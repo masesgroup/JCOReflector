@@ -134,31 +134,11 @@ public class ConfigurationProperty extends NetObject  {
     public ConfigurationProperty() throws Throwable {
     }
 
-    public ConfigurationProperty(java.lang.String name, NetType type, NetObject defaultValue, TypeConverter typeConverter, ConfigurationValidatorBase validator, ConfigurationPropertyOptions options, java.lang.String description) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.globalization.CultureNotFoundException {
+    public ConfigurationProperty(java.lang.String name, NetType type) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(name, type == null ? null : type.getJCOInstance(), defaultValue == null ? null : defaultValue.getJCOInstance(), typeConverter == null ? null : typeConverter.getJCOInstance(), validator == null ? null : validator.getJCOInstance(), options == null ? null : options.getJCOInstance(), description));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ConfigurationProperty(java.lang.String name, NetType type, NetObject defaultValue, TypeConverter typeConverter, ConfigurationValidatorBase validator, ConfigurationPropertyOptions options) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.globalization.CultureNotFoundException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(name, type == null ? null : type.getJCOInstance(), defaultValue == null ? null : defaultValue.getJCOInstance(), typeConverter == null ? null : typeConverter.getJCOInstance(), validator == null ? null : validator.getJCOInstance(), options == null ? null : options.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ConfigurationProperty(java.lang.String name, NetType type, NetObject defaultValue, ConfigurationPropertyOptions options) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.configuration.ConfigurationErrorsException, system.NotSupportedException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(name, type == null ? null : type.getJCOInstance(), defaultValue == null ? null : defaultValue.getJCOInstance(), options == null ? null : options.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(name, type == null ? null : type.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,11 +154,31 @@ public class ConfigurationProperty extends NetObject  {
         }
     }
 
-    public ConfigurationProperty(java.lang.String name, NetType type) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.globalization.CultureNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public ConfigurationProperty(java.lang.String name, NetType type, NetObject defaultValue, TypeConverter typeConverter, ConfigurationValidatorBase validator, ConfigurationPropertyOptions options) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(name, type == null ? null : type.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(name, type == null ? null : type.getJCOInstance(), defaultValue == null ? null : defaultValue.getJCOInstance(), typeConverter == null ? null : typeConverter.getJCOInstance(), validator == null ? null : validator.getJCOInstance(), options == null ? null : options.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ConfigurationProperty(java.lang.String name, NetType type, NetObject defaultValue, TypeConverter typeConverter, ConfigurationValidatorBase validator, ConfigurationPropertyOptions options, java.lang.String description) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.configuration.ConfigurationErrorsException, system.globalization.CultureNotFoundException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(name, type == null ? null : type.getJCOInstance(), defaultValue == null ? null : defaultValue.getJCOInstance(), typeConverter == null ? null : typeConverter.getJCOInstance(), validator == null ? null : validator.getJCOInstance(), options == null ? null : options.getJCOInstance(), description));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ConfigurationProperty(java.lang.String name, NetType type, NetObject defaultValue, ConfigurationPropertyOptions options) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.configuration.ConfigurationErrorsException, system.NotSupportedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(name, type == null ? null : type.getJCOInstance(), defaultValue == null ? null : defaultValue.getJCOInstance(), options == null ? null : options.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

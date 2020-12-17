@@ -139,16 +139,6 @@ public class Calendar extends NetObject  {
     
     // Methods section
     
-    public boolean IsLeapDay(int year, int month, int day, int era) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsLeapDay", year, month, day, era);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean IsLeapDay(int year, int month, int day) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -159,11 +149,11 @@ public class Calendar extends NetObject  {
         }
     }
 
-    public boolean IsLeapMonth(int year, int month, int era) throws Throwable {
+    public boolean IsLeapDay(int year, int month, int day, int era) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsLeapMonth", year, month, era);
+            return (boolean)classInstance.Invoke("IsLeapDay", year, month, day, era);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,11 +169,11 @@ public class Calendar extends NetObject  {
         }
     }
 
-    public boolean IsLeapYear(int year, int era) throws Throwable {
+    public boolean IsLeapMonth(int year, int month, int era) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsLeapYear", year, era);
+            return (boolean)classInstance.Invoke("IsLeapMonth", year, month, era);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,6 +184,16 @@ public class Calendar extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("IsLeapYear", year);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean IsLeapYear(int year, int era) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("IsLeapYear", year, era);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,16 +229,6 @@ public class Calendar extends NetObject  {
         }
     }
 
-    public int GetDaysInMonth(int year, int month, int era) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("GetDaysInMonth", year, month, era);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int GetDaysInMonth(int year, int month) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -249,11 +239,11 @@ public class Calendar extends NetObject  {
         }
     }
 
-    public int GetDaysInYear(int year, int era) throws Throwable {
+    public int GetDaysInMonth(int year, int month, int era) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("GetDaysInYear", year, era);
+            return (int)classInstance.Invoke("GetDaysInMonth", year, month, era);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,6 +254,16 @@ public class Calendar extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Invoke("GetDaysInYear", year);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int GetDaysInYear(int year, int era) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("GetDaysInYear", year, era);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -289,21 +289,21 @@ public class Calendar extends NetObject  {
         }
     }
 
-    public int GetLeapMonth(int year, int era) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("GetLeapMonth", year, era);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int GetLeapMonth(int year) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Invoke("GetLeapMonth", year);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int GetLeapMonth(int year, int era) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("GetLeapMonth", year, era);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -329,21 +329,21 @@ public class Calendar extends NetObject  {
         }
     }
 
-    public int GetMonthsInYear(int year, int era) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("GetMonthsInYear", year, era);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int GetMonthsInYear(int year) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Invoke("GetMonthsInYear", year);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int GetMonthsInYear(int year, int era) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("GetMonthsInYear", year, era);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -477,22 +477,22 @@ public class Calendar extends NetObject  {
         }
     }
 
-    public DateTime ToDateTime(int year, int month, int day, int hour, int minute, int second, int millisecond, int era) throws Throwable {
+    public DateTime ToDateTime(int year, int month, int day, int hour, int minute, int second, int millisecond) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objToDateTime = (JCObject)classInstance.Invoke("ToDateTime", year, month, day, hour, minute, second, millisecond, era);
+            JCObject objToDateTime = (JCObject)classInstance.Invoke("ToDateTime", year, month, day, hour, minute, second, millisecond);
             return new DateTime(objToDateTime);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DateTime ToDateTime(int year, int month, int day, int hour, int minute, int second, int millisecond) throws Throwable {
+    public DateTime ToDateTime(int year, int month, int day, int hour, int minute, int second, int millisecond, int era) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objToDateTime = (JCObject)classInstance.Invoke("ToDateTime", year, month, day, hour, minute, second, millisecond);
+            JCObject objToDateTime = (JCObject)classInstance.Invoke("ToDateTime", year, month, day, hour, minute, second, millisecond, era);
             return new DateTime(objToDateTime);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

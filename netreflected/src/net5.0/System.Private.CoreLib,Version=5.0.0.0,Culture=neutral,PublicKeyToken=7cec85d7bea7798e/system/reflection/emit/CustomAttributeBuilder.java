@@ -134,21 +134,21 @@ public class CustomAttributeBuilder extends NetObject  {
     public CustomAttributeBuilder() throws Throwable {
     }
 
-    public CustomAttributeBuilder(ConstructorInfo con, NetObject[] constructorArgs, FieldInfo[] namedFields, NetObject[] fieldValues) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException {
+    public CustomAttributeBuilder(ConstructorInfo con, NetObject[] constructorArgs) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(con == null ? null : con.getJCOInstance(), toObjectFromArray(constructorArgs), toObjectFromArray(namedFields), toObjectFromArray(fieldValues)));
+            setJCOInstance((JCObject)classType.NewObject(con == null ? null : con.getJCOInstance(), toObjectFromArray(constructorArgs)));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public CustomAttributeBuilder(ConstructorInfo con, NetObject[] constructorArgs, PropertyInfo[] namedProperties, NetObject[] propertyValues, FieldInfo[] namedFields, NetObject[] fieldValues) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
+    public CustomAttributeBuilder(ConstructorInfo con, NetObject[] constructorArgs, FieldInfo[] namedFields, NetObject[] fieldValues) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(con == null ? null : con.getJCOInstance(), toObjectFromArray(constructorArgs), toObjectFromArray(namedProperties), toObjectFromArray(propertyValues), toObjectFromArray(namedFields), toObjectFromArray(fieldValues)));
+            setJCOInstance((JCObject)classType.NewObject(con == null ? null : con.getJCOInstance(), toObjectFromArray(constructorArgs), toObjectFromArray(namedFields), toObjectFromArray(fieldValues)));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,11 +164,11 @@ public class CustomAttributeBuilder extends NetObject  {
         }
     }
 
-    public CustomAttributeBuilder(ConstructorInfo con, NetObject[] constructorArgs) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException {
+    public CustomAttributeBuilder(ConstructorInfo con, NetObject[] constructorArgs, PropertyInfo[] namedProperties, NetObject[] propertyValues, FieldInfo[] namedFields, NetObject[] fieldValues) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(con == null ? null : con.getJCOInstance(), toObjectFromArray(constructorArgs)));
+            setJCOInstance((JCObject)classType.NewObject(con == null ? null : con.getJCOInstance(), toObjectFromArray(constructorArgs), toObjectFromArray(namedProperties), toObjectFromArray(propertyValues), toObjectFromArray(namedFields), toObjectFromArray(fieldValues)));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

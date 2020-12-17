@@ -148,22 +148,22 @@ public class DeleteIndexBinder extends DynamicMetaObjectBinder  {
         }
     }
 
-    public DynamicMetaObject FallbackDeleteIndex(DynamicMetaObject target, DynamicMetaObject[] indexes, DynamicMetaObject errorSuggestion) throws Throwable {
+    public DynamicMetaObject FallbackDeleteIndex(DynamicMetaObject target, DynamicMetaObject[] indexes) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objFallbackDeleteIndex = (JCObject)classInstance.Invoke("FallbackDeleteIndex", target == null ? null : target.getJCOInstance(), toObjectFromArray(indexes), errorSuggestion == null ? null : errorSuggestion.getJCOInstance());
+            JCObject objFallbackDeleteIndex = (JCObject)classInstance.Invoke("FallbackDeleteIndex", target == null ? null : target.getJCOInstance(), toObjectFromArray(indexes));
             return new DynamicMetaObject(objFallbackDeleteIndex);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DynamicMetaObject FallbackDeleteIndex(DynamicMetaObject target, DynamicMetaObject[] indexes) throws Throwable {
+    public DynamicMetaObject FallbackDeleteIndex(DynamicMetaObject target, DynamicMetaObject[] indexes, DynamicMetaObject errorSuggestion) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objFallbackDeleteIndex = (JCObject)classInstance.Invoke("FallbackDeleteIndex", target == null ? null : target.getJCOInstance(), toObjectFromArray(indexes));
+            JCObject objFallbackDeleteIndex = (JCObject)classInstance.Invoke("FallbackDeleteIndex", target == null ? null : target.getJCOInstance(), toObjectFromArray(indexes), errorSuggestion == null ? null : errorSuggestion.getJCOInstance());
             return new DynamicMetaObject(objFallbackDeleteIndex);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

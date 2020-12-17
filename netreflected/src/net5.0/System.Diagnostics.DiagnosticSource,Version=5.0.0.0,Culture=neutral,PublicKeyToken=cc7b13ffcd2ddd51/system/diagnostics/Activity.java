@@ -278,7 +278,7 @@ public class Activity extends NetObject implements AutoCloseable {
         }
     }
 
-    public NetObject GetCustomProperty(java.lang.String propertyName) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException {
+    public NetObject GetCustomProperty(java.lang.String propertyName) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -309,7 +309,7 @@ public class Activity extends NetObject implements AutoCloseable {
         }
     }
 
-    public void SetCustomProperty(java.lang.String propertyName, NetObject propertyValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
+    public void SetCustomProperty(java.lang.String propertyName, NetObject propertyValue) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

@@ -136,26 +136,6 @@ public class Decoder extends NetObject  {
     
     // Methods section
     
-    public int GetCharCount(byte[] bytes, int index, int count, boolean flush) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("GetCharCount", bytes, index, count, flush);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int GetCharCount(JCRefOut dupParam0, int dupParam1, int dupParam2, boolean dupParam3) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("GetCharCount", dupParam0, dupParam1, dupParam2, dupParam3);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int GetCharCount(byte[] bytes, int index, int count) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -176,21 +156,21 @@ public class Decoder extends NetObject  {
         }
     }
 
-    public int GetChars(byte[] bytes, int byteIndex, int byteCount, char[] chars, int charIndex, boolean flush) throws Throwable {
+    public int GetCharCount(byte[] bytes, int index, int count, boolean flush) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("GetChars", bytes, byteIndex, byteCount, chars, charIndex, flush);
+            return (int)classInstance.Invoke("GetCharCount", bytes, index, count, flush);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public int GetChars(JCRefOut dupParam0, int dupParam1, int dupParam2, JCRefOut dupParam3, int dupParam4, boolean dupParam5) throws Throwable {
+    public int GetCharCount(JCRefOut dupParam0, int dupParam1, int dupParam2, boolean dupParam3) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("GetChars", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4, dupParam5);
+            return (int)classInstance.Invoke("GetCharCount", dupParam0, dupParam1, dupParam2, dupParam3);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,6 +191,26 @@ public class Decoder extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Invoke("GetChars", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int GetChars(byte[] bytes, int byteIndex, int byteCount, char[] chars, int charIndex, boolean flush) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("GetChars", bytes, byteIndex, byteCount, chars, charIndex, flush);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int GetChars(JCRefOut dupParam0, int dupParam1, int dupParam2, JCRefOut dupParam3, int dupParam4, boolean dupParam5) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("GetChars", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4, dupParam5);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

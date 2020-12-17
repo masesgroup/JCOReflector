@@ -180,22 +180,22 @@ public class ISymbolReaderImplementation extends NetObject implements ISymbolRea
         }
     }
 
-    public ISymbolMethod GetMethod(SymbolToken method, int version) throws Throwable {
+    public ISymbolMethod GetMethod(SymbolToken method) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetMethod = (JCObject)classInstance.Invoke("GetMethod", method == null ? null : method.getJCOInstance(), version);
+            JCObject objGetMethod = (JCObject)classInstance.Invoke("GetMethod", method == null ? null : method.getJCOInstance());
             return new ISymbolMethodImplementation(objGetMethod);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ISymbolMethod GetMethod(SymbolToken method) throws Throwable {
+    public ISymbolMethod GetMethod(SymbolToken method, int version) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetMethod = (JCObject)classInstance.Invoke("GetMethod", method == null ? null : method.getJCOInstance());
+            JCObject objGetMethod = (JCObject)classInstance.Invoke("GetMethod", method == null ? null : method.getJCOInstance(), version);
             return new ISymbolMethodImplementation(objGetMethod);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

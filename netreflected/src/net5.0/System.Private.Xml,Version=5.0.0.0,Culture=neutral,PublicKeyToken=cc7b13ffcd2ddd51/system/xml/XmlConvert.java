@@ -305,6 +305,17 @@ public class XmlConvert extends NetObject  {
         }
     }
 
+    public static DateTime ToDateTime(java.lang.String s) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.OverflowException, system.InvalidOperationException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objToDateTime = (JCObject)classType.Invoke("ToDateTime", s);
+            return new DateTime(objToDateTime);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static DateTime ToDateTime(java.lang.String s, java.lang.String format) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.OverflowException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -349,12 +360,12 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static DateTime ToDateTime(java.lang.String s) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.OverflowException, system.InvalidOperationException, system.FormatException {
+    public static DateTimeOffset ToDateTimeOffset(java.lang.String s) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.InvalidTimeZoneException, system.OverflowException, system.security.SecurityException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objToDateTime = (JCObject)classType.Invoke("ToDateTime", s);
-            return new DateTime(objToDateTime);
+            JCObject objToDateTimeOffset = (JCObject)classType.Invoke("ToDateTimeOffset", s);
+            return new DateTimeOffset(objToDateTimeOffset);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -387,17 +398,6 @@ public class XmlConvert extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objToDateTimeOffset = (JCObject)classType.Invoke("ToDateTimeOffset", dupParam0, dupParam1);
-            return new DateTimeOffset(objToDateTimeOffset);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DateTimeOffset ToDateTimeOffset(java.lang.String s) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.InvalidTimeZoneException, system.OverflowException, system.security.SecurityException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objToDateTimeOffset = (JCObject)classType.Invoke("ToDateTimeOffset", s);
             return new DateTimeOffset(objToDateTimeOffset);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -556,6 +556,16 @@ public class XmlConvert extends NetObject  {
         }
     }
 
+    public static java.lang.String ToString(DateTime value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("ToString", value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static java.lang.String ToString(DateTime value, java.lang.String format) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -576,7 +586,7 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(DateTime value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.FormatException, system.InvalidOperationException, system.OverflowException {
+    public static java.lang.String ToString(DateTimeOffset value) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -591,16 +601,6 @@ public class XmlConvert extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (java.lang.String)classType.Invoke("ToString", value == null ? null : value.getJCOInstance(), format);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String ToString(DateTimeOffset value) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("ToString", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -165,22 +165,22 @@ public class CancellationTokenSource extends NetObject implements AutoCloseable 
     
     // Methods section
     
-    public static CancellationTokenSource CreateLinkedTokenSource(CancellationToken token1, CancellationToken token2) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.threading.LockRecursionException, system.InvalidOperationException, system.threading.SynchronizationLockException {
+    public static CancellationTokenSource CreateLinkedTokenSource(CancellationToken token) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.threading.LockRecursionException, system.InvalidOperationException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateLinkedTokenSource = (JCObject)classType.Invoke("CreateLinkedTokenSource", token1 == null ? null : token1.getJCOInstance(), token2 == null ? null : token2.getJCOInstance());
+            JCObject objCreateLinkedTokenSource = (JCObject)classType.Invoke("CreateLinkedTokenSource", token == null ? null : token.getJCOInstance());
             return new CancellationTokenSource(objCreateLinkedTokenSource);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static CancellationTokenSource CreateLinkedTokenSource(CancellationToken token) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.threading.LockRecursionException, system.InvalidOperationException, system.threading.SynchronizationLockException {
+    public static CancellationTokenSource CreateLinkedTokenSource(CancellationToken token1, CancellationToken token2) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.threading.LockRecursionException, system.InvalidOperationException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateLinkedTokenSource = (JCObject)classType.Invoke("CreateLinkedTokenSource", token == null ? null : token.getJCOInstance());
+            JCObject objCreateLinkedTokenSource = (JCObject)classType.Invoke("CreateLinkedTokenSource", token1 == null ? null : token1.getJCOInstance(), token2 == null ? null : token2.getJCOInstance());
             return new CancellationTokenSource(objCreateLinkedTokenSource);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -171,22 +171,22 @@ public class ILGenerator extends NetObject  {
         }
     }
 
-    public LocalBuilder DeclareLocal(NetType localType, boolean pinned) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
+    public LocalBuilder DeclareLocal(NetType localType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objDeclareLocal = (JCObject)classInstance.Invoke("DeclareLocal", localType == null ? null : localType.getJCOInstance(), pinned);
+            JCObject objDeclareLocal = (JCObject)classInstance.Invoke("DeclareLocal", localType == null ? null : localType.getJCOInstance());
             return new LocalBuilder(objDeclareLocal);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public LocalBuilder DeclareLocal(NetType localType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
+    public LocalBuilder DeclareLocal(NetType localType, boolean pinned) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objDeclareLocal = (JCObject)classInstance.Invoke("DeclareLocal", localType == null ? null : localType.getJCOInstance());
+            JCObject objDeclareLocal = (JCObject)classInstance.Invoke("DeclareLocal", localType == null ? null : localType.getJCOInstance(), pinned);
             return new LocalBuilder(objDeclareLocal);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -238,6 +238,16 @@ public class ILGenerator extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("BeginScope");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Emit(OpCode opcode) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -398,16 +408,6 @@ public class ILGenerator extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance(), cls == null ? null : cls.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Emit(OpCode opcode) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Emit", opcode == null ? null : opcode.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

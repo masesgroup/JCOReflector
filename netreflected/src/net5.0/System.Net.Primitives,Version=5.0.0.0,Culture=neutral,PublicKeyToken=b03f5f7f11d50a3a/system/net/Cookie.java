@@ -140,11 +140,11 @@ public class Cookie extends NetObject  {
         }
     }
 
-    public Cookie(java.lang.String name, java.lang.String value, java.lang.String path, java.lang.String domain) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidTimeZoneException, system.OverflowException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException, system.net.CookieException {
+    public Cookie(java.lang.String name, java.lang.String value) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidTimeZoneException, system.UnauthorizedAccessException, system.io.IOException, system.OverflowException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.net.CookieException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(name, value, path, domain));
+            setJCOInstance((JCObject)classType.NewObject(name, value));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -160,11 +160,11 @@ public class Cookie extends NetObject  {
         }
     }
 
-    public Cookie(java.lang.String name, java.lang.String value) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidTimeZoneException, system.UnauthorizedAccessException, system.io.IOException, system.OverflowException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.net.CookieException {
+    public Cookie(java.lang.String name, java.lang.String value, java.lang.String path, java.lang.String domain) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidTimeZoneException, system.OverflowException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException, system.net.CookieException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(name, value));
+            setJCOInstance((JCObject)classType.NewObject(name, value, path, domain));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

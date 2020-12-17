@@ -143,21 +143,21 @@ public class AnonymousPipeServerStream extends PipeStream  {
         }
     }
 
-    public AnonymousPipeServerStream(PipeDirection direction, SafePipeHandle serverSafePipeHandle, SafePipeHandle clientSafePipeHandle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.NotSupportedException, system.io.IOException {
+    public AnonymousPipeServerStream(PipeDirection direction) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.threading.SynchronizationLockException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(direction == null ? null : direction.getJCOInstance(), serverSafePipeHandle == null ? null : serverSafePipeHandle.getJCOInstance(), clientSafePipeHandle == null ? null : clientSafePipeHandle.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(direction == null ? null : direction.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public AnonymousPipeServerStream(PipeDirection direction, HandleInheritability inheritability, int bufferSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.NotSupportedException, system.threading.LockRecursionException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.threading.SynchronizationLockException {
+    public AnonymousPipeServerStream(PipeDirection direction, SafePipeHandle serverSafePipeHandle, SafePipeHandle clientSafePipeHandle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.NotSupportedException, system.io.IOException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(direction == null ? null : direction.getJCOInstance(), inheritability == null ? null : inheritability.getJCOInstance(), bufferSize));
+            setJCOInstance((JCObject)classType.NewObject(direction == null ? null : direction.getJCOInstance(), serverSafePipeHandle == null ? null : serverSafePipeHandle.getJCOInstance(), clientSafePipeHandle == null ? null : clientSafePipeHandle.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,11 +173,11 @@ public class AnonymousPipeServerStream extends PipeStream  {
         }
     }
 
-    public AnonymousPipeServerStream(PipeDirection direction) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.threading.SynchronizationLockException {
+    public AnonymousPipeServerStream(PipeDirection direction, HandleInheritability inheritability, int bufferSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.NotSupportedException, system.threading.LockRecursionException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.threading.SynchronizationLockException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(direction == null ? null : direction.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(direction == null ? null : direction.getJCOInstance(), inheritability == null ? null : inheritability.getJCOInstance(), bufferSize));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

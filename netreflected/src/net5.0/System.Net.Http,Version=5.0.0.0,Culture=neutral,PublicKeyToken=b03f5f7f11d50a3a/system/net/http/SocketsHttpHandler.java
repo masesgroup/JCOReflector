@@ -39,7 +39,6 @@ import java.util.ArrayList;
 
 // Import section
 import system.net.http.HttpMessageHandler;
-import system.net.connections.ConnectionFactory;
 import system.net.CookieContainer;
 import system.net.DecompressionMethods;
 import system.net.http.HttpKeepAlivePingPolicy;
@@ -342,27 +341,6 @@ public class SocketsHttpHandler extends HttpMessageHandler  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Set("MaxResponseHeadersLength", MaxResponseHeadersLength);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ConnectionFactory getConnectionFactory() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("ConnectionFactory");
-            return new ConnectionFactory(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setConnectionFactory(ConnectionFactory ConnectionFactory) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("ConnectionFactory", ConnectionFactory == null ? null : ConnectionFactory.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

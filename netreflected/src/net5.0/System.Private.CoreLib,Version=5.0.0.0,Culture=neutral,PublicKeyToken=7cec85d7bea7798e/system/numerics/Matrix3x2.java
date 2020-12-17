@@ -182,17 +182,6 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
-    public static Matrix3x2 CreateRotation(Single radians, Vector2 centerPoint) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArithmeticException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateRotation = (JCObject)classType.Invoke("CreateRotation", radians == null ? null : radians.getJCOInstance(), centerPoint == null ? null : centerPoint.getJCOInstance());
-            return new Matrix3x2(objCreateRotation);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static Matrix3x2 CreateRotation(Single radians) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArithmeticException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -204,11 +193,22 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
-    public static Matrix3x2 CreateScale(Single xScale, Single yScale, Vector2 centerPoint) throws Throwable {
+    public static Matrix3x2 CreateRotation(Single radians, Vector2 centerPoint) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArithmeticException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateScale = (JCObject)classType.Invoke("CreateScale", xScale == null ? null : xScale.getJCOInstance(), yScale == null ? null : yScale.getJCOInstance(), centerPoint == null ? null : centerPoint.getJCOInstance());
+            JCObject objCreateRotation = (JCObject)classType.Invoke("CreateRotation", radians == null ? null : radians.getJCOInstance(), centerPoint == null ? null : centerPoint.getJCOInstance());
+            return new Matrix3x2(objCreateRotation);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Matrix3x2 CreateScale(Single scale) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateScale = (JCObject)classType.Invoke("CreateScale", scale == null ? null : scale.getJCOInstance());
             return new Matrix3x2(objCreateScale);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -226,33 +226,22 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
+    public static Matrix3x2 CreateScale(Single xScale, Single yScale, Vector2 centerPoint) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateScale = (JCObject)classType.Invoke("CreateScale", xScale == null ? null : xScale.getJCOInstance(), yScale == null ? null : yScale.getJCOInstance(), centerPoint == null ? null : centerPoint.getJCOInstance());
+            return new Matrix3x2(objCreateScale);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static Matrix3x2 CreateScale(Single scale, Vector2 centerPoint) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objCreateScale = (JCObject)classType.Invoke("CreateScale", scale == null ? null : scale.getJCOInstance(), centerPoint == null ? null : centerPoint.getJCOInstance());
-            return new Matrix3x2(objCreateScale);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Matrix3x2 CreateScale(Single scale) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateScale = (JCObject)classType.Invoke("CreateScale", scale == null ? null : scale.getJCOInstance());
-            return new Matrix3x2(objCreateScale);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Matrix3x2 CreateScale(Vector2 scales, Vector2 centerPoint) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateScale = (JCObject)classType.Invoke("CreateScale", scales == null ? null : scales.getJCOInstance(), centerPoint == null ? null : centerPoint.getJCOInstance());
             return new Matrix3x2(objCreateScale);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -270,12 +259,12 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
-    public static Matrix3x2 CreateSkew(Single radiansX, Single radiansY, Vector2 centerPoint) throws Throwable {
+    public static Matrix3x2 CreateScale(Vector2 scales, Vector2 centerPoint) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateSkew = (JCObject)classType.Invoke("CreateSkew", radiansX == null ? null : radiansX.getJCOInstance(), radiansY == null ? null : radiansY.getJCOInstance(), centerPoint == null ? null : centerPoint.getJCOInstance());
-            return new Matrix3x2(objCreateSkew);
+            JCObject objCreateScale = (JCObject)classType.Invoke("CreateScale", scales == null ? null : scales.getJCOInstance(), centerPoint == null ? null : centerPoint.getJCOInstance());
+            return new Matrix3x2(objCreateScale);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,6 +275,17 @@ public class Matrix3x2 extends ValueType  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objCreateSkew = (JCObject)classType.Invoke("CreateSkew", radiansX == null ? null : radiansX.getJCOInstance(), radiansY == null ? null : radiansY.getJCOInstance());
+            return new Matrix3x2(objCreateSkew);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Matrix3x2 CreateSkew(Single radiansX, Single radiansY, Vector2 centerPoint) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateSkew = (JCObject)classType.Invoke("CreateSkew", radiansX == null ? null : radiansX.getJCOInstance(), radiansY == null ? null : radiansY.getJCOInstance(), centerPoint == null ? null : centerPoint.getJCOInstance());
             return new Matrix3x2(objCreateSkew);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

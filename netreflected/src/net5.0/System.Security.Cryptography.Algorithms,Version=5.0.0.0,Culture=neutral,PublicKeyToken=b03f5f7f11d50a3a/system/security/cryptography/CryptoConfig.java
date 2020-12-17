@@ -161,22 +161,22 @@ public class CryptoConfig extends NetObject  {
         }
     }
 
-    public static NetObject CreateFromName(java.lang.String name, NetObject... args) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.TypeLoadException, system.security.cryptography.CryptographicException {
+    public static NetObject CreateFromName(java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.TypeLoadException, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateFromName = (JCObject)classType.Invoke("CreateFromName", name, toObjectFromArray(args));
+            JCObject objCreateFromName = (JCObject)classType.Invoke("CreateFromName", name);
             return new NetObject(objCreateFromName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static NetObject CreateFromName(java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.TypeLoadException, system.security.cryptography.CryptographicException {
+    public static NetObject CreateFromName(java.lang.String name, NetObject... args) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.TypeLoadException, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateFromName = (JCObject)classType.Invoke("CreateFromName", name);
+            JCObject objCreateFromName = (JCObject)classType.Invoke("CreateFromName", name, toObjectFromArray(args));
             return new NetObject(objCreateFromName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

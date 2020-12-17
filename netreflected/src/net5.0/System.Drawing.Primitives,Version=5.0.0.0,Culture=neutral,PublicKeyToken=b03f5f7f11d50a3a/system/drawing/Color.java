@@ -193,11 +193,11 @@ public class Color extends ValueType  {
         }
     }
 
-    public static Color FromArgb(int alpha, int red, int green, int blue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
+    public static Color FromArgb(int argb) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objFromArgb = (JCObject)classType.Invoke("FromArgb", alpha, red, green, blue);
+            JCObject objFromArgb = (JCObject)classType.Invoke("FromArgb", argb);
             return new Color(objFromArgb);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -215,22 +215,22 @@ public class Color extends ValueType  {
         }
     }
 
-    public static Color FromArgb(int alpha, Color baseColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
+    public static Color FromArgb(int alpha, int red, int green, int blue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objFromArgb = (JCObject)classType.Invoke("FromArgb", alpha, baseColor == null ? null : baseColor.getJCOInstance());
+            JCObject objFromArgb = (JCObject)classType.Invoke("FromArgb", alpha, red, green, blue);
             return new Color(objFromArgb);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Color FromArgb(int argb) throws Throwable {
+    public static Color FromArgb(int alpha, Color baseColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objFromArgb = (JCObject)classType.Invoke("FromArgb", argb);
+            JCObject objFromArgb = (JCObject)classType.Invoke("FromArgb", alpha, baseColor == null ? null : baseColor.getJCOInstance());
             return new Color(objFromArgb);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

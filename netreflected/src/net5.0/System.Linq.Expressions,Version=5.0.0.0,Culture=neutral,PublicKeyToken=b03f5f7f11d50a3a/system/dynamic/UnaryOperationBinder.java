@@ -148,22 +148,22 @@ public class UnaryOperationBinder extends DynamicMetaObjectBinder  {
         }
     }
 
-    public DynamicMetaObject FallbackUnaryOperation(DynamicMetaObject target, DynamicMetaObject errorSuggestion) throws Throwable {
+    public DynamicMetaObject FallbackUnaryOperation(DynamicMetaObject target) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objFallbackUnaryOperation = (JCObject)classInstance.Invoke("FallbackUnaryOperation", target == null ? null : target.getJCOInstance(), errorSuggestion == null ? null : errorSuggestion.getJCOInstance());
+            JCObject objFallbackUnaryOperation = (JCObject)classInstance.Invoke("FallbackUnaryOperation", target == null ? null : target.getJCOInstance());
             return new DynamicMetaObject(objFallbackUnaryOperation);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DynamicMetaObject FallbackUnaryOperation(DynamicMetaObject target) throws Throwable {
+    public DynamicMetaObject FallbackUnaryOperation(DynamicMetaObject target, DynamicMetaObject errorSuggestion) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objFallbackUnaryOperation = (JCObject)classInstance.Invoke("FallbackUnaryOperation", target == null ? null : target.getJCOInstance());
+            JCObject objFallbackUnaryOperation = (JCObject)classInstance.Invoke("FallbackUnaryOperation", target == null ? null : target.getJCOInstance(), errorSuggestion == null ? null : errorSuggestion.getJCOInstance());
             return new DynamicMetaObject(objFallbackUnaryOperation);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -139,11 +139,11 @@ public class BinaryReader extends NetObject implements AutoCloseable {
     public BinaryReader() throws Throwable {
     }
 
-    public BinaryReader(Stream input, Encoding encoding, boolean leaveOpen) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
+    public BinaryReader(Stream input) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(input == null ? null : input.getJCOInstance(), encoding == null ? null : encoding.getJCOInstance(), leaveOpen));
+            setJCOInstance((JCObject)classType.NewObject(input == null ? null : input.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -159,11 +159,11 @@ public class BinaryReader extends NetObject implements AutoCloseable {
         }
     }
 
-    public BinaryReader(Stream input) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
+    public BinaryReader(Stream input, Encoding encoding, boolean leaveOpen) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(input == null ? null : input.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(input == null ? null : input.getJCOInstance(), encoding == null ? null : encoding.getJCOInstance(), leaveOpen));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

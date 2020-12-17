@@ -141,22 +141,22 @@ public class ComponentSerializationService extends NetObject  {
     
     // Methods section
     
-    public ICollection Deserialize(SerializationStore store, IContainer container) throws Throwable {
+    public ICollection Deserialize(SerializationStore store) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objDeserialize = (JCObject)classInstance.Invoke("Deserialize", store == null ? null : store.getJCOInstance(), container == null ? null : container.getJCOInstance());
+            JCObject objDeserialize = (JCObject)classInstance.Invoke("Deserialize", store == null ? null : store.getJCOInstance());
             return new ICollectionImplementation(objDeserialize);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ICollection Deserialize(SerializationStore store) throws Throwable {
+    public ICollection Deserialize(SerializationStore store, IContainer container) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objDeserialize = (JCObject)classInstance.Invoke("Deserialize", store == null ? null : store.getJCOInstance());
+            JCObject objDeserialize = (JCObject)classInstance.Invoke("Deserialize", store == null ? null : store.getJCOInstance(), container == null ? null : container.getJCOInstance());
             return new ICollectionImplementation(objDeserialize);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -185,11 +185,11 @@ public class ComponentSerializationService extends NetObject  {
         }
     }
 
-    public void DeserializeTo(SerializationStore store, IContainer container, boolean validateRecycledTypes, boolean applyDefaults) throws Throwable {
+    public void DeserializeTo(SerializationStore store, IContainer container) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("DeserializeTo", store == null ? null : store.getJCOInstance(), container == null ? null : container.getJCOInstance(), validateRecycledTypes, applyDefaults);
+            classInstance.Invoke("DeserializeTo", store == null ? null : store.getJCOInstance(), container == null ? null : container.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,11 +205,11 @@ public class ComponentSerializationService extends NetObject  {
         }
     }
 
-    public void DeserializeTo(SerializationStore store, IContainer container) throws Throwable {
+    public void DeserializeTo(SerializationStore store, IContainer container, boolean validateRecycledTypes, boolean applyDefaults) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("DeserializeTo", store == null ? null : store.getJCOInstance(), container == null ? null : container.getJCOInstance());
+            classInstance.Invoke("DeserializeTo", store == null ? null : store.getJCOInstance(), container == null ? null : container.getJCOInstance(), validateRecycledTypes, applyDefaults);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

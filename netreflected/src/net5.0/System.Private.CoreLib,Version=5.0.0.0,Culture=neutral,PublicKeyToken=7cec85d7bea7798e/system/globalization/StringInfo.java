@@ -172,17 +172,6 @@ public class StringInfo extends NetObject  {
         }
     }
 
-    public static TextElementEnumerator GetTextElementEnumerator(java.lang.String str, int index) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetTextElementEnumerator = (JCObject)classType.Invoke("GetTextElementEnumerator", str, index);
-            return new TextElementEnumerator(objGetTextElementEnumerator);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static TextElementEnumerator GetTextElementEnumerator(java.lang.String str) throws Throwable, system.NotSupportedException, system.ArgumentNullException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -194,11 +183,12 @@ public class StringInfo extends NetObject  {
         }
     }
 
-    public static java.lang.String GetNextTextElement(java.lang.String str, int index) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static TextElementEnumerator GetTextElementEnumerator(java.lang.String str, int index) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Invoke("GetNextTextElement", str, index);
+            JCObject objGetTextElementEnumerator = (JCObject)classType.Invoke("GetTextElementEnumerator", str, index);
+            return new TextElementEnumerator(objGetTextElementEnumerator);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,11 +204,11 @@ public class StringInfo extends NetObject  {
         }
     }
 
-    public java.lang.String SubstringByTextElements(int startingTextElement, int lengthInTextElements) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String GetNextTextElement(java.lang.String str, int index) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Invoke("SubstringByTextElements", startingTextElement, lengthInTextElements);
+            return (java.lang.String)classType.Invoke("GetNextTextElement", str, index);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,6 +219,16 @@ public class StringInfo extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Invoke("SubstringByTextElements", startingTextElement);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String SubstringByTextElements(int startingTextElement, int lengthInTextElements) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("SubstringByTextElements", startingTextElement, lengthInTextElements);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

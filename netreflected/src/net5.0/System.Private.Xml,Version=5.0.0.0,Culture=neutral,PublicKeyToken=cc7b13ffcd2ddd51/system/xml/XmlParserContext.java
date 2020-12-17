@@ -135,16 +135,6 @@ public class XmlParserContext extends NetObject  {
     public XmlParserContext() throws Throwable {
     }
 
-    public XmlParserContext(XmlNameTable nt, XmlNamespaceManager nsMgr, java.lang.String docTypeName, java.lang.String pubId, java.lang.String sysId, java.lang.String internalSubset, java.lang.String baseURI, java.lang.String xmlLang, XmlSpace xmlSpace, Encoding enc) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.xml.XmlException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(nt == null ? null : nt.getJCOInstance(), nsMgr == null ? null : nsMgr.getJCOInstance(), docTypeName, pubId, sysId, internalSubset, baseURI, xmlLang, xmlSpace == null ? null : xmlSpace.getJCOInstance(), enc == null ? null : enc.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public XmlParserContext(XmlNameTable nt, XmlNamespaceManager nsMgr, java.lang.String docTypeName, java.lang.String pubId, java.lang.String sysId, java.lang.String internalSubset, java.lang.String baseURI, java.lang.String xmlLang, XmlSpace xmlSpace) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.FormatException, system.IndexOutOfRangeException, system.xml.XmlException {
         try {
             // add reference to assemblyName.dll file
@@ -155,11 +145,11 @@ public class XmlParserContext extends NetObject  {
         }
     }
 
-    public XmlParserContext(XmlNameTable nt, XmlNamespaceManager nsMgr, java.lang.String xmlLang, XmlSpace xmlSpace, Encoding enc) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.FormatException, system.IndexOutOfRangeException, system.xml.XmlException {
+    public XmlParserContext(XmlNameTable nt, XmlNamespaceManager nsMgr, java.lang.String docTypeName, java.lang.String pubId, java.lang.String sysId, java.lang.String internalSubset, java.lang.String baseURI, java.lang.String xmlLang, XmlSpace xmlSpace, Encoding enc) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.xml.XmlException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(nt == null ? null : nt.getJCOInstance(), nsMgr == null ? null : nsMgr.getJCOInstance(), xmlLang, xmlSpace == null ? null : xmlSpace.getJCOInstance(), enc == null ? null : enc.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(nt == null ? null : nt.getJCOInstance(), nsMgr == null ? null : nsMgr.getJCOInstance(), docTypeName, pubId, sysId, internalSubset, baseURI, xmlLang, xmlSpace == null ? null : xmlSpace.getJCOInstance(), enc == null ? null : enc.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,6 +160,16 @@ public class XmlParserContext extends NetObject  {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(nt == null ? null : nt.getJCOInstance(), nsMgr == null ? null : nsMgr.getJCOInstance(), xmlLang, xmlSpace == null ? null : xmlSpace.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlParserContext(XmlNameTable nt, XmlNamespaceManager nsMgr, java.lang.String xmlLang, XmlSpace xmlSpace, Encoding enc) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.FormatException, system.IndexOutOfRangeException, system.xml.XmlException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(nt == null ? null : nt.getJCOInstance(), nsMgr == null ? null : nsMgr.getJCOInstance(), xmlLang, xmlSpace == null ? null : xmlSpace.getJCOInstance(), enc == null ? null : enc.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

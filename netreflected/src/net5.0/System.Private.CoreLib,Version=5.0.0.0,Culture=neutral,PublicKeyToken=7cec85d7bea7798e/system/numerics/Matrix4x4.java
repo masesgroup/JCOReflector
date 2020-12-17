@@ -327,17 +327,6 @@ public class Matrix4x4 extends ValueType  {
         }
     }
 
-    public static Matrix4x4 CreateRotationX(Single radians, Vector3 centerPoint) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateRotationX = (JCObject)classType.Invoke("CreateRotationX", radians == null ? null : radians.getJCOInstance(), centerPoint == null ? null : centerPoint.getJCOInstance());
-            return new Matrix4x4(objCreateRotationX);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static Matrix4x4 CreateRotationX(Single radians) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -349,12 +338,12 @@ public class Matrix4x4 extends ValueType  {
         }
     }
 
-    public static Matrix4x4 CreateRotationY(Single radians, Vector3 centerPoint) throws Throwable {
+    public static Matrix4x4 CreateRotationX(Single radians, Vector3 centerPoint) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateRotationY = (JCObject)classType.Invoke("CreateRotationY", radians == null ? null : radians.getJCOInstance(), centerPoint == null ? null : centerPoint.getJCOInstance());
-            return new Matrix4x4(objCreateRotationY);
+            JCObject objCreateRotationX = (JCObject)classType.Invoke("CreateRotationX", radians == null ? null : radians.getJCOInstance(), centerPoint == null ? null : centerPoint.getJCOInstance());
+            return new Matrix4x4(objCreateRotationX);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -371,12 +360,12 @@ public class Matrix4x4 extends ValueType  {
         }
     }
 
-    public static Matrix4x4 CreateRotationZ(Single radians, Vector3 centerPoint) throws Throwable {
+    public static Matrix4x4 CreateRotationY(Single radians, Vector3 centerPoint) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateRotationZ = (JCObject)classType.Invoke("CreateRotationZ", radians == null ? null : radians.getJCOInstance(), centerPoint == null ? null : centerPoint.getJCOInstance());
-            return new Matrix4x4(objCreateRotationZ);
+            JCObject objCreateRotationY = (JCObject)classType.Invoke("CreateRotationY", radians == null ? null : radians.getJCOInstance(), centerPoint == null ? null : centerPoint.getJCOInstance());
+            return new Matrix4x4(objCreateRotationY);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -393,11 +382,22 @@ public class Matrix4x4 extends ValueType  {
         }
     }
 
-    public static Matrix4x4 CreateScale(Single xScale, Single yScale, Single zScale, Vector3 centerPoint) throws Throwable {
+    public static Matrix4x4 CreateRotationZ(Single radians, Vector3 centerPoint) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateScale = (JCObject)classType.Invoke("CreateScale", xScale == null ? null : xScale.getJCOInstance(), yScale == null ? null : yScale.getJCOInstance(), zScale == null ? null : zScale.getJCOInstance(), centerPoint == null ? null : centerPoint.getJCOInstance());
+            JCObject objCreateRotationZ = (JCObject)classType.Invoke("CreateRotationZ", radians == null ? null : radians.getJCOInstance(), centerPoint == null ? null : centerPoint.getJCOInstance());
+            return new Matrix4x4(objCreateRotationZ);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Matrix4x4 CreateScale(Single scale) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateScale = (JCObject)classType.Invoke("CreateScale", scale == null ? null : scale.getJCOInstance());
             return new Matrix4x4(objCreateScale);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -415,6 +415,17 @@ public class Matrix4x4 extends ValueType  {
         }
     }
 
+    public static Matrix4x4 CreateScale(Single xScale, Single yScale, Single zScale, Vector3 centerPoint) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateScale = (JCObject)classType.Invoke("CreateScale", xScale == null ? null : xScale.getJCOInstance(), yScale == null ? null : yScale.getJCOInstance(), zScale == null ? null : zScale.getJCOInstance(), centerPoint == null ? null : centerPoint.getJCOInstance());
+            return new Matrix4x4(objCreateScale);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static Matrix4x4 CreateScale(Single scale, Vector3 centerPoint) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -426,11 +437,11 @@ public class Matrix4x4 extends ValueType  {
         }
     }
 
-    public static Matrix4x4 CreateScale(Single scale) throws Throwable {
+    public static Matrix4x4 CreateScale(Vector3 scales) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateScale = (JCObject)classType.Invoke("CreateScale", scale == null ? null : scale.getJCOInstance());
+            JCObject objCreateScale = (JCObject)classType.Invoke("CreateScale", scales == null ? null : scales.getJCOInstance());
             return new Matrix4x4(objCreateScale);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -442,17 +453,6 @@ public class Matrix4x4 extends ValueType  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objCreateScale = (JCObject)classType.Invoke("CreateScale", scales == null ? null : scales.getJCOInstance(), centerPoint == null ? null : centerPoint.getJCOInstance());
-            return new Matrix4x4(objCreateScale);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Matrix4x4 CreateScale(Vector3 scales) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateScale = (JCObject)classType.Invoke("CreateScale", scales == null ? null : scales.getJCOInstance());
             return new Matrix4x4(objCreateScale);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

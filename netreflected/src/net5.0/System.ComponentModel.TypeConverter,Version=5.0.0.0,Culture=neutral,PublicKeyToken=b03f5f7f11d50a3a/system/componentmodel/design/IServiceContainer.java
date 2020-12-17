@@ -113,17 +113,17 @@ public interface IServiceContainer extends IJCOBridgeReflected, IServiceProvider
     // Methods section
     
 
-    public void AddService(NetType serviceType, ServiceCreatorCallback callback, boolean promote) throws Throwable;
-
     public void AddService(NetType serviceType, ServiceCreatorCallback callback) throws Throwable;
 
-    public void AddService(NetType serviceType, NetObject serviceInstance, boolean promote) throws Throwable;
+    public void AddService(NetType serviceType, ServiceCreatorCallback callback, boolean promote) throws Throwable;
 
     public void AddService(NetType serviceType, NetObject serviceInstance) throws Throwable;
 
-    public void RemoveService(NetType serviceType, boolean promote) throws Throwable;
+    public void AddService(NetType serviceType, NetObject serviceInstance, boolean promote) throws Throwable;
 
     public void RemoveService(NetType serviceType) throws Throwable;
+
+    public void RemoveService(NetType serviceType, boolean promote) throws Throwable;
 
 
     

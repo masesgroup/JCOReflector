@@ -131,11 +131,11 @@ public class Authorization extends NetObject  {
     public Authorization() throws Throwable {
     }
 
-    public Authorization(java.lang.String token, boolean finished, java.lang.String connectionGroupId) throws Throwable {
+    public Authorization(java.lang.String token) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(token, finished, connectionGroupId));
+            setJCOInstance((JCObject)classType.NewObject(token));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -151,11 +151,11 @@ public class Authorization extends NetObject  {
         }
     }
 
-    public Authorization(java.lang.String token) throws Throwable {
+    public Authorization(java.lang.String token, boolean finished, java.lang.String connectionGroupId) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(token));
+            setJCOInstance((JCObject)classType.NewObject(token, finished, connectionGroupId));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

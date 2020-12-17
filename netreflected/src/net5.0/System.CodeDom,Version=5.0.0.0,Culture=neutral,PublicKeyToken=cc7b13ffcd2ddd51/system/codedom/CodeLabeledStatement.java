@@ -139,21 +139,21 @@ public class CodeLabeledStatement extends CodeStatement  {
         }
     }
 
-    public CodeLabeledStatement(java.lang.String label, CodeStatement statement) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(label, statement == null ? null : statement.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public CodeLabeledStatement(java.lang.String label) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(label));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CodeLabeledStatement(java.lang.String label, CodeStatement statement) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(label, statement == null ? null : statement.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -133,21 +133,21 @@ public class DataObjectMethodAttribute extends Attribute  {
     public DataObjectMethodAttribute() throws Throwable {
     }
 
-    public DataObjectMethodAttribute(DataObjectMethodType methodType, boolean isDefault) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(methodType == null ? null : methodType.getJCOInstance(), isDefault));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DataObjectMethodAttribute(DataObjectMethodType methodType) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(methodType == null ? null : methodType.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DataObjectMethodAttribute(DataObjectMethodType methodType, boolean isDefault) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(methodType == null ? null : methodType.getJCOInstance(), isDefault));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -147,6 +147,16 @@ public class Attachment extends AttachmentBase  {
         }
     }
 
+    public Attachment(Stream contentStream, java.lang.String name) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(contentStream == null ? null : contentStream.getJCOInstance(), name));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Attachment(Stream contentStream, java.lang.String name, java.lang.String mediaType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -157,11 +167,11 @@ public class Attachment extends AttachmentBase  {
         }
     }
 
-    public Attachment(Stream contentStream, java.lang.String name) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException {
+    public Attachment(java.lang.String fileName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.io.IOException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(contentStream == null ? null : contentStream.getJCOInstance(), name));
+            setJCOInstance((JCObject)classType.NewObject(fileName));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,16 +197,6 @@ public class Attachment extends AttachmentBase  {
         }
     }
 
-    public Attachment(java.lang.String fileName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.io.IOException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(fileName));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
 
     
@@ -213,22 +213,22 @@ public class Attachment extends AttachmentBase  {
         }
     }
 
-    public static Attachment CreateAttachmentFromString(java.lang.String content, java.lang.String name, Encoding contentEncoding, java.lang.String mediaType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.PlatformNotSupportedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
+    public static Attachment CreateAttachmentFromString(java.lang.String content, java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.PlatformNotSupportedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateAttachmentFromString = (JCObject)classType.Invoke("CreateAttachmentFromString", content, name, contentEncoding == null ? null : contentEncoding.getJCOInstance(), mediaType);
+            JCObject objCreateAttachmentFromString = (JCObject)classType.Invoke("CreateAttachmentFromString", content, name);
             return new Attachment(objCreateAttachmentFromString);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Attachment CreateAttachmentFromString(java.lang.String content, java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.PlatformNotSupportedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
+    public static Attachment CreateAttachmentFromString(java.lang.String content, java.lang.String name, Encoding contentEncoding, java.lang.String mediaType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.PlatformNotSupportedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateAttachmentFromString = (JCObject)classType.Invoke("CreateAttachmentFromString", content, name);
+            JCObject objCreateAttachmentFromString = (JCObject)classType.Invoke("CreateAttachmentFromString", content, name, contentEncoding == null ? null : contentEncoding.getJCOInstance(), mediaType);
             return new Attachment(objCreateAttachmentFromString);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

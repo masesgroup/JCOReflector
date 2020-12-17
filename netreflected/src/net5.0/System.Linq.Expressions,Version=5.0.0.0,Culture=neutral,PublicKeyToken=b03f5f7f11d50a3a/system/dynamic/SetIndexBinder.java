@@ -148,22 +148,22 @@ public class SetIndexBinder extends DynamicMetaObjectBinder  {
         }
     }
 
-    public DynamicMetaObject FallbackSetIndex(DynamicMetaObject target, DynamicMetaObject[] indexes, DynamicMetaObject value, DynamicMetaObject errorSuggestion) throws Throwable {
+    public DynamicMetaObject FallbackSetIndex(DynamicMetaObject target, DynamicMetaObject[] indexes, DynamicMetaObject value) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objFallbackSetIndex = (JCObject)classInstance.Invoke("FallbackSetIndex", target == null ? null : target.getJCOInstance(), toObjectFromArray(indexes), value == null ? null : value.getJCOInstance(), errorSuggestion == null ? null : errorSuggestion.getJCOInstance());
+            JCObject objFallbackSetIndex = (JCObject)classInstance.Invoke("FallbackSetIndex", target == null ? null : target.getJCOInstance(), toObjectFromArray(indexes), value == null ? null : value.getJCOInstance());
             return new DynamicMetaObject(objFallbackSetIndex);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DynamicMetaObject FallbackSetIndex(DynamicMetaObject target, DynamicMetaObject[] indexes, DynamicMetaObject value) throws Throwable {
+    public DynamicMetaObject FallbackSetIndex(DynamicMetaObject target, DynamicMetaObject[] indexes, DynamicMetaObject value, DynamicMetaObject errorSuggestion) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objFallbackSetIndex = (JCObject)classInstance.Invoke("FallbackSetIndex", target == null ? null : target.getJCOInstance(), toObjectFromArray(indexes), value == null ? null : value.getJCOInstance());
+            JCObject objFallbackSetIndex = (JCObject)classInstance.Invoke("FallbackSetIndex", target == null ? null : target.getJCOInstance(), toObjectFromArray(indexes), value == null ? null : value.getJCOInstance(), errorSuggestion == null ? null : errorSuggestion.getJCOInstance());
             return new DynamicMetaObject(objFallbackSetIndex);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

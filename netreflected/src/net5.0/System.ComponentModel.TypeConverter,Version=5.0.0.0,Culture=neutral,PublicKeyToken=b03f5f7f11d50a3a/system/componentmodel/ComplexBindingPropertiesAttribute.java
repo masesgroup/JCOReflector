@@ -139,21 +139,21 @@ public class ComplexBindingPropertiesAttribute extends Attribute  {
         }
     }
 
-    public ComplexBindingPropertiesAttribute(java.lang.String dataSource, java.lang.String dataMember) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(dataSource, dataMember));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ComplexBindingPropertiesAttribute(java.lang.String dataSource) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(dataSource));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ComplexBindingPropertiesAttribute(java.lang.String dataSource, java.lang.String dataMember) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(dataSource, dataMember));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

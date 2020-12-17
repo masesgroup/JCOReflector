@@ -132,11 +132,11 @@ public class StringValidator extends ConfigurationValidatorBase  {
     public StringValidator() throws Throwable {
     }
 
-    public StringValidator(int minLength, int maxLength, java.lang.String invalidCharacters) throws Throwable {
+    public StringValidator(int minLength) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(minLength, maxLength, invalidCharacters));
+            setJCOInstance((JCObject)classType.NewObject(minLength));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -152,11 +152,11 @@ public class StringValidator extends ConfigurationValidatorBase  {
         }
     }
 
-    public StringValidator(int minLength) throws Throwable {
+    public StringValidator(int minLength, int maxLength, java.lang.String invalidCharacters) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(minLength));
+            setJCOInstance((JCObject)classType.NewObject(minLength, maxLength, invalidCharacters));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -151,22 +151,22 @@ public class XmlSchemaDatatype extends NetObject  {
         }
     }
 
-    public NetObject ChangeType(NetObject value, NetType targetType, IXmlNamespaceResolver namespaceResolver) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
+    public NetObject ChangeType(NetObject value, NetType targetType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objChangeType = (JCObject)classInstance.Invoke("ChangeType", value == null ? null : value.getJCOInstance(), targetType == null ? null : targetType.getJCOInstance(), namespaceResolver == null ? null : namespaceResolver.getJCOInstance());
+            JCObject objChangeType = (JCObject)classInstance.Invoke("ChangeType", value == null ? null : value.getJCOInstance(), targetType == null ? null : targetType.getJCOInstance());
             return new NetObject(objChangeType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public NetObject ChangeType(NetObject value, NetType targetType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
+    public NetObject ChangeType(NetObject value, NetType targetType, IXmlNamespaceResolver namespaceResolver) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objChangeType = (JCObject)classInstance.Invoke("ChangeType", value == null ? null : value.getJCOInstance(), targetType == null ? null : targetType.getJCOInstance());
+            JCObject objChangeType = (JCObject)classInstance.Invoke("ChangeType", value == null ? null : value.getJCOInstance(), targetType == null ? null : targetType.getJCOInstance(), namespaceResolver == null ? null : namespaceResolver.getJCOInstance());
             return new NetObject(objChangeType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -147,22 +147,22 @@ public class DeleteMemberBinder extends DynamicMetaObjectBinder  {
         }
     }
 
-    public DynamicMetaObject FallbackDeleteMember(DynamicMetaObject target, DynamicMetaObject errorSuggestion) throws Throwable {
+    public DynamicMetaObject FallbackDeleteMember(DynamicMetaObject target) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objFallbackDeleteMember = (JCObject)classInstance.Invoke("FallbackDeleteMember", target == null ? null : target.getJCOInstance(), errorSuggestion == null ? null : errorSuggestion.getJCOInstance());
+            JCObject objFallbackDeleteMember = (JCObject)classInstance.Invoke("FallbackDeleteMember", target == null ? null : target.getJCOInstance());
             return new DynamicMetaObject(objFallbackDeleteMember);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DynamicMetaObject FallbackDeleteMember(DynamicMetaObject target) throws Throwable {
+    public DynamicMetaObject FallbackDeleteMember(DynamicMetaObject target, DynamicMetaObject errorSuggestion) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objFallbackDeleteMember = (JCObject)classInstance.Invoke("FallbackDeleteMember", target == null ? null : target.getJCOInstance());
+            JCObject objFallbackDeleteMember = (JCObject)classInstance.Invoke("FallbackDeleteMember", target == null ? null : target.getJCOInstance(), errorSuggestion == null ? null : errorSuggestion.getJCOInstance());
             return new DynamicMetaObject(objFallbackDeleteMember);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

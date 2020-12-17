@@ -293,7 +293,7 @@ public class TextInfo extends NetObject  {
         }
     }
 
-    public java.lang.String getListSeparator() throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException {
+    public java.lang.String getListSeparator() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

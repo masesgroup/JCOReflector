@@ -146,21 +146,21 @@ public class OrderedDictionary extends NetObject  {
         }
     }
 
-    public OrderedDictionary(int capacity, IEqualityComparer comparer) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(capacity, comparer == null ? null : comparer.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public OrderedDictionary(int capacity) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(capacity));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public OrderedDictionary(int capacity, IEqualityComparer comparer) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(capacity, comparer == null ? null : comparer.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

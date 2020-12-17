@@ -125,9 +125,9 @@ public interface ISymbolReader extends IJCOBridgeReflected {
 
     public ISymbolDocument[] GetDocuments() throws Throwable;
 
-    public ISymbolMethod GetMethod(SymbolToken method, int version) throws Throwable;
-
     public ISymbolMethod GetMethod(SymbolToken method) throws Throwable;
+
+    public ISymbolMethod GetMethod(SymbolToken method, int version) throws Throwable;
 
     public ISymbolMethod GetMethodFromDocumentPosition(ISymbolDocument document, int line, int column) throws Throwable;
 

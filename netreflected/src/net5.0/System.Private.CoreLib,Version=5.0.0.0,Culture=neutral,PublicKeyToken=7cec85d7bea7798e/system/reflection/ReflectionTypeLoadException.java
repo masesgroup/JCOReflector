@@ -151,21 +151,21 @@ public class ReflectionTypeLoadException extends SystemException {
 
     // Constructors section
     
-    public ReflectionTypeLoadException(NetType[] classes, NetException[] exceptions, java.lang.String message) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(toObjectFromArray(classes), toObjectFromArray(exceptions), message));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ReflectionTypeLoadException(NetType[] classes, NetException[] exceptions) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(toObjectFromArray(classes), toObjectFromArray(exceptions)));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ReflectionTypeLoadException(NetType[] classes, NetException[] exceptions, java.lang.String message) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(toObjectFromArray(classes), toObjectFromArray(exceptions), message));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

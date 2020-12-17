@@ -135,21 +135,21 @@ public class Validator extends NetObject  {
     
     // Methods section
     
-    public static void ValidateObject(NetObject instance, ValidationContext validationContext, boolean validateAllProperties) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.componentmodel.dataannotations.ValidationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("ValidateObject", instance == null ? null : instance.getJCOInstance(), validationContext == null ? null : validationContext.getJCOInstance(), validateAllProperties);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static void ValidateObject(NetObject instance, ValidationContext validationContext) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.componentmodel.dataannotations.ValidationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ValidateObject", instance == null ? null : instance.getJCOInstance(), validationContext == null ? null : validationContext.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void ValidateObject(NetObject instance, ValidationContext validationContext, boolean validateAllProperties) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.componentmodel.dataannotations.ValidationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("ValidateObject", instance == null ? null : instance.getJCOInstance(), validationContext == null ? null : validationContext.getJCOInstance(), validateAllProperties);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

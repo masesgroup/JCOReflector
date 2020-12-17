@@ -164,22 +164,22 @@ public class XmlQueryItemSequence extends NetObject  {
     
     // Methods section
     
-    public static XmlQueryItemSequence CreateOrReuse(XmlQueryItemSequence seq, XPathItem item) throws Throwable, system.ArgumentOutOfRangeException {
+    public static XmlQueryItemSequence CreateOrReuse(XmlQueryItemSequence seq) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateOrReuse = (JCObject)classType.Invoke("CreateOrReuse", seq == null ? null : seq.getJCOInstance(), item == null ? null : item.getJCOInstance());
+            JCObject objCreateOrReuse = (JCObject)classType.Invoke("CreateOrReuse", seq == null ? null : seq.getJCOInstance());
             return new XmlQueryItemSequence(objCreateOrReuse);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static XmlQueryItemSequence CreateOrReuse(XmlQueryItemSequence seq) throws Throwable {
+    public static XmlQueryItemSequence CreateOrReuse(XmlQueryItemSequence seq, XPathItem item) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateOrReuse = (JCObject)classType.Invoke("CreateOrReuse", seq == null ? null : seq.getJCOInstance());
+            JCObject objCreateOrReuse = (JCObject)classType.Invoke("CreateOrReuse", seq == null ? null : seq.getJCOInstance(), item == null ? null : item.getJCOInstance());
             return new XmlQueryItemSequence(objCreateOrReuse);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

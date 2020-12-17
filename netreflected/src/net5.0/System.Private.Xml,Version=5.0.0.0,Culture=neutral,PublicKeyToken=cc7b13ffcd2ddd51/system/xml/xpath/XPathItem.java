@@ -138,22 +138,22 @@ public class XPathItem extends NetObject  {
     
     // Methods section
     
-    public NetObject ValueAs(NetType returnType, IXmlNamespaceResolver nsResolver) throws Throwable {
+    public NetObject ValueAs(NetType returnType) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objValueAs = (JCObject)classInstance.Invoke("ValueAs", returnType == null ? null : returnType.getJCOInstance(), nsResolver == null ? null : nsResolver.getJCOInstance());
+            JCObject objValueAs = (JCObject)classInstance.Invoke("ValueAs", returnType == null ? null : returnType.getJCOInstance());
             return new NetObject(objValueAs);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public NetObject ValueAs(NetType returnType) throws Throwable {
+    public NetObject ValueAs(NetType returnType, IXmlNamespaceResolver nsResolver) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objValueAs = (JCObject)classInstance.Invoke("ValueAs", returnType == null ? null : returnType.getJCOInstance());
+            JCObject objValueAs = (JCObject)classInstance.Invoke("ValueAs", returnType == null ? null : returnType.getJCOInstance(), nsResolver == null ? null : nsResolver.getJCOInstance());
             return new NetObject(objValueAs);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

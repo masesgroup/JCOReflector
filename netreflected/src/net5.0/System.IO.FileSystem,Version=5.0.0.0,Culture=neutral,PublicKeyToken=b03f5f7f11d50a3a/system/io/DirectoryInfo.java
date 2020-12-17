@@ -179,6 +179,23 @@ public class DirectoryInfo extends FileSystemInfo  {
         }
     }
 
+    public DirectoryInfo[] GetDirectories(java.lang.String searchPattern) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<DirectoryInfo> resultingArrayList = new ArrayList<DirectoryInfo>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetDirectories", searchPattern);
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new DirectoryInfo(resultingObject));
+            }
+            DirectoryInfo[] resultingArray = new DirectoryInfo[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public DirectoryInfo[] GetDirectories(java.lang.String searchPattern, EnumerationOptions enumerationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -213,16 +230,16 @@ public class DirectoryInfo extends FileSystemInfo  {
         }
     }
 
-    public DirectoryInfo[] GetDirectories(java.lang.String searchPattern) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+    public FileInfo[] GetFiles() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<DirectoryInfo> resultingArrayList = new ArrayList<DirectoryInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetDirectories", searchPattern);
+            ArrayList<FileInfo> resultingArrayList = new ArrayList<FileInfo>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFiles");
             for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new DirectoryInfo(resultingObject));
+			    resultingArrayList.add(new FileInfo(resultingObject));
             }
-            DirectoryInfo[] resultingArray = new DirectoryInfo[resultingArrayList.size()];
+            FileInfo[] resultingArray = new FileInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
         } catch (JCNativeException jcne) {
@@ -230,12 +247,12 @@ public class DirectoryInfo extends FileSystemInfo  {
         }
     }
 
-    public FileInfo[] GetFiles() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+    public FileInfo[] GetFiles(java.lang.String searchPattern) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<FileInfo> resultingArrayList = new ArrayList<FileInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFiles");
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFiles", searchPattern);
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new FileInfo(resultingObject));
             }
@@ -281,16 +298,16 @@ public class DirectoryInfo extends FileSystemInfo  {
         }
     }
 
-    public FileInfo[] GetFiles(java.lang.String searchPattern) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+    public FileSystemInfo[] GetFileSystemInfos() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<FileInfo> resultingArrayList = new ArrayList<FileInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFiles", searchPattern);
+            ArrayList<FileSystemInfo> resultingArrayList = new ArrayList<FileSystemInfo>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFileSystemInfos");
             for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new FileInfo(resultingObject));
+			    resultingArrayList.add(new FileSystemInfo(resultingObject));
             }
-            FileInfo[] resultingArray = new FileInfo[resultingArrayList.size()];
+            FileSystemInfo[] resultingArray = new FileSystemInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
         } catch (JCNativeException jcne) {
@@ -298,12 +315,12 @@ public class DirectoryInfo extends FileSystemInfo  {
         }
     }
 
-    public FileSystemInfo[] GetFileSystemInfos() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+    public FileSystemInfo[] GetFileSystemInfos(java.lang.String searchPattern) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<FileSystemInfo> resultingArrayList = new ArrayList<FileSystemInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFileSystemInfos");
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFileSystemInfos", searchPattern);
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new FileSystemInfo(resultingObject));
             }
@@ -338,23 +355,6 @@ public class DirectoryInfo extends FileSystemInfo  {
         try {
             ArrayList<FileSystemInfo> resultingArrayList = new ArrayList<FileSystemInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFileSystemInfos", searchPattern, searchOption == null ? null : searchOption.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new FileSystemInfo(resultingObject));
-            }
-            FileSystemInfo[] resultingArray = new FileSystemInfo[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public FileSystemInfo[] GetFileSystemInfos(java.lang.String searchPattern) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            ArrayList<FileSystemInfo> resultingArrayList = new ArrayList<FileSystemInfo>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFileSystemInfos", searchPattern);
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new FileSystemInfo(resultingObject));
             }

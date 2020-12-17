@@ -117,9 +117,9 @@ public interface ISelectionService extends IJCOBridgeReflected {
 
     public ICollection GetSelectedComponents() throws Throwable;
 
-    public void SetSelectedComponents(ICollection components, SelectionTypes selectionType) throws Throwable;
-
     public void SetSelectedComponents(ICollection components) throws Throwable;
+
+    public void SetSelectedComponents(ICollection components, SelectionTypes selectionType) throws Throwable;
 
 
     

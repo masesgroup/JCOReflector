@@ -151,21 +151,21 @@ public class WarningException extends SystemException {
 
     // Constructors section
     
-    public WarningException(java.lang.String message, java.lang.String helpUrl, java.lang.String helpTopic) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(message, helpUrl, helpTopic));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public WarningException(java.lang.String message, java.lang.String helpUrl) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(message, helpUrl));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public WarningException(java.lang.String message, java.lang.String helpUrl, java.lang.String helpTopic) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(message, helpUrl, helpTopic));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -140,17 +140,6 @@ public class Extensions extends NetObject  {
     
     // Methods section
     
-    public static NetObject XPathEvaluate(XNode node, java.lang.String expression, IXmlNamespaceResolver resolver) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.xml.xpath.XPathException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objXPathEvaluate = (JCObject)classType.Invoke("XPathEvaluate", node == null ? null : node.getJCOInstance(), expression, resolver == null ? null : resolver.getJCOInstance());
-            return new NetObject(objXPathEvaluate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static NetObject XPathEvaluate(XNode node, java.lang.String expression) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.xml.xpath.XPathException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -162,12 +151,12 @@ public class Extensions extends NetObject  {
         }
     }
 
-    public static XElement XPathSelectElement(XNode node, java.lang.String expression, IXmlNamespaceResolver resolver) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.xml.xpath.XPathException {
+    public static NetObject XPathEvaluate(XNode node, java.lang.String expression, IXmlNamespaceResolver resolver) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.xml.xpath.XPathException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objXPathSelectElement = (JCObject)classType.Invoke("XPathSelectElement", node == null ? null : node.getJCOInstance(), expression, resolver == null ? null : resolver.getJCOInstance());
-            return new XElement(objXPathSelectElement);
+            JCObject objXPathEvaluate = (JCObject)classType.Invoke("XPathEvaluate", node == null ? null : node.getJCOInstance(), expression, resolver == null ? null : resolver.getJCOInstance());
+            return new NetObject(objXPathEvaluate);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,12 +173,12 @@ public class Extensions extends NetObject  {
         }
     }
 
-    public static XPathNavigator CreateNavigator(XNode node, XmlNameTable nameTable) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException {
+    public static XElement XPathSelectElement(XNode node, java.lang.String expression, IXmlNamespaceResolver resolver) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.xml.xpath.XPathException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateNavigator = (JCObject)classType.Invoke("CreateNavigator", node == null ? null : node.getJCOInstance(), nameTable == null ? null : nameTable.getJCOInstance());
-            return new XPathNavigator(objCreateNavigator);
+            JCObject objXPathSelectElement = (JCObject)classType.Invoke("XPathSelectElement", node == null ? null : node.getJCOInstance(), expression, resolver == null ? null : resolver.getJCOInstance());
+            return new XElement(objXPathSelectElement);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,6 +189,17 @@ public class Extensions extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objCreateNavigator = (JCObject)classType.Invoke("CreateNavigator", node == null ? null : node.getJCOInstance());
+            return new XPathNavigator(objCreateNavigator);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static XPathNavigator CreateNavigator(XNode node, XmlNameTable nameTable) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateNavigator = (JCObject)classType.Invoke("CreateNavigator", node == null ? null : node.getJCOInstance(), nameTable == null ? null : nameTable.getJCOInstance());
             return new XPathNavigator(objCreateNavigator);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

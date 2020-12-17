@@ -141,11 +141,11 @@ public class CodeCatchClause extends NetObject  {
         }
     }
 
-    public CodeCatchClause(java.lang.String localName, CodeTypeReference catchExceptionType, CodeStatement... statements) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
+    public CodeCatchClause(java.lang.String localName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(localName, catchExceptionType == null ? null : catchExceptionType.getJCOInstance(), toObjectFromArray(statements)));
+            setJCOInstance((JCObject)classType.NewObject(localName));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -161,11 +161,11 @@ public class CodeCatchClause extends NetObject  {
         }
     }
 
-    public CodeCatchClause(java.lang.String localName) throws Throwable {
+    public CodeCatchClause(java.lang.String localName, CodeTypeReference catchExceptionType, CodeStatement... statements) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(localName));
+            setJCOInstance((JCObject)classType.NewObject(localName, catchExceptionType == null ? null : catchExceptionType.getJCOInstance(), toObjectFromArray(statements)));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -196,7 +196,7 @@ public class TcpListener extends NetObject  {
         }
     }
 
-    public IAsyncResult BeginAcceptTcpClient(AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.MulticastNotSupportedException, system.net.sockets.SocketException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException {
+    public IAsyncResult BeginAcceptTcpClient(AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.MulticastNotSupportedException, system.net.sockets.SocketException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -218,7 +218,7 @@ public class TcpListener extends NetObject  {
         }
     }
 
-    public Socket EndAcceptSocket(IAsyncResult asyncResult) throws Throwable, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.threading.tasks.TaskCanceledException, system.AggregateException {
+    public Socket EndAcceptSocket(IAsyncResult asyncResult) throws Throwable, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.ArgumentNullException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -240,7 +240,7 @@ public class TcpListener extends NetObject  {
         }
     }
 
-    public TcpClient EndAcceptTcpClient(IAsyncResult asyncResult) throws Throwable, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.threading.tasks.TaskCanceledException, system.AggregateException {
+    public TcpClient EndAcceptTcpClient(IAsyncResult asyncResult) throws Throwable, system.InvalidOperationException, system.threading.tasks.TaskSchedulerException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.ArgumentNullException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

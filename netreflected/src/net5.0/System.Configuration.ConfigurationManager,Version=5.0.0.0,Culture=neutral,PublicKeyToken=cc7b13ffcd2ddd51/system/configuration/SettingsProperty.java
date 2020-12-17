@@ -145,21 +145,21 @@ public class SettingsProperty extends NetObject  {
         }
     }
 
-    public SettingsProperty(java.lang.String name, NetType propertyType, SettingsProvider provider, boolean isReadOnly, NetObject defaultValue, SettingsSerializeAs serializeAs, SettingsAttributeDictionary attributes, boolean throwOnErrorDeserializing, boolean throwOnErrorSerializing) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(name, propertyType == null ? null : propertyType.getJCOInstance(), provider == null ? null : provider.getJCOInstance(), isReadOnly, defaultValue == null ? null : defaultValue.getJCOInstance(), serializeAs == null ? null : serializeAs.getJCOInstance(), attributes == null ? null : attributes.getJCOInstance(), throwOnErrorDeserializing, throwOnErrorSerializing));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public SettingsProperty(java.lang.String name) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(name));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SettingsProperty(java.lang.String name, NetType propertyType, SettingsProvider provider, boolean isReadOnly, NetObject defaultValue, SettingsSerializeAs serializeAs, SettingsAttributeDictionary attributes, boolean throwOnErrorDeserializing, boolean throwOnErrorSerializing) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(name, propertyType == null ? null : propertyType.getJCOInstance(), provider == null ? null : provider.getJCOInstance(), isReadOnly, defaultValue == null ? null : defaultValue.getJCOInstance(), serializeAs == null ? null : serializeAs.getJCOInstance(), attributes == null ? null : attributes.getJCOInstance(), throwOnErrorDeserializing, throwOnErrorSerializing));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

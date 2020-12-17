@@ -139,22 +139,22 @@ public class GCHandle extends ValueType  {
     
     // Methods section
     
-    public static GCHandle Alloc(NetObject value, GCHandleType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
+    public static GCHandle Alloc(NetObject value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objAlloc = (JCObject)classType.Invoke("Alloc", value == null ? null : value.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            JCObject objAlloc = (JCObject)classType.Invoke("Alloc", value == null ? null : value.getJCOInstance());
             return new GCHandle(objAlloc);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static GCHandle Alloc(NetObject value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
+    public static GCHandle Alloc(NetObject value, GCHandleType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objAlloc = (JCObject)classType.Invoke("Alloc", value == null ? null : value.getJCOInstance());
+            JCObject objAlloc = (JCObject)classType.Invoke("Alloc", value == null ? null : value.getJCOInstance(), type == null ? null : type.getJCOInstance());
             return new GCHandle(objAlloc);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

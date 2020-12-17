@@ -138,22 +138,22 @@ public class XName extends NetObject  {
     
     // Methods section
     
-    public static XName Get(java.lang.String localName, java.lang.String namespaceName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.OverflowException {
+    public static XName Get(java.lang.String expandedName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGet = (JCObject)classType.Invoke("Get", localName, namespaceName);
+            JCObject objGet = (JCObject)classType.Invoke("Get", expandedName);
             return new XName(objGet);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static XName Get(java.lang.String expandedName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.OverflowException {
+    public static XName Get(java.lang.String localName, java.lang.String namespaceName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGet = (JCObject)classType.Invoke("Get", expandedName);
+            JCObject objGet = (JCObject)classType.Invoke("Get", localName, namespaceName);
             return new XName(objGet);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

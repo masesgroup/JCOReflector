@@ -171,6 +171,16 @@ public class CultureNotFoundException extends ArgumentException {
         }
     }
 
+    public CultureNotFoundException(java.lang.String paramName, java.lang.String message) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(paramName, message));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public CultureNotFoundException(java.lang.String message, java.lang.String invalidCultureName, NetException innerException) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -186,16 +196,6 @@ public class CultureNotFoundException extends ArgumentException {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(paramName, invalidCultureName, message));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CultureNotFoundException(java.lang.String paramName, java.lang.String message) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(paramName, message));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

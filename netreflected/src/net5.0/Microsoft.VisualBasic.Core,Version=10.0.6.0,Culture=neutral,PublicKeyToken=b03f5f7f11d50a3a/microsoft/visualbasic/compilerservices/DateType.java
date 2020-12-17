@@ -149,22 +149,22 @@ public class DateType extends NetObject  {
         }
     }
 
-    public static DateTime FromString(java.lang.String Value, CultureInfo culture) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OverflowException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.InvalidCastException {
+    public static DateTime FromString(java.lang.String Value) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.OverflowException, system.TypeInitializationException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.InvalidCastException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objFromString = (JCObject)classType.Invoke("FromString", Value, culture == null ? null : culture.getJCOInstance());
+            JCObject objFromString = (JCObject)classType.Invoke("FromString", Value);
             return new DateTime(objFromString);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static DateTime FromString(java.lang.String Value) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.OverflowException, system.TypeInitializationException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.InvalidCastException {
+    public static DateTime FromString(java.lang.String Value, CultureInfo culture) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OverflowException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.InvalidCastException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objFromString = (JCObject)classType.Invoke("FromString", Value);
+            JCObject objFromString = (JCObject)classType.Invoke("FromString", Value, culture == null ? null : culture.getJCOInstance());
             return new DateTime(objFromString);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -133,21 +133,21 @@ public class RegexCompilationInfo extends NetObject  {
     public RegexCompilationInfo() throws Throwable {
     }
 
-    public RegexCompilationInfo(java.lang.String pattern, RegexOptions options, java.lang.String name, java.lang.String fullnamespace, boolean ispublic, TimeSpan matchTimeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(pattern, options == null ? null : options.getJCOInstance(), name, fullnamespace, ispublic, matchTimeout == null ? null : matchTimeout.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public RegexCompilationInfo(java.lang.String pattern, RegexOptions options, java.lang.String name, java.lang.String fullnamespace, boolean ispublic) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(pattern, options == null ? null : options.getJCOInstance(), name, fullnamespace, ispublic));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public RegexCompilationInfo(java.lang.String pattern, RegexOptions options, java.lang.String name, java.lang.String fullnamespace, boolean ispublic, TimeSpan matchTimeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(pattern, options == null ? null : options.getJCOInstance(), name, fullnamespace, ispublic, matchTimeout == null ? null : matchTimeout.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

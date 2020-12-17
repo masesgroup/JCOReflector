@@ -149,16 +149,6 @@ public class FileSystemWatcher extends Component  {
         }
     }
 
-    public FileSystemWatcher(java.lang.String path, java.lang.String filter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.InvalidOperationException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(path, filter));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public FileSystemWatcher(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
@@ -169,26 +159,36 @@ public class FileSystemWatcher extends Component  {
         }
     }
 
+    public FileSystemWatcher(java.lang.String path, java.lang.String filter) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.InvalidOperationException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(path, filter));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Methods section
     
-    public WaitForChangedResult WaitForChanged(WatcherChangeTypes changeType, int timeout) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.io.FileNotFoundException, system.OutOfMemoryException, system.threading.tasks.TaskSchedulerException, system.OperationCanceledException, system.NotSupportedException {
+    public WaitForChangedResult WaitForChanged(WatcherChangeTypes changeType) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.io.FileNotFoundException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.threading.tasks.TaskSchedulerException, system.OperationCanceledException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objWaitForChanged = (JCObject)classInstance.Invoke("WaitForChanged", changeType == null ? null : changeType.getJCOInstance(), timeout);
+            JCObject objWaitForChanged = (JCObject)classInstance.Invoke("WaitForChanged", changeType == null ? null : changeType.getJCOInstance());
             return new WaitForChangedResult(objWaitForChanged);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public WaitForChangedResult WaitForChanged(WatcherChangeTypes changeType) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.io.FileNotFoundException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.threading.tasks.TaskSchedulerException, system.OperationCanceledException, system.NotSupportedException {
+    public WaitForChangedResult WaitForChanged(WatcherChangeTypes changeType, int timeout) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.io.FileNotFoundException, system.OutOfMemoryException, system.threading.tasks.TaskSchedulerException, system.OperationCanceledException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objWaitForChanged = (JCObject)classInstance.Invoke("WaitForChanged", changeType == null ? null : changeType.getJCOInstance());
+            JCObject objWaitForChanged = (JCObject)classInstance.Invoke("WaitForChanged", changeType == null ? null : changeType.getJCOInstance(), timeout);
             return new WaitForChangedResult(objWaitForChanged);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -139,11 +139,11 @@ public class Regex extends NetObject  {
     public Regex() throws Throwable {
     }
 
-    public Regex(java.lang.String pattern, RegexOptions options, TimeSpan matchTimeout) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.FormatException, system.ArgumentException, system.text.regularexpressions.RegexParseException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException {
+    public Regex(java.lang.String pattern) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.FormatException, system.ArgumentException, system.text.regularexpressions.RegexParseException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(pattern, options == null ? null : options.getJCOInstance(), matchTimeout == null ? null : matchTimeout.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(pattern));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -159,11 +159,11 @@ public class Regex extends NetObject  {
         }
     }
 
-    public Regex(java.lang.String pattern) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.FormatException, system.ArgumentException, system.text.regularexpressions.RegexParseException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException {
+    public Regex(java.lang.String pattern, RegexOptions options, TimeSpan matchTimeout) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.FormatException, system.ArgumentException, system.text.regularexpressions.RegexParseException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(pattern));
+            setJCOInstance((JCObject)classType.NewObject(pattern, options == null ? null : options.getJCOInstance(), matchTimeout == null ? null : matchTimeout.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,31 +174,21 @@ public class Regex extends NetObject  {
     
     // Methods section
     
+    public boolean IsMatch(java.lang.String input) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("IsMatch", input);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean IsMatch(java.lang.String input, int startat) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("IsMatch", input, startat);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean IsMatch(java.lang.String input, java.lang.String pattern, RegexOptions options, TimeSpan matchTimeout) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.text.regularexpressions.RegexParseException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("IsMatch", input, pattern, options == null ? null : options.getJCOInstance(), matchTimeout == null ? null : matchTimeout.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean IsMatch(java.lang.String input, java.lang.String pattern, RegexOptions options) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.text.regularexpressions.RegexParseException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("IsMatch", input, pattern, options == null ? null : options.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,11 +204,21 @@ public class Regex extends NetObject  {
         }
     }
 
-    public boolean IsMatch(java.lang.String input) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean IsMatch(java.lang.String input, java.lang.String pattern, RegexOptions options) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.text.regularexpressions.RegexParseException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Invoke("IsMatch", input);
+            return (boolean)classType.Invoke("IsMatch", input, pattern, options == null ? null : options.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean IsMatch(java.lang.String input, java.lang.String pattern, RegexOptions options, TimeSpan matchTimeout) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.text.regularexpressions.RegexParseException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("IsMatch", input, pattern, options == null ? null : options.getJCOInstance(), matchTimeout == null ? null : matchTimeout.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,11 +273,11 @@ public class Regex extends NetObject  {
         }
     }
 
-    public java.lang.String Replace(java.lang.String input, java.lang.String replacement, int count, int startat) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.FormatException, system.text.regularexpressions.RegexParseException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
+    public java.lang.String Replace(java.lang.String input, java.lang.String replacement) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.text.regularexpressions.RegexParseException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Invoke("Replace", input, replacement, count, startat);
+            return (java.lang.String)classInstance.Invoke("Replace", input, replacement);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,21 +293,11 @@ public class Regex extends NetObject  {
         }
     }
 
-    public static java.lang.String Replace(java.lang.String input, java.lang.String pattern, java.lang.String replacement, RegexOptions options, TimeSpan matchTimeout) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.text.regularexpressions.RegexParseException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String Replace(java.lang.String input, java.lang.String replacement, int count, int startat) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.FormatException, system.text.regularexpressions.RegexParseException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classType.Invoke("Replace", input, pattern, replacement, options == null ? null : options.getJCOInstance(), matchTimeout == null ? null : matchTimeout.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String Replace(java.lang.String input, java.lang.String pattern, java.lang.String replacement, RegexOptions options) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.text.regularexpressions.RegexParseException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("Replace", input, pattern, replacement, options == null ? null : options.getJCOInstance());
+            return (java.lang.String)classInstance.Invoke("Replace", input, replacement, count, startat);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -323,21 +313,21 @@ public class Regex extends NetObject  {
         }
     }
 
-    public static java.lang.String Replace(java.lang.String input, java.lang.String pattern, MatchEvaluator evaluator, RegexOptions options, TimeSpan matchTimeout) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.text.regularexpressions.RegexParseException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
+    public static java.lang.String Replace(java.lang.String input, java.lang.String pattern, java.lang.String replacement, RegexOptions options) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.text.regularexpressions.RegexParseException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Invoke("Replace", input, pattern, evaluator, options == null ? null : options.getJCOInstance(), matchTimeout == null ? null : matchTimeout.getJCOInstance());
+            return (java.lang.String)classType.Invoke("Replace", input, pattern, replacement, options == null ? null : options.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static java.lang.String Replace(java.lang.String input, java.lang.String pattern, MatchEvaluator evaluator, RegexOptions options) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.text.regularexpressions.RegexParseException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
+    public static java.lang.String Replace(java.lang.String input, java.lang.String pattern, java.lang.String replacement, RegexOptions options, TimeSpan matchTimeout) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.text.regularexpressions.RegexParseException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Invoke("Replace", input, pattern, evaluator, options == null ? null : options.getJCOInstance());
+            return (java.lang.String)classType.Invoke("Replace", input, pattern, replacement, options == null ? null : options.getJCOInstance(), matchTimeout == null ? null : matchTimeout.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -353,21 +343,31 @@ public class Regex extends NetObject  {
         }
     }
 
-    public java.lang.String Replace(java.lang.String input, java.lang.String replacement) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.text.regularexpressions.RegexParseException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String Replace(java.lang.String input, java.lang.String pattern, MatchEvaluator evaluator, RegexOptions options) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.text.regularexpressions.RegexParseException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classInstance.Invoke("Replace", input, replacement);
+            return (java.lang.String)classType.Invoke("Replace", input, pattern, evaluator, options == null ? null : options.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public java.lang.String Replace(java.lang.String input, MatchEvaluator evaluator, int count, int startat) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
+    public static java.lang.String Replace(java.lang.String input, java.lang.String pattern, MatchEvaluator evaluator, RegexOptions options, TimeSpan matchTimeout) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.text.regularexpressions.RegexParseException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("Replace", input, pattern, evaluator, options == null ? null : options.getJCOInstance(), matchTimeout == null ? null : matchTimeout.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String Replace(java.lang.String input, MatchEvaluator evaluator) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Invoke("Replace", input, evaluator, count, startat);
+            return (java.lang.String)classInstance.Invoke("Replace", input, evaluator);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -383,11 +383,11 @@ public class Regex extends NetObject  {
         }
     }
 
-    public java.lang.String Replace(java.lang.String input, MatchEvaluator evaluator) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
+    public java.lang.String Replace(java.lang.String input, MatchEvaluator evaluator, int count, int startat) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Invoke("Replace", input, evaluator);
+            return (java.lang.String)classInstance.Invoke("Replace", input, evaluator, count, startat);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -422,12 +422,12 @@ public class Regex extends NetObject  {
         }
     }
 
-    public java.lang.String[] Split(java.lang.String input, int count, int startat) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
+    public java.lang.String[] Split(java.lang.String input) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("Split", input, count, startat);
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("Split", input);
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -460,31 +460,12 @@ public class Regex extends NetObject  {
         }
     }
 
-    public static java.lang.String[] Split(java.lang.String input, java.lang.String pattern, RegexOptions options, TimeSpan matchTimeout) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.text.regularexpressions.RegexParseException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public java.lang.String[] Split(java.lang.String input, int count, int startat) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("Split", input, pattern, options == null ? null : options.getJCOInstance(), matchTimeout == null ? null : matchTimeout.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];
-            for(int indexSplit = 0; indexSplit < resultingArrayList.size(); indexSplit++ ) {
-				resultingArray[indexSplit] = (java.lang.String)resultingArrayList.get(indexSplit);
-            }
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String[] Split(java.lang.String input, java.lang.String pattern, RegexOptions options) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.text.regularexpressions.RegexParseException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("Split", input, pattern, options == null ? null : options.getJCOInstance());
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("Split", input, count, startat);
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -517,12 +498,12 @@ public class Regex extends NetObject  {
         }
     }
 
-    public java.lang.String[] Split(java.lang.String input) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static java.lang.String[] Split(java.lang.String input, java.lang.String pattern, RegexOptions options) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.text.regularexpressions.RegexParseException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("Split", input);
+            JCObject resultingObjects = (JCObject)classType.Invoke("Split", input, pattern, options == null ? null : options.getJCOInstance());
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -536,11 +517,30 @@ public class Regex extends NetObject  {
         }
     }
 
-    public Match Match(java.lang.String input, int beginning, int length) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
+    public static java.lang.String[] Split(java.lang.String input, java.lang.String pattern, RegexOptions options, TimeSpan matchTimeout) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.text.regularexpressions.RegexParseException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classType.Invoke("Split", input, pattern, options == null ? null : options.getJCOInstance(), matchTimeout == null ? null : matchTimeout.getJCOInstance());
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];
+            for(int indexSplit = 0; indexSplit < resultingArrayList.size(); indexSplit++ ) {
+				resultingArray[indexSplit] = (java.lang.String)resultingArrayList.get(indexSplit);
+            }
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Match Match(java.lang.String input) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objMatch = (JCObject)classInstance.Invoke("Match", input, beginning, length);
+            JCObject objMatch = (JCObject)classInstance.Invoke("Match", input);
             return new Match(objMatch);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -558,22 +558,11 @@ public class Regex extends NetObject  {
         }
     }
 
-    public static Match Match(java.lang.String input, java.lang.String pattern, RegexOptions options, TimeSpan matchTimeout) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.text.regularexpressions.RegexParseException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public Match Match(java.lang.String input, int beginning, int length) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objMatch = (JCObject)classType.Invoke("Match", input, pattern, options == null ? null : options.getJCOInstance(), matchTimeout == null ? null : matchTimeout.getJCOInstance());
-            return new Match(objMatch);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Match Match(java.lang.String input, java.lang.String pattern, RegexOptions options) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.text.regularexpressions.RegexParseException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objMatch = (JCObject)classType.Invoke("Match", input, pattern, options == null ? null : options.getJCOInstance());
+            JCObject objMatch = (JCObject)classInstance.Invoke("Match", input, beginning, length);
             return new Match(objMatch);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -591,12 +580,34 @@ public class Regex extends NetObject  {
         }
     }
 
-    public Match Match(java.lang.String input) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
+    public static Match Match(java.lang.String input, java.lang.String pattern, RegexOptions options) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.text.regularexpressions.RegexParseException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objMatch = (JCObject)classType.Invoke("Match", input, pattern, options == null ? null : options.getJCOInstance());
+            return new Match(objMatch);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Match Match(java.lang.String input, java.lang.String pattern, RegexOptions options, TimeSpan matchTimeout) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.text.regularexpressions.RegexParseException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException, system.text.regularexpressions.RegexMatchTimeoutException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objMatch = (JCObject)classType.Invoke("Match", input, pattern, options == null ? null : options.getJCOInstance(), matchTimeout == null ? null : matchTimeout.getJCOInstance());
+            return new Match(objMatch);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MatchCollection Matches(java.lang.String input) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objMatch = (JCObject)classInstance.Invoke("Match", input);
-            return new Match(objMatch);
+            JCObject objMatches = (JCObject)classInstance.Invoke("Matches", input);
+            return new MatchCollection(objMatches);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -607,28 +618,6 @@ public class Regex extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objMatches = (JCObject)classInstance.Invoke("Matches", input, startat);
-            return new MatchCollection(objMatches);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static MatchCollection Matches(java.lang.String input, java.lang.String pattern, RegexOptions options, TimeSpan matchTimeout) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.text.regularexpressions.RegexParseException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objMatches = (JCObject)classType.Invoke("Matches", input, pattern, options == null ? null : options.getJCOInstance(), matchTimeout == null ? null : matchTimeout.getJCOInstance());
-            return new MatchCollection(objMatches);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static MatchCollection Matches(java.lang.String input, java.lang.String pattern, RegexOptions options) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.text.regularexpressions.RegexParseException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objMatches = (JCObject)classType.Invoke("Matches", input, pattern, options == null ? null : options.getJCOInstance());
             return new MatchCollection(objMatches);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -646,22 +635,33 @@ public class Regex extends NetObject  {
         }
     }
 
-    public MatchCollection Matches(java.lang.String input) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static MatchCollection Matches(java.lang.String input, java.lang.String pattern, RegexOptions options) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.text.regularexpressions.RegexParseException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objMatches = (JCObject)classInstance.Invoke("Matches", input);
+            JCObject objMatches = (JCObject)classType.Invoke("Matches", input, pattern, options == null ? null : options.getJCOInstance());
             return new MatchCollection(objMatches);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void CompileToAssembly(RegexCompilationInfo[] regexinfos, AssemblyName assemblyname, CustomAttributeBuilder[] attributes, java.lang.String resourceFile) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
+    public static MatchCollection Matches(java.lang.String input, java.lang.String pattern, RegexOptions options, TimeSpan matchTimeout) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.text.regularexpressions.RegexParseException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("CompileToAssembly", toObjectFromArray(regexinfos), assemblyname == null ? null : assemblyname.getJCOInstance(), toObjectFromArray(attributes), resourceFile);
+            JCObject objMatches = (JCObject)classType.Invoke("Matches", input, pattern, options == null ? null : options.getJCOInstance(), matchTimeout == null ? null : matchTimeout.getJCOInstance());
+            return new MatchCollection(objMatches);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void CompileToAssembly(RegexCompilationInfo[] regexinfos, AssemblyName assemblyname) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("CompileToAssembly", toObjectFromArray(regexinfos), assemblyname == null ? null : assemblyname.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -677,11 +677,11 @@ public class Regex extends NetObject  {
         }
     }
 
-    public static void CompileToAssembly(RegexCompilationInfo[] regexinfos, AssemblyName assemblyname) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static void CompileToAssembly(RegexCompilationInfo[] regexinfos, AssemblyName assemblyname, CustomAttributeBuilder[] attributes, java.lang.String resourceFile) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("CompileToAssembly", toObjectFromArray(regexinfos), assemblyname == null ? null : assemblyname.getJCOInstance());
+            classType.Invoke("CompileToAssembly", toObjectFromArray(regexinfos), assemblyname == null ? null : assemblyname.getJCOInstance(), toObjectFromArray(attributes), resourceFile);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

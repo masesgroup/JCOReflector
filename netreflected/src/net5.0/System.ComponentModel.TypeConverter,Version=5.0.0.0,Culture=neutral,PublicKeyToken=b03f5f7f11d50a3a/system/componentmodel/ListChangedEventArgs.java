@@ -134,6 +134,16 @@ public class ListChangedEventArgs extends EventArgs  {
     public ListChangedEventArgs() throws Throwable {
     }
 
+    public ListChangedEventArgs(ListChangedType listChangedType, int newIndex) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(listChangedType == null ? null : listChangedType.getJCOInstance(), newIndex));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ListChangedEventArgs(ListChangedType listChangedType, int newIndex, int oldIndex) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -149,16 +159,6 @@ public class ListChangedEventArgs extends EventArgs  {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(listChangedType == null ? null : listChangedType.getJCOInstance(), newIndex, propDesc == null ? null : propDesc.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ListChangedEventArgs(ListChangedType listChangedType, int newIndex) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(listChangedType == null ? null : listChangedType.getJCOInstance(), newIndex));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

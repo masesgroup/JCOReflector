@@ -125,22 +125,22 @@ public class ITypeResolutionServiceImplementation extends NetObject implements I
 
     // Methods section
     
-    public Assembly GetAssembly(AssemblyName name, boolean throwOnError) throws Throwable {
+    public Assembly GetAssembly(AssemblyName name) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetAssembly = (JCObject)classInstance.Invoke("GetAssembly", name == null ? null : name.getJCOInstance(), throwOnError);
+            JCObject objGetAssembly = (JCObject)classInstance.Invoke("GetAssembly", name == null ? null : name.getJCOInstance());
             return new Assembly(objGetAssembly);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public Assembly GetAssembly(AssemblyName name) throws Throwable {
+    public Assembly GetAssembly(AssemblyName name, boolean throwOnError) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetAssembly = (JCObject)classInstance.Invoke("GetAssembly", name == null ? null : name.getJCOInstance());
+            JCObject objGetAssembly = (JCObject)classInstance.Invoke("GetAssembly", name == null ? null : name.getJCOInstance(), throwOnError);
             return new Assembly(objGetAssembly);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -157,11 +157,11 @@ public class ITypeResolutionServiceImplementation extends NetObject implements I
         }
     }
 
-    public NetType GetType(java.lang.String name, boolean throwOnError, boolean ignoreCase) throws Throwable {
+    public NetType GetType(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetType = (JCObject)classInstance.Invoke("GetType", name, throwOnError, ignoreCase);
+            JCObject objGetType = (JCObject)classInstance.Invoke("GetType", name);
             return new NetType(objGetType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -179,11 +179,11 @@ public class ITypeResolutionServiceImplementation extends NetObject implements I
         }
     }
 
-    public NetType GetType(java.lang.String name) throws Throwable {
+    public NetType GetType(java.lang.String name, boolean throwOnError, boolean ignoreCase) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetType = (JCObject)classInstance.Invoke("GetType", name);
+            JCObject objGetType = (JCObject)classInstance.Invoke("GetType", name, throwOnError, ignoreCase);
             return new NetType(objGetType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

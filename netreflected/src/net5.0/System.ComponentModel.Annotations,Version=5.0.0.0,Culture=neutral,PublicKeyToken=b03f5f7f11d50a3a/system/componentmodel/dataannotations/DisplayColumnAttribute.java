@@ -132,11 +132,11 @@ public class DisplayColumnAttribute extends Attribute  {
     public DisplayColumnAttribute() throws Throwable {
     }
 
-    public DisplayColumnAttribute(java.lang.String displayColumn, java.lang.String sortColumn, boolean sortDescending) throws Throwable {
+    public DisplayColumnAttribute(java.lang.String displayColumn) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(displayColumn, sortColumn, sortDescending));
+            setJCOInstance((JCObject)classType.NewObject(displayColumn));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -152,11 +152,11 @@ public class DisplayColumnAttribute extends Attribute  {
         }
     }
 
-    public DisplayColumnAttribute(java.lang.String displayColumn) throws Throwable {
+    public DisplayColumnAttribute(java.lang.String displayColumn, java.lang.String sortColumn, boolean sortDescending) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(displayColumn));
+            setJCOInstance((JCObject)classType.NewObject(displayColumn, sortColumn, sortDescending));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

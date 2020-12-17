@@ -148,22 +148,22 @@ public class GetIndexBinder extends DynamicMetaObjectBinder  {
         }
     }
 
-    public DynamicMetaObject FallbackGetIndex(DynamicMetaObject target, DynamicMetaObject[] indexes, DynamicMetaObject errorSuggestion) throws Throwable {
+    public DynamicMetaObject FallbackGetIndex(DynamicMetaObject target, DynamicMetaObject[] indexes) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objFallbackGetIndex = (JCObject)classInstance.Invoke("FallbackGetIndex", target == null ? null : target.getJCOInstance(), toObjectFromArray(indexes), errorSuggestion == null ? null : errorSuggestion.getJCOInstance());
+            JCObject objFallbackGetIndex = (JCObject)classInstance.Invoke("FallbackGetIndex", target == null ? null : target.getJCOInstance(), toObjectFromArray(indexes));
             return new DynamicMetaObject(objFallbackGetIndex);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DynamicMetaObject FallbackGetIndex(DynamicMetaObject target, DynamicMetaObject[] indexes) throws Throwable {
+    public DynamicMetaObject FallbackGetIndex(DynamicMetaObject target, DynamicMetaObject[] indexes, DynamicMetaObject errorSuggestion) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objFallbackGetIndex = (JCObject)classInstance.Invoke("FallbackGetIndex", target == null ? null : target.getJCOInstance(), toObjectFromArray(indexes));
+            JCObject objFallbackGetIndex = (JCObject)classInstance.Invoke("FallbackGetIndex", target == null ? null : target.getJCOInstance(), toObjectFromArray(indexes), errorSuggestion == null ? null : errorSuggestion.getJCOInstance());
             return new DynamicMetaObject(objFallbackGetIndex);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -155,22 +155,22 @@ public class XPathExpression extends NetObject  {
         }
     }
 
-    public static XPathExpression Compile(java.lang.String xpath, IXmlNamespaceResolver nsResolver) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.xml.xpath.XPathException {
+    public static XPathExpression Compile(java.lang.String xpath) throws Throwable, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.xml.xpath.XPathException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCompile = (JCObject)classType.Invoke("Compile", xpath, nsResolver == null ? null : nsResolver.getJCOInstance());
+            JCObject objCompile = (JCObject)classType.Invoke("Compile", xpath);
             return new XPathExpression(objCompile);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static XPathExpression Compile(java.lang.String xpath) throws Throwable, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.xml.xpath.XPathException {
+    public static XPathExpression Compile(java.lang.String xpath, IXmlNamespaceResolver nsResolver) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.xml.xpath.XPathException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCompile = (JCObject)classType.Invoke("Compile", xpath);
+            JCObject objCompile = (JCObject)classType.Invoke("Compile", xpath, nsResolver == null ? null : nsResolver.getJCOInstance());
             return new XPathExpression(objCompile);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

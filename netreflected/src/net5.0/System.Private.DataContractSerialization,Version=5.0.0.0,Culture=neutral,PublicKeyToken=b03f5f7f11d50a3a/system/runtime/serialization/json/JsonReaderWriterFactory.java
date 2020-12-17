@@ -228,33 +228,11 @@ public class JsonReaderWriterFactory extends NetObject  {
         }
     }
 
-    public static XmlDictionaryWriter CreateJsonWriter(Stream stream, Encoding encoding, boolean ownsStream, boolean indent, java.lang.String indentChars) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.xml.XmlException, system.FormatException {
+    public static XmlDictionaryWriter CreateJsonWriter(Stream stream) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.xml.XmlException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateJsonWriter = (JCObject)classType.Invoke("CreateJsonWriter", stream == null ? null : stream.getJCOInstance(), encoding == null ? null : encoding.getJCOInstance(), ownsStream, indent, indentChars);
-            return new XmlDictionaryWriter(objCreateJsonWriter);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static XmlDictionaryWriter CreateJsonWriter(Stream stream, Encoding encoding, boolean ownsStream, boolean indent) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.xml.XmlException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateJsonWriter = (JCObject)classType.Invoke("CreateJsonWriter", stream == null ? null : stream.getJCOInstance(), encoding == null ? null : encoding.getJCOInstance(), ownsStream, indent);
-            return new XmlDictionaryWriter(objCreateJsonWriter);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static XmlDictionaryWriter CreateJsonWriter(Stream stream, Encoding encoding, boolean ownsStream) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.xml.XmlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateJsonWriter = (JCObject)classType.Invoke("CreateJsonWriter", stream == null ? null : stream.getJCOInstance(), encoding == null ? null : encoding.getJCOInstance(), ownsStream);
+            JCObject objCreateJsonWriter = (JCObject)classType.Invoke("CreateJsonWriter", stream == null ? null : stream.getJCOInstance());
             return new XmlDictionaryWriter(objCreateJsonWriter);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -272,11 +250,33 @@ public class JsonReaderWriterFactory extends NetObject  {
         }
     }
 
-    public static XmlDictionaryWriter CreateJsonWriter(Stream stream) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.xml.XmlException {
+    public static XmlDictionaryWriter CreateJsonWriter(Stream stream, Encoding encoding, boolean ownsStream) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.xml.XmlException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateJsonWriter = (JCObject)classType.Invoke("CreateJsonWriter", stream == null ? null : stream.getJCOInstance());
+            JCObject objCreateJsonWriter = (JCObject)classType.Invoke("CreateJsonWriter", stream == null ? null : stream.getJCOInstance(), encoding == null ? null : encoding.getJCOInstance(), ownsStream);
+            return new XmlDictionaryWriter(objCreateJsonWriter);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static XmlDictionaryWriter CreateJsonWriter(Stream stream, Encoding encoding, boolean ownsStream, boolean indent) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.xml.XmlException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateJsonWriter = (JCObject)classType.Invoke("CreateJsonWriter", stream == null ? null : stream.getJCOInstance(), encoding == null ? null : encoding.getJCOInstance(), ownsStream, indent);
+            return new XmlDictionaryWriter(objCreateJsonWriter);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static XmlDictionaryWriter CreateJsonWriter(Stream stream, Encoding encoding, boolean ownsStream, boolean indent, java.lang.String indentChars) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.xml.XmlException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateJsonWriter = (JCObject)classType.Invoke("CreateJsonWriter", stream == null ? null : stream.getJCOInstance(), encoding == null ? null : encoding.getJCOInstance(), ownsStream, indent, indentChars);
             return new XmlDictionaryWriter(objCreateJsonWriter);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -182,22 +182,22 @@ public class PropertyDescriptor extends MemberDescriptor  {
         }
     }
 
-    public PropertyDescriptorCollection GetChildProperties(NetObject instance, Attribute[] filter) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
+    public PropertyDescriptorCollection GetChildProperties(NetObject instance) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetChildProperties = (JCObject)classInstance.Invoke("GetChildProperties", instance == null ? null : instance.getJCOInstance(), toObjectFromArray(filter));
+            JCObject objGetChildProperties = (JCObject)classInstance.Invoke("GetChildProperties", instance == null ? null : instance.getJCOInstance());
             return new PropertyDescriptorCollection(objGetChildProperties);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public PropertyDescriptorCollection GetChildProperties(NetObject instance) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
+    public PropertyDescriptorCollection GetChildProperties(NetObject instance, Attribute[] filter) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetChildProperties = (JCObject)classInstance.Invoke("GetChildProperties", instance == null ? null : instance.getJCOInstance());
+            JCObject objGetChildProperties = (JCObject)classInstance.Invoke("GetChildProperties", instance == null ? null : instance.getJCOInstance(), toObjectFromArray(filter));
             return new PropertyDescriptorCollection(objGetChildProperties);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

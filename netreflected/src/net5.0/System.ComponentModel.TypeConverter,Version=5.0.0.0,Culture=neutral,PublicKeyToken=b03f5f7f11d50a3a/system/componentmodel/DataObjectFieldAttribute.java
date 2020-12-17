@@ -132,21 +132,11 @@ public class DataObjectFieldAttribute extends Attribute  {
     public DataObjectFieldAttribute() throws Throwable {
     }
 
-    public DataObjectFieldAttribute(boolean primaryKey, boolean isIdentity, boolean isNullable, int length) throws Throwable {
+    public DataObjectFieldAttribute(boolean primaryKey) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(primaryKey, isIdentity, isNullable, length));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DataObjectFieldAttribute(boolean primaryKey, boolean isIdentity, boolean isNullable) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(primaryKey, isIdentity, isNullable));
+            setJCOInstance((JCObject)classType.NewObject(primaryKey));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -162,11 +152,21 @@ public class DataObjectFieldAttribute extends Attribute  {
         }
     }
 
-    public DataObjectFieldAttribute(boolean primaryKey) throws Throwable {
+    public DataObjectFieldAttribute(boolean primaryKey, boolean isIdentity, boolean isNullable) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(primaryKey));
+            setJCOInstance((JCObject)classType.NewObject(primaryKey, isIdentity, isNullable));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DataObjectFieldAttribute(boolean primaryKey, boolean isIdentity, boolean isNullable, int length) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(primaryKey, isIdentity, isNullable, length));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

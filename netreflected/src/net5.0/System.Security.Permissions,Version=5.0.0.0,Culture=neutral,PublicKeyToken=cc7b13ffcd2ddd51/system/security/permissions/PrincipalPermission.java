@@ -145,21 +145,21 @@ public class PrincipalPermission extends NetObject  {
         }
     }
 
-    public PrincipalPermission(java.lang.String name, java.lang.String role, boolean isAuthenticated) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(name, role, isAuthenticated));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public PrincipalPermission(java.lang.String name, java.lang.String role) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(name, role));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PrincipalPermission(java.lang.String name, java.lang.String role, boolean isAuthenticated) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(name, role, isAuthenticated));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

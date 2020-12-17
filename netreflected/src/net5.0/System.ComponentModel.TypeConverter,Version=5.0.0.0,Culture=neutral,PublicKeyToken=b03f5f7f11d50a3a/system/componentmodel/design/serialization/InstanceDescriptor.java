@@ -134,21 +134,21 @@ public class InstanceDescriptor extends NetObject  {
     public InstanceDescriptor() throws Throwable {
     }
 
-    public InstanceDescriptor(MemberInfo member, ICollection arguments, boolean isComplete) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(member == null ? null : member.getJCOInstance(), arguments == null ? null : arguments.getJCOInstance(), isComplete));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public InstanceDescriptor(MemberInfo member, ICollection arguments) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(member == null ? null : member.getJCOInstance(), arguments == null ? null : arguments.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public InstanceDescriptor(MemberInfo member, ICollection arguments, boolean isComplete) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(member == null ? null : member.getJCOInstance(), arguments == null ? null : arguments.getJCOInstance(), isComplete));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

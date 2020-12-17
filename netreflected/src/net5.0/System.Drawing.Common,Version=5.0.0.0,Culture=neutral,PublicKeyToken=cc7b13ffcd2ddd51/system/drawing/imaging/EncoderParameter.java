@@ -133,16 +133,6 @@ public class EncoderParameter extends NetObject implements AutoCloseable {
     public EncoderParameter() throws Throwable {
     }
 
-    public EncoderParameter(Encoder encoder, byte value, boolean undefined) throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(encoder == null ? null : encoder.getJCOInstance(), value, undefined));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public EncoderParameter(Encoder encoder, byte value) throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -153,7 +143,7 @@ public class EncoderParameter extends NetObject implements AutoCloseable {
         }
     }
 
-    public EncoderParameter(Encoder encoder, byte[] value, boolean undefined) throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.FormatException, system.ArgumentException {
+    public EncoderParameter(Encoder encoder, byte value, boolean undefined) throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -168,6 +158,16 @@ public class EncoderParameter extends NetObject implements AutoCloseable {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(encoder == null ? null : encoder.getJCOInstance(), value));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public EncoderParameter(Encoder encoder, byte[] value, boolean undefined) throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.FormatException, system.ArgumentException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(encoder == null ? null : encoder.getJCOInstance(), value, undefined));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -193,11 +193,11 @@ public class EncoderParameter extends NetObject implements AutoCloseable {
         }
     }
 
-    public EncoderParameter(Encoder encoder, int numerator1, int demoninator1, int numerator2, int demoninator2) throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException {
+    public EncoderParameter(Encoder encoder, int numerator, int denominator) throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(encoder == null ? null : encoder.getJCOInstance(), numerator1, demoninator1, numerator2, demoninator2));
+            setJCOInstance((JCObject)classType.NewObject(encoder == null ? null : encoder.getJCOInstance(), numerator, denominator));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,7 +213,17 @@ public class EncoderParameter extends NetObject implements AutoCloseable {
         }
     }
 
-    public EncoderParameter(Encoder encoder, int numerator, int denominator) throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException {
+    public EncoderParameter(Encoder encoder, int numerator1, int demoninator1, int numerator2, int demoninator2) throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(encoder == null ? null : encoder.getJCOInstance(), numerator1, demoninator1, numerator2, demoninator2));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public EncoderParameter(Encoder encoder, int[] numerator, int[] denominator) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -233,11 +243,11 @@ public class EncoderParameter extends NetObject implements AutoCloseable {
         }
     }
 
-    public EncoderParameter(Encoder encoder, int[] numerator, int[] denominator) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.OutOfMemoryException {
+    public EncoderParameter(Encoder encoder, long value) throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(encoder == null ? null : encoder.getJCOInstance(), numerator, denominator));
+            setJCOInstance((JCObject)classType.NewObject(encoder == null ? null : encoder.getJCOInstance(), value));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,7 +263,7 @@ public class EncoderParameter extends NetObject implements AutoCloseable {
         }
     }
 
-    public EncoderParameter(Encoder encoder, long value) throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException {
+    public EncoderParameter(Encoder encoder, long[] value) throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -268,16 +278,6 @@ public class EncoderParameter extends NetObject implements AutoCloseable {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(encoder == null ? null : encoder.getJCOInstance(), rangebegin, rangeend));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public EncoderParameter(Encoder encoder, long[] value) throws Throwable, system.PlatformNotSupportedException, system.OutOfMemoryException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(encoder == null ? null : encoder.getJCOInstance(), value));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

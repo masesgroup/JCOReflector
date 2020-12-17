@@ -222,17 +222,6 @@ public class Process extends Component  {
         }
     }
 
-    public static Process GetProcessById(int processId, java.lang.String machineName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.componentmodel.Win32Exception, system.MissingMemberException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetProcessById = (JCObject)classType.Invoke("GetProcessById", processId, machineName);
-            return new Process(objGetProcessById);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static Process GetProcessById(int processId) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.componentmodel.Win32Exception, system.RankException, system.ArrayTypeMismatchException, system.MissingMemberException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -244,11 +233,44 @@ public class Process extends Component  {
         }
     }
 
+    public static Process GetProcessById(int processId, java.lang.String machineName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.componentmodel.Win32Exception, system.MissingMemberException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetProcessById = (JCObject)classType.Invoke("GetProcessById", processId, machineName);
+            return new Process(objGetProcessById);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static Process Start(ProcessStartInfo startInfo) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.threading.SynchronizationLockException, system.AggregateException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.security.cryptography.CryptographicException, system.FormatException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objStart = (JCObject)classType.Invoke("Start", startInfo == null ? null : startInfo.getJCOInstance());
+            return new Process(objStart);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Process Start(java.lang.String fileName) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ObjectDisposedException, system.AggregateException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.ArgumentException, system.security.cryptography.CryptographicException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objStart = (JCObject)classType.Invoke("Start", fileName);
+            return new Process(objStart);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Process Start(java.lang.String fileName, java.lang.String arguments) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ObjectDisposedException, system.AggregateException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.ArgumentException, system.security.cryptography.CryptographicException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objStart = (JCObject)classType.Invoke("Start", fileName, arguments);
             return new Process(objStart);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -271,28 +293,6 @@ public class Process extends Component  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objStart = (JCObject)classType.Invoke("Start", fileName, arguments, userName, password == null ? null : password.getJCOInstance(), domain);
-            return new Process(objStart);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Process Start(java.lang.String fileName, java.lang.String arguments) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ObjectDisposedException, system.AggregateException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.ArgumentException, system.security.cryptography.CryptographicException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objStart = (JCObject)classType.Invoke("Start", fileName, arguments);
-            return new Process(objStart);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Process Start(java.lang.String fileName) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ObjectDisposedException, system.AggregateException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.ArgumentException, system.security.cryptography.CryptographicException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objStart = (JCObject)classType.Invoke("Start", fileName);
             return new Process(objStart);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -333,12 +333,12 @@ public class Process extends Component  {
         }
     }
 
-    public static Process[] GetProcessesByName(java.lang.String processName, java.lang.String machineName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MissingMemberException, system.ObjectDisposedException, system.io.IOException, system.componentmodel.Win32Exception, system.threading.AbandonedMutexException {
+    public static Process[] GetProcessesByName(java.lang.String processName) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.MissingMemberException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             ArrayList<Process> resultingArrayList = new ArrayList<Process>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetProcessesByName", processName, machineName);
+            JCObject resultingObjects = (JCObject)classType.Invoke("GetProcessesByName", processName);
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Process(resultingObject));
             }
@@ -350,12 +350,12 @@ public class Process extends Component  {
         }
     }
 
-    public static Process[] GetProcessesByName(java.lang.String processName) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.MissingMemberException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public static Process[] GetProcessesByName(java.lang.String processName, java.lang.String machineName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.MissingMemberException, system.ObjectDisposedException, system.io.IOException, system.componentmodel.Win32Exception, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             ArrayList<Process> resultingArrayList = new ArrayList<Process>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetProcessesByName", processName);
+            JCObject resultingObjects = (JCObject)classType.Invoke("GetProcessesByName", processName, machineName);
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Process(resultingObject));
             }

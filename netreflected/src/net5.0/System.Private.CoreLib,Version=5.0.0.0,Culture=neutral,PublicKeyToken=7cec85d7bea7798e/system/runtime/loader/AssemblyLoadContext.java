@@ -183,22 +183,22 @@ public class AssemblyLoadContext extends NetObject  {
         }
     }
 
-    public Assembly LoadFromStream(Stream assembly, Stream assemblySymbols) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.BadImageFormatException {
+    public Assembly LoadFromStream(Stream assembly) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objLoadFromStream = (JCObject)classInstance.Invoke("LoadFromStream", assembly == null ? null : assembly.getJCOInstance(), assemblySymbols == null ? null : assemblySymbols.getJCOInstance());
+            JCObject objLoadFromStream = (JCObject)classInstance.Invoke("LoadFromStream", assembly == null ? null : assembly.getJCOInstance());
             return new Assembly(objLoadFromStream);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public Assembly LoadFromStream(Stream assembly) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.BadImageFormatException {
+    public Assembly LoadFromStream(Stream assembly, Stream assemblySymbols) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objLoadFromStream = (JCObject)classInstance.Invoke("LoadFromStream", assembly == null ? null : assembly.getJCOInstance());
+            JCObject objLoadFromStream = (JCObject)classInstance.Invoke("LoadFromStream", assembly == null ? null : assembly.getJCOInstance(), assemblySymbols == null ? null : assemblySymbols.getJCOInstance());
             return new Assembly(objLoadFromStream);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

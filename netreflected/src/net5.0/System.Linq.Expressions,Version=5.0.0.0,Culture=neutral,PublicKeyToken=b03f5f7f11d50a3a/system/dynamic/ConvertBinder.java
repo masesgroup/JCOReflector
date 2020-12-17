@@ -147,22 +147,22 @@ public class ConvertBinder extends DynamicMetaObjectBinder  {
         }
     }
 
-    public DynamicMetaObject FallbackConvert(DynamicMetaObject target, DynamicMetaObject errorSuggestion) throws Throwable {
+    public DynamicMetaObject FallbackConvert(DynamicMetaObject target) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objFallbackConvert = (JCObject)classInstance.Invoke("FallbackConvert", target == null ? null : target.getJCOInstance(), errorSuggestion == null ? null : errorSuggestion.getJCOInstance());
+            JCObject objFallbackConvert = (JCObject)classInstance.Invoke("FallbackConvert", target == null ? null : target.getJCOInstance());
             return new DynamicMetaObject(objFallbackConvert);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DynamicMetaObject FallbackConvert(DynamicMetaObject target) throws Throwable {
+    public DynamicMetaObject FallbackConvert(DynamicMetaObject target, DynamicMetaObject errorSuggestion) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objFallbackConvert = (JCObject)classInstance.Invoke("FallbackConvert", target == null ? null : target.getJCOInstance());
+            JCObject objFallbackConvert = (JCObject)classInstance.Invoke("FallbackConvert", target == null ? null : target.getJCOInstance(), errorSuggestion == null ? null : errorSuggestion.getJCOInstance());
             return new DynamicMetaObject(objFallbackConvert);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -120,9 +120,9 @@ public interface IComNativeDescriptorHandler extends IJCOBridgeReflected {
 
     public EventDescriptor GetDefaultEvent(NetObject component) throws Throwable;
 
-    public EventDescriptorCollection GetEvents(NetObject component, Attribute[] attributes) throws Throwable;
-
     public EventDescriptorCollection GetEvents(NetObject component) throws Throwable;
+
+    public EventDescriptorCollection GetEvents(NetObject component, Attribute[] attributes) throws Throwable;
 
     public PropertyDescriptor GetDefaultProperty(NetObject component) throws Throwable;
 

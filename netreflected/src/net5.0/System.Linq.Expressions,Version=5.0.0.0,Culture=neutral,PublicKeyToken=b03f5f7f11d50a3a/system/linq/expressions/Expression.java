@@ -178,17 +178,6 @@ public class Expression extends NetObject  {
     
     // Methods section
     
-    public static BinaryExpression Add(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objAdd = (JCObject)classType.Invoke("Add", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
-            return new BinaryExpression(objAdd);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static BinaryExpression Add(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -200,11 +189,22 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression AddAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static BinaryExpression Add(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objAddAssign = (JCObject)classType.Invoke("AddAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            JCObject objAdd = (JCObject)classType.Invoke("Add", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            return new BinaryExpression(objAdd);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static BinaryExpression AddAssign(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objAddAssign = (JCObject)classType.Invoke("AddAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
             return new BinaryExpression(objAddAssign);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -222,22 +222,22 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression AddAssign(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static BinaryExpression AddAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objAddAssign = (JCObject)classType.Invoke("AddAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objAddAssign = (JCObject)classType.Invoke("AddAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
             return new BinaryExpression(objAddAssign);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static BinaryExpression AddAssignChecked(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static BinaryExpression AddAssignChecked(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.FormatException, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objAddAssignChecked = (JCObject)classType.Invoke("AddAssignChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            JCObject objAddAssignChecked = (JCObject)classType.Invoke("AddAssignChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
             return new BinaryExpression(objAddAssignChecked);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -255,23 +255,12 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression AddAssignChecked(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.FormatException, system.PlatformNotSupportedException, system.NotSupportedException {
+    public static BinaryExpression AddAssignChecked(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objAddAssignChecked = (JCObject)classType.Invoke("AddAssignChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objAddAssignChecked = (JCObject)classType.Invoke("AddAssignChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
             return new BinaryExpression(objAddAssignChecked);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static BinaryExpression AddChecked(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objAddChecked = (JCObject)classType.Invoke("AddChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
-            return new BinaryExpression(objAddChecked);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,12 +277,12 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression And(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static BinaryExpression AddChecked(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objAnd = (JCObject)classType.Invoke("And", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
-            return new BinaryExpression(objAnd);
+            JCObject objAddChecked = (JCObject)classType.Invoke("AddChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            return new BinaryExpression(objAddChecked);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,12 +299,12 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression AndAlso(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static BinaryExpression And(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objAndAlso = (JCObject)classType.Invoke("AndAlso", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
-            return new BinaryExpression(objAndAlso);
+            JCObject objAnd = (JCObject)classType.Invoke("And", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            return new BinaryExpression(objAnd);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -332,11 +321,22 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression AndAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static BinaryExpression AndAlso(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objAndAssign = (JCObject)classType.Invoke("AndAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            JCObject objAndAlso = (JCObject)classType.Invoke("AndAlso", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            return new BinaryExpression(objAndAlso);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static BinaryExpression AndAssign(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objAndAssign = (JCObject)classType.Invoke("AndAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
             return new BinaryExpression(objAndAssign);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -354,11 +354,11 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression AndAssign(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static BinaryExpression AndAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objAndAssign = (JCObject)classType.Invoke("AndAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objAndAssign = (JCObject)classType.Invoke("AndAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
             return new BinaryExpression(objAndAssign);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -387,17 +387,6 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression Coalesce(Expression left, Expression right, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCoalesce = (JCObject)classType.Invoke("Coalesce", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
-            return new BinaryExpression(objCoalesce);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static BinaryExpression Coalesce(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -409,12 +398,12 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression Divide(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static BinaryExpression Coalesce(Expression left, Expression right, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objDivide = (JCObject)classType.Invoke("Divide", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
-            return new BinaryExpression(objDivide);
+            JCObject objCoalesce = (JCObject)classType.Invoke("Coalesce", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            return new BinaryExpression(objCoalesce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -431,11 +420,22 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression DivideAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static BinaryExpression Divide(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objDivideAssign = (JCObject)classType.Invoke("DivideAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            JCObject objDivide = (JCObject)classType.Invoke("Divide", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            return new BinaryExpression(objDivide);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static BinaryExpression DivideAssign(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objDivideAssign = (JCObject)classType.Invoke("DivideAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
             return new BinaryExpression(objDivideAssign);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -453,23 +453,12 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression DivideAssign(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static BinaryExpression DivideAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objDivideAssign = (JCObject)classType.Invoke("DivideAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objDivideAssign = (JCObject)classType.Invoke("DivideAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
             return new BinaryExpression(objDivideAssign);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static BinaryExpression Equal(Expression left, Expression right, boolean liftToNull, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objEqual = (JCObject)classType.Invoke("Equal", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), liftToNull, method == null ? null : method.getJCOInstance());
-            return new BinaryExpression(objEqual);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -486,12 +475,12 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression ExclusiveOr(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static BinaryExpression Equal(Expression left, Expression right, boolean liftToNull, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objExclusiveOr = (JCObject)classType.Invoke("ExclusiveOr", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
-            return new BinaryExpression(objExclusiveOr);
+            JCObject objEqual = (JCObject)classType.Invoke("Equal", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), liftToNull, method == null ? null : method.getJCOInstance());
+            return new BinaryExpression(objEqual);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -508,11 +497,22 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression ExclusiveOrAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static BinaryExpression ExclusiveOr(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objExclusiveOrAssign = (JCObject)classType.Invoke("ExclusiveOrAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            JCObject objExclusiveOr = (JCObject)classType.Invoke("ExclusiveOr", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            return new BinaryExpression(objExclusiveOr);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static BinaryExpression ExclusiveOrAssign(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objExclusiveOrAssign = (JCObject)classType.Invoke("ExclusiveOrAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
             return new BinaryExpression(objExclusiveOrAssign);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -530,23 +530,12 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression ExclusiveOrAssign(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static BinaryExpression ExclusiveOrAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objExclusiveOrAssign = (JCObject)classType.Invoke("ExclusiveOrAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objExclusiveOrAssign = (JCObject)classType.Invoke("ExclusiveOrAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
             return new BinaryExpression(objExclusiveOrAssign);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static BinaryExpression GreaterThan(Expression left, Expression right, boolean liftToNull, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGreaterThan = (JCObject)classType.Invoke("GreaterThan", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), liftToNull, method == null ? null : method.getJCOInstance());
-            return new BinaryExpression(objGreaterThan);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -563,12 +552,12 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression GreaterThanOrEqual(Expression left, Expression right, boolean liftToNull, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static BinaryExpression GreaterThan(Expression left, Expression right, boolean liftToNull, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGreaterThanOrEqual = (JCObject)classType.Invoke("GreaterThanOrEqual", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), liftToNull, method == null ? null : method.getJCOInstance());
-            return new BinaryExpression(objGreaterThanOrEqual);
+            JCObject objGreaterThan = (JCObject)classType.Invoke("GreaterThan", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), liftToNull, method == null ? null : method.getJCOInstance());
+            return new BinaryExpression(objGreaterThan);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -585,12 +574,12 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression LeftShift(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static BinaryExpression GreaterThanOrEqual(Expression left, Expression right, boolean liftToNull, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objLeftShift = (JCObject)classType.Invoke("LeftShift", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
-            return new BinaryExpression(objLeftShift);
+            JCObject objGreaterThanOrEqual = (JCObject)classType.Invoke("GreaterThanOrEqual", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), liftToNull, method == null ? null : method.getJCOInstance());
+            return new BinaryExpression(objGreaterThanOrEqual);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -607,11 +596,22 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression LeftShiftAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static BinaryExpression LeftShift(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objLeftShiftAssign = (JCObject)classType.Invoke("LeftShiftAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            JCObject objLeftShift = (JCObject)classType.Invoke("LeftShift", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            return new BinaryExpression(objLeftShift);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static BinaryExpression LeftShiftAssign(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objLeftShiftAssign = (JCObject)classType.Invoke("LeftShiftAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
             return new BinaryExpression(objLeftShiftAssign);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -629,23 +629,12 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression LeftShiftAssign(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static BinaryExpression LeftShiftAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objLeftShiftAssign = (JCObject)classType.Invoke("LeftShiftAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objLeftShiftAssign = (JCObject)classType.Invoke("LeftShiftAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
             return new BinaryExpression(objLeftShiftAssign);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static BinaryExpression LessThan(Expression left, Expression right, boolean liftToNull, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objLessThan = (JCObject)classType.Invoke("LessThan", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), liftToNull, method == null ? null : method.getJCOInstance());
-            return new BinaryExpression(objLessThan);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -662,12 +651,12 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression LessThanOrEqual(Expression left, Expression right, boolean liftToNull, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static BinaryExpression LessThan(Expression left, Expression right, boolean liftToNull, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objLessThanOrEqual = (JCObject)classType.Invoke("LessThanOrEqual", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), liftToNull, method == null ? null : method.getJCOInstance());
-            return new BinaryExpression(objLessThanOrEqual);
+            JCObject objLessThan = (JCObject)classType.Invoke("LessThan", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), liftToNull, method == null ? null : method.getJCOInstance());
+            return new BinaryExpression(objLessThan);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -684,11 +673,22 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression MakeBinary(ExpressionType binaryType, Expression left, Expression right, boolean liftToNull, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static BinaryExpression LessThanOrEqual(Expression left, Expression right, boolean liftToNull, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objMakeBinary = (JCObject)classType.Invoke("MakeBinary", binaryType == null ? null : binaryType.getJCOInstance(), left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), liftToNull, method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            JCObject objLessThanOrEqual = (JCObject)classType.Invoke("LessThanOrEqual", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), liftToNull, method == null ? null : method.getJCOInstance());
+            return new BinaryExpression(objLessThanOrEqual);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static BinaryExpression MakeBinary(ExpressionType binaryType, Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.FormatException, system.PlatformNotSupportedException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objMakeBinary = (JCObject)classType.Invoke("MakeBinary", binaryType == null ? null : binaryType.getJCOInstance(), left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
             return new BinaryExpression(objMakeBinary);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -706,23 +706,12 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression MakeBinary(ExpressionType binaryType, Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.FormatException, system.PlatformNotSupportedException, system.NotSupportedException {
+    public static BinaryExpression MakeBinary(ExpressionType binaryType, Expression left, Expression right, boolean liftToNull, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objMakeBinary = (JCObject)classType.Invoke("MakeBinary", binaryType == null ? null : binaryType.getJCOInstance(), left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objMakeBinary = (JCObject)classType.Invoke("MakeBinary", binaryType == null ? null : binaryType.getJCOInstance(), left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), liftToNull, method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
             return new BinaryExpression(objMakeBinary);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static BinaryExpression Modulo(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objModulo = (JCObject)classType.Invoke("Modulo", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
-            return new BinaryExpression(objModulo);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -739,11 +728,22 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression ModuloAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static BinaryExpression Modulo(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objModuloAssign = (JCObject)classType.Invoke("ModuloAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            JCObject objModulo = (JCObject)classType.Invoke("Modulo", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            return new BinaryExpression(objModulo);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static BinaryExpression ModuloAssign(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objModuloAssign = (JCObject)classType.Invoke("ModuloAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
             return new BinaryExpression(objModuloAssign);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -761,23 +761,12 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression ModuloAssign(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static BinaryExpression ModuloAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objModuloAssign = (JCObject)classType.Invoke("ModuloAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objModuloAssign = (JCObject)classType.Invoke("ModuloAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
             return new BinaryExpression(objModuloAssign);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static BinaryExpression Multiply(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objMultiply = (JCObject)classType.Invoke("Multiply", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
-            return new BinaryExpression(objMultiply);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -794,11 +783,22 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression MultiplyAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static BinaryExpression Multiply(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objMultiplyAssign = (JCObject)classType.Invoke("MultiplyAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            JCObject objMultiply = (JCObject)classType.Invoke("Multiply", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            return new BinaryExpression(objMultiply);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static BinaryExpression MultiplyAssign(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objMultiplyAssign = (JCObject)classType.Invoke("MultiplyAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
             return new BinaryExpression(objMultiplyAssign);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -816,22 +816,22 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression MultiplyAssign(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static BinaryExpression MultiplyAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objMultiplyAssign = (JCObject)classType.Invoke("MultiplyAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objMultiplyAssign = (JCObject)classType.Invoke("MultiplyAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
             return new BinaryExpression(objMultiplyAssign);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static BinaryExpression MultiplyAssignChecked(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static BinaryExpression MultiplyAssignChecked(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.FormatException, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objMultiplyAssignChecked = (JCObject)classType.Invoke("MultiplyAssignChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            JCObject objMultiplyAssignChecked = (JCObject)classType.Invoke("MultiplyAssignChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
             return new BinaryExpression(objMultiplyAssignChecked);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -849,23 +849,12 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression MultiplyAssignChecked(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.FormatException, system.PlatformNotSupportedException, system.NotSupportedException {
+    public static BinaryExpression MultiplyAssignChecked(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objMultiplyAssignChecked = (JCObject)classType.Invoke("MultiplyAssignChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objMultiplyAssignChecked = (JCObject)classType.Invoke("MultiplyAssignChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
             return new BinaryExpression(objMultiplyAssignChecked);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static BinaryExpression MultiplyChecked(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objMultiplyChecked = (JCObject)classType.Invoke("MultiplyChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
-            return new BinaryExpression(objMultiplyChecked);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -882,12 +871,12 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression NotEqual(Expression left, Expression right, boolean liftToNull, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static BinaryExpression MultiplyChecked(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objNotEqual = (JCObject)classType.Invoke("NotEqual", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), liftToNull, method == null ? null : method.getJCOInstance());
-            return new BinaryExpression(objNotEqual);
+            JCObject objMultiplyChecked = (JCObject)classType.Invoke("MultiplyChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            return new BinaryExpression(objMultiplyChecked);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -904,12 +893,12 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression Or(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static BinaryExpression NotEqual(Expression left, Expression right, boolean liftToNull, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objOr = (JCObject)classType.Invoke("Or", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
-            return new BinaryExpression(objOr);
+            JCObject objNotEqual = (JCObject)classType.Invoke("NotEqual", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), liftToNull, method == null ? null : method.getJCOInstance());
+            return new BinaryExpression(objNotEqual);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -926,11 +915,22 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression OrAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static BinaryExpression Or(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objOrAssign = (JCObject)classType.Invoke("OrAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            JCObject objOr = (JCObject)classType.Invoke("Or", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            return new BinaryExpression(objOr);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static BinaryExpression OrAssign(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objOrAssign = (JCObject)classType.Invoke("OrAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
             return new BinaryExpression(objOrAssign);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -948,23 +948,12 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression OrAssign(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static BinaryExpression OrAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objOrAssign = (JCObject)classType.Invoke("OrAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objOrAssign = (JCObject)classType.Invoke("OrAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
             return new BinaryExpression(objOrAssign);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static BinaryExpression OrElse(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objOrElse = (JCObject)classType.Invoke("OrElse", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
-            return new BinaryExpression(objOrElse);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -981,12 +970,12 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression Power(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static BinaryExpression OrElse(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objPower = (JCObject)classType.Invoke("Power", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
-            return new BinaryExpression(objPower);
+            JCObject objOrElse = (JCObject)classType.Invoke("OrElse", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            return new BinaryExpression(objOrElse);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1003,11 +992,22 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression PowerAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static BinaryExpression Power(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objPowerAssign = (JCObject)classType.Invoke("PowerAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            JCObject objPower = (JCObject)classType.Invoke("Power", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            return new BinaryExpression(objPower);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static BinaryExpression PowerAssign(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objPowerAssign = (JCObject)classType.Invoke("PowerAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
             return new BinaryExpression(objPowerAssign);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1025,11 +1025,11 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression PowerAssign(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static BinaryExpression PowerAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objPowerAssign = (JCObject)classType.Invoke("PowerAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objPowerAssign = (JCObject)classType.Invoke("PowerAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
             return new BinaryExpression(objPowerAssign);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1058,17 +1058,6 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression RightShift(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objRightShift = (JCObject)classType.Invoke("RightShift", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
-            return new BinaryExpression(objRightShift);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static BinaryExpression RightShift(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -1080,11 +1069,22 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression RightShiftAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static BinaryExpression RightShift(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objRightShiftAssign = (JCObject)classType.Invoke("RightShiftAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            JCObject objRightShift = (JCObject)classType.Invoke("RightShift", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            return new BinaryExpression(objRightShift);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static BinaryExpression RightShiftAssign(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objRightShiftAssign = (JCObject)classType.Invoke("RightShiftAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
             return new BinaryExpression(objRightShiftAssign);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1102,23 +1102,12 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression RightShiftAssign(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static BinaryExpression RightShiftAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objRightShiftAssign = (JCObject)classType.Invoke("RightShiftAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objRightShiftAssign = (JCObject)classType.Invoke("RightShiftAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
             return new BinaryExpression(objRightShiftAssign);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static BinaryExpression Subtract(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objSubtract = (JCObject)classType.Invoke("Subtract", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
-            return new BinaryExpression(objSubtract);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1135,11 +1124,22 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression SubtractAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static BinaryExpression Subtract(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objSubtractAssign = (JCObject)classType.Invoke("SubtractAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            JCObject objSubtract = (JCObject)classType.Invoke("Subtract", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            return new BinaryExpression(objSubtract);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static BinaryExpression SubtractAssign(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objSubtractAssign = (JCObject)classType.Invoke("SubtractAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
             return new BinaryExpression(objSubtractAssign);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1157,22 +1157,22 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression SubtractAssign(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static BinaryExpression SubtractAssign(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objSubtractAssign = (JCObject)classType.Invoke("SubtractAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objSubtractAssign = (JCObject)classType.Invoke("SubtractAssign", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
             return new BinaryExpression(objSubtractAssign);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static BinaryExpression SubtractAssignChecked(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static BinaryExpression SubtractAssignChecked(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.FormatException, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objSubtractAssignChecked = (JCObject)classType.Invoke("SubtractAssignChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
+            JCObject objSubtractAssignChecked = (JCObject)classType.Invoke("SubtractAssignChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
             return new BinaryExpression(objSubtractAssignChecked);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1190,23 +1190,12 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BinaryExpression SubtractAssignChecked(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.FormatException, system.PlatformNotSupportedException, system.NotSupportedException {
+    public static BinaryExpression SubtractAssignChecked(Expression left, Expression right, MethodInfo method, LambdaExpression conversion) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objSubtractAssignChecked = (JCObject)classType.Invoke("SubtractAssignChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance());
+            JCObject objSubtractAssignChecked = (JCObject)classType.Invoke("SubtractAssignChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance(), conversion == null ? null : conversion.getJCOInstance());
             return new BinaryExpression(objSubtractAssignChecked);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static BinaryExpression SubtractChecked(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objSubtractChecked = (JCObject)classType.Invoke("SubtractChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
-            return new BinaryExpression(objSubtractChecked);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1223,22 +1212,22 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BlockExpression Block(Expression arg0, Expression arg1, Expression arg2, Expression arg3, Expression arg4) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
+    public static BinaryExpression SubtractChecked(Expression left, Expression right, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objBlock = (JCObject)classType.Invoke("Block", arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance(), arg3 == null ? null : arg3.getJCOInstance(), arg4 == null ? null : arg4.getJCOInstance());
-            return new BlockExpression(objBlock);
+            JCObject objSubtractChecked = (JCObject)classType.Invoke("SubtractChecked", left == null ? null : left.getJCOInstance(), right == null ? null : right.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            return new BinaryExpression(objSubtractChecked);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static BlockExpression Block(Expression arg0, Expression arg1, Expression arg2, Expression arg3) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
+    public static BlockExpression Block(Expression arg0, Expression arg1) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objBlock = (JCObject)classType.Invoke("Block", arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance(), arg3 == null ? null : arg3.getJCOInstance());
+            JCObject objBlock = (JCObject)classType.Invoke("Block", arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance());
             return new BlockExpression(objBlock);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1256,11 +1245,22 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static BlockExpression Block(Expression arg0, Expression arg1) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
+    public static BlockExpression Block(Expression arg0, Expression arg1, Expression arg2, Expression arg3) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objBlock = (JCObject)classType.Invoke("Block", arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance());
+            JCObject objBlock = (JCObject)classType.Invoke("Block", arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance(), arg3 == null ? null : arg3.getJCOInstance());
+            return new BlockExpression(objBlock);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static BlockExpression Block(Expression arg0, Expression arg1, Expression arg2, Expression arg3, Expression arg4) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objBlock = (JCObject)classType.Invoke("Block", arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance(), arg3 == null ? null : arg3.getJCOInstance(), arg4 == null ? null : arg4.getJCOInstance());
             return new BlockExpression(objBlock);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1289,17 +1289,6 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static CatchBlock Catch(ParameterExpression variable, Expression body, Expression filter) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCatch = (JCObject)classType.Invoke("Catch", variable == null ? null : variable.getJCOInstance(), body == null ? null : body.getJCOInstance(), filter == null ? null : filter.getJCOInstance());
-            return new CatchBlock(objCatch);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static CatchBlock Catch(ParameterExpression variable, Expression body) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -1311,11 +1300,11 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static CatchBlock Catch(NetType type, Expression body, Expression filter) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
+    public static CatchBlock Catch(ParameterExpression variable, Expression body, Expression filter) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCatch = (JCObject)classType.Invoke("Catch", type == null ? null : type.getJCOInstance(), body == null ? null : body.getJCOInstance(), filter == null ? null : filter.getJCOInstance());
+            JCObject objCatch = (JCObject)classType.Invoke("Catch", variable == null ? null : variable.getJCOInstance(), body == null ? null : body.getJCOInstance(), filter == null ? null : filter.getJCOInstance());
             return new CatchBlock(objCatch);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1333,6 +1322,17 @@ public class Expression extends NetObject  {
         }
     }
 
+    public static CatchBlock Catch(NetType type, Expression body, Expression filter) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCatch = (JCObject)classType.Invoke("Catch", type == null ? null : type.getJCOInstance(), body == null ? null : body.getJCOInstance(), filter == null ? null : filter.getJCOInstance());
+            return new CatchBlock(objCatch);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static CatchBlock MakeCatchBlock(NetType type, ParameterExpression variable, Expression body, Expression filter) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -1344,22 +1344,22 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static ConditionalExpression Condition(Expression test, Expression ifTrue, Expression ifFalse, NetType type) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
+    public static ConditionalExpression Condition(Expression test, Expression ifTrue, Expression ifFalse) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCondition = (JCObject)classType.Invoke("Condition", test == null ? null : test.getJCOInstance(), ifTrue == null ? null : ifTrue.getJCOInstance(), ifFalse == null ? null : ifFalse.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            JCObject objCondition = (JCObject)classType.Invoke("Condition", test == null ? null : test.getJCOInstance(), ifTrue == null ? null : ifTrue.getJCOInstance(), ifFalse == null ? null : ifFalse.getJCOInstance());
             return new ConditionalExpression(objCondition);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static ConditionalExpression Condition(Expression test, Expression ifTrue, Expression ifFalse) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
+    public static ConditionalExpression Condition(Expression test, Expression ifTrue, Expression ifFalse, NetType type) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCondition = (JCObject)classType.Invoke("Condition", test == null ? null : test.getJCOInstance(), ifTrue == null ? null : ifTrue.getJCOInstance(), ifFalse == null ? null : ifFalse.getJCOInstance());
+            JCObject objCondition = (JCObject)classType.Invoke("Condition", test == null ? null : test.getJCOInstance(), ifTrue == null ? null : ifTrue.getJCOInstance(), ifFalse == null ? null : ifFalse.getJCOInstance(), type == null ? null : type.getJCOInstance());
             return new ConditionalExpression(objCondition);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1388,22 +1388,22 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static ConstantExpression Constant(NetObject value, NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
+    public static ConstantExpression Constant(NetObject value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objConstant = (JCObject)classType.Invoke("Constant", value == null ? null : value.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            JCObject objConstant = (JCObject)classType.Invoke("Constant", value == null ? null : value.getJCOInstance());
             return new ConstantExpression(objConstant);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static ConstantExpression Constant(NetObject value) throws Throwable {
+    public static ConstantExpression Constant(NetObject value, NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objConstant = (JCObject)classType.Invoke("Constant", value == null ? null : value.getJCOInstance());
+            JCObject objConstant = (JCObject)classType.Invoke("Constant", value == null ? null : value.getJCOInstance(), type == null ? null : type.getJCOInstance());
             return new ConstantExpression(objConstant);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1454,22 +1454,11 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static DynamicExpression Dynamic(CallSiteBinder binder, NetType returnType, Expression arg0, Expression arg1, Expression arg2, Expression arg3) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException {
+    public static DynamicExpression Dynamic(CallSiteBinder binder, NetType returnType, Expression arg0) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objDynamic = (JCObject)classType.Invoke("Dynamic", binder == null ? null : binder.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance(), arg3 == null ? null : arg3.getJCOInstance());
-            return new DynamicExpression(objDynamic);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DynamicExpression Dynamic(CallSiteBinder binder, NetType returnType, Expression arg0, Expression arg1, Expression arg2) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objDynamic = (JCObject)classType.Invoke("Dynamic", binder == null ? null : binder.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance());
+            JCObject objDynamic = (JCObject)classType.Invoke("Dynamic", binder == null ? null : binder.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance());
             return new DynamicExpression(objDynamic);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1487,11 +1476,22 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static DynamicExpression Dynamic(CallSiteBinder binder, NetType returnType, Expression arg0) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException {
+    public static DynamicExpression Dynamic(CallSiteBinder binder, NetType returnType, Expression arg0, Expression arg1, Expression arg2) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objDynamic = (JCObject)classType.Invoke("Dynamic", binder == null ? null : binder.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance());
+            JCObject objDynamic = (JCObject)classType.Invoke("Dynamic", binder == null ? null : binder.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance());
+            return new DynamicExpression(objDynamic);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DynamicExpression Dynamic(CallSiteBinder binder, NetType returnType, Expression arg0, Expression arg1, Expression arg2, Expression arg3) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objDynamic = (JCObject)classType.Invoke("Dynamic", binder == null ? null : binder.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance(), arg3 == null ? null : arg3.getJCOInstance());
             return new DynamicExpression(objDynamic);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1509,22 +1509,11 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static DynamicExpression MakeDynamic(NetType delegateType, CallSiteBinder binder, Expression arg0, Expression arg1, Expression arg2, Expression arg3) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.InvalidOperationException {
+    public static DynamicExpression MakeDynamic(NetType delegateType, CallSiteBinder binder, Expression arg0) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objMakeDynamic = (JCObject)classType.Invoke("MakeDynamic", delegateType == null ? null : delegateType.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance(), arg3 == null ? null : arg3.getJCOInstance());
-            return new DynamicExpression(objMakeDynamic);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DynamicExpression MakeDynamic(NetType delegateType, CallSiteBinder binder, Expression arg0, Expression arg1, Expression arg2) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.InvalidOperationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objMakeDynamic = (JCObject)classType.Invoke("MakeDynamic", delegateType == null ? null : delegateType.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance());
+            JCObject objMakeDynamic = (JCObject)classType.Invoke("MakeDynamic", delegateType == null ? null : delegateType.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance());
             return new DynamicExpression(objMakeDynamic);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1542,11 +1531,22 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static DynamicExpression MakeDynamic(NetType delegateType, CallSiteBinder binder, Expression arg0) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.InvalidOperationException {
+    public static DynamicExpression MakeDynamic(NetType delegateType, CallSiteBinder binder, Expression arg0, Expression arg1, Expression arg2) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objMakeDynamic = (JCObject)classType.Invoke("MakeDynamic", delegateType == null ? null : delegateType.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance());
+            JCObject objMakeDynamic = (JCObject)classType.Invoke("MakeDynamic", delegateType == null ? null : delegateType.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance());
+            return new DynamicExpression(objMakeDynamic);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DynamicExpression MakeDynamic(NetType delegateType, CallSiteBinder binder, Expression arg0, Expression arg1, Expression arg2, Expression arg3) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.FormatException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objMakeDynamic = (JCObject)classType.Invoke("MakeDynamic", delegateType == null ? null : delegateType.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance(), arg3 == null ? null : arg3.getJCOInstance());
             return new DynamicExpression(objMakeDynamic);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1608,11 +1608,11 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static GotoExpression Break(LabelTarget target, Expression value, NetType type) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException {
+    public static GotoExpression Break(LabelTarget target) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objBreak = (JCObject)classType.Invoke("Break", target == null ? null : target.getJCOInstance(), value == null ? null : value.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            JCObject objBreak = (JCObject)classType.Invoke("Break", target == null ? null : target.getJCOInstance());
             return new GotoExpression(objBreak);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1630,34 +1630,23 @@ public class Expression extends NetObject  {
         }
     }
 
+    public static GotoExpression Break(LabelTarget target, Expression value, NetType type) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objBreak = (JCObject)classType.Invoke("Break", target == null ? null : target.getJCOInstance(), value == null ? null : value.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            return new GotoExpression(objBreak);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static GotoExpression Break(LabelTarget target, NetType type) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objBreak = (JCObject)classType.Invoke("Break", target == null ? null : target.getJCOInstance(), type == null ? null : type.getJCOInstance());
             return new GotoExpression(objBreak);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static GotoExpression Break(LabelTarget target) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objBreak = (JCObject)classType.Invoke("Break", target == null ? null : target.getJCOInstance());
-            return new GotoExpression(objBreak);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static GotoExpression Continue(LabelTarget target, NetType type) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objContinue = (JCObject)classType.Invoke("Continue", target == null ? null : target.getJCOInstance(), type == null ? null : type.getJCOInstance());
-            return new GotoExpression(objContinue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1674,11 +1663,22 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static GotoExpression Goto(LabelTarget target, Expression value, NetType type) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException {
+    public static GotoExpression Continue(LabelTarget target, NetType type) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGoto = (JCObject)classType.Invoke("Goto", target == null ? null : target.getJCOInstance(), value == null ? null : value.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            JCObject objContinue = (JCObject)classType.Invoke("Continue", target == null ? null : target.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            return new GotoExpression(objContinue);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static GotoExpression Goto(LabelTarget target) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGoto = (JCObject)classType.Invoke("Goto", target == null ? null : target.getJCOInstance());
             return new GotoExpression(objGoto);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1696,22 +1696,22 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static GotoExpression Goto(LabelTarget target, NetType type) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException {
+    public static GotoExpression Goto(LabelTarget target, Expression value, NetType type) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGoto = (JCObject)classType.Invoke("Goto", target == null ? null : target.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            JCObject objGoto = (JCObject)classType.Invoke("Goto", target == null ? null : target.getJCOInstance(), value == null ? null : value.getJCOInstance(), type == null ? null : type.getJCOInstance());
             return new GotoExpression(objGoto);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static GotoExpression Goto(LabelTarget target) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException {
+    public static GotoExpression Goto(LabelTarget target, NetType type) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGoto = (JCObject)classType.Invoke("Goto", target == null ? null : target.getJCOInstance());
+            JCObject objGoto = (JCObject)classType.Invoke("Goto", target == null ? null : target.getJCOInstance(), type == null ? null : type.getJCOInstance());
             return new GotoExpression(objGoto);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1729,11 +1729,11 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static GotoExpression Return(LabelTarget target, Expression value, NetType type) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException {
+    public static GotoExpression Return(LabelTarget target) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objReturn = (JCObject)classType.Invoke("Return", target == null ? null : target.getJCOInstance(), value == null ? null : value.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            JCObject objReturn = (JCObject)classType.Invoke("Return", target == null ? null : target.getJCOInstance());
             return new GotoExpression(objReturn);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1751,22 +1751,22 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static GotoExpression Return(LabelTarget target, NetType type) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException {
+    public static GotoExpression Return(LabelTarget target, Expression value, NetType type) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objReturn = (JCObject)classType.Invoke("Return", target == null ? null : target.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            JCObject objReturn = (JCObject)classType.Invoke("Return", target == null ? null : target.getJCOInstance(), value == null ? null : value.getJCOInstance(), type == null ? null : type.getJCOInstance());
             return new GotoExpression(objReturn);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static GotoExpression Return(LabelTarget target) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException {
+    public static GotoExpression Return(LabelTarget target, NetType type) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objReturn = (JCObject)classType.Invoke("Return", target == null ? null : target.getJCOInstance());
+            JCObject objReturn = (JCObject)classType.Invoke("Return", target == null ? null : target.getJCOInstance(), type == null ? null : type.getJCOInstance());
             return new GotoExpression(objReturn);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1817,22 +1817,22 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static LabelExpression Label(LabelTarget target, Expression defaultValue) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
+    public static LabelExpression Label(LabelTarget target) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objLabel = (JCObject)classType.Invoke("Label", target == null ? null : target.getJCOInstance(), defaultValue == null ? null : defaultValue.getJCOInstance());
+            JCObject objLabel = (JCObject)classType.Invoke("Label", target == null ? null : target.getJCOInstance());
             return new LabelExpression(objLabel);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static LabelExpression Label(LabelTarget target) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException {
+    public static LabelExpression Label(LabelTarget target, Expression defaultValue) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objLabel = (JCObject)classType.Invoke("Label", target == null ? null : target.getJCOInstance());
+            JCObject objLabel = (JCObject)classType.Invoke("Label", target == null ? null : target.getJCOInstance(), defaultValue == null ? null : defaultValue.getJCOInstance());
             return new LabelExpression(objLabel);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1861,22 +1861,22 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static LabelTarget Label(NetType type, java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
+    public static LabelTarget Label(NetType type) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objLabel = (JCObject)classType.Invoke("Label", type == null ? null : type.getJCOInstance(), name);
+            JCObject objLabel = (JCObject)classType.Invoke("Label", type == null ? null : type.getJCOInstance());
             return new LabelTarget(objLabel);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static LabelTarget Label(NetType type) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
+    public static LabelTarget Label(NetType type, java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objLabel = (JCObject)classType.Invoke("Label", type == null ? null : type.getJCOInstance());
+            JCObject objLabel = (JCObject)classType.Invoke("Label", type == null ? null : type.getJCOInstance(), name);
             return new LabelTarget(objLabel);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1960,11 +1960,11 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static LoopExpression Loop(Expression body, LabelTarget _break, LabelTarget _continue) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
+    public static LoopExpression Loop(Expression body) throws Throwable, system.ArgumentNullException, system.FormatException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objLoop = (JCObject)classType.Invoke("Loop", body == null ? null : body.getJCOInstance(), _break == null ? null : _break.getJCOInstance(), _continue == null ? null : _continue.getJCOInstance());
+            JCObject objLoop = (JCObject)classType.Invoke("Loop", body == null ? null : body.getJCOInstance());
             return new LoopExpression(objLoop);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1982,11 +1982,11 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static LoopExpression Loop(Expression body) throws Throwable, system.ArgumentNullException, system.FormatException, system.PlatformNotSupportedException {
+    public static LoopExpression Loop(Expression body, LabelTarget _break, LabelTarget _continue) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objLoop = (JCObject)classType.Invoke("Loop", body == null ? null : body.getJCOInstance());
+            JCObject objLoop = (JCObject)classType.Invoke("Loop", body == null ? null : body.getJCOInstance(), _break == null ? null : _break.getJCOInstance(), _continue == null ? null : _continue.getJCOInstance());
             return new LoopExpression(objLoop);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -2180,11 +2180,11 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static MethodCallExpression Call(Expression instance, MethodInfo method, Expression arg0, Expression arg1, Expression arg2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
+    public static MethodCallExpression Call(Expression instance, MethodInfo method) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCall = (JCObject)classType.Invoke("Call", instance == null ? null : instance.getJCOInstance(), method == null ? null : method.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance());
+            JCObject objCall = (JCObject)classType.Invoke("Call", instance == null ? null : instance.getJCOInstance(), method == null ? null : method.getJCOInstance());
             return new MethodCallExpression(objCall);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -2202,22 +2202,22 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static MethodCallExpression Call(Expression instance, MethodInfo method, Expression... arguments) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.NotSupportedException {
+    public static MethodCallExpression Call(Expression instance, MethodInfo method, Expression arg0, Expression arg1, Expression arg2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCall = (JCObject)classType.Invoke("Call", instance == null ? null : instance.getJCOInstance(), method == null ? null : method.getJCOInstance(), toObjectFromArray(arguments));
+            JCObject objCall = (JCObject)classType.Invoke("Call", instance == null ? null : instance.getJCOInstance(), method == null ? null : method.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance());
             return new MethodCallExpression(objCall);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static MethodCallExpression Call(Expression instance, MethodInfo method) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
+    public static MethodCallExpression Call(Expression instance, MethodInfo method, Expression... arguments) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCall = (JCObject)classType.Invoke("Call", instance == null ? null : instance.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objCall = (JCObject)classType.Invoke("Call", instance == null ? null : instance.getJCOInstance(), method == null ? null : method.getJCOInstance(), toObjectFromArray(arguments));
             return new MethodCallExpression(objCall);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -2235,33 +2235,11 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static MethodCallExpression Call(MethodInfo method, Expression arg0, Expression arg1, Expression arg2, Expression arg3, Expression arg4) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
+    public static MethodCallExpression Call(MethodInfo method, Expression arg0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCall = (JCObject)classType.Invoke("Call", method == null ? null : method.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance(), arg3 == null ? null : arg3.getJCOInstance(), arg4 == null ? null : arg4.getJCOInstance());
-            return new MethodCallExpression(objCall);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static MethodCallExpression Call(MethodInfo method, Expression arg0, Expression arg1, Expression arg2, Expression arg3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCall = (JCObject)classType.Invoke("Call", method == null ? null : method.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance(), arg3 == null ? null : arg3.getJCOInstance());
-            return new MethodCallExpression(objCall);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static MethodCallExpression Call(MethodInfo method, Expression arg0, Expression arg1, Expression arg2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCall = (JCObject)classType.Invoke("Call", method == null ? null : method.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance());
+            JCObject objCall = (JCObject)classType.Invoke("Call", method == null ? null : method.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance());
             return new MethodCallExpression(objCall);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -2279,11 +2257,33 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static MethodCallExpression Call(MethodInfo method, Expression arg0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
+    public static MethodCallExpression Call(MethodInfo method, Expression arg0, Expression arg1, Expression arg2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCall = (JCObject)classType.Invoke("Call", method == null ? null : method.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance());
+            JCObject objCall = (JCObject)classType.Invoke("Call", method == null ? null : method.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance());
+            return new MethodCallExpression(objCall);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static MethodCallExpression Call(MethodInfo method, Expression arg0, Expression arg1, Expression arg2, Expression arg3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCall = (JCObject)classType.Invoke("Call", method == null ? null : method.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance(), arg3 == null ? null : arg3.getJCOInstance());
+            return new MethodCallExpression(objCall);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static MethodCallExpression Call(MethodInfo method, Expression arg0, Expression arg1, Expression arg2, Expression arg3, Expression arg4) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCall = (JCObject)classType.Invoke("Call", method == null ? null : method.getJCOInstance(), arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance(), arg3 == null ? null : arg3.getJCOInstance(), arg4 == null ? null : arg4.getJCOInstance());
             return new MethodCallExpression(objCall);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -2334,22 +2334,22 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static NewExpression New(ConstructorInfo constructor, Expression... arguments) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
+    public static NewExpression New(ConstructorInfo constructor) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objNew = (JCObject)classType.Invoke("New", constructor == null ? null : constructor.getJCOInstance(), toObjectFromArray(arguments));
+            JCObject objNew = (JCObject)classType.Invoke("New", constructor == null ? null : constructor.getJCOInstance());
             return new NewExpression(objNew);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static NewExpression New(ConstructorInfo constructor) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
+    public static NewExpression New(ConstructorInfo constructor, Expression... arguments) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objNew = (JCObject)classType.Invoke("New", constructor == null ? null : constructor.getJCOInstance());
+            JCObject objNew = (JCObject)classType.Invoke("New", constructor == null ? null : constructor.getJCOInstance(), toObjectFromArray(arguments));
             return new NewExpression(objNew);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -2367,17 +2367,6 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static ParameterExpression Parameter(NetType type, java.lang.String name) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objParameter = (JCObject)classType.Invoke("Parameter", type == null ? null : type.getJCOInstance(), name);
-            return new ParameterExpression(objParameter);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static ParameterExpression Parameter(NetType type) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -2389,12 +2378,12 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static ParameterExpression Variable(NetType type, java.lang.String name) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
+    public static ParameterExpression Parameter(NetType type, java.lang.String name) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objVariable = (JCObject)classType.Invoke("Variable", type == null ? null : type.getJCOInstance(), name);
-            return new ParameterExpression(objVariable);
+            JCObject objParameter = (JCObject)classType.Invoke("Parameter", type == null ? null : type.getJCOInstance(), name);
+            return new ParameterExpression(objParameter);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2405,6 +2394,17 @@ public class Expression extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objVariable = (JCObject)classType.Invoke("Variable", type == null ? null : type.getJCOInstance());
+            return new ParameterExpression(objVariable);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static ParameterExpression Variable(NetType type, java.lang.String name) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objVariable = (JCObject)classType.Invoke("Variable", type == null ? null : type.getJCOInstance(), name);
             return new ParameterExpression(objVariable);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -2477,22 +2477,11 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static SymbolDocumentInfo SymbolDocument(java.lang.String fileName, Guid language, Guid languageVendor, Guid documentType) throws Throwable, system.NotSupportedException, system.ArgumentNullException {
+    public static SymbolDocumentInfo SymbolDocument(java.lang.String fileName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objSymbolDocument = (JCObject)classType.Invoke("SymbolDocument", fileName, language == null ? null : language.getJCOInstance(), languageVendor == null ? null : languageVendor.getJCOInstance(), documentType == null ? null : documentType.getJCOInstance());
-            return new SymbolDocumentInfo(objSymbolDocument);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static SymbolDocumentInfo SymbolDocument(java.lang.String fileName, Guid language, Guid languageVendor) throws Throwable, system.NotSupportedException, system.ArgumentNullException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objSymbolDocument = (JCObject)classType.Invoke("SymbolDocument", fileName, language == null ? null : language.getJCOInstance(), languageVendor == null ? null : languageVendor.getJCOInstance());
+            JCObject objSymbolDocument = (JCObject)classType.Invoke("SymbolDocument", fileName);
             return new SymbolDocumentInfo(objSymbolDocument);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -2510,11 +2499,22 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static SymbolDocumentInfo SymbolDocument(java.lang.String fileName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static SymbolDocumentInfo SymbolDocument(java.lang.String fileName, Guid language, Guid languageVendor) throws Throwable, system.NotSupportedException, system.ArgumentNullException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objSymbolDocument = (JCObject)classType.Invoke("SymbolDocument", fileName);
+            JCObject objSymbolDocument = (JCObject)classType.Invoke("SymbolDocument", fileName, language == null ? null : language.getJCOInstance(), languageVendor == null ? null : languageVendor.getJCOInstance());
+            return new SymbolDocumentInfo(objSymbolDocument);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static SymbolDocumentInfo SymbolDocument(java.lang.String fileName, Guid language, Guid languageVendor, Guid documentType) throws Throwable, system.NotSupportedException, system.ArgumentNullException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objSymbolDocument = (JCObject)classType.Invoke("SymbolDocument", fileName, language == null ? null : language.getJCOInstance(), languageVendor == null ? null : languageVendor.getJCOInstance(), documentType == null ? null : documentType.getJCOInstance());
             return new SymbolDocumentInfo(objSymbolDocument);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -2598,17 +2598,6 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression Convert(Expression expression, NetType type, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objConvert = (JCObject)classType.Invoke("Convert", expression == null ? null : expression.getJCOInstance(), type == null ? null : type.getJCOInstance(), method == null ? null : method.getJCOInstance());
-            return new UnaryExpression(objConvert);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static UnaryExpression Convert(Expression expression, NetType type) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -2620,12 +2609,12 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression ConvertChecked(Expression expression, NetType type, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static UnaryExpression Convert(Expression expression, NetType type, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objConvertChecked = (JCObject)classType.Invoke("ConvertChecked", expression == null ? null : expression.getJCOInstance(), type == null ? null : type.getJCOInstance(), method == null ? null : method.getJCOInstance());
-            return new UnaryExpression(objConvertChecked);
+            JCObject objConvert = (JCObject)classType.Invoke("Convert", expression == null ? null : expression.getJCOInstance(), type == null ? null : type.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            return new UnaryExpression(objConvert);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2642,12 +2631,12 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression Decrement(Expression expression, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static UnaryExpression ConvertChecked(Expression expression, NetType type, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objDecrement = (JCObject)classType.Invoke("Decrement", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
-            return new UnaryExpression(objDecrement);
+            JCObject objConvertChecked = (JCObject)classType.Invoke("ConvertChecked", expression == null ? null : expression.getJCOInstance(), type == null ? null : type.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            return new UnaryExpression(objConvertChecked);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2664,12 +2653,12 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression Increment(Expression expression, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static UnaryExpression Decrement(Expression expression, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objIncrement = (JCObject)classType.Invoke("Increment", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
-            return new UnaryExpression(objIncrement);
+            JCObject objDecrement = (JCObject)classType.Invoke("Decrement", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            return new UnaryExpression(objDecrement);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2686,12 +2675,12 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression IsFalse(Expression expression, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static UnaryExpression Increment(Expression expression, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objIsFalse = (JCObject)classType.Invoke("IsFalse", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
-            return new UnaryExpression(objIsFalse);
+            JCObject objIncrement = (JCObject)classType.Invoke("Increment", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            return new UnaryExpression(objIncrement);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2708,12 +2697,12 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression IsTrue(Expression expression, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static UnaryExpression IsFalse(Expression expression, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objIsTrue = (JCObject)classType.Invoke("IsTrue", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
-            return new UnaryExpression(objIsTrue);
+            JCObject objIsFalse = (JCObject)classType.Invoke("IsFalse", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            return new UnaryExpression(objIsFalse);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2730,12 +2719,12 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression MakeUnary(ExpressionType unaryType, Expression operand, NetType type, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static UnaryExpression IsTrue(Expression expression, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objMakeUnary = (JCObject)classType.Invoke("MakeUnary", unaryType == null ? null : unaryType.getJCOInstance(), operand == null ? null : operand.getJCOInstance(), type == null ? null : type.getJCOInstance(), method == null ? null : method.getJCOInstance());
-            return new UnaryExpression(objMakeUnary);
+            JCObject objIsTrue = (JCObject)classType.Invoke("IsTrue", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            return new UnaryExpression(objIsTrue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2752,12 +2741,12 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression Negate(Expression expression, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static UnaryExpression MakeUnary(ExpressionType unaryType, Expression operand, NetType type, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objNegate = (JCObject)classType.Invoke("Negate", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
-            return new UnaryExpression(objNegate);
+            JCObject objMakeUnary = (JCObject)classType.Invoke("MakeUnary", unaryType == null ? null : unaryType.getJCOInstance(), operand == null ? null : operand.getJCOInstance(), type == null ? null : type.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            return new UnaryExpression(objMakeUnary);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2774,12 +2763,12 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression NegateChecked(Expression expression, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static UnaryExpression Negate(Expression expression, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objNegateChecked = (JCObject)classType.Invoke("NegateChecked", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
-            return new UnaryExpression(objNegateChecked);
+            JCObject objNegate = (JCObject)classType.Invoke("Negate", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            return new UnaryExpression(objNegate);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2796,12 +2785,12 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression Not(Expression expression, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static UnaryExpression NegateChecked(Expression expression, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objNot = (JCObject)classType.Invoke("Not", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
-            return new UnaryExpression(objNot);
+            JCObject objNegateChecked = (JCObject)classType.Invoke("NegateChecked", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            return new UnaryExpression(objNegateChecked);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2818,12 +2807,12 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression OnesComplement(Expression expression, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static UnaryExpression Not(Expression expression, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objOnesComplement = (JCObject)classType.Invoke("OnesComplement", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
-            return new UnaryExpression(objOnesComplement);
+            JCObject objNot = (JCObject)classType.Invoke("Not", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            return new UnaryExpression(objNot);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2840,12 +2829,12 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression PostDecrementAssign(Expression expression, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static UnaryExpression OnesComplement(Expression expression, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objPostDecrementAssign = (JCObject)classType.Invoke("PostDecrementAssign", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
-            return new UnaryExpression(objPostDecrementAssign);
+            JCObject objOnesComplement = (JCObject)classType.Invoke("OnesComplement", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            return new UnaryExpression(objOnesComplement);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2862,12 +2851,12 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression PostIncrementAssign(Expression expression, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static UnaryExpression PostDecrementAssign(Expression expression, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objPostIncrementAssign = (JCObject)classType.Invoke("PostIncrementAssign", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
-            return new UnaryExpression(objPostIncrementAssign);
+            JCObject objPostDecrementAssign = (JCObject)classType.Invoke("PostDecrementAssign", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            return new UnaryExpression(objPostDecrementAssign);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2884,12 +2873,12 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression PreDecrementAssign(Expression expression, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static UnaryExpression PostIncrementAssign(Expression expression, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objPreDecrementAssign = (JCObject)classType.Invoke("PreDecrementAssign", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
-            return new UnaryExpression(objPreDecrementAssign);
+            JCObject objPostIncrementAssign = (JCObject)classType.Invoke("PostIncrementAssign", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            return new UnaryExpression(objPostIncrementAssign);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2906,12 +2895,12 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression PreIncrementAssign(Expression expression, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static UnaryExpression PreDecrementAssign(Expression expression, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objPreIncrementAssign = (JCObject)classType.Invoke("PreIncrementAssign", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
-            return new UnaryExpression(objPreIncrementAssign);
+            JCObject objPreDecrementAssign = (JCObject)classType.Invoke("PreDecrementAssign", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            return new UnaryExpression(objPreDecrementAssign);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -2922,6 +2911,17 @@ public class Expression extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objPreIncrementAssign = (JCObject)classType.Invoke("PreIncrementAssign", expression == null ? null : expression.getJCOInstance());
+            return new UnaryExpression(objPreIncrementAssign);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UnaryExpression PreIncrementAssign(Expression expression, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objPreIncrementAssign = (JCObject)classType.Invoke("PreIncrementAssign", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
             return new UnaryExpression(objPreIncrementAssign);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -2961,22 +2961,22 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression Throw(Expression value, NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
+    public static UnaryExpression Throw(Expression value) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objThrow = (JCObject)classType.Invoke("Throw", value == null ? null : value.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            JCObject objThrow = (JCObject)classType.Invoke("Throw", value == null ? null : value.getJCOInstance());
             return new UnaryExpression(objThrow);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static UnaryExpression Throw(Expression value) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
+    public static UnaryExpression Throw(Expression value, NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objThrow = (JCObject)classType.Invoke("Throw", value == null ? null : value.getJCOInstance());
+            JCObject objThrow = (JCObject)classType.Invoke("Throw", value == null ? null : value.getJCOInstance(), type == null ? null : type.getJCOInstance());
             return new UnaryExpression(objThrow);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -2994,22 +2994,22 @@ public class Expression extends NetObject  {
         }
     }
 
-    public static UnaryExpression UnaryPlus(Expression expression, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static UnaryExpression UnaryPlus(Expression expression) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objUnaryPlus = (JCObject)classType.Invoke("UnaryPlus", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
+            JCObject objUnaryPlus = (JCObject)classType.Invoke("UnaryPlus", expression == null ? null : expression.getJCOInstance());
             return new UnaryExpression(objUnaryPlus);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static UnaryExpression UnaryPlus(Expression expression) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
+    public static UnaryExpression UnaryPlus(Expression expression, MethodInfo method) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objUnaryPlus = (JCObject)classType.Invoke("UnaryPlus", expression == null ? null : expression.getJCOInstance());
+            JCObject objUnaryPlus = (JCObject)classType.Invoke("UnaryPlus", expression == null ? null : expression.getJCOInstance(), method == null ? null : method.getJCOInstance());
             return new UnaryExpression(objUnaryPlus);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

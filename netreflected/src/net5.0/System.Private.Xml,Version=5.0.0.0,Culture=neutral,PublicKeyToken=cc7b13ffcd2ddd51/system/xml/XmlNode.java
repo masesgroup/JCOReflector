@@ -263,17 +263,6 @@ public class XmlNode extends NetObject  {
         }
     }
 
-    public XmlNode SelectSingleNode(java.lang.String xpath, XmlNamespaceManager nsmgr) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.xpath.XPathException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objSelectSingleNode = (JCObject)classInstance.Invoke("SelectSingleNode", xpath, nsmgr == null ? null : nsmgr.getJCOInstance());
-            return new XmlNode(objSelectSingleNode);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public XmlNode SelectSingleNode(java.lang.String xpath) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.xpath.XPathException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -285,12 +274,12 @@ public class XmlNode extends NetObject  {
         }
     }
 
-    public XmlNodeList SelectNodes(java.lang.String xpath, XmlNamespaceManager nsmgr) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.xpath.XPathException {
+    public XmlNode SelectSingleNode(java.lang.String xpath, XmlNamespaceManager nsmgr) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.xpath.XPathException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objSelectNodes = (JCObject)classInstance.Invoke("SelectNodes", xpath, nsmgr == null ? null : nsmgr.getJCOInstance());
-            return new XmlNodeList(objSelectNodes);
+            JCObject objSelectSingleNode = (JCObject)classInstance.Invoke("SelectSingleNode", xpath, nsmgr == null ? null : nsmgr.getJCOInstance());
+            return new XmlNode(objSelectSingleNode);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -301,6 +290,17 @@ public class XmlNode extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objSelectNodes = (JCObject)classInstance.Invoke("SelectNodes", xpath);
+            return new XmlNodeList(objSelectNodes);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlNodeList SelectNodes(java.lang.String xpath, XmlNamespaceManager nsmgr) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.xml.xpath.XPathException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objSelectNodes = (JCObject)classInstance.Invoke("SelectNodes", xpath, nsmgr == null ? null : nsmgr.getJCOInstance());
             return new XmlNodeList(objSelectNodes);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

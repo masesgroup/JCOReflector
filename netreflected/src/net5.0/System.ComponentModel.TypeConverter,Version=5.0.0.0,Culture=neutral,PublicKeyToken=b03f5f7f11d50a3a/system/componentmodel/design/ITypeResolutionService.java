@@ -111,17 +111,17 @@ public interface ITypeResolutionService extends IJCOBridgeReflected {
 
     // Methods section
     
-    public Assembly GetAssembly(AssemblyName name, boolean throwOnError) throws Throwable;
-
     public Assembly GetAssembly(AssemblyName name) throws Throwable;
+
+    public Assembly GetAssembly(AssemblyName name, boolean throwOnError) throws Throwable;
 
     public java.lang.String GetPathOfAssembly(AssemblyName name) throws Throwable;
 
-    public NetType GetType(java.lang.String name, boolean throwOnError, boolean ignoreCase) throws Throwable;
+    public NetType GetType(java.lang.String name) throws Throwable;
 
     public NetType GetType(java.lang.String name, boolean throwOnError) throws Throwable;
 
-    public NetType GetType(java.lang.String name) throws Throwable;
+    public NetType GetType(java.lang.String name, boolean throwOnError, boolean ignoreCase) throws Throwable;
 
     public void ReferenceAssembly(AssemblyName name) throws Throwable;
 

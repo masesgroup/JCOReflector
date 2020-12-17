@@ -365,22 +365,22 @@ public class MathF extends NetObject  {
         }
     }
 
-    public static Single Log(Single x, Single y) throws Throwable {
+    public static Single Log(Single x) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objLog = (JCObject)classType.Invoke("Log", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            JCObject objLog = (JCObject)classType.Invoke("Log", x == null ? null : x.getJCOInstance());
             return new Single(objLog);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Single Log(Single x) throws Throwable {
+    public static Single Log(Single x, Single y) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objLog = (JCObject)classType.Invoke("Log", x == null ? null : x.getJCOInstance());
+            JCObject objLog = (JCObject)classType.Invoke("Log", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
             return new Single(objLog);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -464,11 +464,11 @@ public class MathF extends NetObject  {
         }
     }
 
-    public static Single Round(Single x, int digits, MidpointRounding mode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.ArithmeticException {
+    public static Single Round(Single x) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objRound = (JCObject)classType.Invoke("Round", x == null ? null : x.getJCOInstance(), digits, mode == null ? null : mode.getJCOInstance());
+            JCObject objRound = (JCObject)classType.Invoke("Round", x == null ? null : x.getJCOInstance());
             return new Single(objRound);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -486,22 +486,22 @@ public class MathF extends NetObject  {
         }
     }
 
-    public static Single Round(Single x, MidpointRounding mode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.ArithmeticException {
+    public static Single Round(Single x, int digits, MidpointRounding mode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.ArithmeticException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objRound = (JCObject)classType.Invoke("Round", x == null ? null : x.getJCOInstance(), mode == null ? null : mode.getJCOInstance());
+            JCObject objRound = (JCObject)classType.Invoke("Round", x == null ? null : x.getJCOInstance(), digits, mode == null ? null : mode.getJCOInstance());
             return new Single(objRound);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Single Round(Single x) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException {
+    public static Single Round(Single x, MidpointRounding mode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.ArithmeticException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objRound = (JCObject)classType.Invoke("Round", x == null ? null : x.getJCOInstance());
+            JCObject objRound = (JCObject)classType.Invoke("Round", x == null ? null : x.getJCOInstance(), mode == null ? null : mode.getJCOInstance());
             return new Single(objRound);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

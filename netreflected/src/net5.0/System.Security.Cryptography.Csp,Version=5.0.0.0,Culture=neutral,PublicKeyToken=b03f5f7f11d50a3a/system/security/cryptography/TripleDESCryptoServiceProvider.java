@@ -134,7 +134,7 @@ public class TripleDESCryptoServiceProvider extends TripleDES  {
 
     // Constructors section
     
-    public TripleDESCryptoServiceProvider() throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException {
+    public TripleDESCryptoServiceProvider() throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

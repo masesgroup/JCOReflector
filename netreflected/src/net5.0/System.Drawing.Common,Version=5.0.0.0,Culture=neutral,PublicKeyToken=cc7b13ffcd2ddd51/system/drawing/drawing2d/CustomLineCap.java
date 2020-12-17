@@ -136,11 +136,11 @@ public class CustomLineCap extends MarshalByRefObject implements AutoCloseable {
     public CustomLineCap() throws Throwable {
     }
 
-    public CustomLineCap(GraphicsPath fillPath, GraphicsPath strokePath, LineCap baseCap, Single baseInset) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException {
+    public CustomLineCap(GraphicsPath fillPath, GraphicsPath strokePath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(fillPath == null ? null : fillPath.getJCOInstance(), strokePath == null ? null : strokePath.getJCOInstance(), baseCap == null ? null : baseCap.getJCOInstance(), baseInset == null ? null : baseInset.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(fillPath == null ? null : fillPath.getJCOInstance(), strokePath == null ? null : strokePath.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -156,11 +156,11 @@ public class CustomLineCap extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public CustomLineCap(GraphicsPath fillPath, GraphicsPath strokePath) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
+    public CustomLineCap(GraphicsPath fillPath, GraphicsPath strokePath, LineCap baseCap, Single baseInset) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(fillPath == null ? null : fillPath.getJCOInstance(), strokePath == null ? null : strokePath.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(fillPath == null ? null : fillPath.getJCOInstance(), strokePath == null ? null : strokePath.getJCOInstance(), baseCap == null ? null : baseCap.getJCOInstance(), baseInset == null ? null : baseInset.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

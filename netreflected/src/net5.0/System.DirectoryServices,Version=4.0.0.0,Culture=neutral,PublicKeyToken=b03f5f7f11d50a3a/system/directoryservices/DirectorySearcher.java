@@ -152,21 +152,11 @@ public class DirectorySearcher extends Component  {
         }
     }
 
-    public DirectorySearcher(DirectoryEntry searchRoot, java.lang.String filter, java.lang.String[] propertiesToLoad, SearchScope scope) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
+    public DirectorySearcher(DirectoryEntry searchRoot) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(searchRoot == null ? null : searchRoot.getJCOInstance(), filter, propertiesToLoad, scope == null ? null : scope.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DirectorySearcher(DirectoryEntry searchRoot, java.lang.String filter, java.lang.String[] propertiesToLoad) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(searchRoot == null ? null : searchRoot.getJCOInstance(), filter, propertiesToLoad));
+            setJCOInstance((JCObject)classType.NewObject(searchRoot == null ? null : searchRoot.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,21 +172,31 @@ public class DirectorySearcher extends Component  {
         }
     }
 
-    public DirectorySearcher(DirectoryEntry searchRoot) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
+    public DirectorySearcher(DirectoryEntry searchRoot, java.lang.String filter, java.lang.String[] propertiesToLoad) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(searchRoot == null ? null : searchRoot.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(searchRoot == null ? null : searchRoot.getJCOInstance(), filter, propertiesToLoad));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DirectorySearcher(java.lang.String filter, java.lang.String[] propertiesToLoad, SearchScope scope) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
+    public DirectorySearcher(DirectoryEntry searchRoot, java.lang.String filter, java.lang.String[] propertiesToLoad, SearchScope scope) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(filter, propertiesToLoad, scope == null ? null : scope.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(searchRoot == null ? null : searchRoot.getJCOInstance(), filter, propertiesToLoad, scope == null ? null : scope.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DirectorySearcher(java.lang.String filter) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(filter));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,11 +212,11 @@ public class DirectorySearcher extends Component  {
         }
     }
 
-    public DirectorySearcher(java.lang.String filter) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
+    public DirectorySearcher(java.lang.String filter, java.lang.String[] propertiesToLoad, SearchScope scope) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(filter));
+            setJCOInstance((JCObject)classType.NewObject(filter, propertiesToLoad, scope == null ? null : scope.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

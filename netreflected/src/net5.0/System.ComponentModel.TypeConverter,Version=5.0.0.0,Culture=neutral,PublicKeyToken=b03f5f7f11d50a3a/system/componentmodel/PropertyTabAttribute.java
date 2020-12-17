@@ -141,16 +141,6 @@ public class PropertyTabAttribute extends Attribute  {
         }
     }
 
-    public PropertyTabAttribute(java.lang.String tabClassName, PropertyTabScope tabScope) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(tabClassName, tabScope == null ? null : tabScope.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public PropertyTabAttribute(java.lang.String tabClassName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -161,11 +151,11 @@ public class PropertyTabAttribute extends Attribute  {
         }
     }
 
-    public PropertyTabAttribute(NetType tabClass, PropertyTabScope tabScope) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
+    public PropertyTabAttribute(java.lang.String tabClassName, PropertyTabScope tabScope) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(tabClass == null ? null : tabClass.getJCOInstance(), tabScope == null ? null : tabScope.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(tabClassName, tabScope == null ? null : tabScope.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,6 +166,16 @@ public class PropertyTabAttribute extends Attribute  {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(tabClass == null ? null : tabClass.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PropertyTabAttribute(NetType tabClass, PropertyTabScope tabScope) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(tabClass == null ? null : tabClass.getJCOInstance(), tabScope == null ? null : tabScope.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

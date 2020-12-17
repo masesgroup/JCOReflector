@@ -170,16 +170,6 @@ public class DynamicILInfo extends NetObject  {
         }
     }
 
-    public int GetTokenFor(RuntimeFieldHandle field, RuntimeTypeHandle contextType) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("GetTokenFor", field == null ? null : field.getJCOInstance(), contextType == null ? null : contextType.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int GetTokenFor(RuntimeFieldHandle field) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -190,11 +180,11 @@ public class DynamicILInfo extends NetObject  {
         }
     }
 
-    public int GetTokenFor(RuntimeMethodHandle method, RuntimeTypeHandle contextType) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException {
+    public int GetTokenFor(RuntimeFieldHandle field, RuntimeTypeHandle contextType) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("GetTokenFor", method == null ? null : method.getJCOInstance(), contextType == null ? null : contextType.getJCOInstance());
+            return (int)classInstance.Invoke("GetTokenFor", field == null ? null : field.getJCOInstance(), contextType == null ? null : contextType.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,6 +195,16 @@ public class DynamicILInfo extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Invoke("GetTokenFor", method == null ? null : method.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int GetTokenFor(RuntimeMethodHandle method, RuntimeTypeHandle contextType) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("GetTokenFor", method == null ? null : method.getJCOInstance(), contextType == null ? null : contextType.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

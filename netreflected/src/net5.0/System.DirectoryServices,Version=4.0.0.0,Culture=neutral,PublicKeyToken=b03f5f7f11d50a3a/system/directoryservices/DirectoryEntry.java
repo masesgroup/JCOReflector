@@ -156,11 +156,11 @@ public class DirectoryEntry extends Component  {
         }
     }
 
-    public DirectoryEntry(java.lang.String path, java.lang.String username, java.lang.String password, AuthenticationTypes authenticationType) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NullReferenceException, system.ObjectDisposedException {
+    public DirectoryEntry(java.lang.String path) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NullReferenceException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(path, username, password, authenticationType == null ? null : authenticationType.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(path));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,11 +176,11 @@ public class DirectoryEntry extends Component  {
         }
     }
 
-    public DirectoryEntry(java.lang.String path) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NullReferenceException {
+    public DirectoryEntry(java.lang.String path, java.lang.String username, java.lang.String password, AuthenticationTypes authenticationType) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NullReferenceException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(path));
+            setJCOInstance((JCObject)classType.NewObject(path, username, password, authenticationType == null ? null : authenticationType.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,22 +200,22 @@ public class DirectoryEntry extends Component  {
         }
     }
 
-    public DirectoryEntry CopyTo(DirectoryEntry newParent, java.lang.String newName) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.threading.SynchronizationLockException {
+    public DirectoryEntry CopyTo(DirectoryEntry newParent) throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCopyTo = (JCObject)classInstance.Invoke("CopyTo", newParent == null ? null : newParent.getJCOInstance(), newName);
+            JCObject objCopyTo = (JCObject)classInstance.Invoke("CopyTo", newParent == null ? null : newParent.getJCOInstance());
             return new DirectoryEntry(objCopyTo);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DirectoryEntry CopyTo(DirectoryEntry newParent) throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.threading.SynchronizationLockException {
+    public DirectoryEntry CopyTo(DirectoryEntry newParent, java.lang.String newName) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCopyTo = (JCObject)classInstance.Invoke("CopyTo", newParent == null ? null : newParent.getJCOInstance());
+            JCObject objCopyTo = (JCObject)classInstance.Invoke("CopyTo", newParent == null ? null : newParent.getJCOInstance(), newName);
             return new DirectoryEntry(objCopyTo);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -284,21 +284,21 @@ public class DirectoryEntry extends Component  {
         }
     }
 
-    public void MoveTo(DirectoryEntry newParent, java.lang.String newName) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.NullReferenceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("MoveTo", newParent == null ? null : newParent.getJCOInstance(), newName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void MoveTo(DirectoryEntry newParent) throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.OutOfMemoryException, system.NullReferenceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("MoveTo", newParent == null ? null : newParent.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void MoveTo(DirectoryEntry newParent, java.lang.String newName) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.NullReferenceException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("MoveTo", newParent == null ? null : newParent.getJCOInstance(), newName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

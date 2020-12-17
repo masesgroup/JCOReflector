@@ -151,21 +151,21 @@ public class FileLoadException extends IOException {
 
     // Constructors section
     
-    public FileLoadException(java.lang.String message, java.lang.String fileName, NetException inner) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(message, fileName, inner == null ? null : inner.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public FileLoadException(java.lang.String message, java.lang.String fileName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(message, fileName));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public FileLoadException(java.lang.String message, java.lang.String fileName, NetException inner) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(message, fileName, inner == null ? null : inner.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

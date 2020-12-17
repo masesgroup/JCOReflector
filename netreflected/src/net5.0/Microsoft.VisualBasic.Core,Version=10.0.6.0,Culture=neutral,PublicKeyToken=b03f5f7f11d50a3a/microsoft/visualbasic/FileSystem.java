@@ -573,11 +573,11 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static void Lock(int FileNumber, long FromRecord, long ToRecord) throws Throwable, system.PlatformNotSupportedException, system.FormatException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.InvalidOperationException, system.IndexOutOfRangeException {
+    public static void Lock(int FileNumber) throws Throwable, system.PlatformNotSupportedException, system.FormatException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("Lock", FileNumber, FromRecord, ToRecord);
+            classType.Invoke("Lock", FileNumber);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -593,11 +593,11 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static void Lock(int FileNumber) throws Throwable, system.PlatformNotSupportedException, system.FormatException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.InvalidOperationException, system.IndexOutOfRangeException {
+    public static void Lock(int FileNumber, long FromRecord, long ToRecord) throws Throwable, system.PlatformNotSupportedException, system.FormatException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("Lock", FileNumber);
+            classType.Invoke("Lock", FileNumber, FromRecord, ToRecord);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -683,11 +683,11 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static void Unlock(int FileNumber, long FromRecord, long ToRecord) throws Throwable, system.PlatformNotSupportedException, system.FormatException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.InvalidOperationException, system.IndexOutOfRangeException {
+    public static void Unlock(int FileNumber) throws Throwable, system.PlatformNotSupportedException, system.FormatException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("Unlock", FileNumber, FromRecord, ToRecord);
+            classType.Invoke("Unlock", FileNumber);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -703,11 +703,11 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static void Unlock(int FileNumber) throws Throwable, system.PlatformNotSupportedException, system.FormatException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.InvalidOperationException, system.IndexOutOfRangeException {
+    public static void Unlock(int FileNumber, long FromRecord, long ToRecord) throws Throwable, system.PlatformNotSupportedException, system.FormatException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("Unlock", FileNumber);
+            classType.Invoke("Unlock", FileNumber, FromRecord, ToRecord);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

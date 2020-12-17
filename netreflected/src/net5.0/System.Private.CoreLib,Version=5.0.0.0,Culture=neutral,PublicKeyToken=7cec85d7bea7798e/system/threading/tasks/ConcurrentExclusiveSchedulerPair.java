@@ -140,11 +140,11 @@ public class ConcurrentExclusiveSchedulerPair extends NetObject  {
         }
     }
 
-    public ConcurrentExclusiveSchedulerPair(TaskScheduler taskScheduler, int maxConcurrencyLevel, int maxItemsPerTask) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.InvalidOperationException {
+    public ConcurrentExclusiveSchedulerPair(TaskScheduler taskScheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(taskScheduler == null ? null : taskScheduler.getJCOInstance(), maxConcurrencyLevel, maxItemsPerTask));
+            setJCOInstance((JCObject)classType.NewObject(taskScheduler == null ? null : taskScheduler.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -160,11 +160,11 @@ public class ConcurrentExclusiveSchedulerPair extends NetObject  {
         }
     }
 
-    public ConcurrentExclusiveSchedulerPair(TaskScheduler taskScheduler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException {
+    public ConcurrentExclusiveSchedulerPair(TaskScheduler taskScheduler, int maxConcurrencyLevel, int maxItemsPerTask) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(taskScheduler == null ? null : taskScheduler.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(taskScheduler == null ? null : taskScheduler.getJCOInstance(), maxConcurrencyLevel, maxItemsPerTask));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

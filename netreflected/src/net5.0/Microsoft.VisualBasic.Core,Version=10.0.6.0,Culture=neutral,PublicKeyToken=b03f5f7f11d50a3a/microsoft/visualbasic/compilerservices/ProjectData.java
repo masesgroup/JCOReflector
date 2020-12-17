@@ -167,21 +167,21 @@ public class ProjectData extends NetObject  {
         }
     }
 
-    public static void SetProjectError(NetException ex, int lErl) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("SetProjectError", ex == null ? null : ex.getJCOInstance(), lErl);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static void SetProjectError(NetException ex) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("SetProjectError", ex == null ? null : ex.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void SetProjectError(NetException ex, int lErl) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("SetProjectError", ex == null ? null : ex.getJCOInstance(), lErl);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

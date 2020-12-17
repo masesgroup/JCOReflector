@@ -158,21 +158,21 @@ public class UIPermission extends CodeAccessPermission  {
         }
     }
 
-    public UIPermission(UIPermissionWindow windowFlag, UIPermissionClipboard clipboardFlag) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(windowFlag == null ? null : windowFlag.getJCOInstance(), clipboardFlag == null ? null : clipboardFlag.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public UIPermission(UIPermissionWindow windowFlag) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(windowFlag == null ? null : windowFlag.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public UIPermission(UIPermissionWindow windowFlag, UIPermissionClipboard clipboardFlag) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(windowFlag == null ? null : windowFlag.getJCOInstance(), clipboardFlag == null ? null : clipboardFlag.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

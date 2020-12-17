@@ -129,15 +129,15 @@ public interface IReflect extends IJCOBridgeReflected {
 
     public MemberInfo[] GetMembers(BindingFlags bindingAttr) throws Throwable;
 
-    public MethodInfo GetMethod(java.lang.String name, BindingFlags bindingAttr, Binder binder, NetType[] types, ParameterModifier[] modifiers) throws Throwable;
-
     public MethodInfo GetMethod(java.lang.String name, BindingFlags bindingAttr) throws Throwable;
+
+    public MethodInfo GetMethod(java.lang.String name, BindingFlags bindingAttr, Binder binder, NetType[] types, ParameterModifier[] modifiers) throws Throwable;
 
     public MethodInfo[] GetMethods(BindingFlags bindingAttr) throws Throwable;
 
-    public PropertyInfo GetProperty(java.lang.String name, BindingFlags bindingAttr, Binder binder, NetType returnType, NetType[] types, ParameterModifier[] modifiers) throws Throwable;
-
     public PropertyInfo GetProperty(java.lang.String name, BindingFlags bindingAttr) throws Throwable;
+
+    public PropertyInfo GetProperty(java.lang.String name, BindingFlags bindingAttr, Binder binder, NetType returnType, NetType[] types, ParameterModifier[] modifiers) throws Throwable;
 
     public PropertyInfo[] GetProperties(BindingFlags bindingAttr) throws Throwable;
 

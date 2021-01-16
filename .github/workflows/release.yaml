@@ -27,6 +27,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
         with: 
+          submodules: 'true'
           fetch-depth: '1'
 
       # Runs a set of commands using the runners shell
@@ -53,13 +54,58 @@ jobs:
           dotnet .\bin\netcoreapp3.1\JCOReflectorCLI.dll createjars .github\workflows\createjars_core3.1_win19.job
           dotnet .\bin\net5.0\JCOReflectorCLI.dll createjars .github\workflows\createjars_core5.0_win19.job
           .\bin\net461\JCOReflectorCLI createjars .github\workflows\createjars_framework_win19.job
-          
- 
+
+      - name: Build Java Help files
+        run: |
+          dotnet bin\netcoreapp3.1\JCOReflectorCLI.dll builddocs .github\workflows\builddocs_win19.job
+          dotnet bin\net5.0\JCOReflectorCLI.dll builddocs .github\workflows\builddocs_win19.job
+          .\bin\net461\JCOReflectorCLI builddocs .github\workflows\builddocs_win19.job
+
       - name: Compress release files
         run: | 
           Compress-Archive -Path .\bin\netcoreapp3.1\* -DestinationPath .\bin\netcoreapp3.1.zip
           Compress-Archive -Path .\bin\net5.0\* -DestinationPath .\bin\net5.0.zip
           Compress-Archive -Path .\bin\net461\* -DestinationPath .\bin\net461.zip
+
+      - name: Commit changes to netcoreapp3.1 help file
+        uses: EndBug/add-and-commit@v5
+        with:
+          push: false
+          add: '.\netreflected\docs\netcoreapp3.1\*.*'
+          message: Update help file after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
+          
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit changes to net5.0 help file
+        uses: EndBug/add-and-commit@v5
+        with:
+          push: false
+          add: '.\netreflected\docs\net5.0\*.*'
+          message: Update help file after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
+          
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit changes to net461 help file
+        uses: EndBug/add-and-commit@v5
+        with:
+          push: false
+          add: '.\netreflected\docs\net461\*.*'
+          message: Update help file after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
+          
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Commit changes to superproject
+        uses: EndBug/add-and-commit@v5
+        with:
+          push: false
+          add: '.\*.*'
+          message: Update help submodule after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
+          
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload binaries to release
         uses: svenstaro/upload-release-action@v2

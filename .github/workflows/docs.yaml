@@ -45,6 +45,55 @@ jobs:
           Copy-Item .github\workflows\JCOReflectorCLI.runtimeconfig.json -Destination bin\netcoreapp3.1\JCOReflectorCLI.runtimeconfig.json -Force
           Copy-Item .github\workflows\JCOReflectorCLI5.0.runtimeconfig.json -Destination bin\net5.0\JCOReflectorCLI.runtimeconfig.json -Force
 
+      - name: Switch to master netcoreapp3.1 help file
+        run: |
+          cd .\netreflected\docs\netcoreapp3.1
+          git checkout master
+          cd ..\..\..
+
+      - name: Switch to master net5.0 help file
+        run: |
+          cd .\netreflected\docs\net5.0
+          git checkout master
+          cd ..\..\..
+
+      - name: Switch to master net461 help file
+        run: |
+          cd .\netreflected\docs\net461
+          git checkout master
+          cd ..\..\..
+
+      # Runs a set of commands using the runners shell
+      - name: Clean netcoreapp3.1 help file folders
+        run: |
+          Copy-Item .\netreflected\docs\netcoreapp3.1\.git -Destination .\.git -Force
+          Copy-Item .\netreflected\docs\netcoreapp3.1\LICENSE -Destination .\LICENSE -Force
+          Copy-Item .\netreflected\docs\netcoreapp3.1\README.md -Destination .\README.md -Force
+          Remove-Item .\netreflected\docs\netcoreapp3.1\* -Recurse -Force
+          Copy-Item .\.git -Destination .\netreflected\docs\netcoreapp3.1\.git -Force
+          Copy-Item .\LICENSE -Destination .\netreflected\docs\netcoreapp3.1\LICENSE -Force
+          Copy-Item .\README.md -Destination .\netreflected\docs\netcoreapp3.1\README.md -Force
+
+      - name: Clean net5.0 help file folders
+        run: |
+          Copy-Item .\netreflected\docs\net5.0\.git -Destination .\.git -Force
+          Copy-Item .\netreflected\docs\net5.0\LICENSE -Destination .\LICENSE -Force
+          Copy-Item .\netreflected\docs\net5.0\README.md -Destination .\README.md -Force
+          Remove-Item .\netreflected\docs\net5.0\* -Recurse -Force
+          Copy-Item .\.git -Destination .\netreflected\docs\net5.0\.git -Force
+          Copy-Item .\LICENSE -Destination .\netreflected\docs\net5.0\LICENSE -Force
+          Copy-Item .\README.md -Destination .\netreflected\docs\net5.0\README.md -Force
+          
+      - name: Clean net461 help file folders
+        run: |
+          Copy-Item .\netreflected\docs\net461\.git -Destination .\.git -Force
+          Copy-Item .\netreflected\docs\net461\LICENSE -Destination .\LICENSE -Force
+          Copy-Item .\netreflected\docs\net461\README.md -Destination .\README.md -Force
+          Remove-Item .\netreflected\docs\net461\* -Recurse -Force
+          Copy-Item .\.git -Destination .\netreflected\docs\net461\.git -Force
+          Copy-Item .\LICENSE -Destination .\netreflected\docs\net461\LICENSE -Force
+          Copy-Item .\README.md -Destination .\netreflected\docs\net461\README.md -Force
+
       - name: Build Java Help files
         run: |
           dotnet bin\netcoreapp3.1\JCOReflectorCLI.dll builddocs .github\workflows\builddocs_win19.job
@@ -61,7 +110,6 @@ jobs:
           cd .\netreflected\docs\netcoreapp3.1
           git config user.name 'CI_DOCS'
           git config user.email "info@masesgroup.com"
-          git checkout master
           git add *.*
           git commit -m 'Update help file to commit ${{ env.GITHUB_COMMIT_MESSAGE }}'
           cd ..\..\..
@@ -71,7 +119,6 @@ jobs:
           cd .\netreflected\docs\net5.0
           git config user.name 'CI_DOCS'
           git config user.email "info@masesgroup.com"
-          git checkout master
           git add *.*
           git commit -m 'Update help file to commit ${{ env.GITHUB_COMMIT_MESSAGE }}'
           cd ..\..\..
@@ -81,7 +128,6 @@ jobs:
           cd .\netreflected\docs\net461
           git config user.name 'CI_DOCS'
           git config user.email "info@masesgroup.com"
-          git checkout master
           git add *.*
           git commit -m 'Update help file to commit ${{ env.GITHUB_COMMIT_MESSAGE }}'
           cd ..\..\..

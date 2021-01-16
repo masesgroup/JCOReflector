@@ -61,6 +61,7 @@ jobs:
           cd .\netreflected\docs\netcoreapp3.1
           git config user.name 'CI_DOCS'
           git config user.email "info@masesgroup.com"
+          git checkout master
           git add *.*
           git commit -m 'Update help file to commit ${{ env.GITHUB_COMMIT_MESSAGE }}'
           cd ..\..\..
@@ -70,6 +71,7 @@ jobs:
           cd .\netreflected\docs\net5.0
           git config user.name 'CI_DOCS'
           git config user.email "info@masesgroup.com"
+          git checkout master
           git add *.*
           git commit -m 'Update help file to commit ${{ env.GITHUB_COMMIT_MESSAGE }}'
           cd ..\..\..
@@ -79,6 +81,7 @@ jobs:
           cd .\netreflected\docs\net461
           git config user.name 'CI_DOCS'
           git config user.email "info@masesgroup.com"
+          git checkout master
           git add *.*
           git commit -m 'Update help file to commit ${{ env.GITHUB_COMMIT_MESSAGE }}'
           cd ..\..\..
@@ -87,7 +90,7 @@ jobs:
         uses: EndBug/add-and-commit@v5
         with:
           push: false
-          add: '.\*.*'
+          add: '.\netreflected\*.*'
           message: Update help submodule after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
           
         env:

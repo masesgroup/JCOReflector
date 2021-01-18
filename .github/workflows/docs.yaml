@@ -37,7 +37,7 @@ jobs:
         while IFS= read -r file
         do
           echo $file
-          if [[ $file == "netreflected/docs/README.md"]]; then
+          if [[ $file == "netreflected/docs/README.md"* ]]; then
             echo "Recreate docs was requested"
             echo "::set-output name=run_job::true"
             break

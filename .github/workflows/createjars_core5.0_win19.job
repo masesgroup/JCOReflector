@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <JARBuilderEventArgs xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <CancellationToken />
-  <LogLevel>Info</LogLevel>
+  <LogLevel>Error</LogLevel>
   <SourceFolder>netreflected</SourceFolder>
   <SplitFolderByAssembly>true</SplitFolderByAssembly>
   <JDKFolder>C:\Program Files\Java\jdk-13.0.2+8</JDKFolder>

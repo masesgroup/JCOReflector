@@ -512,6 +512,7 @@ namespace MASES.C2JReflector
 
                         if (!string.IsNullOrEmpty(errorData) && errorData != Environment.NewLine)
                         {
+                            errorData = errorData.Replace("{", "{{").Replace("}", "}}");
                             AppendToConsole(LogLevel.Error, errorData);
                         }
                     }

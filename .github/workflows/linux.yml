@@ -38,12 +38,12 @@ jobs:
         do
           echo $file
           if [[ $file == "netreflected/src/"* ]]; then
-            echo "This file is under the directory 'JCOReflector/netreflected/src/JCOReflector'."
+            echo "This file is under the directory 'netreflected/src/JCOReflector'."
             echo "::set-output name=run_job::true"
             break
           fi
           if [[ $file == "JCOReflector/"* ]]; then
-            echo "This file is under the directory 'JCOReflector/JCOReflector/'."
+            echo "This file is under the directory 'JCOReflector/'."
             echo "::set-output name=run_job::true"
             break
           fi

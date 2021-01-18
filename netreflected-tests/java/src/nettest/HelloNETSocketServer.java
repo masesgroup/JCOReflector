@@ -113,7 +113,7 @@ public class HelloNETSocketServer {
                     }
                 }
                 // Show the data on the console.
-                Console.WriteLine("Text received : {0}", new NetObject(data));
+                if (data != null) Console.WriteLine("Text received : {0}", new NetObject(data));
                 handler.Shutdown(SocketShutdown.Both);
                 handler.Close(10);
             }

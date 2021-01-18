@@ -53,15 +53,14 @@ jobs:
           dotnet .\bin\netcoreapp3.1\JCOReflectorCLI.dll createjars .github\workflows\createjars_core3.1_win19.job
           dotnet .\bin\net5.0\JCOReflectorCLI.dll createjars .github\workflows\createjars_core5.0_win19.job
           .\bin\net461\JCOReflectorCLI createjars .github\workflows\createjars_framework_win19.job
-          
- 
+
       - name: Compress release files
         run: | 
           Compress-Archive -Path .\bin\netcoreapp3.1\* -DestinationPath .\bin\netcoreapp3.1.zip
           Compress-Archive -Path .\bin\net5.0\* -DestinationPath .\bin\net5.0.zip
           Compress-Archive -Path .\bin\net461\* -DestinationPath .\bin\net461.zip
 
-      - name: Upload binaries to release
+      - name: Upload netcoreapp3.1 binaries to release
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
@@ -70,7 +69,7 @@ jobs:
           tag: ${{ github.ref }}
           overwrite: true
           
-      - name: Upload binaries to release
+      - name: Upload net5.0 binaries to release
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
@@ -79,7 +78,7 @@ jobs:
           tag: ${{ github.ref }}
           overwrite: true
 
-      - name: Upload binaries to release
+      - name: Upload net461 binaries to release
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}

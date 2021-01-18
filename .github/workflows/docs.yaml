@@ -37,6 +37,12 @@ jobs:
         while IFS= read -r file
         do
           echo $file
+          if [[ $file == "netreflected/docs/README.md"]]; then
+            echo "Recreate docs was requested"
+            echo "::set-output name=run_job::true"
+            break
+          fi
+          echo $file
           if [[ $file == "netreflected/src/"* ]]; then
             echo "This file is under the directory 'netreflected/src/'."
             echo "::set-output name=run_job::true"
@@ -55,7 +61,6 @@ jobs:
   build_docs:
     needs: check
     if: needs.check.outputs.run_job == 'true' 
-    # The type of runner that the job will run on
     # The type of runner that the job will run on
     runs-on: windows-2019
   

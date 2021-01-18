@@ -157,6 +157,7 @@ jobs:
           git config user.email "info@masesgroup.com"
           git add *.*
           git commit -m 'Update help file to commit ${{ env.GITHUB_COMMIT_MESSAGE }}'
+          git push https://${{ secrets.DOCS_API_TOKEN_GITHUB }}@github.com/masesgroup/CoreDocs.git
           cd ..\..\..
 
       - name: Commit changes to net5.0 help file
@@ -166,6 +167,7 @@ jobs:
           git config user.email "info@masesgroup.com"
           git add *.*
           git commit -m 'Update help file to commit ${{ env.GITHUB_COMMIT_MESSAGE }}'
+          git push https://${{ secrets.DOCS_API_TOKEN_GITHUB }}@github.com/masesgroup/NET5Docs.git
           cd ..\..\..
 
       - name: Commit changes to net461 help file
@@ -175,48 +177,12 @@ jobs:
           git config user.email "info@masesgroup.com"
           git add *.*
           git commit -m 'Update help file to commit ${{ env.GITHUB_COMMIT_MESSAGE }}'
+          git push https://${{ secrets.DOCS_API_TOKEN_GITHUB }}@github.com/masesgroup/FrameworkDocs.git
           cd ..\..\..
-
-      - name: Pushes to netcoreapp3.1 repository
-        id: push_netcoreapp31
-        uses: cpina/github-action-push-to-another-repository@cp_instead_of_deleting
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.DOCS_API_TOKEN_GITHUB }}
-        with:
-          source-directory: '.\netreflected\docs\netcoreapp3.1'
-          destination-github-username: 'masesgroup'
-          destination-repository-name: 'CoreDocs'
-          user-email: info@masesgroup.com
-          commit-message: See ORIGIN_COMMIT
-
-      - name: Pushes to net5.0 repository
-        id: push_net5
-        uses: cpina/github-action-push-to-another-repository@cp_instead_of_deleting
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.DOCS_API_TOKEN_GITHUB }}
-        with:
-          source-directory: '.\netreflected\docs\net5.0'
-          destination-github-username: 'masesgroup'
-          destination-repository-name: 'NET5Docs'
-          user-email: info@masesgroup.com
-          commit-message: See ORIGIN_COMMIT
-
-      - name: Pushes to net461 repository
-        id: push_net461
-        uses: cpina/github-action-push-to-another-repository@cp_instead_of_deleting
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.DOCS_API_TOKEN_GITHUB }}
-        with:
-          source-directory: '.\netreflected\docs\net461'
-          destination-github-username: 'masesgroup'
-          destination-repository-name: 'FrameworkDocs'
-          user-email: info@masesgroup.com
-          commit-message: See ORIGIN_COMMIT
 
       - name: Commit changes to superproject
         uses: EndBug/add-and-commit@v5
         with:
-          push: false
           add: '.\netreflected\*.*'
           message: Update help submodule after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
           

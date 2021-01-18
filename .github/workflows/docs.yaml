@@ -66,33 +66,33 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Clean netcoreapp3.1 help file folders
         run: |
-          Copy-Item .\netreflected\docs\netcoreapp3.1\.git -Destination .\.git -Force
-          Copy-Item .\netreflected\docs\netcoreapp3.1\LICENSE -Destination .\LICENSE -Force
-          Copy-Item .\netreflected\docs\netcoreapp3.1\README.md -Destination .\README.md -Force
+          Copy-Item .\netreflected\docs\netcoreapp3.1\.git -Destination .\_data\.git -Force
+          Copy-Item .\netreflected\docs\netcoreapp3.1\LICENSE -Destination .\_data\LICENSE -Force
+          Copy-Item .\netreflected\docs\netcoreapp3.1\README.md -Destination .\_data\README.md -Force
           Remove-Item .\netreflected\docs\netcoreapp3.1\* -Recurse -Force
-          Copy-Item .\.git -Destination .\netreflected\docs\netcoreapp3.1\.git -Force
-          Copy-Item .\LICENSE -Destination .\netreflected\docs\netcoreapp3.1\LICENSE -Force
-          Copy-Item .\README.md -Destination .\netreflected\docs\netcoreapp3.1\README.md -Force
+          Copy-Item .\_data\.git -Destination .\netreflected\docs\netcoreapp3.1\.git -Force
+          Copy-Item .\_data\LICENSE -Destination .\netreflected\docs\netcoreapp3.1\LICENSE -Force
+          Copy-Item .\_data\README.md -Destination .\netreflected\docs\netcoreapp3.1\README.md -Force
 
       - name: Clean net5.0 help file folders
         run: |
-          Copy-Item .\netreflected\docs\net5.0\.git -Destination .\.git -Force
-          Copy-Item .\netreflected\docs\net5.0\LICENSE -Destination .\LICENSE -Force
-          Copy-Item .\netreflected\docs\net5.0\README.md -Destination .\README.md -Force
+          Copy-Item .\netreflected\docs\net5.0\.git -Destination .\_data\.git -Force
+          Copy-Item .\netreflected\docs\net5.0\LICENSE -Destination .\_data\LICENSE -Force
+          Copy-Item .\netreflected\docs\net5.0\README.md -Destination .\_data\README.md -Force
           Remove-Item .\netreflected\docs\net5.0\* -Recurse -Force
-          Copy-Item .\.git -Destination .\netreflected\docs\net5.0\.git -Force
-          Copy-Item .\LICENSE -Destination .\netreflected\docs\net5.0\LICENSE -Force
-          Copy-Item .\README.md -Destination .\netreflected\docs\net5.0\README.md -Force
+          Copy-Item .\_data\.git -Destination .\netreflected\docs\net5.0\.git -Force
+          Copy-Item .\_data\LICENSE -Destination .\netreflected\docs\net5.0\LICENSE -Force
+          Copy-Item .\_data\README.md -Destination .\netreflected\docs\net5.0\README.md -Force
           
       - name: Clean net461 help file folders
         run: |
-          Copy-Item .\netreflected\docs\net461\.git -Destination .\.git -Force
-          Copy-Item .\netreflected\docs\net461\LICENSE -Destination .\LICENSE -Force
-          Copy-Item .\netreflected\docs\net461\README.md -Destination .\README.md -Force
+          Copy-Item .\netreflected\docs\net461\.git -Destination .\_data\.git -Force
+          Copy-Item .\netreflected\docs\net461\LICENSE -Destination .\_data\LICENSE -Force
+          Copy-Item .\netreflected\docs\net461\README.md -Destination .\_data\README.md -Force
           Remove-Item .\netreflected\docs\net461\* -Recurse -Force
-          Copy-Item .\.git -Destination .\netreflected\docs\net461\.git -Force
-          Copy-Item .\LICENSE -Destination .\netreflected\docs\net461\LICENSE -Force
-          Copy-Item .\README.md -Destination .\netreflected\docs\net461\README.md -Force
+          Copy-Item .\_data\.git -Destination .\netreflected\docs\net461\.git -Force
+          Copy-Item .\_data\LICENSE -Destination .\netreflected\docs\net461\LICENSE -Force
+          Copy-Item .\_data\README.md -Destination .\netreflected\docs\net461\README.md -Force
 
       - name: Build Java Help files
         run: |

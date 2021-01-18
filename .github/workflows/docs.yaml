@@ -157,6 +157,7 @@ jobs:
           git config user.email "info@masesgroup.com"
           git add *.*
           git commit -m 'Update help file to commit ${{ env.GITHUB_COMMIT_MESSAGE }}'
+          git push
           cd ..\..\..
 
       - name: Commit changes to net5.0 help file
@@ -166,6 +167,7 @@ jobs:
           git config user.email "info@masesgroup.com"
           git add *.*
           git commit -m 'Update help file to commit ${{ env.GITHUB_COMMIT_MESSAGE }}'
+          git push
           cd ..\..\..
 
       - name: Commit changes to net461 help file
@@ -175,25 +177,8 @@ jobs:
           git config user.email "info@masesgroup.com"
           git add *.*
           git commit -m 'Update help file to commit ${{ env.GITHUB_COMMIT_MESSAGE }}'
+          git push
           cd ..\..\..
-
-      - name: Push netcoreapp3.1 changes
-        uses: ad-m/github-push-action@master
-        with:
-          directory: .\netreflected\docs\netcoreapp3.1
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          
-      - name: Push net5.0 changes
-        uses: ad-m/github-push-action@master
-        with:
-          directory: .\netreflected\docs\net5.0
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Push net461 changes
-        uses: ad-m/github-push-action@master
-        with:
-          directory: .\netreflected\docs\net461
-          github_token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Commit changes to superproject
         uses: EndBug/add-and-commit@v5

@@ -178,7 +178,7 @@ jobs:
           cd ..\..\..
 
       - name: Pushes to netcoreapp3.1 repository
-        id: push_netcoreapp3.1
+        id: push_netcoreapp31
         uses: cpina/github-action-push-to-another-repository@cp_instead_of_deleting
         env:
           API_TOKEN_GITHUB: ${{ secrets.DOCS_API_TOKEN_GITHUB }}
@@ -190,7 +190,7 @@ jobs:
           commit-message: See ORIGIN_COMMIT
 
       - name: Pushes to net5.0 repository
-        id: push_net5.0
+        id: push_net5
         uses: cpina/github-action-push-to-another-repository@cp_instead_of_deleting
         env:
           API_TOKEN_GITHUB: ${{ secrets.DOCS_API_TOKEN_GITHUB }}

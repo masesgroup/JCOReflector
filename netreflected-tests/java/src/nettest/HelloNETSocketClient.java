@@ -102,11 +102,11 @@ public class HelloNETSocketClient {
                         sender.ReceiveAsync(asea);
                         // decode and display the received data
                         String message = Encoding.getASCII().GetString(asea.getBuffer(), 0, asea.getBytesTransferred());
-                        Console.WriteLine("Client data received {0}", new NetObject(message));
+                        if (message != null) Console.WriteLine("Client data received {0}", new NetObject(message));
                     } else {
                         int recBytes = sender.Receive(JCRefOut.Create(bytes));
                         String message = Encoding.getASCII().GetString(bytes, 0, recBytes);
-                        Console.WriteLine("Client data received {0}", new NetObject(message));
+                        if (message != null) Console.WriteLine("Client data received {0}", new NetObject(message));
                     }
                     x++;
                 } catch (ArgumentNullException | SocketException e) {

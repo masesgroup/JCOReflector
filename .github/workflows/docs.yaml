@@ -151,6 +151,14 @@ jobs:
         run:
           .\bin\net461\JCOReflectorCLI builddocs .github\workflows\builddocs_win19.job
 
+      - name: Clean temporary files
+        run: |
+          Remove-Item .\bin\* -Recurse -Force
+          Remove-Item .\JCOReflector\CLI\obj\* -Recurse -Force
+          Remove-Item .\JCOReflector\engine\obj\* -Recurse -Force
+          Remove-Item .\_data\LICENSE -Force
+          Remove-Item .\_data\README.md -Force
+
       - name: Extract commit SHA
         run: |
           echo "GITHUB_COMMIT_MESSAGE=$(echo $GITHUB_SHA | cut -c 1-7)" >> $GITHUB_ENV

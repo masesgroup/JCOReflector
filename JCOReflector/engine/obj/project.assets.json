@@ -1,0 +1,319 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "JCOBridge/2.3.1": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/C2JBridge.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/C2JBridge.dll": {}
+        },
+        "build": {
+          "build/JCOBridge.targets": {}
+        }
+      }
+    },
+    ".NETFramework,Version=v4.6.1": {
+      "JCOBridge/2.3.1": {
+        "type": "package",
+        "compile": {
+          "lib/net461/C2JBridge.dll": {}
+        },
+        "runtime": {
+          "lib/net461/C2JBridge.dll": {}
+        },
+        "build": {
+          "build/JCOBridge.targets": {}
+        }
+      }
+    },
+    "net5.0": {
+      "JCOBridge/2.3.1": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/C2JBridge.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/C2JBridge.dll": {}
+        },
+        "build": {
+          "build/JCOBridge.targets": {}
+        }
+      }
+    },
+    "net5.0-windows7.0": {
+      "JCOBridge/2.3.1": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/C2JBridge.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/C2JBridge.dll": {}
+        },
+        "build": {
+          "build/JCOBridge.targets": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "JCOBridge/2.3.1": {
+      "sha512": "71KhBXtqcpvk0iX6a5sH3wxhVADByGJeL5bPG9ZiS4QLOgsDnCEqPMqpWKiWm570qPecH+CU0BSDrIbnNMR/uQ==",
+      "type": "package",
+      "path": "jcobridge/2.3.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "JCOB128x128.png",
+        "build/JCOBridge.targets",
+        "contentFiles/net461/IpAddressIdGenerator.exe",
+        "contentFiles/net461/IpAddressIdGenerator.exe.config",
+        "contentFiles/net461/J2CBridge_x64.dll",
+        "contentFiles/net461/J2CBridge_x86.dll",
+        "contentFiles/net461/JCOBridge.docs.jar",
+        "contentFiles/net461/JCOBridge.jar",
+        "contentFiles/net461/LicenseManagerUI.exe",
+        "contentFiles/net461/LicenseManagerUI.exe.config",
+        "contentFiles/net461/LicenseViewer.exe",
+        "contentFiles/net461/LicenseViewer.exe.config",
+        "contentFiles/net461/MachineIdGenerator.exe",
+        "contentFiles/net461/MachineIdGenerator.exe.config",
+        "contentFiles/net5.0/C2JBridgeDesktop.dll",
+        "contentFiles/net5.0/IpAddressIdGenerator.dll",
+        "contentFiles/net5.0/IpAddressIdGenerator.runtimeconfig.json",
+        "contentFiles/net5.0/J2CBridge_Arm.dll",
+        "contentFiles/net5.0/J2CBridge_Arm.so",
+        "contentFiles/net5.0/J2CBridge_Arm64.dll",
+        "contentFiles/net5.0/J2CBridge_Arm64.so",
+        "contentFiles/net5.0/J2CBridge_x64.dll",
+        "contentFiles/net5.0/J2CBridge_x64.so",
+        "contentFiles/net5.0/J2CBridge_x86.dll",
+        "contentFiles/net5.0/JCOBridge.docs.jar",
+        "contentFiles/net5.0/JCOBridge.jar",
+        "contentFiles/net5.0/LicenseManagerUI.dll",
+        "contentFiles/net5.0/LicenseManagerUI.runtimeconfig.json",
+        "contentFiles/net5.0/LicenseViewer.dll",
+        "contentFiles/net5.0/LicenseViewer.runtimeconfig.json",
+        "contentFiles/net5.0/MachineIdGenerator.dll",
+        "contentFiles/net5.0/MachineIdGenerator.runtimeconfig.json",
+        "contentFiles/net5.0/Microsoft.NET5.App.runtimeconfig.json",
+        "contentFiles/net5.0/Microsoft.WindowsDesktop.App.runtimeconfig.json",
+        "contentFiles/net5.0/linux-arm/J2CBridgeHostActivator.so",
+        "contentFiles/net5.0/linux-arm/libnethost.so",
+        "contentFiles/net5.0/linux-arm64/J2CBridgeHostActivator.so",
+        "contentFiles/net5.0/linux-arm64/libnethost.so",
+        "contentFiles/net5.0/linux-x64/J2CBridgeHostActivator.so",
+        "contentFiles/net5.0/linux-x64/libnethost.so",
+        "contentFiles/net5.0/win-arm/J2CBridgeHostActivator.dll",
+        "contentFiles/net5.0/win-arm/nethost.dll",
+        "contentFiles/net5.0/win-arm64/J2CBridgeHostActivator.dll",
+        "contentFiles/net5.0/win-arm64/nethost.dll",
+        "contentFiles/net5.0/win-x64/J2CBridgeHostActivator.dll",
+        "contentFiles/net5.0/win-x64/nethost.dll",
+        "contentFiles/net5.0/win-x86/J2CBridgeHostActivator.dll",
+        "contentFiles/net5.0/win-x86/nethost.dll",
+        "contentFiles/netcoreapp3.1/C2JBridgeDesktop.dll",
+        "contentFiles/netcoreapp3.1/IpAddressIdGenerator.dll",
+        "contentFiles/netcoreapp3.1/IpAddressIdGenerator.runtimeconfig.json",
+        "contentFiles/netcoreapp3.1/J2CBridge_Arm.dll",
+        "contentFiles/netcoreapp3.1/J2CBridge_Arm.so",
+        "contentFiles/netcoreapp3.1/J2CBridge_Arm64.dll",
+        "contentFiles/netcoreapp3.1/J2CBridge_Arm64.so",
+        "contentFiles/netcoreapp3.1/J2CBridge_x64.dll",
+        "contentFiles/netcoreapp3.1/J2CBridge_x64.so",
+        "contentFiles/netcoreapp3.1/J2CBridge_x86.dll",
+        "contentFiles/netcoreapp3.1/JCOBridge.docs.jar",
+        "contentFiles/netcoreapp3.1/JCOBridge.jar",
+        "contentFiles/netcoreapp3.1/LicenseManagerUI.dll",
+        "contentFiles/netcoreapp3.1/LicenseManagerUI.runtimeconfig.json",
+        "contentFiles/netcoreapp3.1/LicenseViewer.dll",
+        "contentFiles/netcoreapp3.1/LicenseViewer.runtimeconfig.json",
+        "contentFiles/netcoreapp3.1/MachineIdGenerator.dll",
+        "contentFiles/netcoreapp3.1/MachineIdGenerator.runtimeconfig.json",
+        "contentFiles/netcoreapp3.1/Microsoft.NETCore.App.runtimeconfig.json",
+        "contentFiles/netcoreapp3.1/Microsoft.WindowsDesktop.App.runtimeconfig.json",
+        "contentFiles/netcoreapp3.1/linux-arm/J2CBridgeHostActivator.so",
+        "contentFiles/netcoreapp3.1/linux-arm/libnethost.so",
+        "contentFiles/netcoreapp3.1/linux-arm64/J2CBridgeHostActivator.so",
+        "contentFiles/netcoreapp3.1/linux-arm64/libnethost.so",
+        "contentFiles/netcoreapp3.1/linux-x64/J2CBridgeHostActivator.so",
+        "contentFiles/netcoreapp3.1/linux-x64/libnethost.so",
+        "contentFiles/netcoreapp3.1/win-arm/J2CBridgeHostActivator.dll",
+        "contentFiles/netcoreapp3.1/win-arm/nethost.dll",
+        "contentFiles/netcoreapp3.1/win-arm64/J2CBridgeHostActivator.dll",
+        "contentFiles/netcoreapp3.1/win-arm64/nethost.dll",
+        "contentFiles/netcoreapp3.1/win-x64/J2CBridgeHostActivator.dll",
+        "contentFiles/netcoreapp3.1/win-x64/nethost.dll",
+        "contentFiles/netcoreapp3.1/win-x86/J2CBridgeHostActivator.dll",
+        "contentFiles/netcoreapp3.1/win-x86/nethost.dll",
+        "jcobridge.2.3.1.nupkg.sha512",
+        "jcobridge.nuspec",
+        "lib/net461/C2JBridge.dll",
+        "lib/net5.0/C2JBridge.dll",
+        "lib/netcoreapp3.1/C2JBridge.dll"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "JCOBridge >= 2.3.1"
+    ],
+    ".NETFramework,Version=v4.6.1": [
+      "JCOBridge >= 2.3.1"
+    ],
+    "net5.0": [
+      "JCOBridge >= 2.3.1"
+    ],
+    "net5.0-windows7.0": [
+      "JCOBridge >= 2.3.1"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\runneradmin\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.3.1",
+    "restore": {
+      "projectUniqueName": "D:\\a\\JCOReflector\\JCOReflector\\JCOReflector\\engine\\JCOReflectorEngine.csproj",
+      "projectName": "JCOReflectorEngine",
+      "projectPath": "D:\\a\\JCOReflector\\JCOReflector\\JCOReflector\\engine\\JCOReflectorEngine.csproj",
+      "packagesPath": "C:\\Users\\runneradmin\\.nuget\\packages\\",
+      "outputPath": "D:\\a\\JCOReflector\\JCOReflector\\JCOReflector\\engine\\obj\\",
+      "projectStyle": "PackageReference",
+      "crossTargeting": true,
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\runneradmin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net461",
+        "net5.0",
+        "net5.0-windows",
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "projectReferences": {}
+        },
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "projectReferences": {}
+        },
+        "net5.0-windows7.0": {
+          "targetAlias": "net5.0-windows",
+          "projectReferences": {}
+        },
+        "net461": {
+          "targetAlias": "net461",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
+        "dependencies": {
+          "JCOBridge": {
+            "target": "Package",
+            "version": "[2.3.1, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+      },
+      "net5.0": {
+        "targetAlias": "net5.0",
+        "dependencies": {
+          "JCOBridge": {
+            "target": "Package",
+            "version": "[2.3.1, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+      },
+      "net5.0-windows7.0": {
+        "targetAlias": "net5.0-windows",
+        "dependencies": {
+          "JCOBridge": {
+            "target": "Package",
+            "version": "[2.3.1, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+      },
+      "net461": {
+        "targetAlias": "net461",
+        "dependencies": {
+          "JCOBridge": {
+            "target": "Package",
+            "version": "[2.3.1, )"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

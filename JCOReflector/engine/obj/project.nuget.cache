@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "YFJupv7B+6LY0xMzj4FU90hA41eyuYzox0xqXvtoCeTSb8K4ZrRT+2Qann08qN8rZC/CE+bvJvQsJXVmuYCeTg==",
+  "success": true,
+  "projectFilePath": "D:\\a\\JCOReflector\\JCOReflector\\JCOReflector\\engine\\JCOReflectorEngine.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\runneradmin\\.nuget\\packages\\jcobridge\\2.3.1\\jcobridge.2.3.1.nupkg.sha512"
+  ],
+  "logs": []
+}

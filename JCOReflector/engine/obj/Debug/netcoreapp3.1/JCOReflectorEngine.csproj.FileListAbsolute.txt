@@ -1,0 +1,9 @@
+D:\a\JCOReflector\JCOReflector\bin\netcoreapp3.1\JCOReflectorEngine.deps.json
+D:\a\JCOReflector\JCOReflector\bin\netcoreapp3.1\JCOReflectorEngine.dll
+D:\a\JCOReflector\JCOReflector\bin\netcoreapp3.1\JCOReflectorEngine.pdb
+D:\a\JCOReflector\JCOReflector\JCOReflector\engine\obj\Debug\netcoreapp3.1\JCOReflectorEngine.csprojAssemblyReference.cache
+D:\a\JCOReflector\JCOReflector\JCOReflector\engine\obj\Debug\netcoreapp3.1\JCOReflectorEngine.AssemblyInfoInputs.cache
+D:\a\JCOReflector\JCOReflector\JCOReflector\engine\obj\Debug\netcoreapp3.1\JCOReflectorEngine.AssemblyInfo.cs
+D:\a\JCOReflector\JCOReflector\JCOReflector\engine\obj\Debug\netcoreapp3.1\JCOReflectorEngine.csproj.CoreCompileInputs.cache
+D:\a\JCOReflector\JCOReflector\JCOReflector\engine\obj\Debug\netcoreapp3.1\JCOReflectorEngine.dll
+D:\a\JCOReflector\JCOReflector\JCOReflector\engine\obj\Debug\netcoreapp3.1\JCOReflectorEngine.pdb

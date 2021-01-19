@@ -1,0 +1,12 @@
+D:\a\JCOReflector\JCOReflector\bin\net5.0\JCOReflectorEngine.deps.json
+D:\a\JCOReflector\JCOReflector\bin\net5.0\JCOReflectorEngine.dll
+D:\a\JCOReflector\JCOReflector\bin\net5.0\ref\JCOReflectorEngine.dll
+D:\a\JCOReflector\JCOReflector\bin\net5.0\JCOReflectorEngine.pdb
+D:\a\JCOReflector\JCOReflector\JCOReflector\engine\obj\Debug\net5.0\JCOReflectorEngine.csprojAssemblyReference.cache
+D:\a\JCOReflector\JCOReflector\JCOReflector\engine\obj\Debug\net5.0\JCOReflectorEngine.GeneratedMSBuildEditorConfig.editorconfig
+D:\a\JCOReflector\JCOReflector\JCOReflector\engine\obj\Debug\net5.0\JCOReflectorEngine.AssemblyInfoInputs.cache
+D:\a\JCOReflector\JCOReflector\JCOReflector\engine\obj\Debug\net5.0\JCOReflectorEngine.AssemblyInfo.cs
+D:\a\JCOReflector\JCOReflector\JCOReflector\engine\obj\Debug\net5.0\JCOReflectorEngine.csproj.CoreCompileInputs.cache
+D:\a\JCOReflector\JCOReflector\JCOReflector\engine\obj\Debug\net5.0\JCOReflectorEngine.dll
+D:\a\JCOReflector\JCOReflector\JCOReflector\engine\obj\Debug\net5.0\ref\JCOReflectorEngine.dll
+D:\a\JCOReflector\JCOReflector\JCOReflector\engine\obj\Debug\net5.0\JCOReflectorEngine.pdb

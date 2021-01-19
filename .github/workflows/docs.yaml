@@ -74,8 +74,8 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
         with: 
+          persist-credentials: false
           submodules: 'true'
-          fetch-depth: '1'
 
       # Runs a set of commands using the runners shell
       - name: Build JCOReflectorCLI
@@ -139,25 +139,29 @@ jobs:
           Copy-Item .\_data\LICENSE -Destination .\netreflected\docs\net461\LICENSE -Force
           Copy-Item .\_data\README.md -Destination .\netreflected\docs\net461\README.md -Force
 
-      - name: Build Java Help files
-        run: |
+      - name: Build netcoreapp3.1 Java Help files
+        run:
           dotnet bin\netcoreapp3.1\JCOReflectorCLI.dll builddocs .github\workflows\builddocs_win19.job
+
+      - name: Build net5.0 Java Help files
+        run:
           dotnet bin\net5.0\JCOReflectorCLI.dll builddocs .github\workflows\builddocs_win19.job
+          
+      - name: Build net461 Java Help files
+        run:
           .\bin\net461\JCOReflectorCLI builddocs .github\workflows\builddocs_win19.job
 
       - name: Extract commit SHA
         run: |
           echo "GITHUB_COMMIT_MESSAGE=$(echo $GITHUB_SHA | cut -c 1-7)" >> $GITHUB_ENV
         shell: bash
-
       - name: Commit changes to netcoreapp3.1 help file
         run: |
           cd .\netreflected\docs\netcoreapp3.1
           git config user.name 'CI_DOCS'
           git config user.email "info@masesgroup.com"
-          git add *.*
-          git commit -m 'Update help file to commit ${{ env.GITHUB_COMMIT_MESSAGE }}'
-          git push https://${{ secrets.DOCS_API_TOKEN_GITHUB }}@github.com/masesgroup/CoreDocs.git
+          git add --all
+          git commit -m 'Update help file to commit masesgroup/JCOReflector/${{ env.GITHUB_COMMIT_MESSAGE }}'
           cd ..\..\..
 
       - name: Commit changes to net5.0 help file
@@ -165,9 +169,8 @@ jobs:
           cd .\netreflected\docs\net5.0
           git config user.name 'CI_DOCS'
           git config user.email "info@masesgroup.com"
-          git add *.*
-          git commit -m 'Update help file to commit ${{ env.GITHUB_COMMIT_MESSAGE }}'
-          git push https://${{ secrets.DOCS_API_TOKEN_GITHUB }}@github.com/masesgroup/NET5Docs.git
+          git add --all
+          git commit -m 'Update help file to commit masesgroup/JCOReflector/${{ env.GITHUB_COMMIT_MESSAGE }}'
           cd ..\..\..
 
       - name: Commit changes to net461 help file
@@ -175,17 +178,51 @@ jobs:
           cd .\netreflected\docs\net461
           git config user.name 'CI_DOCS'
           git config user.email "info@masesgroup.com"
-          git add *.*
-          git commit -m 'Update help file to commit ${{ env.GITHUB_COMMIT_MESSAGE }}'
-          git push https://${{ secrets.DOCS_API_TOKEN_GITHUB }}@github.com/masesgroup/FrameworkDocs.git
+          git add --all
+          git commit -m 'Update help file to commit masesgroup/JCOReflector/${{ env.GITHUB_COMMIT_MESSAGE }}'
           cd ..\..\..
-
-      - name: Commit changes to superproject
-        uses: EndBug/add-and-commit@v5
-        with:
-          add: '.\netreflected\*.*'
-          message: Update help submodule after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
-          
+ 
+      - name: Commit changes to JCOReflector repo
+        run: |
+          cd .\netreflected\
+          git config user.name 'CI_DOCS'
+          git config user.email "info@masesgroup.com"
+          git add --all
+          git commit -m 'Update help submodule after commit ${{ env.GITHUB_COMMIT_MESSAGE }}'
+          cd ..
+ 
+      - name: Push changes to netcoreapp3.1 help file
+        run: |
+          .\.github\workflows\push_docs.cmd %FOLDER% %REPO%
+        shell: cmd
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FOLDER: .\netreflected\docs\netcoreapp3.1
+          SUPER_SECRET: ${{ secrets.DOCS_API_TOKEN_GITHUB }}
+          REPO: masesgroup/CoreDocs
 
+      - name: Push changes to net5.0 help file
+        run: |
+          .\.github\workflows\push_docs.cmd %FOLDER% %REPO%
+        shell: cmd
+        env:
+          FOLDER: .\netreflected\docs\net5.0
+          SUPER_SECRET: ${{ secrets.DOCS_API_TOKEN_GITHUB }}
+          REPO: masesgroup/NET5Docs
+
+      - name: Push changes to net461 help file
+        run: |
+          .\.github\workflows\push_docs.cmd %FOLDER% %REPO%
+        shell: cmd
+        env:
+          FOLDER: .\netreflected\docs\net461
+          SUPER_SECRET: ${{ secrets.DOCS_API_TOKEN_GITHUB }}
+          REPO: masesgroup/FrameworkDocs
+
+      - name: Commit changes to JCOReflector
+        run: |
+          .\.github\workflows\push_docs.cmd %FOLDER% %REPO%
+        shell: cmd
+        env:
+          FOLDER: .\
+          SUPER_SECRET: ${{ secrets.DOCS_API_TOKEN_GITHUB }}
+          REPO: masesgroup/JCOReflector

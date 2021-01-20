@@ -161,7 +161,7 @@ jobs:
 
       - name: Extract commit SHA
         run: |
-          echo "GITHUB_COMMIT_MESSAGE=$(echo $GITHUB_SHA | cut -c 1-7)" >> $GITHUB_ENV
+          echo "GITHUB_COMMIT_MESSAGE=$(echo $GITHUB_SHA)" >> $GITHUB_ENV
         shell: bash
       - name: Commit changes to netcoreapp3.1 help file
         run: |
@@ -169,7 +169,7 @@ jobs:
           git config user.name 'CI_DOCS'
           git config user.email "info@masesgroup.com"
           git add --all
-          git commit -m 'Update help file to commit masesgroup/JCOReflector/${{ env.GITHUB_COMMIT_MESSAGE }}'
+          git commit -m 'Update help file to commit ${{ env.GITHUB_COMMIT_MESSAGE }}'
           cd ..\..\..
 
       - name: Commit changes to net5.0 help file
@@ -178,7 +178,7 @@ jobs:
           git config user.name 'CI_DOCS'
           git config user.email "info@masesgroup.com"
           git add --all
-          git commit -m 'Update help file to commit masesgroup/JCOReflector/${{ env.GITHUB_COMMIT_MESSAGE }}'
+          git commit -m 'Update help file to commit ${{ env.GITHUB_COMMIT_MESSAGE }}'
           cd ..\..\..
 
       - name: Commit changes to net461 help file
@@ -187,7 +187,7 @@ jobs:
           git config user.name 'CI_DOCS'
           git config user.email "info@masesgroup.com"
           git add --all
-          git commit -m 'Update help file to commit masesgroup/JCOReflector/${{ env.GITHUB_COMMIT_MESSAGE }}'
+          git commit -m 'Update help file to commit ${{ env.GITHUB_COMMIT_MESSAGE }}'
           cd ..\..\..
  
       - name: Commit changes to JCOReflector repo

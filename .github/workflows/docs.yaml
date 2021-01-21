@@ -167,7 +167,7 @@ jobs:
       - name: Commit changes to netcoreapp3.1 help file
         run: |
           cd .\netreflected\docs\netcoreapp3.1
-          %GITHUB_WORKSPACE%\.github\workflows\commit.cmd CI_DOCS info@masesgroup.com "Update help file to commit ${{ env.GITHUB_COMMIT_MESSAGE }}"
+          %GITHUB_WORKSPACE%\.github\workflows\commit.cmd CI_DOCS info@masesgroup.com "Update help file to commit masesgroup/JCOReflector@${{ env.GITHUB_COMMIT_MESSAGE }}"
           cd ..\..\..
         shell: cmd
         env:
@@ -176,7 +176,7 @@ jobs:
       - name: Commit changes to net5.0 help file
         run: |
           cd .\netreflected\docs\net5.0
-          %GITHUB_WORKSPACE%\.github\workflows\commit.cmd CI_DOCS info@masesgroup.com "Update help file to commit ${{ env.GITHUB_COMMIT_MESSAGE }}"
+          %GITHUB_WORKSPACE%\.github\workflows\commit.cmd CI_DOCS info@masesgroup.com "Update help file to commit masesgroup/JCOReflector@${{ env.GITHUB_COMMIT_MESSAGE }}"
           cd ..\..\..
         shell: cmd
         env:
@@ -185,7 +185,7 @@ jobs:
       - name: Commit changes to net461 help file
         run: |
           cd .\netreflected\docs\net461
-          %GITHUB_WORKSPACE%\.github\workflows\commit.cmd CI_DOCS info@masesgroup.com "Update help file to commit ${{ env.GITHUB_COMMIT_MESSAGE }}"
+          %GITHUB_WORKSPACE%\.github\workflows\commit.cmd CI_DOCS info@masesgroup.com "Update help file to commit masesgroup/JCOReflector@${{ env.GITHUB_COMMIT_MESSAGE }}"
           cd ..\..\..
         shell: cmd
         env:

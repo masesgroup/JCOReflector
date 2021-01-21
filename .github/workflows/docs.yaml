@@ -163,74 +163,81 @@ jobs:
         run: |
           echo "GITHUB_COMMIT_MESSAGE=$(echo $GITHUB_SHA)" >> $GITHUB_ENV
         shell: bash
+        
       - name: Commit changes to netcoreapp3.1 help file
         run: |
           cd .\netreflected\docs\netcoreapp3.1
-          git config user.name 'CI_DOCS'
-          git config user.email "info@masesgroup.com"
-          git add --all
-          git commit -m 'Update help file to commit ${{ env.GITHUB_COMMIT_MESSAGE }}'
+          %GITHUB_WORKSPACE%\.github\workflows\commit.cmd CI_DOCS info@masesgroup.com "Update help file to commit ${{ env.GITHUB_COMMIT_MESSAGE }}"
           cd ..\..\..
+        shell: cmd
+        env:
+          GITHUB_WORKSPACE: $GITHUB_WORKSPACE
 
       - name: Commit changes to net5.0 help file
         run: |
           cd .\netreflected\docs\net5.0
-          git config user.name 'CI_DOCS'
-          git config user.email "info@masesgroup.com"
-          git add --all
-          git commit -m 'Update help file to commit ${{ env.GITHUB_COMMIT_MESSAGE }}'
+          %GITHUB_WORKSPACE%\.github\workflows\commit.cmd CI_DOCS info@masesgroup.com "Update help file to commit ${{ env.GITHUB_COMMIT_MESSAGE }}"
           cd ..\..\..
-
+        shell: cmd
+        env:
+          GITHUB_WORKSPACE: $GITHUB_WORKSPACE
+          
       - name: Commit changes to net461 help file
         run: |
           cd .\netreflected\docs\net461
-          git config user.name 'CI_DOCS'
-          git config user.email "info@masesgroup.com"
-          git add --all
-          git commit -m 'Update help file to commit ${{ env.GITHUB_COMMIT_MESSAGE }}'
+          %GITHUB_WORKSPACE%\.github\workflows\commit.cmd CI_DOCS info@masesgroup.com "Update help file to commit ${{ env.GITHUB_COMMIT_MESSAGE }}"
           cd ..\..\..
+        shell: cmd
+        env:
+          GITHUB_WORKSPACE: $GITHUB_WORKSPACE
  
       - name: Commit changes to JCOReflector repo
         run: |
           cd .\netreflected\
-          git config user.name 'CI_DOCS'
-          git config user.email "info@masesgroup.com"
-          git add --all
-          git commit -m 'Update help submodule after commit ${{ env.GITHUB_COMMIT_MESSAGE }}'
+          %GITHUB_WORKSPACE%\.github\workflows\commit.cmd CI_DOCS info@masesgroup.com "Update help submodule after commit ${{ env.GITHUB_COMMIT_MESSAGE }}"
           cd ..
+        shell: cmd
+        env:
+          GITHUB_WORKSPACE: $GITHUB_WORKSPACE
  
       - name: Push changes to netcoreapp3.1 help file
         run: |
-          .\.github\workflows\push_docs.cmd %FOLDER% %REPO%
+          cd .\netreflected\docs\netcoreapp3.1
+          %GITHUB_WORKSPACE%\.github\workflows\push.cmd %REPO%
+          cd ..\..\..
         shell: cmd
         env:
-          FOLDER: .\netreflected\docs\netcoreapp3.1
+          GITHUB_WORKSPACE: $GITHUB_WORKSPACE
           SUPER_SECRET: ${{ secrets.DOCS_API_TOKEN_GITHUB }}
           REPO: masesgroup/CoreDocs
 
       - name: Push changes to net5.0 help file
         run: |
-          .\.github\workflows\push_docs.cmd %FOLDER% %REPO%
+          cd .\netreflected\docs\net5.0
+          %GITHUB_WORKSPACE%\.github\workflows\push.cmd %REPO%
+          cd ..\..\..
         shell: cmd
         env:
-          FOLDER: .\netreflected\docs\net5.0
+          GITHUB_WORKSPACE: $GITHUB_WORKSPACE
           SUPER_SECRET: ${{ secrets.DOCS_API_TOKEN_GITHUB }}
           REPO: masesgroup/NET5Docs
 
       - name: Push changes to net461 help file
         run: |
-          .\.github\workflows\push_docs.cmd %FOLDER% %REPO%
+          cd .\netreflected\docs\net461
+          %GITHUB_WORKSPACE%\.github\workflows\push.cmd %REPO%
+          cd ..\..\..
         shell: cmd
         env:
-          FOLDER: .\netreflected\docs\net461
+          GITHUB_WORKSPACE: $GITHUB_WORKSPACE
           SUPER_SECRET: ${{ secrets.DOCS_API_TOKEN_GITHUB }}
           REPO: masesgroup/FrameworkDocs
 
       - name: Commit changes to JCOReflector
         run: |
-          .\.github\workflows\push_docs.cmd %FOLDER% %REPO%
+          %GITHUB_WORKSPACE%\.github\workflows\push.cmd %REPO%
         shell: cmd
         env:
-          FOLDER: .\
+          GITHUB_WORKSPACE: $GITHUB_WORKSPACE
           SUPER_SECRET: ${{ secrets.DOCS_API_TOKEN_GITHUB }}
           REPO: masesgroup/JCOReflector

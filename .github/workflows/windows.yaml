@@ -177,6 +177,9 @@ jobs:
       - name: Commit changes
         uses: EndBug/add-and-commit@v5
         with:
+        with:
+          author_name: github-actions
+          author_email: 41898282+github-actions[bot]@users.noreply.github.com
           add: '.\netreflected\src\*.java'
           message: Update sources after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
           

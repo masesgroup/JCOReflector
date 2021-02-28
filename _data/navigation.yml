@@ -7,12 +7,12 @@ main:
     url: https://masesgroup.github.io/JCOBridge/
   - title: "JCOReflector"
     url: https://masesgroup.github.io/JCOReflector/
+  - title: "Data Distribution Manager"
+    url: https://masesgroup.github.io/DataDistributionManager
   - title: "JCO SWT Bridge"
     url: https://masesgroup.github.io/JCOSWTBridge/
   - title: "JCOBridge Examples"
     url: https://masesgroup.github.io/JCOBridge-Examples
-  - title: "Data Distribution Manager"
-    url: https://masesgroup.github.io/DataDistributionManager
     
 sidebar_elements:
   - title: Source code

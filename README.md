@@ -14,7 +14,7 @@ This project aims to create a set of Java (JVM) classes which mimic .NET (Framew
 Using this project it is possible to use .NET API in Java and all JVM enabled languages (Scala, Kotlin, and so on).
 
 The final output of JCOReflector are JARs: JCOReflector can be used to reflects any .NET assembly (even assembly outside the Microsoft ones) into JARs.
-You only need to reference JCOReflector.jar in the class-path and use the .NET API within a Java projects. A simple example is the following one: 
+You only need to reference JCOReflector.jar in the class-path and use the .NET API within a Java projects. A simple Java example is the following one: 
 
 ```java
 
@@ -60,6 +60,24 @@ To run it runs a command like the following one:
 > java -cp JCOReflector.jar;. HelloNET
 
 The full example code, and other ones, are in the project test folder.
+
+A basic Scala examples is the following one:
+
+```scala
+package mscorlib;
+
+import org.mases.jcobridge.netreflection._;
+import system._;
+ 
+object main extends App {
+	try {
+		Environment.GetLogicalDrives().foreach(Console.WriteLine(_))		
+		Environment.Exit(0);
+	} catch {
+		case tre: Throwable => tre.printStackTrace();
+	}
+}
+```
 
 ### Whats in .NET for Java?
 

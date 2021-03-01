@@ -27,7 +27,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
         with: 
-          fetch-depth: '1'
+          submodules: 'true'
 
       # Runs a set of commands using the runners shell
       - name: Build JCOReflectorCLI
@@ -59,6 +59,12 @@ jobs:
           Compress-Archive -Path .\bin\netcoreapp3.1\* -DestinationPath .\bin\netcoreapp3.1.zip
           Compress-Archive -Path .\bin\net5.0\* -DestinationPath .\bin\net5.0.zip
           Compress-Archive -Path .\bin\net461\* -DestinationPath .\bin\net461.zip
+          
+      - name: Compress documentation files
+        run: | 
+          Compress-Archive -Path .\netreflected\docs\netcoreapp3.1\* -DestinationPath .\netcoreapp3.1.docs.zip
+          Compress-Archive -Path .\netreflected\docs\net5.0\* -DestinationPath .\net5.0.docs.zip
+          Compress-Archive -Path .\netreflected\docs\net461\* -DestinationPath .\net461.docs.zip
 
       - name: Upload netcoreapp3.1 binaries to release
         uses: svenstaro/upload-release-action@v2
@@ -84,5 +90,32 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           file: .\bin\net461.zip
           asset_name: net461.zip
+          tag: ${{ github.ref }}
+          overwrite: true
+
+      - name: Upload netcoreapp3.1 binaries to release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: .\netcoreapp3.1.docs.zip
+          asset_name: netcoreapp3.1.docs.zip
+          tag: ${{ github.ref }}
+          overwrite: true
+          
+      - name: Upload net5.0 binaries to release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: .\net5.0.docs.zip
+          asset_name: net5.0.docs.zip
+          tag: ${{ github.ref }}
+          overwrite: true
+
+      - name: Upload net461 binaries to release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: .\net461.docs.zip
+          asset_name: net461.docs.zip
           tag: ${{ github.ref }}
           overwrite: true

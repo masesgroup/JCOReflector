@@ -49,6 +49,8 @@ public final class JCOBridgeInstance implements IJCEventLog {
     static JCOBridge bridgeInstance = null;
     static String[] _commandLineArgs = new String[0];
 
+    static BufferedWriter global_bw = null;
+
     BufferedWriter bw = null;
     FileWriter fw = null;
     String mfileName;
@@ -57,6 +59,23 @@ public final class JCOBridgeInstance implements IJCEventLog {
         mfileName = fileName;
         fw = new FileWriter(mfileName);
         bw = new BufferedWriter(fw);
+    }
+
+    JCOBridgeInstance(BufferedWriter _bw) throws IOException {
+        bw = _bw;
+    }
+
+    static void writeLog(String msg) {
+        writeLog(global_bw, msg);
+    }
+
+    static void writeLog(BufferedWriter bw, String msg) {
+        try {
+            bw.write(msg);
+            bw.newLine();
+        } catch (IOException ioe) {
+            // nothing can be done
+        }
     }
 
     /**
@@ -70,12 +89,7 @@ public final class JCOBridgeInstance implements IJCEventLog {
                 return;
         }
 
-        try {
-            bw.write(msg);
-            bw.newLine();
-        } catch (IOException ioe) {
-            // nothing can do
-        }
+        writeLog(bw, msg);
     }
 
     /**
@@ -89,12 +103,7 @@ public final class JCOBridgeInstance implements IJCEventLog {
                 return;
         }
 
-        try {
-            bw.write(msg);
-            bw.newLine();
-        } catch (IOException ioe) {
-            // nothing can do
-        }
+        writeLog(bw, msg);
     }
 
     /**
@@ -207,7 +216,7 @@ public final class JCOBridgeInstance implements IJCEventLog {
         _isMultiInstance = isMultiInstance;
     }
 
-     /**
+    /**
      * Set command-line arguments
      * <p>
      * It can be applied only before any operation
@@ -232,6 +241,9 @@ public final class JCOBridgeInstance implements IJCEventLog {
         synchronized (synchObj) {
             if (!initialized) {
                 try {
+                    // try extract from resources
+                    FileWriter fw = new FileWriter(_loggingFilename);
+                    global_bw = new BufferedWriter(fw);
                     try {
                         JCOBridge.Initialize(_commandLineArgs);
                     } catch (JCNativeException e) {
@@ -258,7 +270,7 @@ public final class JCOBridgeInstance implements IJCEventLog {
                     try {
                         theBridgeInstance = JCOBridge.CreateNew();
                         try {
-                            _logger = new JCOBridgeInstance(_loggingFilename);
+                            _logger = new JCOBridgeInstance(global_bw);
                             theBridgeInstance.RegisterEventLog(_logger);
                         } catch (Throwable t) {
                             if (_isDebug)
@@ -275,7 +287,7 @@ public final class JCOBridgeInstance implements IJCEventLog {
                     try {
                         bridgeInstance = JCOBridge.CreateNew();
                         try {
-                            _logger = new JCOBridgeInstance(_loggingFilename);
+                            _logger = new JCOBridgeInstance(global_bw);
                             bridgeInstance.RegisterEventLog(_logger);
                         } catch (Throwable t) {
                             if (_isDebug)

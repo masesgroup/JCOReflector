@@ -45,6 +45,7 @@ public class NetArrayList extends NetObject {
             return bridge.GetType(className + ", "
                     + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOBridgeInstance.writeLog(e.toString());
             return null;
         }
     }

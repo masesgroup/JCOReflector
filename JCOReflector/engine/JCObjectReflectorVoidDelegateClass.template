@@ -70,6 +70,7 @@ public class PACKAGE_CLASS_NAME extends JCVoidDelegate implements IJCVoidEventEm
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOBridgeInstance.writeLog(e.toString());
             return null;
         }
     }

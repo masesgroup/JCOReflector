@@ -27,7 +27,9 @@ package org.mases.jcobridge.netreflection;
 import org.mases.jcobridge.*;
 
 /**
- * The base .NET class managing System.Collections.IEnumerator, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}. 
+ * The base .NET class managing System.Collections.IEnumerator, mscorlib,
+ * Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends
+ * {@link NetObject}.
  */
 public class IEnumeratorImplementation extends NetObject implements IEnumerator {
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
@@ -40,10 +42,10 @@ public class IEnumeratorImplementation extends NetObject implements IEnumerator 
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", "
+                    + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException jce) {
-            if (JCOBridgeInstance.getDebug())
-                jce.printStackTrace();
+            JCOBridgeInstance.writeLog(jce.toString());
             return null;
         }
     }
@@ -84,25 +86,25 @@ public class IEnumeratorImplementation extends NetObject implements IEnumerator 
 
     public static IEnumerator ToIEnumerator(IJCOBridgeReflected from) throws Throwable {
         if (from.getJCOInstance() instanceof JCObject) {
-            return new IEnumeratorImplementation((JCObject)from.getJCOInstance());
+            return new IEnumeratorImplementation((JCObject) from.getJCOInstance());
         }
         return null;
     }
 
-	public boolean hasNext() {
+    public boolean hasNext() {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
-		return classInstance.hasNext();
-	}
+        return classInstance.hasNext();
+    }
 
-	public NetObject next() {
+    public NetObject next() {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
-		try {
-			return new NetObject(classInstance.next());
-		} catch (Throwable jce) {
-			throw new java.util.NoSuchElementException(jce.getMessage());
-		}
-	}
+        try {
+            return new NetObject(classInstance.next());
+        } catch (Throwable jce) {
+            throw new java.util.NoSuchElementException(jce.getMessage());
+        }
+    }
 
 }

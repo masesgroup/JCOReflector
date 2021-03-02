@@ -50,6 +50,7 @@ public class NetException extends Throwable implements IJCOBridgeReflected {
             return bridge.GetType(className + ", "
                     + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOBridgeInstance.writeLog(e.toString());
             return null;
         }
     }
@@ -132,6 +133,7 @@ public class NetException extends Throwable implements IJCOBridgeReflected {
             } else
                 return super.getMessage();
         } catch (JCNativeException jcne) {
+            JCOBridgeInstance.writeLog(jcne.toString());
             return null;
         }
     }
@@ -156,6 +158,7 @@ public class NetException extends Throwable implements IJCOBridgeReflected {
             } else
                 return super.getStackTrace();
         } catch (JCNativeException jcne) {
+            JCOBridgeInstance.writeLog(jcne.toString());
             return null;
         }
     }

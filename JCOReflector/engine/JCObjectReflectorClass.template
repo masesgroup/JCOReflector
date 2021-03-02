@@ -71,7 +71,7 @@ public class PACKAGE_CLASS_NAME extends PACKAGE_CLASS_BASE_CLASS PACKAGE_CLASS_I
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
-            JCOBridgeInstance.writeLog(e.toString());
+            JCOReflector.writeLog(e);
             return null;
         }
     }

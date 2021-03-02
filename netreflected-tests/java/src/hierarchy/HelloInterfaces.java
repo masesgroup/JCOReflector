@@ -32,7 +32,7 @@ import system.collections.*;
 
 public class HelloInterfaces {
     public static void main(String[] args) {
-        JCOBridgeInstance.setCommandLineArgs(args);
+        JCOReflector.setCommandLineArgs(args);
         try {
             //Create and populate a sorted array
             SortedList sr = new SortedList();

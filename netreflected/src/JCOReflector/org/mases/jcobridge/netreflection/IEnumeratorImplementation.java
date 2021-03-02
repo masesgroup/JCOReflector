@@ -45,7 +45,7 @@ public class IEnumeratorImplementation extends NetObject implements IEnumerator 
             return bridge.GetType(className + ", "
                     + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException jce) {
-            JCOBridgeInstance.writeLog(jce.toString());
+            JCOReflector.writeLog(jce);
             return null;
         }
     }

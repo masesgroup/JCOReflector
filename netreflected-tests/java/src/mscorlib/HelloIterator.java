@@ -31,7 +31,7 @@ import system.Environment;
 
 public class HelloIterator {
     public static void main(String[] args) {
-        JCOBridgeInstance.setCommandLineArgs(args);
+        JCOReflector.setCommandLineArgs(args);
         try {
             //Get an iterable array and populate a sorted array
 

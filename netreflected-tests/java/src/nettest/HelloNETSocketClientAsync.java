@@ -110,7 +110,7 @@ public class HelloNETSocketClientAsync {
     }
 
     public static void main(String[] args) throws Throwable {
-        JCOBridgeInstance.setCommandLineArgs(args);
+        JCOReflector.setCommandLineArgs(args);
 
         connectDone = new ManualResetEvent(false);
         sendDone = new ManualResetEvent(false);

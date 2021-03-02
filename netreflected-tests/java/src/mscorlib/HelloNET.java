@@ -32,7 +32,7 @@ import system.text.Encoding;
 
 public class HelloNET {
     public static void main(String[] args) {
-        JCOBridgeInstance.setCommandLineArgs(args);
+        JCOReflector.setCommandLineArgs(args);
         try {
             String filename = "test.txt";
             String result = "";

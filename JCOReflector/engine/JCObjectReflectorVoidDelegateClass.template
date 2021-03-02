@@ -70,7 +70,7 @@ public class PACKAGE_CLASS_NAME extends JCVoidDelegate implements IJCVoidEventEm
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
-            JCOBridgeInstance.writeLog(e.toString());
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -108,8 +108,7 @@ DELEGATE_INVOKE_PARAMETERS_CONVERTER_BLOCK
         }
         catch (Throwable throwableFromJCEvent)
         {
-            if (JCOBridgeInstance.getDebug())
-                throwableFromJCEvent.printStackTrace();
+            JCOReflector.writeLog(throwableFromJCEvent);
         }
     }
 
@@ -126,8 +125,7 @@ DELEGATE_INVOKE_PARAMETERS_CONVERTER_BLOCK
         }
         catch (Throwable throwableFromJCEvent)
         {
-            if (JCOBridgeInstance.getDebug())
-                throwableFromJCEvent.printStackTrace();
+            JCOReflector.writeLog(throwableFromJCEvent);
         }
     }
 

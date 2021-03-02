@@ -40,7 +40,7 @@ public class HelloNETSocket {
     public static void main(String[] args)
             throws ArgumentNullException, InvalidOperationException, SecurityException, Throwable {
 
-        JCOBridgeInstance.setCommandLineArgs(args);
+        JCOReflector.setCommandLineArgs(args);
 
         for (int x = 0; x < args.length; x++) {
             String arg = args[x];

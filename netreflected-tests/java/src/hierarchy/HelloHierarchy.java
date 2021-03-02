@@ -33,7 +33,7 @@ import system.text.Encoding;
 
 public class HelloHierarchy {
     public static void main(String[] args) {
-        JCOBridgeInstance.setCommandLineArgs(args);
+        JCOReflector.setCommandLineArgs(args);
         try {
             String fileinputname = "input.txt";
             String fileoutputname = "output.txt";

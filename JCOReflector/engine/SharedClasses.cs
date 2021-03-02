@@ -260,6 +260,7 @@ namespace MASES.C2JReflector
 
         public string JarDestinationFolder { get; set; }
         public bool WithJARSource { get; set; }
+        public bool EmbeddingJCOBridge { get; set; }
     }
 
     #endregion

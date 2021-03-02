@@ -270,6 +270,7 @@ namespace MASES.C2JReflector
                 args.JarDestinationFolder = tbJarDestinationFolder.Text;
                 args.SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value;
                 args.WithJARSource = cbWithSource.IsChecked.Value;
+                args.EmbeddingJCOBridge = cbWithEmbedding.IsChecked.Value;
                 args.AssembliesToUse = AssemblyDataCollection.CreateList(AssemblyDataCollection);
 
                 if (cbExportToFile.IsChecked.Value)

@@ -102,7 +102,10 @@
                             <Button Name="btnBuild" Content="Build classes..." Click="btnBuild_Click" MinWidth="100" VerticalContentAlignment="Center" VerticalAlignment="Stretch"/>
                             <Button Name="btnBuildDoc" Content="Build docs..." Click="btnBuildDoc_Click" MinWidth="100" VerticalContentAlignment="Center" VerticalAlignment="Stretch"/>
                             <Button Name="btnCreateJars" Content="Create JARs..." Click="btnCreateJars_Click" MinWidth="100" VerticalContentAlignment="Center" VerticalAlignment="Stretch"/>
-                            <CheckBox Name="cbWithSource" Content="Source" IsChecked="False" VerticalContentAlignment="Center" ToolTip="Enable generation of source JARs"/>
+                            <StackPanel>
+                                <CheckBox Name="cbWithSource" Content="Source" IsChecked="False" VerticalContentAlignment="Center" ToolTip="Enable generation of source JARs"/>
+                                <CheckBox Name="cbWithEmbedding" Content="Embed JCOBridge" IsChecked="False" VerticalContentAlignment="Center" ToolTip="Enable embedding of JCOBridge"/>
+                            </StackPanel>
                         </DockPanel>
                         <DockPanel DockPanel.Dock="Top" MinHeight="30">
                             <Label Content="JAR destination folder" VerticalContentAlignment="Center" VerticalAlignment="Stretch"/>

@@ -17,6 +17,10 @@
     <DefineConstants>$(DefineConstants);NET_CORE;</DefineConstants>
   </PropertyGroup>
 
+  <ItemGroup Condition="'$(TargetFramework)' == 'net461'">
+    <Reference Include="System.IO.Compression" />
+  </ItemGroup>
+
   <ItemGroup>
     <EmbeddedResource Include="JCObjectReflectorClassEnumerable.template" />
     <EmbeddedResource Include="JCObjectReflectorClassEvent.template" />

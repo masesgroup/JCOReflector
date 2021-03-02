@@ -105,6 +105,7 @@ namespace MASES.C2JReflector
                 return Uri.UnescapeDataString(folderUri.MakeRelativeUri(pathUri).ToString().Replace('/', Path.DirectorySeparatorChar));
             }
 
+            public const string BinDirectory = "bin";
             public const string RootDirectory = "netreflected";
             public const string SourceDirectory = "src";
             public const string StatsDirectory = "statistics";
@@ -121,6 +122,101 @@ namespace MASES.C2JReflector
             public const string CompiledFile = "compiled.filelist";
             public const string CompiledFilter = "*.class";
             public const string CompiledPattern = "{0}.jar";
+            public const string JCOBridgeEmbeddedFile = "JCOBridge.zip";
+#if NET_CORE
+#if NET5_0
+            public static string[] JCOBridgeFiles = new string[]
+            {
+                Path.Combine("linux-arm", "J2CBridgeHostActivator.so"),
+                Path.Combine("linux-arm", "libnethost.so"),
+                Path.Combine("linux-arm64", "J2CBridgeHostActivator.so"),
+                Path.Combine("linux-arm64", "libnethost.so"),
+                Path.Combine("linux-x64", "J2CBridgeHostActivator.so"),
+                Path.Combine("linux-x64", "libnethost.so"),
+                Path.Combine("win-arm", "J2CBridgeHostActivator.dll"),
+                Path.Combine("win-arm", "nethost.dll"),
+                Path.Combine("win-arm64", "J2CBridgeHostActivator.dll"),
+                Path.Combine("win-arm64", "nethost.dll"),
+                Path.Combine("win-x64", "J2CBridgeHostActivator.dll"),
+                Path.Combine("win-x64", "nethost.dll"),
+                Path.Combine("win-x86", "J2CBridgeHostActivator.dll"),
+                Path.Combine("win-x86", "nethost.dll"),
+                "C2JBridge.dll",
+                "C2JBridgeDesktop.dll",
+                "IpAddressIdGenerator.dll",
+                "IpAddressIdGenerator.runtimeconfig.json",
+                "J2CBridge_Arm.dll",
+                "J2CBridge_Arm.so",
+                "J2CBridge_Arm64.dll",
+                "J2CBridge_Arm64.so",
+                "J2CBridge_x64.dll",
+                "J2CBridge_x64.so",
+                "J2CBridge_x86.dll",
+                "JCOBridge.docs.jar",
+                "JCOBridge.jar",
+                "LicenseManagerUI.dll",
+                "LicenseManagerUI.runtimeconfig.json",
+                "LicenseViewer.dll",
+                "LicenseViewer.runtimeconfig.json",
+                "MachineIdGenerator.dll",
+                "MachineIdGenerator.runtimeconfig.json",
+            };
+#else
+            public static string[] JCOBridgeFiles = new string[]
+            {
+                Path.Combine("linux-arm", "J2CBridgeHostActivator.so"),
+                Path.Combine("linux-arm", "libnethost.so"),
+                Path.Combine("linux-arm64", "J2CBridgeHostActivator.so"),
+                Path.Combine("linux-arm64", "libnethost.so"),
+                Path.Combine("linux-x64", "J2CBridgeHostActivator.so"),
+                Path.Combine("linux-x64", "libnethost.so"),
+                Path.Combine("win-arm", "J2CBridgeHostActivator.dll"),
+                Path.Combine("win-arm", "nethost.dll"),
+                Path.Combine("win-arm64", "J2CBridgeHostActivator.dll"),
+                Path.Combine("win-arm64", "nethost.dll"),
+                Path.Combine("win-x64", "J2CBridgeHostActivator.dll"),
+                Path.Combine("win-x64", "nethost.dll"),
+                Path.Combine("win-x86", "J2CBridgeHostActivator.dll"),
+                Path.Combine("win-x86", "nethost.dll"),
+                "C2JBridge.dll",
+                "C2JBridgeDesktop.dll",
+                "IpAddressIdGenerator.dll",
+                "IpAddressIdGenerator.runtimeconfig.json",
+                "J2CBridge_Arm.dll",
+                "J2CBridge_Arm.so",
+                "J2CBridge_Arm64.dll",
+                "J2CBridge_Arm64.so",
+                "J2CBridge_x64.dll",
+                "J2CBridge_x64.so",
+                "J2CBridge_x86.dll",
+                "JCOBridge.docs.jar",
+                "JCOBridge.jar",
+                "LicenseManagerUI.dll",
+                "LicenseManagerUI.runtimeconfig.json",
+                "LicenseViewer.dll",
+                "LicenseViewer.runtimeconfig.json",
+                "MachineIdGenerator.dll",
+                "MachineIdGenerator.runtimeconfig.json",
+            };
+#endif
+#else
+            public static string[] JCOBridgeFiles = new string[]
+            {
+                "C2JBridge.dll",
+                "IpAddressIdGenerator.exe",
+                "IpAddressIdGenerator.exe.config",
+                "J2CBridge_x64.dll",
+                "J2CBridge_x86.dll",
+                "JCOBridge.docs.jar",
+                "JCOBridge.jar",
+                "LicenseManagerUI.exe",
+                "LicenseManagerUI.exe.config",
+                "LicenseViewer.exe",
+                "LicenseViewer.exe.config",
+                "MachineIdGenerator.exe",
+                "MachineIdGenerator.exe.config",
+            };
+#endif
         }
 
         public class Framework
@@ -328,7 +424,7 @@ namespace MASES.C2JReflector
             public const string DUPLICATED_PARAMETER_PROTO = "dupParam{0}";
             public const string NEW_MODIFIER_PROTO = "{0}New{1}";
 
-            public static string AUTOCLOSEABLE_CLOSE_METHOD =   "    public void close() throws Exception {" + Environment.NewLine +
+            public static string AUTOCLOSEABLE_CLOSE_METHOD = "    public void close() throws Exception {" + Environment.NewLine +
                                                                 "        try {" + Environment.NewLine +
                                                                 "            if (classInstance == null)" + Environment.NewLine +
                                                                 "                throw new UnsupportedOperationException(\"classInstance is null.\");" + Environment.NewLine +
@@ -341,7 +437,7 @@ namespace MASES.C2JReflector
                                                                 "        } catch (Throwable t) {" + Environment.NewLine +
                                                                 "            throw new Exception(t);" + Environment.NewLine +
                                                                 "        }" + Environment.NewLine +
-                                                                "    }" ;
+                                                                "    }";
         }
 
         public class Properties

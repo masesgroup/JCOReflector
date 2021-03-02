@@ -21,25 +21,4 @@
   <ItemGroup>
 	<ProjectReference Include="..\engine\JCOReflectorEngine.csproj" />
   </ItemGroup>
-
-  <ItemGroup>
-    <None Include="build.job">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="builddocs.job">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="createjars_core.job">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="createjars_framework.job">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="reflect_framework.job">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="reflect_netcoreapp3.1.job">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
 </Project>

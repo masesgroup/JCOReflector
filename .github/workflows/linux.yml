@@ -92,11 +92,9 @@ jobs:
             dotnet bin/net5.0/JCOReflectorCLI.dll createjars .github/workflows/createjars_core5.0_linux.job																  
 
         - name: Build test source file
-          run: |
-            javac -cp ./bin/netcoreapp3.1/JCOReflector.jar ./netreflected-tests/java/src/hierarchy/*.java ./netreflected-tests/java/src/mscorlib/*.java ./netreflected-tests/java/src/nettest/*.java
-            javac -cp ./bin/net5.0/JCOReflector.jar ./netreflected-tests/java/src/hierarchy/*.java ./netreflected-tests/java/src/mscorlib/*.java ./netreflected-tests/java/src/nettest/*.java
+          run: javac -cp ./bin/netcoreapp3.1/JCOReflector.jar ./netreflected-tests/java/src/hierarchy/*.java ./netreflected-tests/java/src/mscorlib/*.java ./netreflected-tests/java/src/nettest/*.java
 
-        - name: Execute tests	netcoreapp3.1				 
+        - name: Execute tests netcoreapp3.1
           run: |
             java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/java/src/" hierarchy.HelloHierarchy --CoreCLRApp:Microsoft.NETCore.App
             java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/java/src/" hierarchy.HelloInterfaces --CoreCLRApp:Microsoft.NETCore.App
@@ -106,7 +104,10 @@ jobs:
             java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/java/src/" nettest.HelloNETSocket -server 127.0.0.1 --CoreCLRApp:Microsoft.NETCore.App
             java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/java/src/" nettest.HelloNETSocket -async -server 127.0.0.1 --CoreCLRApp:Microsoft.NETCore.App
 
-        - name: Execute tests	net5.0			 
+        - name: Build test source file
+          run: javac -cp ./bin/net5.0/JCOReflector.jar ./netreflected-tests/java/src/hierarchy/*.java ./netreflected-tests/java/src/mscorlib/*.java ./netreflected-tests/java/src/nettest/*.java
+
+        - name: Execute tests net5.0 
           run: |
             java -cp "./bin/net5.0/JCOReflector.jar:./netreflected-tests/java/src/" hierarchy.HelloHierarchy 
             java -cp "./bin/net5.0/JCOReflector.jar:./netreflected-tests/java/src/" hierarchy.HelloInterfaces 
@@ -114,5 +115,4 @@ jobs:
             java -cp "./bin/net5.0/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloNETEvent 
             java -cp "./bin/net5.0/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloIterator 
             java -cp "./bin/net5.0/JCOReflector.jar:./netreflected-tests/java/src/" nettest.HelloNETSocket -server 127.0.0.1 
-            java -cp "./bin/net5.0/JCOReflector.jar:./netreflected-tests/java/src/" nettest.HelloNETSocket -async -server 127.0.0.1 
-
+            java -cp "./bin/net5.0/JCOReflector.jar:./netreflected-tests/java/src/" nettest.HelloNETSocket -async -server 127.0.0.1

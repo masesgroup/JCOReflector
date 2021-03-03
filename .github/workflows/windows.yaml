@@ -77,7 +77,6 @@ jobs:
           dotnet build --no-incremental --framework netcoreapp3.1 JCOReflector\JCOReflectorCLI.sln
           dotnet build --no-incremental --framework net5.0 JCOReflector\JCOReflectorCLI.sln  
           dotnet build --no-incremental --framework net461 JCOReflector\JCOReflectorCLI.sln  
-          
 
       # Runs a set of commands using the runners shell
       - name: Copy configuration file
@@ -90,8 +89,7 @@ jobs:
           Remove-Item .\netreflected\src\netcoreapp3.1 -Recurse -Force 
           Remove-Item .\netreflected\src\net5.0 -Recurse -Force
           Remove-Item .\netreflected\src\net461 -Recurse -Force
-          
-          
+
       - name: Reflect .NET Core 3.1 Java files
         run:
           dotnet bin\netcoreapp3.1\JCOReflectorCLI.dll reflect .github\workflows\reflect_netcoreapp3.1.job
@@ -103,8 +101,7 @@ jobs:
       - name: Reflect .NET Framework Java files
         run:
           .\bin\net461\JCOReflectorCLI reflect .github\workflows\reflect_net461.job
-          
-                
+
       - name: Build Java files .NET Core 3.1
         run: 
           dotnet bin\netcoreapp3.1\JCOReflectorCLI.dll build .github\workflows\build_win19.job
@@ -116,8 +113,7 @@ jobs:
       - name: Build Java files .NET Framework
         run: 
           .\bin\net461\JCOReflectorCLI build .github\workflows\build_win19.job
-          
-          
+
       - name: Build JAR files .NET Core 3.1
         run: 
           dotnet bin\netcoreapp3.1\JCOReflectorCLI.dll createjars .github\workflows\createjars_core3.1_win19.job
@@ -129,17 +125,8 @@ jobs:
           .\bin\net461\JCOReflectorCLI createjars .github\workflows\createjars_framework_win19.job
           
       - name: Build test source file .NET Core 3.1
-        run: 
-          javac -cp ./bin/netcoreapp3.1/JCOReflector.jar ./netreflected-tests/java/src/hierarchy/*.java ./netreflected-tests/java/src/mscorlib/*.java ./netreflected-tests/java/src/nettest/*.java
-      
-      - name: Build test source file .NET Core 5.0
-        run: 
-          javac -cp ./bin/net5.0/JCOReflector.jar ./netreflected-tests/java/src/hierarchy/*.java ./netreflected-tests/java/src/mscorlib/*.java ./netreflected-tests/java/src/nettest/*.java
-      
-      - name: Build test source file .NET Framework
-        run:
-          javac -cp ./bin/net461/JCOReflector.jar ./netreflected-tests/java/src/hierarchy/HelloInterfaces.java ./netreflected-tests/java/src/mscorlib/*.java ./netreflected-tests/java/src/nettest/*.java
-          
+        run: javac -cp ./bin/netcoreapp3.1/JCOReflector.jar ./netreflected-tests/java/src/hierarchy/*.java ./netreflected-tests/java/src/mscorlib/*.java ./netreflected-tests/java/src/nettest/*.java
+
       - name: Execute tests .NET Core 3.1
         run: |
           java -cp "./bin/netcoreapp3.1/JCOReflector.jar;./netreflected-tests/java/src/" hierarchy.HelloHierarchy --CoreCLRApp:Microsoft.NETCore.App
@@ -149,7 +136,10 @@ jobs:
           java -cp "./bin/netcoreapp3.1/JCOReflector.jar;./netreflected-tests/java/src/" mscorlib.HelloIterator --CoreCLRApp:Microsoft.NETCore.App
           java -cp "./bin/netcoreapp3.1/JCOReflector.jar;./netreflected-tests/java/src/" nettest.HelloNETSocket --CoreCLRApp:Microsoft.NETCore.App
           java -cp "./bin/netcoreapp3.1/JCOReflector.jar;./netreflected-tests/java/src/" nettest.HelloNETSocket -async --CoreCLRApp:Microsoft.NETCore.App
-          
+
+      - name: Build test source file .NET Core 5.0
+        run: javac -cp ./bin/net5.0/JCOReflector.jar ./netreflected-tests/java/src/hierarchy/*.java ./netreflected-tests/java/src/mscorlib/*.java ./netreflected-tests/java/src/nettest/*.java
+
       - name: Execute tests .NET Core 5.0
         run: |
           java -cp "./bin/net5.0/JCOReflector.jar;./netreflected-tests/java/src/" hierarchy.HelloHierarchy
@@ -160,6 +150,9 @@ jobs:
           java -cp "./bin/net5.0/JCOReflector.jar;./netreflected-tests/java/src/" nettest.HelloNETSocket
           java -cp "./bin/net5.0/JCOReflector.jar;./netreflected-tests/java/src/" nettest.HelloNETSocket -async
           
+      - name: Build test source file .NET Framework
+        run: javac -cp ./bin/net461/JCOReflector.jar ./netreflected-tests/java/src/hierarchy/HelloInterfaces.java ./netreflected-tests/java/src/mscorlib/*.java ./netreflected-tests/java/src/nettest/*.java
+
       - name: Execute tests .NET Framework
         run: |
           java -cp "./bin/net461/JCOReflector.jar;./netreflected-tests/java/src/" hierarchy.HelloInterfaces
@@ -168,6 +161,12 @@ jobs:
           java -cp "./bin/net461/JCOReflector.jar;./netreflected-tests/java/src/" mscorlib.HelloIterator
           java -cp "./bin/net461/JCOReflector.jar;./netreflected-tests/java/src/" nettest.HelloNETSocket
           java -cp "./bin/net461/JCOReflector.jar;./netreflected-tests/java/src/" nettest.HelloNETSocket -async
+
+      - name: Compress release files
+        run: | 
+          Compress-Archive -Path .\bin\netcoreapp3.1\* -DestinationPath .\bin\netcoreapp3.1.zip
+          Compress-Archive -Path .\bin\net5.0\* -DestinationPath .\bin\net5.0.zip
+          Compress-Archive -Path .\bin\net461\* -DestinationPath .\bin\net461.zip
 
       - name: Extract commit SHA
         run: |
@@ -181,6 +180,20 @@ jobs:
           author_email: 41898282+github-actions[bot]@users.noreply.github.com
           add: '.\netreflected\src\*.java'
           message: Update sources after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
-          
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: netcoreapp3.1.zip
+          path: .\bin\netcoreapp3.1.zip
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: net5.0.zip
+          path: .\bin\net5.0.zip
+          
+      - uses: actions/upload-artifact@v2
+        with:
+          name: net461.zip
+          path: .\bin\net461.zip

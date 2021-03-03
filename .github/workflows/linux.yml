@@ -38,7 +38,7 @@ jobs:
         do
           echo $file
           if [[ $file == "netreflected/src/"* ]]; then
-            echo "This file is under the directory 'netreflected/src/JCOReflector'."
+            echo "This file is under the directory 'netreflected/src'."
             echo "::set-output name=run_job::true"
             break
           fi
@@ -54,8 +54,7 @@ jobs:
           fi
         echo "This files are not in a source directory no action required"
         done < files.txt
-        
-        
+
   # This workflow contains a single job called "build"
   build_linux:
       needs: check

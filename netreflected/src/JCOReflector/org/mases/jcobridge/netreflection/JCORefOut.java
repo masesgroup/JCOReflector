@@ -25,7 +25,9 @@
 package org.mases.jcobridge.netreflection;
 
 import org.mases.jcobridge.JCRefOut;
-
+/**
+ * Wrapper class around {@link JCRefOut}
+ */
 public class JCORefOut<T> {
     T mrefObj = null;
     T[] mrefArray = null;
@@ -73,9 +75,9 @@ public class JCORefOut<T> {
      */
     public Object getJCRefOut() {
         if (mrefObj != null) {
-            return JCRefOut.Create((T)mrefObj);
+            return JCRefOut.Create((T) mrefObj);
         } else {
-            return JCRefOut.Create((T[])mrefArray);
+            return JCRefOut.Create((T[]) mrefArray);
         }
     }
 }

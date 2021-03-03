@@ -24,11 +24,11 @@ sidebar_elements:
   - title: Documentation
     children:
       - title: ".NET Framework documentation"
-        url: /netreflected/docs/net461.md
+        url: /netreflected/docs/net461/
       - title: ".NET Core documentation"
-        url: /netreflected/docs/netcoreapp3.1.md
+        url: /netreflected/docs/netcoreapp3.1/
       - title: ".NET 5 documentation"
-        url: /netreflected/docs/net5.0.md
+        url: /netreflected/docs/net5.0/
   - title: External links
     children:
       - title: "Sinapse Platform Official site"

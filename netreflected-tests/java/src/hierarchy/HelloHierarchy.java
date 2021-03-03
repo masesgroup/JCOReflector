@@ -26,7 +26,6 @@ package hierarchy;
 
 import org.mases.jcobridge.netreflection.*;
 
-import org.mases.jcobridge.JCRefOut;
 import system.*;
 import system.io.*;
 import system.text.Encoding;
@@ -62,7 +61,7 @@ public class HelloHierarchy {
                 //Verify that the stream used where correct reading from the original destination stream
                 byte[] bytes = new byte[1024];
                 //use theJCRefOut special class to retrieve data passed as parameter
-                JCRefOut<byte[]> data = JCRefOut.Create(bytes);
+                JCORefOut<byte[]> data = JCORefOut.Create(bytes);
                 destinationStream.Seek(0, SeekOrigin.Begin);
                 destinationStream.Read(data, 0, 1024);
                 String expectedText= fileText + fileText;

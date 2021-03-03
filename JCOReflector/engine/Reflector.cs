@@ -1381,8 +1381,8 @@ namespace MASES.C2JReflector
 
                             if (isNativeArrayInParameter)
                             {
-                                inputParams.Append(string.Format(Const.Parameters.INPUT_PARAMETER, Const.SpecialNames.JCRefOutType, paramName));
-                                formatter = Const.Parameters.INVOKE_PARAMETER_PRIMITIVE;
+                                inputParams.Append(string.Format(Const.Parameters.INPUT_PARAMETER, Const.SpecialNames.JCORefOutType, paramName));
+                                formatter = Const.Parameters.INVOKE_PARAMETER_JCOREFOUT;
                             }
                             else
                             {

@@ -73,7 +73,7 @@ namespace MASES.C2JReflector
             public const string VarArgsTrailer = "...";
             public const string ArrayTrailer = "[]";
             public const string MultiArrayTrailer = "[,";
-            public const string JCRefOutType = "JCRefOut";
+            public const string JCORefOutType = "JCORefOut";
             public const string NativeStringType = "java.lang.String";
             public const string IJCOBridgeReflected = "IJCOBridgeReflected";
             public const string NetObject = "NetObject";
@@ -398,6 +398,7 @@ namespace MASES.C2JReflector
             public const string INVOKE_PARAMETER_GENERIC = ", ({0} instanceof IJCOBridgeReflected) ? ((IJCOBridgeReflected){0}).getJCOInstance() : throw JCException(\"Cannot manage instance\")";
             public const string INVOKE_PARAMETER_NONPRIMITIVE = ", {1} == null ? null : {0}{1}.getJCOInstance()";
             public const string INVOKE_PARAMETER_NONPRIMITIVE_ARRAY = ", {0}toObjectFromArray({1})";
+            public const string INVOKE_PARAMETER_JCOREFOUT = ", {0}{1}.getJCRefOut()";
         }
 
         public class CTor

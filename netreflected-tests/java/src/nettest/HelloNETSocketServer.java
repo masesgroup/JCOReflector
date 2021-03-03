@@ -24,7 +24,7 @@
 
 package nettest;
 
-import org.mases.jcobridge.*;
+import org.mases.jcobridge.netreflection.JCORefOut;
 import org.mases.jcobridge.netreflection.NetObject;
 import system.*;
 import system.net.*;
@@ -92,7 +92,7 @@ public class HelloNETSocketServer {
                         }
                         dataNew = Encoding.getASCII().GetString(asea.getBuffer(), 0, asea.getBytesTransferred());
                     } else {
-                        int recBytes = handler.Receive(JCRefOut.Create(bytes));
+                        int recBytes = handler.Receive(JCORefOut.Create(bytes));
                         dataNew = Encoding.getASCII().GetString(bytes, 0, recBytes);
                     }
 

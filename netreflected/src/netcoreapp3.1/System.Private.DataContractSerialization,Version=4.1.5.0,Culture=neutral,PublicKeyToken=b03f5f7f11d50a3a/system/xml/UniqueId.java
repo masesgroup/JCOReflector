@@ -72,6 +72,7 @@ public class UniqueId extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -203,11 +204,11 @@ public class UniqueId extends NetObject  {
         }
     }
 
-    public boolean TryGetGuid(JCRefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
+    public boolean TryGetGuid(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("TryGetGuid", dupParam0, dupParam1);
+            return (boolean)classInstance.Invoke("TryGetGuid", dupParam0.getJCRefOut(), dupParam1);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,11 +224,11 @@ public class UniqueId extends NetObject  {
         }
     }
 
-    public int ToCharArray(JCRefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
+    public int ToCharArray(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("ToCharArray", dupParam0, dupParam1);
+            return (int)classInstance.Invoke("ToCharArray", dupParam0.getJCRefOut(), dupParam1);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

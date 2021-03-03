@@ -71,6 +71,7 @@ public class SqlCacheDependencyAdmin extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -183,11 +184,11 @@ public class SqlCacheDependencyAdmin extends NetObject  {
         }
     }
 
-    public static void DisableTableForNotifications(java.lang.String dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.threading.AbandonedMutexException, system.configuration.provider.ProviderException, system.FormatException, system.web.caching.DatabaseNotEnabledForNotificationException {
+    public static void DisableTableForNotifications(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.threading.AbandonedMutexException, system.configuration.provider.ProviderException, system.FormatException, system.web.caching.DatabaseNotEnabledForNotificationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("DisableTableForNotifications", dupParam0, dupParam1);
+            classType.Invoke("DisableTableForNotifications", dupParam0, dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -223,11 +224,11 @@ public class SqlCacheDependencyAdmin extends NetObject  {
         }
     }
 
-    public static void EnableTableForNotifications(java.lang.String dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.threading.AbandonedMutexException, system.configuration.provider.ProviderException, system.FormatException, system.web.caching.DatabaseNotEnabledForNotificationException {
+    public static void EnableTableForNotifications(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.threading.AbandonedMutexException, system.configuration.provider.ProviderException, system.FormatException, system.web.caching.DatabaseNotEnabledForNotificationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("EnableTableForNotifications", dupParam0, dupParam1);
+            classType.Invoke("EnableTableForNotifications", dupParam0, dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -86,6 +86,7 @@ public class WebBrowser extends WebBrowserBase  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -237,11 +238,11 @@ public class WebBrowser extends WebBrowserBase  {
         }
     }
 
-    public void Navigate(java.lang.String dupParam0, java.lang.String dupParam1, JCRefOut dupParam2, java.lang.String dupParam3) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.reflection.TargetInvocationException {
+    public void Navigate(java.lang.String dupParam0, java.lang.String dupParam1, JCORefOut dupParam2, java.lang.String dupParam3) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidCastException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Navigate", dupParam0, dupParam1, dupParam2, dupParam3);
+            classInstance.Invoke("Navigate", dupParam0, dupParam1, dupParam2.getJCRefOut(), dupParam3);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -287,11 +288,11 @@ public class WebBrowser extends WebBrowserBase  {
         }
     }
 
-    public void Navigate(Uri dupParam0, java.lang.String dupParam1, JCRefOut dupParam2, java.lang.String dupParam3) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UriFormatException, system.OutOfMemoryException, system.InvalidCastException, system.componentmodel.Win32Exception {
+    public void Navigate(Uri dupParam0, java.lang.String dupParam1, JCORefOut dupParam2, java.lang.String dupParam3) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UriFormatException, system.OutOfMemoryException, system.InvalidCastException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Navigate", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2, dupParam3);
+            classInstance.Invoke("Navigate", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2.getJCRefOut(), dupParam3);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

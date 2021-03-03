@@ -76,6 +76,7 @@ public class ECDiffieHellmanCngPublicKey extends ECDiffieHellmanPublicKey  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -174,11 +175,11 @@ public class ECDiffieHellmanCngPublicKey extends ECDiffieHellmanPublicKey  {
         }
     }
 
-    public static ECDiffieHellmanPublicKey FromByteArray(JCRefOut dupParam0, CngKeyBlobFormat dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
+    public static ECDiffieHellmanPublicKey FromByteArray(JCORefOut dupParam0, CngKeyBlobFormat dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objFromByteArray = (JCObject)classType.Invoke("FromByteArray", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance());
+            JCObject objFromByteArray = (JCObject)classType.Invoke("FromByteArray", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
             return new ECDiffieHellmanPublicKey(objFromByteArray);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

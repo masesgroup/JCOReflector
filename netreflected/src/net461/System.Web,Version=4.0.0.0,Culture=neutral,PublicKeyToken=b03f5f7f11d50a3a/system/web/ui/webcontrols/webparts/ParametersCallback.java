@@ -72,6 +72,7 @@ public class ParametersCallback extends JCVoidDelegate implements IJCVoidEventEm
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -110,8 +111,7 @@ public class ParametersCallback extends JCVoidDelegate implements IJCVoidEventEm
         }
         catch (Throwable throwableFromJCEvent)
         {
-            if (JCOBridgeInstance.getDebug())
-                throwableFromJCEvent.printStackTrace();
+            JCOReflector.writeLog(throwableFromJCEvent);
         }
     }
 
@@ -129,8 +129,7 @@ public class ParametersCallback extends JCVoidDelegate implements IJCVoidEventEm
         }
         catch (Throwable throwableFromJCEvent)
         {
-            if (JCOBridgeInstance.getDebug())
-                throwableFromJCEvent.printStackTrace();
+            JCOReflector.writeLog(throwableFromJCEvent);
         }
     }
 

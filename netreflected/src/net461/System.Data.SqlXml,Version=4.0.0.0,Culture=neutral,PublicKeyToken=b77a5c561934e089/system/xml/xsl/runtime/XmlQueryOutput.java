@@ -78,6 +78,7 @@ public class XmlQueryOutput extends XmlWriter  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -233,11 +234,11 @@ public class XmlQueryOutput extends XmlWriter  {
         }
     }
 
-    public void WriteBase64(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.NotSupportedException {
+    public void WriteBase64(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("WriteBase64", dupParam0, dupParam1, dupParam2);
+            classInstance.Invoke("WriteBase64", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,11 +274,11 @@ public class XmlQueryOutput extends XmlWriter  {
         }
     }
 
-    public void WriteChars(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.NotSupportedException {
+    public void WriteChars(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("WriteChars", dupParam0, dupParam1, dupParam2);
+            classInstance.Invoke("WriteChars", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -503,11 +504,11 @@ public class XmlQueryOutput extends XmlWriter  {
         }
     }
 
-    public void WriteRaw(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.NotSupportedException {
+    public void WriteRaw(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("WriteRaw", dupParam0, dupParam1, dupParam2);
+            classInstance.Invoke("WriteRaw", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

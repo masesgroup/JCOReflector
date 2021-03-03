@@ -78,6 +78,7 @@ public class ECDsaCng extends ECDsa  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -189,11 +190,11 @@ public class ECDsaCng extends ECDsa  {
         }
     }
 
-    public boolean VerifyData(JCRefOut dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
+    public boolean VerifyData(JCORefOut dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("VerifyData", dupParam0, dupParam1);
+            return (boolean)classInstance.Invoke("VerifyData", dupParam0.getJCRefOut(), dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,11 +210,11 @@ public class ECDsaCng extends ECDsa  {
         }
     }
 
-    public boolean VerifyData(JCRefOut dupParam0, int dupParam1, int dupParam2, JCRefOut dupParam3) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
+    public boolean VerifyData(JCORefOut dupParam0, int dupParam1, int dupParam2, JCORefOut dupParam3) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("VerifyData", dupParam0, dupParam1, dupParam2, dupParam3);
+            return (boolean)classInstance.Invoke("VerifyData", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,11 +230,11 @@ public class ECDsaCng extends ECDsa  {
         }
     }
 
-    public boolean VerifyData(Stream dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
+    public boolean VerifyData(Stream dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("VerifyData", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1);
+            return (boolean)classInstance.Invoke("VerifyData", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,11 +250,11 @@ public class ECDsaCng extends ECDsa  {
         }
     }
 
-    public boolean VerifyHash(JCRefOut dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.NotSupportedException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.RankException {
+    public boolean VerifyHash(JCORefOut dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.NotSupportedException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.RankException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("VerifyHash", dupParam0, dupParam1);
+            return (boolean)classInstance.Invoke("VerifyHash", dupParam0.getJCRefOut(), dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,12 +279,12 @@ public class ECDsaCng extends ECDsa  {
         }
     }
 
-    public byte[] SignData(JCRefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
+    public byte[] SignData(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("SignData", (Object)dupParam0);
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("SignData", (Object)dupParam0.getJCRefOut());
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -316,12 +317,12 @@ public class ECDsaCng extends ECDsa  {
         }
     }
 
-    public byte[] SignData(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
+    public byte[] SignData(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("SignData", dupParam0, dupParam1, dupParam2);
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("SignData", dupParam0.getJCRefOut(), dupParam1, dupParam2);
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -373,12 +374,12 @@ public class ECDsaCng extends ECDsa  {
         }
     }
 
-    public byte[] SignHash(JCRefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.security.cryptography.CryptographicException, system.ArgumentException, system.NullReferenceException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.RankException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException {
+    public byte[] SignHash(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.security.cryptography.CryptographicException, system.ArgumentException, system.NullReferenceException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.RankException, system.security.SecurityException, system.NotSupportedException, system.MissingMethodException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("SignHash", (Object)dupParam0);
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("SignHash", (Object)dupParam0.getJCRefOut());
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }

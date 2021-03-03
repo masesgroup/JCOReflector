@@ -75,6 +75,7 @@ public class ProfileProvider extends SettingsProvider  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -158,11 +159,11 @@ public class ProfileProvider extends SettingsProvider  {
         }
     }
 
-    public int DeleteProfiles(JCRefOut dupParam0) throws Throwable {
+    public int DeleteProfiles(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("DeleteProfiles", (Object)dupParam0);
+            return (int)classInstance.Invoke("DeleteProfiles", (Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

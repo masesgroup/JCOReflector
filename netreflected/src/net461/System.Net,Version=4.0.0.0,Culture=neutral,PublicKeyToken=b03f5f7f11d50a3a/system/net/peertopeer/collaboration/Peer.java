@@ -81,6 +81,7 @@ public class Peer extends NetObject implements AutoCloseable {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -176,11 +177,11 @@ public class Peer extends NetObject implements AutoCloseable {
         }
     }
 
-    public PeerInvitationResponse Invite(PeerApplication dupParam0, java.lang.String dupParam1, JCRefOut dupParam2) throws Throwable {
+    public PeerInvitationResponse Invite(PeerApplication dupParam0, java.lang.String dupParam1, JCORefOut dupParam2) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objInvite = (JCObject)classInstance.Invoke("Invite", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2);
+            JCObject objInvite = (JCObject)classInstance.Invoke("Invite", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2.getJCRefOut());
             return new PeerInvitationResponse(objInvite);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -240,11 +241,11 @@ public class Peer extends NetObject implements AutoCloseable {
         }
     }
 
-    public void InviteAsync(PeerApplication dupParam0, java.lang.String dupParam1, JCRefOut dupParam2, NetObject dupParam3) throws Throwable {
+    public void InviteAsync(PeerApplication dupParam0, java.lang.String dupParam1, JCORefOut dupParam2, NetObject dupParam3) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("InviteAsync", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
+            classInstance.Invoke("InviteAsync", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2.getJCRefOut(), dupParam3 == null ? null : dupParam3.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

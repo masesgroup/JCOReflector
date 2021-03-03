@@ -86,6 +86,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -203,11 +204,11 @@ public class XmlWriter extends NetObject implements AutoCloseable {
         }
     }
 
-    public Task WriteBase64Async(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.NotImplementedException {
+    public Task WriteBase64Async(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objWriteBase64Async = (JCObject)classInstance.Invoke("WriteBase64Async", dupParam0, dupParam1, dupParam2);
+            JCObject objWriteBase64Async = (JCObject)classInstance.Invoke("WriteBase64Async", dupParam0.getJCRefOut(), dupParam1, dupParam2);
             return new Task(objWriteBase64Async);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -225,11 +226,11 @@ public class XmlWriter extends NetObject implements AutoCloseable {
         }
     }
 
-    public Task WriteBinHexAsync(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException {
+    public Task WriteBinHexAsync(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objWriteBinHexAsync = (JCObject)classInstance.Invoke("WriteBinHexAsync", dupParam0, dupParam1, dupParam2);
+            JCObject objWriteBinHexAsync = (JCObject)classInstance.Invoke("WriteBinHexAsync", dupParam0.getJCRefOut(), dupParam1, dupParam2);
             return new Task(objWriteBinHexAsync);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -269,11 +270,11 @@ public class XmlWriter extends NetObject implements AutoCloseable {
         }
     }
 
-    public Task WriteCharsAsync(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.NotImplementedException {
+    public Task WriteCharsAsync(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objWriteCharsAsync = (JCObject)classInstance.Invoke("WriteCharsAsync", dupParam0, dupParam1, dupParam2);
+            JCObject objWriteCharsAsync = (JCObject)classInstance.Invoke("WriteCharsAsync", dupParam0.getJCRefOut(), dupParam1, dupParam2);
             return new Task(objWriteCharsAsync);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -434,11 +435,11 @@ public class XmlWriter extends NetObject implements AutoCloseable {
         }
     }
 
-    public Task WriteRawAsync(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.NotImplementedException {
+    public Task WriteRawAsync(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objWriteRawAsync = (JCObject)classInstance.Invoke("WriteRawAsync", dupParam0, dupParam1, dupParam2);
+            JCObject objWriteRawAsync = (JCObject)classInstance.Invoke("WriteRawAsync", dupParam0.getJCRefOut(), dupParam1, dupParam2);
             return new Task(objWriteRawAsync);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -723,11 +724,11 @@ public class XmlWriter extends NetObject implements AutoCloseable {
         }
     }
 
-    public void WriteBase64(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable {
+    public void WriteBase64(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("WriteBase64", dupParam0, dupParam1, dupParam2);
+            classInstance.Invoke("WriteBase64", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -743,11 +744,11 @@ public class XmlWriter extends NetObject implements AutoCloseable {
         }
     }
 
-    public void WriteBinHex(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
+    public void WriteBinHex(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("WriteBinHex", dupParam0, dupParam1, dupParam2);
+            classInstance.Invoke("WriteBinHex", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -783,11 +784,11 @@ public class XmlWriter extends NetObject implements AutoCloseable {
         }
     }
 
-    public void WriteChars(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable {
+    public void WriteChars(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("WriteChars", dupParam0, dupParam1, dupParam2);
+            classInstance.Invoke("WriteChars", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -963,11 +964,11 @@ public class XmlWriter extends NetObject implements AutoCloseable {
         }
     }
 
-    public void WriteRaw(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable {
+    public void WriteRaw(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("WriteRaw", dupParam0, dupParam1, dupParam2);
+            classInstance.Invoke("WriteRaw", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

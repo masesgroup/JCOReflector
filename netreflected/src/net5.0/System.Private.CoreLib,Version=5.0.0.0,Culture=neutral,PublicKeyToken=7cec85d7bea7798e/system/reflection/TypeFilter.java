@@ -71,6 +71,7 @@ public class TypeFilter extends JCDelegate implements IJCEventEmit, IJCOBridgeRe
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -112,8 +113,7 @@ public class TypeFilter extends JCDelegate implements IJCEventEmit, IJCOBridgeRe
         }
         catch (Throwable throwableFromJCEvent)
         {
-            if (JCOBridgeInstance.getDebug())
-                throwableFromJCEvent.printStackTrace();
+            JCOReflector.writeLog(throwableFromJCEvent);
             return false;
         }
     }
@@ -135,8 +135,7 @@ public class TypeFilter extends JCDelegate implements IJCEventEmit, IJCOBridgeRe
         }
         catch (Throwable throwableFromJCEvent)
         {
-            if (JCOBridgeInstance.getDebug())
-                throwableFromJCEvent.printStackTrace();
+            JCOReflector.writeLog(throwableFromJCEvent);
             return false;
         }
     }

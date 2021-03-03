@@ -73,6 +73,7 @@ public class DSASignatureFormatter extends AsymmetricSignatureFormatter  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -173,12 +174,12 @@ public class DSASignatureFormatter extends AsymmetricSignatureFormatter  {
         }
     }
 
-    public byte[] CreateSignature(JCRefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicUnexpectedOperationException {
+    public byte[] CreateSignature(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicUnexpectedOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("CreateSignature", (Object)dupParam0);
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("CreateSignature", (Object)dupParam0.getJCRefOut());
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }

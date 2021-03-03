@@ -73,6 +73,7 @@ public class MD5 extends HashAlgorithm  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -155,12 +156,12 @@ public class MD5 extends HashAlgorithm  {
         }
     }
 
-    public static byte[] HashData(JCRefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException {
+    public static byte[] HashData(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("HashData", (Object)dupParam0);
+            JCObject resultingObjects = (JCObject)classType.Invoke("HashData", (Object)dupParam0.getJCRefOut());
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }

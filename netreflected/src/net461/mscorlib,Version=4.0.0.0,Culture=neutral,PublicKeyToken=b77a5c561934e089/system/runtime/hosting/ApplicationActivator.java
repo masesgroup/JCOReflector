@@ -73,6 +73,7 @@ public class ApplicationActivator extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -166,11 +167,11 @@ public class ApplicationActivator extends NetObject  {
         }
     }
 
-    public ObjectHandle CreateInstance(ActivationContext dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.OutOfMemoryException, system.MemberAccessException, system.io.IOException, system.security.policy.PolicyException, system.RankException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.runtime.remoting.RemotingException, system.InvalidCastException {
+    public ObjectHandle CreateInstance(ActivationContext dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.OutOfMemoryException, system.MemberAccessException, system.io.IOException, system.security.policy.PolicyException, system.RankException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.runtime.remoting.RemotingException, system.InvalidCastException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateInstance = (JCObject)classInstance.Invoke("CreateInstance", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1);
+            JCObject objCreateInstance = (JCObject)classInstance.Invoke("CreateInstance", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
             return new ObjectHandle(objCreateInstance);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

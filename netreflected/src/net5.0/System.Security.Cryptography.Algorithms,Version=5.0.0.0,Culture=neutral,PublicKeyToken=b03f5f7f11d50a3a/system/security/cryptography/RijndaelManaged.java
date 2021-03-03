@@ -77,6 +77,7 @@ public class RijndaelManaged extends Rijndael  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -134,7 +135,7 @@ public class RijndaelManaged extends Rijndael  {
 
     // Constructors section
     
-    public RijndaelManaged() throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException {
+    public RijndaelManaged() throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -170,11 +171,11 @@ public class RijndaelManaged extends Rijndael  {
         }
     }
 
-    public ICryptoTransform CreateDecryptor(JCRefOut dupParam0, JCRefOut dupParam1) throws Throwable {
+    public ICryptoTransform CreateDecryptor(JCORefOut dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateDecryptor = (JCObject)classInstance.Invoke("CreateDecryptor", dupParam0, dupParam1);
+            JCObject objCreateDecryptor = (JCObject)classInstance.Invoke("CreateDecryptor", dupParam0.getJCRefOut(), dupParam1.getJCRefOut());
             return new ICryptoTransformImplementation(objCreateDecryptor);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -203,11 +204,11 @@ public class RijndaelManaged extends Rijndael  {
         }
     }
 
-    public ICryptoTransform CreateEncryptor(JCRefOut dupParam0, JCRefOut dupParam1) throws Throwable {
+    public ICryptoTransform CreateEncryptor(JCORefOut dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateEncryptor = (JCObject)classInstance.Invoke("CreateEncryptor", dupParam0, dupParam1);
+            JCObject objCreateEncryptor = (JCObject)classInstance.Invoke("CreateEncryptor", dupParam0.getJCRefOut(), dupParam1.getJCRefOut());
             return new ICryptoTransformImplementation(objCreateEncryptor);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

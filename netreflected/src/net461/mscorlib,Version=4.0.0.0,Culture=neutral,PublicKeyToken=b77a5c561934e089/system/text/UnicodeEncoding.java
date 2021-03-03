@@ -74,6 +74,7 @@ public class UnicodeEncoding extends Encoding  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -194,11 +195,11 @@ public class UnicodeEncoding extends Encoding  {
         }
     }
 
-    public int GetByteCount(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+    public int GetByteCount(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("GetByteCount", dupParam0, dupParam1, dupParam2);
+            return (int)classInstance.Invoke("GetByteCount", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -224,11 +225,11 @@ public class UnicodeEncoding extends Encoding  {
         }
     }
 
-    public int GetBytes(JCRefOut dupParam0, int dupParam1, int dupParam2, JCRefOut dupParam3, int dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+    public int GetBytes(JCORefOut dupParam0, int dupParam1, int dupParam2, JCORefOut dupParam3, int dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("GetBytes", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4);
+            return (int)classInstance.Invoke("GetBytes", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3.getJCRefOut(), dupParam4);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -244,11 +245,11 @@ public class UnicodeEncoding extends Encoding  {
         }
     }
 
-    public int GetBytes(java.lang.String dupParam0, int dupParam1, int dupParam2, JCRefOut dupParam3, int dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+    public int GetBytes(java.lang.String dupParam0, int dupParam1, int dupParam2, JCORefOut dupParam3, int dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("GetBytes", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4);
+            return (int)classInstance.Invoke("GetBytes", dupParam0, dupParam1, dupParam2, dupParam3.getJCRefOut(), dupParam4);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -264,11 +265,11 @@ public class UnicodeEncoding extends Encoding  {
         }
     }
 
-    public int GetCharCount(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+    public int GetCharCount(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("GetCharCount", dupParam0, dupParam1, dupParam2);
+            return (int)classInstance.Invoke("GetCharCount", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,11 +285,11 @@ public class UnicodeEncoding extends Encoding  {
         }
     }
 
-    public int GetChars(JCRefOut dupParam0, int dupParam1, int dupParam2, JCRefOut dupParam3, int dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+    public int GetChars(JCORefOut dupParam0, int dupParam1, int dupParam2, JCORefOut dupParam3, int dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("GetChars", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4);
+            return (int)classInstance.Invoke("GetChars", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3.getJCRefOut(), dupParam4);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -324,11 +325,11 @@ public class UnicodeEncoding extends Encoding  {
         }
     }
 
-    public java.lang.String GetString(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+    public java.lang.String GetString(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Invoke("GetString", dupParam0, dupParam1, dupParam2);
+            return (java.lang.String)classInstance.Invoke("GetString", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

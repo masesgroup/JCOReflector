@@ -75,6 +75,7 @@ public class BlobContentId extends ValueType  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -181,11 +182,11 @@ public class BlobContentId extends ValueType  {
         }
     }
 
-    public static BlobContentId FromHash(JCRefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException {
+    public static BlobContentId FromHash(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objFromHash = (JCObject)classType.Invoke("FromHash", (Object)dupParam0);
+            JCObject objFromHash = (JCObject)classType.Invoke("FromHash", (Object)dupParam0.getJCRefOut());
             return new BlobContentId(objFromHash);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

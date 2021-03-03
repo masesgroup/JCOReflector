@@ -73,6 +73,7 @@ public class CommandLineBuilder extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -194,11 +195,11 @@ public class CommandLineBuilder extends NetObject  {
         }
     }
 
-    public void AppendFileNamesIfNotNull(JCRefOut dupParam0, java.lang.String dupParam1) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.NotSupportedException, system.globalization.CultureNotFoundException {
+    public void AppendFileNamesIfNotNull(JCORefOut dupParam0, java.lang.String dupParam1) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AppendFileNamesIfNotNull", dupParam0, dupParam1);
+            classInstance.Invoke("AppendFileNamesIfNotNull", dupParam0.getJCRefOut(), dupParam1);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -254,11 +255,11 @@ public class CommandLineBuilder extends NetObject  {
         }
     }
 
-    public void AppendSwitchIfNotNull(java.lang.String dupParam0, JCRefOut dupParam1, java.lang.String dupParam2) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.NotSupportedException, system.text.regularexpressions.RegexMatchTimeoutException, system.globalization.CultureNotFoundException {
+    public void AppendSwitchIfNotNull(java.lang.String dupParam0, JCORefOut dupParam1, java.lang.String dupParam2) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.NotSupportedException, system.text.regularexpressions.RegexMatchTimeoutException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AppendSwitchIfNotNull", dupParam0, dupParam1, dupParam2);
+            classInstance.Invoke("AppendSwitchIfNotNull", dupParam0, dupParam1.getJCRefOut(), dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -304,11 +305,11 @@ public class CommandLineBuilder extends NetObject  {
         }
     }
 
-    public void AppendSwitchUnquotedIfNotNull(java.lang.String dupParam0, JCRefOut dupParam1, java.lang.String dupParam2) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
+    public void AppendSwitchUnquotedIfNotNull(java.lang.String dupParam0, JCORefOut dupParam1, java.lang.String dupParam2) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AppendSwitchUnquotedIfNotNull", dupParam0, dupParam1, dupParam2);
+            classInstance.Invoke("AppendSwitchUnquotedIfNotNull", dupParam0, dupParam1.getJCRefOut(), dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

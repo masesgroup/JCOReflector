@@ -78,6 +78,7 @@ public class ITaskFactory2Implementation extends NetObject implements ITaskFacto
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }

@@ -72,6 +72,7 @@ public class ISymbolDocumentWriterImplementation extends NetObject implements IS
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -134,11 +135,11 @@ public class ISymbolDocumentWriterImplementation extends NetObject implements IS
         }
     }
 
-    public void SetCheckSum(Guid dupParam0, JCRefOut dupParam1) throws Throwable {
+    public void SetCheckSum(Guid dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetCheckSum", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1);
+            classInstance.Invoke("SetCheckSum", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -154,11 +155,11 @@ public class ISymbolDocumentWriterImplementation extends NetObject implements IS
         }
     }
 
-    public void SetSource(JCRefOut dupParam0) throws Throwable {
+    public void SetSource(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetSource", (Object)dupParam0);
+            classInstance.Invoke("SetSource", (Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

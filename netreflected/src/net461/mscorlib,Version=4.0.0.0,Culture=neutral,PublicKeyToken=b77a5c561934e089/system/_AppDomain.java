@@ -135,7 +135,7 @@ public interface _AppDomain extends IJCOBridgeReflected {
 
     public int ExecuteAssembly(java.lang.String assemblyFile, Evidence assemblySecurity, java.lang.String[] args) throws Throwable;
 
-    public int ExecuteAssembly(java.lang.String dupParam0, Evidence dupParam1, JCRefOut dupParam2) throws Throwable;
+    public int ExecuteAssembly(java.lang.String dupParam0, Evidence dupParam1, JCORefOut dupParam2) throws Throwable;
 
     public NetObject GetData(java.lang.String name) throws Throwable;
 
@@ -145,15 +145,15 @@ public interface _AppDomain extends IJCOBridgeReflected {
 
     public Assembly Load(byte[] rawAssembly) throws Throwable;
 
-    public Assembly Load(JCRefOut dupParam0) throws Throwable;
+    public Assembly Load(JCORefOut dupParam0) throws Throwable;
 
     public Assembly Load(byte[] rawAssembly, byte[] rawSymbolStore) throws Throwable;
 
-    public Assembly Load(JCRefOut dupParam0, JCRefOut dupParam1) throws Throwable;
+    public Assembly Load(JCORefOut dupParam0, JCORefOut dupParam1) throws Throwable;
 
     public Assembly Load(byte[] rawAssembly, byte[] rawSymbolStore, Evidence securityEvidence) throws Throwable;
 
-    public Assembly Load(JCRefOut dupParam0, JCRefOut dupParam1, Evidence dupParam2) throws Throwable;
+    public Assembly Load(JCORefOut dupParam0, JCORefOut dupParam1, Evidence dupParam2) throws Throwable;
 
     public Assembly Load(AssemblyName assemblyRef) throws Throwable;
 

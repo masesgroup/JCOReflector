@@ -71,6 +71,7 @@ public class CookieTransform extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -153,12 +154,12 @@ public class CookieTransform extends NetObject  {
         }
     }
 
-    public byte[] Decode(JCRefOut dupParam0) throws Throwable {
+    public byte[] Decode(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("Decode", (Object)dupParam0);
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("Decode", (Object)dupParam0.getJCRefOut());
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -191,12 +192,12 @@ public class CookieTransform extends NetObject  {
         }
     }
 
-    public byte[] Encode(JCRefOut dupParam0) throws Throwable {
+    public byte[] Encode(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("Encode", (Object)dupParam0);
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("Encode", (Object)dupParam0.getJCRefOut());
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }

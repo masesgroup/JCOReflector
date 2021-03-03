@@ -72,6 +72,7 @@ public class IWebProxyScriptImplementation extends NetObject implements IWebProx
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }

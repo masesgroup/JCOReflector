@@ -77,6 +77,7 @@ public class DSA extends AsymmetricAlgorithm  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -150,11 +151,11 @@ public class DSA extends AsymmetricAlgorithm  {
         }
     }
 
-    public boolean VerifyData(JCRefOut dupParam0, JCRefOut dupParam1, HashAlgorithmName dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
+    public boolean VerifyData(JCORefOut dupParam0, JCORefOut dupParam1, HashAlgorithmName dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("VerifyData", dupParam0, dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
+            return (boolean)classInstance.Invoke("VerifyData", dupParam0.getJCRefOut(), dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,11 +171,11 @@ public class DSA extends AsymmetricAlgorithm  {
         }
     }
 
-    public boolean VerifyData(JCRefOut dupParam0, JCRefOut dupParam1, HashAlgorithmName dupParam2, DSASignatureFormat dupParam3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException {
+    public boolean VerifyData(JCORefOut dupParam0, JCORefOut dupParam1, HashAlgorithmName dupParam2, DSASignatureFormat dupParam3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("VerifyData", dupParam0, dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance());
+            return (boolean)classInstance.Invoke("VerifyData", dupParam0.getJCRefOut(), dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,11 +191,11 @@ public class DSA extends AsymmetricAlgorithm  {
         }
     }
 
-    public boolean VerifyData(JCRefOut dupParam0, int dupParam1, int dupParam2, JCRefOut dupParam3, HashAlgorithmName dupParam4) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
+    public boolean VerifyData(JCORefOut dupParam0, int dupParam1, int dupParam2, JCORefOut dupParam3, HashAlgorithmName dupParam4) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("VerifyData", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance());
+            return (boolean)classInstance.Invoke("VerifyData", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3.getJCRefOut(), dupParam4 == null ? null : dupParam4.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,11 +211,11 @@ public class DSA extends AsymmetricAlgorithm  {
         }
     }
 
-    public boolean VerifyData(JCRefOut dupParam0, int dupParam1, int dupParam2, JCRefOut dupParam3, HashAlgorithmName dupParam4, DSASignatureFormat dupParam5) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException {
+    public boolean VerifyData(JCORefOut dupParam0, int dupParam1, int dupParam2, JCORefOut dupParam3, HashAlgorithmName dupParam4, DSASignatureFormat dupParam5) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("VerifyData", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance(), dupParam5 == null ? null : dupParam5.getJCOInstance());
+            return (boolean)classInstance.Invoke("VerifyData", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3.getJCRefOut(), dupParam4 == null ? null : dupParam4.getJCOInstance(), dupParam5 == null ? null : dupParam5.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,11 +231,11 @@ public class DSA extends AsymmetricAlgorithm  {
         }
     }
 
-    public boolean VerifyData(Stream dupParam0, JCRefOut dupParam1, HashAlgorithmName dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
+    public boolean VerifyData(Stream dupParam0, JCORefOut dupParam1, HashAlgorithmName dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("VerifyData", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
+            return (boolean)classInstance.Invoke("VerifyData", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,11 +251,11 @@ public class DSA extends AsymmetricAlgorithm  {
         }
     }
 
-    public boolean VerifyData(Stream dupParam0, JCRefOut dupParam1, HashAlgorithmName dupParam2, DSASignatureFormat dupParam3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException {
+    public boolean VerifyData(Stream dupParam0, JCORefOut dupParam1, HashAlgorithmName dupParam2, DSASignatureFormat dupParam3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("VerifyData", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance());
+            return (boolean)classInstance.Invoke("VerifyData", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,11 +271,11 @@ public class DSA extends AsymmetricAlgorithm  {
         }
     }
 
-    public boolean VerifySignature(JCRefOut dupParam0, JCRefOut dupParam1) throws Throwable {
+    public boolean VerifySignature(JCORefOut dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("VerifySignature", dupParam0, dupParam1);
+            return (boolean)classInstance.Invoke("VerifySignature", dupParam0.getJCRefOut(), dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -290,11 +291,11 @@ public class DSA extends AsymmetricAlgorithm  {
         }
     }
 
-    public boolean VerifySignature(JCRefOut dupParam0, JCRefOut dupParam1, DSASignatureFormat dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException {
+    public boolean VerifySignature(JCORefOut dupParam0, JCORefOut dupParam1, DSASignatureFormat dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("VerifySignature", dupParam0, dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
+            return (boolean)classInstance.Invoke("VerifySignature", dupParam0.getJCRefOut(), dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,12 +320,12 @@ public class DSA extends AsymmetricAlgorithm  {
         }
     }
 
-    public byte[] CreateSignature(JCRefOut dupParam0) throws Throwable {
+    public byte[] CreateSignature(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("CreateSignature", (Object)dupParam0);
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("CreateSignature", (Object)dupParam0.getJCRefOut());
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -357,12 +358,12 @@ public class DSA extends AsymmetricAlgorithm  {
         }
     }
 
-    public byte[] CreateSignature(JCRefOut dupParam0, DSASignatureFormat dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.security.cryptography.CryptographicException {
+    public byte[] CreateSignature(JCORefOut dupParam0, DSASignatureFormat dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("CreateSignature", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance());
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("CreateSignature", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -395,12 +396,12 @@ public class DSA extends AsymmetricAlgorithm  {
         }
     }
 
-    public byte[] SignData(JCRefOut dupParam0, int dupParam1, int dupParam2, HashAlgorithmName dupParam3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
+    public byte[] SignData(JCORefOut dupParam0, int dupParam1, int dupParam2, HashAlgorithmName dupParam3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("SignData", dupParam0, dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("SignData", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -433,12 +434,12 @@ public class DSA extends AsymmetricAlgorithm  {
         }
     }
 
-    public byte[] SignData(JCRefOut dupParam0, int dupParam1, int dupParam2, HashAlgorithmName dupParam3, DSASignatureFormat dupParam4) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.security.cryptography.CryptographicException {
+    public byte[] SignData(JCORefOut dupParam0, int dupParam1, int dupParam2, HashAlgorithmName dupParam3, DSASignatureFormat dupParam4) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("SignData", dupParam0, dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance());
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("SignData", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance());
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -471,12 +472,12 @@ public class DSA extends AsymmetricAlgorithm  {
         }
     }
 
-    public byte[] SignData(JCRefOut dupParam0, HashAlgorithmName dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
+    public byte[] SignData(JCORefOut dupParam0, HashAlgorithmName dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("SignData", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance());
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("SignData", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -509,12 +510,12 @@ public class DSA extends AsymmetricAlgorithm  {
         }
     }
 
-    public byte[] SignData(JCRefOut dupParam0, HashAlgorithmName dupParam1, DSASignatureFormat dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.security.cryptography.CryptographicException {
+    public byte[] SignData(JCORefOut dupParam0, HashAlgorithmName dupParam1, DSASignatureFormat dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("SignData", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2 == null ? null : dupParam2.getJCOInstance());
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("SignData", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2 == null ? null : dupParam2.getJCOInstance());
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }

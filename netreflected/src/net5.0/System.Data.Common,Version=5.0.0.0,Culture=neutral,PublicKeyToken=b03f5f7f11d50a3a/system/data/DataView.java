@@ -80,6 +80,7 @@ public class DataView extends MarshalByValueComponent  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -268,11 +269,11 @@ public class DataView extends MarshalByValueComponent  {
         }
     }
 
-    public DataTable ToTable(boolean dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.FormatException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.threading.SynchronizationLockException, system.collections.generic.KeyNotFoundException, system.text.regularexpressions.RegexParseException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OverflowException, system.data.sqltypes.SqlNullValueException, system.InvalidCastException, system.RankException {
+    public DataTable ToTable(boolean dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.FormatException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.threading.SynchronizationLockException, system.collections.generic.KeyNotFoundException, system.text.regularexpressions.RegexParseException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OverflowException, system.data.sqltypes.SqlNullValueException, system.InvalidCastException, system.RankException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objToTable = (JCObject)classInstance.Invoke("ToTable", dupParam0, dupParam1);
+            JCObject objToTable = (JCObject)classInstance.Invoke("ToTable", dupParam0, dupParam1.getJCRefOut());
             return new DataTable(objToTable);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -301,11 +302,11 @@ public class DataView extends MarshalByValueComponent  {
         }
     }
 
-    public DataTable ToTable(java.lang.String dupParam0, boolean dupParam1, JCRefOut dupParam2) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.threading.SynchronizationLockException, system.collections.generic.KeyNotFoundException, system.text.regularexpressions.RegexParseException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OverflowException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.InvalidCastException {
+    public DataTable ToTable(java.lang.String dupParam0, boolean dupParam1, JCORefOut dupParam2) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.threading.SynchronizationLockException, system.collections.generic.KeyNotFoundException, system.text.regularexpressions.RegexParseException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OverflowException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.InvalidCastException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objToTable = (JCObject)classInstance.Invoke("ToTable", dupParam0, dupParam1, dupParam2);
+            JCObject objToTable = (JCObject)classInstance.Invoke("ToTable", dupParam0, dupParam1, dupParam2.getJCRefOut());
             return new DataTable(objToTable);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

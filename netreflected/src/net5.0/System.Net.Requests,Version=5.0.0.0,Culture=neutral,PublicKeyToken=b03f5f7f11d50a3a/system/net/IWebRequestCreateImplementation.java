@@ -73,6 +73,7 @@ public class IWebRequestCreateImplementation extends NetObject implements IWebRe
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }

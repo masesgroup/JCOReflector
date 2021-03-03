@@ -79,6 +79,7 @@ public class _FieldInfoImplementation extends NetObject implements _FieldInfo {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }

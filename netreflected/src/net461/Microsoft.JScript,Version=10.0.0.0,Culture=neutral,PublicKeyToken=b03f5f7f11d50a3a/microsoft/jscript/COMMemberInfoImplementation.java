@@ -74,6 +74,7 @@ public class COMMemberInfoImplementation extends NetObject implements COMMemberI
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }

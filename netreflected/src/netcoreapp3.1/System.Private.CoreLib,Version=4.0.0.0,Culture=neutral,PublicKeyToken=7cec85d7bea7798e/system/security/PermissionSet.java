@@ -77,6 +77,7 @@ public class PermissionSet extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -221,12 +222,12 @@ public class PermissionSet extends NetObject  {
         }
     }
 
-    public static byte[] ConvertPermissionSet(java.lang.String dupParam0, JCRefOut dupParam1, java.lang.String dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public static byte[] ConvertPermissionSet(java.lang.String dupParam0, JCORefOut dupParam1, java.lang.String dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("ConvertPermissionSet", dupParam0, dupParam1, dupParam2);
+            JCObject resultingObjects = (JCObject)classType.Invoke("ConvertPermissionSet", dupParam0, dupParam1.getJCRefOut(), dupParam2);
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }

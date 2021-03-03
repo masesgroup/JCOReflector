@@ -82,6 +82,7 @@ public class XmlConvert extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -338,11 +339,11 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static DateTime ToDateTime(java.lang.String dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OverflowException, system.ArrayTypeMismatchException {
+    public static DateTime ToDateTime(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OverflowException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objToDateTime = (JCObject)classType.Invoke("ToDateTime", dupParam0, dupParam1);
+            JCObject objToDateTime = (JCObject)classType.Invoke("ToDateTime", dupParam0, dupParam1.getJCRefOut());
             return new DateTime(objToDateTime);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -393,11 +394,11 @@ public class XmlConvert extends NetObject  {
         }
     }
 
-    public static DateTimeOffset ToDateTimeOffset(java.lang.String dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.FormatException, system.ArrayTypeMismatchException {
+    public static DateTimeOffset ToDateTimeOffset(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OverflowException, system.FormatException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objToDateTimeOffset = (JCObject)classType.Invoke("ToDateTimeOffset", dupParam0, dupParam1);
+            JCObject objToDateTimeOffset = (JCObject)classType.Invoke("ToDateTimeOffset", dupParam0, dupParam1.getJCRefOut());
             return new DateTimeOffset(objToDateTimeOffset);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

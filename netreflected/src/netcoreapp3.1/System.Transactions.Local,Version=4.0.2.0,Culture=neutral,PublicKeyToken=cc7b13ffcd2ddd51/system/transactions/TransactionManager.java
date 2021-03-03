@@ -77,6 +77,7 @@ public class TransactionManager extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -151,11 +152,11 @@ public class TransactionManager extends NetObject  {
         }
     }
 
-    public static Enlistment Reenlist(Guid dupParam0, JCRefOut dupParam1, IEnlistmentNotification dupParam2) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.io.IOException {
+    public static Enlistment Reenlist(Guid dupParam0, JCORefOut dupParam1, IEnlistmentNotification dupParam2) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OverflowException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.io.IOException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objReenlist = (JCObject)classType.Invoke("Reenlist", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
+            JCObject objReenlist = (JCObject)classType.Invoke("Reenlist", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance());
             return new Enlistment(objReenlist);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

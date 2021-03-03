@@ -80,6 +80,7 @@ public class ScriptObject extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -165,11 +166,11 @@ public class ScriptObject extends NetObject  {
         }
     }
 
-    public NetObject InvokeMember(java.lang.String dupParam0, BindingFlags dupParam1, Binder dupParam2, NetObject dupParam3, NetObject[] dupParam4, ParameterModifier[] dupParam5, CultureInfo dupParam6, JCRefOut dupParam7) throws Throwable, system.reflection.TargetException, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, microsoft.jscript.JScriptException, system.OverflowException, system.IndexOutOfRangeException, system.ArithmeticException, system.reflection.AmbiguousMatchException, system.MissingMemberException, system.InvalidCastException, system.security.SecurityException, system.MissingFieldException {
+    public NetObject InvokeMember(java.lang.String dupParam0, BindingFlags dupParam1, Binder dupParam2, NetObject dupParam3, NetObject[] dupParam4, ParameterModifier[] dupParam5, CultureInfo dupParam6, JCORefOut dupParam7) throws Throwable, system.reflection.TargetException, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, microsoft.jscript.JScriptException, system.OverflowException, system.IndexOutOfRangeException, system.ArithmeticException, system.reflection.AmbiguousMatchException, system.MissingMemberException, system.InvalidCastException, system.security.SecurityException, system.MissingFieldException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objInvokeMember = (JCObject)classInstance.Invoke("InvokeMember", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance(), toObjectFromArray(dupParam4), toObjectFromArray(dupParam5), dupParam6 == null ? null : dupParam6.getJCOInstance(), dupParam7);
+            JCObject objInvokeMember = (JCObject)classInstance.Invoke("InvokeMember", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance(), toObjectFromArray(dupParam4), toObjectFromArray(dupParam5), dupParam6 == null ? null : dupParam6.getJCOInstance(), dupParam7.getJCRefOut());
             return new NetObject(objInvokeMember);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

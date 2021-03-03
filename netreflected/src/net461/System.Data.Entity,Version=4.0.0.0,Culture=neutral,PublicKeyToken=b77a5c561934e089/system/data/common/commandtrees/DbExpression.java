@@ -77,6 +77,7 @@ public class DbExpression extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -151,11 +152,11 @@ public class DbExpression extends NetObject  {
         }
     }
 
-    public static DbExpression FromBinary(JCRefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+    public static DbExpression FromBinary(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objFromBinary = (JCObject)classType.Invoke("FromBinary", (Object)dupParam0);
+            JCObject objFromBinary = (JCObject)classType.Invoke("FromBinary", (Object)dupParam0.getJCRefOut());
             return new DbExpression(objFromBinary);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

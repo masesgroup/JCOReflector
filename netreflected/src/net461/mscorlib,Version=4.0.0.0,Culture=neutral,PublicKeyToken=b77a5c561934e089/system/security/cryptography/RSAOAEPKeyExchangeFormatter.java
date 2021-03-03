@@ -74,6 +74,7 @@ public class RSAOAEPKeyExchangeFormatter extends AsymmetricKeyExchangeFormatter 
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -174,12 +175,12 @@ public class RSAOAEPKeyExchangeFormatter extends AsymmetricKeyExchangeFormatter 
         }
     }
 
-    public byte[] CreateKeyExchange(JCRefOut dupParam0) throws Throwable, system.security.cryptography.CryptographicUnexpectedOperationException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.ApplicationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.TypeLoadException, system.io.IOException, system.FormatException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.ObjectDisposedException {
+    public byte[] CreateKeyExchange(JCORefOut dupParam0) throws Throwable, system.security.cryptography.CryptographicUnexpectedOperationException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.ApplicationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.TypeLoadException, system.io.IOException, system.FormatException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("CreateKeyExchange", (Object)dupParam0);
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("CreateKeyExchange", (Object)dupParam0.getJCRefOut());
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -212,12 +213,12 @@ public class RSAOAEPKeyExchangeFormatter extends AsymmetricKeyExchangeFormatter 
         }
     }
 
-    public byte[] CreateKeyExchange(JCRefOut dupParam0, NetType dupParam1) throws Throwable {
+    public byte[] CreateKeyExchange(JCORefOut dupParam0, NetType dupParam1) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("CreateKeyExchange", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance());
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("CreateKeyExchange", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }

@@ -81,6 +81,7 @@ public class DateTime extends ValueType  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -585,11 +586,11 @@ public class DateTime extends ValueType  {
         }
     }
 
-    public static DateTime ParseExact(java.lang.String dupParam0, JCRefOut dupParam1, IFormatProvider dupParam2, DateTimeStyles dupParam3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.OverflowException, system.FormatException {
+    public static DateTime ParseExact(java.lang.String dupParam0, JCORefOut dupParam1, IFormatProvider dupParam2, DateTimeStyles dupParam3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.OverflowException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objParseExact = (JCObject)classType.Invoke("ParseExact", dupParam0, dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance());
+            JCObject objParseExact = (JCObject)classType.Invoke("ParseExact", dupParam0, dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance());
             return new DateTime(objParseExact);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

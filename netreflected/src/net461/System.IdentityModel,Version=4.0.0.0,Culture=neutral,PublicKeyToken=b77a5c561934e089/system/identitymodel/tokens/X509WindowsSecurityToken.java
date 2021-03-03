@@ -74,6 +74,7 @@ public class X509WindowsSecurityToken extends X509SecurityToken implements AutoC
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }

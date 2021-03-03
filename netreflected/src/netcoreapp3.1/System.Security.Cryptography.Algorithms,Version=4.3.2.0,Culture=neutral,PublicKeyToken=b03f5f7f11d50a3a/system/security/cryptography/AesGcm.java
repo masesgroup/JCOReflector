@@ -72,6 +72,7 @@ public class AesGcm extends NetObject implements AutoCloseable {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -157,11 +158,11 @@ public class AesGcm extends NetObject implements AutoCloseable {
         }
     }
 
-    public void Decrypt(JCRefOut dupParam0, JCRefOut dupParam1, JCRefOut dupParam2, JCRefOut dupParam3, JCRefOut dupParam4) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException {
+    public void Decrypt(JCORefOut dupParam0, JCORefOut dupParam1, JCORefOut dupParam2, JCORefOut dupParam3, JCORefOut dupParam4) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Decrypt", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4);
+            classInstance.Invoke("Decrypt", dupParam0.getJCRefOut(), dupParam1.getJCRefOut(), dupParam2.getJCRefOut(), dupParam3.getJCRefOut(), dupParam4.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,11 +188,11 @@ public class AesGcm extends NetObject implements AutoCloseable {
         }
     }
 
-    public void Encrypt(JCRefOut dupParam0, JCRefOut dupParam1, JCRefOut dupParam2, JCRefOut dupParam3, JCRefOut dupParam4) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException {
+    public void Encrypt(JCORefOut dupParam0, JCORefOut dupParam1, JCORefOut dupParam2, JCORefOut dupParam3, JCORefOut dupParam4) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Encrypt", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4);
+            classInstance.Invoke("Encrypt", dupParam0.getJCRefOut(), dupParam1.getJCRefOut(), dupParam2.getJCRefOut(), dupParam3.getJCRefOut(), dupParam4.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

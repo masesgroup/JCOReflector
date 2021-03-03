@@ -76,6 +76,7 @@ public class Message extends NamedItem  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -175,12 +176,12 @@ public class Message extends NamedItem  {
         }
     }
 
-    public MessagePart[] FindPartsByName(JCRefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
+    public MessagePart[] FindPartsByName(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<MessagePart> resultingArrayList = new ArrayList<MessagePart>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("FindPartsByName", (Object)dupParam0);
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("FindPartsByName", (Object)dupParam0.getJCRefOut());
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MessagePart(resultingObject));
             }

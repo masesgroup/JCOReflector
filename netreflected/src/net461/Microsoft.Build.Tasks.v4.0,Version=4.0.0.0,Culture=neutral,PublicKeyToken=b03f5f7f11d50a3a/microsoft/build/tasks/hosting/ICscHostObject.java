@@ -121,11 +121,11 @@ public interface ICscHostObject extends IJCOBridgeReflected, ITaskHost {
 
     public boolean SetAdditionalLibPaths(java.lang.String[] additionalLibPaths) throws Throwable;
 
-    public boolean SetAdditionalLibPaths(JCRefOut dupParam0) throws Throwable;
+    public boolean SetAdditionalLibPaths(JCORefOut dupParam0) throws Throwable;
 
     public boolean SetAddModules(java.lang.String[] addModules) throws Throwable;
 
-    public boolean SetAddModules(JCRefOut dupParam0) throws Throwable;
+    public boolean SetAddModules(JCORefOut dupParam0) throws Throwable;
 
     public boolean SetAllowUnsafeBlocks(boolean allowUnsafeBlocks) throws Throwable;
 

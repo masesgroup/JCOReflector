@@ -70,6 +70,7 @@ public class XmlSerializationCollectionFixupCallback extends JCVoidDelegate impl
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -109,8 +110,7 @@ public class XmlSerializationCollectionFixupCallback extends JCVoidDelegate impl
         }
         catch (Throwable throwableFromJCEvent)
         {
-            if (JCOBridgeInstance.getDebug())
-                throwableFromJCEvent.printStackTrace();
+            JCOReflector.writeLog(throwableFromJCEvent);
         }
     }
 
@@ -129,8 +129,7 @@ public class XmlSerializationCollectionFixupCallback extends JCVoidDelegate impl
         }
         catch (Throwable throwableFromJCEvent)
         {
-            if (JCOBridgeInstance.getDebug())
-                throwableFromJCEvent.printStackTrace();
+            JCOReflector.writeLog(throwableFromJCEvent);
         }
     }
 

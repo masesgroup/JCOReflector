@@ -111,7 +111,7 @@ public interface IRemoteWebConfigurationHostServer extends IJCOBridgeReflected {
     
     public java.lang.String DoEncryptOrDecrypt(boolean doEncrypt, java.lang.String xmlString, java.lang.String protectionProviderName, java.lang.String protectionProviderType, java.lang.String[] parameterKeys, java.lang.String[] parameterValues) throws Throwable;
 
-    public java.lang.String DoEncryptOrDecrypt(boolean dupParam0, java.lang.String dupParam1, java.lang.String dupParam2, java.lang.String dupParam3, JCRefOut dupParam4, JCRefOut dupParam5) throws Throwable;
+    public java.lang.String DoEncryptOrDecrypt(boolean dupParam0, java.lang.String dupParam1, java.lang.String dupParam2, java.lang.String dupParam3, JCORefOut dupParam4, JCORefOut dupParam5) throws Throwable;
 
     public java.lang.String GetFilePaths(int webLevel, java.lang.String path, java.lang.String site, java.lang.String locationSubPath) throws Throwable;
 

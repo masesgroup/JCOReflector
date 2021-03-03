@@ -72,6 +72,7 @@ public class _AssemblyNameImplementation extends NetObject implements _AssemblyN
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }

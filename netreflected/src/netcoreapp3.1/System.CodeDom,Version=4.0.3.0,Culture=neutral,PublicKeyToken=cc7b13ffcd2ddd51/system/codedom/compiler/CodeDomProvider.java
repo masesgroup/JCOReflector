@@ -95,6 +95,7 @@ public class CodeDomProvider extends Component  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -270,11 +271,11 @@ public class CodeDomProvider extends Component  {
         }
     }
 
-    public CompilerResults CompileAssemblyFromFile(CompilerParameters dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.NotImplementedException {
+    public CompilerResults CompileAssemblyFromFile(CompilerParameters dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCompileAssemblyFromFile = (JCObject)classInstance.Invoke("CompileAssemblyFromFile", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1);
+            JCObject objCompileAssemblyFromFile = (JCObject)classInstance.Invoke("CompileAssemblyFromFile", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
             return new CompilerResults(objCompileAssemblyFromFile);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -292,11 +293,11 @@ public class CodeDomProvider extends Component  {
         }
     }
 
-    public CompilerResults CompileAssemblyFromSource(CompilerParameters dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.NotImplementedException {
+    public CompilerResults CompileAssemblyFromSource(CompilerParameters dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCompileAssemblyFromSource = (JCObject)classInstance.Invoke("CompileAssemblyFromSource", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1);
+            JCObject objCompileAssemblyFromSource = (JCObject)classInstance.Invoke("CompileAssemblyFromSource", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
             return new CompilerResults(objCompileAssemblyFromSource);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -75,6 +75,7 @@ public class RuntimeOps extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -202,11 +203,11 @@ public class RuntimeOps extends NetObject  {
         }
     }
 
-    public static IRuntimeVariables CreateRuntimeVariables(NetObject[] dupParam0, JCRefOut dupParam1) throws Throwable {
+    public static IRuntimeVariables CreateRuntimeVariables(NetObject[] dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateRuntimeVariables = (JCObject)classType.Invoke("CreateRuntimeVariables", toObjectFromArray(dupParam0), dupParam1);
+            JCObject objCreateRuntimeVariables = (JCObject)classType.Invoke("CreateRuntimeVariables", toObjectFromArray(dupParam0), dupParam1.getJCRefOut());
             return new IRuntimeVariablesImplementation(objCreateRuntimeVariables);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -224,11 +225,11 @@ public class RuntimeOps extends NetObject  {
         }
     }
 
-    public static IRuntimeVariables MergeRuntimeVariables(IRuntimeVariables dupParam0, IRuntimeVariables dupParam1, JCRefOut dupParam2) throws Throwable {
+    public static IRuntimeVariables MergeRuntimeVariables(IRuntimeVariables dupParam0, IRuntimeVariables dupParam1, JCORefOut dupParam2) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objMergeRuntimeVariables = (JCObject)classType.Invoke("MergeRuntimeVariables", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2);
+            JCObject objMergeRuntimeVariables = (JCObject)classType.Invoke("MergeRuntimeVariables", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2.getJCRefOut());
             return new IRuntimeVariablesImplementation(objMergeRuntimeVariables);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

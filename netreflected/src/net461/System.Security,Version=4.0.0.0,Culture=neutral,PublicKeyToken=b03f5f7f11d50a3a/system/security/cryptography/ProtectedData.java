@@ -72,6 +72,7 @@ public class ProtectedData extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -154,12 +155,12 @@ public class ProtectedData extends NetObject  {
         }
     }
 
-    public static byte[] Protect(JCRefOut dupParam0, JCRefOut dupParam1, DataProtectionScope dupParam2) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
+    public static byte[] Protect(JCORefOut dupParam0, JCORefOut dupParam1, DataProtectionScope dupParam2) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("Protect", dupParam0, dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
+            JCObject resultingObjects = (JCObject)classType.Invoke("Protect", dupParam0.getJCRefOut(), dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance());
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -192,12 +193,12 @@ public class ProtectedData extends NetObject  {
         }
     }
 
-    public static byte[] Unprotect(JCRefOut dupParam0, JCRefOut dupParam1, DataProtectionScope dupParam2) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
+    public static byte[] Unprotect(JCORefOut dupParam0, JCORefOut dupParam1, DataProtectionScope dupParam2) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("Unprotect", dupParam0, dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
+            JCObject resultingObjects = (JCObject)classType.Invoke("Unprotect", dupParam0.getJCRefOut(), dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance());
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }

@@ -78,6 +78,7 @@ public class SignedCms extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -298,11 +299,11 @@ public class SignedCms extends NetObject  {
         }
     }
 
-    public void Decode(JCRefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.runtime.interopservices.ExternalException {
+    public void Decode(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.formats.asn1.AsnContentException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Decode", (Object)dupParam0);
+            classInstance.Invoke("Decode", (Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

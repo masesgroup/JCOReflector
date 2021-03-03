@@ -74,6 +74,7 @@ public class HttpUtility extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -164,12 +165,12 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static byte[] UrlDecodeToBytes(JCRefOut dupParam0) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
+    public static byte[] UrlDecodeToBytes(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("UrlDecodeToBytes", (Object)dupParam0);
+            JCObject resultingObjects = (JCObject)classType.Invoke("UrlDecodeToBytes", (Object)dupParam0.getJCRefOut());
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -202,12 +203,12 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static byte[] UrlDecodeToBytes(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException {
+    public static byte[] UrlDecodeToBytes(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("UrlDecodeToBytes", dupParam0, dupParam1, dupParam2);
+            JCObject resultingObjects = (JCObject)classType.Invoke("UrlDecodeToBytes", dupParam0.getJCRefOut(), dupParam1, dupParam2);
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -278,12 +279,12 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static byte[] UrlEncodeToBytes(JCRefOut dupParam0) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
+    public static byte[] UrlEncodeToBytes(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("UrlEncodeToBytes", (Object)dupParam0);
+            JCObject resultingObjects = (JCObject)classType.Invoke("UrlEncodeToBytes", (Object)dupParam0.getJCRefOut());
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -316,12 +317,12 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static byte[] UrlEncodeToBytes(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException {
+    public static byte[] UrlEncodeToBytes(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("UrlEncodeToBytes", dupParam0, dupParam1, dupParam2);
+            JCObject resultingObjects = (JCObject)classType.Invoke("UrlEncodeToBytes", dupParam0.getJCRefOut(), dupParam1, dupParam2);
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -484,11 +485,11 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static java.lang.String UrlDecode(JCRefOut dupParam0, int dupParam1, int dupParam2, Encoding dupParam3) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException {
+    public static java.lang.String UrlDecode(JCORefOut dupParam0, int dupParam1, int dupParam2, Encoding dupParam3) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Invoke("UrlDecode", dupParam0, dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
+            return (java.lang.String)classType.Invoke("UrlDecode", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -504,11 +505,11 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static java.lang.String UrlDecode(JCRefOut dupParam0, Encoding dupParam1) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
+    public static java.lang.String UrlDecode(JCORefOut dupParam0, Encoding dupParam1) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Invoke("UrlDecode", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance());
+            return (java.lang.String)classType.Invoke("UrlDecode", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -544,11 +545,11 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static java.lang.String UrlEncode(JCRefOut dupParam0) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static java.lang.String UrlEncode(JCORefOut dupParam0) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Invoke("UrlEncode", (Object)dupParam0);
+            return (java.lang.String)classType.Invoke("UrlEncode", (Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -564,11 +565,11 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public static java.lang.String UrlEncode(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static java.lang.String UrlEncode(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Invoke("UrlEncode", dupParam0, dupParam1, dupParam2);
+            return (java.lang.String)classType.Invoke("UrlEncode", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

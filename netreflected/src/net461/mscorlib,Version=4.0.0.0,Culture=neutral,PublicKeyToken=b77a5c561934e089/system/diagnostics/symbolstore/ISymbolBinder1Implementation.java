@@ -73,6 +73,7 @@ public class ISymbolBinder1Implementation extends NetObject implements ISymbolBi
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }

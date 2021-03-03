@@ -78,6 +78,7 @@ public class UdpClient extends NetObject implements AutoCloseable {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -219,11 +220,11 @@ public class UdpClient extends NetObject implements AutoCloseable {
         }
     }
 
-    public int Send(JCRefOut dupParam0, int dupParam1) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.security.SecurityException, system.NullReferenceException, system.net.sockets.SocketException {
+    public int Send(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.security.SecurityException, system.NullReferenceException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("Send", dupParam0, dupParam1);
+            return (int)classInstance.Invoke("Send", dupParam0.getJCRefOut(), dupParam1);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,11 +240,11 @@ public class UdpClient extends NetObject implements AutoCloseable {
         }
     }
 
-    public int Send(JCRefOut dupParam0, int dupParam1, IPEndPoint dupParam2) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.security.SecurityException, system.NullReferenceException, system.net.sockets.SocketException {
+    public int Send(JCORefOut dupParam0, int dupParam1, IPEndPoint dupParam2) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.security.SecurityException, system.NullReferenceException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("Send", dupParam0, dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
+            return (int)classInstance.Invoke("Send", dupParam0.getJCRefOut(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,11 +260,11 @@ public class UdpClient extends NetObject implements AutoCloseable {
         }
     }
 
-    public int Send(JCRefOut dupParam0, int dupParam1, java.lang.String dupParam2, int dupParam3) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.security.SecurityException, system.NullReferenceException, system.net.sockets.SocketException, system.FormatException, system.AccessViolationException {
+    public int Send(JCORefOut dupParam0, int dupParam1, java.lang.String dupParam2, int dupParam3) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.security.SecurityException, system.NullReferenceException, system.net.sockets.SocketException, system.FormatException, system.AccessViolationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("Send", dupParam0, dupParam1, dupParam2, dupParam3);
+            return (int)classInstance.Invoke("Send", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -291,11 +292,11 @@ public class UdpClient extends NetObject implements AutoCloseable {
         }
     }
 
-    public IAsyncResult BeginSend(JCRefOut dupParam0, int dupParam1, AsyncCallback dupParam2, NetObject dupParam3) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.AccessViolationException, system.security.SecurityException, system.NullReferenceException, system.net.sockets.SocketException, system.NotSupportedException {
+    public IAsyncResult BeginSend(JCORefOut dupParam0, int dupParam1, AsyncCallback dupParam2, NetObject dupParam3) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.AccessViolationException, system.security.SecurityException, system.NullReferenceException, system.net.sockets.SocketException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objBeginSend = (JCObject)classInstance.Invoke("BeginSend", dupParam0, dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
+            JCObject objBeginSend = (JCObject)classInstance.Invoke("BeginSend", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
             return new IAsyncResultImplementation(objBeginSend);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -313,11 +314,11 @@ public class UdpClient extends NetObject implements AutoCloseable {
         }
     }
 
-    public IAsyncResult BeginSend(JCRefOut dupParam0, int dupParam1, IPEndPoint dupParam2, AsyncCallback dupParam3, NetObject dupParam4) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.AccessViolationException, system.IndexOutOfRangeException, system.security.SecurityException, system.net.sockets.SocketException {
+    public IAsyncResult BeginSend(JCORefOut dupParam0, int dupParam1, IPEndPoint dupParam2, AsyncCallback dupParam3, NetObject dupParam4) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.AccessViolationException, system.IndexOutOfRangeException, system.security.SecurityException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objBeginSend = (JCObject)classInstance.Invoke("BeginSend", dupParam0, dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance());
+            JCObject objBeginSend = (JCObject)classInstance.Invoke("BeginSend", dupParam0.getJCRefOut(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance());
             return new IAsyncResultImplementation(objBeginSend);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -335,11 +336,11 @@ public class UdpClient extends NetObject implements AutoCloseable {
         }
     }
 
-    public IAsyncResult BeginSend(JCRefOut dupParam0, int dupParam1, java.lang.String dupParam2, int dupParam3, AsyncCallback dupParam4, NetObject dupParam5) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.net.sockets.SocketException, system.IndexOutOfRangeException, system.FormatException, system.AccessViolationException, system.security.SecurityException, system.NullReferenceException {
+    public IAsyncResult BeginSend(JCORefOut dupParam0, int dupParam1, java.lang.String dupParam2, int dupParam3, AsyncCallback dupParam4, NetObject dupParam5) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.net.sockets.SocketException, system.IndexOutOfRangeException, system.FormatException, system.AccessViolationException, system.security.SecurityException, system.NullReferenceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objBeginSend = (JCObject)classInstance.Invoke("BeginSend", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4, dupParam5 == null ? null : dupParam5.getJCOInstance());
+            JCObject objBeginSend = (JCObject)classInstance.Invoke("BeginSend", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3, dupParam4, dupParam5 == null ? null : dupParam5.getJCOInstance());
             return new IAsyncResultImplementation(objBeginSend);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

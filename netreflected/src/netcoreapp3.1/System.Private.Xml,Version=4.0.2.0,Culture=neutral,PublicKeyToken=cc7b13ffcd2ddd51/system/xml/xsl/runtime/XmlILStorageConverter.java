@@ -78,6 +78,7 @@ public class XmlILStorageConverter extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -163,11 +164,11 @@ public class XmlILStorageConverter extends NetObject  {
         }
     }
 
-    public static XmlAtomicValue BytesToAtomicValue(JCRefOut dupParam0, int dupParam1, XmlQueryRuntime dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+    public static XmlAtomicValue BytesToAtomicValue(JCORefOut dupParam0, int dupParam1, XmlQueryRuntime dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objBytesToAtomicValue = (JCObject)classType.Invoke("BytesToAtomicValue", dupParam0, dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
+            JCObject objBytesToAtomicValue = (JCObject)classType.Invoke("BytesToAtomicValue", dupParam0.getJCRefOut(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
             return new XmlAtomicValue(objBytesToAtomicValue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

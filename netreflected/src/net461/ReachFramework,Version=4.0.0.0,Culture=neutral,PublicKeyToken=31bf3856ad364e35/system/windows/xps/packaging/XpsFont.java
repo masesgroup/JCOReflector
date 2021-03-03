@@ -73,6 +73,7 @@ public class XpsFont extends XpsResource  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -148,11 +149,11 @@ public class XpsFont extends XpsResource  {
         }
     }
 
-    public static void ObfuscateFontData(JCRefOut dupParam0, Guid dupParam1) throws Throwable, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException {
+    public static void ObfuscateFontData(JCORefOut dupParam0, Guid dupParam1) throws Throwable, system.FormatException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("ObfuscateFontData", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance());
+            classType.Invoke("ObfuscateFontData", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

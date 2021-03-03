@@ -76,6 +76,7 @@ public class FunctionExpression extends AST  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -152,11 +153,11 @@ public class FunctionExpression extends AST  {
         }
     }
 
-    public static FunctionObject JScriptFunctionExpression(RuntimeTypeHandle dupParam0, java.lang.String dupParam1, java.lang.String dupParam2, JCRefOut dupParam3, JSLocalField[] dupParam4, boolean dupParam5, boolean dupParam6, java.lang.String dupParam7, VsaEngine dupParam8) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException {
+    public static FunctionObject JScriptFunctionExpression(RuntimeTypeHandle dupParam0, java.lang.String dupParam1, java.lang.String dupParam2, JCORefOut dupParam3, JSLocalField[] dupParam4, boolean dupParam5, boolean dupParam6, java.lang.String dupParam7, VsaEngine dupParam8) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objJScriptFunctionExpression = (JCObject)classType.Invoke("JScriptFunctionExpression", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2, dupParam3, toObjectFromArray(dupParam4), dupParam5, dupParam6, dupParam7, dupParam8 == null ? null : dupParam8.getJCOInstance());
+            JCObject objJScriptFunctionExpression = (JCObject)classType.Invoke("JScriptFunctionExpression", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2, dupParam3.getJCRefOut(), toObjectFromArray(dupParam4), dupParam5, dupParam6, dupParam7, dupParam8 == null ? null : dupParam8.getJCOInstance());
             return new FunctionObject(objJScriptFunctionExpression);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -111,7 +111,7 @@ public interface IProcessHostPreloadClient extends IJCOBridgeReflected {
     
     public void Preload(java.lang.String[] parameters) throws Throwable;
 
-    public void Preload(JCRefOut dupParam0) throws Throwable;
+    public void Preload(JCORefOut dupParam0) throws Throwable;
 
 
     

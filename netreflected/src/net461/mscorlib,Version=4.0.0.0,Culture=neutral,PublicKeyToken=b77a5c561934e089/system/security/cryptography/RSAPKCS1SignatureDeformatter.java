@@ -73,6 +73,7 @@ public class RSAPKCS1SignatureDeformatter extends AsymmetricSignatureDeformatter
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -164,11 +165,11 @@ public class RSAPKCS1SignatureDeformatter extends AsymmetricSignatureDeformatter
         }
     }
 
-    public boolean VerifySignature(JCRefOut dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentNullException, system.security.cryptography.CryptographicUnexpectedOperationException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.RankException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException, system.FormatException, system.OverflowException {
+    public boolean VerifySignature(JCORefOut dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.security.cryptography.CryptographicUnexpectedOperationException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.RankException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException, system.FormatException, system.OverflowException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("VerifySignature", dupParam0, dupParam1);
+            return (boolean)classInstance.Invoke("VerifySignature", dupParam0.getJCRefOut(), dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

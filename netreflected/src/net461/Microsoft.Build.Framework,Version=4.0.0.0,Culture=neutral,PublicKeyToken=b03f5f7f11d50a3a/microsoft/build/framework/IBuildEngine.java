@@ -117,7 +117,7 @@ public interface IBuildEngine extends IJCOBridgeReflected {
     
     public boolean BuildProjectFile(java.lang.String projectFileName, java.lang.String[] targetNames, IDictionary globalProperties, IDictionary targetOutputs) throws Throwable;
 
-    public boolean BuildProjectFile(java.lang.String dupParam0, JCRefOut dupParam1, IDictionary dupParam2, IDictionary dupParam3) throws Throwable;
+    public boolean BuildProjectFile(java.lang.String dupParam0, JCORefOut dupParam1, IDictionary dupParam2, IDictionary dupParam3) throws Throwable;
 
     public void LogCustomEvent(CustomBuildEventArgs e) throws Throwable;
 

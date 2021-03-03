@@ -98,6 +98,7 @@ public class SqlDataReader extends DbDataReader  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -303,11 +304,11 @@ public class SqlDataReader extends DbDataReader  {
         }
     }
 
-    public long GetBytes(int dupParam0, long dupParam1, JCRefOut dupParam2, int dupParam3, int dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTypeException, system.FormatException {
+    public long GetBytes(int dupParam0, long dupParam1, JCORefOut dupParam2, int dupParam3, int dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTypeException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (long)classInstance.Invoke("GetBytes", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4);
+            return (long)classInstance.Invoke("GetBytes", dupParam0, dupParam1, dupParam2.getJCRefOut(), dupParam3, dupParam4);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -323,11 +324,11 @@ public class SqlDataReader extends DbDataReader  {
         }
     }
 
-    public long GetChars(int dupParam0, long dupParam1, JCRefOut dupParam2, int dupParam3, int dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.TypeLoadException, system.reflection.TargetInvocationException, system.xml.XmlException {
+    public long GetChars(int dupParam0, long dupParam1, JCORefOut dupParam2, int dupParam3, int dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.OverflowException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlTypeException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTruncateException, system.TypeLoadException, system.reflection.TargetInvocationException, system.xml.XmlException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (long)classInstance.Invoke("GetChars", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4);
+            return (long)classInstance.Invoke("GetChars", dupParam0, dupParam1, dupParam2.getJCRefOut(), dupParam3, dupParam4);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

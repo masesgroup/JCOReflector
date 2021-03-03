@@ -80,6 +80,7 @@ public class IRawElementProviderFragmentRootImplementation extends NetObject imp
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }

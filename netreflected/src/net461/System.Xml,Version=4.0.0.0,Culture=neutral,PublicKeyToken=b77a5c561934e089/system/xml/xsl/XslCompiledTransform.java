@@ -85,6 +85,7 @@ public class XslCompiledTransform extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -187,11 +188,11 @@ public class XslCompiledTransform extends NetObject  {
         }
     }
 
-    public void Load(MethodInfo dupParam0, JCRefOut dupParam1, NetType[] dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.reflection.AmbiguousMatchException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.configuration.ConfigurationException, system.NotImplementedException, system.IndexOutOfRangeException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.FormatException, system.io.EndOfStreamException, system.xml.XmlException, system.io.IOException, system.globalization.CultureNotFoundException {
+    public void Load(MethodInfo dupParam0, JCORefOut dupParam1, NetType[] dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.reflection.AmbiguousMatchException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.configuration.ConfigurationException, system.NotImplementedException, system.IndexOutOfRangeException, system.MissingMethodException, system.ArgumentOutOfRangeException, system.FormatException, system.io.EndOfStreamException, system.xml.XmlException, system.io.IOException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Load", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, toObjectFromArray(dupParam2));
+            classInstance.Invoke("Load", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut(), toObjectFromArray(dupParam2));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

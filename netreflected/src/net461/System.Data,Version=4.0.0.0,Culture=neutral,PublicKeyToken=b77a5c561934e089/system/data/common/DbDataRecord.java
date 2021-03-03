@@ -77,6 +77,7 @@ public class DbDataRecord extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -240,11 +241,11 @@ public class DbDataRecord extends NetObject  {
         }
     }
 
-    public long GetBytes(int dupParam0, long dupParam1, JCRefOut dupParam2, int dupParam3, int dupParam4) throws Throwable {
+    public long GetBytes(int dupParam0, long dupParam1, JCORefOut dupParam2, int dupParam3, int dupParam4) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (long)classInstance.Invoke("GetBytes", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4);
+            return (long)classInstance.Invoke("GetBytes", dupParam0, dupParam1, dupParam2.getJCRefOut(), dupParam3, dupParam4);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,11 +261,11 @@ public class DbDataRecord extends NetObject  {
         }
     }
 
-    public long GetChars(int dupParam0, long dupParam1, JCRefOut dupParam2, int dupParam3, int dupParam4) throws Throwable {
+    public long GetChars(int dupParam0, long dupParam1, JCORefOut dupParam2, int dupParam3, int dupParam4) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (long)classInstance.Invoke("GetChars", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4);
+            return (long)classInstance.Invoke("GetChars", dupParam0, dupParam1, dupParam2.getJCRefOut(), dupParam3, dupParam4);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -74,6 +74,7 @@ public class Array extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -321,11 +322,11 @@ public class Array extends NetObject  {
         }
     }
 
-    public static Array CreateInstance(NetType dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static Array CreateInstance(NetType dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateInstance = (JCObject)classType.Invoke("CreateInstance", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1);
+            JCObject objCreateInstance = (JCObject)classType.Invoke("CreateInstance", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
             return new Array(objCreateInstance);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -343,11 +344,11 @@ public class Array extends NetObject  {
         }
     }
 
-    public static Array CreateInstance(NetType dupParam0, JCRefOut dupParam1, JCRefOut dupParam2) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static Array CreateInstance(NetType dupParam0, JCORefOut dupParam1, JCORefOut dupParam2) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateInstance = (JCObject)classType.Invoke("CreateInstance", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2);
+            JCObject objCreateInstance = (JCObject)classType.Invoke("CreateInstance", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut(), dupParam2.getJCRefOut());
             return new Array(objCreateInstance);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -420,11 +421,11 @@ public class Array extends NetObject  {
         }
     }
 
-    public NetObject GetValue(JCRefOut dupParam0) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public NetObject GetValue(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", (Object)dupParam0);
+            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", (Object)dupParam0.getJCRefOut());
             return new NetObject(objGetValue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -625,11 +626,11 @@ public class Array extends NetObject  {
         }
     }
 
-    public void SetValue(NetObject dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public void SetValue(NetObject dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetValue", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1);
+            classInstance.Invoke("SetValue", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

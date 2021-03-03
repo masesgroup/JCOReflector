@@ -75,6 +75,7 @@ public class ResXResourceWriter extends NetObject implements AutoCloseable {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -190,11 +191,11 @@ public class ResXResourceWriter extends NetObject implements AutoCloseable {
         }
     }
 
-    public void AddMetadata(java.lang.String dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.TypeLoadException, system.xml.XmlException, system.NotSupportedException {
+    public void AddMetadata(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.TypeLoadException, system.xml.XmlException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddMetadata", dupParam0, dupParam1);
+            classInstance.Invoke("AddMetadata", dupParam0, dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,11 +241,11 @@ public class ResXResourceWriter extends NetObject implements AutoCloseable {
         }
     }
 
-    public void AddResource(java.lang.String dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.TypeLoadException, system.xml.XmlException, system.NotSupportedException {
+    public void AddResource(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.InvalidOperationException, system.OutOfMemoryException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.TypeLoadException, system.xml.XmlException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddResource", dupParam0, dupParam1);
+            classInstance.Invoke("AddResource", dupParam0, dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -79,6 +79,7 @@ public class SqlProfileProvider extends ProfileProvider  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -170,11 +171,11 @@ public class SqlProfileProvider extends ProfileProvider  {
         }
     }
 
-    public int DeleteProfiles(JCRefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.threading.AbandonedMutexException, system.configuration.provider.ProviderException, system.security.SecurityException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.web.HttpException, system.io.IOException, system.FormatException, system.web.management.SqlExecutionException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
+    public int DeleteProfiles(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.threading.AbandonedMutexException, system.configuration.provider.ProviderException, system.security.SecurityException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.web.HttpException, system.io.IOException, system.FormatException, system.web.management.SqlExecutionException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("DeleteProfiles", (Object)dupParam0);
+            return (int)classInstance.Invoke("DeleteProfiles", (Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

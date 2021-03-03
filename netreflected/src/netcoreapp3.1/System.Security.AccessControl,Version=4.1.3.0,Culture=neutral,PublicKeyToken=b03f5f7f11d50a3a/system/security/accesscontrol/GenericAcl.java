@@ -73,6 +73,7 @@ public class GenericAcl extends NetObject implements Iterable<GenericAce> {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -165,11 +166,11 @@ public class GenericAcl extends NetObject implements Iterable<GenericAce> {
         }
     }
 
-    public void GetBinaryForm(JCRefOut dupParam0, int dupParam1) throws Throwable {
+    public void GetBinaryForm(JCORefOut dupParam0, int dupParam1) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("GetBinaryForm", dupParam0, dupParam1);
+            classInstance.Invoke("GetBinaryForm", dupParam0.getJCRefOut(), dupParam1);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

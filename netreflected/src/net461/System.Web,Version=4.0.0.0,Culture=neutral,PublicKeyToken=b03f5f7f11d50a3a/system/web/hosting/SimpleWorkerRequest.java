@@ -73,6 +73,7 @@ public class SimpleWorkerRequest extends HttpWorkerRequest  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -368,11 +369,11 @@ public class SimpleWorkerRequest extends HttpWorkerRequest  {
         }
     }
 
-    public void SendResponseFromMemory(JCRefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException {
+    public void SendResponseFromMemory(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SendResponseFromMemory", dupParam0, dupParam1);
+            classInstance.Invoke("SendResponseFromMemory", dupParam0.getJCRefOut(), dupParam1);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

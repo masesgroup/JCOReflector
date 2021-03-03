@@ -77,6 +77,7 @@ public class JsonReaderWriterFactory extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -151,11 +152,11 @@ public class JsonReaderWriterFactory extends NetObject  {
         }
     }
 
-    public static XmlDictionaryReader CreateJsonReader(JCRefOut dupParam0, int dupParam1, int dupParam2, Encoding dupParam3, XmlDictionaryReaderQuotas dupParam4, OnXmlDictionaryReaderClose dupParam5) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.xml.XmlException {
+    public static XmlDictionaryReader CreateJsonReader(JCORefOut dupParam0, int dupParam1, int dupParam2, Encoding dupParam3, XmlDictionaryReaderQuotas dupParam4, OnXmlDictionaryReaderClose dupParam5) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.xml.XmlException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateJsonReader = (JCObject)classType.Invoke("CreateJsonReader", dupParam0, dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance(), dupParam5);
+            JCObject objCreateJsonReader = (JCObject)classType.Invoke("CreateJsonReader", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance(), dupParam5);
             return new XmlDictionaryReader(objCreateJsonReader);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -173,11 +174,11 @@ public class JsonReaderWriterFactory extends NetObject  {
         }
     }
 
-    public static XmlDictionaryReader CreateJsonReader(JCRefOut dupParam0, int dupParam1, int dupParam2, XmlDictionaryReaderQuotas dupParam3) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.xml.XmlException {
+    public static XmlDictionaryReader CreateJsonReader(JCORefOut dupParam0, int dupParam1, int dupParam2, XmlDictionaryReaderQuotas dupParam3) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.xml.XmlException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateJsonReader = (JCObject)classType.Invoke("CreateJsonReader", dupParam0, dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
+            JCObject objCreateJsonReader = (JCObject)classType.Invoke("CreateJsonReader", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
             return new XmlDictionaryReader(objCreateJsonReader);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -195,11 +196,11 @@ public class JsonReaderWriterFactory extends NetObject  {
         }
     }
 
-    public static XmlDictionaryReader CreateJsonReader(JCRefOut dupParam0, XmlDictionaryReaderQuotas dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.xml.XmlException {
+    public static XmlDictionaryReader CreateJsonReader(JCORefOut dupParam0, XmlDictionaryReaderQuotas dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.xml.XmlException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateJsonReader = (JCObject)classType.Invoke("CreateJsonReader", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance());
+            JCObject objCreateJsonReader = (JCObject)classType.Invoke("CreateJsonReader", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
             return new XmlDictionaryReader(objCreateJsonReader);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

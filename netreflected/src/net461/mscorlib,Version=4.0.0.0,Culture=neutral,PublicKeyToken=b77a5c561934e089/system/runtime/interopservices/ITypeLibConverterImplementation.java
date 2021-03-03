@@ -82,6 +82,7 @@ public class ITypeLibConverterImplementation extends NetObject implements ITypeL
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -156,11 +157,11 @@ public class ITypeLibConverterImplementation extends NetObject implements ITypeL
         }
     }
 
-    public AssemblyBuilder ConvertTypeLibToAssembly(NetObject dupParam0, java.lang.String dupParam1, int dupParam2, ITypeLibImporterNotifySink dupParam3, JCRefOut dupParam4, StrongNameKeyPair dupParam5, boolean dupParam6) throws Throwable {
+    public AssemblyBuilder ConvertTypeLibToAssembly(NetObject dupParam0, java.lang.String dupParam1, int dupParam2, ITypeLibImporterNotifySink dupParam3, JCORefOut dupParam4, StrongNameKeyPair dupParam5, boolean dupParam6) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objConvertTypeLibToAssembly = (JCObject)classInstance.Invoke("ConvertTypeLibToAssembly", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4, dupParam5 == null ? null : dupParam5.getJCOInstance(), dupParam6);
+            JCObject objConvertTypeLibToAssembly = (JCObject)classInstance.Invoke("ConvertTypeLibToAssembly", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4.getJCRefOut(), dupParam5 == null ? null : dupParam5.getJCOInstance(), dupParam6);
             return new AssemblyBuilder(objConvertTypeLibToAssembly);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -178,11 +179,11 @@ public class ITypeLibConverterImplementation extends NetObject implements ITypeL
         }
     }
 
-    public AssemblyBuilder ConvertTypeLibToAssembly(NetObject dupParam0, java.lang.String dupParam1, TypeLibImporterFlags dupParam2, ITypeLibImporterNotifySink dupParam3, JCRefOut dupParam4, StrongNameKeyPair dupParam5, java.lang.String dupParam6, Version dupParam7) throws Throwable {
+    public AssemblyBuilder ConvertTypeLibToAssembly(NetObject dupParam0, java.lang.String dupParam1, TypeLibImporterFlags dupParam2, ITypeLibImporterNotifySink dupParam3, JCORefOut dupParam4, StrongNameKeyPair dupParam5, java.lang.String dupParam6, Version dupParam7) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objConvertTypeLibToAssembly = (JCObject)classInstance.Invoke("ConvertTypeLibToAssembly", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4, dupParam5 == null ? null : dupParam5.getJCOInstance(), dupParam6, dupParam7 == null ? null : dupParam7.getJCOInstance());
+            JCObject objConvertTypeLibToAssembly = (JCObject)classInstance.Invoke("ConvertTypeLibToAssembly", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4.getJCRefOut(), dupParam5 == null ? null : dupParam5.getJCOInstance(), dupParam6, dupParam7 == null ? null : dupParam7.getJCOInstance());
             return new AssemblyBuilder(objConvertTypeLibToAssembly);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

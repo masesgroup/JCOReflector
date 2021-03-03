@@ -71,6 +71,7 @@ public class ValidateValueCallback extends JCDelegate implements IJCEventEmit, I
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -111,8 +112,7 @@ public class ValidateValueCallback extends JCDelegate implements IJCEventEmit, I
         }
         catch (Throwable throwableFromJCEvent)
         {
-            if (JCOBridgeInstance.getDebug())
-                throwableFromJCEvent.printStackTrace();
+            JCOReflector.writeLog(throwableFromJCEvent);
             return false;
         }
     }
@@ -133,8 +133,7 @@ public class ValidateValueCallback extends JCDelegate implements IJCEventEmit, I
         }
         catch (Throwable throwableFromJCEvent)
         {
-            if (JCOBridgeInstance.getDebug())
-                throwableFromJCEvent.printStackTrace();
+            JCOReflector.writeLog(throwableFromJCEvent);
             return false;
         }
     }

@@ -82,6 +82,7 @@ public class SessionSecurityTokenHandler extends SecurityTokenHandler  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -204,11 +205,11 @@ public class SessionSecurityTokenHandler extends SecurityTokenHandler  {
         }
     }
 
-    public SecurityToken ReadToken(JCRefOut dupParam0, SecurityTokenResolver dupParam1) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
+    public SecurityToken ReadToken(JCORefOut dupParam0, SecurityTokenResolver dupParam1) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objReadToken = (JCObject)classInstance.Invoke("ReadToken", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance());
+            JCObject objReadToken = (JCObject)classInstance.Invoke("ReadToken", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
             return new SecurityToken(objReadToken);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

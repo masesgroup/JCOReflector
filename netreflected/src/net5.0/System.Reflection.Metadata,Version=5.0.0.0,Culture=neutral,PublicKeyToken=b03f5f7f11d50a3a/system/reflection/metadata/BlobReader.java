@@ -86,6 +86,7 @@ public class BlobReader extends ValueType  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -474,11 +475,11 @@ public class BlobReader extends ValueType  {
         }
     }
 
-    public void ReadBytes(int dupParam0, JCRefOut dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.BadImageFormatException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException {
+    public void ReadBytes(int dupParam0, JCORefOut dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.BadImageFormatException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("ReadBytes", dupParam0, dupParam1, dupParam2);
+            classInstance.Invoke("ReadBytes", dupParam0, dupParam1.getJCRefOut(), dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

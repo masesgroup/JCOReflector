@@ -77,6 +77,7 @@ public class GenericAce extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -162,11 +163,11 @@ public class GenericAce extends NetObject  {
         }
     }
 
-    public static GenericAce CreateFromBinaryForm(JCRefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.SystemException {
+    public static GenericAce CreateFromBinaryForm(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.SystemException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateFromBinaryForm = (JCObject)classType.Invoke("CreateFromBinaryForm", dupParam0, dupParam1);
+            JCObject objCreateFromBinaryForm = (JCObject)classType.Invoke("CreateFromBinaryForm", dupParam0.getJCRefOut(), dupParam1);
             return new GenericAce(objCreateFromBinaryForm);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -183,11 +184,11 @@ public class GenericAce extends NetObject  {
         }
     }
 
-    public void GetBinaryForm(JCRefOut dupParam0, int dupParam1) throws Throwable {
+    public void GetBinaryForm(JCORefOut dupParam0, int dupParam1) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("GetBinaryForm", dupParam0, dupParam1);
+            classInstance.Invoke("GetBinaryForm", dupParam0.getJCRefOut(), dupParam1);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

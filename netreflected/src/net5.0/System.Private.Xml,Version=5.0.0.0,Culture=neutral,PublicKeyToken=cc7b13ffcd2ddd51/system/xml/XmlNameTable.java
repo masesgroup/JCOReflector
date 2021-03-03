@@ -71,6 +71,7 @@ public class XmlNameTable extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -144,11 +145,11 @@ public class XmlNameTable extends NetObject  {
         }
     }
 
-    public java.lang.String Add(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable {
+    public java.lang.String Add(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Invoke("Add", dupParam0, dupParam1, dupParam2);
+            return (java.lang.String)classInstance.Invoke("Add", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,11 +175,11 @@ public class XmlNameTable extends NetObject  {
         }
     }
 
-    public java.lang.String Get(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable {
+    public java.lang.String Get(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Invoke("Get", dupParam0, dupParam1, dupParam2);
+            return (java.lang.String)classInstance.Invoke("Get", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

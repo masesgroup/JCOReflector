@@ -79,6 +79,7 @@ public class Conversions extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -463,11 +464,11 @@ public class Conversions extends NetObject  {
         }
     }
 
-    public static java.lang.String FromCharArray(JCRefOut dupParam0) throws Throwable {
+    public static java.lang.String FromCharArray(JCORefOut dupParam0) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Invoke("FromCharArray", (Object)dupParam0);
+            return (java.lang.String)classType.Invoke("FromCharArray", (Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -483,11 +484,11 @@ public class Conversions extends NetObject  {
         }
     }
 
-    public static java.lang.String FromCharArraySubset(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable {
+    public static java.lang.String FromCharArraySubset(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Invoke("FromCharArraySubset", dupParam0, dupParam1, dupParam2);
+            return (java.lang.String)classType.Invoke("FromCharArraySubset", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

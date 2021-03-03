@@ -76,6 +76,7 @@ public class SqlChars extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -177,11 +178,11 @@ public class SqlChars extends NetObject  {
         }
     }
 
-    public long Read(long dupParam0, JCRefOut dupParam1, int dupParam2, int dupParam3) throws Throwable, system.data.sqltypes.SqlNullValueException, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+    public long Read(long dupParam0, JCORefOut dupParam1, int dupParam2, int dupParam3) throws Throwable, system.data.sqltypes.SqlNullValueException, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (long)classInstance.Invoke("Read", dupParam0, dupParam1, dupParam2, dupParam3);
+            return (long)classInstance.Invoke("Read", dupParam0, dupParam1.getJCRefOut(), dupParam2, dupParam3);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -239,11 +240,11 @@ public class SqlChars extends NetObject  {
         }
     }
 
-    public void Write(long dupParam0, JCRefOut dupParam1, int dupParam2, int dupParam3) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.data.sqltypes.SqlTypeException {
+    public void Write(long dupParam0, JCORefOut dupParam1, int dupParam2, int dupParam3) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.data.sqltypes.SqlTypeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Write", dupParam0, dupParam1, dupParam2, dupParam3);
+            classInstance.Invoke("Write", dupParam0, dupParam1.getJCRefOut(), dupParam2, dupParam3);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

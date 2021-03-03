@@ -71,6 +71,7 @@ public class IWin32WindowImplementation extends NetObject implements IWin32Windo
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }

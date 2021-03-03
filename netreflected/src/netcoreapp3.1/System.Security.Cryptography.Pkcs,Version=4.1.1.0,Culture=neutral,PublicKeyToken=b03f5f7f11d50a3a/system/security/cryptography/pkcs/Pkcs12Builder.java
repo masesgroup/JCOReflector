@@ -74,6 +74,7 @@ public class Pkcs12Builder extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -174,11 +175,11 @@ public class Pkcs12Builder extends NetObject  {
         }
     }
 
-    public void AddSafeContentsEncrypted(Pkcs12SafeContents dupParam0, JCRefOut dupParam1, PbeParameters dupParam2) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.OverflowException, system.NullReferenceException {
+    public void AddSafeContentsEncrypted(Pkcs12SafeContents dupParam0, JCORefOut dupParam1, PbeParameters dupParam2) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException, system.ObjectDisposedException, system.OverflowException, system.NullReferenceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddSafeContentsEncrypted", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
+            classInstance.Invoke("AddSafeContentsEncrypted", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

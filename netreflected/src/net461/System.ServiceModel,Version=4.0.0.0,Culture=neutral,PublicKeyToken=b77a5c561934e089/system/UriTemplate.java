@@ -75,6 +75,7 @@ public class UriTemplate extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -203,11 +204,11 @@ public class UriTemplate extends NetObject  {
         }
     }
 
-    public Uri BindByPosition(Uri dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.UriFormatException, system.collections.generic.KeyNotFoundException, system.security.SecurityException {
+    public Uri BindByPosition(Uri dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.UriFormatException, system.collections.generic.KeyNotFoundException, system.security.SecurityException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objBindByPosition = (JCObject)classInstance.Invoke("BindByPosition", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1);
+            JCObject objBindByPosition = (JCObject)classInstance.Invoke("BindByPosition", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
             return new Uri(objBindByPosition);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

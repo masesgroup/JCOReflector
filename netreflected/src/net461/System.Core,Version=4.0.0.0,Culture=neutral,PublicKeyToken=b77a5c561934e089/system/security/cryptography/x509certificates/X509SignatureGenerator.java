@@ -77,6 +77,7 @@ public class X509SignatureGenerator extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -178,12 +179,12 @@ public class X509SignatureGenerator extends NetObject  {
         }
     }
 
-    public byte[] SignData(JCRefOut dupParam0, HashAlgorithmName dupParam1) throws Throwable {
+    public byte[] SignData(JCORefOut dupParam0, HashAlgorithmName dupParam1) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("SignData", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance());
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("SignData", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }

@@ -78,6 +78,7 @@ public class X509Certificate extends NetObject implements AutoCloseable {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -622,11 +623,11 @@ public class X509Certificate extends NetObject implements AutoCloseable {
         }
     }
 
-    public void Import(JCRefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+    public void Import(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Import", (Object)dupParam0);
+            classInstance.Invoke("Import", (Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -642,11 +643,11 @@ public class X509Certificate extends NetObject implements AutoCloseable {
         }
     }
 
-    public void Import(JCRefOut dupParam0, SecureString dupParam1, X509KeyStorageFlags dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+    public void Import(JCORefOut dupParam0, SecureString dupParam1, X509KeyStorageFlags dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Import", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2 == null ? null : dupParam2.getJCOInstance());
+            classInstance.Invoke("Import", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2 == null ? null : dupParam2.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -662,11 +663,11 @@ public class X509Certificate extends NetObject implements AutoCloseable {
         }
     }
 
-    public void Import(JCRefOut dupParam0, java.lang.String dupParam1, X509KeyStorageFlags dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+    public void Import(JCORefOut dupParam0, java.lang.String dupParam1, X509KeyStorageFlags dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Import", dupParam0, dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
+            classInstance.Invoke("Import", dupParam0.getJCRefOut(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

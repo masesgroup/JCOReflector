@@ -73,6 +73,7 @@ public class RoleManagerModule extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -154,7 +155,7 @@ public class RoleManagerModule extends NetObject  {
         }
     }
 
-    public void Init(HttpApplication app) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.threading.ThreadAbortException, system.web.HttpRequestValidationException, system.FormatException, system.runtime.serialization.SerializationException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.OverflowException {
+    public void Init(HttpApplication app) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.FormatException, system.threading.ThreadAbortException, system.runtime.serialization.SerializationException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.OverflowException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

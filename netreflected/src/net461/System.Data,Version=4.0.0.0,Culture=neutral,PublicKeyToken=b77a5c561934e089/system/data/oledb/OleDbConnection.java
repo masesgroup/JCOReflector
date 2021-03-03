@@ -82,6 +82,7 @@ public class OleDbConnection extends DbConnection  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -207,11 +208,11 @@ public class OleDbConnection extends DbConnection  {
         }
     }
 
-    public DataTable GetSchema(java.lang.String dupParam0, JCRefOut dupParam1) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
+    public DataTable GetSchema(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetSchema = (JCObject)classInstance.Invoke("GetSchema", dupParam0, dupParam1);
+            JCObject objGetSchema = (JCObject)classInstance.Invoke("GetSchema", dupParam0, dupParam1.getJCRefOut());
             return new DataTable(objGetSchema);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

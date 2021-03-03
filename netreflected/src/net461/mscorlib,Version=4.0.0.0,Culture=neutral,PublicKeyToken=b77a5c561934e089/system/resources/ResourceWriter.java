@@ -72,6 +72,7 @@ public class ResourceWriter extends NetObject implements AutoCloseable {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -167,11 +168,11 @@ public class ResourceWriter extends NetObject implements AutoCloseable {
         }
     }
 
-    public void AddResource(java.lang.String dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException {
+    public void AddResource(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddResource", dupParam0, dupParam1);
+            classInstance.Invoke("AddResource", dupParam0, dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,11 +228,11 @@ public class ResourceWriter extends NetObject implements AutoCloseable {
         }
     }
 
-    public void AddResourceData(java.lang.String dupParam0, java.lang.String dupParam1, JCRefOut dupParam2) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException {
+    public void AddResourceData(java.lang.String dupParam0, java.lang.String dupParam1, JCORefOut dupParam2) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddResourceData", dupParam0, dupParam1, dupParam2);
+            classInstance.Invoke("AddResourceData", dupParam0, dupParam1, dupParam2.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

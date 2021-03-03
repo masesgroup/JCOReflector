@@ -73,6 +73,7 @@ public class Rijndael extends SymmetricAlgorithm  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -136,7 +137,7 @@ public class Rijndael extends SymmetricAlgorithm  {
     
     // Methods section
     
-    public static Rijndael CreateNewRijndael() throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException {
+    public static Rijndael CreateNewRijndael() throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {

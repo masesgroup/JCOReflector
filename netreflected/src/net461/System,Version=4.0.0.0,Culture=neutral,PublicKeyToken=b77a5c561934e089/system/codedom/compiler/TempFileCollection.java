@@ -71,6 +71,7 @@ public class TempFileCollection extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -202,11 +203,11 @@ public class TempFileCollection extends NetObject  {
         }
     }
 
-    public void CopyTo(JCRefOut dupParam0, int dupParam1) throws Throwable {
+    public void CopyTo(JCORefOut dupParam0, int dupParam1) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("CopyTo", dupParam0, dupParam1);
+            classInstance.Invoke("CopyTo", dupParam0.getJCRefOut(), dupParam1);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -77,6 +77,7 @@ public class Claim extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -185,11 +186,11 @@ public class Claim extends NetObject  {
         }
     }
 
-    public static Claim CreateHashClaim(JCRefOut dupParam0) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+    public static Claim CreateHashClaim(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateHashClaim = (JCObject)classType.Invoke("CreateHashClaim", (Object)dupParam0);
+            JCObject objCreateHashClaim = (JCObject)classType.Invoke("CreateHashClaim", (Object)dupParam0.getJCRefOut());
             return new Claim(objCreateHashClaim);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -251,11 +252,11 @@ public class Claim extends NetObject  {
         }
     }
 
-    public static Claim CreateThumbprintClaim(JCRefOut dupParam0) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+    public static Claim CreateThumbprintClaim(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateThumbprintClaim = (JCObject)classType.Invoke("CreateThumbprintClaim", (Object)dupParam0);
+            JCObject objCreateThumbprintClaim = (JCObject)classType.Invoke("CreateThumbprintClaim", (Object)dupParam0.getJCRefOut());
             return new Claim(objCreateThumbprintClaim);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

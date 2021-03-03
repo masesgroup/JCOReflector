@@ -73,6 +73,7 @@ public class CompilerWrapper extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -155,11 +156,11 @@ public class CompilerWrapper extends NetObject  {
         }
     }
 
-    public WorkflowCompilerResults Compile(WorkflowCompilerParameters dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.io.InvalidDataException, system.xml.XmlException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.RankException, system.security.cryptography.CryptographicException, system.threading.AbandonedMutexException, system.PlatformNotSupportedException, system.reflection.TargetParameterCountException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.io.EndOfStreamException, system.CannotUnloadAppDomainException {
+    public WorkflowCompilerResults Compile(WorkflowCompilerParameters dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.io.InvalidDataException, system.xml.XmlException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.RankException, system.security.cryptography.CryptographicException, system.threading.AbandonedMutexException, system.PlatformNotSupportedException, system.reflection.TargetParameterCountException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.io.EndOfStreamException, system.CannotUnloadAppDomainException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCompile = (JCObject)classInstance.Invoke("Compile", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1);
+            JCObject objCompile = (JCObject)classInstance.Invoke("Compile", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
             return new WorkflowCompilerResults(objCompile);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

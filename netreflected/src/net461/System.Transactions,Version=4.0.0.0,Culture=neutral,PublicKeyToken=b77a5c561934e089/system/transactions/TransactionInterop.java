@@ -74,6 +74,7 @@ public class TransactionInterop extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -156,12 +157,12 @@ public class TransactionInterop extends NetObject  {
         }
     }
 
-    public static byte[] GetExportCookie(Transaction dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.OverflowException, system.transactions.TransactionManagerCommunicationException {
+    public static byte[] GetExportCookie(Transaction dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.transactions.TransactionPromotionException, system.transactions.TransactionException, system.transactions.TransactionInDoubtException, system.OverflowException, system.transactions.TransactionManagerCommunicationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetExportCookie", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1);
+            JCObject resultingObjects = (JCObject)classType.Invoke("GetExportCookie", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -246,11 +247,11 @@ public class TransactionInterop extends NetObject  {
         }
     }
 
-    public static Transaction GetTransactionFromExportCookie(JCRefOut dupParam0) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.transactions.TransactionException, system.IndexOutOfRangeException, system.OverflowException, system.transactions.TransactionManagerCommunicationException, system.RankException {
+    public static Transaction GetTransactionFromExportCookie(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.transactions.TransactionException, system.IndexOutOfRangeException, system.OverflowException, system.transactions.TransactionManagerCommunicationException, system.RankException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetTransactionFromExportCookie = (JCObject)classType.Invoke("GetTransactionFromExportCookie", (Object)dupParam0);
+            JCObject objGetTransactionFromExportCookie = (JCObject)classType.Invoke("GetTransactionFromExportCookie", (Object)dupParam0.getJCRefOut());
             return new Transaction(objGetTransactionFromExportCookie);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -268,11 +269,11 @@ public class TransactionInterop extends NetObject  {
         }
     }
 
-    public static Transaction GetTransactionFromTransmitterPropagationToken(JCRefOut dupParam0) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.transactions.TransactionException, system.IndexOutOfRangeException, system.OverflowException, system.transactions.TransactionManagerCommunicationException {
+    public static Transaction GetTransactionFromTransmitterPropagationToken(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.reflection.AmbiguousMatchException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.transactions.TransactionException, system.IndexOutOfRangeException, system.OverflowException, system.transactions.TransactionManagerCommunicationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetTransactionFromTransmitterPropagationToken = (JCObject)classType.Invoke("GetTransactionFromTransmitterPropagationToken", (Object)dupParam0);
+            JCObject objGetTransactionFromTransmitterPropagationToken = (JCObject)classType.Invoke("GetTransactionFromTransmitterPropagationToken", (Object)dupParam0.getJCRefOut());
             return new Transaction(objGetTransactionFromTransmitterPropagationToken);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

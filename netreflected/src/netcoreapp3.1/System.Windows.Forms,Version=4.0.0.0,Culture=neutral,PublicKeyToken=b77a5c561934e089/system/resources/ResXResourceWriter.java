@@ -75,6 +75,7 @@ public class ResXResourceWriter extends NetObject implements AutoCloseable {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -190,11 +191,11 @@ public class ResXResourceWriter extends NetObject implements AutoCloseable {
         }
     }
 
-    public void AddMetadata(java.lang.String dupParam0, JCRefOut dupParam1) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.TypeLoadException, system.io.FileLoadException, system.xml.XmlException {
+    public void AddMetadata(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.TypeLoadException, system.io.FileLoadException, system.xml.XmlException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddMetadata", dupParam0, dupParam1);
+            classInstance.Invoke("AddMetadata", dupParam0, dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,11 +241,11 @@ public class ResXResourceWriter extends NetObject implements AutoCloseable {
         }
     }
 
-    public void AddResource(java.lang.String dupParam0, JCRefOut dupParam1) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.TypeLoadException, system.io.FileLoadException, system.xml.XmlException {
+    public void AddResource(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.TypeLoadException, system.io.FileLoadException, system.xml.XmlException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddResource", dupParam0, dupParam1);
+            classInstance.Invoke("AddResource", dupParam0, dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -115,7 +115,7 @@ public interface IXmlMtomReaderInitializer extends IJCOBridgeReflected {
     
     public void SetInput(byte[] buffer, int offset, int count, Encoding[] encodings, java.lang.String contentType, XmlDictionaryReaderQuotas quotas, int maxBufferSize, OnXmlDictionaryReaderClose onClose) throws Throwable;
 
-    public void SetInput(JCRefOut dupParam0, int dupParam1, int dupParam2, Encoding[] dupParam3, java.lang.String dupParam4, XmlDictionaryReaderQuotas dupParam5, int dupParam6, OnXmlDictionaryReaderClose dupParam7) throws Throwable;
+    public void SetInput(JCORefOut dupParam0, int dupParam1, int dupParam2, Encoding[] dupParam3, java.lang.String dupParam4, XmlDictionaryReaderQuotas dupParam5, int dupParam6, OnXmlDictionaryReaderClose dupParam7) throws Throwable;
 
     public void SetInput(Stream stream, Encoding[] encodings, java.lang.String contentType, XmlDictionaryReaderQuotas quotas, int maxBufferSize, OnXmlDictionaryReaderClose onClose) throws Throwable;
 

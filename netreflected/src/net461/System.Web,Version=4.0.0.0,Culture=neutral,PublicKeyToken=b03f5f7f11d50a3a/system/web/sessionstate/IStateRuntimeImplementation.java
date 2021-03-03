@@ -71,6 +71,7 @@ public class IStateRuntimeImplementation extends NetObject implements IStateRunt
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }

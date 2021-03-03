@@ -72,6 +72,7 @@ public class BookmarkCallback extends JCVoidDelegate implements IJCVoidEventEmit
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -112,8 +113,7 @@ public class BookmarkCallback extends JCVoidDelegate implements IJCVoidEventEmit
         }
         catch (Throwable throwableFromJCEvent)
         {
-            if (JCOBridgeInstance.getDebug())
-                throwableFromJCEvent.printStackTrace();
+            JCOReflector.writeLog(throwableFromJCEvent);
         }
     }
 
@@ -133,8 +133,7 @@ public class BookmarkCallback extends JCVoidDelegate implements IJCVoidEventEmit
         }
         catch (Throwable throwableFromJCEvent)
         {
-            if (JCOBridgeInstance.getDebug())
-                throwableFromJCEvent.printStackTrace();
+            JCOReflector.writeLog(throwableFromJCEvent);
         }
     }
 

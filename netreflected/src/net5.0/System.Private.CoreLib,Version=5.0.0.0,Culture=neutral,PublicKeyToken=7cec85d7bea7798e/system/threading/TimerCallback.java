@@ -70,6 +70,7 @@ public class TimerCallback extends JCVoidDelegate implements IJCVoidEventEmit, I
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -108,8 +109,7 @@ public class TimerCallback extends JCVoidDelegate implements IJCVoidEventEmit, I
         }
         catch (Throwable throwableFromJCEvent)
         {
-            if (JCOBridgeInstance.getDebug())
-                throwableFromJCEvent.printStackTrace();
+            JCOReflector.writeLog(throwableFromJCEvent);
         }
     }
 
@@ -127,8 +127,7 @@ public class TimerCallback extends JCVoidDelegate implements IJCVoidEventEmit, I
         }
         catch (Throwable throwableFromJCEvent)
         {
-            if (JCOBridgeInstance.getDebug())
-                throwableFromJCEvent.printStackTrace();
+            JCOReflector.writeLog(throwableFromJCEvent);
         }
     }
 

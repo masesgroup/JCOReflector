@@ -93,6 +93,7 @@ public class MethodBuilder extends MethodInfo  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -230,12 +231,12 @@ public class MethodBuilder extends MethodInfo  {
         }
     }
 
-    public GenericTypeParameterBuilder[] DefineGenericParameters(JCRefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException {
+    public GenericTypeParameterBuilder[] DefineGenericParameters(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<GenericTypeParameterBuilder> resultingArrayList = new ArrayList<GenericTypeParameterBuilder>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("DefineGenericParameters", (Object)dupParam0);
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("DefineGenericParameters", (Object)dupParam0.getJCRefOut());
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new GenericTypeParameterBuilder(resultingObject));
             }
@@ -400,11 +401,11 @@ public class MethodBuilder extends MethodInfo  {
         }
     }
 
-    public void CreateMethodBody(JCRefOut dupParam0, int dupParam1) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public void CreateMethodBody(JCORefOut dupParam0, int dupParam1) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("CreateMethodBody", dupParam0, dupParam1);
+            classInstance.Invoke("CreateMethodBody", dupParam0.getJCRefOut(), dupParam1);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -420,11 +421,11 @@ public class MethodBuilder extends MethodInfo  {
         }
     }
 
-    public void SetCustomAttribute(ConstructorInfo dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
+    public void SetCustomAttribute(ConstructorInfo dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetCustomAttribute", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1);
+            classInstance.Invoke("SetCustomAttribute", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -490,11 +491,11 @@ public class MethodBuilder extends MethodInfo  {
         }
     }
 
-    public void SetSymCustomAttribute(java.lang.String dupParam0, JCRefOut dupParam1) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public void SetSymCustomAttribute(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetSymCustomAttribute", dupParam0, dupParam1);
+            classInstance.Invoke("SetSymCustomAttribute", dupParam0, dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

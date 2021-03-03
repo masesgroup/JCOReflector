@@ -76,6 +76,7 @@ public class ObjectManager extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -212,11 +213,11 @@ public class ObjectManager extends NetObject  {
         }
     }
 
-    public void RecordArrayElementFixup(long dupParam0, JCRefOut dupParam1, long dupParam2) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.runtime.serialization.SerializationException {
+    public void RecordArrayElementFixup(long dupParam0, JCORefOut dupParam1, long dupParam2) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.runtime.serialization.SerializationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("RecordArrayElementFixup", dupParam0, dupParam1, dupParam2);
+            classInstance.Invoke("RecordArrayElementFixup", dupParam0, dupParam1.getJCRefOut(), dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,11 +283,11 @@ public class ObjectManager extends NetObject  {
         }
     }
 
-    public void RegisterObject(NetObject dupParam0, long dupParam1, SerializationInfo dupParam2, long dupParam3, MemberInfo dupParam4, JCRefOut dupParam5) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.runtime.serialization.SerializationException, system.MulticastNotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.RankException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.MissingMemberException, system.reflection.TargetException {
+    public void RegisterObject(NetObject dupParam0, long dupParam1, SerializationInfo dupParam2, long dupParam3, MemberInfo dupParam4, JCORefOut dupParam5) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.runtime.serialization.SerializationException, system.MulticastNotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.RankException, system.FormatException, system.InvalidOperationException, system.NotSupportedException, system.MissingMemberException, system.reflection.TargetException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("RegisterObject", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance(), dupParam5);
+            classInstance.Invoke("RegisterObject", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance(), dupParam5.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

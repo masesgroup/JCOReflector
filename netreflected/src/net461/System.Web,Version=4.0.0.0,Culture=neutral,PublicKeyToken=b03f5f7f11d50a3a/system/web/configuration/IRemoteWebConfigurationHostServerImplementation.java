@@ -71,6 +71,7 @@ public class IRemoteWebConfigurationHostServerImplementation extends NetObject i
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -133,11 +134,11 @@ public class IRemoteWebConfigurationHostServerImplementation extends NetObject i
         }
     }
 
-    public java.lang.String DoEncryptOrDecrypt(boolean dupParam0, java.lang.String dupParam1, java.lang.String dupParam2, java.lang.String dupParam3, JCRefOut dupParam4, JCRefOut dupParam5) throws Throwable {
+    public java.lang.String DoEncryptOrDecrypt(boolean dupParam0, java.lang.String dupParam1, java.lang.String dupParam2, java.lang.String dupParam3, JCORefOut dupParam4, JCORefOut dupParam5) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Invoke("DoEncryptOrDecrypt", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4, dupParam5);
+            return (java.lang.String)classInstance.Invoke("DoEncryptOrDecrypt", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4.getJCRefOut(), dupParam5.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -74,6 +74,7 @@ public class RemoteCertificateValidationCallback extends JCDelegate implements I
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -117,8 +118,7 @@ public class RemoteCertificateValidationCallback extends JCDelegate implements I
         }
         catch (Throwable throwableFromJCEvent)
         {
-            if (JCOBridgeInstance.getDebug())
-                throwableFromJCEvent.printStackTrace();
+            JCOReflector.writeLog(throwableFromJCEvent);
             return false;
         }
     }
@@ -142,8 +142,7 @@ public class RemoteCertificateValidationCallback extends JCDelegate implements I
         }
         catch (Throwable throwableFromJCEvent)
         {
-            if (JCOBridgeInstance.getDebug())
-                throwableFromJCEvent.printStackTrace();
+            JCOReflector.writeLog(throwableFromJCEvent);
             return false;
         }
     }

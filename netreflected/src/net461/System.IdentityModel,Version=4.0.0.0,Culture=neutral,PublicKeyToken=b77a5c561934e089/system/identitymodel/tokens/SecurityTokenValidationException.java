@@ -72,8 +72,7 @@ public class SecurityTokenValidationException extends SecurityTokenException {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException jce) {
-            if (JCOBridgeInstance.getDebug())
-                jce.printStackTrace();
+            JCOReflector.writeLog(jce);
             return null;
         }
     }

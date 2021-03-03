@@ -71,6 +71,7 @@ public class IAccessibleHandlerImplementation extends NetObject implements IAcce
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }

@@ -131,6 +131,7 @@ public class MetadataBuilder extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -260,11 +261,11 @@ public class MetadataBuilder extends NetObject  {
         }
     }
 
-    public BlobHandle GetOrAddBlob(JCRefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
+    public BlobHandle GetOrAddBlob(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetOrAddBlob = (JCObject)classInstance.Invoke("GetOrAddBlob", (Object)dupParam0);
+            JCObject objGetOrAddBlob = (JCObject)classInstance.Invoke("GetOrAddBlob", (Object)dupParam0.getJCRefOut());
             return new BlobHandle(objGetOrAddBlob);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -74,6 +74,7 @@ public class Roles extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -292,11 +293,11 @@ public class Roles extends NetObject  {
         }
     }
 
-    public static void AddUsersToRole(JCRefOut dupParam0, java.lang.String dupParam1) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.FormatException, system.configuration.ConfigurationException, system.TypeLoadException, system.NullReferenceException {
+    public static void AddUsersToRole(JCORefOut dupParam0, java.lang.String dupParam1) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.FormatException, system.configuration.ConfigurationException, system.TypeLoadException, system.NullReferenceException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("AddUsersToRole", dupParam0, dupParam1);
+            classType.Invoke("AddUsersToRole", dupParam0.getJCRefOut(), dupParam1);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,11 +313,11 @@ public class Roles extends NetObject  {
         }
     }
 
-    public static void AddUsersToRoles(JCRefOut dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.FormatException, system.configuration.ConfigurationException, system.TypeLoadException, system.NullReferenceException {
+    public static void AddUsersToRoles(JCORefOut dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.FormatException, system.configuration.ConfigurationException, system.TypeLoadException, system.NullReferenceException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("AddUsersToRoles", dupParam0, dupParam1);
+            classType.Invoke("AddUsersToRoles", dupParam0.getJCRefOut(), dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -342,11 +343,11 @@ public class Roles extends NetObject  {
         }
     }
 
-    public static void AddUserToRoles(java.lang.String dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.FormatException, system.configuration.ConfigurationException, system.TypeLoadException, system.NullReferenceException {
+    public static void AddUserToRoles(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.FormatException, system.configuration.ConfigurationException, system.TypeLoadException, system.NullReferenceException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("AddUserToRoles", dupParam0, dupParam1);
+            classType.Invoke("AddUserToRoles", dupParam0, dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -392,11 +393,11 @@ public class Roles extends NetObject  {
         }
     }
 
-    public static void RemoveUserFromRoles(java.lang.String dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.FormatException, system.configuration.ConfigurationException, system.TypeLoadException, system.NullReferenceException {
+    public static void RemoveUserFromRoles(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.FormatException, system.configuration.ConfigurationException, system.TypeLoadException, system.NullReferenceException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("RemoveUserFromRoles", dupParam0, dupParam1);
+            classType.Invoke("RemoveUserFromRoles", dupParam0, dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -412,11 +413,11 @@ public class Roles extends NetObject  {
         }
     }
 
-    public static void RemoveUsersFromRole(JCRefOut dupParam0, java.lang.String dupParam1) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.FormatException, system.configuration.ConfigurationException, system.TypeLoadException, system.NullReferenceException {
+    public static void RemoveUsersFromRole(JCORefOut dupParam0, java.lang.String dupParam1) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.FormatException, system.configuration.ConfigurationException, system.TypeLoadException, system.NullReferenceException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("RemoveUsersFromRole", dupParam0, dupParam1);
+            classType.Invoke("RemoveUsersFromRole", dupParam0.getJCRefOut(), dupParam1);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -432,11 +433,11 @@ public class Roles extends NetObject  {
         }
     }
 
-    public static void RemoveUsersFromRoles(JCRefOut dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.FormatException, system.configuration.ConfigurationException, system.TypeLoadException, system.NullReferenceException {
+    public static void RemoveUsersFromRoles(JCORefOut dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.ArgumentOutOfRangeException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.FormatException, system.configuration.ConfigurationException, system.TypeLoadException, system.NullReferenceException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("RemoveUsersFromRoles", dupParam0, dupParam1);
+            classType.Invoke("RemoveUsersFromRoles", dupParam0.getJCRefOut(), dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

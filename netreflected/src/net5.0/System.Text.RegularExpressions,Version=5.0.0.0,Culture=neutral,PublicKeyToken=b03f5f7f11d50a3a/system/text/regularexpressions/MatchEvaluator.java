@@ -72,6 +72,7 @@ public class MatchEvaluator extends JCDelegate implements IJCEventEmit, IJCOBrid
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -112,8 +113,7 @@ public class MatchEvaluator extends JCDelegate implements IJCEventEmit, IJCOBrid
         }
         catch (Throwable throwableFromJCEvent)
         {
-            if (JCOBridgeInstance.getDebug())
-                throwableFromJCEvent.printStackTrace();
+            JCOReflector.writeLog(throwableFromJCEvent);
             return "";
         }
     }
@@ -134,8 +134,7 @@ public class MatchEvaluator extends JCDelegate implements IJCEventEmit, IJCOBrid
         }
         catch (Throwable throwableFromJCEvent)
         {
-            if (JCOBridgeInstance.getDebug())
-                throwableFromJCEvent.printStackTrace();
+            JCOReflector.writeLog(throwableFromJCEvent);
             return "";
         }
     }

@@ -77,6 +77,7 @@ public class X509AsymmetricSecurityKey extends AsymmetricSecurityKey  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -211,12 +212,12 @@ public class X509AsymmetricSecurityKey extends AsymmetricSecurityKey  {
         }
     }
 
-    public byte[] DecryptKey(java.lang.String dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException, system.threading.ThreadAbortException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.OverflowException {
+    public byte[] DecryptKey(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException, system.threading.ThreadAbortException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.OverflowException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("DecryptKey", dupParam0, dupParam1);
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("DecryptKey", dupParam0, dupParam1.getJCRefOut());
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -249,12 +250,12 @@ public class X509AsymmetricSecurityKey extends AsymmetricSecurityKey  {
         }
     }
 
-    public byte[] EncryptKey(java.lang.String dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException, system.NotSupportedException, system.threading.ThreadAbortException, system.MissingMethodException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException {
+    public byte[] EncryptKey(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException, system.NotSupportedException, system.threading.ThreadAbortException, system.MissingMethodException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("EncryptKey", dupParam0, dupParam1);
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("EncryptKey", dupParam0, dupParam1.getJCRefOut());
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }

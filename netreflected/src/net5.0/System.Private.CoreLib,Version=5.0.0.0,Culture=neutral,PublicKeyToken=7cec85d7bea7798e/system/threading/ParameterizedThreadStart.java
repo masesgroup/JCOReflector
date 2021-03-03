@@ -70,6 +70,7 @@ public class ParameterizedThreadStart extends JCVoidDelegate implements IJCVoidE
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -108,8 +109,7 @@ public class ParameterizedThreadStart extends JCVoidDelegate implements IJCVoidE
         }
         catch (Throwable throwableFromJCEvent)
         {
-            if (JCOBridgeInstance.getDebug())
-                throwableFromJCEvent.printStackTrace();
+            JCOReflector.writeLog(throwableFromJCEvent);
         }
     }
 
@@ -127,8 +127,7 @@ public class ParameterizedThreadStart extends JCVoidDelegate implements IJCVoidE
         }
         catch (Throwable throwableFromJCEvent)
         {
-            if (JCOBridgeInstance.getDebug())
-                throwableFromJCEvent.printStackTrace();
+            JCOReflector.writeLog(throwableFromJCEvent);
         }
     }
 

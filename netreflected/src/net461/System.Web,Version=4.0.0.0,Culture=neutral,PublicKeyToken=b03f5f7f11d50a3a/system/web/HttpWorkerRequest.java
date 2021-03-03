@@ -76,6 +76,7 @@ public class HttpWorkerRequest extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -344,11 +345,11 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
-    public int GetPreloadedEntityBody(JCRefOut dupParam0, int dupParam1) throws Throwable {
+    public int GetPreloadedEntityBody(JCORefOut dupParam0, int dupParam1) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("GetPreloadedEntityBody", dupParam0, dupParam1);
+            return (int)classInstance.Invoke("GetPreloadedEntityBody", dupParam0.getJCRefOut(), dupParam1);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -404,11 +405,11 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
-    public int ReadEntityBody(JCRefOut dupParam0, int dupParam1) throws Throwable {
+    public int ReadEntityBody(JCORefOut dupParam0, int dupParam1) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("ReadEntityBody", dupParam0, dupParam1);
+            return (int)classInstance.Invoke("ReadEntityBody", dupParam0.getJCRefOut(), dupParam1);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -424,11 +425,11 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
-    public int ReadEntityBody(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable {
+    public int ReadEntityBody(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("ReadEntityBody", dupParam0, dupParam1, dupParam2);
+            return (int)classInstance.Invoke("ReadEntityBody", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -508,11 +509,11 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
-    public IAsyncResult BeginRead(JCRefOut dupParam0, int dupParam1, int dupParam2, AsyncCallback dupParam3, NetObject dupParam4) throws Throwable, system.NotSupportedException {
+    public IAsyncResult BeginRead(JCORefOut dupParam0, int dupParam1, int dupParam2, AsyncCallback dupParam3, NetObject dupParam4) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objBeginRead = (JCObject)classInstance.Invoke("BeginRead", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance());
+            JCObject objBeginRead = (JCObject)classInstance.Invoke("BeginRead", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance());
             return new IAsyncResultImplementation(objBeginRead);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -839,11 +840,11 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
-    public void SendResponseFromMemory(JCRefOut dupParam0, int dupParam1) throws Throwable {
+    public void SendResponseFromMemory(JCORefOut dupParam0, int dupParam1) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SendResponseFromMemory", dupParam0, dupParam1);
+            classInstance.Invoke("SendResponseFromMemory", dupParam0.getJCRefOut(), dupParam1);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -78,6 +78,7 @@ public class TemplateEditingService extends NetObject implements AutoCloseable {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -174,11 +175,11 @@ public class TemplateEditingService extends NetObject implements AutoCloseable {
         }
     }
 
-    public ITemplateEditingFrame CreateFrame(TemplatedControlDesigner dupParam0, java.lang.String dupParam1, JCRefOut dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public ITemplateEditingFrame CreateFrame(TemplatedControlDesigner dupParam0, java.lang.String dupParam1, JCORefOut dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateFrame = (JCObject)classInstance.Invoke("CreateFrame", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2);
+            JCObject objCreateFrame = (JCObject)classInstance.Invoke("CreateFrame", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2.getJCRefOut());
             return new ITemplateEditingFrameImplementation(objCreateFrame);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -196,11 +197,11 @@ public class TemplateEditingService extends NetObject implements AutoCloseable {
         }
     }
 
-    public ITemplateEditingFrame CreateFrame(TemplatedControlDesigner dupParam0, java.lang.String dupParam1, JCRefOut dupParam2, Style dupParam3, Style[] dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public ITemplateEditingFrame CreateFrame(TemplatedControlDesigner dupParam0, java.lang.String dupParam1, JCORefOut dupParam2, Style dupParam3, Style[] dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateFrame = (JCObject)classInstance.Invoke("CreateFrame", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), toObjectFromArray(dupParam4));
+            JCObject objCreateFrame = (JCObject)classInstance.Invoke("CreateFrame", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2.getJCRefOut(), dupParam3 == null ? null : dupParam3.getJCOInstance(), toObjectFromArray(dupParam4));
             return new ITemplateEditingFrameImplementation(objCreateFrame);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

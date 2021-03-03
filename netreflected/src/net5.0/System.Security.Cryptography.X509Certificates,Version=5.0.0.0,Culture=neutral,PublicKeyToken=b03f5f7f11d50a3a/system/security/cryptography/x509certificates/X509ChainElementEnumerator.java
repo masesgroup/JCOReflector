@@ -70,8 +70,7 @@ public class X509ChainElementEnumerator extends NetObject implements Iterator<X5
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException jce) {
-            if (JCOBridgeInstance.getDebug())
-                jce.printStackTrace();
+            JCOReflector.writeLog(jce);
             return null;
         }
     }

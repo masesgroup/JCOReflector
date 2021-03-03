@@ -78,6 +78,7 @@ public class FileIOPermission extends CodeAccessPermission  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -296,11 +297,11 @@ public class FileIOPermission extends CodeAccessPermission  {
         }
     }
 
-    public void AddPathList(FileIOPermissionAccess dupParam0, JCRefOut dupParam1) throws Throwable {
+    public void AddPathList(FileIOPermissionAccess dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddPathList", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1);
+            classInstance.Invoke("AddPathList", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -336,11 +337,11 @@ public class FileIOPermission extends CodeAccessPermission  {
         }
     }
 
-    public void SetPathList(FileIOPermissionAccess dupParam0, JCRefOut dupParam1) throws Throwable {
+    public void SetPathList(FileIOPermissionAccess dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetPathList", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1);
+            classInstance.Invoke("SetPathList", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

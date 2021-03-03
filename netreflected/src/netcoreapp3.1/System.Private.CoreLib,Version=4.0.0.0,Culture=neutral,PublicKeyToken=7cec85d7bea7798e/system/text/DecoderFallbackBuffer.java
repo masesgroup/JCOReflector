@@ -71,6 +71,7 @@ public class DecoderFallbackBuffer extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -144,11 +145,11 @@ public class DecoderFallbackBuffer extends NetObject  {
         }
     }
 
-    public boolean Fallback(JCRefOut dupParam0, int dupParam1) throws Throwable {
+    public boolean Fallback(JCORefOut dupParam0, int dupParam1) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Fallback", dupParam0, dupParam1);
+            return (boolean)classInstance.Invoke("Fallback", dupParam0.getJCRefOut(), dupParam1);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

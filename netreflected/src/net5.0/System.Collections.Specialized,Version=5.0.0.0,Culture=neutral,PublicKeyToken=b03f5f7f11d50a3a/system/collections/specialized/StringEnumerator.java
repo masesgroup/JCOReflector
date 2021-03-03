@@ -69,8 +69,7 @@ public class StringEnumerator extends NetObject implements Iterator<java.lang.St
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException jce) {
-            if (JCOBridgeInstance.getDebug())
-                jce.printStackTrace();
+            JCOReflector.writeLog(jce);
             return null;
         }
     }

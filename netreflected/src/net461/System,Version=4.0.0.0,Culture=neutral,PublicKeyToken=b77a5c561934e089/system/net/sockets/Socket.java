@@ -93,6 +93,7 @@ public class Socket extends NetObject implements AutoCloseable {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -357,11 +358,11 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
-    public int IOControl(int dupParam0, JCRefOut dupParam1, JCRefOut dupParam2) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+    public int IOControl(int dupParam0, JCORefOut dupParam1, JCORefOut dupParam2) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("IOControl", dupParam0, dupParam1, dupParam2);
+            return (int)classInstance.Invoke("IOControl", dupParam0, dupParam1.getJCRefOut(), dupParam2.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -377,11 +378,11 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
-    public int IOControl(IOControlCode dupParam0, JCRefOut dupParam1, JCRefOut dupParam2) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+    public int IOControl(IOControlCode dupParam0, JCORefOut dupParam1, JCORefOut dupParam2) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("IOControl", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2);
+            return (int)classInstance.Invoke("IOControl", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut(), dupParam2.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -397,11 +398,11 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
-    public int Receive(JCRefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.NullReferenceException, system.NotImplementedException, system.NotSupportedException, system.net.sockets.SocketException {
+    public int Receive(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.NullReferenceException, system.NotImplementedException, system.NotSupportedException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("Receive", (Object)dupParam0);
+            return (int)classInstance.Invoke("Receive", (Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -417,11 +418,11 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
-    public int Receive(JCRefOut dupParam0, int dupParam1, int dupParam2, SocketFlags dupParam3) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.security.SecurityException, system.NullReferenceException, system.PlatformNotSupportedException, system.NotImplementedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.threading.SynchronizationLockException, system.net.sockets.SocketException {
+    public int Receive(JCORefOut dupParam0, int dupParam1, int dupParam2, SocketFlags dupParam3) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.security.SecurityException, system.NullReferenceException, system.PlatformNotSupportedException, system.NotImplementedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.threading.SynchronizationLockException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("Receive", dupParam0, dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
+            return (int)classInstance.Invoke("Receive", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -437,11 +438,11 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
-    public int Receive(JCRefOut dupParam0, int dupParam1, SocketFlags dupParam2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.NullReferenceException, system.NotImplementedException, system.NotSupportedException, system.net.sockets.SocketException {
+    public int Receive(JCORefOut dupParam0, int dupParam1, SocketFlags dupParam2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.NullReferenceException, system.NotImplementedException, system.NotSupportedException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("Receive", dupParam0, dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
+            return (int)classInstance.Invoke("Receive", dupParam0.getJCRefOut(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -457,11 +458,11 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
-    public int Receive(JCRefOut dupParam0, SocketFlags dupParam1) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.NullReferenceException, system.NotImplementedException, system.NotSupportedException, system.net.sockets.SocketException {
+    public int Receive(JCORefOut dupParam0, SocketFlags dupParam1) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.NullReferenceException, system.NotImplementedException, system.NotSupportedException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("Receive", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance());
+            return (int)classInstance.Invoke("Receive", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -477,11 +478,11 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
-    public int Send(JCRefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.NullReferenceException, system.NotImplementedException, system.NotSupportedException, system.net.sockets.SocketException {
+    public int Send(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.NullReferenceException, system.NotImplementedException, system.NotSupportedException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("Send", (Object)dupParam0);
+            return (int)classInstance.Invoke("Send", (Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -497,11 +498,11 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
-    public int Send(JCRefOut dupParam0, int dupParam1, int dupParam2, SocketFlags dupParam3) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.security.SecurityException, system.NullReferenceException, system.PlatformNotSupportedException, system.NotImplementedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.threading.SynchronizationLockException, system.net.sockets.SocketException {
+    public int Send(JCORefOut dupParam0, int dupParam1, int dupParam2, SocketFlags dupParam3) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.security.SecurityException, system.NullReferenceException, system.PlatformNotSupportedException, system.NotImplementedException, system.componentmodel.Win32Exception, system.NotSupportedException, system.threading.SynchronizationLockException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("Send", dupParam0, dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
+            return (int)classInstance.Invoke("Send", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -517,11 +518,11 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
-    public int Send(JCRefOut dupParam0, int dupParam1, SocketFlags dupParam2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.NullReferenceException, system.NotImplementedException, system.NotSupportedException, system.net.sockets.SocketException {
+    public int Send(JCORefOut dupParam0, int dupParam1, SocketFlags dupParam2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.NullReferenceException, system.NotImplementedException, system.NotSupportedException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("Send", dupParam0, dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
+            return (int)classInstance.Invoke("Send", dupParam0.getJCRefOut(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -537,11 +538,11 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
-    public int Send(JCRefOut dupParam0, SocketFlags dupParam1) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.NullReferenceException, system.NotImplementedException, system.NotSupportedException, system.net.sockets.SocketException {
+    public int Send(JCORefOut dupParam0, SocketFlags dupParam1) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.NullReferenceException, system.NotImplementedException, system.NotSupportedException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("Send", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance());
+            return (int)classInstance.Invoke("Send", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -557,11 +558,11 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
-    public int SendTo(JCRefOut dupParam0, int dupParam1, int dupParam2, SocketFlags dupParam3, EndPoint dupParam4) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.NotImplementedException, system.net.sockets.SocketException, system.security.SecurityException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
+    public int SendTo(JCORefOut dupParam0, int dupParam1, int dupParam2, SocketFlags dupParam3, EndPoint dupParam4) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.NotImplementedException, system.net.sockets.SocketException, system.security.SecurityException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("SendTo", dupParam0, dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance());
+            return (int)classInstance.Invoke("SendTo", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -577,11 +578,11 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
-    public int SendTo(JCRefOut dupParam0, int dupParam1, SocketFlags dupParam2, EndPoint dupParam3) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.NotImplementedException, system.NotSupportedException, system.net.sockets.SocketException, system.security.SecurityException, system.NullReferenceException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.threading.SynchronizationLockException {
+    public int SendTo(JCORefOut dupParam0, int dupParam1, SocketFlags dupParam2, EndPoint dupParam3) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.NotImplementedException, system.NotSupportedException, system.net.sockets.SocketException, system.security.SecurityException, system.NullReferenceException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("SendTo", dupParam0, dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance());
+            return (int)classInstance.Invoke("SendTo", dupParam0.getJCRefOut(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -597,11 +598,11 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
-    public int SendTo(JCRefOut dupParam0, EndPoint dupParam1) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.NotImplementedException, system.NotSupportedException, system.net.sockets.SocketException, system.security.SecurityException, system.NullReferenceException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.threading.SynchronizationLockException {
+    public int SendTo(JCORefOut dupParam0, EndPoint dupParam1) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.NotImplementedException, system.NotSupportedException, system.net.sockets.SocketException, system.security.SecurityException, system.NullReferenceException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("SendTo", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance());
+            return (int)classInstance.Invoke("SendTo", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -617,11 +618,11 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
-    public int SendTo(JCRefOut dupParam0, SocketFlags dupParam1, EndPoint dupParam2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.NotImplementedException, system.NotSupportedException, system.net.sockets.SocketException, system.security.SecurityException, system.NullReferenceException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.threading.SynchronizationLockException {
+    public int SendTo(JCORefOut dupParam0, SocketFlags dupParam1, EndPoint dupParam2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.NotImplementedException, system.NotSupportedException, system.net.sockets.SocketException, system.security.SecurityException, system.NullReferenceException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("SendTo", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2 == null ? null : dupParam2.getJCOInstance());
+            return (int)classInstance.Invoke("SendTo", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2 == null ? null : dupParam2.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -726,11 +727,11 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
-    public IAsyncResult BeginReceive(JCRefOut dupParam0, int dupParam1, int dupParam2, SocketFlags dupParam3, AsyncCallback dupParam4, NetObject dupParam5) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.AccessViolationException, system.IndexOutOfRangeException, system.security.SecurityException, system.net.sockets.SocketException {
+    public IAsyncResult BeginReceive(JCORefOut dupParam0, int dupParam1, int dupParam2, SocketFlags dupParam3, AsyncCallback dupParam4, NetObject dupParam5) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.AccessViolationException, system.IndexOutOfRangeException, system.security.SecurityException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objBeginReceive = (JCObject)classInstance.Invoke("BeginReceive", dupParam0, dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4, dupParam5 == null ? null : dupParam5.getJCOInstance());
+            JCObject objBeginReceive = (JCObject)classInstance.Invoke("BeginReceive", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4, dupParam5 == null ? null : dupParam5.getJCOInstance());
             return new IAsyncResultImplementation(objBeginReceive);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -748,11 +749,11 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
-    public IAsyncResult BeginSend(JCRefOut dupParam0, int dupParam1, int dupParam2, SocketFlags dupParam3, AsyncCallback dupParam4, NetObject dupParam5) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.AccessViolationException, system.IndexOutOfRangeException, system.security.SecurityException, system.net.sockets.SocketException {
+    public IAsyncResult BeginSend(JCORefOut dupParam0, int dupParam1, int dupParam2, SocketFlags dupParam3, AsyncCallback dupParam4, NetObject dupParam5) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.AccessViolationException, system.IndexOutOfRangeException, system.security.SecurityException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objBeginSend = (JCObject)classInstance.Invoke("BeginSend", dupParam0, dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4, dupParam5 == null ? null : dupParam5.getJCOInstance());
+            JCObject objBeginSend = (JCObject)classInstance.Invoke("BeginSend", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4, dupParam5 == null ? null : dupParam5.getJCOInstance());
             return new IAsyncResultImplementation(objBeginSend);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -770,11 +771,11 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
-    public IAsyncResult BeginSendFile(java.lang.String dupParam0, JCRefOut dupParam1, JCRefOut dupParam2, TransmitFileOptions dupParam3, AsyncCallback dupParam4, NetObject dupParam5) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.io.PathTooLongException, system.NullReferenceException, system.security.SecurityException, system.io.IOException, system.threading.WaitHandleCannotBeOpenedException, system.AccessViolationException {
+    public IAsyncResult BeginSendFile(java.lang.String dupParam0, JCORefOut dupParam1, JCORefOut dupParam2, TransmitFileOptions dupParam3, AsyncCallback dupParam4, NetObject dupParam5) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.resources.MissingManifestResourceException, system.InvalidCastException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NotSupportedException, system.io.PathTooLongException, system.NullReferenceException, system.security.SecurityException, system.io.IOException, system.threading.WaitHandleCannotBeOpenedException, system.AccessViolationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objBeginSendFile = (JCObject)classInstance.Invoke("BeginSendFile", dupParam0, dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4, dupParam5 == null ? null : dupParam5.getJCOInstance());
+            JCObject objBeginSendFile = (JCObject)classInstance.Invoke("BeginSendFile", dupParam0, dupParam1.getJCRefOut(), dupParam2.getJCRefOut(), dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4, dupParam5 == null ? null : dupParam5.getJCOInstance());
             return new IAsyncResultImplementation(objBeginSendFile);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -803,11 +804,11 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
-    public IAsyncResult BeginSendTo(JCRefOut dupParam0, int dupParam1, int dupParam2, SocketFlags dupParam3, EndPoint dupParam4, AsyncCallback dupParam5, NetObject dupParam6) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.NotImplementedException, system.net.sockets.SocketException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.AccessViolationException, system.security.SecurityException {
+    public IAsyncResult BeginSendTo(JCORefOut dupParam0, int dupParam1, int dupParam2, SocketFlags dupParam3, EndPoint dupParam4, AsyncCallback dupParam5, NetObject dupParam6) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.NotImplementedException, system.net.sockets.SocketException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.AccessViolationException, system.security.SecurityException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objBeginSendTo = (JCObject)classInstance.Invoke("BeginSendTo", dupParam0, dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance(), dupParam5, dupParam6 == null ? null : dupParam6.getJCOInstance());
+            JCObject objBeginSendTo = (JCObject)classInstance.Invoke("BeginSendTo", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance(), dupParam5, dupParam6 == null ? null : dupParam6.getJCOInstance());
             return new IAsyncResultImplementation(objBeginSendTo);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -998,11 +999,11 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
-    public void GetSocketOption(SocketOptionLevel dupParam0, SocketOptionName dupParam1, JCRefOut dupParam2) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+    public void GetSocketOption(SocketOptionLevel dupParam0, SocketOptionName dupParam1, JCORefOut dupParam2) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("GetSocketOption", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2);
+            classInstance.Invoke("GetSocketOption", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1048,11 +1049,11 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
-    public void SendFile(java.lang.String dupParam0, JCRefOut dupParam1, JCRefOut dupParam2, TransmitFileOptions dupParam3) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.threading.WaitHandleCannotBeOpenedException, system.AccessViolationException, system.collections.generic.KeyNotFoundException {
+    public void SendFile(java.lang.String dupParam0, JCORefOut dupParam1, JCORefOut dupParam2, TransmitFileOptions dupParam3) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.threading.WaitHandleCannotBeOpenedException, system.AccessViolationException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SendFile", dupParam0, dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
+            classInstance.Invoke("SendFile", dupParam0, dupParam1.getJCRefOut(), dupParam2.getJCRefOut(), dupParam3 == null ? null : dupParam3.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1088,11 +1089,11 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
-    public void SetSocketOption(SocketOptionLevel dupParam0, SocketOptionName dupParam1, JCRefOut dupParam2) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+    public void SetSocketOption(SocketOptionLevel dupParam0, SocketOptionName dupParam1, JCORefOut dupParam2) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetSocketOption", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2);
+            classInstance.Invoke("SetSocketOption", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

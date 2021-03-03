@@ -75,6 +75,7 @@ public class COMCharStream extends Stream  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -160,11 +161,11 @@ public class COMCharStream extends Stream  {
         }
     }
 
-    public int Read(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.NotSupportedException {
+    public int Read(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("Read", dupParam0, dupParam1, dupParam2);
+            return (int)classInstance.Invoke("Read", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,11 +221,11 @@ public class COMCharStream extends Stream  {
         }
     }
 
-    public void Write(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
+    public void Write(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Write", dupParam0, dupParam1, dupParam2);
+            classInstance.Invoke("Write", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

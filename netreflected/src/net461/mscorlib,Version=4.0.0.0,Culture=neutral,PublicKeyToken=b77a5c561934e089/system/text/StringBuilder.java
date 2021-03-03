@@ -80,6 +80,7 @@ public class StringBuilder extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -286,11 +287,11 @@ public class StringBuilder extends NetObject  {
         }
     }
 
-    public StringBuilder Append(JCRefOut dupParam0) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
+    public StringBuilder Append(JCORefOut dupParam0) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objAppend = (JCObject)classInstance.Invoke("Append", (Object)dupParam0);
+            JCObject objAppend = (JCObject)classInstance.Invoke("Append", (Object)dupParam0.getJCRefOut());
             return new StringBuilder(objAppend);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -308,11 +309,11 @@ public class StringBuilder extends NetObject  {
         }
     }
 
-    public StringBuilder Append(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException {
+    public StringBuilder Append(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objAppend = (JCObject)classInstance.Invoke("Append", dupParam0, dupParam1, dupParam2);
+            JCObject objAppend = (JCObject)classInstance.Invoke("Append", dupParam0.getJCRefOut(), dupParam1, dupParam2);
             return new StringBuilder(objAppend);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -627,11 +628,11 @@ public class StringBuilder extends NetObject  {
         }
     }
 
-    public StringBuilder Insert(int dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public StringBuilder Insert(int dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objInsert = (JCObject)classInstance.Invoke("Insert", dupParam0, dupParam1);
+            JCObject objInsert = (JCObject)classInstance.Invoke("Insert", dupParam0, dupParam1.getJCRefOut());
             return new StringBuilder(objInsert);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -649,11 +650,11 @@ public class StringBuilder extends NetObject  {
         }
     }
 
-    public StringBuilder Insert(int dupParam0, JCRefOut dupParam1, int dupParam2, int dupParam3) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
+    public StringBuilder Insert(int dupParam0, JCORefOut dupParam1, int dupParam2, int dupParam3) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objInsert = (JCObject)classInstance.Invoke("Insert", dupParam0, dupParam1, dupParam2, dupParam3);
+            JCObject objInsert = (JCObject)classInstance.Invoke("Insert", dupParam0, dupParam1.getJCRefOut(), dupParam2, dupParam3);
             return new StringBuilder(objInsert);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -868,11 +869,11 @@ public class StringBuilder extends NetObject  {
         }
     }
 
-    public void CopyTo(int dupParam0, JCRefOut dupParam1, int dupParam2, int dupParam3) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
+    public void CopyTo(int dupParam0, JCORefOut dupParam1, int dupParam2, int dupParam3) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("CopyTo", dupParam0, dupParam1, dupParam2, dupParam3);
+            classInstance.Invoke("CopyTo", dupParam0, dupParam1.getJCRefOut(), dupParam2, dupParam3);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

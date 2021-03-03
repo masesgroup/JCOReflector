@@ -91,6 +91,7 @@ public class HttpResponseWrapper extends HttpResponseBase  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -228,11 +229,11 @@ public class HttpResponseWrapper extends HttpResponseBase  {
         }
     }
 
-    public void AddCacheItemDependencies(JCRefOut dupParam0) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException {
+    public void AddCacheItemDependencies(JCORefOut dupParam0) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddCacheItemDependencies", (Object)dupParam0);
+            classInstance.Invoke("AddCacheItemDependencies", (Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,11 +269,11 @@ public class HttpResponseWrapper extends HttpResponseBase  {
         }
     }
 
-    public void AddFileDependencies(JCRefOut dupParam0) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException {
+    public void AddFileDependencies(JCORefOut dupParam0) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddFileDependencies", (Object)dupParam0);
+            classInstance.Invoke("AddFileDependencies", (Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -338,11 +339,11 @@ public class HttpResponseWrapper extends HttpResponseBase  {
         }
     }
 
-    public void BinaryWrite(JCRefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException {
+    public void BinaryWrite(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("BinaryWrite", (Object)dupParam0);
+            classInstance.Invoke("BinaryWrite", (Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -628,7 +629,7 @@ public class HttpResponseWrapper extends HttpResponseBase  {
         }
     }
 
-    public void SetCookie(HttpCookie cookie) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.web.HttpRequestValidationException, system.NullReferenceException {
+    public void SetCookie(HttpCookie cookie) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.NullReferenceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -678,11 +679,11 @@ public class HttpResponseWrapper extends HttpResponseBase  {
         }
     }
 
-    public void Write(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public void Write(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Write", dupParam0, dupParam1, dupParam2);
+            classInstance.Invoke("Write", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

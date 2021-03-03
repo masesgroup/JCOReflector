@@ -94,6 +94,7 @@ public class SqlDataRecord extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -289,11 +290,11 @@ public class SqlDataRecord extends NetObject  {
         }
     }
 
-    public long GetBytes(int dupParam0, long dupParam1, JCRefOut dupParam2, int dupParam3, int dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTypeException, system.OverflowException, microsoft.sqlserver.server.InvalidUdtException, system.InvalidCastException {
+    public long GetBytes(int dupParam0, long dupParam1, JCORefOut dupParam2, int dupParam3, int dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlNullValueException, system.data.sqltypes.SqlTypeException, system.OverflowException, microsoft.sqlserver.server.InvalidUdtException, system.InvalidCastException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (long)classInstance.Invoke("GetBytes", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4);
+            return (long)classInstance.Invoke("GetBytes", dupParam0, dupParam1, dupParam2.getJCRefOut(), dupParam3, dupParam4);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,11 +310,11 @@ public class SqlDataRecord extends NetObject  {
         }
     }
 
-    public long GetChars(int dupParam0, long dupParam1, JCRefOut dupParam2, int dupParam3, int dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlNullValueException, system.OverflowException, system.xml.XmlException, system.reflection.TargetInvocationException, system.NotSupportedException, microsoft.sqlserver.server.InvalidUdtException, system.InvalidCastException {
+    public long GetChars(int dupParam0, long dupParam1, JCORefOut dupParam2, int dupParam3, int dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.sqlclient.SqlException, system.data.sqltypes.SqlNullValueException, system.OverflowException, system.xml.XmlException, system.reflection.TargetInvocationException, system.NotSupportedException, microsoft.sqlserver.server.InvalidUdtException, system.InvalidCastException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (long)classInstance.Invoke("GetChars", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4);
+            return (long)classInstance.Invoke("GetChars", dupParam0, dupParam1, dupParam2.getJCRefOut(), dupParam3, dupParam4);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -686,11 +687,11 @@ public class SqlDataRecord extends NetObject  {
         }
     }
 
-    public void SetBytes(int dupParam0, long dupParam1, JCRefOut dupParam2, int dupParam3, int dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.data.sqlclient.SqlException {
+    public void SetBytes(int dupParam0, long dupParam1, JCORefOut dupParam2, int dupParam3, int dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.data.sqlclient.SqlException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetBytes", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4);
+            classInstance.Invoke("SetBytes", dupParam0, dupParam1, dupParam2.getJCRefOut(), dupParam3, dupParam4);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -716,11 +717,11 @@ public class SqlDataRecord extends NetObject  {
         }
     }
 
-    public void SetChars(int dupParam0, long dupParam1, JCRefOut dupParam2, int dupParam3, int dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.data.sqlclient.SqlException {
+    public void SetChars(int dupParam0, long dupParam1, JCORefOut dupParam2, int dupParam3, int dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.InvalidCastException, system.data.sqlclient.SqlException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetChars", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4);
+            classInstance.Invoke("SetChars", dupParam0, dupParam1, dupParam2.getJCRefOut(), dupParam3, dupParam4);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

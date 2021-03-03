@@ -73,6 +73,7 @@ public class ActivationContext extends NetObject implements AutoCloseable {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -160,11 +161,11 @@ public class ActivationContext extends NetObject implements AutoCloseable {
         }
     }
 
-    public static ActivationContext CreatePartialActivationContext(ApplicationIdentity dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
+    public static ActivationContext CreatePartialActivationContext(ApplicationIdentity dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreatePartialActivationContext = (JCObject)classType.Invoke("CreatePartialActivationContext", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1);
+            JCObject objCreatePartialActivationContext = (JCObject)classType.Invoke("CreatePartialActivationContext", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
             return new ActivationContext(objCreatePartialActivationContext);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

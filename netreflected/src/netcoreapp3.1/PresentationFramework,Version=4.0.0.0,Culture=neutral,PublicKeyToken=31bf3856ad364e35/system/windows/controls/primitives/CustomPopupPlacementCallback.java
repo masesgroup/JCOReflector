@@ -73,6 +73,7 @@ public class CustomPopupPlacementCallback extends JCDelegate implements IJCEvent
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -120,8 +121,7 @@ public class CustomPopupPlacementCallback extends JCDelegate implements IJCEvent
         }
         catch (Throwable throwableFromJCEvent)
         {
-            if (JCOBridgeInstance.getDebug())
-                throwableFromJCEvent.printStackTrace();
+            JCOReflector.writeLog(throwableFromJCEvent);
 			return null;
         }
     }
@@ -149,8 +149,7 @@ public class CustomPopupPlacementCallback extends JCDelegate implements IJCEvent
         }
         catch (Throwable throwableFromJCEvent)
         {
-            if (JCOBridgeInstance.getDebug())
-                throwableFromJCEvent.printStackTrace();
+            JCOReflector.writeLog(throwableFromJCEvent);
 			return null;
         }
     }

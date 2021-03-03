@@ -89,6 +89,7 @@ public class XmlDictionaryReader extends XmlReader  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -422,11 +423,11 @@ public class XmlDictionaryReader extends XmlReader  {
         }
     }
 
-    public int IndexOfLocalName(JCRefOut dupParam0, java.lang.String dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
+    public int IndexOfLocalName(JCORefOut dupParam0, java.lang.String dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("IndexOfLocalName", dupParam0, dupParam1);
+            return (int)classInstance.Invoke("IndexOfLocalName", dupParam0.getJCRefOut(), dupParam1);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -452,11 +453,11 @@ public class XmlDictionaryReader extends XmlReader  {
         }
     }
 
-    public int ReadArray(java.lang.String dupParam0, java.lang.String dupParam1, JCRefOut dupParam2, int dupParam3, int dupParam4) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException, system.xml.XmlException, system.OutOfMemoryException {
+    public int ReadArray(java.lang.String dupParam0, java.lang.String dupParam1, JCORefOut dupParam2, int dupParam3, int dupParam4) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException, system.xml.XmlException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("ReadArray", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4);
+            return (int)classInstance.Invoke("ReadArray", dupParam0, dupParam1, dupParam2.getJCRefOut(), dupParam3, dupParam4);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -562,11 +563,11 @@ public class XmlDictionaryReader extends XmlReader  {
         }
     }
 
-    public int ReadArray(XmlDictionaryString dupParam0, XmlDictionaryString dupParam1, JCRefOut dupParam2, int dupParam3, int dupParam4) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.xml.XmlException, system.OutOfMemoryException {
+    public int ReadArray(XmlDictionaryString dupParam0, XmlDictionaryString dupParam1, JCORefOut dupParam2, int dupParam3, int dupParam4) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.xml.XmlException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("ReadArray", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2, dupParam3, dupParam4);
+            return (int)classInstance.Invoke("ReadArray", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2.getJCRefOut(), dupParam3, dupParam4);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -672,11 +673,11 @@ public class XmlDictionaryReader extends XmlReader  {
         }
     }
 
-    public int ReadContentAsChars(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.NotSupportedException {
+    public int ReadContentAsChars(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("ReadContentAsChars", dupParam0, dupParam1, dupParam2);
+            return (int)classInstance.Invoke("ReadContentAsChars", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -702,11 +703,11 @@ public class XmlDictionaryReader extends XmlReader  {
         }
     }
 
-    public int ReadValueAsBase64(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
+    public int ReadValueAsBase64(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("ReadValueAsBase64", dupParam0, dupParam1, dupParam2);
+            return (int)classInstance.Invoke("ReadValueAsBase64", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1151,11 +1152,11 @@ public class XmlDictionaryReader extends XmlReader  {
         }
     }
 
-    public static XmlDictionaryReader CreateBinaryReader(JCRefOut dupParam0, int dupParam1, int dupParam2, IXmlDictionary dupParam3, XmlDictionaryReaderQuotas dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
+    public static XmlDictionaryReader CreateBinaryReader(JCORefOut dupParam0, int dupParam1, int dupParam2, IXmlDictionary dupParam3, XmlDictionaryReaderQuotas dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateBinaryReader = (JCObject)classType.Invoke("CreateBinaryReader", dupParam0, dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance());
+            JCObject objCreateBinaryReader = (JCObject)classType.Invoke("CreateBinaryReader", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance());
             return new XmlDictionaryReader(objCreateBinaryReader);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1173,11 +1174,11 @@ public class XmlDictionaryReader extends XmlReader  {
         }
     }
 
-    public static XmlDictionaryReader CreateBinaryReader(JCRefOut dupParam0, int dupParam1, int dupParam2, IXmlDictionary dupParam3, XmlDictionaryReaderQuotas dupParam4, XmlBinaryReaderSession dupParam5) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+    public static XmlDictionaryReader CreateBinaryReader(JCORefOut dupParam0, int dupParam1, int dupParam2, IXmlDictionary dupParam3, XmlDictionaryReaderQuotas dupParam4, XmlBinaryReaderSession dupParam5) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateBinaryReader = (JCObject)classType.Invoke("CreateBinaryReader", dupParam0, dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance(), dupParam5 == null ? null : dupParam5.getJCOInstance());
+            JCObject objCreateBinaryReader = (JCObject)classType.Invoke("CreateBinaryReader", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance(), dupParam5 == null ? null : dupParam5.getJCOInstance());
             return new XmlDictionaryReader(objCreateBinaryReader);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1195,11 +1196,11 @@ public class XmlDictionaryReader extends XmlReader  {
         }
     }
 
-    public static XmlDictionaryReader CreateBinaryReader(JCRefOut dupParam0, int dupParam1, int dupParam2, IXmlDictionary dupParam3, XmlDictionaryReaderQuotas dupParam4, XmlBinaryReaderSession dupParam5, OnXmlDictionaryReaderClose dupParam6) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
+    public static XmlDictionaryReader CreateBinaryReader(JCORefOut dupParam0, int dupParam1, int dupParam2, IXmlDictionary dupParam3, XmlDictionaryReaderQuotas dupParam4, XmlBinaryReaderSession dupParam5, OnXmlDictionaryReaderClose dupParam6) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateBinaryReader = (JCObject)classType.Invoke("CreateBinaryReader", dupParam0, dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance(), dupParam5 == null ? null : dupParam5.getJCOInstance(), dupParam6);
+            JCObject objCreateBinaryReader = (JCObject)classType.Invoke("CreateBinaryReader", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance(), dupParam5 == null ? null : dupParam5.getJCOInstance(), dupParam6);
             return new XmlDictionaryReader(objCreateBinaryReader);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1217,11 +1218,11 @@ public class XmlDictionaryReader extends XmlReader  {
         }
     }
 
-    public static XmlDictionaryReader CreateBinaryReader(JCRefOut dupParam0, int dupParam1, int dupParam2, XmlDictionaryReaderQuotas dupParam3) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
+    public static XmlDictionaryReader CreateBinaryReader(JCORefOut dupParam0, int dupParam1, int dupParam2, XmlDictionaryReaderQuotas dupParam3) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateBinaryReader = (JCObject)classType.Invoke("CreateBinaryReader", dupParam0, dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
+            JCObject objCreateBinaryReader = (JCObject)classType.Invoke("CreateBinaryReader", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
             return new XmlDictionaryReader(objCreateBinaryReader);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1239,11 +1240,11 @@ public class XmlDictionaryReader extends XmlReader  {
         }
     }
 
-    public static XmlDictionaryReader CreateBinaryReader(JCRefOut dupParam0, XmlDictionaryReaderQuotas dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
+    public static XmlDictionaryReader CreateBinaryReader(JCORefOut dupParam0, XmlDictionaryReaderQuotas dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateBinaryReader = (JCObject)classType.Invoke("CreateBinaryReader", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance());
+            JCObject objCreateBinaryReader = (JCObject)classType.Invoke("CreateBinaryReader", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
             return new XmlDictionaryReader(objCreateBinaryReader);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1316,11 +1317,11 @@ public class XmlDictionaryReader extends XmlReader  {
         }
     }
 
-    public static XmlDictionaryReader CreateMtomReader(JCRefOut dupParam0, int dupParam1, int dupParam2, Encoding dupParam3, XmlDictionaryReaderQuotas dupParam4) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
+    public static XmlDictionaryReader CreateMtomReader(JCORefOut dupParam0, int dupParam1, int dupParam2, Encoding dupParam3, XmlDictionaryReaderQuotas dupParam4) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateMtomReader = (JCObject)classType.Invoke("CreateMtomReader", dupParam0, dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance());
+            JCObject objCreateMtomReader = (JCObject)classType.Invoke("CreateMtomReader", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance());
             return new XmlDictionaryReader(objCreateMtomReader);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1338,11 +1339,11 @@ public class XmlDictionaryReader extends XmlReader  {
         }
     }
 
-    public static XmlDictionaryReader CreateMtomReader(JCRefOut dupParam0, int dupParam1, int dupParam2, Encoding[] dupParam3, java.lang.String dupParam4, XmlDictionaryReaderQuotas dupParam5) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException {
+    public static XmlDictionaryReader CreateMtomReader(JCORefOut dupParam0, int dupParam1, int dupParam2, Encoding[] dupParam3, java.lang.String dupParam4, XmlDictionaryReaderQuotas dupParam5) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateMtomReader = (JCObject)classType.Invoke("CreateMtomReader", dupParam0, dupParam1, dupParam2, toObjectFromArray(dupParam3), dupParam4, dupParam5 == null ? null : dupParam5.getJCOInstance());
+            JCObject objCreateMtomReader = (JCObject)classType.Invoke("CreateMtomReader", dupParam0.getJCRefOut(), dupParam1, dupParam2, toObjectFromArray(dupParam3), dupParam4, dupParam5 == null ? null : dupParam5.getJCOInstance());
             return new XmlDictionaryReader(objCreateMtomReader);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1360,11 +1361,11 @@ public class XmlDictionaryReader extends XmlReader  {
         }
     }
 
-    public static XmlDictionaryReader CreateMtomReader(JCRefOut dupParam0, int dupParam1, int dupParam2, Encoding[] dupParam3, java.lang.String dupParam4, XmlDictionaryReaderQuotas dupParam5, int dupParam6, OnXmlDictionaryReaderClose dupParam7) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+    public static XmlDictionaryReader CreateMtomReader(JCORefOut dupParam0, int dupParam1, int dupParam2, Encoding[] dupParam3, java.lang.String dupParam4, XmlDictionaryReaderQuotas dupParam5, int dupParam6, OnXmlDictionaryReaderClose dupParam7) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateMtomReader = (JCObject)classType.Invoke("CreateMtomReader", dupParam0, dupParam1, dupParam2, toObjectFromArray(dupParam3), dupParam4, dupParam5 == null ? null : dupParam5.getJCOInstance(), dupParam6, dupParam7);
+            JCObject objCreateMtomReader = (JCObject)classType.Invoke("CreateMtomReader", dupParam0.getJCRefOut(), dupParam1, dupParam2, toObjectFromArray(dupParam3), dupParam4, dupParam5 == null ? null : dupParam5.getJCOInstance(), dupParam6, dupParam7);
             return new XmlDictionaryReader(objCreateMtomReader);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1382,11 +1383,11 @@ public class XmlDictionaryReader extends XmlReader  {
         }
     }
 
-    public static XmlDictionaryReader CreateMtomReader(JCRefOut dupParam0, int dupParam1, int dupParam2, Encoding[] dupParam3, XmlDictionaryReaderQuotas dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException {
+    public static XmlDictionaryReader CreateMtomReader(JCORefOut dupParam0, int dupParam1, int dupParam2, Encoding[] dupParam3, XmlDictionaryReaderQuotas dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateMtomReader = (JCObject)classType.Invoke("CreateMtomReader", dupParam0, dupParam1, dupParam2, toObjectFromArray(dupParam3), dupParam4 == null ? null : dupParam4.getJCOInstance());
+            JCObject objCreateMtomReader = (JCObject)classType.Invoke("CreateMtomReader", dupParam0.getJCRefOut(), dupParam1, dupParam2, toObjectFromArray(dupParam3), dupParam4 == null ? null : dupParam4.getJCOInstance());
             return new XmlDictionaryReader(objCreateMtomReader);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1448,11 +1449,11 @@ public class XmlDictionaryReader extends XmlReader  {
         }
     }
 
-    public static XmlDictionaryReader CreateTextReader(JCRefOut dupParam0, int dupParam1, int dupParam2, Encoding dupParam3, XmlDictionaryReaderQuotas dupParam4, OnXmlDictionaryReaderClose dupParam5) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.xml.XmlException {
+    public static XmlDictionaryReader CreateTextReader(JCORefOut dupParam0, int dupParam1, int dupParam2, Encoding dupParam3, XmlDictionaryReaderQuotas dupParam4, OnXmlDictionaryReaderClose dupParam5) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.xml.XmlException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateTextReader = (JCObject)classType.Invoke("CreateTextReader", dupParam0, dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance(), dupParam5);
+            JCObject objCreateTextReader = (JCObject)classType.Invoke("CreateTextReader", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance(), dupParam5);
             return new XmlDictionaryReader(objCreateTextReader);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1470,11 +1471,11 @@ public class XmlDictionaryReader extends XmlReader  {
         }
     }
 
-    public static XmlDictionaryReader CreateTextReader(JCRefOut dupParam0, int dupParam1, int dupParam2, XmlDictionaryReaderQuotas dupParam3) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.xml.XmlException {
+    public static XmlDictionaryReader CreateTextReader(JCORefOut dupParam0, int dupParam1, int dupParam2, XmlDictionaryReaderQuotas dupParam3) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.xml.XmlException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateTextReader = (JCObject)classType.Invoke("CreateTextReader", dupParam0, dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
+            JCObject objCreateTextReader = (JCObject)classType.Invoke("CreateTextReader", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
             return new XmlDictionaryReader(objCreateTextReader);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1492,11 +1493,11 @@ public class XmlDictionaryReader extends XmlReader  {
         }
     }
 
-    public static XmlDictionaryReader CreateTextReader(JCRefOut dupParam0, XmlDictionaryReaderQuotas dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.xml.XmlException, system.FormatException {
+    public static XmlDictionaryReader CreateTextReader(JCORefOut dupParam0, XmlDictionaryReaderQuotas dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.xml.XmlException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateTextReader = (JCObject)classType.Invoke("CreateTextReader", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance());
+            JCObject objCreateTextReader = (JCObject)classType.Invoke("CreateTextReader", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
             return new XmlDictionaryReader(objCreateTextReader);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1635,11 +1636,11 @@ public class XmlDictionaryReader extends XmlReader  {
         }
     }
 
-    public void StartCanonicalization(Stream dupParam0, boolean dupParam1, JCRefOut dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
+    public void StartCanonicalization(Stream dupParam0, boolean dupParam1, JCORefOut dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("StartCanonicalization", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2);
+            classInstance.Invoke("StartCanonicalization", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

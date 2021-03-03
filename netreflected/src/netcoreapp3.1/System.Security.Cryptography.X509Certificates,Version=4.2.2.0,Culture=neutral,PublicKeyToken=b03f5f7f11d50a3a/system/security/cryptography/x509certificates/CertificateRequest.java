@@ -80,6 +80,7 @@ public class CertificateRequest extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -244,11 +245,11 @@ public class CertificateRequest extends NetObject  {
         }
     }
 
-    public X509Certificate2 Create(X500DistinguishedName dupParam0, X509SignatureGenerator dupParam1, DateTimeOffset dupParam2, DateTimeOffset dupParam3, JCRefOut dupParam4) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.DivideByZeroException, system.runtime.serialization.SerializationException, system.io.IOException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public X509Certificate2 Create(X500DistinguishedName dupParam0, X509SignatureGenerator dupParam1, DateTimeOffset dupParam2, DateTimeOffset dupParam3, JCORefOut dupParam4) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.DivideByZeroException, system.runtime.serialization.SerializationException, system.io.IOException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreate = (JCObject)classInstance.Invoke("Create", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4);
+            JCObject objCreate = (JCObject)classInstance.Invoke("Create", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4.getJCRefOut());
             return new X509Certificate2(objCreate);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -266,11 +267,11 @@ public class CertificateRequest extends NetObject  {
         }
     }
 
-    public X509Certificate2 Create(X509Certificate2 dupParam0, DateTimeOffset dupParam1, DateTimeOffset dupParam2, JCRefOut dupParam3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.OverflowException, system.io.IOException {
+    public X509Certificate2 Create(X509Certificate2 dupParam0, DateTimeOffset dupParam1, DateTimeOffset dupParam2, JCORefOut dupParam3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.security.SecurityException, system.OverflowException, system.io.IOException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreate = (JCObject)classInstance.Invoke("Create", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3);
+            JCObject objCreate = (JCObject)classInstance.Invoke("Create", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3.getJCRefOut());
             return new X509Certificate2(objCreate);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -75,6 +75,7 @@ public class KeyInfoX509Data extends KeyInfoClause  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -217,11 +218,11 @@ public class KeyInfoX509Data extends KeyInfoClause  {
         }
     }
 
-    public void AddSubjectKeyId(JCRefOut dupParam0) throws Throwable, system.ArgumentOutOfRangeException {
+    public void AddSubjectKeyId(JCORefOut dupParam0) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddSubjectKeyId", (Object)dupParam0);
+            classInstance.Invoke("AddSubjectKeyId", (Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

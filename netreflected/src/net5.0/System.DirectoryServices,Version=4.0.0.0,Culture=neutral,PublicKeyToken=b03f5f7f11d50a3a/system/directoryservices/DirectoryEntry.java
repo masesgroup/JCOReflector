@@ -79,6 +79,7 @@ public class DirectoryEntry extends Component  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -324,11 +325,11 @@ public class DirectoryEntry extends Component  {
         }
     }
 
-    public void RefreshCache(JCRefOut dupParam0) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.OverflowException, system.FormatException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
+    public void RefreshCache(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.OverflowException, system.FormatException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("RefreshCache", (Object)dupParam0);
+            classInstance.Invoke("RefreshCache", (Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

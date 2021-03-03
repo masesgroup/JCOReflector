@@ -82,6 +82,7 @@ public class FileSystem extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -214,11 +215,11 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static TextFieldParser OpenTextFieldParser(java.lang.String dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.text.regularexpressions.RegexParseException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.FileNotFoundException, system.runtime.serialization.SerializationException, system.io.IOException, system.componentmodel.InvalidEnumArgumentException {
+    public static TextFieldParser OpenTextFieldParser(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.text.regularexpressions.RegexParseException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.io.FileNotFoundException, system.runtime.serialization.SerializationException, system.io.IOException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objOpenTextFieldParser = (JCObject)classType.Invoke("OpenTextFieldParser", dupParam0, dupParam1);
+            JCObject objOpenTextFieldParser = (JCObject)classType.Invoke("OpenTextFieldParser", dupParam0, dupParam1.getJCRefOut());
             return new TextFieldParser(objOpenTextFieldParser);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -633,11 +634,11 @@ public class FileSystem extends NetObject  {
         }
     }
 
-    public static void WriteAllBytes(java.lang.String dupParam0, JCRefOut dupParam1, boolean dupParam2) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.runtime.serialization.SerializationException, system.io.IOException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException {
+    public static void WriteAllBytes(java.lang.String dupParam0, JCORefOut dupParam1, boolean dupParam2) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.runtime.serialization.SerializationException, system.io.IOException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("WriteAllBytes", dupParam0, dupParam1, dupParam2);
+            classType.Invoke("WriteAllBytes", dupParam0, dupParam1.getJCRefOut(), dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

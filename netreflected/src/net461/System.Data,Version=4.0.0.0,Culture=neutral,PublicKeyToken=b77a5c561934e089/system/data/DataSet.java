@@ -104,6 +104,7 @@ public class DataSet extends MarshalByValueComponent  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -450,11 +451,11 @@ public class DataSet extends MarshalByValueComponent  {
         }
     }
 
-    public void InferXmlSchema(Stream dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NullReferenceException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.xml.schema.XmlSchemaInferenceException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.data.DataException, system.globalization.CultureNotFoundException {
+    public void InferXmlSchema(Stream dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NullReferenceException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.xml.schema.XmlSchemaInferenceException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.data.DataException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("InferXmlSchema", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1);
+            classInstance.Invoke("InferXmlSchema", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -470,11 +471,11 @@ public class DataSet extends MarshalByValueComponent  {
         }
     }
 
-    public void InferXmlSchema(TextReader dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NullReferenceException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.xml.schema.XmlSchemaInferenceException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.data.DataException, system.globalization.CultureNotFoundException {
+    public void InferXmlSchema(TextReader dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NullReferenceException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.xml.schema.XmlSchemaInferenceException, system.OutOfMemoryException, system.FormatException, system.OverflowException, system.data.DataException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("InferXmlSchema", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1);
+            classInstance.Invoke("InferXmlSchema", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -490,11 +491,11 @@ public class DataSet extends MarshalByValueComponent  {
         }
     }
 
-    public void InferXmlSchema(java.lang.String dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.UriFormatException, system.io.PathTooLongException, system.OutOfMemoryException, system.NullReferenceException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.xml.schema.XmlSchemaInferenceException, system.FormatException, system.OverflowException, system.data.DataException {
+    public void InferXmlSchema(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.UriFormatException, system.io.PathTooLongException, system.OutOfMemoryException, system.NullReferenceException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.xml.schema.XmlSchemaInferenceException, system.FormatException, system.OverflowException, system.data.DataException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("InferXmlSchema", dupParam0, dupParam1);
+            classInstance.Invoke("InferXmlSchema", dupParam0, dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -510,11 +511,11 @@ public class DataSet extends MarshalByValueComponent  {
         }
     }
 
-    public void InferXmlSchema(XmlReader dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NullReferenceException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.xml.schema.XmlSchemaInferenceException, system.RankException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException, system.security.SecurityException, system.OverflowException, system.data.DataException, system.InvalidCastException {
+    public void InferXmlSchema(XmlReader dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NullReferenceException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.xml.schema.XmlSchemaInferenceException, system.RankException, system.NotSupportedException, system.FormatException, system.OutOfMemoryException, system.security.SecurityException, system.OverflowException, system.data.DataException, system.InvalidCastException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("InferXmlSchema", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1);
+            classInstance.Invoke("InferXmlSchema", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -550,11 +551,11 @@ public class DataSet extends MarshalByValueComponent  {
         }
     }
 
-    public void Load(IDataReader dupParam0, LoadOption dupParam1, JCRefOut dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.collections.generic.KeyNotFoundException, system.MulticastNotSupportedException, system.data.sqltypes.SqlNullValueException {
+    public void Load(IDataReader dupParam0, LoadOption dupParam1, JCORefOut dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.collections.generic.KeyNotFoundException, system.MulticastNotSupportedException, system.data.sqltypes.SqlNullValueException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Load", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2);
+            classInstance.Invoke("Load", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

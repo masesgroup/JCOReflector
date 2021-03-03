@@ -74,6 +74,7 @@ public class ICodeCompilerImplementation extends NetObject implements ICodeCompi
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -170,11 +171,11 @@ public class ICodeCompilerImplementation extends NetObject implements ICodeCompi
         }
     }
 
-    public CompilerResults CompileAssemblyFromFileBatch(CompilerParameters dupParam0, JCRefOut dupParam1) throws Throwable {
+    public CompilerResults CompileAssemblyFromFileBatch(CompilerParameters dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCompileAssemblyFromFileBatch = (JCObject)classInstance.Invoke("CompileAssemblyFromFileBatch", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1);
+            JCObject objCompileAssemblyFromFileBatch = (JCObject)classInstance.Invoke("CompileAssemblyFromFileBatch", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
             return new CompilerResults(objCompileAssemblyFromFileBatch);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -203,11 +204,11 @@ public class ICodeCompilerImplementation extends NetObject implements ICodeCompi
         }
     }
 
-    public CompilerResults CompileAssemblyFromSourceBatch(CompilerParameters dupParam0, JCRefOut dupParam1) throws Throwable {
+    public CompilerResults CompileAssemblyFromSourceBatch(CompilerParameters dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCompileAssemblyFromSourceBatch = (JCObject)classInstance.Invoke("CompileAssemblyFromSourceBatch", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1);
+            JCObject objCompileAssemblyFromSourceBatch = (JCObject)classInstance.Invoke("CompileAssemblyFromSourceBatch", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
             return new CompilerResults(objCompileAssemblyFromSourceBatch);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

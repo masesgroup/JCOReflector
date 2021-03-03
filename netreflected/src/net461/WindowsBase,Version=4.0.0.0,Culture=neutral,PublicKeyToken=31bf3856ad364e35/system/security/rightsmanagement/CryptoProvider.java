@@ -71,6 +71,7 @@ public class CryptoProvider extends NetObject implements AutoCloseable {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -155,12 +156,12 @@ public class CryptoProvider extends NetObject implements AutoCloseable {
         }
     }
 
-    public byte[] Decrypt(JCRefOut dupParam0) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.rightsmanagement.RightsManagementException {
+    public byte[] Decrypt(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.rightsmanagement.RightsManagementException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("Decrypt", (Object)dupParam0);
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("Decrypt", (Object)dupParam0.getJCRefOut());
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -193,12 +194,12 @@ public class CryptoProvider extends NetObject implements AutoCloseable {
         }
     }
 
-    public byte[] Encrypt(JCRefOut dupParam0) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.rightsmanagement.RightsManagementException {
+    public byte[] Encrypt(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.rightsmanagement.RightsManagementException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("Encrypt", (Object)dupParam0);
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("Encrypt", (Object)dupParam0.getJCRefOut());
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }

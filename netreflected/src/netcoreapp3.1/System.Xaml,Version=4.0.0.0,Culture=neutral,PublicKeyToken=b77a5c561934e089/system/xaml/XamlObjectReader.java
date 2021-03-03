@@ -77,6 +77,7 @@ public class XamlObjectReader extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -147,7 +148,7 @@ public class XamlObjectReader extends NetObject  {
         }
     }
 
-    public XamlObjectReader(NetObject instance, XamlObjectReaderSettings settings) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MulticastNotSupportedException, system.PlatformNotSupportedException, system.MissingMemberException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.xaml.XamlObjectReaderException, system.xaml.XamlSchemaException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.xml.XmlException, system.globalization.CultureNotFoundException {
+    public XamlObjectReader(NetObject instance, XamlObjectReaderSettings settings) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MulticastNotSupportedException, system.PlatformNotSupportedException, system.MissingMemberException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.xaml.XamlObjectReaderException, system.xaml.XamlSchemaException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.xaml.XamlException, system.xml.XmlException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -157,7 +158,7 @@ public class XamlObjectReader extends NetObject  {
         }
     }
 
-    public XamlObjectReader(NetObject instance, XamlSchemaContext schemaContext) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.MissingMemberException, system.FormatException, system.xaml.XamlObjectReaderException, system.xaml.XamlSchemaException, system.collections.generic.KeyNotFoundException, system.xml.XmlException {
+    public XamlObjectReader(NetObject instance, XamlSchemaContext schemaContext) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.MissingMemberException, system.FormatException, system.xaml.XamlObjectReaderException, system.xaml.XamlSchemaException, system.collections.generic.KeyNotFoundException, system.xaml.XamlException, system.xml.XmlException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -167,7 +168,7 @@ public class XamlObjectReader extends NetObject  {
         }
     }
 
-    public XamlObjectReader(NetObject instance, XamlSchemaContext schemaContext, XamlObjectReaderSettings settings) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MissingMemberException, system.FormatException, system.ArrayTypeMismatchException, system.xaml.XamlObjectReaderException, system.xaml.XamlSchemaException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.xml.XmlException {
+    public XamlObjectReader(NetObject instance, XamlSchemaContext schemaContext, XamlObjectReaderSettings settings) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MissingMemberException, system.FormatException, system.ArrayTypeMismatchException, system.xaml.XamlObjectReaderException, system.xaml.XamlSchemaException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.xaml.XamlException, system.xml.XmlException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

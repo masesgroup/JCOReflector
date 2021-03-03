@@ -80,6 +80,7 @@ public class ObjectSecurity extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -296,11 +297,11 @@ public class ObjectSecurity extends NetObject  {
         }
     }
 
-    public void SetSecurityDescriptorBinaryForm(JCRefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.SystemException, system.OverflowException, system.InvalidOperationException {
+    public void SetSecurityDescriptorBinaryForm(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.SystemException, system.OverflowException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetSecurityDescriptorBinaryForm", (Object)dupParam0);
+            classInstance.Invoke("SetSecurityDescriptorBinaryForm", (Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,11 +317,11 @@ public class ObjectSecurity extends NetObject  {
         }
     }
 
-    public void SetSecurityDescriptorBinaryForm(JCRefOut dupParam0, AccessControlSections dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.SystemException, system.OverflowException, system.InvalidOperationException {
+    public void SetSecurityDescriptorBinaryForm(JCORefOut dupParam0, AccessControlSections dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.SystemException, system.OverflowException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetSecurityDescriptorBinaryForm", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance());
+            classInstance.Invoke("SetSecurityDescriptorBinaryForm", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

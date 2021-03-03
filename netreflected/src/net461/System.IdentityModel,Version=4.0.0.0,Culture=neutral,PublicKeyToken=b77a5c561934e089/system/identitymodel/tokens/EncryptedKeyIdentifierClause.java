@@ -74,6 +74,7 @@ public class EncryptedKeyIdentifierClause extends BinaryKeyIdentifierClause  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -189,11 +190,11 @@ public class EncryptedKeyIdentifierClause extends BinaryKeyIdentifierClause  {
         }
     }
 
-    public boolean Matches(JCRefOut dupParam0, java.lang.String dupParam1, java.lang.String dupParam2) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
+    public boolean Matches(JCORefOut dupParam0, java.lang.String dupParam1, java.lang.String dupParam2) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Matches", dupParam0, dupParam1, dupParam2);
+            return (boolean)classInstance.Invoke("Matches", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

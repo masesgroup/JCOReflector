@@ -87,6 +87,7 @@ public class NegotiateStream extends AuthenticatedStream  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -192,11 +193,11 @@ public class NegotiateStream extends AuthenticatedStream  {
         }
     }
 
-    public int Read(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.threading.tasks.TaskSchedulerException, system.io.IOException, system.componentmodel.Win32Exception {
+    public int Read(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.threading.tasks.TaskSchedulerException, system.io.IOException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("Read", dupParam0, dupParam1, dupParam2);
+            return (int)classInstance.Invoke("Read", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,11 +323,11 @@ public class NegotiateStream extends AuthenticatedStream  {
         }
     }
 
-    public IAsyncResult BeginRead(JCRefOut dupParam0, int dupParam1, int dupParam2, AsyncCallback dupParam3, NetObject dupParam4) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.OperationCanceledException, system.threading.SemaphoreFullException, system.IndexOutOfRangeException, system.FormatException, system.security.cryptography.CryptographicException, system.io.IOException, system.componentmodel.Win32Exception {
+    public IAsyncResult BeginRead(JCORefOut dupParam0, int dupParam1, int dupParam2, AsyncCallback dupParam3, NetObject dupParam4) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.OperationCanceledException, system.threading.SemaphoreFullException, system.IndexOutOfRangeException, system.FormatException, system.security.cryptography.CryptographicException, system.io.IOException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objBeginRead = (JCObject)classInstance.Invoke("BeginRead", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance());
+            JCObject objBeginRead = (JCObject)classInstance.Invoke("BeginRead", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance());
             return new IAsyncResultImplementation(objBeginRead);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -344,11 +345,11 @@ public class NegotiateStream extends AuthenticatedStream  {
         }
     }
 
-    public IAsyncResult BeginWrite(JCRefOut dupParam0, int dupParam1, int dupParam2, AsyncCallback dupParam3, NetObject dupParam4) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.OperationCanceledException, system.threading.SemaphoreFullException, system.IndexOutOfRangeException, system.FormatException, system.security.cryptography.CryptographicException, system.io.IOException {
+    public IAsyncResult BeginWrite(JCORefOut dupParam0, int dupParam1, int dupParam2, AsyncCallback dupParam3, NetObject dupParam4) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.OperationCanceledException, system.threading.SemaphoreFullException, system.IndexOutOfRangeException, system.FormatException, system.security.cryptography.CryptographicException, system.io.IOException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objBeginWrite = (JCObject)classInstance.Invoke("BeginWrite", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance());
+            JCObject objBeginWrite = (JCObject)classInstance.Invoke("BeginWrite", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance());
             return new IAsyncResultImplementation(objBeginWrite);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -626,11 +627,11 @@ public class NegotiateStream extends AuthenticatedStream  {
         }
     }
 
-    public void Write(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.io.IOException, system.threading.tasks.TaskSchedulerException {
+    public void Write(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.io.IOException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Write", dupParam0, dupParam1, dupParam2);
+            classInstance.Invoke("Write", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

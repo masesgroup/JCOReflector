@@ -70,8 +70,7 @@ public class X509ExtensionEnumerator extends NetObject implements Iterator<X509E
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException jce) {
-            if (JCOBridgeInstance.getDebug())
-                jce.printStackTrace();
+            JCOReflector.writeLog(jce);
             return null;
         }
     }

@@ -84,6 +84,7 @@ public class PeerContact extends Peer  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -246,11 +247,11 @@ public class PeerContact extends Peer  {
         }
     }
 
-    public PeerInvitationResponse Invite(PeerApplication dupParam0, java.lang.String dupParam1, JCRefOut dupParam2) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.net.peertopeer.PeerToPeerException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.FormatException, system.OutOfMemoryException, system.net.sockets.SocketException, system.security.cryptography.CryptographicException, system.collections.generic.KeyNotFoundException {
+    public PeerInvitationResponse Invite(PeerApplication dupParam0, java.lang.String dupParam1, JCORefOut dupParam2) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.net.peertopeer.PeerToPeerException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.FormatException, system.OutOfMemoryException, system.net.sockets.SocketException, system.security.cryptography.CryptographicException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objInvite = (JCObject)classInstance.Invoke("Invite", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2);
+            JCObject objInvite = (JCObject)classInstance.Invoke("Invite", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2.getJCRefOut());
             return new PeerInvitationResponse(objInvite);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -279,11 +280,11 @@ public class PeerContact extends Peer  {
         }
     }
 
-    public PeerInvitationResponse Invite(PeerEndPoint dupParam0, PeerApplication dupParam1, java.lang.String dupParam2, JCRefOut dupParam3) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.net.peertopeer.PeerToPeerException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.NullReferenceException, system.FormatException, system.OverflowException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.net.sockets.SocketException, system.security.cryptography.CryptographicException, system.collections.generic.KeyNotFoundException {
+    public PeerInvitationResponse Invite(PeerEndPoint dupParam0, PeerApplication dupParam1, java.lang.String dupParam2, JCORefOut dupParam3) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.net.peertopeer.PeerToPeerException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.NullReferenceException, system.FormatException, system.OverflowException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.net.sockets.SocketException, system.security.cryptography.CryptographicException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objInvite = (JCObject)classInstance.Invoke("Invite", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2, dupParam3);
+            JCObject objInvite = (JCObject)classInstance.Invoke("Invite", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2, dupParam3.getJCRefOut());
             return new PeerInvitationResponse(objInvite);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -332,11 +333,11 @@ public class PeerContact extends Peer  {
         }
     }
 
-    public void InviteAsync(PeerApplication dupParam0, java.lang.String dupParam1, JCRefOut dupParam2, NetObject dupParam3) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.net.peertopeer.PeerToPeerException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.FormatException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.OutOfMemoryException, system.net.sockets.SocketException, system.security.cryptography.CryptographicException {
+    public void InviteAsync(PeerApplication dupParam0, java.lang.String dupParam1, JCORefOut dupParam2, NetObject dupParam3) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.net.peertopeer.PeerToPeerException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.FormatException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.OutOfMemoryException, system.net.sockets.SocketException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("InviteAsync", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
+            classInstance.Invoke("InviteAsync", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2.getJCRefOut(), dupParam3 == null ? null : dupParam3.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -362,11 +363,11 @@ public class PeerContact extends Peer  {
         }
     }
 
-    public void InviteAsync(PeerEndPoint dupParam0, java.lang.String dupParam1, JCRefOut dupParam2, PeerApplication dupParam3, NetObject dupParam4) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.net.peertopeer.PeerToPeerException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.FormatException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.OutOfMemoryException, system.net.sockets.SocketException, system.security.cryptography.CryptographicException {
+    public void InviteAsync(PeerEndPoint dupParam0, java.lang.String dupParam1, JCORefOut dupParam2, PeerApplication dupParam3, NetObject dupParam4) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.net.peertopeer.PeerToPeerException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.FormatException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.OutOfMemoryException, system.net.sockets.SocketException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("InviteAsync", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance());
+            classInstance.Invoke("InviteAsync", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2.getJCRefOut(), dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

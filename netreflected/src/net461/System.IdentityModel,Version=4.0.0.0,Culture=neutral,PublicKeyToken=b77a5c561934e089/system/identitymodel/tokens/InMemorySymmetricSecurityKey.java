@@ -76,6 +76,7 @@ public class InMemorySymmetricSecurityKey extends SymmetricSecurityKey  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -210,12 +211,12 @@ public class InMemorySymmetricSecurityKey extends SymmetricSecurityKey  {
         }
     }
 
-    public byte[] DecryptKey(java.lang.String dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.security.SecurityException, system.ApplicationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.TypeLoadException, system.io.IOException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.NotImplementedException, system.collections.generic.KeyNotFoundException, system.RankException {
+    public byte[] DecryptKey(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.security.SecurityException, system.ApplicationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.TypeLoadException, system.io.IOException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.NotImplementedException, system.collections.generic.KeyNotFoundException, system.RankException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("DecryptKey", dupParam0, dupParam1);
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("DecryptKey", dupParam0, dupParam1.getJCRefOut());
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -248,12 +249,12 @@ public class InMemorySymmetricSecurityKey extends SymmetricSecurityKey  {
         }
     }
 
-    public byte[] EncryptKey(java.lang.String dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.security.SecurityException, system.ApplicationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.TypeLoadException, system.io.IOException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.NotImplementedException, system.collections.generic.KeyNotFoundException, system.RankException {
+    public byte[] EncryptKey(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.security.SecurityException, system.ApplicationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.TypeLoadException, system.io.IOException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.NotImplementedException, system.collections.generic.KeyNotFoundException, system.RankException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("EncryptKey", dupParam0, dupParam1);
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("EncryptKey", dupParam0, dupParam1.getJCRefOut());
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -286,12 +287,12 @@ public class InMemorySymmetricSecurityKey extends SymmetricSecurityKey  {
         }
     }
 
-    public byte[] GenerateDerivedKey(java.lang.String dupParam0, JCRefOut dupParam1, JCRefOut dupParam2, int dupParam3, int dupParam4) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
+    public byte[] GenerateDerivedKey(java.lang.String dupParam0, JCORefOut dupParam1, JCORefOut dupParam2, int dupParam3, int dupParam4) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GenerateDerivedKey", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4);
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GenerateDerivedKey", dupParam0, dupParam1.getJCRefOut(), dupParam2.getJCRefOut(), dupParam3, dupParam4);
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -345,11 +346,11 @@ public class InMemorySymmetricSecurityKey extends SymmetricSecurityKey  {
         }
     }
 
-    public ICryptoTransform GetDecryptionTransform(java.lang.String dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.security.SecurityException, system.ApplicationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.TypeLoadException, system.io.IOException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.NotImplementedException, system.collections.generic.KeyNotFoundException {
+    public ICryptoTransform GetDecryptionTransform(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.security.SecurityException, system.ApplicationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.TypeLoadException, system.io.IOException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.NotImplementedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetDecryptionTransform = (JCObject)classInstance.Invoke("GetDecryptionTransform", dupParam0, dupParam1);
+            JCObject objGetDecryptionTransform = (JCObject)classInstance.Invoke("GetDecryptionTransform", dupParam0, dupParam1.getJCRefOut());
             return new ICryptoTransformImplementation(objGetDecryptionTransform);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -367,11 +368,11 @@ public class InMemorySymmetricSecurityKey extends SymmetricSecurityKey  {
         }
     }
 
-    public ICryptoTransform GetEncryptionTransform(java.lang.String dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.security.SecurityException, system.ApplicationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.TypeLoadException, system.io.IOException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.NotImplementedException, system.collections.generic.KeyNotFoundException {
+    public ICryptoTransform GetEncryptionTransform(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.security.SecurityException, system.ApplicationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.TypeLoadException, system.io.IOException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.NotImplementedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetEncryptionTransform = (JCObject)classInstance.Invoke("GetEncryptionTransform", dupParam0, dupParam1);
+            JCObject objGetEncryptionTransform = (JCObject)classInstance.Invoke("GetEncryptionTransform", dupParam0, dupParam1.getJCRefOut());
             return new ICryptoTransformImplementation(objGetEncryptionTransform);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

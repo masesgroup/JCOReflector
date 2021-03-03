@@ -78,6 +78,7 @@ public class ISymbolWriterImplementation extends NetObject implements ISymbolWri
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -201,11 +202,11 @@ public class ISymbolWriterImplementation extends NetObject implements ISymbolWri
         }
     }
 
-    public void DefineField(SymbolToken dupParam0, java.lang.String dupParam1, FieldAttributes dupParam2, JCRefOut dupParam3, SymAddressKind dupParam4, int dupParam5, int dupParam6, int dupParam7) throws Throwable {
+    public void DefineField(SymbolToken dupParam0, java.lang.String dupParam1, FieldAttributes dupParam2, JCORefOut dupParam3, SymAddressKind dupParam4, int dupParam5, int dupParam6, int dupParam7) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("DefineField", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance(), dupParam5, dupParam6, dupParam7);
+            classInstance.Invoke("DefineField", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3.getJCRefOut(), dupParam4 == null ? null : dupParam4.getJCOInstance(), dupParam5, dupParam6, dupParam7);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,11 +222,11 @@ public class ISymbolWriterImplementation extends NetObject implements ISymbolWri
         }
     }
 
-    public void DefineGlobalVariable(java.lang.String dupParam0, FieldAttributes dupParam1, JCRefOut dupParam2, SymAddressKind dupParam3, int dupParam4, int dupParam5, int dupParam6) throws Throwable {
+    public void DefineGlobalVariable(java.lang.String dupParam0, FieldAttributes dupParam1, JCORefOut dupParam2, SymAddressKind dupParam3, int dupParam4, int dupParam5, int dupParam6) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("DefineGlobalVariable", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4, dupParam5, dupParam6);
+            classInstance.Invoke("DefineGlobalVariable", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2.getJCRefOut(), dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4, dupParam5, dupParam6);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,11 +242,11 @@ public class ISymbolWriterImplementation extends NetObject implements ISymbolWri
         }
     }
 
-    public void DefineLocalVariable(java.lang.String dupParam0, FieldAttributes dupParam1, JCRefOut dupParam2, SymAddressKind dupParam3, int dupParam4, int dupParam5, int dupParam6, int dupParam7, int dupParam8) throws Throwable {
+    public void DefineLocalVariable(java.lang.String dupParam0, FieldAttributes dupParam1, JCORefOut dupParam2, SymAddressKind dupParam3, int dupParam4, int dupParam5, int dupParam6, int dupParam7, int dupParam8) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("DefineLocalVariable", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4, dupParam5, dupParam6, dupParam7, dupParam8);
+            classInstance.Invoke("DefineLocalVariable", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2.getJCRefOut(), dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4, dupParam5, dupParam6, dupParam7, dupParam8);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -271,11 +272,11 @@ public class ISymbolWriterImplementation extends NetObject implements ISymbolWri
         }
     }
 
-    public void DefineSequencePoints(ISymbolDocumentWriter dupParam0, JCRefOut dupParam1, JCRefOut dupParam2, JCRefOut dupParam3, JCRefOut dupParam4, JCRefOut dupParam5) throws Throwable {
+    public void DefineSequencePoints(ISymbolDocumentWriter dupParam0, JCORefOut dupParam1, JCORefOut dupParam2, JCORefOut dupParam3, JCORefOut dupParam4, JCORefOut dupParam5) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("DefineSequencePoints", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2, dupParam3, dupParam4, dupParam5);
+            classInstance.Invoke("DefineSequencePoints", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut(), dupParam2.getJCRefOut(), dupParam3.getJCRefOut(), dupParam4.getJCRefOut(), dupParam5.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -331,11 +332,11 @@ public class ISymbolWriterImplementation extends NetObject implements ISymbolWri
         }
     }
 
-    public void SetSymAttribute(SymbolToken dupParam0, java.lang.String dupParam1, JCRefOut dupParam2) throws Throwable {
+    public void SetSymAttribute(SymbolToken dupParam0, java.lang.String dupParam1, JCORefOut dupParam2) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetSymAttribute", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2);
+            classInstance.Invoke("SetSymAttribute", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -75,6 +75,7 @@ public class EventDescriptorCollection extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -234,11 +235,11 @@ public class EventDescriptorCollection extends NetObject  {
         }
     }
 
-    public EventDescriptorCollection Sort(JCRefOut dupParam0) throws Throwable {
+    public EventDescriptorCollection Sort(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objSort = (JCObject)classInstance.Invoke("Sort", (Object)dupParam0);
+            JCObject objSort = (JCObject)classInstance.Invoke("Sort", (Object)dupParam0.getJCRefOut());
             return new EventDescriptorCollection(objSort);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -256,11 +257,11 @@ public class EventDescriptorCollection extends NetObject  {
         }
     }
 
-    public EventDescriptorCollection Sort(JCRefOut dupParam0, IComparer dupParam1) throws Throwable {
+    public EventDescriptorCollection Sort(JCORefOut dupParam0, IComparer dupParam1) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objSort = (JCObject)classInstance.Invoke("Sort", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance());
+            JCObject objSort = (JCObject)classInstance.Invoke("Sort", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
             return new EventDescriptorCollection(objSort);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -74,6 +74,7 @@ public class IRawElementProviderAdviseEventsImplementation extends NetObject imp
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -158,11 +159,11 @@ public class IRawElementProviderAdviseEventsImplementation extends NetObject imp
         }
     }
 
-    public void AdviseEventAdded(int dupParam0, JCRefOut dupParam1) throws Throwable {
+    public void AdviseEventAdded(int dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AdviseEventAdded", dupParam0, dupParam1);
+            classInstance.Invoke("AdviseEventAdded", dupParam0, dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,11 +179,11 @@ public class IRawElementProviderAdviseEventsImplementation extends NetObject imp
         }
     }
 
-    public void AdviseEventRemoved(int dupParam0, JCRefOut dupParam1) throws Throwable {
+    public void AdviseEventRemoved(int dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AdviseEventRemoved", dupParam0, dupParam1);
+            classInstance.Invoke("AdviseEventRemoved", dupParam0, dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

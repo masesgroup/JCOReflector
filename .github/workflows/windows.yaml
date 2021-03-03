@@ -28,19 +28,18 @@ jobs:
         run: |
           mapfile -d ',' -t added_modified_files < <(printf '%s,' '${{ steps.get_changed_files.outputs.added_modified }}')
           for added_modified_file in "${added_modified_files[@]}"; do
-              echo $file
               if [[ $added_modified_file == "netreflected/src/JCOReflector/"* ]]; then
-                echo "This file is under the directory 'netreflected/src/JCOReflector'."
+                echo "$added_modified_file is under the directory 'netreflected/src/JCOReflector'."
                 echo "::set-output name=run_job::true"
                 break
               fi
               if [[ $added_modified_file == "JCOReflector/"* ]]; then
-                echo "This file is under the directory 'JCOReflector/'."
+                echo "$added_modified_file is under the directory 'JCOReflector/'."
                 echo "::set-output name=run_job::true"
                 break
               fi
               if [[ $added_modified_file == "netreflected-tests/"* ]]; then
-                echo "This file is under the directory 'netreflected-tests/'."
+                echo "$added_modified_file is under the directory 'netreflected-tests/'."
                 echo "::set-output name=run_job::true"
                 break
               fi

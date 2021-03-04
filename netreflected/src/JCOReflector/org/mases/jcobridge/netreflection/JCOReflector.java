@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -22,7 +22,7 @@
  *  SOFTWARE.
  */
 
- package org.mases.jcobridge.netreflection;
+package org.mases.jcobridge.netreflection;
 
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
@@ -34,6 +34,7 @@ import java.io.*;
 import java.lang.reflect.*;
 
 public class JCOReflector {
+    static String _runtimeFolder = null;
     static boolean _isLogging = false;
     static String _loggingFilename = "JCOBridge.log";
     static boolean _useFullname = false;
@@ -220,7 +221,7 @@ public class JCOReflector {
         }
     }
 
-    private static void unzip(String zipFilePath, String destDirectory) throws IOException {
+    static void unzip(String zipFilePath, String destDirectory) throws IOException {
         writeLog(String.format("Extracting %s", zipFilePath));
         File destDir = new File(destDirectory);
         if (!destDir.exists()) {
@@ -236,6 +237,7 @@ public class JCOReflector {
                         try {
                             Runtime.getRuntime().exec(new String[] { "chmod", "755", filePath }).waitFor();
                         } catch (Throwable e) {
+                            writeLog(e);
                         }
                     }
                 } else {
@@ -248,7 +250,7 @@ public class JCOReflector {
         }
     }
 
-    private static void extractFile(ZipInputStream zipIn, String filePath) throws IOException {
+    static void extractFile(ZipInputStream zipIn, String filePath) throws IOException {
         final int BUFFER_SIZE = 4096;
         try (BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(filePath))) {
             byte[] bytesIn = new byte[BUFFER_SIZE];
@@ -259,16 +261,22 @@ public class JCOReflector {
         }
     }
 
-    private static String extractAndReturnPath(Path pathToJar) {
+    static String extractAndReturnPath(String pathToJar) {
         final String containerFileName = "JCOBridge.zip";
         try {
-            Path tmpPath = (pathToJar == null) ? Files.createTempDirectory(JCOReflector.class.getName()) : pathToJar;
+            Path tmpPath = (pathToJar == null) ? Files.createTempDirectory(JCOReflector.class.getName()) : Paths.get(pathToJar);
             String targetFolder = tmpPath.toString();
             writeLog(String.format("Destination folder is %s", targetFolder));
             File extractedLibFile = new File(targetFolder, containerFileName);
             // Extract file into the current directory
             try (InputStream reader = JCOReflector.class.getResourceAsStream(containerFileName);
                     FileOutputStream writer = new FileOutputStream(extractedLibFile);) {
+                if (reader == null) {
+                    writeLog("Missing embedded JCOBridge resource. "
+                            + "If available will be used the JCOBridge.jar in the classpath."
+                            + "If not available the application will fail with some exceptions.");
+                    return null;
+                }
                 byte[] buffer = new byte[1024];
                 int bytesRead = 0;
                 while ((bytesRead = reader.read(buffer)) != -1) {
@@ -314,13 +322,16 @@ public class JCOReflector {
                 URL[] urls = new URL[1];
                 urls[0] = url;
                 ClassLoader loader = new URLClassLoader(urls);
-                return singleLoader("org.mases.jcobridge.IJCEventLog", loader)
-                        && singleLoader("org.mases.jcobridge.JCException", loader);
+                return singleLoader("org.mases.jcobridge.JCException", loader);
             }
         } catch (Exception e) {
             writeLog(e.toString());
             return false;
         }
+    }
+
+    static String getRTFolder() {
+        return _runtimeFolder;
     }
 
     /**
@@ -329,12 +340,19 @@ public class JCOReflector {
      * @return true if the runtime was initialized, otherwise see JCOReflector.log
      *         to check possible error conditions
      */
-    public static boolean initialize() {
-        // try extract from resources
-        String path = extractAndReturnPath(null);
-        if (path != null)
-            return addToClasspath(new File(path, "JCOBridge.jar"));
-        return false;
+    public static boolean initRT() {
+        return initRT((String)null);
+    }
+
+    /**
+     * Invoke this method to initialize JCOBridge runtime to a temporary folder
+     * 
+     * @return true if the runtime was initialized, otherwise see JCOReflector.log
+     *         to check possible error conditions
+     */
+    public static boolean initRT(String[] args) {
+        setCommandLineArgs(args);
+        return initRT((String)null);
     }
 
     /**
@@ -345,12 +363,9 @@ public class JCOReflector {
      * @return true if the runtime was initialized, otherwise see JCOReflector.log
      *         to check possible error conditions
      */
-    public static boolean initialize(String pathToUse) {
-        Path pathToJar = Paths.get(pathToUse);
+    public static boolean initRT(String pathToUse) {
         // try extract from resources
-        String path = extractAndReturnPath(pathToJar);
-        if (path != null)
-            return addToClasspath(new File(path, "JCOBridge.jar"));
-        return false;
+        _runtimeFolder = extractAndReturnPath(pathToUse);
+        return _runtimeFolder != null;
     }
 }

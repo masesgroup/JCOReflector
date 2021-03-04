@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -42,7 +42,7 @@ public class NetType extends NetObject {
     static JCType createType() {
         try {
             return bridge.GetType(className + ", "
-                    + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+                    + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -71,7 +71,7 @@ public class NetType extends NetObject {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -85,14 +85,14 @@ public class NetType extends NetObject {
     public static void AssertCast(IJCOBridgeReflected to, IJCOBridgeReflected from) throws Throwable {
         if (!NetType.CanCast(to, from)) {
             throw new UnsupportedOperationException(String.format("%s cannot be casted to %s", from.getJCOObjectName(),
-                    (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName)));
+                    (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName)));
         }
     }
 
     public static void AssertCast(JCType to, IJCOBridgeReflected from) throws Throwable {
         if (!NetType.CanCast(to, from)) {
             throw new UnsupportedOperationException(String.format("%s cannot be casted to %s", from.getJCOObjectName(),
-                    (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName)));
+                    (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName)));
         }
     }
 
@@ -135,7 +135,7 @@ public class NetType extends NetObject {
     public static <T extends IJCOBridgeReflected> String GetType(Class<T> tClass)
             throws IllegalArgumentException, IllegalAccessException, NoSuchFieldException, SecurityException {
         String TClassname = (String) tClass.getField("className").get(null);
-        String assemblyName = JCOBridgeInstance.getUseFullAssemblyName() ? "assemblyFullName" : "assemblyShortName";
+        String assemblyName = JCOReflector.getUseFullAssemblyName() ? "assemblyFullName" : "assemblyShortName";
         String TAssemblyname = (String) tClass.getField(assemblyName).get(null);
 
         return TClassname + ", " + TAssemblyname;

@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -56,14 +56,14 @@ public interface IJCOBridgeReflected {
     /**
      * Returns the instantiated class
      * 
-     * @return An {@link Object} representing the instance of the instantiated Class
+     * @return An {@link Object} representing the CLR instance of the instantiated Class
      */
     public Object getJCOInstance();
 
     /**
      * Returns the instantiated class Type
      * 
-     * @return A {@link JCType} representing the Type of the instantiated Class
+     * @return A {@link JCType} representing the CLR Type of the instantiated Class
      */
     public JCType getJCOType();
 }

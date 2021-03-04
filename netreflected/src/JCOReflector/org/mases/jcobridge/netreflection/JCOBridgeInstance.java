@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -77,16 +77,7 @@ public final class JCOBridgeInstance implements IJCEventLog {
 
         JCOReflector.writeLog(bw, msg);
     }
-
-    /**
-     * Get UseFullAssemblyName state
-     * 
-     * @return the UseFullAssemblyName state
-     */
-    public static boolean getUseFullAssemblyName() {
-        return JCOReflector.getUseFullAssemblyName();
-    }
-
+    
     /**
      * Returns the {@link JCOBridge} instance associated to the assmebly.
      * <p>

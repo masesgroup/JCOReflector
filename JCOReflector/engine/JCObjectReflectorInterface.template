@@ -66,7 +66,7 @@ public interface PACKAGE_CLASS_NAME extends PACKAGE_CLASS_BASE_CLASS {
      */
     public static PACKAGE_CLASS_NAME ToPACKAGE_CLASS_NAME(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("FULL_ASSEMBLY_CLASS_NAME");
-        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+        JCType classType = bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new PACKAGE_CLASS_NAMEImplementation(from.getJCOInstance());
     }

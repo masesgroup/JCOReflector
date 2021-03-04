@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -30,15 +30,14 @@ import org.mases.jcobridge.netreflection.JCOBridgeInstance;
 import java.util.ArrayList;
 
 /**
- * The base .NET class managing System.Exception, mscorlib, Version=4.0.0.0,
- * Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link Throwable}.
+ * The base .NET class managing System.Exception, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link Throwable}.
  * Implements {@link IJCOBridgeReflected}
  */
 public class NetException extends Throwable implements IJCOBridgeReflected {
     static long serialVersionUID = 6575785859373L;
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
     public static final String assemblyShortName = "mscorlib";
-    public static final  String className = "System.Exception";
+    public static final String className = "System.Exception";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
     public static JCType classType = createType();
     static JCEnum enumInstance = null;
@@ -48,7 +47,7 @@ public class NetException extends Throwable implements IJCOBridgeReflected {
     static JCType createType() {
         try {
             return bridge.GetType(className + ", "
-                    + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+                    + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -89,7 +88,7 @@ public class NetException extends Throwable implements IJCOBridgeReflected {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -103,11 +102,11 @@ public class NetException extends Throwable implements IJCOBridgeReflected {
     public JCType getJCOType() {
         return classType;
     }
-/*
-    public final void setJCNativeException(JCNativeException jcne) {
-        jcNativeException = jcne;
-    }
-*/
+
+    /*
+     * public final void setJCNativeException(JCNativeException jcne) {
+     * jcNativeException = jcne; }
+     */
     public static NetException cast(IJCOBridgeReflected from) throws Throwable {
         return new NetException(from.getJCOInstance());
     }

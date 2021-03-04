@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -36,14 +36,14 @@ public class IEnumerableImplementation extends NetObject implements IEnumerable 
     public static final String assemblyShortName = "mscorlib";
     public static final String className = "System.Collections.IEnumerable";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
-    static JCType classType = createType();
+    public static JCType classType = createType();
     static JCEnum enumInstance = null;
     JCObject classInstance = null;
 
     static JCType createType() {
         try {
             return bridge.GetType(className + ", "
-                    + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+                    + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException jce) {
             JCOReflector.writeLog(jce);
             return null;
@@ -74,7 +74,7 @@ public class IEnumerableImplementation extends NetObject implements IEnumerable 
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {

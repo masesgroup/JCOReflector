@@ -82,6 +82,7 @@ public class XslCompiledTransform extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -173,11 +174,11 @@ public class XslCompiledTransform extends NetObject  {
         }
     }
 
-    public void Load(MethodInfo dupParam0, JCRefOut dupParam1, NetType[] dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.xml.XmlException, system.io.IOException, system.OutOfMemoryException {
+    public void Load(MethodInfo dupParam0, JCORefOut dupParam1, NetType[] dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.xml.XmlException, system.io.IOException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Load", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, toObjectFromArray(dupParam2));
+            classInstance.Invoke("Load", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut(), toObjectFromArray(dupParam2));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -76,6 +76,7 @@ public class ToolLocationHelper extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -430,11 +431,11 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
-    public static java.lang.String GetPlatformExtensionSDKLocation(java.lang.String dupParam0, java.lang.String dupParam1, Version dupParam2, JCRefOut dupParam3, java.lang.String dupParam4) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
+    public static java.lang.String GetPlatformExtensionSDKLocation(java.lang.String dupParam0, java.lang.String dupParam1, Version dupParam2, JCORefOut dupParam3, java.lang.String dupParam4) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Invoke("GetPlatformExtensionSDKLocation", dupParam0, dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3, dupParam4);
+            return (java.lang.String)classType.Invoke("GetPlatformExtensionSDKLocation", dupParam0, dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3.getJCRefOut(), dupParam4);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -480,11 +481,11 @@ public class ToolLocationHelper extends NetObject  {
         }
     }
 
-    public static java.lang.String GetPlatformSDKLocation(java.lang.String dupParam0, Version dupParam1, JCRefOut dupParam2, java.lang.String dupParam3) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotImplementedException {
+    public static java.lang.String GetPlatformSDKLocation(java.lang.String dupParam0, Version dupParam1, JCORefOut dupParam2, java.lang.String dupParam3) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.OutOfMemoryException, system.io.PathTooLongException, system.NotSupportedException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotImplementedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Invoke("GetPlatformSDKLocation", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2, dupParam3);
+            return (java.lang.String)classType.Invoke("GetPlatformSDKLocation", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2.getJCRefOut(), dupParam3);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

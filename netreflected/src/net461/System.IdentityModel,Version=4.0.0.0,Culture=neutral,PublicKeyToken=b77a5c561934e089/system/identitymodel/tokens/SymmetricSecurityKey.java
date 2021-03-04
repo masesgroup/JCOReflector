@@ -76,6 +76,7 @@ public class SymmetricSecurityKey extends SecurityKey  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -158,12 +159,12 @@ public class SymmetricSecurityKey extends SecurityKey  {
         }
     }
 
-    public byte[] GenerateDerivedKey(java.lang.String dupParam0, JCRefOut dupParam1, JCRefOut dupParam2, int dupParam3, int dupParam4) throws Throwable {
+    public byte[] GenerateDerivedKey(java.lang.String dupParam0, JCORefOut dupParam1, JCORefOut dupParam2, int dupParam3, int dupParam4) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GenerateDerivedKey", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4);
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GenerateDerivedKey", dupParam0, dupParam1.getJCRefOut(), dupParam2.getJCRefOut(), dupParam3, dupParam4);
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -217,11 +218,11 @@ public class SymmetricSecurityKey extends SecurityKey  {
         }
     }
 
-    public ICryptoTransform GetDecryptionTransform(java.lang.String dupParam0, JCRefOut dupParam1) throws Throwable {
+    public ICryptoTransform GetDecryptionTransform(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetDecryptionTransform = (JCObject)classInstance.Invoke("GetDecryptionTransform", dupParam0, dupParam1);
+            JCObject objGetDecryptionTransform = (JCObject)classInstance.Invoke("GetDecryptionTransform", dupParam0, dupParam1.getJCRefOut());
             return new ICryptoTransformImplementation(objGetDecryptionTransform);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -239,11 +240,11 @@ public class SymmetricSecurityKey extends SecurityKey  {
         }
     }
 
-    public ICryptoTransform GetEncryptionTransform(java.lang.String dupParam0, JCRefOut dupParam1) throws Throwable {
+    public ICryptoTransform GetEncryptionTransform(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetEncryptionTransform = (JCObject)classInstance.Invoke("GetEncryptionTransform", dupParam0, dupParam1);
+            JCObject objGetEncryptionTransform = (JCObject)classInstance.Invoke("GetEncryptionTransform", dupParam0, dupParam1.getJCRefOut());
             return new ICryptoTransformImplementation(objGetEncryptionTransform);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -72,6 +72,7 @@ public class SchemaNameCollection extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -187,11 +188,11 @@ public class SchemaNameCollection extends NetObject  {
         }
     }
 
-    public void AddRange(JCRefOut dupParam0) throws Throwable, system.ArgumentNullException {
+    public void AddRange(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddRange", (Object)dupParam0);
+            classInstance.Invoke("AddRange", (Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,11 +218,11 @@ public class SchemaNameCollection extends NetObject  {
         }
     }
 
-    public void CopyTo(JCRefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentException {
+    public void CopyTo(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("CopyTo", dupParam0, dupParam1);
+            classInstance.Invoke("CopyTo", dupParam0.getJCRefOut(), dupParam1);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

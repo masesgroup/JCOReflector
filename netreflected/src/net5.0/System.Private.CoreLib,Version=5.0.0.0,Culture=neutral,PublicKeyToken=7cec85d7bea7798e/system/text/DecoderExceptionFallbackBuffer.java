@@ -72,6 +72,7 @@ public class DecoderExceptionFallbackBuffer extends DecoderFallbackBuffer  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -153,11 +154,11 @@ public class DecoderExceptionFallbackBuffer extends DecoderFallbackBuffer  {
         }
     }
 
-    public boolean Fallback(JCRefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException, system.text.DecoderFallbackException {
+    public boolean Fallback(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException, system.text.DecoderFallbackException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Fallback", dupParam0, dupParam1);
+            return (boolean)classInstance.Invoke("Fallback", dupParam0.getJCRefOut(), dupParam1);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

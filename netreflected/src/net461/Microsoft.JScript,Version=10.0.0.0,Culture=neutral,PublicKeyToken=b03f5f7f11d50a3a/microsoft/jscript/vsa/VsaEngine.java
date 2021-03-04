@@ -93,6 +93,7 @@ public class VsaEngine extends BaseVsaEngine  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -226,11 +227,11 @@ public class VsaEngine extends BaseVsaEngine  {
         }
     }
 
-    public static GlobalScope CreateEngineAndGetGlobalScope(boolean dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, microsoft.jscript.vsa.JSVsaException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+    public static GlobalScope CreateEngineAndGetGlobalScope(boolean dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, microsoft.jscript.vsa.JSVsaException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateEngineAndGetGlobalScope = (JCObject)classType.Invoke("CreateEngineAndGetGlobalScope", dupParam0, dupParam1);
+            JCObject objCreateEngineAndGetGlobalScope = (JCObject)classType.Invoke("CreateEngineAndGetGlobalScope", dupParam0, dupParam1.getJCRefOut());
             return new GlobalScope(objCreateEngineAndGetGlobalScope);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -248,11 +249,11 @@ public class VsaEngine extends BaseVsaEngine  {
         }
     }
 
-    public static GlobalScope CreateEngineAndGetGlobalScopeWithType(boolean dupParam0, JCRefOut dupParam1, RuntimeTypeHandle dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.ArgumentOutOfRangeException, microsoft.jscript.vsa.JSVsaException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException, system.security.SecurityException, system.NullReferenceException {
+    public static GlobalScope CreateEngineAndGetGlobalScopeWithType(boolean dupParam0, JCORefOut dupParam1, RuntimeTypeHandle dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.ArgumentOutOfRangeException, microsoft.jscript.vsa.JSVsaException, system.IndexOutOfRangeException, system.NotSupportedException, system.NotImplementedException, system.security.SecurityException, system.NullReferenceException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateEngineAndGetGlobalScopeWithType = (JCObject)classType.Invoke("CreateEngineAndGetGlobalScopeWithType", dupParam0, dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
+            JCObject objCreateEngineAndGetGlobalScopeWithType = (JCObject)classType.Invoke("CreateEngineAndGetGlobalScopeWithType", dupParam0, dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance());
             return new GlobalScope(objCreateEngineAndGetGlobalScopeWithType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -270,11 +271,11 @@ public class VsaEngine extends BaseVsaEngine  {
         }
     }
 
-    public static GlobalScope CreateEngineAndGetGlobalScopeWithTypeAndRootNamespace(boolean dupParam0, JCRefOut dupParam1, RuntimeTypeHandle dupParam2, java.lang.String dupParam3) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, microsoft.jscript.vsa.JSVsaException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.NullReferenceException {
+    public static GlobalScope CreateEngineAndGetGlobalScopeWithTypeAndRootNamespace(boolean dupParam0, JCORefOut dupParam1, RuntimeTypeHandle dupParam2, java.lang.String dupParam3) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, microsoft.jscript.vsa.JSVsaException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.NullReferenceException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateEngineAndGetGlobalScopeWithTypeAndRootNamespace = (JCObject)classType.Invoke("CreateEngineAndGetGlobalScopeWithTypeAndRootNamespace", dupParam0, dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3);
+            JCObject objCreateEngineAndGetGlobalScopeWithTypeAndRootNamespace = (JCObject)classType.Invoke("CreateEngineAndGetGlobalScopeWithTypeAndRootNamespace", dupParam0, dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3);
             return new GlobalScope(objCreateEngineAndGetGlobalScopeWithTypeAndRootNamespace);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

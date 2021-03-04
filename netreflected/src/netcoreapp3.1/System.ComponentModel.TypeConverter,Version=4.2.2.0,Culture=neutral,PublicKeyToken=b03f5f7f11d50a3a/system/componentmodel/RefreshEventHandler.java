@@ -71,6 +71,7 @@ public class RefreshEventHandler extends JCVoidDelegate implements IJCVoidEventE
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -109,8 +110,7 @@ public class RefreshEventHandler extends JCVoidDelegate implements IJCVoidEventE
         }
         catch (Throwable throwableFromJCEvent)
         {
-            if (JCOBridgeInstance.getDebug())
-                throwableFromJCEvent.printStackTrace();
+            JCOReflector.writeLog(throwableFromJCEvent);
         }
     }
 
@@ -128,8 +128,7 @@ public class RefreshEventHandler extends JCVoidDelegate implements IJCVoidEventE
         }
         catch (Throwable throwableFromJCEvent)
         {
-            if (JCOBridgeInstance.getDebug())
-                throwableFromJCEvent.printStackTrace();
+            JCOReflector.writeLog(throwableFromJCEvent);
         }
     }
 

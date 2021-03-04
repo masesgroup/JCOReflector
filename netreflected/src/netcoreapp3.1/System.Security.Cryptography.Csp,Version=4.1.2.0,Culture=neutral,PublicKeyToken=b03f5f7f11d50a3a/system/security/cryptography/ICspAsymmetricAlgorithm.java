@@ -114,7 +114,7 @@ public interface ICspAsymmetricAlgorithm extends IJCOBridgeReflected {
 
     public void ImportCspBlob(byte[] rawData) throws Throwable;
 
-    public void ImportCspBlob(JCRefOut dupParam0) throws Throwable;
+    public void ImportCspBlob(JCORefOut dupParam0) throws Throwable;
 
 
     

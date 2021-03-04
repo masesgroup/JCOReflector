@@ -72,6 +72,7 @@ public class IToolboxUserImplementation extends NetObject implements IToolboxUse
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }

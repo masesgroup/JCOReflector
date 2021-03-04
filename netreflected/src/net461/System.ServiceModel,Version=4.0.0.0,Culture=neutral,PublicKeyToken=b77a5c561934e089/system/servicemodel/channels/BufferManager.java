@@ -72,6 +72,7 @@ public class BufferManager extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -185,11 +186,11 @@ public class BufferManager extends NetObject  {
         }
     }
 
-    public void ReturnBuffer(JCRefOut dupParam0) throws Throwable {
+    public void ReturnBuffer(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("ReturnBuffer", (Object)dupParam0);
+            classInstance.Invoke("ReturnBuffer", (Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -72,6 +72,7 @@ public class GroupDescriptionSelectorCallback extends JCDelegate implements IJCE
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -113,8 +114,7 @@ public class GroupDescriptionSelectorCallback extends JCDelegate implements IJCE
         }
         catch (Throwable throwableFromJCEvent)
         {
-            if (JCOBridgeInstance.getDebug())
-                throwableFromJCEvent.printStackTrace();
+            JCOReflector.writeLog(throwableFromJCEvent);
 			return null;
         }
     }
@@ -136,8 +136,7 @@ public class GroupDescriptionSelectorCallback extends JCDelegate implements IJCE
         }
         catch (Throwable throwableFromJCEvent)
         {
-            if (JCOBridgeInstance.getDebug())
-                throwableFromJCEvent.printStackTrace();
+            JCOReflector.writeLog(throwableFromJCEvent);
 			return null;
         }
     }

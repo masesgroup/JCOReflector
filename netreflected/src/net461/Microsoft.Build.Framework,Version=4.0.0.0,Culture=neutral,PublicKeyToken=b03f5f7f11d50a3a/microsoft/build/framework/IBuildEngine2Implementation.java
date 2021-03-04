@@ -79,6 +79,7 @@ public class IBuildEngine2Implementation extends NetObject implements IBuildEngi
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -141,11 +142,11 @@ public class IBuildEngine2Implementation extends NetObject implements IBuildEngi
         }
     }
 
-    public boolean BuildProjectFile(java.lang.String dupParam0, JCRefOut dupParam1, IDictionary dupParam2, IDictionary dupParam3) throws Throwable {
+    public boolean BuildProjectFile(java.lang.String dupParam0, JCORefOut dupParam1, IDictionary dupParam2, IDictionary dupParam3) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("BuildProjectFile", dupParam0, dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance());
+            return (boolean)classInstance.Invoke("BuildProjectFile", dupParam0, dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -161,11 +162,11 @@ public class IBuildEngine2Implementation extends NetObject implements IBuildEngi
         }
     }
 
-    public boolean BuildProjectFile(java.lang.String dupParam0, JCRefOut dupParam1, IDictionary dupParam2, IDictionary dupParam3, java.lang.String dupParam4) throws Throwable {
+    public boolean BuildProjectFile(java.lang.String dupParam0, JCORefOut dupParam1, IDictionary dupParam2, IDictionary dupParam3, java.lang.String dupParam4) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("BuildProjectFile", dupParam0, dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4);
+            return (boolean)classInstance.Invoke("BuildProjectFile", dupParam0, dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,11 +182,11 @@ public class IBuildEngine2Implementation extends NetObject implements IBuildEngi
         }
     }
 
-    public boolean BuildProjectFilesInParallel(JCRefOut dupParam0, JCRefOut dupParam1, IDictionary[] dupParam2, IDictionary[] dupParam3, JCRefOut dupParam4, boolean dupParam5, boolean dupParam6) throws Throwable {
+    public boolean BuildProjectFilesInParallel(JCORefOut dupParam0, JCORefOut dupParam1, IDictionary[] dupParam2, IDictionary[] dupParam3, JCORefOut dupParam4, boolean dupParam5, boolean dupParam6) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("BuildProjectFilesInParallel", dupParam0, dupParam1, toObjectFromArray(dupParam2), toObjectFromArray(dupParam3), dupParam4, dupParam5, dupParam6);
+            return (boolean)classInstance.Invoke("BuildProjectFilesInParallel", dupParam0.getJCRefOut(), dupParam1.getJCRefOut(), toObjectFromArray(dupParam2), toObjectFromArray(dupParam3), dupParam4.getJCRefOut(), dupParam5, dupParam6);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

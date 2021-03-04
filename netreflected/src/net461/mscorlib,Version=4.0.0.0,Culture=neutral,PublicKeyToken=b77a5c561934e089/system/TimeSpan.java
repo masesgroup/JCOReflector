@@ -76,6 +76,7 @@ public class TimeSpan extends ValueType  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -405,11 +406,11 @@ public class TimeSpan extends ValueType  {
         }
     }
 
-    public static TimeSpan ParseExact(java.lang.String dupParam0, JCRefOut dupParam1, IFormatProvider dupParam2) throws Throwable, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException {
+    public static TimeSpan ParseExact(java.lang.String dupParam0, JCORefOut dupParam1, IFormatProvider dupParam2) throws Throwable, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objParseExact = (JCObject)classType.Invoke("ParseExact", dupParam0, dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
+            JCObject objParseExact = (JCObject)classType.Invoke("ParseExact", dupParam0, dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance());
             return new TimeSpan(objParseExact);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -427,11 +428,11 @@ public class TimeSpan extends ValueType  {
         }
     }
 
-    public static TimeSpan ParseExact(java.lang.String dupParam0, JCRefOut dupParam1, IFormatProvider dupParam2, TimeSpanStyles dupParam3) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public static TimeSpan ParseExact(java.lang.String dupParam0, JCORefOut dupParam1, IFormatProvider dupParam2, TimeSpanStyles dupParam3) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objParseExact = (JCObject)classType.Invoke("ParseExact", dupParam0, dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance());
+            JCObject objParseExact = (JCObject)classType.Invoke("ParseExact", dupParam0, dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance());
             return new TimeSpan(objParseExact);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

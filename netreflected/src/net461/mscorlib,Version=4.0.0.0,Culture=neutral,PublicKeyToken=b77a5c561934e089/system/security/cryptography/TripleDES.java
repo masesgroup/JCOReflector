@@ -73,6 +73,7 @@ public class TripleDES extends SymmetricAlgorithm  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -146,11 +147,11 @@ public class TripleDES extends SymmetricAlgorithm  {
         }
     }
 
-    public static boolean IsWeakKey(JCRefOut dupParam0) throws Throwable, system.security.cryptography.CryptographicException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static boolean IsWeakKey(JCORefOut dupParam0) throws Throwable, system.security.cryptography.CryptographicException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classType.Invoke("IsWeakKey", (Object)dupParam0);
+            return (boolean)classType.Invoke("IsWeakKey", (Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -117,7 +117,7 @@ public interface IXmlBinaryReaderInitializer extends IJCOBridgeReflected {
     
     public void SetInput(byte[] buffer, int offset, int count, IXmlDictionary dictionary, XmlDictionaryReaderQuotas quotas, XmlBinaryReaderSession session, OnXmlDictionaryReaderClose onClose) throws Throwable;
 
-    public void SetInput(JCRefOut dupParam0, int dupParam1, int dupParam2, IXmlDictionary dupParam3, XmlDictionaryReaderQuotas dupParam4, XmlBinaryReaderSession dupParam5, OnXmlDictionaryReaderClose dupParam6) throws Throwable;
+    public void SetInput(JCORefOut dupParam0, int dupParam1, int dupParam2, IXmlDictionary dupParam3, XmlDictionaryReaderQuotas dupParam4, XmlBinaryReaderSession dupParam5, OnXmlDictionaryReaderClose dupParam6) throws Throwable;
 
     public void SetInput(Stream stream, IXmlDictionary dictionary, XmlDictionaryReaderQuotas quotas, XmlBinaryReaderSession session, OnXmlDictionaryReaderClose onClose) throws Throwable;
 

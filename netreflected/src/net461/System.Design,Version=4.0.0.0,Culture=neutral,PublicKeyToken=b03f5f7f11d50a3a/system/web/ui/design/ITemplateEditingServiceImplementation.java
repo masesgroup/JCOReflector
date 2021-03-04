@@ -76,6 +76,7 @@ public class ITemplateEditingServiceImplementation extends NetObject implements 
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -149,11 +150,11 @@ public class ITemplateEditingServiceImplementation extends NetObject implements 
         }
     }
 
-    public ITemplateEditingFrame CreateFrame(TemplatedControlDesigner dupParam0, java.lang.String dupParam1, JCRefOut dupParam2) throws Throwable {
+    public ITemplateEditingFrame CreateFrame(TemplatedControlDesigner dupParam0, java.lang.String dupParam1, JCORefOut dupParam2) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateFrame = (JCObject)classInstance.Invoke("CreateFrame", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2);
+            JCObject objCreateFrame = (JCObject)classInstance.Invoke("CreateFrame", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2.getJCRefOut());
             return new ITemplateEditingFrameImplementation(objCreateFrame);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -171,11 +172,11 @@ public class ITemplateEditingServiceImplementation extends NetObject implements 
         }
     }
 
-    public ITemplateEditingFrame CreateFrame(TemplatedControlDesigner dupParam0, java.lang.String dupParam1, JCRefOut dupParam2, Style dupParam3, Style[] dupParam4) throws Throwable {
+    public ITemplateEditingFrame CreateFrame(TemplatedControlDesigner dupParam0, java.lang.String dupParam1, JCORefOut dupParam2, Style dupParam3, Style[] dupParam4) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateFrame = (JCObject)classInstance.Invoke("CreateFrame", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), toObjectFromArray(dupParam4));
+            JCObject objCreateFrame = (JCObject)classInstance.Invoke("CreateFrame", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2.getJCRefOut(), dupParam3 == null ? null : dupParam3.getJCOInstance(), toObjectFromArray(dupParam4));
             return new ITemplateEditingFrameImplementation(objCreateFrame);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

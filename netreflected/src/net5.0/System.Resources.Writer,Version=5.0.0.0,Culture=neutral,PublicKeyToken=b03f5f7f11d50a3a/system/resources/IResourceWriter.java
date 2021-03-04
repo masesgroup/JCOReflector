@@ -113,7 +113,7 @@ public interface IResourceWriter extends IJCOBridgeReflected, IDisposable {
     
     public void AddResource(java.lang.String name, byte[] value) throws Throwable;
 
-    public void AddResource(java.lang.String dupParam0, JCRefOut dupParam1) throws Throwable;
+    public void AddResource(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable;
 
     public void AddResource(java.lang.String name, NetObject value) throws Throwable;
 

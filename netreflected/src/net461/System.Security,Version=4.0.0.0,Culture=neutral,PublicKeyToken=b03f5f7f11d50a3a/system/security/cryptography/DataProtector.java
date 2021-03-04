@@ -72,6 +72,7 @@ public class DataProtector extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -145,11 +146,11 @@ public class DataProtector extends NetObject  {
         }
     }
 
-    public boolean IsReprotectRequired(JCRefOut dupParam0) throws Throwable {
+    public boolean IsReprotectRequired(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsReprotectRequired", (Object)dupParam0);
+            return (boolean)classInstance.Invoke("IsReprotectRequired", (Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,12 +175,12 @@ public class DataProtector extends NetObject  {
         }
     }
 
-    public byte[] Protect(JCRefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ApplicationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.TypeLoadException, system.io.IOException, system.ObjectDisposedException, system.security.cryptography.CryptographicUnexpectedOperationException {
+    public byte[] Protect(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ApplicationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.TypeLoadException, system.io.IOException, system.ObjectDisposedException, system.security.cryptography.CryptographicUnexpectedOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("Protect", (Object)dupParam0);
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("Protect", (Object)dupParam0.getJCRefOut());
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -212,12 +213,12 @@ public class DataProtector extends NetObject  {
         }
     }
 
-    public byte[] Unprotect(JCRefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ApplicationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.TypeLoadException, system.io.IOException, system.ObjectDisposedException, system.security.cryptography.CryptographicUnexpectedOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.threading.AbandonedMutexException, system.security.cryptography.CryptographicException {
+    public byte[] Unprotect(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.security.SecurityException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ApplicationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.TypeLoadException, system.io.IOException, system.ObjectDisposedException, system.security.cryptography.CryptographicUnexpectedOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.OutOfMemoryException, system.resources.MissingManifestResourceException, system.threading.AbandonedMutexException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("Unprotect", (Object)dupParam0);
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("Unprotect", (Object)dupParam0.getJCRefOut());
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -242,11 +243,11 @@ public class DataProtector extends NetObject  {
         }
     }
 
-    public static DataProtector Create(java.lang.String dupParam0, java.lang.String dupParam1, java.lang.String dupParam2, JCRefOut dupParam3) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.TypeLoadException, system.ObjectDisposedException {
+    public static DataProtector Create(java.lang.String dupParam0, java.lang.String dupParam1, java.lang.String dupParam2, JCORefOut dupParam3) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ApplicationException, system.TypeLoadException, system.ObjectDisposedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", dupParam0, dupParam1, dupParam2, dupParam3);
+            JCObject objCreate = (JCObject)classType.Invoke("Create", dupParam0, dupParam1, dupParam2, dupParam3.getJCRefOut());
             return new DataProtector(objCreate);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

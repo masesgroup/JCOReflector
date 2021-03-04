@@ -73,6 +73,7 @@ public class X509ExtensionCollection extends NetObject implements Iterable<X509E
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }

@@ -120,11 +120,11 @@ public interface IBuildEngine2 extends IJCOBridgeReflected, IBuildEngine {
 
     public boolean BuildProjectFile(java.lang.String projectFileName, java.lang.String[] targetNames, IDictionary globalProperties, IDictionary targetOutputs, java.lang.String toolsVersion) throws Throwable;
 
-    public boolean BuildProjectFile(java.lang.String dupParam0, JCRefOut dupParam1, IDictionary dupParam2, IDictionary dupParam3, java.lang.String dupParam4) throws Throwable;
+    public boolean BuildProjectFile(java.lang.String dupParam0, JCORefOut dupParam1, IDictionary dupParam2, IDictionary dupParam3, java.lang.String dupParam4) throws Throwable;
 
     public boolean BuildProjectFilesInParallel(java.lang.String[] projectFileNames, java.lang.String[] targetNames, IDictionary[] globalProperties, IDictionary[] targetOutputsPerProject, java.lang.String[] toolsVersion, boolean useResultsCache, boolean unloadProjectsOnCompletion) throws Throwable;
 
-    public boolean BuildProjectFilesInParallel(JCRefOut dupParam0, JCRefOut dupParam1, IDictionary[] dupParam2, IDictionary[] dupParam3, JCRefOut dupParam4, boolean dupParam5, boolean dupParam6) throws Throwable;
+    public boolean BuildProjectFilesInParallel(JCORefOut dupParam0, JCORefOut dupParam1, IDictionary[] dupParam2, IDictionary[] dupParam3, JCORefOut dupParam4, boolean dupParam5, boolean dupParam6) throws Throwable;
 
 
 

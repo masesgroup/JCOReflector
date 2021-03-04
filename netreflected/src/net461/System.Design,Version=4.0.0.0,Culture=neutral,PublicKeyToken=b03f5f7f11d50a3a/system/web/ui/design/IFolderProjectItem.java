@@ -117,7 +117,7 @@ public interface IFolderProjectItem extends IJCOBridgeReflected {
     
     public IDocumentProjectItem AddDocument(java.lang.String name, byte[] content) throws Throwable;
 
-    public IDocumentProjectItem AddDocument(java.lang.String dupParam0, JCRefOut dupParam1) throws Throwable;
+    public IDocumentProjectItem AddDocument(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable;
 
     public IFolderProjectItem AddFolder(java.lang.String name) throws Throwable;
 

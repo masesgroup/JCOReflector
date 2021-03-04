@@ -74,6 +74,7 @@ public class DelegatingXmlDictionaryWriter extends XmlDictionaryWriter  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -189,11 +190,11 @@ public class DelegatingXmlDictionaryWriter extends XmlDictionaryWriter  {
         }
     }
 
-    public void StartCanonicalization(Stream dupParam0, boolean dupParam1, JCRefOut dupParam2) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
+    public void StartCanonicalization(Stream dupParam0, boolean dupParam1, JCORefOut dupParam2) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("StartCanonicalization", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2);
+            classInstance.Invoke("StartCanonicalization", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,11 +210,11 @@ public class DelegatingXmlDictionaryWriter extends XmlDictionaryWriter  {
         }
     }
 
-    public void WriteBase64(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable {
+    public void WriteBase64(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("WriteBase64", dupParam0, dupParam1, dupParam2);
+            classInstance.Invoke("WriteBase64", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -249,11 +250,11 @@ public class DelegatingXmlDictionaryWriter extends XmlDictionaryWriter  {
         }
     }
 
-    public void WriteChars(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable {
+    public void WriteChars(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("WriteChars", dupParam0, dupParam1, dupParam2);
+            classInstance.Invoke("WriteChars", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -349,11 +350,11 @@ public class DelegatingXmlDictionaryWriter extends XmlDictionaryWriter  {
         }
     }
 
-    public void WriteRaw(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable {
+    public void WriteRaw(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("WriteRaw", dupParam0, dupParam1, dupParam2);
+            classInstance.Invoke("WriteRaw", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

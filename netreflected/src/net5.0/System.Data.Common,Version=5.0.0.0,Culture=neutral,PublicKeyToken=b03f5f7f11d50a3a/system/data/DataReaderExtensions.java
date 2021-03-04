@@ -78,6 +78,7 @@ public class DataReaderExtensions extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -221,11 +222,11 @@ public class DataReaderExtensions extends NetObject  {
         }
     }
 
-    public static long GetBytes(DbDataReader dupParam0, java.lang.String dupParam1, long dupParam2, JCRefOut dupParam3, int dupParam4, int dupParam5) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
+    public static long GetBytes(DbDataReader dupParam0, java.lang.String dupParam1, long dupParam2, JCORefOut dupParam3, int dupParam4, int dupParam5) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (long)classType.Invoke("GetBytes", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2, dupParam3, dupParam4, dupParam5);
+            return (long)classType.Invoke("GetBytes", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2, dupParam3.getJCRefOut(), dupParam4, dupParam5);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,11 +242,11 @@ public class DataReaderExtensions extends NetObject  {
         }
     }
 
-    public static long GetChars(DbDataReader dupParam0, java.lang.String dupParam1, long dupParam2, JCRefOut dupParam3, int dupParam4, int dupParam5) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
+    public static long GetChars(DbDataReader dupParam0, java.lang.String dupParam1, long dupParam2, JCORefOut dupParam3, int dupParam4, int dupParam5) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (long)classType.Invoke("GetChars", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2, dupParam3, dupParam4, dupParam5);
+            return (long)classType.Invoke("GetChars", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2, dupParam3.getJCRefOut(), dupParam4, dupParam5);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -71,6 +71,7 @@ public class SqlColumnEncryptionKeyStoreProvider extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -144,11 +145,11 @@ public class SqlColumnEncryptionKeyStoreProvider extends NetObject  {
         }
     }
 
-    public boolean VerifyColumnMasterKeyMetadata(java.lang.String dupParam0, boolean dupParam1, JCRefOut dupParam2) throws Throwable, system.NotImplementedException {
+    public boolean VerifyColumnMasterKeyMetadata(java.lang.String dupParam0, boolean dupParam1, JCORefOut dupParam2) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("VerifyColumnMasterKeyMetadata", dupParam0, dupParam1, dupParam2);
+            return (boolean)classInstance.Invoke("VerifyColumnMasterKeyMetadata", dupParam0, dupParam1, dupParam2.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,12 +174,12 @@ public class SqlColumnEncryptionKeyStoreProvider extends NetObject  {
         }
     }
 
-    public byte[] DecryptColumnEncryptionKey(java.lang.String dupParam0, java.lang.String dupParam1, JCRefOut dupParam2) throws Throwable {
+    public byte[] DecryptColumnEncryptionKey(java.lang.String dupParam0, java.lang.String dupParam1, JCORefOut dupParam2) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("DecryptColumnEncryptionKey", dupParam0, dupParam1, dupParam2);
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("DecryptColumnEncryptionKey", dupParam0, dupParam1, dupParam2.getJCRefOut());
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -211,12 +212,12 @@ public class SqlColumnEncryptionKeyStoreProvider extends NetObject  {
         }
     }
 
-    public byte[] EncryptColumnEncryptionKey(java.lang.String dupParam0, java.lang.String dupParam1, JCRefOut dupParam2) throws Throwable {
+    public byte[] EncryptColumnEncryptionKey(java.lang.String dupParam0, java.lang.String dupParam1, JCORefOut dupParam2) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("EncryptColumnEncryptionKey", dupParam0, dupParam1, dupParam2);
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("EncryptColumnEncryptionKey", dupParam0, dupParam1, dupParam2.getJCRefOut());
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }

@@ -73,6 +73,7 @@ public class DpapiDataProtector extends DataProtector  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -158,11 +159,11 @@ public class DpapiDataProtector extends DataProtector  {
         }
     }
 
-    public boolean IsReprotectRequired(JCRefOut dupParam0) throws Throwable {
+    public boolean IsReprotectRequired(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsReprotectRequired", (Object)dupParam0);
+            return (boolean)classInstance.Invoke("IsReprotectRequired", (Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

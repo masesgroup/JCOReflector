@@ -118,11 +118,11 @@ public interface ITemplateEditingService extends IJCOBridgeReflected {
 
     public ITemplateEditingFrame CreateFrame(TemplatedControlDesigner designer, java.lang.String frameName, java.lang.String[] templateNames) throws Throwable;
 
-    public ITemplateEditingFrame CreateFrame(TemplatedControlDesigner dupParam0, java.lang.String dupParam1, JCRefOut dupParam2) throws Throwable;
+    public ITemplateEditingFrame CreateFrame(TemplatedControlDesigner dupParam0, java.lang.String dupParam1, JCORefOut dupParam2) throws Throwable;
 
     public ITemplateEditingFrame CreateFrame(TemplatedControlDesigner designer, java.lang.String frameName, java.lang.String[] templateNames, Style controlStyle, Style[] templateStyles) throws Throwable;
 
-    public ITemplateEditingFrame CreateFrame(TemplatedControlDesigner dupParam0, java.lang.String dupParam1, JCRefOut dupParam2, Style dupParam3, Style[] dupParam4) throws Throwable;
+    public ITemplateEditingFrame CreateFrame(TemplatedControlDesigner dupParam0, java.lang.String dupParam1, JCORefOut dupParam2, Style dupParam3, Style[] dupParam4) throws Throwable;
 
 
     

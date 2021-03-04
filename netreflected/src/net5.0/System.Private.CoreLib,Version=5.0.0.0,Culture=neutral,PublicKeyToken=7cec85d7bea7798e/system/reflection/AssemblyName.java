@@ -82,6 +82,7 @@ public class AssemblyName extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -263,11 +264,11 @@ public class AssemblyName extends NetObject  {
         }
     }
 
-    public void SetPublicKey(JCRefOut dupParam0) throws Throwable {
+    public void SetPublicKey(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetPublicKey", (Object)dupParam0);
+            classInstance.Invoke("SetPublicKey", (Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,11 +284,11 @@ public class AssemblyName extends NetObject  {
         }
     }
 
-    public void SetPublicKeyToken(JCRefOut dupParam0) throws Throwable {
+    public void SetPublicKeyToken(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetPublicKeyToken", (Object)dupParam0);
+            classInstance.Invoke("SetPublicKeyToken", (Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -162,11 +162,11 @@ public interface _Assembly extends IJCOBridgeReflected {
 
     public Module LoadModule(java.lang.String moduleName, byte[] rawModule) throws Throwable;
 
-    public Module LoadModule(java.lang.String dupParam0, JCRefOut dupParam1) throws Throwable;
+    public Module LoadModule(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable;
 
     public Module LoadModule(java.lang.String moduleName, byte[] rawModule, byte[] rawSymbolStore) throws Throwable;
 
-    public Module LoadModule(java.lang.String dupParam0, JCRefOut dupParam1, JCRefOut dupParam2) throws Throwable;
+    public Module LoadModule(java.lang.String dupParam0, JCORefOut dupParam1, JCORefOut dupParam2) throws Throwable;
 
     public Module[] GetLoadedModules() throws Throwable;
 

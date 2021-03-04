@@ -70,6 +70,7 @@ public class Machine extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -78,6 +79,7 @@ public class Machine extends NetObject  {
         try {
             return bridge.GetEnum(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -97,8 +99,7 @@ public class Machine extends NetObject  {
                 String enumName = NetEnum.GetName(classType, (JCObject)instance);
                 classInstance = enumReflected.fromValue(enumName);
             } catch (Throwable t) {
-                if (JCOBridgeInstance.getDebug())
-                    t.printStackTrace();
+                JCOReflector.writeLog(t);
                 classInstance = enumReflected;
             }
         } else if (instance instanceof JCEnum) {
@@ -112,8 +113,7 @@ public class Machine extends NetObject  {
         try {
             addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
         } catch (Throwable jcne) {
-            if (JCOBridgeInstance.getDebug())
-                jcne.printStackTrace();
+            JCOReflector.writeLog(jcne);
         }
     }
 

@@ -116,11 +116,11 @@ public interface IRawElementProviderAdviseEvents extends IJCOBridgeReflected, IR
 
     public void AdviseEventAdded(int eventId, int[] properties) throws Throwable;
 
-    public void AdviseEventAdded(int dupParam0, JCRefOut dupParam1) throws Throwable;
+    public void AdviseEventAdded(int dupParam0, JCORefOut dupParam1) throws Throwable;
 
     public void AdviseEventRemoved(int eventId, int[] properties) throws Throwable;
 
-    public void AdviseEventRemoved(int dupParam0, JCRefOut dupParam1) throws Throwable;
+    public void AdviseEventRemoved(int dupParam0, JCORefOut dupParam1) throws Throwable;
 
 
     

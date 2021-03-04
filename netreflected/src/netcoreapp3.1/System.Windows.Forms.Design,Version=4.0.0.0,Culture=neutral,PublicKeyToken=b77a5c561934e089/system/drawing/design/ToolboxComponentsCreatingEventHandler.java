@@ -71,6 +71,7 @@ public class ToolboxComponentsCreatingEventHandler extends JCVoidDelegate implem
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -110,8 +111,7 @@ public class ToolboxComponentsCreatingEventHandler extends JCVoidDelegate implem
         }
         catch (Throwable throwableFromJCEvent)
         {
-            if (JCOBridgeInstance.getDebug())
-                throwableFromJCEvent.printStackTrace();
+            JCOReflector.writeLog(throwableFromJCEvent);
         }
     }
 
@@ -130,8 +130,7 @@ public class ToolboxComponentsCreatingEventHandler extends JCVoidDelegate implem
         }
         catch (Throwable throwableFromJCEvent)
         {
-            if (JCOBridgeInstance.getDebug())
-                throwableFromJCEvent.printStackTrace();
+            JCOReflector.writeLog(throwableFromJCEvent);
         }
     }
 

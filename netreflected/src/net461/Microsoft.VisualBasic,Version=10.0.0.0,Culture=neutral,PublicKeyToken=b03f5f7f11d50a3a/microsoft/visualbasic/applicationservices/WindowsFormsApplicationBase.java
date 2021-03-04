@@ -81,6 +81,7 @@ public class WindowsFormsApplicationBase extends ConsoleApplicationBase  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -182,11 +183,11 @@ public class WindowsFormsApplicationBase extends ConsoleApplicationBase  {
         }
     }
 
-    public void Run(JCRefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.net.networkinformation.NetworkInformationException, system.globalization.CultureNotFoundException, system.net.sockets.SocketException, microsoft.visualbasic.applicationservices.NoStartupFormException, system.componentmodel.InvalidAsynchronousStateException, system.componentmodel.InvalidEnumArgumentException, system.AccessViolationException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.FormatException, system.InvalidCastException, system.TypeLoadException, system.runtime.remoting.RemotingException, system.componentmodel.Win32Exception, microsoft.visualbasic.applicationservices.CantStartSingleInstanceException {
+    public void Run(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.NotImplementedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.net.networkinformation.NetworkInformationException, system.globalization.CultureNotFoundException, system.net.sockets.SocketException, microsoft.visualbasic.applicationservices.NoStartupFormException, system.componentmodel.InvalidAsynchronousStateException, system.componentmodel.InvalidEnumArgumentException, system.AccessViolationException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.FormatException, system.InvalidCastException, system.TypeLoadException, system.runtime.remoting.RemotingException, system.componentmodel.Win32Exception, microsoft.visualbasic.applicationservices.CantStartSingleInstanceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Run", (Object)dupParam0);
+            classInstance.Invoke("Run", (Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

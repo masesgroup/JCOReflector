@@ -72,6 +72,7 @@ public class PropertyChangedCallback extends JCVoidDelegate implements IJCVoidEv
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -111,8 +112,7 @@ public class PropertyChangedCallback extends JCVoidDelegate implements IJCVoidEv
         }
         catch (Throwable throwableFromJCEvent)
         {
-            if (JCOBridgeInstance.getDebug())
-                throwableFromJCEvent.printStackTrace();
+            JCOReflector.writeLog(throwableFromJCEvent);
         }
     }
 
@@ -131,8 +131,7 @@ public class PropertyChangedCallback extends JCVoidDelegate implements IJCVoidEv
         }
         catch (Throwable throwableFromJCEvent)
         {
-            if (JCOBridgeInstance.getDebug())
-                throwableFromJCEvent.printStackTrace();
+            JCOReflector.writeLog(throwableFromJCEvent);
         }
     }
 

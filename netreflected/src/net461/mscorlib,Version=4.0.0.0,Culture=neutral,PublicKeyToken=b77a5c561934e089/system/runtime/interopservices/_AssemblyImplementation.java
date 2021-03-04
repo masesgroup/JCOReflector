@@ -86,6 +86,7 @@ public class _AssemblyImplementation extends NetObject implements _Assembly {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -376,11 +377,11 @@ public class _AssemblyImplementation extends NetObject implements _Assembly {
         }
     }
 
-    public Module LoadModule(java.lang.String dupParam0, JCRefOut dupParam1) throws Throwable {
+    public Module LoadModule(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objLoadModule = (JCObject)classInstance.Invoke("LoadModule", dupParam0, dupParam1);
+            JCObject objLoadModule = (JCObject)classInstance.Invoke("LoadModule", dupParam0, dupParam1.getJCRefOut());
             return new Module(objLoadModule);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -398,11 +399,11 @@ public class _AssemblyImplementation extends NetObject implements _Assembly {
         }
     }
 
-    public Module LoadModule(java.lang.String dupParam0, JCRefOut dupParam1, JCRefOut dupParam2) throws Throwable {
+    public Module LoadModule(java.lang.String dupParam0, JCORefOut dupParam1, JCORefOut dupParam2) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objLoadModule = (JCObject)classInstance.Invoke("LoadModule", dupParam0, dupParam1, dupParam2);
+            JCObject objLoadModule = (JCObject)classInstance.Invoke("LoadModule", dupParam0, dupParam1.getJCRefOut(), dupParam2.getJCRefOut());
             return new Module(objLoadModule);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -77,6 +77,7 @@ public class IFolderProjectItemImplementation extends NetObject implements IFold
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -140,11 +141,11 @@ public class IFolderProjectItemImplementation extends NetObject implements IFold
         }
     }
 
-    public IDocumentProjectItem AddDocument(java.lang.String dupParam0, JCRefOut dupParam1) throws Throwable {
+    public IDocumentProjectItem AddDocument(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objAddDocument = (JCObject)classInstance.Invoke("AddDocument", dupParam0, dupParam1);
+            JCObject objAddDocument = (JCObject)classInstance.Invoke("AddDocument", dupParam0, dupParam1.getJCRefOut());
             return new IDocumentProjectItemImplementation(objAddDocument);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

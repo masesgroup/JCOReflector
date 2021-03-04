@@ -73,6 +73,7 @@ public class RSAPKCS1SignatureFormatter extends AsymmetricSignatureFormatter  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -173,12 +174,12 @@ public class RSAPKCS1SignatureFormatter extends AsymmetricSignatureFormatter  {
         }
     }
 
-    public byte[] CreateSignature(JCRefOut dupParam0) throws Throwable, system.ArgumentNullException, system.security.cryptography.CryptographicUnexpectedOperationException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.RankException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException, system.FormatException, system.OverflowException {
+    public byte[] CreateSignature(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.security.cryptography.CryptographicUnexpectedOperationException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.RankException, system.ObjectDisposedException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException, system.FormatException, system.OverflowException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("CreateSignature", (Object)dupParam0);
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("CreateSignature", (Object)dupParam0.getJCRefOut());
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }

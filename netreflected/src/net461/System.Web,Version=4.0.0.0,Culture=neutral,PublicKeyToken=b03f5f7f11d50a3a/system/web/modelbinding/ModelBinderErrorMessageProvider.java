@@ -73,6 +73,7 @@ public class ModelBinderErrorMessageProvider extends JCDelegate implements IJCEv
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -115,8 +116,7 @@ public class ModelBinderErrorMessageProvider extends JCDelegate implements IJCEv
         }
         catch (Throwable throwableFromJCEvent)
         {
-            if (JCOBridgeInstance.getDebug())
-                throwableFromJCEvent.printStackTrace();
+            JCOReflector.writeLog(throwableFromJCEvent);
             return "";
         }
     }
@@ -139,8 +139,7 @@ public class ModelBinderErrorMessageProvider extends JCDelegate implements IJCEv
         }
         catch (Throwable throwableFromJCEvent)
         {
-            if (JCOBridgeInstance.getDebug())
-                throwableFromJCEvent.printStackTrace();
+            JCOReflector.writeLog(throwableFromJCEvent);
             return "";
         }
     }

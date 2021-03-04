@@ -72,6 +72,7 @@ public class SessionIDManager extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -183,7 +184,7 @@ public class SessionIDManager extends NetObject  {
         }
     }
 
-    public java.lang.String GetSessionID(HttpContext context) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.NotSupportedException, system.IndexOutOfRangeException, system.configuration.ConfigurationException, system.InvalidCastException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.threading.ThreadAbortException, system.web.HttpRequestValidationException {
+    public java.lang.String GetSessionID(HttpContext context) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.NotSupportedException, system.IndexOutOfRangeException, system.configuration.ConfigurationException, system.InvalidCastException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.web.HttpRequestValidationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

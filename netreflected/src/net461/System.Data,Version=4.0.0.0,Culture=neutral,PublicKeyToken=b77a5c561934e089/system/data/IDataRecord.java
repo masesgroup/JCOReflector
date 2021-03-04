@@ -135,11 +135,11 @@ public interface IDataRecord extends IJCOBridgeReflected {
 
     public long GetBytes(int i, long fieldOffset, byte[] buffer, int bufferoffset, int length) throws Throwable;
 
-    public long GetBytes(int dupParam0, long dupParam1, JCRefOut dupParam2, int dupParam3, int dupParam4) throws Throwable;
+    public long GetBytes(int dupParam0, long dupParam1, JCORefOut dupParam2, int dupParam3, int dupParam4) throws Throwable;
 
     public long GetChars(int i, long fieldoffset, char[] buffer, int bufferoffset, int length) throws Throwable;
 
-    public long GetChars(int dupParam0, long dupParam1, JCRefOut dupParam2, int dupParam3, int dupParam4) throws Throwable;
+    public long GetChars(int dupParam0, long dupParam1, JCORefOut dupParam2, int dupParam3, int dupParam4) throws Throwable;
 
     public long GetInt64(int i) throws Throwable;
 

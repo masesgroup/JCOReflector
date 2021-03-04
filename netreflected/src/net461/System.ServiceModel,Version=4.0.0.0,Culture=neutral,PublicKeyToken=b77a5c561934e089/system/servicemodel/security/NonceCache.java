@@ -72,6 +72,7 @@ public class NonceCache extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -145,11 +146,11 @@ public class NonceCache extends NetObject  {
         }
     }
 
-    public boolean CheckNonce(JCRefOut dupParam0) throws Throwable {
+    public boolean CheckNonce(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("CheckNonce", (Object)dupParam0);
+            return (boolean)classInstance.Invoke("CheckNonce", (Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,11 +166,11 @@ public class NonceCache extends NetObject  {
         }
     }
 
-    public boolean TryAddNonce(JCRefOut dupParam0) throws Throwable {
+    public boolean TryAddNonce(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("TryAddNonce", (Object)dupParam0);
+            return (boolean)classInstance.Invoke("TryAddNonce", (Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

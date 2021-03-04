@@ -120,7 +120,7 @@ public interface ISymbolMethod extends IJCOBridgeReflected {
     
     public boolean GetSourceStartEnd(ISymbolDocument[] docs, int[] lines, int[] columns) throws Throwable;
 
-    public boolean GetSourceStartEnd(ISymbolDocument[] dupParam0, JCRefOut dupParam1, JCRefOut dupParam2) throws Throwable;
+    public boolean GetSourceStartEnd(ISymbolDocument[] dupParam0, JCORefOut dupParam1, JCORefOut dupParam2) throws Throwable;
 
     public int GetOffset(ISymbolDocument document, int line, int column) throws Throwable;
 
@@ -134,7 +134,7 @@ public interface ISymbolMethod extends IJCOBridgeReflected {
 
     public void GetSequencePoints(int[] offsets, ISymbolDocument[] documents, int[] lines, int[] columns, int[] endLines, int[] endColumns) throws Throwable;
 
-    public void GetSequencePoints(JCRefOut dupParam0, ISymbolDocument[] dupParam1, JCRefOut dupParam2, JCRefOut dupParam3, JCRefOut dupParam4, JCRefOut dupParam5) throws Throwable;
+    public void GetSequencePoints(JCORefOut dupParam0, ISymbolDocument[] dupParam1, JCORefOut dupParam2, JCORefOut dupParam3, JCORefOut dupParam4, JCORefOut dupParam5) throws Throwable;
 
 
     

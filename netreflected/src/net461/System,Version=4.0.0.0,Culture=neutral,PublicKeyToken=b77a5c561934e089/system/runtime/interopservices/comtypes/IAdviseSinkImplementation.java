@@ -73,6 +73,7 @@ public class IAdviseSinkImplementation extends NetObject implements IAdviseSink 
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }

@@ -73,6 +73,7 @@ public class DbGeometry extends NetObject  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -280,11 +281,11 @@ public class DbGeometry extends NetObject  {
         }
     }
 
-    public static DbGeometry FromBinary(JCRefOut dupParam0) throws Throwable, system.ArgumentNullException {
+    public static DbGeometry FromBinary(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objFromBinary = (JCObject)classType.Invoke("FromBinary", (Object)dupParam0);
+            JCObject objFromBinary = (JCObject)classType.Invoke("FromBinary", (Object)dupParam0.getJCRefOut());
             return new DbGeometry(objFromBinary);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -302,11 +303,11 @@ public class DbGeometry extends NetObject  {
         }
     }
 
-    public static DbGeometry FromBinary(JCRefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
+    public static DbGeometry FromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objFromBinary = (JCObject)classType.Invoke("FromBinary", dupParam0, dupParam1);
+            JCObject objFromBinary = (JCObject)classType.Invoke("FromBinary", dupParam0.getJCRefOut(), dupParam1);
             return new DbGeometry(objFromBinary);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -368,11 +369,11 @@ public class DbGeometry extends NetObject  {
         }
     }
 
-    public static DbGeometry GeometryCollectionFromBinary(JCRefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
+    public static DbGeometry GeometryCollectionFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGeometryCollectionFromBinary = (JCObject)classType.Invoke("GeometryCollectionFromBinary", dupParam0, dupParam1);
+            JCObject objGeometryCollectionFromBinary = (JCObject)classType.Invoke("GeometryCollectionFromBinary", dupParam0.getJCRefOut(), dupParam1);
             return new DbGeometry(objGeometryCollectionFromBinary);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -423,11 +424,11 @@ public class DbGeometry extends NetObject  {
         }
     }
 
-    public static DbGeometry LineFromBinary(JCRefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
+    public static DbGeometry LineFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objLineFromBinary = (JCObject)classType.Invoke("LineFromBinary", dupParam0, dupParam1);
+            JCObject objLineFromBinary = (JCObject)classType.Invoke("LineFromBinary", dupParam0.getJCRefOut(), dupParam1);
             return new DbGeometry(objLineFromBinary);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -456,11 +457,11 @@ public class DbGeometry extends NetObject  {
         }
     }
 
-    public static DbGeometry MultiLineFromBinary(JCRefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
+    public static DbGeometry MultiLineFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objMultiLineFromBinary = (JCObject)classType.Invoke("MultiLineFromBinary", dupParam0, dupParam1);
+            JCObject objMultiLineFromBinary = (JCObject)classType.Invoke("MultiLineFromBinary", dupParam0.getJCRefOut(), dupParam1);
             return new DbGeometry(objMultiLineFromBinary);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -489,11 +490,11 @@ public class DbGeometry extends NetObject  {
         }
     }
 
-    public static DbGeometry MultiPointFromBinary(JCRefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
+    public static DbGeometry MultiPointFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objMultiPointFromBinary = (JCObject)classType.Invoke("MultiPointFromBinary", dupParam0, dupParam1);
+            JCObject objMultiPointFromBinary = (JCObject)classType.Invoke("MultiPointFromBinary", dupParam0.getJCRefOut(), dupParam1);
             return new DbGeometry(objMultiPointFromBinary);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -522,11 +523,11 @@ public class DbGeometry extends NetObject  {
         }
     }
 
-    public static DbGeometry MultiPolygonFromBinary(JCRefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
+    public static DbGeometry MultiPolygonFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objMultiPolygonFromBinary = (JCObject)classType.Invoke("MultiPolygonFromBinary", dupParam0, dupParam1);
+            JCObject objMultiPolygonFromBinary = (JCObject)classType.Invoke("MultiPolygonFromBinary", dupParam0.getJCRefOut(), dupParam1);
             return new DbGeometry(objMultiPolygonFromBinary);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -566,11 +567,11 @@ public class DbGeometry extends NetObject  {
         }
     }
 
-    public static DbGeometry PointFromBinary(JCRefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
+    public static DbGeometry PointFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objPointFromBinary = (JCObject)classType.Invoke("PointFromBinary", dupParam0, dupParam1);
+            JCObject objPointFromBinary = (JCObject)classType.Invoke("PointFromBinary", dupParam0.getJCRefOut(), dupParam1);
             return new DbGeometry(objPointFromBinary);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -599,11 +600,11 @@ public class DbGeometry extends NetObject  {
         }
     }
 
-    public static DbGeometry PolygonFromBinary(JCRefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
+    public static DbGeometry PolygonFromBinary(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objPolygonFromBinary = (JCObject)classType.Invoke("PolygonFromBinary", dupParam0, dupParam1);
+            JCObject objPolygonFromBinary = (JCObject)classType.Invoke("PolygonFromBinary", dupParam0.getJCRefOut(), dupParam1);
             return new DbGeometry(objPolygonFromBinary);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

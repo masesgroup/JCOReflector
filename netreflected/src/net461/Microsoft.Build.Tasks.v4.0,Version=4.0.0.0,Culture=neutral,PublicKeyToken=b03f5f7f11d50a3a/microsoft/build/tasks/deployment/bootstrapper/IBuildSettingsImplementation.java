@@ -73,6 +73,7 @@ public class IBuildSettingsImplementation extends NetObject implements IBuildSet
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }

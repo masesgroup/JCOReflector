@@ -116,7 +116,7 @@ public interface IFragmentCapableXmlDictionaryWriter extends IJCOBridgeReflected
 
     public void WriteFragment(byte[] buffer, int offset, int count) throws Throwable;
 
-    public void WriteFragment(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable;
+    public void WriteFragment(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable;
 
 
     

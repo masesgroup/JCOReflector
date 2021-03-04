@@ -71,6 +71,7 @@ public class DataGridViewAutoSizeColumnModeEventHandler extends JCVoidDelegate i
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -110,8 +111,7 @@ public class DataGridViewAutoSizeColumnModeEventHandler extends JCVoidDelegate i
         }
         catch (Throwable throwableFromJCEvent)
         {
-            if (JCOBridgeInstance.getDebug())
-                throwableFromJCEvent.printStackTrace();
+            JCOReflector.writeLog(throwableFromJCEvent);
         }
     }
 
@@ -130,8 +130,7 @@ public class DataGridViewAutoSizeColumnModeEventHandler extends JCVoidDelegate i
         }
         catch (Throwable throwableFromJCEvent)
         {
-            if (JCOBridgeInstance.getDebug())
-                throwableFromJCEvent.printStackTrace();
+            JCOReflector.writeLog(throwableFromJCEvent);
         }
     }
 

@@ -70,6 +70,7 @@ public class UpdateSourceExceptionFilterCallback extends JCDelegate implements I
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -111,8 +112,7 @@ public class UpdateSourceExceptionFilterCallback extends JCDelegate implements I
         }
         catch (Throwable throwableFromJCEvent)
         {
-            if (JCOBridgeInstance.getDebug())
-                throwableFromJCEvent.printStackTrace();
+            JCOReflector.writeLog(throwableFromJCEvent);
 			return null;
         }
     }
@@ -134,8 +134,7 @@ public class UpdateSourceExceptionFilterCallback extends JCDelegate implements I
         }
         catch (Throwable throwableFromJCEvent)
         {
-            if (JCOBridgeInstance.getDebug())
-                throwableFromJCEvent.printStackTrace();
+            JCOReflector.writeLog(throwableFromJCEvent);
 			return null;
         }
     }

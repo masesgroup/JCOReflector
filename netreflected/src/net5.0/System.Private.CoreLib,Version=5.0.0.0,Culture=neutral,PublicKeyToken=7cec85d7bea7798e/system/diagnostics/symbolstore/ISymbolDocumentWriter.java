@@ -112,11 +112,11 @@ public interface ISymbolDocumentWriter extends IJCOBridgeReflected {
     
     public void SetCheckSum(Guid algorithmId, byte[] checkSum) throws Throwable;
 
-    public void SetCheckSum(Guid dupParam0, JCRefOut dupParam1) throws Throwable;
+    public void SetCheckSum(Guid dupParam0, JCORefOut dupParam1) throws Throwable;
 
     public void SetSource(byte[] source) throws Throwable;
 
-    public void SetSource(JCRefOut dupParam0) throws Throwable;
+    public void SetSource(JCORefOut dupParam0) throws Throwable;
 
 
     

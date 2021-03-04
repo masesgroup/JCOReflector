@@ -74,6 +74,7 @@ public class RSAPKCS1KeyExchangeDeformatter extends AsymmetricKeyExchangeDeforma
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -174,12 +175,12 @@ public class RSAPKCS1KeyExchangeDeformatter extends AsymmetricKeyExchangeDeforma
         }
     }
 
-    public byte[] DecryptKeyExchange(JCRefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.security.cryptography.CryptographicUnexpectedOperationException {
+    public byte[] DecryptKeyExchange(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.security.cryptography.CryptographicUnexpectedOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("DecryptKeyExchange", (Object)dupParam0);
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("DecryptKeyExchange", (Object)dupParam0.getJCRefOut());
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }

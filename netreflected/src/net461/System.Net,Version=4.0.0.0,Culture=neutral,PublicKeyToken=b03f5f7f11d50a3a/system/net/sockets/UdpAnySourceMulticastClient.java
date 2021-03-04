@@ -76,6 +76,7 @@ public class UdpAnySourceMulticastClient extends NetObject implements AutoClosea
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -173,11 +174,11 @@ public class UdpAnySourceMulticastClient extends NetObject implements AutoClosea
         }
     }
 
-    public IAsyncResult BeginReceiveFromGroup(JCRefOut dupParam0, int dupParam1, int dupParam2, AsyncCallback dupParam3, NetObject dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.net.sockets.SocketException {
+    public IAsyncResult BeginReceiveFromGroup(JCORefOut dupParam0, int dupParam1, int dupParam2, AsyncCallback dupParam3, NetObject dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objBeginReceiveFromGroup = (JCObject)classInstance.Invoke("BeginReceiveFromGroup", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance());
+            JCObject objBeginReceiveFromGroup = (JCObject)classInstance.Invoke("BeginReceiveFromGroup", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance());
             return new IAsyncResultImplementation(objBeginReceiveFromGroup);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -195,11 +196,11 @@ public class UdpAnySourceMulticastClient extends NetObject implements AutoClosea
         }
     }
 
-    public IAsyncResult BeginSendTo(JCRefOut dupParam0, int dupParam1, int dupParam2, IPEndPoint dupParam3, AsyncCallback dupParam4, NetObject dupParam5) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.net.sockets.SocketException {
+    public IAsyncResult BeginSendTo(JCORefOut dupParam0, int dupParam1, int dupParam2, IPEndPoint dupParam3, AsyncCallback dupParam4, NetObject dupParam5) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objBeginSendTo = (JCObject)classInstance.Invoke("BeginSendTo", dupParam0, dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4, dupParam5 == null ? null : dupParam5.getJCOInstance());
+            JCObject objBeginSendTo = (JCObject)classInstance.Invoke("BeginSendTo", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4, dupParam5 == null ? null : dupParam5.getJCOInstance());
             return new IAsyncResultImplementation(objBeginSendTo);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -217,11 +218,11 @@ public class UdpAnySourceMulticastClient extends NetObject implements AutoClosea
         }
     }
 
-    public IAsyncResult BeginSendToGroup(JCRefOut dupParam0, int dupParam1, int dupParam2, AsyncCallback dupParam3, NetObject dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.net.sockets.SocketException {
+    public IAsyncResult BeginSendToGroup(JCORefOut dupParam0, int dupParam1, int dupParam2, AsyncCallback dupParam3, NetObject dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objBeginSendToGroup = (JCObject)classInstance.Invoke("BeginSendToGroup", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance());
+            JCObject objBeginSendToGroup = (JCObject)classInstance.Invoke("BeginSendToGroup", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance());
             return new IAsyncResultImplementation(objBeginSendToGroup);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

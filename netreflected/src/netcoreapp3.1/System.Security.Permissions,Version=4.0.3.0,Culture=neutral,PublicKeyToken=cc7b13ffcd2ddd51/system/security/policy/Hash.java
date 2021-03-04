@@ -77,6 +77,7 @@ public class Hash extends EvidenceBase  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -182,11 +183,11 @@ public class Hash extends EvidenceBase  {
         }
     }
 
-    public static Hash CreateMD5(JCRefOut dupParam0) throws Throwable {
+    public static Hash CreateMD5(JCORefOut dupParam0) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateMD5 = (JCObject)classType.Invoke("CreateMD5", (Object)dupParam0);
+            JCObject objCreateMD5 = (JCObject)classType.Invoke("CreateMD5", (Object)dupParam0.getJCRefOut());
             return new Hash(objCreateMD5);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -204,11 +205,11 @@ public class Hash extends EvidenceBase  {
         }
     }
 
-    public static Hash CreateSHA1(JCRefOut dupParam0) throws Throwable {
+    public static Hash CreateSHA1(JCORefOut dupParam0) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateSHA1 = (JCObject)classType.Invoke("CreateSHA1", (Object)dupParam0);
+            JCObject objCreateSHA1 = (JCObject)classType.Invoke("CreateSHA1", (Object)dupParam0.getJCRefOut());
             return new Hash(objCreateSHA1);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -226,11 +227,11 @@ public class Hash extends EvidenceBase  {
         }
     }
 
-    public static Hash CreateSHA256(JCRefOut dupParam0) throws Throwable {
+    public static Hash CreateSHA256(JCORefOut dupParam0) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateSHA256 = (JCObject)classType.Invoke("CreateSHA256", (Object)dupParam0);
+            JCObject objCreateSHA256 = (JCObject)classType.Invoke("CreateSHA256", (Object)dupParam0.getJCRefOut());
             return new Hash(objCreateSHA256);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -80,6 +80,7 @@ public class PersonalizationProvider extends ProviderBase  {
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -163,11 +164,11 @@ public class PersonalizationProvider extends ProviderBase  {
         }
     }
 
-    public int ResetState(PersonalizationScope dupParam0, JCRefOut dupParam1, JCRefOut dupParam2) throws Throwable {
+    public int ResetState(PersonalizationScope dupParam0, JCORefOut dupParam1, JCORefOut dupParam2) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("ResetState", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2);
+            return (int)classInstance.Invoke("ResetState", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut(), dupParam2.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

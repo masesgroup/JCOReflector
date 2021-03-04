@@ -72,6 +72,7 @@ public class _AssemblyBuilderImplementation extends NetObject implements _Assemb
         try {
             return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }

@@ -24,13 +24,35 @@
 
 package mscorlib;
 
-import system._;
- 
-object HelloNet extends App {
-	try {
-		Environment.GetLogicalDrives().foreach(Console.WriteLine(_))
-		Environment.Exit(0);
-	} catch {
-		case tre: Throwable => tre.printStackTrace();
+import org.mases.jcobridge.netreflection._
+import system._
+import system.io._
+import system.text.Encoding
+
+object HelloNet {
+	def main(args: scala.Array[String]): Unit = {
+		JCOReflector.setCommandLineArgs(args)
+		try {
+			val filename = "test.txt"
+			var result = ""
+			if (!File.Exists(filename)) File.WriteAllText(filename, "First Java string")
+			result = File.ReadAllText(filename)
+			Console.WriteLine(result)
+			result = result + " Java Execution"
+			File.WriteAllText(filename, result)
+			val byteCount = Encoding.getASCII.GetByteCount(result)
+			val resByte = File.ReadAllBytes(filename)
+			if (byteCount == resByte.length) Console.WriteLine("{0} and result have equals array lengths. The length is {1}", new NetObject(filename), new NetObject(byteCount))
+			Console.WriteLine("Writing array on file.")
+			File.WriteAllBytes("test2.txt", resByte)
+			Console.WriteLine(result)
+			Console.WriteLine("Exiting")
+			Environment.Exit(0)
+		} catch {
+			case fnfe: FileNotFoundException =>
+				fnfe.printStackTrace()
+			case tre: Throwable =>
+				tre.printStackTrace()
+		}
 	}
 }

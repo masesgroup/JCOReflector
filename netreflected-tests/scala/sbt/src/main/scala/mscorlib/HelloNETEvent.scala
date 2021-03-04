@@ -24,39 +24,40 @@
 
 package mscorlib;
 
-import org.mases.jcobridge.netreflection.*;
+import org.mases.jcobridge.netreflection._
+import system.Console
+import system.Environment
+import system.threading.Thread
+import system.threading.ThreadStart
+import system.timers.Timer
 
-import system.Environment;
-import system.threading.Thread;
-import system.threading.ThreadStart;
-import system.timers.Timer;
-
-public class HelloNETEvent {
-    public static void main(String[] args) {
-        JCOReflector.setCommandLineArgs(args);
-        try (Timer timer = new Timer();){
-            TimerElapsed elapsed = new TimerElapsed();
-            
-            timer.addElapsed(elapsed);
-            timer.setInterval(1000);
-
-            Thread thread = new Thread(new ThreadStart() {
-                public void Invoke() {
-                    try {
-                        System.out.println("Running thread.");
-                        timer.setEnabled(true);
-                    } catch (Throwable e) {
-                        e.printStackTrace();
-                    }
-                }
-            });
-            thread.Start();
-            Thread.Sleep(10000);
-            timer.Stop();
-            timer.removeElapsed(elapsed);
-            Environment.Exit(0);
-        } catch (Throwable tre) {
-            tre.printStackTrace();
+object HelloNETEvent {
+  def main(args: scala.Array[String]): Unit = {
+    JCOReflector.setCommandLineArgs(args)
+    val timer = new Timer
+    try {
+      val elapsed = new TimerElapsed
+      timer.addElapsed(elapsed)
+      timer.setInterval(1000)
+      val thread = new Thread(new ThreadStart() {
+        override def Invoke(): Unit = {
+          try {
+            Console.WriteLine("Running thread.")
+            timer.setEnabled(true)
+          } catch {
+            case e: Throwable =>
+              e.printStackTrace()
+          }
         }
-    }
+      })
+      thread.Start()
+      Thread.Sleep(10000)
+      timer.Stop()
+      timer.removeElapsed(elapsed)
+      Environment.Exit(0)
+    } catch {
+      case tre: Throwable =>
+        tre.printStackTrace()
+    } finally if (timer != null) timer.close()
+  }
 }

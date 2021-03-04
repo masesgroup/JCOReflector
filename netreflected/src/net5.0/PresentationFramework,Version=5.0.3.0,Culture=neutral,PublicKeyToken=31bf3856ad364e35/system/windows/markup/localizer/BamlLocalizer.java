@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -74,7 +74,7 @@ public class BamlLocalizer extends NetObject  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -106,7 +106,7 @@ public class BamlLocalizer extends NetObject  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -140,7 +140,7 @@ public class BamlLocalizer extends NetObject  {
     public BamlLocalizer(Stream source) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ApplicationException, system.windows.markup.XamlParseException, system.componentmodel.InvalidEnumArgumentException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(source == null ? null : source.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -150,7 +150,7 @@ public class BamlLocalizer extends NetObject  {
     public BamlLocalizer(Stream source, BamlLocalizabilityResolver resolver) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.collections.generic.KeyNotFoundException, system.windows.markup.XamlParseException, system.ApplicationException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(source == null ? null : source.getJCOInstance(), resolver == null ? null : resolver.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -160,7 +160,7 @@ public class BamlLocalizer extends NetObject  {
     public BamlLocalizer(Stream source, BamlLocalizabilityResolver resolver, TextReader comments) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.collections.generic.KeyNotFoundException, system.windows.markup.XamlParseException, system.OutOfMemoryException, system.ApplicationException, system.componentmodel.InvalidEnumArgumentException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(source == null ? null : source.getJCOInstance(), resolver == null ? null : resolver.getJCOInstance(), comments == null ? null : comments.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

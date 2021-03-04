@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -69,7 +69,7 @@ public class BuildMethod extends JCDelegate implements IJCEventEmit, IJCOBridgeR
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -85,7 +85,7 @@ public class BuildMethod extends JCDelegate implements IJCEventEmit, IJCOBridgeR
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -137,16 +137,16 @@ public class BuildMethod extends JCDelegate implements IJCEventEmit, IJCOBridgeR
     }
 
     public BuildMethod() {
-        super(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+        super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
     }
 
     public BuildMethod(IBuildMethod instance) {
-        super(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+        super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         callerInstance = instance;
     }
 
     public BuildMethod(Object instance) throws Throwable {
-        super(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+        super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         if (instance == null) throw new IllegalArgumentException("Instance cannot be null");
         if (instance instanceof IBuildMethod) {
             callerInstance = (IBuildMethod) instance;
@@ -165,7 +165,7 @@ public class BuildMethod extends JCDelegate implements IJCEventEmit, IJCOBridgeR
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public Control METHOD_JAVA_NAME() throws Throwable {
+    public Control DynamicInvoke() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

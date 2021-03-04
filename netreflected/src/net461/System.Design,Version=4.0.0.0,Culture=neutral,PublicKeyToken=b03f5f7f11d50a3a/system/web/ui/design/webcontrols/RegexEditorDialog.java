@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -72,7 +72,7 @@ public class RegexEditorDialog extends Form  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -104,7 +104,7 @@ public class RegexEditorDialog extends Form  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -138,7 +138,7 @@ public class RegexEditorDialog extends Form  {
     public RegexEditorDialog(ISite site) throws Throwable, system.configuration.ConfigurationErrorsException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.NotSupportedException, system.security.SecurityException, system.componentmodel.InvalidEnumArgumentException, system.collections.generic.KeyNotFoundException, system.NotImplementedException, system.OverflowException, system.MulticastNotSupportedException, system.RankException, system.NullReferenceException, system.InvalidCastException, system.FormatException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(site == null ? null : site.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

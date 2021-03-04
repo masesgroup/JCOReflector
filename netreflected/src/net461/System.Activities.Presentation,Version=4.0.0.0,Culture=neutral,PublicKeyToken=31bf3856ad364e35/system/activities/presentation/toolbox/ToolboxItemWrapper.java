@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -71,7 +71,7 @@ public class ToolboxItemWrapper extends NetObject  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -103,7 +103,7 @@ public class ToolboxItemWrapper extends NetObject  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -134,7 +134,7 @@ public class ToolboxItemWrapper extends NetObject  {
     public ToolboxItemWrapper() throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.MulticastNotSupportedException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -144,7 +144,7 @@ public class ToolboxItemWrapper extends NetObject  {
     public ToolboxItemWrapper(java.lang.String toolName, java.lang.String assemblyName, java.lang.String bitmapName, java.lang.String displayName) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.NotSupportedException, system.OutOfMemoryException, system.io.IOException, system.collections.generic.KeyNotFoundException, system.io.FileNotFoundException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(toolName, assemblyName, bitmapName, displayName));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -154,7 +154,7 @@ public class ToolboxItemWrapper extends NetObject  {
     public ToolboxItemWrapper(NetType toolType) throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(toolType == null ? null : toolType.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -164,7 +164,7 @@ public class ToolboxItemWrapper extends NetObject  {
     public ToolboxItemWrapper(NetType toolType, java.lang.String displayName) throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(toolType == null ? null : toolType.getJCOInstance(), displayName));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -174,7 +174,7 @@ public class ToolboxItemWrapper extends NetObject  {
     public ToolboxItemWrapper(NetType toolType, java.lang.String bitmapName, java.lang.String displayName) throws Throwable, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentException, system.MulticastNotSupportedException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(toolType == null ? null : toolType.getJCOInstance(), bitmapName, displayName));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

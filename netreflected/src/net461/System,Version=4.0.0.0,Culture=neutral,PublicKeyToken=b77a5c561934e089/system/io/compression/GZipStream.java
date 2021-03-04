@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -76,7 +76,7 @@ public class GZipStream extends Stream  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -108,7 +108,7 @@ public class GZipStream extends Stream  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -142,7 +142,7 @@ public class GZipStream extends Stream  {
     public GZipStream(Stream stream, CompressionLevel compressionLevel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.SystemException, system.NotSupportedException, system.threading.SemaphoreFullException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(stream == null ? null : stream.getJCOInstance(), compressionLevel == null ? null : compressionLevel.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -152,7 +152,7 @@ public class GZipStream extends Stream  {
     public GZipStream(Stream stream, CompressionLevel compressionLevel, boolean leaveOpen) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.SystemException, system.NotSupportedException, system.threading.tasks.TaskSchedulerException, system.threading.SemaphoreFullException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(stream == null ? null : stream.getJCOInstance(), compressionLevel == null ? null : compressionLevel.getJCOInstance(), leaveOpen));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -162,7 +162,7 @@ public class GZipStream extends Stream  {
     public GZipStream(Stream stream, CompressionMode mode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.SystemException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.threading.SemaphoreFullException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(stream == null ? null : stream.getJCOInstance(), mode == null ? null : mode.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -172,7 +172,7 @@ public class GZipStream extends Stream  {
     public GZipStream(Stream stream, CompressionMode mode, boolean leaveOpen) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.SystemException, system.threading.ThreadAbortException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.threading.SemaphoreFullException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(stream == null ? null : stream.getJCOInstance(), mode == null ? null : mode.getJCOInstance(), leaveOpen));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

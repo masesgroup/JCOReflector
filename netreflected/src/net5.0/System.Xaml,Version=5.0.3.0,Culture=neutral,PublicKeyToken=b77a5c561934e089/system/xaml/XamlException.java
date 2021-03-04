@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -71,7 +71,7 @@ public class XamlException extends NetException {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException jce) {
             JCOReflector.writeLog(jce);
             return null;
@@ -121,7 +121,7 @@ public class XamlException extends NetException {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -152,7 +152,7 @@ public class XamlException extends NetException {
     public XamlException(java.lang.String message, NetException innerException, int lineNumber, int linePosition) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(message, innerException == null ? null : innerException.getJCOInstance(), lineNumber, linePosition));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

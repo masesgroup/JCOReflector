@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -70,7 +70,7 @@ public class ComSourceInterfacesAttribute extends Attribute  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -102,7 +102,7 @@ public class ComSourceInterfacesAttribute extends Attribute  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -136,7 +136,7 @@ public class ComSourceInterfacesAttribute extends Attribute  {
     public ComSourceInterfacesAttribute(java.lang.String sourceInterfaces) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(sourceInterfaces));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -146,7 +146,7 @@ public class ComSourceInterfacesAttribute extends Attribute  {
     public ComSourceInterfacesAttribute(NetType sourceInterface) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(sourceInterface == null ? null : sourceInterface.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -156,7 +156,7 @@ public class ComSourceInterfacesAttribute extends Attribute  {
     public ComSourceInterfacesAttribute(NetType sourceInterface1, NetType sourceInterface2) throws Throwable, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(sourceInterface1 == null ? null : sourceInterface1.getJCOInstance(), sourceInterface2 == null ? null : sourceInterface2.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -166,7 +166,7 @@ public class ComSourceInterfacesAttribute extends Attribute  {
     public ComSourceInterfacesAttribute(NetType sourceInterface1, NetType sourceInterface2, NetType sourceInterface3) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(sourceInterface1 == null ? null : sourceInterface1.getJCOInstance(), sourceInterface2 == null ? null : sourceInterface2.getJCOInstance(), sourceInterface3 == null ? null : sourceInterface3.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -176,7 +176,7 @@ public class ComSourceInterfacesAttribute extends Attribute  {
     public ComSourceInterfacesAttribute(NetType sourceInterface1, NetType sourceInterface2, NetType sourceInterface3, NetType sourceInterface4) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(sourceInterface1 == null ? null : sourceInterface1.getJCOInstance(), sourceInterface2 == null ? null : sourceInterface2.getJCOInstance(), sourceInterface3 == null ? null : sourceInterface3.getJCOInstance(), sourceInterface4 == null ? null : sourceInterface4.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

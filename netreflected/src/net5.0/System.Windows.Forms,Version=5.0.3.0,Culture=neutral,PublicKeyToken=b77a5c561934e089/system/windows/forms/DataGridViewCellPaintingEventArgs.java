@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -77,7 +77,7 @@ public class DataGridViewCellPaintingEventArgs extends HandledEventArgs  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -109,7 +109,7 @@ public class DataGridViewCellPaintingEventArgs extends HandledEventArgs  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -143,7 +143,7 @@ public class DataGridViewCellPaintingEventArgs extends HandledEventArgs  {
     public DataGridViewCellPaintingEventArgs(DataGridView dataGridView, Graphics graphics, Rectangle clipBounds, Rectangle cellBounds, int rowIndex, int columnIndex, DataGridViewElementStates cellState, NetObject value, NetObject formattedValue, java.lang.String errorText, DataGridViewCellStyle cellStyle, DataGridViewAdvancedBorderStyle advancedBorderStyle, DataGridViewPaintParts paintParts) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(dataGridView == null ? null : dataGridView.getJCOInstance(), graphics == null ? null : graphics.getJCOInstance(), clipBounds == null ? null : clipBounds.getJCOInstance(), cellBounds == null ? null : cellBounds.getJCOInstance(), rowIndex, columnIndex, cellState == null ? null : cellState.getJCOInstance(), value == null ? null : value.getJCOInstance(), formattedValue == null ? null : formattedValue.getJCOInstance(), errorText, cellStyle == null ? null : cellStyle.getJCOInstance(), advancedBorderStyle == null ? null : advancedBorderStyle.getJCOInstance(), paintParts == null ? null : paintParts.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

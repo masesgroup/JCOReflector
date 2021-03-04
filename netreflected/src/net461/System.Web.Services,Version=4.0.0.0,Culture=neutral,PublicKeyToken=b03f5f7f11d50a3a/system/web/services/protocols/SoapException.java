@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -75,7 +75,7 @@ public class SoapException extends SystemException {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException jce) {
             JCOReflector.writeLog(jce);
             return null;
@@ -125,7 +125,7 @@ public class SoapException extends SystemException {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -156,7 +156,7 @@ public class SoapException extends SystemException {
     public SoapException(java.lang.String message, XmlQualifiedName code) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(message, code == null ? null : code.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -166,7 +166,7 @@ public class SoapException extends SystemException {
     public SoapException(java.lang.String message, XmlQualifiedName code, NetException innerException) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(message, code == null ? null : code.getJCOInstance(), innerException == null ? null : innerException.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -176,7 +176,7 @@ public class SoapException extends SystemException {
     public SoapException(java.lang.String message, XmlQualifiedName code, java.lang.String actor) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(message, code == null ? null : code.getJCOInstance(), actor));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -186,7 +186,7 @@ public class SoapException extends SystemException {
     public SoapException(java.lang.String message, XmlQualifiedName code, java.lang.String actor, NetException innerException) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(message, code == null ? null : code.getJCOInstance(), actor, innerException == null ? null : innerException.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -196,7 +196,7 @@ public class SoapException extends SystemException {
     public SoapException(java.lang.String message, XmlQualifiedName code, java.lang.String actor, java.lang.String role, java.lang.String lang, XmlNode detail, SoapFaultSubCode subCode, NetException innerException) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(message, code == null ? null : code.getJCOInstance(), actor, role, lang, detail == null ? null : detail.getJCOInstance(), subCode == null ? null : subCode.getJCOInstance(), innerException == null ? null : innerException.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -206,7 +206,7 @@ public class SoapException extends SystemException {
     public SoapException(java.lang.String message, XmlQualifiedName code, java.lang.String actor, java.lang.String role, XmlNode detail, SoapFaultSubCode subCode, NetException innerException) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(message, code == null ? null : code.getJCOInstance(), actor, role, detail == null ? null : detail.getJCOInstance(), subCode == null ? null : subCode.getJCOInstance(), innerException == null ? null : innerException.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -216,7 +216,7 @@ public class SoapException extends SystemException {
     public SoapException(java.lang.String message, XmlQualifiedName code, java.lang.String actor, XmlNode detail) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(message, code == null ? null : code.getJCOInstance(), actor, detail == null ? null : detail.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -226,7 +226,7 @@ public class SoapException extends SystemException {
     public SoapException(java.lang.String message, XmlQualifiedName code, java.lang.String actor, XmlNode detail, NetException innerException) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(message, code == null ? null : code.getJCOInstance(), actor, detail == null ? null : detail.getJCOInstance(), innerException == null ? null : innerException.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -236,7 +236,7 @@ public class SoapException extends SystemException {
     public SoapException(java.lang.String message, XmlQualifiedName code, SoapFaultSubCode subCode) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(message, code == null ? null : code.getJCOInstance(), subCode == null ? null : subCode.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

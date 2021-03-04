@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -73,7 +73,7 @@ public class X509SubjectKeyIdentifierExtension extends X509Extension  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -105,7 +105,7 @@ public class X509SubjectKeyIdentifierExtension extends X509Extension  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -136,7 +136,7 @@ public class X509SubjectKeyIdentifierExtension extends X509Extension  {
     public X509SubjectKeyIdentifierExtension() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -146,7 +146,7 @@ public class X509SubjectKeyIdentifierExtension extends X509Extension  {
     public X509SubjectKeyIdentifierExtension(byte[] subjectKeyIdentifier, boolean critical) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(subjectKeyIdentifier, critical));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -156,7 +156,7 @@ public class X509SubjectKeyIdentifierExtension extends X509Extension  {
     public X509SubjectKeyIdentifierExtension(AsnEncodedData encodedSubjectKeyIdentifier, boolean critical) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(encodedSubjectKeyIdentifier == null ? null : encodedSubjectKeyIdentifier.getJCOInstance(), critical));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -166,7 +166,7 @@ public class X509SubjectKeyIdentifierExtension extends X509Extension  {
     public X509SubjectKeyIdentifierExtension(PublicKey key, boolean critical) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.NotSupportedException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(key == null ? null : key.getJCOInstance(), critical));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -176,7 +176,7 @@ public class X509SubjectKeyIdentifierExtension extends X509Extension  {
     public X509SubjectKeyIdentifierExtension(PublicKey key, X509SubjectKeyIdentifierHashAlgorithm algorithm, boolean critical) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(key == null ? null : key.getJCOInstance(), algorithm == null ? null : algorithm.getJCOInstance(), critical));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -186,7 +186,7 @@ public class X509SubjectKeyIdentifierExtension extends X509Extension  {
     public X509SubjectKeyIdentifierExtension(java.lang.String subjectKeyIdentifier, boolean critical) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(subjectKeyIdentifier, critical));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

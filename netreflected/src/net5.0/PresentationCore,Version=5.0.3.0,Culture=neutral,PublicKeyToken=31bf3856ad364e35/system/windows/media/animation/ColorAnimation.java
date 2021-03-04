@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -76,7 +76,7 @@ public class ColorAnimation extends ColorAnimationBase  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -108,7 +108,7 @@ public class ColorAnimation extends ColorAnimationBase  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -139,7 +139,7 @@ public class ColorAnimation extends ColorAnimationBase  {
     public ColorAnimation() throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -149,7 +149,7 @@ public class ColorAnimation extends ColorAnimationBase  {
     public ColorAnimation(Color toValue, Duration duration) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(toValue == null ? null : toValue.getJCOInstance(), duration == null ? null : duration.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -159,7 +159,7 @@ public class ColorAnimation extends ColorAnimationBase  {
     public ColorAnimation(Color toValue, Duration duration, FillBehavior fillBehavior) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(toValue == null ? null : toValue.getJCOInstance(), duration == null ? null : duration.getJCOInstance(), fillBehavior == null ? null : fillBehavior.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -169,7 +169,7 @@ public class ColorAnimation extends ColorAnimationBase  {
     public ColorAnimation(Color fromValue, Color toValue, Duration duration) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(fromValue == null ? null : fromValue.getJCOInstance(), toValue == null ? null : toValue.getJCOInstance(), duration == null ? null : duration.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -179,7 +179,7 @@ public class ColorAnimation extends ColorAnimationBase  {
     public ColorAnimation(Color fromValue, Color toValue, Duration duration, FillBehavior fillBehavior) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(fromValue == null ? null : fromValue.getJCOInstance(), toValue == null ? null : toValue.getJCOInstance(), duration == null ? null : duration.getJCOInstance(), fillBehavior == null ? null : fillBehavior.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

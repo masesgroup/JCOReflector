@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -72,7 +72,7 @@ public class HierarchicalVirtualizationItemDesiredSizes extends ValueType  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -104,7 +104,7 @@ public class HierarchicalVirtualizationItemDesiredSizes extends ValueType  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -138,7 +138,7 @@ public class HierarchicalVirtualizationItemDesiredSizes extends ValueType  {
     public HierarchicalVirtualizationItemDesiredSizes(Size logicalSize, Size logicalSizeInViewport, Size logicalSizeBeforeViewport, Size logicalSizeAfterViewport, Size pixelSize, Size pixelSizeInViewport, Size pixelSizeBeforeViewport, Size pixelSizeAfterViewport) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(logicalSize == null ? null : logicalSize.getJCOInstance(), logicalSizeInViewport == null ? null : logicalSizeInViewport.getJCOInstance(), logicalSizeBeforeViewport == null ? null : logicalSizeBeforeViewport.getJCOInstance(), logicalSizeAfterViewport == null ? null : logicalSizeAfterViewport.getJCOInstance(), pixelSize == null ? null : pixelSize.getJCOInstance(), pixelSizeInViewport == null ? null : pixelSizeInViewport.getJCOInstance(), pixelSizeBeforeViewport == null ? null : pixelSizeBeforeViewport.getJCOInstance(), pixelSizeAfterViewport == null ? null : pixelSizeAfterViewport.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

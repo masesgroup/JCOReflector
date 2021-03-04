@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -71,7 +71,7 @@ public class StackTrace extends NetObject  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -103,7 +103,7 @@ public class StackTrace extends NetObject  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -134,7 +134,7 @@ public class StackTrace extends NetObject  {
     public StackTrace() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.security.SecurityException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -144,7 +144,7 @@ public class StackTrace extends NetObject  {
     public StackTrace(boolean fNeedFileInfo) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.security.SecurityException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(fNeedFileInfo));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -154,7 +154,7 @@ public class StackTrace extends NetObject  {
     public StackTrace(int skipFrames) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.security.SecurityException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(skipFrames));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -164,7 +164,7 @@ public class StackTrace extends NetObject  {
     public StackTrace(int skipFrames, boolean fNeedFileInfo) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.security.SecurityException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(skipFrames, fNeedFileInfo));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -174,7 +174,7 @@ public class StackTrace extends NetObject  {
     public StackTrace(StackFrame frame) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(frame == null ? null : frame.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -184,7 +184,7 @@ public class StackTrace extends NetObject  {
     public StackTrace(NetException e) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.security.SecurityException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(e == null ? null : e.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -194,7 +194,7 @@ public class StackTrace extends NetObject  {
     public StackTrace(NetException e, boolean fNeedFileInfo) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.security.SecurityException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(e == null ? null : e.getJCOInstance(), fNeedFileInfo));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -204,7 +204,7 @@ public class StackTrace extends NetObject  {
     public StackTrace(NetException e, int skipFrames) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.security.SecurityException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(e == null ? null : e.getJCOInstance(), skipFrames));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -214,7 +214,7 @@ public class StackTrace extends NetObject  {
     public StackTrace(NetException e, int skipFrames, boolean fNeedFileInfo) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.security.SecurityException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(e == null ? null : e.getJCOInstance(), skipFrames, fNeedFileInfo));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -224,7 +224,7 @@ public class StackTrace extends NetObject  {
     public StackTrace(Thread targetThread, boolean needFileInfo) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.security.SecurityException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(targetThread == null ? null : targetThread.getJCOInstance(), needFileInfo));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

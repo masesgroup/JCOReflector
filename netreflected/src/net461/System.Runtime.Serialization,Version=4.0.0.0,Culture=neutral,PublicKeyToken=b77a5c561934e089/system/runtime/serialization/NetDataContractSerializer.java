@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -81,7 +81,7 @@ public class NetDataContractSerializer extends XmlObjectSerializer  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -113,7 +113,7 @@ public class NetDataContractSerializer extends XmlObjectSerializer  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -144,7 +144,7 @@ public class NetDataContractSerializer extends XmlObjectSerializer  {
     public NetDataContractSerializer() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -154,7 +154,7 @@ public class NetDataContractSerializer extends XmlObjectSerializer  {
     public NetDataContractSerializer(StreamingContext context) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(context == null ? null : context.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -164,7 +164,7 @@ public class NetDataContractSerializer extends XmlObjectSerializer  {
     public NetDataContractSerializer(StreamingContext context, int maxItemsInObjectGraph, boolean ignoreExtensionDataObject, FormatterAssemblyStyle assemblyFormat, ISurrogateSelector surrogateSelector) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(context == null ? null : context.getJCOInstance(), maxItemsInObjectGraph, ignoreExtensionDataObject, assemblyFormat == null ? null : assemblyFormat.getJCOInstance(), surrogateSelector == null ? null : surrogateSelector.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -174,7 +174,7 @@ public class NetDataContractSerializer extends XmlObjectSerializer  {
     public NetDataContractSerializer(java.lang.String rootName, java.lang.String rootNamespace) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(rootName, rootNamespace));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -184,7 +184,7 @@ public class NetDataContractSerializer extends XmlObjectSerializer  {
     public NetDataContractSerializer(java.lang.String rootName, java.lang.String rootNamespace, StreamingContext context, int maxItemsInObjectGraph, boolean ignoreExtensionDataObject, FormatterAssemblyStyle assemblyFormat, ISurrogateSelector surrogateSelector) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(rootName, rootNamespace, context == null ? null : context.getJCOInstance(), maxItemsInObjectGraph, ignoreExtensionDataObject, assemblyFormat == null ? null : assemblyFormat.getJCOInstance(), surrogateSelector == null ? null : surrogateSelector.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -194,7 +194,7 @@ public class NetDataContractSerializer extends XmlObjectSerializer  {
     public NetDataContractSerializer(XmlDictionaryString rootName, XmlDictionaryString rootNamespace) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(rootName == null ? null : rootName.getJCOInstance(), rootNamespace == null ? null : rootNamespace.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -204,7 +204,7 @@ public class NetDataContractSerializer extends XmlObjectSerializer  {
     public NetDataContractSerializer(XmlDictionaryString rootName, XmlDictionaryString rootNamespace, StreamingContext context, int maxItemsInObjectGraph, boolean ignoreExtensionDataObject, FormatterAssemblyStyle assemblyFormat, ISurrogateSelector surrogateSelector) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(rootName == null ? null : rootName.getJCOInstance(), rootNamespace == null ? null : rootNamespace.getJCOInstance(), context == null ? null : context.getJCOInstance(), maxItemsInObjectGraph, ignoreExtensionDataObject, assemblyFormat == null ? null : assemblyFormat.getJCOInstance(), surrogateSelector == null ? null : surrogateSelector.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

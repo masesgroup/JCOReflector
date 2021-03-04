@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -82,7 +82,7 @@ public class IsolatedStorageFileStream extends FileStream  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -114,7 +114,7 @@ public class IsolatedStorageFileStream extends FileStream  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -148,7 +148,7 @@ public class IsolatedStorageFileStream extends FileStream  {
     public IsolatedStorageFileStream(java.lang.String path, FileMode mode) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.io.isolatedstorage.IsolatedStorageException, system.ArgumentOutOfRangeException, system.ApplicationException, system.OutOfMemoryException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.runtime.serialization.SerializationException, system.io.IOException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(path, mode == null ? null : mode.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -158,7 +158,7 @@ public class IsolatedStorageFileStream extends FileStream  {
     public IsolatedStorageFileStream(java.lang.String path, FileMode mode, FileAccess access) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.io.isolatedstorage.IsolatedStorageException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.ApplicationException, system.runtime.serialization.SerializationException, system.io.IOException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(path, mode == null ? null : mode.getJCOInstance(), access == null ? null : access.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -168,7 +168,7 @@ public class IsolatedStorageFileStream extends FileStream  {
     public IsolatedStorageFileStream(java.lang.String path, FileMode mode, FileAccess access, FileShare share) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.io.isolatedstorage.IsolatedStorageException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.ApplicationException, system.runtime.serialization.SerializationException, system.io.IOException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(path, mode == null ? null : mode.getJCOInstance(), access == null ? null : access.getJCOInstance(), share == null ? null : share.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -178,7 +178,7 @@ public class IsolatedStorageFileStream extends FileStream  {
     public IsolatedStorageFileStream(java.lang.String path, FileMode mode, FileAccess access, FileShare share, int bufferSize) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.io.isolatedstorage.IsolatedStorageException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.ApplicationException, system.runtime.serialization.SerializationException, system.io.IOException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(path, mode == null ? null : mode.getJCOInstance(), access == null ? null : access.getJCOInstance(), share == null ? null : share.getJCOInstance(), bufferSize));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -188,7 +188,7 @@ public class IsolatedStorageFileStream extends FileStream  {
     public IsolatedStorageFileStream(java.lang.String path, FileMode mode, FileAccess access, FileShare share, int bufferSize, IsolatedStorageFile isf) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.io.isolatedstorage.IsolatedStorageException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.ApplicationException, system.runtime.serialization.SerializationException, system.io.IOException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(path, mode == null ? null : mode.getJCOInstance(), access == null ? null : access.getJCOInstance(), share == null ? null : share.getJCOInstance(), bufferSize, isf == null ? null : isf.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -198,7 +198,7 @@ public class IsolatedStorageFileStream extends FileStream  {
     public IsolatedStorageFileStream(java.lang.String path, FileMode mode, FileAccess access, FileShare share, IsolatedStorageFile isf) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.io.isolatedstorage.IsolatedStorageException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.ApplicationException, system.runtime.serialization.SerializationException, system.io.IOException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(path, mode == null ? null : mode.getJCOInstance(), access == null ? null : access.getJCOInstance(), share == null ? null : share.getJCOInstance(), isf == null ? null : isf.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -208,7 +208,7 @@ public class IsolatedStorageFileStream extends FileStream  {
     public IsolatedStorageFileStream(java.lang.String path, FileMode mode, FileAccess access, IsolatedStorageFile isf) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.io.isolatedstorage.IsolatedStorageException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.ApplicationException, system.runtime.serialization.SerializationException, system.io.IOException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(path, mode == null ? null : mode.getJCOInstance(), access == null ? null : access.getJCOInstance(), isf == null ? null : isf.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -218,7 +218,7 @@ public class IsolatedStorageFileStream extends FileStream  {
     public IsolatedStorageFileStream(java.lang.String path, FileMode mode, IsolatedStorageFile isf) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.io.isolatedstorage.IsolatedStorageException, system.ArgumentOutOfRangeException, system.ApplicationException, system.OutOfMemoryException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.runtime.serialization.SerializationException, system.io.IOException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(path, mode == null ? null : mode.getJCOInstance(), isf == null ? null : isf.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

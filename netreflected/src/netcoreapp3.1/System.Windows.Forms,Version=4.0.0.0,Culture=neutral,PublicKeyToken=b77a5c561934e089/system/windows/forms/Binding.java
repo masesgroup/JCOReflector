@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -80,7 +80,7 @@ public class Binding extends NetObject  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -112,7 +112,7 @@ public class Binding extends NetObject  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -146,7 +146,7 @@ public class Binding extends NetObject  {
     public Binding(java.lang.String propertyName, NetObject dataSource, java.lang.String dataMember) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.FormatException, system.RankException, system.MissingMethodException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(propertyName, dataSource == null ? null : dataSource.getJCOInstance(), dataMember));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -156,7 +156,7 @@ public class Binding extends NetObject  {
     public Binding(java.lang.String propertyName, NetObject dataSource, java.lang.String dataMember, boolean formattingEnabled) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.FormatException, system.RankException, system.MissingMethodException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(propertyName, dataSource == null ? null : dataSource.getJCOInstance(), dataMember, formattingEnabled));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -166,7 +166,7 @@ public class Binding extends NetObject  {
     public Binding(java.lang.String propertyName, NetObject dataSource, java.lang.String dataMember, boolean formattingEnabled, DataSourceUpdateMode dataSourceUpdateMode) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.FormatException, system.RankException, system.MissingMethodException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(propertyName, dataSource == null ? null : dataSource.getJCOInstance(), dataMember, formattingEnabled, dataSourceUpdateMode == null ? null : dataSourceUpdateMode.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -176,7 +176,7 @@ public class Binding extends NetObject  {
     public Binding(java.lang.String propertyName, NetObject dataSource, java.lang.String dataMember, boolean formattingEnabled, DataSourceUpdateMode dataSourceUpdateMode, NetObject nullValue) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.FormatException, system.RankException, system.MissingMethodException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(propertyName, dataSource == null ? null : dataSource.getJCOInstance(), dataMember, formattingEnabled, dataSourceUpdateMode == null ? null : dataSourceUpdateMode.getJCOInstance(), nullValue == null ? null : nullValue.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -186,7 +186,7 @@ public class Binding extends NetObject  {
     public Binding(java.lang.String propertyName, NetObject dataSource, java.lang.String dataMember, boolean formattingEnabled, DataSourceUpdateMode dataSourceUpdateMode, NetObject nullValue, java.lang.String formatString) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.FormatException, system.RankException, system.MissingMethodException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(propertyName, dataSource == null ? null : dataSource.getJCOInstance(), dataMember, formattingEnabled, dataSourceUpdateMode == null ? null : dataSourceUpdateMode.getJCOInstance(), nullValue == null ? null : nullValue.getJCOInstance(), formatString));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -196,7 +196,7 @@ public class Binding extends NetObject  {
     public Binding(java.lang.String propertyName, NetObject dataSource, java.lang.String dataMember, boolean formattingEnabled, DataSourceUpdateMode dataSourceUpdateMode, NetObject nullValue, java.lang.String formatString, IFormatProvider formatInfo) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.FormatException, system.MissingMethodException, system.InvalidCastException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(propertyName, dataSource == null ? null : dataSource.getJCOInstance(), dataMember, formattingEnabled, dataSourceUpdateMode == null ? null : dataSourceUpdateMode.getJCOInstance(), nullValue == null ? null : nullValue.getJCOInstance(), formatString, formatInfo == null ? null : formatInfo.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -96,7 +96,7 @@ public class SqlMetaData extends NetObject  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -128,7 +128,7 @@ public class SqlMetaData extends NetObject  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -162,7 +162,7 @@ public class SqlMetaData extends NetObject  {
     public SqlMetaData(java.lang.String name, SqlDbType dbType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(name, dbType == null ? null : dbType.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -172,7 +172,7 @@ public class SqlMetaData extends NetObject  {
     public SqlMetaData(java.lang.String name, SqlDbType dbType, boolean useServerDefault, boolean isUniqueKey, SortOrder columnSortOrder, int sortOrdinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(name, dbType == null ? null : dbType.getJCOInstance(), useServerDefault, isUniqueKey, columnSortOrder == null ? null : columnSortOrder.getJCOInstance(), sortOrdinal));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -182,7 +182,7 @@ public class SqlMetaData extends NetObject  {
     public SqlMetaData(java.lang.String name, SqlDbType dbType, byte precision, byte scale) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(name, dbType == null ? null : dbType.getJCOInstance(), precision, scale));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -192,7 +192,7 @@ public class SqlMetaData extends NetObject  {
     public SqlMetaData(java.lang.String name, SqlDbType dbType, byte precision, byte scale, boolean useServerDefault, boolean isUniqueKey, SortOrder columnSortOrder, int sortOrdinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(name, dbType == null ? null : dbType.getJCOInstance(), precision, scale, useServerDefault, isUniqueKey, columnSortOrder == null ? null : columnSortOrder.getJCOInstance(), sortOrdinal));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -202,7 +202,7 @@ public class SqlMetaData extends NetObject  {
     public SqlMetaData(java.lang.String name, SqlDbType dbType, long maxLength) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(name, dbType == null ? null : dbType.getJCOInstance(), maxLength));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -212,7 +212,7 @@ public class SqlMetaData extends NetObject  {
     public SqlMetaData(java.lang.String name, SqlDbType dbType, long maxLength, boolean useServerDefault, boolean isUniqueKey, SortOrder columnSortOrder, int sortOrdinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(name, dbType == null ? null : dbType.getJCOInstance(), maxLength, useServerDefault, isUniqueKey, columnSortOrder == null ? null : columnSortOrder.getJCOInstance(), sortOrdinal));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -222,7 +222,7 @@ public class SqlMetaData extends NetObject  {
     public SqlMetaData(java.lang.String name, SqlDbType dbType, long maxLength, byte precision, byte scale, long locale, SqlCompareOptions compareOptions, NetType userDefinedType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, microsoft.sqlserver.server.InvalidUdtException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(name, dbType == null ? null : dbType.getJCOInstance(), maxLength, precision, scale, locale, compareOptions == null ? null : compareOptions.getJCOInstance(), userDefinedType == null ? null : userDefinedType.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -232,7 +232,7 @@ public class SqlMetaData extends NetObject  {
     public SqlMetaData(java.lang.String name, SqlDbType dbType, long maxLength, byte precision, byte scale, long localeId, SqlCompareOptions compareOptions, NetType userDefinedType, boolean useServerDefault, boolean isUniqueKey, SortOrder columnSortOrder, int sortOrdinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, microsoft.sqlserver.server.InvalidUdtException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(name, dbType == null ? null : dbType.getJCOInstance(), maxLength, precision, scale, localeId, compareOptions == null ? null : compareOptions.getJCOInstance(), userDefinedType == null ? null : userDefinedType.getJCOInstance(), useServerDefault, isUniqueKey, columnSortOrder == null ? null : columnSortOrder.getJCOInstance(), sortOrdinal));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -242,7 +242,7 @@ public class SqlMetaData extends NetObject  {
     public SqlMetaData(java.lang.String name, SqlDbType dbType, long maxLength, long locale, SqlCompareOptions compareOptions) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(name, dbType == null ? null : dbType.getJCOInstance(), maxLength, locale, compareOptions == null ? null : compareOptions.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -252,7 +252,7 @@ public class SqlMetaData extends NetObject  {
     public SqlMetaData(java.lang.String name, SqlDbType dbType, long maxLength, long locale, SqlCompareOptions compareOptions, boolean useServerDefault, boolean isUniqueKey, SortOrder columnSortOrder, int sortOrdinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(name, dbType == null ? null : dbType.getJCOInstance(), maxLength, locale, compareOptions == null ? null : compareOptions.getJCOInstance(), useServerDefault, isUniqueKey, columnSortOrder == null ? null : columnSortOrder.getJCOInstance(), sortOrdinal));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -262,7 +262,7 @@ public class SqlMetaData extends NetObject  {
     public SqlMetaData(java.lang.String name, SqlDbType dbType, java.lang.String database, java.lang.String owningSchema, java.lang.String objectName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(name, dbType == null ? null : dbType.getJCOInstance(), database, owningSchema, objectName));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -272,7 +272,7 @@ public class SqlMetaData extends NetObject  {
     public SqlMetaData(java.lang.String name, SqlDbType dbType, java.lang.String database, java.lang.String owningSchema, java.lang.String objectName, boolean useServerDefault, boolean isUniqueKey, SortOrder columnSortOrder, int sortOrdinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(name, dbType == null ? null : dbType.getJCOInstance(), database, owningSchema, objectName, useServerDefault, isUniqueKey, columnSortOrder == null ? null : columnSortOrder.getJCOInstance(), sortOrdinal));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -282,7 +282,7 @@ public class SqlMetaData extends NetObject  {
     public SqlMetaData(java.lang.String name, SqlDbType dbType, NetType userDefinedType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, microsoft.sqlserver.server.InvalidUdtException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(name, dbType == null ? null : dbType.getJCOInstance(), userDefinedType == null ? null : userDefinedType.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -292,7 +292,7 @@ public class SqlMetaData extends NetObject  {
     public SqlMetaData(java.lang.String name, SqlDbType dbType, NetType userDefinedType, java.lang.String serverTypeName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, microsoft.sqlserver.server.InvalidUdtException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(name, dbType == null ? null : dbType.getJCOInstance(), userDefinedType == null ? null : userDefinedType.getJCOInstance(), serverTypeName));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -302,7 +302,7 @@ public class SqlMetaData extends NetObject  {
     public SqlMetaData(java.lang.String name, SqlDbType dbType, NetType userDefinedType, java.lang.String serverTypeName, boolean useServerDefault, boolean isUniqueKey, SortOrder columnSortOrder, int sortOrdinal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, microsoft.sqlserver.server.InvalidUdtException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(name, dbType == null ? null : dbType.getJCOInstance(), userDefinedType == null ? null : userDefinedType.getJCOInstance(), serverTypeName, useServerDefault, isUniqueKey, columnSortOrder == null ? null : columnSortOrder.getJCOInstance(), sortOrdinal));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

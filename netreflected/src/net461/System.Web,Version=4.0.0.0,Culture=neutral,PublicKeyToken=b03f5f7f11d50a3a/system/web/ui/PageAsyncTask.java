@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -71,7 +71,7 @@ public class PageAsyncTask extends NetObject  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -103,7 +103,7 @@ public class PageAsyncTask extends NetObject  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -137,7 +137,7 @@ public class PageAsyncTask extends NetObject  {
     public PageAsyncTask(BeginEventHandler beginHandler, EndEventHandler endHandler, EndEventHandler timeoutHandler, NetObject state) throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(beginHandler, endHandler, timeoutHandler, state == null ? null : state.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -147,7 +147,7 @@ public class PageAsyncTask extends NetObject  {
     public PageAsyncTask(BeginEventHandler beginHandler, EndEventHandler endHandler, EndEventHandler timeoutHandler, NetObject state, boolean executeInParallel) throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.web.HttpException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.configuration.ConfigurationException, system.InvalidCastException, system.NullReferenceException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(beginHandler, endHandler, timeoutHandler, state == null ? null : state.getJCOInstance(), executeInParallel));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -68,7 +68,7 @@ public class TimerCallback extends JCVoidDelegate implements IJCVoidEventEmit, I
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -84,7 +84,7 @@ public class TimerCallback extends JCVoidDelegate implements IJCVoidEventEmit, I
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -132,16 +132,16 @@ public class TimerCallback extends JCVoidDelegate implements IJCVoidEventEmit, I
     }
 
     public TimerCallback() {
-        super(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+        super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
     }
 
     public TimerCallback(ITimerCallback instance) {
-        super(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+        super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         callerInstance = instance;
     }
 
     public TimerCallback(Object instance) throws Throwable {
-        super(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+        super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         if (instance == null) throw new IllegalArgumentException("Instance cannot be null");
         if (instance instanceof ITimerCallback) {
             callerInstance = (ITimerCallback) instance;
@@ -160,7 +160,7 @@ public class TimerCallback extends JCVoidDelegate implements IJCVoidEventEmit, I
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public void METHOD_JAVA_NAME(NetObject state) throws Throwable {
+    public void DynamicInvoke(NetObject state) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

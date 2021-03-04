@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -69,7 +69,7 @@ public class DataGridViewColumnDividerDoubleClickEventHandler extends JCVoidDele
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -85,7 +85,7 @@ public class DataGridViewColumnDividerDoubleClickEventHandler extends JCVoidDele
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -135,16 +135,16 @@ public class DataGridViewColumnDividerDoubleClickEventHandler extends JCVoidDele
     }
 
     public DataGridViewColumnDividerDoubleClickEventHandler() {
-        super(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+        super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
     }
 
     public DataGridViewColumnDividerDoubleClickEventHandler(IDataGridViewColumnDividerDoubleClickEventHandler instance) {
-        super(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+        super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         callerInstance = instance;
     }
 
     public DataGridViewColumnDividerDoubleClickEventHandler(Object instance) throws Throwable {
-        super(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+        super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         if (instance == null) throw new IllegalArgumentException("Instance cannot be null");
         if (instance instanceof IDataGridViewColumnDividerDoubleClickEventHandler) {
             callerInstance = (IDataGridViewColumnDividerDoubleClickEventHandler) instance;
@@ -163,7 +163,7 @@ public class DataGridViewColumnDividerDoubleClickEventHandler extends JCVoidDele
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public void METHOD_JAVA_NAME(NetObject sender, DataGridViewColumnDividerDoubleClickEventArgs e) throws Throwable {
+    public void DynamicInvoke(NetObject sender, DataGridViewColumnDividerDoubleClickEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

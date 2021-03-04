@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -82,7 +82,7 @@ public class XmlTextReader extends XmlReader  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -114,7 +114,7 @@ public class XmlTextReader extends XmlReader  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -148,7 +148,7 @@ public class XmlTextReader extends XmlReader  {
     public XmlTextReader(Stream input) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(input == null ? null : input.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -158,7 +158,7 @@ public class XmlTextReader extends XmlReader  {
     public XmlTextReader(Stream input, XmlNameTable nt) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(input == null ? null : input.getJCOInstance(), nt == null ? null : nt.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -168,7 +168,7 @@ public class XmlTextReader extends XmlReader  {
     public XmlTextReader(Stream xmlFragment, XmlNodeType fragType, XmlParserContext context) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(xmlFragment == null ? null : xmlFragment.getJCOInstance(), fragType == null ? null : fragType.getJCOInstance(), context == null ? null : context.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -178,7 +178,7 @@ public class XmlTextReader extends XmlReader  {
     public XmlTextReader(TextReader input) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(input == null ? null : input.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -188,7 +188,7 @@ public class XmlTextReader extends XmlReader  {
     public XmlTextReader(TextReader input, XmlNameTable nt) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(input == null ? null : input.getJCOInstance(), nt == null ? null : nt.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -198,7 +198,7 @@ public class XmlTextReader extends XmlReader  {
     public XmlTextReader(java.lang.String url) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(url));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -208,7 +208,7 @@ public class XmlTextReader extends XmlReader  {
     public XmlTextReader(java.lang.String url, Stream input) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(url, input == null ? null : input.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -218,7 +218,7 @@ public class XmlTextReader extends XmlReader  {
     public XmlTextReader(java.lang.String url, Stream input, XmlNameTable nt) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(url, input == null ? null : input.getJCOInstance(), nt == null ? null : nt.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -228,7 +228,7 @@ public class XmlTextReader extends XmlReader  {
     public XmlTextReader(java.lang.String url, TextReader input) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(url, input == null ? null : input.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -238,7 +238,7 @@ public class XmlTextReader extends XmlReader  {
     public XmlTextReader(java.lang.String url, TextReader input, XmlNameTable nt) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(url, input == null ? null : input.getJCOInstance(), nt == null ? null : nt.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -248,7 +248,7 @@ public class XmlTextReader extends XmlReader  {
     public XmlTextReader(java.lang.String url, XmlNameTable nt) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(url, nt == null ? null : nt.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -258,7 +258,7 @@ public class XmlTextReader extends XmlReader  {
     public XmlTextReader(java.lang.String xmlFragment, XmlNodeType fragType, XmlParserContext context) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(xmlFragment, fragType == null ? null : fragType.getJCOInstance(), context == null ? null : context.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

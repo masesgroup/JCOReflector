@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -72,7 +72,7 @@ public class ActivationArguments extends EvidenceBase  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -104,7 +104,7 @@ public class ActivationArguments extends EvidenceBase  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -138,7 +138,7 @@ public class ActivationArguments extends EvidenceBase  {
     public ActivationArguments(ActivationContext activationData) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(activationData == null ? null : activationData.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -148,7 +148,7 @@ public class ActivationArguments extends EvidenceBase  {
     public ActivationArguments(ActivationContext activationContext, java.lang.String[] activationData) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(activationContext == null ? null : activationContext.getJCOInstance(), activationData));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -158,7 +158,7 @@ public class ActivationArguments extends EvidenceBase  {
     public ActivationArguments(ApplicationIdentity applicationIdentity) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(applicationIdentity == null ? null : applicationIdentity.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -168,7 +168,7 @@ public class ActivationArguments extends EvidenceBase  {
     public ActivationArguments(ApplicationIdentity applicationIdentity, java.lang.String[] activationData) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(applicationIdentity == null ? null : applicationIdentity.getJCOInstance(), activationData));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

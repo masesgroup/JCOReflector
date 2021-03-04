@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -75,7 +75,7 @@ public class XamlObjectReader extends NetObject  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -107,7 +107,7 @@ public class XamlObjectReader extends NetObject  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -141,7 +141,7 @@ public class XamlObjectReader extends NetObject  {
     public XamlObjectReader(NetObject instance) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.MulticastNotSupportedException, system.threading.ThreadAbortException, system.InvalidOperationException, system.IndexOutOfRangeException, system.xaml.XamlObjectReaderException, system.NotSupportedException, system.xaml.XamlSchemaException, system.collections.generic.KeyNotFoundException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(instance == null ? null : instance.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -151,7 +151,7 @@ public class XamlObjectReader extends NetObject  {
     public XamlObjectReader(NetObject instance, XamlObjectReaderSettings settings) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.MulticastNotSupportedException, system.threading.ThreadAbortException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.xaml.XamlObjectReaderException, system.xaml.XamlSchemaException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.xml.XmlException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(instance == null ? null : instance.getJCOInstance(), settings == null ? null : settings.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -161,7 +161,7 @@ public class XamlObjectReader extends NetObject  {
     public XamlObjectReader(NetObject instance, XamlSchemaContext schemaContext) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.xaml.XamlObjectReaderException, system.xaml.XamlSchemaException, system.NotImplementedException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.xml.XmlException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(instance == null ? null : instance.getJCOInstance(), schemaContext == null ? null : schemaContext.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -171,7 +171,7 @@ public class XamlObjectReader extends NetObject  {
     public XamlObjectReader(NetObject instance, XamlSchemaContext schemaContext, XamlObjectReaderSettings settings) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.resources.MissingManifestResourceException, system.xaml.XamlObjectReaderException, system.xaml.XamlSchemaException, system.NotImplementedException, system.NotSupportedException, system.OutOfMemoryException, system.xml.XmlException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(instance == null ? null : instance.getJCOInstance(), schemaContext == null ? null : schemaContext.getJCOInstance(), settings == null ? null : settings.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

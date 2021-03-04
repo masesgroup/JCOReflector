@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -77,7 +77,7 @@ public class AnnotationDocumentPaginator extends DocumentPaginator  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -109,7 +109,7 @@ public class AnnotationDocumentPaginator extends DocumentPaginator  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -143,7 +143,7 @@ public class AnnotationDocumentPaginator extends DocumentPaginator  {
     public AnnotationDocumentPaginator(DocumentPaginator originalPaginator, Stream annotationStore) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.xml.XmlException, system.xml.xpath.XPathException, system.security.SecurityException, system.io.IOException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.reflection.TargetInvocationException, system.MulticastNotSupportedException, system.NotImplementedException, system.collections.generic.KeyNotFoundException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(originalPaginator == null ? null : originalPaginator.getJCOInstance(), annotationStore == null ? null : annotationStore.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -153,7 +153,7 @@ public class AnnotationDocumentPaginator extends DocumentPaginator  {
     public AnnotationDocumentPaginator(DocumentPaginator originalPaginator, Stream annotationStore, FlowDirection flowDirection) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.xml.XmlException, system.xml.xpath.XPathException, system.security.SecurityException, system.io.IOException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.reflection.TargetInvocationException, system.MulticastNotSupportedException, system.NotImplementedException, system.collections.generic.KeyNotFoundException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(originalPaginator == null ? null : originalPaginator.getJCOInstance(), annotationStore == null ? null : annotationStore.getJCOInstance(), flowDirection == null ? null : flowDirection.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -163,7 +163,7 @@ public class AnnotationDocumentPaginator extends DocumentPaginator  {
     public AnnotationDocumentPaginator(DocumentPaginator originalPaginator, AnnotationStore annotationStore) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentOutOfRangeException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.NotSupportedException, system.reflection.TargetInvocationException, system.MulticastNotSupportedException, system.NotImplementedException, system.collections.generic.KeyNotFoundException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(originalPaginator == null ? null : originalPaginator.getJCOInstance(), annotationStore == null ? null : annotationStore.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -173,7 +173,7 @@ public class AnnotationDocumentPaginator extends DocumentPaginator  {
     public AnnotationDocumentPaginator(DocumentPaginator originalPaginator, AnnotationStore annotationStore, FlowDirection flowDirection) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.NotSupportedException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.reflection.TargetInvocationException, system.NotImplementedException, system.collections.generic.KeyNotFoundException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(originalPaginator == null ? null : originalPaginator.getJCOInstance(), annotationStore == null ? null : annotationStore.getJCOInstance(), flowDirection == null ? null : flowDirection.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -69,7 +69,7 @@ public class BuildFinishedEventHandler extends JCVoidDelegate implements IJCVoid
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -85,7 +85,7 @@ public class BuildFinishedEventHandler extends JCVoidDelegate implements IJCVoid
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -135,16 +135,16 @@ public class BuildFinishedEventHandler extends JCVoidDelegate implements IJCVoid
     }
 
     public BuildFinishedEventHandler() {
-        super(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+        super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
     }
 
     public BuildFinishedEventHandler(IBuildFinishedEventHandler instance) {
-        super(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+        super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         callerInstance = instance;
     }
 
     public BuildFinishedEventHandler(Object instance) throws Throwable {
-        super(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+        super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         if (instance == null) throw new IllegalArgumentException("Instance cannot be null");
         if (instance instanceof IBuildFinishedEventHandler) {
             callerInstance = (IBuildFinishedEventHandler) instance;
@@ -163,7 +163,7 @@ public class BuildFinishedEventHandler extends JCVoidDelegate implements IJCVoid
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public void METHOD_JAVA_NAME(NetObject sender, BuildFinishedEventArgs e) throws Throwable {
+    public void DynamicInvoke(NetObject sender, BuildFinishedEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

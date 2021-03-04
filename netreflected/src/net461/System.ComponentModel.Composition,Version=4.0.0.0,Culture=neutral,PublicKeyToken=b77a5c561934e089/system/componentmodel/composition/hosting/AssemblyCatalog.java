@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -74,7 +74,7 @@ public class AssemblyCatalog extends ComposablePartCatalog  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -106,7 +106,7 @@ public class AssemblyCatalog extends ComposablePartCatalog  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -140,7 +140,7 @@ public class AssemblyCatalog extends ComposablePartCatalog  {
     public AssemblyCatalog(Assembly assembly) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(assembly == null ? null : assembly.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -150,7 +150,7 @@ public class AssemblyCatalog extends ComposablePartCatalog  {
     public AssemblyCatalog(Assembly assembly, ICompositionElement definitionOrigin) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(assembly == null ? null : assembly.getJCOInstance(), definitionOrigin == null ? null : definitionOrigin.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -160,7 +160,7 @@ public class AssemblyCatalog extends ComposablePartCatalog  {
     public AssemblyCatalog(Assembly assembly, ReflectionContext reflectionContext) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(assembly == null ? null : assembly.getJCOInstance(), reflectionContext == null ? null : reflectionContext.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -170,7 +170,7 @@ public class AssemblyCatalog extends ComposablePartCatalog  {
     public AssemblyCatalog(Assembly assembly, ReflectionContext reflectionContext, ICompositionElement definitionOrigin) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(assembly == null ? null : assembly.getJCOInstance(), reflectionContext == null ? null : reflectionContext.getJCOInstance(), definitionOrigin == null ? null : definitionOrigin.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -180,7 +180,7 @@ public class AssemblyCatalog extends ComposablePartCatalog  {
     public AssemblyCatalog(java.lang.String codeBase) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.InvalidCastException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(codeBase));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -190,7 +190,7 @@ public class AssemblyCatalog extends ComposablePartCatalog  {
     public AssemblyCatalog(java.lang.String codeBase, ICompositionElement definitionOrigin) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.InvalidCastException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(codeBase, definitionOrigin == null ? null : definitionOrigin.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -200,7 +200,7 @@ public class AssemblyCatalog extends ComposablePartCatalog  {
     public AssemblyCatalog(java.lang.String codeBase, ReflectionContext reflectionContext) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.InvalidCastException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(codeBase, reflectionContext == null ? null : reflectionContext.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -210,7 +210,7 @@ public class AssemblyCatalog extends ComposablePartCatalog  {
     public AssemblyCatalog(java.lang.String codeBase, ReflectionContext reflectionContext, ICompositionElement definitionOrigin) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.InvalidCastException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(codeBase, reflectionContext == null ? null : reflectionContext.getJCOInstance(), definitionOrigin == null ? null : definitionOrigin.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

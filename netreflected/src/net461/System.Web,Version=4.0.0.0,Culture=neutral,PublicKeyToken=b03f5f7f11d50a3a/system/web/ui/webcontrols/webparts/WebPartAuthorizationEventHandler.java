@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -69,7 +69,7 @@ public class WebPartAuthorizationEventHandler extends JCVoidDelegate implements 
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -85,7 +85,7 @@ public class WebPartAuthorizationEventHandler extends JCVoidDelegate implements 
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -135,16 +135,16 @@ public class WebPartAuthorizationEventHandler extends JCVoidDelegate implements 
     }
 
     public WebPartAuthorizationEventHandler() {
-        super(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+        super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
     }
 
     public WebPartAuthorizationEventHandler(IWebPartAuthorizationEventHandler instance) {
-        super(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+        super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         callerInstance = instance;
     }
 
     public WebPartAuthorizationEventHandler(Object instance) throws Throwable {
-        super(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+        super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         if (instance == null) throw new IllegalArgumentException("Instance cannot be null");
         if (instance instanceof IWebPartAuthorizationEventHandler) {
             callerInstance = (IWebPartAuthorizationEventHandler) instance;
@@ -163,7 +163,7 @@ public class WebPartAuthorizationEventHandler extends JCVoidDelegate implements 
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public void METHOD_JAVA_NAME(NetObject sender, WebPartAuthorizationEventArgs e) throws Throwable {
+    public void DynamicInvoke(NetObject sender, WebPartAuthorizationEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

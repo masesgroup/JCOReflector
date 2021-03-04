@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -71,7 +71,7 @@ public class PasswordDeriveBytes extends DeriveBytes  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -103,7 +103,7 @@ public class PasswordDeriveBytes extends DeriveBytes  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -137,7 +137,7 @@ public class PasswordDeriveBytes extends DeriveBytes  {
     public PasswordDeriveBytes(byte[] password, byte[] salt) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.ArgumentOutOfRangeException, system.security.cryptography.CryptographicException, system.TypeLoadException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(password, salt));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -147,7 +147,7 @@ public class PasswordDeriveBytes extends DeriveBytes  {
     public PasswordDeriveBytes(byte[] password, byte[] salt, CspParameters cspParams) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.cryptography.CryptographicException, system.TypeLoadException, system.NotSupportedException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(password, salt, cspParams == null ? null : cspParams.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -157,7 +157,7 @@ public class PasswordDeriveBytes extends DeriveBytes  {
     public PasswordDeriveBytes(byte[] password, byte[] salt, java.lang.String hashName, int iterations) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.ArgumentOutOfRangeException, system.security.cryptography.CryptographicException, system.TypeLoadException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(password, salt, hashName, iterations));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -167,7 +167,7 @@ public class PasswordDeriveBytes extends DeriveBytes  {
     public PasswordDeriveBytes(byte[] password, byte[] salt, java.lang.String hashName, int iterations, CspParameters cspParams) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.PlatformNotSupportedException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(password, salt, hashName, iterations, cspParams == null ? null : cspParams.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -177,7 +177,7 @@ public class PasswordDeriveBytes extends DeriveBytes  {
     public PasswordDeriveBytes(java.lang.String strPassword, byte[] rgbSalt) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.ArgumentOutOfRangeException, system.security.cryptography.CryptographicException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(strPassword, rgbSalt));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -187,7 +187,7 @@ public class PasswordDeriveBytes extends DeriveBytes  {
     public PasswordDeriveBytes(java.lang.String strPassword, byte[] rgbSalt, CspParameters cspParams) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.InvalidOperationException, system.TypeLoadException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(strPassword, rgbSalt, cspParams == null ? null : cspParams.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -197,7 +197,7 @@ public class PasswordDeriveBytes extends DeriveBytes  {
     public PasswordDeriveBytes(java.lang.String strPassword, byte[] rgbSalt, java.lang.String strHashName, int iterations) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.ArgumentOutOfRangeException, system.security.cryptography.CryptographicException, system.TypeLoadException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(strPassword, rgbSalt, strHashName, iterations));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -207,7 +207,7 @@ public class PasswordDeriveBytes extends DeriveBytes  {
     public PasswordDeriveBytes(java.lang.String strPassword, byte[] rgbSalt, java.lang.String strHashName, int iterations, CspParameters cspParams) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException, system.TypeLoadException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(strPassword, rgbSalt, strHashName, iterations, cspParams == null ? null : cspParams.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

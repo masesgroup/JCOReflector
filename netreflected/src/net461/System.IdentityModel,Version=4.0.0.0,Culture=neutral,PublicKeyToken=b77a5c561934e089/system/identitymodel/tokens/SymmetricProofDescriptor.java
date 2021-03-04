@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -73,7 +73,7 @@ public class SymmetricProofDescriptor extends ProofDescriptor  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -105,7 +105,7 @@ public class SymmetricProofDescriptor extends ProofDescriptor  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -139,7 +139,7 @@ public class SymmetricProofDescriptor extends ProofDescriptor  {
     public SymmetricProofDescriptor(byte[] key, EncryptingCredentials targetWrappingCredentials) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(key, targetWrappingCredentials == null ? null : targetWrappingCredentials.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -149,7 +149,7 @@ public class SymmetricProofDescriptor extends ProofDescriptor  {
     public SymmetricProofDescriptor(int keySizeInBits, EncryptingCredentials targetWrappingCredentials) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(keySizeInBits, targetWrappingCredentials == null ? null : targetWrappingCredentials.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -159,7 +159,7 @@ public class SymmetricProofDescriptor extends ProofDescriptor  {
     public SymmetricProofDescriptor(int keySizeInBits, EncryptingCredentials targetWrappingCredentials, EncryptingCredentials requestorWrappingCredentials) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(keySizeInBits, targetWrappingCredentials == null ? null : targetWrappingCredentials.getJCOInstance(), requestorWrappingCredentials == null ? null : requestorWrappingCredentials.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -169,7 +169,7 @@ public class SymmetricProofDescriptor extends ProofDescriptor  {
     public SymmetricProofDescriptor(int keySizeInBits, EncryptingCredentials targetWrappingCredentials, EncryptingCredentials requestorWrappingCredentials, byte[] sourceEntropy) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotImplementedException, system.NotSupportedException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(keySizeInBits, targetWrappingCredentials == null ? null : targetWrappingCredentials.getJCOInstance(), requestorWrappingCredentials == null ? null : requestorWrappingCredentials.getJCOInstance(), sourceEntropy));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -179,7 +179,7 @@ public class SymmetricProofDescriptor extends ProofDescriptor  {
     public SymmetricProofDescriptor(int keySizeInBits, EncryptingCredentials targetWrappingCredentials, EncryptingCredentials requestorWrappingCredentials, byte[] sourceEntropy, java.lang.String encryptWith) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.ApplicationException, system.NotSupportedException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.collections.generic.KeyNotFoundException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(keySizeInBits, targetWrappingCredentials == null ? null : targetWrappingCredentials.getJCOInstance(), requestorWrappingCredentials == null ? null : requestorWrappingCredentials.getJCOInstance(), sourceEntropy, encryptWith));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -189,7 +189,7 @@ public class SymmetricProofDescriptor extends ProofDescriptor  {
     public SymmetricProofDescriptor(int keySizeInBits, EncryptingCredentials targetWrappingCredentials, EncryptingCredentials requestorWrappingCredentials, java.lang.String encryptWith) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(keySizeInBits, targetWrappingCredentials == null ? null : targetWrappingCredentials.getJCOInstance(), requestorWrappingCredentials == null ? null : requestorWrappingCredentials.getJCOInstance(), encryptWith));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -199,7 +199,7 @@ public class SymmetricProofDescriptor extends ProofDescriptor  {
     public SymmetricProofDescriptor(EncryptingCredentials targetWrappingCredentials) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NotImplementedException, system.security.cryptography.CryptographicException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(targetWrappingCredentials == null ? null : targetWrappingCredentials.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

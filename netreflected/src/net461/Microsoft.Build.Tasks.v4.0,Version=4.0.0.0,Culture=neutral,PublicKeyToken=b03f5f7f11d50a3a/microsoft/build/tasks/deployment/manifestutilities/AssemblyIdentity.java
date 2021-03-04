@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -70,7 +70,7 @@ public class AssemblyIdentity extends NetObject  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -102,7 +102,7 @@ public class AssemblyIdentity extends NetObject  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -133,7 +133,7 @@ public class AssemblyIdentity extends NetObject  {
     public AssemblyIdentity() throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -143,7 +143,7 @@ public class AssemblyIdentity extends NetObject  {
     public AssemblyIdentity(AssemblyIdentity identity) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(identity == null ? null : identity.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -153,7 +153,7 @@ public class AssemblyIdentity extends NetObject  {
     public AssemblyIdentity(java.lang.String name) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(name));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -163,7 +163,7 @@ public class AssemblyIdentity extends NetObject  {
     public AssemblyIdentity(java.lang.String name, java.lang.String version) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(name, version));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -173,7 +173,7 @@ public class AssemblyIdentity extends NetObject  {
     public AssemblyIdentity(java.lang.String name, java.lang.String version, java.lang.String publicKeyToken, java.lang.String culture) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(name, version, publicKeyToken, culture));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -183,7 +183,7 @@ public class AssemblyIdentity extends NetObject  {
     public AssemblyIdentity(java.lang.String name, java.lang.String version, java.lang.String publicKeyToken, java.lang.String culture, java.lang.String processorArchitecture) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(name, version, publicKeyToken, culture, processorArchitecture));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -193,7 +193,7 @@ public class AssemblyIdentity extends NetObject  {
     public AssemblyIdentity(java.lang.String name, java.lang.String version, java.lang.String publicKeyToken, java.lang.String culture, java.lang.String processorArchitecture, java.lang.String type) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(name, version, publicKeyToken, culture, processorArchitecture, type));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

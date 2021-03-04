@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -79,7 +79,7 @@ public class WSTrustChannelFactory extends NetObject  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -111,7 +111,7 @@ public class WSTrustChannelFactory extends NetObject  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -142,7 +142,7 @@ public class WSTrustChannelFactory extends NetObject  {
     public WSTrustChannelFactory() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.collections.generic.KeyNotFoundException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -152,7 +152,7 @@ public class WSTrustChannelFactory extends NetObject  {
     public WSTrustChannelFactory(system.servicemodel.channels.Binding binding) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationException, system.componentmodel.InvalidEnumArgumentException, system.security.cryptography.CryptographicException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(binding == null ? null : binding.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -162,7 +162,7 @@ public class WSTrustChannelFactory extends NetObject  {
     public WSTrustChannelFactory(system.servicemodel.channels.Binding binding, EndpointAddress remoteAddress) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.collections.generic.KeyNotFoundException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(binding == null ? null : binding.getJCOInstance(), remoteAddress == null ? null : remoteAddress.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -172,7 +172,7 @@ public class WSTrustChannelFactory extends NetObject  {
     public WSTrustChannelFactory(system.servicemodel.channels.Binding binding, java.lang.String remoteAddress) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.configuration.ConfigurationException, system.componentmodel.InvalidEnumArgumentException, system.security.cryptography.CryptographicException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(binding == null ? null : binding.getJCOInstance(), remoteAddress));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -182,7 +182,7 @@ public class WSTrustChannelFactory extends NetObject  {
     public WSTrustChannelFactory(ServiceEndpoint endpoint) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.collections.generic.KeyNotFoundException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(endpoint == null ? null : endpoint.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -192,7 +192,7 @@ public class WSTrustChannelFactory extends NetObject  {
     public WSTrustChannelFactory(java.lang.String endpointConfigurationName) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(endpointConfigurationName));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -202,7 +202,7 @@ public class WSTrustChannelFactory extends NetObject  {
     public WSTrustChannelFactory(java.lang.String endpointConfigurationName, EndpointAddress remoteAddress) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.collections.generic.KeyNotFoundException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(endpointConfigurationName, remoteAddress == null ? null : remoteAddress.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

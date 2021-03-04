@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -74,7 +74,7 @@ public class RuleConditionDialog extends Form  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -106,7 +106,7 @@ public class RuleConditionDialog extends Form  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -140,7 +140,7 @@ public class RuleConditionDialog extends Form  {
     public RuleConditionDialog(NetType activityType, ITypeProvider typeProvider, CodeExpression expression) throws Throwable, system.configuration.ConfigurationErrorsException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.NotSupportedException, system.security.SecurityException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException, system.RankException, system.OverflowException, system.io.EndOfStreamException, system.FormatException, system.io.IOException, system.BadImageFormatException, system.collections.generic.KeyNotFoundException, system.InvalidCastException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(activityType == null ? null : activityType.getJCOInstance(), typeProvider == null ? null : typeProvider.getJCOInstance(), expression == null ? null : expression.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -150,7 +150,7 @@ public class RuleConditionDialog extends Form  {
     public RuleConditionDialog(Activity activity, CodeExpression expression) throws Throwable, system.configuration.ConfigurationErrorsException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.NotSupportedException, system.security.SecurityException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException, system.RankException, system.OverflowException, system.io.EndOfStreamException, system.FormatException, system.io.IOException, system.BadImageFormatException, system.collections.generic.KeyNotFoundException, system.InvalidCastException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(activity == null ? null : activity.getJCOInstance(), expression == null ? null : expression.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

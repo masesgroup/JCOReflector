@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -87,7 +87,7 @@ public class XpsDocument extends XpsPartBase  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -119,7 +119,7 @@ public class XpsDocument extends XpsPartBase  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -153,7 +153,7 @@ public class XpsDocument extends XpsPartBase  {
     public XpsDocument(Package _package) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(_package == null ? null : _package.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -163,7 +163,7 @@ public class XpsDocument extends XpsPartBase  {
     public XpsDocument(Package _package, CompressionOption compressionOption) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(_package == null ? null : _package.getJCOInstance(), compressionOption == null ? null : compressionOption.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -173,7 +173,7 @@ public class XpsDocument extends XpsPartBase  {
     public XpsDocument(Package _package, CompressionOption compressionOption, java.lang.String path) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(_package == null ? null : _package.getJCOInstance(), compressionOption == null ? null : compressionOption.getJCOInstance(), path));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -183,7 +183,7 @@ public class XpsDocument extends XpsPartBase  {
     public XpsDocument(java.lang.String path, FileAccess packageAccess) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.io.IOException, system.ObjectDisposedException, system.io.InvalidDataException, system.xml.XmlException, system.io.FileFormatException, system.UnauthorizedAccessException, system.collections.generic.KeyNotFoundException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(path, packageAccess == null ? null : packageAccess.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -193,7 +193,7 @@ public class XpsDocument extends XpsPartBase  {
     public XpsDocument(java.lang.String path, FileAccess packageAccess, CompressionOption compressionOption) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.globalization.CultureNotFoundException, system.UriFormatException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.io.IOException, system.ObjectDisposedException, system.io.InvalidDataException, system.xml.XmlException, system.io.FileFormatException, system.UnauthorizedAccessException, system.collections.generic.KeyNotFoundException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(path, packageAccess == null ? null : packageAccess.getJCOInstance(), compressionOption == null ? null : compressionOption.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -68,7 +68,7 @@ public interface ISettingsProviderService extends IJCOBridgeReflected {
      */
     public static ISettingsProviderService ToISettingsProviderService(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Configuration.ConfigurationManager, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51");
-        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+        JCType classType = bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ISettingsProviderServiceImplementation(from.getJCOInstance());
     }

@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -78,7 +78,7 @@ public class DrawToolTipEventArgs extends EventArgs  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -110,7 +110,7 @@ public class DrawToolTipEventArgs extends EventArgs  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -144,7 +144,7 @@ public class DrawToolTipEventArgs extends EventArgs  {
     public DrawToolTipEventArgs(Graphics graphics, IWin32Window associatedWindow, Control associatedControl, Rectangle bounds, java.lang.String toolTipText, Color backColor, Color foreColor, Font font) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(graphics == null ? null : graphics.getJCOInstance(), associatedWindow == null ? null : associatedWindow.getJCOInstance(), associatedControl == null ? null : associatedControl.getJCOInstance(), bounds == null ? null : bounds.getJCOInstance(), toolTipText, backColor == null ? null : backColor.getJCOInstance(), foreColor == null ? null : foreColor.getJCOInstance(), font == null ? null : font.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

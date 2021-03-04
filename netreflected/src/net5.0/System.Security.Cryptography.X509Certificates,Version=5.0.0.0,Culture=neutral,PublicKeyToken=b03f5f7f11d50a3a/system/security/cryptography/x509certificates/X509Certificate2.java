@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -81,7 +81,7 @@ public class X509Certificate2 extends X509Certificate  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -113,7 +113,7 @@ public class X509Certificate2 extends X509Certificate  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -144,7 +144,7 @@ public class X509Certificate2 extends X509Certificate  {
     public X509Certificate2() throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -154,7 +154,7 @@ public class X509Certificate2 extends X509Certificate  {
     public X509Certificate2(byte[] rawData) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.runtime.serialization.SerializationException, system.NotSupportedException, system.io.IOException, system.ArrayTypeMismatchException, system.MissingMethodException, system.reflection.TargetInvocationException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject((Object)rawData));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -164,7 +164,7 @@ public class X509Certificate2 extends X509Certificate  {
     public X509Certificate2(byte[] rawData, SecureString password) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.runtime.serialization.SerializationException, system.NotSupportedException, system.io.IOException, system.ArrayTypeMismatchException, system.MissingMethodException, system.reflection.TargetInvocationException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(rawData, password == null ? null : password.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -174,7 +174,7 @@ public class X509Certificate2 extends X509Certificate  {
     public X509Certificate2(byte[] rawData, SecureString password, X509KeyStorageFlags keyStorageFlags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.runtime.serialization.SerializationException, system.NotSupportedException, system.io.IOException, system.ArrayTypeMismatchException, system.MissingMethodException, system.reflection.TargetInvocationException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(rawData, password == null ? null : password.getJCOInstance(), keyStorageFlags == null ? null : keyStorageFlags.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -184,7 +184,7 @@ public class X509Certificate2 extends X509Certificate  {
     public X509Certificate2(byte[] rawData, java.lang.String password) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.runtime.serialization.SerializationException, system.NotSupportedException, system.io.IOException, system.ArrayTypeMismatchException, system.MissingMethodException, system.reflection.TargetInvocationException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(rawData, password));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -194,7 +194,7 @@ public class X509Certificate2 extends X509Certificate  {
     public X509Certificate2(byte[] rawData, java.lang.String password, X509KeyStorageFlags keyStorageFlags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.security.cryptography.CryptographicException, system.runtime.serialization.SerializationException, system.NotSupportedException, system.io.IOException, system.ArrayTypeMismatchException, system.MissingMethodException, system.reflection.TargetInvocationException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(rawData, password, keyStorageFlags == null ? null : keyStorageFlags.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -204,7 +204,7 @@ public class X509Certificate2 extends X509Certificate  {
     public X509Certificate2(X509Certificate certificate) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(certificate == null ? null : certificate.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -214,7 +214,7 @@ public class X509Certificate2 extends X509Certificate  {
     public X509Certificate2(java.lang.String fileName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.runtime.serialization.SerializationException, system.io.IOException, system.ArrayTypeMismatchException, system.MissingMethodException, system.reflection.TargetInvocationException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(fileName));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -224,7 +224,7 @@ public class X509Certificate2 extends X509Certificate  {
     public X509Certificate2(java.lang.String fileName, SecureString password) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.io.IOException, system.ArrayTypeMismatchException, system.MissingMethodException, system.reflection.TargetInvocationException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(fileName, password == null ? null : password.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -234,7 +234,7 @@ public class X509Certificate2 extends X509Certificate  {
     public X509Certificate2(java.lang.String fileName, SecureString password, X509KeyStorageFlags keyStorageFlags) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.FormatException, system.runtime.serialization.SerializationException, system.io.IOException, system.MissingMethodException, system.reflection.TargetInvocationException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(fileName, password == null ? null : password.getJCOInstance(), keyStorageFlags == null ? null : keyStorageFlags.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -244,7 +244,7 @@ public class X509Certificate2 extends X509Certificate  {
     public X509Certificate2(java.lang.String fileName, java.lang.String password) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.runtime.serialization.SerializationException, system.io.IOException, system.ArrayTypeMismatchException, system.MissingMethodException, system.reflection.TargetInvocationException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(fileName, password));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -254,7 +254,7 @@ public class X509Certificate2 extends X509Certificate  {
     public X509Certificate2(java.lang.String fileName, java.lang.String password, X509KeyStorageFlags keyStorageFlags) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.FormatException, system.runtime.serialization.SerializationException, system.io.IOException, system.MissingMethodException, system.reflection.TargetInvocationException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(fileName, password, keyStorageFlags == null ? null : keyStorageFlags.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

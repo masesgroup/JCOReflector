@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -76,7 +76,7 @@ public class RedirectionException extends CommunicationException {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException jce) {
             JCOReflector.writeLog(jce);
             return null;
@@ -126,7 +126,7 @@ public class RedirectionException extends CommunicationException {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -157,7 +157,7 @@ public class RedirectionException extends CommunicationException {
     public RedirectionException(RedirectionType type, RedirectionDuration duration, RedirectionScope scope, NetException innerException, RedirectionLocation... locations) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.UriFormatException, system.FormatException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), duration == null ? null : duration.getJCOInstance(), scope == null ? null : scope.getJCOInstance(), innerException == null ? null : innerException.getJCOInstance(), toObjectFromArray(locations)));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -167,7 +167,7 @@ public class RedirectionException extends CommunicationException {
     public RedirectionException(RedirectionType type, RedirectionDuration duration, RedirectionScope scope, RedirectionLocation... locations) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.UriFormatException, system.FormatException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), duration == null ? null : duration.getJCOInstance(), scope == null ? null : scope.getJCOInstance(), toObjectFromArray(locations)));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -177,7 +177,7 @@ public class RedirectionException extends CommunicationException {
     public RedirectionException(java.lang.String message, RedirectionType type, RedirectionDuration duration, RedirectionScope scope, NetException innerException, RedirectionLocation... locations) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(message, type == null ? null : type.getJCOInstance(), duration == null ? null : duration.getJCOInstance(), scope == null ? null : scope.getJCOInstance(), innerException == null ? null : innerException.getJCOInstance(), toObjectFromArray(locations)));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -187,7 +187,7 @@ public class RedirectionException extends CommunicationException {
     public RedirectionException(java.lang.String message, RedirectionType type, RedirectionDuration duration, RedirectionScope scope, RedirectionLocation... locations) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.MulticastNotSupportedException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(message, type == null ? null : type.getJCOInstance(), duration == null ? null : duration.getJCOInstance(), scope == null ? null : scope.getJCOInstance(), toObjectFromArray(locations)));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

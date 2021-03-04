@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -76,7 +76,7 @@ public class X509Certificate extends NetObject implements AutoCloseable {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -108,7 +108,7 @@ public class X509Certificate extends NetObject implements AutoCloseable {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -139,7 +139,7 @@ public class X509Certificate extends NetObject implements AutoCloseable {
     public X509Certificate() throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -149,7 +149,7 @@ public class X509Certificate extends NetObject implements AutoCloseable {
     public X509Certificate(byte[] data) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.IndexOutOfRangeException, system.security.cryptography.CryptographicException, system.runtime.serialization.SerializationException, system.io.IOException, system.ArrayTypeMismatchException, system.MissingMethodException, system.reflection.TargetInvocationException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject((Object)data));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -159,7 +159,7 @@ public class X509Certificate extends NetObject implements AutoCloseable {
     public X509Certificate(byte[] rawData, SecureString password) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.runtime.serialization.SerializationException, system.NotSupportedException, system.io.IOException, system.ArrayTypeMismatchException, system.MissingMethodException, system.reflection.TargetInvocationException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(rawData, password == null ? null : password.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -169,7 +169,7 @@ public class X509Certificate extends NetObject implements AutoCloseable {
     public X509Certificate(byte[] rawData, SecureString password, X509KeyStorageFlags keyStorageFlags) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.runtime.serialization.SerializationException, system.NotSupportedException, system.io.IOException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(rawData, password == null ? null : password.getJCOInstance(), keyStorageFlags == null ? null : keyStorageFlags.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -179,7 +179,7 @@ public class X509Certificate extends NetObject implements AutoCloseable {
     public X509Certificate(byte[] rawData, java.lang.String password) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.security.cryptography.CryptographicException, system.runtime.serialization.SerializationException, system.NotSupportedException, system.io.IOException, system.ArrayTypeMismatchException, system.MissingMethodException, system.reflection.TargetInvocationException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(rawData, password));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -189,7 +189,7 @@ public class X509Certificate extends NetObject implements AutoCloseable {
     public X509Certificate(byte[] rawData, java.lang.String password, X509KeyStorageFlags keyStorageFlags) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.InvalidOperationException, system.IndexOutOfRangeException, system.security.cryptography.CryptographicException, system.runtime.serialization.SerializationException, system.NotSupportedException, system.io.IOException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(rawData, password, keyStorageFlags == null ? null : keyStorageFlags.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -199,7 +199,7 @@ public class X509Certificate extends NetObject implements AutoCloseable {
     public X509Certificate(SerializationInfo info, StreamingContext context) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -209,7 +209,7 @@ public class X509Certificate extends NetObject implements AutoCloseable {
     public X509Certificate(X509Certificate cert) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(cert == null ? null : cert.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -219,7 +219,7 @@ public class X509Certificate extends NetObject implements AutoCloseable {
     public X509Certificate(java.lang.String fileName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.runtime.serialization.SerializationException, system.io.IOException, system.ArrayTypeMismatchException, system.MissingMethodException, system.reflection.TargetInvocationException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(fileName));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -229,7 +229,7 @@ public class X509Certificate extends NetObject implements AutoCloseable {
     public X509Certificate(java.lang.String fileName, SecureString password) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.io.IOException, system.ArrayTypeMismatchException, system.MissingMethodException, system.reflection.TargetInvocationException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(fileName, password == null ? null : password.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -239,7 +239,7 @@ public class X509Certificate extends NetObject implements AutoCloseable {
     public X509Certificate(java.lang.String fileName, SecureString password, X509KeyStorageFlags keyStorageFlags) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException, system.runtime.serialization.SerializationException, system.io.IOException, system.MissingMethodException, system.reflection.TargetInvocationException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(fileName, password == null ? null : password.getJCOInstance(), keyStorageFlags == null ? null : keyStorageFlags.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -249,7 +249,7 @@ public class X509Certificate extends NetObject implements AutoCloseable {
     public X509Certificate(java.lang.String fileName, java.lang.String password) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.runtime.serialization.SerializationException, system.io.IOException, system.ArrayTypeMismatchException, system.MissingMethodException, system.reflection.TargetInvocationException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(fileName, password));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -259,7 +259,7 @@ public class X509Certificate extends NetObject implements AutoCloseable {
     public X509Certificate(java.lang.String fileName, java.lang.String password, X509KeyStorageFlags keyStorageFlags) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.FormatException, system.ArrayTypeMismatchException, system.security.cryptography.CryptographicException, system.runtime.serialization.SerializationException, system.io.IOException, system.MissingMethodException, system.reflection.TargetInvocationException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(fileName, password, keyStorageFlags == null ? null : keyStorageFlags.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

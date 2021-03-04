@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -69,7 +69,7 @@ public class RequestBringIntoViewEventHandler extends JCVoidDelegate implements 
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -85,7 +85,7 @@ public class RequestBringIntoViewEventHandler extends JCVoidDelegate implements 
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -135,16 +135,16 @@ public class RequestBringIntoViewEventHandler extends JCVoidDelegate implements 
     }
 
     public RequestBringIntoViewEventHandler() {
-        super(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+        super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
     }
 
     public RequestBringIntoViewEventHandler(IRequestBringIntoViewEventHandler instance) {
-        super(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+        super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         callerInstance = instance;
     }
 
     public RequestBringIntoViewEventHandler(Object instance) throws Throwable {
-        super(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+        super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         if (instance == null) throw new IllegalArgumentException("Instance cannot be null");
         if (instance instanceof IRequestBringIntoViewEventHandler) {
             callerInstance = (IRequestBringIntoViewEventHandler) instance;
@@ -163,7 +163,7 @@ public class RequestBringIntoViewEventHandler extends JCVoidDelegate implements 
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public void METHOD_JAVA_NAME(NetObject sender, RequestBringIntoViewEventArgs e) throws Throwable {
+    public void DynamicInvoke(NetObject sender, RequestBringIntoViewEventArgs e) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

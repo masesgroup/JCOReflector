@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -75,7 +75,7 @@ public class XmlWriterTraceListener extends TextWriterTraceListener  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -107,7 +107,7 @@ public class XmlWriterTraceListener extends TextWriterTraceListener  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -141,7 +141,7 @@ public class XmlWriterTraceListener extends TextWriterTraceListener  {
     public XmlWriterTraceListener(Stream stream) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(stream == null ? null : stream.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -151,7 +151,7 @@ public class XmlWriterTraceListener extends TextWriterTraceListener  {
     public XmlWriterTraceListener(Stream stream, java.lang.String name) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(stream == null ? null : stream.getJCOInstance(), name));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -161,7 +161,7 @@ public class XmlWriterTraceListener extends TextWriterTraceListener  {
     public XmlWriterTraceListener(TextWriter writer) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(writer == null ? null : writer.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -171,7 +171,7 @@ public class XmlWriterTraceListener extends TextWriterTraceListener  {
     public XmlWriterTraceListener(TextWriter writer, java.lang.String name) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(writer == null ? null : writer.getJCOInstance(), name));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -181,7 +181,7 @@ public class XmlWriterTraceListener extends TextWriterTraceListener  {
     public XmlWriterTraceListener(java.lang.String filename) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(filename));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -191,7 +191,7 @@ public class XmlWriterTraceListener extends TextWriterTraceListener  {
     public XmlWriterTraceListener(java.lang.String filename, java.lang.String name) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(filename, name));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

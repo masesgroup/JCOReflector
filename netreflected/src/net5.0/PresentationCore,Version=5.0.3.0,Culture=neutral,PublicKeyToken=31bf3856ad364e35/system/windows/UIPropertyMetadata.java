@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -72,7 +72,7 @@ public class UIPropertyMetadata extends PropertyMetadata  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -104,7 +104,7 @@ public class UIPropertyMetadata extends PropertyMetadata  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -135,7 +135,7 @@ public class UIPropertyMetadata extends PropertyMetadata  {
     public UIPropertyMetadata() throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -145,7 +145,7 @@ public class UIPropertyMetadata extends PropertyMetadata  {
     public UIPropertyMetadata(NetObject defaultValue) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(defaultValue == null ? null : defaultValue.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -155,7 +155,7 @@ public class UIPropertyMetadata extends PropertyMetadata  {
     public UIPropertyMetadata(NetObject defaultValue, PropertyChangedCallback propertyChangedCallback) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(defaultValue == null ? null : defaultValue.getJCOInstance(), propertyChangedCallback));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -165,7 +165,7 @@ public class UIPropertyMetadata extends PropertyMetadata  {
     public UIPropertyMetadata(NetObject defaultValue, PropertyChangedCallback propertyChangedCallback, CoerceValueCallback coerceValueCallback) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(defaultValue == null ? null : defaultValue.getJCOInstance(), propertyChangedCallback, coerceValueCallback));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -175,7 +175,7 @@ public class UIPropertyMetadata extends PropertyMetadata  {
     public UIPropertyMetadata(NetObject defaultValue, PropertyChangedCallback propertyChangedCallback, CoerceValueCallback coerceValueCallback, boolean isAnimationProhibited) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(defaultValue == null ? null : defaultValue.getJCOInstance(), propertyChangedCallback, coerceValueCallback, isAnimationProhibited));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -185,7 +185,7 @@ public class UIPropertyMetadata extends PropertyMetadata  {
     public UIPropertyMetadata(PropertyChangedCallback propertyChangedCallback) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(propertyChangedCallback));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

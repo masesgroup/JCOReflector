@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -68,7 +68,7 @@ public interface INameScopeDictionary extends IJCOBridgeReflected, INameScope, I
      */
     public static INameScopeDictionary ToINameScopeDictionary(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Xaml, Version=5.0.3.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+        JCType classType = bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new INameScopeDictionaryImplementation(from.getJCOInstance());
     }

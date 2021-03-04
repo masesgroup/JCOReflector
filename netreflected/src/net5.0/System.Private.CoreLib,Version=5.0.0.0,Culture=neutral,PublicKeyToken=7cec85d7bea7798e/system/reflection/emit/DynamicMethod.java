@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -85,7 +85,7 @@ public class DynamicMethod extends MethodInfo  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -117,7 +117,7 @@ public class DynamicMethod extends MethodInfo  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -151,7 +151,7 @@ public class DynamicMethod extends MethodInfo  {
     public DynamicMethod(java.lang.String name, MethodAttributes attributes, CallingConventions callingConvention, NetType returnType, NetType[] parameterTypes, Module m, boolean skipVisibility) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(name, attributes == null ? null : attributes.getJCOInstance(), callingConvention == null ? null : callingConvention.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(parameterTypes), m == null ? null : m.getJCOInstance(), skipVisibility));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -161,7 +161,7 @@ public class DynamicMethod extends MethodInfo  {
     public DynamicMethod(java.lang.String name, MethodAttributes attributes, CallingConventions callingConvention, NetType returnType, NetType[] parameterTypes, NetType owner, boolean skipVisibility) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(name, attributes == null ? null : attributes.getJCOInstance(), callingConvention == null ? null : callingConvention.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(parameterTypes), owner == null ? null : owner.getJCOInstance(), skipVisibility));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -171,7 +171,7 @@ public class DynamicMethod extends MethodInfo  {
     public DynamicMethod(java.lang.String name, NetType returnType, NetType[] parameterTypes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(name, returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(parameterTypes)));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -181,7 +181,7 @@ public class DynamicMethod extends MethodInfo  {
     public DynamicMethod(java.lang.String name, NetType returnType, NetType[] parameterTypes, boolean restrictedSkipVisibility) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(name, returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(parameterTypes), restrictedSkipVisibility));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -191,7 +191,7 @@ public class DynamicMethod extends MethodInfo  {
     public DynamicMethod(java.lang.String name, NetType returnType, NetType[] parameterTypes, Module m) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(name, returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(parameterTypes), m == null ? null : m.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -201,7 +201,7 @@ public class DynamicMethod extends MethodInfo  {
     public DynamicMethod(java.lang.String name, NetType returnType, NetType[] parameterTypes, Module m, boolean skipVisibility) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(name, returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(parameterTypes), m == null ? null : m.getJCOInstance(), skipVisibility));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -211,7 +211,7 @@ public class DynamicMethod extends MethodInfo  {
     public DynamicMethod(java.lang.String name, NetType returnType, NetType[] parameterTypes, NetType owner) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(name, returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(parameterTypes), owner == null ? null : owner.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -221,7 +221,7 @@ public class DynamicMethod extends MethodInfo  {
     public DynamicMethod(java.lang.String name, NetType returnType, NetType[] parameterTypes, NetType owner, boolean skipVisibility) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(name, returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(parameterTypes), owner == null ? null : owner.getJCOInstance(), skipVisibility));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

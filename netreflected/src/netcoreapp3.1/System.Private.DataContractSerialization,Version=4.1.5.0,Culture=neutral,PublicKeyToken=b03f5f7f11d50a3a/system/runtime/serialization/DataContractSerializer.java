@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -77,7 +77,7 @@ public class DataContractSerializer extends XmlObjectSerializer  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -109,7 +109,7 @@ public class DataContractSerializer extends XmlObjectSerializer  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -143,7 +143,7 @@ public class DataContractSerializer extends XmlObjectSerializer  {
     public DataContractSerializer(NetType type) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -153,7 +153,7 @@ public class DataContractSerializer extends XmlObjectSerializer  {
     public DataContractSerializer(NetType type, DataContractSerializerSettings settings) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), settings == null ? null : settings.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -163,7 +163,7 @@ public class DataContractSerializer extends XmlObjectSerializer  {
     public DataContractSerializer(NetType type, java.lang.String rootName, java.lang.String rootNamespace) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), rootName, rootNamespace));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -173,7 +173,7 @@ public class DataContractSerializer extends XmlObjectSerializer  {
     public DataContractSerializer(NetType type, XmlDictionaryString rootName, XmlDictionaryString rootNamespace) throws Throwable, system.ArgumentException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), rootName == null ? null : rootName.getJCOInstance(), rootNamespace == null ? null : rootNamespace.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

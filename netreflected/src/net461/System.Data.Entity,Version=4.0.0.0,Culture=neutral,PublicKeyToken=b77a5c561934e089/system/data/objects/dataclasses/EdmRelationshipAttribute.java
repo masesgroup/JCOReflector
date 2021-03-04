@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -71,7 +71,7 @@ public class EdmRelationshipAttribute extends Attribute  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -103,7 +103,7 @@ public class EdmRelationshipAttribute extends Attribute  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -137,7 +137,7 @@ public class EdmRelationshipAttribute extends Attribute  {
     public EdmRelationshipAttribute(java.lang.String relationshipNamespaceName, java.lang.String relationshipName, java.lang.String role1Name, RelationshipMultiplicity role1Multiplicity, NetType role1Type, java.lang.String role2Name, RelationshipMultiplicity role2Multiplicity, NetType role2Type) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(relationshipNamespaceName, relationshipName, role1Name, role1Multiplicity == null ? null : role1Multiplicity.getJCOInstance(), role1Type == null ? null : role1Type.getJCOInstance(), role2Name, role2Multiplicity == null ? null : role2Multiplicity.getJCOInstance(), role2Type == null ? null : role2Type.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -147,7 +147,7 @@ public class EdmRelationshipAttribute extends Attribute  {
     public EdmRelationshipAttribute(java.lang.String relationshipNamespaceName, java.lang.String relationshipName, java.lang.String role1Name, RelationshipMultiplicity role1Multiplicity, NetType role1Type, java.lang.String role2Name, RelationshipMultiplicity role2Multiplicity, NetType role2Type, boolean isForeignKey) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(relationshipNamespaceName, relationshipName, role1Name, role1Multiplicity == null ? null : role1Multiplicity.getJCOInstance(), role1Type == null ? null : role1Type.getJCOInstance(), role2Name, role2Multiplicity == null ? null : role2Multiplicity.getJCOInstance(), role2Type == null ? null : role2Type.getJCOInstance(), isForeignKey));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

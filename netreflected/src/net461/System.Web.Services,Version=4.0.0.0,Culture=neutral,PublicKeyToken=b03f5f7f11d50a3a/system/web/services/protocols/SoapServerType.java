@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -72,7 +72,7 @@ public class SoapServerType extends ServerType  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -104,7 +104,7 @@ public class SoapServerType extends ServerType  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -138,7 +138,7 @@ public class SoapServerType extends ServerType  {
     public SoapServerType(NetType type, WebServiceProtocols protocolsSupported) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotImplementedException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.RankException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.NullReferenceException, system.io.PathTooLongException, system.MemberAccessException, system.security.SecurityException, system.web.HttpException, system.web.HttpRequestValidationException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.threading.ThreadAbortException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.io.FileNotFoundException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.UnauthorizedAccessException, system.web.services.protocols.SoapException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), protocolsSupported == null ? null : protocolsSupported.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

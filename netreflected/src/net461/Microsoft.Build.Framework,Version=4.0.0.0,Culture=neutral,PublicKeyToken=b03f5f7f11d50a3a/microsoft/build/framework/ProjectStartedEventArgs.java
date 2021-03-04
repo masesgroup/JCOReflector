@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -72,7 +72,7 @@ public class ProjectStartedEventArgs extends BuildStatusEventArgs  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -104,7 +104,7 @@ public class ProjectStartedEventArgs extends BuildStatusEventArgs  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -138,7 +138,7 @@ public class ProjectStartedEventArgs extends BuildStatusEventArgs  {
     public ProjectStartedEventArgs(int projectId, java.lang.String message, java.lang.String helpKeyword, java.lang.String projectFile, java.lang.String targetNames, IEnumerable properties, IEnumerable items, BuildEventContext parentBuildEventContext) throws Throwable, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(projectId, message, helpKeyword, projectFile, targetNames, properties == null ? null : properties.getJCOInstance(), items == null ? null : items.getJCOInstance(), parentBuildEventContext == null ? null : parentBuildEventContext.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -148,7 +148,7 @@ public class ProjectStartedEventArgs extends BuildStatusEventArgs  {
     public ProjectStartedEventArgs(int projectId, java.lang.String message, java.lang.String helpKeyword, java.lang.String projectFile, java.lang.String targetNames, IEnumerable properties, IEnumerable items, BuildEventContext parentBuildEventContext, DateTime eventTimestamp) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(projectId, message, helpKeyword, projectFile, targetNames, properties == null ? null : properties.getJCOInstance(), items == null ? null : items.getJCOInstance(), parentBuildEventContext == null ? null : parentBuildEventContext.getJCOInstance(), eventTimestamp == null ? null : eventTimestamp.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -158,7 +158,7 @@ public class ProjectStartedEventArgs extends BuildStatusEventArgs  {
     public ProjectStartedEventArgs(java.lang.String message, java.lang.String helpKeyword, java.lang.String projectFile, java.lang.String targetNames, IEnumerable properties, IEnumerable items) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(message, helpKeyword, projectFile, targetNames, properties == null ? null : properties.getJCOInstance(), items == null ? null : items.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -168,7 +168,7 @@ public class ProjectStartedEventArgs extends BuildStatusEventArgs  {
     public ProjectStartedEventArgs(java.lang.String message, java.lang.String helpKeyword, java.lang.String projectFile, java.lang.String targetNames, IEnumerable properties, IEnumerable items, DateTime eventTimestamp) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(message, helpKeyword, projectFile, targetNames, properties == null ? null : properties.getJCOInstance(), items == null ? null : items.getJCOInstance(), eventTimestamp == null ? null : eventTimestamp.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

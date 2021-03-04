@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -83,7 +83,7 @@ public class WorkflowView extends UserControl  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -115,7 +115,7 @@ public class WorkflowView extends UserControl  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -146,7 +146,7 @@ public class WorkflowView extends UserControl  {
     public WorkflowView() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.NotImplementedException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.runtime.interopservices.ExternalException, system.componentmodel.Win32Exception, system.security.SecurityException, system.threading.ThreadStateException, system.RankException, system.OutOfMemoryException, system.NullReferenceException, system.OverflowException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.AccessViolationException, system.TypeLoadException, system.runtime.serialization.SerializationException, system.xml.XmlException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -156,7 +156,7 @@ public class WorkflowView extends UserControl  {
     public WorkflowView(IServiceProvider serviceProvider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationErrorsException, system.FormatException, system.MulticastNotSupportedException, system.NullReferenceException, system.InvalidCastException, system.workflow.componentmodel.serialization.WorkflowMarkupSerializationException, system.MissingMethodException, system.runtime.interopservices.ExternalException, system.componentmodel.Win32Exception, system.security.SecurityException, system.threading.ThreadStateException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.RankException, system.OverflowException, system.UnauthorizedAccessException, system.io.IOException, system.io.FileNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.AccessViolationException, system.runtime.serialization.SerializationException, system.TypeLoadException, system.xml.XmlException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(serviceProvider == null ? null : serviceProvider.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

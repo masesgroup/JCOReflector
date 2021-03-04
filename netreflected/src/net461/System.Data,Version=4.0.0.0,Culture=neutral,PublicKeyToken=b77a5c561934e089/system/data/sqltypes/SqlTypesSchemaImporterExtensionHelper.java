@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -79,7 +79,7 @@ public class SqlTypesSchemaImporterExtensionHelper extends SchemaImporterExtensi
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -111,7 +111,7 @@ public class SqlTypesSchemaImporterExtensionHelper extends SchemaImporterExtensi
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -145,7 +145,7 @@ public class SqlTypesSchemaImporterExtensionHelper extends SchemaImporterExtensi
     public SqlTypesSchemaImporterExtensionHelper(java.lang.String name, java.lang.String destinationType) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(name, destinationType));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -155,7 +155,7 @@ public class SqlTypesSchemaImporterExtensionHelper extends SchemaImporterExtensi
     public SqlTypesSchemaImporterExtensionHelper(java.lang.String name, java.lang.String destinationType, boolean direct) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(name, destinationType, direct));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -165,7 +165,7 @@ public class SqlTypesSchemaImporterExtensionHelper extends SchemaImporterExtensi
     public SqlTypesSchemaImporterExtensionHelper(java.lang.String name, java.lang.String targetNamespace, java.lang.String[] references, CodeNamespaceImport[] namespaceImports, java.lang.String destinationType, boolean direct) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(name, targetNamespace, references, toObjectFromArray(namespaceImports), destinationType, direct));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

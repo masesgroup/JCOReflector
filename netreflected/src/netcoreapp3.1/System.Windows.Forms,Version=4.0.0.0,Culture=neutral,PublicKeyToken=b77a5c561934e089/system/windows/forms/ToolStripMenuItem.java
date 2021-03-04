@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -76,7 +76,7 @@ public class ToolStripMenuItem extends ToolStripDropDownItem  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -108,7 +108,7 @@ public class ToolStripMenuItem extends ToolStripDropDownItem  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -139,7 +139,7 @@ public class ToolStripMenuItem extends ToolStripDropDownItem  {
     public ToolStripMenuItem() throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -149,7 +149,7 @@ public class ToolStripMenuItem extends ToolStripDropDownItem  {
     public ToolStripMenuItem(Image image) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ApplicationException, system.OverflowException, system.MulticastNotSupportedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(image == null ? null : image.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -159,7 +159,7 @@ public class ToolStripMenuItem extends ToolStripDropDownItem  {
     public ToolStripMenuItem(java.lang.String text) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ApplicationException, system.OverflowException, system.MulticastNotSupportedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(text));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -169,7 +169,7 @@ public class ToolStripMenuItem extends ToolStripDropDownItem  {
     public ToolStripMenuItem(java.lang.String text, Image image) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ApplicationException, system.OverflowException, system.MulticastNotSupportedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(text, image == null ? null : image.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -179,7 +179,7 @@ public class ToolStripMenuItem extends ToolStripDropDownItem  {
     public ToolStripMenuItem(java.lang.String text, Image image, EventHandler onClick) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ApplicationException, system.OverflowException, system.MulticastNotSupportedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(text, image == null ? null : image.getJCOInstance(), onClick));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -189,7 +189,7 @@ public class ToolStripMenuItem extends ToolStripDropDownItem  {
     public ToolStripMenuItem(java.lang.String text, Image image, EventHandler onClick, java.lang.String name) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.OverflowException, system.componentmodel.InvalidAsynchronousStateException, system.ApplicationException, system.MulticastNotSupportedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(text, image == null ? null : image.getJCOInstance(), onClick, name));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -199,7 +199,7 @@ public class ToolStripMenuItem extends ToolStripDropDownItem  {
     public ToolStripMenuItem(java.lang.String text, Image image, EventHandler onClick, Keys shortcutKeys) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.ArgumentException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ApplicationException, system.OverflowException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(text, image == null ? null : image.getJCOInstance(), onClick, shortcutKeys == null ? null : shortcutKeys.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -209,7 +209,7 @@ public class ToolStripMenuItem extends ToolStripDropDownItem  {
     public ToolStripMenuItem(java.lang.String text, Image image, ToolStripItem... dropDownItems) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.componentmodel.InvalidEnumArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MulticastNotSupportedException, system.NotSupportedException, system.RankException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(text, image == null ? null : image.getJCOInstance(), toObjectFromArray(dropDownItems)));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -84,7 +84,7 @@ public class FormattedText extends NetObject  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -116,7 +116,7 @@ public class FormattedText extends NetObject  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -150,7 +150,7 @@ public class FormattedText extends NetObject  {
     public FormattedText(java.lang.String textToFormat, CultureInfo culture, FlowDirection flowDirection, Typeface typeface, double emSize, Brush foreground) throws Throwable, system.ArgumentException, system.componentmodel.Win32Exception, system.ArgumentNullException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(textToFormat, culture == null ? null : culture.getJCOInstance(), flowDirection == null ? null : flowDirection.getJCOInstance(), typeface == null ? null : typeface.getJCOInstance(), emSize, foreground == null ? null : foreground.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -160,7 +160,7 @@ public class FormattedText extends NetObject  {
     public FormattedText(java.lang.String textToFormat, CultureInfo culture, FlowDirection flowDirection, Typeface typeface, double emSize, Brush foreground, double pixelsPerDip) throws Throwable, system.ArgumentException, system.componentmodel.Win32Exception, system.ArgumentNullException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(textToFormat, culture == null ? null : culture.getJCOInstance(), flowDirection == null ? null : flowDirection.getJCOInstance(), typeface == null ? null : typeface.getJCOInstance(), emSize, foreground == null ? null : foreground.getJCOInstance(), pixelsPerDip));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -170,7 +170,7 @@ public class FormattedText extends NetObject  {
     public FormattedText(java.lang.String textToFormat, CultureInfo culture, FlowDirection flowDirection, Typeface typeface, double emSize, Brush foreground, NumberSubstitution numberSubstitution) throws Throwable, system.ArgumentException, system.componentmodel.Win32Exception, system.ArgumentNullException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(textToFormat, culture == null ? null : culture.getJCOInstance(), flowDirection == null ? null : flowDirection.getJCOInstance(), typeface == null ? null : typeface.getJCOInstance(), emSize, foreground == null ? null : foreground.getJCOInstance(), numberSubstitution == null ? null : numberSubstitution.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -180,7 +180,7 @@ public class FormattedText extends NetObject  {
     public FormattedText(java.lang.String textToFormat, CultureInfo culture, FlowDirection flowDirection, Typeface typeface, double emSize, Brush foreground, NumberSubstitution numberSubstitution, double pixelsPerDip) throws Throwable, system.ArgumentException, system.componentmodel.Win32Exception, system.ArgumentNullException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(textToFormat, culture == null ? null : culture.getJCOInstance(), flowDirection == null ? null : flowDirection.getJCOInstance(), typeface == null ? null : typeface.getJCOInstance(), emSize, foreground == null ? null : foreground.getJCOInstance(), numberSubstitution == null ? null : numberSubstitution.getJCOInstance(), pixelsPerDip));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -190,7 +190,7 @@ public class FormattedText extends NetObject  {
     public FormattedText(java.lang.String textToFormat, CultureInfo culture, FlowDirection flowDirection, Typeface typeface, double emSize, Brush foreground, NumberSubstitution numberSubstitution, TextFormattingMode textFormattingMode) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(textToFormat, culture == null ? null : culture.getJCOInstance(), flowDirection == null ? null : flowDirection.getJCOInstance(), typeface == null ? null : typeface.getJCOInstance(), emSize, foreground == null ? null : foreground.getJCOInstance(), numberSubstitution == null ? null : numberSubstitution.getJCOInstance(), textFormattingMode == null ? null : textFormattingMode.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -200,7 +200,7 @@ public class FormattedText extends NetObject  {
     public FormattedText(java.lang.String textToFormat, CultureInfo culture, FlowDirection flowDirection, Typeface typeface, double emSize, Brush foreground, NumberSubstitution numberSubstitution, TextFormattingMode textFormattingMode, double pixelsPerDip) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(textToFormat, culture == null ? null : culture.getJCOInstance(), flowDirection == null ? null : flowDirection.getJCOInstance(), typeface == null ? null : typeface.getJCOInstance(), emSize, foreground == null ? null : foreground.getJCOInstance(), numberSubstitution == null ? null : numberSubstitution.getJCOInstance(), textFormattingMode == null ? null : textFormattingMode.getJCOInstance(), pixelsPerDip));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

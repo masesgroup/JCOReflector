@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -75,7 +75,7 @@ public class ConnectionOptions extends ManagementOptions  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -107,7 +107,7 @@ public class ConnectionOptions extends ManagementOptions  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -138,7 +138,7 @@ public class ConnectionOptions extends ManagementOptions  {
     public ConnectionOptions() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.ObjectDisposedException, system.security.cryptography.CryptographicException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -148,7 +148,7 @@ public class ConnectionOptions extends ManagementOptions  {
     public ConnectionOptions(java.lang.String locale, java.lang.String username, SecureString password, java.lang.String authority, ImpersonationLevel impersonation, AuthenticationLevel authentication, boolean enablePrivileges, ManagementNamedValueCollection context, TimeSpan timeout) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MulticastNotSupportedException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(locale, username, password == null ? null : password.getJCOInstance(), authority, impersonation == null ? null : impersonation.getJCOInstance(), authentication == null ? null : authentication.getJCOInstance(), enablePrivileges, context == null ? null : context.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -158,7 +158,7 @@ public class ConnectionOptions extends ManagementOptions  {
     public ConnectionOptions(java.lang.String locale, java.lang.String username, java.lang.String password, java.lang.String authority, ImpersonationLevel impersonation, AuthenticationLevel authentication, boolean enablePrivileges, ManagementNamedValueCollection context, TimeSpan timeout) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(locale, username, password, authority, impersonation == null ? null : impersonation.getJCOInstance(), authentication == null ? null : authentication.getJCOInstance(), enablePrivileges, context == null ? null : context.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

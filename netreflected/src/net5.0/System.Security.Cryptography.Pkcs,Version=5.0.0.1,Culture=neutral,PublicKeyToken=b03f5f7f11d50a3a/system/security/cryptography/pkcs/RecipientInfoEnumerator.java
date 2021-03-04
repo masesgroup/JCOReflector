@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -62,13 +62,13 @@ public class RecipientInfoEnumerator extends NetObject implements Iterator<Recip
      */
     public static final String className = "System.Security.Cryptography.Pkcs.RecipientInfoEnumerator";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
-    static JCType classType = createType();
+    public static JCType classType = createType();
     static JCEnum enumInstance = null;
     Iterator<JCObject> classInstance = null;
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException jce) {
             JCOReflector.writeLog(jce);
             return null;
@@ -96,7 +96,7 @@ public class RecipientInfoEnumerator extends NetObject implements Iterator<Recip
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {

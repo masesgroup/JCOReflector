@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -79,7 +79,7 @@ public class FlatTrackingData extends NetObject  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -111,7 +111,7 @@ public class FlatTrackingData extends NetObject  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -145,7 +145,7 @@ public class FlatTrackingData extends NetObject  {
     public FlatTrackingData(ITask ownerTask, ITaskItem[] tlogFiles, boolean skipMissingFiles) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.io.PathTooLongException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.OutOfMemoryException, system.InvalidTimeZoneException, system.OverflowException, system.RankException, system.collections.generic.KeyNotFoundException, system.io.IOException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(ownerTask == null ? null : ownerTask.getJCOInstance(), toObjectFromArray(tlogFiles), skipMissingFiles));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -155,7 +155,7 @@ public class FlatTrackingData extends NetObject  {
     public FlatTrackingData(ITask ownerTask, ITaskItem[] tlogFiles, DateTime missingFileTimeUtc) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.io.PathTooLongException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.OutOfMemoryException, system.InvalidTimeZoneException, system.OverflowException, system.RankException, system.collections.generic.KeyNotFoundException, system.io.IOException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(ownerTask == null ? null : ownerTask.getJCOInstance(), toObjectFromArray(tlogFiles), missingFileTimeUtc == null ? null : missingFileTimeUtc.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -165,7 +165,7 @@ public class FlatTrackingData extends NetObject  {
     public FlatTrackingData(ITaskItem[] tlogFiles, boolean skipMissingFiles) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.io.PathTooLongException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.OutOfMemoryException, system.InvalidTimeZoneException, system.OverflowException, system.RankException, system.collections.generic.KeyNotFoundException, system.io.IOException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(toObjectFromArray(tlogFiles), skipMissingFiles));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -175,7 +175,7 @@ public class FlatTrackingData extends NetObject  {
     public FlatTrackingData(ITaskItem[] tlogFiles, ITaskItem[] tlogFilesToIgnore, DateTime missingFileTimeUtc) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.io.PathTooLongException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.OutOfMemoryException, system.InvalidTimeZoneException, system.OverflowException, system.RankException, system.collections.generic.KeyNotFoundException, system.io.IOException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(toObjectFromArray(tlogFiles), toObjectFromArray(tlogFilesToIgnore), missingFileTimeUtc == null ? null : missingFileTimeUtc.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -185,7 +185,7 @@ public class FlatTrackingData extends NetObject  {
     public FlatTrackingData(ITaskItem[] tlogFiles, DateTime missingFileTimeUtc) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.io.PathTooLongException, system.NotSupportedException, system.InvalidOperationException, system.NullReferenceException, system.OutOfMemoryException, system.InvalidTimeZoneException, system.OverflowException, system.RankException, system.collections.generic.KeyNotFoundException, system.io.IOException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(toObjectFromArray(tlogFiles), missingFileTimeUtc == null ? null : missingFileTimeUtc.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

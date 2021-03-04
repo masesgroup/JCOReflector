@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -92,7 +92,7 @@ public class Socket extends NetObject implements AutoCloseable {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -124,7 +124,7 @@ public class Socket extends NetObject implements AutoCloseable {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -158,7 +158,7 @@ public class Socket extends NetObject implements AutoCloseable {
     public Socket(AddressFamily addressFamily, SocketType socketType, ProtocolType protocolType) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.NotSupportedException, system.net.sockets.SocketException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(addressFamily == null ? null : addressFamily.getJCOInstance(), socketType == null ? null : socketType.getJCOInstance(), protocolType == null ? null : protocolType.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -168,7 +168,7 @@ public class Socket extends NetObject implements AutoCloseable {
     public Socket(SafeSocketHandle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.net.sockets.SocketException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(handle == null ? null : handle.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -178,7 +178,7 @@ public class Socket extends NetObject implements AutoCloseable {
     public Socket(SocketInformation socketInformation) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.net.sockets.SocketException, system.InvalidOperationException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(socketInformation == null ? null : socketInformation.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -188,7 +188,7 @@ public class Socket extends NetObject implements AutoCloseable {
     public Socket(SocketType socketType, ProtocolType protocolType) throws Throwable, system.ArgumentException, system.net.sockets.SocketException, system.ArgumentNullException, system.InvalidOperationException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(socketType == null ? null : socketType.getJCOInstance(), protocolType == null ? null : protocolType.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

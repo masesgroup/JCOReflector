@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -75,7 +75,7 @@ public interface IXpsFixedDocumentWriter extends IJCOBridgeReflected, IDocumentS
      */
     public static IXpsFixedDocumentWriter ToIXpsFixedDocumentWriter(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("ReachFramework, Version=5.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");
-        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+        JCType classType = bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IXpsFixedDocumentWriterImplementation(from.getJCOInstance());
     }

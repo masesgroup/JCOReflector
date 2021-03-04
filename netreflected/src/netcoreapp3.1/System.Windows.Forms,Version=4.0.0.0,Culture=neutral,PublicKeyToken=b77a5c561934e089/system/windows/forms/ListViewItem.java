@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -79,7 +79,7 @@ public class ListViewItem extends NetObject  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -111,7 +111,7 @@ public class ListViewItem extends NetObject  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -142,7 +142,7 @@ public class ListViewItem extends NetObject  {
     public ListViewItem() throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -152,7 +152,7 @@ public class ListViewItem extends NetObject  {
     public ListViewItem(java.lang.String text) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(text));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -162,7 +162,7 @@ public class ListViewItem extends NetObject  {
     public ListViewItem(java.lang.String text, int imageIndex) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(text, imageIndex));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -172,7 +172,7 @@ public class ListViewItem extends NetObject  {
     public ListViewItem(java.lang.String text, int imageIndex, ListViewGroup group) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(text, imageIndex, group == null ? null : group.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -182,7 +182,7 @@ public class ListViewItem extends NetObject  {
     public ListViewItem(java.lang.String text, java.lang.String imageKey) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(text, imageKey));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -192,7 +192,7 @@ public class ListViewItem extends NetObject  {
     public ListViewItem(java.lang.String text, java.lang.String imageKey, ListViewGroup group) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(text, imageKey, group == null ? null : group.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -202,7 +202,7 @@ public class ListViewItem extends NetObject  {
     public ListViewItem(java.lang.String text, ListViewGroup group) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(text, group == null ? null : group.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -212,7 +212,7 @@ public class ListViewItem extends NetObject  {
     public ListViewItem(java.lang.String[] items) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject((Object)items));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -222,7 +222,7 @@ public class ListViewItem extends NetObject  {
     public ListViewItem(java.lang.String[] items, int imageIndex) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(items, imageIndex));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -232,7 +232,7 @@ public class ListViewItem extends NetObject  {
     public ListViewItem(java.lang.String[] items, int imageIndex, Color foreColor, Color backColor, Font font) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(items, imageIndex, foreColor == null ? null : foreColor.getJCOInstance(), backColor == null ? null : backColor.getJCOInstance(), font == null ? null : font.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -242,7 +242,7 @@ public class ListViewItem extends NetObject  {
     public ListViewItem(java.lang.String[] items, int imageIndex, Color foreColor, Color backColor, Font font, ListViewGroup group) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(items, imageIndex, foreColor == null ? null : foreColor.getJCOInstance(), backColor == null ? null : backColor.getJCOInstance(), font == null ? null : font.getJCOInstance(), group == null ? null : group.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -252,7 +252,7 @@ public class ListViewItem extends NetObject  {
     public ListViewItem(java.lang.String[] items, int imageIndex, ListViewGroup group) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(items, imageIndex, group == null ? null : group.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -262,7 +262,7 @@ public class ListViewItem extends NetObject  {
     public ListViewItem(java.lang.String[] items, java.lang.String imageKey) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(items, imageKey));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -272,7 +272,7 @@ public class ListViewItem extends NetObject  {
     public ListViewItem(java.lang.String[] items, java.lang.String imageKey, Color foreColor, Color backColor, Font font) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(items, imageKey, foreColor == null ? null : foreColor.getJCOInstance(), backColor == null ? null : backColor.getJCOInstance(), font == null ? null : font.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -282,7 +282,7 @@ public class ListViewItem extends NetObject  {
     public ListViewItem(java.lang.String[] items, java.lang.String imageKey, Color foreColor, Color backColor, Font font, ListViewGroup group) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(items, imageKey, foreColor == null ? null : foreColor.getJCOInstance(), backColor == null ? null : backColor.getJCOInstance(), font == null ? null : font.getJCOInstance(), group == null ? null : group.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -292,7 +292,7 @@ public class ListViewItem extends NetObject  {
     public ListViewItem(java.lang.String[] items, java.lang.String imageKey, ListViewGroup group) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(items, imageKey, group == null ? null : group.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -302,7 +302,7 @@ public class ListViewItem extends NetObject  {
     public ListViewItem(java.lang.String[] items, ListViewGroup group) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(items, group == null ? null : group.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -312,7 +312,7 @@ public class ListViewItem extends NetObject  {
     public ListViewItem(ListViewGroup group) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(group == null ? null : group.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

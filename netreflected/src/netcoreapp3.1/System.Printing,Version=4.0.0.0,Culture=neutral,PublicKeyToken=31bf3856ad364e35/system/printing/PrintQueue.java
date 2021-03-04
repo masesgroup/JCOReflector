@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -88,7 +88,7 @@ public class PrintQueue extends PrintSystemObject  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -120,7 +120,7 @@ public class PrintQueue extends PrintSystemObject  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -154,7 +154,7 @@ public class PrintQueue extends PrintSystemObject  {
     public PrintQueue(PrintServer printServer, java.lang.String printQueueName) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.ObjectDisposedException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(printServer == null ? null : printServer.getJCOInstance(), printQueueName));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -164,7 +164,7 @@ public class PrintQueue extends PrintSystemObject  {
     public PrintQueue(PrintServer printServer, java.lang.String printQueueName, int printSchemaVersion) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.ObjectDisposedException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(printServer == null ? null : printServer.getJCOInstance(), printQueueName, printSchemaVersion));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -174,7 +174,7 @@ public class PrintQueue extends PrintSystemObject  {
     public PrintQueue(PrintServer printServer, java.lang.String printQueueName, int printSchemaVersion, PrintSystemDesiredAccess desiredAccess) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.ObjectDisposedException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(printServer == null ? null : printServer.getJCOInstance(), printQueueName, printSchemaVersion, desiredAccess == null ? null : desiredAccess.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -184,7 +184,7 @@ public class PrintQueue extends PrintSystemObject  {
     public PrintQueue(PrintServer printServer, java.lang.String printQueueName, PrintQueueIndexedProperty[] propertyFilter) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(printServer == null ? null : printServer.getJCOInstance(), printQueueName, toObjectFromArray(propertyFilter)));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -194,7 +194,7 @@ public class PrintQueue extends PrintSystemObject  {
     public PrintQueue(PrintServer printServer, java.lang.String printQueueName, PrintQueueIndexedProperty[] propertyFilter, PrintSystemDesiredAccess desiredAccess) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(printServer == null ? null : printServer.getJCOInstance(), printQueueName, toObjectFromArray(propertyFilter), desiredAccess == null ? null : desiredAccess.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -204,7 +204,7 @@ public class PrintQueue extends PrintSystemObject  {
     public PrintQueue(PrintServer printServer, java.lang.String printQueueName, PrintSystemDesiredAccess desiredAccess) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.ObjectDisposedException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(printServer == null ? null : printServer.getJCOInstance(), printQueueName, desiredAccess == null ? null : desiredAccess.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -214,7 +214,7 @@ public class PrintQueue extends PrintSystemObject  {
     public PrintQueue(PrintServer printServer, java.lang.String printQueueName, java.lang.String[] propertyFilter) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.ObjectDisposedException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(printServer == null ? null : printServer.getJCOInstance(), printQueueName, propertyFilter));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -224,7 +224,7 @@ public class PrintQueue extends PrintSystemObject  {
     public PrintQueue(PrintServer printServer, java.lang.String printQueueName, java.lang.String[] propertyFilter, PrintSystemDesiredAccess desiredAccess) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.ObjectDisposedException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(printServer == null ? null : printServer.getJCOInstance(), printQueueName, propertyFilter, desiredAccess == null ? null : desiredAccess.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

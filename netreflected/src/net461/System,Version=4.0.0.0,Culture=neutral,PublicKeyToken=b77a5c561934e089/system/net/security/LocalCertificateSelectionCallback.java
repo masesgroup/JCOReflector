@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -70,7 +70,7 @@ public class LocalCertificateSelectionCallback extends JCDelegate implements IJC
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -86,7 +86,7 @@ public class LocalCertificateSelectionCallback extends JCDelegate implements IJC
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -172,16 +172,16 @@ public class LocalCertificateSelectionCallback extends JCDelegate implements IJC
     }
 
     public LocalCertificateSelectionCallback() {
-        super(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+        super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
     }
 
     public LocalCertificateSelectionCallback(ILocalCertificateSelectionCallback instance) {
-        super(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+        super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         callerInstance = instance;
     }
 
     public LocalCertificateSelectionCallback(Object instance) throws Throwable {
-        super(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+        super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         if (instance == null) throw new IllegalArgumentException("Instance cannot be null");
         if (instance instanceof ILocalCertificateSelectionCallback) {
             callerInstance = (ILocalCertificateSelectionCallback) instance;
@@ -200,7 +200,7 @@ public class LocalCertificateSelectionCallback extends JCDelegate implements IJC
         return JCOBridgeInstance.translateException(ne);
     }
 
-    public X509Certificate METHOD_JAVA_NAME(NetObject sender, java.lang.String targetHost, X509CertificateCollection localCertificates, X509Certificate remoteCertificate, java.lang.String[] acceptableIssuers) throws Throwable {
+    public X509Certificate DynamicInvoke(NetObject sender, java.lang.String targetHost, X509CertificateCollection localCertificates, X509Certificate remoteCertificate, java.lang.String[] acceptableIssuers) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

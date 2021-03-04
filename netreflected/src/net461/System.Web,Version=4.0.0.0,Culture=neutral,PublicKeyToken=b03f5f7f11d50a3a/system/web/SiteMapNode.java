@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -79,7 +79,7 @@ public class SiteMapNode extends NetObject  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -111,7 +111,7 @@ public class SiteMapNode extends NetObject  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -145,7 +145,7 @@ public class SiteMapNode extends NetObject  {
     public SiteMapNode(SiteMapProvider provider, java.lang.String key) throws Throwable, system.web.HttpException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(provider == null ? null : provider.getJCOInstance(), key));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -155,7 +155,7 @@ public class SiteMapNode extends NetObject  {
     public SiteMapNode(SiteMapProvider provider, java.lang.String key, java.lang.String url) throws Throwable, system.web.HttpException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(provider == null ? null : provider.getJCOInstance(), key, url));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -165,7 +165,7 @@ public class SiteMapNode extends NetObject  {
     public SiteMapNode(SiteMapProvider provider, java.lang.String key, java.lang.String url, java.lang.String title) throws Throwable, system.web.HttpException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(provider == null ? null : provider.getJCOInstance(), key, url, title));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -175,7 +175,7 @@ public class SiteMapNode extends NetObject  {
     public SiteMapNode(SiteMapProvider provider, java.lang.String key, java.lang.String url, java.lang.String title, java.lang.String description) throws Throwable, system.web.HttpException, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(provider == null ? null : provider.getJCOInstance(), key, url, title, description));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -185,7 +185,7 @@ public class SiteMapNode extends NetObject  {
     public SiteMapNode(SiteMapProvider provider, java.lang.String key, java.lang.String url, java.lang.String title, java.lang.String description, IList roles, NameValueCollection attributes, NameValueCollection explicitResourceKeys, java.lang.String implicitResourceKey) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.web.HttpException, system.OutOfMemoryException, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(provider == null ? null : provider.getJCOInstance(), key, url, title, description, roles == null ? null : roles.getJCOInstance(), attributes == null ? null : attributes.getJCOInstance(), explicitResourceKeys == null ? null : explicitResourceKeys.getJCOInstance(), implicitResourceKey));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

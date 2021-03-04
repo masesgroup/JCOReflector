@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -76,7 +76,7 @@ public class Font extends MarshalByRefObject implements AutoCloseable {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -108,7 +108,7 @@ public class Font extends MarshalByRefObject implements AutoCloseable {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -142,7 +142,7 @@ public class Font extends MarshalByRefObject implements AutoCloseable {
     public Font(Font prototype, FontStyle newStyle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(prototype == null ? null : prototype.getJCOInstance(), newStyle == null ? null : newStyle.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -152,7 +152,7 @@ public class Font extends MarshalByRefObject implements AutoCloseable {
     public Font(FontFamily family, Single emSize) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(family == null ? null : family.getJCOInstance(), emSize == null ? null : emSize.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -162,7 +162,7 @@ public class Font extends MarshalByRefObject implements AutoCloseable {
     public Font(FontFamily family, Single emSize, FontStyle style) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(family == null ? null : family.getJCOInstance(), emSize == null ? null : emSize.getJCOInstance(), style == null ? null : style.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -172,7 +172,7 @@ public class Font extends MarshalByRefObject implements AutoCloseable {
     public Font(FontFamily family, Single emSize, FontStyle style, GraphicsUnit unit) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(family == null ? null : family.getJCOInstance(), emSize == null ? null : emSize.getJCOInstance(), style == null ? null : style.getJCOInstance(), unit == null ? null : unit.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -182,7 +182,7 @@ public class Font extends MarshalByRefObject implements AutoCloseable {
     public Font(FontFamily family, Single emSize, FontStyle style, GraphicsUnit unit, byte gdiCharSet) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(family == null ? null : family.getJCOInstance(), emSize == null ? null : emSize.getJCOInstance(), style == null ? null : style.getJCOInstance(), unit == null ? null : unit.getJCOInstance(), gdiCharSet));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -192,7 +192,7 @@ public class Font extends MarshalByRefObject implements AutoCloseable {
     public Font(FontFamily family, Single emSize, FontStyle style, GraphicsUnit unit, byte gdiCharSet, boolean gdiVerticalFont) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(family == null ? null : family.getJCOInstance(), emSize == null ? null : emSize.getJCOInstance(), style == null ? null : style.getJCOInstance(), unit == null ? null : unit.getJCOInstance(), gdiCharSet, gdiVerticalFont));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -202,7 +202,7 @@ public class Font extends MarshalByRefObject implements AutoCloseable {
     public Font(FontFamily family, Single emSize, GraphicsUnit unit) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(family == null ? null : family.getJCOInstance(), emSize == null ? null : emSize.getJCOInstance(), unit == null ? null : unit.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -212,7 +212,7 @@ public class Font extends MarshalByRefObject implements AutoCloseable {
     public Font(java.lang.String familyName, Single emSize) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.security.SecurityException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(familyName, emSize == null ? null : emSize.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -222,7 +222,7 @@ public class Font extends MarshalByRefObject implements AutoCloseable {
     public Font(java.lang.String familyName, Single emSize, FontStyle style) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.security.SecurityException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(familyName, emSize == null ? null : emSize.getJCOInstance(), style == null ? null : style.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -232,7 +232,7 @@ public class Font extends MarshalByRefObject implements AutoCloseable {
     public Font(java.lang.String familyName, Single emSize, FontStyle style, GraphicsUnit unit) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.security.SecurityException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(familyName, emSize == null ? null : emSize.getJCOInstance(), style == null ? null : style.getJCOInstance(), unit == null ? null : unit.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -242,7 +242,7 @@ public class Font extends MarshalByRefObject implements AutoCloseable {
     public Font(java.lang.String familyName, Single emSize, FontStyle style, GraphicsUnit unit, byte gdiCharSet) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.security.SecurityException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(familyName, emSize == null ? null : emSize.getJCOInstance(), style == null ? null : style.getJCOInstance(), unit == null ? null : unit.getJCOInstance(), gdiCharSet));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -252,7 +252,7 @@ public class Font extends MarshalByRefObject implements AutoCloseable {
     public Font(java.lang.String familyName, Single emSize, FontStyle style, GraphicsUnit unit, byte gdiCharSet, boolean gdiVerticalFont) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.security.SecurityException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(familyName, emSize == null ? null : emSize.getJCOInstance(), style == null ? null : style.getJCOInstance(), unit == null ? null : unit.getJCOInstance(), gdiCharSet, gdiVerticalFont));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -262,7 +262,7 @@ public class Font extends MarshalByRefObject implements AutoCloseable {
     public Font(java.lang.String familyName, Single emSize, GraphicsUnit unit) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.security.SecurityException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(familyName, emSize == null ? null : emSize.getJCOInstance(), unit == null ? null : unit.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

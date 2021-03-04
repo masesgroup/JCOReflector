@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -88,7 +88,7 @@ public class XmlSerializer extends NetObject  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -120,7 +120,7 @@ public class XmlSerializer extends NetObject  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -154,7 +154,7 @@ public class XmlSerializer extends NetObject  {
     public XmlSerializer(NetType type) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.resources.MissingManifestResourceException, system.NotSupportedException, system.security.SecurityException, system.NotImplementedException, system.InvalidCastException, system.NullReferenceException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.ApplicationException, system.componentmodel.Win32Exception, system.RankException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.TypeLoadException, system.collections.generic.KeyNotFoundException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -164,7 +164,7 @@ public class XmlSerializer extends NetObject  {
     public XmlSerializer(NetType type, java.lang.String defaultNamespace) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentException, system.threading.ThreadAbortException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.FormatException, system.OverflowException, system.NotImplementedException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.PlatformNotSupportedException, system.security.SecurityException, system.SystemException, system.UnauthorizedAccessException, system.io.IOException, system.ApplicationException, system.componentmodel.Win32Exception, system.RankException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.TypeLoadException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), defaultNamespace));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -174,7 +174,7 @@ public class XmlSerializer extends NetObject  {
     public XmlSerializer(NetType type, NetType[] extraTypes) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.security.SecurityException, system.TypeLoadException, system.io.FileNotFoundException, system.UnauthorizedAccessException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), toObjectFromArray(extraTypes)));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -184,7 +184,7 @@ public class XmlSerializer extends NetObject  {
     public XmlSerializer(NetType type, XmlAttributeOverrides overrides) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.security.SecurityException, system.TypeLoadException, system.io.FileNotFoundException, system.UnauthorizedAccessException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), overrides == null ? null : overrides.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -194,7 +194,7 @@ public class XmlSerializer extends NetObject  {
     public XmlSerializer(NetType type, XmlAttributeOverrides overrides, NetType[] extraTypes, XmlRootAttribute root, java.lang.String defaultNamespace) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.security.SecurityException, system.TypeLoadException, system.io.FileNotFoundException, system.UnauthorizedAccessException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), overrides == null ? null : overrides.getJCOInstance(), toObjectFromArray(extraTypes), root == null ? null : root.getJCOInstance(), defaultNamespace));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -204,7 +204,7 @@ public class XmlSerializer extends NetObject  {
     public XmlSerializer(NetType type, XmlAttributeOverrides overrides, NetType[] extraTypes, XmlRootAttribute root, java.lang.String defaultNamespace, java.lang.String location) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NotImplementedException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.security.SecurityException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), overrides == null ? null : overrides.getJCOInstance(), toObjectFromArray(extraTypes), root == null ? null : root.getJCOInstance(), defaultNamespace, location));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -214,7 +214,7 @@ public class XmlSerializer extends NetObject  {
     public XmlSerializer(NetType type, XmlAttributeOverrides overrides, NetType[] extraTypes, XmlRootAttribute root, java.lang.String defaultNamespace, java.lang.String location, Evidence evidence) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotSupportedException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.TypeLoadException, system.security.SecurityException, system.collections.generic.KeyNotFoundException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), overrides == null ? null : overrides.getJCOInstance(), toObjectFromArray(extraTypes), root == null ? null : root.getJCOInstance(), defaultNamespace, location, evidence == null ? null : evidence.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -224,7 +224,7 @@ public class XmlSerializer extends NetObject  {
     public XmlSerializer(NetType type, XmlRootAttribute root) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.security.SecurityException, system.TypeLoadException, system.io.FileNotFoundException, system.UnauthorizedAccessException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), root == null ? null : root.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -234,7 +234,7 @@ public class XmlSerializer extends NetObject  {
     public XmlSerializer(XmlTypeMapping xmlTypeMapping) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(xmlTypeMapping == null ? null : xmlTypeMapping.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -74,7 +74,7 @@ public class ForeignKeyConstraint extends Constraint  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -106,7 +106,7 @@ public class ForeignKeyConstraint extends Constraint  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -140,7 +140,7 @@ public class ForeignKeyConstraint extends Constraint  {
     public ForeignKeyConstraint(DataColumn parentColumn, DataColumn childColumn) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.data.InvalidConstraintException, system.IndexOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(parentColumn == null ? null : parentColumn.getJCOInstance(), childColumn == null ? null : childColumn.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -150,7 +150,7 @@ public class ForeignKeyConstraint extends Constraint  {
     public ForeignKeyConstraint(DataColumn[] parentColumns, DataColumn[] childColumns) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.data.InvalidConstraintException, system.IndexOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(toObjectFromArray(parentColumns), toObjectFromArray(childColumns)));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -160,7 +160,7 @@ public class ForeignKeyConstraint extends Constraint  {
     public ForeignKeyConstraint(java.lang.String constraintName, DataColumn parentColumn, DataColumn childColumn) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.InvalidConstraintException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(constraintName, parentColumn == null ? null : parentColumn.getJCOInstance(), childColumn == null ? null : childColumn.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -170,7 +170,7 @@ public class ForeignKeyConstraint extends Constraint  {
     public ForeignKeyConstraint(java.lang.String constraintName, DataColumn[] parentColumns, DataColumn[] childColumns) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.data.InvalidConstraintException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(constraintName, toObjectFromArray(parentColumns), toObjectFromArray(childColumns)));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -180,7 +180,7 @@ public class ForeignKeyConstraint extends Constraint  {
     public ForeignKeyConstraint(java.lang.String constraintName, java.lang.String parentTableName, java.lang.String parentTableNamespace, java.lang.String[] parentColumnNames, java.lang.String[] childColumnNames, AcceptRejectRule acceptRejectRule, Rule deleteRule, Rule updateRule) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(constraintName, parentTableName, parentTableNamespace, parentColumnNames, childColumnNames, acceptRejectRule == null ? null : acceptRejectRule.getJCOInstance(), deleteRule == null ? null : deleteRule.getJCOInstance(), updateRule == null ? null : updateRule.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -190,7 +190,7 @@ public class ForeignKeyConstraint extends Constraint  {
     public ForeignKeyConstraint(java.lang.String constraintName, java.lang.String parentTableName, java.lang.String[] parentColumnNames, java.lang.String[] childColumnNames, AcceptRejectRule acceptRejectRule, Rule deleteRule, Rule updateRule) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(constraintName, parentTableName, parentColumnNames, childColumnNames, acceptRejectRule == null ? null : acceptRejectRule.getJCOInstance(), deleteRule == null ? null : deleteRule.getJCOInstance(), updateRule == null ? null : updateRule.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

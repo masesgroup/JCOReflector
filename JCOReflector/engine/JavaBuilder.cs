@@ -1,7 +1,7 @@
 ﻿/*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -416,7 +416,11 @@ namespace MASES.C2JReflector
 
             if (withEmbedding && !string.IsNullOrEmpty(manifestFile)) // we are making JCOReflector.jar
             {
-                var jcoBridgeEmbeddedFile = Path.Combine(searchPath, "org", "mases", "jcobridge", "netreflection", Const.FileNameAndDirectory.JCOBridgeEmbeddedFile);
+                var jcoBridgeEmbeddedFile = Path.Combine(searchPath, Const.FileNameAndDirectory.OrgSubDirectory,
+                                                                     Const.FileNameAndDirectory.MasesSubDirectory,
+                                                                     Const.FileNameAndDirectory.JCOBridgeSubDirectory,
+                                                                     Const.FileNameAndDirectory.NetreflectionSubDirectory, 
+                                                                     Const.FileNameAndDirectory.JCOBridgeEmbeddedFile);
 
                 var frameworkPath = Path.Combine(rootFolder, Const.FileNameAndDirectory.BinDirectory, Const.Framework.RuntimeFolder);
                 var localArchive = Path.Combine(frameworkPath, Const.FileNameAndDirectory.JCOBridgeEmbeddedFile);

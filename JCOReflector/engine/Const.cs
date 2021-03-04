@@ -1,7 +1,7 @@
 ﻿/*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -114,6 +114,11 @@ namespace MASES.C2JReflector
             public const string StatisticsFilename = "Statistics.csv";
 
             public const string CommonDirectory = "JCOReflector";
+            public const string OrgSubDirectory = "org";
+            public const string MasesSubDirectory = "mases";
+            public const string JCOBridgeSubDirectory = "jcobridge";
+            public const string NetreflectionSubDirectory = "netreflection";
+
             public const string ManifestFile = "JCOReflector.manifest";
             public const string ReferencesFile = "references.filelist";
             public const string SourceFile = "sources.filelist";
@@ -160,6 +165,8 @@ namespace MASES.C2JReflector
                 "LicenseViewer.runtimeconfig.json",
                 "MachineIdGenerator.dll",
                 "MachineIdGenerator.runtimeconfig.json",
+                "Microsoft.NET5.App.runtimeconfig.json",
+                "Microsoft.WindowsDesktop.App.runtimeconfig.json",
             };
 #else
             public static string[] JCOBridgeFiles = new string[]
@@ -197,6 +204,8 @@ namespace MASES.C2JReflector
                 "LicenseViewer.runtimeconfig.json",
                 "MachineIdGenerator.dll",
                 "MachineIdGenerator.runtimeconfig.json",
+                "Microsoft.NETCore.App.runtimeconfig.json",
+                "Microsoft.WindowsDesktop.App.runtimeconfig.json",
             };
 #endif
 #else

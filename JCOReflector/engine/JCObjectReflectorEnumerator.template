@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -61,7 +61,7 @@ public class PACKAGE_CLASS_NAME extends NetObject implements Iterator<PACKAGE_IN
      */
     public static final String className = "FULLYQUALIFIED_CLASS_NAME";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
-    static JCType classType = createType();
+    public static JCType classType = createType();
     static JCEnum enumInstance = null;
     Iterator<JCObject> classInstance = null;
 

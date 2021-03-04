@@ -1,7 +1,7 @@
 ﻿/*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -1870,7 +1870,8 @@ namespace MASES.C2JReflector
             importsStr = importsStr + string.Format(Const.Imports.IMPORT, packageName, string.Format("I{0}", delegateName));
 
             string dynamicInvokeExecParamStr = dynamicInvokeExecParams.ToString();
-            var dynamicInvokeStr = dynamicInvokeTemplateToUse.Replace(Const.Methods.METHOD_NAME, Const.SpecialNames.METHOD_DYNAMICINVOKE_NAME)
+            var dynamicInvokeStr = dynamicInvokeTemplateToUse.Replace(Const.Methods.METHOD_JAVA_NAME, Const.SpecialNames.METHOD_DYNAMICINVOKE_NAME)
+                                                             .Replace(Const.Methods.METHOD_NAME, Const.SpecialNames.METHOD_DYNAMICINVOKE_NAME)
                                                              .Replace(Const.Methods.METHOD_RETURN_TYPE, returnType)
                                                              .Replace(Const.Methods.METHOD_IMPLEMENTATION_RETURN_TYPE, isInterfaceRetVal ? returnType + Const.SpecialNames.ImplementationTrailer : returnType)
                                                              .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)

@@ -163,6 +163,7 @@ jobs:
         shell: cmd
         run: |
           cd ./netreflected-tests/scala
+          mkdir output
           ..\..\scala-2.13.5\bin\scalac -toolcp "../../bin/netcoreapp3.1/*" -d ./output ./src/main/scala/hierarchy/* ./src/main/scala/mscorlib/* ./src/main/scala/nettest/*
           
       - name: Execute Scala tests .NET Core 3.1
@@ -175,11 +176,13 @@ jobs:
           ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/netcoreapp3.1/*;./output" mscorlib.HelloIterator --CoreCLRApp:Microsoft.NETCore.App
           ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/netcoreapp3.1/*;./output" nettest.HelloNETSocket --CoreCLRApp:Microsoft.NETCore.App
           ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/netcoreapp3.1/*;./output" nettest.HelloNETSocket -async --CoreCLRApp:Microsoft.NETCore.App
+          rmdir output /s /q
 
       - name: Build Scala test source file .NET Core 5.0
         shell: cmd
         run: |
           cd ./netreflected-tests/scala
+          mkdir output
           ..\..\scala-2.13.5\bin\scalac -toolcp "../../bin/net5.0/*" -d ./output ./src/main/scala/hierarchy/* ./src/main/scala/mscorlib/* ./src/main/scala/nettest/*
           
       - name: Execute Scala tests .NET Core 5.0
@@ -192,11 +195,13 @@ jobs:
           ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/net5.0/*;./output" mscorlib.HelloIterator
           ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/net5.0/*;./output" nettest.HelloNETSocket
           ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/net5.0/*;./output" nettest.HelloNETSocket -async
+          rmdir output /s /q
 
       - name: Build Scala test source file .NET Framework
         shell: cmd
         run: |
           cd ./netreflected-tests/scala
+          mkdir output
           ..\..\scala-2.13.5\bin\scalac -toolcp "../../bin/net461/*" -d ./output ./src/main/scala/hierarchy/* ./src/main/scala/mscorlib/* ./src/main/scala/nettest/*
           
       - name: Execute Scala tests .NET Framework
@@ -209,6 +214,7 @@ jobs:
           ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/net461/*;./output" mscorlib.HelloIterator
           ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/net461/*;./output" nettest.HelloNETSocket
           ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/net461/*;./output" nettest.HelloNETSocket -async
+          rmdir output /s /q
 
       - name: Compress release files
         run: | 

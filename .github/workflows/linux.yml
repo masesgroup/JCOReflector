@@ -129,6 +129,7 @@ jobs:
         - name: Build Scala test source file .NET Core 3.1
           run: |
             cd ./netreflected-tests/scala
+            mkdir output
             scalac -toolcp "../../bin/netcoreapp3.1/*" -d ./output ./src/main/scala/hierarchy/* ./src/main/scala/mscorlib/* ./src/main/scala/nettest/*
 
         - name: Execute Scala tests .NET Core 3.1
@@ -140,10 +141,12 @@ jobs:
             scala -toolcp "../../bin/netcoreapp3.1/*;./output" mscorlib.HelloIterator --CoreCLRApp:Microsoft.NETCore.App
             scala -toolcp "../../bin/netcoreapp3.1/*;./output" nettest.HelloNETSocket --CoreCLRApp:Microsoft.NETCore.App
             scala -toolcp "../../bin/netcoreapp3.1/*;./output" nettest.HelloNETSocket -async --CoreCLRApp:Microsoft.NETCore.App
+            rm -rf output
 
         - name: Build Scala test source file .NET Core 5.0
           run: |
             cd ./netreflected-tests/scala
+            mkdir output
             scalac -toolcp "../../bin/net5.0/*" -d ./output ./src/main/scala/hierarchy/* ./src/main/scala/mscorlib/* ./src/main/scala/nettest/*
 
         - name: Execute Scala tests .NET Core 5.0
@@ -155,3 +158,4 @@ jobs:
             scala -toolcp "../../bin/net5.0/*;./output" mscorlib.HelloIterator
             scala -toolcp "../../bin/net5.0/*;./output" nettest.HelloNETSocket
             scala -toolcp "../../bin/net5.0/*;./output" nettest.HelloNETSocket -async
+            rm -rf output

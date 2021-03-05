@@ -366,6 +366,9 @@ public class JCOReflector {
     public static boolean initRT(String pathToUse) {
         // try extract from resources
         _runtimeFolder = extractAndReturnPath(pathToUse);
+        if (JCOReflector.getRTFolder() != null && JCOReflector.getRTFolder() != "") {
+            org.mases.jcobridge.JCOBridge.setNativePath(_runtimeFolder);
+        }
         return _runtimeFolder != null;
     }
 }

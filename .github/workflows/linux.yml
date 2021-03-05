@@ -37,6 +37,11 @@ jobs:
         while IFS= read -r file
         do
           echo $file
+          if [[ $file == ".github/workflows/"* ]]; then
+            echo "This file is under the directory '.github/workflows'."
+            echo "::set-output name=run_job::true"
+            break
+          fi
           if [[ $file == "netreflected/src/"* ]]; then
             echo "This file is under the directory 'netreflected/src'."
             echo "::set-output name=run_job::true"
@@ -124,7 +129,7 @@ jobs:
         - name: Build Scala test source file .NET Core 3.1
           run: |
             cd ./netreflected-tests/scala
-            scalac -toolcp "../../bin/netcoreapp3.1/*" -d output ./src/main/scala/hierarchy/* ./src/main/scala/mscorlib/* ./src/main/scala/nettest/*
+            scalac -toolcp "../../bin/netcoreapp3.1/*" -d ./output ./src/main/scala/hierarchy/* ./src/main/scala/mscorlib/* ./src/main/scala/nettest/*
 
         - name: Execute Scala tests .NET Core 3.1
           run: |
@@ -139,7 +144,7 @@ jobs:
         - name: Build Scala test source file .NET Core 5.0
           run: |
             cd ./netreflected-tests/scala
-            scalac -toolcp "../../bin/net5.0/*" -d output ./src/main/scala/hierarchy/* ./src/main/scala/mscorlib/* ./src/main/scala/nettest/*
+            scalac -toolcp "../../bin/net5.0/*" -d ./output ./src/main/scala/hierarchy/* ./src/main/scala/mscorlib/* ./src/main/scala/nettest/*
 
         - name: Execute Scala tests .NET Core 5.0
           run: |

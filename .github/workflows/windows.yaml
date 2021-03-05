@@ -28,6 +28,11 @@ jobs:
         run: |
           mapfile -d ',' -t added_modified_files < <(printf '%s,' '${{ steps.get_changed_files.outputs.added_modified }}')
           for added_modified_file in "${added_modified_files[@]}"; do
+              if [[ $added_modified_file == ".github/workflows/"* ]]; then
+                echo "$added_modified_file is under the directory '.github/workflows'."
+                echo "::set-output name=run_job::true"
+                break
+              fi
               if [[ $added_modified_file == "netreflected/src/JCOReflector/"* ]]; then
                 echo "$added_modified_file is under the directory 'netreflected/src/JCOReflector'."
                 echo "::set-output name=run_job::true"
@@ -158,7 +163,7 @@ jobs:
         shell: cmd
         run: |
           cd ./netreflected-tests/scala
-          ..\..\scala-2.13.5\bin\scalac -toolcp "../../bin/netcoreapp3.1/*" -d output ./src/main/scala/hierarchy/* ./src/main/scala/mscorlib/* ./src/main/scala/nettest/*
+          ..\..\scala-2.13.5\bin\scalac -toolcp "../../bin/netcoreapp3.1/*" -d ./output ./src/main/scala/hierarchy/* ./src/main/scala/mscorlib/* ./src/main/scala/nettest/*
           
       - name: Execute Scala tests .NET Core 3.1
         shell: cmd
@@ -175,7 +180,7 @@ jobs:
         shell: cmd
         run: |
           cd ./netreflected-tests/scala
-          ..\..\scala-2.13.5\bin\scalac -toolcp "../../bin/net5.0/*" -d output ./src/main/scala/hierarchy/* ./src/main/scala/mscorlib/* ./src/main/scala/nettest/*
+          ..\..\scala-2.13.5\bin\scalac -toolcp "../../bin/net5.0/*" -d ./output ./src/main/scala/hierarchy/* ./src/main/scala/mscorlib/* ./src/main/scala/nettest/*
           
       - name: Execute Scala tests .NET Core 5.0
         shell: cmd
@@ -192,7 +197,7 @@ jobs:
         shell: cmd
         run: |
           cd ./netreflected-tests/scala
-          ..\..\scala-2.13.5\bin\scalac -toolcp "../../bin/net461/*" -d output ./src/main/scala/hierarchy/* ./src/main/scala/mscorlib/* ./src/main/scala/nettest/*
+          ..\..\scala-2.13.5\bin\scalac -toolcp "../../bin/net461/*" -d ./output ./src/main/scala/hierarchy/* ./src/main/scala/mscorlib/* ./src/main/scala/nettest/*
           
       - name: Execute Scala tests .NET Framework
         shell: cmd

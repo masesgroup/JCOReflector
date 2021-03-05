@@ -24,8 +24,6 @@
 
 package mscorlib
 
-import system._
-
 import org.mases.jcobridge.netreflection.JCOReflector
 import system.Console
 import system.Environment

@@ -64,18 +64,21 @@ The full example code, and other ones, are in the project test folder.
 A basic Scala examples is the following one:
 
 ```scala
-package mscorlib;
+package mscorlib
 
-import org.mases.jcobridge.netreflection._;
-import system._;
- 
-object main extends App {
-	try {
-		Environment.GetLogicalDrives().foreach(Console.WriteLine(_))		
-		Environment.Exit(0);
-	} catch {
-		case tre: Throwable => tre.printStackTrace();
-	}
+import system.Console
+import system.Environment
+
+object HelloIterator {
+  def main(args: scala.Array[String]): Unit = {
+    try {
+      Environment.GetLogicalDrives.foreach(Console.WriteLine(_))
+      Environment.Exit(0)
+    } catch {
+      case tre: Throwable =>
+        tre.printStackTrace()
+    }
+  }
 }
 ```
 

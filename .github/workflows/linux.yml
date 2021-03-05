@@ -115,3 +115,38 @@ jobs:
             java -cp "./bin/net5.0/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloIterator 
             java -cp "./bin/net5.0/JCOReflector.jar:./netreflected-tests/java/src/" nettest.HelloNETSocket -server 127.0.0.1 
             java -cp "./bin/net5.0/JCOReflector.jar:./netreflected-tests/java/src/" nettest.HelloNETSocket -async -server 127.0.0.1
+
+      - name: Download Scala package
+        run: |
+            sudo apt update
+            sudo apt install scala
+        
+      - name: Build Scala test source file .NET Core 3.1
+        run: |
+          cd ./netreflected-tests/scala
+          scalac -toolcp "../../bin/netcoreapp3.1/*" -d output ./src/main/scala/hierarchy/* ./src/main/scala/mscorlib/* ./src/main/scala/nettest/*
+          
+      - name: Execute Scala tests .NET Core 3.1
+        run: |
+          scala -toolcp "../../bin/netcoreapp3.1/*;./output" hierarchy.HelloHierarchy --CoreCLRApp:Microsoft.NETCore.App
+          scala -toolcp "../../bin/netcoreapp3.1/*;./output" hierarchy.HelloInterfaces --CoreCLRApp:Microsoft.NETCore.App
+          scala -toolcp "../../bin/netcoreapp3.1/*;./output" mscorlib.HelloNET --CoreCLRApp:Microsoft.NETCore.App
+          scala -toolcp "../../bin/netcoreapp3.1/*;./output" mscorlib.HelloNETEvent --CoreCLRApp:Microsoft.NETCore.App
+          scala -toolcp "../../bin/netcoreapp3.1/*;./output" mscorlib.HelloIterator --CoreCLRApp:Microsoft.NETCore.App
+          scala -toolcp "../../bin/netcoreapp3.1/*;./output" nettest.HelloNETSocket --CoreCLRApp:Microsoft.NETCore.App
+          scala -toolcp "../../bin/netcoreapp3.1/*;./output" nettest.HelloNETSocket -async --CoreCLRApp:Microsoft.NETCore.App
+
+      - name: Build Scala test source file .NET Core 5.0
+        run: |
+          cd ./netreflected-tests/scala
+          scalac -toolcp "../../bin/net5.0/*" -d output ./src/main/scala/hierarchy/* ./src/main/scala/mscorlib/* ./src/main/scala/nettest/*
+          
+      - name: Execute Scala tests .NET Core 5.0
+        run: |
+          scala -toolcp "../../bin/net5.0/*;./output" hierarchy.HelloHierarchy
+          scala -toolcp "../../bin/net5.0/*;./output" hierarchy.HelloInterfaces
+          scala -toolcp "../../bin/net5.0/*;./output" mscorlib.HelloNET
+          scala -toolcp "../../bin/net5.0/*;./output" mscorlib.HelloNETEvent
+          scala -toolcp "../../bin/net5.0/*;./output" mscorlib.HelloIterator
+          scala -toolcp "../../bin/net5.0/*;./output" nettest.HelloNETSocket
+          scala -toolcp "../../bin/net5.0/*;./output" nettest.HelloNETSocket -async

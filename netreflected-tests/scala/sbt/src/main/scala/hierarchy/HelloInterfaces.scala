@@ -22,30 +22,35 @@
  *  SOFTWARE.
  */
 
- package nettest;
+package hierarchy
 
-import org.mases.jcobridge.netreflection.NetObject;
+import org.mases.jcobridge.netreflection._
+import system.Console
+import system.Environment
+import system.collections._
 
-import system.AsyncCallback;
-import system.Console;
-import system.IAsyncResult;
-import system.net.sockets.Socket;
+object HelloInterfaces {
+  def main(args: scala.Array[String]): Unit = {
+    JCOReflector.setCommandLineArgs(args)
+    try { //Create and populate a sorted array
+      val sr = new SortedList
+      sr.Add(new NetObject("Hello"), new NetObject("test"))
+      sr.Add(new NetObject("Hello2"), new NetObject("test2"))
+      sr.Add(new NetObject("Hello3"), new NetObject("test3"))
+      // Get the IList interface
+      val keyList = sr.GetKeyList
+      val valueList = sr.GetValueList
 
-public class ConnectCallback extends AsyncCallback {
-    public void Invoke(IAsyncResult ar) {
-        try {
-            // Retrieve the socket from the state object.
-            Socket client = Socket.cast(ar.getAsyncState());
+      keyList.forEach(v => Console.WriteLine(v.ToString))
+      valueList.forEach(v => Console.WriteLine(v.ToString))
 
-            // Complete the connection.
-            client.EndConnect(ar);
+      val ev = Environment.GetEnvironmentVariables
+      ev.getKeys.forEach(v => Console.WriteLine(v.ToString))
 
-            Console.WriteLine("Socket connected to {0}", new NetObject(client.getRemoteEndPoint().ToString()));
-
-            // Signal that the connection has been made.
-            HelloNETSocketClientAsync.connectDone.Set();
-        } catch (Throwable e) {
-            e.printStackTrace();
-        }
+      Environment.Exit(0)
+    } catch {
+      case tre: Throwable =>
+        tre.printStackTrace()
     }
+  }
 }

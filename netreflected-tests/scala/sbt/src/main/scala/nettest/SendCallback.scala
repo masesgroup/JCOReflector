@@ -22,30 +22,26 @@
  *  SOFTWARE.
  */
 
- package nettest;
+package nettest
 
-import org.mases.jcobridge.netreflection.NetObject;
+import org.mases.jcobridge.netreflection.NetObject
+import system.AsyncCallback
+import system.Console
+import system.IAsyncResult
+import system.net.sockets.Socket
 
-import system.AsyncCallback;
-import system.Console;
-import system.IAsyncResult;
-import system.net.sockets.Socket;
-
-public class ConnectCallback extends AsyncCallback {
-    public void Invoke(IAsyncResult ar) {
-        try {
-            // Retrieve the socket from the state object.
-            Socket client = Socket.cast(ar.getAsyncState());
-
-            // Complete the connection.
-            client.EndConnect(ar);
-
-            Console.WriteLine("Socket connected to {0}", new NetObject(client.getRemoteEndPoint().ToString()));
-
-            // Signal that the connection has been made.
-            HelloNETSocketClientAsync.connectDone.Set();
-        } catch (Throwable e) {
-            e.printStackTrace();
-        }
+class SendCallback extends AsyncCallback {
+  override def Invoke(ar: IAsyncResult): Unit = {
+    try { // Retrieve the socket from the state object.
+      val client = Socket.cast(ar.getAsyncState)
+      // Complete sending the data to the remote device.
+      val bytesSent = client.EndSend(ar)
+      Console.WriteLine("Sent {0} bytes to server.", new NetObject(bytesSent))
+      // Signal that all bytes have been sent.
+      HelloNETSocketClientAsync.sendDone.Set
+    } catch {
+      case e: Throwable =>
+        e.printStackTrace()
     }
+  }
 }

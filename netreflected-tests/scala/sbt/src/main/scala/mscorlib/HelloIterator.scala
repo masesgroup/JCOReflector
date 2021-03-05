@@ -33,12 +33,9 @@ import system.Environment
 object HelloIterator {
   def main(args: scala.Array[String]): Unit = {
     JCOReflector.setCommandLineArgs(args)
-    try { //Get an iterable array and populate a sorted array
-      val ld = Environment.GetLogicalDrives
-      for (drive <- ld) {
-        Console.WriteLine(drive)
-        //System.out.println(drive); viable Alternative
-      }
+    try {
+      //Get an iterable array and populate a sorted array
+      Environment.GetLogicalDrives.foreach(Console.WriteLine(_)) //System.out.println(_); viable Alternative
       Environment.Exit(0)
     } catch {
       case tre: Throwable =>

@@ -21,43 +21,43 @@
  *  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  *  SOFTWARE.
  */
+package nettest
 
-package nettest;
+import system.AsyncCallback
+import system.IAsyncResult
+import system.net.sockets.Socket
+import system.net.sockets.SocketFlags
+import system.text.Encoding
 
-import system.AsyncCallback;
-import system.IAsyncResult;
-import system.net.sockets.Socket;
-import system.net.sockets.SocketFlags;
-import system.text.Encoding;
-
-public class ReceiveCallback extends AsyncCallback {
-    public void Invoke(IAsyncResult ar) {
+class ReceiveCallback : AsyncCallback() {
+    override fun Invoke(ar: IAsyncResult) {
         try {
             // Retrieve the state object and the client socket
             // from the asynchronous state object.
-            Socket client = HelloNETSocketClientAsync.State.workSocket;
+            val client: Socket? = HelloNETSocketClientAsync.State.workSocket
 
             // Read data from the remote device.
-            int bytesRead = client.EndReceive(ar);
-
+            val bytesRead = client?.EndReceive(ar)!!
             if (bytesRead > 0) {
                 // There might be more data, so store the data received so far.
                 HelloNETSocketClientAsync.State.sb
-                        .append(Encoding.getASCII().GetString(HelloNETSocketClientAsync.State.buffer, 0, bytesRead));
+                    .append(Encoding.getASCII().GetString(HelloNETSocketClientAsync.State.buffer, 0, bytesRead))
 
                 // Get the rest of the data.
-                client.BeginReceive(HelloNETSocketClientAsync.State.buffer, 0,
-                        HelloNETSocketClientAsync.State.BufferSize, SocketFlags.None, new ReceiveCallback(), null);
+                client.BeginReceive(
+                    HelloNETSocketClientAsync.State.buffer, 0,
+                    HelloNETSocketClientAsync.State.BufferSize, SocketFlags.None, ReceiveCallback(), null
+                )
             } else {
                 // All the data has arrived; put it in response.
-                if (HelloNETSocketClientAsync.State.sb.length() > 1) {
-                    HelloNETSocketClientAsync.response = HelloNETSocketClientAsync.State.sb.toString();
+                if (HelloNETSocketClientAsync.State.sb.length > 1) {
+                    HelloNETSocketClientAsync.response = HelloNETSocketClientAsync.State.sb.toString()
                 }
                 // Signal that all bytes have been received.
-                HelloNETSocketClientAsync.receiveDone.Set();
+                HelloNETSocketClientAsync.receiveDone!!.Set()
             }
-        } catch (Throwable e) {
-            e.printStackTrace();
+        } catch (e: Throwable) {
+            e.printStackTrace()
         }
     }
 }

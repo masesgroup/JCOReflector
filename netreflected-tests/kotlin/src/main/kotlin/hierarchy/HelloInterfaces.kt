@@ -22,43 +22,43 @@
  *  SOFTWARE.
  */
 
-package hierarchy;
+package hierarchy
 
-import org.mases.jcobridge.netreflection.*;
+import org.mases.jcobridge.netreflection.JCOReflector
+import org.mases.jcobridge.netreflection.NetObject
+import system.Console
+import system.Environment
+import system.collections.SortedList
 
-import system.Console;
-import system.Environment;
-import system.collections.*;
-
-public class HelloInterfaces {
-    public static void main(String[] args) {
-        JCOReflector.setCommandLineArgs(args);
+object HelloInterfaces {
+    @JvmStatic
+    fun main(args: Array<String>) {
+        JCOReflector.setCommandLineArgs(args)
         try {
             //Create and populate a sorted array
-            SortedList sr = new SortedList();
-            sr.Add(new NetObject("Hello"), new NetObject("test"));
-            sr.Add(new NetObject("Hello2"), new NetObject("test2"));
-            sr.Add(new NetObject("Hello3"), new NetObject("test3"));
-            // Get the IList interface 
-            IList keyList = sr.GetKeyList();
-            IList valueList = sr.GetValueList();
-            
+            val sr = SortedList()
+            sr.Add(NetObject("Hello"), NetObject("test"))
+            sr.Add(NetObject("Hello2"), NetObject("test2"))
+            sr.Add(NetObject("Hello3"), NetObject("test3"))
+            // Get the IList interface
+            val keyList = sr.GetKeyList()
+            val valueList = sr.GetValueList()
+
             //operate on interface
-            for (NetObject netObject : keyList) {
-                Console.WriteLine(netObject.ToString());
+            for (netObject in keyList) {
+                Console.WriteLine(netObject.ToString())
             }
-            for (NetObject netObject : valueList) {
-                Console.WriteLine(netObject.ToString());
+            for (netObject in valueList) {
+                Console.WriteLine(netObject.ToString())
             }
-            IDictionary ev = Environment.GetEnvironmentVariables();
-            for (NetObject netObject : ev.getKeys()) {
-                Console.WriteLine(netObject.ToString()); 
+            val ev = Environment.GetEnvironmentVariables()
+            for (netObject in ev.keys) {
+                Console.WriteLine(netObject.ToString())
                 //System.out.println(netObject.ToString()); viable Alternative
             }
-            Environment.Exit(0);
-        }
-        catch (Throwable tre) {
-            tre.printStackTrace();
+            Environment.Exit(0)
+        } catch (tre: Throwable) {
+            tre.printStackTrace()
         }
     }
 }

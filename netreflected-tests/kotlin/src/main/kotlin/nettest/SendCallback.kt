@@ -21,31 +21,28 @@
  *  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  *  SOFTWARE.
  */
+package nettest
 
- package nettest;
+import org.mases.jcobridge.netreflection.NetObject
+import system.AsyncCallback
+import system.Console
+import system.IAsyncResult
+import system.net.sockets.Socket
 
-import org.mases.jcobridge.netreflection.NetObject;
-
-import system.AsyncCallback;
-import system.Console;
-import system.IAsyncResult;
-import system.net.sockets.Socket;
-
-public class ConnectCallback extends AsyncCallback {
-    public void Invoke(IAsyncResult ar) {
+class SendCallback : AsyncCallback() {
+    override fun Invoke(ar: IAsyncResult) {
         try {
             // Retrieve the socket from the state object.
-            Socket client = Socket.cast(ar.getAsyncState());
+            val client = Socket.cast(ar.asyncState)
 
-            // Complete the connection.
-            client.EndConnect(ar);
+            // Complete sending the data to the remote device.
+            val bytesSent = client.EndSend(ar)
+            Console.WriteLine("Sent {0} bytes to server.", NetObject(bytesSent))
 
-            Console.WriteLine("Socket connected to {0}", new NetObject(client.getRemoteEndPoint().ToString()));
-
-            // Signal that the connection has been made.
-            HelloNETSocketClientAsync.connectDone.Set();
-        } catch (Throwable e) {
-            e.printStackTrace();
+            // Signal that all bytes have been sent.
+            HelloNETSocketClientAsync.sendDone!!.Set()
+        } catch (e: Throwable) {
+            e.printStackTrace()
         }
     }
 }

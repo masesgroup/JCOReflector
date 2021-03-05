@@ -21,31 +21,21 @@
  *  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  *  SOFTWARE.
  */
+package nettest
 
- package nettest;
+import system.net.sockets.Socket
 
-import org.mases.jcobridge.netreflection.NetObject;
+// State object for receiving data from remote device.
+class StateObject {
+    // Client socket.
+    lateinit var workSocket: Socket
 
-import system.AsyncCallback;
-import system.Console;
-import system.IAsyncResult;
-import system.net.sockets.Socket;
+    // Size of receive buffer.
+    var BufferSize = 256
 
-public class ConnectCallback extends AsyncCallback {
-    public void Invoke(IAsyncResult ar) {
-        try {
-            // Retrieve the socket from the state object.
-            Socket client = Socket.cast(ar.getAsyncState());
+    // Receive buffer.
+    var buffer = ByteArray(BufferSize)
 
-            // Complete the connection.
-            client.EndConnect(ar);
-
-            Console.WriteLine("Socket connected to {0}", new NetObject(client.getRemoteEndPoint().ToString()));
-
-            // Signal that the connection has been made.
-            HelloNETSocketClientAsync.connectDone.Set();
-        } catch (Throwable e) {
-            e.printStackTrace();
-        }
-    }
+    // Received data string.
+    var sb = StringBuilder()
 }

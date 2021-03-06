@@ -121,7 +121,7 @@ jobs:
             java -cp "./bin/net5.0/JCOReflector.jar:./netreflected-tests/java/src/" nettest.HelloNETSocket -server 127.0.0.1 
             java -cp "./bin/net5.0/JCOReflector.jar:./netreflected-tests/java/src/" nettest.HelloNETSocket -async -server 127.0.0.1
 
-        - name: Download Scala package
+        - name: Download and install Scala package
           run: |
             sudo apt update
             sudo apt-get install unzip

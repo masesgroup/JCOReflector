@@ -204,7 +204,7 @@ jobs:
         run: |
           cd ./netreflected-tests/scala
           mkdir output
-          ..\..\scala-2.13.5\bin\scalac -toolcp "../../bin/net461/*" -d ./output ./src/main/scala/hierarchy/HelloInterfaces.java ./src/main/scala/mscorlib/* ./src/main/scala/nettest/*
+          ..\..\scala-2.13.5\bin\scalac -toolcp "../../bin/net461/*" -d ./output ./src/main/scala/hierarchy/HelloInterfaces.scala ./src/main/scala/mscorlib/* ./src/main/scala/nettest/*
           
       - name: Execute Scala tests .NET Framework
         shell: cmd

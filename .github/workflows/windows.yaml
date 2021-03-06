@@ -169,6 +169,7 @@ jobs:
       - name: Execute Scala tests .NET Core 3.1
         shell: cmd
         run: |
+          cd ./netreflected-tests/scala
           ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/netcoreapp3.1/*;./output" hierarchy.HelloHierarchy --CoreCLRApp:Microsoft.NETCore.App
           ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/netcoreapp3.1/*;./output" hierarchy.HelloInterfaces --CoreCLRApp:Microsoft.NETCore.App
           ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/netcoreapp3.1/*;./output" mscorlib.HelloNET --CoreCLRApp:Microsoft.NETCore.App
@@ -188,6 +189,7 @@ jobs:
       - name: Execute Scala tests .NET Core 5.0
         shell: cmd
         run: |
+          cd ./netreflected-tests/scala
           ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/net5.0/*;./output" hierarchy.HelloHierarchy
           ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/net5.0/*;./output" hierarchy.HelloInterfaces
           ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/net5.0/*;./output" mscorlib.HelloNET
@@ -207,6 +209,7 @@ jobs:
       - name: Execute Scala tests .NET Framework
         shell: cmd
         run: |
+          cd ./netreflected-tests/scala
           ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/net461/*;./output" hierarchy.HelloHierarchy
           ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/net461/*;./output" hierarchy.HelloInterfaces
           ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/net461/*;./output" mscorlib.HelloNET

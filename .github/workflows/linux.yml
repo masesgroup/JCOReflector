@@ -124,7 +124,11 @@ jobs:
         - name: Download Scala package
           run: |
               sudo apt update
-              sudo apt install scala
+              sudo apt-get install unzip
+              sudo apt-get install zip
+              curl -s "https://get.sdkman.io" | bash
+              source "$HOME/.sdkman/bin/sdkman-init.sh"
+              sdk install scala
 
         - name: Build Scala test source file .NET Core 3.1
           run: |

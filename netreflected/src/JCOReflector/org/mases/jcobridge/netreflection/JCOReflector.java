@@ -194,6 +194,16 @@ public class JCOReflector {
     }
 
     /**
+     * Write a log to JCOReflector log
+     * 
+     * @param format format {@link String} to log
+     * @param args format arguments
+     */
+    public static void writeLog(String format, Object... args) {
+        writeLog(String.format(format, args));
+    }
+
+    /**
      * Write a string to JCOReflector log
      * 
      * @param msg message to log

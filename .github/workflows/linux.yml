@@ -141,7 +141,7 @@ jobs:
             source "$HOME/.sdkman/bin/sdkman-init.sh"
             scala -cp "./bin/netcoreapp3.1/*:./netreflected-tests/scala/output" hierarchy.HelloHierarchy --CoreCLRApp:Microsoft.NETCore.App
             scala -cp "./bin/netcoreapp3.1/*:./netreflected-tests/scala/output" hierarchy.HelloInterfaces --CoreCLRApp:Microsoft.NETCore.App
-            scala -cp "./bin/netcoreapp3.1/*:./netreflected-tests/scala/output" mscorlib.HelloNET --CoreCLRApp:Microsoft.NETCore.App
+            scala -cp "./bin/netcoreapp3.1/*:./netreflected-tests/scala/output" mscorlib.HelloNet --CoreCLRApp:Microsoft.NETCore.App
             scala -cp "./bin/netcoreapp3.1/*:./netreflected-tests/scala/output" mscorlib.HelloNETEvent --CoreCLRApp:Microsoft.NETCore.App
             scala -cp "./bin/netcoreapp3.1/*:./netreflected-tests/scala/output" mscorlib.HelloIterator --CoreCLRApp:Microsoft.NETCore.App
             scala -cp "./bin/netcoreapp3.1/*:./netreflected-tests/scala/output" nettest.HelloNETSocket --CoreCLRApp:Microsoft.NETCore.App
@@ -159,7 +159,7 @@ jobs:
             source "$HOME/.sdkman/bin/sdkman-init.sh"
             scala -cp "./bin/net5.0/*:./netreflected-tests/scala/output" hierarchy.HelloHierarchy
             scala -cp "./bin/net5.0/*:./netreflected-tests/scala/output" hierarchy.HelloInterfaces
-            scala -cp "./bin/net5.0/*:./netreflected-tests/scala/output" mscorlib.HelloNET
+            scala -cp "./bin/net5.0/*:./netreflected-tests/scala/output" mscorlib.HelloNet
             scala -cp "./bin/net5.0/*:./netreflected-tests/scala/output" mscorlib.HelloNETEvent
             scala -cp "./bin/net5.0/*:./netreflected-tests/scala/output" mscorlib.HelloIterator
             scala -cp "./bin/net5.0/*:./netreflected-tests/scala/output" nettest.HelloNETSocket

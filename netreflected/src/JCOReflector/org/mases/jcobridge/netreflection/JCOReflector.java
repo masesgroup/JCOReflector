@@ -39,23 +39,25 @@ public class JCOReflector {
     static String _loggingFilename = "JCOBridge.log";
     static boolean _useFullname = false;
     static boolean _isDebug = false;
+    static boolean _isConsoleLog = false;
     static boolean _isMultiInstance = false;
     static boolean _initialized = false;
     static String[] _commandLineArgs = new String[0];
-    static BufferedWriter global_bw = null;
+    static Object global_bw_lock = new Object();
+    static BufferedWriter global_bw = new BufferedWriter(new FileWriter("JCOReflector.log"));
 
     public static synchronized boolean getInitialized() {
         return _initialized;
     }
 
-    public static synchronized void setInitialized(boolean initialized) {
+    static synchronized void setInitialized(boolean initialized) {
         _initialized = initialized;
     }
 
     /**
      * Get Logging state
      * 
-     * @return the debug state
+     * @return the logging state
      */
     public static synchronized boolean getLogging() {
         return _isLogging;
@@ -68,6 +70,7 @@ public class JCOReflector {
      * @param isLogging the new logging state
      */
     public static synchronized void setLogging(boolean isLogging) {
+        writeLog("Set Logging to %s", isLogging ? "true" : "false");
         _isLogging = isLogging;
     }
 
@@ -91,6 +94,7 @@ public class JCOReflector {
     public static synchronized void setLogFilename(String loggingFilename) {
         if (!getInitialized())
             return;
+        writeLog("Set LogFilename to %s", loggingFilename);
         _loggingFilename = loggingFilename;
     }
 
@@ -113,6 +117,7 @@ public class JCOReflector {
     public static void setUseFullAssemblyName(boolean useFullname) {
         if (getInitialized())
             return;
+        writeLog("Set UseFullAssemblyName to %s", useFullname ? "true" : "false");
         _useFullname = useFullname;
     }
 
@@ -131,7 +136,27 @@ public class JCOReflector {
      * @param isDebug the new debug state
      */
     public static void setDebug(boolean isDebug) {
+        writeLog("Set debug to %s", isDebug ? "true" : "false");
         _isDebug = isDebug;
+    }
+
+    /**
+     * Get console log
+     * 
+     * @return the console log state
+     */
+    public static boolean getConsoleLog() {
+        return _isConsoleLog;
+    }
+
+    /**
+     * Set console log
+     * 
+     * @param isConsoleLog the new console log state
+     */
+    public static void setConsoleLog(boolean isConsoleLog) {
+        writeLog("Set debug to %s", isConsoleLog ? "true" : "false");
+        _isConsoleLog = isConsoleLog;
     }
 
     /**
@@ -153,6 +178,7 @@ public class JCOReflector {
     public static void setInstanceByAssembly(boolean isMultiInstance) {
         if (getInitialized())
             return;
+        writeLog("Set InstanceByAssembly to %s", isMultiInstance ? "true" : "false");
         _isMultiInstance = isMultiInstance;
     }
 
@@ -188,8 +214,10 @@ public class JCOReflector {
         StringBuilder sb = new StringBuilder();
         sb.append(t.getMessage());
         sb.append(System.getProperty("line.separator"));
-        sb.append(t.getStackTrace());
-        sb.append(System.getProperty("line.separator"));
+        for (StackTraceElement ste : t.getStackTrace()) {
+            sb.append(ste.toString());
+            sb.append(System.getProperty("line.separator"));
+        }
         writeLog(sb.toString());
     }
 
@@ -197,10 +225,14 @@ public class JCOReflector {
      * Write a log to JCOReflector log
      * 
      * @param format format {@link String} to log
-     * @param args format arguments
+     * @param args   format arguments
      */
     public static void writeLog(String format, Object... args) {
-        writeLog(String.format(format, args));
+        try {
+            writeLog(String.format(format, args));
+        } catch (Throwable t) {
+            writeLog(t);
+        }
     }
 
     /**
@@ -208,15 +240,10 @@ public class JCOReflector {
      * 
      * @param msg message to log
      */
-    public static synchronized void writeLog(String msg) {
-        if (global_bw == null) {
-            try {
-                global_bw = new BufferedWriter(new FileWriter("JCOReflector.log"));
-            } catch (IOException e) {
-                e.printStackTrace();
-                System.exit(1);
-            }
-        }
+    public static void writeLog(String msg) {
+        if (getConsoleLog())
+            System.out.println(msg);
+
         writeLog(global_bw, msg);
     }
 
@@ -274,7 +301,8 @@ public class JCOReflector {
     static String extractAndReturnPath(String pathToJar) {
         final String containerFileName = "JCOBridge.zip";
         try {
-            Path tmpPath = (pathToJar == null) ? Files.createTempDirectory(JCOReflector.class.getName()) : Paths.get(pathToJar);
+            Path tmpPath = (pathToJar == null) ? Files.createTempDirectory(JCOReflector.class.getName())
+                    : Paths.get(pathToJar);
             String targetFolder = tmpPath.toString();
             writeLog(String.format("Destination folder is %s", targetFolder));
             File extractedLibFile = new File(targetFolder, containerFileName);
@@ -345,13 +373,29 @@ public class JCOReflector {
     }
 
     /**
-     * Invoke this method to initialize JCOBridge runtime to a temporary folder
+     * Initialize {@link JCOReflector} runtime
      * 
      * @return true if the runtime was initialized, otherwise see JCOReflector.log
      *         to check possible error conditions
      */
-    public static boolean initRT() {
-        return initRT((String)null);
+    public static void init(String[] args) {
+        setCommandLineArgs(args);
+        for (int index = 0; index < args.length; index++) {
+            String string = args[index];
+            if (string.toLowerCase() == "-debug") {
+                setDebug(true);
+            } else if (string.toLowerCase() == "-logging") {
+                setLogging(true);
+            } else if (string.toLowerCase() == "-instancebyassembly") {
+                setInstanceByAssembly(true);
+            } else if (string.toLowerCase() == "-logfilename") {
+                setLogFilename(args[index++]);
+            } else if (string.toLowerCase() == "-initRT") {
+                initRT(args[index++]);
+            } else if (string.toLowerCase() == "-initTempRT") {
+                initTempRT();
+            }
+        }
     }
 
     /**
@@ -360,9 +404,8 @@ public class JCOReflector {
      * @return true if the runtime was initialized, otherwise see JCOReflector.log
      *         to check possible error conditions
      */
-    public static boolean initRT(String[] args) {
-        setCommandLineArgs(args);
-        return initRT((String)null);
+    public static boolean initTempRT() {
+        return initRT(null);
     }
 
     /**
@@ -374,9 +417,11 @@ public class JCOReflector {
      *         to check possible error conditions
      */
     public static boolean initRT(String pathToUse) {
+        writeLog("Initialize RT to %s", pathToUse != null ? pathToUse : "Temporary folder");
         // try extract from resources
         _runtimeFolder = extractAndReturnPath(pathToUse);
         if (JCOReflector.getRTFolder() != null && JCOReflector.getRTFolder() != "") {
+            writeLog("Setting RT folder to %s", _runtimeFolder);
             org.mases.jcobridge.JCOBridge.setNativePath(_runtimeFolder);
         }
         return _runtimeFolder != null;

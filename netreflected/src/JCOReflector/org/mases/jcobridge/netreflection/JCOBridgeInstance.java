@@ -90,6 +90,7 @@ public final class JCOBridgeInstance implements IJCEventLog {
         synchronized (synchObj) {
             if (!JCOReflector.getInitialized()) {
                 try {
+                    JCOReflector.writeLog("Initializing JCOBridge runtime");
                     try {
                         JCOBridge.Initialize(JCOReflector.getCommandLineArgs());
                     } catch (JCNativeException e) {
@@ -116,7 +117,6 @@ public final class JCOBridgeInstance implements IJCEventLog {
                         try {
                             _logger = new JCOBridgeInstance(JCOReflector.getLogFilename());
                             theBridgeInstance.RegisterEventLog(_logger);
-                            JCOReflector.setLogging(true);
                         } catch (Throwable t) {
                             JCOReflector.writeLog(t);
                         }
@@ -132,7 +132,6 @@ public final class JCOBridgeInstance implements IJCEventLog {
                         try {
                             _logger = new JCOBridgeInstance(JCOReflector.getLogFilename());
                             bridgeInstance.RegisterEventLog(_logger);
-                            JCOReflector.setLogging(true);
                         } catch (Throwable t) {
                             JCOReflector.writeLog(t);
                         }

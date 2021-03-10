@@ -68,7 +68,15 @@ public class JsonIgnoreCondition extends NetObject  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            String classToCreate = className + ", "
+                    + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Creating %s", classToCreate);
+            JCType typeCreated = bridge.GetType(classToCreate);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Created: %s",
+                        (typeCreated != null) ? typeCreated.toString() : "Returned null value");
+            return typeCreated;
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;
@@ -77,7 +85,15 @@ public class JsonIgnoreCondition extends NetObject  {
 
     static JCEnum createEnum() {
         try {
-            return bridge.GetEnum(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            String enumToCreate = className + ", "
+                    + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Creating Enum %s", enumToCreate);
+            JCEnum enumCreated = bridge.GetEnum(enumToCreate);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Created Enum: %s",
+                        (enumCreated != null) ? enumCreated.toString() : "Returned null value");
+            return enumCreated;
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;

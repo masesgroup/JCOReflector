@@ -75,7 +75,15 @@ public class ContextBindingElement extends BindingElement  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            String classToCreate = className + ", "
+                    + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Creating %s", classToCreate);
+            JCType typeCreated = bridge.GetType(classToCreate);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Created: %s",
+                        (typeCreated != null) ? typeCreated.toString() : "Returned null value");
+            return typeCreated;
         } catch (JCException e) {
             JCOReflector.writeLog(e);
             return null;

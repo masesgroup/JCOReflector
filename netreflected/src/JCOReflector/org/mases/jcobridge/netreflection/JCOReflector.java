@@ -44,7 +44,17 @@ public class JCOReflector {
     static boolean _initialized = false;
     static String[] _commandLineArgs = new String[0];
     static Object global_bw_lock = new Object();
-    static BufferedWriter global_bw = new BufferedWriter(new FileWriter("JCOReflector.log"));
+    static BufferedWriter global_bw = getWriter();
+
+    static BufferedWriter getWriter() {
+        try {
+            return new BufferedWriter(new FileWriter("JCOReflector.log"));
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.exit(1);
+        }
+        return null;
+    }
 
     public static synchronized boolean getInitialized() {
         return _initialized;

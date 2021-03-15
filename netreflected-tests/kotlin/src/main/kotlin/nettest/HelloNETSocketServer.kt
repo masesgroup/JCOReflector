@@ -42,7 +42,7 @@ object HelloNETSocketServer {
     fun StartListening(asyncMode: Boolean, address: String?, port: Int) {
         // Data buffer for incoming data.
         val bytes = ByteArray(1024)
-        var ipAddress: IPAddress? = null
+        var ipAddress: IPAddress?
 
         // Establish the local endpoint for the socket.
         // Dns.GetHostName returns the name of the host running the application.
@@ -76,7 +76,7 @@ object HelloNETSocketServer {
                 // An incoming connection needs to be processed.
                 var receive = true
                 while (receive && run) {
-                    var dataNew = ""
+                    var dataNew : String
                     if (asyncMode) {
                         val asea = SocketAsyncEventArgs()
                         asea.SetBuffer(bytes, 0, bytes.size)

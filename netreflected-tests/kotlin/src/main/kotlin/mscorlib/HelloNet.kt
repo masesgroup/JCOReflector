@@ -37,11 +37,10 @@ object HelloNET {
         JCOReflector.setCommandLineArgs(args)
         try {
             val filename = "test.txt"
-            var result = ""
             if (!File.Exists(filename)) {
                 File.WriteAllText(filename, "First Java string")
             }
-            result = File.ReadAllText(filename)
+            var result: String = File.ReadAllText(filename)
             Console.WriteLine(result)
             result = "$result Java Execution"
             File.WriteAllText(filename, result)

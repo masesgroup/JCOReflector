@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -76,8 +76,17 @@ public class FileIOPermission extends CodeAccessPermission  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            String classToCreate = className + ", "
+                    + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Creating %s", classToCreate);
+            JCType typeCreated = bridge.GetType(classToCreate);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Created: %s",
+                        (typeCreated != null) ? typeCreated.toString() : "Returned null value");
+            return typeCreated;
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -107,7 +116,7 @@ public class FileIOPermission extends CodeAccessPermission  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -141,7 +150,7 @@ public class FileIOPermission extends CodeAccessPermission  {
     public FileIOPermission(FileIOPermissionAccess access, AccessControlActions actions, java.lang.String path) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(access == null ? null : access.getJCOInstance(), actions == null ? null : actions.getJCOInstance(), path));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -151,7 +160,7 @@ public class FileIOPermission extends CodeAccessPermission  {
     public FileIOPermission(FileIOPermissionAccess access, AccessControlActions actions, java.lang.String[] pathList) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(access == null ? null : access.getJCOInstance(), actions == null ? null : actions.getJCOInstance(), pathList));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -161,7 +170,7 @@ public class FileIOPermission extends CodeAccessPermission  {
     public FileIOPermission(FileIOPermissionAccess access, java.lang.String path) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(access == null ? null : access.getJCOInstance(), path));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -171,7 +180,7 @@ public class FileIOPermission extends CodeAccessPermission  {
     public FileIOPermission(FileIOPermissionAccess access, java.lang.String[] pathList) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(access == null ? null : access.getJCOInstance(), pathList));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -181,7 +190,7 @@ public class FileIOPermission extends CodeAccessPermission  {
     public FileIOPermission(PermissionState state) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(state == null ? null : state.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -296,11 +305,11 @@ public class FileIOPermission extends CodeAccessPermission  {
         }
     }
 
-    public void AddPathList(FileIOPermissionAccess dupParam0, JCRefOut dupParam1) throws Throwable {
+    public void AddPathList(FileIOPermissionAccess dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddPathList", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1);
+            classInstance.Invoke("AddPathList", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -336,11 +345,11 @@ public class FileIOPermission extends CodeAccessPermission  {
         }
     }
 
-    public void SetPathList(FileIOPermissionAccess dupParam0, JCRefOut dupParam1) throws Throwable {
+    public void SetPathList(FileIOPermissionAccess dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetPathList", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1);
+            classInstance.Invoke("SetPathList", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

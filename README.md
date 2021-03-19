@@ -1,20 +1,28 @@
-# JCOReflector
+# JCOReflector (a .NET Java wrapper)
 
 ![CI_WINDOWS](https://github.com/masesgroup/JCOReflector/workflows/CI_WINDOWS/badge.svg)  ![CI_LINUX](https://github.com/masesgroup/JCOReflector/workflows/CI_LINUX/badge.svg)  ![CI_RELEASE](https://github.com/masesgroup/JCOReflector/workflows/CI_RELEASE/badge.svg)
 
-JCOReflector is a reflection engine which automatically writes Java classes using .NET class reflection.
-The generated classes are based on the powerful [JCOBridge](https://www.jcobridge.com) engine and extends its use to simplify the use of .NET from Java(JVM).
+## The project
+
+JCOReflector produce a set of **.NET wrapper for Java** as JARs that are available for download. It's simple to use: you only need to reference JCOReflector.jar in the class-path and use the .NET API within your Java projects like exposed in the example section. 
+
+The core of the project is the innovative JCOReflector, a reflection engine which automatically writes Java classes using .NET class reflection.
+JCOReflector can be used to reflects any .NET assembly (even assembly outside the Microsoft ones) into JARs.
+The generated wrapper classes are based on the powerful [JCOBridge](https://www.jcobridge.com) engine and extends its use to simplify the use of .NET from Java(JVM).
 It was created internally from us to support our customers, now we made it available for everyone.
 
 This project adheres to the Contributor [Covenant code of conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to coc_reporting@masesgroup.com.
 
-## Scope of the project
+## History of the project
 
-This project aims to create a set of Java (JVM) classes which mimic .NET (Framework/Core) conterparts.
+This project started in 2019 with the aims to create a set of Java (JVM) classes which mimic .NET (Framework/Core) conterparts, in May 2020 the first commit in GitHub.
 Using this project it is possible to use .NET API in Java and all JVM enabled languages (Scala, Kotlin, and so on).
+The final output of JCOReflector are JARs.
+At its first stages no JARs was available: only the JCOBridge engine, the graphical UI that helps to manages reflection and the operations needed to finally build JARs was relased.
+Starting from recent relases automated continous integration and verification process are in places, so the produced JARs are directly available for download and is no more needed to manually rebuils JARs before use it. 
+Anyway still possible to use JCOReflector to reflects any .NET assembly (even assembly outside the Microsoft ones) into JARs, and because JCOReflector uses templates it is not necessary to manually manages the output, special needs can be addressed dirctly inside the templates.
 
-The final output of JCOReflector are JARs: JCOReflector can be used to reflects any .NET assembly (even assembly outside the Microsoft ones) into JARs.
-You only need to reference JCOReflector.jar in the class-path and use the .NET API within a Java projects. A simple example is the following one: 
+## Simple example
 
 ```java
 
@@ -61,6 +69,50 @@ To run it runs a command like the following one:
 
 The full example code, and other ones, are in the project test folder.
 
+A basic Scala examples is the following one:
+
+```scala
+package mscorlib
+
+import system.Console
+import system.Environment
+
+object HelloIterator {
+  def main(args: scala.Array[String]): Unit = {
+    try {
+      Environment.GetLogicalDrives.foreach(Console.WriteLine(_))
+      Environment.Exit(0)
+    } catch {
+      case tre: Throwable =>
+        tre.printStackTrace()
+    }
+  }
+}
+```
+
+the same example written in Kotlin is the following one:
+
+```kotlin
+package mscorlib
+
+import system.Console
+import system.Environment
+
+object HelloIterator {
+    @JvmStatic
+    fun main(args: Array<String>) {
+        try {
+            for (drive in Environment.GetLogicalDrives()) {
+                Console.WriteLine(drive)
+            }
+            Environment.Exit(0)
+        } catch (tre: Throwable) {
+            tre.printStackTrace()
+        }
+    }
+}
+```
+
 ### Whats in .NET for Java?
 
 From the point of view of .NET it is very simple to use Java classes and it is not necessary to have some kind of reflection classes.
@@ -68,8 +120,7 @@ From the point of view of .NET it is very simple to use Java classes and it is n
 
 ## Actual state
 
-The project is at its first stages. A graphical UI helps to manages reflection and all other operations to finally build JARs.
-JCOReflector uses templates so it is not necessary to manually manages the output.
+The JCOBridge is a mature platform for .NET assembly reflection, the .NET wrapper JARs are available and cover most of the .NET framework functionality.  
 The reflector executables, available for both Framework and CoreCLR, is limited in the following features:
 
 ### Implemented in the reflector

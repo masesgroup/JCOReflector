@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -71,8 +71,17 @@ public class XpsFont extends XpsResource  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            String classToCreate = className + ", "
+                    + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Creating %s", classToCreate);
+            JCType typeCreated = bridge.GetType(classToCreate);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Created: %s",
+                        (typeCreated != null) ? typeCreated.toString() : "Returned null value");
+            return typeCreated;
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -102,7 +111,7 @@ public class XpsFont extends XpsResource  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -148,11 +157,11 @@ public class XpsFont extends XpsResource  {
         }
     }
 
-    public static void ObfuscateFontData(JCRefOut dupParam0, Guid dupParam1) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException, system.OverflowException {
+    public static void ObfuscateFontData(JCORefOut dupParam0, Guid dupParam1) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("ObfuscateFontData", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance());
+            classType.Invoke("ObfuscateFontData", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

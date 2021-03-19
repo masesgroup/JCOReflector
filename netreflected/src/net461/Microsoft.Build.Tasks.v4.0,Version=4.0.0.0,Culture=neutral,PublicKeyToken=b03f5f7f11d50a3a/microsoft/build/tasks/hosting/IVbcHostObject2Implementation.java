@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -75,8 +75,17 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            String classToCreate = className + ", "
+                    + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Creating %s", classToCreate);
+            JCType typeCreated = bridge.GetType(classToCreate);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Created: %s",
+                        (typeCreated != null) ? typeCreated.toString() : "Returned null value");
+            return typeCreated;
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -106,7 +115,7 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -169,11 +178,11 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
         }
     }
 
-    public boolean SetAdditionalLibPaths(JCRefOut dupParam0) throws Throwable {
+    public boolean SetAdditionalLibPaths(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("SetAdditionalLibPaths", (Object)dupParam0);
+            return (boolean)classInstance.Invoke("SetAdditionalLibPaths", (Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -189,11 +198,11 @@ public class IVbcHostObject2Implementation extends NetObject implements IVbcHost
         }
     }
 
-    public boolean SetAddModules(JCRefOut dupParam0) throws Throwable {
+    public boolean SetAddModules(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("SetAddModules", (Object)dupParam0);
+            return (boolean)classInstance.Invoke("SetAddModules", (Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

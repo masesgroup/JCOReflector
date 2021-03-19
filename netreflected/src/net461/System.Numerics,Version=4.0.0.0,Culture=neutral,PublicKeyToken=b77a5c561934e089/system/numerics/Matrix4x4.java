@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -76,8 +76,17 @@ public class Matrix4x4 extends ValueType  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            String classToCreate = className + ", "
+                    + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Creating %s", classToCreate);
+            JCType typeCreated = bridge.GetType(classToCreate);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Created: %s",
+                        (typeCreated != null) ? typeCreated.toString() : "Returned null value");
+            return typeCreated;
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -107,7 +116,7 @@ public class Matrix4x4 extends ValueType  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -141,7 +150,7 @@ public class Matrix4x4 extends ValueType  {
     public Matrix4x4(Single m11, Single m12, Single m13, Single m14, Single m21, Single m22, Single m23, Single m24, Single m31, Single m32, Single m33, Single m34, Single m41, Single m42, Single m43, Single m44) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(m11 == null ? null : m11.getJCOInstance(), m12 == null ? null : m12.getJCOInstance(), m13 == null ? null : m13.getJCOInstance(), m14 == null ? null : m14.getJCOInstance(), m21 == null ? null : m21.getJCOInstance(), m22 == null ? null : m22.getJCOInstance(), m23 == null ? null : m23.getJCOInstance(), m24 == null ? null : m24.getJCOInstance(), m31 == null ? null : m31.getJCOInstance(), m32 == null ? null : m32.getJCOInstance(), m33 == null ? null : m33.getJCOInstance(), m34 == null ? null : m34.getJCOInstance(), m41 == null ? null : m41.getJCOInstance(), m42 == null ? null : m42.getJCOInstance(), m43 == null ? null : m43.getJCOInstance(), m44 == null ? null : m44.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -151,7 +160,7 @@ public class Matrix4x4 extends ValueType  {
     public Matrix4x4(Matrix3x2 value) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(value == null ? null : value.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -75,8 +75,17 @@ public class XamlServices extends NetObject  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            String classToCreate = className + ", "
+                    + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Creating %s", classToCreate);
+            JCType typeCreated = bridge.GetType(classToCreate);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Created: %s",
+                        (typeCreated != null) ? typeCreated.toString() : "Returned null value");
+            return typeCreated;
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -106,7 +115,7 @@ public class XamlServices extends NetObject  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -195,7 +204,7 @@ public class XamlServices extends NetObject  {
         }
     }
 
-    public static java.lang.String Save(NetObject instance) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException, system.xaml.XamlObjectReaderException, system.xaml.XamlSchemaException, system.NotImplementedException {
+    public static java.lang.String Save(NetObject instance) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException, system.xaml.XamlObjectReaderException, system.xaml.XamlSchemaException, system.xaml.XamlException, system.NotImplementedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -205,7 +214,7 @@ public class XamlServices extends NetObject  {
         }
     }
 
-    public static void Save(Stream stream, NetObject instance) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.xml.XmlException, system.ArrayTypeMismatchException, system.MulticastNotSupportedException, system.xaml.XamlObjectReaderException, system.xaml.XamlSchemaException, system.NotImplementedException {
+    public static void Save(Stream stream, NetObject instance) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.xml.XmlException, system.ArrayTypeMismatchException, system.MulticastNotSupportedException, system.xaml.XamlObjectReaderException, system.xaml.XamlSchemaException, system.xaml.XamlException, system.NotImplementedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -215,7 +224,7 @@ public class XamlServices extends NetObject  {
         }
     }
 
-    public static void Save(TextWriter writer, NetObject instance) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.xml.XmlException, system.MulticastNotSupportedException, system.xaml.XamlObjectReaderException, system.xaml.XamlSchemaException, system.NotImplementedException {
+    public static void Save(TextWriter writer, NetObject instance) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.xml.XmlException, system.MulticastNotSupportedException, system.xaml.XamlObjectReaderException, system.xaml.XamlSchemaException, system.xaml.XamlException, system.NotImplementedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -225,7 +234,7 @@ public class XamlServices extends NetObject  {
         }
     }
 
-    public static void Save(java.lang.String fileName, NetObject instance) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.xml.XmlException, system.runtime.serialization.SerializationException, system.io.IOException, system.ArrayTypeMismatchException, system.MulticastNotSupportedException, system.xaml.XamlObjectReaderException, system.xaml.XamlSchemaException, system.NotImplementedException {
+    public static void Save(java.lang.String fileName, NetObject instance) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.xml.XmlException, system.runtime.serialization.SerializationException, system.io.IOException, system.ArrayTypeMismatchException, system.MulticastNotSupportedException, system.xaml.XamlObjectReaderException, system.xaml.XamlSchemaException, system.xaml.XamlException, system.NotImplementedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -245,7 +254,7 @@ public class XamlServices extends NetObject  {
         }
     }
 
-    public static void Save(XmlWriter writer, NetObject instance) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.FormatException, system.xaml.XamlObjectReaderException, system.xaml.XamlSchemaException, system.NotImplementedException {
+    public static void Save(XmlWriter writer, NetObject instance) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.MulticastNotSupportedException, system.FormatException, system.xaml.XamlObjectReaderException, system.xaml.XamlSchemaException, system.xaml.XamlException, system.NotImplementedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {

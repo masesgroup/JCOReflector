@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -72,8 +72,17 @@ public class EncryptedKeyIdentifierClause extends BinaryKeyIdentifierClause  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            String classToCreate = className + ", "
+                    + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Creating %s", classToCreate);
+            JCType typeCreated = bridge.GetType(classToCreate);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Created: %s",
+                        (typeCreated != null) ? typeCreated.toString() : "Returned null value");
+            return typeCreated;
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -103,7 +112,7 @@ public class EncryptedKeyIdentifierClause extends BinaryKeyIdentifierClause  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -137,7 +146,7 @@ public class EncryptedKeyIdentifierClause extends BinaryKeyIdentifierClause  {
     public EncryptedKeyIdentifierClause(byte[] encryptedKey, java.lang.String encryptionMethod) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.OutOfMemoryException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(encryptedKey, encryptionMethod));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -147,7 +156,7 @@ public class EncryptedKeyIdentifierClause extends BinaryKeyIdentifierClause  {
     public EncryptedKeyIdentifierClause(byte[] encryptedKey, java.lang.String encryptionMethod, SecurityKeyIdentifier encryptingKeyIdentifier) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(encryptedKey, encryptionMethod, encryptingKeyIdentifier == null ? null : encryptingKeyIdentifier.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -157,7 +166,7 @@ public class EncryptedKeyIdentifierClause extends BinaryKeyIdentifierClause  {
     public EncryptedKeyIdentifierClause(byte[] encryptedKey, java.lang.String encryptionMethod, SecurityKeyIdentifier encryptingKeyIdentifier, java.lang.String carriedKeyName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(encryptedKey, encryptionMethod, encryptingKeyIdentifier == null ? null : encryptingKeyIdentifier.getJCOInstance(), carriedKeyName));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -167,7 +176,7 @@ public class EncryptedKeyIdentifierClause extends BinaryKeyIdentifierClause  {
     public EncryptedKeyIdentifierClause(byte[] encryptedKey, java.lang.String encryptionMethod, SecurityKeyIdentifier encryptingKeyIdentifier, java.lang.String carriedKeyName, byte[] derivationNonce, int derivationLength) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(encryptedKey, encryptionMethod, encryptingKeyIdentifier == null ? null : encryptingKeyIdentifier.getJCOInstance(), carriedKeyName, derivationNonce, derivationLength));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -189,11 +198,11 @@ public class EncryptedKeyIdentifierClause extends BinaryKeyIdentifierClause  {
         }
     }
 
-    public boolean Matches(JCRefOut dupParam0, java.lang.String dupParam1, java.lang.String dupParam2) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
+    public boolean Matches(JCORefOut dupParam0, java.lang.String dupParam1, java.lang.String dupParam2) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Matches", dupParam0, dupParam1, dupParam2);
+            return (boolean)classInstance.Invoke("Matches", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -73,8 +73,17 @@ public class VerificationAttribute extends Attribute  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            String classToCreate = className + ", "
+                    + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Creating %s", classToCreate);
+            JCType typeCreated = bridge.GetType(classToCreate);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Created: %s",
+                        (typeCreated != null) ? typeCreated.toString() : "Returned null value");
+            return typeCreated;
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -104,7 +113,7 @@ public class VerificationAttribute extends Attribute  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -138,7 +147,7 @@ public class VerificationAttribute extends Attribute  {
     public VerificationAttribute(java.lang.String guideline, java.lang.String checkpoint, VerificationReportLevel reportLevel, int priority, java.lang.String message) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(guideline, checkpoint, reportLevel == null ? null : reportLevel.getJCOInstance(), priority, message));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -148,7 +157,7 @@ public class VerificationAttribute extends Attribute  {
     public VerificationAttribute(java.lang.String guideline, java.lang.String checkpoint, VerificationReportLevel reportLevel, int priority, java.lang.String message, VerificationRule rule, java.lang.String conditionalProperty) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(guideline, checkpoint, reportLevel == null ? null : reportLevel.getJCOInstance(), priority, message, rule == null ? null : rule.getJCOInstance(), conditionalProperty));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -158,7 +167,7 @@ public class VerificationAttribute extends Attribute  {
     public VerificationAttribute(java.lang.String guideline, java.lang.String checkpoint, VerificationReportLevel reportLevel, int priority, java.lang.String message, VerificationRule rule, java.lang.String conditionalProperty, VerificationConditionalOperator conditionalOperator, java.lang.String conditionalValue, java.lang.String guidelineUrl) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(guideline, checkpoint, reportLevel == null ? null : reportLevel.getJCOInstance(), priority, message, rule == null ? null : rule.getJCOInstance(), conditionalProperty, conditionalOperator == null ? null : conditionalOperator.getJCOInstance(), conditionalValue, guidelineUrl));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

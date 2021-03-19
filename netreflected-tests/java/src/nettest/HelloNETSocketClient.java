@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -27,9 +27,10 @@ package nettest;
 //import java 
 import java.util.Arrays;
 
-import org.mases.jcobridge.*;
-//import .NET
+import org.mases.jcobridge.netreflection.JCORefOut;
 import org.mases.jcobridge.netreflection.NetObject;
+//import .NET
+
 import system.*;
 import system.diagnostics.tracing.EventSourceException;
 import system.net.*;
@@ -104,7 +105,7 @@ public class HelloNETSocketClient {
                         String message = Encoding.getASCII().GetString(asea.getBuffer(), 0, asea.getBytesTransferred());
                         if (message != null) Console.WriteLine("Client data received {0}", new NetObject(message));
                     } else {
-                        int recBytes = sender.Receive(JCRefOut.Create(bytes));
+                        int recBytes = sender.Receive(JCORefOut.Create(bytes));
                         String message = Encoding.getASCII().GetString(bytes, 0, recBytes);
                         if (message != null) Console.WriteLine("Client data received {0}", new NetObject(message));
                     }

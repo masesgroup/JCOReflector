@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -73,8 +73,17 @@ public class OracleTimeSpan extends ValueType  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            String classToCreate = className + ", "
+                    + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Creating %s", classToCreate);
+            JCType typeCreated = bridge.GetType(classToCreate);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Created: %s",
+                        (typeCreated != null) ? typeCreated.toString() : "Returned null value");
+            return typeCreated;
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -104,7 +113,7 @@ public class OracleTimeSpan extends ValueType  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -138,7 +147,7 @@ public class OracleTimeSpan extends ValueType  {
     public OracleTimeSpan(int hours, int minutes, int seconds) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(hours, minutes, seconds));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -148,7 +157,7 @@ public class OracleTimeSpan extends ValueType  {
     public OracleTimeSpan(int days, int hours, int minutes, int seconds) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(days, hours, minutes, seconds));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -158,7 +167,7 @@ public class OracleTimeSpan extends ValueType  {
     public OracleTimeSpan(int days, int hours, int minutes, int seconds, int milliseconds) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(days, hours, minutes, seconds, milliseconds));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -168,7 +177,7 @@ public class OracleTimeSpan extends ValueType  {
     public OracleTimeSpan(long ticks) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(ticks));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -178,7 +187,7 @@ public class OracleTimeSpan extends ValueType  {
     public OracleTimeSpan(OracleTimeSpan from) throws Throwable, system.ArgumentException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(from == null ? null : from.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -188,7 +197,7 @@ public class OracleTimeSpan extends ValueType  {
     public OracleTimeSpan(TimeSpan ts) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(ts == null ? null : ts.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

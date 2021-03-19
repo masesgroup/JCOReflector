@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -75,10 +75,17 @@ public class InstanceKeyCollisionException extends InstancePersistenceCommandExc
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            String classToCreate = className + ", "
+                    + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Creating %s", classToCreate);
+            JCType typeCreated = bridge.GetType(classToCreate);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Created: %s",
+                        (typeCreated != null) ? typeCreated.toString() : "Returned null value");
+            return typeCreated;
         } catch (JCException jce) {
-            if (JCOBridgeInstance.getDebug())
-                jce.printStackTrace();
+            JCOReflector.writeLog(jce);
             return null;
         }
     }
@@ -126,7 +133,7 @@ public class InstanceKeyCollisionException extends InstancePersistenceCommandExc
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -157,7 +164,7 @@ public class InstanceKeyCollisionException extends InstancePersistenceCommandExc
     public InstanceKeyCollisionException(XName commandName, Guid instanceId, InstanceKey instanceKey, Guid conflictingInstanceId) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(commandName == null ? null : commandName.getJCOInstance(), instanceId == null ? null : instanceId.getJCOInstance(), instanceKey == null ? null : instanceKey.getJCOInstance(), conflictingInstanceId == null ? null : conflictingInstanceId.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -167,7 +174,7 @@ public class InstanceKeyCollisionException extends InstancePersistenceCommandExc
     public InstanceKeyCollisionException(XName commandName, Guid instanceId, InstanceKey instanceKey, Guid conflictingInstanceId, NetException innerException) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(commandName == null ? null : commandName.getJCOInstance(), instanceId == null ? null : instanceId.getJCOInstance(), instanceKey == null ? null : instanceKey.getJCOInstance(), conflictingInstanceId == null ? null : conflictingInstanceId.getJCOInstance(), innerException == null ? null : innerException.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -177,7 +184,7 @@ public class InstanceKeyCollisionException extends InstancePersistenceCommandExc
     public InstanceKeyCollisionException(XName commandName, Guid instanceId, InstanceKey instanceKey, Guid conflictingInstanceId, java.lang.String message, NetException innerException) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(commandName == null ? null : commandName.getJCOInstance(), instanceId == null ? null : instanceId.getJCOInstance(), instanceKey == null ? null : instanceKey.getJCOInstance(), conflictingInstanceId == null ? null : conflictingInstanceId.getJCOInstance(), message, innerException == null ? null : innerException.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

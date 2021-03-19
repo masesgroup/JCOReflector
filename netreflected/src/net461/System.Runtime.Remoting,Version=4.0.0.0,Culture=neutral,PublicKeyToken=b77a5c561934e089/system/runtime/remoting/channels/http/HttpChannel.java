@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -82,8 +82,17 @@ public class HttpChannel extends BaseChannelWithProperties  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            String classToCreate = className + ", "
+                    + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Creating %s", classToCreate);
+            JCType typeCreated = bridge.GetType(classToCreate);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Created: %s",
+                        (typeCreated != null) ? typeCreated.toString() : "Returned null value");
+            return typeCreated;
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -113,7 +122,7 @@ public class HttpChannel extends BaseChannelWithProperties  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -144,7 +153,7 @@ public class HttpChannel extends BaseChannelWithProperties  {
     public HttpChannel() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.net.sockets.SocketException, system.FormatException, system.NotSupportedException, system.configuration.ConfigurationException, system.security.SecurityException, system.InvalidOperationException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.OutOfMemoryException, system.NotImplementedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.AccessViolationException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.runtime.remoting.RemotingException, system.OverflowException, system.threading.AbandonedMutexException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -154,7 +163,7 @@ public class HttpChannel extends BaseChannelWithProperties  {
     public HttpChannel(int port) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.net.sockets.SocketException, system.FormatException, system.NotSupportedException, system.configuration.ConfigurationException, system.security.SecurityException, system.InvalidOperationException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.OutOfMemoryException, system.NotImplementedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.AccessViolationException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.runtime.remoting.RemotingException, system.OverflowException, system.threading.AbandonedMutexException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(port));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -164,7 +173,7 @@ public class HttpChannel extends BaseChannelWithProperties  {
     public HttpChannel(IDictionary properties, IClientChannelSinkProvider clientSinkProvider, IServerChannelSinkProvider serverSinkProvider) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.OverflowException, system.NotImplementedException, system.IndexOutOfRangeException, system.net.sockets.SocketException, system.NotSupportedException, system.configuration.ConfigurationException, system.security.SecurityException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.OutOfMemoryException, system.AccessViolationException, system.ObjectDisposedException, system.runtime.remoting.RemotingException, system.threading.AbandonedMutexException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(properties == null ? null : properties.getJCOInstance(), clientSinkProvider == null ? null : clientSinkProvider.getJCOInstance(), serverSinkProvider == null ? null : serverSinkProvider.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

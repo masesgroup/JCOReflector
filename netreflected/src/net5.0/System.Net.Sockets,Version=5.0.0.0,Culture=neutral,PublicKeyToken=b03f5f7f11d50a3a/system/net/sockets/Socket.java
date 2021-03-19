@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -92,8 +92,17 @@ public class Socket extends NetObject implements AutoCloseable {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            String classToCreate = className + ", "
+                    + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Creating %s", classToCreate);
+            JCType typeCreated = bridge.GetType(classToCreate);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Created: %s",
+                        (typeCreated != null) ? typeCreated.toString() : "Returned null value");
+            return typeCreated;
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -123,7 +132,7 @@ public class Socket extends NetObject implements AutoCloseable {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -157,7 +166,7 @@ public class Socket extends NetObject implements AutoCloseable {
     public Socket(AddressFamily addressFamily, SocketType socketType, ProtocolType protocolType) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.NotSupportedException, system.net.sockets.SocketException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(addressFamily == null ? null : addressFamily.getJCOInstance(), socketType == null ? null : socketType.getJCOInstance(), protocolType == null ? null : protocolType.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -167,7 +176,7 @@ public class Socket extends NetObject implements AutoCloseable {
     public Socket(SafeSocketHandle handle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.net.sockets.SocketException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(handle == null ? null : handle.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -177,7 +186,7 @@ public class Socket extends NetObject implements AutoCloseable {
     public Socket(SocketInformation socketInformation) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.net.sockets.SocketException, system.InvalidOperationException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(socketInformation == null ? null : socketInformation.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -187,7 +196,7 @@ public class Socket extends NetObject implements AutoCloseable {
     public Socket(SocketType socketType, ProtocolType protocolType) throws Throwable, system.ArgumentException, system.net.sockets.SocketException, system.ArgumentNullException, system.InvalidOperationException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(socketType == null ? null : socketType.getJCOInstance(), protocolType == null ? null : protocolType.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -368,11 +377,11 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
-    public int IOControl(int dupParam0, JCRefOut dupParam1, JCRefOut dupParam2) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.net.sockets.SocketException {
+    public int IOControl(int dupParam0, JCORefOut dupParam1, JCORefOut dupParam2) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("IOControl", dupParam0, dupParam1, dupParam2);
+            return (int)classInstance.Invoke("IOControl", dupParam0, dupParam1.getJCRefOut(), dupParam2.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -388,11 +397,11 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
-    public int IOControl(IOControlCode dupParam0, JCRefOut dupParam1, JCRefOut dupParam2) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.net.sockets.SocketException {
+    public int IOControl(IOControlCode dupParam0, JCORefOut dupParam1, JCORefOut dupParam2) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("IOControl", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2);
+            return (int)classInstance.Invoke("IOControl", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut(), dupParam2.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -408,11 +417,11 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
-    public int Receive(JCRefOut dupParam0) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.net.sockets.SocketException, system.ArrayTypeMismatchException {
+    public int Receive(JCORefOut dupParam0) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.net.sockets.SocketException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("Receive", (Object)dupParam0);
+            return (int)classInstance.Invoke("Receive", (Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -428,11 +437,11 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
-    public int Receive(JCRefOut dupParam0, int dupParam1, int dupParam2, SocketFlags dupParam3) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException {
+    public int Receive(JCORefOut dupParam0, int dupParam1, int dupParam2, SocketFlags dupParam3) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("Receive", dupParam0, dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
+            return (int)classInstance.Invoke("Receive", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -448,11 +457,11 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
-    public int Receive(JCRefOut dupParam0, int dupParam1, SocketFlags dupParam2) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.net.sockets.SocketException, system.ArrayTypeMismatchException {
+    public int Receive(JCORefOut dupParam0, int dupParam1, SocketFlags dupParam2) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.net.sockets.SocketException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("Receive", dupParam0, dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
+            return (int)classInstance.Invoke("Receive", dupParam0.getJCRefOut(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -468,11 +477,11 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
-    public int Receive(JCRefOut dupParam0, SocketFlags dupParam1) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.net.sockets.SocketException, system.ArrayTypeMismatchException {
+    public int Receive(JCORefOut dupParam0, SocketFlags dupParam1) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.net.sockets.SocketException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("Receive", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance());
+            return (int)classInstance.Invoke("Receive", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -488,11 +497,11 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
-    public int Send(JCRefOut dupParam0) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.net.sockets.SocketException, system.ArrayTypeMismatchException {
+    public int Send(JCORefOut dupParam0) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.net.sockets.SocketException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("Send", (Object)dupParam0);
+            return (int)classInstance.Invoke("Send", (Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -508,11 +517,11 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
-    public int Send(JCRefOut dupParam0, int dupParam1, int dupParam2, SocketFlags dupParam3) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException {
+    public int Send(JCORefOut dupParam0, int dupParam1, int dupParam2, SocketFlags dupParam3) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.IndexOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("Send", dupParam0, dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
+            return (int)classInstance.Invoke("Send", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -528,11 +537,11 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
-    public int Send(JCRefOut dupParam0, int dupParam1, SocketFlags dupParam2) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.net.sockets.SocketException, system.ArrayTypeMismatchException {
+    public int Send(JCORefOut dupParam0, int dupParam1, SocketFlags dupParam2) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.net.sockets.SocketException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("Send", dupParam0, dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
+            return (int)classInstance.Invoke("Send", dupParam0.getJCRefOut(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -548,11 +557,11 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
-    public int Send(JCRefOut dupParam0, SocketFlags dupParam1) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.net.sockets.SocketException, system.ArrayTypeMismatchException {
+    public int Send(JCORefOut dupParam0, SocketFlags dupParam1) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.net.sockets.SocketException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("Send", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance());
+            return (int)classInstance.Invoke("Send", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -568,11 +577,11 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
-    public int SendTo(JCRefOut dupParam0, int dupParam1, int dupParam2, SocketFlags dupParam3, EndPoint dupParam4) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.net.sockets.SocketException {
+    public int SendTo(JCORefOut dupParam0, int dupParam1, int dupParam2, SocketFlags dupParam3, EndPoint dupParam4) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("SendTo", dupParam0, dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance());
+            return (int)classInstance.Invoke("SendTo", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -588,11 +597,11 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
-    public int SendTo(JCRefOut dupParam0, int dupParam1, SocketFlags dupParam2, EndPoint dupParam3) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.IndexOutOfRangeException, system.ArgumentException {
+    public int SendTo(JCORefOut dupParam0, int dupParam1, SocketFlags dupParam2, EndPoint dupParam3) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.IndexOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("SendTo", dupParam0, dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance());
+            return (int)classInstance.Invoke("SendTo", dupParam0.getJCRefOut(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -608,11 +617,11 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
-    public int SendTo(JCRefOut dupParam0, EndPoint dupParam1) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.IndexOutOfRangeException, system.ArgumentException {
+    public int SendTo(JCORefOut dupParam0, EndPoint dupParam1) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.IndexOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("SendTo", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance());
+            return (int)classInstance.Invoke("SendTo", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -628,11 +637,11 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
-    public int SendTo(JCRefOut dupParam0, SocketFlags dupParam1, EndPoint dupParam2) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.IndexOutOfRangeException, system.ArgumentException {
+    public int SendTo(JCORefOut dupParam0, SocketFlags dupParam1, EndPoint dupParam2) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException, system.IndexOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("SendTo", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2 == null ? null : dupParam2.getJCOInstance());
+            return (int)classInstance.Invoke("SendTo", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2 == null ? null : dupParam2.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -682,7 +691,7 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
-    public IAsyncResult BeginConnect(IPAddress address, int port, AsyncCallback requestCallback, NetObject state) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.FormatException, system.net.sockets.SocketException, system.threading.tasks.TaskSchedulerException, system.OutOfMemoryException {
+    public IAsyncResult BeginConnect(IPAddress address, int port, AsyncCallback requestCallback, NetObject state) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.FormatException, system.net.sockets.SocketException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -737,11 +746,11 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
-    public IAsyncResult BeginReceive(JCRefOut dupParam0, int dupParam1, int dupParam2, SocketFlags dupParam3, AsyncCallback dupParam4, NetObject dupParam5) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.security.SecurityException, system.net.sockets.SocketException {
+    public IAsyncResult BeginReceive(JCORefOut dupParam0, int dupParam1, int dupParam2, SocketFlags dupParam3, AsyncCallback dupParam4, NetObject dupParam5) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.security.SecurityException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objBeginReceive = (JCObject)classInstance.Invoke("BeginReceive", dupParam0, dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4, dupParam5 == null ? null : dupParam5.getJCOInstance());
+            JCObject objBeginReceive = (JCObject)classInstance.Invoke("BeginReceive", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4, dupParam5 == null ? null : dupParam5.getJCOInstance());
             return new IAsyncResultImplementation(objBeginReceive);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -759,11 +768,11 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
-    public IAsyncResult BeginSend(JCRefOut dupParam0, int dupParam1, int dupParam2, SocketFlags dupParam3, AsyncCallback dupParam4, NetObject dupParam5) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.net.sockets.SocketException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.security.SecurityException {
+    public IAsyncResult BeginSend(JCORefOut dupParam0, int dupParam1, int dupParam2, SocketFlags dupParam3, AsyncCallback dupParam4, NetObject dupParam5) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.net.sockets.SocketException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.security.SecurityException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objBeginSend = (JCObject)classInstance.Invoke("BeginSend", dupParam0, dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4, dupParam5 == null ? null : dupParam5.getJCOInstance());
+            JCObject objBeginSend = (JCObject)classInstance.Invoke("BeginSend", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4, dupParam5 == null ? null : dupParam5.getJCOInstance());
             return new IAsyncResultImplementation(objBeginSend);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -781,11 +790,11 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
-    public IAsyncResult BeginSendFile(java.lang.String dupParam0, JCRefOut dupParam1, JCRefOut dupParam2, TransmitFileOptions dupParam3, AsyncCallback dupParam4, NetObject dupParam5) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.net.sockets.SocketException, system.ArrayTypeMismatchException, system.runtime.serialization.SerializationException, system.io.IOException, system.security.SecurityException {
+    public IAsyncResult BeginSendFile(java.lang.String dupParam0, JCORefOut dupParam1, JCORefOut dupParam2, TransmitFileOptions dupParam3, AsyncCallback dupParam4, NetObject dupParam5) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.net.sockets.SocketException, system.ArrayTypeMismatchException, system.runtime.serialization.SerializationException, system.io.IOException, system.security.SecurityException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objBeginSendFile = (JCObject)classInstance.Invoke("BeginSendFile", dupParam0, dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4, dupParam5 == null ? null : dupParam5.getJCOInstance());
+            JCObject objBeginSendFile = (JCObject)classInstance.Invoke("BeginSendFile", dupParam0, dupParam1.getJCRefOut(), dupParam2.getJCRefOut(), dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4, dupParam5 == null ? null : dupParam5.getJCOInstance());
             return new IAsyncResultImplementation(objBeginSendFile);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -814,11 +823,11 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
-    public IAsyncResult BeginSendTo(JCRefOut dupParam0, int dupParam1, int dupParam2, SocketFlags dupParam3, EndPoint dupParam4, AsyncCallback dupParam5, NetObject dupParam6) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.net.sockets.SocketException, system.security.SecurityException {
+    public IAsyncResult BeginSendTo(JCORefOut dupParam0, int dupParam1, int dupParam2, SocketFlags dupParam3, EndPoint dupParam4, AsyncCallback dupParam5, NetObject dupParam6) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.net.sockets.SocketException, system.security.SecurityException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objBeginSendTo = (JCObject)classInstance.Invoke("BeginSendTo", dupParam0, dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance(), dupParam5, dupParam6 == null ? null : dupParam6.getJCOInstance());
+            JCObject objBeginSendTo = (JCObject)classInstance.Invoke("BeginSendTo", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance(), dupParam5, dupParam6 == null ? null : dupParam6.getJCOInstance());
             return new IAsyncResultImplementation(objBeginSendTo);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1009,11 +1018,11 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
-    public void GetSocketOption(SocketOptionLevel dupParam0, SocketOptionName dupParam1, JCRefOut dupParam2) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.net.sockets.SocketException {
+    public void GetSocketOption(SocketOptionLevel dupParam0, SocketOptionName dupParam1, JCORefOut dupParam2) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("GetSocketOption", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2);
+            classInstance.Invoke("GetSocketOption", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1069,11 +1078,11 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
-    public void SendFile(java.lang.String dupParam0, JCRefOut dupParam1, JCRefOut dupParam2, TransmitFileOptions dupParam3) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.net.sockets.SocketException, system.ArrayTypeMismatchException, system.runtime.serialization.SerializationException, system.io.IOException {
+    public void SendFile(java.lang.String dupParam0, JCORefOut dupParam1, JCORefOut dupParam2, TransmitFileOptions dupParam3) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.net.sockets.SocketException, system.ArrayTypeMismatchException, system.runtime.serialization.SerializationException, system.io.IOException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SendFile", dupParam0, dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
+            classInstance.Invoke("SendFile", dupParam0, dupParam1.getJCRefOut(), dupParam2.getJCRefOut(), dupParam3 == null ? null : dupParam3.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1109,11 +1118,11 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
-    public void SetSocketOption(SocketOptionLevel dupParam0, SocketOptionName dupParam1, JCRefOut dupParam2) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.net.sockets.SocketException {
+    public void SetSocketOption(SocketOptionLevel dupParam0, SocketOptionName dupParam1, JCORefOut dupParam2) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetSocketOption", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2);
+            classInstance.Invoke("SetSocketOption", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -37,8 +37,13 @@ jobs:
         while IFS= read -r file
         do
           echo $file
+          if [[ $file == ".github/workflows/linux.yml"* ]]; then
+            echo "This file is under the directory '.github/workflows/linux.yml'."
+            echo "::set-output name=run_job::true"
+            break
+          fi
           if [[ $file == "netreflected/src/"* ]]; then
-            echo "This file is under the directory 'netreflected/src/JCOReflector'."
+            echo "This file is under the directory 'netreflected/src'."
             echo "::set-output name=run_job::true"
             break
           fi
@@ -54,8 +59,7 @@ jobs:
           fi
         echo "This files are not in a source directory no action required"
         done < files.txt
-        
-        
+
   # This workflow contains a single job called "build"
   build_linux:
       needs: check
@@ -91,12 +95,10 @@ jobs:
             dotnet bin/netcoreapp3.1/JCOReflectorCLI.dll createjars .github/workflows/createjars_core3.1_linux.job	
             dotnet bin/net5.0/JCOReflectorCLI.dll createjars .github/workflows/createjars_core5.0_linux.job																  
 
-        - name: Build test source file
-          run: |
-            javac -cp ./bin/netcoreapp3.1/JCOReflector.jar ./netreflected-tests/java/src/hierarchy/*.java ./netreflected-tests/java/src/mscorlib/*.java ./netreflected-tests/java/src/nettest/*.java
-            javac -cp ./bin/net5.0/JCOReflector.jar ./netreflected-tests/java/src/hierarchy/*.java ./netreflected-tests/java/src/mscorlib/*.java ./netreflected-tests/java/src/nettest/*.java
+        - name: Build Java test source file
+          run: javac -cp ./bin/netcoreapp3.1/JCOReflector.jar ./netreflected-tests/java/src/hierarchy/*.java ./netreflected-tests/java/src/mscorlib/*.java ./netreflected-tests/java/src/nettest/*.java
 
-        - name: Execute tests	netcoreapp3.1				 
+        - name: Execute Java tests netcoreapp3.1
           run: |
             java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/java/src/" hierarchy.HelloHierarchy --CoreCLRApp:Microsoft.NETCore.App
             java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/java/src/" hierarchy.HelloInterfaces --CoreCLRApp:Microsoft.NETCore.App
@@ -106,7 +108,10 @@ jobs:
             java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/java/src/" nettest.HelloNETSocket -server 127.0.0.1 --CoreCLRApp:Microsoft.NETCore.App
             java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/java/src/" nettest.HelloNETSocket -async -server 127.0.0.1 --CoreCLRApp:Microsoft.NETCore.App
 
-        - name: Execute tests	net5.0			 
+        - name: Build Java test source file
+          run: javac -cp ./bin/net5.0/JCOReflector.jar ./netreflected-tests/java/src/hierarchy/*.java ./netreflected-tests/java/src/mscorlib/*.java ./netreflected-tests/java/src/nettest/*.java
+
+        - name: Execute Java tests net5.0 
           run: |
             java -cp "./bin/net5.0/JCOReflector.jar:./netreflected-tests/java/src/" hierarchy.HelloHierarchy 
             java -cp "./bin/net5.0/JCOReflector.jar:./netreflected-tests/java/src/" hierarchy.HelloInterfaces 
@@ -114,5 +119,49 @@ jobs:
             java -cp "./bin/net5.0/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloNETEvent 
             java -cp "./bin/net5.0/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloIterator 
             java -cp "./bin/net5.0/JCOReflector.jar:./netreflected-tests/java/src/" nettest.HelloNETSocket -server 127.0.0.1 
-            java -cp "./bin/net5.0/JCOReflector.jar:./netreflected-tests/java/src/" nettest.HelloNETSocket -async -server 127.0.0.1 
+            java -cp "./bin/net5.0/JCOReflector.jar:./netreflected-tests/java/src/" nettest.HelloNETSocket -async -server 127.0.0.1
 
+        - name: Download and install Scala package
+          run: |
+            sudo apt update
+            sudo apt-get install unzip
+            sudo apt-get install zip
+            curl -s "https://get.sdkman.io" | bash
+            source "$HOME/.sdkman/bin/sdkman-init.sh"
+            sdk install scala
+
+        - name: Build Scala test source file .NET Core 3.1
+          run: |
+            source "$HOME/.sdkman/bin/sdkman-init.sh"
+            mkdir ./netreflected-tests/scala/output
+            scalac -cp "./bin/netcoreapp3.1/*" -d ./netreflected-tests/scala/output ./netreflected-tests/scala/src/main/scala/hierarchy/* ./netreflected-tests/scala/src/main/scala/mscorlib/* ./netreflected-tests/scala/src/main/scala/nettest/*
+
+        - name: Execute Scala tests .NET Core 3.1
+          run: |
+            source "$HOME/.sdkman/bin/sdkman-init.sh"
+            scala -nobootcp -toolcp "./bin/netcoreapp3.1/*:./netreflected-tests/scala/output" hierarchy.HelloHierarchy --CoreCLRApp:Microsoft.NETCore.App
+            scala -nobootcp -toolcp "./bin/netcoreapp3.1/*:./netreflected-tests/scala/output" hierarchy.HelloInterfaces --CoreCLRApp:Microsoft.NETCore.App
+            scala -nobootcp -toolcp "./bin/netcoreapp3.1/*:./netreflected-tests/scala/output" mscorlib.HelloNet --CoreCLRApp:Microsoft.NETCore.App
+            scala -nobootcp -toolcp "./bin/netcoreapp3.1/*:./netreflected-tests/scala/output" mscorlib.HelloNETEvent --CoreCLRApp:Microsoft.NETCore.App
+            scala -nobootcp -toolcp "./bin/netcoreapp3.1/*:./netreflected-tests/scala/output" mscorlib.HelloIterator --CoreCLRApp:Microsoft.NETCore.App
+            scala -nobootcp -toolcp "./bin/netcoreapp3.1/*:./netreflected-tests/scala/output" nettest.HelloNETSocket --CoreCLRApp:Microsoft.NETCore.App
+            scala -nobootcp -toolcp "./bin/netcoreapp3.1/*:./netreflected-tests/scala/output" nettest.HelloNETSocket -async --CoreCLRApp:Microsoft.NETCore.App
+            rm -rf ./netreflected-tests/scala/output
+
+        - name: Build Scala test source file .NET Core 5.0
+          run: |
+            source "$HOME/.sdkman/bin/sdkman-init.sh"
+            mkdir ./netreflected-tests/scala/output
+            scalac -cp "./bin/net5.0/*" -d ./netreflected-tests/scala/output ./netreflected-tests/scala/src/main/scala/hierarchy/* ./netreflected-tests/scala/src/main/scala/mscorlib/* ./netreflected-tests/scala/src/main/scala/nettest/*
+
+        - name: Execute Scala tests .NET Core 5.0
+          run: |
+            source "$HOME/.sdkman/bin/sdkman-init.sh"
+            scala -nobootcp -toolcp "./bin/net5.0/*:./netreflected-tests/scala/output" hierarchy.HelloHierarchy
+            scala -nobootcp -toolcp "./bin/net5.0/*:./netreflected-tests/scala/output" hierarchy.HelloInterfaces
+            scala -nobootcp -toolcp "./bin/net5.0/*:./netreflected-tests/scala/output" mscorlib.HelloNet
+            scala -nobootcp -toolcp "./bin/net5.0/*:./netreflected-tests/scala/output" mscorlib.HelloNETEvent
+            scala -nobootcp -toolcp "./bin/net5.0/*:./netreflected-tests/scala/output" mscorlib.HelloIterator
+            scala -nobootcp -toolcp "./bin/net5.0/*:./netreflected-tests/scala/output" nettest.HelloNETSocket
+            scala -nobootcp -toolcp "./bin/net5.0/*:./netreflected-tests/scala/output" nettest.HelloNETSocket -async
+            rm -rf ./netreflected-tests/scala/output

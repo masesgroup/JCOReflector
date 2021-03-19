@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -76,8 +76,17 @@ public class PEHeaderBuilder extends NetObject  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            String classToCreate = className + ", "
+                    + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Creating %s", classToCreate);
+            JCType typeCreated = bridge.GetType(classToCreate);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Created: %s",
+                        (typeCreated != null) ? typeCreated.toString() : "Returned null value");
+            return typeCreated;
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -107,7 +116,7 @@ public class PEHeaderBuilder extends NetObject  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -141,7 +150,7 @@ public class PEHeaderBuilder extends NetObject  {
     public PEHeaderBuilder(Machine machine, int sectionAlignment, int fileAlignment, UInt64 imageBase, byte majorLinkerVersion, byte minorLinkerVersion, UInt16 majorOperatingSystemVersion, UInt16 minorOperatingSystemVersion, UInt16 majorImageVersion, UInt16 minorImageVersion, UInt16 majorSubsystemVersion, UInt16 minorSubsystemVersion, Subsystem subsystem, DllCharacteristics dllCharacteristics, Characteristics imageCharacteristics, UInt64 sizeOfStackReserve, UInt64 sizeOfStackCommit, UInt64 sizeOfHeapReserve, UInt64 sizeOfHeapCommit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(machine == null ? null : machine.getJCOInstance(), sectionAlignment, fileAlignment, imageBase == null ? null : imageBase.getJCOInstance(), majorLinkerVersion, minorLinkerVersion, majorOperatingSystemVersion == null ? null : majorOperatingSystemVersion.getJCOInstance(), minorOperatingSystemVersion == null ? null : minorOperatingSystemVersion.getJCOInstance(), majorImageVersion == null ? null : majorImageVersion.getJCOInstance(), minorImageVersion == null ? null : minorImageVersion.getJCOInstance(), majorSubsystemVersion == null ? null : majorSubsystemVersion.getJCOInstance(), minorSubsystemVersion == null ? null : minorSubsystemVersion.getJCOInstance(), subsystem == null ? null : subsystem.getJCOInstance(), dllCharacteristics == null ? null : dllCharacteristics.getJCOInstance(), imageCharacteristics == null ? null : imageCharacteristics.getJCOInstance(), sizeOfStackReserve == null ? null : sizeOfStackReserve.getJCOInstance(), sizeOfStackCommit == null ? null : sizeOfStackCommit.getJCOInstance(), sizeOfHeapReserve == null ? null : sizeOfHeapReserve.getJCOInstance(), sizeOfHeapCommit == null ? null : sizeOfHeapCommit.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

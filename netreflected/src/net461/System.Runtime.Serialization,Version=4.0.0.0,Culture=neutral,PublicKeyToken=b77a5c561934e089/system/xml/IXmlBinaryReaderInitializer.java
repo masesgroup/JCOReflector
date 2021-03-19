@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -72,7 +72,7 @@ public interface IXmlBinaryReaderInitializer extends IJCOBridgeReflected {
      */
     public static IXmlBinaryReaderInitializer ToIXmlBinaryReaderInitializer(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+        JCType classType = bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IXmlBinaryReaderInitializerImplementation(from.getJCOInstance());
     }
@@ -117,7 +117,7 @@ public interface IXmlBinaryReaderInitializer extends IJCOBridgeReflected {
     
     public void SetInput(byte[] buffer, int offset, int count, IXmlDictionary dictionary, XmlDictionaryReaderQuotas quotas, XmlBinaryReaderSession session, OnXmlDictionaryReaderClose onClose) throws Throwable;
 
-    public void SetInput(JCRefOut dupParam0, int dupParam1, int dupParam2, IXmlDictionary dupParam3, XmlDictionaryReaderQuotas dupParam4, XmlBinaryReaderSession dupParam5, OnXmlDictionaryReaderClose dupParam6) throws Throwable;
+    public void SetInput(JCORefOut dupParam0, int dupParam1, int dupParam2, IXmlDictionary dupParam3, XmlDictionaryReaderQuotas dupParam4, XmlBinaryReaderSession dupParam5, OnXmlDictionaryReaderClose dupParam6) throws Throwable;
 
     public void SetInput(Stream stream, IXmlDictionary dictionary, XmlDictionaryReaderQuotas quotas, XmlBinaryReaderSession session, OnXmlDictionaryReaderClose onClose) throws Throwable;
 

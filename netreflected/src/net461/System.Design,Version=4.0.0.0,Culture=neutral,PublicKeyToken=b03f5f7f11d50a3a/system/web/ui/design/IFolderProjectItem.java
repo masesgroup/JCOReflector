@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -72,7 +72,7 @@ public interface IFolderProjectItem extends IJCOBridgeReflected {
      */
     public static IFolderProjectItem ToIFolderProjectItem(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+        JCType classType = bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IFolderProjectItemImplementation(from.getJCOInstance());
     }
@@ -117,7 +117,7 @@ public interface IFolderProjectItem extends IJCOBridgeReflected {
     
     public IDocumentProjectItem AddDocument(java.lang.String name, byte[] content) throws Throwable;
 
-    public IDocumentProjectItem AddDocument(java.lang.String dupParam0, JCRefOut dupParam1) throws Throwable;
+    public IDocumentProjectItem AddDocument(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable;
 
     public IFolderProjectItem AddFolder(java.lang.String name) throws Throwable;
 

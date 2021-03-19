@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -74,8 +74,17 @@ public class PerformanceCounter extends Component  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            String classToCreate = className + ", "
+                    + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Creating %s", classToCreate);
+            JCType typeCreated = bridge.GetType(classToCreate);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Created: %s",
+                        (typeCreated != null) ? typeCreated.toString() : "Returned null value");
+            return typeCreated;
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -105,7 +114,7 @@ public class PerformanceCounter extends Component  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -136,7 +145,7 @@ public class PerformanceCounter extends Component  {
     public PerformanceCounter() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -146,7 +155,7 @@ public class PerformanceCounter extends Component  {
     public PerformanceCounter(java.lang.String categoryName, java.lang.String counterName) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.security.SecurityException, system.componentmodel.Win32Exception, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException, system.io.IOException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(categoryName, counterName));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -156,7 +165,7 @@ public class PerformanceCounter extends Component  {
     public PerformanceCounter(java.lang.String categoryName, java.lang.String counterName, boolean readOnly) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.security.SecurityException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.configuration.ConfigurationException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(categoryName, counterName, readOnly));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -166,7 +175,7 @@ public class PerformanceCounter extends Component  {
     public PerformanceCounter(java.lang.String categoryName, java.lang.String counterName, java.lang.String instanceName) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.security.SecurityException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.configuration.ConfigurationException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(categoryName, counterName, instanceName));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -176,7 +185,7 @@ public class PerformanceCounter extends Component  {
     public PerformanceCounter(java.lang.String categoryName, java.lang.String counterName, java.lang.String instanceName, boolean readOnly) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.PlatformNotSupportedException, system.security.SecurityException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.configuration.ConfigurationException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException, system.OverflowException, system.threading.AbandonedMutexException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(categoryName, counterName, instanceName, readOnly));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -186,7 +195,7 @@ public class PerformanceCounter extends Component  {
     public PerformanceCounter(java.lang.String categoryName, java.lang.String counterName, java.lang.String instanceName, java.lang.String machineName) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException, system.componentmodel.Win32Exception, system.security.SecurityException, system.configuration.ConfigurationException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException, system.OverflowException, system.threading.AbandonedMutexException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(categoryName, counterName, instanceName, machineName));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

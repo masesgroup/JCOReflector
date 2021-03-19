@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -26,14 +26,13 @@ package hierarchy;
 
 import org.mases.jcobridge.netreflection.*;
 
-import org.mases.jcobridge.JCRefOut;
 import system.*;
 import system.io.*;
 import system.text.Encoding;
 
 public class HelloHierarchy {
     public static void main(String[] args) {
-        JCOBridgeInstance.setCommandLineArgs(args);
+        JCOReflector.setCommandLineArgs(args);
         try {
             String fileinputname = "input.txt";
             String fileoutputname = "output.txt";
@@ -49,11 +48,11 @@ public class HelloHierarchy {
             try(FileStream sourceStream = File.Open(fileinputname, FileMode.Open) ; 
             FileStream destinationStream = File.Create(fileoutputname);)
             {
-                //Cast to destination stream to stream base class
+                //Cast the destination stream to stream base class
                 str = (Stream) destinationStream;
                 //Copy the Source content to the destination stream using the casted object
                 sourceStream.CopyTo(str);
-                //Cast the base stram to the FileStream and assign to a Filestream
+                //Cast the base stream to the FileStream and assign to a Filestream
                 FileStream destinationStreamInstance = (FileStream) str;
                 //Write using the casted stream
                 byte[] toWrite = Encoding.getASCII().GetBytes(fileText);
@@ -61,8 +60,8 @@ public class HelloHierarchy {
 
                 //Verify that the stream used where correct reading from the original destination stream
                 byte[] bytes = new byte[1024];
-                //use theJCRefOut special class to retrieve data passed as parameter
-                JCRefOut<byte[]> data = JCRefOut.Create(bytes);
+                //use the JCORefOut special class to retrieve data passed as parameter
+                JCORefOut<byte[]> data = JCORefOut.Create(bytes);
                 destinationStream.Seek(0, SeekOrigin.Begin);
                 destinationStream.Read(data, 0, 1024);
                 String expectedText= fileText + fileText;
@@ -82,8 +81,8 @@ public class HelloHierarchy {
             }
             
             //check if the dispose affected the casted class
-            if(str.getCanRead() == true) result += " Hierarchy dispose NOT OK";
-            if(str.getCanWrite() == true) result += " Hierarchy dispose NOT OK";
+            if(str.getCanRead()) result += " Hierarchy dispose NOT OK";
+            if(str.getCanWrite()) result += " Hierarchy dispose NOT OK";
             
             Console.WriteLine(result);
             Console.WriteLine("Exiting");

@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -70,7 +70,7 @@ public interface IXmlMtomReaderInitializer extends IJCOBridgeReflected {
      */
     public static IXmlMtomReaderInitializer ToIXmlMtomReaderInitializer(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+        JCType classType = bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IXmlMtomReaderInitializerImplementation(from.getJCOInstance());
     }
@@ -115,7 +115,7 @@ public interface IXmlMtomReaderInitializer extends IJCOBridgeReflected {
     
     public void SetInput(byte[] buffer, int offset, int count, Encoding[] encodings, java.lang.String contentType, XmlDictionaryReaderQuotas quotas, int maxBufferSize, OnXmlDictionaryReaderClose onClose) throws Throwable;
 
-    public void SetInput(JCRefOut dupParam0, int dupParam1, int dupParam2, Encoding[] dupParam3, java.lang.String dupParam4, XmlDictionaryReaderQuotas dupParam5, int dupParam6, OnXmlDictionaryReaderClose dupParam7) throws Throwable;
+    public void SetInput(JCORefOut dupParam0, int dupParam1, int dupParam2, Encoding[] dupParam3, java.lang.String dupParam4, XmlDictionaryReaderQuotas dupParam5, int dupParam6, OnXmlDictionaryReaderClose dupParam7) throws Throwable;
 
     public void SetInput(Stream stream, Encoding[] encodings, java.lang.String contentType, XmlDictionaryReaderQuotas quotas, int maxBufferSize, OnXmlDictionaryReaderClose onClose) throws Throwable;
 

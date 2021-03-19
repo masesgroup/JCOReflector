@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -78,8 +78,17 @@ public class ISymbolMethodImplementation extends NetObject implements ISymbolMet
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            String classToCreate = className + ", "
+                    + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Creating %s", classToCreate);
+            JCType typeCreated = bridge.GetType(classToCreate);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Created: %s",
+                        (typeCreated != null) ? typeCreated.toString() : "Returned null value");
+            return typeCreated;
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -109,7 +118,7 @@ public class ISymbolMethodImplementation extends NetObject implements ISymbolMet
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -142,11 +151,11 @@ public class ISymbolMethodImplementation extends NetObject implements ISymbolMet
         }
     }
 
-    public boolean GetSourceStartEnd(ISymbolDocument[] dupParam0, JCRefOut dupParam1, JCRefOut dupParam2) throws Throwable {
+    public boolean GetSourceStartEnd(ISymbolDocument[] dupParam0, JCORefOut dupParam1, JCORefOut dupParam2) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("GetSourceStartEnd", toObjectFromArray(dupParam0), dupParam1, dupParam2);
+            return (boolean)classInstance.Invoke("GetSourceStartEnd", toObjectFromArray(dupParam0), dupParam1.getJCRefOut(), dupParam2.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,11 +239,11 @@ public class ISymbolMethodImplementation extends NetObject implements ISymbolMet
         }
     }
 
-    public void GetSequencePoints(JCRefOut dupParam0, ISymbolDocument[] dupParam1, JCRefOut dupParam2, JCRefOut dupParam3, JCRefOut dupParam4, JCRefOut dupParam5) throws Throwable {
+    public void GetSequencePoints(JCORefOut dupParam0, ISymbolDocument[] dupParam1, JCORefOut dupParam2, JCORefOut dupParam3, JCORefOut dupParam4, JCORefOut dupParam5) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("GetSequencePoints", dupParam0, toObjectFromArray(dupParam1), dupParam2, dupParam3, dupParam4, dupParam5);
+            classInstance.Invoke("GetSequencePoints", dupParam0.getJCRefOut(), toObjectFromArray(dupParam1), dupParam2.getJCRefOut(), dupParam3.getJCRefOut(), dupParam4.getJCRefOut(), dupParam5.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

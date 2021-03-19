@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -68,7 +68,7 @@ public interface ICryptoTransform extends IJCOBridgeReflected, IDisposable {
      */
     public static ICryptoTransform ToICryptoTransform(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Security.Cryptography.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+        JCType classType = bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ICryptoTransformImplementation(from.getJCOInstance());
     }
@@ -113,11 +113,11 @@ public interface ICryptoTransform extends IJCOBridgeReflected, IDisposable {
     
     public byte[] TransformFinalBlock(byte[] inputBuffer, int inputOffset, int inputCount) throws Throwable;
 
-    public byte[] TransformFinalBlock(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable;
+    public byte[] TransformFinalBlock(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable;
 
     public int TransformBlock(byte[] inputBuffer, int inputOffset, int inputCount, byte[] outputBuffer, int outputOffset) throws Throwable;
 
-    public int TransformBlock(JCRefOut dupParam0, int dupParam1, int dupParam2, JCRefOut dupParam3, int dupParam4) throws Throwable;
+    public int TransformBlock(JCORefOut dupParam0, int dupParam1, int dupParam2, JCORefOut dupParam3, int dupParam4) throws Throwable;
 
 
 

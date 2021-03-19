@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -81,7 +81,7 @@ public interface _Assembly extends IJCOBridgeReflected {
      */
     public static _Assembly To_Assembly(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+        JCType classType = bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new _AssemblyImplementation(from.getJCOInstance());
     }
@@ -162,11 +162,11 @@ public interface _Assembly extends IJCOBridgeReflected {
 
     public Module LoadModule(java.lang.String moduleName, byte[] rawModule) throws Throwable;
 
-    public Module LoadModule(java.lang.String dupParam0, JCRefOut dupParam1) throws Throwable;
+    public Module LoadModule(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable;
 
     public Module LoadModule(java.lang.String moduleName, byte[] rawModule, byte[] rawSymbolStore) throws Throwable;
 
-    public Module LoadModule(java.lang.String dupParam0, JCRefOut dupParam1, JCRefOut dupParam2) throws Throwable;
+    public Module LoadModule(java.lang.String dupParam0, JCORefOut dupParam1, JCORefOut dupParam2) throws Throwable;
 
     public Module[] GetLoadedModules() throws Throwable;
 

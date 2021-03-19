@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -67,7 +67,7 @@ public interface IFragmentCapableXmlDictionaryWriter extends IJCOBridgeReflected
      */
     public static IFragmentCapableXmlDictionaryWriter ToIFragmentCapableXmlDictionaryWriter(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+        JCType classType = bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new IFragmentCapableXmlDictionaryWriterImplementation(from.getJCOInstance());
     }
@@ -116,7 +116,7 @@ public interface IFragmentCapableXmlDictionaryWriter extends IJCOBridgeReflected
 
     public void WriteFragment(byte[] buffer, int offset, int count) throws Throwable;
 
-    public void WriteFragment(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable;
+    public void WriteFragment(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable;
 
 
     

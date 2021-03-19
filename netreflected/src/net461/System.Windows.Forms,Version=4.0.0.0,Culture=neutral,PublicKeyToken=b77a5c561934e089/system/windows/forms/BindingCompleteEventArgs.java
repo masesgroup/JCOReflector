@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -72,8 +72,17 @@ public class BindingCompleteEventArgs extends CancelEventArgs  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            String classToCreate = className + ", "
+                    + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Creating %s", classToCreate);
+            JCType typeCreated = bridge.GetType(classToCreate);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Created: %s",
+                        (typeCreated != null) ? typeCreated.toString() : "Returned null value");
+            return typeCreated;
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -103,7 +112,7 @@ public class BindingCompleteEventArgs extends CancelEventArgs  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -137,7 +146,7 @@ public class BindingCompleteEventArgs extends CancelEventArgs  {
     public BindingCompleteEventArgs(system.windows.forms.Binding binding, BindingCompleteState state, BindingCompleteContext context) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(binding == null ? null : binding.getJCOInstance(), state == null ? null : state.getJCOInstance(), context == null ? null : context.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -147,7 +156,7 @@ public class BindingCompleteEventArgs extends CancelEventArgs  {
     public BindingCompleteEventArgs(system.windows.forms.Binding binding, BindingCompleteState state, BindingCompleteContext context, java.lang.String errorText) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(binding == null ? null : binding.getJCOInstance(), state == null ? null : state.getJCOInstance(), context == null ? null : context.getJCOInstance(), errorText));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -157,7 +166,7 @@ public class BindingCompleteEventArgs extends CancelEventArgs  {
     public BindingCompleteEventArgs(system.windows.forms.Binding binding, BindingCompleteState state, BindingCompleteContext context, java.lang.String errorText, NetException exception) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(binding == null ? null : binding.getJCOInstance(), state == null ? null : state.getJCOInstance(), context == null ? null : context.getJCOInstance(), errorText, exception == null ? null : exception.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -167,7 +176,7 @@ public class BindingCompleteEventArgs extends CancelEventArgs  {
     public BindingCompleteEventArgs(system.windows.forms.Binding binding, BindingCompleteState state, BindingCompleteContext context, java.lang.String errorText, NetException exception, boolean cancel) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(binding == null ? null : binding.getJCOInstance(), state == null ? null : state.getJCOInstance(), context == null ? null : context.getJCOInstance(), errorText, exception == null ? null : exception.getJCOInstance(), cancel));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -73,8 +73,17 @@ public class UdpSingleSourceMulticastClient extends NetObject implements AutoClo
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            String classToCreate = className + ", "
+                    + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Creating %s", classToCreate);
+            JCType typeCreated = bridge.GetType(classToCreate);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Created: %s",
+                        (typeCreated != null) ? typeCreated.toString() : "Returned null value");
+            return typeCreated;
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -104,7 +113,7 @@ public class UdpSingleSourceMulticastClient extends NetObject implements AutoClo
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -138,7 +147,7 @@ public class UdpSingleSourceMulticastClient extends NetObject implements AutoClo
     public UdpSingleSourceMulticastClient(IPAddress sourceAddress, IPAddress groupAddress, int localPort) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(sourceAddress == null ? null : sourceAddress.getJCOInstance(), groupAddress == null ? null : groupAddress.getJCOInstance(), localPort));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -172,11 +181,11 @@ public class UdpSingleSourceMulticastClient extends NetObject implements AutoClo
         }
     }
 
-    public IAsyncResult BeginReceiveFromSource(JCRefOut dupParam0, int dupParam1, int dupParam2, AsyncCallback dupParam3, NetObject dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.net.sockets.SocketException {
+    public IAsyncResult BeginReceiveFromSource(JCORefOut dupParam0, int dupParam1, int dupParam2, AsyncCallback dupParam3, NetObject dupParam4) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objBeginReceiveFromSource = (JCObject)classInstance.Invoke("BeginReceiveFromSource", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance());
+            JCObject objBeginReceiveFromSource = (JCObject)classInstance.Invoke("BeginReceiveFromSource", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance());
             return new IAsyncResultImplementation(objBeginReceiveFromSource);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -194,11 +203,11 @@ public class UdpSingleSourceMulticastClient extends NetObject implements AutoClo
         }
     }
 
-    public IAsyncResult BeginSendToSource(JCRefOut dupParam0, int dupParam1, int dupParam2, int dupParam3, AsyncCallback dupParam4, NetObject dupParam5) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.net.sockets.SocketException {
+    public IAsyncResult BeginSendToSource(JCORefOut dupParam0, int dupParam1, int dupParam2, int dupParam3, AsyncCallback dupParam4, NetObject dupParam5) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objBeginSendToSource = (JCObject)classInstance.Invoke("BeginSendToSource", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4, dupParam5 == null ? null : dupParam5.getJCOInstance());
+            JCObject objBeginSendToSource = (JCObject)classInstance.Invoke("BeginSendToSource", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3, dupParam4, dupParam5 == null ? null : dupParam5.getJCOInstance());
             return new IAsyncResultImplementation(objBeginSendToSource);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

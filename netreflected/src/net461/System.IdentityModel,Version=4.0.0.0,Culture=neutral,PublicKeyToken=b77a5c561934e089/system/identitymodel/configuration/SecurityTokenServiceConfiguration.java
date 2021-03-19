@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -77,8 +77,17 @@ public class SecurityTokenServiceConfiguration extends IdentityConfiguration  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            String classToCreate = className + ", "
+                    + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Creating %s", classToCreate);
+            JCType typeCreated = bridge.GetType(classToCreate);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Created: %s",
+                        (typeCreated != null) ? typeCreated.toString() : "Returned null value");
+            return typeCreated;
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -108,7 +117,7 @@ public class SecurityTokenServiceConfiguration extends IdentityConfiguration  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -139,7 +148,7 @@ public class SecurityTokenServiceConfiguration extends IdentityConfiguration  {
     public SecurityTokenServiceConfiguration() throws Throwable, system.ArgumentException, system.OverflowException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.configuration.ConfigurationException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NotImplementedException, system.MissingMethodException, system.TypeLoadException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -149,7 +158,7 @@ public class SecurityTokenServiceConfiguration extends IdentityConfiguration  {
     public SecurityTokenServiceConfiguration(boolean loadConfig) throws Throwable, system.ArgumentException, system.OverflowException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ObjectDisposedException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.configuration.ConfigurationException, system.MissingMethodException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(loadConfig));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -159,7 +168,7 @@ public class SecurityTokenServiceConfiguration extends IdentityConfiguration  {
     public SecurityTokenServiceConfiguration(java.lang.String issuerName) throws Throwable, system.ArgumentException, system.OverflowException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.configuration.ConfigurationException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.NotImplementedException, system.MissingMethodException, system.TypeLoadException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(issuerName));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -169,7 +178,7 @@ public class SecurityTokenServiceConfiguration extends IdentityConfiguration  {
     public SecurityTokenServiceConfiguration(java.lang.String issuerName, boolean loadConfig) throws Throwable, system.ArgumentException, system.OverflowException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.ObjectDisposedException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.configuration.ConfigurationException, system.MissingMethodException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(issuerName, loadConfig));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -179,7 +188,7 @@ public class SecurityTokenServiceConfiguration extends IdentityConfiguration  {
     public SecurityTokenServiceConfiguration(java.lang.String issuerName, SigningCredentials signingCredentials) throws Throwable, system.ArgumentException, system.OverflowException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.UriFormatException, system.TypeLoadException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(issuerName, signingCredentials == null ? null : signingCredentials.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -189,7 +198,7 @@ public class SecurityTokenServiceConfiguration extends IdentityConfiguration  {
     public SecurityTokenServiceConfiguration(java.lang.String issuerName, SigningCredentials signingCredentials, boolean loadConfig) throws Throwable, system.ArgumentException, system.OverflowException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException, system.UriFormatException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(issuerName, signingCredentials == null ? null : signingCredentials.getJCOInstance(), loadConfig));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -199,7 +208,7 @@ public class SecurityTokenServiceConfiguration extends IdentityConfiguration  {
     public SecurityTokenServiceConfiguration(java.lang.String issuerName, SigningCredentials signingCredentials, java.lang.String serviceName) throws Throwable, system.ArgumentException, system.OverflowException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.reflection.AmbiguousMatchException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.UriFormatException, system.TypeLoadException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(issuerName, signingCredentials == null ? null : signingCredentials.getJCOInstance(), serviceName));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

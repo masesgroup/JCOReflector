@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -76,10 +76,17 @@ public class ConfigurationErrorsException extends ConfigurationException {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            String classToCreate = className + ", "
+                    + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Creating %s", classToCreate);
+            JCType typeCreated = bridge.GetType(classToCreate);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Created: %s",
+                        (typeCreated != null) ? typeCreated.toString() : "Returned null value");
+            return typeCreated;
         } catch (JCException jce) {
-            if (JCOBridgeInstance.getDebug())
-                jce.printStackTrace();
+            JCOReflector.writeLog(jce);
             return null;
         }
     }
@@ -127,7 +134,7 @@ public class ConfigurationErrorsException extends ConfigurationException {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -158,7 +165,7 @@ public class ConfigurationErrorsException extends ConfigurationException {
     public ConfigurationErrorsException(java.lang.String message, NetException inner, java.lang.String filename, int line) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(message, inner == null ? null : inner.getJCOInstance(), filename, line));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -168,7 +175,7 @@ public class ConfigurationErrorsException extends ConfigurationException {
     public ConfigurationErrorsException(java.lang.String message, NetException inner, XmlNode node) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(message, inner == null ? null : inner.getJCOInstance(), node == null ? null : node.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -178,7 +185,7 @@ public class ConfigurationErrorsException extends ConfigurationException {
     public ConfigurationErrorsException(java.lang.String message, NetException inner, XmlReader reader) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(message, inner == null ? null : inner.getJCOInstance(), reader == null ? null : reader.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -188,7 +195,7 @@ public class ConfigurationErrorsException extends ConfigurationException {
     public ConfigurationErrorsException(java.lang.String message, java.lang.String filename, int line) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(message, filename, line));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -198,7 +205,7 @@ public class ConfigurationErrorsException extends ConfigurationException {
     public ConfigurationErrorsException(java.lang.String message, XmlNode node) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(message, node == null ? null : node.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -208,7 +215,7 @@ public class ConfigurationErrorsException extends ConfigurationException {
     public ConfigurationErrorsException(java.lang.String message, XmlReader reader) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(message, reader == null ? null : reader.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

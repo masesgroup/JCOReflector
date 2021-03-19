@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -69,7 +69,7 @@ public interface ICodeCompiler extends IJCOBridgeReflected {
      */
     public static ICodeCompiler ToICodeCompiler(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51");
-        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+        JCType classType = bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ICodeCompilerImplementation(from.getJCOInstance());
     }
@@ -120,13 +120,13 @@ public interface ICodeCompiler extends IJCOBridgeReflected {
 
     public CompilerResults CompileAssemblyFromFileBatch(CompilerParameters options, java.lang.String[] fileNames) throws Throwable;
 
-    public CompilerResults CompileAssemblyFromFileBatch(CompilerParameters dupParam0, JCRefOut dupParam1) throws Throwable;
+    public CompilerResults CompileAssemblyFromFileBatch(CompilerParameters dupParam0, JCORefOut dupParam1) throws Throwable;
 
     public CompilerResults CompileAssemblyFromSource(CompilerParameters options, java.lang.String source) throws Throwable;
 
     public CompilerResults CompileAssemblyFromSourceBatch(CompilerParameters options, java.lang.String[] sources) throws Throwable;
 
-    public CompilerResults CompileAssemblyFromSourceBatch(CompilerParameters dupParam0, JCRefOut dupParam1) throws Throwable;
+    public CompilerResults CompileAssemblyFromSourceBatch(CompilerParameters dupParam0, JCORefOut dupParam1) throws Throwable;
 
 
     

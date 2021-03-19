@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -110,7 +110,7 @@ public class HelloNETSocketClientAsync {
     }
 
     public static void main(String[] args) throws Throwable {
-        JCOBridgeInstance.setCommandLineArgs(args);
+        JCOReflector.setCommandLineArgs(args);
 
         connectDone = new ManualResetEvent(false);
         sendDone = new ManualResetEvent(false);

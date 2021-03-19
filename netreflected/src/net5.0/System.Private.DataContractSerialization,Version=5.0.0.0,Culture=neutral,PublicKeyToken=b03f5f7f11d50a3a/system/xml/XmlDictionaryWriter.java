@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -88,8 +88,17 @@ public class XmlDictionaryWriter extends XmlWriter  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            String classToCreate = className + ", "
+                    + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Creating %s", classToCreate);
+            JCType typeCreated = bridge.GetType(classToCreate);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Created: %s",
+                        (typeCreated != null) ? typeCreated.toString() : "Returned null value");
+            return typeCreated;
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -119,7 +128,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -164,11 +173,11 @@ public class XmlDictionaryWriter extends XmlWriter  {
         }
     }
 
-    public Task WriteBase64Async(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable {
+    public Task WriteBase64Async(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objWriteBase64Async = (JCObject)classInstance.Invoke("WriteBase64Async", dupParam0, dupParam1, dupParam2);
+            JCObject objWriteBase64Async = (JCObject)classInstance.Invoke("WriteBase64Async", dupParam0.getJCRefOut(), dupParam1, dupParam2);
             return new Task(objWriteBase64Async);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -326,11 +335,11 @@ public class XmlDictionaryWriter extends XmlWriter  {
         }
     }
 
-    public void StartCanonicalization(Stream dupParam0, boolean dupParam1, JCRefOut dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
+    public void StartCanonicalization(Stream dupParam0, boolean dupParam1, JCORefOut dupParam2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("StartCanonicalization", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2);
+            classInstance.Invoke("StartCanonicalization", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -346,11 +355,11 @@ public class XmlDictionaryWriter extends XmlWriter  {
         }
     }
 
-    public void WriteArray(java.lang.String dupParam0, java.lang.String dupParam1, java.lang.String dupParam2, JCRefOut dupParam3, int dupParam4, int dupParam5) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
+    public void WriteArray(java.lang.String dupParam0, java.lang.String dupParam1, java.lang.String dupParam2, JCORefOut dupParam3, int dupParam4, int dupParam5) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("WriteArray", dupParam0, dupParam1, dupParam2, dupParam3, dupParam4, dupParam5);
+            classInstance.Invoke("WriteArray", dupParam0, dupParam1, dupParam2, dupParam3.getJCRefOut(), dupParam4, dupParam5);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -456,11 +465,11 @@ public class XmlDictionaryWriter extends XmlWriter  {
         }
     }
 
-    public void WriteArray(java.lang.String dupParam0, XmlDictionaryString dupParam1, XmlDictionaryString dupParam2, JCRefOut dupParam3, int dupParam4, int dupParam5) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
+    public void WriteArray(java.lang.String dupParam0, XmlDictionaryString dupParam1, XmlDictionaryString dupParam2, JCORefOut dupParam3, int dupParam4, int dupParam5) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("WriteArray", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3, dupParam4, dupParam5);
+            classInstance.Invoke("WriteArray", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3.getJCRefOut(), dupParam4, dupParam5);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

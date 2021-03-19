@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -75,8 +75,17 @@ public class Hash extends EvidenceBase  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            String classToCreate = className + ", "
+                    + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Creating %s", classToCreate);
+            JCType typeCreated = bridge.GetType(classToCreate);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Created: %s",
+                        (typeCreated != null) ? typeCreated.toString() : "Returned null value");
+            return typeCreated;
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -106,7 +115,7 @@ public class Hash extends EvidenceBase  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -140,7 +149,7 @@ public class Hash extends EvidenceBase  {
     public Hash(Assembly assembly) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(assembly == null ? null : assembly.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -182,11 +191,11 @@ public class Hash extends EvidenceBase  {
         }
     }
 
-    public static Hash CreateMD5(JCRefOut dupParam0) throws Throwable {
+    public static Hash CreateMD5(JCORefOut dupParam0) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateMD5 = (JCObject)classType.Invoke("CreateMD5", (Object)dupParam0);
+            JCObject objCreateMD5 = (JCObject)classType.Invoke("CreateMD5", (Object)dupParam0.getJCRefOut());
             return new Hash(objCreateMD5);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -204,11 +213,11 @@ public class Hash extends EvidenceBase  {
         }
     }
 
-    public static Hash CreateSHA1(JCRefOut dupParam0) throws Throwable {
+    public static Hash CreateSHA1(JCORefOut dupParam0) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateSHA1 = (JCObject)classType.Invoke("CreateSHA1", (Object)dupParam0);
+            JCObject objCreateSHA1 = (JCObject)classType.Invoke("CreateSHA1", (Object)dupParam0.getJCRefOut());
             return new Hash(objCreateSHA1);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -226,11 +235,11 @@ public class Hash extends EvidenceBase  {
         }
     }
 
-    public static Hash CreateSHA256(JCRefOut dupParam0) throws Throwable {
+    public static Hash CreateSHA256(JCORefOut dupParam0) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateSHA256 = (JCObject)classType.Invoke("CreateSHA256", (Object)dupParam0);
+            JCObject objCreateSHA256 = (JCObject)classType.Invoke("CreateSHA256", (Object)dupParam0.getJCRefOut());
             return new Hash(objCreateSHA256);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

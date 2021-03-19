@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -78,8 +78,17 @@ public class ToolStripItemTextRenderEventArgs extends ToolStripItemRenderEventAr
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            String classToCreate = className + ", "
+                    + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Creating %s", classToCreate);
+            JCType typeCreated = bridge.GetType(classToCreate);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Created: %s",
+                        (typeCreated != null) ? typeCreated.toString() : "Returned null value");
+            return typeCreated;
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -109,7 +118,7 @@ public class ToolStripItemTextRenderEventArgs extends ToolStripItemRenderEventAr
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -143,7 +152,7 @@ public class ToolStripItemTextRenderEventArgs extends ToolStripItemRenderEventAr
     public ToolStripItemTextRenderEventArgs(Graphics g, ToolStripItem item, java.lang.String text, Rectangle textRectangle, Color textColor, Font textFont, ContentAlignment textAlign) throws Throwable, system.InvalidOperationException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(g == null ? null : g.getJCOInstance(), item == null ? null : item.getJCOInstance(), text, textRectangle == null ? null : textRectangle.getJCOInstance(), textColor == null ? null : textColor.getJCOInstance(), textFont == null ? null : textFont.getJCOInstance(), textAlign == null ? null : textAlign.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -153,7 +162,7 @@ public class ToolStripItemTextRenderEventArgs extends ToolStripItemRenderEventAr
     public ToolStripItemTextRenderEventArgs(Graphics g, ToolStripItem item, java.lang.String text, Rectangle textRectangle, Color textColor, Font textFont, TextFormatFlags format) throws Throwable, system.InvalidOperationException, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(g == null ? null : g.getJCOInstance(), item == null ? null : item.getJCOInstance(), text, textRectangle == null ? null : textRectangle.getJCOInstance(), textColor == null ? null : textColor.getJCOInstance(), textFont == null ? null : textFont.getJCOInstance(), format == null ? null : format.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -27,8 +27,6 @@ package org.mases.jcobridge.netreflection;
 import org.mases.jcobridge.*;
 import java.util.*;
 import java.net.*;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.io.*;
 import java.lang.reflect.*;
 
@@ -37,17 +35,10 @@ import java.lang.reflect.*;
  * 
  */
 public final class JCOBridgeInstance implements IJCEventLog {
-    static boolean _useFullname = false;
-    static boolean _isDebug = false;
-    static boolean _isLogging = false;
     static IJCEventLog _logger = null;
-    static String _loggingFilename = "JCOReflector.log";
-    static boolean _isMultiInstance = false;
-    static boolean initialized = false;
     static Object synchObj = new Object();
     static HashMap<String, JCOBridge> bridgeInstances = new HashMap<String, JCOBridge>();
     static JCOBridge bridgeInstance = null;
-    static String[] _commandLineArgs = new String[0];
 
     BufferedWriter bw = null;
     FileWriter fw = null;
@@ -66,16 +57,11 @@ public final class JCOBridgeInstance implements IJCEventLog {
      */
     public void FusionLog(String msg) {
         synchronized (synchObj) {
-            if (!_isLogging)
+            if (!JCOReflector.getLogging())
                 return;
         }
 
-        try {
-            bw.write(msg);
-            bw.newLine();
-        } catch (IOException ioe) {
-            // nothing can do
-        }
+        JCOReflector.writeLog(bw, msg);
     }
 
     /**
@@ -85,141 +71,13 @@ public final class JCOBridgeInstance implements IJCEventLog {
      */
     public void EventLog(String msg) {
         synchronized (synchObj) {
-            if (!_isLogging)
+            if (!JCOReflector.getLogging())
                 return;
         }
 
-        try {
-            bw.write(msg);
-            bw.newLine();
-        } catch (IOException ioe) {
-            // nothing can do
-        }
+        JCOReflector.writeLog(bw, msg);
     }
-
-    /**
-     * Get UseFullAssemblyName state
-     * 
-     * @return the UseFullAssemblyName state
-     */
-    public static boolean getUseFullAssemblyName() {
-        return _useFullname;
-    }
-
-    /**
-     * Set UseFullAssemblyName state
-     * <p>
-     * Set only on startup
-     * 
-     * @param useFullname the new UseFullAssemblyName state
-     */
-    public static void setUseFullAssemblyName(boolean useFullname) {
-        if (initialized)
-            return;
-        _useFullname = useFullname;
-    }
-
-    /**
-     * Get Debug state
-     * 
-     * @return the debug state
-     */
-    public static boolean getDebug() {
-        return _isDebug;
-    }
-
-    /**
-     * Set Debug state
-     * 
-     * @param isDebug the new debug state
-     */
-    public static void setDebug(boolean isDebug) {
-        _isDebug = isDebug;
-    }
-
-    /**
-     * Get Logging state
-     * 
-     * @return the debug state
-     */
-    public static boolean getLogging() {
-        synchronized (synchObj) {
-            return _isLogging;
-        }
-    }
-
-    /**
-     * Set Logging state
-     * <p>
-     * 
-     * @param isLogging the new logging state
-     */
-    public static void setLogging(boolean isLogging) {
-        synchronized (synchObj) {
-            _isLogging = isLogging;
-        }
-    }
-
-    /**
-     * Get Logging filename
-     * 
-     * @return the log filename
-     */
-    public static String getLogFilename() {
-        synchronized (synchObj) {
-            return _loggingFilename;
-        }
-    }
-
-    /**
-     * Set Logging filename
-     * <p>
-     * If the logging operations are started on a {@link JCOBridge} instance, it is
-     * not possible to change the name during runtime.
-     * 
-     * @param loggingFilename the new log filename
-     */
-    public static void setLogFilename(String loggingFilename) {
-        synchronized (synchObj) {
-            _loggingFilename = loggingFilename;
-        }
-    }
-
-    /**
-     * Get InstanceByAssembly state
-     * 
-     * @return the {@link JCOBridge} state
-     */
-    public static boolean getInstanceByAssembly() {
-        return _isMultiInstance;
-    }
-
-    /**
-     * Set {@link JCOBridge} instance by assembly state
-     * <p>
-     * It can be applied only before any operation
-     * 
-     * @param isMultiInstance the new InstanceByAssembly state
-     */
-    public static void setInstanceByAssembly(boolean isMultiInstance) {
-        if (initialized)
-            return;
-        _isMultiInstance = isMultiInstance;
-    }
-
-     /**
-     * Set command-line arguments
-     * <p>
-     * It can be applied only before any operation
-     * 
-     * @param args the command-line arguments
-     */
-    public static void setCommandLineArgs(String[] args) {
-        if (initialized)
-            return;
-        _commandLineArgs = args;
-    }
-
+    
     /**
      * Returns the {@link JCOBridge} instance associated to the assmebly.
      * <p>
@@ -230,44 +88,41 @@ public final class JCOBridgeInstance implements IJCEventLog {
      */
     public static JCOBridge getInstance(String assemblyName) {
         synchronized (synchObj) {
-            if (!initialized) {
+            if (!JCOReflector.getInitialized()) {
                 try {
+                    JCOReflector.writeLog("Initializing JCOBridge runtime");
                     try {
-                        JCOBridge.Initialize(_commandLineArgs);
+                        JCOBridge.Initialize(JCOReflector.getCommandLineArgs());
                     } catch (JCNativeException e) {
                         if (!e.getCLRType().contains("FallbackInTrialModeException")) {
-                            if (_isDebug)
-                                e.printStackTrace();
+                            JCOReflector.writeLog(e);
                             System.exit(1);
                         }
                     } finally {
-                        initialized = true;
+                        JCOReflector.setInitialized(true);
                     }
                 } catch (IOException | JCException e) {
-                    if (_isDebug)
-                        e.printStackTrace();
+                    JCOReflector.writeLog(e);
                     System.exit(1);
                 }
             }
 
             JCOBridge theBridgeInstance = null;
-            if (_isMultiInstance) {
+            if (JCOReflector.getInstanceByAssembly()) {
                 if (bridgeInstances.containsKey(assemblyName)) {
                     theBridgeInstance = bridgeInstances.get(assemblyName);
                 } else {
                     try {
                         theBridgeInstance = JCOBridge.CreateNew();
                         try {
-                            _logger = new JCOBridgeInstance(_loggingFilename);
+                            _logger = new JCOBridgeInstance(JCOReflector.getLogFilename());
                             theBridgeInstance.RegisterEventLog(_logger);
                         } catch (Throwable t) {
-                            if (_isDebug)
-                                t.printStackTrace();
+                            JCOReflector.writeLog(t);
                         }
                         bridgeInstances.put(assemblyName, theBridgeInstance);
                     } catch (JCException e) {
-                        if (_isDebug)
-                            e.printStackTrace();
+                        JCOReflector.writeLog(e);
                     }
                 }
             } else {
@@ -275,15 +130,13 @@ public final class JCOBridgeInstance implements IJCEventLog {
                     try {
                         bridgeInstance = JCOBridge.CreateNew();
                         try {
-                            _logger = new JCOBridgeInstance(_loggingFilename);
+                            _logger = new JCOBridgeInstance(JCOReflector.getLogFilename());
                             bridgeInstance.RegisterEventLog(_logger);
                         } catch (Throwable t) {
-                            if (_isDebug)
-                                t.printStackTrace();
+                            JCOReflector.writeLog(t);
                         }
                     } catch (JCException e) {
-                        if (_isDebug)
-                            e.printStackTrace();
+                        JCOReflector.writeLog(e);
                     }
                 }
                 theBridgeInstance = bridgeInstance;

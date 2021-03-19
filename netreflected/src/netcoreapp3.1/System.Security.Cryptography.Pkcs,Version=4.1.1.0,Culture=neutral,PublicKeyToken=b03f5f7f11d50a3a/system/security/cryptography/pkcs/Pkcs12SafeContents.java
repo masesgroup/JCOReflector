@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -81,8 +81,17 @@ public class Pkcs12SafeContents extends NetObject  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            String classToCreate = className + ", "
+                    + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Creating %s", classToCreate);
+            JCType typeCreated = bridge.GetType(classToCreate);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Created: %s",
+                        (typeCreated != null) ? typeCreated.toString() : "Returned null value");
+            return typeCreated;
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -112,7 +121,7 @@ public class Pkcs12SafeContents extends NetObject  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -143,7 +152,7 @@ public class Pkcs12SafeContents extends NetObject  {
     public Pkcs12SafeContents() throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -198,11 +207,11 @@ public class Pkcs12SafeContents extends NetObject  {
         }
     }
 
-    public Pkcs12ShroudedKeyBag AddShroudedKey(AsymmetricAlgorithm dupParam0, JCRefOut dupParam1, PbeParameters dupParam2) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.cryptography.CryptographicException {
+    public Pkcs12ShroudedKeyBag AddShroudedKey(AsymmetricAlgorithm dupParam0, JCORefOut dupParam1, PbeParameters dupParam2) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.ArrayTypeMismatchException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.cryptography.CryptographicException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objAddShroudedKey = (JCObject)classInstance.Invoke("AddShroudedKey", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
+            JCObject objAddShroudedKey = (JCObject)classInstance.Invoke("AddShroudedKey", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance());
             return new Pkcs12ShroudedKeyBag(objAddShroudedKey);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -240,11 +249,11 @@ public class Pkcs12SafeContents extends NetObject  {
         }
     }
 
-    public void Decrypt(JCRefOut dupParam0) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public void Decrypt(JCORefOut dupParam0) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Decrypt", (Object)dupParam0);
+            classInstance.Invoke("Decrypt", (Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

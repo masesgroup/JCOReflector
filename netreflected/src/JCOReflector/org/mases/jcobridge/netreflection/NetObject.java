@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -33,8 +33,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 /**
- * The base .NET class managing System.Object, mscorlib, Version=4.0.0.0,
- * Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements
+ * The base .NET class managing System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements
  * {@link IJCOBridgeReflected}
  */
 public class NetObject implements IJCOBridgeReflected {
@@ -48,9 +47,17 @@ public class NetObject implements IJCOBridgeReflected {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", "
-                    + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            String classToCreate = className + ", "
+                    + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Creating %s", classToCreate);
+            JCType typeCreated = bridge.GetType(classToCreate);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Created: %s",
+                        (typeCreated != null) ? typeCreated.toString() : "Returned null value");
+            return typeCreated;
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -78,7 +85,7 @@ public class NetObject implements IJCOBridgeReflected {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -96,7 +103,7 @@ public class NetObject implements IJCOBridgeReflected {
     public static NetObject cast(IJCOBridgeReflected from) throws Throwable {
         if (!NetType.CanCast(classType, from.getJCOType())) {
             throw new UnsupportedOperationException(String.format("%s cannot be casted to %s", from.getJCOObjectName(),
-                    (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName)));
+                    (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName)));
         }
         return new NetObject(from.getJCOInstance());
     }
@@ -140,10 +147,9 @@ public class NetObject implements IJCOBridgeReflected {
     }
 
     public NetType GetType() throws Throwable {
-        if (classInstance instanceof JCObject || classInstance instanceof IJCOBridgeReflected)
-        {
+        if (classInstance instanceof JCObject || classInstance instanceof IJCOBridgeReflected) {
             return new NetType(classInstance);
-        } 
+        }
         return new NetType(getJCOType());
     }
 

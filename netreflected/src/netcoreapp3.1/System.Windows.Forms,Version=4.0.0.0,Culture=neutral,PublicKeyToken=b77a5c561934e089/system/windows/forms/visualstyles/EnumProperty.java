@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -68,16 +68,34 @@ public class EnumProperty extends NetObject  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            String classToCreate = className + ", "
+                    + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Creating %s", classToCreate);
+            JCType typeCreated = bridge.GetType(classToCreate);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Created: %s",
+                        (typeCreated != null) ? typeCreated.toString() : "Returned null value");
+            return typeCreated;
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
 
     static JCEnum createEnum() {
         try {
-            return bridge.GetEnum(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            String enumToCreate = className + ", "
+                    + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Creating Enum %s", enumToCreate);
+            JCEnum enumCreated = bridge.GetEnum(enumToCreate);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Created Enum: %s",
+                        (enumCreated != null) ? enumCreated.toString() : "Returned null value");
+            return enumCreated;
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -97,8 +115,7 @@ public class EnumProperty extends NetObject  {
                 String enumName = NetEnum.GetName(classType, (JCObject)instance);
                 classInstance = enumReflected.fromValue(enumName);
             } catch (Throwable t) {
-                if (JCOBridgeInstance.getDebug())
-                    t.printStackTrace();
+                JCOReflector.writeLog(t);
                 classInstance = enumReflected;
             }
         } else if (instance instanceof JCEnum) {
@@ -110,10 +127,9 @@ public class EnumProperty extends NetObject  {
         super();
         // add reference to assemblyName.dll file
         try {
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
         } catch (Throwable jcne) {
-            if (JCOBridgeInstance.getDebug())
-                jcne.printStackTrace();
+            JCOReflector.writeLog(jcne);
         }
     }
 
@@ -126,7 +142,7 @@ public class EnumProperty extends NetObject  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {

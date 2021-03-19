@@ -1,7 +1,7 @@
 ﻿/*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -270,6 +270,7 @@ namespace MASES.C2JReflector
                 args.JarDestinationFolder = tbJarDestinationFolder.Text;
                 args.SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value;
                 args.WithJARSource = cbWithSource.IsChecked.Value;
+                args.EmbeddingJCOBridge = cbWithEmbedding.IsChecked.Value;
                 args.AssembliesToUse = AssemblyDataCollection.CreateList(AssemblyDataCollection);
 
                 if (cbExportToFile.IsChecked.Value)

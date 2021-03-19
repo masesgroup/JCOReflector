@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -89,8 +89,17 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            String classToCreate = className + ", "
+                    + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Creating %s", classToCreate);
+            JCType typeCreated = bridge.GetType(classToCreate);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Created: %s",
+                        (typeCreated != null) ? typeCreated.toString() : "Returned null value");
+            return typeCreated;
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -120,7 +129,7 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -173,11 +182,11 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
-    public int ExecuteAssembly(java.lang.String dupParam0, Evidence dupParam1, JCRefOut dupParam2) throws Throwable {
+    public int ExecuteAssembly(java.lang.String dupParam0, Evidence dupParam1, JCORefOut dupParam2) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("ExecuteAssembly", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2);
+            return (int)classInstance.Invoke("ExecuteAssembly", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,11 +236,11 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
-    public Assembly Load(JCRefOut dupParam0) throws Throwable {
+    public Assembly Load(JCORefOut dupParam0) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objLoad = (JCObject)classInstance.Invoke("Load", (Object)dupParam0);
+            JCObject objLoad = (JCObject)classInstance.Invoke("Load", (Object)dupParam0.getJCRefOut());
             return new Assembly(objLoad);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -249,11 +258,11 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
-    public Assembly Load(JCRefOut dupParam0, JCRefOut dupParam1) throws Throwable {
+    public Assembly Load(JCORefOut dupParam0, JCORefOut dupParam1) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objLoad = (JCObject)classInstance.Invoke("Load", dupParam0, dupParam1);
+            JCObject objLoad = (JCObject)classInstance.Invoke("Load", dupParam0.getJCRefOut(), dupParam1.getJCRefOut());
             return new Assembly(objLoad);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -271,11 +280,11 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
         }
     }
 
-    public Assembly Load(JCRefOut dupParam0, JCRefOut dupParam1, Evidence dupParam2) throws Throwable {
+    public Assembly Load(JCORefOut dupParam0, JCORefOut dupParam1, Evidence dupParam2) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objLoad = (JCObject)classInstance.Invoke("Load", dupParam0, dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
+            JCObject objLoad = (JCObject)classInstance.Invoke("Load", dupParam0.getJCRefOut(), dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance());
             return new Assembly(objLoad);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

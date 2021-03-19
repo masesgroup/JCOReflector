@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -105,8 +105,17 @@ public class ModuleBuilder extends Module  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            String classToCreate = className + ", "
+                    + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Creating %s", classToCreate);
+            JCType typeCreated = bridge.GetType(classToCreate);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Created: %s",
+                        (typeCreated != null) ? typeCreated.toString() : "Returned null value");
+            return typeCreated;
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -136,7 +145,7 @@ public class ModuleBuilder extends Module  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -299,11 +308,11 @@ public class ModuleBuilder extends Module  {
         }
     }
 
-    public FieldBuilder DefineInitializedData(java.lang.String dupParam0, JCRefOut dupParam1, FieldAttributes dupParam2) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException {
+    public FieldBuilder DefineInitializedData(java.lang.String dupParam0, JCORefOut dupParam1, FieldAttributes dupParam2) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.ArgumentOutOfRangeException, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objDefineInitializedData = (JCObject)classInstance.Invoke("DefineInitializedData", dupParam0, dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance());
+            JCObject objDefineInitializedData = (JCObject)classInstance.Invoke("DefineInitializedData", dupParam0, dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance());
             return new FieldBuilder(objDefineInitializedData);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -420,11 +429,11 @@ public class ModuleBuilder extends Module  {
         }
     }
 
-    public SignatureToken GetSignatureToken(JCRefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
+    public SignatureToken GetSignatureToken(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetSignatureToken = (JCObject)classInstance.Invoke("GetSignatureToken", dupParam0, dupParam1);
+            JCObject objGetSignatureToken = (JCObject)classInstance.Invoke("GetSignatureToken", dupParam0.getJCRefOut(), dupParam1);
             return new SignatureToken(objGetSignatureToken);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -775,11 +784,11 @@ public class ModuleBuilder extends Module  {
         }
     }
 
-    public void DefineUnmanagedResource(JCRefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentNullException {
+    public void DefineUnmanagedResource(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("DefineUnmanagedResource", (Object)dupParam0);
+            classInstance.Invoke("DefineUnmanagedResource", (Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -805,11 +814,11 @@ public class ModuleBuilder extends Module  {
         }
     }
 
-    public void SetCustomAttribute(ConstructorInfo dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.MissingMethodException, system.FormatException {
+    public void SetCustomAttribute(ConstructorInfo dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.MissingMethodException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetCustomAttribute", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1);
+            classInstance.Invoke("SetCustomAttribute", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -835,11 +844,11 @@ public class ModuleBuilder extends Module  {
         }
     }
 
-    public void SetSymCustomAttribute(java.lang.String dupParam0, JCRefOut dupParam1) throws Throwable, system.ArgumentException, system.InvalidOperationException {
+    public void SetSymCustomAttribute(java.lang.String dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetSymCustomAttribute", dupParam0, dupParam1);
+            classInstance.Invoke("SetSymCustomAttribute", dupParam0, dupParam1.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

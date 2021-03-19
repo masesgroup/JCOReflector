@@ -1,7 +1,7 @@
 ﻿/*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -319,7 +319,7 @@ namespace MASES.C2JReflector
                 }
 
                 var srcRootFolder = Path.Combine(args.SourceFolder, Const.FileNameAndDirectory.SourceDirectory);
-                var jars = CreateJars(args.JDKFolder, args.RootFolder, srcRootFolder, args.JarDestinationFolder, (args.AssembliesToUse == null) ? CreateFolderList(srcRootFolder) : args.AssembliesToUse, args.WithJARSource);
+                var jars = CreateJars(args.JDKFolder, args.RootFolder, srcRootFolder, args.JarDestinationFolder, (args.AssembliesToUse == null) ? CreateFolderList(srcRootFolder) : args.AssembliesToUse, args.WithJARSource, args.EmbeddingJCOBridge);
                 reportStr = string.Format("{0} Jars created in {1}.", jars, DateTime.Now - dtStart);
             }
             catch (OperationCanceledException ex)
@@ -339,7 +339,7 @@ namespace MASES.C2JReflector
             }
         }
 
-        public static int CreateJars(string jdkFolder, string rootFolder, string originFolder, string destFolder, IEnumerable<string> assemblies, bool withSource, int timeout = Timeout.Infinite)
+        public static int CreateJars(string jdkFolder, string rootFolder, string originFolder, string destFolder, IEnumerable<string> assemblies, bool withSource, bool withEmbedding, int timeout = Timeout.Infinite)
         {
             var counter = 0;
             var manifestTemplate = Const.Templates.GetTemplate(Const.Templates.ManifestTemplate);
@@ -348,7 +348,7 @@ namespace MASES.C2JReflector
             {
                 if (item.Contains(Const.FileNameAndDirectory.CommonDirectory)) continue; // bypass for class-path build
 
-                var resName = CreateSingleJar(jdkFolder, originFolder, item, JarType.Compiled, destFolder, timeout);
+                var resName = CreateSingleJar(jdkFolder, rootFolder, originFolder, item, JarType.Compiled, destFolder, timeout, withEmbedding);
                 if (!string.IsNullOrEmpty(resName))
                 {
                     var str = string.Format(" {0} ", string.Format(Const.FileNameAndDirectory.CompiledPattern, resName));
@@ -357,7 +357,7 @@ namespace MASES.C2JReflector
                 }
                 if (withSource)
                 {
-                    CreateSingleJar(jdkFolder, originFolder, item, JarType.Source, destFolder, timeout);
+                    CreateSingleJar(jdkFolder, rootFolder, originFolder, item, JarType.Source, destFolder, timeout, false);
                     counter++;
                 }
             }
@@ -369,17 +369,17 @@ namespace MASES.C2JReflector
 
             var reflectorPath = Path.Combine(rootFolder, Const.FileNameAndDirectory.RootDirectory, Const.FileNameAndDirectory.SourceDirectory);
 
-            CreateSingleJar(jdkFolder, reflectorPath, Const.FileNameAndDirectory.CommonDirectory, JarType.Compiled, destFolder, timeout, manifestFileName);
+            CreateSingleJar(jdkFolder, rootFolder, reflectorPath, Const.FileNameAndDirectory.CommonDirectory, JarType.Compiled, destFolder, timeout, withEmbedding, manifestFileName);
             counter++;
             if (withSource)
             {
-                CreateSingleJar(jdkFolder, reflectorPath, Const.FileNameAndDirectory.CommonDirectory, JarType.Source, destFolder, timeout);
+                CreateSingleJar(jdkFolder, rootFolder, reflectorPath, Const.FileNameAndDirectory.CommonDirectory, JarType.Source, destFolder, timeout, withEmbedding);
                 counter++;
             }
             return counter;
         }
 
-        static string CreateSingleJar(string jdkFolder, string originFolder, string pathName, JarType type, string destinationFolder, int timeout, string manifestFile = null)
+        static string CreateSingleJar(string jdkFolder, string rootFolder, string originFolder, string pathName, JarType type, string destinationFolder, int timeout, bool withEmbedding, string manifestFile = null)
         {
             string filter = string.Empty;
             string patternName = string.Empty;
@@ -410,6 +410,42 @@ namespace MASES.C2JReflector
             foreach (var item in Directory.EnumerateFiles(searchPath, filter, SearchOption.AllDirectories))
             {
                 var fileName = Path.GetFullPath(item);
+                fileName = fileName.Replace(searchPath, ".");
+                sb.AppendLine(fileName);
+            }
+
+            if (withEmbedding && !string.IsNullOrEmpty(manifestFile)) // we are making JCOReflector.jar
+            {
+                var jcoBridgeEmbeddedFile = Path.Combine(searchPath, Const.FileNameAndDirectory.OrgSubDirectory,
+                                                                     Const.FileNameAndDirectory.MasesSubDirectory,
+                                                                     Const.FileNameAndDirectory.JCOBridgeSubDirectory,
+                                                                     Const.FileNameAndDirectory.NetreflectionSubDirectory, 
+                                                                     Const.FileNameAndDirectory.JCOBridgeEmbeddedFile);
+
+                var frameworkPath = Path.Combine(rootFolder, Const.FileNameAndDirectory.BinDirectory, Const.Framework.RuntimeFolder);
+                var localArchive = Path.Combine(frameworkPath, Const.FileNameAndDirectory.JCOBridgeEmbeddedFile);
+                if (File.Exists(localArchive)) File.Delete(localArchive);
+                using (var archive = System.IO.Compression.ZipFile.Open(localArchive, System.IO.Compression.ZipArchiveMode.Create))
+                {
+                    foreach (var item in Const.FileNameAndDirectory.JCOBridgeFiles)
+                    {
+                        System.IO.Compression.ZipArchiveEntry entry = archive.CreateEntry(item, System.IO.Compression.CompressionLevel.Optimal);
+                        using (StreamWriter writer = new StreamWriter(entry.Open()))
+                        {
+                            byte[] buffer = File.ReadAllBytes(Path.Combine(frameworkPath, item));
+                            writer.BaseStream.Write(buffer, 0, buffer.Length);
+                        }
+                    }
+                }
+                if (File.Exists(jcoBridgeEmbeddedFile)) File.Delete(jcoBridgeEmbeddedFile);
+                File.Move(localArchive, jcoBridgeEmbeddedFile);
+
+                if (!File.Exists(jcoBridgeEmbeddedFile))
+                {
+                    throw new InvalidOperationException(string.Format("Unable to find {0}", jcoBridgeEmbeddedFile));
+                }
+
+                var fileName = Path.GetFullPath(jcoBridgeEmbeddedFile);
                 fileName = fileName.Replace(searchPath, ".");
                 sb.AppendLine(fileName);
             }

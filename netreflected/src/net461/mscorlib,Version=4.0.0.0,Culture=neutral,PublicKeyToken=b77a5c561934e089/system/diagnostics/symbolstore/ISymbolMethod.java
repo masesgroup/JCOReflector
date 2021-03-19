@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -75,7 +75,7 @@ public interface ISymbolMethod extends IJCOBridgeReflected {
      */
     public static ISymbolMethod ToISymbolMethod(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089");
-        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+        JCType classType = bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ISymbolMethodImplementation(from.getJCOInstance());
     }
@@ -120,7 +120,7 @@ public interface ISymbolMethod extends IJCOBridgeReflected {
     
     public boolean GetSourceStartEnd(ISymbolDocument[] docs, int[] lines, int[] columns) throws Throwable;
 
-    public boolean GetSourceStartEnd(ISymbolDocument[] dupParam0, JCRefOut dupParam1, JCRefOut dupParam2) throws Throwable;
+    public boolean GetSourceStartEnd(ISymbolDocument[] dupParam0, JCORefOut dupParam1, JCORefOut dupParam2) throws Throwable;
 
     public int GetOffset(ISymbolDocument document, int line, int column) throws Throwable;
 
@@ -134,7 +134,7 @@ public interface ISymbolMethod extends IJCOBridgeReflected {
 
     public void GetSequencePoints(int[] offsets, ISymbolDocument[] documents, int[] lines, int[] columns, int[] endLines, int[] endColumns) throws Throwable;
 
-    public void GetSequencePoints(JCRefOut dupParam0, ISymbolDocument[] dupParam1, JCRefOut dupParam2, JCRefOut dupParam3, JCRefOut dupParam4, JCRefOut dupParam5) throws Throwable;
+    public void GetSequencePoints(JCORefOut dupParam0, ISymbolDocument[] dupParam1, JCORefOut dupParam2, JCORefOut dupParam3, JCORefOut dupParam4, JCORefOut dupParam5) throws Throwable;
 
 
     

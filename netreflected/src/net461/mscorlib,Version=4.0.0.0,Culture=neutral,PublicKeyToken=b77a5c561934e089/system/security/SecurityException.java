@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -80,10 +80,17 @@ public class SecurityException extends SystemException {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            String classToCreate = className + ", "
+                    + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Creating %s", classToCreate);
+            JCType typeCreated = bridge.GetType(classToCreate);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Created: %s",
+                        (typeCreated != null) ? typeCreated.toString() : "Returned null value");
+            return typeCreated;
         } catch (JCException jce) {
-            if (JCOBridgeInstance.getDebug())
-                jce.printStackTrace();
+            JCOReflector.writeLog(jce);
             return null;
         }
     }
@@ -131,7 +138,7 @@ public class SecurityException extends SystemException {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -162,7 +169,7 @@ public class SecurityException extends SystemException {
     public SecurityException(java.lang.String message, NetObject deny, NetObject permitOnly, MethodInfo method, NetObject demanded, IPermission permThatFailed) throws Throwable, system.security.SecurityException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.runtime.serialization.SerializationException, system.NotImplementedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.security.XmlSyntaxException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(message, deny == null ? null : deny.getJCOInstance(), permitOnly == null ? null : permitOnly.getJCOInstance(), method == null ? null : method.getJCOInstance(), demanded == null ? null : demanded.getJCOInstance(), permThatFailed == null ? null : permThatFailed.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -172,7 +179,7 @@ public class SecurityException extends SystemException {
     public SecurityException(java.lang.String message, AssemblyName assemblyName, PermissionSet grant, PermissionSet refused, MethodInfo method, SecurityAction action, NetObject demanded, IPermission permThatFailed, Evidence evidence) throws Throwable, system.security.SecurityException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.runtime.serialization.SerializationException, system.NotImplementedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.OutOfMemoryException, system.security.XmlSyntaxException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(message, assemblyName == null ? null : assemblyName.getJCOInstance(), grant == null ? null : grant.getJCOInstance(), refused == null ? null : refused.getJCOInstance(), method == null ? null : method.getJCOInstance(), action == null ? null : action.getJCOInstance(), demanded == null ? null : demanded.getJCOInstance(), permThatFailed == null ? null : permThatFailed.getJCOInstance(), evidence == null ? null : evidence.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -182,7 +189,7 @@ public class SecurityException extends SystemException {
     public SecurityException(java.lang.String message, NetType type) throws Throwable, system.security.SecurityException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(message, type == null ? null : type.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -192,7 +199,7 @@ public class SecurityException extends SystemException {
     public SecurityException(java.lang.String message, NetType type, java.lang.String state) throws Throwable, system.security.SecurityException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(message, type == null ? null : type.getJCOInstance(), state));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

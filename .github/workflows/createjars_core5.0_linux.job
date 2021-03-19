@@ -8,4 +8,5 @@
   <JDKTarget>Version8</JDKTarget>
   <JarDestinationFolder>bin/net5.0</JarDestinationFolder>
   <WithJARSource>false</WithJARSource>
+  <EmbeddingJCOBridge>true</EmbeddingJCOBridge>
 </JARBuilderEventArgs>

@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -82,8 +82,17 @@ public class LdapConnection extends DirectoryConnection implements AutoCloseable
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            String classToCreate = className + ", "
+                    + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Creating %s", classToCreate);
+            JCType typeCreated = bridge.GetType(classToCreate);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Created: %s",
+                        (typeCreated != null) ? typeCreated.toString() : "Returned null value");
+            return typeCreated;
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -113,7 +122,7 @@ public class LdapConnection extends DirectoryConnection implements AutoCloseable
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -147,7 +156,7 @@ public class LdapConnection extends DirectoryConnection implements AutoCloseable
     public LdapConnection(LdapDirectoryIdentifier identifier) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.UriFormatException, system.AccessViolationException, system.xml.xpath.XPathException, system.directoryservices.protocols.DsmlInvalidDocumentException, system.NotSupportedException, system.directoryservices.protocols.DirectoryOperationException, system.directoryservices.protocols.LdapException, system.directoryservices.protocols.DirectoryException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.componentmodel.InvalidEnumArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(identifier == null ? null : identifier.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -157,7 +166,7 @@ public class LdapConnection extends DirectoryConnection implements AutoCloseable
     public LdapConnection(LdapDirectoryIdentifier identifier, NetworkCredential credential) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.UriFormatException, system.AccessViolationException, system.xml.xpath.XPathException, system.directoryservices.protocols.DsmlInvalidDocumentException, system.NotSupportedException, system.directoryservices.protocols.DirectoryOperationException, system.directoryservices.protocols.LdapException, system.directoryservices.protocols.DirectoryException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.componentmodel.InvalidEnumArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(identifier == null ? null : identifier.getJCOInstance(), credential == null ? null : credential.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -167,7 +176,7 @@ public class LdapConnection extends DirectoryConnection implements AutoCloseable
     public LdapConnection(LdapDirectoryIdentifier identifier, NetworkCredential credential, AuthType authType) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.AccessViolationException, system.xml.xpath.XPathException, system.directoryservices.protocols.DsmlInvalidDocumentException, system.NotSupportedException, system.FormatException, system.directoryservices.protocols.DirectoryOperationException, system.directoryservices.protocols.LdapException, system.directoryservices.protocols.DirectoryException, system.security.cryptography.CryptographicException, system.componentmodel.InvalidEnumArgumentException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(identifier == null ? null : identifier.getJCOInstance(), credential == null ? null : credential.getJCOInstance(), authType == null ? null : authType.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -177,7 +186,7 @@ public class LdapConnection extends DirectoryConnection implements AutoCloseable
     public LdapConnection(java.lang.String server) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.AccessViolationException, system.xml.xpath.XPathException, system.directoryservices.protocols.DsmlInvalidDocumentException, system.NotSupportedException, system.directoryservices.protocols.DirectoryOperationException, system.directoryservices.protocols.LdapException, system.directoryservices.protocols.DirectoryException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.componentmodel.InvalidEnumArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(server));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

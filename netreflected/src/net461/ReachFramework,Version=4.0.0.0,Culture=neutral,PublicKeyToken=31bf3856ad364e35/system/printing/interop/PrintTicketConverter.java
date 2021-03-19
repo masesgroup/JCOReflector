@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -72,8 +72,17 @@ public class PrintTicketConverter extends NetObject implements AutoCloseable {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            String classToCreate = className + ", "
+                    + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Creating %s", classToCreate);
+            JCType typeCreated = bridge.GetType(classToCreate);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Created: %s",
+                        (typeCreated != null) ? typeCreated.toString() : "Returned null value");
+            return typeCreated;
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -103,7 +112,7 @@ public class PrintTicketConverter extends NetObject implements AutoCloseable {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -137,7 +146,7 @@ public class PrintTicketConverter extends NetObject implements AutoCloseable {
     public PrintTicketConverter(java.lang.String deviceName, int clientPrintSchemaVersion) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidCastException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.AccessViolationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.componentmodel.InvalidEnumArgumentException, system.security.SecurityException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(deviceName, clientPrintSchemaVersion));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -198,11 +207,11 @@ public class PrintTicketConverter extends NetObject implements AutoCloseable {
         }
     }
 
-    public PrintTicket ConvertDevModeToPrintTicket(JCRefOut dupParam0) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.ArgumentException, system.IndexOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.globalization.CultureNotFoundException {
+    public PrintTicket ConvertDevModeToPrintTicket(JCORefOut dupParam0) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.ArgumentException, system.IndexOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objConvertDevModeToPrintTicket = (JCObject)classInstance.Invoke("ConvertDevModeToPrintTicket", (Object)dupParam0);
+            JCObject objConvertDevModeToPrintTicket = (JCObject)classInstance.Invoke("ConvertDevModeToPrintTicket", (Object)dupParam0.getJCRefOut());
             return new PrintTicket(objConvertDevModeToPrintTicket);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -220,11 +229,11 @@ public class PrintTicketConverter extends NetObject implements AutoCloseable {
         }
     }
 
-    public PrintTicket ConvertDevModeToPrintTicket(JCRefOut dupParam0, PrintTicketScope dupParam1) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.ArgumentException, system.NullReferenceException, system.FormatException, system.OverflowException, system.globalization.CultureNotFoundException {
+    public PrintTicket ConvertDevModeToPrintTicket(JCORefOut dupParam0, PrintTicketScope dupParam1) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.xml.XmlException, system.ArgumentException, system.NullReferenceException, system.FormatException, system.OverflowException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objConvertDevModeToPrintTicket = (JCObject)classInstance.Invoke("ConvertDevModeToPrintTicket", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance());
+            JCObject objConvertDevModeToPrintTicket = (JCObject)classInstance.Invoke("ConvertDevModeToPrintTicket", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
             return new PrintTicket(objConvertDevModeToPrintTicket);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

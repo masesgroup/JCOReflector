@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -73,7 +73,7 @@ public interface ISymbolWriter extends IJCOBridgeReflected {
      */
     public static ISymbolWriter ToISymbolWriter(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Diagnostics.StackTrace, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a");
-        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+        JCType classType = bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ISymbolWriterImplementation(from.getJCOInstance());
     }
@@ -130,21 +130,21 @@ public interface ISymbolWriter extends IJCOBridgeReflected {
 
     public void DefineField(SymbolToken parent, java.lang.String name, FieldAttributes attributes, byte[] signature, SymAddressKind addrKind, int addr1, int addr2, int addr3) throws Throwable;
 
-    public void DefineField(SymbolToken dupParam0, java.lang.String dupParam1, FieldAttributes dupParam2, JCRefOut dupParam3, SymAddressKind dupParam4, int dupParam5, int dupParam6, int dupParam7) throws Throwable;
+    public void DefineField(SymbolToken dupParam0, java.lang.String dupParam1, FieldAttributes dupParam2, JCORefOut dupParam3, SymAddressKind dupParam4, int dupParam5, int dupParam6, int dupParam7) throws Throwable;
 
     public void DefineGlobalVariable(java.lang.String name, FieldAttributes attributes, byte[] signature, SymAddressKind addrKind, int addr1, int addr2, int addr3) throws Throwable;
 
-    public void DefineGlobalVariable(java.lang.String dupParam0, FieldAttributes dupParam1, JCRefOut dupParam2, SymAddressKind dupParam3, int dupParam4, int dupParam5, int dupParam6) throws Throwable;
+    public void DefineGlobalVariable(java.lang.String dupParam0, FieldAttributes dupParam1, JCORefOut dupParam2, SymAddressKind dupParam3, int dupParam4, int dupParam5, int dupParam6) throws Throwable;
 
     public void DefineLocalVariable(java.lang.String name, FieldAttributes attributes, byte[] signature, SymAddressKind addrKind, int addr1, int addr2, int addr3, int startOffset, int endOffset) throws Throwable;
 
-    public void DefineLocalVariable(java.lang.String dupParam0, FieldAttributes dupParam1, JCRefOut dupParam2, SymAddressKind dupParam3, int dupParam4, int dupParam5, int dupParam6, int dupParam7, int dupParam8) throws Throwable;
+    public void DefineLocalVariable(java.lang.String dupParam0, FieldAttributes dupParam1, JCORefOut dupParam2, SymAddressKind dupParam3, int dupParam4, int dupParam5, int dupParam6, int dupParam7, int dupParam8) throws Throwable;
 
     public void DefineParameter(java.lang.String name, ParameterAttributes attributes, int sequence, SymAddressKind addrKind, int addr1, int addr2, int addr3) throws Throwable;
 
     public void DefineSequencePoints(ISymbolDocumentWriter document, int[] offsets, int[] lines, int[] columns, int[] endLines, int[] endColumns) throws Throwable;
 
-    public void DefineSequencePoints(ISymbolDocumentWriter dupParam0, JCRefOut dupParam1, JCRefOut dupParam2, JCRefOut dupParam3, JCRefOut dupParam4, JCRefOut dupParam5) throws Throwable;
+    public void DefineSequencePoints(ISymbolDocumentWriter dupParam0, JCORefOut dupParam1, JCORefOut dupParam2, JCORefOut dupParam3, JCORefOut dupParam4, JCORefOut dupParam5) throws Throwable;
 
     public void OpenMethod(SymbolToken method) throws Throwable;
 
@@ -156,7 +156,7 @@ public interface ISymbolWriter extends IJCOBridgeReflected {
 
     public void SetSymAttribute(SymbolToken parent, java.lang.String name, byte[] data) throws Throwable;
 
-    public void SetSymAttribute(SymbolToken dupParam0, java.lang.String dupParam1, JCRefOut dupParam2) throws Throwable;
+    public void SetSymAttribute(SymbolToken dupParam0, java.lang.String dupParam1, JCORefOut dupParam2) throws Throwable;
 
     public void SetUserEntryPoint(SymbolToken entryMethod) throws Throwable;
 

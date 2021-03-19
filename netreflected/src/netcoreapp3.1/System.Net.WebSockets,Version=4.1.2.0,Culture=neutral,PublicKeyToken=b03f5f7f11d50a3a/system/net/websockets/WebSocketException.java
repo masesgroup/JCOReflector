@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -73,10 +73,17 @@ public class WebSocketException extends Win32Exception {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            String classToCreate = className + ", "
+                    + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Creating %s", classToCreate);
+            JCType typeCreated = bridge.GetType(classToCreate);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Created: %s",
+                        (typeCreated != null) ? typeCreated.toString() : "Returned null value");
+            return typeCreated;
         } catch (JCException jce) {
-            if (JCOBridgeInstance.getDebug())
-                jce.printStackTrace();
+            JCOReflector.writeLog(jce);
             return null;
         }
     }
@@ -124,7 +131,7 @@ public class WebSocketException extends Win32Exception {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -155,7 +162,7 @@ public class WebSocketException extends Win32Exception {
     public WebSocketException(int nativeError) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(nativeError));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -165,7 +172,7 @@ public class WebSocketException extends Win32Exception {
     public WebSocketException(int nativeError, NetException innerException) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(nativeError, innerException == null ? null : innerException.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -175,7 +182,7 @@ public class WebSocketException extends Win32Exception {
     public WebSocketException(int nativeError, java.lang.String message) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(nativeError, message));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -185,7 +192,7 @@ public class WebSocketException extends Win32Exception {
     public WebSocketException(WebSocketError error) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(error == null ? null : error.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -195,7 +202,7 @@ public class WebSocketException extends Win32Exception {
     public WebSocketException(WebSocketError error, int nativeError) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(error == null ? null : error.getJCOInstance(), nativeError));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -205,7 +212,7 @@ public class WebSocketException extends Win32Exception {
     public WebSocketException(WebSocketError error, int nativeError, NetException innerException) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(error == null ? null : error.getJCOInstance(), nativeError, innerException == null ? null : innerException.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -215,7 +222,7 @@ public class WebSocketException extends Win32Exception {
     public WebSocketException(WebSocketError error, int nativeError, java.lang.String message) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(error == null ? null : error.getJCOInstance(), nativeError, message));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -225,7 +232,7 @@ public class WebSocketException extends Win32Exception {
     public WebSocketException(WebSocketError error, int nativeError, java.lang.String message, NetException innerException) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(error == null ? null : error.getJCOInstance(), nativeError, message, innerException == null ? null : innerException.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -235,7 +242,7 @@ public class WebSocketException extends Win32Exception {
     public WebSocketException(WebSocketError error, NetException innerException) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(error == null ? null : error.getJCOInstance(), innerException == null ? null : innerException.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -245,7 +252,7 @@ public class WebSocketException extends Win32Exception {
     public WebSocketException(WebSocketError error, java.lang.String message) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(error == null ? null : error.getJCOInstance(), message));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -255,7 +262,7 @@ public class WebSocketException extends Win32Exception {
     public WebSocketException(WebSocketError error, java.lang.String message, NetException innerException) throws Throwable {
         try {
             // add reference to assemblyName.dll file
-            addReference(JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(error == null ? null : error.getJCOInstance(), message, innerException == null ? null : innerException.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

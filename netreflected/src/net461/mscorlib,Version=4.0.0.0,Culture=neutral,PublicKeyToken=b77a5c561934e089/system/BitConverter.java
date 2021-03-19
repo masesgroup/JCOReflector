@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -73,8 +73,17 @@ public class BitConverter extends NetObject  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            String classToCreate = className + ", "
+                    + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Creating %s", classToCreate);
+            JCType typeCreated = bridge.GetType(classToCreate);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Created: %s",
+                        (typeCreated != null) ? typeCreated.toString() : "Returned null value");
+            return typeCreated;
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -104,7 +113,7 @@ public class BitConverter extends NetObject  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -148,11 +157,11 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static boolean ToBoolean(JCRefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+    public static boolean ToBoolean(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classType.Invoke("ToBoolean", dupParam0, dupParam1);
+            return (boolean)classType.Invoke("ToBoolean", dupParam0.getJCRefOut(), dupParam1);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -358,11 +367,11 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static char ToChar(JCRefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static char ToChar(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (char)classType.Invoke("ToChar", dupParam0, dupParam1);
+            return (char)classType.Invoke("ToChar", dupParam0.getJCRefOut(), dupParam1);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -388,11 +397,11 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static double ToDouble(JCRefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static double ToDouble(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (double)classType.Invoke("ToDouble", dupParam0, dupParam1);
+            return (double)classType.Invoke("ToDouble", dupParam0.getJCRefOut(), dupParam1);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -408,11 +417,11 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static short ToInt16(JCRefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static short ToInt16(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (short)classType.Invoke("ToInt16", dupParam0, dupParam1);
+            return (short)classType.Invoke("ToInt16", dupParam0.getJCRefOut(), dupParam1);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -428,11 +437,11 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static int ToInt32(JCRefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static int ToInt32(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classType.Invoke("ToInt32", dupParam0, dupParam1);
+            return (int)classType.Invoke("ToInt32", dupParam0.getJCRefOut(), dupParam1);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -458,11 +467,11 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static long ToInt64(JCRefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static long ToInt64(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (long)classType.Invoke("ToInt64", dupParam0, dupParam1);
+            return (long)classType.Invoke("ToInt64", dupParam0.getJCRefOut(), dupParam1);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -479,11 +488,11 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static Single ToSingle(JCRefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static Single ToSingle(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objToSingle = (JCObject)classType.Invoke("ToSingle", dupParam0, dupParam1);
+            JCObject objToSingle = (JCObject)classType.Invoke("ToSingle", dupParam0.getJCRefOut(), dupParam1);
             return new Single(objToSingle);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -500,11 +509,11 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(JCRefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
+    public static java.lang.String ToString(JCORefOut dupParam0) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Invoke("ToString", (Object)dupParam0);
+            return (java.lang.String)classType.Invoke("ToString", (Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -520,11 +529,11 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(JCRefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
+    public static java.lang.String ToString(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Invoke("ToString", dupParam0, dupParam1);
+            return (java.lang.String)classType.Invoke("ToString", dupParam0.getJCRefOut(), dupParam1);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -540,11 +549,11 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static java.lang.String ToString(JCRefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
+    public static java.lang.String ToString(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Invoke("ToString", dupParam0, dupParam1, dupParam2);
+            return (java.lang.String)classType.Invoke("ToString", dupParam0.getJCRefOut(), dupParam1, dupParam2);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -561,11 +570,11 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static UInt16 ToUInt16(JCRefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static UInt16 ToUInt16(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objToUInt16 = (JCObject)classType.Invoke("ToUInt16", dupParam0, dupParam1);
+            JCObject objToUInt16 = (JCObject)classType.Invoke("ToUInt16", dupParam0.getJCRefOut(), dupParam1);
             return new UInt16(objToUInt16);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -583,11 +592,11 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static UInt32 ToUInt32(JCRefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static UInt32 ToUInt32(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objToUInt32 = (JCObject)classType.Invoke("ToUInt32", dupParam0, dupParam1);
+            JCObject objToUInt32 = (JCObject)classType.Invoke("ToUInt32", dupParam0.getJCRefOut(), dupParam1);
             return new UInt32(objToUInt32);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -605,11 +614,11 @@ public class BitConverter extends NetObject  {
         }
     }
 
-    public static UInt64 ToUInt64(JCRefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public static UInt64 ToUInt64(JCORefOut dupParam0, int dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objToUInt64 = (JCObject)classType.Invoke("ToUInt64", dupParam0, dupParam1);
+            JCObject objToUInt64 = (JCObject)classType.Invoke("ToUInt64", dupParam0.getJCRefOut(), dupParam1);
             return new UInt64(objToUInt64);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -67,7 +67,7 @@ public interface ISymbolDocumentWriter extends IJCOBridgeReflected {
      */
     public static ISymbolDocumentWriter ToISymbolDocumentWriter(IJCOBridgeReflected from) throws Throwable {
         JCOBridge bridge = JCOBridgeInstance.getInstance("System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e");
-        JCType classType = bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+        JCType classType = bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
         return new ISymbolDocumentWriterImplementation(from.getJCOInstance());
     }
@@ -112,11 +112,11 @@ public interface ISymbolDocumentWriter extends IJCOBridgeReflected {
     
     public void SetCheckSum(Guid algorithmId, byte[] checkSum) throws Throwable;
 
-    public void SetCheckSum(Guid dupParam0, JCRefOut dupParam1) throws Throwable;
+    public void SetCheckSum(Guid dupParam0, JCORefOut dupParam1) throws Throwable;
 
     public void SetSource(byte[] source) throws Throwable;
 
-    public void SetSource(JCRefOut dupParam0) throws Throwable;
+    public void SetSource(JCORefOut dupParam0) throws Throwable;
 
 
     

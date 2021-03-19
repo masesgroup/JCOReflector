@@ -8,4 +8,5 @@
   <JDKTarget>Version8</JDKTarget>
   <JarDestinationFolder>bin\netcoreapp3.1</JarDestinationFolder>
   <WithJARSource>false</WithJARSource>
+  <EmbeddingJCOBridge>true</EmbeddingJCOBridge>
 </JARBuilderEventArgs>

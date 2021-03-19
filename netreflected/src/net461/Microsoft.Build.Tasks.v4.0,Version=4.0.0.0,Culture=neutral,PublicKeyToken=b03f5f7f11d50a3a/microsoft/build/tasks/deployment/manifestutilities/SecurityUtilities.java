@@ -1,7 +1,7 @@
 /*
  *  MIT License
  *
- *  Copyright (c) 2020 MASES s.r.l.
+ *  Copyright (c) 2021 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -74,8 +74,17 @@ public class SecurityUtilities extends NetObject  {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            String classToCreate = className + ", "
+                    + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Creating %s", classToCreate);
+            JCType typeCreated = bridge.GetType(classToCreate);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Created: %s",
+                        (typeCreated != null) ? typeCreated.toString() : "Returned null value");
+            return typeCreated;
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -105,7 +114,7 @@ public class SecurityUtilities extends NetObject  {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -150,11 +159,11 @@ public class SecurityUtilities extends NetObject  {
         }
     }
 
-    public static PermissionSet ComputeZonePermissionSet(java.lang.String dupParam0, PermissionSet dupParam1, JCRefOut dupParam2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.xml.XmlException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.OutOfMemoryException {
+    public static PermissionSet ComputeZonePermissionSet(java.lang.String dupParam0, PermissionSet dupParam1, JCORefOut dupParam2) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.xml.XmlException, system.NullReferenceException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.OutOfMemoryException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objComputeZonePermissionSet = (JCObject)classType.Invoke("ComputeZonePermissionSet", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2);
+            JCObject objComputeZonePermissionSet = (JCObject)classType.Invoke("ComputeZonePermissionSet", dupParam0, dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2.getJCRefOut());
             return new PermissionSet(objComputeZonePermissionSet);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -172,11 +181,11 @@ public class SecurityUtilities extends NetObject  {
         }
     }
 
-    public static PermissionSet IdentityListToPermissionSet(JCRefOut dupParam0) throws Throwable, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.xml.XmlException, system.RankException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.NotSupportedException {
+    public static PermissionSet IdentityListToPermissionSet(JCORefOut dupParam0) throws Throwable, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.xml.XmlException, system.RankException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objIdentityListToPermissionSet = (JCObject)classType.Invoke("IdentityListToPermissionSet", (Object)dupParam0);
+            JCObject objIdentityListToPermissionSet = (JCObject)classType.Invoke("IdentityListToPermissionSet", (Object)dupParam0.getJCRefOut());
             return new PermissionSet(objIdentityListToPermissionSet);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

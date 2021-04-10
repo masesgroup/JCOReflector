@@ -2,7 +2,13 @@
 ###################
 *.class
 
+
 # Intermediate files #
 ###################
 *.filelist
 *.manifest
+
+# POM Files #
+##############
+*.xml
+/target/

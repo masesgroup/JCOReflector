@@ -23,7 +23,6 @@
  */
 
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
@@ -38,6 +37,8 @@ namespace MASES.C2JReflector
             const string BUILD = "build";
             const string BUILDDOCS = "builddocs";
             const string CREATEJARS = "createjars";
+            const string CREATESNAPSHOTPOMS = "createsnapshotpoms";
+            const string CREATERELEASEPOMS = "createreleasepoms";
             const string DEFAULTJDK = "jdk-14.0.1";
             const string JDKPARAM = "-jdk=";
 
@@ -86,8 +87,34 @@ namespace MASES.C2JReflector
                             {
                                 input.SrcDestinationFolder = Path.GetFullPath(tbDestinationFolder);
                             }
-
-                            Task.Factory.StartNew(Reflector.ExportAssembly, input).Wait();
+                            input.GeneratePOM = ReflectorEventArgs.POMType.NoPOM;
+                            Task.Factory.StartNew(Reflector.ExecuteAction, input).Wait();
+                        }
+                        break;
+                    case CREATESNAPSHOTPOMS:
+                        {
+                            var input = readInput<ReflectorEventArgs>(args[1]);
+                            input.CancellationToken = new CancellationTokenSource().Token;
+                            input.RootFolder = RepositoryRoot;
+                            if (input.SrcDestinationFolder == null)
+                            {
+                                input.SrcDestinationFolder = Path.GetFullPath(tbDestinationFolder);
+                            }
+                            input.GeneratePOM = ReflectorEventArgs.POMType.Snapshot;
+                            Task.Factory.StartNew(Reflector.ExecuteAction, input).Wait();
+                        }
+                        break;
+                    case CREATERELEASEPOMS:
+                        {
+                            var input = readInput<ReflectorEventArgs>(args[1]);
+                            input.CancellationToken = new CancellationTokenSource().Token;
+                            input.RootFolder = RepositoryRoot;
+                            if (input.SrcDestinationFolder == null)
+                            {
+                                input.SrcDestinationFolder = Path.GetFullPath(tbDestinationFolder);
+                            }
+                            input.GeneratePOM = ReflectorEventArgs.POMType.Release;
+                            Task.Factory.StartNew(Reflector.ExecuteAction, input).Wait();
                         }
                         break;
                     case BUILD:

@@ -270,6 +270,13 @@ namespace MASES.C2JReflector
     [Serializable]
     public class ReflectorEventArgs : CommonEventArgs
     {
+        public enum POMType
+        {
+            NoPOM,
+            Release,
+            Snapshot
+        }
+
         public ReflectorEventArgs()
         {
         }
@@ -292,6 +299,7 @@ namespace MASES.C2JReflector
         public bool EnableInheritance { get; set; }
         public bool EnableInterfaceInheritance { get; set; }
         public bool DryRun { get; set; }
+        public POMType GeneratePOM { get; set; }
     }
     #endregion
 }

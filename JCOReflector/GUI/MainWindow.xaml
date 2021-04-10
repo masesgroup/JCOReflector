@@ -90,7 +90,9 @@
                             </GroupBox>
                             <DockPanel DockPanel.Dock="Top" MinHeight="30" LastChildFill="False">
                                 <Button Name="btnExecute" Content="Execute build..." MinWidth="100" Click="btnExecute_Click" VerticalAlignment="Stretch" VerticalContentAlignment="Center"/>
-                                <Button Name="btnReset"  Content="Reset statistics..." MinWidth="100" Click="btnReset_Click" VerticalAlignment="Stretch" VerticalContentAlignment="Center" />
+                                <Button Name="btnReset" Content="Reset statistics..." MinWidth="100" Click="btnReset_Click" VerticalAlignment="Stretch" VerticalContentAlignment="Center" />
+                                <Button Name="btnGenerateSnapshotPOM" Content="Generate Snapshot POM..." MinWidth="100" Click="btnGenerateSnapshotPOM_Click" VerticalAlignment="Stretch" VerticalContentAlignment="Center" ToolTip="Generate snapshot POM for Maven"/>
+                                <Button Name="btnGeneratePOM" Content="Generate POM..." MinWidth="100" Click="btnGeneratePOM_Click" VerticalAlignment="Stretch" VerticalContentAlignment="Center" ToolTip="Generate POM for Maven"/>
                             </DockPanel>
                         </DockPanel>
                     </DockPanel>

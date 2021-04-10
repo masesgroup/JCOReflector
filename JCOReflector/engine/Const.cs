@@ -49,8 +49,20 @@ namespace MASES.C2JReflector
         Version14
     }
 
-    public class Const
+    public static class Const
     {
+        public static string ToFolderName(this System.Reflection.AssemblyName assName)
+        {
+            var name = string.Concat(assName.FullName.Split(' '));
+
+            name = name.Replace(',', '_')
+                       .Replace('=', '_').ToLowerInvariant();
+
+            return name;
+        }
+
+        public static string ReflectorVersion = typeof(JavaBuilder).Assembly.GetName().Version.ToString();
+
         public static string[] KeyWords = new string[]
         {
             "import",
@@ -112,6 +124,7 @@ namespace MASES.C2JReflector
             public const string DocsDirectory = "docs";
 
             public const string StatisticsFilename = "Statistics.csv";
+            public const string POMFilename = "pom.xml";
 
             public const string CommonDirectory = "JCOReflector";
             public const string OrgSubDirectory = "org";
@@ -226,6 +239,26 @@ namespace MASES.C2JReflector
                 "MachineIdGenerator.exe.config",
             };
 #endif
+
+            public static string CreateJCOBridgeZip(string rootFolder)
+            {
+                var frameworkPath = Path.Combine(rootFolder, BinDirectory, Framework.RuntimeFolder);
+                var localArchive = Path.Combine(frameworkPath, JCOBridgeEmbeddedFile);
+                if (File.Exists(localArchive)) File.Delete(localArchive);
+                using (var archive = System.IO.Compression.ZipFile.Open(localArchive, System.IO.Compression.ZipArchiveMode.Create))
+                {
+                    foreach (var item in JCOBridgeFiles)
+                    {
+                        System.IO.Compression.ZipArchiveEntry entry = archive.CreateEntry(item, System.IO.Compression.CompressionLevel.Optimal);
+                        using (StreamWriter writer = new StreamWriter(entry.Open()))
+                        {
+                            byte[] buffer = File.ReadAllBytes(Path.Combine(frameworkPath, item));
+                            writer.BaseStream.Write(buffer, 0, buffer.Length);
+                        }
+                    }
+                }
+                return localArchive;
+            }
         }
 
         public class Framework
@@ -292,6 +325,12 @@ namespace MASES.C2JReflector
                 NonVoidDelegateInterfaceTemplate ,
 
                 ManifestTemplate,
+
+                POMTemplate,
+                POMDependencyTemplate,
+
+                POMJCOReflector,
+                MainPOMTemplate,
             };
 
             static Templates()
@@ -365,6 +404,12 @@ namespace MASES.C2JReflector
             public const string NonVoidDelegateInterfaceTemplate = "JCObjectReflectorNonVoidDelegateInterface.template";
 
             public const string ManifestTemplate = "JCOManifest.template";
+
+            public const string POMTemplate = "JCOPOM.template";
+            public const string POMDependencyTemplate = "JCOPOMDependency.template";
+
+            public const string POMJCOReflector = "JCOPOMJCOReflector.template";
+            public const string MainPOMTemplate = "JCOMainPOM.template";
         }
 
         public class Imports
@@ -572,6 +617,19 @@ namespace MASES.C2JReflector
         public class Documentation
         {
             public const string DOCS_HEADER = "<a href=\\\"https://masesgroup.github.io/JCOReflector\\\" style=\\\"text-decoration: none;margin-left: 0;padding: 1px 20px 0 0;font-size: 30px;font-weight: 200;color: #777777;text-shadow: 0 1px 0 #ffffff;\\\"><b>JCOReflector</b></a> powered by </large><a href=\\\"https://www.jcobridge.com/\\\" style=\\\"text-decoration: none;overflow: hidden;margin-left: 0;padding: 1px 20px 0 0;font-size: 30px;font-weight: 200;color: #777777;text-shadow: 0 1px 0 #ffffff;\\\"><span style=\\\"color: #5090FF;\\\"> <img src=\\\"https://www.jcobridge.com/LogoSquare.png\\\" width=\\\"25\\\">J<small>VM CLR Objects Bridge</small></span></a>";
+        }
+
+        public class POM
+        {
+            public const string POM_DEPENDENCIES_SECTION = "POM_DEPENDENCIES_SECTION";
+            public const string POM_FULL_ASSEMBLY_CLASS_NAME = "POM_FULL_ASSEMBLY_CLASS_NAME";
+            public const string POM_FULL_ASSEMBLY_CLASS_NAME_FOLDER = "POM_FULL_ASSEMBLY_CLASS_NAME_FOLDER";
+            public const string POM_VERSION_PLACEHOLDER = "POM_VERSION_PLACEHOLDER";
+            public const string POM_VERSION_SNAPSHOT = "-SNAPSHOT";
+            public const string POM_MODULES_PLACEHOLDER = "POM_MODULES_PLACEHOLDER";
+            public const string POM_RUNTIME_PLACEHOLDER = "POM_RUNTIME_PLACEHOLDER";
+            public const string POM_JCOREFLECTOR_MODULE_PLACEHOLDER = "    <module>JCOReflector\\{0}.xml</module>";
+            public const string POM_MODULE_PLACEHOLDER = "    <module>{0}\\{1}</module>";
         }
     }
 }

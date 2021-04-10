@@ -49,8 +49,6 @@ namespace MASES.C2JReflector
 
         static LogLevel logLevel;
 
-        static string reflectorVersion = typeof(JavaBuilder).Assembly.GetName().Version.ToString();
-
         static void AppendToConsole(LogLevel level, string format, params object[] args)
         {
             if (logLevel >= level && AppendToConsoleHandler != null)
@@ -363,7 +361,7 @@ namespace MASES.C2JReflector
             }
             sb.AppendLine();
             var manifestStr = sb.ToString();
-            manifestStr = manifestStr.Replace(Const.Class.JCOREFLECTOR_VERSION, reflectorVersion);
+            manifestStr = manifestStr.Replace(Const.Class.JCOREFLECTOR_VERSION, Const.ReflectorVersion);
             var manifestFileName = Path.Combine(originFolder, Const.FileNameAndDirectory.ManifestFile);
             File.WriteAllText(manifestFileName, manifestStr);
 
@@ -422,21 +420,8 @@ namespace MASES.C2JReflector
                                                                      Const.FileNameAndDirectory.NetreflectionSubDirectory, 
                                                                      Const.FileNameAndDirectory.JCOBridgeEmbeddedFile);
 
-                var frameworkPath = Path.Combine(rootFolder, Const.FileNameAndDirectory.BinDirectory, Const.Framework.RuntimeFolder);
-                var localArchive = Path.Combine(frameworkPath, Const.FileNameAndDirectory.JCOBridgeEmbeddedFile);
-                if (File.Exists(localArchive)) File.Delete(localArchive);
-                using (var archive = System.IO.Compression.ZipFile.Open(localArchive, System.IO.Compression.ZipArchiveMode.Create))
-                {
-                    foreach (var item in Const.FileNameAndDirectory.JCOBridgeFiles)
-                    {
-                        System.IO.Compression.ZipArchiveEntry entry = archive.CreateEntry(item, System.IO.Compression.CompressionLevel.Optimal);
-                        using (StreamWriter writer = new StreamWriter(entry.Open()))
-                        {
-                            byte[] buffer = File.ReadAllBytes(Path.Combine(frameworkPath, item));
-                            writer.BaseStream.Write(buffer, 0, buffer.Length);
-                        }
-                    }
-                }
+                var localArchive = Const.FileNameAndDirectory.CreateJCOBridgeZip(rootFolder);
+
                 if (File.Exists(jcoBridgeEmbeddedFile)) File.Delete(jcoBridgeEmbeddedFile);
                 File.Move(localArchive, jcoBridgeEmbeddedFile);
 

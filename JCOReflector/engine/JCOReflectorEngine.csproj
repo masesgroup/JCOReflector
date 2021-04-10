@@ -6,7 +6,7 @@
     <Description>JCOReflector - Java class generator based on JCOBridge</Description>
     <Copyright>Copyright ©  MASES s.r.l. 2020</Copyright>
     <Company>MASES s.r.l.</Company>
-    <Version>1.3.1.0</Version>
+    <Version>1.4.0.0</Version>
     <Product>JCOReflectorEngine</Product>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
     <TargetFrameworks>net461;netcoreapp3.1;net5.0;net5.0-windows</TargetFrameworks>
@@ -55,6 +55,10 @@
     <EmbeddedResource Include="JCObjectReflectorInterfaceGetProperty.template" />
     <EmbeddedResource Include="JCObjectReflectorInterfaceSetProperty.template" />
     <EmbeddedResource Include="JCObjectReflectorInterfaceGetPropertyArray.template" />
+    <EmbeddedResource Include="JCOPOM.template" />
+    <EmbeddedResource Include="JCOPOMDependency.template" />
+    <EmbeddedResource Include="JCOMainPOM.template" />
+    <EmbeddedResource Include="JCOPOMJCOReflector.template" />
   </ItemGroup>
   
   <ItemGroup>

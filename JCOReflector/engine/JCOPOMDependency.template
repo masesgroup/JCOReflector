@@ -1,0 +1,5 @@
+		<dependency>
+			<groupId>com.masesgroup</groupId>
+			<artifactId>POM_FULL_ASSEMBLY_CLASS_NAME</artifactId>
+			<version>POM_VERSION_PLACEHOLDER</version>
+		</dependency>

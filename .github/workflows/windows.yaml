@@ -94,7 +94,7 @@ jobs:
 
       - name: Reflect .NET Core 3.1 Java files
         run: dotnet bin\netcoreapp3.1\JCOReflectorCLI.dll reflect .github\workflows\reflect_netcoreapp3.1.job
-          
+
       - name: Reflect .NET 5.0 Java files
         run: .\bin\net5.0\JCOReflectorCLI reflect .github\workflows\reflect_net5.0.job
           

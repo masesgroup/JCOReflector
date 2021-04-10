@@ -49,7 +49,7 @@ jobs:
                 break
               fi
           done
-          
+
   # This workflow contains a single job called "build"
   build_windows:
     needs: check

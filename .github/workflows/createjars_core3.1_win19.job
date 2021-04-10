@@ -4,7 +4,7 @@
   <LogLevel>Error</LogLevel>
   <SourceFolder>netreflected</SourceFolder>
   <SplitFolderByAssembly>true</SplitFolderByAssembly>
-  <JDKFolder>C:\Program Files\Java\jdk-13.0.2+8</JDKFolder>
+  <JDKFolder>C:\Program Files\Java\jdk-13.0.2+8.1</JDKFolder>
   <JDKTarget>Version8</JDKTarget>
   <JarDestinationFolder>bin\netcoreapp3.1</JarDestinationFolder>
   <WithJARSource>false</WithJARSource>

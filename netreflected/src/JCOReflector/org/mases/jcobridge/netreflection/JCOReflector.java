@@ -24,6 +24,8 @@
 
 package org.mases.jcobridge.netreflection;
 
+import org.mases.jcobridge.JCOBridge;
+
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 import java.net.*;
@@ -385,8 +387,7 @@ public class JCOReflector {
     /**
      * Initialize {@link JCOReflector} runtime
      * 
-     * @return true if the runtime was initialized, otherwise see JCOReflector.log
-     *         to check possible error conditions
+     * @param args command-line arguments
      */
     public static void init(String[] args) {
         setCommandLineArgs(args);

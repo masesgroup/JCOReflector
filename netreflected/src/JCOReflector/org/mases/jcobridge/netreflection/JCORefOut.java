@@ -25,6 +25,8 @@
 package org.mases.jcobridge.netreflection;
 
 import org.mases.jcobridge.JCRefOut;
+import java.util.concurrent.atomic.*;
+
 /**
  * Wrapper class around {@link JCRefOut}
  */

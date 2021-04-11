@@ -102,13 +102,18 @@ namespace MASES.C2JReflector
         public static void GenerateDocs(object o)
         {
             bool failed = false;
-            JavaBuilderEventArgs args = o as JavaBuilderEventArgs;
+            DocsBuilderEventArgs args = o as DocsBuilderEventArgs;
             CancellationToken = args.CancellationToken;
             logLevel = args.LogLevel;
             DateTime dtStart = DateTime.Now;
             string reportStr = string.Empty;
             try
             {
+                if (string.IsNullOrEmpty(args.CommitVersion))
+                {
+                    throw new ArgumentException("Commit version must be set when docs are generated.");
+                }
+
                 if (!Path.IsPathRooted(args.SourceFolder))
                 {
                     args.SourceFolder = Path.Combine(args.RootFolder, args.SourceFolder);
@@ -121,7 +126,7 @@ namespace MASES.C2JReflector
 
                 var srcRootFolder = Path.Combine(args.SourceFolder, Const.FileNameAndDirectory.SourceDirectory);
                 string destinationFolder = Path.Combine(args.SourceFolder, Const.FileNameAndDirectory.DocsDirectory);
-                var classes = CreateSourceListAndGenerateDocs(args.JDKFolder, args.JDKTarget, args.RootFolder, srcRootFolder, destinationFolder, (args.AssembliesToUse == null) ? CreateFolderList(srcRootFolder) : args.AssembliesToUse, Timeout.Infinite);
+                var classes = CreateSourceListAndGenerateDocs(args.JDKFolder, args.JDKTarget, args.RootFolder, srcRootFolder, destinationFolder, args.CommitVersion, (args.AssembliesToUse == null) ? CreateFolderList(srcRootFolder) : args.AssembliesToUse, Timeout.Infinite);
                 reportStr = string.Format("Javadoc of {0} classes done in {1}.", classes, DateTime.Now - dtStart);
             }
             catch (OperationCanceledException ex)
@@ -262,7 +267,7 @@ namespace MASES.C2JReflector
             return counter;
         }
 
-        static int CreateSourceListAndGenerateDocs(string jdkFolder, JDKVersion jdkTarget, string rootFolder, string originFolder, string destinationFolder, IEnumerable<string> assemblies, int timeout)
+        static int CreateSourceListAndGenerateDocs(string jdkFolder, JDKVersion jdkTarget, string rootFolder, string originFolder, string destinationFolder, string commitVersion, IEnumerable<string> assemblies, int timeout)
         {
             int counter = 0;
             var tmpFile = Path.Combine(originFolder, Const.FileNameAndDirectory.SourceFile);
@@ -290,7 +295,8 @@ namespace MASES.C2JReflector
             destinationFolder = Path.Combine(destinationFolder, Const.Framework.RuntimeFolder);
             destinationFolder = destinationFolder.Replace('\\', '/');
 
-            launchProcess(originFolder, Path.Combine(jdkFolder, JavaDoc), "-header \"" + Const.Documentation.DOCS_HEADER + "\" -quiet -author -noindex -nodeprecated -nodeprecatedlist -notimestamp -nohelp -notree -public -cp " + jcoBridgeCp + " -d " + destinationFolder + " -link https://www.jcobridge.com/api-java @" + Const.FileNameAndDirectory.SourceFile, timeout);
+            var header = Const.Documentation.DOCS_HEADER.Replace(Const.Documentation.DOCS_VERSION_JCOREFLECTOR_PLACEHOLDER, string.Format("v{0}-{1}", Const.ReflectorVersion, commitVersion));
+            launchProcess(originFolder, Path.Combine(jdkFolder, JavaDoc), "-header \"" + header + "\" -quiet -author -noindex -nodeprecated -nodeprecatedlist -notimestamp -nohelp -notree -public -cp " + jcoBridgeCp + " -d " + destinationFolder + " -link https://www.jcobridge.com/api-java @" + Const.FileNameAndDirectory.SourceFile, timeout);
 
             return counter;
         }

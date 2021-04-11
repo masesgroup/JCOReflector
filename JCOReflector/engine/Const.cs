@@ -608,7 +608,8 @@ namespace MASES.C2JReflector
 
         public class Documentation
         {
-            public const string DOCS_HEADER = "<a href=\\\"https://masesgroup.github.io/JCOReflector\\\" style=\\\"text-decoration: none;margin-left: 0;padding: 1px 20px 0 0;font-size: 30px;font-weight: 200;color: #777777;text-shadow: 0 1px 0 #ffffff;\\\"><b>JCOReflector</b></a> powered by </large><a href=\\\"https://www.jcobridge.com/\\\" style=\\\"text-decoration: none;overflow: hidden;margin-left: 0;padding: 1px 20px 0 0;font-size: 30px;font-weight: 200;color: #777777;text-shadow: 0 1px 0 #ffffff;\\\"><span style=\\\"color: #5090FF;\\\"> <img src=\\\"https://www.jcobridge.com/LogoSquare.png\\\" width=\\\"25\\\">J<small>VM CLR Objects Bridge</small></span></a>";
+            public const string DOCS_VERSION_JCOREFLECTOR_PLACEHOLDER = "DOCS_VERSION_JCOREFLECTOR_PLACEHOLDER";
+            public const string DOCS_HEADER = "<a href=\\\"https://masesgroup.github.io/JCOReflector\\\" style=\\\"text-decoration: none;margin-left: 0;padding: 1px 20px 0 0;font-size: 30px;font-weight: 200;color: #777777;text-shadow: 0 1px 0 #ffffff;\\\"><b>JCOReflector</b></a> DOCS_VERSION_JCOREFLECTOR_PLACEHOLDER powered by </large><a href=\\\"https://www.jcobridge.com/\\\" style=\\\"text-decoration: none;overflow: hidden;margin-left: 0;padding: 1px 20px 0 0;font-size: 30px;font-weight: 200;color: #777777;text-shadow: 0 1px 0 #ffffff;\\\"><span style=\\\"color: #5090FF;\\\"> <img src=\\\"https://www.jcobridge.com/LogoSquare.png\\\" width=\\\"25\\\">J<small>VM CLR Objects Bridge</small></span></a>";
         }
 
         public class POM

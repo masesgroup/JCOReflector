@@ -114,6 +114,10 @@
                             <Button Name="btnGeneratePOM" Content="Generate POM..." MinWidth="100" Click="btnGeneratePOM_Click" VerticalAlignment="Stretch" VerticalContentAlignment="Center" ToolTip="Generate POM for Maven"/>
                         </DockPanel>
                         <DockPanel DockPanel.Dock="Top" MinHeight="30">
+                            <Label Content="Commit version for docs" VerticalContentAlignment="Center" VerticalAlignment="Stretch"/>
+                            <TextBox Name="tbCommitVersion" VerticalContentAlignment="Center" VerticalAlignment="Stretch" />
+                        </DockPanel>
+                        <DockPanel DockPanel.Dock="Top" MinHeight="30">
                             <Label Content="JAR destination folder" VerticalContentAlignment="Center" VerticalAlignment="Stretch"/>
                             <TextBox Name="tbJarDestinationFolder" VerticalContentAlignment="Center" VerticalAlignment="Stretch" IsReadOnly="True" />
                         </DockPanel>

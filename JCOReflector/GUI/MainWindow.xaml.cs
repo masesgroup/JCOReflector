@@ -233,7 +233,7 @@ namespace MASES.C2JReflector
         {
             try
             {
-                JavaBuilderEventArgs args = new JavaBuilderEventArgs(RepositoryRoot, (LogLevel)cbLogLevel.SelectedValue);
+                DocsBuilderEventArgs args = new DocsBuilderEventArgs(RepositoryRoot, (LogLevel)cbLogLevel.SelectedValue);
                 cts = new CancellationTokenSource();
                 args.CancellationToken = cts.Token;
                 args.JDKFolder = tbJDKFolder.Text;
@@ -241,6 +241,7 @@ namespace MASES.C2JReflector
                 args.SourceFolder = tbDestinationFolder.Text;
                 args.SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value;
                 args.AssembliesToUse = AssemblyDataCollection.CreateList(AssemblyDataCollection);
+                args.CommitVersion = tbCommitVersion.Text;
 
                 if (cbExportToFile.IsChecked.Value)
                 {

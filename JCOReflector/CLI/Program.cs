@@ -41,6 +41,7 @@ namespace MASES.C2JReflector
             const string CREATERELEASEPOMS = "createreleasepoms";
             const string DEFAULTJDK = "jdk-14.0.1";
             const string JDKPARAM = "-jdk=";
+            const string COMMITVERSIONPARAM = "-commit=";
 
             if (args.Length < 2)
             {
@@ -51,6 +52,7 @@ namespace MASES.C2JReflector
 
             string RepositoryRoot;
             string tbJDKFolder = string.Empty;
+            string tbCommitVersion = string.Empty;
 
             for (int index = 2; index < args.Length; index++)
             {
@@ -59,6 +61,10 @@ namespace MASES.C2JReflector
                 {
                     tbJDKFolder = arg.Substring(JDKPARAM.Length);
                     tbJDKFolder = Path.GetFullPath(tbJDKFolder);
+                }
+                else if (arg.StartsWith(COMMITVERSIONPARAM))
+                {
+                    tbCommitVersion = arg.Substring(COMMITVERSIONPARAM.Length);
                 }
             }
 
@@ -130,7 +136,7 @@ namespace MASES.C2JReflector
                         break;
                     case BUILDDOCS:
                         {
-                            var input = readInput<JavaBuilderEventArgs>(args[1]);
+                            var input = readInput<DocsBuilderEventArgs>(args[1]);
                             input.CancellationToken = new CancellationTokenSource().Token;
                             input.RootFolder = RepositoryRoot;
                             if (string.IsNullOrEmpty(input.SourceFolder))
@@ -150,6 +156,15 @@ namespace MASES.C2JReflector
 #else
                                 throw new ArgumentException("Missing JDKFolder input");
 #endif
+                            }
+
+                            if (string.IsNullOrEmpty(tbCommitVersion))
+                            {
+                                throw new ArgumentException("Commit version must be set when docs are generated.");
+                            }
+                            else
+                            {
+                                input.CommitVersion = tbCommitVersion;
                             }
 
                             if (!string.IsNullOrEmpty(tbJDKFolder))

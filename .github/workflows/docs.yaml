@@ -139,17 +139,19 @@ jobs:
           Copy-Item .\_data\LICENSE -Destination .\netreflected\docs\net461\LICENSE -Force
           Copy-Item .\_data\README.md -Destination .\netreflected\docs\net461\README.md -Force
 
+      - name: Extract commit SHA
+        run: |
+          echo "GITHUB_COMMIT_MESSAGE=$(echo $GITHUB_SHA)" >> $GITHUB_ENV
+        shell: bash
+
       - name: Build netcoreapp3.1 Java Help files
-        run:
-          dotnet bin\netcoreapp3.1\JCOReflectorCLI.dll builddocs .github\workflows\builddocs_win19.job
+        run: dotnet bin\netcoreapp3.1\JCOReflectorCLI.dll builddocs .github\workflows\builddocs_win19.job -commit=${{ env.GITHUB_COMMIT_MESSAGE }}
 
       - name: Build net5.0 Java Help files
-        run:
-          dotnet bin\net5.0\JCOReflectorCLI.dll builddocs .github\workflows\builddocs_win19.job
+        run: dotnet bin\net5.0\JCOReflectorCLI.dll builddocs .github\workflows\builddocs_win19.job -commit=${{ env.GITHUB_COMMIT_MESSAGE }}
           
       - name: Build net461 Java Help files
-        run:
-          .\bin\net461\JCOReflectorCLI builddocs .github\workflows\builddocs_win19.job
+        run: .\bin\net461\JCOReflectorCLI builddocs .github\workflows\builddocs_win19.job -commit=${{ env.GITHUB_COMMIT_MESSAGE }}
 
       - name: Clean temporary files
         run: |
@@ -158,11 +160,6 @@ jobs:
           Remove-Item .\JCOReflector\engine\obj\* -Recurse -Force
           Remove-Item .\_data\LICENSE -Force
           Remove-Item .\_data\README.md -Force
-
-      - name: Extract commit SHA
-        run: |
-          echo "GITHUB_COMMIT_MESSAGE=$(echo $GITHUB_SHA)" >> $GITHUB_ENV
-        shell: bash
         
       - name: Commit changes to netcoreapp3.1 help file
         run: |

@@ -244,6 +244,21 @@ namespace MASES.C2JReflector
     }
     #endregion
 
+    #region DocsBuilderEventArgs Class
+
+    [Serializable]
+    public class DocsBuilderEventArgs : JavaBuilderEventArgs
+    {
+        public DocsBuilderEventArgs(string rootFolder, LogLevel logLevel)
+            : base(rootFolder, logLevel)
+        {
+        }
+
+        public string CommitVersion { get; set; }
+    }
+
+    #endregion
+
     #region JARBuilderEventArgs Class
 
     [Serializable]

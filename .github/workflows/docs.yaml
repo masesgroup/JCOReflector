@@ -48,11 +48,6 @@ jobs:
             echo "::set-output name=run_job::true"
             break
           fi
-          if [[ $file == "JCOReflector/"* ]]; then
-            echo "This file is under the directory 'JCOReflector/'."
-            echo "::set-output name=run_job::true"
-            break
-          fi
         echo "This files are not in a source directory no action required"
         done < files.txt
         

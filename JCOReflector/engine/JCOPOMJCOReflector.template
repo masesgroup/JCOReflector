@@ -5,7 +5,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.masesgroup</groupId>
-  <artifactId>JCOReflector_POM_RUNTIME_PLACEHOLDER</artifactId>
+  <artifactId>jcoreflector_POM_RUNTIME_PLACEHOLDER</artifactId>
   <name>JCOReflector POM_RUNTIME_PLACEHOLDER</name>
   <description>A set of Java classes to use .NET from any JVM enabled language (Java, Kotlin, Scala and others)</description>
   <url>https://github.com/masesgroup/JCOReflector</url>

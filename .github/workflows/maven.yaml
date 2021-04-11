@@ -23,7 +23,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
       with:
-        fetch-depth: 1
+        fetch-depth: 2
 
     - name: check files
       id: check_files

@@ -556,6 +556,12 @@ namespace MASES.C2JReflector
                                      .Replace(Const.POM.POM_VERSION_PLACEHOLDER, Const.ReflectorVersion + ((GeneratePOM == ReflectorEventArgs.POMType.Snapshot) ? Const.POM.POM_VERSION_SNAPSHOT : string.Empty))
                                      .Replace(Const.POM.POM_DEPENDENCIES_SECTION, sb.ToString());
 
+            if (!Directory.Exists(destFolder))
+            {
+                // maybe some assemblies cannot have reflected files and the folder is non existent
+                Directory.CreateDirectory(destFolder);
+            }
+
             var fileName = Path.Combine(destFolder, Const.FileNameAndDirectory.POMFilename);
             writeFile(fileName, pomTemplate);
         }

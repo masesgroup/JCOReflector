@@ -42,7 +42,6 @@ jobs:
             echo "::set-output name=run_job::true"
             break
           fi
-          echo $file
           if [[ $file == "netreflected/src/"* ]]; then
             echo "This file is under the directory 'netreflected/src/'."
             echo "::set-output name=run_job::true"

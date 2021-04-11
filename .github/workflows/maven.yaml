@@ -94,8 +94,7 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Copy configuration file
-        run: |
-          Copy-Item .github\workflows\JCOReflectorCLI5.0.runtimeconfig.json -Destination bin\net5.0\JCOReflectorCLI.runtimeconfig.json -Force
+        run: Copy-Item .github\workflows\JCOReflectorCLI5.0.runtimeconfig.json -Destination bin\net5.0\JCOReflectorCLI.runtimeconfig.json -Force
 
       - name: Build net5.0 Maven POM files
         run:

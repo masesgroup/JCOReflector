@@ -49,8 +49,6 @@ namespace MASES.C2JReflector
 
         static LogLevel logLevel;
 
-        static string reflectorVersion = typeof(JavaBuilder).Assembly.GetName().Version.ToString();
-
         static void AppendToConsole(LogLevel level, string format, params object[] args)
         {
             if (logLevel >= level && AppendToConsoleHandler != null)
@@ -205,11 +203,15 @@ namespace MASES.C2JReflector
             }
         }
 
-        static IEnumerable<string> CreateFolderList(string originFolder)
+        static IEnumerable<string> CreateFolderList(string originFolder, bool withCommonDir = true)
         {
             originFolder = Path.GetFullPath(originFolder);
             List<string> dirs = new List<string>();
-            dirs.Add(Const.FileNameAndDirectory.CommonDirectory);
+
+            if (withCommonDir)
+            {
+                dirs.Add(Const.FileNameAndDirectory.CommonDirectory);
+            }
 
             originFolder = Path.Combine(originFolder, Const.Framework.RuntimeFolder);
             foreach (var item in Directory.EnumerateDirectories(originFolder))
@@ -293,6 +295,71 @@ namespace MASES.C2JReflector
             return counter;
         }
 
+        public static void CreatePOM(object o)
+        {
+            bool failed = false;
+            DateTime dtStart = DateTime.Now;
+            string reportStr = string.Empty;
+            try
+            {
+                JARBuilderEventArgs args = o as JARBuilderEventArgs;
+                logLevel = args.LogLevel;
+
+                if (!Path.IsPathRooted(args.SourceFolder))
+                {
+                    args.SourceFolder = Path.Combine(args.RootFolder, args.SourceFolder);
+                }
+
+                if (!Path.IsPathRooted(args.JDKFolder))
+                {
+                    args.JDKFolder = Path.Combine(args.RootFolder, args.JDKFolder);
+                }
+
+                if (!Path.IsPathRooted(args.JarDestinationFolder))
+                {
+                    args.JarDestinationFolder = Path.Combine(args.RootFolder, args.JarDestinationFolder);
+                }
+
+                Const.FileNameAndDirectory.CreateJCOBridgeZip(args.RootFolder);
+
+                var srcRootFolder = Path.Combine(args.SourceFolder, Const.FileNameAndDirectory.SourceDirectory);
+                var assembliesToUse = (args.AssembliesToUse == null) ? CreateFolderList(srcRootFolder, false) : args.AssembliesToUse;
+                StringBuilder sb = new StringBuilder();
+                foreach (var item in assembliesToUse)
+                {
+                    sb.AppendFormat(Const.POM.POM_JCOREFLECTOR_SOURCE_PLACEHOLDER, item);
+                    sb.AppendLine();
+                }
+                var sourceFlders = sb.ToString();
+                //sourceFlders = sourceFlders.Remove(sourceFlders.LastIndexOf(','));
+                sourceFlders = sourceFlders.Replace('\\', '/');
+
+                var jcoPomTemplate = Const.Templates.GetTemplate(Const.Templates.POMJCOReflector);
+                var jcoPom = jcoPomTemplate.Replace(Const.POM.POM_VERSION_PLACEHOLDER, Const.ReflectorVersion + ((args.GeneratePOM == JARBuilderEventArgs.POMType.Snapshot) ? Const.POM.POM_VERSION_SNAPSHOT : string.Empty))
+                                           .Replace(Const.POM.POM_RUNTIME_PLACEHOLDER, Const.Framework.RuntimeFolder)
+                                           .Replace(Const.POM.POM_SOURCEDIRECTORIES_PLACEHOLDER, sourceFlders);
+
+                var fileName = Path.Combine(srcRootFolder, string.Format("{0}.xml", Const.Framework.RuntimeFolder));
+                File.WriteAllText(fileName, jcoPom);
+                reportStr = string.Format("{0} POM created in {1}.", fileName, DateTime.Now - dtStart);
+            }
+            catch (OperationCanceledException ex)
+            {
+                reportStr = string.Format("Error {0}", ex.Message);
+                AppendToConsole(LogLevel.Error, reportStr);
+            }
+            catch (Exception ex)
+            {
+                reportStr = string.Format("Error {0}", ex.Message);
+                AppendToConsole(LogLevel.Error, reportStr);
+                failed = true;
+            }
+            finally
+            {
+                EndOperationHandler?.Invoke(null, new EndOperationEventArgs(reportStr, failed));
+            }
+        }
+
         public static void CreateJars(object o)
         {
             bool failed = false;
@@ -363,7 +430,7 @@ namespace MASES.C2JReflector
             }
             sb.AppendLine();
             var manifestStr = sb.ToString();
-            manifestStr = manifestStr.Replace(Const.Class.JCOREFLECTOR_VERSION, reflectorVersion);
+            manifestStr = manifestStr.Replace(Const.Class.JCOREFLECTOR_VERSION, Const.ReflectorVersion);
             var manifestFileName = Path.Combine(originFolder, Const.FileNameAndDirectory.ManifestFile);
             File.WriteAllText(manifestFileName, manifestStr);
 
@@ -422,21 +489,8 @@ namespace MASES.C2JReflector
                                                                      Const.FileNameAndDirectory.NetreflectionSubDirectory, 
                                                                      Const.FileNameAndDirectory.JCOBridgeEmbeddedFile);
 
-                var frameworkPath = Path.Combine(rootFolder, Const.FileNameAndDirectory.BinDirectory, Const.Framework.RuntimeFolder);
-                var localArchive = Path.Combine(frameworkPath, Const.FileNameAndDirectory.JCOBridgeEmbeddedFile);
-                if (File.Exists(localArchive)) File.Delete(localArchive);
-                using (var archive = System.IO.Compression.ZipFile.Open(localArchive, System.IO.Compression.ZipArchiveMode.Create))
-                {
-                    foreach (var item in Const.FileNameAndDirectory.JCOBridgeFiles)
-                    {
-                        System.IO.Compression.ZipArchiveEntry entry = archive.CreateEntry(item, System.IO.Compression.CompressionLevel.Optimal);
-                        using (StreamWriter writer = new StreamWriter(entry.Open()))
-                        {
-                            byte[] buffer = File.ReadAllBytes(Path.Combine(frameworkPath, item));
-                            writer.BaseStream.Write(buffer, 0, buffer.Length);
-                        }
-                    }
-                }
+                var localArchive = Const.FileNameAndDirectory.CreateJCOBridgeZip(rootFolder);
+
                 if (File.Exists(jcoBridgeEmbeddedFile)) File.Delete(jcoBridgeEmbeddedFile);
                 File.Move(localArchive, jcoBridgeEmbeddedFile);
 

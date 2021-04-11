@@ -276,7 +276,7 @@ namespace MASES.C2JReflector
             return res;
         }
 
-        public static async Task ExportAssembly(object o)
+        public static async Task ExecuteAction(object o)
         {
             bool failed = false;
             List<Type> typesToExport = new List<Type>();
@@ -374,7 +374,7 @@ namespace MASES.C2JReflector
 
         static string assemblyDestinationFolder(string rootFolder, AssemblyName assemblyName, bool splitByAssembly)
         {
-            return Path.Combine(rootFolder, Const.Framework.RuntimeFolder, splitByAssembly ? string.Concat(assemblyName.FullName.Split(' ')) : string.Empty);
+            return Path.Combine(rootFolder, Const.Framework.RuntimeFolder, splitByAssembly ? assemblyName.ToFolderName() : string.Empty);
         }
 
         static bool typePrefilter(Type type)

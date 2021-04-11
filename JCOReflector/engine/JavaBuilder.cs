@@ -203,11 +203,15 @@ namespace MASES.C2JReflector
             }
         }
 
-        static IEnumerable<string> CreateFolderList(string originFolder)
+        static IEnumerable<string> CreateFolderList(string originFolder, bool withCommonDir = true)
         {
             originFolder = Path.GetFullPath(originFolder);
             List<string> dirs = new List<string>();
-            dirs.Add(Const.FileNameAndDirectory.CommonDirectory);
+
+            if (withCommonDir)
+            {
+                dirs.Add(Const.FileNameAndDirectory.CommonDirectory);
+            }
 
             originFolder = Path.Combine(originFolder, Const.Framework.RuntimeFolder);
             foreach (var item in Directory.EnumerateDirectories(originFolder))
@@ -289,6 +293,71 @@ namespace MASES.C2JReflector
             launchProcess(originFolder, Path.Combine(jdkFolder, JavaDoc), "-header \"" + Const.Documentation.DOCS_HEADER + "\" -quiet -author -noindex -nodeprecated -nodeprecatedlist -notimestamp -nohelp -notree -public -cp " + jcoBridgeCp + " -d " + destinationFolder + " -link https://www.jcobridge.com/api-java @" + Const.FileNameAndDirectory.SourceFile, timeout);
 
             return counter;
+        }
+
+        public static void CreatePOM(object o)
+        {
+            bool failed = false;
+            DateTime dtStart = DateTime.Now;
+            string reportStr = string.Empty;
+            try
+            {
+                JARBuilderEventArgs args = o as JARBuilderEventArgs;
+                logLevel = args.LogLevel;
+
+                if (!Path.IsPathRooted(args.SourceFolder))
+                {
+                    args.SourceFolder = Path.Combine(args.RootFolder, args.SourceFolder);
+                }
+
+                if (!Path.IsPathRooted(args.JDKFolder))
+                {
+                    args.JDKFolder = Path.Combine(args.RootFolder, args.JDKFolder);
+                }
+
+                if (!Path.IsPathRooted(args.JarDestinationFolder))
+                {
+                    args.JarDestinationFolder = Path.Combine(args.RootFolder, args.JarDestinationFolder);
+                }
+
+                Const.FileNameAndDirectory.CreateJCOBridgeZip(args.RootFolder);
+
+                var srcRootFolder = Path.Combine(args.SourceFolder, Const.FileNameAndDirectory.SourceDirectory);
+                var assembliesToUse = (args.AssembliesToUse == null) ? CreateFolderList(srcRootFolder, false) : args.AssembliesToUse;
+                StringBuilder sb = new StringBuilder();
+                foreach (var item in assembliesToUse)
+                {
+                    sb.AppendFormat(Const.POM.POM_JCOREFLECTOR_SOURCE_PLACEHOLDER, item);
+                    sb.AppendLine();
+                }
+                var sourceFlders = sb.ToString();
+                //sourceFlders = sourceFlders.Remove(sourceFlders.LastIndexOf(','));
+                sourceFlders = sourceFlders.Replace('\\', '/');
+
+                var jcoPomTemplate = Const.Templates.GetTemplate(Const.Templates.POMJCOReflector);
+                var jcoPom = jcoPomTemplate.Replace(Const.POM.POM_VERSION_PLACEHOLDER, Const.ReflectorVersion + ((args.GeneratePOM == JARBuilderEventArgs.POMType.Snapshot) ? Const.POM.POM_VERSION_SNAPSHOT : string.Empty))
+                                           .Replace(Const.POM.POM_RUNTIME_PLACEHOLDER, Const.Framework.RuntimeFolder)
+                                           .Replace(Const.POM.POM_SOURCEDIRECTORIES_PLACEHOLDER, sourceFlders);
+
+                var fileName = Path.Combine(srcRootFolder, string.Format("{0}.xml", Const.Framework.RuntimeFolder));
+                File.WriteAllText(fileName, jcoPom);
+                reportStr = string.Format("{0} POM created in {1}.", fileName, DateTime.Now - dtStart);
+            }
+            catch (OperationCanceledException ex)
+            {
+                reportStr = string.Format("Error {0}", ex.Message);
+                AppendToConsole(LogLevel.Error, reportStr);
+            }
+            catch (Exception ex)
+            {
+                reportStr = string.Format("Error {0}", ex.Message);
+                AppendToConsole(LogLevel.Error, reportStr);
+                failed = true;
+            }
+            finally
+            {
+                EndOperationHandler?.Invoke(null, new EndOperationEventArgs(reportStr, failed));
+            }
         }
 
         public static void CreateJars(object o)

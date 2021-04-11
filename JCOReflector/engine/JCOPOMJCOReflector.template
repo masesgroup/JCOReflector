@@ -7,15 +7,9 @@
   <groupId>com.masesgroup</groupId>
   <artifactId>JCOReflector_POM_RUNTIME_PLACEHOLDER</artifactId>
   <name>JCOReflector POM_RUNTIME_PLACEHOLDER</name>
-  <description>JCOReflector POM_RUNTIME_PLACEHOLDER</description>
+  <description>A set of Java classes to use .NET from any JVM enabled language (Java, Kotlin, Scala and others)</description>
   <url>https://github.com/masesgroup/JCOReflector</url>
   <version>POM_VERSION_PLACEHOLDER</version>
-
-  <parent>
-    <groupId>com.masesgroup</groupId>
-    <artifactId>JCOReflector</artifactId>
-    <version>POM_VERSION_PLACEHOLDER</version>
-  </parent>
 
   <licenses>
     <license>
@@ -57,10 +51,10 @@
     </repository>
   </distributionManagement>
   <build>
-    <sourceDirectory>.</sourceDirectory>
+    <sourceDirectory>./JCOReflector</sourceDirectory>
     <resources>
       <resource>
-        <directory>${basedir}/../../../bin/POM_RUNTIME_PLACEHOLDER/</directory>
+        <directory>${basedir}/../../bin/POM_RUNTIME_PLACEHOLDER/</directory>
         <filtering>false</filtering>
         <includes>
           <include>JCOBridge.zip</include>
@@ -69,6 +63,24 @@
       </resource>
     </resources>
     <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>build-helper-maven-plugin</artifactId>
+        <version>3.2.0</version>
+        <executions>
+          <execution>
+            <phase>validate</phase>
+            <goals>
+              <goal>add-source</goal>
+            </goals>
+            <configuration>
+              <sources>
+POM_SOURCEDIRECTORIES_PLACEHOLDER
+              </sources>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-source-plugin</artifactId>
@@ -145,7 +157,7 @@
       <artifactId>JCOBridge</artifactId>
       <version>2.3.2</version>
       <scope>system</scope>
-      <systemPath>${basedir}\..\..\..\bin\POM_RUNTIME_PLACEHOLDER\JCOBridge.jar</systemPath>
+      <systemPath>${basedir}\..\..\bin\POM_RUNTIME_PLACEHOLDER\JCOBridge.jar</systemPath>
     </dependency>
   </dependencies>
 </project>

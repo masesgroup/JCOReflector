@@ -170,71 +170,6 @@ namespace MASES.C2JReflector
             args.EnableInheritance = cbEnableInheritance.IsChecked.Value;
             args.EnableInterfaceInheritance = cbEnableInterfaceInheritance.IsChecked.Value;
             args.DryRun = cbDryRun.IsChecked.Value;
-            args.GeneratePOM = ReflectorEventArgs.POMType.NoPOM;
-
-            if (cbExportToFile.IsChecked.Value)
-            {
-                export(args);
-                if (MessageBox.Show("Continue operation?", string.Empty, MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.Yes) == MessageBoxResult.No) return;
-            }
-
-            Task.Factory.StartNew(Reflector.ExecuteAction, args);
-        }
-
-        private void btnGenerateSnapshotPOM_Click(object sender, RoutedEventArgs e)
-        {
-            commandPanel.IsEnabled = false;
-            btnStop.Visibility = Visibility.Visible;
-
-            ReflectorEventArgs args = new ReflectorEventArgs(RepositoryRoot, (LogLevel)cbLogLevel.SelectedValue);
-            cts = new CancellationTokenSource();
-            args.CancellationToken = cts.Token;
-            args.AssemblyNames = string.IsNullOrEmpty(tbAssemblyNames.Text) ? new List<string>().ToArray() : tbAssemblyNames.Text.Replace("\r", "").Split('\n');
-            args.SrcDestinationFolder = tbDestinationFolder.Text;
-            args.SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value;
-            args.ForceRebuild = cbForceRebuildIfFolderExist.IsChecked.Value;
-            args.UseParallelBuild = cbUseParallel.IsChecked.Value;
-            args.CreateExceptionThrownClause = cbExportExceptions.IsChecked.Value;
-            args.ExceptionThrownClauseDepth = MaxDepth;
-            args.EnableAbstract = cbExportAbstract.IsChecked.Value;
-            args.EnableArray = cbExportArray.IsChecked.Value;
-            args.EnableDuplicateMethodNativeArrayWithJCRefOut = cbDuplicateMethodNativeArray.IsChecked.Value;
-            args.EnableInheritance = cbEnableInheritance.IsChecked.Value;
-            args.EnableInterfaceInheritance = cbEnableInterfaceInheritance.IsChecked.Value;
-            args.DryRun = cbDryRun.IsChecked.Value;
-            args.GeneratePOM = ReflectorEventArgs.POMType.Snapshot;
-
-            if (cbExportToFile.IsChecked.Value)
-            {
-                export(args);
-                if (MessageBox.Show("Continue operation?", string.Empty, MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.Yes) == MessageBoxResult.No) return;
-            }
-
-            Task.Factory.StartNew(Reflector.ExecuteAction, args);
-        }
-
-        private void btnGeneratePOM_Click(object sender, RoutedEventArgs e)
-        {
-            commandPanel.IsEnabled = false;
-            btnStop.Visibility = Visibility.Visible;
-
-            ReflectorEventArgs args = new ReflectorEventArgs(RepositoryRoot, (LogLevel)cbLogLevel.SelectedValue);
-            cts = new CancellationTokenSource();
-            args.CancellationToken = cts.Token;
-            args.AssemblyNames = string.IsNullOrEmpty(tbAssemblyNames.Text) ? new List<string>().ToArray() : tbAssemblyNames.Text.Replace("\r", "").Split('\n');
-            args.SrcDestinationFolder = tbDestinationFolder.Text;
-            args.SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value;
-            args.ForceRebuild = cbForceRebuildIfFolderExist.IsChecked.Value;
-            args.UseParallelBuild = cbUseParallel.IsChecked.Value;
-            args.CreateExceptionThrownClause = cbExportExceptions.IsChecked.Value;
-            args.ExceptionThrownClauseDepth = MaxDepth;
-            args.EnableAbstract = cbExportAbstract.IsChecked.Value;
-            args.EnableArray = cbExportArray.IsChecked.Value;
-            args.EnableDuplicateMethodNativeArrayWithJCRefOut = cbDuplicateMethodNativeArray.IsChecked.Value;
-            args.EnableInheritance = cbEnableInheritance.IsChecked.Value;
-            args.EnableInterfaceInheritance = cbEnableInterfaceInheritance.IsChecked.Value;
-            args.DryRun = cbDryRun.IsChecked.Value;
-            args.GeneratePOM = ReflectorEventArgs.POMType.Release;
 
             if (cbExportToFile.IsChecked.Value)
             {
@@ -353,6 +288,56 @@ namespace MASES.C2JReflector
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
+        }
+
+        private void btnGenerateSnapshotPOM_Click(object sender, RoutedEventArgs e)
+        {
+            JARBuilderEventArgs args = new JARBuilderEventArgs(RepositoryRoot, (LogLevel)cbLogLevel.SelectedValue);
+            cts = new CancellationTokenSource();
+            args.CancellationToken = cts.Token;
+            args.JDKFolder = tbJDKFolder.Text;
+            args.SourceFolder = tbDestinationFolder.Text;
+            args.JarDestinationFolder = tbJarDestinationFolder.Text;
+            args.SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value;
+            args.WithJARSource = cbWithSource.IsChecked.Value;
+            args.EmbeddingJCOBridge = cbWithEmbedding.IsChecked.Value;
+            args.GeneratePOM = JARBuilderEventArgs.POMType.Snapshot;
+            args.AssembliesToUse = AssemblyDataCollection.CreateList(AssemblyDataCollection);
+
+            if (cbExportToFile.IsChecked.Value)
+            {
+                export(args);
+                if (MessageBox.Show("Continue operation?", string.Empty, MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.Yes) == MessageBoxResult.No) return;
+            }
+
+            commandPanel.IsEnabled = false;
+            btnStop.Visibility = Visibility.Visible;
+            Task.Factory.StartNew(JavaBuilder.CreatePOM, args);
+        }
+
+        private void btnGeneratePOM_Click(object sender, RoutedEventArgs e)
+        {
+            JARBuilderEventArgs args = new JARBuilderEventArgs(RepositoryRoot, (LogLevel)cbLogLevel.SelectedValue);
+            cts = new CancellationTokenSource();
+            args.CancellationToken = cts.Token;
+            args.JDKFolder = tbJDKFolder.Text;
+            args.SourceFolder = tbDestinationFolder.Text;
+            args.JarDestinationFolder = tbJarDestinationFolder.Text;
+            args.SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value;
+            args.WithJARSource = cbWithSource.IsChecked.Value;
+            args.EmbeddingJCOBridge = cbWithEmbedding.IsChecked.Value;
+            args.GeneratePOM = JARBuilderEventArgs.POMType.Release;
+            args.AssembliesToUse = AssemblyDataCollection.CreateList(AssemblyDataCollection);
+
+            if (cbExportToFile.IsChecked.Value)
+            {
+                export(args);
+                if (MessageBox.Show("Continue operation?", string.Empty, MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.Yes) == MessageBoxResult.No) return;
+            }
+
+            commandPanel.IsEnabled = false;
+            btnStop.Visibility = Visibility.Visible;
+            Task.Factory.StartNew(JavaBuilder.CreatePOM, args);
         }
 
         public delegate void appendToConsoleDelegate(TextBox myControl, string format, object[] args);

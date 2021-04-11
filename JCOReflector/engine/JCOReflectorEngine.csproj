@@ -55,9 +55,6 @@
     <EmbeddedResource Include="JCObjectReflectorInterfaceGetProperty.template" />
     <EmbeddedResource Include="JCObjectReflectorInterfaceSetProperty.template" />
     <EmbeddedResource Include="JCObjectReflectorInterfaceGetPropertyArray.template" />
-    <EmbeddedResource Include="JCOPOM.template" />
-    <EmbeddedResource Include="JCOPOMDependency.template" />
-    <EmbeddedResource Include="JCOMainPOM.template" />
     <EmbeddedResource Include="JCOPOMJCOReflector.template" />
   </ItemGroup>
   

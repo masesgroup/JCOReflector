@@ -326,11 +326,7 @@ namespace MASES.C2JReflector
 
                 ManifestTemplate,
 
-                POMTemplate,
-                POMDependencyTemplate,
-
                 POMJCOReflector,
-                MainPOMTemplate,
             };
 
             static Templates()
@@ -405,11 +401,7 @@ namespace MASES.C2JReflector
 
             public const string ManifestTemplate = "JCOManifest.template";
 
-            public const string POMTemplate = "JCOPOM.template";
-            public const string POMDependencyTemplate = "JCOPOMDependency.template";
-
             public const string POMJCOReflector = "JCOPOMJCOReflector.template";
-            public const string MainPOMTemplate = "JCOMainPOM.template";
         }
 
         public class Imports
@@ -621,15 +613,12 @@ namespace MASES.C2JReflector
 
         public class POM
         {
-            public const string POM_DEPENDENCIES_SECTION = "POM_DEPENDENCIES_SECTION";
-            public const string POM_FULL_ASSEMBLY_CLASS_NAME = "POM_FULL_ASSEMBLY_CLASS_NAME";
-            public const string POM_FULL_ASSEMBLY_CLASS_NAME_FOLDER = "POM_FULL_ASSEMBLY_CLASS_NAME_FOLDER";
+            public const string POM_SOURCEDIRECTORIES_PLACEHOLDER = "POM_SOURCEDIRECTORIES_PLACEHOLDER";
+
             public const string POM_VERSION_PLACEHOLDER = "POM_VERSION_PLACEHOLDER";
             public const string POM_VERSION_SNAPSHOT = "-SNAPSHOT";
-            public const string POM_MODULES_PLACEHOLDER = "POM_MODULES_PLACEHOLDER";
             public const string POM_RUNTIME_PLACEHOLDER = "POM_RUNTIME_PLACEHOLDER";
-            public const string POM_JCOREFLECTOR_MODULE_PLACEHOLDER = "    <module>JCOReflector\\{0}.xml</module>";
-            public const string POM_MODULE_PLACEHOLDER = "    <module>{0}\\{1}</module>";
+            public const string POM_JCOREFLECTOR_SOURCE_PLACEHOLDER = "                <source>./{0}</source>";
         }
     }
 }

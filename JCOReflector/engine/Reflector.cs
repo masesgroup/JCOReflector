@@ -44,8 +44,6 @@ namespace MASES.C2JReflector
 
         static bool EnableWrite = true;
 
-        static ReflectorEventArgs.POMType GeneratePOM = ReflectorEventArgs.POMType.NoPOM;
-
         static bool EnableAbstract = true;
         static bool EnableArray = true;
         static bool EnableDuplicateMethodNativeArrayWithJCRefOut = true;
@@ -308,7 +306,6 @@ namespace MASES.C2JReflector
             EnableInheritance = args.EnableInheritance;
             // EnableInterfaceInheritance = args.EnableInterfaceInheritance; -- disabled due to issues in reflector engines (see https://github.com/masesgroup/JCOReflector/issues/6#issuecomment-686596662)
             EnableWrite = !args.DryRun;
-            GeneratePOM = args.GeneratePOM;
 
             string reportStr = string.Empty;
             string statisticsCsv = string.Empty;
@@ -331,52 +328,22 @@ namespace MASES.C2JReflector
                     await ExportAssemblyWithReferences(assemblyReferenced, assemblyParsed, new AssemblyName(assembly.FullName), SrcDestinationFolder, SplitByAssembly, ForceRebuild);
                 }
 
-                if (GeneratePOM != ReflectorEventArgs.POMType.NoPOM)
-                {
-                    Const.FileNameAndDirectory.CreateJCOBridgeZip(args.RootFolder);
-
-                    var jcoPomTemplate = Const.Templates.GetTemplate(Const.Templates.POMJCOReflector);
-                    var jcoPom = jcoPomTemplate.Replace(Const.POM.POM_VERSION_PLACEHOLDER, Const.ReflectorVersion + ((GeneratePOM == ReflectorEventArgs.POMType.Snapshot) ? Const.POM.POM_VERSION_SNAPSHOT : string.Empty))
-                                               .Replace(Const.POM.POM_RUNTIME_PLACEHOLDER, Const.Framework.RuntimeFolder);
-
-                    var fileName = Path.Combine(SrcDestinationFolder, Const.FileNameAndDirectory.CommonDirectory, string.Format("{0}.xml", Const.Framework.RuntimeFolder));
-                    writeFile(fileName, jcoPom);
-
-                    var mainPomTemplate = Const.Templates.GetTemplate(Const.Templates.MainPOMTemplate);
-                    var jcoModule = string.Format(Const.POM.POM_JCOREFLECTOR_MODULE_PLACEHOLDER, Const.Framework.RuntimeFolder);
-                    StringBuilder sb = new StringBuilder(jcoModule);
-                    sb.AppendLine();
-                    foreach (var item in assemblyReferenced)
-                    {
-                        var module = string.Format(Const.POM.POM_MODULE_PLACEHOLDER, Const.Framework.RuntimeFolder, new AssemblyName(item).ToFolderName());
-                        sb.AppendLine(module);
-                    }
-                    var mainPOM = mainPomTemplate.Replace(Const.POM.POM_VERSION_PLACEHOLDER, Const.ReflectorVersion + ((GeneratePOM == ReflectorEventArgs.POMType.Snapshot) ? Const.POM.POM_VERSION_SNAPSHOT : string.Empty))
-                                                 .Replace(Const.POM.POM_MODULES_PLACEHOLDER, sb.ToString());
-
-                    fileName = Path.Combine(SrcDestinationFolder, string.Format("{0}.xml", Const.Framework.RuntimeFolder));
-                    writeFile(fileName, mainPOM);
-                }
-
                 reportStr = GetReport();
 
-                if (GeneratePOM == ReflectorEventArgs.POMType.NoPOM)
-                {
-                    string statisticsError;
-                    statisticsCsv = GetStatisticsCsv(out statisticsError);
+                string statisticsError;
+                statisticsCsv = GetStatisticsCsv(out statisticsError);
 
-                    if (!String.IsNullOrEmpty(statisticsError))
-                    {
-                        reportStr += statisticsError;
-                    }
-                    else if (!WriteStatisticsCsv(statisticsCsv))
-                    {
-                        reportStr += "ERROR WRITING STATISTICS FILES" + Environment.NewLine;
-                    }
-                    else
-                    {
-                        reportStr += "STATISTICS FILES CREATED OK" + Environment.NewLine;
-                    }
+                if (!String.IsNullOrEmpty(statisticsError))
+                {
+                    reportStr += statisticsError;
+                }
+                else if (!WriteStatisticsCsv(statisticsCsv))
+                {
+                    reportStr += "ERROR WRITING STATISTICS FILES" + Environment.NewLine;
+                }
+                else
+                {
+                    reportStr += "STATISTICS FILES CREATED OK" + Environment.NewLine;
                 }
             }
             catch (OperationCanceledException ex)
@@ -482,12 +449,6 @@ namespace MASES.C2JReflector
                 return assembly;
             }
 
-            if (GeneratePOM != ReflectorEventArgs.POMType.NoPOM)
-            {
-                exportPOMFile(assembly, destFolder);
-                return assembly;
-            }
-
             List<Type> typesToExport = new List<Type>();
 
             AppendToConsole(LogLevel.Info, "Getting types from {0}", assembly.FullName);
@@ -526,44 +487,6 @@ namespace MASES.C2JReflector
             }
 
             return assembly;
-        }
-
-        static void exportPOMFile(Assembly assembly, string destFolder)
-        {
-            var pomTemplate = Const.Templates.GetTemplate(Const.Templates.POMTemplate);
-
-            StringBuilder sb = new StringBuilder();
-
-            var pomDependencyTemplate = Const.Templates.GetTemplate(Const.Templates.POMDependencyTemplate);
-            var pomDependency = pomDependencyTemplate.Replace(Const.POM.POM_FULL_ASSEMBLY_CLASS_NAME, Const.FileNameAndDirectory.CommonDirectory + "_" + Const.Framework.RuntimeFolder)
-                                                         .Replace(Const.POM.POM_VERSION_PLACEHOLDER, Const.ReflectorVersion + ((GeneratePOM == ReflectorEventArgs.POMType.Snapshot) ? Const.POM.POM_VERSION_SNAPSHOT : string.Empty));
-            sb.AppendLine(pomDependency);
-
-            var assNames = assembly.GetReferencedAssemblies();
-            if (assNames != null)
-            {
-                foreach (var assName in assNames)
-                {
-                    pomDependency = pomDependencyTemplate.Replace(Const.POM.POM_FULL_ASSEMBLY_CLASS_NAME_FOLDER, assembly.GetName().ToFolderName())
-                                                         .Replace(Const.POM.POM_FULL_ASSEMBLY_CLASS_NAME, assembly.GetName().FullName)
-                                                         .Replace(Const.POM.POM_VERSION_PLACEHOLDER, Const.ReflectorVersion + ((GeneratePOM == ReflectorEventArgs.POMType.Snapshot) ? Const.POM.POM_VERSION_SNAPSHOT : string.Empty));
-                    sb.AppendLine(pomDependency);
-                }
-            }
-
-            pomTemplate = pomTemplate.Replace(Const.POM.POM_FULL_ASSEMBLY_CLASS_NAME_FOLDER, assembly.GetName().ToFolderName())
-                                     .Replace(Const.POM.POM_FULL_ASSEMBLY_CLASS_NAME, assembly.GetName().FullName)
-                                     .Replace(Const.POM.POM_VERSION_PLACEHOLDER, Const.ReflectorVersion + ((GeneratePOM == ReflectorEventArgs.POMType.Snapshot) ? Const.POM.POM_VERSION_SNAPSHOT : string.Empty))
-                                     .Replace(Const.POM.POM_DEPENDENCIES_SECTION, sb.ToString());
-
-            if (!Directory.Exists(destFolder))
-            {
-                // maybe some assemblies cannot have reflected files and the folder is non existent
-                Directory.CreateDirectory(destFolder);
-            }
-
-            var fileName = Path.Combine(destFolder, Const.FileNameAndDirectory.POMFilename);
-            writeFile(fileName, pomTemplate);
         }
 
         static void exportingPublicTypes(List<Type> typesToExport, string destFolder, string assemblyname)

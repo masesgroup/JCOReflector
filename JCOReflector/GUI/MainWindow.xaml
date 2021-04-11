@@ -91,8 +91,6 @@
                             <DockPanel DockPanel.Dock="Top" MinHeight="30" LastChildFill="False">
                                 <Button Name="btnExecute" Content="Execute build..." MinWidth="100" Click="btnExecute_Click" VerticalAlignment="Stretch" VerticalContentAlignment="Center"/>
                                 <Button Name="btnReset" Content="Reset statistics..." MinWidth="100" Click="btnReset_Click" VerticalAlignment="Stretch" VerticalContentAlignment="Center" />
-                                <Button Name="btnGenerateSnapshotPOM" Content="Generate Snapshot POM..." MinWidth="100" Click="btnGenerateSnapshotPOM_Click" VerticalAlignment="Stretch" VerticalContentAlignment="Center" ToolTip="Generate snapshot POM for Maven"/>
-                                <Button Name="btnGeneratePOM" Content="Generate POM..." MinWidth="100" Click="btnGeneratePOM_Click" VerticalAlignment="Stretch" VerticalContentAlignment="Center" ToolTip="Generate POM for Maven"/>
                             </DockPanel>
                         </DockPanel>
                     </DockPanel>
@@ -103,11 +101,17 @@
                             <Button Name="btnGetFolders" Content="Get folders..." Click="btnGetFolders_Click" MinWidth="100" VerticalContentAlignment="Center" VerticalAlignment="Stretch"/>
                             <Button Name="btnBuild" Content="Build classes..." Click="btnBuild_Click" MinWidth="100" VerticalContentAlignment="Center" VerticalAlignment="Stretch"/>
                             <Button Name="btnBuildDoc" Content="Build docs..." Click="btnBuildDoc_Click" MinWidth="100" VerticalContentAlignment="Center" VerticalAlignment="Stretch"/>
-                            <Button Name="btnCreateJars" Content="Create JARs..." Click="btnCreateJars_Click" MinWidth="100" VerticalContentAlignment="Center" VerticalAlignment="Stretch"/>
-                            <StackPanel>
-                                <CheckBox Name="cbWithSource" Content="Source" IsChecked="False" VerticalContentAlignment="Center" ToolTip="Enable generation of source JARs"/>
-                                <CheckBox Name="cbWithEmbedding" Content="Embed JCOBridge" IsChecked="False" VerticalContentAlignment="Center" ToolTip="Enable embedding of JCOBridge"/>
-                            </StackPanel>
+                            <GroupBox Header="JAR">
+                                <DockPanel>
+                                    <Button Name="btnCreateJars" Content="Create JARs..." Click="btnCreateJars_Click" MinWidth="100" VerticalContentAlignment="Center" VerticalAlignment="Stretch"/>
+                                    <StackPanel>
+                                        <CheckBox Name="cbWithSource" Content="Source" IsChecked="False" VerticalContentAlignment="Center" ToolTip="Enable generation of source JARs"/>
+                                        <CheckBox Name="cbWithEmbedding" Content="Embed JCOBridge" IsChecked="False" VerticalContentAlignment="Center" ToolTip="Enable embedding of JCOBridge"/>
+                                    </StackPanel>
+                                </DockPanel>
+                            </GroupBox>
+                            <Button Name="btnGenerateSnapshotPOM" Content="Generate Snapshot POM..." MinWidth="100" Click="btnGenerateSnapshotPOM_Click" VerticalAlignment="Stretch" VerticalContentAlignment="Center" ToolTip="Generate snapshot POM for Maven"/>
+                            <Button Name="btnGeneratePOM" Content="Generate POM..." MinWidth="100" Click="btnGeneratePOM_Click" VerticalAlignment="Stretch" VerticalContentAlignment="Center" ToolTip="Generate POM for Maven"/>
                         </DockPanel>
                         <DockPanel DockPanel.Dock="Top" MinHeight="30">
                             <Label Content="JAR destination folder" VerticalContentAlignment="Center" VerticalAlignment="Stretch"/>

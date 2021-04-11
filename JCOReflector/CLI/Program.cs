@@ -87,33 +87,7 @@ namespace MASES.C2JReflector
                             {
                                 input.SrcDestinationFolder = Path.GetFullPath(tbDestinationFolder);
                             }
-                            input.GeneratePOM = ReflectorEventArgs.POMType.NoPOM;
-                            Task.Factory.StartNew(Reflector.ExecuteAction, input).Wait();
-                        }
-                        break;
-                    case CREATESNAPSHOTPOMS:
-                        {
-                            var input = readInput<ReflectorEventArgs>(args[1]);
-                            input.CancellationToken = new CancellationTokenSource().Token;
-                            input.RootFolder = RepositoryRoot;
-                            if (input.SrcDestinationFolder == null)
-                            {
-                                input.SrcDestinationFolder = Path.GetFullPath(tbDestinationFolder);
-                            }
-                            input.GeneratePOM = ReflectorEventArgs.POMType.Snapshot;
-                            Task.Factory.StartNew(Reflector.ExecuteAction, input).Wait();
-                        }
-                        break;
-                    case CREATERELEASEPOMS:
-                        {
-                            var input = readInput<ReflectorEventArgs>(args[1]);
-                            input.CancellationToken = new CancellationTokenSource().Token;
-                            input.RootFolder = RepositoryRoot;
-                            if (input.SrcDestinationFolder == null)
-                            {
-                                input.SrcDestinationFolder = Path.GetFullPath(tbDestinationFolder);
-                            }
-                            input.GeneratePOM = ReflectorEventArgs.POMType.Release;
+
                             Task.Factory.StartNew(Reflector.ExecuteAction, input).Wait();
                         }
                         break;
@@ -232,6 +206,96 @@ namespace MASES.C2JReflector
                             }
 
                             Task.Factory.StartNew(JavaBuilder.CreateJars, input).Wait();
+                        }
+                        break;
+                    case CREATESNAPSHOTPOMS:
+                        {
+                            var input = readInput<JARBuilderEventArgs>(args[1]);
+                            input.CancellationToken = new CancellationTokenSource().Token;
+                            input.RootFolder = RepositoryRoot;
+
+                            if (string.IsNullOrEmpty(input.SourceFolder))
+                            {
+                                input.SourceFolder = Path.GetFullPath(tbDestinationFolder);
+                            }
+
+                            if (input.JarDestinationFolder == null)
+                            {
+                                input.JarDestinationFolder = tbJarDestinationFolder;
+                            }
+
+                            if (input.JDKTarget == JDKVersion.NotSet)
+                            {
+                                input.JDKTarget = JDKVersion.Version8;
+                            }
+
+                            if (string.IsNullOrEmpty(input.JDKFolder))
+                            {
+#if DEBUG
+                                input.JDKFolder = Path.GetFullPath(Path.Combine(RepositoryRoot, DEFAULTJDK));
+#else
+                                throw new ArgumentException("Missing JDKFolder input");
+#endif
+                            }
+
+                            if (!string.IsNullOrEmpty(tbJDKFolder))
+                            {
+                                input.JDKFolder = tbJDKFolder;
+                            }
+
+                            if (input.AssembliesToUse == null || input.AssembliesToUse.Length == 0)
+                            {
+                                input.AssembliesToUse = createList(input);
+                            }
+
+                            input.GeneratePOM = JARBuilderEventArgs.POMType.Snapshot;
+
+                            Task.Factory.StartNew(JavaBuilder.CreatePOM, input).Wait();
+                        }
+                        break;
+                    case CREATERELEASEPOMS:
+                        {
+                            var input = readInput<JARBuilderEventArgs>(args[1]);
+                            input.CancellationToken = new CancellationTokenSource().Token;
+                            input.RootFolder = RepositoryRoot;
+
+                            if (string.IsNullOrEmpty(input.SourceFolder))
+                            {
+                                input.SourceFolder = Path.GetFullPath(tbDestinationFolder);
+                            }
+
+                            if (input.JarDestinationFolder == null)
+                            {
+                                input.JarDestinationFolder = tbJarDestinationFolder;
+                            }
+
+                            if (input.JDKTarget == JDKVersion.NotSet)
+                            {
+                                input.JDKTarget = JDKVersion.Version8;
+                            }
+
+                            if (string.IsNullOrEmpty(input.JDKFolder))
+                            {
+#if DEBUG
+                                input.JDKFolder = Path.GetFullPath(Path.Combine(RepositoryRoot, DEFAULTJDK));
+#else
+                                throw new ArgumentException("Missing JDKFolder input");
+#endif
+                            }
+
+                            if (!string.IsNullOrEmpty(tbJDKFolder))
+                            {
+                                input.JDKFolder = tbJDKFolder;
+                            }
+
+                            if (input.AssembliesToUse == null || input.AssembliesToUse.Length == 0)
+                            {
+                                input.AssembliesToUse = createList(input);
+                            }
+
+                            input.GeneratePOM = JARBuilderEventArgs.POMType.Release;
+
+                            Task.Factory.StartNew(JavaBuilder.CreatePOM, input).Wait();
                         }
                         break;
                     default:

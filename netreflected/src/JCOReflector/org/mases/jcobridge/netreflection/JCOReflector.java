@@ -35,6 +35,9 @@ import java.nio.file.Paths;
 import java.io.*;
 import java.lang.reflect.*;
 
+/**
+ * Main class to manage {@link JCOReflector} features
+ */
 public class JCOReflector {
     static String _runtimeFolder = null;
     static boolean _isLogging = false;
@@ -57,7 +60,11 @@ public class JCOReflector {
         }
         return null;
     }
-
+    
+    /**
+     * Return if {@link JCOReflector} is initialized
+     * @return true if {@link JCOReflector} is initialized
+     */
     public static synchronized boolean getInitialized() {
         return _initialized;
     }

@@ -215,7 +215,7 @@ namespace MASES.C2JReflector
         {
         }
 
-        public FolderBuilderEventArgs(string rootFolder, LogLevel logLevel) 
+        public FolderBuilderEventArgs(string rootFolder, LogLevel logLevel)
             : base(rootFolder, logLevel)
         {
         }
@@ -233,7 +233,7 @@ namespace MASES.C2JReflector
         {
         }
 
-        public JavaBuilderEventArgs(string rootFolder, LogLevel logLevel) 
+        public JavaBuilderEventArgs(string rootFolder, LogLevel logLevel)
             : base(rootFolder, logLevel)
         {
         }
@@ -260,7 +260,7 @@ namespace MASES.C2JReflector
         {
         }
 
-        public JARBuilderEventArgs(string rootFolder, LogLevel logLevel) 
+        public JARBuilderEventArgs(string rootFolder, LogLevel logLevel)
             : base(rootFolder, logLevel)
         {
         }
@@ -278,11 +278,12 @@ namespace MASES.C2JReflector
     [Serializable]
     public class ReflectorEventArgs : CommonEventArgs
     {
+
         public ReflectorEventArgs()
         {
         }
 
-        public ReflectorEventArgs(string rootFolder, LogLevel logLevel) 
+        public ReflectorEventArgs(string rootFolder, LogLevel logLevel)
             : base(rootFolder, logLevel)
         {
         }

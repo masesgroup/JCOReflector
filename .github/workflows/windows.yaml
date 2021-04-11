@@ -59,7 +59,7 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Export environment variables (used to check some infos like the path of JDK)
+      - name: Export environment variables
         run: set
         shell: cmd
     
@@ -233,12 +233,22 @@ jobs:
           echo "GITHUB_COMMIT_MESSAGE=$(echo $GITHUB_SHA | cut -c 1-7)" >> $GITHUB_ENV
         shell: bash
 
-      - name: Commit changes
+      - name: Commit source changes
         uses: EndBug/add-and-commit@v5
         with:
           author_name: github-actions
           author_email: 41898282+github-actions[bot]@users.noreply.github.com
           add: '.\netreflected\src\*.java'
+          message: Update sources after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Commit report changes
+        uses: EndBug/add-and-commit@v5
+        with:
+          author_name: github-actions
+          author_email: 41898282+github-actions[bot]@users.noreply.github.com
+          add: '.\netreflected\README.md'
           message: Update sources after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

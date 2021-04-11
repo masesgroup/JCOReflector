@@ -231,12 +231,17 @@ namespace MASES.C2JReflector
             return res;
         }
 
-        static string GetReport()
+        static string GetReport(string[] assemblyNames)
         {
             string res = string.Empty;
             try
             {
                 StringBuilder sb = new StringBuilder();
+                sb.AppendLine("Parsed assemblies are:");
+                foreach (var item in assemblyNames)
+                {
+                    sb.AppendLine(string.Format("* {0}", item));
+                }
                 sb.AppendLine();
                 sb.AppendLine("> Analyzed Assemblies:");
                 foreach (var item in assemblyReferenced)
@@ -328,7 +333,24 @@ namespace MASES.C2JReflector
                     await ExportAssemblyWithReferences(assemblyReferenced, assemblyParsed, new AssemblyName(assembly.FullName), SrcDestinationFolder, SplitByAssembly, ForceRebuild);
                 }
 
-                reportStr = GetReport();
+                reportStr = GetReport(args.AssemblyNames);
+                var reportfile = Path.Combine(args.SrcDestinationFolder, Const.Report.REPORT_FILE_TO_WRITE);
+                if (File.Exists(reportfile))
+                {
+                    var beginTag = string.Format(Const.Report.REPORT_BEGIN_PLACEHOLDER, Const.Framework.RuntimeFolder);
+                    var endTag = string.Format(Const.Report.REPORT_END_PLACEHOLDER, Const.Framework.RuntimeFolder);
+                    var readmeContent = File.ReadAllText(reportfile);
+
+                    StringBuilder sb = new StringBuilder();
+                    var preText = readmeContent.Substring(0, readmeContent.IndexOf(beginTag));
+                    sb.Append(preText);
+                    sb.AppendLine(beginTag);
+                    sb.AppendLine(reportStr);
+                    var endText = readmeContent.Substring(readmeContent.IndexOf(endTag));
+                    sb.Append(endText);
+                    File.WriteAllText(reportfile, sb.ToString());
+                }
+
                 string statisticsError;
                 statisticsCsv = GetStatisticsCsv(out statisticsError);
 

@@ -13,6 +13,7 @@ There are two main folders:
 
 ![FrameworkStatisticPercent](https://docs.google.com/spreadsheets/d/e/2PACX-1vRKe-7bBH40JmQmq4I194xz9g2YsoU7L9fHwzY0fqZyWepyjqnOC0B7lgO9CjAuTrBkOA8qbTiScLpS/pubchart?oid=485555819&format=image)
 
+[//]: # "BeginReport net461"
 Parsed assemblies are:
 * PresentationFramework,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35
 * System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
@@ -95,7 +96,7 @@ Parsed assemblies are:
 > * Microsoft.Workflow.Compiler, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 > * System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 
-> Total Types: Analyzed = 43267 - Implemented = 12308 - Discarded = 30958 - Non Public = 30501 - Generic = 354 - Internals = 50
+> Total Types: Analyzed = 43270 - Implemented = 12308 - Discarded = 30961 - Non Public = 30504 - Generic = 354 - Internals = 50
 > * Total Enumerators: Analyzed = 26 - Implemented = 25
 > * Total Delegates: Analyzed = 554 - Implemented = 554
 > * Total Enums: Implemented = 1660 - Flags = 314
@@ -106,14 +107,16 @@ Parsed assemblies are:
 >   * Total Properties: Analyzed 31911 - Implemented = 29770
 >   * Total Events: Analyzed 2391 - Implemented = 2185
 
+[//]: # "EndReport net461"
 ## .NET Core (reference is .NET Core 3.1)
 
 ![NetcoreStatistic](https://docs.google.com/spreadsheets/d/e/2PACX-1vRKe-7bBH40JmQmq4I194xz9g2YsoU7L9fHwzY0fqZyWepyjqnOC0B7lgO9CjAuTrBkOA8qbTiScLpS/pubchart?oid=964222969&format=image)
 
 ![NetcoreStatisticPercent](https://docs.google.com/spreadsheets/d/e/2PACX-1vRKe-7bBH40JmQmq4I194xz9g2YsoU7L9fHwzY0fqZyWepyjqnOC0B7lgO9CjAuTrBkOA8qbTiScLpS/pubchart?oid=857533338&format=image)
 
+[//]: # "BeginReport netcoreapp3.1"
 Parsed assemblies are:
-* PresentationFramework
+* PresentationFramework,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35
 
 > Analyzed Assemblies:
 > * PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
@@ -313,12 +316,13 @@ Parsed assemblies are:
 > * System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 > * System.Data.SqlClient, Version=4.6.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Data.Odbc, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
-> * System.Data.OleDb, Version=4.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+> * System.Data.OleDb, Version=4.0.1.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 > * System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 > * System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
 > * System.IO.Ports, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
 > * System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+> * System.Text.Encoding.CodePages, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 > * System.Windows.Forms.Design.Editors, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 > * System.Dynamic.Runtime, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
@@ -347,10 +351,10 @@ Parsed assemblies are:
 > * System.ServiceModel.Syndication, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
 > * System.ServiceProcess, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.ServiceProcess.ServiceController, Version=4.2.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
-> * System.Text.Encoding.CodePages, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Text.Encoding, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Text.Encodings.Web, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
 > * System.Text.Json, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+> * System.Text.Encodings.Web, Version=4.0.5.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
 > * System.Threading.Channels, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
 > * System.Threading.Tasks.Dataflow, Version=4.6.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Threading.Tasks.Extensions, Version=4.3.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
@@ -375,7 +379,7 @@ Parsed assemblies are:
 > * System.Security.Claims, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Net.Security, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 
-> Total Types: Analyzed = 24338 - Implemented = 6966 - Discarded = 17371 - Non Public = 17063 - Generic = 232 - Internals = 33
+> Total Types: Analyzed = 24353 - Implemented = 6966 - Discarded = 17386 - Non Public = 17078 - Generic = 232 - Internals = 33
 > * Total Enumerators: Analyzed = 24 - Implemented = 23
 > * Total Delegates: Analyzed = 359 - Implemented = 359
 > * Total Enums: Implemented = 1203 - Flags = 260
@@ -386,21 +390,23 @@ Parsed assemblies are:
 >   * Total Properties: Analyzed 17746 - Implemented = 16607
 >   * Total Events: Analyzed 1725 - Implemented = 1620
 
+[//]: # "EndReport netcoreapp3.1"
 ## .NET Core (reference is .NET v5.0.100)
 
 ![Net5Statistic](https://docs.google.com/spreadsheets/d/e/2PACX-1vRKe-7bBH40JmQmq4I194xz9g2YsoU7L9fHwzY0fqZyWepyjqnOC0B7lgO9CjAuTrBkOA8qbTiScLpS/pubchart?oid=212559398&format=image)
 
 ![Net5StatisticPercent](https://docs.google.com/spreadsheets/d/e/2PACX-1vRKe-7bBH40JmQmq4I194xz9g2YsoU7L9fHwzY0fqZyWepyjqnOC0B7lgO9CjAuTrBkOA8qbTiScLpS/pubchart?oid=1162005117&format=image)
 
+[//]: # "BeginReport net5.0"
 Parsed assemblies are:
-* PresentationFramework
+* PresentationFramework, Version=5.0.0.0, PublicKeyToken=31bf3856ad364e35
 
 > Analyzed Assemblies:
-> * PresentationFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+> * PresentationFramework, Version=5.0.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 > * System.Runtime, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
 > * System.Private.Uri, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
-> * System.Xaml, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+> * System.Xaml, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 > * System.Runtime.InteropServices, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Collections.Specialized, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.ComponentModel.Primitives, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
@@ -448,8 +454,6 @@ Parsed assemblies are:
 > * System.Reflection.Primitives, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Net.Http, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Threading.Channels, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
-> * System.Net.Connections, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
-> * System.IO.Pipelines, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
 > * System.Net.NetworkInformation, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Diagnostics.DiagnosticSource, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
 > * System.IO.Compression, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
@@ -489,7 +493,7 @@ Parsed assemblies are:
 > * System.Data.Common, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Xml.XmlSerializer, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Transactions.Local, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
-> * WindowsBase, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+> * WindowsBase, Version=5.0.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 > * Accessibility, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 > * System.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Runtime.InteropServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
@@ -545,7 +549,7 @@ Parsed assemblies are:
 > * System.Linq, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Configuration.ConfigurationManager, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
 > * System.Security.Cryptography.ProtectedData, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
-> * System.Diagnostics.EventLog, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+> * System.Diagnostics.EventLog, Version=5.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
 > * System.Runtime, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Resources.ResourceManager, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Runtime.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
@@ -561,7 +565,7 @@ Parsed assemblies are:
 > * System.IO.FileSystem, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Threading.Thread, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Threading.Tasks, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
-> * PresentationCore, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+> * PresentationCore, Version=5.0.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 > * mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 > * System.Private.CoreLib, Version=0.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
 > * Microsoft.Win32.Registry, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
@@ -593,14 +597,15 @@ Parsed assemblies are:
 > * System.Security.Cryptography.X509Certificates, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Threading, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Threading.Tasks.Parallel, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
-> * DirectWriteForwarder, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+> * DirectWriteForwarder, Version=5.0.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 > * System.Runtime.Extensions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * Microsoft.CSharp, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * Microsoft.VisualBasic.Core, Version=10.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
-> * Microsoft.VisualBasic.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
-> * System.Windows.Forms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-> * System.Windows.Forms.Primitives, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+> * Microsoft.VisualBasic.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+> * System.Windows.Forms, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+> * System.Drawing.Common, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+> * System.Windows.Forms.Primitives, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 > * System.Text.Encoding.CodePages, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * netstandard, Version=2.1.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
 > * System.AppContext, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
@@ -667,7 +672,7 @@ Parsed assemblies are:
 > * System.Net.WebSockets, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Text.RegularExpressions, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
-> * System.Windows.Forms.Design, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+> * System.Windows.Forms.Design, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 > * System.CodeDom, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
 > * System.Dynamic.Runtime, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Globalization.Calendars, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
@@ -681,7 +686,7 @@ Parsed assemblies are:
 > * System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Net.Http.Json, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
 > * System.Text.Json, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
-> * System.Text.Encodings.Web, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
+> * System.Text.Encodings.Web, Version=5.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
 > * System.Runtime.Intrinsics, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
 > * System.Numerics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 > * System.Runtime.Numerics, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
@@ -708,6 +713,7 @@ Parsed assemblies are:
 > * System.ServiceProcess, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.ServiceProcess.ServiceController, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Text.Encoding, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+> * System.Text.Encodings.Web, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
 > * System.Threading.Tasks.Dataflow, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Threading.Tasks, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Threading.Tasks.Extensions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
@@ -728,12 +734,12 @@ Parsed assemblies are:
 > * System.Xml.XmlSerializer, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Xml.XmlDocument, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
-> * UIAutomationTypes, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
-> * UIAutomationProvider, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
-> * System.Windows.Input.Manipulations, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-> * ReachFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
-> * System.Printing, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
-> * PresentationUI, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+> * UIAutomationTypes, Version=5.0.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+> * UIAutomationProvider, Version=5.0.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+> * System.Windows.Input.Manipulations, Version=5.0.4.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+> * ReachFramework, Version=5.0.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+> * System.Printing, Version=5.0.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+> * PresentationUI, Version=5.0.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 > * System.DirectoryServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Net.Primitives, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Net.NameResolution, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
@@ -741,13 +747,15 @@ Parsed assemblies are:
 > * System.Security.Claims, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Net.Security, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 
-> Total Types: Analyzed = 25450 - Implemented = 7107 - Discarded = 18342 - Non Public = 18031 - Generic = 238 - Internals = 29
+> Total Types: Analyzed = 25376 - Implemented = 7088 - Discarded = 18287 - Non Public = 17983 - Generic = 238 - Internals = 29
 > * Total Enumerators: Analyzed = 24 - Implemented = 23
-> * Total Delegates: Analyzed = 363 - Implemented = 363
-> * Total Enums: Implemented = 1229 - Flags = 265
-> * Total Interfaces: Implemented = 357
-> * Total Classes: Implemented = 5135 Exceptions = 234
->   * Total Constructors: Analyzed 6515 - Implemented = 5619
->   * Total Methods: Analyzed 28422 - Implemented = 19778 - Duplicated = 755
->   * Total Properties: Analyzed 18050 - Implemented = 16880
+> * Total Delegates: Analyzed = 362 - Implemented = 362
+> * Total Enums: Implemented = 1227 - Flags = 265
+> * Total Interfaces: Implemented = 355
+> * Total Classes: Implemented = 5121 Exceptions = 233
+>   * Total Constructors: Analyzed 6504 - Implemented = 5612
+>   * Total Methods: Analyzed 28377 - Implemented = 19749 - Duplicated = 755
+>   * Total Properties: Analyzed 18027 - Implemented = 16860
 >   * Total Events: Analyzed 1733 - Implemented = 1626
+
+[//]: # "EndReport net5.0"

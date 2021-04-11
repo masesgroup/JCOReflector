@@ -614,11 +614,17 @@ namespace MASES.C2JReflector
         public class POM
         {
             public const string POM_SOURCEDIRECTORIES_PLACEHOLDER = "POM_SOURCEDIRECTORIES_PLACEHOLDER";
-
             public const string POM_VERSION_PLACEHOLDER = "POM_VERSION_PLACEHOLDER";
             public const string POM_VERSION_SNAPSHOT = "-SNAPSHOT";
             public const string POM_RUNTIME_PLACEHOLDER = "POM_RUNTIME_PLACEHOLDER";
             public const string POM_JCOREFLECTOR_SOURCE_PLACEHOLDER = "                <source>./{0}</source>";
+        }
+
+        public class Report
+        {
+            public const string REPORT_FILE_TO_WRITE = "README.md";
+            public const string REPORT_BEGIN_PLACEHOLDER = "[//]: # \"BeginReport {0}\"";
+            public const string REPORT_END_PLACEHOLDER = "[//]: # \"EndReport {0}\"";
         }
     }
 }

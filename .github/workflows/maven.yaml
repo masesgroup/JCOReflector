@@ -98,11 +98,11 @@ jobs:
 
       - name: Build net5.0 Maven POM files
         run:
-          dotnet bin\net5.0\JCOReflectorCLI.dll createsnapshotpoms .github\workflows\reflect_net5.0.job
+          dotnet bin\net5.0\JCOReflectorCLI.dll createsnapshotpoms .github\workflows\createjars_core5.0_win19.job
           
       - name: Build net461 Maven POM files
         run:
-          .\bin\net461\JCOReflectorCLI createsnapshotpoms .github\workflows\reflect_net461.job
+          .\bin\net461\JCOReflectorCLI createsnapshotpoms .github\workflows\createjars_framework_win19.job
 
       - name: Set up Apache Maven Central
         uses: actions/setup-java@v1

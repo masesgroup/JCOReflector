@@ -41,7 +41,39 @@ jobs:
         run: |
           Copy-Item .github\workflows\JCOReflectorCLI.runtimeconfig.json -Destination bin\netcoreapp3.1\JCOReflectorCLI.runtimeconfig.json -Force
           Copy-Item .github\workflows\JCOReflectorCLI5.0.runtimeconfig.json -Destination bin\net5.0\JCOReflectorCLI.runtimeconfig.json -Force
-   
+
+      - name: Build net5.0 Maven POM files
+        run: dotnet bin\net5.0\JCOReflectorCLI.dll createreleasepoms .github\workflows\createjars_core5.0_win19.job
+          
+      - name: Build net461 Maven POM files
+        run: .\bin\net461\JCOReflectorCLI createreleasepoms .github\workflows\createjars_framework_win19.job
+
+      - name: Set up Apache Maven Central
+        uses: actions/setup-java@v1
+        with: # running setup-java again overwrites the settings.xml
+          java-version: 11
+          server-id: ossrh # Value of the distributionManagement/repository/id field of the pom.xml
+          server-username: MAVEN_USERNAME # env variable for username in deploy
+          server-password: MAVEN_CENTRAL_TOKEN # env variable for token in deploy
+          gpg-private-key: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }} # Value of the GPG private key to import
+          gpg-passphrase: MAVEN_GPG_PASSPHRASE # env variable for GPG private key passphrase
+
+      - name: Publish net5.0 to Apache Maven Central
+        shell: bash
+        run: mvn --file ./netreflected/src/net5.0.xml --no-transfer-progress --batch-mode -Dgpg.passphrase=${{ secrets.MAVEN_GPG_PASSPHRASE }} deploy
+        env:
+          MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
+          MAVEN_CENTRAL_TOKEN: ${{ secrets.MAVEN_CENTRAL_TOKEN }}
+          MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
+
+      - name: Publish net461 to Apache Maven Central
+        shell: bash
+        run: mvn --file ./netreflected/src/net461.xml --no-transfer-progress --batch-mode -Dgpg.passphrase=${{ secrets.MAVEN_GPG_PASSPHRASE }} deploy
+        env:
+          MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
+          MAVEN_CENTRAL_TOKEN: ${{ secrets.MAVEN_CENTRAL_TOKEN }}
+          MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
+
       - name: Build Java files
         run: |
           dotnet bin\netcoreapp3.1\JCOReflectorCLI.dll build .github\workflows\build_win19.job

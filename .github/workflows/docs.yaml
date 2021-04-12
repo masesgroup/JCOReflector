@@ -42,6 +42,11 @@ jobs:
             echo "::set-output name=run_job::true"
             break
           fi
+          if [[ $file == ".github/workflows/docs.yaml"* ]]; then
+            echo "Recreate docs was requested"
+            echo "::set-output name=run_job::true"
+            break
+          fi
           if [[ $file == "netreflected/src/"* ]]; then
             echo "This file is under the directory 'netreflected/src/'."
             echo "::set-output name=run_job::true"
@@ -49,8 +54,7 @@ jobs:
           fi
         echo "This files are not in a source directory no action required"
         done < files.txt
-        
-        
+
   # This workflow contains a single job called "build"
   build_docs:
     needs: check

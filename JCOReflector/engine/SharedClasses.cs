@@ -249,6 +249,10 @@ namespace MASES.C2JReflector
     [Serializable]
     public class DocsBuilderEventArgs : JavaBuilderEventArgs
     {
+        public DocsBuilderEventArgs()
+        {
+        }
+
         public DocsBuilderEventArgs(string rootFolder, LogLevel logLevel)
             : base(rootFolder, logLevel)
         {

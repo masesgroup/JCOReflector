@@ -71,7 +71,7 @@
         <configuration>
           <compilerArgs>
             <arg>-cp</arg>
-            <arg>../../bin/POM_RUNTIME_PLACEHOLDER/JCOBridge.jar</arg>
+            <arg>${basedir}/../../bin/POM_RUNTIME_PLACEHOLDER/JCOBridge.jar</arg>
           </compilerArgs>
         </configuration>
       </plugin>

@@ -37,8 +37,8 @@ jobs:
         while IFS= read -r file
         do
           echo $file
-          if [[ $file == ".github/workflows/linux.yml"* ]]; then
-            echo "This file is under the directory '.github/workflows/linux.yml'."
+          if [[ $file == ".github/workflows/linux.yaml"* ]]; then
+            echo "This file is under the directory '.github/workflows/linux.yaml'."
             echo "::set-output name=run_job::true"
             break
           fi

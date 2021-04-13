@@ -58,11 +58,23 @@
         <filtering>false</filtering>
         <includes>
           <include>JCOBridge.zip</include>
+          <include>JCOBridge.jar</include>
         </includes>
         <targetPath>org/mases/jcobridge/netreflection</targetPath>
       </resource>
     </resources>
     <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
+        <configuration>
+          <compilerArgs>
+            <arg>-cp</arg>
+            <arg>${basedir}/../../bin/POM_RUNTIME_PLACEHOLDER/JCOBridge.jar</arg>
+          </compilerArgs>
+        </configuration>
+      </plugin>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>build-helper-maven-plugin</artifactId>
@@ -106,8 +118,18 @@ POM_SOURCEDIRECTORIES_PLACEHOLDER
         <artifactId>maven-javadoc-plugin</artifactId>
         <version>2.9.1</version>
         <configuration>
+          <links>
+            <link>https://www.jcobridge.com/api-java</link>
+          </links>
           <quiet>true</quiet>
           <source>8</source>
+          <additionalDependencies>
+            <additionalDependency>
+              <groupId>JCOBridge</groupId>
+              <artifactId>JCOBridge</artifactId>
+              <version>2.3.2</version>
+            </additionalDependency>
+          </additionalDependencies>
         </configuration>
         <executions>
           <execution>
@@ -151,13 +173,4 @@ POM_SOURCEDIRECTORIES_PLACEHOLDER
       </plugin>
     </plugins>
   </build>
-  <dependencies>
-    <dependency>
-      <groupId>JCOBridge</groupId>
-      <artifactId>JCOBridge</artifactId>
-      <version>2.3.2</version>
-      <scope>system</scope>
-      <systemPath>${basedir}\..\..\bin\POM_RUNTIME_PLACEHOLDER\JCOBridge.jar</systemPath>
-    </dependency>
-  </dependencies>
 </project>

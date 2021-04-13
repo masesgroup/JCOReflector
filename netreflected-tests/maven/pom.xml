@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.masesgroup</groupId>
+    <artifactId>netreflected-tests</artifactId>
+    <version>1.4.0.0-SNAPSHOT</version>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+    </properties>
+
+    <build>
+        <sourceDirectory>../java/src</sourceDirectory>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>unpack</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>unpack</goal>
+                        </goals>
+                        <configuration>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>com.masesgroup</groupId>
+                                    <artifactId>jcoreflector_net5.0</artifactId>
+                                    <outputDirectory>${basedir}</outputDirectory>
+                                    <includes>org/mases/jcobridge/netreflection/JCOBridge.jar</includes>
+                                </artifactItem>
+                            </artifactItems>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.masesgroup</groupId>
+            <artifactId>jcoreflector_net5.0</artifactId>
+            <version>1.4.0.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>JCOBridge</groupId>
+            <artifactId>JCOBridge</artifactId>
+            <version>2.3.2</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/org/mases/jcobridge/netreflection/JCOBridge.jar</systemPath>
+        </dependency>
+    </dependencies>
+</project>

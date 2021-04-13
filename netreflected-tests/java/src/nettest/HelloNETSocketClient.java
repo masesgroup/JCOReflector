@@ -110,6 +110,8 @@ public class HelloNETSocketClient {
                         if (message != null) Console.WriteLine("Client data received {0}", new NetObject(message));
                     }
                     x++;
+                    //force a closure after 50 connections if no external closure happened before 
+                    if((x % 50) == 0) run = false;
                 } catch (ArgumentNullException | SocketException e) {
                     Console.WriteLine(e.getMessage());
                 }

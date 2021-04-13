@@ -72,9 +72,9 @@ public class HelloNETSocket {
         // trigger the thread closing procedure
         HelloNETSocketClient.run = false;
         Thread.Sleep(1000);
-        // wait for thread join
-        threadServer.Join();
-        threadClient.Join();
+        // wait for thread join, if not, close the test
+        threadServer.Join(5000);
+        threadClient.Join(5000);
         // close the application
         Environment.Exit(0);
         return;

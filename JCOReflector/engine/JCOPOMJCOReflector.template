@@ -58,6 +58,7 @@
         <filtering>false</filtering>
         <includes>
           <include>JCOBridge.zip</include>
+          <include>JCOBridge.jar</include>
         </includes>
         <targetPath>org/mases/jcobridge/netreflection</targetPath>
       </resource>

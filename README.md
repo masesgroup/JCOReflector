@@ -2,6 +2,8 @@
 
 ![CI_WINDOWS](https://github.com/masesgroup/JCOReflector/workflows/CI_WINDOWS/badge.svg)  ![CI_LINUX](https://github.com/masesgroup/JCOReflector/workflows/CI_LINUX/badge.svg)  [![CI_DOCS](https://github.com/masesgroup/JCOReflector/actions/workflows/docs.yaml/badge.svg)](https://github.com/masesgroup/JCOReflector/actions/workflows/docs.yaml)  [![CI_MAVEN](https://github.com/masesgroup/JCOReflector/actions/workflows/maven.yaml/badge.svg)](https://github.com/masesgroup/JCOReflector/actions/workflows/maven.yaml)  ![CI_RELEASE](https://github.com/masesgroup/JCOReflector/workflows/CI_RELEASE/badge.svg)
 
+[![JCOReflector .NET Framework Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net461.svg?label=JCOReflector%20.NET%20Framework%20Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net461%22)  [![JCOReflector .NET 5 Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net5.0.svg?label=JCOReflector%20.NET%205%20Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net5.0%22)
+
 ## The project
 
 JCOReflector produce a set of **.NET wrapper for Java** as JARs that are available for download. It's simple to use: you only need to reference JCOReflector.jar in the class-path and use the .NET API within your Java projects like exposed in the example section. 

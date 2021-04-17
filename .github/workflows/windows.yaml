@@ -249,7 +249,7 @@ jobs:
           author_name: github-actions
           author_email: 41898282+github-actions[bot]@users.noreply.github.com
           add: '.\netreflected\README.md'
-          message: Update sources after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
+          message: Update README.md after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

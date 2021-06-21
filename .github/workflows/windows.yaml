@@ -241,6 +241,16 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
+      - name: Commit source changes
+        uses: EndBug/add-and-commit@v5
+        with:
+          author_name: github-actions
+          author_email: 41898282+github-actions[bot]@users.noreply.github.com
+          add: '.\netreflected\statistics\*.*'
+          message: Update statistics after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
       - name: Commit report changes
         uses: EndBug/add-and-commit@v5
         with:

@@ -9,6 +9,8 @@ main:
     url: https://masesgroup.github.io/JCOReflector/
   - title: "Data Distribution Manager"
     url: https://masesgroup.github.io/DataDistributionManager
+  - title: "DDM Chat"
+    url: https://masesgroup.github.io/DDMChat
   - title: "JCO SWT Bridge"
     url: https://masesgroup.github.io/JCOSWTBridge/
   - title: "JCOBridge Examples"

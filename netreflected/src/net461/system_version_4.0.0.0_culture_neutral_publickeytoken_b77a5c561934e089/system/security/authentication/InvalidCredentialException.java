@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import system.security.authentication.AuthenticationException;
 
 /**
- * The base .NET class managing System.Security.Authentication.InvalidCredentialException, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link AuthenticationException}.
+ * The base .NET class managing System.Security.Authentication.InvalidCredentialException, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Authentication.InvalidCredentialException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Authentication.InvalidCredentialException</a>

@@ -47,7 +47,7 @@ import system.xml.XmlDictionaryWriter;
 
 
 /**
- * The base .NET class managing System.IdentityModel.Tokens.SamlDoNotCacheCondition, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link SamlCondition}.
+ * The base .NET class managing System.IdentityModel.Tokens.SamlDoNotCacheCondition, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.SamlDoNotCacheCondition" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.SamlDoNotCacheCondition</a>

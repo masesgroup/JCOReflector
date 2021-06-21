@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import system.net.OpenReadCompletedEventArgs;
 import system.net.IOpenReadCompletedEventHandler;
 /**
- * The base .NET class managing System.Net.OpenReadCompletedEventHandler, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * The base .NET class managing System.Net.OpenReadCompletedEventHandler, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.OpenReadCompletedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.OpenReadCompletedEventHandler</a>

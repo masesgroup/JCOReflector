@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import system.windows.DragEventArgs;
 import system.windows.IDragEventHandler;
 /**
- * The base .NET class managing System.Windows.DragEventHandler, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * The base .NET class managing System.Windows.DragEventHandler, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.DragEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.DragEventHandler</a>

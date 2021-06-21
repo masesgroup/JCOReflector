@@ -42,7 +42,7 @@ import system.security.cryptography.SHA512;
 
 
 /**
- * The base .NET class managing System.Security.Cryptography.SHA512CryptoServiceProvider, System.Security.Cryptography.Csp, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link SHA512}.
+ * The base .NET class managing System.Security.Cryptography.SHA512CryptoServiceProvider, System.Security.Cryptography.Csp, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.SHA512CryptoServiceProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.SHA512CryptoServiceProvider</a>

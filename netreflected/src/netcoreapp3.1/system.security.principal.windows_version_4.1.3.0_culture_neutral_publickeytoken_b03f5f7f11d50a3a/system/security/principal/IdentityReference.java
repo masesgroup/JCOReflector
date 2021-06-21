@@ -42,7 +42,7 @@ import system.security.principal.IdentityReference;
 
 
 /**
- * The base .NET class managing System.Security.Principal.IdentityReference, System.Security.Principal.Windows, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * The base .NET class managing System.Security.Principal.IdentityReference, System.Security.Principal.Windows, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Principal.IdentityReference" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Principal.IdentityReference</a>

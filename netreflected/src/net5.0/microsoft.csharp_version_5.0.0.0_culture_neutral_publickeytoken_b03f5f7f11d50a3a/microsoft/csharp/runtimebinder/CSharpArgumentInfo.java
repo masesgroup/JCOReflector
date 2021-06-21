@@ -43,7 +43,7 @@ import microsoft.csharp.runtimebinder.CSharpArgumentInfoFlags;
 
 
 /**
- * The base .NET class managing Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo, Microsoft.CSharp, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * The base .NET class managing Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo, Microsoft.CSharp, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.CSharp.RuntimeBinder.CSharpArgumentInfo</a>

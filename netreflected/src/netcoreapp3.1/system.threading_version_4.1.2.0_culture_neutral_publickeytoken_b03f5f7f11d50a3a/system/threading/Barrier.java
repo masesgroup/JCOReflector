@@ -43,7 +43,7 @@ import system.TimeSpan;
 
 
 /**
- * The base .NET class managing System.Threading.Barrier, System.Threading, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * The base .NET class managing System.Threading.Barrier, System.Threading, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Barrier" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Barrier</a>

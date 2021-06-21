@@ -52,7 +52,7 @@ import system.TypeCode;
 
 
 /**
- * The base .NET class managing System.Convert, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * The base .NET class managing System.Convert, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Convert" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Convert</a>

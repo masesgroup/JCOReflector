@@ -50,7 +50,7 @@ import system.reflection.PropertyInfo;
 
 
 /**
- * The base .NET class managing System.Runtime.InteropServices.Expando.IExpando, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link IJCOBridgeReflected, IReflect}.
+ * The base .NET class managing System.Runtime.InteropServices.Expando.IExpando, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.Expando.IExpando" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.Expando.IExpando</a>

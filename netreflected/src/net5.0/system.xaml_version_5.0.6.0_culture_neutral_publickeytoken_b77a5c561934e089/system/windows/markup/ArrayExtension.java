@@ -47,7 +47,7 @@ import system.collections.IListImplementation;
 
 
 /**
- * The base .NET class managing System.Windows.Markup.ArrayExtension, System.Xaml, Version=5.0.6.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link MarkupExtension}.
+ * The base .NET class managing System.Windows.Markup.ArrayExtension, System.Xaml, Version=5.0.6.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Markup.ArrayExtension" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Markup.ArrayExtension</a>

@@ -47,7 +47,7 @@ import system.windows.input.MouseAction;
 
 
 /**
- * The base .NET class managing System.Windows.Input.MouseBinding, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link InputBinding}.
+ * The base .NET class managing System.Windows.Input.MouseBinding, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.MouseBinding" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.MouseBinding</a>

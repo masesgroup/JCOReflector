@@ -43,7 +43,7 @@ import system.runtime.versioning.FrameworkName;
 
 
 /**
- * The base .NET class managing System.Runtime.Versioning.FrameworkName, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * The base .NET class managing System.Runtime.Versioning.FrameworkName, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Versioning.FrameworkName" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Versioning.FrameworkName</a>

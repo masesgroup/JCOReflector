@@ -65,7 +65,7 @@ import system.codedom.compiler.LanguageOptions;
 
 
 /**
- * The base .NET class managing System.CodeDom.Compiler.CodeDomProvider, System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link Component}.
+ * The base .NET class managing System.CodeDom.Compiler.CodeDomProvider, System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.Compiler.CodeDomProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.Compiler.CodeDomProvider</a>

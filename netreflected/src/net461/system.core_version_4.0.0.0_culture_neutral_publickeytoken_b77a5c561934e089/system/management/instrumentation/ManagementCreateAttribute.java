@@ -42,7 +42,7 @@ import system.management.instrumentation.ManagementNewInstanceAttribute;
 
 
 /**
- * The base .NET class managing System.Management.Instrumentation.ManagementCreateAttribute, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link ManagementNewInstanceAttribute}.
+ * The base .NET class managing System.Management.Instrumentation.ManagementCreateAttribute, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Management.Instrumentation.ManagementCreateAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Management.Instrumentation.ManagementCreateAttribute</a>

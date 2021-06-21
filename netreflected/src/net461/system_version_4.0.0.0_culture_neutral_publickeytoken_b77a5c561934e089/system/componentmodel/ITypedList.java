@@ -42,7 +42,7 @@ import system.componentmodel.PropertyDescriptor;
 
 
 /**
- * The base .NET class managing System.ComponentModel.ITypedList, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link IJCOBridgeReflected}.
+ * The base .NET class managing System.ComponentModel.ITypedList, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.ITypedList" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.ITypedList</a>

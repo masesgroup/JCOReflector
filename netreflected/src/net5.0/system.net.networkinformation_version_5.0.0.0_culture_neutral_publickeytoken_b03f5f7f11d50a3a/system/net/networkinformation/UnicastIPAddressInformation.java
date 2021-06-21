@@ -46,7 +46,7 @@ import system.net.networkinformation.SuffixOrigin;
 
 
 /**
- * The base .NET class managing System.Net.NetworkInformation.UnicastIPAddressInformation, System.Net.NetworkInformation, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link IPAddressInformation}.
+ * The base .NET class managing System.Net.NetworkInformation.UnicastIPAddressInformation, System.Net.NetworkInformation, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.NetworkInformation.UnicastIPAddressInformation" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.NetworkInformation.UnicastIPAddressInformation</a>

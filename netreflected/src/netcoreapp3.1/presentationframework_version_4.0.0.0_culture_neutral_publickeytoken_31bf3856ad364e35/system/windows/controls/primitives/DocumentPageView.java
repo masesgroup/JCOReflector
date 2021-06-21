@@ -47,7 +47,7 @@ import system.EventHandler;
 
 
 /**
- * The base .NET class managing System.Windows.Controls.Primitives.DocumentPageView, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link FrameworkElement}.
+ * The base .NET class managing System.Windows.Controls.Primitives.DocumentPageView, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.Primitives.DocumentPageView" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.Primitives.DocumentPageView</a>

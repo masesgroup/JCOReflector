@@ -42,7 +42,7 @@ import system.servicemodel.activities.SendContent;
 
 
 /**
- * The base .NET class managing System.ServiceModel.Activities.SendParametersContent, System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link SendContent}.
+ * The base .NET class managing System.ServiceModel.Activities.SendParametersContent, System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activities.SendParametersContent" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activities.SendParametersContent</a>

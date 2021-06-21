@@ -41,7 +41,7 @@ import java.util.ArrayList;
 
 
 /**
- * The base .NET class managing System.Buffers.Text.Utf8Parser, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * The base .NET class managing System.Buffers.Text.Utf8Parser, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Buffers.Text.Utf8Parser" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Buffers.Text.Utf8Parser</a>

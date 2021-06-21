@@ -43,7 +43,7 @@ import system.codedom.CodeLinePragma;
 
 
 /**
- * The base .NET class managing System.CodeDom.CodeSnippetCompileUnit, System.CodeDom, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link CodeCompileUnit}.
+ * The base .NET class managing System.CodeDom.CodeSnippetCompileUnit, System.CodeDom, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeSnippetCompileUnit" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeSnippetCompileUnit</a>

@@ -44,7 +44,7 @@ import system.componentmodel.ICustomTypeDescriptorImplementation;
 
 
 /**
- * The base .NET class managing System.ComponentModel.DataAnnotations.AssociatedMetadataTypeTypeDescriptionProvider, System.ComponentModel.Annotations, Version=4.3.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link TypeDescriptionProvider}.
+ * The base .NET class managing System.ComponentModel.DataAnnotations.AssociatedMetadataTypeTypeDescriptionProvider, System.ComponentModel.Annotations, Version=4.3.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.DataAnnotations.AssociatedMetadataTypeTypeDescriptionProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.DataAnnotations.AssociatedMetadataTypeTypeDescriptionProvider</a>

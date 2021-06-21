@@ -43,7 +43,7 @@ import system.buffers.OperationStatus;
 
 
 /**
- * The base .NET class managing System.IO.Compression.BrotliDecoder, System.IO.Compression.Brotli, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link ValueType}.
+ * The base .NET class managing System.IO.Compression.BrotliDecoder, System.IO.Compression.Brotli, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.Compression.BrotliDecoder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.Compression.BrotliDecoder</a>

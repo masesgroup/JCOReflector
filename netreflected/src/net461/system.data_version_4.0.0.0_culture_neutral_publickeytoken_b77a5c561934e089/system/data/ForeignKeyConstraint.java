@@ -46,7 +46,7 @@ import system.data.DataTable;
 
 
 /**
- * The base .NET class managing System.Data.ForeignKeyConstraint, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link Constraint}.
+ * The base .NET class managing System.Data.ForeignKeyConstraint, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.ForeignKeyConstraint" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.ForeignKeyConstraint</a>

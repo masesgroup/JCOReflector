@@ -42,7 +42,7 @@ import system.xml.XmlNameTable;
 
 
 /**
- * The base .NET class managing System.Xml.NameTable, System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link XmlNameTable}.
+ * The base .NET class managing System.Xml.NameTable, System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.NameTable" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.NameTable</a>

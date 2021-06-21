@@ -42,7 +42,7 @@ import system.configuration.ConfigurationSectionGroup;
 
 
 /**
- * The base .NET class managing System.Configuration.UserSettingsGroup, System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link ConfigurationSectionGroup}.
+ * The base .NET class managing System.Configuration.UserSettingsGroup, System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.UserSettingsGroup" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.UserSettingsGroup</a>

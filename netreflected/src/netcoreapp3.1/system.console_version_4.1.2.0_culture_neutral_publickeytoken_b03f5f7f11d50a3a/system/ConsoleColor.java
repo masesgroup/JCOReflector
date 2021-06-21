@@ -40,7 +40,7 @@ import org.mases.jcobridge.netreflection.*;
 // PACKAGE_IMPORT_SECTION
 
 /**
- * The base .NET class managing System.ConsoleColor, System.Console, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * The base .NET class managing System.ConsoleColor, System.Console, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ConsoleColor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ConsoleColor</a>

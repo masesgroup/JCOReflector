@@ -43,7 +43,7 @@ import system.io.Stream;
 
 
 /**
- * The base .NET class managing System.Net.Http.StreamContent, System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link HttpContent}.
+ * The base .NET class managing System.Net.Http.StreamContent, System.Net.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Http.StreamContent" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Http.StreamContent</a>

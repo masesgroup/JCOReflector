@@ -59,7 +59,7 @@ import system.windows.forms.QueryContinueDragEventHandler;
 
 
 /**
- * The base .NET class managing System.Windows.Forms.Integration.ElementHost, WindowsFormsIntegration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link Control}.
+ * The base .NET class managing System.Windows.Forms.Integration.ElementHost, WindowsFormsIntegration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Integration.ElementHost" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Integration.ElementHost</a>

@@ -40,7 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.net.sockets.ISecurityCriticalAction;
 /**
- * The base .NET class managing System.Net.Sockets.SecurityCriticalAction, System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * The base .NET class managing System.Net.Sockets.SecurityCriticalAction, System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Sockets.SecurityCriticalAction" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Sockets.SecurityCriticalAction</a>

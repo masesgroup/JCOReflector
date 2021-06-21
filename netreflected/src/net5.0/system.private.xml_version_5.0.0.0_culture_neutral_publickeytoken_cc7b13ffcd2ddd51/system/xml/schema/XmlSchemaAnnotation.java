@@ -44,7 +44,7 @@ import system.xml.XmlAttribute;
 
 
 /**
- * The base .NET class managing System.Xml.Schema.XmlSchemaAnnotation, System.Private.Xml, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link XmlSchemaObject}.
+ * The base .NET class managing System.Xml.Schema.XmlSchemaAnnotation, System.Private.Xml, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.XmlSchemaAnnotation" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.XmlSchemaAnnotation</a>

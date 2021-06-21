@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import system.xml.XmlNodeChangedEventArgs;
 import system.xml.IXmlNodeChangedEventHandler;
 /**
- * The base .NET class managing System.Xml.XmlNodeChangedEventHandler, System.Private.Xml, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * The base .NET class managing System.Xml.XmlNodeChangedEventHandler, System.Private.Xml, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlNodeChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlNodeChangedEventHandler</a>

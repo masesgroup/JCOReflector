@@ -52,7 +52,7 @@ import system.componentmodel.ListChangedEventHandler;
 
 
 /**
- * The base .NET class managing System.ComponentModel.IBindingListView, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link IEnumerableImplementation}.
+ * The base .NET class managing System.ComponentModel.IBindingListView, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.IBindingListView" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.IBindingListView</a>

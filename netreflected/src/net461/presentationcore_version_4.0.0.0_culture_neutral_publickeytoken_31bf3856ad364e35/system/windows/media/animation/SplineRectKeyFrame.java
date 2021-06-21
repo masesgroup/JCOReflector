@@ -45,7 +45,7 @@ import system.windows.media.animation.KeySpline;
 
 
 /**
- * The base .NET class managing System.Windows.Media.Animation.SplineRectKeyFrame, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link RectKeyFrame}.
+ * The base .NET class managing System.Windows.Media.Animation.SplineRectKeyFrame, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Animation.SplineRectKeyFrame" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Animation.SplineRectKeyFrame</a>

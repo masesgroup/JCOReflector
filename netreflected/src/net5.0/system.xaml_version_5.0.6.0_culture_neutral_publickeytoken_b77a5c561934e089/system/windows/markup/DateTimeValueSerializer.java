@@ -44,7 +44,7 @@ import system.windows.markup.IValueSerializerContextImplementation;
 
 
 /**
- * The base .NET class managing System.Windows.Markup.DateTimeValueSerializer, System.Xaml, Version=5.0.6.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link ValueSerializer}.
+ * The base .NET class managing System.Windows.Markup.DateTimeValueSerializer, System.Xaml, Version=5.0.6.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Markup.DateTimeValueSerializer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Markup.DateTimeValueSerializer</a>

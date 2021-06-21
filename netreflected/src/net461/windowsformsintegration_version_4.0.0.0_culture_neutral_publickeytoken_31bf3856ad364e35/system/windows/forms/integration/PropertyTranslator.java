@@ -40,7 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.windows.forms.integration.IPropertyTranslator;
 /**
- * The base .NET class managing System.Windows.Forms.Integration.PropertyTranslator, WindowsFormsIntegration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * The base .NET class managing System.Windows.Forms.Integration.PropertyTranslator, WindowsFormsIntegration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Integration.PropertyTranslator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Integration.PropertyTranslator</a>

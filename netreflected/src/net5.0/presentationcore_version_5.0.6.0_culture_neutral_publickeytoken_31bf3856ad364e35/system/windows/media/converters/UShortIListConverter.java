@@ -42,7 +42,7 @@ import system.windows.media.converters.BaseIListConverter;
 
 
 /**
- * The base .NET class managing System.Windows.Media.Converters.UShortIListConverter, PresentationCore, Version=5.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link BaseIListConverter}.
+ * The base .NET class managing System.Windows.Media.Converters.UShortIListConverter, PresentationCore, Version=5.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Converters.UShortIListConverter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Converters.UShortIListConverter</a>

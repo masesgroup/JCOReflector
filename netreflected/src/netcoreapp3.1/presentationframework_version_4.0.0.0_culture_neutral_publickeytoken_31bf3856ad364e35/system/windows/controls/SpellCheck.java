@@ -45,7 +45,7 @@ import system.windows.controls.SpellingReform;
 
 
 /**
- * The base .NET class managing System.Windows.Controls.SpellCheck, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * The base .NET class managing System.Windows.Controls.SpellCheck, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.SpellCheck" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.SpellCheck</a>

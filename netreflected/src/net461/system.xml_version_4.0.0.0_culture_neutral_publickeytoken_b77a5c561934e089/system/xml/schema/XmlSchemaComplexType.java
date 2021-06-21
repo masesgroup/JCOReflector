@@ -49,7 +49,7 @@ import system.xml.schema.XmlSchemaParticle;
 
 
 /**
- * The base .NET class managing System.Xml.Schema.XmlSchemaComplexType, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link XmlSchemaType}.
+ * The base .NET class managing System.Xml.Schema.XmlSchemaComplexType, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.XmlSchemaComplexType" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.XmlSchemaComplexType</a>

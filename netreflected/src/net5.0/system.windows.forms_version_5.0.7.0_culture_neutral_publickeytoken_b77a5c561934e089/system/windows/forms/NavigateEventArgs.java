@@ -42,7 +42,7 @@ import system.EventArgs;
 
 
 /**
- * The base .NET class managing System.Windows.Forms.NavigateEventArgs, System.Windows.Forms, Version=5.0.7.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link EventArgs}.
+ * The base .NET class managing System.Windows.Forms.NavigateEventArgs, System.Windows.Forms, Version=5.0.7.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.NavigateEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.NavigateEventArgs</a>

@@ -43,7 +43,7 @@ import system.threading.WaitHandle;
 
 
 /**
- * The base .NET class managing System.Threading.RegisteredWaitHandle, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link MarshalByRefObject}.
+ * The base .NET class managing System.Threading.RegisteredWaitHandle, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.RegisteredWaitHandle" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.RegisteredWaitHandle</a>

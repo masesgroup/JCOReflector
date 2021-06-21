@@ -44,7 +44,7 @@ import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
 
 /**
- * The base .NET class managing System.Deployment.Application.DependentPlatformMissingException, System.Deployment, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link DeploymentException}.
+ * The base .NET class managing System.Deployment.Application.DependentPlatformMissingException, System.Deployment, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Deployment.Application.DependentPlatformMissingException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Deployment.Application.DependentPlatformMissingException</a>

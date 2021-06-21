@@ -63,7 +63,7 @@ import system.RuntimeMethodHandle;
 
 
 /**
- * The base .NET class managing System.Reflection.Emit.MethodBuilder, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link MethodInfo}.
+ * The base .NET class managing System.Reflection.Emit.MethodBuilder, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Emit.MethodBuilder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Emit.MethodBuilder</a>

@@ -45,7 +45,7 @@ import system.xml.XmlElement;
 
 
 /**
- * The base .NET class managing System.Security.Cryptography.Xml.KeyInfoX509Data, System.Security.Cryptography.Xml, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link KeyInfoClause}.
+ * The base .NET class managing System.Security.Cryptography.Xml.KeyInfoX509Data, System.Security.Cryptography.Xml, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Xml.KeyInfoX509Data" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Xml.KeyInfoX509Data</a>

@@ -45,7 +45,7 @@ import system.web.ui.webcontrols.webparts.WebPartVerb;
 
 
 /**
- * The base .NET class managing System.Web.UI.WebControls.WebParts.EditorZoneBase, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link ToolZone}.
+ * The base .NET class managing System.Web.UI.WebControls.WebParts.EditorZoneBase, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.WebParts.EditorZoneBase" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.WebParts.EditorZoneBase</a>

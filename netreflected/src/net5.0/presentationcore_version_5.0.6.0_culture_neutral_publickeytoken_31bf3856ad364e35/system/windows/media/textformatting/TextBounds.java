@@ -43,7 +43,7 @@ import system.windows.Rect;
 
 
 /**
- * The base .NET class managing System.Windows.Media.TextFormatting.TextBounds, PresentationCore, Version=5.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * The base .NET class managing System.Windows.Media.TextFormatting.TextBounds, PresentationCore, Version=5.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.TextFormatting.TextBounds" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.TextFormatting.TextBounds</a>

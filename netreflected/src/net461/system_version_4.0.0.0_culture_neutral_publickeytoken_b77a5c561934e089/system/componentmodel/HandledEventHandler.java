@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import system.componentmodel.HandledEventArgs;
 import system.componentmodel.IHandledEventHandler;
 /**
- * The base .NET class managing System.ComponentModel.HandledEventHandler, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * The base .NET class managing System.ComponentModel.HandledEventHandler, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.HandledEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.HandledEventHandler</a>

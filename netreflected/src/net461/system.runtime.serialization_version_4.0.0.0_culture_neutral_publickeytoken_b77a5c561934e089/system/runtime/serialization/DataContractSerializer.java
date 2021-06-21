@@ -51,7 +51,7 @@ import system.runtime.serialization.IDataContractSurrogateImplementation;
 
 
 /**
- * The base .NET class managing System.Runtime.Serialization.DataContractSerializer, System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link XmlObjectSerializer}.
+ * The base .NET class managing System.Runtime.Serialization.DataContractSerializer, System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.DataContractSerializer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.DataContractSerializer</a>

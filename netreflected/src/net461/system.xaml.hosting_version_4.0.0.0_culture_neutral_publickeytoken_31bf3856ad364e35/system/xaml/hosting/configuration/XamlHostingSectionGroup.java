@@ -43,7 +43,7 @@ import system.xaml.hosting.configuration.XamlHostingSection;
 
 
 /**
- * The base .NET class managing System.Xaml.Hosting.Configuration.XamlHostingSectionGroup, System.Xaml.Hosting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link ConfigurationSectionGroup}.
+ * The base .NET class managing System.Xaml.Hosting.Configuration.XamlHostingSectionGroup, System.Xaml.Hosting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.Hosting.Configuration.XamlHostingSectionGroup" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.Hosting.Configuration.XamlHostingSectionGroup</a>

@@ -42,7 +42,7 @@ import system.windows.media.HitTestFilterBehavior;
 import system.windows.DependencyObject;
 import system.windows.media.IHitTestFilterCallback;
 /**
- * The base .NET class managing System.Windows.Media.HitTestFilterCallback, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link JCDelegate}. Implements {@link IJCEventEmit}, {@link IJCOBridgeReflected}
+ * The base .NET class managing System.Windows.Media.HitTestFilterCallback, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link JCDelegate}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.HitTestFilterCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.HitTestFilterCallback</a>

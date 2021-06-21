@@ -42,7 +42,7 @@ import system.net.IPEndPoint;
 import system.net.ServicePoint;
 import system.net.IBindIPEndPoint;
 /**
- * The base .NET class managing System.Net.BindIPEndPoint, System.Net.ServicePoint, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link JCDelegate}. Implements {@link IJCEventEmit}, {@link IJCOBridgeReflected}
+ * The base .NET class managing System.Net.BindIPEndPoint, System.Net.ServicePoint, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link JCDelegate}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.BindIPEndPoint" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.BindIPEndPoint</a>

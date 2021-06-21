@@ -42,7 +42,7 @@ import system.UriParser;
 
 
 /**
- * The base .NET class managing System.GopherStyleUriParser, System.Private.Uri, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link UriParser}.
+ * The base .NET class managing System.GopherStyleUriParser, System.Private.Uri, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.GopherStyleUriParser" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.GopherStyleUriParser</a>

@@ -48,7 +48,7 @@ import system.xml.XmlNodeType;
 
 
 /**
- * The base .NET class managing System.Xml.XmlAttribute, System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link XmlNode}.
+ * The base .NET class managing System.Xml.XmlAttribute, System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlAttribute</a>

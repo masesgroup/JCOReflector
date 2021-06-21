@@ -43,7 +43,7 @@ import system.workflow.componentmodel.PropertyMetadata;
 
 
 /**
- * The base .NET class managing System.Workflow.ComponentModel.DependencyProperty, System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * The base .NET class managing System.Workflow.ComponentModel.DependencyProperty, System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.DependencyProperty" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.DependencyProperty</a>

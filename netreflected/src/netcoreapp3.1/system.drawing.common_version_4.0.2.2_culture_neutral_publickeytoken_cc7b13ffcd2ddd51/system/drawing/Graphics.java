@@ -77,7 +77,7 @@ import system.drawing.text.TextRenderingHint;
 
 
 /**
- * The base .NET class managing System.Drawing.Graphics, System.Drawing.Common, Version=4.0.2.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link MarshalByRefObject}.
+ * The base .NET class managing System.Drawing.Graphics, System.Drawing.Common, Version=4.0.2.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Graphics" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Graphics</a>

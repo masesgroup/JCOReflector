@@ -51,7 +51,7 @@ import system.threading.tasks.ValueTask;
 
 
 /**
- * The base .NET class managing System.Net.Sockets.NetworkStream, System.Net.Sockets, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link Stream}.
+ * The base .NET class managing System.Net.Sockets.NetworkStream, System.Net.Sockets, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Sockets.NetworkStream" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Sockets.NetworkStream</a>

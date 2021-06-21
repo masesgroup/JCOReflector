@@ -42,7 +42,7 @@ import system.xml.schema.XmlSchemaFacet;
 
 
 /**
- * The base .NET class managing System.Xml.Schema.XmlSchemaMaxInclusiveFacet, System.Private.Xml, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link XmlSchemaFacet}.
+ * The base .NET class managing System.Xml.Schema.XmlSchemaMaxInclusiveFacet, System.Private.Xml, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.XmlSchemaMaxInclusiveFacet" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.XmlSchemaMaxInclusiveFacet</a>

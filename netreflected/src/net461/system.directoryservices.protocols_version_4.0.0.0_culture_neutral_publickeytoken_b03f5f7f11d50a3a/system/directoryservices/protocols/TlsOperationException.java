@@ -42,7 +42,7 @@ import system.directoryservices.protocols.DirectoryOperationException;
 import system.directoryservices.protocols.DirectoryResponse;
 
 /**
- * The base .NET class managing System.DirectoryServices.Protocols.TlsOperationException, System.DirectoryServices.Protocols, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link DirectoryOperationException}.
+ * The base .NET class managing System.DirectoryServices.Protocols.TlsOperationException, System.DirectoryServices.Protocols, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.Protocols.TlsOperationException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.Protocols.TlsOperationException</a>

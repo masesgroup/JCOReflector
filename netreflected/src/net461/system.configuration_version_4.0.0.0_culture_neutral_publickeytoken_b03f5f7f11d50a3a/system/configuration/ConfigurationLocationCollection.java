@@ -43,7 +43,7 @@ import system.configuration.ConfigurationLocation;
 
 
 /**
- * The base .NET class managing System.Configuration.ConfigurationLocationCollection, System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link ReadOnlyCollectionBase}.
+ * The base .NET class managing System.Configuration.ConfigurationLocationCollection, System.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.ConfigurationLocationCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.ConfigurationLocationCollection</a>

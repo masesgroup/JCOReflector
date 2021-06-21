@@ -42,7 +42,7 @@ import system.drawing.printing.PrinterResolutionKind;
 
 
 /**
- * The base .NET class managing System.Drawing.Printing.PrinterResolution, System.Drawing.Common, Version=4.0.2.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * The base .NET class managing System.Drawing.Printing.PrinterResolution, System.Drawing.Common, Version=4.0.2.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Printing.PrinterResolution" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Printing.PrinterResolution</a>

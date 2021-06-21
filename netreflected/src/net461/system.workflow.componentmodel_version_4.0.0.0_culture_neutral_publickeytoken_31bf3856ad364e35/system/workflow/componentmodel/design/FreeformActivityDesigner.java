@@ -52,7 +52,7 @@ import system.workflow.componentmodel.design.ConnectorEventHandler;
 
 
 /**
- * The base .NET class managing System.Workflow.ComponentModel.Design.FreeformActivityDesigner, System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link CompositeActivityDesigner}.
+ * The base .NET class managing System.Workflow.ComponentModel.Design.FreeformActivityDesigner, System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.FreeformActivityDesigner" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.FreeformActivityDesigner</a>

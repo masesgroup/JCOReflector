@@ -40,7 +40,7 @@ import org.mases.jcobridge.netreflection.*;
 // PACKAGE_IMPORT_SECTION
 
 /**
- * The base .NET class managing System.Activities.Presentation.Debug.BreakpointTypes, System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * The base .NET class managing System.Activities.Presentation.Debug.BreakpointTypes, System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.Debug.BreakpointTypes" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.Debug.BreakpointTypes</a>

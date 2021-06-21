@@ -44,7 +44,7 @@ import system.reflection.metadata.ecma335.LiteralsEncoder;
 
 
 /**
- * The base .NET class managing System.Reflection.Metadata.Ecma335.VectorEncoder, System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link ValueType}.
+ * The base .NET class managing System.Reflection.Metadata.Ecma335.VectorEncoder, System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.Ecma335.VectorEncoder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.Ecma335.VectorEncoder</a>

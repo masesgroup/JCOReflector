@@ -46,7 +46,7 @@ import system.security.cryptography.ECParameters;
 
 
 /**
- * The base .NET class managing System.Security.Cryptography.ECDiffieHellmanCngPublicKey, System.Security.Cryptography.Cng, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link ECDiffieHellmanPublicKey}.
+ * The base .NET class managing System.Security.Cryptography.ECDiffieHellmanCngPublicKey, System.Security.Cryptography.Cng, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.ECDiffieHellmanCngPublicKey" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.ECDiffieHellmanCngPublicKey</a>

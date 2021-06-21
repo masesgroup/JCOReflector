@@ -43,7 +43,7 @@ import system.windows.UIElement;
 
 
 /**
- * The base .NET class managing System.Windows.Controls.AdornedElementPlaceholder, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link FrameworkElement}.
+ * The base .NET class managing System.Windows.Controls.AdornedElementPlaceholder, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.AdornedElementPlaceholder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.AdornedElementPlaceholder</a>

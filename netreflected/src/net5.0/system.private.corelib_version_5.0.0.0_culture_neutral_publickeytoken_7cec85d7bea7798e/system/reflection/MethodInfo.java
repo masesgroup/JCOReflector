@@ -47,7 +47,7 @@ import system.reflection.ParameterInfo;
 
 
 /**
- * The base .NET class managing System.Reflection.MethodInfo, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link MethodBase}.
+ * The base .NET class managing System.Reflection.MethodInfo, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.MethodInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.MethodInfo</a>

@@ -43,7 +43,7 @@ import system.windows.ComponentResourceKey;
 
 
 /**
- * The base .NET class managing System.Windows.Controls.Primitives.CalendarItem, PresentationFramework, Version=5.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link Control}.
+ * The base .NET class managing System.Windows.Controls.Primitives.CalendarItem, PresentationFramework, Version=5.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.Primitives.CalendarItem" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.Primitives.CalendarItem</a>

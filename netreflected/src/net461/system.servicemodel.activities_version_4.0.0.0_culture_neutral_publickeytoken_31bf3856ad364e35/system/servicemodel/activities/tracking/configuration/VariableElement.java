@@ -42,7 +42,7 @@ import system.servicemodel.activities.tracking.configuration.TrackingConfigurati
 
 
 /**
- * The base .NET class managing System.ServiceModel.Activities.Tracking.Configuration.VariableElement, System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link TrackingConfigurationElement}.
+ * The base .NET class managing System.ServiceModel.Activities.Tracking.Configuration.VariableElement, System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activities.Tracking.Configuration.VariableElement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activities.Tracking.Configuration.VariableElement</a>

@@ -42,7 +42,7 @@ import system.componentmodel.design.IServiceContainer;
 import system.componentmodel.design.IServiceContainerImplementation;
 import system.componentmodel.design.IServiceCreatorCallback;
 /**
- * The base .NET class managing System.ComponentModel.Design.ServiceCreatorCallback, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCDelegate}. Implements {@link IJCEventEmit}, {@link IJCOBridgeReflected}
+ * The base .NET class managing System.ComponentModel.Design.ServiceCreatorCallback, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCDelegate}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ServiceCreatorCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ServiceCreatorCallback</a>

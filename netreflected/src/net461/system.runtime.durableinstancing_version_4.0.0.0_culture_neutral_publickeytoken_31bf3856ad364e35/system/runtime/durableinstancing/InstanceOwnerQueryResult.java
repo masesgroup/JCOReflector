@@ -43,7 +43,7 @@ import system.Guid;
 
 
 /**
- * The base .NET class managing System.Runtime.DurableInstancing.InstanceOwnerQueryResult, System.Runtime.DurableInstancing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link InstanceStoreQueryResult}.
+ * The base .NET class managing System.Runtime.DurableInstancing.InstanceOwnerQueryResult, System.Runtime.DurableInstancing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.DurableInstancing.InstanceOwnerQueryResult" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.DurableInstancing.InstanceOwnerQueryResult</a>

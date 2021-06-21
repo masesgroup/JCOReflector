@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import system.web.ui.IDataSourceViewOperationCallback;
 
 /**
- * The base .NET class managing System.Web.UI.DataSourceViewOperationCallback, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link JCDelegate}. Implements {@link IJCEventEmit}, {@link IJCOBridgeReflected}
+ * The base .NET class managing System.Web.UI.DataSourceViewOperationCallback, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link JCDelegate}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.DataSourceViewOperationCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.DataSourceViewOperationCallback</a>

@@ -43,7 +43,7 @@ import system.servicemodel.activities.tracking.configuration.ProfileElementColle
 
 
 /**
- * The base .NET class managing System.ServiceModel.Activities.Tracking.Configuration.TrackingSection, System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link ConfigurationSection}.
+ * The base .NET class managing System.ServiceModel.Activities.Tracking.Configuration.TrackingSection, System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activities.Tracking.Configuration.TrackingSection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activities.Tracking.Configuration.TrackingSection</a>

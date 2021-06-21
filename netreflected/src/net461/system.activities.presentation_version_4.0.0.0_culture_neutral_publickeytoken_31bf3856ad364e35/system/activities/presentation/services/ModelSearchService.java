@@ -42,7 +42,7 @@ import system.activities.presentation.model.TextImage;
 
 
 /**
- * The base .NET class managing System.Activities.Presentation.Services.ModelSearchService, System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * The base .NET class managing System.Activities.Presentation.Services.ModelSearchService, System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.Services.ModelSearchService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.Services.ModelSearchService</a>

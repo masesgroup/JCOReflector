@@ -44,7 +44,7 @@ import system.servicemodel.security.SecurityTokenAttachmentMode;
 
 
 /**
- * The base .NET class managing System.ServiceModel.Security.SupportingTokenSpecification, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link SecurityTokenSpecification}.
+ * The base .NET class managing System.ServiceModel.Security.SupportingTokenSpecification, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.SupportingTokenSpecification" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.SupportingTokenSpecification</a>

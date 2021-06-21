@@ -44,7 +44,7 @@ import system.servicemodel.peerresolvers.PeerReferralPolicy;
 
 
 /**
- * The base .NET class managing System.ServiceModel.Channels.PeerResolverBindingElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link BindingElement}.
+ * The base .NET class managing System.ServiceModel.Channels.PeerResolverBindingElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.PeerResolverBindingElement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.PeerResolverBindingElement</a>

@@ -40,7 +40,7 @@ import org.mases.jcobridge.netreflection.*;
 
 
 /**
- * The base .NET class managing System.Data.Common.IDbColumnSchemaGenerator, System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link IJCOBridgeReflected}.
+ * The base .NET class managing System.Data.Common.IDbColumnSchemaGenerator, System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.IDbColumnSchemaGenerator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.IDbColumnSchemaGenerator</a>

@@ -42,7 +42,7 @@ import system.runtime.interopservices.CriticalHandle;
 
 
 /**
- * The base .NET class managing Microsoft.Win32.SafeHandles.CriticalHandleZeroOrMinusOneIsInvalid, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link CriticalHandle}.
+ * The base .NET class managing Microsoft.Win32.SafeHandles.CriticalHandleZeroOrMinusOneIsInvalid, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.SafeHandles.CriticalHandleZeroOrMinusOneIsInvalid" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.SafeHandles.CriticalHandleZeroOrMinusOneIsInvalid</a>

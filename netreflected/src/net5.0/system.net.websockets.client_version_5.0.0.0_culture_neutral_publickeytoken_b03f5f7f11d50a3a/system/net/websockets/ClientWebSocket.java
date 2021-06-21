@@ -49,7 +49,7 @@ import system.net.websockets.WebSocketState;
 
 
 /**
- * The base .NET class managing System.Net.WebSockets.ClientWebSocket, System.Net.WebSockets.Client, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link WebSocket}.
+ * The base .NET class managing System.Net.WebSockets.ClientWebSocket, System.Net.WebSockets.Client, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.WebSockets.ClientWebSocket" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.WebSockets.ClientWebSocket</a>

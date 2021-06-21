@@ -45,7 +45,7 @@ import system.text.unicode.UnicodeRange;
 
 
 /**
- * The base .NET class managing System.Text.Encodings.Web.JavaScriptEncoder, System.Text.Encodings.Web, Version=5.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link TextEncoder}.
+ * The base .NET class managing System.Text.Encodings.Web.JavaScriptEncoder, System.Text.Encodings.Web, Version=5.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.Encodings.Web.JavaScriptEncoder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.Encodings.Web.JavaScriptEncoder</a>

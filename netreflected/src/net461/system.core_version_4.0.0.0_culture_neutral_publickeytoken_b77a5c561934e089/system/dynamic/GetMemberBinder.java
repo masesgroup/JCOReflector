@@ -43,7 +43,7 @@ import system.dynamic.DynamicMetaObject;
 
 
 /**
- * The base .NET class managing System.Dynamic.GetMemberBinder, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link DynamicMetaObjectBinder}.
+ * The base .NET class managing System.Dynamic.GetMemberBinder, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Dynamic.GetMemberBinder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Dynamic.GetMemberBinder</a>

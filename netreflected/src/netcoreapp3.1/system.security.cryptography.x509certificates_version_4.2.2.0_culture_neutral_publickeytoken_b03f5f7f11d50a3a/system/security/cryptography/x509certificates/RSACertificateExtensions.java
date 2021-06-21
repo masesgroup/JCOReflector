@@ -43,7 +43,7 @@ import system.security.cryptography.x509certificates.X509Certificate2;
 
 
 /**
- * The base .NET class managing System.Security.Cryptography.X509Certificates.RSACertificateExtensions, System.Security.Cryptography.X509Certificates, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * The base .NET class managing System.Security.Cryptography.X509Certificates.RSACertificateExtensions, System.Security.Cryptography.X509Certificates, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.X509Certificates.RSACertificateExtensions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.X509Certificates.RSACertificateExtensions</a>

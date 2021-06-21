@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import system.windows.SessionEndingCancelEventArgs;
 import system.windows.ISessionEndingCancelEventHandler;
 /**
- * The base .NET class managing System.Windows.SessionEndingCancelEventHandler, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * The base .NET class managing System.Windows.SessionEndingCancelEventHandler, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.SessionEndingCancelEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.SessionEndingCancelEventHandler</a>

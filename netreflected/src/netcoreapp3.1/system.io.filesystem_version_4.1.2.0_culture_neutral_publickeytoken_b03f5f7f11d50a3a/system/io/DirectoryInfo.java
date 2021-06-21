@@ -46,7 +46,7 @@ import system.io.FileInfo;
 
 
 /**
- * The base .NET class managing System.IO.DirectoryInfo, System.IO.FileSystem, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link FileSystemInfo}.
+ * The base .NET class managing System.IO.DirectoryInfo, System.IO.FileSystem, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.DirectoryInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.DirectoryInfo</a>

@@ -42,7 +42,7 @@ import system.Uri;
 
 
 /**
- * The base .NET class managing System.Net.ICredentials, System.Net.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link IJCOBridgeReflected}.
+ * The base .NET class managing System.Net.ICredentials, System.Net.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.ICredentials" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.ICredentials</a>

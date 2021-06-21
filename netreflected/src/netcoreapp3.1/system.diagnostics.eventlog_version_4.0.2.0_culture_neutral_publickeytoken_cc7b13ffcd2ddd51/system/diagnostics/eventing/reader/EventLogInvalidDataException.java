@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import system.diagnostics.eventing.reader.EventLogException;
 
 /**
- * The base .NET class managing System.Diagnostics.Eventing.Reader.EventLogInvalidDataException, System.Diagnostics.EventLog, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link EventLogException}.
+ * The base .NET class managing System.Diagnostics.Eventing.Reader.EventLogInvalidDataException, System.Diagnostics.EventLog, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Eventing.Reader.EventLogInvalidDataException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Eventing.Reader.EventLogInvalidDataException</a>

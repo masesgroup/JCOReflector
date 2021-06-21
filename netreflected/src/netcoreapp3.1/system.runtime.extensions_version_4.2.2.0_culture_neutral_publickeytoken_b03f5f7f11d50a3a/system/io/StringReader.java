@@ -42,7 +42,7 @@ import system.io.TextReader;
 
 
 /**
- * The base .NET class managing System.IO.StringReader, System.Runtime.Extensions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link TextReader}.
+ * The base .NET class managing System.IO.StringReader, System.Runtime.Extensions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.StringReader" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.StringReader</a>

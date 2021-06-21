@@ -43,7 +43,7 @@ import system.web.ui.webcontrols.MenuItemCollection;
 
 
 /**
- * The base .NET class managing System.Web.UI.WebControls.MenuItem, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * The base .NET class managing System.Web.UI.WebControls.MenuItem, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.MenuItem" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.MenuItem</a>

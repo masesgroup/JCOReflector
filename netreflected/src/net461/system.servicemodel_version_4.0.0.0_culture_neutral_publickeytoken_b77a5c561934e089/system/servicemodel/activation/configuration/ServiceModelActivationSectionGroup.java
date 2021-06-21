@@ -47,7 +47,7 @@ import system.servicemodel.activation.configuration.NetTcpSection;
 
 
 /**
- * The base .NET class managing System.ServiceModel.Activation.Configuration.ServiceModelActivationSectionGroup, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link ConfigurationSectionGroup}.
+ * The base .NET class managing System.ServiceModel.Activation.Configuration.ServiceModelActivationSectionGroup, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activation.Configuration.ServiceModelActivationSectionGroup" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activation.Configuration.ServiceModelActivationSectionGroup</a>

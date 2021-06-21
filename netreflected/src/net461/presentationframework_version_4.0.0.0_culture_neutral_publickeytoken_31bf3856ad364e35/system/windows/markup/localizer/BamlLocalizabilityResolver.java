@@ -43,7 +43,7 @@ import system.windows.markup.localizer.ElementLocalizability;
 
 
 /**
- * The base .NET class managing System.Windows.Markup.Localizer.BamlLocalizabilityResolver, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * The base .NET class managing System.Windows.Markup.Localizer.BamlLocalizabilityResolver, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Markup.Localizer.BamlLocalizabilityResolver" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Markup.Localizer.BamlLocalizabilityResolver</a>

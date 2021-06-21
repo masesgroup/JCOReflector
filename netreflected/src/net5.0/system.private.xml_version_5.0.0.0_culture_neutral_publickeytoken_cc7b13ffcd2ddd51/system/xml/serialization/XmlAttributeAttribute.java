@@ -43,7 +43,7 @@ import system.xml.schema.XmlSchemaForm;
 
 
 /**
- * The base .NET class managing System.Xml.Serialization.XmlAttributeAttribute, System.Private.Xml, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link Attribute}.
+ * The base .NET class managing System.Xml.Serialization.XmlAttributeAttribute, System.Private.Xml, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.XmlAttributeAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.XmlAttributeAttribute</a>

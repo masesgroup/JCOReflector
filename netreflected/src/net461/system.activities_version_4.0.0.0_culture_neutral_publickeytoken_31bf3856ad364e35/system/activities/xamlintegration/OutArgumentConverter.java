@@ -42,7 +42,7 @@ import system.activities.xamlintegration.TypeConverterBase;
 
 
 /**
- * The base .NET class managing System.Activities.XamlIntegration.OutArgumentConverter, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link TypeConverterBase}.
+ * The base .NET class managing System.Activities.XamlIntegration.OutArgumentConverter, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.XamlIntegration.OutArgumentConverter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.XamlIntegration.OutArgumentConverter</a>

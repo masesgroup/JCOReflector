@@ -45,7 +45,7 @@ import system.numerics.Vector2;
 
 
 /**
- * The base .NET class managing System.Numerics.Matrix3x2, System.Numerics.Vectors, Version=4.1.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link ValueType}.
+ * The base .NET class managing System.Numerics.Matrix3x2, System.Numerics.Vectors, Version=4.1.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Numerics.Matrix3x2" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Numerics.Matrix3x2</a>

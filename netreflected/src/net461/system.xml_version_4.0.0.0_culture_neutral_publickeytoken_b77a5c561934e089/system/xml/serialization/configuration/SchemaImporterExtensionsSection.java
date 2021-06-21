@@ -43,7 +43,7 @@ import system.xml.serialization.configuration.SchemaImporterExtensionElementColl
 
 
 /**
- * The base .NET class managing System.Xml.Serialization.Configuration.SchemaImporterExtensionsSection, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link ConfigurationSection}.
+ * The base .NET class managing System.Xml.Serialization.Configuration.SchemaImporterExtensionsSection, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.Configuration.SchemaImporterExtensionsSection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.Configuration.SchemaImporterExtensionsSection</a>

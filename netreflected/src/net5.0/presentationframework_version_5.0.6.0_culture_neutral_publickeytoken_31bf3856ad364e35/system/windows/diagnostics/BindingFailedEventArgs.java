@@ -44,7 +44,7 @@ import system.windows.data.BindingExpressionBase;
 
 
 /**
- * The base .NET class managing System.Windows.Diagnostics.BindingFailedEventArgs, PresentationFramework, Version=5.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link EventArgs}.
+ * The base .NET class managing System.Windows.Diagnostics.BindingFailedEventArgs, PresentationFramework, Version=5.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Diagnostics.BindingFailedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Diagnostics.BindingFailedEventArgs</a>

@@ -42,7 +42,7 @@ import system.EventArgs;
 
 
 /**
- * The base .NET class managing System.Net.WriteStreamClosedEventArgs, System.Net.WebClient, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link EventArgs}.
+ * The base .NET class managing System.Net.WriteStreamClosedEventArgs, System.Net.WebClient, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.WriteStreamClosedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.WriteStreamClosedEventArgs</a>

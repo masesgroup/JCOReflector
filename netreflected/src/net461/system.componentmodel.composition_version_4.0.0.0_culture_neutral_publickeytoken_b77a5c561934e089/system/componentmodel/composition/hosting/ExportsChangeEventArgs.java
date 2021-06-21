@@ -43,7 +43,7 @@ import system.componentmodel.composition.hosting.AtomicComposition;
 
 
 /**
- * The base .NET class managing System.ComponentModel.Composition.Hosting.ExportsChangeEventArgs, System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link EventArgs}.
+ * The base .NET class managing System.ComponentModel.Composition.Hosting.ExportsChangeEventArgs, System.ComponentModel.Composition, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Composition.Hosting.ExportsChangeEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Composition.Hosting.ExportsChangeEventArgs</a>

@@ -41,7 +41,7 @@ import system.xml.XmlNode;
 
 
 /**
- * The base .NET class managing System.Xml.IHasXmlNode, System.Private.Xml, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link IJCOBridgeReflected}.
+ * The base .NET class managing System.Xml.IHasXmlNode, System.Private.Xml, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.IHasXmlNode" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.IHasXmlNode</a>

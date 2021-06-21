@@ -45,7 +45,7 @@ import system.globalization.CultureInfo;
 
 
 /**
- * The base .NET class managing System.Windows.Forms.DataGridPreferredColumnWidthTypeConverter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link TypeConverter}.
+ * The base .NET class managing System.Windows.Forms.DataGridPreferredColumnWidthTypeConverter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridPreferredColumnWidthTypeConverter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridPreferredColumnWidthTypeConverter</a>

@@ -43,7 +43,7 @@ import system.linq.expressions.MemberMemberBinding;
 
 
 /**
- * The base .NET class managing System.Linq.Expressions.MemberMemberBinding, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link MemberBinding}.
+ * The base .NET class managing System.Linq.Expressions.MemberMemberBinding, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.MemberMemberBinding" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.MemberMemberBinding</a>

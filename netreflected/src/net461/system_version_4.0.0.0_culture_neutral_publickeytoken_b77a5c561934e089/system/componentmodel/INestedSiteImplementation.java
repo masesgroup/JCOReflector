@@ -49,7 +49,7 @@ import system.componentmodel.IContainerImplementation;
 
 
 /**
- * The base .NET class managing System.ComponentModel.INestedSite, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.ComponentModel.INestedSite, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.INestedSite" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.INestedSite</a>

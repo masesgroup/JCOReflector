@@ -43,7 +43,7 @@ import system.activities.Activity;
 
 
 /**
- * The base .NET class managing System.Activities.Statements.While, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NativeActivity}.
+ * The base .NET class managing System.Activities.Statements.While, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Statements.While" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Statements.While</a>

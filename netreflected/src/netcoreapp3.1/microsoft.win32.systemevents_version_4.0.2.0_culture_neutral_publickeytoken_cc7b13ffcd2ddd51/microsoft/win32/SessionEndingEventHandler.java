@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import microsoft.win32.SessionEndingEventArgs;
 import microsoft.win32.ISessionEndingEventHandler;
 /**
- * The base .NET class managing Microsoft.Win32.SessionEndingEventHandler, Microsoft.Win32.SystemEvents, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * The base .NET class managing Microsoft.Win32.SessionEndingEventHandler, Microsoft.Win32.SystemEvents, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.SessionEndingEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.SessionEndingEventHandler</a>

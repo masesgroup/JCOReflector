@@ -44,7 +44,7 @@ import system.Single;
 
 
 /**
- * The base .NET class managing System.Windows.Input.StylusPointPropertyInfo, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link StylusPointProperty}.
+ * The base .NET class managing System.Windows.Input.StylusPointPropertyInfo, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.StylusPointPropertyInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.StylusPointPropertyInfo</a>

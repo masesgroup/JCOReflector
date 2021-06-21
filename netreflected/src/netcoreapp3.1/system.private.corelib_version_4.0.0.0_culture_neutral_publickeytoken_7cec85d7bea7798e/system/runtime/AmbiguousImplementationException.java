@@ -40,7 +40,7 @@ import java.util.ArrayList;
 // Import section
 
 /**
- * The base .NET class managing System.Runtime.AmbiguousImplementationException, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetException}.
+ * The base .NET class managing System.Runtime.AmbiguousImplementationException, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.AmbiguousImplementationException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.AmbiguousImplementationException</a>

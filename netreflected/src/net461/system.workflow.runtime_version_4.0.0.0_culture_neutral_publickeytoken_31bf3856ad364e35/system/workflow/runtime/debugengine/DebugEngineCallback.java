@@ -40,7 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.workflow.runtime.debugengine.IDebugEngineCallback;
 /**
- * The base .NET class managing System.Workflow.Runtime.DebugEngine.DebugEngineCallback, System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * The base .NET class managing System.Workflow.Runtime.DebugEngine.DebugEngineCallback, System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.DebugEngine.DebugEngineCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.DebugEngine.DebugEngineCallback</a>

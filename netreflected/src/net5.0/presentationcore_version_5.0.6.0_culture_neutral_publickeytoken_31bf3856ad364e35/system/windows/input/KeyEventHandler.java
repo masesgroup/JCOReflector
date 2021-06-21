@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import system.windows.input.KeyEventArgs;
 import system.windows.input.IKeyEventHandler;
 /**
- * The base .NET class managing System.Windows.Input.KeyEventHandler, PresentationCore, Version=5.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * The base .NET class managing System.Windows.Input.KeyEventHandler, PresentationCore, Version=5.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.KeyEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.KeyEventHandler</a>

@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import system.windows.xps.serialization.XpsSerializationProgressChangedEventArgs;
 import system.windows.xps.serialization.IXpsSerializationProgressChangedEventHandler;
 /**
- * The base .NET class managing System.Windows.Xps.Serialization.XpsSerializationProgressChangedEventHandler, ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * The base .NET class managing System.Windows.Xps.Serialization.XpsSerializationProgressChangedEventHandler, ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Xps.Serialization.XpsSerializationProgressChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Xps.Serialization.XpsSerializationProgressChangedEventHandler</a>

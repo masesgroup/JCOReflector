@@ -42,7 +42,7 @@ import system.reflection.TypeInfo;
 
 
 /**
- * The base .NET class managing System.Reflection.IntrospectionExtensions, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * The base .NET class managing System.Reflection.IntrospectionExtensions, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.IntrospectionExtensions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.IntrospectionExtensions</a>

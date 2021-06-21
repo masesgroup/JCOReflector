@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import system.runtime.interopservices.ExternalException;
 
 /**
- * The base .NET class managing System.ServiceModel.MsmqException, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link ExternalException}.
+ * The base .NET class managing System.ServiceModel.MsmqException, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.MsmqException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.MsmqException</a>

@@ -43,7 +43,7 @@ import microsoft.jscript.JSToken;
 
 
 /**
- * The base .NET class managing Microsoft.JScript.JSScanner, Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * The base .NET class managing Microsoft.JScript.JSScanner, Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.JSScanner" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.JSScanner</a>

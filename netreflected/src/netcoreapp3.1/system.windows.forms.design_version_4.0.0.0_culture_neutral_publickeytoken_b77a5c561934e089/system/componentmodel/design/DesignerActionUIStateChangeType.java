@@ -40,7 +40,7 @@ import org.mases.jcobridge.netreflection.*;
 // PACKAGE_IMPORT_SECTION
 
 /**
- * The base .NET class managing System.ComponentModel.Design.DesignerActionUIStateChangeType, System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.ComponentModel.Design.DesignerActionUIStateChangeType, System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.DesignerActionUIStateChangeType" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.DesignerActionUIStateChangeType</a>

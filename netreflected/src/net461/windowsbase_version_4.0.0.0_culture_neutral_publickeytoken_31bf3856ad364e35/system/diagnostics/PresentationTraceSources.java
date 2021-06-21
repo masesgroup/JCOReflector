@@ -43,7 +43,7 @@ import system.diagnostics.TraceSource;
 
 
 /**
- * The base .NET class managing System.Diagnostics.PresentationTraceSources, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * The base .NET class managing System.Diagnostics.PresentationTraceSources, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.PresentationTraceSources" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.PresentationTraceSources</a>

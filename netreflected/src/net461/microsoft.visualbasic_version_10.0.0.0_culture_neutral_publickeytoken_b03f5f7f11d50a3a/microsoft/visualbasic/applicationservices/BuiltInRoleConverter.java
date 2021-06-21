@@ -45,7 +45,7 @@ import system.globalization.CultureInfo;
 
 
 /**
- * The base .NET class managing Microsoft.VisualBasic.ApplicationServices.BuiltInRoleConverter, Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link TypeConverter}.
+ * The base .NET class managing Microsoft.VisualBasic.ApplicationServices.BuiltInRoleConverter, Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.ApplicationServices.BuiltInRoleConverter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.ApplicationServices.BuiltInRoleConverter</a>

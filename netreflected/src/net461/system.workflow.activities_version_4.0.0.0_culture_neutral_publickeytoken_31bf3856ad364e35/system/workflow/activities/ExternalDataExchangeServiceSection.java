@@ -43,7 +43,7 @@ import system.workflow.runtime.configuration.WorkflowRuntimeServiceElementCollec
 
 
 /**
- * The base .NET class managing System.Workflow.Activities.ExternalDataExchangeServiceSection, System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link ConfigurationSection}.
+ * The base .NET class managing System.Workflow.Activities.ExternalDataExchangeServiceSection, System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.ExternalDataExchangeServiceSection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.ExternalDataExchangeServiceSection</a>

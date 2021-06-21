@@ -72,7 +72,7 @@ import system.windows.forms.InputLanguageChangingEventHandler;
 
 
 /**
- * The base .NET class managing System.Windows.Forms.Form, System.Windows.Forms, Version=5.0.7.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link ContainerControl}.
+ * The base .NET class managing System.Windows.Forms.Form, System.Windows.Forms, Version=5.0.7.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Form" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Form</a>

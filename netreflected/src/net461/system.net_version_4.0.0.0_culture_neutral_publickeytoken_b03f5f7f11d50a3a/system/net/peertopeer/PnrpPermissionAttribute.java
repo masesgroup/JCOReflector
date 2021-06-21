@@ -45,7 +45,7 @@ import system.security.IPermissionImplementation;
 
 
 /**
- * The base .NET class managing System.Net.PeerToPeer.PnrpPermissionAttribute, System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link CodeAccessSecurityAttribute}.
+ * The base .NET class managing System.Net.PeerToPeer.PnrpPermissionAttribute, System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.PeerToPeer.PnrpPermissionAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.PeerToPeer.PnrpPermissionAttribute</a>

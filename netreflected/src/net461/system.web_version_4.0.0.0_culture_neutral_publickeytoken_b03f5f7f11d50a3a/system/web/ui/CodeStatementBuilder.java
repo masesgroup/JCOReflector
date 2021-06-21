@@ -44,7 +44,7 @@ import system.codedom.CodeArgumentReferenceExpression;
 
 
 /**
- * The base .NET class managing System.Web.UI.CodeStatementBuilder, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link ControlBuilder}.
+ * The base .NET class managing System.Web.UI.CodeStatementBuilder, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.CodeStatementBuilder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.CodeStatementBuilder</a>

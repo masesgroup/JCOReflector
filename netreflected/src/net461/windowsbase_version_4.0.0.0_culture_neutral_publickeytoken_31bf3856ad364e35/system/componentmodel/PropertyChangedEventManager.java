@@ -46,7 +46,7 @@ import system.windows.IWeakEventListenerImplementation;
 
 
 /**
- * The base .NET class managing System.ComponentModel.PropertyChangedEventManager, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link WeakEventManager}.
+ * The base .NET class managing System.ComponentModel.PropertyChangedEventManager, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.PropertyChangedEventManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.PropertyChangedEventManager</a>

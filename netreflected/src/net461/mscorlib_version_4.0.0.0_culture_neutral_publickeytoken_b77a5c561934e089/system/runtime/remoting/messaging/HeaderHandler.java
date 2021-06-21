@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import system.runtime.remoting.messaging.Header;
 import system.runtime.remoting.messaging.IHeaderHandler;
 /**
- * The base .NET class managing System.Runtime.Remoting.Messaging.HeaderHandler, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCDelegate}. Implements {@link IJCEventEmit}, {@link IJCOBridgeReflected}
+ * The base .NET class managing System.Runtime.Remoting.Messaging.HeaderHandler, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCDelegate}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Messaging.HeaderHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Messaging.HeaderHandler</a>

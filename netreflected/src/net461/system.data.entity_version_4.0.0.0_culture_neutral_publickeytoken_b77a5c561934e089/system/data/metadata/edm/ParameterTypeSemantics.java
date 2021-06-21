@@ -40,7 +40,7 @@ import org.mases.jcobridge.netreflection.*;
 // PACKAGE_IMPORT_SECTION
 
 /**
- * The base .NET class managing System.Data.Metadata.Edm.ParameterTypeSemantics, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.Data.Metadata.Edm.ParameterTypeSemantics, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Metadata.Edm.ParameterTypeSemantics" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Metadata.Edm.ParameterTypeSemantics</a>

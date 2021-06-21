@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import system.xml.serialization.XmlElementEventArgs;
 import system.xml.serialization.IXmlElementEventHandler;
 /**
- * The base .NET class managing System.Xml.Serialization.XmlElementEventHandler, System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * The base .NET class managing System.Xml.Serialization.XmlElementEventHandler, System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.XmlElementEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.XmlElementEventHandler</a>

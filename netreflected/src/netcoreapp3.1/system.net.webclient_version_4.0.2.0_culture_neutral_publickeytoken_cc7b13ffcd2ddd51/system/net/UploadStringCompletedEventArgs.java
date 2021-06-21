@@ -42,7 +42,7 @@ import system.componentmodel.AsyncCompletedEventArgs;
 
 
 /**
- * The base .NET class managing System.Net.UploadStringCompletedEventArgs, System.Net.WebClient, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link AsyncCompletedEventArgs}.
+ * The base .NET class managing System.Net.UploadStringCompletedEventArgs, System.Net.WebClient, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.UploadStringCompletedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.UploadStringCompletedEventArgs</a>

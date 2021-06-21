@@ -47,7 +47,7 @@ import system.globalization.CultureInfo;
 
 
 /**
- * The base .NET class managing System.Drawing.ImageConverter, System.Windows.Extensions, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link TypeConverter}.
+ * The base .NET class managing System.Drawing.ImageConverter, System.Windows.Extensions, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.ImageConverter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.ImageConverter</a>

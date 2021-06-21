@@ -42,7 +42,7 @@ import system.activities.debugger.symbol.WorkflowSymbol;
 
 
 /**
- * The base .NET class managing System.Activities.Debugger.Symbol.WorkflowSymbol, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * The base .NET class managing System.Activities.Debugger.Symbol.WorkflowSymbol, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Debugger.Symbol.WorkflowSymbol" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Debugger.Symbol.WorkflowSymbol</a>

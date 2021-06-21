@@ -42,7 +42,7 @@ import system.windows.DataTemplate;
 
 
 /**
- * The base .NET class managing System.Windows.Controls.ItemContainerTemplate, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link DataTemplate}.
+ * The base .NET class managing System.Windows.Controls.ItemContainerTemplate, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.ItemContainerTemplate" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.ItemContainerTemplate</a>

@@ -46,7 +46,7 @@ import system.Array;
 
 
 /**
- * The base .NET class managing System.Collections.Specialized.IOrderedDictionary, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link IEnumerableImplementation}.
+ * The base .NET class managing System.Collections.Specialized.IOrderedDictionary, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Specialized.IOrderedDictionary" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Specialized.IOrderedDictionary</a>

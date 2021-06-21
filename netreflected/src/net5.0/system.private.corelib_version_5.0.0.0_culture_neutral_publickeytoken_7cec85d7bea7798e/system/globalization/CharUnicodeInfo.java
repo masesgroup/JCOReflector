@@ -42,7 +42,7 @@ import system.globalization.UnicodeCategory;
 
 
 /**
- * The base .NET class managing System.Globalization.CharUnicodeInfo, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * The base .NET class managing System.Globalization.CharUnicodeInfo, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Globalization.CharUnicodeInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Globalization.CharUnicodeInfo</a>

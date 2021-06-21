@@ -44,7 +44,7 @@ import system.xml.xpath.XPathNodeType;
 
 
 /**
- * The base .NET class managing System.Xml.Xsl.Runtime.NodeKindContentIterator, System.Data.SqlXml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link ValueType}.
+ * The base .NET class managing System.Xml.Xsl.Runtime.NodeKindContentIterator, System.Data.SqlXml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.Runtime.NodeKindContentIterator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.Runtime.NodeKindContentIterator</a>

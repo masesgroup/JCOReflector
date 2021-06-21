@@ -43,7 +43,7 @@ import system.security.SecurityCriticalScope;
 
 
 /**
- * The base .NET class managing System.Security.SecurityCriticalAttribute, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link Attribute}.
+ * The base .NET class managing System.Security.SecurityCriticalAttribute, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.SecurityCriticalAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.SecurityCriticalAttribute</a>

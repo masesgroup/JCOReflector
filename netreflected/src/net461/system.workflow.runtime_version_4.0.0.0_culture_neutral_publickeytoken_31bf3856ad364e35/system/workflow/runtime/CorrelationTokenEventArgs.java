@@ -43,7 +43,7 @@ import system.workflow.runtime.CorrelationToken;
 
 
 /**
- * The base .NET class managing System.Workflow.Runtime.CorrelationTokenEventArgs, System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link EventArgs}.
+ * The base .NET class managing System.Workflow.Runtime.CorrelationTokenEventArgs, System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.CorrelationTokenEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.CorrelationTokenEventArgs</a>

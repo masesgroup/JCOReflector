@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import system.reflection.ITypeFilter;
 
 /**
- * The base .NET class managing System.Reflection.TypeFilter, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link JCDelegate}. Implements {@link IJCEventEmit}, {@link IJCOBridgeReflected}
+ * The base .NET class managing System.Reflection.TypeFilter, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link JCDelegate}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.TypeFilter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.TypeFilter</a>

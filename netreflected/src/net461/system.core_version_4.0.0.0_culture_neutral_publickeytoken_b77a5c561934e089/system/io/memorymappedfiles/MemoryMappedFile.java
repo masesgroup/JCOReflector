@@ -52,7 +52,7 @@ import microsoft.win32.safehandles.SafeMemoryMappedFileHandle;
 
 
 /**
- * The base .NET class managing System.IO.MemoryMappedFiles.MemoryMappedFile, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.IO.MemoryMappedFiles.MemoryMappedFile, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.MemoryMappedFiles.MemoryMappedFile" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.MemoryMappedFiles.MemoryMappedFile</a>

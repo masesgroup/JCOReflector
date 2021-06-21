@@ -45,7 +45,7 @@ import system.IServiceProviderImplementation;
 
 
 /**
- * The base .NET class managing System.Workflow.Activities.CodeCondition, System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link ActivityCondition}.
+ * The base .NET class managing System.Workflow.Activities.CodeCondition, System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.CodeCondition" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.CodeCondition</a>

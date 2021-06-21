@@ -44,7 +44,7 @@ import system.xml.linq.XNamespace;
 
 
 /**
- * The base .NET class managing System.ServiceModel.Channels.CorrelationKey, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link InstanceKey}.
+ * The base .NET class managing System.ServiceModel.Channels.CorrelationKey, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.CorrelationKey" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.CorrelationKey</a>

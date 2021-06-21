@@ -43,7 +43,7 @@ import system.transactions.Transaction;
 
 
 /**
- * The base .NET class managing System.Transactions.TransactionEventArgs, System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link EventArgs}.
+ * The base .NET class managing System.Transactions.TransactionEventArgs, System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.TransactionEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.TransactionEventArgs</a>

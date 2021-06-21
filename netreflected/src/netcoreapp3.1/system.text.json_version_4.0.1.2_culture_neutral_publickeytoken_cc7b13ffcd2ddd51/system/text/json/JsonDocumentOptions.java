@@ -43,7 +43,7 @@ import system.text.json.JsonCommentHandling;
 
 
 /**
- * The base .NET class managing System.Text.Json.JsonDocumentOptions, System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link ValueType}.
+ * The base .NET class managing System.Text.Json.JsonDocumentOptions, System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.JsonDocumentOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.JsonDocumentOptions</a>

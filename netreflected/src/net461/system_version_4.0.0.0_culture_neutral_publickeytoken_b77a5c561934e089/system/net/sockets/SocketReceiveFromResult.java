@@ -42,7 +42,7 @@ import system.ValueType;
 
 
 /**
- * The base .NET class managing System.Net.Sockets.SocketReceiveFromResult, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link ValueType}.
+ * The base .NET class managing System.Net.Sockets.SocketReceiveFromResult, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Sockets.SocketReceiveFromResult" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Sockets.SocketReceiveFromResult</a>

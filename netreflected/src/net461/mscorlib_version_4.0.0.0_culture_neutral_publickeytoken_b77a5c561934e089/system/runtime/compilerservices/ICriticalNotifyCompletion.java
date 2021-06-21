@@ -43,7 +43,7 @@ import system.Action;
 
 
 /**
- * The base .NET class managing System.Runtime.CompilerServices.ICriticalNotifyCompletion, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link IJCOBridgeReflected, INotifyCompletion}.
+ * The base .NET class managing System.Runtime.CompilerServices.ICriticalNotifyCompletion, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.CompilerServices.ICriticalNotifyCompletion" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.CompilerServices.ICriticalNotifyCompletion</a>

@@ -43,7 +43,7 @@ import system.windows.automation.provider.ProviderOptions;
 
 
 /**
- * The base .NET class managing System.Windows.Automation.Provider.IRawElementProviderAdviseEvents, UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link IJCOBridgeReflected, IRawElementProviderSimple}.
+ * The base .NET class managing System.Windows.Automation.Provider.IRawElementProviderAdviseEvents, UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Provider.IRawElementProviderAdviseEvents" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Provider.IRawElementProviderAdviseEvents</a>

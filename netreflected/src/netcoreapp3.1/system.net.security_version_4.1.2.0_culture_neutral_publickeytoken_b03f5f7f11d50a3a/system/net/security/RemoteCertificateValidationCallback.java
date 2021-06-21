@@ -44,7 +44,7 @@ import system.net.security.SslPolicyErrors;
 import system.net.security.IRemoteCertificateValidationCallback;
 
 /**
- * The base .NET class managing System.Net.Security.RemoteCertificateValidationCallback, System.Net.Security, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link JCDelegate}. Implements {@link IJCEventEmit}, {@link IJCOBridgeReflected}
+ * The base .NET class managing System.Net.Security.RemoteCertificateValidationCallback, System.Net.Security, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link JCDelegate}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Security.RemoteCertificateValidationCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Security.RemoteCertificateValidationCallback</a>

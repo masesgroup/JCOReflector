@@ -44,7 +44,7 @@ import system.diagnostics.EventLogPermissionEntryCollection;
 
 
 /**
- * The base .NET class managing System.Diagnostics.EventLogPermissionEntryCollection, System.Security.Permissions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link CollectionBase}.
+ * The base .NET class managing System.Diagnostics.EventLogPermissionEntryCollection, System.Security.Permissions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.EventLogPermissionEntryCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.EventLogPermissionEntryCollection</a>

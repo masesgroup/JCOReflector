@@ -42,7 +42,7 @@ import system.web.ui.htmlcontrols.HtmlInputText;
 
 
 /**
- * The base .NET class managing System.Web.UI.HtmlControls.HtmlInputPassword, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link HtmlInputText}.
+ * The base .NET class managing System.Web.UI.HtmlControls.HtmlInputPassword, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.HtmlControls.HtmlInputPassword" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.HtmlControls.HtmlInputPassword</a>

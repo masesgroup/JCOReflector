@@ -43,7 +43,7 @@ import system.configuration.SectionInformation;
 
 
 /**
- * The base .NET class managing System.Configuration.ConfigurationSection, System.Configuration.ConfigurationManager, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link ConfigurationElement}.
+ * The base .NET class managing System.Configuration.ConfigurationSection, System.Configuration.ConfigurationManager, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.ConfigurationSection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.ConfigurationSection</a>

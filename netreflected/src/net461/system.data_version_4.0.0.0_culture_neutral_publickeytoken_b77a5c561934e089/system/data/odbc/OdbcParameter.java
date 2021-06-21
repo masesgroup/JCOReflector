@@ -46,7 +46,7 @@ import system.data.DbType;
 
 
 /**
- * The base .NET class managing System.Data.Odbc.OdbcParameter, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link DbParameter}.
+ * The base .NET class managing System.Data.Odbc.OdbcParameter, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Odbc.OdbcParameter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Odbc.OdbcParameter</a>

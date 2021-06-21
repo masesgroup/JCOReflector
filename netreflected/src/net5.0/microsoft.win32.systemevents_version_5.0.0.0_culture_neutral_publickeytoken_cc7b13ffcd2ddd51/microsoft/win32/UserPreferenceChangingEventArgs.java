@@ -43,7 +43,7 @@ import microsoft.win32.UserPreferenceCategory;
 
 
 /**
- * The base .NET class managing Microsoft.Win32.UserPreferenceChangingEventArgs, Microsoft.Win32.SystemEvents, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link EventArgs}.
+ * The base .NET class managing Microsoft.Win32.UserPreferenceChangingEventArgs, Microsoft.Win32.SystemEvents, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.UserPreferenceChangingEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.UserPreferenceChangingEventArgs</a>

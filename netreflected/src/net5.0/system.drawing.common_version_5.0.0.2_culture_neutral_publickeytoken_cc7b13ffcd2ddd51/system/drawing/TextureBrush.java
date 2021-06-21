@@ -50,7 +50,7 @@ import system.Single;
 
 
 /**
- * The base .NET class managing System.Drawing.TextureBrush, System.Drawing.Common, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link Brush}.
+ * The base .NET class managing System.Drawing.TextureBrush, System.Drawing.Common, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.TextureBrush" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.TextureBrush</a>

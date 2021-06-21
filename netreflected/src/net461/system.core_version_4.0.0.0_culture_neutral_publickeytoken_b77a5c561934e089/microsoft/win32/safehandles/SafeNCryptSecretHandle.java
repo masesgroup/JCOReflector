@@ -42,7 +42,7 @@ import microsoft.win32.safehandles.SafeNCryptHandle;
 
 
 /**
- * The base .NET class managing Microsoft.Win32.SafeHandles.SafeNCryptSecretHandle, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link SafeNCryptHandle}.
+ * The base .NET class managing Microsoft.Win32.SafeHandles.SafeNCryptSecretHandle, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.SafeHandles.SafeNCryptSecretHandle" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.SafeHandles.SafeNCryptSecretHandle</a>

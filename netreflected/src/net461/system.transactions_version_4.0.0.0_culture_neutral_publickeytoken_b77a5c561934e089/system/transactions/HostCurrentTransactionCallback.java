@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import system.transactions.Transaction;
 import system.transactions.IHostCurrentTransactionCallback;
 /**
- * The base .NET class managing System.Transactions.HostCurrentTransactionCallback, System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCDelegate}. Implements {@link IJCEventEmit}, {@link IJCOBridgeReflected}
+ * The base .NET class managing System.Transactions.HostCurrentTransactionCallback, System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCDelegate}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.HostCurrentTransactionCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.HostCurrentTransactionCallback</a>

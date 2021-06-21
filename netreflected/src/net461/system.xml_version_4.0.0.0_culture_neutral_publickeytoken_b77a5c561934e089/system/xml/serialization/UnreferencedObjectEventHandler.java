@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import system.xml.serialization.UnreferencedObjectEventArgs;
 import system.xml.serialization.IUnreferencedObjectEventHandler;
 /**
- * The base .NET class managing System.Xml.Serialization.UnreferencedObjectEventHandler, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * The base .NET class managing System.Xml.Serialization.UnreferencedObjectEventHandler, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.UnreferencedObjectEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.UnreferencedObjectEventHandler</a>

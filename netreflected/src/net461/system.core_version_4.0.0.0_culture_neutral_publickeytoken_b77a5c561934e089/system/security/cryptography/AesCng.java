@@ -46,7 +46,7 @@ import system.security.cryptography.ICryptoTransformImplementation;
 
 
 /**
- * The base .NET class managing System.Security.Cryptography.AesCng, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link Aes}.
+ * The base .NET class managing System.Security.Cryptography.AesCng, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.AesCng" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.AesCng</a>

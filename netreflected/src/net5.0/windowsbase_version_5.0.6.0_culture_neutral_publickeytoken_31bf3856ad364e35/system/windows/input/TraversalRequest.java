@@ -42,7 +42,7 @@ import system.windows.input.FocusNavigationDirection;
 
 
 /**
- * The base .NET class managing System.Windows.Input.TraversalRequest, WindowsBase, Version=5.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * The base .NET class managing System.Windows.Input.TraversalRequest, WindowsBase, Version=5.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.TraversalRequest" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.TraversalRequest</a>

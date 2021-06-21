@@ -44,7 +44,7 @@ import system.xml.schema.XmlSchemaObjectEnumerator;
 
 
 /**
- * The base .NET class managing System.Xml.Schema.XmlSchemaObjectCollection, System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link CollectionBase}.
+ * The base .NET class managing System.Xml.Schema.XmlSchemaObjectCollection, System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.XmlSchemaObjectCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.XmlSchemaObjectCollection</a>

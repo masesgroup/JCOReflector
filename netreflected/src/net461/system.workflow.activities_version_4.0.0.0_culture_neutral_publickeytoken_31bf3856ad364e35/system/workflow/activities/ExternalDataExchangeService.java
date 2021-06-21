@@ -44,7 +44,7 @@ import system.workflow.activities.ExternalDataExchangeServiceSection;
 
 
 /**
- * The base .NET class managing System.Workflow.Activities.ExternalDataExchangeService, System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link WorkflowRuntimeService}.
+ * The base .NET class managing System.Workflow.Activities.ExternalDataExchangeService, System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.ExternalDataExchangeService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.ExternalDataExchangeService</a>

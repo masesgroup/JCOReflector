@@ -45,7 +45,7 @@ import system.collections.ICollectionImplementation;
 
 
 /**
- * The base .NET class managing System.Diagnostics.InstanceDataCollectionCollection, System.Diagnostics.PerformanceCounter, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link DictionaryBase}.
+ * The base .NET class managing System.Diagnostics.InstanceDataCollectionCollection, System.Diagnostics.PerformanceCounter, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.InstanceDataCollectionCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.InstanceDataCollectionCollection</a>

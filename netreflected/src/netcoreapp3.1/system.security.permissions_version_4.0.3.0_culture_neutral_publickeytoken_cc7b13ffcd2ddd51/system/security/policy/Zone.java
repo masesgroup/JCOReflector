@@ -47,7 +47,7 @@ import system.security.policy.Zone;
 
 
 /**
- * The base .NET class managing System.Security.Policy.Zone, System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link EvidenceBase}.
+ * The base .NET class managing System.Security.Policy.Zone, System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.Zone" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.Zone</a>

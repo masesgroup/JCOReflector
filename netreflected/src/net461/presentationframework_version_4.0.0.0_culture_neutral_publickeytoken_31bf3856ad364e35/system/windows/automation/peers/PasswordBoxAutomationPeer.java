@@ -44,7 +44,7 @@ import system.windows.automation.peers.PatternInterface;
 
 
 /**
- * The base .NET class managing System.Windows.Automation.Peers.PasswordBoxAutomationPeer, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link TextAutomationPeer}.
+ * The base .NET class managing System.Windows.Automation.Peers.PasswordBoxAutomationPeer, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Peers.PasswordBoxAutomationPeer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Peers.PasswordBoxAutomationPeer</a>

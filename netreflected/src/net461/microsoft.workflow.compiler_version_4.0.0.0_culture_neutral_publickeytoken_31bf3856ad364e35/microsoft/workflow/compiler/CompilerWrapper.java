@@ -43,7 +43,7 @@ import system.workflow.componentmodel.compiler.WorkflowCompilerParameters;
 
 
 /**
- * The base .NET class managing Microsoft.Workflow.Compiler.CompilerWrapper, Microsoft.Workflow.Compiler, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * The base .NET class managing Microsoft.Workflow.Compiler.CompilerWrapper, Microsoft.Workflow.Compiler, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Workflow.Compiler.CompilerWrapper" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Workflow.Compiler.CompilerWrapper</a>

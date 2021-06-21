@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import system.componentmodel.design.ComponentChangedEventArgs;
 import system.componentmodel.design.IComponentChangedEventHandler;
 /**
- * The base .NET class managing System.ComponentModel.Design.ComponentChangedEventHandler, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * The base .NET class managing System.ComponentModel.Design.ComponentChangedEventHandler, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ComponentChangedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ComponentChangedEventHandler</a>

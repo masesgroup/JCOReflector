@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import system.identitymodel.RequestException;
 
 /**
- * The base .NET class managing System.IdentityModel.BadRequestException, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link RequestException}.
+ * The base .NET class managing System.IdentityModel.BadRequestException, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.BadRequestException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.BadRequestException</a>

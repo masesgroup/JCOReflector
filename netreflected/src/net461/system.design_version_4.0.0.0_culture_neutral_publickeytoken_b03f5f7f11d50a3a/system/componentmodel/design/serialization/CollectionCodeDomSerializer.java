@@ -44,7 +44,7 @@ import system.componentmodel.design.serialization.IDesignerSerializationManagerI
 
 
 /**
- * The base .NET class managing System.ComponentModel.Design.Serialization.CollectionCodeDomSerializer, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link CodeDomSerializer}.
+ * The base .NET class managing System.ComponentModel.Design.Serialization.CollectionCodeDomSerializer, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.CollectionCodeDomSerializer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.CollectionCodeDomSerializer</a>

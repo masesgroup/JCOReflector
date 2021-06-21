@@ -43,7 +43,7 @@ import system.data.metadata.edm.EdmFunction;
 
 
 /**
- * The base .NET class managing System.Data.Common.CommandTrees.DbFunctionAggregate, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link DbAggregate}.
+ * The base .NET class managing System.Data.Common.CommandTrees.DbFunctionAggregate, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.CommandTrees.DbFunctionAggregate" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.CommandTrees.DbFunctionAggregate</a>

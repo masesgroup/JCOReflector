@@ -44,7 +44,7 @@ import system.web.services.protocols.SoapServerMethod;
 
 
 /**
- * The base .NET class managing System.Web.Services.Protocols.SoapServerType, System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link ServerType}.
+ * The base .NET class managing System.Web.Services.Protocols.SoapServerType, System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Services.Protocols.SoapServerType" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Services.Protocols.SoapServerType</a>

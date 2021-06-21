@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import system.io.IOException;
 
 /**
- * The base .NET class managing System.IO.EndOfStreamException, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link IOException}.
+ * The base .NET class managing System.IO.EndOfStreamException, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.EndOfStreamException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.EndOfStreamException</a>

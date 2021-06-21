@@ -56,7 +56,7 @@ import system.activities.hosting.WorkflowInstanceExtensionManager;
 
 
 /**
- * The base .NET class managing System.Activities.WorkflowApplication, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link WorkflowInstance}.
+ * The base .NET class managing System.Activities.WorkflowApplication, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.WorkflowApplication" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.WorkflowApplication</a>

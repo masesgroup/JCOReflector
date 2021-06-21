@@ -44,7 +44,7 @@ import system.Array;
 
 
 /**
- * The base .NET class managing System.Security.Permissions.KeyContainerPermissionAccessEntryCollection, System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * The base .NET class managing System.Security.Permissions.KeyContainerPermissionAccessEntryCollection, System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.KeyContainerPermissionAccessEntryCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.KeyContainerPermissionAccessEntryCollection</a>

@@ -41,7 +41,7 @@ import system.threading.tasks.sources.ValueTaskSourceStatus;
 
 
 /**
- * The base .NET class managing System.Threading.Tasks.Sources.IValueTaskSource, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link IJCOBridgeReflected}.
+ * The base .NET class managing System.Threading.Tasks.Sources.IValueTaskSource, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Sources.IValueTaskSource" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Sources.IValueTaskSource</a>

@@ -43,7 +43,7 @@ import system.xml.linq.XObjectChange;
 
 
 /**
- * The base .NET class managing System.Xml.Linq.XObjectChangeEventArgs, System.Private.Xml.Linq, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link EventArgs}.
+ * The base .NET class managing System.Xml.Linq.XObjectChangeEventArgs, System.Private.Xml.Linq, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Linq.XObjectChangeEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Linq.XObjectChangeEventArgs</a>

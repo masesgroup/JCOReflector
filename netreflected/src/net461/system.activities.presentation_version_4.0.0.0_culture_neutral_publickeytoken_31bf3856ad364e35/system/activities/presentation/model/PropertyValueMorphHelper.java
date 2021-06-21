@@ -42,7 +42,7 @@ import system.activities.presentation.model.ModelItem;
 import system.activities.presentation.model.ModelProperty;
 import system.activities.presentation.model.IPropertyValueMorphHelper;
 /**
- * The base .NET class managing System.Activities.Presentation.Model.PropertyValueMorphHelper, System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link JCDelegate}. Implements {@link IJCEventEmit}, {@link IJCOBridgeReflected}
+ * The base .NET class managing System.Activities.Presentation.Model.PropertyValueMorphHelper, System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link JCDelegate}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.Model.PropertyValueMorphHelper" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.Model.PropertyValueMorphHelper</a>

@@ -45,7 +45,7 @@ import system.linq.IQueryProviderImplementation;
 
 
 /**
- * The base .NET class managing System.Linq.IOrderedQueryable, System.Linq.Expressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link IJCOBridgeReflected, IQueryable, IEnumerable}.
+ * The base .NET class managing System.Linq.IOrderedQueryable, System.Linq.Expressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Linq.IOrderedQueryable" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Linq.IOrderedQueryable</a>

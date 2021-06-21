@@ -42,7 +42,7 @@ import system.printing.PrintSystemObject;
 
 
 /**
- * The base .NET class managing System.Printing.PrintFilter, System.Printing, Version=5.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link PrintSystemObject}.
+ * The base .NET class managing System.Printing.PrintFilter, System.Printing, Version=5.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Printing.PrintFilter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Printing.PrintFilter</a>

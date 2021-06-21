@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import system.xml.xsl.XsltMessageEncounteredEventArgs;
 import system.xml.xsl.IXsltMessageEncounteredEventHandler;
 /**
- * The base .NET class managing System.Xml.Xsl.XsltMessageEncounteredEventHandler, System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * The base .NET class managing System.Xml.Xsl.XsltMessageEncounteredEventHandler, System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.XsltMessageEncounteredEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.XsltMessageEncounteredEventHandler</a>

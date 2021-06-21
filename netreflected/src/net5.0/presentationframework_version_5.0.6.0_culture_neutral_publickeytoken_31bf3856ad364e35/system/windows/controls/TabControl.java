@@ -45,7 +45,7 @@ import system.windows.DataTemplate;
 
 
 /**
- * The base .NET class managing System.Windows.Controls.TabControl, PresentationFramework, Version=5.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link Selector}.
+ * The base .NET class managing System.Windows.Controls.TabControl, PresentationFramework, Version=5.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.TabControl" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.TabControl</a>

@@ -43,7 +43,7 @@ import system.activities.tracking.CustomTrackingRecord;
 
 
 /**
- * The base .NET class managing System.Activities.CodeActivityContext, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link ActivityContext}.
+ * The base .NET class managing System.Activities.CodeActivityContext, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.CodeActivityContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.CodeActivityContext</a>

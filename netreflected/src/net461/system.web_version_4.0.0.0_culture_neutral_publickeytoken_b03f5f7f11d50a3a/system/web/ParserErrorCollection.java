@@ -44,7 +44,7 @@ import system.web.ParserErrorCollection;
 
 
 /**
- * The base .NET class managing System.Web.ParserErrorCollection, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link CollectionBase}.
+ * The base .NET class managing System.Web.ParserErrorCollection, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.ParserErrorCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.ParserErrorCollection</a>

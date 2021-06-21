@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import system.windows.controls.ToolTipEventArgs;
 import system.windows.controls.IToolTipEventHandler;
 /**
- * The base .NET class managing System.Windows.Controls.ToolTipEventHandler, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * The base .NET class managing System.Windows.Controls.ToolTipEventHandler, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.ToolTipEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.ToolTipEventHandler</a>

@@ -53,7 +53,7 @@ import system.windows.navigation.NavigationStoppedEventHandler;
 
 
 /**
- * The base .NET class managing System.Windows.Navigation.NavigationService, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * The base .NET class managing System.Windows.Navigation.NavigationService, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Navigation.NavigationService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Navigation.NavigationService</a>

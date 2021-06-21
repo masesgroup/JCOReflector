@@ -42,7 +42,7 @@ import microsoft.build.framework.xamltypes.BaseProperty;
 
 
 /**
- * The base .NET class managing Microsoft.Build.Framework.XamlTypes.StringListProperty, Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link BaseProperty}.
+ * The base .NET class managing Microsoft.Build.Framework.XamlTypes.StringListProperty, Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.XamlTypes.StringListProperty" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.XamlTypes.StringListProperty</a>

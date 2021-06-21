@@ -40,7 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.xml.schema.IXmlValueGetter;
 /**
- * The base .NET class managing System.Xml.Schema.XmlValueGetter, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCDelegate}. Implements {@link IJCEventEmit}, {@link IJCOBridgeReflected}
+ * The base .NET class managing System.Xml.Schema.XmlValueGetter, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCDelegate}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.XmlValueGetter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.XmlValueGetter</a>

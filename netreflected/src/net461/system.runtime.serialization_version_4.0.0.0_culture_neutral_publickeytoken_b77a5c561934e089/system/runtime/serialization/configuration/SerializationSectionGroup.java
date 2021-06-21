@@ -46,7 +46,7 @@ import system.runtime.serialization.configuration.NetDataContractSerializerSecti
 
 
 /**
- * The base .NET class managing System.Runtime.Serialization.Configuration.SerializationSectionGroup, System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link ConfigurationSectionGroup}.
+ * The base .NET class managing System.Runtime.Serialization.Configuration.SerializationSectionGroup, System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.Configuration.SerializationSectionGroup" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.Configuration.SerializationSectionGroup</a>

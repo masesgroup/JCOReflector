@@ -49,7 +49,7 @@ import system.EventHandler;
 
 
 /**
- * The base .NET class managing System.Windows.Forms.IBindableComponent, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link IJCOBridgeReflected, IComponent, IDisposable}.
+ * The base .NET class managing System.Windows.Forms.IBindableComponent, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.IBindableComponent" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.IBindableComponent</a>

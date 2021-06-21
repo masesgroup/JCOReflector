@@ -49,7 +49,7 @@ import system.windows.xps.packaging.PackagingProgressEventArgs;
 
 
 /**
- * The base .NET class managing System.Printing.PrintQueueStream, System.Printing, Version=5.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link Stream}.
+ * The base .NET class managing System.Printing.PrintQueueStream, System.Printing, Version=5.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Printing.PrintQueueStream" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Printing.PrintQueueStream</a>

@@ -47,7 +47,7 @@ import system.AsyncCallback;
 
 
 /**
- * The base .NET class managing System.Transactions.CommittableTransaction, System.Transactions.Local, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link Transaction}.
+ * The base .NET class managing System.Transactions.CommittableTransaction, System.Transactions.Local, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.CommittableTransaction" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.CommittableTransaction</a>

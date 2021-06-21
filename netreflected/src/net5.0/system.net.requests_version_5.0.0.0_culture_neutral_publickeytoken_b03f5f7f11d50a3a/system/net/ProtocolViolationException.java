@@ -43,7 +43,7 @@ import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
 
 /**
- * The base .NET class managing System.Net.ProtocolViolationException, System.Net.Requests, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link InvalidOperationException}.
+ * The base .NET class managing System.Net.ProtocolViolationException, System.Net.Requests, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.ProtocolViolationException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.ProtocolViolationException</a>

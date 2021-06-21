@@ -42,7 +42,7 @@ import system.componentmodel.BaseNumberConverter;
 
 
 /**
- * The base .NET class managing System.ComponentModel.ByteConverter, System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link BaseNumberConverter}.
+ * The base .NET class managing System.ComponentModel.ByteConverter, System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.ByteConverter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.ByteConverter</a>

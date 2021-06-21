@@ -49,7 +49,7 @@ import system.windows.media.Matrix;
 
 
 /**
- * The base .NET class managing System.Windows.Rect, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link ValueType}.
+ * The base .NET class managing System.Windows.Rect, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Rect" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Rect</a>

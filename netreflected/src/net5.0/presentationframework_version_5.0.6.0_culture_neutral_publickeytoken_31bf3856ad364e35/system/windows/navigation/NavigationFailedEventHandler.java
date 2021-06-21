@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import system.windows.navigation.NavigationFailedEventArgs;
 import system.windows.navigation.INavigationFailedEventHandler;
 /**
- * The base .NET class managing System.Windows.Navigation.NavigationFailedEventHandler, PresentationFramework, Version=5.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * The base .NET class managing System.Windows.Navigation.NavigationFailedEventHandler, PresentationFramework, Version=5.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Navigation.NavigationFailedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Navigation.NavigationFailedEventHandler</a>

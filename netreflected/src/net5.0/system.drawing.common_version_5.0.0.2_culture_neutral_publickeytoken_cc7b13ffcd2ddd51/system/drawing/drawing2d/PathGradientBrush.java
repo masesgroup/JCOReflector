@@ -53,7 +53,7 @@ import system.drawing.RectangleF;
 
 
 /**
- * The base .NET class managing System.Drawing.Drawing2D.PathGradientBrush, System.Drawing.Common, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link Brush}.
+ * The base .NET class managing System.Drawing.Drawing2D.PathGradientBrush, System.Drawing.Common, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Drawing2D.PathGradientBrush" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Drawing2D.PathGradientBrush</a>

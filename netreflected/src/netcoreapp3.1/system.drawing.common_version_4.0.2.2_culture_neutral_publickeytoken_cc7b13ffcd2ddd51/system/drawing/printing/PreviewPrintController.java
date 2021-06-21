@@ -47,7 +47,7 @@ import system.drawing.printing.PrintEventArgs;
 
 
 /**
- * The base .NET class managing System.Drawing.Printing.PreviewPrintController, System.Drawing.Common, Version=4.0.2.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link PrintController}.
+ * The base .NET class managing System.Drawing.Printing.PreviewPrintController, System.Drawing.Common, Version=4.0.2.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Printing.PreviewPrintController" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Printing.PreviewPrintController</a>

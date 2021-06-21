@@ -45,7 +45,7 @@ import system.io.compression.CompressionLevel;
 
 
 /**
- * The base .NET class managing System.IO.Compression.ZipFile, System.IO.Compression.ZipFile, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.IO.Compression.ZipFile, System.IO.Compression.ZipFile, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.Compression.ZipFile" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.Compression.ZipFile</a>

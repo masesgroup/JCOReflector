@@ -48,7 +48,7 @@ import system.threading.tasks.ValueTask;
 
 
 /**
- * The base .NET class managing System.IO.UnmanagedMemoryStream, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link Stream}.
+ * The base .NET class managing System.IO.UnmanagedMemoryStream, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.UnmanagedMemoryStream" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.UnmanagedMemoryStream</a>

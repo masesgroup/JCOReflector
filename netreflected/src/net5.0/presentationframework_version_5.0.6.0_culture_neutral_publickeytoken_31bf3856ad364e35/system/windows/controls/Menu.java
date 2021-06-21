@@ -42,7 +42,7 @@ import system.windows.controls.primitives.MenuBase;
 
 
 /**
- * The base .NET class managing System.Windows.Controls.Menu, PresentationFramework, Version=5.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link MenuBase}.
+ * The base .NET class managing System.Windows.Controls.Menu, PresentationFramework, Version=5.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.Menu" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.Menu</a>

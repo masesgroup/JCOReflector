@@ -44,7 +44,7 @@ import system.codedom.CodeTypeReferenceCollection;
 
 
 /**
- * The base .NET class managing System.CodeDom.CodeMemberEvent, System.CodeDom, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link CodeTypeMember}.
+ * The base .NET class managing System.CodeDom.CodeMemberEvent, System.CodeDom, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeMemberEvent" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeMemberEvent</a>

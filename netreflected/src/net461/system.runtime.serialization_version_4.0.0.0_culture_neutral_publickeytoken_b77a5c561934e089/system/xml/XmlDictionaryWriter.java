@@ -60,7 +60,7 @@ import system.xml.UniqueId;
 
 
 /**
- * The base .NET class managing System.Xml.XmlDictionaryWriter, System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link XmlWriter}.
+ * The base .NET class managing System.Xml.XmlDictionaryWriter, System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlDictionaryWriter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlDictionaryWriter</a>

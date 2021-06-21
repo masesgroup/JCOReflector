@@ -44,7 +44,7 @@ import system.windows.markup.IValueSerializerContextImplementation;
 
 
 /**
- * The base .NET class managing Microsoft.VisualBasic.Activities.XamlIntegration.VisualBasicSettingsValueSerializer, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link ValueSerializer}.
+ * The base .NET class managing Microsoft.VisualBasic.Activities.XamlIntegration.VisualBasicSettingsValueSerializer, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.Activities.XamlIntegration.VisualBasicSettingsValueSerializer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.Activities.XamlIntegration.VisualBasicSettingsValueSerializer</a>

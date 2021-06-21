@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import system.drawing.printing.PrintEventArgs;
 import system.drawing.printing.IPrintEventHandler;
 /**
- * The base .NET class managing System.Drawing.Printing.PrintEventHandler, System.Drawing.Common, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * The base .NET class managing System.Drawing.Printing.PrintEventHandler, System.Drawing.Common, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Printing.PrintEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Printing.PrintEventHandler</a>

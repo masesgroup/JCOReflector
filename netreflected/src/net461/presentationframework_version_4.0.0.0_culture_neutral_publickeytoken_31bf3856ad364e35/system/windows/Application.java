@@ -64,7 +64,7 @@ import system.windows.threading.DispatcherUnhandledExceptionEventHandler;
 
 
 /**
- * The base .NET class managing System.Windows.Application, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link DispatcherObject}.
+ * The base .NET class managing System.Windows.Application, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Application" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Application</a>

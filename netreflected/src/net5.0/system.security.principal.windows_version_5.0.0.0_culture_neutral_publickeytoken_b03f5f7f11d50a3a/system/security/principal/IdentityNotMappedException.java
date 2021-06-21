@@ -44,7 +44,7 @@ import system.runtime.serialization.StreamingContext;
 import system.security.principal.IdentityReferenceCollection;
 
 /**
- * The base .NET class managing System.Security.Principal.IdentityNotMappedException, System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link SystemException}.
+ * The base .NET class managing System.Security.Principal.IdentityNotMappedException, System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Principal.IdentityNotMappedException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Principal.IdentityNotMappedException</a>

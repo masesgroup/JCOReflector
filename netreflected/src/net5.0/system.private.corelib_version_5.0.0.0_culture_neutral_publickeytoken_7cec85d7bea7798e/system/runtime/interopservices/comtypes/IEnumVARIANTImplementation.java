@@ -43,7 +43,7 @@ import system.runtime.interopservices.comtypes.IEnumVARIANTImplementation;
 
 
 /**
- * The base .NET class managing System.Runtime.InteropServices.ComTypes.IEnumVARIANT, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * The base .NET class managing System.Runtime.InteropServices.ComTypes.IEnumVARIANT, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.ComTypes.IEnumVARIANT" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.ComTypes.IEnumVARIANT</a>

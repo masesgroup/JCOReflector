@@ -43,7 +43,7 @@ import system.security.permissions.IsolatedStorageContainment;
 
 
 /**
- * The base .NET class managing System.Security.Permissions.IsolatedStoragePermissionAttribute, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link CodeAccessSecurityAttribute}.
+ * The base .NET class managing System.Security.Permissions.IsolatedStoragePermissionAttribute, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.IsolatedStoragePermissionAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.IsolatedStoragePermissionAttribute</a>

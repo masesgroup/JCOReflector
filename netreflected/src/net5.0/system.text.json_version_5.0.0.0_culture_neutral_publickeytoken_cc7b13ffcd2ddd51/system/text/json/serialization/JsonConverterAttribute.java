@@ -43,7 +43,7 @@ import system.text.json.serialization.JsonConverter;
 
 
 /**
- * The base .NET class managing System.Text.Json.Serialization.JsonConverterAttribute, System.Text.Json, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link JsonAttribute}.
+ * The base .NET class managing System.Text.Json.Serialization.JsonConverterAttribute, System.Text.Json, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.Serialization.JsonConverterAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.Serialization.JsonConverterAttribute</a>

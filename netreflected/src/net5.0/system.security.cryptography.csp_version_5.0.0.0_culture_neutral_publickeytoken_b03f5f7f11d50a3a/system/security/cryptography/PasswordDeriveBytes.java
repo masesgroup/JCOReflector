@@ -43,7 +43,7 @@ import system.security.cryptography.CspParameters;
 
 
 /**
- * The base .NET class managing System.Security.Cryptography.PasswordDeriveBytes, System.Security.Cryptography.Csp, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link DeriveBytes}.
+ * The base .NET class managing System.Security.Cryptography.PasswordDeriveBytes, System.Security.Cryptography.Csp, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.PasswordDeriveBytes" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.PasswordDeriveBytes</a>

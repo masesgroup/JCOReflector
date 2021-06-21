@@ -45,7 +45,7 @@ import system.globalization.CultureInfo;
 
 
 /**
- * The base .NET class managing System.Xaml.Schema.XamlTypeTypeConverter, System.Xaml, Version=5.0.6.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link TypeConverter}.
+ * The base .NET class managing System.Xaml.Schema.XamlTypeTypeConverter, System.Xaml, Version=5.0.6.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.Schema.XamlTypeTypeConverter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.Schema.XamlTypeTypeConverter</a>

@@ -44,7 +44,7 @@ import system.componentmodel.design.serialization.IDesignerLoaderHostImplementat
 
 
 /**
- * The base .NET class managing System.ComponentModel.Design.Serialization.BasicDesignerLoader, System.Windows.Forms.Design, Version=5.0.7.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link DesignerLoader}.
+ * The base .NET class managing System.ComponentModel.Design.Serialization.BasicDesignerLoader, System.Windows.Forms.Design, Version=5.0.7.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.BasicDesignerLoader" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.BasicDesignerLoader</a>

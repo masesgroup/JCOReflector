@@ -42,7 +42,7 @@ import system.text.regularexpressions.Match;
 import system.text.regularexpressions.IMatchEvaluator;
 
 /**
- * The base .NET class managing System.Text.RegularExpressions.MatchEvaluator, System.Text.RegularExpressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link JCDelegate}. Implements {@link IJCEventEmit}, {@link IJCOBridgeReflected}
+ * The base .NET class managing System.Text.RegularExpressions.MatchEvaluator, System.Text.RegularExpressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link JCDelegate}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.RegularExpressions.MatchEvaluator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.RegularExpressions.MatchEvaluator</a>

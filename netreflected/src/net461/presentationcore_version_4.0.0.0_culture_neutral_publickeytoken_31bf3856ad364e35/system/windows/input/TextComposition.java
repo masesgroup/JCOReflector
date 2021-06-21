@@ -46,7 +46,7 @@ import system.windows.input.TextCompositionAutoComplete;
 
 
 /**
- * The base .NET class managing System.Windows.Input.TextComposition, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link DispatcherObject}.
+ * The base .NET class managing System.Windows.Input.TextComposition, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.TextComposition" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.TextComposition</a>

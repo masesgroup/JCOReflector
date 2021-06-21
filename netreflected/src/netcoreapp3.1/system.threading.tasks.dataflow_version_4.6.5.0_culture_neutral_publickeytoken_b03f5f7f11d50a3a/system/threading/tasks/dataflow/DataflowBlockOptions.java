@@ -43,7 +43,7 @@ import system.threading.tasks.TaskScheduler;
 
 
 /**
- * The base .NET class managing System.Threading.Tasks.Dataflow.DataflowBlockOptions, System.Threading.Tasks.Dataflow, Version=4.6.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * The base .NET class managing System.Threading.Tasks.Dataflow.DataflowBlockOptions, System.Threading.Tasks.Dataflow, Version=4.6.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Dataflow.DataflowBlockOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Dataflow.DataflowBlockOptions</a>

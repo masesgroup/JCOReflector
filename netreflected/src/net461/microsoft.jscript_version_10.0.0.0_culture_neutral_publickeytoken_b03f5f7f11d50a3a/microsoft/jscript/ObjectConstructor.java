@@ -43,7 +43,7 @@ import microsoft.jscript.JSObject;
 
 
 /**
- * The base .NET class managing Microsoft.JScript.ObjectConstructor, Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link ScriptFunction}.
+ * The base .NET class managing Microsoft.JScript.ObjectConstructor, Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.ObjectConstructor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.ObjectConstructor</a>

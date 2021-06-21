@@ -43,7 +43,7 @@ import system.LoaderOptimization;
 
 
 /**
- * The base .NET class managing System.LoaderOptimizationAttribute, System.Runtime.Extensions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link Attribute}.
+ * The base .NET class managing System.LoaderOptimizationAttribute, System.Runtime.Extensions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.LoaderOptimizationAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.LoaderOptimizationAttribute</a>

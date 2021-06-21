@@ -46,7 +46,7 @@ import system.reflection.BindingFlags;
 
 
 /**
- * The base .NET class managing Microsoft.JScript.ActivationObject, Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link ScriptObject}.
+ * The base .NET class managing Microsoft.JScript.ActivationObject, Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.ActivationObject" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.ActivationObject</a>

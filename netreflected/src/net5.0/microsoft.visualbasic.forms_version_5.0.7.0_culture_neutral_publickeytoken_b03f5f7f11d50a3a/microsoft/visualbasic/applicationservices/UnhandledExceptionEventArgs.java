@@ -42,7 +42,7 @@ import system.threading.ThreadExceptionEventArgs;
 
 
 /**
- * The base .NET class managing Microsoft.VisualBasic.ApplicationServices.UnhandledExceptionEventArgs, Microsoft.VisualBasic.Forms, Version=5.0.7.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link ThreadExceptionEventArgs}.
+ * The base .NET class managing Microsoft.VisualBasic.ApplicationServices.UnhandledExceptionEventArgs, Microsoft.VisualBasic.Forms, Version=5.0.7.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.ApplicationServices.UnhandledExceptionEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.ApplicationServices.UnhandledExceptionEventArgs</a>

@@ -55,7 +55,7 @@ import system.RuntimeMethodHandle;
 
 
 /**
- * The base .NET class managing Microsoft.JScript.COMMethodInfo, Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link JSMethod}.
+ * The base .NET class managing Microsoft.JScript.COMMethodInfo, Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.COMMethodInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.COMMethodInfo</a>

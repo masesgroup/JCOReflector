@@ -44,7 +44,7 @@ import system.io.packaging.VerifyResult;
 
 
 /**
- * The base .NET class managing System.IO.Packaging.SignatureVerificationEventArgs, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link EventArgs}.
+ * The base .NET class managing System.IO.Packaging.SignatureVerificationEventArgs, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.Packaging.SignatureVerificationEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.Packaging.SignatureVerificationEventArgs</a>

@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import system.componentmodel.CurrentChangingEventArgs;
 import system.componentmodel.ICurrentChangingEventHandler;
 /**
- * The base .NET class managing System.ComponentModel.CurrentChangingEventHandler, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * The base .NET class managing System.ComponentModel.CurrentChangingEventHandler, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.CurrentChangingEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.CurrentChangingEventHandler</a>

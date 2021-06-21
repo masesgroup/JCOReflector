@@ -45,7 +45,7 @@ import system.Uri;
 
 
 /**
- * The base .NET class managing System.ServiceModel.Security.Tokens.RecipientServiceModelSecurityTokenRequirement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link ServiceModelSecurityTokenRequirement}.
+ * The base .NET class managing System.ServiceModel.Security.Tokens.RecipientServiceModelSecurityTokenRequirement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.Tokens.RecipientServiceModelSecurityTokenRequirement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.Tokens.RecipientServiceModelSecurityTokenRequirement</a>

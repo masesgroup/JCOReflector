@@ -42,7 +42,7 @@ import system.drawing.Pen;
 
 
 /**
- * The base .NET class managing System.Drawing.Pens, System.Drawing.Common, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * The base .NET class managing System.Drawing.Pens, System.Drawing.Common, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Pens" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Pens</a>

@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import system.data.sqlclient.SqlInfoMessageEventArgs;
 import system.data.sqlclient.ISqlInfoMessageEventHandler;
 /**
- * The base .NET class managing System.Data.SqlClient.SqlInfoMessageEventHandler, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * The base .NET class managing System.Data.SqlClient.SqlInfoMessageEventHandler, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlClient.SqlInfoMessageEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlClient.SqlInfoMessageEventHandler</a>

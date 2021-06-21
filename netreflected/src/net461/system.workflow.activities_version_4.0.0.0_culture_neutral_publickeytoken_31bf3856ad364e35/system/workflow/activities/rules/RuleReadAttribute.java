@@ -43,7 +43,7 @@ import system.workflow.activities.rules.RuleAttributeTarget;
 
 
 /**
- * The base .NET class managing System.Workflow.Activities.Rules.RuleReadAttribute, System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link RuleReadWriteAttribute}.
+ * The base .NET class managing System.Workflow.Activities.Rules.RuleReadAttribute, System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.Rules.RuleReadAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.Rules.RuleReadAttribute</a>

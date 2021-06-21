@@ -43,7 +43,7 @@ import system.xml.XmlAttribute;
 
 
 /**
- * The base .NET class managing System.Xml.Serialization.XmlAttributeEventArgs, System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link EventArgs}.
+ * The base .NET class managing System.Xml.Serialization.XmlAttributeEventArgs, System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.XmlAttributeEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.XmlAttributeEventArgs</a>

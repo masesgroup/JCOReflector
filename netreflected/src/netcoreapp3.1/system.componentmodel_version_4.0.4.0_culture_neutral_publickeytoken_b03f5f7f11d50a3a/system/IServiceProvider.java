@@ -40,7 +40,7 @@ import org.mases.jcobridge.netreflection.*;
 
 
 /**
- * The base .NET class managing System.IServiceProvider, System.ComponentModel, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link IJCOBridgeReflected}.
+ * The base .NET class managing System.IServiceProvider, System.ComponentModel, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IServiceProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IServiceProvider</a>

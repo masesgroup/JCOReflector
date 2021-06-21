@@ -40,7 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.xml.serialization.IXmlSerializationReadCallback;
 /**
- * The base .NET class managing System.Xml.Serialization.XmlSerializationReadCallback, System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link JCDelegate}. Implements {@link IJCEventEmit}, {@link IJCOBridgeReflected}
+ * The base .NET class managing System.Xml.Serialization.XmlSerializationReadCallback, System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link JCDelegate}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.XmlSerializationReadCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.XmlSerializationReadCallback</a>

@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import system.componentmodel.Win32Exception;
 
 /**
- * The base .NET class managing System.Net.HttpListenerException, System.Net.HttpListener, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link Win32Exception}.
+ * The base .NET class managing System.Net.HttpListenerException, System.Net.HttpListener, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.HttpListenerException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.HttpListenerException</a>

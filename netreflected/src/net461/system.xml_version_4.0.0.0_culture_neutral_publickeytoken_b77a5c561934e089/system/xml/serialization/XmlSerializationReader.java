@@ -42,7 +42,7 @@ import system.xml.serialization.XmlSerializationGeneratedCode;
 
 
 /**
- * The base .NET class managing System.Xml.Serialization.XmlSerializationReader, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link XmlSerializationGeneratedCode}.
+ * The base .NET class managing System.Xml.Serialization.XmlSerializationReader, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.XmlSerializationReader" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.XmlSerializationReader</a>

@@ -44,7 +44,7 @@ import system.componentmodel.IComponentImplementation;
 
 
 /**
- * The base .NET class managing System.ComponentModel.NestedContainer, System.ComponentModel.TypeConverter, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link Container}.
+ * The base .NET class managing System.ComponentModel.NestedContainer, System.ComponentModel.TypeConverter, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.NestedContainer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.NestedContainer</a>

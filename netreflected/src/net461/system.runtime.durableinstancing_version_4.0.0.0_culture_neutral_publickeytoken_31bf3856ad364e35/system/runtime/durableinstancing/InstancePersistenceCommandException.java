@@ -45,7 +45,7 @@ import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
 
 /**
- * The base .NET class managing System.Runtime.DurableInstancing.InstancePersistenceCommandException, System.Runtime.DurableInstancing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link InstancePersistenceException}.
+ * The base .NET class managing System.Runtime.DurableInstancing.InstancePersistenceCommandException, System.Runtime.DurableInstancing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.DurableInstancing.InstancePersistenceCommandException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.DurableInstancing.InstancePersistenceCommandException</a>

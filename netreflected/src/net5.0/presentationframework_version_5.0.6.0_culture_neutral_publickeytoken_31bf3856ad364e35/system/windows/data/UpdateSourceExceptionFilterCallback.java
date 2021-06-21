@@ -40,7 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.windows.data.IUpdateSourceExceptionFilterCallback;
 /**
- * The base .NET class managing System.Windows.Data.UpdateSourceExceptionFilterCallback, PresentationFramework, Version=5.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link JCDelegate}. Implements {@link IJCEventEmit}, {@link IJCOBridgeReflected}
+ * The base .NET class managing System.Windows.Data.UpdateSourceExceptionFilterCallback, PresentationFramework, Version=5.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link JCDelegate}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.UpdateSourceExceptionFilterCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.UpdateSourceExceptionFilterCallback</a>

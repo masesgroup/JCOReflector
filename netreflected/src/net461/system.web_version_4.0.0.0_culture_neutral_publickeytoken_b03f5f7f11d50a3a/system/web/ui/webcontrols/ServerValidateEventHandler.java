@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import system.web.ui.webcontrols.ServerValidateEventArgs;
 import system.web.ui.webcontrols.IServerValidateEventHandler;
 /**
- * The base .NET class managing System.Web.UI.WebControls.ServerValidateEventHandler, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * The base .NET class managing System.Web.UI.WebControls.ServerValidateEventHandler, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.ServerValidateEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.ServerValidateEventHandler</a>

@@ -48,7 +48,7 @@ import system.security.cryptography.RSAParameters;
 
 
 /**
- * The base .NET class managing System.Security.Cryptography.RSA, System.Security.Cryptography.Algorithms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link AsymmetricAlgorithm}.
+ * The base .NET class managing System.Security.Cryptography.RSA, System.Security.Cryptography.Algorithms, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.RSA" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.RSA</a>

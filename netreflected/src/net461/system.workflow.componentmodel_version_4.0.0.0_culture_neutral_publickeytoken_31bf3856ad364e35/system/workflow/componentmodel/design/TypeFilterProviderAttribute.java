@@ -42,7 +42,7 @@ import system.Attribute;
 
 
 /**
- * The base .NET class managing System.Workflow.ComponentModel.Design.TypeFilterProviderAttribute, System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link Attribute}.
+ * The base .NET class managing System.Workflow.ComponentModel.Design.TypeFilterProviderAttribute, System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.TypeFilterProviderAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.TypeFilterProviderAttribute</a>

@@ -44,7 +44,7 @@ import system.net.NetworkCredential;
 import system.directoryservices.protocols.INotifyOfNewConnectionCallback;
 
 /**
- * The base .NET class managing System.DirectoryServices.Protocols.NotifyOfNewConnectionCallback, System.DirectoryServices.Protocols, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link JCDelegate}. Implements {@link IJCEventEmit}, {@link IJCOBridgeReflected}
+ * The base .NET class managing System.DirectoryServices.Protocols.NotifyOfNewConnectionCallback, System.DirectoryServices.Protocols, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link JCDelegate}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.Protocols.NotifyOfNewConnectionCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.Protocols.NotifyOfNewConnectionCallback</a>

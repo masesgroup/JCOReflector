@@ -43,7 +43,7 @@ import system.windows.controls.PageRange;
 
 
 /**
- * The base .NET class managing System.Windows.Controls.PageRange, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link ValueType}.
+ * The base .NET class managing System.Windows.Controls.PageRange, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.PageRange" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.PageRange</a>

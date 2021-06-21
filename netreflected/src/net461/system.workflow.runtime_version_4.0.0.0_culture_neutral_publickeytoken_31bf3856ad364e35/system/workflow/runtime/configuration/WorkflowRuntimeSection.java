@@ -44,7 +44,7 @@ import system.workflow.runtime.configuration.WorkflowRuntimeServiceElementCollec
 
 
 /**
- * The base .NET class managing System.Workflow.Runtime.Configuration.WorkflowRuntimeSection, System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link ConfigurationSection}.
+ * The base .NET class managing System.Workflow.Runtime.Configuration.WorkflowRuntimeSection, System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.Configuration.WorkflowRuntimeSection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.Configuration.WorkflowRuntimeSection</a>

@@ -44,7 +44,7 @@ import system.Uri;
 
 
 /**
- * The base .NET class managing System.IdentityModel.Tokens.Saml2Evidence, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.IdentityModel.Tokens.Saml2Evidence, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.Saml2Evidence" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.Saml2Evidence</a>

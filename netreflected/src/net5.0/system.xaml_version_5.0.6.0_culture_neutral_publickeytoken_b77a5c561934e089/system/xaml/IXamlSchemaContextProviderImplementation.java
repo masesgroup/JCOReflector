@@ -42,7 +42,7 @@ import system.xaml.XamlSchemaContext;
 
 
 /**
- * The base .NET class managing System.Xaml.IXamlSchemaContextProvider, System.Xaml, Version=5.0.6.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.Xaml.IXamlSchemaContextProvider, System.Xaml, Version=5.0.6.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.IXamlSchemaContextProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.IXamlSchemaContextProvider</a>

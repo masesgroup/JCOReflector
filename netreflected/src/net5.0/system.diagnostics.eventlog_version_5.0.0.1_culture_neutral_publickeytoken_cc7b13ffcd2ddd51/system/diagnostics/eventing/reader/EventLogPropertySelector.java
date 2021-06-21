@@ -41,7 +41,7 @@ import java.util.ArrayList;
 
 
 /**
- * The base .NET class managing System.Diagnostics.Eventing.Reader.EventLogPropertySelector, System.Diagnostics.EventLog, Version=5.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * The base .NET class managing System.Diagnostics.Eventing.Reader.EventLogPropertySelector, System.Diagnostics.EventLog, Version=5.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Eventing.Reader.EventLogPropertySelector" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Eventing.Reader.EventLogPropertySelector</a>

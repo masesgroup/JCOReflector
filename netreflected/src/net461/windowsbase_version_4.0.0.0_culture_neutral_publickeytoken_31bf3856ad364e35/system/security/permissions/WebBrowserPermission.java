@@ -47,7 +47,7 @@ import system.security.SecurityElement;
 
 
 /**
- * The base .NET class managing System.Security.Permissions.WebBrowserPermission, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link CodeAccessPermission}.
+ * The base .NET class managing System.Security.Permissions.WebBrowserPermission, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.WebBrowserPermission" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.WebBrowserPermission</a>

@@ -46,7 +46,7 @@ import system.windows.media.animation.IEasingFunctionImplementation;
 
 
 /**
- * The base .NET class managing System.Windows.Media.Animation.EasingRotation3DKeyFrame, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link Rotation3DKeyFrame}.
+ * The base .NET class managing System.Windows.Media.Animation.EasingRotation3DKeyFrame, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Animation.EasingRotation3DKeyFrame" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Animation.EasingRotation3DKeyFrame</a>

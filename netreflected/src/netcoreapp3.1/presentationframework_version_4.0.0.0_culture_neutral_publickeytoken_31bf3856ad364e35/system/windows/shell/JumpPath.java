@@ -42,7 +42,7 @@ import system.windows.shell.JumpItem;
 
 
 /**
- * The base .NET class managing System.Windows.Shell.JumpPath, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link JumpItem}.
+ * The base .NET class managing System.Windows.Shell.JumpPath, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Shell.JumpPath" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Shell.JumpPath</a>

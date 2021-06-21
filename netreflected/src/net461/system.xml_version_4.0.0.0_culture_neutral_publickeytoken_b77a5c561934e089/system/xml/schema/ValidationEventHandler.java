@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import system.xml.schema.ValidationEventArgs;
 import system.xml.schema.IValidationEventHandler;
 /**
- * The base .NET class managing System.Xml.Schema.ValidationEventHandler, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * The base .NET class managing System.Xml.Schema.ValidationEventHandler, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.ValidationEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.ValidationEventHandler</a>

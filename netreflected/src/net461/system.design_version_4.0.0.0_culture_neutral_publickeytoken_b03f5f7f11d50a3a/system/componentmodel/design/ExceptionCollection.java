@@ -42,7 +42,7 @@ import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
 
 /**
- * The base .NET class managing System.ComponentModel.Design.ExceptionCollection, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetException}.
+ * The base .NET class managing System.ComponentModel.Design.ExceptionCollection, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ExceptionCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ExceptionCollection</a>

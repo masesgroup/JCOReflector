@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import system.windows.documents.serialization.WritingCompletedEventArgs;
 import system.windows.documents.serialization.IWritingCompletedEventHandler;
 /**
- * The base .NET class managing System.Windows.Documents.Serialization.WritingCompletedEventHandler, PresentationFramework, Version=5.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * The base .NET class managing System.Windows.Documents.Serialization.WritingCompletedEventHandler, PresentationFramework, Version=5.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.Serialization.WritingCompletedEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.Serialization.WritingCompletedEventHandler</a>

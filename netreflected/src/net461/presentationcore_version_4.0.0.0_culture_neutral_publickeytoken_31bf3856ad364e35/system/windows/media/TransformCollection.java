@@ -44,7 +44,7 @@ import system.windows.media.TransformCollection;
 
 
 /**
- * The base .NET class managing System.Windows.Media.TransformCollection, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link Animatable}.
+ * The base .NET class managing System.Windows.Media.TransformCollection, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.TransformCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.TransformCollection</a>

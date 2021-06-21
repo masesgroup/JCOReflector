@@ -44,7 +44,7 @@ import system.security.policy.Evidence;
 
 
 /**
- * The base .NET class managing System.Security.Policy.IIdentityPermissionFactory, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.Security.Policy.IIdentityPermissionFactory, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.IIdentityPermissionFactory" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.IIdentityPermissionFactory</a>

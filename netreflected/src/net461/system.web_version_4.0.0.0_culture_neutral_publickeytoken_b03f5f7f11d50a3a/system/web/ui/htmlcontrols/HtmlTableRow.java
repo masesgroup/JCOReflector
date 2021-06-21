@@ -43,7 +43,7 @@ import system.web.ui.htmlcontrols.HtmlTableCellCollection;
 
 
 /**
- * The base .NET class managing System.Web.UI.HtmlControls.HtmlTableRow, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link HtmlContainerControl}.
+ * The base .NET class managing System.Web.UI.HtmlControls.HtmlTableRow, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.HtmlControls.HtmlTableRow" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.HtmlControls.HtmlTableRow</a>

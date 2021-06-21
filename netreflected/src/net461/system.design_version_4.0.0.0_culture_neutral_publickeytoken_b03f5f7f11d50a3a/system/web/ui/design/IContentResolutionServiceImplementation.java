@@ -44,7 +44,7 @@ import system.collections.IDictionaryImplementation;
 
 
 /**
- * The base .NET class managing System.Web.UI.Design.IContentResolutionService, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * The base .NET class managing System.Web.UI.Design.IContentResolutionService, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.IContentResolutionService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.IContentResolutionService</a>

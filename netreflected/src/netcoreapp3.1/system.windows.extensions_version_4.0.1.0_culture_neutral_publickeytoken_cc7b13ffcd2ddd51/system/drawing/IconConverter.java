@@ -45,7 +45,7 @@ import system.globalization.CultureInfo;
 
 
 /**
- * The base .NET class managing System.Drawing.IconConverter, System.Windows.Extensions, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link ExpandableObjectConverter}.
+ * The base .NET class managing System.Drawing.IconConverter, System.Windows.Extensions, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.IconConverter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.IconConverter</a>

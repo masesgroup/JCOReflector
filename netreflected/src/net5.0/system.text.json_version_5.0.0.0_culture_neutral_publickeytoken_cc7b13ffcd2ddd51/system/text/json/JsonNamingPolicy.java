@@ -42,7 +42,7 @@ import system.text.json.JsonNamingPolicy;
 
 
 /**
- * The base .NET class managing System.Text.Json.JsonNamingPolicy, System.Text.Json, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * The base .NET class managing System.Text.Json.JsonNamingPolicy, System.Text.Json, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.JsonNamingPolicy" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.JsonNamingPolicy</a>

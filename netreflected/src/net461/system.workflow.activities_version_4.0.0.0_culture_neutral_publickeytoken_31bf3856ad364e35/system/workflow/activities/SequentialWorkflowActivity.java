@@ -44,7 +44,7 @@ import system.EventHandler;
 
 
 /**
- * The base .NET class managing System.Workflow.Activities.SequentialWorkflowActivity, System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link SequenceActivity}.
+ * The base .NET class managing System.Workflow.Activities.SequentialWorkflowActivity, System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.SequentialWorkflowActivity" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.SequentialWorkflowActivity</a>

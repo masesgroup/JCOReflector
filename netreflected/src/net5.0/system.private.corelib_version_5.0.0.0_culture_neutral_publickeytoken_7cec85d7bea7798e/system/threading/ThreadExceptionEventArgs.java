@@ -42,7 +42,7 @@ import system.EventArgs;
 
 
 /**
- * The base .NET class managing System.Threading.ThreadExceptionEventArgs, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link EventArgs}.
+ * The base .NET class managing System.Threading.ThreadExceptionEventArgs, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.ThreadExceptionEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.ThreadExceptionEventArgs</a>

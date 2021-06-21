@@ -43,7 +43,7 @@ import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
 
 /**
- * The base .NET class managing System.Net.Mail.SmtpFailedRecipientsException, System.Net.Mail, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link SmtpFailedRecipientException}.
+ * The base .NET class managing System.Net.Mail.SmtpFailedRecipientsException, System.Net.Mail, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mail.SmtpFailedRecipientsException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mail.SmtpFailedRecipientsException</a>

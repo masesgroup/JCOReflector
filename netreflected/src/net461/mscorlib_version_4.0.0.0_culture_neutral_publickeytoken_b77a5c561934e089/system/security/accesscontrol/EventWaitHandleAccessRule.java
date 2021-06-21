@@ -45,7 +45,7 @@ import system.security.accesscontrol.AccessControlType;
 
 
 /**
- * The base .NET class managing System.Security.AccessControl.EventWaitHandleAccessRule, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link AccessRule}.
+ * The base .NET class managing System.Security.AccessControl.EventWaitHandleAccessRule, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.EventWaitHandleAccessRule" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.EventWaitHandleAccessRule</a>

@@ -43,7 +43,7 @@ import system.io.Stream;
 
 
 /**
- * The base .NET class managing Microsoft.Win32.OpenFileDialog, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link FileDialog}.
+ * The base .NET class managing Microsoft.Win32.OpenFileDialog, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.OpenFileDialog" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.OpenFileDialog</a>

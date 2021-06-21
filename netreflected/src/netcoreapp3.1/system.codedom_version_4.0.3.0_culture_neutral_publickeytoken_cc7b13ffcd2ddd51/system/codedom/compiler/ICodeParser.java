@@ -42,7 +42,7 @@ import system.io.TextReader;
 
 
 /**
- * The base .NET class managing System.CodeDom.Compiler.ICodeParser, System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link IJCOBridgeReflected}.
+ * The base .NET class managing System.CodeDom.Compiler.ICodeParser, System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.Compiler.ICodeParser" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.Compiler.ICodeParser</a>

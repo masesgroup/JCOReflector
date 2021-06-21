@@ -45,7 +45,7 @@ import system.servicemodel.activities.tracking.configuration.VariableElementColl
 
 
 /**
- * The base .NET class managing System.ServiceModel.Activities.Tracking.Configuration.ActivityStateQueryElement, System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link TrackingQueryElement}.
+ * The base .NET class managing System.ServiceModel.Activities.Tracking.Configuration.ActivityStateQueryElement, System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activities.Tracking.Configuration.ActivityStateQueryElement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activities.Tracking.Configuration.ActivityStateQueryElement</a>

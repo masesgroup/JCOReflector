@@ -44,7 +44,7 @@ import system.servicemodel.activities.SendParametersContent;
 
 
 /**
- * The base .NET class managing System.ServiceModel.Activities.SendContent, System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * The base .NET class managing System.ServiceModel.Activities.SendContent, System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activities.SendContent" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activities.SendContent</a>

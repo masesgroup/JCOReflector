@@ -42,7 +42,7 @@ import system.drawing.Graphics;
 
 
 /**
- * The base .NET class managing System.Drawing.BufferedGraphics, System.Drawing.Common, Version=4.0.2.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * The base .NET class managing System.Drawing.BufferedGraphics, System.Drawing.Common, Version=4.0.2.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.BufferedGraphics" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.BufferedGraphics</a>

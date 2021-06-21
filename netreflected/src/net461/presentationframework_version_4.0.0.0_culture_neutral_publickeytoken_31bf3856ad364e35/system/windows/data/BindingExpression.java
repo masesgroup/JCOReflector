@@ -42,7 +42,7 @@ import system.windows.data.BindingExpressionBase;
 
 
 /**
- * The base .NET class managing System.Windows.Data.BindingExpression, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link BindingExpressionBase}.
+ * The base .NET class managing System.Windows.Data.BindingExpression, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.BindingExpression" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.BindingExpression</a>

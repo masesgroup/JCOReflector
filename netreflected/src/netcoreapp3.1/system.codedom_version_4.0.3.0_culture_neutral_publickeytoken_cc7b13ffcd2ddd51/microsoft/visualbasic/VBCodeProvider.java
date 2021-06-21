@@ -51,7 +51,7 @@ import system.codedom.compiler.LanguageOptions;
 
 
 /**
- * The base .NET class managing Microsoft.VisualBasic.VBCodeProvider, System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link CodeDomProvider}.
+ * The base .NET class managing Microsoft.VisualBasic.VBCodeProvider, System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.VBCodeProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.VBCodeProvider</a>

@@ -47,7 +47,7 @@ import system.servicemodel.dispatcher.DispatchRuntime;
 
 
 /**
- * The base .NET class managing System.ServiceModel.Activities.Description.WorkflowContractBehaviorAttribute, System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link Attribute}.
+ * The base .NET class managing System.ServiceModel.Activities.Description.WorkflowContractBehaviorAttribute, System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activities.Description.WorkflowContractBehaviorAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activities.Description.WorkflowContractBehaviorAttribute</a>

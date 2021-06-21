@@ -42,7 +42,7 @@ import system.security.cryptography.x509certificates.X509Certificate;
 import system.security.cryptography.x509certificates.X509CertificateCollection;
 import system.net.security.ILocalCertificateSelectionCallback;
 /**
- * The base .NET class managing System.Net.Security.LocalCertificateSelectionCallback, System.Net.Security, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link JCDelegate}. Implements {@link IJCEventEmit}, {@link IJCOBridgeReflected}
+ * The base .NET class managing System.Net.Security.LocalCertificateSelectionCallback, System.Net.Security, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link JCDelegate}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Security.LocalCertificateSelectionCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Security.LocalCertificateSelectionCallback</a>

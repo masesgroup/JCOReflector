@@ -49,7 +49,7 @@ import system.xml.XmlSpace;
 
 
 /**
- * The base .NET class managing System.Xml.XmlNodeReader, System.Private.Xml, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link XmlReader}.
+ * The base .NET class managing System.Xml.XmlNodeReader, System.Private.Xml, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlNodeReader" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlNodeReader</a>

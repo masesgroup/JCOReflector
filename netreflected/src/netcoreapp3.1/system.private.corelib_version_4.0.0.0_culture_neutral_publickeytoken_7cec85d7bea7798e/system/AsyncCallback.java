@@ -42,7 +42,7 @@ import system.IAsyncResult;
 import system.IAsyncResultImplementation;
 import system.IAsyncCallback;
 /**
- * The base .NET class managing System.AsyncCallback, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * The base .NET class managing System.AsyncCallback, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.AsyncCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.AsyncCallback</a>

@@ -42,7 +42,7 @@ import system.collections.generic.ReferenceEqualityComparer;
 
 
 /**
- * The base .NET class managing System.Collections.Generic.ReferenceEqualityComparer, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * The base .NET class managing System.Collections.Generic.ReferenceEqualityComparer, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.ReferenceEqualityComparer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Generic.ReferenceEqualityComparer</a>

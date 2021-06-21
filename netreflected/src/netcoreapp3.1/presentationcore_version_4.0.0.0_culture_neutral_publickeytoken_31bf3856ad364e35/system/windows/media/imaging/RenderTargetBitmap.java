@@ -44,7 +44,7 @@ import system.windows.media.Visual;
 
 
 /**
- * The base .NET class managing System.Windows.Media.Imaging.RenderTargetBitmap, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link BitmapSource}.
+ * The base .NET class managing System.Windows.Media.Imaging.RenderTargetBitmap, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Imaging.RenderTargetBitmap" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Imaging.RenderTargetBitmap</a>

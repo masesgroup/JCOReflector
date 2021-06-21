@@ -42,7 +42,7 @@ import system.codedom.CodeExpression;
 
 
 /**
- * The base .NET class managing System.CodeDom.CodeBaseReferenceExpression, System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link CodeExpression}.
+ * The base .NET class managing System.CodeDom.CodeBaseReferenceExpression, System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeBaseReferenceExpression" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeBaseReferenceExpression</a>

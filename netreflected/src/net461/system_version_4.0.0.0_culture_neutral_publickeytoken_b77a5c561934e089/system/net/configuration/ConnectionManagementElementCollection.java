@@ -43,7 +43,7 @@ import system.net.configuration.ConnectionManagementElement;
 
 
 /**
- * The base .NET class managing System.Net.Configuration.ConnectionManagementElementCollection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link ConfigurationElementCollection}.
+ * The base .NET class managing System.Net.Configuration.ConnectionManagementElementCollection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Configuration.ConnectionManagementElementCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Configuration.ConnectionManagementElementCollection</a>

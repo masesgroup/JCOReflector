@@ -42,7 +42,7 @@ import system.windows.forms.design.ParentControlDesigner;
 
 
 /**
- * The base .NET class managing System.Windows.Forms.Design.ScrollableControlDesigner, System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link ParentControlDesigner}.
+ * The base .NET class managing System.Windows.Forms.Design.ScrollableControlDesigner, System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.ScrollableControlDesigner" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.ScrollableControlDesigner</a>

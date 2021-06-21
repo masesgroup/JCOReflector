@@ -77,7 +77,7 @@ import system.reflection.Assembly;
 
 
 /**
- * The base .NET class managing System.Reflection.Emit.ModuleBuilder, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link Module}.
+ * The base .NET class managing System.Reflection.Emit.ModuleBuilder, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Emit.ModuleBuilder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Emit.ModuleBuilder</a>

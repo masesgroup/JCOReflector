@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import system.diagnostics.EntryWrittenEventArgs;
 import system.diagnostics.IEntryWrittenEventHandler;
 /**
- * The base .NET class managing System.Diagnostics.EntryWrittenEventHandler, System.Diagnostics.EventLog, Version=5.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * The base .NET class managing System.Diagnostics.EntryWrittenEventHandler, System.Diagnostics.EventLog, Version=5.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.EntryWrittenEventHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.EntryWrittenEventHandler</a>

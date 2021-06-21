@@ -44,7 +44,7 @@ import system.reflection.AssemblyName;
 
 
 /**
- * The base .NET class managing System.Xaml.Permissions.XamlAccessLevel, System.Windows.Extensions, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * The base .NET class managing System.Xaml.Permissions.XamlAccessLevel, System.Windows.Extensions, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.Permissions.XamlAccessLevel" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.Permissions.XamlAccessLevel</a>

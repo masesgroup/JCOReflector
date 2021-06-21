@@ -42,7 +42,7 @@ import system.threading.channels.ChannelOptions;
 
 
 /**
- * The base .NET class managing System.Threading.Channels.UnboundedChannelOptions, System.Threading.Channels, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link ChannelOptions}.
+ * The base .NET class managing System.Threading.Channels.UnboundedChannelOptions, System.Threading.Channels, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Channels.UnboundedChannelOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Channels.UnboundedChannelOptions</a>

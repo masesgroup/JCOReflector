@@ -43,7 +43,7 @@ import system.runtime.interopservices.ComInterfaceType;
 
 
 /**
- * The base .NET class managing System.Runtime.InteropServices.InterfaceTypeAttribute, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link Attribute}.
+ * The base .NET class managing System.Runtime.InteropServices.InterfaceTypeAttribute, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.InterfaceTypeAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.InterfaceTypeAttribute</a>

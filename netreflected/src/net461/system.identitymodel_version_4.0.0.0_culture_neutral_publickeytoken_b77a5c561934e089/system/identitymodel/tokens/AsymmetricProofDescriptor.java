@@ -45,7 +45,7 @@ import system.identitymodel.protocols.wstrust.RequestSecurityTokenResponse;
 
 
 /**
- * The base .NET class managing System.IdentityModel.Tokens.AsymmetricProofDescriptor, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link ProofDescriptor}.
+ * The base .NET class managing System.IdentityModel.Tokens.AsymmetricProofDescriptor, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.AsymmetricProofDescriptor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.AsymmetricProofDescriptor</a>

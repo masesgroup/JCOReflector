@@ -45,7 +45,7 @@ import system.windows.media.MediaTimeline;
 
 
 /**
- * The base .NET class managing System.Windows.Media.MediaTimeline, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link Timeline}.
+ * The base .NET class managing System.Windows.Media.MediaTimeline, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.MediaTimeline" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.MediaTimeline</a>

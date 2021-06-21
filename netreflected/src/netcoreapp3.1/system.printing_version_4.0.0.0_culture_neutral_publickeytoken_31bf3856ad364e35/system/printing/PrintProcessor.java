@@ -42,7 +42,7 @@ import system.printing.PrintFilter;
 
 
 /**
- * The base .NET class managing System.Printing.PrintProcessor, System.Printing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link PrintFilter}.
+ * The base .NET class managing System.Printing.PrintProcessor, System.Printing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Printing.PrintProcessor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Printing.PrintProcessor</a>

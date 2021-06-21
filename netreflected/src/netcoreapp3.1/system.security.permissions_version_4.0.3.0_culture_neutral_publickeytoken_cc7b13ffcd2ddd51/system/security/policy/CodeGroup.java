@@ -50,7 +50,7 @@ import system.security.policy.IMembershipConditionImplementation;
 
 
 /**
- * The base .NET class managing System.Security.Policy.CodeGroup, System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * The base .NET class managing System.Security.Policy.CodeGroup, System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.CodeGroup" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.CodeGroup</a>

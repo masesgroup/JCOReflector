@@ -43,7 +43,7 @@ import system.windows.forms.integration.WindowsFormsHost;
 
 
 /**
- * The base .NET class managing System.Windows.Automation.Peers.WindowsFormsHostAutomationPeer, WindowsFormsIntegration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link FrameworkElementAutomationPeer}.
+ * The base .NET class managing System.Windows.Automation.Peers.WindowsFormsHostAutomationPeer, WindowsFormsIntegration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Peers.WindowsFormsHostAutomationPeer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Peers.WindowsFormsHostAutomationPeer</a>

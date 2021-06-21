@@ -44,7 +44,7 @@ import system.windows.DependencyProperty;
 
 
 /**
- * The base .NET class managing System.Windows.Markup.Primitives.MarkupProperty, WindowsBase, Version=5.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * The base .NET class managing System.Windows.Markup.Primitives.MarkupProperty, WindowsBase, Version=5.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Markup.Primitives.MarkupProperty" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Markup.Primitives.MarkupProperty</a>

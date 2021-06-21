@@ -44,7 +44,7 @@ import system.activities.WorkflowIdentity;
 
 
 /**
- * The base .NET class managing System.Activities.Tracking.WorkflowInstanceRecord, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link TrackingRecord}.
+ * The base .NET class managing System.Activities.Tracking.WorkflowInstanceRecord, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Tracking.WorkflowInstanceRecord" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Tracking.WorkflowInstanceRecord</a>

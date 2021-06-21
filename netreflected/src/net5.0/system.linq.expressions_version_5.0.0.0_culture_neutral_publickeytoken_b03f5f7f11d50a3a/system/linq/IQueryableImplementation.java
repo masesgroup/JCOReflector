@@ -44,7 +44,7 @@ import system.linq.IQueryProviderImplementation;
 
 
 /**
- * The base .NET class managing System.Linq.IQueryable, System.Linq.Expressions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link IEnumerableImplementation}.
+ * The base .NET class managing System.Linq.IQueryable, System.Linq.Expressions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Linq.IQueryable" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Linq.IQueryable</a>

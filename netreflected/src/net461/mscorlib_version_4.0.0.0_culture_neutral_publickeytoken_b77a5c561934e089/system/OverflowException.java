@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import system.ArithmeticException;
 
 /**
- * The base .NET class managing System.OverflowException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link ArithmeticException}.
+ * The base .NET class managing System.OverflowException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.OverflowException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.OverflowException</a>

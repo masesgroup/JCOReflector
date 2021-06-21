@@ -45,7 +45,7 @@ import system.globalization.CultureInfo;
 
 
 /**
- * The base .NET class managing System.Configuration.TimeSpanMinutesConverter, System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link ConfigurationConverterBase}.
+ * The base .NET class managing System.Configuration.TimeSpanMinutesConverter, System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.TimeSpanMinutesConverter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.TimeSpanMinutesConverter</a>

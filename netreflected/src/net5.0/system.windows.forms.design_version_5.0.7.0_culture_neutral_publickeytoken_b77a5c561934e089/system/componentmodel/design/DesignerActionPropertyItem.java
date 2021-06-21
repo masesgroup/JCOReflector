@@ -44,7 +44,7 @@ import system.componentmodel.IComponentImplementation;
 
 
 /**
- * The base .NET class managing System.ComponentModel.Design.DesignerActionPropertyItem, System.Windows.Forms.Design, Version=5.0.7.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link DesignerActionItem}.
+ * The base .NET class managing System.ComponentModel.Design.DesignerActionPropertyItem, System.Windows.Forms.Design, Version=5.0.7.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.DesignerActionPropertyItem" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.DesignerActionPropertyItem</a>

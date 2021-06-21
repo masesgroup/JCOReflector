@@ -44,7 +44,7 @@ import system.activities.WorkflowIdentity;
 
 
 /**
- * The base .NET class managing System.Activities.Tracking.WorkflowInstanceAbortedRecord, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link WorkflowInstanceRecord}.
+ * The base .NET class managing System.Activities.Tracking.WorkflowInstanceAbortedRecord, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Tracking.WorkflowInstanceAbortedRecord" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Tracking.WorkflowInstanceAbortedRecord</a>

@@ -43,7 +43,7 @@ import system.configuration.SettingsAttributeDictionary;
 
 
 /**
- * The base .NET class managing System.Configuration.SettingsAttributeDictionary, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link Hashtable}.
+ * The base .NET class managing System.Configuration.SettingsAttributeDictionary, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.SettingsAttributeDictionary" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.SettingsAttributeDictionary</a>

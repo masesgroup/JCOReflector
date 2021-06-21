@@ -43,7 +43,7 @@ import system.activities.Activity;
 
 
 /**
- * The base .NET class managing System.Activities.DynamicUpdate.NativeActivityUpdateMapMetadata, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link UpdateMapMetadata}.
+ * The base .NET class managing System.Activities.DynamicUpdate.NativeActivityUpdateMapMetadata, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateMapMetadata" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.DynamicUpdate.NativeActivityUpdateMapMetadata</a>

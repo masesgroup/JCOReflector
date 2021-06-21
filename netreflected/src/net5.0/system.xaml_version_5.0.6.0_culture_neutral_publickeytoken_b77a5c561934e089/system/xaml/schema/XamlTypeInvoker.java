@@ -44,7 +44,7 @@ import system.xaml.schema.XamlTypeInvoker;
 
 
 /**
- * The base .NET class managing System.Xaml.Schema.XamlTypeInvoker, System.Xaml, Version=5.0.6.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.Xaml.Schema.XamlTypeInvoker, System.Xaml, Version=5.0.6.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.Schema.XamlTypeInvoker" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.Schema.XamlTypeInvoker</a>

@@ -43,7 +43,7 @@ import system.security.cryptography.AsnEncodedData;
 
 
 /**
- * The base .NET class managing System.Security.Cryptography.Pkcs.Pkcs9DocumentName, System.Security.Cryptography.Pkcs, Version=5.0.0.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link Pkcs9AttributeObject}.
+ * The base .NET class managing System.Security.Cryptography.Pkcs.Pkcs9DocumentName, System.Security.Cryptography.Pkcs, Version=5.0.0.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.Pkcs9DocumentName" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.Pkcs9DocumentName</a>

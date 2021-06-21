@@ -45,7 +45,7 @@ import system.diagnostics.EventLogEntryType;
 
 
 /**
- * The base .NET class managing System.Diagnostics.EventLogEntry, System.Diagnostics.EventLog, Version=5.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link Component}.
+ * The base .NET class managing System.Diagnostics.EventLogEntry, System.Diagnostics.EventLog, Version=5.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.EventLogEntry" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.EventLogEntry</a>

@@ -58,7 +58,7 @@ import system.RuntimeTypeHandle;
 
 
 /**
- * The base .NET class managing System.Reflection.TypeDelegator, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link TypeInfo}.
+ * The base .NET class managing System.Reflection.TypeDelegator, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.TypeDelegator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.TypeDelegator</a>

@@ -46,7 +46,7 @@ import system.drawing.drawing2d.LineJoin;
 
 
 /**
- * The base .NET class managing System.Drawing.Drawing2D.CustomLineCap, System.Drawing.Common, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link MarshalByRefObject}.
+ * The base .NET class managing System.Drawing.Drawing2D.CustomLineCap, System.Drawing.Common, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Drawing2D.CustomLineCap" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Drawing2D.CustomLineCap</a>

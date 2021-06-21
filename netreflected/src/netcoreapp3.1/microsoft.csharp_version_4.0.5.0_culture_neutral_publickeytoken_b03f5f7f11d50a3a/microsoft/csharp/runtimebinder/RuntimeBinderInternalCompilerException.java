@@ -40,7 +40,7 @@ import java.util.ArrayList;
 // Import section
 
 /**
- * The base .NET class managing Microsoft.CSharp.RuntimeBinder.RuntimeBinderInternalCompilerException, Microsoft.CSharp, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetException}.
+ * The base .NET class managing Microsoft.CSharp.RuntimeBinder.RuntimeBinderInternalCompilerException, Microsoft.CSharp, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.CSharp.RuntimeBinder.RuntimeBinderInternalCompilerException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.CSharp.RuntimeBinder.RuntimeBinderInternalCompilerException</a>

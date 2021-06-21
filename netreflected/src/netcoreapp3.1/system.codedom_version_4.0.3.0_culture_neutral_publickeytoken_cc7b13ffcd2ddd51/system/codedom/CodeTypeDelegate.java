@@ -44,7 +44,7 @@ import system.codedom.CodeTypeReference;
 
 
 /**
- * The base .NET class managing System.CodeDom.CodeTypeDelegate, System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * The base .NET class managing System.CodeDom.CodeTypeDelegate, System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link CodeTypeDeclaration}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeTypeDelegate" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeTypeDelegate</a>

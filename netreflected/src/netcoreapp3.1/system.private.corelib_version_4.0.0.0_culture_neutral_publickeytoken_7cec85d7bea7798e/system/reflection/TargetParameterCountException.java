@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import system.ApplicationException;
 
 /**
- * The base .NET class managing System.Reflection.TargetParameterCountException, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetException}.
+ * The base .NET class managing System.Reflection.TargetParameterCountException, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link ApplicationException}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.TargetParameterCountException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.TargetParameterCountException</a>

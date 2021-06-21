@@ -42,7 +42,7 @@ import system.activities.NativeActivity;
 
 
 /**
- * The base .NET class managing System.Activities.Statements.Rethrow, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * The base .NET class managing System.Activities.Statements.Rethrow, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NativeActivity}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Statements.Rethrow" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Statements.Rethrow</a>

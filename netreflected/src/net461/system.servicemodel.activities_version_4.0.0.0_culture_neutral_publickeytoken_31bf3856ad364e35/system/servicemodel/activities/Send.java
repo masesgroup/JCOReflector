@@ -47,7 +47,7 @@ import system.xml.linq.XName;
 
 
 /**
- * The base .NET class managing System.ServiceModel.Activities.Send, System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * The base .NET class managing System.ServiceModel.Activities.Send, System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link Activity}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activities.Send" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activities.Send</a>

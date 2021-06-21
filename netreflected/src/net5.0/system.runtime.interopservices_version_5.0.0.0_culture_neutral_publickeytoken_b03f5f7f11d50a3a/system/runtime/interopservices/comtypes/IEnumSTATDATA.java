@@ -41,7 +41,7 @@ import system.runtime.interopservices.comtypes.STATDATA;
 
 
 /**
- * The base .NET class managing System.Runtime.InteropServices.ComTypes.IEnumSTATDATA, System.Runtime.InteropServices, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * The base .NET class managing System.Runtime.InteropServices.ComTypes.IEnumSTATDATA, System.Runtime.InteropServices, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link IJCOBridgeReflected}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.ComTypes.IEnumSTATDATA" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.ComTypes.IEnumSTATDATA</a>

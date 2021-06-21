@@ -42,7 +42,7 @@ import system.data.sqltypes.SqlTypesSchemaImporterExtensionHelper;
 
 
 /**
- * The base .NET class managing System.Data.SqlTypes.TypeTextSchemaImporterExtension, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.Data.SqlTypes.TypeTextSchemaImporterExtension, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link SqlTypesSchemaImporterExtensionHelper}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlTypes.TypeTextSchemaImporterExtension" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlTypes.TypeTextSchemaImporterExtension</a>

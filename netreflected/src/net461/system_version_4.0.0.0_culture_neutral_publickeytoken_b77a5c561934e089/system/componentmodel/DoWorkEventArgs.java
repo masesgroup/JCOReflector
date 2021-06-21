@@ -42,7 +42,7 @@ import system.componentmodel.CancelEventArgs;
 
 
 /**
- * The base .NET class managing System.ComponentModel.DoWorkEventArgs, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.ComponentModel.DoWorkEventArgs, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link CancelEventArgs}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.DoWorkEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.DoWorkEventArgs</a>

@@ -42,7 +42,7 @@ import system.SystemException;
 import system.threading.CancellationToken;
 
 /**
- * The base .NET class managing System.OperationCanceledException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetException}.
+ * The base .NET class managing System.OperationCanceledException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link SystemException}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.OperationCanceledException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.OperationCanceledException</a>

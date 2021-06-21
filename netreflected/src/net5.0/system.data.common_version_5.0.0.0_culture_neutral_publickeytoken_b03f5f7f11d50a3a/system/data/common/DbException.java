@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import system.runtime.interopservices.ExternalException;
 
 /**
- * The base .NET class managing System.Data.Common.DbException, System.Data.Common, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetException}.
+ * The base .NET class managing System.Data.Common.DbException, System.Data.Common, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link ExternalException}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.DbException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.DbException</a>

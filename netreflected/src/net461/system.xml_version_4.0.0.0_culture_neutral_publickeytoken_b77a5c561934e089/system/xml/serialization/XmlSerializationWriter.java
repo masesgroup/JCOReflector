@@ -42,7 +42,7 @@ import system.xml.serialization.XmlSerializationGeneratedCode;
 
 
 /**
- * The base .NET class managing System.Xml.Serialization.XmlSerializationWriter, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.Xml.Serialization.XmlSerializationWriter, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link XmlSerializationGeneratedCode}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.XmlSerializationWriter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.XmlSerializationWriter</a>

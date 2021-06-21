@@ -43,7 +43,7 @@ import system.reflection.metadata.GenericParameterConstraintHandle;
 
 
 /**
- * The base .NET class managing System.Reflection.Metadata.GenericParameterConstraintHandleCollection, System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * The base .NET class managing System.Reflection.Metadata.GenericParameterConstraintHandleCollection, System.Reflection.Metadata, Version=1.4.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link ValueType}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.GenericParameterConstraintHandleCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Metadata.GenericParameterConstraintHandleCollection</a>

@@ -44,7 +44,7 @@ import system.data.metadata.edm.EdmType;
 
 
 /**
- * The base .NET class managing System.Data.Metadata.Edm.EdmType, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.Data.Metadata.Edm.EdmType, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link GlobalItem}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Metadata.Edm.EdmType" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Metadata.Edm.EdmType</a>

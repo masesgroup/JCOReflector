@@ -51,7 +51,7 @@ import system.windows.media.imaging.BitmapDecoder;
 
 
 /**
- * The base .NET class managing System.Windows.Media.Imaging.BitmapFrame, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * The base .NET class managing System.Windows.Media.Imaging.BitmapFrame, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link BitmapSource}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Imaging.BitmapFrame" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Imaging.BitmapFrame</a>

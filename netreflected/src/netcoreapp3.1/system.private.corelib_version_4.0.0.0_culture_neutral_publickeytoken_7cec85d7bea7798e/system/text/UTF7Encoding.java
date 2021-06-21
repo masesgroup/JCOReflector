@@ -44,7 +44,7 @@ import system.text.Encoder;
 
 
 /**
- * The base .NET class managing System.Text.UTF7Encoding, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * The base .NET class managing System.Text.UTF7Encoding, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link Encoding}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.UTF7Encoding" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.UTF7Encoding</a>

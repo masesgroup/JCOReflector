@@ -46,7 +46,7 @@ import system.threading.EventWaitHandle;
 
 
 /**
- * The base .NET class managing System.Threading.EventWaitHandle, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.Threading.EventWaitHandle, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link WaitHandle}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.EventWaitHandle" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.EventWaitHandle</a>

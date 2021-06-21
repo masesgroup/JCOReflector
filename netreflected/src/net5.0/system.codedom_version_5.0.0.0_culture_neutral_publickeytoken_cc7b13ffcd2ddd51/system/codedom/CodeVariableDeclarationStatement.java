@@ -44,7 +44,7 @@ import system.codedom.CodeExpression;
 
 
 /**
- * The base .NET class managing System.CodeDom.CodeVariableDeclarationStatement, System.CodeDom, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * The base .NET class managing System.CodeDom.CodeVariableDeclarationStatement, System.CodeDom, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link CodeStatement}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeVariableDeclarationStatement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeVariableDeclarationStatement</a>

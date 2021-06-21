@@ -42,7 +42,7 @@ import system.componentmodel.design.ComponentRenameEventHandler;
 
 
 /**
- * The base .NET class managing System.Windows.Forms.ComponentModel.Com2Interop.IComPropertyBrowser, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * The base .NET class managing System.Windows.Forms.ComponentModel.Com2Interop.IComPropertyBrowser, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link IJCOBridgeReflected}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ComponentModel.Com2Interop.IComPropertyBrowser" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ComponentModel.Com2Interop.IComPropertyBrowser</a>

@@ -53,7 +53,7 @@ import system.runtime.serialization.SerializationBinder;
 
 
 /**
- * The base .NET class managing System.Runtime.Serialization.NetDataContractSerializer, System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.Runtime.Serialization.NetDataContractSerializer, System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link XmlObjectSerializer}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.NetDataContractSerializer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.NetDataContractSerializer</a>

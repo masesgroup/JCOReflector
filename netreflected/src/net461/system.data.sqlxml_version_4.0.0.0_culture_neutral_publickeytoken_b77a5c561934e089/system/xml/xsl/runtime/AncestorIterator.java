@@ -44,7 +44,7 @@ import system.xml.xsl.runtime.XmlNavigatorFilter;
 
 
 /**
- * The base .NET class managing System.Xml.Xsl.Runtime.AncestorIterator, System.Data.SqlXml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.Xml.Xsl.Runtime.AncestorIterator, System.Data.SqlXml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link ValueType}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.Runtime.AncestorIterator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.Runtime.AncestorIterator</a>

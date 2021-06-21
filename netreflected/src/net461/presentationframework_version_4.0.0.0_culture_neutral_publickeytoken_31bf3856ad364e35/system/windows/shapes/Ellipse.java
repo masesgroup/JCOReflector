@@ -44,7 +44,7 @@ import system.windows.media.Transform;
 
 
 /**
- * The base .NET class managing System.Windows.Shapes.Ellipse, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * The base .NET class managing System.Windows.Shapes.Ellipse, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link Shape}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Shapes.Ellipse" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Shapes.Ellipse</a>

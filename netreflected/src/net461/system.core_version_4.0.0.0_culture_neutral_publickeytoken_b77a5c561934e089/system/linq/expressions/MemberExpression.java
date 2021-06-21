@@ -45,7 +45,7 @@ import system.reflection.MemberInfo;
 
 
 /**
- * The base .NET class managing System.Linq.Expressions.MemberExpression, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.Linq.Expressions.MemberExpression, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link Expression}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.MemberExpression" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.MemberExpression</a>

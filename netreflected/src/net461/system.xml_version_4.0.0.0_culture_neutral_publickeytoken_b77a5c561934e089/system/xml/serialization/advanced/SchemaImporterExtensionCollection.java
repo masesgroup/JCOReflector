@@ -43,7 +43,7 @@ import system.xml.serialization.advanced.SchemaImporterExtension;
 
 
 /**
- * The base .NET class managing System.Xml.Serialization.Advanced.SchemaImporterExtensionCollection, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.Xml.Serialization.Advanced.SchemaImporterExtensionCollection, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link CollectionBase}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.Advanced.SchemaImporterExtensionCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.Advanced.SchemaImporterExtensionCollection</a>

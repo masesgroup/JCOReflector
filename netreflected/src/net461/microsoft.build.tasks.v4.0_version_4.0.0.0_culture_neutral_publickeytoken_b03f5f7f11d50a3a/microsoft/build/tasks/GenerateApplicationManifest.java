@@ -44,7 +44,7 @@ import microsoft.build.framework.ITaskItemImplementation;
 
 
 /**
- * The base .NET class managing Microsoft.Build.Tasks.GenerateApplicationManifest, Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * The base .NET class managing Microsoft.Build.Tasks.GenerateApplicationManifest, Microsoft.Build.Tasks.v4.0, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link GenerateManifestBase}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Tasks.GenerateApplicationManifest" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Tasks.GenerateApplicationManifest</a>

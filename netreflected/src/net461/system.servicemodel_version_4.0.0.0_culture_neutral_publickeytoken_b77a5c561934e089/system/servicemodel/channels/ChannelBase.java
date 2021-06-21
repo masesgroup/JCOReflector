@@ -42,7 +42,7 @@ import system.servicemodel.channels.CommunicationObject;
 
 
 /**
- * The base .NET class managing System.ServiceModel.Channels.ChannelBase, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.ServiceModel.Channels.ChannelBase, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link CommunicationObject}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.ChannelBase" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.ChannelBase</a>

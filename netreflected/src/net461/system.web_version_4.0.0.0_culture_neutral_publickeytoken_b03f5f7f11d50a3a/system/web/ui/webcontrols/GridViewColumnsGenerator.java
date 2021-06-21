@@ -42,7 +42,7 @@ import system.web.ui.webcontrols.AutoFieldsGenerator;
 
 
 /**
- * The base .NET class managing System.Web.UI.WebControls.GridViewColumnsGenerator, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * The base .NET class managing System.Web.UI.WebControls.GridViewColumnsGenerator, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link AutoFieldsGenerator}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.GridViewColumnsGenerator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.GridViewColumnsGenerator</a>

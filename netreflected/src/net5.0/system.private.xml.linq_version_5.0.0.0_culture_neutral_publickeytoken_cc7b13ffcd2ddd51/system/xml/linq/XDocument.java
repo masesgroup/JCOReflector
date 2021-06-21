@@ -56,7 +56,7 @@ import system.xml.XmlNodeType;
 
 
 /**
- * The base .NET class managing System.Xml.Linq.XDocument, System.Private.Xml.Linq, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * The base .NET class managing System.Xml.Linq.XDocument, System.Private.Xml.Linq, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link XContainer}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Linq.XDocument" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Linq.XDocument</a>

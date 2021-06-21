@@ -43,7 +43,7 @@ import microsoft.win32.safehandles.SafeMemoryMappedViewHandle;
 
 
 /**
- * The base .NET class managing System.IO.MemoryMappedFiles.MemoryMappedViewStream, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.IO.MemoryMappedFiles.MemoryMappedViewStream, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link UnmanagedMemoryStream}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.MemoryMappedFiles.MemoryMappedViewStream" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.MemoryMappedFiles.MemoryMappedViewStream</a>

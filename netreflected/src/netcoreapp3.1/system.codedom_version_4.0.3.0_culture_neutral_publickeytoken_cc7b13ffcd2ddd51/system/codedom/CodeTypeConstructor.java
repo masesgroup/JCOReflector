@@ -42,7 +42,7 @@ import system.codedom.CodeMemberMethod;
 
 
 /**
- * The base .NET class managing System.CodeDom.CodeTypeConstructor, System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * The base .NET class managing System.CodeDom.CodeTypeConstructor, System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link CodeMemberMethod}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeTypeConstructor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeTypeConstructor</a>

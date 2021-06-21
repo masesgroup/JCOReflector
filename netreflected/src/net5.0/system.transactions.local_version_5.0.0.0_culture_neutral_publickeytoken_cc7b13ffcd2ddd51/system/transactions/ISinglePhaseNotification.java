@@ -45,7 +45,7 @@ import system.transactions.SinglePhaseEnlistment;
 
 
 /**
- * The base .NET class managing System.Transactions.ISinglePhaseNotification, System.Transactions.Local, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Implements {@link IJCOBridgeReflected}.
+ * The base .NET class managing System.Transactions.ISinglePhaseNotification, System.Transactions.Local, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link IJCOBridgeReflected, IEnlistmentNotification}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.ISinglePhaseNotification" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.ISinglePhaseNotification</a>

@@ -43,7 +43,7 @@ import system.EventHandler;
 
 
 /**
- * The base .NET class managing System.Activities.Presentation.View.IExpressionEditorInstance, System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Implements {@link IJCOBridgeReflected}.
+ * The base .NET class managing System.Activities.Presentation.View.IExpressionEditorInstance, System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link IJCOBridgeReflected}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.View.IExpressionEditorInstance" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.View.IExpressionEditorInstance</a>

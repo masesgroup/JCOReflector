@@ -44,7 +44,7 @@ import system.windows.input.ICommandImplementation;
 
 
 /**
- * The base .NET class managing System.Windows.Input.CanExecuteRoutedEventArgs, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * The base .NET class managing System.Windows.Input.CanExecuteRoutedEventArgs, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link RoutedEventArgs}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.CanExecuteRoutedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.CanExecuteRoutedEventArgs</a>

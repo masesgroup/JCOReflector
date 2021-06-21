@@ -46,7 +46,7 @@ import system.workflow.runtime.tracking.TrackingAnnotationCollection;
 
 
 /**
- * The base .NET class managing System.Workflow.Runtime.Tracking.WorkflowTrackingRecord, System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * The base .NET class managing System.Workflow.Runtime.Tracking.WorkflowTrackingRecord, System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link TrackingRecord}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.Tracking.WorkflowTrackingRecord" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.Tracking.WorkflowTrackingRecord</a>

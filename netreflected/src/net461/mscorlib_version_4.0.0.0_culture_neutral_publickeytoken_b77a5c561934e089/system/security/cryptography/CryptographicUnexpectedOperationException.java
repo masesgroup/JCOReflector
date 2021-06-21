@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import system.security.cryptography.CryptographicException;
 
 /**
- * The base .NET class managing System.Security.Cryptography.CryptographicUnexpectedOperationException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetException}.
+ * The base .NET class managing System.Security.Cryptography.CryptographicUnexpectedOperationException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link CryptographicException}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.CryptographicUnexpectedOperationException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.CryptographicUnexpectedOperationException</a>

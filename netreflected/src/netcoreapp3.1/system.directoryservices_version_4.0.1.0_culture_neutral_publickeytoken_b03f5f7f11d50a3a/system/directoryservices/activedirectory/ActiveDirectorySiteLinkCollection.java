@@ -44,7 +44,7 @@ import system.directoryservices.activedirectory.ActiveDirectorySiteLinkCollectio
 
 
 /**
- * The base .NET class managing System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLinkCollection, System.DirectoryServices, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * The base .NET class managing System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLinkCollection, System.DirectoryServices, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link CollectionBase}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLinkCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.ActiveDirectory.ActiveDirectorySiteLinkCollection</a>

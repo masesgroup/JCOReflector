@@ -43,7 +43,7 @@ import system.xml.schema.XmlSchemaForm;
 
 
 /**
- * The base .NET class managing System.Xml.Serialization.XmlArrayAttribute, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.Xml.Serialization.XmlArrayAttribute, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link Attribute}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.XmlArrayAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Serialization.XmlArrayAttribute</a>

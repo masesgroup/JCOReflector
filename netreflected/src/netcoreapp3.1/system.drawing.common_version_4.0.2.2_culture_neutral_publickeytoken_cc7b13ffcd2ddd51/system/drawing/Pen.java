@@ -54,7 +54,7 @@ import system.drawing.drawing2d.PenType;
 
 
 /**
- * The base .NET class managing System.Drawing.Pen, System.Drawing.Common, Version=4.0.2.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * The base .NET class managing System.Drawing.Pen, System.Drawing.Common, Version=4.0.2.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link MarshalByRefObject}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Pen" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Pen</a>

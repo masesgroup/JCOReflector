@@ -46,7 +46,7 @@ import system.drawing.Bitmap;
 
 
 /**
- * The base .NET class managing System.Drawing.Icon, System.Drawing.Common, Version=4.0.2.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * The base .NET class managing System.Drawing.Icon, System.Drawing.Common, Version=4.0.2.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link MarshalByRefObject}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Icon" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Icon</a>

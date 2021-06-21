@@ -52,7 +52,7 @@ import system.drawing.drawing2d.Matrix;
 
 
 /**
- * The base .NET class managing System.Drawing.Region, System.Drawing.Common, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * The base .NET class managing System.Drawing.Region, System.Drawing.Common, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link MarshalByRefObject}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Region" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Region</a>

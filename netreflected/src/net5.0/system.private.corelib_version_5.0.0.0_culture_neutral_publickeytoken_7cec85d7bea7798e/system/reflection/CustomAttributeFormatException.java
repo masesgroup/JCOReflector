@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import system.FormatException;
 
 /**
- * The base .NET class managing System.Reflection.CustomAttributeFormatException, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetException}.
+ * The base .NET class managing System.Reflection.CustomAttributeFormatException, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link FormatException}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.CustomAttributeFormatException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.CustomAttributeFormatException</a>

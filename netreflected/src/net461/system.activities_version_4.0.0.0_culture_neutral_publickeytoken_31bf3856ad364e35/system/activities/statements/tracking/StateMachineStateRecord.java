@@ -42,7 +42,7 @@ import system.activities.tracking.CustomTrackingRecord;
 
 
 /**
- * The base .NET class managing System.Activities.Statements.Tracking.StateMachineStateRecord, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * The base .NET class managing System.Activities.Statements.Tracking.StateMachineStateRecord, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link CustomTrackingRecord}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Statements.Tracking.StateMachineStateRecord" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Statements.Tracking.StateMachineStateRecord</a>

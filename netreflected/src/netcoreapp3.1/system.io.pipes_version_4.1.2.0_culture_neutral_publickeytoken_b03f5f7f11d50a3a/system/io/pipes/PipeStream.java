@@ -51,7 +51,7 @@ import system.io.pipes.PipeTransmissionMode;
 
 
 /**
- * The base .NET class managing System.IO.Pipes.PipeStream, System.IO.Pipes, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * The base .NET class managing System.IO.Pipes.PipeStream, System.IO.Pipes, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link Stream}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.Pipes.PipeStream" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.Pipes.PipeStream</a>

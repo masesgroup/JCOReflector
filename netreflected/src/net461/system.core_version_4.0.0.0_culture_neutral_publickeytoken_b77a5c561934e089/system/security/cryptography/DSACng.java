@@ -45,7 +45,7 @@ import system.security.cryptography.KeySizes;
 
 
 /**
- * The base .NET class managing System.Security.Cryptography.DSACng, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.Security.Cryptography.DSACng, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link DSA}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.DSACng" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.DSACng</a>

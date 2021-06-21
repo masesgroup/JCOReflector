@@ -42,7 +42,7 @@ import system.data.metadata.edm.EdmType;
 
 
 /**
- * The base .NET class managing System.Data.Metadata.Edm.StructuralType, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.Data.Metadata.Edm.StructuralType, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link EdmType}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Metadata.Edm.StructuralType" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Metadata.Edm.StructuralType</a>

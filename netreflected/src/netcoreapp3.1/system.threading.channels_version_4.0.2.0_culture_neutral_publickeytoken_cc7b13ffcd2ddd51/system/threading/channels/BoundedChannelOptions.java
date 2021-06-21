@@ -43,7 +43,7 @@ import system.threading.channels.BoundedChannelFullMode;
 
 
 /**
- * The base .NET class managing System.Threading.Channels.BoundedChannelOptions, System.Threading.Channels, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * The base .NET class managing System.Threading.Channels.BoundedChannelOptions, System.Threading.Channels, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link ChannelOptions}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Channels.BoundedChannelOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Channels.BoundedChannelOptions</a>

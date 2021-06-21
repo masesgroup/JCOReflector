@@ -60,7 +60,7 @@ import system.UnhandledExceptionEventHandler;
 
 
 /**
- * The base .NET class managing System.AppDomain, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * The base .NET class managing System.AppDomain, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link MarshalByRefObject}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.AppDomain" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.AppDomain</a>

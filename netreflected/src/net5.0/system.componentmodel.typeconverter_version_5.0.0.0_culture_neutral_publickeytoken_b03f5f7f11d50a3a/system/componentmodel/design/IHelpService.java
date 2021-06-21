@@ -44,7 +44,7 @@ import system.componentmodel.design.HelpKeywordType;
 
 
 /**
- * The base .NET class managing System.ComponentModel.Design.IHelpService, System.ComponentModel.TypeConverter, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * The base .NET class managing System.ComponentModel.Design.IHelpService, System.ComponentModel.TypeConverter, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link IJCOBridgeReflected}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.IHelpService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.IHelpService</a>

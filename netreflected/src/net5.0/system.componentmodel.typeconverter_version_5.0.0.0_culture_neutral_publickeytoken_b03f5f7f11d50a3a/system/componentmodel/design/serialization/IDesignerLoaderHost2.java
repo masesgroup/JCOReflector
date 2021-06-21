@@ -60,7 +60,7 @@ import system.EventHandler;
 
 
 /**
- * The base .NET class managing System.ComponentModel.Design.Serialization.IDesignerLoaderHost2, System.ComponentModel.TypeConverter, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * The base .NET class managing System.ComponentModel.Design.Serialization.IDesignerLoaderHost2, System.ComponentModel.TypeConverter, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link IJCOBridgeReflected, IDesignerLoaderHost, IDesignerHost, IServiceContainer, IServiceProvider}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.IDesignerLoaderHost2" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.IDesignerLoaderHost2</a>

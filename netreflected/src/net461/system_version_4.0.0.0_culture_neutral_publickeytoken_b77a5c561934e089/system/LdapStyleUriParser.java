@@ -42,7 +42,7 @@ import system.UriParser;
 
 
 /**
- * The base .NET class managing System.LdapStyleUriParser, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.LdapStyleUriParser, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link UriParser}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.LdapStyleUriParser" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.LdapStyleUriParser</a>

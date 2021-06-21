@@ -44,7 +44,7 @@ import system.TimeSpan;
 
 
 /**
- * The base .NET class managing System.Management.DeleteOptions, System.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * The base .NET class managing System.Management.DeleteOptions, System.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link ManagementOptions}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Management.DeleteOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Management.DeleteOptions</a>

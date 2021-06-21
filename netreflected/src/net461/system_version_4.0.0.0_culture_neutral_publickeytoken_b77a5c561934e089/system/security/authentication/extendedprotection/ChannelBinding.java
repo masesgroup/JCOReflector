@@ -42,7 +42,7 @@ import microsoft.win32.safehandles.SafeHandleZeroOrMinusOneIsInvalid;
 
 
 /**
- * The base .NET class managing System.Security.Authentication.ExtendedProtection.ChannelBinding, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.Security.Authentication.ExtendedProtection.ChannelBinding, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link SafeHandleZeroOrMinusOneIsInvalid}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Authentication.ExtendedProtection.ChannelBinding" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Authentication.ExtendedProtection.ChannelBinding</a>

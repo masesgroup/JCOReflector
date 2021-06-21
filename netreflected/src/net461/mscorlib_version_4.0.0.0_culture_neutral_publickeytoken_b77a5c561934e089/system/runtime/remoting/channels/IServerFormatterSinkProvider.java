@@ -48,7 +48,7 @@ import system.runtime.remoting.channels.IChannelDataStoreImplementation;
 
 
 /**
- * The base .NET class managing System.Runtime.Remoting.Channels.IServerFormatterSinkProvider, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * The base .NET class managing System.Runtime.Remoting.Channels.IServerFormatterSinkProvider, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link IJCOBridgeReflected, IServerChannelSinkProvider}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Channels.IServerFormatterSinkProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Channels.IServerFormatterSinkProvider</a>

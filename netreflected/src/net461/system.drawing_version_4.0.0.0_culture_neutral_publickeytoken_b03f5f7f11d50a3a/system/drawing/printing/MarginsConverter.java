@@ -47,7 +47,7 @@ import system.collections.IDictionaryImplementation;
 
 
 /**
- * The base .NET class managing System.Drawing.Printing.MarginsConverter, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * The base .NET class managing System.Drawing.Printing.MarginsConverter, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link ExpandableObjectConverter}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Printing.MarginsConverter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Printing.MarginsConverter</a>

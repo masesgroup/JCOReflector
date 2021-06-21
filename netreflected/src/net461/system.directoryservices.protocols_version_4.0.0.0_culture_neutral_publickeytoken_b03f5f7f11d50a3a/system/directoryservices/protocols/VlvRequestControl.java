@@ -42,7 +42,7 @@ import system.directoryservices.protocols.DirectoryControl;
 
 
 /**
- * The base .NET class managing System.DirectoryServices.Protocols.VlvRequestControl, System.DirectoryServices.Protocols, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * The base .NET class managing System.DirectoryServices.Protocols.VlvRequestControl, System.DirectoryServices.Protocols, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link DirectoryControl}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.Protocols.VlvRequestControl" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.Protocols.VlvRequestControl</a>

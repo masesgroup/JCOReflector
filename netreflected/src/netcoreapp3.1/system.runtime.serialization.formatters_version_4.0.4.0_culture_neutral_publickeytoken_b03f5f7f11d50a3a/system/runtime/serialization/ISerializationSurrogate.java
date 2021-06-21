@@ -44,7 +44,7 @@ import system.runtime.serialization.ISurrogateSelectorImplementation;
 
 
 /**
- * The base .NET class managing System.Runtime.Serialization.ISerializationSurrogate, System.Runtime.Serialization.Formatters, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * The base .NET class managing System.Runtime.Serialization.ISerializationSurrogate, System.Runtime.Serialization.Formatters, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link IJCOBridgeReflected}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.ISerializationSurrogate" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Serialization.ISerializationSurrogate</a>

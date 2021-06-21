@@ -41,7 +41,7 @@ import system.security.policy.Evidence;
 
 
 /**
- * The base .NET class managing System.Security.IEvidenceFactory, System.Security.Permissions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Implements {@link IJCOBridgeReflected}.
+ * The base .NET class managing System.Security.IEvidenceFactory, System.Security.Permissions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link IJCOBridgeReflected}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.IEvidenceFactory" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.IEvidenceFactory</a>

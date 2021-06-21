@@ -51,7 +51,7 @@ import system.xml.XmlReader;
 
 
 /**
- * The base .NET class managing System.Xml.XmlDataDocument, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.Xml.XmlDataDocument, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link XmlDocument}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlDataDocument" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlDataDocument</a>

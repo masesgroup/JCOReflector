@@ -49,7 +49,7 @@ import system.collections.IDictionaryImplementation;
 
 
 /**
- * The base .NET class managing System.Drawing.FontConverter, System.Drawing.Common, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * The base .NET class managing System.Drawing.FontConverter, System.Drawing.Common, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link TypeConverter}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.FontConverter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.FontConverter</a>

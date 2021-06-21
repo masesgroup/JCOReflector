@@ -45,7 +45,7 @@ import system.xml.XmlQualifiedName;
 
 
 /**
- * The base .NET class managing System.Xml.Schema.XmlSchemaSimpleContentExtension, System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * The base .NET class managing System.Xml.Schema.XmlSchemaSimpleContentExtension, System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link XmlSchemaContent}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.XmlSchemaSimpleContentExtension" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.XmlSchemaSimpleContentExtension</a>

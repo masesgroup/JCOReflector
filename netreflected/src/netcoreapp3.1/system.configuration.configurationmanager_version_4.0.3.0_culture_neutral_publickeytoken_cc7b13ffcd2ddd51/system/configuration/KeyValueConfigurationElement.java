@@ -42,7 +42,7 @@ import system.configuration.ConfigurationElement;
 
 
 /**
- * The base .NET class managing System.Configuration.KeyValueConfigurationElement, System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * The base .NET class managing System.Configuration.KeyValueConfigurationElement, System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link ConfigurationElement}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.KeyValueConfigurationElement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.KeyValueConfigurationElement</a>

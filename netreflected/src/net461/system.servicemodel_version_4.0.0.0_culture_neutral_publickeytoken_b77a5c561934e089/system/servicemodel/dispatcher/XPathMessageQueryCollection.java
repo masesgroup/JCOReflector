@@ -42,7 +42,7 @@ import system.servicemodel.dispatcher.MessageQueryCollection;
 
 
 /**
- * The base .NET class managing System.ServiceModel.Dispatcher.XPathMessageQueryCollection, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.ServiceModel.Dispatcher.XPathMessageQueryCollection, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link MessageQueryCollection}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Dispatcher.XPathMessageQueryCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Dispatcher.XPathMessageQueryCollection</a>

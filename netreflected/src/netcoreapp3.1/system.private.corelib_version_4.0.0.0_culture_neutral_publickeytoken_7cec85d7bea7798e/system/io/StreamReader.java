@@ -44,7 +44,7 @@ import system.text.Encoding;
 
 
 /**
- * The base .NET class managing System.IO.StreamReader, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * The base .NET class managing System.IO.StreamReader, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link TextReader}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.StreamReader" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.StreamReader</a>

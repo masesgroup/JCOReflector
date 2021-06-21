@@ -43,7 +43,7 @@ import system.servicemodel.activities.tracking.configuration.StateElementCollect
 
 
 /**
- * The base .NET class managing System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement, System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * The base .NET class managing System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement, System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link TrackingQueryElement}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement</a>

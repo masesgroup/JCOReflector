@@ -42,7 +42,7 @@ import system.servicemodel.security.tokens.SecurityTokenParameters;
 
 
 /**
- * The base .NET class managing System.ServiceModel.Security.Tokens.UserNameSecurityTokenParameters, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.ServiceModel.Security.Tokens.UserNameSecurityTokenParameters, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link SecurityTokenParameters}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.Tokens.UserNameSecurityTokenParameters" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.Tokens.UserNameSecurityTokenParameters</a>

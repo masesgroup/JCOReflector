@@ -44,7 +44,7 @@ import system.diagnostics.ActivityTagsCollection;
 
 
 /**
- * The base .NET class managing System.Diagnostics.ActivityEvent, System.Diagnostics.DiagnosticSource, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * The base .NET class managing System.Diagnostics.ActivityEvent, System.Diagnostics.DiagnosticSource, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link ValueType}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.ActivityEvent" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.ActivityEvent</a>

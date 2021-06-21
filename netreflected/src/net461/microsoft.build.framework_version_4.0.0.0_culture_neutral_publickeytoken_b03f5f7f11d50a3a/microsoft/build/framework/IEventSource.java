@@ -54,7 +54,7 @@ import microsoft.build.framework.TaskStartedEventHandler;
 
 
 /**
- * The base .NET class managing Microsoft.Build.Framework.IEventSource, Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * The base .NET class managing Microsoft.Build.Framework.IEventSource, Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link IJCOBridgeReflected}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.IEventSource" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.IEventSource</a>

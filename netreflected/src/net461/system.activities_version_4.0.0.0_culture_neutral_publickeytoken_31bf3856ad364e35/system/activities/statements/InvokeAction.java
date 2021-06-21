@@ -43,7 +43,7 @@ import system.activities.ActivityAction;
 
 
 /**
- * The base .NET class managing System.Activities.Statements.InvokeAction, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * The base .NET class managing System.Activities.Statements.InvokeAction, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NativeActivity}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Statements.InvokeAction" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Statements.InvokeAction</a>

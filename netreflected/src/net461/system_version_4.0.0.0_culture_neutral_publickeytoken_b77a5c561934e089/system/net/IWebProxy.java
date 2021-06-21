@@ -43,7 +43,7 @@ import system.net.ICredentialsImplementation;
 
 
 /**
- * The base .NET class managing System.Net.IWebProxy, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * The base .NET class managing System.Net.IWebProxy, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link IJCOBridgeReflected}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.IWebProxy" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.IWebProxy</a>

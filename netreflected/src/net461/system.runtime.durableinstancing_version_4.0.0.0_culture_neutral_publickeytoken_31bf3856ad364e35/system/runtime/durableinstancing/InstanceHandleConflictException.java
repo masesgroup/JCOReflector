@@ -43,7 +43,7 @@ import system.xml.linq.XName;
 import system.Guid;
 
 /**
- * The base .NET class managing System.Runtime.DurableInstancing.InstanceHandleConflictException, System.Runtime.DurableInstancing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetException}.
+ * The base .NET class managing System.Runtime.DurableInstancing.InstanceHandleConflictException, System.Runtime.DurableInstancing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link InstancePersistenceCommandException}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.DurableInstancing.InstanceHandleConflictException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.DurableInstancing.InstanceHandleConflictException</a>

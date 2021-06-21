@@ -52,7 +52,7 @@ import system.windows.TextWrapping;
 
 
 /**
- * The base .NET class managing System.Windows.Controls.TextBox, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * The base .NET class managing System.Windows.Controls.TextBox, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link TextBoxBase}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.TextBox" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.TextBox</a>

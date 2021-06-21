@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import system.xml.XmlException;
 
 /**
- * The base .NET class managing System.Security.Cryptography.Xml.CryptoSignedXmlRecursionException, System.Security.Cryptography.Xml, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetException}.
+ * The base .NET class managing System.Security.Cryptography.Xml.CryptoSignedXmlRecursionException, System.Security.Cryptography.Xml, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link XmlException}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Xml.CryptoSignedXmlRecursionException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Xml.CryptoSignedXmlRecursionException</a>

@@ -44,7 +44,7 @@ import system.linq.expressions.Expression;
 
 
 /**
- * The base .NET class managing System.Linq.Expressions.MemberAssignment, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.Linq.Expressions.MemberAssignment, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link MemberBinding}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.MemberAssignment" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Linq.Expressions.MemberAssignment</a>

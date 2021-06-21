@@ -44,7 +44,7 @@ import system.io.TextWriter;
 
 
 /**
- * The base .NET class managing System.Diagnostics.TextWriterTraceListener, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.Diagnostics.TextWriterTraceListener, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link TraceListener}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.TextWriterTraceListener" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.TextWriterTraceListener</a>

@@ -48,7 +48,7 @@ import system.collections.specialized.NameValueCollection;
 
 
 /**
- * The base .NET class managing System.Configuration.LocalFileSettingsProvider, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.Configuration.LocalFileSettingsProvider, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link SettingsProvider}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.LocalFileSettingsProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.LocalFileSettingsProvider</a>

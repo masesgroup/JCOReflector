@@ -44,7 +44,7 @@ import system.text.encodings.web.JavaScriptEncoder;
 
 
 /**
- * The base .NET class managing System.Text.Json.JsonEncodedText, System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * The base .NET class managing System.Text.Json.JsonEncodedText, System.Text.Json, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link ValueType}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.JsonEncodedText" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.JsonEncodedText</a>

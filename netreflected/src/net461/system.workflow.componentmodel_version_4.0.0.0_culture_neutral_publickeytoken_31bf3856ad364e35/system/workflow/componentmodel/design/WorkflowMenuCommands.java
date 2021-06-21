@@ -42,7 +42,7 @@ import system.componentmodel.design.StandardCommands;
 
 
 /**
- * The base .NET class managing System.Workflow.ComponentModel.Design.WorkflowMenuCommands, System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * The base .NET class managing System.Workflow.ComponentModel.Design.WorkflowMenuCommands, System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link StandardCommands}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.WorkflowMenuCommands" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.WorkflowMenuCommands</a>

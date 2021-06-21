@@ -42,7 +42,7 @@ import system.text.EncoderFallbackBuffer;
 
 
 /**
- * The base .NET class managing System.Text.EncoderExceptionFallbackBuffer, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * The base .NET class managing System.Text.EncoderExceptionFallbackBuffer, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link EncoderFallbackBuffer}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.EncoderExceptionFallbackBuffer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.EncoderExceptionFallbackBuffer</a>

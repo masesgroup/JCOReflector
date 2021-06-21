@@ -44,7 +44,7 @@ import system.collections.specialized.NotifyCollectionChangedEventArgs;
 
 
 /**
- * The base .NET class managing System.Windows.Automation.Peers.IViewAutomationPeer, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Implements {@link IJCOBridgeReflected}.
+ * The base .NET class managing System.Windows.Automation.Peers.IViewAutomationPeer, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link IJCOBridgeReflected}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Peers.IViewAutomationPeer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Peers.IViewAutomationPeer</a>

@@ -45,7 +45,7 @@ import system.web.modelbinding.ModelBindingExecutionContext;
 
 
 /**
- * The base .NET class managing System.Web.ModelBinding.IUnvalidatedValueProviderSource, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * The base .NET class managing System.Web.ModelBinding.IUnvalidatedValueProviderSource, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link IJCOBridgeReflected, IValueProviderSource}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.ModelBinding.IUnvalidatedValueProviderSource" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.ModelBinding.IUnvalidatedValueProviderSource</a>

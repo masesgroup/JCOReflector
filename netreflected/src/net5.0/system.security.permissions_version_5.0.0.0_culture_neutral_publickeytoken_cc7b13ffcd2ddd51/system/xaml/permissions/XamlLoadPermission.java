@@ -47,7 +47,7 @@ import system.security.SecurityElement;
 
 
 /**
- * The base .NET class managing System.Xaml.Permissions.XamlLoadPermission, System.Security.Permissions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * The base .NET class managing System.Xaml.Permissions.XamlLoadPermission, System.Security.Permissions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link CodeAccessPermission}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.Permissions.XamlLoadPermission" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.Permissions.XamlLoadPermission</a>

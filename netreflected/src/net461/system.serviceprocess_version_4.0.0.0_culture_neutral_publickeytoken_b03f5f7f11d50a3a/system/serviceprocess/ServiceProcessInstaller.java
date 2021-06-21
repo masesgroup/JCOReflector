@@ -47,7 +47,7 @@ import system.serviceprocess.ServiceAccount;
 
 
 /**
- * The base .NET class managing System.ServiceProcess.ServiceProcessInstaller, System.ServiceProcess, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * The base .NET class managing System.ServiceProcess.ServiceProcessInstaller, System.ServiceProcess, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link ComponentInstaller}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceProcess.ServiceProcessInstaller" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceProcess.ServiceProcessInstaller</a>

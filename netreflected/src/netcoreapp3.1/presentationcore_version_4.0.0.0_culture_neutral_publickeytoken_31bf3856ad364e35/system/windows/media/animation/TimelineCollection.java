@@ -44,7 +44,7 @@ import system.windows.media.animation.TimelineCollection;
 
 
 /**
- * The base .NET class managing System.Windows.Media.Animation.TimelineCollection, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * The base .NET class managing System.Windows.Media.Animation.TimelineCollection, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link Animatable}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Animation.TimelineCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Animation.TimelineCollection</a>

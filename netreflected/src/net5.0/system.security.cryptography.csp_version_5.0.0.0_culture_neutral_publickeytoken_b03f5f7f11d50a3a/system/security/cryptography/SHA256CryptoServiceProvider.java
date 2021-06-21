@@ -42,7 +42,7 @@ import system.security.cryptography.SHA256;
 
 
 /**
- * The base .NET class managing System.Security.Cryptography.SHA256CryptoServiceProvider, System.Security.Cryptography.Csp, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * The base .NET class managing System.Security.Cryptography.SHA256CryptoServiceProvider, System.Security.Cryptography.Csp, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link SHA256}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.SHA256CryptoServiceProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.SHA256CryptoServiceProvider</a>

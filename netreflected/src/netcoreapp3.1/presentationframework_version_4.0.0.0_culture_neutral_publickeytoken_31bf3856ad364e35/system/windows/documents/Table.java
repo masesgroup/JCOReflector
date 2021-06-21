@@ -44,7 +44,7 @@ import system.windows.documents.TableRowGroupCollection;
 
 
 /**
- * The base .NET class managing System.Windows.Documents.Table, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * The base .NET class managing System.Windows.Documents.Table, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link Block}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.Table" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.Table</a>

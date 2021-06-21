@@ -43,7 +43,7 @@ import system.codedom.CodeExpressionCollection;
 
 
 /**
- * The base .NET class managing System.CodeDom.CodeDelegateInvokeExpression, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.CodeDom.CodeDelegateInvokeExpression, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link CodeExpression}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeDelegateInvokeExpression" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeDelegateInvokeExpression</a>

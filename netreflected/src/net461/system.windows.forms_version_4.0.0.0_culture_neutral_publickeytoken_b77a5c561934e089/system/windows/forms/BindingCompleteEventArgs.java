@@ -44,7 +44,7 @@ import system.windows.forms.BindingCompleteContext;
 
 
 /**
- * The base .NET class managing System.Windows.Forms.BindingCompleteEventArgs, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.Windows.Forms.BindingCompleteEventArgs, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link CancelEventArgs}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.BindingCompleteEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.BindingCompleteEventArgs</a>

@@ -43,7 +43,7 @@ import system.diagnostics.tracing.EventCommand;
 
 
 /**
- * The base .NET class managing System.Diagnostics.Tracing.EventCommandEventArgs, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.Diagnostics.Tracing.EventCommandEventArgs, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link EventArgs}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Tracing.EventCommandEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.Tracing.EventCommandEventArgs</a>

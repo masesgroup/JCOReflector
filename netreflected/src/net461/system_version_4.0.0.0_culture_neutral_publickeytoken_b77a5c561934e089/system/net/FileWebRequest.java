@@ -53,7 +53,7 @@ import system.Uri;
 
 
 /**
- * The base .NET class managing System.Net.FileWebRequest, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.Net.FileWebRequest, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link WebRequest}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.FileWebRequest" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.FileWebRequest</a>

@@ -45,7 +45,7 @@ import system.numerics.Vector2;
 
 
 /**
- * The base .NET class managing System.Numerics.Matrix3x2, System.Numerics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.Numerics.Matrix3x2, System.Numerics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link ValueType}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Numerics.Matrix3x2" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Numerics.Matrix3x2</a>

@@ -46,7 +46,7 @@ import system.componentmodel.design.CommandID;
 
 
 /**
- * The base .NET class managing System.Workflow.ComponentModel.Design.ActivityDesignerVerb, System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * The base .NET class managing System.Workflow.ComponentModel.Design.ActivityDesignerVerb, System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link DesignerVerb}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.ActivityDesignerVerb" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.ActivityDesignerVerb</a>

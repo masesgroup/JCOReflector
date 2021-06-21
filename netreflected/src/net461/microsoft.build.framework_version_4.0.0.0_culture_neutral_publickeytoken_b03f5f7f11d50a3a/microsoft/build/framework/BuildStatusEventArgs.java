@@ -42,7 +42,7 @@ import microsoft.build.framework.LazyFormattedBuildEventArgs;
 
 
 /**
- * The base .NET class managing Microsoft.Build.Framework.BuildStatusEventArgs, Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * The base .NET class managing Microsoft.Build.Framework.BuildStatusEventArgs, Microsoft.Build.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link LazyFormattedBuildEventArgs}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.BuildStatusEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Build.Framework.BuildStatusEventArgs</a>

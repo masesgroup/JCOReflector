@@ -50,7 +50,7 @@ import system.drawing.design.ToolboxItem;
 
 
 /**
- * The base .NET class managing System.Windows.Forms.Design.ComponentTray, System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.Windows.Forms.Design.ComponentTray, System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link ScrollableControl}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.ComponentTray" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.ComponentTray</a>

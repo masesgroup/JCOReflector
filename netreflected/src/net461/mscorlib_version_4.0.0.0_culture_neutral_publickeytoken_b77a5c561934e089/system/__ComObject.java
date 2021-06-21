@@ -42,7 +42,7 @@ import system.MarshalByRefObject;
 
 
 /**
- * The base .NET class managing System.__ComObject, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.__ComObject, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link MarshalByRefObject}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.__ComObject" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.__ComObject</a>

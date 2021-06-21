@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import system.SystemException;
 
 /**
- * The base .NET class managing System.IdentityModel.Tokens.SecurityTokenException, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetException}.
+ * The base .NET class managing System.IdentityModel.Tokens.SecurityTokenException, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link SystemException}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.SecurityTokenException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.SecurityTokenException</a>

@@ -42,7 +42,7 @@ import system.servicemodel.MessageContractMemberAttribute;
 
 
 /**
- * The base .NET class managing System.ServiceModel.MessageHeaderAttribute, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.ServiceModel.MessageHeaderAttribute, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link MessageContractMemberAttribute}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.MessageHeaderAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.MessageHeaderAttribute</a>

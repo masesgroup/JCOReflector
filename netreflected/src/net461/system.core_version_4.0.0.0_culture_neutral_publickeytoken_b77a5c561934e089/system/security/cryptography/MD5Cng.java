@@ -42,7 +42,7 @@ import system.security.cryptography.MD5;
 
 
 /**
- * The base .NET class managing System.Security.Cryptography.MD5Cng, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.Security.Cryptography.MD5Cng, System.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link MD5}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.MD5Cng" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.MD5Cng</a>

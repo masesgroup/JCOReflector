@@ -40,7 +40,7 @@ import java.util.ArrayList;
 // Import section
 PACKAGE_IMPORT_SECTION
 /**
- * The base .NET class managing FULLYQUALIFIED_CLASS_NAME, FULL_ASSEMBLY_CLASS_NAME. Extends {@link JCVoidDelegate}. Implements {@link IJCVoidEventEmit}, {@link IJCOBridgeReflected}
+ * The base .NET class managing FULLYQUALIFIED_CLASS_NAME, FULL_ASSEMBLY_CLASS_NAME.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/FULLYQUALIFIED_CLASS_NAME" target="_top">https://docs.microsoft.com/en-us/dotnet/api/FULLYQUALIFIED_CLASS_NAME</a>

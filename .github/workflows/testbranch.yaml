@@ -16,8 +16,48 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+  # Verify if a build is needed
+  check:
+    name: Check changed files
+    outputs:
+      run_job: ${{ steps.check_files.outputs.run_job }}
+    runs-on: ubuntu-latest
+    steps:
+      - id: get_changed_files
+        uses: jitterbit/get-changed-files@v1
+        with:
+          format: 'csv'
+
+      - id: check_files
+        run: |
+          mapfile -d ',' -t added_modified_files < <(printf '%s,' '${{ steps.get_changed_files.outputs.added_modified }}')
+          for added_modified_file in "${added_modified_files[@]}"; do
+              if [[ $added_modified_file == ".github/workflows/testbranch.yaml"* ]]; then
+                echo "$added_modified_file is under the directory '.github/workflows'."
+                echo "::set-output name=run_job::true"
+                break
+              fi
+              if [[ $added_modified_file == "netreflected/src/JCOReflector/"* ]]; then
+                echo "$added_modified_file is under the directory 'netreflected/src/JCOReflector'."
+                echo "::set-output name=run_job::true"
+                break
+              fi
+              if [[ $added_modified_file == "JCOReflector/"* ]]; then
+                echo "$added_modified_file is under the directory 'JCOReflector/'."
+                echo "::set-output name=run_job::true"
+                break
+              fi
+              if [[ $added_modified_file == "netreflected-tests/"* ]]; then
+                echo "$added_modified_file is under the directory 'netreflected-tests/'."
+                echo "::set-output name=run_job::true"
+                break
+              fi
+          done
+
   # This workflow contains a single job called "build"
   build_testbranch:
+    needs: check
+    if: needs.check.outputs.run_job == 'true'
     # The type of runner that the job will run on
     runs-on: windows-2019
   

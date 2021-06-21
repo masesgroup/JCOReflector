@@ -43,7 +43,7 @@ import system.configuration.ConfigurationValidatorBase;
 
 
 /**
- * The base .NET class managing System.Configuration.ConfigurationValidatorAttribute, System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * The base .NET class managing System.Configuration.ConfigurationValidatorAttribute, System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link Attribute}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.ConfigurationValidatorAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.ConfigurationValidatorAttribute</a>

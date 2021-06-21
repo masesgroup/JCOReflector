@@ -44,7 +44,7 @@ import system.runtime.interopservices.GCHandleType;
 
 
 /**
- * The base .NET class managing System.Runtime.InteropServices.GCHandle, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * The base .NET class managing System.Runtime.InteropServices.GCHandle, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link ValueType}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.GCHandle" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.GCHandle</a>

@@ -45,7 +45,7 @@ import system.formats.asn1.Asn1Tag;
 
 
 /**
- * The base .NET class managing System.Formats.Asn1.Asn1Tag, System.Formats.Asn1, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * The base .NET class managing System.Formats.Asn1.Asn1Tag, System.Formats.Asn1, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link ValueType}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Formats.Asn1.Asn1Tag" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Formats.Asn1.Asn1Tag</a>

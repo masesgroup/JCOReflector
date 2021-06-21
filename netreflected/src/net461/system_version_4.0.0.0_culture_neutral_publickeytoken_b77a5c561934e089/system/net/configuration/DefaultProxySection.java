@@ -45,7 +45,7 @@ import system.net.configuration.ProxyElement;
 
 
 /**
- * The base .NET class managing System.Net.Configuration.DefaultProxySection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.Net.Configuration.DefaultProxySection, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link ConfigurationSection}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Configuration.DefaultProxySection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Configuration.DefaultProxySection</a>

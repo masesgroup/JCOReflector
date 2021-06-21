@@ -47,7 +47,7 @@ import system.net.mime.ContentDisposition;
 
 
 /**
- * The base .NET class managing System.Net.Mail.Attachment, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.Net.Mail.Attachment, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link AttachmentBase}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mail.Attachment" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mail.Attachment</a>

@@ -48,7 +48,7 @@ import system.security.permissions.MediaPermissionVideo;
 
 
 /**
- * The base .NET class managing System.Security.Permissions.MediaPermissionAttribute, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * The base .NET class managing System.Security.Permissions.MediaPermissionAttribute, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link CodeAccessSecurityAttribute}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.MediaPermissionAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.MediaPermissionAttribute</a>

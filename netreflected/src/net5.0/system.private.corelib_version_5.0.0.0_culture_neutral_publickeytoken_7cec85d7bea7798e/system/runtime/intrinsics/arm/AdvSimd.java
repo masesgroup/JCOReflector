@@ -47,7 +47,7 @@ import system.UInt64;
 
 
 /**
- * The base .NET class managing System.Runtime.Intrinsics.Arm.AdvSimd, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * The base .NET class managing System.Runtime.Intrinsics.Arm.AdvSimd, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link ArmBase}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Intrinsics.Arm.AdvSimd" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Intrinsics.Arm.AdvSimd</a>

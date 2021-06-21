@@ -42,7 +42,7 @@ import system.componentmodel.IExtenderProviderImplementation;
 
 
 /**
- * The base .NET class managing System.ComponentModel.Design.IExtenderProviderService, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * The base .NET class managing System.ComponentModel.Design.IExtenderProviderService, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link IJCOBridgeReflected}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.IExtenderProviderService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.IExtenderProviderService</a>

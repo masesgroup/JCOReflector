@@ -44,7 +44,7 @@ import system.runtime.serialization.StreamingContext;
 import system.data.odbc.OdbcErrorCollection;
 
 /**
- * The base .NET class managing System.Data.Odbc.OdbcException, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetException}.
+ * The base .NET class managing System.Data.Odbc.OdbcException, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link DbException}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Odbc.OdbcException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Odbc.OdbcException</a>

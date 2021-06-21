@@ -42,7 +42,7 @@ import system.windows.media.converters.BaseIListConverter;
 
 
 /**
- * The base .NET class managing System.Windows.Media.Converters.PointIListConverter, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * The base .NET class managing System.Windows.Media.Converters.PointIListConverter, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link BaseIListConverter}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Converters.PointIListConverter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Converters.PointIListConverter</a>

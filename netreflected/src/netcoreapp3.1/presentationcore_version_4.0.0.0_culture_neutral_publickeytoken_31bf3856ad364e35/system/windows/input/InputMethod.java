@@ -51,7 +51,7 @@ import system.windows.input.InputMethodStateChangedEventHandler;
 
 
 /**
- * The base .NET class managing System.Windows.Input.InputMethod, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * The base .NET class managing System.Windows.Input.InputMethod, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link DispatcherObject}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.InputMethod" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.InputMethod</a>

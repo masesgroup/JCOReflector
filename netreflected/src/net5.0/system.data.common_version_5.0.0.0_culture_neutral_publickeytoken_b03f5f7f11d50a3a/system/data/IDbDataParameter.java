@@ -45,7 +45,7 @@ import system.data.ParameterDirection;
 
 
 /**
- * The base .NET class managing System.Data.IDbDataParameter, System.Data.Common, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * The base .NET class managing System.Data.IDbDataParameter, System.Data.Common, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link IJCOBridgeReflected, IDataParameter}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.IDbDataParameter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.IDbDataParameter</a>

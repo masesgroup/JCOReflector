@@ -42,7 +42,7 @@ import microsoft.jscript.BinaryOp;
 
 
 /**
- * The base .NET class managing Microsoft.JScript.Equality, Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * The base .NET class managing Microsoft.JScript.Equality, Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link BinaryOp}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.Equality" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.Equality</a>

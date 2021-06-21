@@ -52,7 +52,7 @@ import system.windows.media.animation.TimeSeekOrigin;
 
 
 /**
- * The base .NET class managing System.Windows.Media.Animation.Storyboard, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * The base .NET class managing System.Windows.Media.Animation.Storyboard, PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link ParallelTimeline}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Animation.Storyboard" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Animation.Storyboard</a>

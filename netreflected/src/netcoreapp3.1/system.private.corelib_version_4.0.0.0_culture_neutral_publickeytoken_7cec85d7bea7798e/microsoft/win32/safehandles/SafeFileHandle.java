@@ -42,7 +42,7 @@ import microsoft.win32.safehandles.SafeHandleZeroOrMinusOneIsInvalid;
 
 
 /**
- * The base .NET class managing Microsoft.Win32.SafeHandles.SafeFileHandle, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * The base .NET class managing Microsoft.Win32.SafeHandles.SafeFileHandle, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link SafeHandleZeroOrMinusOneIsInvalid}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.SafeHandles.SafeFileHandle" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.Win32.SafeHandles.SafeFileHandle</a>

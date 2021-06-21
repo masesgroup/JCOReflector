@@ -43,7 +43,7 @@ import system.xml.schema.XmlSchemaAnnotation;
 
 
 /**
- * The base .NET class managing System.Xml.Schema.XmlSchemaImport, System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * The base .NET class managing System.Xml.Schema.XmlSchemaImport, System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link XmlSchemaExternal}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.XmlSchemaImport" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.XmlSchemaImport</a>

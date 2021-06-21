@@ -44,7 +44,7 @@ import system.data.metadata.edm.TypeUsage;
 
 
 /**
- * The base .NET class managing System.Data.Common.CommandTrees.DbFunctionCommandTree, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.Data.Common.CommandTrees.DbFunctionCommandTree, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link DbCommandTree}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.CommandTrees.DbFunctionCommandTree" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Common.CommandTrees.DbFunctionCommandTree</a>

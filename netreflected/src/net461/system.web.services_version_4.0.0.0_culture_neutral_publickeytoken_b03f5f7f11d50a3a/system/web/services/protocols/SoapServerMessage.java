@@ -44,7 +44,7 @@ import system.web.services.protocols.SoapProtocolVersion;
 
 
 /**
- * The base .NET class managing System.Web.Services.Protocols.SoapServerMessage, System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * The base .NET class managing System.Web.Services.Protocols.SoapServerMessage, System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link SoapMessage}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Services.Protocols.SoapServerMessage" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Services.Protocols.SoapServerMessage</a>

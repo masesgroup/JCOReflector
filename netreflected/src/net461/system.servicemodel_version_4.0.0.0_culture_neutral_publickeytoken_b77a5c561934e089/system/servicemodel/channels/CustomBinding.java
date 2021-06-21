@@ -44,7 +44,7 @@ import system.servicemodel.channels.BindingElementCollection;
 
 
 /**
- * The base .NET class managing System.ServiceModel.Channels.CustomBinding, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.ServiceModel.Channels.CustomBinding, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link Binding}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.CustomBinding" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.CustomBinding</a>

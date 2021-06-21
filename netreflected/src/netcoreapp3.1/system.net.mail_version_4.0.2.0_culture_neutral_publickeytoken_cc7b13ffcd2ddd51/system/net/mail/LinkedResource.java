@@ -47,7 +47,7 @@ import system.Uri;
 
 
 /**
- * The base .NET class managing System.Net.Mail.LinkedResource, System.Net.Mail, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * The base .NET class managing System.Net.Mail.LinkedResource, System.Net.Mail, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link AttachmentBase}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mail.LinkedResource" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mail.LinkedResource</a>

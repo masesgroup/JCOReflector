@@ -64,7 +64,7 @@ import system.security.SecurityRuleSet;
 
 
 /**
- * The base .NET class managing System.Reflection.Emit.AssemblyBuilder, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.Reflection.Emit.AssemblyBuilder, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link Assembly}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Emit.AssemblyBuilder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.Emit.AssemblyBuilder</a>

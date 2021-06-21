@@ -47,7 +47,7 @@ import system.security.cryptography.HashAlgorithm;
 
 
 /**
- * The base .NET class managing System.IdentityModel.Tokens.X509AsymmetricSecurityKey, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.IdentityModel.Tokens.X509AsymmetricSecurityKey, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link AsymmetricSecurityKey}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.X509AsymmetricSecurityKey" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.X509AsymmetricSecurityKey</a>

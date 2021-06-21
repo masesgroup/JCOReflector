@@ -42,7 +42,7 @@ import system.collections.IDictionaryImplementation;
 
 
 /**
- * The base .NET class managing System.ComponentModel.Design.IDesignerFilter, System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Implements {@link IJCOBridgeReflected}.
+ * The base .NET class managing System.ComponentModel.Design.IDesignerFilter, System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link IJCOBridgeReflected}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.IDesignerFilter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.IDesignerFilter</a>

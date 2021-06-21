@@ -42,7 +42,7 @@ import system.runtime.intrinsics.x86.Sse3;
 
 
 /**
- * The base .NET class managing System.Runtime.Intrinsics.X86.Ssse3, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * The base .NET class managing System.Runtime.Intrinsics.X86.Ssse3, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link Sse3}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Intrinsics.X86.Ssse3" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Intrinsics.X86.Ssse3</a>

@@ -45,7 +45,7 @@ import system.security.principal.SecurityIdentifier;
 
 
 /**
- * The base .NET class managing System.Security.AccessControl.CommonAce, System.Security.AccessControl, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * The base .NET class managing System.Security.AccessControl.CommonAce, System.Security.AccessControl, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link QualifiedAce}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.CommonAce" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.CommonAce</a>

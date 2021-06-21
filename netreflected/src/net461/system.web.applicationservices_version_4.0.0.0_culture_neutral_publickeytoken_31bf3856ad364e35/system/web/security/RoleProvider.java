@@ -42,7 +42,7 @@ import system.configuration.provider.ProviderBase;
 
 
 /**
- * The base .NET class managing System.Web.Security.RoleProvider, System.Web.ApplicationServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * The base .NET class managing System.Web.Security.RoleProvider, System.Web.ApplicationServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link ProviderBase}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Security.RoleProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Security.RoleProvider</a>

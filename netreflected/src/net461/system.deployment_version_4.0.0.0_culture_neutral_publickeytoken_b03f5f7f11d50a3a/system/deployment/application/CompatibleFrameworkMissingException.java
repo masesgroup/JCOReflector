@@ -44,7 +44,7 @@ import system.runtime.serialization.StreamingContext;
 import system.deployment.application.CompatibleFrameworks;
 
 /**
- * The base .NET class managing System.Deployment.Application.CompatibleFrameworkMissingException, System.Deployment, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetException}.
+ * The base .NET class managing System.Deployment.Application.CompatibleFrameworkMissingException, System.Deployment, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link DependentPlatformMissingException}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Deployment.Application.CompatibleFrameworkMissingException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Deployment.Application.CompatibleFrameworkMissingException</a>

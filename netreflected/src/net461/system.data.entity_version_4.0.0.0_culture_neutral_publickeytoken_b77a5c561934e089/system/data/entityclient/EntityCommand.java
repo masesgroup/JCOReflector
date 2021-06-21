@@ -51,7 +51,7 @@ import system.data.UpdateRowSource;
 
 
 /**
- * The base .NET class managing System.Data.EntityClient.EntityCommand, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.Data.EntityClient.EntityCommand, System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link DbCommand}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.EntityClient.EntityCommand" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.EntityClient.EntityCommand</a>

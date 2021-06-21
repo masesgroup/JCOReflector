@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import system.ApplicationException;
 
 /**
- * The base .NET class managing System.Reflection.InvalidFilterCriteriaException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetException}.
+ * The base .NET class managing System.Reflection.InvalidFilterCriteriaException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link ApplicationException}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.InvalidFilterCriteriaException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.InvalidFilterCriteriaException</a>

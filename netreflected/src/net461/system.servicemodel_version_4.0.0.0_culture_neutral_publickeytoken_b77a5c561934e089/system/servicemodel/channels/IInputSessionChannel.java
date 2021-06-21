@@ -54,7 +54,7 @@ import system.EventHandler;
 
 
 /**
- * The base .NET class managing System.ServiceModel.Channels.IInputSessionChannel, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * The base .NET class managing System.ServiceModel.Channels.IInputSessionChannel, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link IJCOBridgeReflected, IInputChannel, IChannel, ICommunicationObject}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.IInputSessionChannel" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.IInputSessionChannel</a>

@@ -51,7 +51,7 @@ import system.runtime.remoting.activation.IActivatorImplementation;
 
 
 /**
- * The base .NET class managing System.Runtime.Remoting.Messaging.ConstructionCall, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.Runtime.Remoting.Messaging.ConstructionCall, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link MethodCall}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Messaging.ConstructionCall" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Messaging.ConstructionCall</a>

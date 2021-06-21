@@ -42,7 +42,7 @@ import system.IDisposableImplementation;
 
 
 /**
- * The base .NET class managing System.Resources.IResourceReader, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Implements {@link IJCOBridgeReflected}.
+ * The base .NET class managing System.Resources.IResourceReader, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link IJCOBridgeReflected, IEnumerable, IDisposable}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Resources.IResourceReader" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Resources.IResourceReader</a>

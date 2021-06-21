@@ -45,7 +45,7 @@ import system.security.IPermissionImplementation;
 
 
 /**
- * The base .NET class managing System.Security.Permissions.RegistryPermissionAttribute, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.Security.Permissions.RegistryPermissionAttribute, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link CodeAccessSecurityAttribute}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.RegistryPermissionAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.RegistryPermissionAttribute</a>

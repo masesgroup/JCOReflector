@@ -43,7 +43,7 @@ import system.xml.schema.XmlSchemaContentProcessing;
 
 
 /**
- * The base .NET class managing System.Xml.Schema.XmlSchemaAny, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.Xml.Schema.XmlSchemaAny, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link XmlSchemaParticle}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.XmlSchemaAny" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.XmlSchemaAny</a>

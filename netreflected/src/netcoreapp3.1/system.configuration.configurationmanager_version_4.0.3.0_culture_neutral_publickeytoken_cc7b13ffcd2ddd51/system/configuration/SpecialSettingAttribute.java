@@ -43,7 +43,7 @@ import system.configuration.SpecialSetting;
 
 
 /**
- * The base .NET class managing System.Configuration.SpecialSettingAttribute, System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * The base .NET class managing System.Configuration.SpecialSettingAttribute, System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link Attribute}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.SpecialSettingAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.SpecialSettingAttribute</a>

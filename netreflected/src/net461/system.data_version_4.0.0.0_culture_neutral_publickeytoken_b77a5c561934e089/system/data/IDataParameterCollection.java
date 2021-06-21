@@ -45,7 +45,7 @@ import system.Array;
 
 
 /**
- * The base .NET class managing System.Data.IDataParameterCollection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * The base .NET class managing System.Data.IDataParameterCollection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link IJCOBridgeReflected, IList, ICollection, IEnumerable}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.IDataParameterCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.IDataParameterCollection</a>

@@ -44,7 +44,7 @@ import system.security.accesscontrol.ObjectAceFlags;
 
 
 /**
- * The base .NET class managing System.Security.AccessControl.ObjectAuditRule, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.Security.AccessControl.ObjectAuditRule, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link AuditRule}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.ObjectAuditRule" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.AccessControl.ObjectAuditRule</a>

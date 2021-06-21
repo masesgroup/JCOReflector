@@ -42,7 +42,7 @@ import system.threading.tasks.dataflow.DataflowBlockOptions;
 
 
 /**
- * The base .NET class managing System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions, System.Threading.Tasks.Dataflow, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * The base .NET class managing System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions, System.Threading.Tasks.Dataflow, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link DataflowBlockOptions}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Threading.Tasks.Dataflow.GroupingDataflowBlockOptions</a>

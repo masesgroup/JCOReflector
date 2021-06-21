@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import system.SystemException;
 
 /**
- * The base .NET class managing System.Workflow.Activities.EventDeliveryFailedException, System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetException}.
+ * The base .NET class managing System.Workflow.Activities.EventDeliveryFailedException, System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link SystemException}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.EventDeliveryFailedException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.EventDeliveryFailedException</a>

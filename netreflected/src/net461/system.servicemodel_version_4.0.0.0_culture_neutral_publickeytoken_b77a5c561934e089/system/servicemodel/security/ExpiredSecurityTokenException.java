@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import system.servicemodel.security.MessageSecurityException;
 
 /**
- * The base .NET class managing System.ServiceModel.Security.ExpiredSecurityTokenException, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetException}.
+ * The base .NET class managing System.ServiceModel.Security.ExpiredSecurityTokenException, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link MessageSecurityException}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.ExpiredSecurityTokenException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Security.ExpiredSecurityTokenException</a>

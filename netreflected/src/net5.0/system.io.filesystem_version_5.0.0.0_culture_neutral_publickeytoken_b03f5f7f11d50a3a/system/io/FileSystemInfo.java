@@ -46,7 +46,7 @@ import system.io.FileAttributes;
 
 
 /**
- * The base .NET class managing System.IO.FileSystemInfo, System.IO.FileSystem, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * The base .NET class managing System.IO.FileSystemInfo, System.IO.FileSystem, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link MarshalByRefObject}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.FileSystemInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.FileSystemInfo</a>

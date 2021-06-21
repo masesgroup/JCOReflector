@@ -48,7 +48,7 @@ import system.numerics.Plane;
 
 
 /**
- * The base .NET class managing System.Numerics.Matrix4x4, System.Numerics.Vectors, Version=4.1.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * The base .NET class managing System.Numerics.Matrix4x4, System.Numerics.Vectors, Version=4.1.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link ValueType}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Numerics.Matrix4x4" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Numerics.Matrix4x4</a>

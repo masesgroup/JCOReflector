@@ -42,7 +42,7 @@ import system.drawing.text.FontCollection;
 
 
 /**
- * The base .NET class managing System.Drawing.Text.InstalledFontCollection, System.Drawing.Common, Version=4.0.2.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * The base .NET class managing System.Drawing.Text.InstalledFontCollection, System.Drawing.Common, Version=4.0.2.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link FontCollection}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Text.InstalledFontCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Text.InstalledFontCollection</a>

@@ -43,7 +43,7 @@ import system.identitymodel.claims.Claim;
 
 
 /**
- * The base .NET class managing System.IdentityModel.Claims.DefaultClaimSet, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.IdentityModel.Claims.DefaultClaimSet, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link ClaimSet}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Claims.DefaultClaimSet" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Claims.DefaultClaimSet</a>

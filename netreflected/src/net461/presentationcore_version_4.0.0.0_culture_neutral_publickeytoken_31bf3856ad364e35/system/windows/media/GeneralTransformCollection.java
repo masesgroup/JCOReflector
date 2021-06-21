@@ -44,7 +44,7 @@ import system.windows.media.GeneralTransformCollection;
 
 
 /**
- * The base .NET class managing System.Windows.Media.GeneralTransformCollection, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * The base .NET class managing System.Windows.Media.GeneralTransformCollection, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link Animatable}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.GeneralTransformCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.GeneralTransformCollection</a>

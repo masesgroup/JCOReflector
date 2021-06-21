@@ -48,7 +48,7 @@ import system.collections.IDictionaryImplementation;
 
 
 /**
- * The base .NET class managing System.Web.HttpBrowserCapabilitiesWrapper, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * The base .NET class managing System.Web.HttpBrowserCapabilitiesWrapper, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link HttpBrowserCapabilitiesBase}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.HttpBrowserCapabilitiesWrapper" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.HttpBrowserCapabilitiesWrapper</a>

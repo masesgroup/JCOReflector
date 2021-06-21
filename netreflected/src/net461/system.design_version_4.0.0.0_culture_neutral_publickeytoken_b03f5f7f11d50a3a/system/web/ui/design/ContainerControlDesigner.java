@@ -47,7 +47,7 @@ import system.web.ui.webcontrols.Style;
 
 
 /**
- * The base .NET class managing System.Web.UI.Design.ContainerControlDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * The base .NET class managing System.Web.UI.Design.ContainerControlDesigner, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link ControlDesigner}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.ContainerControlDesigner" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.ContainerControlDesigner</a>

@@ -43,7 +43,7 @@ import microsoft.jscript.JSToken;
 
 
 /**
- * The base .NET class managing Microsoft.JScript.NumericBinary, Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * The base .NET class managing Microsoft.JScript.NumericBinary, Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link BinaryOp}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.NumericBinary" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.NumericBinary</a>

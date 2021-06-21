@@ -43,7 +43,7 @@ import system.servicemodel.activation.ServiceHostFactoryBase;
 
 
 /**
- * The base .NET class managing System.ServiceModel.Activation.ServiceRoute, System.ServiceModel.Activation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * The base .NET class managing System.ServiceModel.Activation.ServiceRoute, System.ServiceModel.Activation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link Route}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activation.ServiceRoute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activation.ServiceRoute</a>

@@ -42,7 +42,7 @@ import system.componentmodel.BaseNumberConverter;
 
 
 /**
- * The base .NET class managing System.ComponentModel.Int16Converter, System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * The base .NET class managing System.ComponentModel.Int16Converter, System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link BaseNumberConverter}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Int16Converter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Int16Converter</a>

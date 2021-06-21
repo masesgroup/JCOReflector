@@ -45,7 +45,7 @@ import system.security.cryptography.x509certificates.X509SubjectKeyIdentifierHas
 
 
 /**
- * The base .NET class managing System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierExtension, System.Security.Cryptography.X509Certificates, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * The base .NET class managing System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierExtension, System.Security.Cryptography.X509Certificates, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link X509Extension}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierExtension" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.X509Certificates.X509SubjectKeyIdentifierExtension</a>

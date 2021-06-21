@@ -44,7 +44,7 @@ import system.web.management.WebBaseEvent;
 
 
 /**
- * The base .NET class managing System.Web.Management.IisTraceWebEventProvider, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * The base .NET class managing System.Web.Management.IisTraceWebEventProvider, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link WebEventProvider}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Management.IisTraceWebEventProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Management.IisTraceWebEventProvider</a>

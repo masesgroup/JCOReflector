@@ -44,7 +44,7 @@ import system.componentmodel.dataannotations.ValidationContext;
 
 
 /**
- * The base .NET class managing System.ComponentModel.DataAnnotations.ValidationAttribute, System.ComponentModel.DataAnnotations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * The base .NET class managing System.ComponentModel.DataAnnotations.ValidationAttribute, System.ComponentModel.DataAnnotations, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link Attribute}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.DataAnnotations.ValidationAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.DataAnnotations.ValidationAttribute</a>

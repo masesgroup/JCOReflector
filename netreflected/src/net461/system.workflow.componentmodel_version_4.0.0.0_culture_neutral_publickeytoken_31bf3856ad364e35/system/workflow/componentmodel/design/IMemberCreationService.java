@@ -44,7 +44,7 @@ import system.workflow.componentmodel.Activity;
 
 
 /**
- * The base .NET class managing System.Workflow.ComponentModel.Design.IMemberCreationService, System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Implements {@link IJCOBridgeReflected}.
+ * The base .NET class managing System.Workflow.ComponentModel.Design.IMemberCreationService, System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link IJCOBridgeReflected}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.IMemberCreationService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.IMemberCreationService</a>

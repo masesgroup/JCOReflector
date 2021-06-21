@@ -42,7 +42,7 @@ import system.Attribute;
 
 
 /**
- * The base .NET class managing System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute, System.Diagnostics.Tools, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * The base .NET class managing System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute, System.Diagnostics.Tools, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link Attribute}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute</a>

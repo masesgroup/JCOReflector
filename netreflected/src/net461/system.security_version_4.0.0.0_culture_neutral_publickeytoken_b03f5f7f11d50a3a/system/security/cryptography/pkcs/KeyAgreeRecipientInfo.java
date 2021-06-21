@@ -47,7 +47,7 @@ import system.security.cryptography.pkcs.SubjectIdentifierOrKey;
 
 
 /**
- * The base .NET class managing System.Security.Cryptography.Pkcs.KeyAgreeRecipientInfo, System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * The base .NET class managing System.Security.Cryptography.Pkcs.KeyAgreeRecipientInfo, System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link RecipientInfo}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.KeyAgreeRecipientInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.KeyAgreeRecipientInfo</a>

@@ -44,7 +44,7 @@ import system.windows.Rect;
 
 
 /**
- * The base .NET class managing System.Windows.HwndDpiChangedEventArgs, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * The base .NET class managing System.Windows.HwndDpiChangedEventArgs, PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link HandledEventArgs}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.HwndDpiChangedEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.HwndDpiChangedEventArgs</a>

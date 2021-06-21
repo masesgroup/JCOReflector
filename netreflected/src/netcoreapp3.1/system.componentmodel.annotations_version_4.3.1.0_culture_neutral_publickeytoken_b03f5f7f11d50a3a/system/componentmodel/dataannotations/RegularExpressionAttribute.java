@@ -42,7 +42,7 @@ import system.componentmodel.dataannotations.ValidationAttribute;
 
 
 /**
- * The base .NET class managing System.ComponentModel.DataAnnotations.RegularExpressionAttribute, System.ComponentModel.Annotations, Version=4.3.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * The base .NET class managing System.ComponentModel.DataAnnotations.RegularExpressionAttribute, System.ComponentModel.Annotations, Version=4.3.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link ValidationAttribute}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.DataAnnotations.RegularExpressionAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.DataAnnotations.RegularExpressionAttribute</a>

@@ -45,7 +45,7 @@ import system.data.sqlclient.SqlErrorCollection;
 import system.Guid;
 
 /**
- * The base .NET class managing System.Data.SqlClient.SqlException, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetException}.
+ * The base .NET class managing System.Data.SqlClient.SqlException, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link DbException}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlClient.SqlException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlClient.SqlException</a>

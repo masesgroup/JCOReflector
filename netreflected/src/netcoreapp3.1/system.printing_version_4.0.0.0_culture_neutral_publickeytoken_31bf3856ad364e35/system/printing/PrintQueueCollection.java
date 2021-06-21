@@ -45,7 +45,7 @@ import system.printing.PrintQueue;
 
 
 /**
- * The base .NET class managing System.Printing.PrintQueueCollection, System.Printing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * The base .NET class managing System.Printing.PrintQueueCollection, System.Printing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link PrintSystemObjects}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Printing.PrintQueueCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Printing.PrintQueueCollection</a>

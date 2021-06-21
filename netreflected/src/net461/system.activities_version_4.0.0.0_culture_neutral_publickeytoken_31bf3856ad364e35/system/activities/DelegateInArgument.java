@@ -42,7 +42,7 @@ import system.activities.DelegateArgument;
 
 
 /**
- * The base .NET class managing System.Activities.DelegateInArgument, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * The base .NET class managing System.Activities.DelegateInArgument, System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link DelegateArgument}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.DelegateInArgument" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.DelegateInArgument</a>

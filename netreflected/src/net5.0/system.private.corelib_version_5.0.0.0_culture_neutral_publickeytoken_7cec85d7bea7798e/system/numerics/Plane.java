@@ -48,7 +48,7 @@ import system.numerics.Quaternion;
 
 
 /**
- * The base .NET class managing System.Numerics.Plane, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * The base .NET class managing System.Numerics.Plane, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link ValueType}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Numerics.Plane" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Numerics.Plane</a>

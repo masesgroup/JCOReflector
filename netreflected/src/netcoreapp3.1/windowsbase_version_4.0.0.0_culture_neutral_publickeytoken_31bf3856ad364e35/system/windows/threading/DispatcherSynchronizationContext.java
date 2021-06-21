@@ -45,7 +45,7 @@ import system.threading.SendOrPostCallback;
 
 
 /**
- * The base .NET class managing System.Windows.Threading.DispatcherSynchronizationContext, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link NetObject}.
+ * The base .NET class managing System.Windows.Threading.DispatcherSynchronizationContext, WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link SynchronizationContext}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Threading.DispatcherSynchronizationContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Threading.DispatcherSynchronizationContext</a>

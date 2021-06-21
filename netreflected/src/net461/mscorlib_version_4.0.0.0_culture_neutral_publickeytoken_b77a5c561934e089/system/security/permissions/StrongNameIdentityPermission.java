@@ -48,7 +48,7 @@ import system.security.SecurityElement;
 
 
 /**
- * The base .NET class managing System.Security.Permissions.StrongNameIdentityPermission, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.Security.Permissions.StrongNameIdentityPermission, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link CodeAccessPermission}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.StrongNameIdentityPermission" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.StrongNameIdentityPermission</a>

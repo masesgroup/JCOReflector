@@ -41,7 +41,7 @@ import system.net.NetworkCredential;
 
 
 /**
- * The base .NET class managing System.Net.ICredentialsByHost, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * The base .NET class managing System.Net.ICredentialsByHost, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link IJCOBridgeReflected}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.ICredentialsByHost" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.ICredentialsByHost</a>

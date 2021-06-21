@@ -43,7 +43,7 @@ import system.security.cryptography.HashAlgorithmName;
 
 
 /**
- * The base .NET class managing System.Security.Cryptography.Rfc2898DeriveBytes, System.Security.Cryptography.Algorithms, Version=4.3.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * The base .NET class managing System.Security.Cryptography.Rfc2898DeriveBytes, System.Security.Cryptography.Algorithms, Version=4.3.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link DeriveBytes}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Rfc2898DeriveBytes" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Rfc2898DeriveBytes</a>

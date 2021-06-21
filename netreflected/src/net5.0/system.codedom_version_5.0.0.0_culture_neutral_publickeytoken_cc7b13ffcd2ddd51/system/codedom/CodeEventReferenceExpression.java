@@ -42,7 +42,7 @@ import system.codedom.CodeExpression;
 
 
 /**
- * The base .NET class managing System.CodeDom.CodeEventReferenceExpression, System.CodeDom, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * The base .NET class managing System.CodeDom.CodeEventReferenceExpression, System.CodeDom, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link CodeExpression}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeEventReferenceExpression" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.CodeEventReferenceExpression</a>

@@ -43,7 +43,7 @@ import microsoft.win32.safehandles.SafeMemoryMappedViewHandle;
 
 
 /**
- * The base .NET class managing System.IO.MemoryMappedFiles.MemoryMappedViewAccessor, System.IO.MemoryMappedFiles, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * The base .NET class managing System.IO.MemoryMappedFiles.MemoryMappedViewAccessor, System.IO.MemoryMappedFiles, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link UnmanagedMemoryAccessor}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.MemoryMappedFiles.MemoryMappedViewAccessor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.MemoryMappedFiles.MemoryMappedViewAccessor</a>

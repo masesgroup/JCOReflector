@@ -45,7 +45,7 @@ import system.xml.XmlWriter;
 
 
 /**
- * The base .NET class managing System.Xml.Linq.XContainer, System.Private.Xml.Linq, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * The base .NET class managing System.Xml.Linq.XContainer, System.Private.Xml.Linq, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link XNode}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Linq.XContainer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Linq.XContainer</a>

@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import system.MissingMemberException;
 
 /**
- * The base .NET class managing System.MissingFieldException, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetException}.
+ * The base .NET class managing System.MissingFieldException, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link MissingMemberException}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.MissingFieldException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.MissingFieldException</a>

@@ -50,7 +50,7 @@ import system.IFormatProviderImplementation;
 
 
 /**
- * The base .NET class managing System.Numerics.Vector4, System.Numerics.Vectors, Version=4.1.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * The base .NET class managing System.Numerics.Vector4, System.Numerics.Vectors, Version=4.1.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link ValueType}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Numerics.Vector4" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Numerics.Vector4</a>

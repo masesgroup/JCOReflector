@@ -43,7 +43,7 @@ import system.web.HttpRequest;
 
 
 /**
- * The base .NET class managing System.Web.Services.Protocols.UrlParameterReader, System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * The base .NET class managing System.Web.Services.Protocols.UrlParameterReader, System.Web.Services, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link ValueCollectionParameterReader}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Services.Protocols.UrlParameterReader" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Services.Protocols.UrlParameterReader</a>

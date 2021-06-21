@@ -42,7 +42,7 @@ import system.activities.ExecutionProperties;
 
 
 /**
- * The base .NET class managing System.ServiceModel.Activities.IReceiveMessageCallback, System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Implements {@link IJCOBridgeReflected}.
+ * The base .NET class managing System.ServiceModel.Activities.IReceiveMessageCallback, System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link IJCOBridgeReflected}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activities.IReceiveMessageCallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Activities.IReceiveMessageCallback</a>

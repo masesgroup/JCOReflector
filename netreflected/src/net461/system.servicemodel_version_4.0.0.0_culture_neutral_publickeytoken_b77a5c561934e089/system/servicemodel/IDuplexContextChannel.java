@@ -58,7 +58,7 @@ import system.EventHandler;
 
 
 /**
- * The base .NET class managing System.ServiceModel.IDuplexContextChannel, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * The base .NET class managing System.ServiceModel.IDuplexContextChannel, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link IJCOBridgeReflected, IContextChannel, IChannel, ICommunicationObject}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.IDuplexContextChannel" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.IDuplexContextChannel</a>

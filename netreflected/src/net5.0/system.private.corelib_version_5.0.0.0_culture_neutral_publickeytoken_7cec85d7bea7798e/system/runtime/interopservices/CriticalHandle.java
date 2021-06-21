@@ -42,7 +42,7 @@ import system.runtime.constrainedexecution.CriticalFinalizerObject;
 
 
 /**
- * The base .NET class managing System.Runtime.InteropServices.CriticalHandle, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * The base .NET class managing System.Runtime.InteropServices.CriticalHandle, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link CriticalFinalizerObject}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.CriticalHandle" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.CriticalHandle</a>

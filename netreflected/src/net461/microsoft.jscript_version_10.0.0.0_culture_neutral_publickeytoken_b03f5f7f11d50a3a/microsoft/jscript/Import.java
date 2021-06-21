@@ -43,7 +43,7 @@ import microsoft.jscript.vsa.VsaEngine;
 
 
 /**
- * The base .NET class managing Microsoft.JScript.Import, Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * The base .NET class managing Microsoft.JScript.Import, Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link AST}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.Import" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.Import</a>

@@ -43,7 +43,7 @@ import system.text.DecoderFallbackBuffer;
 
 
 /**
- * The base .NET class managing System.Text.DecoderReplacementFallback, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetObject}.
+ * The base .NET class managing System.Text.DecoderReplacementFallback, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link DecoderFallback}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.DecoderReplacementFallback" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.DecoderReplacementFallback</a>

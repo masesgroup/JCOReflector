@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import system.SystemException;
 
 /**
- * The base .NET class managing System.Security.Authentication.AuthenticationException, System.Net.Security, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetException}.
+ * The base .NET class managing System.Security.Authentication.AuthenticationException, System.Net.Security, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link SystemException}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Authentication.AuthenticationException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Authentication.AuthenticationException</a>

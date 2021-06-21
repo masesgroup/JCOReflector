@@ -48,7 +48,7 @@ import system.directoryservices.activedirectory.DirectoryServerCollection;
 
 
 /**
- * The base .NET class managing System.DirectoryServices.ActiveDirectory.ApplicationPartition, System.DirectoryServices, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * The base .NET class managing System.DirectoryServices.ActiveDirectory.ApplicationPartition, System.DirectoryServices, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link ActiveDirectoryPartition}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.ActiveDirectory.ApplicationPartition" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.DirectoryServices.ActiveDirectory.ApplicationPartition</a>

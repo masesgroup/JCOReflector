@@ -42,7 +42,7 @@ import system.componentmodel.CancelEventArgs;
 
 
 /**
- * The base .NET class managing Microsoft.VisualBasic.ApplicationServices.StartupEventArgs, Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * The base .NET class managing Microsoft.VisualBasic.ApplicationServices.StartupEventArgs, Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link CancelEventArgs}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.ApplicationServices.StartupEventArgs" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.VisualBasic.ApplicationServices.StartupEventArgs</a>

@@ -43,7 +43,7 @@ import system.security.cryptography.HMAC;
 
 
 /**
- * The base .NET class managing System.Security.Cryptography.HMAC, System.Security.Cryptography.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * The base .NET class managing System.Security.Cryptography.HMAC, System.Security.Cryptography.Primitives, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link KeyedHashAlgorithm}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.HMAC" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.HMAC</a>

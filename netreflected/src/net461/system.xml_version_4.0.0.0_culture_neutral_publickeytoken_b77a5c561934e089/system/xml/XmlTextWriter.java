@@ -48,7 +48,7 @@ import system.xml.XmlSpace;
 
 
 /**
- * The base .NET class managing System.Xml.XmlTextWriter, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
+ * The base .NET class managing System.Xml.XmlTextWriter, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link XmlWriter}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlTextWriter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlTextWriter</a>

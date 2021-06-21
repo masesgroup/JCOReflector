@@ -43,7 +43,7 @@ import system.transactions.Transaction;
 
 
 /**
- * The base .NET class managing System.Workflow.Runtime.IPendingWork, System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Implements {@link IJCOBridgeReflected}.
+ * The base .NET class managing System.Workflow.Runtime.IPendingWork, System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35. Extends {@link IJCOBridgeReflected}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.IPendingWork" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.IPendingWork</a>

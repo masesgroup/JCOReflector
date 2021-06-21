@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import system.io.IOException;
 
 /**
- * The base .NET class managing System.IO.DirectoryNotFoundException, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link NetException}.
+ * The base .NET class managing System.IO.DirectoryNotFoundException, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link IOException}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.DirectoryNotFoundException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.DirectoryNotFoundException</a>

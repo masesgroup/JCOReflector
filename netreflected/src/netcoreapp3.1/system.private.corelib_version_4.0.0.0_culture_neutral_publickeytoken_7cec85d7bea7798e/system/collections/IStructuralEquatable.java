@@ -42,7 +42,7 @@ import system.collections.IEqualityComparerImplementation;
 
 
 /**
- * The base .NET class managing System.Collections.IStructuralEquatable, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Implements {@link IJCOBridgeReflected}.
+ * The base .NET class managing System.Collections.IStructuralEquatable, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link IJCOBridgeReflected}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IStructuralEquatable" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Collections.IStructuralEquatable</a>

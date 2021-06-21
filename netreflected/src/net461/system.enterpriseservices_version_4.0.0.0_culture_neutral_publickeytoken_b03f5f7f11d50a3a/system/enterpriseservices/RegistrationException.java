@@ -44,7 +44,7 @@ import system.runtime.serialization.StreamingContext;
 import system.enterpriseservices.RegistrationErrorInfo;
 
 /**
- * The base .NET class managing System.EnterpriseServices.RegistrationException, System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetException}.
+ * The base .NET class managing System.EnterpriseServices.RegistrationException, System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link SystemException}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.EnterpriseServices.RegistrationException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.EnterpriseServices.RegistrationException</a>

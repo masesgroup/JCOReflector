@@ -43,7 +43,7 @@ import system.security.cryptography.xml.TransformChain;
 
 
 /**
- * The base .NET class managing System.Security.Cryptography.Xml.DataReference, System.Security.Cryptography.Xml, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * The base .NET class managing System.Security.Cryptography.Xml.DataReference, System.Security.Cryptography.Xml, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link EncryptedReference}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Xml.DataReference" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Xml.DataReference</a>

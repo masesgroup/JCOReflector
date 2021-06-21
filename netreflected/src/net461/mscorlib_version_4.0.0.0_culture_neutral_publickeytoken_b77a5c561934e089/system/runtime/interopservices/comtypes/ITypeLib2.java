@@ -44,7 +44,7 @@ import system.runtime.interopservices.comtypes.ITypeInfoImplementation;
 
 
 /**
- * The base .NET class managing System.Runtime.InteropServices.ComTypes.ITypeLib2, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IJCOBridgeReflected}.
+ * The base .NET class managing System.Runtime.InteropServices.ComTypes.ITypeLib2, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link IJCOBridgeReflected, ITypeLib}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.ComTypes.ITypeLib2" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.InteropServices.ComTypes.ITypeLib2</a>

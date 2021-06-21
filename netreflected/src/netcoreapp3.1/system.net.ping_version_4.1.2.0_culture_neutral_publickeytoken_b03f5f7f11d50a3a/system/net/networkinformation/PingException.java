@@ -41,7 +41,7 @@ import java.util.ArrayList;
 import system.InvalidOperationException;
 
 /**
- * The base .NET class managing System.Net.NetworkInformation.PingException, System.Net.Ping, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetException}.
+ * The base .NET class managing System.Net.NetworkInformation.PingException, System.Net.Ping, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link InvalidOperationException}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.NetworkInformation.PingException" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.NetworkInformation.PingException</a>

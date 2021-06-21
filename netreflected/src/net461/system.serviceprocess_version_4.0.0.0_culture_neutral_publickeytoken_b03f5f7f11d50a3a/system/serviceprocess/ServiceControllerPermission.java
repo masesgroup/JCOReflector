@@ -46,7 +46,7 @@ import system.serviceprocess.ServiceControllerPermissionEntryCollection;
 
 
 /**
- * The base .NET class managing System.ServiceProcess.ServiceControllerPermission, System.ServiceProcess, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link NetObject}.
+ * The base .NET class managing System.ServiceProcess.ServiceControllerPermission, System.ServiceProcess, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a. Extends {@link ResourcePermissionBase}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceProcess.ServiceControllerPermission" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceProcess.ServiceControllerPermission</a>

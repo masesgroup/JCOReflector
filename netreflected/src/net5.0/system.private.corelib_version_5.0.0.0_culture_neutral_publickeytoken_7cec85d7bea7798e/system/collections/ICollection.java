@@ -41,7 +41,7 @@ import system.Array;
 
 
 /**
- * The base .NET class managing System.Collections.ICollection, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Implements {@link IJCOBridgeReflected}.
+ * The base .NET class managing System.Collections.ICollection, System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e. Extends {@link IJCOBridgeReflected, IEnumerable}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.ICollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Collections.ICollection</a>

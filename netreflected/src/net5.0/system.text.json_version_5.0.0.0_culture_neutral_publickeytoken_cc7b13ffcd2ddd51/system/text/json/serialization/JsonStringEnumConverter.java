@@ -45,7 +45,7 @@ import system.text.json.JsonSerializerOptions;
 
 
 /**
- * The base .NET class managing System.Text.Json.Serialization.JsonStringEnumConverter, System.Text.Json, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link NetObject}.
+ * The base .NET class managing System.Text.Json.Serialization.JsonStringEnumConverter, System.Text.Json, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51. Extends {@link JsonConverterFactory}.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.Serialization.JsonStringEnumConverter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.Json.Serialization.JsonStringEnumConverter</a>

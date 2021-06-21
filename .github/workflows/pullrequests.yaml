@@ -1,11 +1,11 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI_WINDOWS
+name: CI_PULLREQUEST
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
 on:
-  push:
+  pull_request:
     branches: [ master ]
 
 # This workflow contains two jobs called "check" and "build_windows"
@@ -219,49 +219,3 @@ jobs:
           ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/net461/*;./output" nettest.HelloNETSocket
           ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/net461/*;./output" nettest.HelloNETSocket -async
           rmdir output /s /q
-
-      - name: Compress release files
-        run: | 
-          Compress-Archive -Path .\bin\netcoreapp3.1\* -DestinationPath .\bin\netcoreapp3.1.zip
-          Compress-Archive -Path .\bin\net5.0\* -DestinationPath .\bin\net5.0.zip
-          Compress-Archive -Path .\bin\net461\* -DestinationPath .\bin\net461.zip
-
-      - name: Extract commit SHA
-        run: |
-          echo "GITHUB_COMMIT_MESSAGE=$(echo $GITHUB_SHA | cut -c 1-7)" >> $GITHUB_ENV
-        shell: bash
-
-      - name: Commit source changes
-        uses: EndBug/add-and-commit@v5
-        with:
-          author_name: github-actions
-          author_email: 41898282+github-actions[bot]@users.noreply.github.com
-          add: '.\netreflected\src\*.java'
-          message: Update sources after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
-      - name: Commit report changes
-        uses: EndBug/add-and-commit@v5
-        with:
-          author_name: github-actions
-          author_email: 41898282+github-actions[bot]@users.noreply.github.com
-          add: '.\netreflected\README.md'
-          message: Update README.md after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - uses: actions/upload-artifact@v2
-        with:
-          name: netcoreapp3.1.zip
-          path: .\bin\netcoreapp3.1.zip
-
-      - uses: actions/upload-artifact@v2
-        with:
-          name: net5.0.zip
-          path: .\bin\net5.0.zip
-          
-      - uses: actions/upload-artifact@v2
-        with:
-          name: net461.zip
-          path: .\bin\net461.zip

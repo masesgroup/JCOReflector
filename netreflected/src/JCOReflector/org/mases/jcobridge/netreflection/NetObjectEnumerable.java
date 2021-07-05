@@ -46,9 +46,17 @@ public class NetObjectEnumerable extends NetObject implements IEnumerable {
 
     static JCType createType() {
         try {
-            return bridge.GetType(className + ", "
-                    + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
+            String classToCreate = className + ", "
+                    + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Creating %s", classToCreate);
+            JCType typeCreated = bridge.GetType(classToCreate);
+            if (JCOReflector.getDebug())
+                JCOReflector.writeLog("Created: %s",
+                        (typeCreated != null) ? typeCreated.toString() : "Returned null value");
+            return typeCreated;
         } catch (JCException e) {
+            JCOReflector.writeLog(e);
             return null;
         }
     }
@@ -72,7 +80,7 @@ public class NetObjectEnumerable extends NetObject implements IEnumerable {
     }
 
     public String getJCOObjectName() {
-        return className + ", " + (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+        return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
     public Object getJCOInstance() {
@@ -90,7 +98,7 @@ public class NetObjectEnumerable extends NetObject implements IEnumerable {
     public static NetObjectEnumerable cast(IJCOBridgeReflected from) throws Throwable {
         if (!NetType.CanCast(classType, from.getJCOType())) {
             throw new UnsupportedOperationException(String.format("%s cannot be casted to %s", from.getJCOObjectName(),
-                    (JCOBridgeInstance.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName)));
+                    (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName)));
         }
         return new NetObjectEnumerable(from.getJCOInstance());
     }

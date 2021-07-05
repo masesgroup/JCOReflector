@@ -89,6 +89,7 @@ namespace MASES.C2JReflector
             public const string NativeStringType = "java.lang.String";
             public const string IJCOBridgeReflected = "IJCOBridgeReflected";
             public const string NetObject = "NetObject";
+            public const string NetObjectEnumerable = "NetObjectEnumerable";
             public const string AutoCloseable = "AutoCloseable";
             public const string NetType = "NetType";
             public const string NetException = "NetException";
@@ -102,6 +103,7 @@ namespace MASES.C2JReflector
             public const string STATIC_KEYWORD = "static ";
             public const string FINAL_KEYWORD = "final ";
             public const string METHOD_DYNAMICINVOKE_NAME = "DynamicInvoke";
+            public const string METHOD_GETENUMERATOR_NAME = "GetEnumerator";
         }
 
         public class FileNameAndDirectory
@@ -284,45 +286,57 @@ namespace MASES.C2JReflector
             {
                 ReflectorInterfaceTemplate,
                 ReflectorInterfaceClassTemplate,
-                ReflectorInterfaceEventTemplate ,
-                ReflectorInterfaceMethodTemplate ,
+                ReflectorInterfaceEventTemplate,
+                ReflectorInterfaceMethodTemplate,
                 ReflectorInterfaceGetTemplate,
                 ReflectorInterfaceGetArrayTemplate,
-                ReflectorInterfaceSetTemplate ,
+                ReflectorInterfaceSetTemplate,
 
-                ReflectorThrowableClassTemplate ,
+                ReflectorThrowableClassTemplate,
                 ReflectorClassTemplate,
 
-                ReflectorClassConstructorTemplate ,
+                ReflectorClassConstructorTemplate,
 
-                ReflectorClassVoidMethodTemplate ,
-                ReflectorClassNativeMethodTemplate ,
-                ReflectorClassNativeArrayMethodTemplate ,
-                ReflectorClassObjectMethodTemplate ,
+                ReflectorClassVoidMethodTemplate,
+                ReflectorClassNativeMethodTemplate,
+                ReflectorClassNativeArrayMethodTemplate,
+                ReflectorClassObjectMethodTemplate,
                 ReflectorClassObjectArrayMethodTemplate,
 
-                ReflectorClassSetTemplate ,
-                ReflectorClassNativeGetTemplate ,
-                ReflectorClassNativeArrayGetTemplate ,
+                ReflectorClassVoidMethodDeprecatedTemplate,
+                ReflectorClassNativeMethodDeprecatedTemplate,
+                ReflectorClassNativeArrayMethodDeprecatedTemplate,
+                ReflectorClassObjectMethodDeprecatedTemplate,
+                ReflectorClassObjectArrayMethodDeprecatedTemplate,
+
+                ReflectorClassSetTemplate,
+                ReflectorClassNativeGetTemplate,
+                ReflectorClassNativeArrayGetTemplate,
                 ReflectorClassObjectGetTemplate,
                 ReflectorClassObjectArrayGetTemplate,
 
-                ReflectorEnumTemplate ,
-                ReflectorEnumFlagsTemplate ,
+                ReflectorClassSetDeprecatedTemplate,
+                ReflectorClassNativeGetDeprecatedTemplate,
+                ReflectorClassNativeArrayGetDeprecatedTemplate,
+                ReflectorClassObjectGetDeprecatedTemplate,
+                ReflectorClassObjectArrayGetDeprecatedTemplate,
+
+                ReflectorEnumTemplate,
+                ReflectorEnumFlagsTemplate,
 
                 ReflectorEnumeratorTemplate,
-                ReflectorEnumerableTemplate ,
+                ReflectorEnumerableTemplate,
+                ReflectorEnumerableDeprecatedTemplate,
                 ReflectorEnumerableNativeNextTemplate,
-                ReflectorEnumerableObjectNextTemplate ,
+                ReflectorEnumerableObjectNextTemplate,
 
-                ReflectorClassEventTemplate ,
+                ReflectorClassEventTemplate,
 
-
-                VoidDelegateClassTemplate ,
-                VoidDelegateInterfaceTemplate ,
+                VoidDelegateClassTemplate,
+                VoidDelegateInterfaceTemplate,
                 NativeDelegateClassTemplate,
-                ObjectDelegateClassTemplate ,
-                NonVoidDelegateInterfaceTemplate ,
+                ObjectDelegateClassTemplate,
+                NonVoidDelegateInterfaceTemplate,
 
                 ManifestTemplate,
 
@@ -376,17 +390,30 @@ namespace MASES.C2JReflector
             public const string ReflectorClassObjectMethodTemplate = "JCObjectReflectorClassObjectMethod.template";
             public const string ReflectorClassObjectArrayMethodTemplate = "JCObjectReflectorClassObjectMethodArray.template";
 
+            public const string ReflectorClassVoidMethodDeprecatedTemplate = "JCObjectReflectorClassVoidMethodDeprecated.template";
+            public const string ReflectorClassNativeMethodDeprecatedTemplate = "JCObjectReflectorClassNativeMethodDeprecated.template";
+            public const string ReflectorClassNativeArrayMethodDeprecatedTemplate = "JCObjectReflectorClassNativeMethodArrayDeprecated.template";
+            public const string ReflectorClassObjectMethodDeprecatedTemplate = "JCObjectReflectorClassObjectMethodDeprecated.template";
+            public const string ReflectorClassObjectArrayMethodDeprecatedTemplate = "JCObjectReflectorClassObjectMethodArrayDeprecated.template";
+
             public const string ReflectorClassSetTemplate = "JCObjectReflectorClassSetProperty.template";
             public const string ReflectorClassNativeGetTemplate = "JCObjectReflectorClassNativeGetProperty.template";
             public const string ReflectorClassNativeArrayGetTemplate = "JCObjectReflectorClassNativeGetPropertyArray.template";
             public const string ReflectorClassObjectGetTemplate = "JCObjectReflectorClassObjectGetProperty.template";
             public const string ReflectorClassObjectArrayGetTemplate = "JCObjectReflectorClassObjectGetPropertyArray.template";
 
+            public const string ReflectorClassSetDeprecatedTemplate = "JCObjectReflectorClassSetPropertyDeprecated.template";
+            public const string ReflectorClassNativeGetDeprecatedTemplate = "JCObjectReflectorClassNativeGetPropertyDeprecated.template";
+            public const string ReflectorClassNativeArrayGetDeprecatedTemplate = "JCObjectReflectorClassNativeGetPropertyArrayDeprecated.template";
+            public const string ReflectorClassObjectGetDeprecatedTemplate = "JCObjectReflectorClassObjectGetPropertyDeprecated.template";
+            public const string ReflectorClassObjectArrayGetDeprecatedTemplate = "JCObjectReflectorClassObjectGetPropertyArrayDeprecated.template";
+
             public const string ReflectorEnumTemplate = "JCObjectReflectorEnum.template";
             public const string ReflectorEnumFlagsTemplate = "JCObjectReflectorEnumFlags.template";
 
             public const string ReflectorEnumeratorTemplate = "JCObjectReflectorEnumerator.template";
             public const string ReflectorEnumerableTemplate = "JCObjectReflectorClassEnumerable.template";
+            public const string ReflectorEnumerableDeprecatedTemplate = "JCObjectReflectorClassEnumerableDeprecated.template";
             public const string ReflectorEnumerableNativeNextTemplate = "JCObjectReflectorEnumeratorNativeNext.template";
             public const string ReflectorEnumerableObjectNextTemplate = "JCObjectReflectorEnumeratorObjectNext.template";
 
@@ -485,6 +512,9 @@ namespace MASES.C2JReflector
                                                                 "            throw new Exception(t);" + Environment.NewLine +
                                                                 "        }" + Environment.NewLine +
                                                                 "    }";
+
+            public const string METHOD_INTERFACE_NAME = "METHOD_INTERFACE_NAME";
+            public const string METHOD_ENUMERATOR_NAME = "METHOD_ENUMERATOR_NAME";
         }
 
         public class Properties
@@ -500,6 +530,7 @@ namespace MASES.C2JReflector
             public const string PROPERTY_VALUE = "PROPERTY_VALUE";
             public const string PROPERTY_PARAMETERS = "PROPERTY_PARAMETERS";
             public const string PROPERTY_INVOKE_PARAMETERS = "PROPERTY_INVOKE_PARAMETERS";
+            public const string PROPERTY_INTERFACE_NAME = "PROPERTY_INTERFACE_NAME";
         }
 
         public class Events

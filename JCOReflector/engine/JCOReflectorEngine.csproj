@@ -55,9 +55,21 @@
     <EmbeddedResource Include="JCObjectReflectorInterfaceGetProperty.template" />
     <EmbeddedResource Include="JCObjectReflectorInterfaceSetProperty.template" />
     <EmbeddedResource Include="JCObjectReflectorInterfaceGetPropertyArray.template" />
+    <EmbeddedResource Include="JCObjectReflectorClassNativeMethodArrayDeprecated.template" />
+    <EmbeddedResource Include="JCObjectReflectorClassNativeMethodDeprecated.template" />
+    <EmbeddedResource Include="JCObjectReflectorClassObjectMethodArrayDeprecated.template" />
+    <EmbeddedResource Include="JCObjectReflectorClassObjectMethodDeprecated.template" />
+    <EmbeddedResource Include="JCObjectReflectorClassVoidMethodDeprecated.template" />
+    <EmbeddedResource Include="JCObjectReflectorClassEnumerableDeprecated.template" />
+    <EmbeddedResource Include="JCObjectReflectorClassNativeGetPropertyDeprecated.template" />
+    <EmbeddedResource Include="JCObjectReflectorClassNativeGetPropertyArrayDeprecated.template" />
+    <EmbeddedResource Include="JCObjectReflectorClassObjectGetPropertyDeprecated.template" />
+    <EmbeddedResource Include="JCObjectReflectorClassObjectGetPropertyArrayDeprecated.template" />
+    <EmbeddedResource Include="JCObjectReflectorClassSetPropertyDeprecated.template" />
+
     <EmbeddedResource Include="JCOPOMJCOReflector.template" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <PackageReference Include="JCOBridge" Version="2.3.2" />
   </ItemGroup>

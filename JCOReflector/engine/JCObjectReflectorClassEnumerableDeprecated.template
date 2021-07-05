@@ -1,3 +1,8 @@
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToMETHOD_INTERFACE_NAME method available in METHOD_INTERFACE_NAME to obtain an object with an invocable method
+     */
+    @Deprecated
     public final METHOD_RETURN_TYPE METHOD_ENUMERATOR_NAME() throws Throwable {
         return new METHOD_IMPLEMENTATION_RETURN_TYPE(classInstance);
     }

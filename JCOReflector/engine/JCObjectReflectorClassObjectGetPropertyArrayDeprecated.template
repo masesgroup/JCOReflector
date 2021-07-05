@@ -1,0 +1,8 @@
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToPROPERTY_INTERFACE_NAME method available in PROPERTY_INTERFACE_NAME to obtain an object with an invocable method
+     */
+    @Deprecated
+    public final METHOD_MODIFIER_KEYWORDPROPERTY_OUTPUTTYPE[] getPROPERTY_JAVA_NAME(PROPERTY_PARAMETERS) throws ThrowableTHROWABLE_TEMPLATE {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToPROPERTY_INTERFACE_NAME to obtain the full interface.");
+    }

@@ -292,7 +292,7 @@ namespace MASES.C2JReflector
                 sb.AppendLine();
                 sb.AppendFormat(">     * Events = {0}", implementedEvents);
                 sb.AppendLine();
-                sb.AppendFormat("> * Discarded Types = {0}",  discardedTypes);
+                sb.AppendFormat("> * Discarded Types = {0}", discardedTypes);
                 sb.AppendLine();
                 sb.AppendFormat(">   * Non Public = {0}", discardedNonPublicTypes);
                 sb.AppendLine();

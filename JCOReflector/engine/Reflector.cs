@@ -813,7 +813,7 @@ namespace MASES.C2JReflector
             {
                 reflectorClassTemplate = Const.Templates.GetTemplate(Const.Templates.ReflectorClassTemplate);
                 packageBaseClass = Const.SpecialNames.NetObject;
-                if (typeof(IEnumerable).IsAssignableFrom(item))
+                if (EnableInterfaceInheritance && typeof(IEnumerable).IsAssignableFrom(item))
                 {
                     packageBaseClass = Const.SpecialNames.NetObjectEnumerable;
                 }

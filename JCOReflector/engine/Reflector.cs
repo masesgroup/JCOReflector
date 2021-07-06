@@ -845,13 +845,15 @@ namespace MASES.C2JReflector
                 {
                     foreach (var interfaceType in implementableInterfaces)
                     {
+                        var nameToAdd = interfaceType.Namespace.ToLowerInvariant() + "." + interfaceType.Name;
+
                         if (string.IsNullOrEmpty(implementsStr))
                         {
-                            implementsStr += Const.Class.PACKAGE_CLASS_IMPLEMENTS_PROTO + interfaceType.Name;
+                            implementsStr += Const.Class.PACKAGE_CLASS_IMPLEMENTS_PROTO + nameToAdd;
                         }
                         else
                         {
-                            implementsStr += ", " + interfaceType.Name;
+                            implementsStr += ", " + nameToAdd;
                         }
 
                         imports.Add(interfaceType);

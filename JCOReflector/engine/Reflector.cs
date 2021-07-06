@@ -1872,156 +1872,159 @@ namespace MASES.C2JReflector
             searchProperties(type, properties, false, isInterface);
             searchProperties(type, properties, true, isInterface);
 
-            if (properties.Count == 0) return string.Empty;
-
-            SortedDictionary<string, Tuple<bool, PropertyInfo>> sortedData = new SortedDictionary<string, Tuple<bool, PropertyInfo>>();
-            foreach (var item in properties)
-            {
-                var strMethod = item.Item2.ToString();
-                if (!sortedData.ContainsKey(strMethod))
-                {
-                    sortedData.Add(strMethod, item);
-                }
-            }
-
-            properties = new List<Tuple<bool, PropertyInfo>>();
-            properties.AddRange(sortedData.Values);
-            string templateToUse = string.Empty;
-
-            StringBuilder propertyInterfaceBuilder = new StringBuilder();
-            StringBuilder propertyBuilder = new StringBuilder();
-            bool isPrimitive = true;
-            string defaultPrimitiveValue = string.Empty;
-            bool isManaged = true;
-            bool isSpecial = false;
-            bool isArray = false;
-
             List<string> propertiesSignaturesCreated = new List<string>();
             List<string> propertiesNameCreated = new List<string>();
 
-            foreach (var prop in properties.ToArray())
-            {
-                var statics = prop.Item1;
-                var item = prop.Item2;
+            StringBuilder propertyInterfaceBuilder = new StringBuilder();
+            StringBuilder propertyBuilder = new StringBuilder();
 
-                if (withInheritance)
+            if (properties.Count != 0)
+            {
+                SortedDictionary<string, Tuple<bool, PropertyInfo>> sortedData = new SortedDictionary<string, Tuple<bool, PropertyInfo>>();
+                foreach (var item in properties)
                 {
-                    if (item.DeclaringType == type)
+                    var strMethod = item.Item2.ToString();
+                    if (!sortedData.ContainsKey(strMethod))
+                    {
+                        sortedData.Add(strMethod, item);
+                    }
+                }
+
+                properties = new List<Tuple<bool, PropertyInfo>>();
+                properties.AddRange(sortedData.Values);
+                string templateToUse = string.Empty;
+
+                bool isPrimitive = true;
+                string defaultPrimitiveValue = string.Empty;
+                bool isManaged = true;
+                bool isSpecial = false;
+                bool isArray = false;
+
+                foreach (var prop in properties.ToArray())
+                {
+                    var statics = prop.Item1;
+                    var item = prop.Item2;
+
+                    if (withInheritance)
+                    {
+                        if (item.DeclaringType == type)
+                        {
+                            Interlocked.Increment(ref analyzedProperties);
+                        }
+                    }
+                    else
                     {
                         Interlocked.Increment(ref analyzedProperties);
                     }
-                }
-                else
-                {
-                    Interlocked.Increment(ref analyzedProperties);
-                }
 
-                var propertyName = item.Name;
+                    var propertyName = item.Name;
 
-                isPrimitive = true;
-                defaultPrimitiveValue = string.Empty;
-                isManaged = true;
-                isSpecial = false;
-                isArray = false;
+                    isPrimitive = true;
+                    defaultPrimitiveValue = string.Empty;
+                    isManaged = true;
+                    isSpecial = false;
+                    isArray = false;
 
-                if (isException)
-                {
-                    if (propertyName == "Message") continue;
-                    if (propertyName == "StackTrace") continue;
-                }
-
-                if (propertiesSignaturesCreated.Contains(item.ToString())
-                    || item.IsSpecialName
-                    || ((withInheritance && !isInterface) ? item.DeclaringType != type : false)
-                    || (!propertiesNameCreated.Contains(propertyName) ? false : isDifferentOnlyForRetVal(propertiesSignaturesCreated, item.ToString(), propertyName))
-                   ) continue;
-
-                string propertyType = "void";
-
-                propertyType = convertType(imports, item.PropertyType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
-                if (!isManaged) continue; // found not managed type, jump to next 
-
-                bool isPropertyTypeInterface = isArray ? item.PropertyType.GetElementType().IsInterface : item.PropertyType.IsInterface;
-
-                if (item.CanRead) // get
-                {
-                    if (item.GetMethod.GetParameters().Length != 0) continue; // only get without parameters are managed
-                    isPrimitive |= typeof(Delegate).IsAssignableFrom(item.PropertyType);
-
-                    var exceptionStr = exceptionStringBuilder(item.GetMethod, imports);
-
-                    bool isNewPropertyVal = (withInheritance && !isInterface) ? isNewProperty(type, item, properties, true) : false;
-                    string newPropertyName = string.Empty;
-                    if (isNewPropertyVal)
+                    if (isException)
                     {
-                        newPropertyName = string.Format(Const.Methods.NEW_MODIFIER_PROTO, propertyName, type.Name);
+                        if (propertyName == "Message") continue;
+                        if (propertyName == "StackTrace") continue;
                     }
 
-                    if (withInheritance ? (isInterface && (item.GetMethod.GetBaseDefinition().DeclaringType == type)) : isInterface)
-                    {
-                        string propertyInterfaceTemplate = Const.Templates.GetTemplate(isArray ? Const.Templates.ReflectorInterfaceGetArrayTemplate : Const.Templates.ReflectorInterfaceGetTemplate);
+                    if (propertiesSignaturesCreated.Contains(item.ToString())
+                        || item.IsSpecialName
+                        || ((withInheritance && !isInterface) ? item.DeclaringType != type : false)
+                        || (!propertiesNameCreated.Contains(propertyName) ? false : isDifferentOnlyForRetVal(propertiesSignaturesCreated, item.ToString(), propertyName))
+                       ) continue;
 
-                        var propertyInterfaceStr = buildPropertySignature(propertyInterfaceTemplate, isNewPropertyVal ? newPropertyName : propertyName, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics, string.Empty);
-                        propertyInterfaceBuilder.AppendLine(propertyInterfaceStr);
-                    }
+                    string propertyType = "void";
 
-                    if (withInheritance ? (isInterface || (item.GetMethod.GetBaseDefinition().DeclaringType == type)) : true)
+                    propertyType = convertType(imports, item.PropertyType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
+                    if (!isManaged) continue; // found not managed type, jump to next 
+
+                    bool isPropertyTypeInterface = isArray ? item.PropertyType.GetElementType().IsInterface : item.PropertyType.IsInterface;
+
+                    if (item.CanRead) // get
                     {
-                        if (isArray)
+                        if (item.GetMethod.GetParameters().Length != 0) continue; // only get without parameters are managed
+                        isPrimitive |= typeof(Delegate).IsAssignableFrom(item.PropertyType);
+
+                        var exceptionStr = exceptionStringBuilder(item.GetMethod, imports);
+
+                        bool isNewPropertyVal = (withInheritance && !isInterface) ? isNewProperty(type, item, properties, true) : false;
+                        string newPropertyName = string.Empty;
+                        if (isNewPropertyVal)
                         {
-                            templateToUse = Const.Templates.GetTemplate(isPrimitive ? Const.Templates.ReflectorClassNativeArrayGetTemplate : Const.Templates.ReflectorClassObjectArrayGetTemplate);
-                        }
-                        else
-                        {
-                            templateToUse = Const.Templates.GetTemplate(isPrimitive ? Const.Templates.ReflectorClassNativeGetTemplate : Const.Templates.ReflectorClassObjectGetTemplate);
+                            newPropertyName = string.Format(Const.Methods.NEW_MODIFIER_PROTO, propertyName, type.Name);
                         }
 
-                        var propertyStr = buildPropertySignature(templateToUse, isNewPropertyVal ? newPropertyName : propertyName, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics, string.Empty);
-                        propertyBuilder.AppendLine(propertyStr);
-                    }
-                }
-                if (item.CanWrite) // set
-                {
-                    var exceptionStr = exceptionStringBuilder(item.SetMethod, imports);
+                        if (withInheritance ? (isInterface && (item.GetMethod.GetBaseDefinition().DeclaringType == type)) : isInterface)
+                        {
+                            string propertyInterfaceTemplate = Const.Templates.GetTemplate(isArray ? Const.Templates.ReflectorInterfaceGetArrayTemplate : Const.Templates.ReflectorInterfaceGetTemplate);
 
-                    bool isNewPropertyVal = (withInheritance && !isInterface) ? isNewProperty(type, item, properties, false) : false;
-                    string newPropertyName = string.Empty;
-                    if (isNewPropertyVal)
+                            var propertyInterfaceStr = buildPropertySignature(propertyInterfaceTemplate, isNewPropertyVal ? newPropertyName : propertyName, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics, string.Empty);
+                            propertyInterfaceBuilder.AppendLine(propertyInterfaceStr);
+                        }
+
+                        if (withInheritance ? (isInterface || (item.GetMethod.GetBaseDefinition().DeclaringType == type)) : true)
+                        {
+                            if (isArray)
+                            {
+                                templateToUse = Const.Templates.GetTemplate(isPrimitive ? Const.Templates.ReflectorClassNativeArrayGetTemplate : Const.Templates.ReflectorClassObjectArrayGetTemplate);
+                            }
+                            else
+                            {
+                                templateToUse = Const.Templates.GetTemplate(isPrimitive ? Const.Templates.ReflectorClassNativeGetTemplate : Const.Templates.ReflectorClassObjectGetTemplate);
+                            }
+
+                            var propertyStr = buildPropertySignature(templateToUse, isNewPropertyVal ? newPropertyName : propertyName, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics, string.Empty);
+                            propertyBuilder.AppendLine(propertyStr);
+                        }
+                    }
+                    if (item.CanWrite) // set
                     {
-                        newPropertyName = string.Format(Const.Methods.NEW_MODIFIER_PROTO, propertyName, type.Name);
+                        var exceptionStr = exceptionStringBuilder(item.SetMethod, imports);
+
+                        bool isNewPropertyVal = (withInheritance && !isInterface) ? isNewProperty(type, item, properties, false) : false;
+                        string newPropertyName = string.Empty;
+                        if (isNewPropertyVal)
+                        {
+                            newPropertyName = string.Format(Const.Methods.NEW_MODIFIER_PROTO, propertyName, type.Name);
+                        }
+
+                        if (withInheritance ? (isInterface && (item.SetMethod.GetBaseDefinition().DeclaringType == type)) : isInterface)
+                        {
+                            string propertyInterfaceTemplate = Const.Templates.GetTemplate(Const.Templates.ReflectorInterfaceSetTemplate);
+
+                            var propertyInterfaceStr = buildPropertySignature(propertyInterfaceTemplate, isNewPropertyVal ? newPropertyName : propertyName, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics, string.Empty);
+                            propertyInterfaceBuilder.AppendLine(propertyInterfaceStr);
+                        }
+
+                        if (withInheritance ? (isInterface || (item.SetMethod.GetBaseDefinition().DeclaringType == type)) : true)
+                        {
+                            templateToUse = Const.Templates.GetTemplate(Const.Templates.ReflectorClassSetTemplate);
+                            var propertyStr = buildPropertySignature(templateToUse, isNewPropertyVal ? newPropertyName : propertyName, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics, string.Empty);
+                            propertyBuilder.AppendLine(propertyStr);
+                        }
                     }
 
-                    if (withInheritance ? (isInterface && (item.SetMethod.GetBaseDefinition().DeclaringType == type)) : isInterface)
+                    propertiesSignaturesCreated.Add(item.ToString());
+                    propertiesNameCreated.Add(item.Name);
+
+                    if (withInheritance)
                     {
-                        string propertyInterfaceTemplate = Const.Templates.GetTemplate(Const.Templates.ReflectorInterfaceSetTemplate);
-
-                        var propertyInterfaceStr = buildPropertySignature(propertyInterfaceTemplate, isNewPropertyVal ? newPropertyName : propertyName, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics, string.Empty);
-                        propertyInterfaceBuilder.AppendLine(propertyInterfaceStr);
+                        if (item.DeclaringType == type)
+                        {
+                            Interlocked.Increment(ref implementedProperties);
+                        }
                     }
-
-                    if (withInheritance ? (isInterface || (item.SetMethod.GetBaseDefinition().DeclaringType == type)) : true)
-                    {
-                        templateToUse = Const.Templates.GetTemplate(Const.Templates.ReflectorClassSetTemplate);
-                        var propertyStr = buildPropertySignature(templateToUse, isNewPropertyVal ? newPropertyName : propertyName, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics, string.Empty);
-                        propertyBuilder.AppendLine(propertyStr);
-                    }
-                }
-
-                propertiesSignaturesCreated.Add(item.ToString());
-                propertiesNameCreated.Add(item.Name);
-
-                if (withInheritance)
-                {
-                    if (item.DeclaringType == type)
+                    else
                     {
                         Interlocked.Increment(ref implementedProperties);
                     }
                 }
-                else
-                {
-                    Interlocked.Increment(ref implementedProperties);
-                }
             }
+            else if (!EnableInterfaceInheritance) return string.Empty;
 
             if (!isInterface && EnableInheritance && EnableInterfaceInheritance)
             {
@@ -2033,7 +2036,7 @@ namespace MASES.C2JReflector
 
                     if (properties.Count == 0) continue;
 
-                    sortedData = new SortedDictionary<string, Tuple<bool, PropertyInfo>>();
+                    SortedDictionary<string, Tuple<bool, PropertyInfo>> sortedData = new SortedDictionary<string, Tuple<bool, PropertyInfo>>();
                     foreach (var item in properties)
                     {
                         var strMethod = item.Item2.ToString();
@@ -2042,6 +2045,14 @@ namespace MASES.C2JReflector
                             sortedData.Add(strMethod, item);
                         }
                     }
+
+                    string templateToUse = string.Empty;
+
+                    bool isPrimitive = true;
+                    string defaultPrimitiveValue = string.Empty;
+                    bool isManaged = true;
+                    bool isSpecial = false;
+                    bool isArray = false;
 
                     properties = new List<Tuple<bool, PropertyInfo>>();
                     properties.AddRange(sortedData.Values);

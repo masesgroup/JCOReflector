@@ -840,25 +840,6 @@ namespace MASES.C2JReflector
                     packageBaseClass = item.BaseType.Name;
                     imports.Add(item.BaseType);
                 }
-
-                if (EnableInterfaceInheritance)
-                {
-                    foreach (var interfaceType in implementableInterfaces)
-                    {
-                        var nameToAdd = interfaceType.Namespace.ToLowerInvariant() + "." + interfaceType.Name;
-
-                        if (string.IsNullOrEmpty(implementsStr))
-                        {
-                            implementsStr += Const.Class.PACKAGE_CLASS_IMPLEMENTS_PROTO + nameToAdd;
-                        }
-                        else
-                        {
-                            implementsStr += ", " + nameToAdd;
-                        }
-
-                        imports.Add(interfaceType);
-                    }
-                }
             }
 
             var packageName = item.Namespace.ToLowerInvariant();
@@ -900,6 +881,25 @@ namespace MASES.C2JReflector
 
             var eventsInstanceStr = exportingEvents(item, imports, implementableInterfaces, withInheritance, false, isException, destFolder, assemblyname, out returnInterfaceSection);
             reflectorClassTemplate = reflectorClassTemplate.Replace(Const.Class.INSTANCE_EVENTS_SECTION, eventsInstanceStr);
+
+            if (EnableInheritance && EnableInterfaceInheritance)
+            {
+                foreach (var interfaceType in implementableInterfaces)
+                {
+                    var nameToAdd = interfaceType.Namespace.ToLowerInvariant() + "." + interfaceType.Name;
+
+                    if (string.IsNullOrEmpty(implementsStr))
+                    {
+                        implementsStr += Const.Class.PACKAGE_CLASS_IMPLEMENTS_PROTO + nameToAdd;
+                    }
+                    else
+                    {
+                        implementsStr += ", " + nameToAdd;
+                    }
+
+                    imports.Add(interfaceType);
+                }
+            }
 
             var importStr = exportingImports(imports);
             reflectorClassTemplate = reflectorClassTemplate.Replace(Const.Class.PACKAGE_IMPORT_SECTION, importStr);
@@ -1578,10 +1578,10 @@ namespace MASES.C2JReflector
 
             if (!isInterface && EnableInheritance && EnableInterfaceInheritance)
             {
-                foreach (var item in implementableInterfaces)
+                foreach (var implementableInterface in implementableInterfaces.ToArray())
                 {
                     allMethods = new List<MethodInfo>();
-                    searchMethods(item, allMethods, true);
+                    searchMethods(implementableInterface, allMethods, true);
                     methods = allMethods.ToArray();
 
                     if (methods.Length == 0) return string.Empty;
@@ -1600,6 +1600,7 @@ namespace MASES.C2JReflector
                     methodLst.AddRange(sortedData.Values);
 
                     methods = methodLst.ToArray();
+                    int extraImplementedMethods = 0;
 
                     foreach (var interfaceMethod in methods)
                     {
@@ -1619,7 +1620,7 @@ namespace MASES.C2JReflector
 
                         if (interfaceMethod.IsGenericMethod // don't manage generic methods
                             || interfaceMethod.ContainsGenericParameters
-                            || ((withInheritance && !isInterface) ? !interfaceMethod.DeclaringType.IsAssignableFrom(item) : false)
+                            || ((withInheritance && !isInterface) ? !interfaceMethod.DeclaringType.IsAssignableFrom(implementableInterface) : false)
                             || (!methodsNameCreated.Contains(methodName) ? false : isDifferentOnlyForRetVal(methodsSignatureCreated, interfaceMethod.ToString(), methodName))
                            ) continue;
 
@@ -1645,7 +1646,7 @@ namespace MASES.C2JReflector
                             {
                                 //returnEnumeratorType = string.Empty;
                                 returnType = Const.SpecialNames.NetIEnumerator;
-                                methodStr = templateToUse.Replace(Const.Methods.METHOD_INTERFACE_NAME, item.Name)
+                                methodStr = templateToUse.Replace(Const.Methods.METHOD_INTERFACE_NAME, implementableInterface.Name)
                                                          .Replace(Const.Methods.METHOD_ENUMERATOR_NAME, enumeratorMethodName)
                                                          .Replace(Const.Methods.METHOD_RETURN_TYPE, returnType)
                                                          .Replace(Const.Methods.METHOD_IMPLEMENTATION_RETURN_TYPE, interfaceMethod.ReturnType.IsInterface ? returnType + Const.SpecialNames.ImplementationTrailer : returnType)
@@ -1671,7 +1672,7 @@ namespace MASES.C2JReflector
                                     enumeratorMethodName += type.Name;
                                 }
 
-                                methodStr = templateToUse.Replace(Const.Methods.METHOD_INTERFACE_NAME, item.Name)
+                                methodStr = templateToUse.Replace(Const.Methods.METHOD_INTERFACE_NAME, implementableInterface.Name)
                                                          .Replace(Const.Methods.METHOD_ENUMERATOR_NAME, enumeratorMethodName)
                                                          .Replace(Const.Methods.METHOD_RETURN_TYPE, returnType)
                                                          .Replace(Const.Methods.METHOD_IMPLEMENTATION_RETURN_TYPE, interfaceMethod.ReturnType.IsInterface ? returnType + Const.SpecialNames.ImplementationTrailer : returnType)
@@ -1749,7 +1750,7 @@ namespace MASES.C2JReflector
                                 newMethodName = string.Format(Const.Methods.NEW_MODIFIER_PROTO, methodName, type.Name);
                             }
 
-                            methodStr = templateToUse.Replace(Const.Methods.METHOD_INTERFACE_NAME, item.Name)
+                            methodStr = templateToUse.Replace(Const.Methods.METHOD_INTERFACE_NAME, implementableInterface.Name)
                                                      .Replace(Const.Methods.METHOD_JAVA_NAME, isNewMethodVal ? newMethodName : methodName)
                                                      .Replace(Const.Methods.METHOD_NAME, methodName)
                                                      .Replace(Const.Methods.METHOD_RETURN_TYPE, returnType)
@@ -1769,8 +1770,12 @@ namespace MASES.C2JReflector
                             methodInterfaceBuilder.AppendLine(methodInterfaceStr);
                         }
 
+                        Interlocked.Increment(ref extraImplementedMethods);
+
                         methodBuilder.AppendLine(methodStr);
                     }
+
+                    if (extraImplementedMethods != methods.Length) implementableInterfaces.Remove(implementableInterface);
                 }
             }
 
@@ -2028,7 +2033,7 @@ namespace MASES.C2JReflector
 
             if (!isInterface && EnableInheritance && EnableInterfaceInheritance)
             {
-                foreach (var implementableInterface in implementableInterfaces)
+                foreach (var implementableInterface in implementableInterfaces.ToArray())
                 {
                     properties = new List<Tuple<bool, PropertyInfo>>();
                     searchProperties(implementableInterface, properties, false, true);
@@ -2056,6 +2061,8 @@ namespace MASES.C2JReflector
 
                     properties = new List<Tuple<bool, PropertyInfo>>();
                     properties.AddRange(sortedData.Values);
+
+                    int extraImplementedProperties = 0;
 
                     foreach (var interfaceProp in properties)
                     {
@@ -2137,9 +2144,13 @@ namespace MASES.C2JReflector
                             }
                         }
 
+                        Interlocked.Increment(ref extraImplementedProperties);
+
                         propertiesSignaturesCreated.Add(item.ToString());
                         propertiesNameCreated.Add(item.Name);
                     }
+
+                    if (extraImplementedProperties != properties.Count) implementableInterfaces.Remove(implementableInterface);
                 }
             }
 

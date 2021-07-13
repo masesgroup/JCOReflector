@@ -5,4 +5,5 @@
   <SplitFolderByAssembly>true</SplitFolderByAssembly>
   <JDKFolder>jdk</JDKFolder>
   <JDKTarget>Version8</JDKTarget>
+  <JDKToolExtraOptions></JDKToolExtraOptions>
 </JavaBuilderEventArgs>

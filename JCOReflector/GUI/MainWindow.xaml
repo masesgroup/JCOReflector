@@ -121,6 +121,10 @@
                             <Label Content="JAR destination folder" VerticalContentAlignment="Center" VerticalAlignment="Stretch"/>
                             <TextBox Name="tbJarDestinationFolder" VerticalContentAlignment="Center" VerticalAlignment="Stretch" IsReadOnly="True" />
                         </DockPanel>
+                        <DockPanel DockPanel.Dock="Top" MinHeight="30">
+                            <Label Content="JDK Tool Extra Options" VerticalContentAlignment="Center" VerticalAlignment="Stretch"/>
+                            <TextBox Name="tbJDKToolExtraOptions" VerticalContentAlignment="Center" VerticalAlignment="Stretch" />
+                        </DockPanel>
                         <local:AssemblyCollectionControl DockPanel.Dock="Bottom" AssemblyDataCollection="{Binding ElementName=mainWindow, Path=AssemblyDataCollection, Mode=TwoWay}"/>
                     </DockPanel>
                 </TabItem>

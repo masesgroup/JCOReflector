@@ -241,6 +241,7 @@ namespace MASES.C2JReflector
         public string JDKFolder { get; set; }
         public JDKVersion JDKTarget { get; set; }
         public string[] AssembliesToUse { get; set; }
+        public string JDKToolExtraOptions { get; set; }
     }
     #endregion
 

@@ -79,7 +79,7 @@ namespace MASES.C2JReflector
                 }
 
                 var srcRootFolder = Path.Combine(args.SourceFolder, Const.FileNameAndDirectory.SourceDirectory);
-                var classes = CreateSourceListAndCompile(args.JDKFolder, args.JDKTarget, args.RootFolder, srcRootFolder, (args.AssembliesToUse == null) ? CreateFolderList(srcRootFolder) : args.AssembliesToUse, Timeout.Infinite);
+                var classes = CreateSourceListAndCompile(args.JDKFolder, args.JDKTarget, args.JDKToolExtraOptions, args.RootFolder, srcRootFolder, (args.AssembliesToUse == null) ? CreateFolderList(srcRootFolder) : args.AssembliesToUse, Timeout.Infinite);
                 reportStr = string.Format("Compilation of {0} classes done in {1}.", classes, DateTime.Now - dtStart);
             }
             catch (OperationCanceledException ex)
@@ -126,7 +126,7 @@ namespace MASES.C2JReflector
 
                 var srcRootFolder = Path.Combine(args.SourceFolder, Const.FileNameAndDirectory.SourceDirectory);
                 string destinationFolder = Path.Combine(args.SourceFolder, Const.FileNameAndDirectory.DocsDirectory);
-                var classes = CreateSourceListAndGenerateDocs(args.JDKFolder, args.JDKTarget, args.RootFolder, srcRootFolder, destinationFolder, args.CommitVersion, (args.AssembliesToUse == null) ? CreateFolderList(srcRootFolder) : args.AssembliesToUse, Timeout.Infinite);
+                var classes = CreateSourceListAndGenerateDocs(args.JDKFolder, args.JDKTarget, args.JDKToolExtraOptions, args.RootFolder, srcRootFolder, destinationFolder, args.CommitVersion, (args.AssembliesToUse == null) ? CreateFolderList(srcRootFolder) : args.AssembliesToUse, Timeout.Infinite);
                 reportStr = string.Format("Javadoc of {0} classes done in {1}.", classes, DateTime.Now - dtStart);
             }
             catch (OperationCanceledException ex)
@@ -231,7 +231,7 @@ namespace MASES.C2JReflector
             return dirs;
         }
 
-        static int CreateSourceListAndCompile(string jdkFolder, JDKVersion jdkTarget, string rootFolder, string originFolder, IEnumerable<string> assemblies, int timeout)
+        static int CreateSourceListAndCompile(string jdkFolder, JDKVersion jdkTarget, string toolExtraOptions, string rootFolder, string originFolder, IEnumerable<string> assemblies, int timeout)
         {
             int counter = 0;
             var tmpFile = Path.Combine(originFolder, Const.FileNameAndDirectory.SourceFile);
@@ -255,19 +255,20 @@ namespace MASES.C2JReflector
             File.WriteAllText(tmpFile, sb.ToString());
             var jcoBridgePath = Path.GetDirectoryName(typeof(JavaBuilder).Assembly.Location);
             var jcoBridgeCp = Path.Combine(jcoBridgePath, "JCOBridge.jar");
+            var extraOptions = string.IsNullOrEmpty(toolExtraOptions) ? string.Empty : string.Format(" {0} ", toolExtraOptions);
             if (jdkTarget == JDKVersion.NotSet)
             {
-                launchProcess(originFolder, Path.Combine(jdkFolder, JavaCompiler), "-cp " + jcoBridgeCp + " @" + Const.FileNameAndDirectory.SourceFile, timeout);
+                launchProcess(originFolder, Path.Combine(jdkFolder, JavaCompiler), "-cp " + jcoBridgeCp + extraOptions + " @" + Const.FileNameAndDirectory.SourceFile, timeout);
             }
             else
             {
                 string compatibility = string.Format(" -source {0} -target {0}", (int)jdkTarget); // -bootclasspath rt{0}.jar
-                launchProcess(originFolder, Path.Combine(jdkFolder, JavaCompiler), "-cp " + jcoBridgeCp + compatibility + " @" + Const.FileNameAndDirectory.SourceFile, timeout);
+                launchProcess(originFolder, Path.Combine(jdkFolder, JavaCompiler), "-cp " + jcoBridgeCp + compatibility + extraOptions + " @" + Const.FileNameAndDirectory.SourceFile, timeout);
             }
             return counter;
         }
 
-        static int CreateSourceListAndGenerateDocs(string jdkFolder, JDKVersion jdkTarget, string rootFolder, string originFolder, string destinationFolder, string commitVersion, IEnumerable<string> assemblies, int timeout)
+        static int CreateSourceListAndGenerateDocs(string jdkFolder, JDKVersion jdkTarget, string toolExtraOptions, string rootFolder, string originFolder, string destinationFolder, string commitVersion, IEnumerable<string> assemblies, int timeout)
         {
             int counter = 0;
             var tmpFile = Path.Combine(originFolder, Const.FileNameAndDirectory.SourceFile);
@@ -294,9 +295,9 @@ namespace MASES.C2JReflector
 
             destinationFolder = Path.Combine(destinationFolder, Const.Framework.RuntimeFolder);
             destinationFolder = destinationFolder.Replace('\\', '/');
-
+            var extraOptions = string.IsNullOrEmpty(toolExtraOptions) ? string.Empty : string.Format(" {0} ", toolExtraOptions);
             var header = Const.Documentation.DOCS_HEADER.Replace(Const.Documentation.DOCS_VERSION_JCOREFLECTOR_PLACEHOLDER, string.Format("v{0}-{1}", Const.ReflectorVersion, commitVersion));
-            launchProcess(originFolder, Path.Combine(jdkFolder, JavaDoc), "-header \"" + header + "\" -quiet -author -noindex -nodeprecated -nodeprecatedlist -notimestamp -nohelp -notree -public -cp " + jcoBridgeCp + " -d " + destinationFolder + " -link https://www.jcobridge.com/api-java @" + Const.FileNameAndDirectory.SourceFile, timeout);
+            launchProcess(originFolder, Path.Combine(jdkFolder, JavaDoc), "-header \"" + header + "\" -quiet -author -noindex -nodeprecated -nodeprecatedlist -notimestamp -nohelp -notree -public -cp " + jcoBridgeCp + " -d " + destinationFolder + extraOptions + " -link https://www.jcobridge.com/api-java @" + Const.FileNameAndDirectory.SourceFile, timeout);
 
             return counter;
         }

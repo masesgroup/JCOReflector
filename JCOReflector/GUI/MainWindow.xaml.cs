@@ -209,6 +209,7 @@ namespace MASES.C2JReflector
                 args.CancellationToken = cts.Token;
                 args.JDKFolder = tbJDKFolder.Text;
                 args.JDKTarget = (JDKVersion)cbTarget.SelectedValue;
+                args.JDKToolExtraOptions = tbJDKToolExtraOptions.Text;
                 args.SourceFolder = tbDestinationFolder.Text;
                 args.SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value;
                 args.AssembliesToUse = AssemblyDataCollection.CreateList(AssemblyDataCollection);
@@ -238,6 +239,7 @@ namespace MASES.C2JReflector
                 args.CancellationToken = cts.Token;
                 args.JDKFolder = tbJDKFolder.Text;
                 args.JDKTarget = (JDKVersion)cbTarget.SelectedValue;
+                args.JDKToolExtraOptions = tbJDKToolExtraOptions.Text;
                 args.SourceFolder = tbDestinationFolder.Text;
                 args.SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value;
                 args.AssembliesToUse = AssemblyDataCollection.CreateList(AssemblyDataCollection);
@@ -267,6 +269,7 @@ namespace MASES.C2JReflector
                 cts = new CancellationTokenSource();
                 args.CancellationToken = cts.Token;
                 args.JDKFolder = tbJDKFolder.Text;
+                args.JDKToolExtraOptions = tbJDKToolExtraOptions.Text;
                 args.SourceFolder = tbDestinationFolder.Text;
                 args.JarDestinationFolder = tbJarDestinationFolder.Text;
                 args.SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value;
@@ -297,6 +300,7 @@ namespace MASES.C2JReflector
             cts = new CancellationTokenSource();
             args.CancellationToken = cts.Token;
             args.JDKFolder = tbJDKFolder.Text;
+            args.JDKToolExtraOptions = tbJDKToolExtraOptions.Text;
             args.SourceFolder = tbDestinationFolder.Text;
             args.JarDestinationFolder = tbJarDestinationFolder.Text;
             args.SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value;
@@ -322,6 +326,7 @@ namespace MASES.C2JReflector
             cts = new CancellationTokenSource();
             args.CancellationToken = cts.Token;
             args.JDKFolder = tbJDKFolder.Text;
+            args.JDKToolExtraOptions = tbJDKToolExtraOptions.Text;
             args.SourceFolder = tbDestinationFolder.Text;
             args.JarDestinationFolder = tbJarDestinationFolder.Text;
             args.SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value;

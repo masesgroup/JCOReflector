@@ -6,6 +6,7 @@
   <SplitFolderByAssembly>true</SplitFolderByAssembly>
   <JDKFolder>jdk</JDKFolder>
   <JDKTarget>Version8</JDKTarget>
+  <JDKToolExtraOptions></JDKToolExtraOptions>
   <JarDestinationFolder>bin/net5.0</JarDestinationFolder>
   <WithJARSource>false</WithJARSource>
   <EmbeddingJCOBridge>true</EmbeddingJCOBridge>

@@ -113,8 +113,8 @@ Parsed assemblies are:
 >   * Classes = 9222
 >     * Exceptions = 396
 >     * Constructors = 10186
->     * Methods = 29691
->       * Duplicated Methods = 996
+>     * Methods = 29674
+>       * Duplicated Methods = 999
 >     * Properties = 29770
 >     * Events = 2185
 > * Discarded Types = 30970
@@ -411,8 +411,8 @@ Parsed assemblies are:
 >   * Classes = 5027
 >     * Exceptions = 229
 >     * Constructors = 5537
->     * Methods = 19414
->       * Duplicated Methods = 723
+>     * Methods = 19397
+>       * Duplicated Methods = 726
 >     * Properties = 16607
 >     * Events = 1620
 > * Discarded Types = 17386
@@ -793,8 +793,8 @@ Parsed assemblies are:
 >   * Classes = 5121
 >     * Exceptions = 233
 >     * Constructors = 5612
->     * Methods = 19749
->       * Duplicated Methods = 755
+>     * Methods = 19732
+>       * Duplicated Methods = 758
 >     * Properties = 16860
 >     * Events = 1626
 > * Discarded Types = 18287

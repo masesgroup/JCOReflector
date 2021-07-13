@@ -339,7 +339,7 @@ namespace MASES.C2JReflector
             EnableArray = args.EnableArray;
             EnableDuplicateMethodNativeArrayWithJCRefOut = args.EnableDuplicateMethodNativeArrayWithJCRefOut;
             EnableInheritance = args.EnableInheritance;
-            EnableInterfaceInheritance = args.EnableInterfaceInheritance;// -- disabled due to issues in reflector engines (see https://github.com/masesgroup/JCOReflector/issues/6#issuecomment-686596662)
+            EnableInterfaceInheritance = args.EnableInterfaceInheritance;
             EnableWrite = !args.DryRun;
 
             string reportStr = string.Empty;

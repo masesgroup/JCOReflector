@@ -40,6 +40,10 @@ import java.util.ArrayList;
 // Import section
 import system.ValueType;
 import system.windows.FontStyle;
+import system.IFormatProvider;
+import system.IFormatProviderImplementation;
+import system.IFormattable;
+import system.IFormattableImplementation;
 
 
 /**
@@ -48,7 +52,7 @@ import system.windows.FontStyle;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.FontStyle" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.FontStyle</a>
  */
-public class FontStyle extends ValueType  {
+public class FontStyle extends ValueType implements system.IFormattable {
     /**
      * Fully assembly qualified name: PresentationCore, Version=5.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -155,6 +159,15 @@ public class FontStyle extends ValueType  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIFormattable method available in IFormattable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public java.lang.String ToString(java.lang.String format, IFormatProvider formatProvider) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFormattable to obtain the full interface.");
     }
 
 

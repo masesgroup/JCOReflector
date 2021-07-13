@@ -61,7 +61,7 @@ import system.collections.ICollectionImplementation;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Hashtable" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Hashtable</a>
  */
-public class Hashtable extends NetObject  {
+public class Hashtable extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */

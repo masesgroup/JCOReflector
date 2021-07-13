@@ -48,7 +48,7 @@ import system.management.QualifierData;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Management.QualifierDataCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Management.QualifierDataCollection</a>
  */
-public class QualifierDataCollection extends NetObject  {
+public class QualifierDataCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

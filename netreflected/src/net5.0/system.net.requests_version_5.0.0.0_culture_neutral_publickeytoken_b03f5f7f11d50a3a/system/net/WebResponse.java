@@ -40,8 +40,12 @@ import java.util.ArrayList;
 // Import section
 import system.MarshalByRefObject;
 import system.io.Stream;
+import system.runtime.serialization.SerializationInfo;
+import system.runtime.serialization.StreamingContext;
 import system.net.WebHeaderCollection;
 import system.Uri;
+import system.runtime.serialization.ISerializable;
+import system.runtime.serialization.ISerializableImplementation;
 
 
 /**
@@ -50,7 +54,7 @@ import system.Uri;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.WebResponse" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.WebResponse</a>
  */
-public class WebResponse extends MarshalByRefObject implements AutoCloseable {
+public class WebResponse extends MarshalByRefObject implements system.runtime.serialization.ISerializable, AutoCloseable {
     /**
      * Fully assembly qualified name: System.Net.Requests, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -176,6 +180,15 @@ public class WebResponse extends MarshalByRefObject implements AutoCloseable {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToISerializable method available in ISerializable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
     }
 
     public void close() throws Exception {

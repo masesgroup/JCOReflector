@@ -42,6 +42,8 @@ import system.web.ui.webcontrols.Image;
 import system.web.ui.webcontrols.HotSpotCollection;
 import system.web.ui.webcontrols.HotSpotMode;
 import system.web.ui.webcontrols.ImageMapEventHandler;
+import system.web.ui.IPostBackEventHandler;
+import system.web.ui.IPostBackEventHandlerImplementation;
 
 
 /**
@@ -50,7 +52,7 @@ import system.web.ui.webcontrols.ImageMapEventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.ImageMap" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.ImageMap</a>
  */
-public class ImageMap extends Image  {
+public class ImageMap extends Image implements system.web.ui.IPostBackEventHandler {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -155,6 +157,15 @@ public class ImageMap extends Image  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIPostBackEventHandler method available in IPostBackEventHandler to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void RaisePostBackEvent(java.lang.String eventArgument) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackEventHandler to obtain the full interface.");
+    }
+
 
     
     // Properties section

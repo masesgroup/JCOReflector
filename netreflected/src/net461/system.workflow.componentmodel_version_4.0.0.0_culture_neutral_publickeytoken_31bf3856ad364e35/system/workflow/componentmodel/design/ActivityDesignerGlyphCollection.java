@@ -47,7 +47,7 @@ import system.workflow.componentmodel.design.ActivityDesignerGlyphCollection;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.ActivityDesignerGlyphCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.ActivityDesignerGlyphCollection</a>
  */
-public class ActivityDesignerGlyphCollection extends NetObject  {
+public class ActivityDesignerGlyphCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

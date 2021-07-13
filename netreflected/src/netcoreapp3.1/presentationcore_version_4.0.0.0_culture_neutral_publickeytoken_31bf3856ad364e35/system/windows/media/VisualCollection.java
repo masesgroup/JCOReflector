@@ -48,7 +48,7 @@ import system.Array;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.VisualCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.VisualCollection</a>
  */
-public class VisualCollection extends NetObject  {
+public class VisualCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

@@ -47,7 +47,7 @@ import system.workflow.activities.rules.RuleCondition;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.Rules.RuleConditionCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.Rules.RuleConditionCollection</a>
  */
-public class RuleConditionCollection extends NetObject  {
+public class RuleConditionCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

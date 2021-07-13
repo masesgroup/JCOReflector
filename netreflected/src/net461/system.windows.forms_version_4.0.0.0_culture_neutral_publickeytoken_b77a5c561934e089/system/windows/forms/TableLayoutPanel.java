@@ -50,6 +50,8 @@ import system.windows.forms.TableLayoutPanelGrowStyle;
 import system.windows.forms.TableLayoutRowStyleCollection;
 import system.windows.forms.TableLayoutSettings;
 import system.windows.forms.TableLayoutCellPaintEventHandler;
+import system.componentmodel.IExtenderProvider;
+import system.componentmodel.IExtenderProviderImplementation;
 
 
 /**
@@ -58,7 +60,7 @@ import system.windows.forms.TableLayoutCellPaintEventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.TableLayoutPanel" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.TableLayoutPanel</a>
  */
-public class TableLayoutPanel extends Panel  {
+public class TableLayoutPanel extends Panel implements system.componentmodel.IExtenderProvider {
     /**
      * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -322,6 +324,15 @@ public class TableLayoutPanel extends Panel  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIExtenderProvider method available in IExtenderProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean CanExtend(NetObject extendee) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIExtenderProvider to obtain the full interface.");
     }
 
 

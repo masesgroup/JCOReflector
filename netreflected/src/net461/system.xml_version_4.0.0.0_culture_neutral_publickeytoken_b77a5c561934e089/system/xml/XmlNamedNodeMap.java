@@ -47,7 +47,7 @@ import system.xml.XmlNode;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlNamedNodeMap" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlNamedNodeMap</a>
  */
-public class XmlNamedNodeMap extends NetObject  {
+public class XmlNamedNodeMap extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.web.HttpContext;
 
 
 /**
@@ -151,6 +152,15 @@ public class AssemblyResourceLoader extends NetObject  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIHttpHandler method available in IHttpHandler to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ProcessRequest(HttpContext context) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIHttpHandler to obtain the full interface.");
+    }
+
 
     
     // Properties section

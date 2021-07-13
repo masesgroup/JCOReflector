@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.xml.linq.XNode;
+import system.collections.IEqualityComparer;
+import system.collections.IEqualityComparerImplementation;
 
 
 /**
@@ -47,7 +49,7 @@ import system.xml.linq.XNode;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Linq.XNodeEqualityComparer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Linq.XNodeEqualityComparer</a>
  */
-public class XNodeEqualityComparer extends NetObject  {
+public class XNodeEqualityComparer extends NetObject implements system.collections.IEqualityComparer {
     /**
      * Fully assembly qualified name: System.Private.Xml.Linq, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -170,6 +172,24 @@ public class XNodeEqualityComparer extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIEqualityComparer method available in IEqualityComparer to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean Equals(NetObject x, NetObject y) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEqualityComparer to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIEqualityComparer method available in IEqualityComparer to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public int GetHashCode(NetObject obj) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEqualityComparer to obtain the full interface.");
     }
 
 

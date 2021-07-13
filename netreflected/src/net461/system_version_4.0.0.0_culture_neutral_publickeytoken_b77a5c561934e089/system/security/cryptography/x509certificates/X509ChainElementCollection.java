@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.security.cryptography.x509certificates.X509ChainElementEnumerator;
 import system.security.cryptography.x509certificates.X509ChainElement;
+import system.Array;
 
 
 /**
@@ -48,7 +48,7 @@ import system.security.cryptography.x509certificates.X509ChainElement;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.X509Certificates.X509ChainElementCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.X509Certificates.X509ChainElementCollection</a>
  */
-public class X509ChainElementCollection extends NetObject implements Iterable<X509ChainElement> {
+public class X509ChainElementCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -147,15 +147,6 @@ public class X509ChainElementCollection extends NetObject implements Iterable<X5
     
     // Methods section
     
-    public X509ChainElementEnumerator GetEnumerator() throws Throwable {
-        return new X509ChainElementEnumerator(classInstance);
-    }
-
-    @SuppressWarnings("unchecked")
-    public java.util.Iterator<X509ChainElement> iterator() {
-        return new X509ChainElementEnumerator(classInstance);
-    }
-
     public void CopyTo(X509ChainElement[] array, int index) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -164,6 +155,15 @@ public class X509ChainElementCollection extends NetObject implements Iterable<X5
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICollection method available in ICollection to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void CopyTo(Array array, int index) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection to obtain the full interface.");
     }
 
 

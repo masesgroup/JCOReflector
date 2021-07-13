@@ -39,12 +39,15 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.Expression;
+import system.EventArgs;
 import system.windows.controls.ValidationError;
 import system.windows.data.BindingBase;
 import system.windows.data.BindingGroup;
 import system.windows.data.BindingStatus;
 import system.windows.DependencyObject;
 import system.windows.DependencyProperty;
+import system.windows.IWeakEventListener;
+import system.windows.IWeakEventListenerImplementation;
 
 
 /**
@@ -53,7 +56,7 @@ import system.windows.DependencyProperty;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.BindingExpressionBase" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.BindingExpressionBase</a>
  */
-public class BindingExpressionBase extends Expression  {
+public class BindingExpressionBase extends Expression implements system.windows.IWeakEventListener {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -178,6 +181,15 @@ public class BindingExpressionBase extends Expression  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIWeakEventListener method available in IWeakEventListener to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean ReceiveWeakEvent(NetType managerType, NetObject sender, EventArgs e) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWeakEventListener to obtain the full interface.");
     }
 
 

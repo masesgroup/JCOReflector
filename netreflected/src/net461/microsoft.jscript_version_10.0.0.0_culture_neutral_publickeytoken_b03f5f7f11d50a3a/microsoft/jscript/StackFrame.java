@@ -251,6 +251,15 @@ public class StackFrame extends ScriptObject  {
         }
     }
 
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIActivationObject method available in IActivationObject to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public FieldInfo GetLocalField(java.lang.String name) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIActivationObject to obtain the full interface.");
+    }
+
 
     
     // Properties section

@@ -40,7 +40,6 @@ import java.util.ArrayList;
 // Import section
 import system.collections.CollectionBase;
 import system.xml.schema.XmlSchemaObject;
-import system.xml.schema.XmlSchemaObjectEnumerator;
 
 
 /**
@@ -49,7 +48,7 @@ import system.xml.schema.XmlSchemaObjectEnumerator;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.XmlSchemaObjectCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.XmlSchemaObjectCollection</a>
  */
-public class XmlSchemaObjectCollection extends CollectionBase implements Iterable<XmlSchemaObject> {
+public class XmlSchemaObjectCollection extends CollectionBase  {
     /**
      * Fully assembly qualified name: System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -192,15 +191,6 @@ public class XmlSchemaObjectCollection extends CollectionBase implements Iterabl
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
-    }
-
-    public XmlSchemaObjectEnumerator GetEnumerator() throws Throwable {
-        return new XmlSchemaObjectEnumerator(classInstance);
-    }
-
-    @SuppressWarnings("unchecked")
-    public java.util.Iterator<XmlSchemaObject> iterator() {
-        return new XmlSchemaObjectEnumerator(classInstance);
     }
 
     public void CopyTo(XmlSchemaObject[] array, int index) throws Throwable {

@@ -55,6 +55,8 @@ import system.xml.XmlWriter;
 import system.servicemodel.channels.MessageHeaders;
 import system.servicemodel.channels.MessageProperties;
 import system.servicemodel.channels.MessageState;
+import system.IDisposable;
+import system.IDisposableImplementation;
 
 
 /**
@@ -63,7 +65,7 @@ import system.servicemodel.channels.MessageState;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.Message" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.Message</a>
  */
-public class Message extends NetObject implements AutoCloseable {
+public class Message extends NetObject implements system.IDisposable, AutoCloseable {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -443,6 +445,15 @@ public class Message extends NetObject implements AutoCloseable {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDisposable method available in IDisposable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Dispose() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
     }
 
     public void close() throws Exception {

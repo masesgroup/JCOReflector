@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.web.ui.htmlcontrols.HtmlContainerControl;
 import system.EventHandler;
+import system.web.ui.IPostBackEventHandler;
+import system.web.ui.IPostBackEventHandlerImplementation;
 
 
 /**
@@ -48,7 +50,7 @@ import system.EventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.HtmlControls.HtmlAnchor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.HtmlControls.HtmlAnchor</a>
  */
-public class HtmlAnchor extends HtmlContainerControl  {
+public class HtmlAnchor extends HtmlContainerControl implements system.web.ui.IPostBackEventHandler {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -153,6 +155,15 @@ public class HtmlAnchor extends HtmlContainerControl  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIPostBackEventHandler method available in IPostBackEventHandler to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void RaisePostBackEvent(java.lang.String eventArgument) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackEventHandler to obtain the full interface.");
+    }
+
 
     
     // Properties section

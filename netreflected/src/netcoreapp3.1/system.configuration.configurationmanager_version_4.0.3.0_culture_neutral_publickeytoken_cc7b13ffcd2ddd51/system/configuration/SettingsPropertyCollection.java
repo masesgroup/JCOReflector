@@ -48,7 +48,7 @@ import system.Array;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.SettingsPropertyCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.SettingsPropertyCollection</a>
  */
-public class SettingsPropertyCollection extends NetObject  {
+public class SettingsPropertyCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

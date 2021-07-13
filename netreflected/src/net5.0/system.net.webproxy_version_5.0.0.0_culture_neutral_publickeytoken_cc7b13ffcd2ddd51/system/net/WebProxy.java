@@ -42,6 +42,10 @@ import system.net.ICredentials;
 import system.net.ICredentialsImplementation;
 import system.Uri;
 import system.net.WebProxy;
+import system.runtime.serialization.SerializationInfo;
+import system.runtime.serialization.StreamingContext;
+import system.runtime.serialization.ISerializable;
+import system.runtime.serialization.ISerializableImplementation;
 
 
 /**
@@ -50,7 +54,7 @@ import system.net.WebProxy;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.WebProxy" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.WebProxy</a>
  */
-public class WebProxy extends NetObject  {
+public class WebProxy extends NetObject implements system.runtime.serialization.ISerializable {
     /**
      * Fully assembly qualified name: System.Net.WebProxy, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -275,6 +279,15 @@ public class WebProxy extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToISerializable method available in ISerializable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
     }
 
 

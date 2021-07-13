@@ -45,6 +45,8 @@ import system.windows.DependencyObject;
 import system.windows.FrameworkElementFactory;
 import system.windows.ResourceDictionary;
 import system.windows.TemplateContent;
+import system.windows.markup.IQueryAmbient;
+import system.windows.markup.IQueryAmbientImplementation;
 
 
 /**
@@ -53,7 +55,7 @@ import system.windows.TemplateContent;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.FrameworkTemplate" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.FrameworkTemplate</a>
  */
-public class FrameworkTemplate extends DispatcherObject  {
+public class FrameworkTemplate extends DispatcherObject implements system.windows.markup.IQueryAmbient {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -220,6 +222,24 @@ public class FrameworkTemplate extends DispatcherObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToINameScope method available in INameScope to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetObject FindName(java.lang.String name) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINameScope to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIQueryAmbient method available in IQueryAmbient to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean IsAmbientPropertyAvailable(java.lang.String propertyName) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIQueryAmbient to obtain the full interface.");
     }
 
 

@@ -46,7 +46,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.IPEndPointCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.IPEndPointCollection</a>
  */
-public class IPEndPointCollection extends NetObject  {
+public class IPEndPointCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

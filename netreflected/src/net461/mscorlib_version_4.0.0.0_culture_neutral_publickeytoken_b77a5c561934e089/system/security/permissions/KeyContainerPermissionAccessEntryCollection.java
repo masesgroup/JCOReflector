@@ -39,7 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.security.permissions.KeyContainerPermissionAccessEntry;
-import system.security.permissions.KeyContainerPermissionAccessEntryEnumerator;
+import system.Array;
 
 
 /**
@@ -48,7 +48,7 @@ import system.security.permissions.KeyContainerPermissionAccessEntryEnumerator;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.KeyContainerPermissionAccessEntryCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.KeyContainerPermissionAccessEntryCollection</a>
  */
-public class KeyContainerPermissionAccessEntryCollection extends NetObject implements Iterable<KeyContainerPermissionAccessEntry> {
+public class KeyContainerPermissionAccessEntryCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -167,15 +167,6 @@ public class KeyContainerPermissionAccessEntryCollection extends NetObject imple
         }
     }
 
-    public KeyContainerPermissionAccessEntryEnumerator GetEnumerator() throws Throwable {
-        return new KeyContainerPermissionAccessEntryEnumerator(classInstance);
-    }
-
-    @SuppressWarnings("unchecked")
-    public java.util.Iterator<KeyContainerPermissionAccessEntry> iterator() {
-        return new KeyContainerPermissionAccessEntryEnumerator(classInstance);
-    }
-
     public void Clear() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -204,6 +195,15 @@ public class KeyContainerPermissionAccessEntryCollection extends NetObject imple
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICollection method available in ICollection to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void CopyTo(Array array, int index) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection to obtain the full interface.");
     }
 
 

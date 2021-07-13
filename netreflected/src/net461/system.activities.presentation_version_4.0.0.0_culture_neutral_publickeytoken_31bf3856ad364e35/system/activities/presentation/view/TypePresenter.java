@@ -175,6 +175,15 @@ public class TypePresenter extends ContentControl  {
         }
     }
 
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIComponentConnector method available in IComponentConnector to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Connect(int connectionId, NetObject target) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIComponentConnector to obtain the full interface.");
+    }
+
 
     
     // Properties section

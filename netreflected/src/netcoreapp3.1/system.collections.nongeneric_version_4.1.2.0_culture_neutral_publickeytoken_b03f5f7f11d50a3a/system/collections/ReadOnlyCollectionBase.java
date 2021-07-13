@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.Array;
 
 
 /**
@@ -46,7 +47,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.ReadOnlyCollectionBase" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Collections.ReadOnlyCollectionBase</a>
  */
-public class ReadOnlyCollectionBase extends NetObject  {
+public class ReadOnlyCollectionBase extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Collections.NonGeneric, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -143,6 +144,15 @@ public class ReadOnlyCollectionBase extends NetObject  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICollection method available in ICollection to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void CopyTo(Array array, int index) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection to obtain the full interface.");
+    }
+
 
     
     // Properties section

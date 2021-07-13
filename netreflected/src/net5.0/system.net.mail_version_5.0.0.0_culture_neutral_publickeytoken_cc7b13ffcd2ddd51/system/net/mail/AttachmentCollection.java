@@ -46,7 +46,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mail.AttachmentCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mail.AttachmentCollection</a>
  */
-public class AttachmentCollection extends NetObject implements AutoCloseable {
+public class AttachmentCollection extends NetObjectEnumerable implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Net.Mail, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.reflection.AssemblyName;
 import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
+import system.UInt32;
 import system.configuration.assemblies.AssemblyHashAlgorithm;
 import system.configuration.assemblies.AssemblyVersionCompatibility;
 import system.globalization.CultureInfo;

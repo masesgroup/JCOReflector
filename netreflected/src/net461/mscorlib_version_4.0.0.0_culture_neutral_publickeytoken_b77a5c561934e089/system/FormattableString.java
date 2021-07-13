@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.FormattableString;
 import system.IFormatProvider;
 import system.IFormatProviderImplementation;
+import system.IFormattable;
+import system.IFormattableImplementation;
 
 
 /**
@@ -49,7 +51,7 @@ import system.IFormatProviderImplementation;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.FormattableString" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.FormattableString</a>
  */
-public class FormattableString extends NetObject  {
+public class FormattableString extends NetObject implements system.IFormattable {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -192,6 +194,15 @@ public class FormattableString extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIFormattable method available in IFormattable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public java.lang.String ToString(java.lang.String format, IFormatProvider formatProvider) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFormattable to obtain the full interface.");
     }
 
 

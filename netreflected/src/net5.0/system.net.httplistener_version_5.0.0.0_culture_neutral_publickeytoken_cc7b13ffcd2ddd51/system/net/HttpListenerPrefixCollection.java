@@ -47,7 +47,7 @@ import system.Array;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.HttpListenerPrefixCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.HttpListenerPrefixCollection</a>
  */
-public class HttpListenerPrefixCollection extends NetObject  {
+public class HttpListenerPrefixCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Net.HttpListener, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

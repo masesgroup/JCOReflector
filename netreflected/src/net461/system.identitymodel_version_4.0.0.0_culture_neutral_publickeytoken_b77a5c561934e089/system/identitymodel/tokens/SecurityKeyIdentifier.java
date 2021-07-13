@@ -48,7 +48,7 @@ import system.identitymodel.tokens.SecurityKey;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.SecurityKeyIdentifier" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.SecurityKeyIdentifier</a>
  */
-public class SecurityKeyIdentifier extends NetObject  {
+public class SecurityKeyIdentifier extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

@@ -177,6 +177,15 @@ public class XObject extends NetObject  {
         }
     }
 
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIXmlLineInfo method available in IXmlLineInfo to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean HasLineInfo() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlLineInfo to obtain the full interface.");
+    }
+
 
     
     // Properties section

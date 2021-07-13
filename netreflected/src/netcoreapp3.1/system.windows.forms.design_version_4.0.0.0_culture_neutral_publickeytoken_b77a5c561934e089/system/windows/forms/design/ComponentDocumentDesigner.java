@@ -41,7 +41,15 @@ import java.util.ArrayList;
 import system.componentmodel.design.ComponentDesigner;
 import system.componentmodel.IComponent;
 import system.componentmodel.IComponentImplementation;
+import system.componentmodel.design.ViewTechnology;
+import system.drawing.design.ToolboxItem;
+import system.collections.IDictionary;
+import system.collections.IDictionaryImplementation;
 import system.windows.forms.Control;
+import system.drawing.design.IToolboxUser;
+import system.drawing.design.IToolboxUserImplementation;
+import system.componentmodel.design.ITypeDescriptorFilterService;
+import system.componentmodel.design.ITypeDescriptorFilterServiceImplementation;
 
 
 /**
@@ -50,7 +58,7 @@ import system.windows.forms.Control;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.ComponentDocumentDesigner" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.ComponentDocumentDesigner</a>
  */
-public class ComponentDocumentDesigner extends ComponentDesigner  {
+public class ComponentDocumentDesigner extends ComponentDesigner implements system.drawing.design.IToolboxUser, system.componentmodel.design.ITypeDescriptorFilterService {
     /**
      * Fully assembly qualified name: System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -163,6 +171,60 @@ public class ComponentDocumentDesigner extends ComponentDesigner  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIRootDesigner method available in IRootDesigner to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetObject GetView(ViewTechnology technology) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRootDesigner to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIToolboxUser method available in IToolboxUser to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean GetToolSupported(ToolboxItem tool) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxUser to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIToolboxUser method available in IToolboxUser to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ToolPicked(ToolboxItem tool) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxUser to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToITypeDescriptorFilterService method available in ITypeDescriptorFilterService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean FilterAttributes(IComponent component, IDictionary attributes) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITypeDescriptorFilterService to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToITypeDescriptorFilterService method available in ITypeDescriptorFilterService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean FilterEvents(IComponent component, IDictionary events) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITypeDescriptorFilterService to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToITypeDescriptorFilterService method available in ITypeDescriptorFilterService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean FilterProperties(IComponent component, IDictionary properties) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITypeDescriptorFilterService to obtain the full interface.");
     }
 
 

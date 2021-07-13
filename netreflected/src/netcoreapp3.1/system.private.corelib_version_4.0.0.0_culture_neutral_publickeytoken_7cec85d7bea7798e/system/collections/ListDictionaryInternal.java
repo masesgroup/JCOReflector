@@ -49,7 +49,7 @@ import system.collections.ICollectionImplementation;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.ListDictionaryInternal" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Collections.ListDictionaryInternal</a>
  */
-public class ListDictionaryInternal extends NetObject  {
+public class ListDictionaryInternal extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */

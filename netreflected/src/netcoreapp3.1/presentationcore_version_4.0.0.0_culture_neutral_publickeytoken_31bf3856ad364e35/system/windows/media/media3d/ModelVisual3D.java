@@ -42,6 +42,8 @@ import system.windows.media.media3d.Visual3D;
 import system.windows.media.media3d.Model3D;
 import system.windows.media.media3d.Transform3D;
 import system.windows.media.media3d.Visual3DCollection;
+import system.windows.markup.IAddChild;
+import system.windows.markup.IAddChildImplementation;
 
 
 /**
@@ -50,7 +52,7 @@ import system.windows.media.media3d.Visual3DCollection;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Media3D.ModelVisual3D" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Media3D.ModelVisual3D</a>
  */
-public class ModelVisual3D extends Visual3D  {
+public class ModelVisual3D extends Visual3D implements system.windows.markup.IAddChild {
     /**
      * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -155,6 +157,24 @@ public class ModelVisual3D extends Visual3D  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIAddChild method available in IAddChild to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void AddChild(NetObject value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIAddChild method available in IAddChild to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void AddText(java.lang.String text) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+    }
+
 
     
     // Properties section

@@ -47,6 +47,8 @@ import system.componentmodel.design.serialization.IDesignerSerializationManagerI
 import system.collections.IList;
 import system.collections.IListImplementation;
 import system.workflow.componentmodel.design.AmbientTheme;
+import system.IDisposable;
+import system.IDisposableImplementation;
 
 
 /**
@@ -55,7 +57,7 @@ import system.workflow.componentmodel.design.AmbientTheme;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.WorkflowTheme" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.WorkflowTheme</a>
  */
-public class WorkflowTheme extends NetObject implements AutoCloseable {
+public class WorkflowTheme extends NetObject implements system.IDisposable, AutoCloseable {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -254,6 +256,15 @@ public class WorkflowTheme extends NetObject implements AutoCloseable {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDisposable method available in IDisposable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Dispose() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
     }
 
     public void close() throws Exception {

@@ -48,7 +48,7 @@ import system.collections.specialized.NotifyCollectionChangedEventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.PropertyEditing.PropertyValueCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.PropertyEditing.PropertyValueCollection</a>
  */
-public class PropertyValueCollection extends NetObject  {
+public class PropertyValueCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

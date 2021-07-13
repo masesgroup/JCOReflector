@@ -50,7 +50,7 @@ import system.io.BinaryWriter;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.HttpStaticObjectsCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.HttpStaticObjectsCollection</a>
  */
-public class HttpStaticObjectsCollection extends NetObject  {
+public class HttpStaticObjectsCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

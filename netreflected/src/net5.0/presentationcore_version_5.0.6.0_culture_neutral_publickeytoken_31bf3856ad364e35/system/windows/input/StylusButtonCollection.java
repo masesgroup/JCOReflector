@@ -48,7 +48,7 @@ import system.Guid;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.StylusButtonCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.StylusButtonCollection</a>
  */
-public class StylusButtonCollection extends NetObject  {
+public class StylusButtonCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=5.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

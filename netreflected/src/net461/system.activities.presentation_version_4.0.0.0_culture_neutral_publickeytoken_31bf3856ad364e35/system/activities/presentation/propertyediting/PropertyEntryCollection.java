@@ -48,7 +48,7 @@ import system.activities.presentation.propertyediting.PropertyValue;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.PropertyEditing.PropertyEntryCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.PropertyEditing.PropertyEntryCollection</a>
  */
-public class PropertyEntryCollection extends NetObject  {
+public class PropertyEntryCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

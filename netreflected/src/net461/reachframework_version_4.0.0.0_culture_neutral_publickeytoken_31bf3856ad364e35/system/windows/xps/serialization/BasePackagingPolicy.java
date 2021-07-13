@@ -42,6 +42,8 @@ import system.windows.xps.serialization.XpsResourceStream;
 import system.xml.XmlWriter;
 import system.printing.PrintTicket;
 import system.Uri;
+import system.IDisposable;
+import system.IDisposableImplementation;
 
 
 /**
@@ -50,7 +52,7 @@ import system.Uri;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Xps.Serialization.BasePackagingPolicy" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Xps.Serialization.BasePackagingPolicy</a>
  */
-public class BasePackagingPolicy extends NetObject implements AutoCloseable {
+public class BasePackagingPolicy extends NetObject implements system.IDisposable, AutoCloseable {
     /**
      * Fully assembly qualified name: ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -375,6 +377,15 @@ public class BasePackagingPolicy extends NetObject implements AutoCloseable {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDisposable method available in IDisposable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Dispose() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
     }
 
     public void close() throws Exception {

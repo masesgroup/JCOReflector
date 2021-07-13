@@ -40,6 +40,16 @@ import java.util.ArrayList;
 // Import section
 import system.ValueType;
 import system.ValueTuple;
+import system.collections.IEqualityComparer;
+import system.collections.IEqualityComparerImplementation;
+import system.collections.IComparer;
+import system.collections.IComparerImplementation;
+import system.collections.IStructuralEquatable;
+import system.collections.IStructuralEquatableImplementation;
+import system.collections.IStructuralComparable;
+import system.collections.IStructuralComparableImplementation;
+import system.IComparable;
+import system.IComparableImplementation;
 
 
 /**
@@ -48,7 +58,7 @@ import system.ValueTuple;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ValueTuple" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ValueTuple</a>
  */
-public class ValueTuple extends ValueType  {
+public class ValueTuple extends ValueType implements system.collections.IStructuralEquatable, system.collections.IStructuralComparable, system.IComparable {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */
@@ -176,6 +186,42 @@ public class ValueTuple extends ValueType  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIStructuralEquatable method available in IStructuralEquatable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean Equals(NetObject other, IEqualityComparer comparer) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStructuralEquatable to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIStructuralEquatable method available in IStructuralEquatable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public int GetHashCode(IEqualityComparer comparer) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStructuralEquatable to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIStructuralComparable method available in IStructuralComparable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public int CompareTo(NetObject other, IComparer comparer) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStructuralComparable to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIComparable method available in IComparable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public int CompareTo(NetObject obj) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIComparable to obtain the full interface.");
     }
 
 

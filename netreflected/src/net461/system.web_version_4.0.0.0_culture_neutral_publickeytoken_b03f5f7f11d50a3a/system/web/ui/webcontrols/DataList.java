@@ -39,6 +39,10 @@ import java.util.ArrayList;
 
 // Import section
 import system.web.ui.webcontrols.BaseDataList;
+import system.web.ui.webcontrols.Style;
+import system.web.ui.webcontrols.ListItemType;
+import system.web.ui.webcontrols.RepeatInfo;
+import system.web.ui.HtmlTextWriter;
 import system.web.ui.ITemplate;
 import system.web.ui.ITemplateImplementation;
 import system.web.ui.webcontrols.DataListItem;
@@ -49,6 +53,8 @@ import system.web.ui.webcontrols.RepeatLayout;
 import system.web.ui.webcontrols.TableItemStyle;
 import system.web.ui.webcontrols.DataListCommandEventHandler;
 import system.web.ui.webcontrols.DataListItemEventHandler;
+import system.web.ui.INamingContainer;
+import system.web.ui.INamingContainerImplementation;
 
 
 /**
@@ -57,7 +63,7 @@ import system.web.ui.webcontrols.DataListItemEventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.DataList" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.DataList</a>
  */
-public class DataList extends BaseDataList  {
+public class DataList extends BaseDataList implements system.web.ui.INamingContainer {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -162,6 +168,24 @@ public class DataList extends BaseDataList  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIRepeatInfoUser method available in IRepeatInfoUser to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public Style GetItemStyle(ListItemType itemType, int repeatIndex) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRepeatInfoUser to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIRepeatInfoUser method available in IRepeatInfoUser to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void RenderItem(ListItemType itemType, int repeatIndex, RepeatInfo repeatInfo, HtmlTextWriter writer) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRepeatInfoUser to obtain the full interface.");
+    }
+
 
     
     // Properties section

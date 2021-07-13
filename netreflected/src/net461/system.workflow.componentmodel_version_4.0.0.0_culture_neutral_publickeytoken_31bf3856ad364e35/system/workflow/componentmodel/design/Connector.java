@@ -44,6 +44,8 @@ import system.drawing.Size;
 import system.drawing.Rectangle;
 import system.windows.forms.AccessibleObject;
 import system.workflow.componentmodel.design.FreeformActivityDesigner;
+import system.IDisposable;
+import system.IDisposableImplementation;
 
 
 /**
@@ -52,7 +54,7 @@ import system.workflow.componentmodel.design.FreeformActivityDesigner;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.Connector" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.Connector</a>
  */
-public class Connector extends NetObject implements AutoCloseable {
+public class Connector extends NetObject implements system.IDisposable, AutoCloseable {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -189,6 +191,15 @@ public class Connector extends NetObject implements AutoCloseable {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDisposable method available in IDisposable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Dispose() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
     }
 
     public void close() throws Exception {

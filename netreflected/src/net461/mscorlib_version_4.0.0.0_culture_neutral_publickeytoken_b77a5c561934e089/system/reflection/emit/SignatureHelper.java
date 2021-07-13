@@ -42,6 +42,7 @@ import system.reflection.emit.SignatureHelper;
 import system.reflection.Module;
 import system.reflection.CallingConventions;
 import system.runtime.interopservices.CallingConvention;
+import system.UInt32;
 
 
 /**

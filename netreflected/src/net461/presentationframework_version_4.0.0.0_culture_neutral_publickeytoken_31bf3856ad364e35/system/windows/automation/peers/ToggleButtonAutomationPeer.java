@@ -169,6 +169,15 @@ public class ToggleButtonAutomationPeer extends ButtonBaseAutomationPeer  {
         }
     }
 
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIToggleProvider method available in IToggleProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Toggle() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToggleProvider to obtain the full interface.");
+    }
+
 
     
     // Properties section

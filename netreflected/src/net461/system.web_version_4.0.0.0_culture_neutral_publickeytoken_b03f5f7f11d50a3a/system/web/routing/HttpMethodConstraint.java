@@ -38,6 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.web.HttpContextBase;
+import system.web.routing.Route;
+import system.web.routing.RouteValueDictionary;
+import system.web.routing.RouteDirection;
+import system.web.routing.IRouteConstraint;
+import system.web.routing.IRouteConstraintImplementation;
 
 
 /**
@@ -46,7 +52,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Routing.HttpMethodConstraint" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Routing.HttpMethodConstraint</a>
  */
-public class HttpMethodConstraint extends NetObject  {
+public class HttpMethodConstraint extends NetObject implements system.web.routing.IRouteConstraint {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -155,6 +161,15 @@ public class HttpMethodConstraint extends NetObject  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIRouteConstraint method available in IRouteConstraint to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean Match(HttpContextBase httpContext, Route route, java.lang.String parameterName, RouteValueDictionary values, RouteDirection routeDirection) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRouteConstraint to obtain the full interface.");
+    }
+
 
     
     // Properties section

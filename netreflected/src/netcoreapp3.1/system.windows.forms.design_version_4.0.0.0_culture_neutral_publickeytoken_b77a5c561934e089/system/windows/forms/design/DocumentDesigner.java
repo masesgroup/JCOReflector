@@ -43,7 +43,11 @@ import system.windows.forms.design.behavior.GlyphCollection;
 import system.windows.forms.design.behavior.GlyphSelectionType;
 import system.componentmodel.IComponent;
 import system.componentmodel.IComponentImplementation;
+import system.componentmodel.design.ViewTechnology;
+import system.drawing.design.ToolboxItem;
 import system.windows.forms.design.SelectionRules;
+import system.drawing.design.IToolboxUser;
+import system.drawing.design.IToolboxUserImplementation;
 
 
 /**
@@ -52,7 +56,7 @@ import system.windows.forms.design.SelectionRules;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.DocumentDesigner" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.DocumentDesigner</a>
  */
-public class DocumentDesigner extends ScrollableControlDesigner  {
+public class DocumentDesigner extends ScrollableControlDesigner implements system.drawing.design.IToolboxUser {
     /**
      * Fully assembly qualified name: System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -176,6 +180,33 @@ public class DocumentDesigner extends ScrollableControlDesigner  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIRootDesigner method available in IRootDesigner to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetObject GetView(ViewTechnology technology) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRootDesigner to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIToolboxUser method available in IToolboxUser to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean GetToolSupported(ToolboxItem tool) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxUser to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIToolboxUser method available in IToolboxUser to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ToolPicked(ToolboxItem tool) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxUser to obtain the full interface.");
     }
 
 

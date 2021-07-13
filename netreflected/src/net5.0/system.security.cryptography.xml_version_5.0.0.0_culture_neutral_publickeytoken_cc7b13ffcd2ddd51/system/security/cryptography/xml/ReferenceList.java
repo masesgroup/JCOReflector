@@ -48,7 +48,7 @@ import system.Array;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Xml.ReferenceList" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Xml.ReferenceList</a>
  */
-public class ReferenceList extends NetObject  {
+public class ReferenceList extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Security.Cryptography.Xml, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

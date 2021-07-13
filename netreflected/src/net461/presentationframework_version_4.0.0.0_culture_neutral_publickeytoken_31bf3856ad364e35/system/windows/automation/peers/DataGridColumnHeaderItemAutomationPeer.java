@@ -42,6 +42,10 @@ import system.windows.automation.peers.ItemAutomationPeer;
 import system.windows.controls.DataGridColumn;
 import system.windows.automation.peers.DataGridColumnHeadersPresenterAutomationPeer;
 import system.windows.automation.peers.PatternInterface;
+import system.windows.automation.provider.IInvokeProvider;
+import system.windows.automation.provider.IInvokeProviderImplementation;
+import system.windows.automation.provider.IScrollItemProvider;
+import system.windows.automation.provider.IScrollItemProviderImplementation;
 
 
 /**
@@ -50,7 +54,7 @@ import system.windows.automation.peers.PatternInterface;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Peers.DataGridColumnHeaderItemAutomationPeer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Peers.DataGridColumnHeaderItemAutomationPeer</a>
  */
-public class DataGridColumnHeaderItemAutomationPeer extends ItemAutomationPeer  {
+public class DataGridColumnHeaderItemAutomationPeer extends ItemAutomationPeer implements system.windows.automation.provider.IInvokeProvider, system.windows.automation.provider.IScrollItemProvider {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -168,6 +172,51 @@ public class DataGridColumnHeaderItemAutomationPeer extends ItemAutomationPeer  
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIInvokeProvider method available in IInvokeProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Invoke() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIInvokeProvider to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIScrollItemProvider method available in IScrollItemProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ScrollIntoView() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIScrollItemProvider to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToITransformProvider method available in ITransformProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Move(double x, double y) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITransformProvider to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToITransformProvider method available in ITransformProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Resize(double width, double height) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITransformProvider to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToITransformProvider method available in ITransformProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Rotate(double degrees) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITransformProvider to obtain the full interface.");
     }
 
 

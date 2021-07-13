@@ -46,6 +46,7 @@ import system.reflection.emit.UnmanagedMarshal;
 import system.reflection.BindingFlags;
 import system.reflection.Binder;
 import system.globalization.CultureInfo;
+import system.UInt32;
 import system.reflection.FieldAttributes;
 import system.reflection.Module;
 import system.RuntimeFieldHandle;

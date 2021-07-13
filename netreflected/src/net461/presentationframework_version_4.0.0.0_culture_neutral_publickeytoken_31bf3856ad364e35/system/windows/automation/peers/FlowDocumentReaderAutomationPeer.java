@@ -169,6 +169,33 @@ public class FlowDocumentReaderAutomationPeer extends FrameworkElementAutomation
         }
     }
 
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIMultipleViewProvider method available in IMultipleViewProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public int[] GetSupportedViews() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIMultipleViewProvider to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIMultipleViewProvider method available in IMultipleViewProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public java.lang.String GetViewName(int viewId) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIMultipleViewProvider to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIMultipleViewProvider method available in IMultipleViewProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void SetCurrentView(int viewId) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIMultipleViewProvider to obtain the full interface.");
+    }
+
 
     
     // Properties section

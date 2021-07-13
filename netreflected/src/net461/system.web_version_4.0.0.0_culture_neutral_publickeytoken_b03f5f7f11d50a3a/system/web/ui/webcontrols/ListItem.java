@@ -40,6 +40,10 @@ import java.util.ArrayList;
 // Import section
 import system.web.ui.webcontrols.ListItem;
 import system.web.ui.AttributeCollection;
+import system.web.ui.IParserAccessor;
+import system.web.ui.IParserAccessorImplementation;
+import system.web.ui.IAttributeAccessor;
+import system.web.ui.IAttributeAccessorImplementation;
 
 
 /**
@@ -48,7 +52,7 @@ import system.web.ui.AttributeCollection;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.ListItem" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.ListItem</a>
  */
-public class ListItem extends NetObject  {
+public class ListItem extends NetObject implements system.web.ui.IParserAccessor, system.web.ui.IAttributeAccessor {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -192,6 +196,60 @@ public class ListItem extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIStateManager method available in IStateManager to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetObject SaveViewState() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStateManager to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIStateManager method available in IStateManager to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void LoadViewState(NetObject state) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStateManager to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIStateManager method available in IStateManager to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void TrackViewState() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStateManager to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIParserAccessor method available in IParserAccessor to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void AddParsedSubObject(NetObject obj) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIParserAccessor to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIAttributeAccessor method available in IAttributeAccessor to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public java.lang.String GetAttribute(java.lang.String key) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAttributeAccessor to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIAttributeAccessor method available in IAttributeAccessor to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void SetAttribute(java.lang.String key, java.lang.String value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAttributeAccessor to obtain the full interface.");
     }
 
 

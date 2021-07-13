@@ -44,6 +44,8 @@ import system.web.ui.ITemplate;
 import system.web.ui.ITemplateImplementation;
 import system.web.ui.webcontrols.RoleGroupCollection;
 import system.EventHandler;
+import system.web.ui.INamingContainer;
+import system.web.ui.INamingContainerImplementation;
 
 
 /**
@@ -52,7 +54,7 @@ import system.EventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.LoginView" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.LoginView</a>
  */
-public class LoginView extends Control  {
+public class LoginView extends Control implements system.web.ui.INamingContainer {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

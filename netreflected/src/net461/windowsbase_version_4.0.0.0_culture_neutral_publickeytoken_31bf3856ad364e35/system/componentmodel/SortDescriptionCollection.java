@@ -46,7 +46,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.SortDescriptionCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.SortDescriptionCollection</a>
  */
-public class SortDescriptionCollection extends NetObject  {
+public class SortDescriptionCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

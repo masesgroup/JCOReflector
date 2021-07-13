@@ -38,6 +38,15 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.web.services.description.ServiceDescriptionCollection;
+import system.xml.schema.XmlSchemaSet;
+import system.servicemodel.description.WsdlImporter;
+import system.servicemodel.description.WsdlContractConversionContext;
+import system.servicemodel.description.WsdlEndpointConversionContext;
+import system.servicemodel.description.MetadataImporter;
+import system.servicemodel.description.PolicyConversionContext;
+import system.servicemodel.description.IPolicyImportExtension;
+import system.servicemodel.description.IPolicyImportExtensionImplementation;
 
 
 /**
@@ -46,7 +55,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.TransportBindingElementImporter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.TransportBindingElementImporter</a>
  */
-public class TransportBindingElementImporter extends NetObject  {
+public class TransportBindingElementImporter extends NetObject implements system.servicemodel.description.IPolicyImportExtension {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -151,6 +160,33 @@ public class TransportBindingElementImporter extends NetObject  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIWsdlImportExtension method available in IWsdlImportExtension to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ImportContract(WsdlImporter importer, WsdlContractConversionContext context) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWsdlImportExtension to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIWsdlImportExtension method available in IWsdlImportExtension to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ImportEndpoint(WsdlImporter importer, WsdlEndpointConversionContext context) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWsdlImportExtension to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIPolicyImportExtension method available in IPolicyImportExtension to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ImportPolicy(MetadataImporter importer, PolicyConversionContext context) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPolicyImportExtension to obtain the full interface.");
+    }
+
 
     
     // Properties section

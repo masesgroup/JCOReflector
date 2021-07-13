@@ -41,6 +41,9 @@ import java.util.ArrayList;
 import system.servicemodel.description.MetadataSet;
 import system.xml.XmlReader;
 import system.xml.XmlWriter;
+import system.xml.schema.XmlSchema;
+import system.xml.serialization.IXmlSerializable;
+import system.xml.serialization.IXmlSerializableImplementation;
 
 
 /**
@@ -49,7 +52,7 @@ import system.xml.XmlWriter;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Description.MetadataSet" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Description.MetadataSet</a>
  */
-public class MetadataSet extends NetObject  {
+public class MetadataSet extends NetObject implements system.xml.serialization.IXmlSerializable {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -173,6 +176,33 @@ public class MetadataSet extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIXmlSerializable method available in IXmlSerializable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public XmlSchema GetSchema() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIXmlSerializable method available in IXmlSerializable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ReadXml(XmlReader reader) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIXmlSerializable method available in IXmlSerializable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void WriteXml(XmlWriter writer) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
     }
 
 

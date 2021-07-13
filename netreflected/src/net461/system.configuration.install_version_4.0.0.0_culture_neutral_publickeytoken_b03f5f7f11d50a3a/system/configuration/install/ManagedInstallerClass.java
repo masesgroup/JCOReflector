@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.configuration.install.IManagedInstaller;
+import system.configuration.install.IManagedInstallerImplementation;
 
 
 /**
@@ -46,7 +48,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.Install.ManagedInstallerClass" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.Install.ManagedInstallerClass</a>
  */
-public class ManagedInstallerClass extends NetObject  {
+public class ManagedInstallerClass extends NetObject implements system.configuration.install.IManagedInstaller {
     /**
      * Fully assembly qualified name: System.Configuration.Install, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -169,6 +171,15 @@ public class ManagedInstallerClass extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIManagedInstaller method available in IManagedInstaller to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public int ManagedInstall(java.lang.String commandLine, int hInstall) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIManagedInstaller to obtain the full interface.");
     }
 
 

@@ -43,6 +43,10 @@ import system.drawing.Point;
 import system.componentmodel.design.ITypeResolutionService;
 import system.componentmodel.design.ITypeResolutionServiceImplementation;
 import system.reflection.AssemblyName;
+import system.runtime.serialization.SerializationInfo;
+import system.runtime.serialization.StreamingContext;
+import system.runtime.serialization.ISerializable;
+import system.runtime.serialization.ISerializableImplementation;
 
 
 /**
@@ -51,7 +55,7 @@ import system.reflection.AssemblyName;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Resources.ResXDataNode" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Resources.ResXDataNode</a>
  */
-public class ResXDataNode extends NetObject  {
+public class ResXDataNode extends NetObject implements system.runtime.serialization.ISerializable {
     /**
      * Fully assembly qualified name: System.Windows.Forms, Version=5.0.7.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -221,6 +225,15 @@ public class ResXDataNode extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToISerializable method available in ISerializable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
     }
 
 

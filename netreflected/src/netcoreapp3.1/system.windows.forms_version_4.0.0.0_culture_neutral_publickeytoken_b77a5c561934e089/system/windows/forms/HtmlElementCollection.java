@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.forms.HtmlElementCollection;
+import system.Array;
 import system.windows.forms.HtmlElement;
 
 
@@ -48,7 +49,7 @@ import system.windows.forms.HtmlElement;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.HtmlElementCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.HtmlElementCollection</a>
  */
-public class HtmlElementCollection extends NetObject  {
+public class HtmlElementCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -156,6 +157,15 @@ public class HtmlElementCollection extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICollection method available in ICollection to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void CopyTo(Array array, int index) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection to obtain the full interface.");
     }
 
 

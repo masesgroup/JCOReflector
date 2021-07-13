@@ -39,8 +39,12 @@ import java.util.ArrayList;
 
 // Import section
 import system.data.objects.dataclasses.StructuralObject;
+import system.data.objects.dataclasses.IEntityChangeTracker;
+import system.data.objects.dataclasses.IEntityChangeTrackerImplementation;
 import system.data.EntityKey;
 import system.data.EntityState;
+import system.data.objects.dataclasses.IEntityWithChangeTracker;
+import system.data.objects.dataclasses.IEntityWithChangeTrackerImplementation;
 
 
 /**
@@ -49,7 +53,7 @@ import system.data.EntityState;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Objects.DataClasses.EntityObject" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Objects.DataClasses.EntityObject</a>
  */
-public class EntityObject extends StructuralObject  {
+public class EntityObject extends StructuralObject implements system.data.objects.dataclasses.IEntityWithChangeTracker {
     /**
      * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -146,6 +150,15 @@ public class EntityObject extends StructuralObject  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIEntityWithChangeTracker method available in IEntityWithChangeTracker to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void SetChangeTracker(IEntityChangeTracker changeTracker) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEntityWithChangeTracker to obtain the full interface.");
+    }
+
 
     
     // Properties section

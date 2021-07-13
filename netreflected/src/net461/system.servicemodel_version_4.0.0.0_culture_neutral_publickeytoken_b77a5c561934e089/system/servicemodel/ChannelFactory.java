@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.servicemodel.channels.CommunicationObject;
 import system.servicemodel.description.ClientCredentials;
 import system.servicemodel.description.ServiceEndpoint;
+import system.IDisposable;
+import system.IDisposableImplementation;
 
 
 /**
@@ -49,7 +51,7 @@ import system.servicemodel.description.ServiceEndpoint;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.ChannelFactory" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.ChannelFactory</a>
  */
-public class ChannelFactory extends CommunicationObject implements AutoCloseable {
+public class ChannelFactory extends CommunicationObject implements system.IDisposable, AutoCloseable {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -146,6 +148,15 @@ public class ChannelFactory extends CommunicationObject implements AutoCloseable
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDisposable method available in IDisposable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Dispose() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
+    }
+
     public void close() throws Exception {
         try {
             if (classInstance == null)

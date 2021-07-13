@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.ContextBoundObject;
 import system.enterpriseservices.ServicedComponent;
+import system.enterpriseservices.IRemoteDispatch;
+import system.enterpriseservices.IRemoteDispatchImplementation;
 
 
 /**
@@ -48,7 +50,7 @@ import system.enterpriseservices.ServicedComponent;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.EnterpriseServices.ServicedComponent" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.EnterpriseServices.ServicedComponent</a>
  */
-public class ServicedComponent extends ContextBoundObject implements AutoCloseable {
+public class ServicedComponent extends ContextBoundObject implements system.enterpriseservices.IRemoteDispatch, AutoCloseable {
     /**
      * Fully assembly qualified name: System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -163,6 +165,24 @@ public class ServicedComponent extends ContextBoundObject implements AutoCloseab
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIRemoteDispatch method available in IRemoteDispatch to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public java.lang.String RemoteDispatchAutoDone(java.lang.String s) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRemoteDispatch to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIRemoteDispatch method available in IRemoteDispatch to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public java.lang.String RemoteDispatchNotAutoDone(java.lang.String s) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRemoteDispatch to obtain the full interface.");
     }
 
     public void close() throws Exception {

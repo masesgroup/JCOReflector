@@ -55,6 +55,7 @@ import system.security.PermissionSet;
 import system.reflection.ConstructorInfo;
 import system.reflection.emit.CustomAttributeBuilder;
 import system.reflection.emit.UnmanagedMarshal;
+import system.UInt32;
 import system.reflection.CallingConventions;
 import system.reflection.ICustomAttributeProvider;
 import system.reflection.ICustomAttributeProviderImplementation;

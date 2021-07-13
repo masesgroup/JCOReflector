@@ -49,7 +49,7 @@ import system.Array;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.Evidence" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.Evidence</a>
  */
-public class Evidence extends NetObject  {
+public class Evidence extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

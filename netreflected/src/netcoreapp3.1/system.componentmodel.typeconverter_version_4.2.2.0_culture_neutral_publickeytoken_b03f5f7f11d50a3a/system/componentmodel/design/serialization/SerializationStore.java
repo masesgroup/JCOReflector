@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.io.Stream;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
+import system.IDisposable;
+import system.IDisposableImplementation;
 
 
 /**
@@ -49,7 +51,7 @@ import system.collections.ICollectionImplementation;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.SerializationStore" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.SerializationStore</a>
  */
-public class SerializationStore extends NetObject implements AutoCloseable {
+public class SerializationStore extends NetObject implements system.IDisposable, AutoCloseable {
     /**
      * Fully assembly qualified name: System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -164,6 +166,15 @@ public class SerializationStore extends NetObject implements AutoCloseable {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDisposable method available in IDisposable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Dispose() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
     }
 
     public void close() throws Exception {

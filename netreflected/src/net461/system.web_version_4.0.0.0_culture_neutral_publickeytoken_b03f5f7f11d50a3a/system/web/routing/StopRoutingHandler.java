@@ -38,6 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.web.IHttpHandler;
+import system.web.IHttpHandlerImplementation;
+import system.web.routing.RequestContext;
+import system.web.routing.IRouteHandler;
+import system.web.routing.IRouteHandlerImplementation;
 
 
 /**
@@ -46,7 +51,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Routing.StopRoutingHandler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Routing.StopRoutingHandler</a>
  */
-public class StopRoutingHandler extends NetObject  {
+public class StopRoutingHandler extends NetObject implements system.web.routing.IRouteHandler {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -151,6 +156,15 @@ public class StopRoutingHandler extends NetObject  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIRouteHandler method available in IRouteHandler to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public IHttpHandler GetHttpHandler(RequestContext requestContext) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRouteHandler to obtain the full interface.");
+    }
+
 
     
     // Properties section

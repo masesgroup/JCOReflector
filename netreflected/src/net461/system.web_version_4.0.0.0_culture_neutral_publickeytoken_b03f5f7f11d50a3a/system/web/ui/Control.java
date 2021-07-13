@@ -43,6 +43,8 @@ import system.web.ui.Control;
 import system.web.ui.Page;
 import system.web.ui.HtmlTextWriter;
 import system.web.ui.RenderMethod;
+import system.collections.IDictionary;
+import system.collections.IDictionaryImplementation;
 import system.componentmodel.ISite;
 import system.componentmodel.ISiteImplementation;
 import system.Version;
@@ -52,6 +54,8 @@ import system.web.ui.TemplateControl;
 import system.web.ui.ValidateRequestMode;
 import system.web.ui.ViewStateMode;
 import system.EventHandler;
+import system.web.ui.IParserAccessor;
+import system.web.ui.IParserAccessorImplementation;
 
 
 /**
@@ -60,7 +64,7 @@ import system.EventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Control" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Control</a>
  */
-public class Control extends NetObject implements AutoCloseable {
+public class Control extends NetObject implements system.web.ui.IParserAccessor, AutoCloseable {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -334,6 +338,42 @@ public class Control extends NetObject implements AutoCloseable {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIParserAccessor method available in IParserAccessor to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void AddParsedSubObject(NetObject obj) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIParserAccessor to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIControlDesignerAccessor method available in IControlDesignerAccessor to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public IDictionary GetDesignModeState() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIControlDesignerAccessor to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIControlDesignerAccessor method available in IControlDesignerAccessor to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void SetDesignModeState(IDictionary data) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIControlDesignerAccessor to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIControlDesignerAccessor method available in IControlDesignerAccessor to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void SetOwnerControl(Control owner) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIControlDesignerAccessor to obtain the full interface.");
     }
 
     public void close() throws Exception {

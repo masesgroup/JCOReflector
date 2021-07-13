@@ -154,6 +154,33 @@ public class PagerSettings extends NetObject  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIStateManager method available in IStateManager to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetObject SaveViewState() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStateManager to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIStateManager method available in IStateManager to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void LoadViewState(NetObject state) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStateManager to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIStateManager method available in IStateManager to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void TrackViewState() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStateManager to obtain the full interface.");
+    }
+
 
     
     // Properties section

@@ -47,7 +47,7 @@ import system.enterpriseservices.compensatingresourcemanager.ClerkInfo;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.EnterpriseServices.CompensatingResourceManager.ClerkMonitor" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.EnterpriseServices.CompensatingResourceManager.ClerkMonitor</a>
  */
-public class ClerkMonitor extends NetObject  {
+public class ClerkMonitor extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

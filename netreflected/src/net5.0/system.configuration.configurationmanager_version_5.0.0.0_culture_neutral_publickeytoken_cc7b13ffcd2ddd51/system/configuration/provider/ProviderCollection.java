@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.configuration.provider.ProviderBase;
+import system.Array;
 
 
 /**
@@ -47,7 +48,7 @@ import system.configuration.provider.ProviderBase;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.Provider.ProviderCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Configuration.Provider.ProviderCollection</a>
  */
-public class ProviderCollection extends NetObject  {
+public class ProviderCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Configuration.ConfigurationManager, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -200,6 +201,15 @@ public class ProviderCollection extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICollection method available in ICollection to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void CopyTo(Array array, int index) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection to obtain the full interface.");
     }
 
 

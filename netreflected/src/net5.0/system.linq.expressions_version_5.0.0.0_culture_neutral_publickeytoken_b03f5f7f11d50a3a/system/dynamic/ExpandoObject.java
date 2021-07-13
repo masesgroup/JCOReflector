@@ -38,6 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.dynamic.DynamicMetaObject;
+import system.linq.expressions.Expression;
+import system.dynamic.IDynamicMetaObjectProvider;
+import system.dynamic.IDynamicMetaObjectProviderImplementation;
 
 
 /**
@@ -46,7 +50,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Dynamic.ExpandoObject" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Dynamic.ExpandoObject</a>
  */
-public class ExpandoObject extends NetObject  {
+public class ExpandoObject extends NetObjectEnumerable implements system.dynamic.IDynamicMetaObjectProvider {
     /**
      * Fully assembly qualified name: System.Linq.Expressions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -151,6 +155,15 @@ public class ExpandoObject extends NetObject  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDynamicMetaObjectProvider method available in IDynamicMetaObjectProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public DynamicMetaObject GetMetaObject(Expression parameter) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDynamicMetaObjectProvider to obtain the full interface.");
+    }
+
 
     
     // Properties section

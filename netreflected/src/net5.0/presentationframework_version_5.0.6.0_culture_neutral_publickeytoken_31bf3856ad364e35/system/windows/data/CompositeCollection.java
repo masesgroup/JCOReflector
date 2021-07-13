@@ -39,6 +39,13 @@ import java.util.ArrayList;
 
 // Import section
 import system.Array;
+import system.componentmodel.ICollectionView;
+import system.componentmodel.ICollectionViewImplementation;
+import system.EventArgs;
+import system.componentmodel.ICollectionViewFactory;
+import system.componentmodel.ICollectionViewFactoryImplementation;
+import system.windows.IWeakEventListener;
+import system.windows.IWeakEventListenerImplementation;
 
 
 /**
@@ -47,7 +54,7 @@ import system.Array;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.CompositeCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.CompositeCollection</a>
  */
-public class CompositeCollection extends NetObject  {
+public class CompositeCollection extends NetObjectEnumerable implements system.componentmodel.ICollectionViewFactory, system.windows.IWeakEventListener {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=5.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -240,6 +247,24 @@ public class CompositeCollection extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICollectionViewFactory method available in ICollectionViewFactory to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public ICollectionView CreateView() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollectionViewFactory to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIWeakEventListener method available in IWeakEventListener to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean ReceiveWeakEvent(NetType managerType, NetObject sender, EventArgs e) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWeakEventListener to obtain the full interface.");
     }
 
 

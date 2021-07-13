@@ -53,6 +53,8 @@ import system.web.ui.webcontrols.webparts.WebPartMenuStyle;
 import system.web.ui.webcontrols.webparts.WebPartVerb;
 import system.web.ui.webcontrols.webparts.WebPartVerbRenderMode;
 import system.web.ui.webcontrols.webparts.WebPartVerbsEventHandler;
+import system.web.ui.IPostBackEventHandler;
+import system.web.ui.IPostBackEventHandlerImplementation;
 
 
 /**
@@ -61,7 +63,7 @@ import system.web.ui.webcontrols.webparts.WebPartVerbsEventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartZoneBase" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartZoneBase</a>
  */
-public class WebPartZoneBase extends WebZone  {
+public class WebPartZoneBase extends WebZone implements system.web.ui.IPostBackEventHandler {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -167,6 +169,15 @@ public class WebPartZoneBase extends WebZone  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIPostBackEventHandler method available in IPostBackEventHandler to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void RaisePostBackEvent(java.lang.String eventArgument) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackEventHandler to obtain the full interface.");
     }
 
 

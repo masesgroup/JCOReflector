@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.windows.automation.peers.FrameworkElementAutomationPeer;
 import system.windows.controls.ScrollViewer;
 import system.windows.automation.peers.PatternInterface;
+import system.windows.automation.ScrollAmount;
 
 
 /**
@@ -167,6 +168,24 @@ public class ScrollViewerAutomationPeer extends FrameworkElementAutomationPeer  
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIScrollProvider method available in IScrollProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Scroll(ScrollAmount horizontalAmount, ScrollAmount verticalAmount) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIScrollProvider to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIScrollProvider method available in IScrollProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void SetScrollPercent(double horizontalPercent, double verticalPercent) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIScrollProvider to obtain the full interface.");
     }
 
 

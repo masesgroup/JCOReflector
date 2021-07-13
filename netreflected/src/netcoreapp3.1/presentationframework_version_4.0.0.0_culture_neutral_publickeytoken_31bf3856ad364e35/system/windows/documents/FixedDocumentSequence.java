@@ -41,6 +41,10 @@ import java.util.ArrayList;
 import system.windows.FrameworkContentElement;
 import system.windows.documents.DocumentPaginator;
 import system.windows.documents.DocumentReferenceCollection;
+import system.windows.markup.IAddChild;
+import system.windows.markup.IAddChildImplementation;
+import system.IServiceProvider;
+import system.IServiceProviderImplementation;
 
 
 /**
@@ -49,7 +53,7 @@ import system.windows.documents.DocumentReferenceCollection;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.FixedDocumentSequence" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.FixedDocumentSequence</a>
  */
-public class FixedDocumentSequence extends FrameworkContentElement  {
+public class FixedDocumentSequence extends FrameworkContentElement implements system.windows.markup.IAddChild, system.IServiceProvider {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -154,6 +158,33 @@ public class FixedDocumentSequence extends FrameworkContentElement  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIAddChild method available in IAddChild to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void AddChild(NetObject value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIAddChild method available in IAddChild to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void AddText(java.lang.String text) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIServiceProvider method available in IServiceProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetObject GetService(NetType serviceType) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceProvider to obtain the full interface.");
+    }
+
 
     
     // Properties section

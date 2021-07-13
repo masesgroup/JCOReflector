@@ -42,7 +42,10 @@ import system.windows.data.CollectionView;
 import system.IDisposable;
 import system.IDisposableImplementation;
 import system.Array;
+import system.EventArgs;
 import system.componentmodel.SortDescriptionCollection;
+import system.windows.IWeakEventListener;
+import system.windows.IWeakEventListenerImplementation;
 
 
 /**
@@ -51,7 +54,7 @@ import system.componentmodel.SortDescriptionCollection;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.ItemCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.ItemCollection</a>
  */
-public class ItemCollection extends CollectionView  {
+public class ItemCollection extends CollectionView implements system.windows.IWeakEventListener {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -320,6 +323,78 @@ public class ItemCollection extends CollectionView  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIEditableCollectionViewAddNewItem method available in IEditableCollectionViewAddNewItem to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetObject AddNewItem(NetObject newItem) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEditableCollectionViewAddNewItem to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIEditableCollectionView method available in IEditableCollectionView to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetObject AddNew() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEditableCollectionView to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIEditableCollectionView method available in IEditableCollectionView to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void CancelEdit() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEditableCollectionView to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIEditableCollectionView method available in IEditableCollectionView to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void CancelNew() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEditableCollectionView to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIEditableCollectionView method available in IEditableCollectionView to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void CommitEdit() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEditableCollectionView to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIEditableCollectionView method available in IEditableCollectionView to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void CommitNew() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEditableCollectionView to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIEditableCollectionView method available in IEditableCollectionView to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void EditItem(NetObject item) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEditableCollectionView to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIWeakEventListener method available in IWeakEventListener to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean ReceiveWeakEvent(NetType managerType, NetObject sender, EventArgs e) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWeakEventListener to obtain the full interface.");
     }
 
 

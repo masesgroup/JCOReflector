@@ -73,6 +73,7 @@ import system.reflection.ResourceAttributes;
 import system.security.cryptography.x509certificates.X509Certificate;
 import system.io.Stream;
 import system.reflection.emit.CustomAttributeBuilder;
+import system.UInt32;
 import system.reflection.Assembly;
 
 

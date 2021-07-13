@@ -38,6 +38,13 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.description.ContractDescription;
+import system.servicemodel.description.ServiceEndpoint;
+import system.servicemodel.channels.BindingParameterCollection;
+import system.servicemodel.dispatcher.ClientRuntime;
+import system.servicemodel.dispatcher.DispatchRuntime;
+import system.servicemodel.description.IContractBehavior;
+import system.servicemodel.description.IContractBehaviorImplementation;
 
 
 /**
@@ -46,7 +53,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Description.ServiceMetadataContractBehavior" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Description.ServiceMetadataContractBehavior</a>
  */
-public class ServiceMetadataContractBehavior extends NetObject  {
+public class ServiceMetadataContractBehavior extends NetObject implements system.servicemodel.description.IContractBehavior {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -161,6 +168,42 @@ public class ServiceMetadataContractBehavior extends NetObject  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIContractBehavior method available in IContractBehavior to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void AddBindingParameters(ContractDescription contractDescription, ServiceEndpoint endpoint, BindingParameterCollection bindingParameters) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContractBehavior to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIContractBehavior method available in IContractBehavior to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ApplyClientBehavior(ContractDescription contractDescription, ServiceEndpoint endpoint, ClientRuntime clientRuntime) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContractBehavior to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIContractBehavior method available in IContractBehavior to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ApplyDispatchBehavior(ContractDescription contractDescription, ServiceEndpoint endpoint, DispatchRuntime dispatchRuntime) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContractBehavior to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIContractBehavior method available in IContractBehavior to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Validate(ContractDescription contractDescription, ServiceEndpoint endpoint) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContractBehavior to obtain the full interface.");
+    }
+
 
     
     // Properties section

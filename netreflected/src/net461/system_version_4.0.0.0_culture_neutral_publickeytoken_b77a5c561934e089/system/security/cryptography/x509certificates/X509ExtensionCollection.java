@@ -39,7 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.security.cryptography.x509certificates.X509Extension;
-import system.security.cryptography.x509certificates.X509ExtensionEnumerator;
+import system.Array;
 
 
 /**
@@ -48,7 +48,7 @@ import system.security.cryptography.x509certificates.X509ExtensionEnumerator;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.X509Certificates.X509ExtensionCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.X509Certificates.X509ExtensionCollection</a>
  */
-public class X509ExtensionCollection extends NetObject implements Iterable<X509Extension> {
+public class X509ExtensionCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -163,15 +163,6 @@ public class X509ExtensionCollection extends NetObject implements Iterable<X509E
         }
     }
 
-    public X509ExtensionEnumerator GetEnumerator() throws Throwable {
-        return new X509ExtensionEnumerator(classInstance);
-    }
-
-    @SuppressWarnings("unchecked")
-    public java.util.Iterator<X509Extension> iterator() {
-        return new X509ExtensionEnumerator(classInstance);
-    }
-
     public void CopyTo(X509Extension[] array, int index) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -180,6 +171,15 @@ public class X509ExtensionCollection extends NetObject implements Iterable<X509E
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICollection method available in ICollection to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void CopyTo(Array array, int index) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection to obtain the full interface.");
     }
 
 

@@ -48,7 +48,7 @@ import system.text.regularexpressions.Capture;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.RegularExpressions.CaptureCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.RegularExpressions.CaptureCollection</a>
  */
-public class CaptureCollection extends NetObject  {
+public class CaptureCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

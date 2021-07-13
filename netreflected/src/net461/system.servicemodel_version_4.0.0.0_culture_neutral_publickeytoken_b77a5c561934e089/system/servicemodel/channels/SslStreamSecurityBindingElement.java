@@ -43,8 +43,12 @@ import system.servicemodel.channels.BindingElement;
 import system.servicemodel.channels.StreamUpgradeProvider;
 import system.servicemodel.channels.BindingContext;
 import system.xml.XmlElement;
+import system.servicemodel.description.MetadataExporter;
+import system.servicemodel.description.PolicyConversionContext;
 import system.security.authentication.SslProtocols;
 import system.servicemodel.security.IdentityVerifier;
+import system.servicemodel.description.IPolicyExportExtension;
+import system.servicemodel.description.IPolicyExportExtensionImplementation;
 
 
 /**
@@ -53,7 +57,7 @@ import system.servicemodel.security.IdentityVerifier;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.SslStreamSecurityBindingElement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.SslStreamSecurityBindingElement</a>
  */
-public class SslStreamSecurityBindingElement extends StreamUpgradeBindingElement  {
+public class SslStreamSecurityBindingElement extends StreamUpgradeBindingElement implements system.servicemodel.description.IPolicyExportExtension {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -210,6 +214,15 @@ public class SslStreamSecurityBindingElement extends StreamUpgradeBindingElement
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIPolicyExportExtension method available in IPolicyExportExtension to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ExportPolicy(MetadataExporter exporter, PolicyConversionContext context) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPolicyExportExtension to obtain the full interface.");
     }
 
 

@@ -42,6 +42,15 @@ import system.codedom.CodeTypeMember;
 import system.io.TextWriter;
 import system.codedom.compiler.CodeGeneratorOptions;
 import system.codedom.CodeObject;
+import system.codedom.compiler.GeneratorSupport;
+import system.codedom.CodeTypeReference;
+import system.codedom.CodeCompileUnit;
+import system.codedom.CodeExpression;
+import system.codedom.CodeNamespace;
+import system.codedom.CodeStatement;
+import system.codedom.CodeTypeDeclaration;
+import system.codedom.compiler.ICodeGenerator;
+import system.codedom.compiler.ICodeGeneratorImplementation;
 
 
 /**
@@ -50,7 +59,7 @@ import system.codedom.CodeObject;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.Compiler.CodeGenerator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.Compiler.CodeGenerator</a>
  */
-public class CodeGenerator extends NetObject  {
+public class CodeGenerator extends NetObject implements system.codedom.compiler.ICodeGenerator {
     /**
      * Fully assembly qualified name: System.CodeDom, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -175,6 +184,105 @@ public class CodeGenerator extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICodeGenerator method available in ICodeGenerator to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean IsValidIdentifier(java.lang.String value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeGenerator to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICodeGenerator method available in ICodeGenerator to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean Supports(GeneratorSupport supports) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeGenerator to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICodeGenerator method available in ICodeGenerator to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public java.lang.String CreateEscapedIdentifier(java.lang.String value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeGenerator to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICodeGenerator method available in ICodeGenerator to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public java.lang.String CreateValidIdentifier(java.lang.String value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeGenerator to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICodeGenerator method available in ICodeGenerator to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public java.lang.String GetTypeOutput(CodeTypeReference type) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeGenerator to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICodeGenerator method available in ICodeGenerator to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void GenerateCodeFromCompileUnit(CodeCompileUnit e, TextWriter w, CodeGeneratorOptions o) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeGenerator to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICodeGenerator method available in ICodeGenerator to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void GenerateCodeFromExpression(CodeExpression e, TextWriter w, CodeGeneratorOptions o) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeGenerator to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICodeGenerator method available in ICodeGenerator to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void GenerateCodeFromNamespace(CodeNamespace e, TextWriter w, CodeGeneratorOptions o) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeGenerator to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICodeGenerator method available in ICodeGenerator to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void GenerateCodeFromStatement(CodeStatement e, TextWriter w, CodeGeneratorOptions o) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeGenerator to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICodeGenerator method available in ICodeGenerator to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void GenerateCodeFromType(CodeTypeDeclaration e, TextWriter w, CodeGeneratorOptions o) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeGenerator to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICodeGenerator method available in ICodeGenerator to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ValidateIdentifier(java.lang.String value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeGenerator to obtain the full interface.");
     }
 
 

@@ -50,9 +50,13 @@ import system.transactions.EnlistmentOptions;
 import system.transactions.ISinglePhaseNotification;
 import system.transactions.ISinglePhaseNotificationImplementation;
 import system.transactions.Transaction;
+import system.runtime.serialization.SerializationInfo;
+import system.runtime.serialization.StreamingContext;
 import system.transactions.IsolationLevel;
 import system.transactions.TransactionInformation;
 import system.transactions.TransactionCompletedEventHandler;
+import system.runtime.serialization.ISerializable;
+import system.runtime.serialization.ISerializableImplementation;
 
 
 /**
@@ -61,7 +65,7 @@ import system.transactions.TransactionCompletedEventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.Transaction" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Transactions.Transaction</a>
  */
-public class Transaction extends NetObject implements AutoCloseable {
+public class Transaction extends NetObject implements system.runtime.serialization.ISerializable, AutoCloseable {
     /**
      * Fully assembly qualified name: System.Transactions.Local, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -314,6 +318,15 @@ public class Transaction extends NetObject implements AutoCloseable {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToISerializable method available in ISerializable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
     }
 
     public void close() throws Exception {

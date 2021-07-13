@@ -47,6 +47,8 @@ import system.servicemodel.description.ServiceCredentials;
 import system.servicemodel.description.ServiceDescription;
 import system.servicemodel.dispatcher.ChannelDispatcherCollection;
 import system.TimeSpan;
+import system.IDisposable;
+import system.IDisposableImplementation;
 
 
 /**
@@ -55,7 +57,7 @@ import system.TimeSpan;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.ServiceHostBase" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.ServiceHostBase</a>
  */
-public class ServiceHostBase extends CommunicationObject implements AutoCloseable {
+public class ServiceHostBase extends CommunicationObject implements system.IDisposable, AutoCloseable {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -224,6 +226,15 @@ public class ServiceHostBase extends CommunicationObject implements AutoCloseabl
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDisposable method available in IDisposable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Dispose() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
     }
 
     public void close() throws Exception {

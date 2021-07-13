@@ -195,6 +195,24 @@ public class RoutedCommand extends NetObject  {
         }
     }
 
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICommand method available in ICommand to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean CanExecute(NetObject parameter) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICommand to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICommand method available in ICommand to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Execute(NetObject parameter) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICommand to obtain the full interface.");
+    }
+
 
     
     // Properties section

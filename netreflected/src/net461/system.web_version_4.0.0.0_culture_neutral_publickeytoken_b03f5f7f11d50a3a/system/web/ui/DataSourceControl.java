@@ -41,6 +41,11 @@ import java.util.ArrayList;
 import system.web.ui.Control;
 import system.web.ui.Page;
 import system.web.ui.HtmlTextWriter;
+import system.collections.ICollection;
+import system.collections.ICollectionImplementation;
+import system.web.ui.DataSourceView;
+import system.collections.IList;
+import system.collections.IListImplementation;
 import system.web.ui.ClientIDMode;
 import system.web.ui.ControlCollection;
 
@@ -197,6 +202,33 @@ public class DataSourceControl extends Control  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDataSource method available in IDataSource to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public ICollection GetViewNames() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataSource to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDataSource method available in IDataSource to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public DataSourceView GetView(java.lang.String viewName) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataSource to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIListSource method available in IListSource to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public IList GetList() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIListSource to obtain the full interface.");
     }
 
 

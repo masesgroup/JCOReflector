@@ -1251,251 +1251,179 @@ namespace MASES.C2JReflector
             searchMethods(type, allMethods, isInterface);
             methods = allMethods.ToArray();
 
-            if (methods.Length == 0) return string.Empty;
-
-            SortedDictionary<string, MethodInfo> sortedData = new SortedDictionary<string, MethodInfo>();
-            foreach (var item in methods)
-            {
-                var strMethod = item.ToString();
-                if (!sortedData.ContainsKey(strMethod))
-                {
-                    sortedData.Add(strMethod, item);
-                }
-            }
-
             var methodLst = new List<MethodInfo>();
-            methodLst.AddRange(sortedData.Values);
-
-            methods = methodLst.ToArray();
 
             string templateInterfaceToUse = Const.Templates.GetTemplate(Const.Templates.ReflectorInterfaceMethodTemplate);
             string templateToUse = string.Empty;
 
-            bool hasEnumerable = typeof(IEnumerable).IsAssignableFrom(type);
+            List<string> methodsSignatureCreated = new List<string>();
+            List<string> methodsNameCreated = new List<string>();
+            List<string> methodsDuplicatedCreated = new List<string>();
 
-            StringBuilder methodInterfaceBuilder = new StringBuilder();
-            StringBuilder methodBuilder = new StringBuilder();
             bool isPrimitive = true;
             string defaultPrimitiveValue = string.Empty;
             bool isSpecial = false;
             bool isArray = false;
             bool isRetValArray = false;
             bool isManaged = true;
+            bool hasEnumerable = typeof(IEnumerable).IsAssignableFrom(type);
 
-            List<string> methodsSignatureCreated = new List<string>();
-            List<string> methodsNameCreated = new List<string>();
-            List<string> methodsDuplicatedCreated = new List<string>();
+            StringBuilder methodInterfaceBuilder = new StringBuilder();
+            StringBuilder methodBuilder = new StringBuilder();
 
-            foreach (var item in methods)
+            if (methods.Length != 0)
             {
-                var methodName = item.Name;
-
-                isPrimitive = true;
-                defaultPrimitiveValue = string.Empty;
-                isSpecial = false;
-                isArray = false;
-                isRetValArray = false;
-                isManaged = true;
-
-                if (!item.IsPublic
-                    || item.IsSpecialName // remove properties
-                    || methodsSignatureCreated.Contains(item.ToString()) // avoid duplicated methods from inheritance
-                   ) continue;
-
-                if (withInheritance)
+                SortedDictionary<string, MethodInfo> sortedData = new SortedDictionary<string, MethodInfo>();
+                foreach (var item in methods)
                 {
-                    if (item.DeclaringType == type)
+                    var strMethod = item.ToString();
+                    if (!sortedData.ContainsKey(strMethod))
+                    {
+                        sortedData.Add(strMethod, item);
+                    }
+                }
+
+                methodLst.AddRange(sortedData.Values);
+                methods = methodLst.ToArray();
+
+                foreach (var item in methods)
+                {
+                    var methodName = item.Name;
+
+                    isPrimitive = true;
+                    defaultPrimitiveValue = string.Empty;
+                    isSpecial = false;
+                    isArray = false;
+                    isRetValArray = false;
+                    isManaged = true;
+
+                    if (!item.IsPublic
+                        || item.IsSpecialName // remove properties
+                        || methodsSignatureCreated.Contains(item.ToString()) // avoid duplicated methods from inheritance
+                       ) continue;
+
+                    if (withInheritance)
+                    {
+                        if (item.DeclaringType == type)
+                        {
+                            Interlocked.Increment(ref analyzedMethods);
+                        }
+                    }
+                    else
                     {
                         Interlocked.Increment(ref analyzedMethods);
                     }
-                }
-                else
-                {
-                    Interlocked.Increment(ref analyzedMethods);
-                }
 
-                if (item.IsGenericMethod // don't manage generic methods
-                    || item.ContainsGenericParameters
-                    || ((withInheritance && !isInterface) ? item.DeclaringType != type : false)
-                    || (!methodsNameCreated.Contains(methodName) ? false : isDifferentOnlyForRetVal(methodsSignatureCreated, item.ToString(), methodName))
-                   ) continue;
+                    if (item.IsGenericMethod // don't manage generic methods
+                        || item.ContainsGenericParameters
+                        || ((withInheritance && !isInterface) ? item.DeclaringType != type : false)
+                        || (!methodsNameCreated.Contains(methodName) ? false : isDifferentOnlyForRetVal(methodsSignatureCreated, item.ToString(), methodName))
+                       ) continue;
 
-                var parameters = item.GetParameters();
+                    var parameters = item.GetParameters();
 
-                if (methodName == "ToString" && parameters.Length == 0) continue;
-                if (methodName == "GetHashCode" && parameters.Length == 0) continue;
-                if (methodName == "GetType" && parameters.Length == 0) continue;
-                if (methodName == "Equals" && parameters.Length == 1 && parameters[0].ParameterType == typeof(object)) continue;
+                    if (methodName == "ToString" && parameters.Length == 0) continue;
+                    if (methodName == "GetHashCode" && parameters.Length == 0) continue;
+                    if (methodName == "GetType" && parameters.Length == 0) continue;
+                    if (methodName == "Equals" && parameters.Length == 1 && parameters[0].ParameterType == typeof(object)) continue;
 
-                string methodInterfaceStr = string.Empty;
-                string dupMethodInterfaceStr = string.Empty;
-                string methodStr = string.Empty;
-                string dupMethodStr = string.Empty;
-                string dupMethodSignature = string.Empty;
+                    string methodInterfaceStr = string.Empty;
+                    string dupMethodInterfaceStr = string.Empty;
+                    string methodStr = string.Empty;
+                    string dupMethodStr = string.Empty;
+                    string dupMethodSignature = string.Empty;
 
-                var signToAdd = item.ToString();
+                    var signToAdd = item.ToString();
 
-                if (hasEnumerable && methodName == Const.SpecialNames.METHOD_GETENUMERATOR_NAME && parameters.Length == 0)
-                {
-                    if (EnableInterfaceInheritance) continue; // we avoid any enumerator here, becuase it is managed in the superclass
-
-                    var enumeratorMethodName = Const.SpecialNames.METHOD_GETENUMERATOR_NAME;
-                    templateToUse = Const.Templates.GetTemplate(Const.Templates.ReflectorEnumerableTemplate);
-                    var returnType = string.Empty;
-                    if (!isInterface && EnableInheritance && EnableInterfaceInheritance && item.ReturnType == typeof(IEnumerator))
+                    if (hasEnumerable && methodName == Const.SpecialNames.METHOD_GETENUMERATOR_NAME && parameters.Length == 0)
                     {
-                        returnEnumeratorType = string.Empty;
-                        returnType = Const.SpecialNames.NetIEnumerator;
-                        methodStr = templateToUse.Replace(Const.Methods.METHOD_ENUMERATOR_NAME, enumeratorMethodName)
-                                                 .Replace(Const.Methods.METHOD_RETURN_TYPE, returnType)
-                                                 .Replace(Const.Methods.METHOD_IMPLEMENTATION_RETURN_TYPE, item.ReturnType.IsInterface ? returnType + Const.SpecialNames.ImplementationTrailer : returnType)
-                                                 .Replace(Const.Methods.METHOD_RETURN_INNER_TYPE, Const.SpecialNames.NetObject);
-                    }
-                    else
-                    {
-                        if (!exportingEnumerator(item.ReturnType, null, null, out returnEnumeratorType, true))
+                        if (EnableInterfaceInheritance) continue; // we avoid any enumerator here, becuase it is managed in the superclass
+
+                        var enumeratorMethodName = Const.SpecialNames.METHOD_GETENUMERATOR_NAME;
+                        templateToUse = Const.Templates.GetTemplate(Const.Templates.ReflectorEnumerableTemplate);
+                        var returnType = string.Empty;
+                        if (!isInterface && EnableInheritance && EnableInterfaceInheritance && item.ReturnType == typeof(IEnumerator))
                         {
                             returnEnumeratorType = string.Empty;
-                            continue;
-                        }
-
-                        returnType = convertType(imports, item.ReturnType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
-                        if (!isManaged)
-                        {
-                            returnEnumeratorType = string.Empty;
-                            continue;
-                        }
-
-                        if (!isInterface && EnableInheritance && EnableInterfaceInheritance && type.GetInterfaces().Contains(typeof(IEnumerable)))
-                        {
-                            enumeratorMethodName += type.Name;
-                            signToAdd = signToAdd.Replace(Const.SpecialNames.METHOD_GETENUMERATOR_NAME, enumeratorMethodName);
-                        }
-
-                        if (EnableInterfaceInheritance && enumeratorMethodName == Const.SpecialNames.METHOD_GETENUMERATOR_NAME) continue;
-
-                        methodStr = templateToUse.Replace(Const.Methods.METHOD_ENUMERATOR_NAME, enumeratorMethodName)
-                                                 .Replace(Const.Methods.METHOD_RETURN_TYPE, returnType)
-                                                 .Replace(Const.Methods.METHOD_IMPLEMENTATION_RETURN_TYPE, item.ReturnType.IsInterface ? returnType + Const.SpecialNames.ImplementationTrailer : returnType)
-                                                 .Replace(Const.Methods.METHOD_RETURN_INNER_TYPE, returnEnumeratorType);
-                    }
-                }
-                else
-                {
-                    bool hasNativeArrayInParameter = false;
-
-                    isRetValArray = false;
-                    string returnType = "void";
-                    bool isInterfaceRetVal = false;
-                    if (item.ReturnType == typeof(void))
-                    {
-                        templateToUse = Const.Templates.GetTemplate(Const.Templates.ReflectorClassVoidMethodTemplate);
-                    }
-                    else
-                    {
-                        returnType = convertType(imports, item.ReturnType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isRetValArray);
-                        if (!isManaged) continue;
-                        isPrimitive |= typeof(Delegate).IsAssignableFrom(item.ReturnType);
-
-                        if (isRetValArray)
-                        {
-                            isInterfaceRetVal = item.ReturnType.GetElementType().IsInterface;
-                            templateToUse = Const.Templates.GetTemplate(isPrimitive ? Const.Templates.ReflectorClassNativeArrayMethodTemplate : Const.Templates.ReflectorClassObjectArrayMethodTemplate);
+                            returnType = Const.SpecialNames.NetIEnumerator;
+                            methodStr = templateToUse.Replace(Const.Methods.METHOD_ENUMERATOR_NAME, enumeratorMethodName)
+                                                     .Replace(Const.Methods.METHOD_RETURN_TYPE, returnType)
+                                                     .Replace(Const.Methods.METHOD_IMPLEMENTATION_RETURN_TYPE, item.ReturnType.IsInterface ? returnType + Const.SpecialNames.ImplementationTrailer : returnType)
+                                                     .Replace(Const.Methods.METHOD_RETURN_INNER_TYPE, Const.SpecialNames.NetObject);
                         }
                         else
                         {
-                            isInterfaceRetVal = item.ReturnType.IsInterface;
-                            templateToUse = Const.Templates.GetTemplate(isPrimitive ? Const.Templates.ReflectorClassNativeMethodTemplate : Const.Templates.ReflectorClassObjectMethodTemplate);
+                            if (!exportingEnumerator(item.ReturnType, null, null, out returnEnumeratorType, true))
+                            {
+                                returnEnumeratorType = string.Empty;
+                                continue;
+                            }
+
+                            returnType = convertType(imports, item.ReturnType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
+                            if (!isManaged)
+                            {
+                                returnEnumeratorType = string.Empty;
+                                continue;
+                            }
+
+                            if (!isInterface && EnableInheritance && EnableInterfaceInheritance && type.GetInterfaces().Contains(typeof(IEnumerable)))
+                            {
+                                enumeratorMethodName += type.Name;
+                                signToAdd = signToAdd.Replace(Const.SpecialNames.METHOD_GETENUMERATOR_NAME, enumeratorMethodName);
+                            }
+
+                            if (EnableInterfaceInheritance && enumeratorMethodName == Const.SpecialNames.METHOD_GETENUMERATOR_NAME) continue;
+
+                            methodStr = templateToUse.Replace(Const.Methods.METHOD_ENUMERATOR_NAME, enumeratorMethodName)
+                                                     .Replace(Const.Methods.METHOD_RETURN_TYPE, returnType)
+                                                     .Replace(Const.Methods.METHOD_IMPLEMENTATION_RETURN_TYPE, item.ReturnType.IsInterface ? returnType + Const.SpecialNames.ImplementationTrailer : returnType)
+                                                     .Replace(Const.Methods.METHOD_RETURN_INNER_TYPE, returnEnumeratorType);
                         }
                     }
-
-                    StringBuilder inputParams = new StringBuilder();
-                    StringBuilder execParams = new StringBuilder();
-
-                    foreach (var parameter in parameters)
+                    else
                     {
-                        string paramType = convertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
-                        hasNativeArrayInParameter |= isArray && isPrimitive;
-                        isManaged &= !parameter.IsOut; // out parameters not managed
-                        if (!isManaged) break; // found not managed type, stop here
-                        isPrimitive |= typeof(Delegate).IsAssignableFrom(parameter.ParameterType);
-                        var paramName = checkForkeyword(parameter.Name);
-                        inputParams.Append(string.Format(Const.Parameters.INPUT_PARAMETER, (isArray) ? paramType + (IsParams(parameter) ? Const.SpecialNames.VarArgsTrailer : Const.SpecialNames.ArrayTrailer) : paramType, paramName));
+                        bool hasNativeArrayInParameter = false;
 
-                        string formatter = isPrimitive ? Const.Parameters.INVOKE_PARAMETER_PRIMITIVE : Const.Parameters.INVOKE_PARAMETER_NONPRIMITIVE;
-                        if (!isPrimitive && isArray) formatter = Const.Parameters.INVOKE_PARAMETER_NONPRIMITIVE_ARRAY;
-
-                        string objectCaster = string.Empty;
-                        if (isArray && parameters.Length == 1)
+                        isRetValArray = false;
+                        string returnType = "void";
+                        bool isInterfaceRetVal = false;
+                        if (item.ReturnType == typeof(void))
                         {
-                            objectCaster = "(Object)";
+                            templateToUse = Const.Templates.GetTemplate(Const.Templates.ReflectorClassVoidMethodTemplate);
+                        }
+                        else
+                        {
+                            returnType = convertType(imports, item.ReturnType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isRetValArray);
+                            if (!isManaged) continue;
+                            isPrimitive |= typeof(Delegate).IsAssignableFrom(item.ReturnType);
+
+                            if (isRetValArray)
+                            {
+                                isInterfaceRetVal = item.ReturnType.GetElementType().IsInterface;
+                                templateToUse = Const.Templates.GetTemplate(isPrimitive ? Const.Templates.ReflectorClassNativeArrayMethodTemplate : Const.Templates.ReflectorClassObjectArrayMethodTemplate);
+                            }
+                            else
+                            {
+                                isInterfaceRetVal = item.ReturnType.IsInterface;
+                                templateToUse = Const.Templates.GetTemplate(isPrimitive ? Const.Templates.ReflectorClassNativeMethodTemplate : Const.Templates.ReflectorClassObjectMethodTemplate);
+                            }
                         }
 
-                        execParams.Append(string.Format(formatter, objectCaster, paramName));
-                    }
-                    if (!isManaged) continue; // found not managed type, jump to next 
-                    string inputParamStr = inputParams.ToString();
-                    if (!string.IsNullOrEmpty(inputParamStr))
-                    {
-                        inputParamStr = inputParamStr.Substring(0, inputParamStr.Length - 2);
-                    }
-
-                    string execParamStr = execParams.ToString();
-
-                    var exceptionStr = exceptionStringBuilder(item, imports);
-
-                    bool isNewMethodVal = (withInheritance && !isInterface) ? isNewMethod(type, item, allMethods) : false;
-                    string newMethodName = string.Empty;
-                    if (isNewMethodVal)
-                    {
-                        newMethodName = string.Format(Const.Methods.NEW_MODIFIER_PROTO, methodName, type.Name);
-                    }
-
-                    methodStr = templateToUse.Replace(Const.Methods.METHOD_JAVA_NAME, isNewMethodVal ? newMethodName : methodName)
-                                             .Replace(Const.Methods.METHOD_NAME, methodName)
-                                             .Replace(Const.Methods.METHOD_RETURN_TYPE, returnType)
-                                             .Replace(Const.Methods.METHOD_IMPLEMENTATION_RETURN_TYPE, isInterfaceRetVal ? returnType + Const.SpecialNames.ImplementationTrailer : returnType)
-                                             .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
-                                             .Replace(Const.Methods.METHOD_INVOKE_PARAMETERS, execParamStr)
-                                             .Replace(Const.Methods.METHOD_MODIFIER_KEYWORD, item.IsStatic ? Const.SpecialNames.STATIC_KEYWORD : string.Empty)
-                                             .Replace(Const.Methods.METHOD_OBJECT, item.IsStatic ? Const.Class.STATIC_CLASS_NAME : Const.Class.INSTANCE_CLASS_NAME)
-                                             .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr);
-
-                    if (withInheritance ? (isInterface && (item.GetBaseDefinition().DeclaringType == type)) : isInterface)
-                    {
-                        methodInterfaceStr = templateInterfaceToUse.Replace(Const.Methods.METHOD_JAVA_NAME, isNewMethodVal ? newMethodName : methodName)
-                                                                   .Replace(Const.Methods.METHOD_NAME, methodName)
-                                                                   .Replace(Const.Methods.METHOD_RETURN_TYPE, isRetValArray ? returnType + Const.SpecialNames.ArrayTrailer : returnType)
-                                                                   .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
-                                                                   .Replace(Const.Methods.METHOD_INVOKE_PARAMETERS, execParamStr)
-                                                                   .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr);
-                    }
-
-                    if (EnableDuplicateMethodNativeArrayWithJCRefOut && hasNativeArrayInParameter)
-                    {
-                        // needs a duplication in method signature
-                        inputParams = new StringBuilder();
-                        execParams = new StringBuilder();
+                        StringBuilder inputParams = new StringBuilder();
+                        StringBuilder execParams = new StringBuilder();
 
                         foreach (var parameter in parameters)
                         {
                             string paramType = convertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
-                            bool isNativeArrayInParameter = isArray && isPrimitive;
+                            hasNativeArrayInParameter |= isArray && isPrimitive;
+                            isManaged &= !parameter.IsOut; // out parameters not managed
+                            if (!isManaged) break; // found not managed type, stop here
                             isPrimitive |= typeof(Delegate).IsAssignableFrom(parameter.ParameterType);
-                            var paramName = string.Format(Const.Methods.DUPLICATED_PARAMETER_PROTO, parameter.Position); // change name to avoid confusion made by parameter name when a duplicated method is searched
+                            var paramName = checkForkeyword(parameter.Name);
+                            inputParams.Append(string.Format(Const.Parameters.INPUT_PARAMETER, (isArray) ? paramType + (IsParams(parameter) ? Const.SpecialNames.VarArgsTrailer : Const.SpecialNames.ArrayTrailer) : paramType, paramName));
 
                             string formatter = isPrimitive ? Const.Parameters.INVOKE_PARAMETER_PRIMITIVE : Const.Parameters.INVOKE_PARAMETER_NONPRIMITIVE;
                             if (!isPrimitive && isArray) formatter = Const.Parameters.INVOKE_PARAMETER_NONPRIMITIVE_ARRAY;
-
-                            if (isNativeArrayInParameter)
-                            {
-                                inputParams.Append(string.Format(Const.Parameters.INPUT_PARAMETER, Const.SpecialNames.JCORefOutType, paramName));
-                                formatter = Const.Parameters.INVOKE_PARAMETER_JCOREFOUT;
-                            }
-                            else
-                            {
-                                inputParams.Append(string.Format(Const.Parameters.INPUT_PARAMETER, (isArray) ? paramType + (IsParams(parameter) ? Const.SpecialNames.VarArgsTrailer : Const.SpecialNames.ArrayTrailer) : paramType, paramName));
-                            }
 
                             string objectCaster = string.Empty;
                             if (isArray && parameters.Length == 1)
@@ -1505,76 +1433,150 @@ namespace MASES.C2JReflector
 
                             execParams.Append(string.Format(formatter, objectCaster, paramName));
                         }
-                        inputParamStr = inputParams.ToString();
+                        if (!isManaged) continue; // found not managed type, jump to next 
+                        string inputParamStr = inputParams.ToString();
                         if (!string.IsNullOrEmpty(inputParamStr))
                         {
                             inputParamStr = inputParamStr.Substring(0, inputParamStr.Length - 2);
                         }
 
-                        execParamStr = execParams.ToString();
+                        string execParamStr = execParams.ToString();
 
-                        dupMethodStr = templateToUse.Replace(Const.Methods.METHOD_JAVA_NAME, isNewMethodVal ? newMethodName : methodName)
-                                                    .Replace(Const.Methods.METHOD_NAME, methodName)
-                                                    .Replace(Const.Methods.METHOD_RETURN_TYPE, returnType)
-                                                    .Replace(Const.Methods.METHOD_IMPLEMENTATION_RETURN_TYPE, isInterfaceRetVal ? returnType + Const.SpecialNames.ImplementationTrailer : returnType)
-                                                    .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
-                                                    .Replace(Const.Methods.METHOD_INVOKE_PARAMETERS, execParamStr)
-                                                    .Replace(Const.Methods.METHOD_MODIFIER_KEYWORD, item.IsStatic ? Const.SpecialNames.STATIC_KEYWORD : string.Empty)
-                                                    .Replace(Const.Methods.METHOD_OBJECT, item.IsStatic ? Const.Class.STATIC_CLASS_NAME : Const.Class.INSTANCE_CLASS_NAME)
-                                                    .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr);
+                        var exceptionStr = exceptionStringBuilder(item, imports);
+
+                        bool isNewMethodVal = (withInheritance && !isInterface) ? isNewMethod(type, item, allMethods) : false;
+                        string newMethodName = string.Empty;
+                        if (isNewMethodVal)
+                        {
+                            newMethodName = string.Format(Const.Methods.NEW_MODIFIER_PROTO, methodName, type.Name);
+                        }
+
+                        methodStr = templateToUse.Replace(Const.Methods.METHOD_JAVA_NAME, isNewMethodVal ? newMethodName : methodName)
+                                                 .Replace(Const.Methods.METHOD_NAME, methodName)
+                                                 .Replace(Const.Methods.METHOD_RETURN_TYPE, returnType)
+                                                 .Replace(Const.Methods.METHOD_IMPLEMENTATION_RETURN_TYPE, isInterfaceRetVal ? returnType + Const.SpecialNames.ImplementationTrailer : returnType)
+                                                 .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
+                                                 .Replace(Const.Methods.METHOD_INVOKE_PARAMETERS, execParamStr)
+                                                 .Replace(Const.Methods.METHOD_MODIFIER_KEYWORD, item.IsStatic ? Const.SpecialNames.STATIC_KEYWORD : string.Empty)
+                                                 .Replace(Const.Methods.METHOD_OBJECT, item.IsStatic ? Const.Class.STATIC_CLASS_NAME : Const.Class.INSTANCE_CLASS_NAME)
+                                                 .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr);
 
                         if (withInheritance ? (isInterface && (item.GetBaseDefinition().DeclaringType == type)) : isInterface)
                         {
-                            dupMethodInterfaceStr = templateInterfaceToUse.Replace(Const.Methods.METHOD_JAVA_NAME, isNewMethodVal ? newMethodName : methodName)
-                                                                          .Replace(Const.Methods.METHOD_NAME, methodName)
-                                                                          .Replace(Const.Methods.METHOD_RETURN_TYPE, isRetValArray ? returnType + Const.SpecialNames.ArrayTrailer : returnType)
-                                                                          .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
-                                                                          .Replace(Const.Methods.METHOD_INVOKE_PARAMETERS, execParamStr)
-                                                                          .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr);
+                            methodInterfaceStr = templateInterfaceToUse.Replace(Const.Methods.METHOD_JAVA_NAME, isNewMethodVal ? newMethodName : methodName)
+                                                                       .Replace(Const.Methods.METHOD_NAME, methodName)
+                                                                       .Replace(Const.Methods.METHOD_RETURN_TYPE, isRetValArray ? returnType + Const.SpecialNames.ArrayTrailer : returnType)
+                                                                       .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
+                                                                       .Replace(Const.Methods.METHOD_INVOKE_PARAMETERS, execParamStr)
+                                                                       .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr);
                         }
 
-                        dupMethodSignature = templateInterfaceToUse.Replace(Const.Methods.METHOD_JAVA_NAME, isNewMethodVal ? newMethodName : methodName)
-                                                                   .Replace(Const.Methods.METHOD_NAME, methodName)
-                                                                   .Replace(Const.Methods.METHOD_RETURN_TYPE, string.Empty)
-                                                                   .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
-                                                                   .Replace(Const.Methods.METHOD_INVOKE_PARAMETERS, execParamStr)
-                                                                   .Replace(Const.Exceptions.THROWABLE_TEMPLATE, string.Empty);
+                        if (EnableDuplicateMethodNativeArrayWithJCRefOut && hasNativeArrayInParameter)
+                        {
+                            // needs a duplication in method signature
+                            inputParams = new StringBuilder();
+                            execParams = new StringBuilder();
 
-                        Interlocked.Increment(ref implementedDuplicatedMethods);
+                            foreach (var parameter in parameters)
+                            {
+                                string paramType = convertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
+                                bool isNativeArrayInParameter = isArray && isPrimitive;
+                                isPrimitive |= typeof(Delegate).IsAssignableFrom(parameter.ParameterType);
+                                var paramName = string.Format(Const.Methods.DUPLICATED_PARAMETER_PROTO, parameter.Position); // change name to avoid confusion made by parameter name when a duplicated method is searched
+
+                                string formatter = isPrimitive ? Const.Parameters.INVOKE_PARAMETER_PRIMITIVE : Const.Parameters.INVOKE_PARAMETER_NONPRIMITIVE;
+                                if (!isPrimitive && isArray) formatter = Const.Parameters.INVOKE_PARAMETER_NONPRIMITIVE_ARRAY;
+
+                                if (isNativeArrayInParameter)
+                                {
+                                    inputParams.Append(string.Format(Const.Parameters.INPUT_PARAMETER, Const.SpecialNames.JCORefOutType, paramName));
+                                    formatter = Const.Parameters.INVOKE_PARAMETER_JCOREFOUT;
+                                }
+                                else
+                                {
+                                    inputParams.Append(string.Format(Const.Parameters.INPUT_PARAMETER, (isArray) ? paramType + (IsParams(parameter) ? Const.SpecialNames.VarArgsTrailer : Const.SpecialNames.ArrayTrailer) : paramType, paramName));
+                                }
+
+                                string objectCaster = string.Empty;
+                                if (isArray && parameters.Length == 1)
+                                {
+                                    objectCaster = "(Object)";
+                                }
+
+                                execParams.Append(string.Format(formatter, objectCaster, paramName));
+                            }
+                            inputParamStr = inputParams.ToString();
+                            if (!string.IsNullOrEmpty(inputParamStr))
+                            {
+                                inputParamStr = inputParamStr.Substring(0, inputParamStr.Length - 2);
+                            }
+
+                            execParamStr = execParams.ToString();
+
+                            dupMethodStr = templateToUse.Replace(Const.Methods.METHOD_JAVA_NAME, isNewMethodVal ? newMethodName : methodName)
+                                                        .Replace(Const.Methods.METHOD_NAME, methodName)
+                                                        .Replace(Const.Methods.METHOD_RETURN_TYPE, returnType)
+                                                        .Replace(Const.Methods.METHOD_IMPLEMENTATION_RETURN_TYPE, isInterfaceRetVal ? returnType + Const.SpecialNames.ImplementationTrailer : returnType)
+                                                        .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
+                                                        .Replace(Const.Methods.METHOD_INVOKE_PARAMETERS, execParamStr)
+                                                        .Replace(Const.Methods.METHOD_MODIFIER_KEYWORD, item.IsStatic ? Const.SpecialNames.STATIC_KEYWORD : string.Empty)
+                                                        .Replace(Const.Methods.METHOD_OBJECT, item.IsStatic ? Const.Class.STATIC_CLASS_NAME : Const.Class.INSTANCE_CLASS_NAME)
+                                                        .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr);
+
+                            if (withInheritance ? (isInterface && (item.GetBaseDefinition().DeclaringType == type)) : isInterface)
+                            {
+                                dupMethodInterfaceStr = templateInterfaceToUse.Replace(Const.Methods.METHOD_JAVA_NAME, isNewMethodVal ? newMethodName : methodName)
+                                                                              .Replace(Const.Methods.METHOD_NAME, methodName)
+                                                                              .Replace(Const.Methods.METHOD_RETURN_TYPE, isRetValArray ? returnType + Const.SpecialNames.ArrayTrailer : returnType)
+                                                                              .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
+                                                                              .Replace(Const.Methods.METHOD_INVOKE_PARAMETERS, execParamStr)
+                                                                              .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr);
+                            }
+
+                            dupMethodSignature = templateInterfaceToUse.Replace(Const.Methods.METHOD_JAVA_NAME, isNewMethodVal ? newMethodName : methodName)
+                                                                       .Replace(Const.Methods.METHOD_NAME, methodName)
+                                                                       .Replace(Const.Methods.METHOD_RETURN_TYPE, string.Empty)
+                                                                       .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
+                                                                       .Replace(Const.Methods.METHOD_INVOKE_PARAMETERS, execParamStr)
+                                                                       .Replace(Const.Exceptions.THROWABLE_TEMPLATE, string.Empty);
+
+                            Interlocked.Increment(ref implementedDuplicatedMethods);
+                        }
                     }
-                }
 
-                methodsSignatureCreated.Add(signToAdd);
-                methodsNameCreated.Add(item.Name);
+                    methodsSignatureCreated.Add(signToAdd);
+                    methodsNameCreated.Add(item.Name);
 
-                if (isInterface)
-                {
-                    methodInterfaceBuilder.AppendLine(methodInterfaceStr);
-                    if (EnableDuplicateMethodNativeArrayWithJCRefOut && !string.IsNullOrEmpty(dupMethodInterfaceStr) && !methodsDuplicatedCreated.Contains(dupMethodSignature))
+                    if (isInterface)
                     {
-                        methodInterfaceBuilder.AppendLine(dupMethodInterfaceStr);
+                        methodInterfaceBuilder.AppendLine(methodInterfaceStr);
+                        if (EnableDuplicateMethodNativeArrayWithJCRefOut && !string.IsNullOrEmpty(dupMethodInterfaceStr) && !methodsDuplicatedCreated.Contains(dupMethodSignature))
+                        {
+                            methodInterfaceBuilder.AppendLine(dupMethodInterfaceStr);
+                        }
                     }
-                }
 
-                methodBuilder.AppendLine(methodStr);
-                if (EnableDuplicateMethodNativeArrayWithJCRefOut && !string.IsNullOrEmpty(dupMethodStr) && !methodsDuplicatedCreated.Contains(dupMethodSignature))
-                {
-                    methodBuilder.AppendLine(dupMethodStr);
-                    methodsDuplicatedCreated.Add(dupMethodSignature);
-                }
+                    methodBuilder.AppendLine(methodStr);
+                    if (EnableDuplicateMethodNativeArrayWithJCRefOut && !string.IsNullOrEmpty(dupMethodStr) && !methodsDuplicatedCreated.Contains(dupMethodSignature))
+                    {
+                        methodBuilder.AppendLine(dupMethodStr);
+                        methodsDuplicatedCreated.Add(dupMethodSignature);
+                    }
 
-                if (withInheritance)
-                {
-                    if (item.DeclaringType == type)
+                    if (withInheritance)
+                    {
+                        if (item.DeclaringType == type)
+                        {
+                            Interlocked.Increment(ref implementedMethods);
+                        }
+                    }
+                    else
                     {
                         Interlocked.Increment(ref implementedMethods);
                     }
                 }
-                else
-                {
-                    Interlocked.Increment(ref implementedMethods);
-                }
             }
+            else if (!EnableInterfaceInheritance) return string.Empty;
 
             if (!isInterface && EnableInheritance && EnableInterfaceInheritance)
             {
@@ -1584,9 +1586,9 @@ namespace MASES.C2JReflector
                     searchMethods(implementableInterface, allMethods, true);
                     methods = allMethods.ToArray();
 
-                    if (methods.Length == 0) return string.Empty;
+                    if (methods.Length == 0) continue;
 
-                    sortedData = new SortedDictionary<string, MethodInfo>();
+                    SortedDictionary<string, MethodInfo> sortedData = new SortedDictionary<string, MethodInfo>();
                     foreach (var method in methods)
                     {
                         var strMethod = method.ToString();

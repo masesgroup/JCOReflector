@@ -1760,19 +1760,81 @@ namespace MASES.C2JReflector
                                                      .Replace(Const.Methods.METHOD_MODIFIER_KEYWORD, interfaceMethod.IsStatic ? Const.SpecialNames.STATIC_KEYWORD : string.Empty)
                                                      .Replace(Const.Methods.METHOD_OBJECT, interfaceMethod.IsStatic ? Const.Class.STATIC_CLASS_NAME : Const.Class.INSTANCE_CLASS_NAME)
                                                      .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr);
+
+                            if (EnableDuplicateMethodNativeArrayWithJCRefOut && hasNativeArrayInParameter)
+                            {
+                                // needs a duplication in method signature
+                                inputParams = new StringBuilder();
+                                execParams = new StringBuilder();
+
+                                foreach (var parameter in parameters)
+                                {
+                                    string paramType = convertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
+                                    bool isNativeArrayInParameter = isArray && isPrimitive;
+                                    isPrimitive |= typeof(Delegate).IsAssignableFrom(parameter.ParameterType);
+                                    var paramName = string.Format(Const.Methods.DUPLICATED_PARAMETER_PROTO, parameter.Position); // change name to avoid confusion made by parameter name when a duplicated method is searched
+
+                                    string formatter = isPrimitive ? Const.Parameters.INVOKE_PARAMETER_PRIMITIVE : Const.Parameters.INVOKE_PARAMETER_NONPRIMITIVE;
+                                    if (!isPrimitive && isArray) formatter = Const.Parameters.INVOKE_PARAMETER_NONPRIMITIVE_ARRAY;
+
+                                    if (isNativeArrayInParameter)
+                                    {
+                                        inputParams.Append(string.Format(Const.Parameters.INPUT_PARAMETER, Const.SpecialNames.JCORefOutType, paramName));
+                                        formatter = Const.Parameters.INVOKE_PARAMETER_JCOREFOUT;
+                                    }
+                                    else
+                                    {
+                                        inputParams.Append(string.Format(Const.Parameters.INPUT_PARAMETER, (isArray) ? paramType + (IsParams(parameter) ? Const.SpecialNames.VarArgsTrailer : Const.SpecialNames.ArrayTrailer) : paramType, paramName));
+                                    }
+
+                                    string objectCaster = string.Empty;
+                                    if (isArray && parameters.Length == 1)
+                                    {
+                                        objectCaster = "(Object)";
+                                    }
+
+                                    execParams.Append(string.Format(formatter, objectCaster, paramName));
+                                }
+                                inputParamStr = inputParams.ToString();
+                                if (!string.IsNullOrEmpty(inputParamStr))
+                                {
+                                    inputParamStr = inputParamStr.Substring(0, inputParamStr.Length - 2);
+                                }
+
+                                execParamStr = execParams.ToString();
+
+                                dupMethodStr = templateToUse.Replace(Const.Methods.METHOD_JAVA_NAME, isNewMethodVal ? newMethodName : methodName)
+                                                            .Replace(Const.Methods.METHOD_NAME, methodName)
+                                                            .Replace(Const.Methods.METHOD_RETURN_TYPE, returnType)
+                                                            .Replace(Const.Methods.METHOD_IMPLEMENTATION_RETURN_TYPE, isInterfaceRetVal ? returnType + Const.SpecialNames.ImplementationTrailer : returnType)
+                                                            .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
+                                                            .Replace(Const.Methods.METHOD_INVOKE_PARAMETERS, execParamStr)
+                                                            .Replace(Const.Methods.METHOD_MODIFIER_KEYWORD, interfaceMethod.IsStatic ? Const.SpecialNames.STATIC_KEYWORD : string.Empty)
+                                                            .Replace(Const.Methods.METHOD_OBJECT, interfaceMethod.IsStatic ? Const.Class.STATIC_CLASS_NAME : Const.Class.INSTANCE_CLASS_NAME)
+                                                            .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr);
+
+                                dupMethodSignature = templateInterfaceToUse.Replace(Const.Methods.METHOD_JAVA_NAME, isNewMethodVal ? newMethodName : methodName)
+                                                                           .Replace(Const.Methods.METHOD_NAME, methodName)
+                                                                           .Replace(Const.Methods.METHOD_RETURN_TYPE, string.Empty)
+                                                                           .Replace(Const.Methods.METHOD_PARAMETERS, inputParamStr)
+                                                                           .Replace(Const.Methods.METHOD_INVOKE_PARAMETERS, execParamStr)
+                                                                           .Replace(Const.Exceptions.THROWABLE_TEMPLATE, string.Empty);
+
+                                Interlocked.Increment(ref implementedDuplicatedMethods);
+                            }
                         }
 
                         methodsSignatureCreated.Add(interfaceMethod.ToString());
                         methodsNameCreated.Add(interfaceMethod.Name);
 
-                        if (isInterface)
-                        {
-                            methodInterfaceBuilder.AppendLine(methodInterfaceStr);
-                        }
-
                         Interlocked.Increment(ref extraImplementedMethods);
 
                         methodBuilder.AppendLine(methodStr);
+                        if (EnableDuplicateMethodNativeArrayWithJCRefOut && !string.IsNullOrEmpty(dupMethodStr) && !methodsDuplicatedCreated.Contains(dupMethodSignature))
+                        {
+                            methodBuilder.AppendLine(dupMethodStr);
+                            methodsDuplicatedCreated.Add(dupMethodSignature);
+                        }
                     }
 
                     if (extraImplementedMethods != methods.Length) implementableInterfaces.Remove(implementableInterface);

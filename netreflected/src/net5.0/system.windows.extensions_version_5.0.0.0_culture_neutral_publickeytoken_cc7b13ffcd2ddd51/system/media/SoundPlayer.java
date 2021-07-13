@@ -40,8 +40,12 @@ import java.util.ArrayList;
 // Import section
 import system.componentmodel.Component;
 import system.io.Stream;
+import system.runtime.serialization.SerializationInfo;
+import system.runtime.serialization.StreamingContext;
 import system.componentmodel.AsyncCompletedEventHandler;
 import system.EventHandler;
+import system.runtime.serialization.ISerializable;
+import system.runtime.serialization.ISerializableImplementation;
 
 
 /**
@@ -50,7 +54,7 @@ import system.EventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Media.SoundPlayer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Media.SoundPlayer</a>
  */
-public class SoundPlayer extends Component  {
+public class SoundPlayer extends Component implements system.runtime.serialization.ISerializable {
     /**
      * Fully assembly qualified name: System.Windows.Extensions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -233,6 +237,15 @@ public class SoundPlayer extends Component  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToISerializable method available in ISerializable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
     }
 
 

@@ -46,7 +46,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Configuration.X509CertificateTrustedIssuerElementCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Configuration.X509CertificateTrustedIssuerElementCollection</a>
  */
-public class X509CertificateTrustedIssuerElementCollection extends NetObject  {
+public class X509CertificateTrustedIssuerElementCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

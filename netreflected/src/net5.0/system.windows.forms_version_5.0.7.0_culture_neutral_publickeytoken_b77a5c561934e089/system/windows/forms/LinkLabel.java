@@ -159,6 +159,24 @@ public class LinkLabel extends Label  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIButtonControl method available in IButtonControl to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void NotifyDefault(boolean value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIButtonControl to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIButtonControl method available in IButtonControl to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void PerformClick() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIButtonControl to obtain the full interface.");
+    }
+
 
     
     // Properties section

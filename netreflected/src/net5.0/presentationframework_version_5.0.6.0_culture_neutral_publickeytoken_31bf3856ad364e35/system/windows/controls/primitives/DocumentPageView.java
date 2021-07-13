@@ -44,6 +44,10 @@ import system.windows.documents.DocumentPage;
 import system.windows.documents.DocumentPaginator;
 import system.windows.media.Stretch;
 import system.EventHandler;
+import system.IServiceProvider;
+import system.IServiceProviderImplementation;
+import system.IDisposable;
+import system.IDisposableImplementation;
 
 
 /**
@@ -52,7 +56,7 @@ import system.EventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.Primitives.DocumentPageView" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.Primitives.DocumentPageView</a>
  */
-public class DocumentPageView extends FrameworkElement implements AutoCloseable {
+public class DocumentPageView extends FrameworkElement implements system.IServiceProvider, system.IDisposable, AutoCloseable {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=5.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -157,6 +161,24 @@ public class DocumentPageView extends FrameworkElement implements AutoCloseable 
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIServiceProvider method available in IServiceProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetObject GetService(NetType serviceType) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceProvider to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDisposable method available in IDisposable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Dispose() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
+    }
+
     public void close() throws Exception {
         try {
             if (classInstance == null)

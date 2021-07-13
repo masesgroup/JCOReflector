@@ -58,6 +58,8 @@ import system.drawing.Region;
 import system.Single;
 import system.drawing.SizeF;
 import system.windows.forms.BoundsSpecified;
+import system.windows.forms.DragEventArgs;
+import system.EventArgs;
 import system.componentmodel.ISite;
 import system.componentmodel.ISiteImplementation;
 import system.drawing.Color;
@@ -95,6 +97,8 @@ import system.windows.forms.PreviewKeyDownEventHandler;
 import system.windows.forms.QueryAccessibilityHelpEventHandler;
 import system.windows.forms.QueryContinueDragEventHandler;
 import system.windows.forms.UICuesEventHandler;
+import system.windows.forms.IDropTarget;
+import system.windows.forms.IDropTargetImplementation;
 
 
 /**
@@ -103,7 +107,7 @@ import system.windows.forms.UICuesEventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Control" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Control</a>
  */
-public class Control extends Component  {
+public class Control extends Component implements system.windows.forms.IDropTarget {
     /**
      * Fully assembly qualified name: System.Windows.Forms, Version=5.0.7.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -790,6 +794,42 @@ public class Control extends Component  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDropTarget method available in IDropTarget to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void OnDragDrop(DragEventArgs e) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDropTarget to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDropTarget method available in IDropTarget to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void OnDragEnter(DragEventArgs e) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDropTarget to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDropTarget method available in IDropTarget to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void OnDragLeave(EventArgs e) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDropTarget to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDropTarget method available in IDropTarget to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void OnDragOver(DragEventArgs e) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDropTarget to obtain the full interface.");
     }
 
 

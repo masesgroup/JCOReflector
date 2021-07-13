@@ -47,7 +47,7 @@ import system.identitymodel.metadata.IndexedProtocolEndpoint;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Metadata.IndexedProtocolEndpointDictionary" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Metadata.IndexedProtocolEndpointDictionary</a>
  */
-public class IndexedProtocolEndpointDictionary extends NetObject  {
+public class IndexedProtocolEndpointDictionary extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

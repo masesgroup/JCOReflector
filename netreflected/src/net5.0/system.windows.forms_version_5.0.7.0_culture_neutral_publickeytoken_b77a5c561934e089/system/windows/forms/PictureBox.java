@@ -51,6 +51,8 @@ import system.componentmodel.ProgressChangedEventHandler;
 import system.EventHandler;
 import system.windows.forms.KeyEventHandler;
 import system.windows.forms.KeyPressEventHandler;
+import system.componentmodel.ISupportInitialize;
+import system.componentmodel.ISupportInitializeImplementation;
 
 
 /**
@@ -59,7 +61,7 @@ import system.windows.forms.KeyPressEventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.PictureBox" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.PictureBox</a>
  */
-public class PictureBox extends Control  {
+public class PictureBox extends Control implements system.componentmodel.ISupportInitialize {
     /**
      * Fully assembly qualified name: System.Windows.Forms, Version=5.0.7.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -212,6 +214,24 @@ public class PictureBox extends Control  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToISupportInitialize method available in ISupportInitialize to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void BeginInit() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToISupportInitialize method available in ISupportInitialize to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void EndInit() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
     }
 
 

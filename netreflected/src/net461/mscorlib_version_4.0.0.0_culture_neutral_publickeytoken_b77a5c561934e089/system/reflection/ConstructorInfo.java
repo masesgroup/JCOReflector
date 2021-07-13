@@ -42,6 +42,9 @@ import system.reflection.MethodBase;
 import system.reflection.BindingFlags;
 import system.reflection.Binder;
 import system.globalization.CultureInfo;
+import system.reflection.MethodImplAttributes;
+import system.reflection.ParameterInfo;
+import system.UInt32;
 import system.reflection.MemberTypes;
 
 
@@ -168,6 +171,87 @@ public class ConstructorInfo extends MethodBase  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static To_ConstructorInfo method available in _ConstructorInfo to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean IsDefined(NetType attributeType, boolean inherit) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_ConstructorInfo to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static To_ConstructorInfo method available in _ConstructorInfo to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetObject Invoke_2(NetObject obj, BindingFlags invokeAttr, Binder binder, NetObject[] parameters, CultureInfo culture) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_ConstructorInfo to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static To_ConstructorInfo method available in _ConstructorInfo to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetObject Invoke_3(NetObject obj, NetObject[] parameters) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_ConstructorInfo to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static To_ConstructorInfo method available in _ConstructorInfo to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetObject Invoke_4(BindingFlags invokeAttr, Binder binder, NetObject[] parameters, CultureInfo culture) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_ConstructorInfo to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static To_ConstructorInfo method available in _ConstructorInfo to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetObject Invoke_5(NetObject[] parameters) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_ConstructorInfo to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static To_ConstructorInfo method available in _ConstructorInfo to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetObject[] GetCustomAttributes(boolean inherit) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_ConstructorInfo to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static To_ConstructorInfo method available in _ConstructorInfo to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetObject[] GetCustomAttributes(NetType attributeType, boolean inherit) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_ConstructorInfo to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static To_ConstructorInfo method available in _ConstructorInfo to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public MethodImplAttributes GetMethodImplementationFlags() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_ConstructorInfo to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static To_ConstructorInfo method available in _ConstructorInfo to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public ParameterInfo[] GetParameters() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_ConstructorInfo to obtain the full interface.");
     }
 
 

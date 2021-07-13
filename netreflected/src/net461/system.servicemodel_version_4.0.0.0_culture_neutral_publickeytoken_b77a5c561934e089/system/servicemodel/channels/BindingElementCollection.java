@@ -48,7 +48,7 @@ import system.servicemodel.channels.BindingElementCollection;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.BindingElementCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.BindingElementCollection</a>
  */
-public class BindingElementCollection extends NetObject  {
+public class BindingElementCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

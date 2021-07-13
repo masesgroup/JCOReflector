@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.web.ui.webcontrols.webparts.PersonalizationStateInfo;
+import system.Array;
 
 
 /**
@@ -47,7 +48,7 @@ import system.web.ui.webcontrols.webparts.PersonalizationStateInfo;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.WebParts.PersonalizationStateInfoCollection</a>
  */
-public class PersonalizationStateInfoCollection extends NetObject  {
+public class PersonalizationStateInfoCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -200,6 +201,15 @@ public class PersonalizationStateInfoCollection extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICollection method available in ICollection to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void CopyTo(Array array, int index) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection to obtain the full interface.");
     }
 
 

@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.windows.automation.peers.ItemsControlAutomationPeer;
 import system.windows.automation.peers.PatternInterface;
+import system.windows.automation.provider.IRawElementProviderSimple;
+import system.windows.automation.provider.IRawElementProviderSimpleImplementation;
 
 
 /**
@@ -154,6 +156,15 @@ public class SelectorAutomationPeer extends ItemsControlAutomationPeer  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToISelectionProvider method available in ISelectionProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public IRawElementProviderSimple[] GetSelection() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISelectionProvider to obtain the full interface.");
     }
 
 

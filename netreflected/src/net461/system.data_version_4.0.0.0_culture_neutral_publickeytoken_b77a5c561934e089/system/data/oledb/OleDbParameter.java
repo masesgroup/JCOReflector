@@ -43,6 +43,8 @@ import system.data.oledb.OleDbType;
 import system.data.ParameterDirection;
 import system.data.DataRowVersion;
 import system.data.DbType;
+import system.ICloneable;
+import system.ICloneableImplementation;
 
 
 /**
@@ -51,7 +53,7 @@ import system.data.DbType;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.OleDb.OleDbParameter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.OleDb.OleDbParameter</a>
  */
-public class OleDbParameter extends DbParameter  {
+public class OleDbParameter extends DbParameter implements system.ICloneable {
     /**
      * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -234,6 +236,15 @@ public class OleDbParameter extends DbParameter  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICloneable method available in ICloneable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetObject Clone() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICloneable to obtain the full interface.");
     }
 
 

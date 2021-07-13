@@ -169,6 +169,24 @@ public class ExpanderAutomationPeer extends FrameworkElementAutomationPeer  {
         }
     }
 
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIExpandCollapseProvider method available in IExpandCollapseProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Collapse() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIExpandCollapseProvider to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIExpandCollapseProvider method available in IExpandCollapseProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Expand() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIExpandCollapseProvider to obtain the full interface.");
+    }
+
 
     
     // Properties section

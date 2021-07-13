@@ -41,6 +41,10 @@ import java.util.ArrayList;
 import system.componentmodel.design.serialization.DesignerLoader;
 import system.componentmodel.design.serialization.IDesignerLoaderHost;
 import system.componentmodel.design.serialization.IDesignerLoaderHostImplementation;
+import system.collections.ICollection;
+import system.collections.ICollectionImplementation;
+import system.componentmodel.design.serialization.IDesignerLoaderService;
+import system.componentmodel.design.serialization.IDesignerLoaderServiceImplementation;
 
 
 /**
@@ -49,7 +53,7 @@ import system.componentmodel.design.serialization.IDesignerLoaderHostImplementat
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.BasicDesignerLoader" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.BasicDesignerLoader</a>
  */
-public class BasicDesignerLoader extends DesignerLoader  {
+public class BasicDesignerLoader extends DesignerLoader implements system.componentmodel.design.serialization.IDesignerLoaderService {
     /**
      * Fully assembly qualified name: System.Windows.Forms.Design, Version=5.0.7.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -174,6 +178,33 @@ public class BasicDesignerLoader extends DesignerLoader  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDesignerLoaderService method available in IDesignerLoaderService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean Reload() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerLoaderService to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDesignerLoaderService method available in IDesignerLoaderService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void AddLoadDependency() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerLoaderService to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDesignerLoaderService method available in IDesignerLoaderService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void DependentLoadComplete(boolean successful, ICollection errorCollection) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerLoaderService to obtain the full interface.");
     }
 
 

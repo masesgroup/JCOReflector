@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.MarshalByRefObject;
+import system.web.hosting.IRegisteredObject;
+import system.web.hosting.IRegisteredObjectImplementation;
 
 
 /**
@@ -47,7 +49,7 @@ import system.MarshalByRefObject;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Hosting.ISAPIRuntime" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Hosting.ISAPIRuntime</a>
  */
-public class ISAPIRuntime extends MarshalByRefObject  {
+public class ISAPIRuntime extends MarshalByRefObject implements system.web.hosting.IRegisteredObject {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -191,6 +193,15 @@ public class ISAPIRuntime extends MarshalByRefObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIRegisteredObject method available in IRegisteredObject to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Stop(boolean immediate) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRegisteredObject to obtain the full interface.");
     }
 
 

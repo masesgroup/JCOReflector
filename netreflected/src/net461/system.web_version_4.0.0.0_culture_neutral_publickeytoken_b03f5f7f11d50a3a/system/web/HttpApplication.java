@@ -41,6 +41,9 @@ import java.util.ArrayList;
 import system.web.HttpContext;
 import system.web.BeginEventHandler;
 import system.web.EndEventHandler;
+import system.IAsyncResult;
+import system.IAsyncResultImplementation;
+import system.AsyncCallback;
 import system.componentmodel.ISite;
 import system.componentmodel.ISiteImplementation;
 import system.security.principal.IPrincipal;
@@ -623,6 +626,33 @@ public class HttpApplication extends NetObject implements AutoCloseable {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIHttpAsyncHandler method available in IHttpAsyncHandler to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public IAsyncResult BeginProcessRequest(HttpContext context, AsyncCallback cb, NetObject extraData) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIHttpAsyncHandler to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIHttpAsyncHandler method available in IHttpAsyncHandler to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void EndProcessRequest(IAsyncResult result) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIHttpAsyncHandler to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIHttpHandler method available in IHttpHandler to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ProcessRequest(HttpContext context) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIHttpHandler to obtain the full interface.");
     }
 
     public void close() throws Exception {

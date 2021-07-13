@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.windows.ResourceKey;
 import system.reflection.Assembly;
+import system.componentmodel.ISupportInitialize;
+import system.componentmodel.ISupportInitializeImplementation;
 
 
 /**
@@ -48,7 +50,7 @@ import system.reflection.Assembly;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.TemplateKey" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.TemplateKey</a>
  */
-public class TemplateKey extends ResourceKey  {
+public class TemplateKey extends ResourceKey implements system.componentmodel.ISupportInitialize {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -145,6 +147,24 @@ public class TemplateKey extends ResourceKey  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToISupportInitialize method available in ISupportInitialize to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void BeginInit() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToISupportInitialize method available in ISupportInitialize to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void EndInit() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
+    }
+
 
     
     // Properties section

@@ -46,7 +46,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.SetterBaseCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.SetterBaseCollection</a>
  */
-public class SetterBaseCollection extends NetObject  {
+public class SetterBaseCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

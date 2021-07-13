@@ -39,6 +39,14 @@ import java.util.ArrayList;
 
 // Import section
 import system.componentmodel.design.serialization.BasicDesignerLoader;
+import system.componentmodel.IContainer;
+import system.componentmodel.IContainerImplementation;
+import system.collections.ICollection;
+import system.collections.ICollectionImplementation;
+import system.componentmodel.design.serialization.INameCreationService;
+import system.componentmodel.design.serialization.INameCreationServiceImplementation;
+import system.componentmodel.design.serialization.IDesignerSerializationService;
+import system.componentmodel.design.serialization.IDesignerSerializationServiceImplementation;
 
 
 /**
@@ -47,7 +55,7 @@ import system.componentmodel.design.serialization.BasicDesignerLoader;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.CodeDomDesignerLoader" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.CodeDomDesignerLoader</a>
  */
-public class CodeDomDesignerLoader extends BasicDesignerLoader  {
+public class CodeDomDesignerLoader extends BasicDesignerLoader implements system.componentmodel.design.serialization.INameCreationService, system.componentmodel.design.serialization.IDesignerSerializationService {
     /**
      * Fully assembly qualified name: System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -152,6 +160,51 @@ public class CodeDomDesignerLoader extends BasicDesignerLoader  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToINameCreationService method available in INameCreationService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean IsValidName(java.lang.String name) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINameCreationService to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToINameCreationService method available in INameCreationService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public java.lang.String CreateName(IContainer container, NetType dataType) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINameCreationService to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToINameCreationService method available in INameCreationService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ValidateName(java.lang.String name) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINameCreationService to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDesignerSerializationService method available in IDesignerSerializationService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public ICollection Deserialize(NetObject serializationData) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationService to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDesignerSerializationService method available in IDesignerSerializationService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetObject Serialize(ICollection objects) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationService to obtain the full interface.");
     }
 
 

@@ -47,7 +47,7 @@ import system.Guid;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.FileDialogCustomPlacesCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.FileDialogCustomPlacesCollection</a>
  */
-public class FileDialogCustomPlacesCollection extends NetObject  {
+public class FileDialogCustomPlacesCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Windows.Forms.Primitives, Version=5.0.7.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

@@ -38,6 +38,16 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.IComponent;
+import system.componentmodel.IComponentImplementation;
+import system.componentmodel.EventDescriptor;
+import system.collections.ICollection;
+import system.collections.ICollectionImplementation;
+import system.componentmodel.PropertyDescriptor;
+import system.componentmodel.PropertyDescriptorCollection;
+import system.componentmodel.EventDescriptorCollection;
+import system.componentmodel.design.IEventBindingService;
+import system.componentmodel.design.IEventBindingServiceImplementation;
 
 
 /**
@@ -46,7 +56,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.EventBindingService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.EventBindingService</a>
  */
-public class EventBindingService extends NetObject  {
+public class EventBindingService extends NetObject implements system.componentmodel.design.IEventBindingService {
     /**
      * Fully assembly qualified name: System.Windows.Forms.Design, Version=5.0.7.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -143,6 +153,78 @@ public class EventBindingService extends NetObject  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIEventBindingService method available in IEventBindingService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean ShowCode() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEventBindingService to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIEventBindingService method available in IEventBindingService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean ShowCode(int lineNumber) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEventBindingService to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIEventBindingService method available in IEventBindingService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean ShowCode(IComponent component, EventDescriptor e) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEventBindingService to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIEventBindingService method available in IEventBindingService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public ICollection GetCompatibleMethods(EventDescriptor e) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEventBindingService to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIEventBindingService method available in IEventBindingService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public EventDescriptor GetEvent(PropertyDescriptor property) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEventBindingService to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIEventBindingService method available in IEventBindingService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public PropertyDescriptor GetEventProperty(EventDescriptor e) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEventBindingService to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIEventBindingService method available in IEventBindingService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public PropertyDescriptorCollection GetEventProperties(EventDescriptorCollection events) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEventBindingService to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIEventBindingService method available in IEventBindingService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public java.lang.String CreateUniqueMethodName(IComponent component, EventDescriptor e) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEventBindingService to obtain the full interface.");
+    }
+
 
     
     // Properties section

@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.windows.automation.peers.SelectorItemAutomationPeer;
 import system.windows.automation.peers.SelectorAutomationPeer;
 import system.windows.automation.peers.PatternInterface;
+import system.windows.automation.provider.IScrollItemProvider;
+import system.windows.automation.provider.IScrollItemProviderImplementation;
 
 
 /**
@@ -49,7 +51,7 @@ import system.windows.automation.peers.PatternInterface;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Peers.ListBoxItemAutomationPeer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Peers.ListBoxItemAutomationPeer</a>
  */
-public class ListBoxItemAutomationPeer extends SelectorItemAutomationPeer  {
+public class ListBoxItemAutomationPeer extends SelectorItemAutomationPeer implements system.windows.automation.provider.IScrollItemProvider {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -167,6 +169,15 @@ public class ListBoxItemAutomationPeer extends SelectorItemAutomationPeer  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIScrollItemProvider method available in IScrollItemProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ScrollIntoView() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIScrollItemProvider to obtain the full interface.");
     }
 
 

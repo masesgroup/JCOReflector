@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
 import system.web.ui.design.ControlDesigner;
+import system.IServiceProvider;
+import system.IServiceProviderImplementation;
 
 
 /**
@@ -49,7 +51,7 @@ import system.web.ui.design.ControlDesigner;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.DesignerObject" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.DesignerObject</a>
  */
-public class DesignerObject extends NetObject  {
+public class DesignerObject extends NetObject implements system.IServiceProvider {
     /**
      * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -146,6 +148,15 @@ public class DesignerObject extends NetObject  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIServiceProvider method available in IServiceProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetObject GetService(NetType serviceType) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceProvider to obtain the full interface.");
+    }
+
 
     
     // Properties section

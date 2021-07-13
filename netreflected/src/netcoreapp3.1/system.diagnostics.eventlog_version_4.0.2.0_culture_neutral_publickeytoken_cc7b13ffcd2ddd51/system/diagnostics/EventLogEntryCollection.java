@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.diagnostics.EventLogEntry;
+import system.Array;
 
 
 /**
@@ -47,7 +48,7 @@ import system.diagnostics.EventLogEntry;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.EventLogEntryCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Diagnostics.EventLogEntryCollection</a>
  */
-public class EventLogEntryCollection extends NetObject  {
+public class EventLogEntryCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Diagnostics.EventLog, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -154,6 +155,15 @@ public class EventLogEntryCollection extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICollection method available in ICollection to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void CopyTo(Array array, int index) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection to obtain the full interface.");
     }
 
 

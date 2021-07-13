@@ -39,6 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.web.ui.Control;
+import system.collections.ICollection;
+import system.collections.ICollectionImplementation;
+import system.web.ui.DataSourceView;
 import system.web.ui.webcontrols.ModelDataSourceView;
 import system.web.ui.webcontrols.CallingDataMethodsEventHandler;
 
@@ -176,6 +179,51 @@ public class ModelDataSource extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDataSource method available in IDataSource to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public ICollection GetViewNames() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataSource to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDataSource method available in IDataSource to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public DataSourceView GetView(java.lang.String viewName) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataSource to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIStateManager method available in IStateManager to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetObject SaveViewState() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStateManager to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIStateManager method available in IStateManager to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void LoadViewState(NetObject state) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStateManager to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIStateManager method available in IStateManager to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void TrackViewState() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStateManager to obtain the full interface.");
     }
 
 

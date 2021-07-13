@@ -47,7 +47,7 @@ import system.enterpriseservices.SecurityIdentity;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.EnterpriseServices.SecurityCallers" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.EnterpriseServices.SecurityCallers</a>
  */
-public class SecurityCallers extends NetObject  {
+public class SecurityCallers extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

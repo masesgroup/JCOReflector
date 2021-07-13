@@ -40,6 +40,12 @@ import java.util.ArrayList;
 // Import section
 import system.windows.automation.peers.AutomationPeer;
 import system.windows.automation.peers.PatternInterface;
+import system.windows.automation.provider.IRawElementProviderSimple;
+import system.windows.automation.provider.IRawElementProviderSimpleImplementation;
+import system.windows.automation.provider.IInvokeProvider;
+import system.windows.automation.provider.IInvokeProviderImplementation;
+import system.windows.automation.provider.IVirtualizedItemProvider;
+import system.windows.automation.provider.IVirtualizedItemProviderImplementation;
 
 
 /**
@@ -48,7 +54,7 @@ import system.windows.automation.peers.PatternInterface;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Peers.DateTimeAutomationPeer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Peers.DateTimeAutomationPeer</a>
  */
-public class DateTimeAutomationPeer extends AutomationPeer  {
+public class DateTimeAutomationPeer extends AutomationPeer implements system.windows.automation.provider.IInvokeProvider, system.windows.automation.provider.IVirtualizedItemProvider {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -156,6 +162,69 @@ public class DateTimeAutomationPeer extends AutomationPeer  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToISelectionItemProvider method available in ISelectionItemProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void AddToSelection() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISelectionItemProvider to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToISelectionItemProvider method available in ISelectionItemProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void RemoveFromSelection() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISelectionItemProvider to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToISelectionItemProvider method available in ISelectionItemProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Select() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISelectionItemProvider to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToITableItemProvider method available in ITableItemProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public IRawElementProviderSimple[] GetColumnHeaderItems() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITableItemProvider to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToITableItemProvider method available in ITableItemProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public IRawElementProviderSimple[] GetRowHeaderItems() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITableItemProvider to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIInvokeProvider method available in IInvokeProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Invoke() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIInvokeProvider to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIVirtualizedItemProvider method available in IVirtualizedItemProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Realize() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIVirtualizedItemProvider to obtain the full interface.");
     }
 
 

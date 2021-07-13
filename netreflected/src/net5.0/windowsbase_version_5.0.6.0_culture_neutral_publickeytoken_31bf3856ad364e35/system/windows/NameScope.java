@@ -49,7 +49,7 @@ import system.windows.DependencyObject;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.NameScope" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.NameScope</a>
  */
-public class NameScope extends NetObject  {
+public class NameScope extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: WindowsBase, Version=5.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

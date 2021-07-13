@@ -47,6 +47,7 @@ import system.reflection.ParameterInfo;
 import system.reflection.emit.MethodBuilder;
 import system.reflection.ConstructorInfo;
 import system.reflection.emit.CustomAttributeBuilder;
+import system.UInt32;
 import system.reflection.emit.PropertyToken;
 import system.reflection.Module;
 import system.reflection.PropertyAttributes;

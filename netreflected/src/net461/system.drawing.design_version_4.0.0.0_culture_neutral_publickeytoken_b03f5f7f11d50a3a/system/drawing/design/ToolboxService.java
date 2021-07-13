@@ -43,6 +43,12 @@ import system.collections.ICollectionImplementation;
 import system.reflection.Assembly;
 import system.reflection.AssemblyName;
 import system.drawing.design.ToolboxItem;
+import system.componentmodel.design.IDesignerHost;
+import system.componentmodel.design.IDesignerHostImplementation;
+import system.drawing.design.ToolboxItemCollection;
+import system.drawing.design.ToolboxItemCreatorCallback;
+import system.componentmodel.design.IComponentDiscoveryService;
+import system.componentmodel.design.IComponentDiscoveryServiceImplementation;
 
 
 /**
@@ -51,7 +57,7 @@ import system.drawing.design.ToolboxItem;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Design.ToolboxService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Design.ToolboxService</a>
  */
-public class ToolboxService extends NetObject  {
+public class ToolboxService extends NetObject implements system.componentmodel.design.IComponentDiscoveryService {
     /**
      * Fully assembly qualified name: System.Drawing.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -222,6 +228,258 @@ public class ToolboxService extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean IsSupported(NetObject serializedObject, ICollection filterAttributes) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean IsSupported(NetObject serializedObject, IDesignerHost host) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean IsToolboxItem(NetObject serializedObject) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean IsToolboxItem(NetObject serializedObject, IDesignerHost host) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean SetCursor() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public ToolboxItem DeserializeToolboxItem(NetObject serializedObject) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public ToolboxItem DeserializeToolboxItem(NetObject serializedObject, IDesignerHost host) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public ToolboxItem GetSelectedToolboxItem() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public ToolboxItem GetSelectedToolboxItem(IDesignerHost host) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public ToolboxItemCollection GetToolboxItems() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public ToolboxItemCollection GetToolboxItems(IDesignerHost host) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public ToolboxItemCollection GetToolboxItems(java.lang.String category) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public ToolboxItemCollection GetToolboxItems(java.lang.String category, IDesignerHost host) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetObject SerializeToolboxItem(ToolboxItem toolboxItem) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void AddCreator(ToolboxItemCreatorCallback creator, java.lang.String format) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void AddCreator(ToolboxItemCreatorCallback creator, java.lang.String format, IDesignerHost host) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void AddLinkedToolboxItem(ToolboxItem toolboxItem, IDesignerHost host) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void AddLinkedToolboxItem(ToolboxItem toolboxItem, java.lang.String category, IDesignerHost host) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void AddToolboxItem(ToolboxItem toolboxItem) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void AddToolboxItem(ToolboxItem toolboxItem, java.lang.String category) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Refresh() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void RemoveCreator(java.lang.String format) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void RemoveCreator(java.lang.String format, IDesignerHost host) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void RemoveToolboxItem(ToolboxItem toolboxItem) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void RemoveToolboxItem(ToolboxItem toolboxItem, java.lang.String category) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void SelectedToolboxItemUsed() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIToolboxService method available in IToolboxService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void SetSelectedToolboxItem(ToolboxItem toolboxItem) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxService to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIComponentDiscoveryService method available in IComponentDiscoveryService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public ICollection GetComponentTypes(IDesignerHost designerHost, NetType baseType) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIComponentDiscoveryService to obtain the full interface.");
     }
 
 

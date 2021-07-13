@@ -38,7 +38,6 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.security.cryptography.pkcs.SignerInfoEnumerator;
 import system.Array;
 import system.security.cryptography.pkcs.SignerInfo;
 
@@ -49,7 +48,7 @@ import system.security.cryptography.pkcs.SignerInfo;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.SignerInfoCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.SignerInfoCollection</a>
  */
-public class SignerInfoCollection extends NetObject implements Iterable<SignerInfo> {
+public class SignerInfoCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Security.Cryptography.Pkcs, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -148,15 +147,6 @@ public class SignerInfoCollection extends NetObject implements Iterable<SignerIn
     
     // Methods section
     
-    public SignerInfoEnumerator GetEnumerator() throws Throwable {
-        return new SignerInfoEnumerator(classInstance);
-    }
-
-    @SuppressWarnings("unchecked")
-    public java.util.Iterator<SignerInfo> iterator() {
-        return new SignerInfoEnumerator(classInstance);
-    }
-
     public void CopyTo(Array array, int index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

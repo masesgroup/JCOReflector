@@ -50,7 +50,7 @@ import system.security.cryptography.xml.Transform;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Xml.SignedInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Xml.SignedInfo</a>
  */
-public class SignedInfo extends NetObject  {
+public class SignedInfo extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

@@ -40,6 +40,10 @@ import java.util.ArrayList;
 // Import section
 import system.web.ui.webcontrols.WebControl;
 import system.web.ui.ControlCollection;
+import system.web.ui.INamingContainer;
+import system.web.ui.INamingContainerImplementation;
+import system.web.ui.webcontrols.ICompositeControlDesignerAccessor;
+import system.web.ui.webcontrols.ICompositeControlDesignerAccessorImplementation;
 
 
 /**
@@ -48,7 +52,7 @@ import system.web.ui.ControlCollection;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.CompositeControl" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.CompositeControl</a>
  */
-public class CompositeControl extends WebControl  {
+public class CompositeControl extends WebControl implements system.web.ui.INamingContainer, system.web.ui.webcontrols.ICompositeControlDesignerAccessor {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -153,6 +157,15 @@ public class CompositeControl extends WebControl  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICompositeControlDesignerAccessor method available in ICompositeControlDesignerAccessor to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void RecreateChildControls() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICompositeControlDesignerAccessor to obtain the full interface.");
     }
 
 

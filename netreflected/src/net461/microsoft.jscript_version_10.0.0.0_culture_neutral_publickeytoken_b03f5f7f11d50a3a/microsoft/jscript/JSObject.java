@@ -42,6 +42,8 @@ import microsoft.jscript.ScriptObject;
 import system.reflection.FieldInfo;
 import system.reflection.MemberInfo;
 import system.reflection.BindingFlags;
+import system.reflection.MethodInfo;
+import system.reflection.PropertyInfo;
 
 
 /**
@@ -208,6 +210,24 @@ public class JSObject extends ScriptObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIExpando method available in IExpando to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public PropertyInfo AddProperty(java.lang.String name) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIExpando to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIExpando method available in IExpando to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void RemoveMember(MemberInfo m) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIExpando to obtain the full interface.");
     }
 
 

@@ -169,6 +169,15 @@ public class PasswordBoxAutomationPeer extends TextAutomationPeer  {
         }
     }
 
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIValueProvider method available in IValueProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void SetValue(java.lang.String value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIValueProvider to obtain the full interface.");
+    }
+
 
     
     // Properties section

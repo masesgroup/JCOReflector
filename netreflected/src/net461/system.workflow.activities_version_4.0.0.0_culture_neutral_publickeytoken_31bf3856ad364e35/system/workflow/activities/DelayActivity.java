@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.workflow.componentmodel.Activity;
+import system.workflow.componentmodel.ActivityExecutionContext;
 import system.TimeSpan;
 import system.EventHandler;
 

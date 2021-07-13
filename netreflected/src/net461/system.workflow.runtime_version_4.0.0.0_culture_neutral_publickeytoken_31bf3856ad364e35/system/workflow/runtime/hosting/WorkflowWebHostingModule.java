@@ -38,6 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.web.HttpApplication;
+import system.web.IHttpModule;
+import system.web.IHttpModuleImplementation;
 
 
 /**
@@ -46,7 +49,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.Hosting.WorkflowWebHostingModule" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.Hosting.WorkflowWebHostingModule</a>
  */
-public class WorkflowWebHostingModule extends NetObject  {
+public class WorkflowWebHostingModule extends NetObject implements system.web.IHttpModule {
     /**
      * Fully assembly qualified name: System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -151,6 +154,24 @@ public class WorkflowWebHostingModule extends NetObject  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIHttpModule method available in IHttpModule to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Dispose() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIHttpModule to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIHttpModule method available in IHttpModule to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Init(HttpApplication context) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIHttpModule to obtain the full interface.");
+    }
+
 
     
     // Properties section

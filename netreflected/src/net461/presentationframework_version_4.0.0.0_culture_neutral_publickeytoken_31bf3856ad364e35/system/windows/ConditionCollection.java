@@ -46,7 +46,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.ConditionCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.ConditionCollection</a>
  */
-public class ConditionCollection extends NetObject  {
+public class ConditionCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

@@ -43,6 +43,7 @@ import system.reflection.MemberInfo;
 import system.reflection.Module;
 import system.reflection.ParameterInfo;
 import system.Attribute;
+import system.UInt32;
 
 
 /**

@@ -47,7 +47,7 @@ import system.workflow.activities.rules.RuleSet;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.Rules.RuleSetCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.Rules.RuleSetCollection</a>
  */
-public class RuleSetCollection extends NetObject  {
+public class RuleSetCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

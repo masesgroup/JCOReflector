@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.activities.persistence.PersistenceParticipant;
+import system.activities.hosting.WorkflowInstanceProxy;
 
 
 /**
@@ -152,6 +153,15 @@ public class CompensationExtension extends PersistenceParticipant  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIWorkflowInstanceExtension method available in IWorkflowInstanceExtension to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void SetInstance(WorkflowInstanceProxy instance) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWorkflowInstanceExtension to obtain the full interface.");
+    }
+
 
     
     // Properties section

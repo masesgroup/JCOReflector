@@ -48,7 +48,7 @@ import system.windows.media.animation.ClockCollection;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Animation.ClockCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.Animation.ClockCollection</a>
  */
-public class ClockCollection extends NetObject  {
+public class ClockCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

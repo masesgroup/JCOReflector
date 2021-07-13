@@ -41,7 +41,12 @@ import java.util.ArrayList;
 import system.workflow.runtime.hosting.WorkflowPersistenceService;
 import system.collections.specialized.NameValueCollection;
 import system.TimeSpan;
+import system.collections.ICollection;
+import system.collections.ICollectionImplementation;
+import system.transactions.Transaction;
 import system.Guid;
+import system.workflow.runtime.IPendingWork;
+import system.workflow.runtime.IPendingWorkImplementation;
 
 
 /**
@@ -50,7 +55,7 @@ import system.Guid;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Runtime.Hosting.SqlWorkflowPersistenceService</a>
  */
-public class SqlWorkflowPersistenceService extends WorkflowPersistenceService  {
+public class SqlWorkflowPersistenceService extends WorkflowPersistenceService implements system.workflow.runtime.IPendingWork {
     /**
      * Fully assembly qualified name: System.Workflow.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -179,6 +184,33 @@ public class SqlWorkflowPersistenceService extends WorkflowPersistenceService  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIPendingWork method available in IPendingWork to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean MustCommit(ICollection items) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPendingWork to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIPendingWork method available in IPendingWork to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Commit(Transaction transaction, ICollection items) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPendingWork to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIPendingWork method available in IPendingWork to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Complete(boolean succeeded, ICollection items) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPendingWork to obtain the full interface.");
+    }
+
 
     
     // Properties section

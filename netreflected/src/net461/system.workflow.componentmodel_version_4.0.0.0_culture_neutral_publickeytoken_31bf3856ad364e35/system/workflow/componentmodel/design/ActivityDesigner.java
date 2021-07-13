@@ -48,9 +48,23 @@ import system.IServiceProviderImplementation;
 import system.workflow.componentmodel.design.HitTestInfo;
 import system.drawing.Point;
 import system.drawing.Rectangle;
+import system.collections.IDictionary;
+import system.collections.IDictionaryImplementation;
+import system.componentmodel.IComponent;
+import system.componentmodel.IComponentImplementation;
+import system.drawing.design.ToolboxItem;
+import system.io.BinaryReader;
+import system.io.BinaryWriter;
+import system.componentmodel.design.ViewTechnology;
 import system.drawing.Size;
 import system.windows.forms.AccessibleObject;
 import system.workflow.componentmodel.design.ActivityDesignerTheme;
+import system.componentmodel.design.IDesignerFilter;
+import system.componentmodel.design.IDesignerFilterImplementation;
+import system.drawing.design.IToolboxUser;
+import system.drawing.design.IToolboxUserImplementation;
+import system.workflow.componentmodel.design.IPersistUIState;
+import system.workflow.componentmodel.design.IPersistUIStateImplementation;
 
 
 /**
@@ -59,7 +73,7 @@ import system.workflow.componentmodel.design.ActivityDesignerTheme;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.ActivityDesigner" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.ActivityDesigner</a>
  */
-public class ActivityDesigner extends NetObject implements AutoCloseable {
+public class ActivityDesigner extends NetObject implements system.componentmodel.design.IDesignerFilter, system.drawing.design.IToolboxUser, system.workflow.componentmodel.design.IPersistUIState, AutoCloseable {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -255,6 +269,132 @@ public class ActivityDesigner extends NetObject implements AutoCloseable {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDesignerFilter method available in IDesignerFilter to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void PostFilterAttributes(IDictionary attributes) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDesignerFilter method available in IDesignerFilter to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void PostFilterEvents(IDictionary events) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDesignerFilter method available in IDesignerFilter to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void PostFilterProperties(IDictionary properties) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDesignerFilter method available in IDesignerFilter to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void PreFilterAttributes(IDictionary attributes) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDesignerFilter method available in IDesignerFilter to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void PreFilterEvents(IDictionary events) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDesignerFilter method available in IDesignerFilter to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void PreFilterProperties(IDictionary properties) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDesigner method available in IDesigner to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void DoDefaultAction() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesigner to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDesigner method available in IDesigner to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Initialize(IComponent component) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesigner to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIToolboxUser method available in IToolboxUser to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean GetToolSupported(ToolboxItem tool) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxUser to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIToolboxUser method available in IToolboxUser to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ToolPicked(ToolboxItem tool) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToolboxUser to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIPersistUIState method available in IPersistUIState to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void LoadViewState(BinaryReader reader) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPersistUIState to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIPersistUIState method available in IPersistUIState to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void SaveViewState(BinaryWriter writer) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPersistUIState to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIWorkflowRootDesigner method available in IWorkflowRootDesigner to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean IsSupportedActivityType(NetType activityType) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWorkflowRootDesigner to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIRootDesigner method available in IRootDesigner to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetObject GetView(ViewTechnology technology) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRootDesigner to obtain the full interface.");
     }
 
     public void close() throws Exception {

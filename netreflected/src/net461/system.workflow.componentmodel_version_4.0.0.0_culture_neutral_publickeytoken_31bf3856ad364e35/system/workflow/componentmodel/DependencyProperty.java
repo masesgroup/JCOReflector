@@ -40,6 +40,10 @@ import java.util.ArrayList;
 // Import section
 import system.workflow.componentmodel.DependencyProperty;
 import system.workflow.componentmodel.PropertyMetadata;
+import system.runtime.serialization.SerializationInfo;
+import system.runtime.serialization.StreamingContext;
+import system.runtime.serialization.ISerializable;
+import system.runtime.serialization.ISerializableImplementation;
 
 
 /**
@@ -48,7 +52,7 @@ import system.workflow.componentmodel.PropertyMetadata;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.DependencyProperty" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.DependencyProperty</a>
  */
-public class DependencyProperty extends NetObject  {
+public class DependencyProperty extends NetObject implements system.runtime.serialization.ISerializable {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -211,6 +215,15 @@ public class DependencyProperty extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToISerializable method available in ISerializable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
     }
 
 

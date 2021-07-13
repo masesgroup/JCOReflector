@@ -49,7 +49,7 @@ import system.collections.ICollectionImplementation;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Specialized.HybridDictionary" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Specialized.HybridDictionary</a>
  */
-public class HybridDictionary extends NetObject  {
+public class HybridDictionary extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Collections.Specialized, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

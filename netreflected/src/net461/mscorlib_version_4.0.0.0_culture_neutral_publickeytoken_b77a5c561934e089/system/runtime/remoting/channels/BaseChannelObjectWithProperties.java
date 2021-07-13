@@ -51,7 +51,7 @@ import system.collections.IDictionaryImplementation;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Channels.BaseChannelObjectWithProperties" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Runtime.Remoting.Channels.BaseChannelObjectWithProperties</a>
  */
-public class BaseChannelObjectWithProperties extends NetObject  {
+public class BaseChannelObjectWithProperties extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

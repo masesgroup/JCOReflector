@@ -56,6 +56,8 @@ import system.windows.xps.packaging.XpsDocument;
 import system.io.packaging.PackageProperties;
 import system.windows.xps.packaging.IXpsFixedDocumentSequenceReader;
 import system.windows.xps.packaging.IXpsFixedDocumentSequenceReaderImplementation;
+import system.IDisposable;
+import system.IDisposableImplementation;
 
 
 /**
@@ -64,7 +66,7 @@ import system.windows.xps.packaging.IXpsFixedDocumentSequenceReaderImplementatio
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Xps.Packaging.XpsDocument" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Xps.Packaging.XpsDocument</a>
  */
-public class XpsDocument extends XpsPartBase implements AutoCloseable {
+public class XpsDocument extends XpsPartBase implements system.IDisposable, AutoCloseable {
     /**
      * Fully assembly qualified name: ReachFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -308,6 +310,15 @@ public class XpsDocument extends XpsPartBase implements AutoCloseable {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDisposable method available in IDisposable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Dispose() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
     }
 
     public void close() throws Exception {

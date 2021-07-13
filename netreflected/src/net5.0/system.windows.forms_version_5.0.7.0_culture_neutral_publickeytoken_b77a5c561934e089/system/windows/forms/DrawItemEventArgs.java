@@ -201,6 +201,15 @@ public class DrawItemEventArgs extends EventArgs implements AutoCloseable {
         }
     }
 
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDeviceContext method available in IDeviceContext to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ReleaseHdc() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDeviceContext to obtain the full interface.");
+    }
+
     public void close() throws Exception {
         try {
             if (classInstance == null)

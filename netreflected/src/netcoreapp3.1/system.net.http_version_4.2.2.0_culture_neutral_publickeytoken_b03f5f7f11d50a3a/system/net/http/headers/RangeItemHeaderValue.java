@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.ICloneable;
+import system.ICloneableImplementation;
 
 
 /**
@@ -46,7 +48,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Http.Headers.RangeItemHeaderValue" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Http.Headers.RangeItemHeaderValue</a>
  */
-public class RangeItemHeaderValue extends NetObject  {
+public class RangeItemHeaderValue extends NetObject implements system.ICloneable {
     /**
      * Fully assembly qualified name: System.Net.Http, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -145,6 +147,15 @@ public class RangeItemHeaderValue extends NetObject  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICloneable method available in ICloneable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetObject Clone() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICloneable to obtain the full interface.");
+    }
+
 
     
     // Properties section

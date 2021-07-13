@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.Array;
 import system.windows.forms.GridItem;
 
 
@@ -47,7 +48,7 @@ import system.windows.forms.GridItem;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.GridItemCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.GridItemCollection</a>
  */
-public class GridItemCollection extends NetObject  {
+public class GridItemCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Windows.Forms, Version=5.0.7.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -146,6 +147,15 @@ public class GridItemCollection extends NetObject  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICollection method available in ICollection to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void CopyTo(Array array, int index) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection to obtain the full interface.");
+    }
+
 
     
     // Properties section

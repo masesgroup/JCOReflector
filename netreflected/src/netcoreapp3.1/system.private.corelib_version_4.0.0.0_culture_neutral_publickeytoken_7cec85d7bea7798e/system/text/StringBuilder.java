@@ -47,6 +47,10 @@ import system.UInt32;
 import system.UInt64;
 import system.IFormatProvider;
 import system.IFormatProviderImplementation;
+import system.runtime.serialization.SerializationInfo;
+import system.runtime.serialization.StreamingContext;
+import system.runtime.serialization.ISerializable;
+import system.runtime.serialization.ISerializableImplementation;
 
 
 /**
@@ -55,7 +59,7 @@ import system.IFormatProviderImplementation;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.StringBuilder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.StringBuilder</a>
  */
-public class StringBuilder extends NetObject  {
+public class StringBuilder extends NetObject implements system.runtime.serialization.ISerializable {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */
@@ -973,6 +977,15 @@ public class StringBuilder extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToISerializable method available in ISerializable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
     }
 
 

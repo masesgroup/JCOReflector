@@ -151,6 +151,15 @@ public class PerformanceCounterManager extends NetObject  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICollectData method available in ICollectData to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void CloseData() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollectData to obtain the full interface.");
+    }
+
 
     
     // Properties section

@@ -42,6 +42,7 @@ import system.reflection.emit.ParameterToken;
 import system.reflection.ConstructorInfo;
 import system.reflection.emit.CustomAttributeBuilder;
 import system.reflection.emit.UnmanagedMarshal;
+import system.UInt32;
 
 
 /**

@@ -41,11 +41,15 @@ import java.util.ArrayList;
 import system.MarshalByRefObject;
 import system.windows.forms.TreeNode;
 import system.windows.forms.TreeView;
+import system.runtime.serialization.SerializationInfo;
+import system.runtime.serialization.StreamingContext;
 import system.drawing.Color;
 import system.drawing.Font;
 import system.drawing.Rectangle;
 import system.windows.forms.ContextMenuStrip;
 import system.windows.forms.TreeNodeCollection;
+import system.runtime.serialization.ISerializable;
+import system.runtime.serialization.ISerializableImplementation;
 
 
 /**
@@ -54,7 +58,7 @@ import system.windows.forms.TreeNodeCollection;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.TreeNode" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.TreeNode</a>
  */
-public class TreeNode extends MarshalByRefObject  {
+public class TreeNode extends MarshalByRefObject implements system.runtime.serialization.ISerializable {
     /**
      * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -308,6 +312,15 @@ public class TreeNode extends MarshalByRefObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToISerializable method available in ISerializable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
     }
 
 

@@ -43,6 +43,8 @@ import system.reflection.EventInfo;
 import system.reflection.FieldInfo;
 import system.reflection.MethodInfo;
 import system.reflection.PropertyInfo;
+import system.reflection.IReflectableType;
+import system.reflection.IReflectableTypeImplementation;
 
 
 /**
@@ -51,7 +53,7 @@ import system.reflection.PropertyInfo;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.TypeInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.TypeInfo</a>
  */
-public class TypeInfo extends NetObject  {
+public class TypeInfo extends NetObject implements system.reflection.IReflectableType {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -222,6 +224,15 @@ public class TypeInfo extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIReflectableType method available in IReflectableType to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public TypeInfo GetTypeInfo() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflectableType to obtain the full interface.");
     }
 
 

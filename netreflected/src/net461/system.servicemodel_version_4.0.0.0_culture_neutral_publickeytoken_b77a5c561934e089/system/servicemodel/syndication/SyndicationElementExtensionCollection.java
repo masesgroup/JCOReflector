@@ -50,7 +50,7 @@ import system.runtime.serialization.XmlObjectSerializer;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Syndication.SyndicationElementExtensionCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Syndication.SyndicationElementExtensionCollection</a>
  */
-public class SyndicationElementExtensionCollection extends NetObject  {
+public class SyndicationElementExtensionCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

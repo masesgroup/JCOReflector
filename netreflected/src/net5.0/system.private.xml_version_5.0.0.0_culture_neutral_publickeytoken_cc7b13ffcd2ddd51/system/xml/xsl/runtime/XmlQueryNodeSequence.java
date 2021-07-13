@@ -48,7 +48,7 @@ import system.xml.xsl.runtime.XmlQueryNodeSequence;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryNodeSequence" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryNodeSequence</a>
  */
-public class XmlQueryNodeSequence extends NetObject  {
+public class XmlQueryNodeSequence extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Private.Xml, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

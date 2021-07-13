@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.windows.TriggerBase;
 import system.windows.ConditionCollection;
 import system.windows.SetterBaseCollection;
+import system.windows.markup.IAddChild;
+import system.windows.markup.IAddChildImplementation;
 
 
 /**
@@ -49,7 +51,7 @@ import system.windows.SetterBaseCollection;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.MultiTrigger" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.MultiTrigger</a>
  */
-public class MultiTrigger extends TriggerBase  {
+public class MultiTrigger extends TriggerBase implements system.windows.markup.IAddChild {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -154,6 +156,24 @@ public class MultiTrigger extends TriggerBase  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIAddChild method available in IAddChild to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void AddChild(NetObject value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIAddChild method available in IAddChild to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void AddText(java.lang.String text) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+    }
+
 
     
     // Properties section

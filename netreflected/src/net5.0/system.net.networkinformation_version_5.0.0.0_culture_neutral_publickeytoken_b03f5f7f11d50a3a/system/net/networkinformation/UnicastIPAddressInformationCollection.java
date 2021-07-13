@@ -47,7 +47,7 @@ import system.net.networkinformation.UnicastIPAddressInformation;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.NetworkInformation.UnicastIPAddressInformationCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.NetworkInformation.UnicastIPAddressInformationCollection</a>
  */
-public class UnicastIPAddressInformationCollection extends NetObject  {
+public class UnicastIPAddressInformationCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Net.NetworkInformation, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

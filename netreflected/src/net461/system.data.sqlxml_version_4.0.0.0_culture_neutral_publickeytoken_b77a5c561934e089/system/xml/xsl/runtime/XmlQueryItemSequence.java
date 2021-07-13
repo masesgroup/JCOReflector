@@ -48,7 +48,7 @@ import system.xml.xsl.runtime.XmlQueryItemSequence;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryItemSequence" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Xsl.Runtime.XmlQueryItemSequence</a>
  */
-public class XmlQueryItemSequence extends NetObject  {
+public class XmlQueryItemSequence extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Data.SqlXml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

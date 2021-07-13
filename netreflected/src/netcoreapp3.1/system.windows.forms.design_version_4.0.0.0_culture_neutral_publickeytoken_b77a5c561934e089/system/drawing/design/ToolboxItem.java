@@ -44,12 +44,16 @@ import system.componentmodel.design.IDesignerHost;
 import system.componentmodel.design.IDesignerHostImplementation;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
+import system.runtime.serialization.SerializationInfo;
+import system.runtime.serialization.StreamingContext;
 import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
 import system.drawing.Bitmap;
 import system.reflection.AssemblyName;
 import system.drawing.design.ToolboxComponentsCreatedEventHandler;
 import system.drawing.design.ToolboxComponentsCreatingEventHandler;
+import system.runtime.serialization.ISerializable;
+import system.runtime.serialization.ISerializableImplementation;
 
 
 /**
@@ -58,7 +62,7 @@ import system.drawing.design.ToolboxComponentsCreatingEventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Design.ToolboxItem" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Drawing.Design.ToolboxItem</a>
  */
-public class ToolboxItem extends NetObject  {
+public class ToolboxItem extends NetObject implements system.runtime.serialization.ISerializable {
     /**
      * Fully assembly qualified name: System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -253,6 +257,15 @@ public class ToolboxItem extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToISerializable method available in ISerializable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
     }
 
 

@@ -47,7 +47,7 @@ import system.data.objects.ObjectParameter;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Objects.ObjectParameterCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Objects.ObjectParameterCollection</a>
  */
-public class ObjectParameterCollection extends NetObject  {
+public class ObjectParameterCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

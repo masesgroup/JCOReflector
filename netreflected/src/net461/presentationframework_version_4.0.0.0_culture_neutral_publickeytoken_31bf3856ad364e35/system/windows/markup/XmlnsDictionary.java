@@ -51,7 +51,7 @@ import system.collections.ICollectionImplementation;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Markup.XmlnsDictionary" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Markup.XmlnsDictionary</a>
  */
-public class XmlnsDictionary extends NetObject  {
+public class XmlnsDictionary extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

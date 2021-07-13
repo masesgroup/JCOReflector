@@ -154,6 +154,15 @@ public class WorkflowItemPresenter extends ContentControl  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICompositeView method available in ICompositeView to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void OnItemMoved(ModelItem modelItem) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICompositeView to obtain the full interface.");
+    }
+
 
     
     // Properties section

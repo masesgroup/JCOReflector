@@ -47,7 +47,7 @@ import system.xml.XmlNameTable;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlNamespaceManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlNamespaceManager</a>
  */
-public class XmlNamespaceManager extends NetObject  {
+public class XmlNamespaceManager extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Private.Xml, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

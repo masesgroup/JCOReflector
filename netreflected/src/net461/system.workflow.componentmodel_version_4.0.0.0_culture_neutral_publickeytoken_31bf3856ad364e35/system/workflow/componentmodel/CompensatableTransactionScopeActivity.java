@@ -39,7 +39,11 @@ import java.util.ArrayList;
 
 // Import section
 import system.workflow.componentmodel.CompositeActivity;
+import system.workflow.componentmodel.ActivityExecutionStatus;
+import system.workflow.componentmodel.ActivityExecutionContext;
 import system.workflow.componentmodel.WorkflowTransactionOptions;
+import system.workflow.componentmodel.ICompensatableActivity;
+import system.workflow.componentmodel.ICompensatableActivityImplementation;
 
 
 /**
@@ -48,7 +52,7 @@ import system.workflow.componentmodel.WorkflowTransactionOptions;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.CompensatableTransactionScopeActivity" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.CompensatableTransactionScopeActivity</a>
  */
-public class CompensatableTransactionScopeActivity extends CompositeActivity  {
+public class CompensatableTransactionScopeActivity extends CompositeActivity implements system.workflow.componentmodel.ICompensatableActivity {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -163,6 +167,15 @@ public class CompensatableTransactionScopeActivity extends CompositeActivity  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICompensatableActivity method available in ICompensatableActivity to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public ActivityExecutionStatus Compensate(ActivityExecutionContext executionContext) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICompensatableActivity to obtain the full interface.");
+    }
+
 
     
     // Properties section

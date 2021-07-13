@@ -58,6 +58,7 @@ import system.reflection.ConstructorInfo;
 import system.reflection.emit.CustomAttributeBuilder;
 import system.reflection.MethodInfo;
 import system.reflection.emit.PEFileKinds;
+import system.UInt32;
 import system.security.PermissionSet;
 import system.security.policy.Evidence;
 import system.security.SecurityRuleSet;

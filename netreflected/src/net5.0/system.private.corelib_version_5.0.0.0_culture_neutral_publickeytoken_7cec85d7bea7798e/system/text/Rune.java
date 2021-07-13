@@ -44,6 +44,8 @@ import system.text.Rune;
 import system.buffers.OperationStatus;
 import system.globalization.UnicodeCategory;
 import system.globalization.CultureInfo;
+import system.IComparable;
+import system.IComparableImplementation;
 
 
 /**
@@ -52,7 +54,7 @@ import system.globalization.CultureInfo;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.Rune" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.Rune</a>
  */
-public class Rune extends ValueType  {
+public class Rune extends ValueType implements system.IComparable {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */
@@ -415,6 +417,15 @@ public class Rune extends ValueType  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIComparable method available in IComparable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public int CompareTo(NetObject obj) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIComparable to obtain the full interface.");
     }
 
 

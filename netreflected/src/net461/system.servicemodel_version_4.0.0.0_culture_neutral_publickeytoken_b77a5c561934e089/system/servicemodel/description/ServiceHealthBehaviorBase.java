@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.servicemodel.ServiceHostBase;
 import system.servicemodel.channels.Message;
+import system.servicemodel.description.ServiceDescription;
 import system.Uri;
 
 
@@ -146,6 +147,24 @@ public class ServiceHealthBehaviorBase extends NetObject  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIServiceBehavior method available in IServiceBehavior to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ApplyDispatchBehavior(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIServiceBehavior method available in IServiceBehavior to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Validate(ServiceDescription serviceDescription, ServiceHostBase serviceHostBase) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceBehavior to obtain the full interface.");
+    }
+
 
     
     // Properties section

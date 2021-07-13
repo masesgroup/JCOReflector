@@ -47,7 +47,7 @@ import system.xml.XmlElement;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Description.PolicyAssertionCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Description.PolicyAssertionCollection</a>
  */
-public class PolicyAssertionCollection extends NetObject  {
+public class PolicyAssertionCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

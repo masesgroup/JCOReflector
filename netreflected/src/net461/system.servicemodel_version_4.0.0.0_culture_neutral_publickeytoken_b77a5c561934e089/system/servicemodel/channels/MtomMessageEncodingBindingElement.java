@@ -43,7 +43,16 @@ import system.servicemodel.channels.MessageVersion;
 import system.text.Encoding;
 import system.servicemodel.channels.BindingElement;
 import system.servicemodel.channels.MessageEncoderFactory;
+import system.servicemodel.description.WsdlExporter;
+import system.servicemodel.description.WsdlContractConversionContext;
+import system.servicemodel.description.WsdlEndpointConversionContext;
+import system.servicemodel.description.MetadataExporter;
+import system.servicemodel.description.PolicyConversionContext;
 import system.xml.XmlDictionaryReaderQuotas;
+import system.servicemodel.description.IWsdlExportExtension;
+import system.servicemodel.description.IWsdlExportExtensionImplementation;
+import system.servicemodel.description.IPolicyExportExtension;
+import system.servicemodel.description.IPolicyExportExtensionImplementation;
 
 
 /**
@@ -52,7 +61,7 @@ import system.xml.XmlDictionaryReaderQuotas;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.MtomMessageEncodingBindingElement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.MtomMessageEncodingBindingElement</a>
  */
-public class MtomMessageEncodingBindingElement extends MessageEncodingBindingElement  {
+public class MtomMessageEncodingBindingElement extends MessageEncodingBindingElement implements system.servicemodel.description.IWsdlExportExtension, system.servicemodel.description.IPolicyExportExtension {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -217,6 +226,33 @@ public class MtomMessageEncodingBindingElement extends MessageEncodingBindingEle
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIWsdlExportExtension method available in IWsdlExportExtension to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWsdlExportExtension to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIWsdlExportExtension method available in IWsdlExportExtension to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ExportEndpoint(WsdlExporter exporter, WsdlEndpointConversionContext context) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWsdlExportExtension to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIPolicyExportExtension method available in IPolicyExportExtension to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ExportPolicy(MetadataExporter exporter, PolicyConversionContext context) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPolicyExportExtension to obtain the full interface.");
     }
 
 

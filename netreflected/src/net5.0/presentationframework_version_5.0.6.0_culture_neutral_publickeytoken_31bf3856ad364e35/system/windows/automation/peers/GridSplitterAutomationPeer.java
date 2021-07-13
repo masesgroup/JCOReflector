@@ -169,6 +169,33 @@ public class GridSplitterAutomationPeer extends ThumbAutomationPeer  {
         }
     }
 
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToITransformProvider method available in ITransformProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Move(double x, double y) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITransformProvider to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToITransformProvider method available in ITransformProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Resize(double width, double height) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITransformProvider to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToITransformProvider method available in ITransformProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Rotate(double degrees) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITransformProvider to obtain the full interface.");
+    }
+
 
     
     // Properties section

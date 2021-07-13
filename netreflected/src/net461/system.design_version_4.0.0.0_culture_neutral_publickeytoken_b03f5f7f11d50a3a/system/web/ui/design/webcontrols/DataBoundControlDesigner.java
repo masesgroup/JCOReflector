@@ -43,6 +43,8 @@ import system.componentmodel.design.DesignerActionListCollection;
 import system.web.ui.design.DesignerDataSourceView;
 import system.web.ui.design.IDataSourceDesigner;
 import system.web.ui.design.IDataSourceDesignerImplementation;
+import system.web.ui.design.IDataSourceProvider;
+import system.web.ui.design.IDataSourceProviderImplementation;
 
 
 /**
@@ -51,7 +53,7 @@ import system.web.ui.design.IDataSourceDesignerImplementation;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.WebControls.DataBoundControlDesigner" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.Design.WebControls.DataBoundControlDesigner</a>
  */
-public class DataBoundControlDesigner extends BaseDataBoundControlDesigner  {
+public class DataBoundControlDesigner extends BaseDataBoundControlDesigner implements system.web.ui.design.IDataSourceProvider {
     /**
      * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -156,6 +158,33 @@ public class DataBoundControlDesigner extends BaseDataBoundControlDesigner  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDataBindingSchemaProvider method available in IDataBindingSchemaProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void RefreshSchema(boolean preferSilent) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataBindingSchemaProvider to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDataSourceProvider method available in IDataSourceProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public IEnumerable GetResolvedSelectedDataSource() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataSourceProvider to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDataSourceProvider method available in IDataSourceProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetObject GetSelectedDataSource() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataSourceProvider to obtain the full interface.");
+    }
+
 
     
     // Properties section

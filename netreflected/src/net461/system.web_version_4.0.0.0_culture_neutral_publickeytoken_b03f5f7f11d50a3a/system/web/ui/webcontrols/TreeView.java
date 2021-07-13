@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.web.ui.webcontrols.HierarchicalDataBoundControl;
 import system.web.ui.webcontrols.TreeNode;
 import system.web.ui.HtmlTextWriter;
+import system.collections.specialized.NameValueCollection;
 import system.web.ui.webcontrols.Style;
 import system.web.ui.webcontrols.TreeNodeBindingCollection;
 import system.web.ui.webcontrols.TreeNodeCollection;
@@ -50,6 +51,12 @@ import system.web.ui.webcontrols.TreeNodeTypes;
 import system.web.ui.webcontrols.TreeViewImageSet;
 import system.EventHandler;
 import system.web.ui.webcontrols.TreeNodeEventHandler;
+import system.web.ui.IPostBackEventHandler;
+import system.web.ui.IPostBackEventHandlerImplementation;
+import system.web.ui.IPostBackDataHandler;
+import system.web.ui.IPostBackDataHandlerImplementation;
+import system.web.ui.ICallbackEventHandler;
+import system.web.ui.ICallbackEventHandlerImplementation;
 
 
 /**
@@ -58,7 +65,7 @@ import system.web.ui.webcontrols.TreeNodeEventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.TreeView" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.TreeView</a>
  */
-public class TreeView extends HierarchicalDataBoundControl  {
+public class TreeView extends HierarchicalDataBoundControl implements system.web.ui.IPostBackEventHandler, system.web.ui.IPostBackDataHandler, system.web.ui.ICallbackEventHandler {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -222,6 +229,51 @@ public class TreeView extends HierarchicalDataBoundControl  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIPostBackEventHandler method available in IPostBackEventHandler to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void RaisePostBackEvent(java.lang.String eventArgument) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackEventHandler to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIPostBackDataHandler method available in IPostBackDataHandler to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean LoadPostData(java.lang.String postDataKey, NameValueCollection postCollection) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackDataHandler to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIPostBackDataHandler method available in IPostBackDataHandler to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void RaisePostDataChangedEvent() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackDataHandler to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICallbackEventHandler method available in ICallbackEventHandler to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public java.lang.String GetCallbackResult() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICallbackEventHandler to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICallbackEventHandler method available in ICallbackEventHandler to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void RaiseCallbackEvent(java.lang.String eventArgument) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICallbackEventHandler to obtain the full interface.");
     }
 
 

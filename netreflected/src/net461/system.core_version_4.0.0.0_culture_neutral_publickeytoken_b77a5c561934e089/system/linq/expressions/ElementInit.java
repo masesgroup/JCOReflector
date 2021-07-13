@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.linq.expressions.ElementInit;
+import system.linq.expressions.Expression;
 import system.reflection.MethodInfo;
 
 
@@ -147,6 +148,15 @@ public class ElementInit extends NetObject  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIArgumentProvider method available in IArgumentProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public Expression GetArgument(int index) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIArgumentProvider to obtain the full interface.");
+    }
+
 
     
     // Properties section

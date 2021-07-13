@@ -50,7 +50,7 @@ import system.net.ICredentialsImplementation;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.CredentialCache" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.CredentialCache</a>
  */
-public class CredentialCache extends NetObject  {
+public class CredentialCache extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

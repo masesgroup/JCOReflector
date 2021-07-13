@@ -47,7 +47,7 @@ import system.windows.documents.ListItem;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.ListItemCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.ListItemCollection</a>
  */
-public class ListItemCollection extends NetObject  {
+public class ListItemCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

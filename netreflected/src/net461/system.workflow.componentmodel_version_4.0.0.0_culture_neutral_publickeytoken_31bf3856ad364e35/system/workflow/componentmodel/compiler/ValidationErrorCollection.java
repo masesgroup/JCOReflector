@@ -48,7 +48,7 @@ import system.workflow.componentmodel.compiler.ValidationError;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Compiler.ValidationErrorCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Compiler.ValidationErrorCollection</a>
  */
-public class ValidationErrorCollection extends NetObject  {
+public class ValidationErrorCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

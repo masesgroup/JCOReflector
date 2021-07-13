@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.activities.ActivityPropertyReference;
 import system.activities.Activity;
 import system.Version;
+import system.activities.debugger.IDebuggableWorkflowTree;
+import system.activities.debugger.IDebuggableWorkflowTreeImplementation;
 
 
 /**
@@ -49,7 +51,7 @@ import system.Version;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.ActivityBuilder" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.ActivityBuilder</a>
  */
-public class ActivityBuilder extends NetObject  {
+public class ActivityBuilder extends NetObject implements system.activities.debugger.IDebuggableWorkflowTree {
     /**
      * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -193,6 +195,15 @@ public class ActivityBuilder extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDebuggableWorkflowTree method available in IDebuggableWorkflowTree to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public Activity GetWorkflowRoot() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDebuggableWorkflowTree to obtain the full interface.");
     }
 
 

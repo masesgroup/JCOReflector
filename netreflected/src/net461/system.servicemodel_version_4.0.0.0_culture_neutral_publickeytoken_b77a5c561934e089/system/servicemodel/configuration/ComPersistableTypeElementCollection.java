@@ -46,7 +46,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Configuration.ComPersistableTypeElementCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Configuration.ComPersistableTypeElementCollection</a>
  */
-public class ComPersistableTypeElementCollection extends NetObject  {
+public class ComPersistableTypeElementCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

@@ -250,6 +250,33 @@ public class TaskItem extends MarshalByRefObject  {
         }
     }
 
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToITaskItem2 method available in ITaskItem2 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public IDictionary CloneCustomMetadataEscaped() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITaskItem2 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToITaskItem2 method available in ITaskItem2 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public java.lang.String GetMetadataValueEscaped(java.lang.String metadataName) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITaskItem2 to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToITaskItem2 method available in ITaskItem2 to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void SetMetadataValueLiteral(java.lang.String metadataName, java.lang.String metadataValue) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITaskItem2 to obtain the full interface.");
+    }
+
 
     
     // Properties section

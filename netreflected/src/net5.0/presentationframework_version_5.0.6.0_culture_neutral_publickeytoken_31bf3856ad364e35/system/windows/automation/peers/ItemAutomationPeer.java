@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.windows.automation.peers.AutomationPeer;
 import system.windows.automation.peers.PatternInterface;
 import system.windows.automation.peers.ItemsControlAutomationPeer;
+import system.windows.automation.provider.IVirtualizedItemProvider;
+import system.windows.automation.provider.IVirtualizedItemProviderImplementation;
 
 
 /**
@@ -49,7 +51,7 @@ import system.windows.automation.peers.ItemsControlAutomationPeer;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Peers.ItemAutomationPeer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Peers.ItemAutomationPeer</a>
  */
-public class ItemAutomationPeer extends AutomationPeer  {
+public class ItemAutomationPeer extends AutomationPeer implements system.windows.automation.provider.IVirtualizedItemProvider {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=5.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -155,6 +157,15 @@ public class ItemAutomationPeer extends AutomationPeer  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIVirtualizedItemProvider method available in IVirtualizedItemProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Realize() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIVirtualizedItemProvider to obtain the full interface.");
     }
 
 

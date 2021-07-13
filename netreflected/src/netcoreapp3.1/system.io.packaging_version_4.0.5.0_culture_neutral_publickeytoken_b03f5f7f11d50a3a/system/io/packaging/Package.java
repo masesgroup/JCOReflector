@@ -51,6 +51,8 @@ import system.io.packaging.PackageRelationship;
 import system.io.packaging.TargetMode;
 import system.io.packaging.PackageRelationshipCollection;
 import system.io.packaging.PackageProperties;
+import system.IDisposable;
+import system.IDisposableImplementation;
 
 
 /**
@@ -59,7 +61,7 @@ import system.io.packaging.PackageProperties;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.Packaging.Package" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.Packaging.Package</a>
  */
-public class Package extends NetObject implements AutoCloseable {
+public class Package extends NetObject implements system.IDisposable, AutoCloseable {
     /**
      * Fully assembly qualified name: System.IO.Packaging, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -390,6 +392,15 @@ public class Package extends NetObject implements AutoCloseable {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDisposable method available in IDisposable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Dispose() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
     }
 
     public void close() throws Exception {

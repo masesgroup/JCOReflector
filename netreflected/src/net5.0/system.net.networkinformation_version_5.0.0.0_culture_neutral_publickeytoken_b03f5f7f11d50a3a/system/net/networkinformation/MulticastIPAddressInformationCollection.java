@@ -47,7 +47,7 @@ import system.net.networkinformation.MulticastIPAddressInformation;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.NetworkInformation.MulticastIPAddressInformationCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.NetworkInformation.MulticastIPAddressInformationCollection</a>
  */
-public class MulticastIPAddressInformationCollection extends NetObject  {
+public class MulticastIPAddressInformationCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Net.NetworkInformation, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

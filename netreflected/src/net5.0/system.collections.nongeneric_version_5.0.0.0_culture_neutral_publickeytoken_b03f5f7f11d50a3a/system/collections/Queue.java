@@ -51,7 +51,7 @@ import system.Array;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Queue" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Queue</a>
  */
-public class Queue extends NetObject  {
+public class Queue extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Collections.NonGeneric, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

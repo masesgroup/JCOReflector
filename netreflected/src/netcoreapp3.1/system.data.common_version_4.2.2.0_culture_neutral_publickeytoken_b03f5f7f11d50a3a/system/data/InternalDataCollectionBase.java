@@ -47,7 +47,7 @@ import system.Array;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.InternalDataCollectionBase" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.InternalDataCollectionBase</a>
  */
-public class InternalDataCollectionBase extends NetObject  {
+public class InternalDataCollectionBase extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

@@ -148,6 +148,15 @@ public class InvocationExpression extends Expression  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIArgumentProvider method available in IArgumentProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public Expression GetArgument(int index) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIArgumentProvider to obtain the full interface.");
+    }
+
 
     
     // Properties section

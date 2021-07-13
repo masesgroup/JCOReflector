@@ -48,7 +48,7 @@ import system.windows.forms.Control;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.TableLayoutControlCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.TableLayoutControlCollection</a>
  */
-public class TableLayoutControlCollection extends NetObject  {
+public class TableLayoutControlCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

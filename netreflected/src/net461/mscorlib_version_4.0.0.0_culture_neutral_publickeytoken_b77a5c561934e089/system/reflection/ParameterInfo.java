@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.runtime.serialization.StreamingContext;
+import system.UInt32;
 import system.reflection.MemberInfo;
 import system.reflection.ParameterAttributes;
 

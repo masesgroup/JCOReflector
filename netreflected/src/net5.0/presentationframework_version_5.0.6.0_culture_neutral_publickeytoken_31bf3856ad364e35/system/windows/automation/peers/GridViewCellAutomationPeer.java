@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.windows.automation.peers.FrameworkElementAutomationPeer;
 import system.windows.automation.peers.PatternInterface;
+import system.windows.automation.provider.IRawElementProviderSimple;
+import system.windows.automation.provider.IRawElementProviderSimpleImplementation;
 
 
 /**
@@ -156,6 +158,24 @@ public class GridViewCellAutomationPeer extends FrameworkElementAutomationPeer  
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToITableItemProvider method available in ITableItemProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public IRawElementProviderSimple[] GetColumnHeaderItems() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITableItemProvider to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToITableItemProvider method available in ITableItemProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public IRawElementProviderSimple[] GetRowHeaderItems() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITableItemProvider to obtain the full interface.");
     }
 
 

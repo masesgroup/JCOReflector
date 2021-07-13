@@ -39,8 +39,12 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.forms.HorizontalAlignment;
+import system.runtime.serialization.SerializationInfo;
+import system.runtime.serialization.StreamingContext;
 import system.windows.forms.ListView;
 import system.windows.forms.ListViewGroupCollapsedState;
+import system.runtime.serialization.ISerializable;
+import system.runtime.serialization.ISerializableImplementation;
 
 
 /**
@@ -49,7 +53,7 @@ import system.windows.forms.ListViewGroupCollapsedState;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ListViewGroup" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ListViewGroup</a>
  */
-public class ListViewGroup extends NetObject  {
+public class ListViewGroup extends NetObject implements system.runtime.serialization.ISerializable {
     /**
      * Fully assembly qualified name: System.Windows.Forms, Version=5.0.7.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -184,6 +188,15 @@ public class ListViewGroup extends NetObject  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToISerializable method available in ISerializable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
+    }
+
 
     
     // Properties section

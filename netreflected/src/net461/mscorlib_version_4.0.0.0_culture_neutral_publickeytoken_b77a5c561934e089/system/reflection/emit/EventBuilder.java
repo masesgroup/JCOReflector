@@ -42,6 +42,7 @@ import system.reflection.emit.EventToken;
 import system.reflection.emit.MethodBuilder;
 import system.reflection.ConstructorInfo;
 import system.reflection.emit.CustomAttributeBuilder;
+import system.UInt32;
 
 
 /**

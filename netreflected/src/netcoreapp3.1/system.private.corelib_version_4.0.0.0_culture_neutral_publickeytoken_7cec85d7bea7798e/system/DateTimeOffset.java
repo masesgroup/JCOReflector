@@ -46,7 +46,15 @@ import system.DateTimeOffset;
 import system.IFormatProvider;
 import system.IFormatProviderImplementation;
 import system.globalization.DateTimeStyles;
+import system.runtime.serialization.SerializationInfo;
+import system.runtime.serialization.StreamingContext;
 import system.DayOfWeek;
+import system.IComparable;
+import system.IComparableImplementation;
+import system.runtime.serialization.ISerializable;
+import system.runtime.serialization.ISerializableImplementation;
+import system.runtime.serialization.IDeserializationCallback;
+import system.runtime.serialization.IDeserializationCallbackImplementation;
 
 
 /**
@@ -55,7 +63,7 @@ import system.DayOfWeek;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.DateTimeOffset" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.DateTimeOffset</a>
  */
-public class DateTimeOffset extends ValueType  {
+public class DateTimeOffset extends ValueType implements system.IComparable, system.runtime.serialization.ISerializable, system.runtime.serialization.IDeserializationCallback {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */
@@ -586,6 +594,33 @@ public class DateTimeOffset extends ValueType  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIComparable method available in IComparable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public int CompareTo(NetObject obj) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIComparable to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToISerializable method available in ISerializable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDeserializationCallback method available in IDeserializationCallback to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void OnDeserialization(NetObject sender) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDeserializationCallback to obtain the full interface.");
     }
 
 

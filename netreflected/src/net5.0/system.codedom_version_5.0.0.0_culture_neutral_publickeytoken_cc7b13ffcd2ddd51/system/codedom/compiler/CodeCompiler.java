@@ -39,6 +39,11 @@ import java.util.ArrayList;
 
 // Import section
 import system.codedom.compiler.CodeGenerator;
+import system.codedom.compiler.CompilerResults;
+import system.codedom.compiler.CompilerParameters;
+import system.codedom.CodeCompileUnit;
+import system.codedom.compiler.ICodeCompiler;
+import system.codedom.compiler.ICodeCompilerImplementation;
 
 
 /**
@@ -47,7 +52,7 @@ import system.codedom.compiler.CodeGenerator;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.Compiler.CodeCompiler" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.CodeDom.Compiler.CodeCompiler</a>
  */
-public class CodeCompiler extends CodeGenerator  {
+public class CodeCompiler extends CodeGenerator implements system.codedom.compiler.ICodeCompiler {
     /**
      * Fully assembly qualified name: System.CodeDom, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -144,6 +149,78 @@ public class CodeCompiler extends CodeGenerator  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICodeCompiler method available in ICodeCompiler to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public CompilerResults CompileAssemblyFromDom(CompilerParameters options, CodeCompileUnit compilationUnit) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeCompiler to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICodeCompiler method available in ICodeCompiler to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public CompilerResults CompileAssemblyFromDomBatch(CompilerParameters options, CodeCompileUnit[] compilationUnits) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeCompiler to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICodeCompiler method available in ICodeCompiler to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public CompilerResults CompileAssemblyFromFile(CompilerParameters options, java.lang.String fileName) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeCompiler to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICodeCompiler method available in ICodeCompiler to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public CompilerResults CompileAssemblyFromFileBatch(CompilerParameters options, java.lang.String[] fileNames) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeCompiler to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToMETHOD_INTERFACE_NAME method available in METHOD_INTERFACE_NAME to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public CompilerResults CompileAssemblyFromFileBatch(CompilerParameters dupParam0, JCORefOut dupParam1) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToMETHOD_INTERFACE_NAME to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICodeCompiler method available in ICodeCompiler to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public CompilerResults CompileAssemblyFromSource(CompilerParameters options, java.lang.String source) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeCompiler to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICodeCompiler method available in ICodeCompiler to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public CompilerResults CompileAssemblyFromSourceBatch(CompilerParameters options, java.lang.String[] sources) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICodeCompiler to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToMETHOD_INTERFACE_NAME method available in METHOD_INTERFACE_NAME to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public CompilerResults CompileAssemblyFromSourceBatch(CompilerParameters dupParam0, JCORefOut dupParam1) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToMETHOD_INTERFACE_NAME to obtain the full interface.");
+    }
+
 
     
     // Properties section

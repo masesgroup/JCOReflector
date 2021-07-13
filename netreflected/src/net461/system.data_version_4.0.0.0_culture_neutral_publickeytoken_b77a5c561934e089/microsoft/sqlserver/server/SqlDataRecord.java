@@ -61,6 +61,8 @@ import system.DateTimeOffset;
 import system.Decimal;
 import system.Guid;
 import system.TimeSpan;
+import system.data.IDataReader;
+import system.data.IDataReaderImplementation;
 
 
 /**
@@ -1023,6 +1025,15 @@ public class SqlDataRecord extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDataRecord method available in IDataRecord to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public IDataReader GetData(int i) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataRecord to obtain the full interface.");
     }
 
 

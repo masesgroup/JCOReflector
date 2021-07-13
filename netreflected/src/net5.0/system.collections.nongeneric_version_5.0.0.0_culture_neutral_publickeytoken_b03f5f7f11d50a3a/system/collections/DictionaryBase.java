@@ -47,7 +47,7 @@ import system.Array;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.DictionaryBase" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Collections.DictionaryBase</a>
  */
-public class DictionaryBase extends NetObject  {
+public class DictionaryBase extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Collections.NonGeneric, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -162,6 +162,33 @@ public class DictionaryBase extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDictionary method available in IDictionary to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean Contains(NetObject key) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDictionary to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDictionary method available in IDictionary to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Add(NetObject key, NetObject value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDictionary to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDictionary method available in IDictionary to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Remove(NetObject key) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDictionary to obtain the full interface.");
     }
 
 

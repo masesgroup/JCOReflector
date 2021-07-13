@@ -47,7 +47,7 @@ import system.activities.LocationReferenceEnvironment;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Hosting.SymbolResolver" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Hosting.SymbolResolver</a>
  */
-public class SymbolResolver extends NetObject  {
+public class SymbolResolver extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

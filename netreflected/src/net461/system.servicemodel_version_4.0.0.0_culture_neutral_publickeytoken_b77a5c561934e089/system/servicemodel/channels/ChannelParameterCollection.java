@@ -48,7 +48,7 @@ import system.servicemodel.channels.IChannelImplementation;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.ChannelParameterCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.ChannelParameterCollection</a>
  */
-public class ChannelParameterCollection extends NetObject  {
+public class ChannelParameterCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

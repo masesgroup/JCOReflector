@@ -47,6 +47,8 @@ import system.componentmodel.IComponent;
 import system.componentmodel.IComponentImplementation;
 import system.drawing.Point;
 import system.drawing.design.ToolboxItem;
+import system.componentmodel.IExtenderProvider;
+import system.componentmodel.IExtenderProviderImplementation;
 
 
 /**
@@ -55,7 +57,7 @@ import system.drawing.design.ToolboxItem;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.ComponentTray" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.ComponentTray</a>
  */
-public class ComponentTray extends ScrollableControl  {
+public class ComponentTray extends ScrollableControl implements system.componentmodel.IExtenderProvider {
     /**
      * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -255,6 +257,15 @@ public class ComponentTray extends ScrollableControl  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIExtenderProvider method available in IExtenderProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean CanExtend(NetObject extendee) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIExtenderProvider to obtain the full interface.");
     }
 
 

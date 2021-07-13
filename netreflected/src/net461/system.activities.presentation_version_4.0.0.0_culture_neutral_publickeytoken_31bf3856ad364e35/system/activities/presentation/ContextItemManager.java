@@ -48,7 +48,7 @@ import system.activities.presentation.SubscribeContextCallback;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.ContextItemManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.ContextItemManager</a>
  */
-public class ContextItemManager extends NetObject  {
+public class ContextItemManager extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

@@ -165,6 +165,15 @@ public class InvokeWorkflowActivity extends Activity  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToITypeFilterProvider method available in ITypeFilterProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean CanFilterType(NetType type, boolean throwOnError) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITypeFilterProvider to obtain the full interface.");
+    }
+
 
     
     // Properties section

@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.web.ui.webcontrols.webparts.WebPartTransformer;
 import system.web.ui.Control;
+import system.web.ui.webcontrols.webparts.FieldCallback;
 
 
 /**
@@ -173,6 +174,15 @@ public class RowToFieldTransformer extends WebPartTransformer  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIWebPartField method available in IWebPartField to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void GetFieldValue(FieldCallback callback) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWebPartField to obtain the full interface.");
     }
 
 

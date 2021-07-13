@@ -46,7 +46,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mail.LinkedResourceCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mail.LinkedResourceCollection</a>
  */
-public class LinkedResourceCollection extends NetObject implements AutoCloseable {
+public class LinkedResourceCollection extends NetObjectEnumerable implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Net.Mail, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

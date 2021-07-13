@@ -48,7 +48,7 @@ import system.activities.presentation.SubscribeServiceCallback;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.ServiceManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.Presentation.ServiceManager</a>
  */
-public class ServiceManager extends NetObject  {
+public class ServiceManager extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Activities.Presentation, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

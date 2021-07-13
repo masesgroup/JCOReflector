@@ -39,6 +39,12 @@ import java.util.ArrayList;
 
 // Import section
 import system.Uri;
+import system.servicemodel.description.ServiceEndpoint;
+import system.servicemodel.channels.BindingParameterCollection;
+import system.servicemodel.dispatcher.ClientRuntime;
+import system.servicemodel.dispatcher.EndpointDispatcher;
+import system.servicemodel.description.IEndpointBehavior;
+import system.servicemodel.description.IEndpointBehaviorImplementation;
 
 
 /**
@@ -47,7 +53,7 @@ import system.Uri;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Description.ClientViaBehavior" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Description.ClientViaBehavior</a>
  */
-public class ClientViaBehavior extends NetObject  {
+public class ClientViaBehavior extends NetObject implements system.servicemodel.description.IEndpointBehavior {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -156,6 +162,42 @@ public class ClientViaBehavior extends NetObject  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIEndpointBehavior method available in IEndpointBehavior to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void AddBindingParameters(ServiceEndpoint endpoint, BindingParameterCollection bindingParameters) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEndpointBehavior to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIEndpointBehavior method available in IEndpointBehavior to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ApplyClientBehavior(ServiceEndpoint endpoint, ClientRuntime clientRuntime) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEndpointBehavior to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIEndpointBehavior method available in IEndpointBehavior to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ApplyDispatchBehavior(ServiceEndpoint endpoint, EndpointDispatcher endpointDispatcher) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEndpointBehavior to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIEndpointBehavior method available in IEndpointBehavior to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Validate(ServiceEndpoint endpoint) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEndpointBehavior to obtain the full interface.");
+    }
+
 
     
     // Properties section

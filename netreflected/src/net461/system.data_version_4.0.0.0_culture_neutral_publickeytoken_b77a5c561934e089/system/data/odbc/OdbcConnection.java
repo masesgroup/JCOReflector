@@ -48,6 +48,8 @@ import system.enterpriseservices.ITransactionImplementation;
 import system.transactions.Transaction;
 import system.data.ConnectionState;
 import system.data.odbc.OdbcInfoMessageEventHandler;
+import system.ICloneable;
+import system.ICloneableImplementation;
 
 
 /**
@@ -56,7 +58,7 @@ import system.data.odbc.OdbcInfoMessageEventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Odbc.OdbcConnection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Odbc.OdbcConnection</a>
  */
-public class OdbcConnection extends DbConnection  {
+public class OdbcConnection extends DbConnection implements system.ICloneable {
     /**
      * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -306,6 +308,15 @@ public class OdbcConnection extends DbConnection  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICloneable method available in ICloneable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetObject Clone() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICloneable to obtain the full interface.");
     }
 
 

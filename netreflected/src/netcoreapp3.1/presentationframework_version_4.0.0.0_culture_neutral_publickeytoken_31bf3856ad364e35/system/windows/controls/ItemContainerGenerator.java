@@ -41,9 +41,16 @@ import java.util.ArrayList;
 import system.windows.DependencyObject;
 import system.IDisposable;
 import system.IDisposableImplementation;
+import system.windows.controls.primitives.GeneratorPosition;
+import system.windows.controls.primitives.GeneratorDirection;
+import system.windows.controls.ItemContainerGenerator;
+import system.windows.controls.Panel;
+import system.EventArgs;
 import system.windows.controls.primitives.GeneratorStatus;
 import system.EventHandler;
 import system.windows.controls.primitives.ItemsChangedEventHandler;
+import system.windows.IWeakEventListener;
+import system.windows.IWeakEventListenerImplementation;
 
 
 /**
@@ -52,7 +59,7 @@ import system.windows.controls.primitives.ItemsChangedEventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.ItemContainerGenerator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.ItemContainerGenerator</a>
  */
-public class ItemContainerGenerator extends NetObject  {
+public class ItemContainerGenerator extends NetObject implements system.windows.IWeakEventListener {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -213,6 +220,105 @@ public class ItemContainerGenerator extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIRecyclingItemContainerGenerator method available in IRecyclingItemContainerGenerator to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Recycle(GeneratorPosition position, int count) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRecyclingItemContainerGenerator to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIItemContainerGenerator method available in IItemContainerGenerator to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public int IndexFromGeneratorPosition(GeneratorPosition position) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerGenerator to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIItemContainerGenerator method available in IItemContainerGenerator to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public IDisposable StartAt(GeneratorPosition position, GeneratorDirection direction) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerGenerator to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIItemContainerGenerator method available in IItemContainerGenerator to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public IDisposable StartAt(GeneratorPosition position, GeneratorDirection direction, boolean allowStartAtRealizedItem) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerGenerator to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIItemContainerGenerator method available in IItemContainerGenerator to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public ItemContainerGenerator GetItemContainerGeneratorForPanel(Panel panel) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerGenerator to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIItemContainerGenerator method available in IItemContainerGenerator to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public GeneratorPosition GeneratorPositionFromIndex(int itemIndex) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerGenerator to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIItemContainerGenerator method available in IItemContainerGenerator to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public DependencyObject GenerateNext() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerGenerator to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIItemContainerGenerator method available in IItemContainerGenerator to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void PrepareItemContainer(DependencyObject container) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerGenerator to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIItemContainerGenerator method available in IItemContainerGenerator to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Remove(GeneratorPosition position, int count) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerGenerator to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIItemContainerGenerator method available in IItemContainerGenerator to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void RemoveAll() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerGenerator to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIWeakEventListener method available in IWeakEventListener to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean ReceiveWeakEvent(NetType managerType, NetObject sender, EventArgs e) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWeakEventListener to obtain the full interface.");
     }
 
 

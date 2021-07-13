@@ -38,6 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.web.services.description.ServiceDescriptionCollection;
+import system.xml.schema.XmlSchemaSet;
+import system.servicemodel.description.WsdlImporter;
+import system.servicemodel.description.WsdlContractConversionContext;
+import system.servicemodel.description.WsdlEndpointConversionContext;
 
 
 /**
@@ -151,6 +156,24 @@ public class StandardBindingImporter extends NetObject  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIWsdlImportExtension method available in IWsdlImportExtension to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ImportContract(WsdlImporter importer, WsdlContractConversionContext context) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWsdlImportExtension to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIWsdlImportExtension method available in IWsdlImportExtension to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ImportEndpoint(WsdlImporter importer, WsdlEndpointConversionContext context) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWsdlImportExtension to obtain the full interface.");
+    }
+
 
     
     // Properties section

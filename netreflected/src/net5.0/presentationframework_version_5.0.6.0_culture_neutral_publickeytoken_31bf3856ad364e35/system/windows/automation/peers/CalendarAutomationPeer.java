@@ -41,6 +41,10 @@ import java.util.ArrayList;
 import system.windows.automation.peers.FrameworkElementAutomationPeer;
 import system.windows.controls.Calendar;
 import system.windows.automation.peers.PatternInterface;
+import system.windows.automation.provider.IRawElementProviderSimple;
+import system.windows.automation.provider.IRawElementProviderSimpleImplementation;
+import system.windows.automation.provider.IItemContainerProvider;
+import system.windows.automation.provider.IItemContainerProviderImplementation;
 
 
 /**
@@ -49,7 +53,7 @@ import system.windows.automation.peers.PatternInterface;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Peers.CalendarAutomationPeer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Peers.CalendarAutomationPeer</a>
  */
-public class CalendarAutomationPeer extends FrameworkElementAutomationPeer  {
+public class CalendarAutomationPeer extends FrameworkElementAutomationPeer implements system.windows.automation.provider.IItemContainerProvider {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=5.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -167,6 +171,78 @@ public class CalendarAutomationPeer extends FrameworkElementAutomationPeer  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIGridProvider method available in IGridProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public IRawElementProviderSimple GetItem(int row, int column) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIGridProvider to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIMultipleViewProvider method available in IMultipleViewProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public int[] GetSupportedViews() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIMultipleViewProvider to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIMultipleViewProvider method available in IMultipleViewProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public java.lang.String GetViewName(int viewId) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIMultipleViewProvider to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIMultipleViewProvider method available in IMultipleViewProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void SetCurrentView(int viewId) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIMultipleViewProvider to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToISelectionProvider method available in ISelectionProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public IRawElementProviderSimple[] GetSelection() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISelectionProvider to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToITableProvider method available in ITableProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public IRawElementProviderSimple[] GetColumnHeaders() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITableProvider to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToITableProvider method available in ITableProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public IRawElementProviderSimple[] GetRowHeaders() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITableProvider to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIItemContainerProvider method available in IItemContainerProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public IRawElementProviderSimple FindItemByProperty(IRawElementProviderSimple startAfter, int propertyId, NetObject value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerProvider to obtain the full interface.");
     }
 
 

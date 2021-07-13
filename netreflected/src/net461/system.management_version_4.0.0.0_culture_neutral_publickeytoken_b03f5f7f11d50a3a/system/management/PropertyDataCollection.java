@@ -49,7 +49,7 @@ import system.management.PropertyData;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Management.PropertyDataCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Management.PropertyDataCollection</a>
  */
-public class PropertyDataCollection extends NetObject  {
+public class PropertyDataCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

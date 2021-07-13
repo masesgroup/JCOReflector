@@ -42,11 +42,17 @@ import system.IServiceProvider;
 import system.IServiceProviderImplementation;
 import system.IDisposable;
 import system.IDisposableImplementation;
+import system.collections.ICollection;
+import system.collections.ICollectionImplementation;
+import system.componentmodel.design.serialization.IDesignerSerializationProvider;
+import system.componentmodel.design.serialization.IDesignerSerializationProviderImplementation;
 import system.collections.IList;
 import system.collections.IListImplementation;
 import system.componentmodel.IContainer;
 import system.componentmodel.IContainerImplementation;
 import system.EventHandler;
+import system.IServiceProvider;
+import system.IServiceProviderImplementation;
 
 
 /**
@@ -55,7 +61,7 @@ import system.EventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.DesignerSerializationManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.DesignerSerializationManager</a>
  */
-public class DesignerSerializationManager extends NetObject  {
+public class DesignerSerializationManager extends NetObject implements system.IServiceProvider {
     /**
      * Fully assembly qualified name: System.Windows.Forms.Design, Version=5.0.7.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -201,6 +207,87 @@ public class DesignerSerializationManager extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDesignerSerializationManager method available in IDesignerSerializationManager to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetObject CreateInstance(NetType type, ICollection arguments, java.lang.String name, boolean addToContainer) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationManager to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDesignerSerializationManager method available in IDesignerSerializationManager to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetObject GetInstance(java.lang.String name) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationManager to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDesignerSerializationManager method available in IDesignerSerializationManager to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public java.lang.String GetName(NetObject value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationManager to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDesignerSerializationManager method available in IDesignerSerializationManager to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetType GetType(java.lang.String typeName) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationManager to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDesignerSerializationManager method available in IDesignerSerializationManager to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void AddSerializationProvider(IDesignerSerializationProvider provider) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationManager to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDesignerSerializationManager method available in IDesignerSerializationManager to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void RemoveSerializationProvider(IDesignerSerializationProvider provider) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationManager to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDesignerSerializationManager method available in IDesignerSerializationManager to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ReportError(NetObject errorInformation) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationManager to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDesignerSerializationManager method available in IDesignerSerializationManager to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void SetName(NetObject instance, java.lang.String name) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationManager to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIServiceProvider method available in IServiceProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetObject GetService(NetType serviceType) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceProvider to obtain the full interface.");
     }
 
 

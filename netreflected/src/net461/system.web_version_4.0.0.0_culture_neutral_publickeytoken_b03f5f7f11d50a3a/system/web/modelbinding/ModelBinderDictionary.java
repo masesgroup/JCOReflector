@@ -48,7 +48,7 @@ import system.web.modelbinding.IModelBinderImplementation;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.ModelBinding.ModelBinderDictionary" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.ModelBinding.ModelBinderDictionary</a>
  */
-public class ModelBinderDictionary extends NetObject  {
+public class ModelBinderDictionary extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

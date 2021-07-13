@@ -42,6 +42,11 @@ import system.windows.PresentationSource;
 import system.windows.interop.HwndSourceParameters;
 import system.runtime.interopservices.HandleRef;
 import system.windows.interop.HwndSource;
+import system.windows.input.TraversalRequest;
+import system.windows.interop.IKeyboardInputSite;
+import system.windows.interop.IKeyboardInputSiteImplementation;
+import system.windows.interop.IKeyboardInputSink;
+import system.windows.interop.IKeyboardInputSinkImplementation;
 import system.windows.input.RestoreFocusMode;
 import system.windows.interop.HwndTarget;
 import system.windows.media.Visual;
@@ -185,6 +190,33 @@ public class HwndSource extends PresentationSource implements AutoCloseable {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIKeyboardInputSink method available in IKeyboardInputSink to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean HasFocusWithin() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIKeyboardInputSink to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIKeyboardInputSink method available in IKeyboardInputSink to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean TabInto(TraversalRequest request) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIKeyboardInputSink to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIKeyboardInputSink method available in IKeyboardInputSink to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public IKeyboardInputSite RegisterKeyboardInputSink(IKeyboardInputSink sink) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIKeyboardInputSink to obtain the full interface.");
     }
 
     public void close() throws Exception {

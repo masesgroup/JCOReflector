@@ -40,7 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.security.cryptography.CryptographicAttributeObject;
 import system.security.cryptography.AsnEncodedData;
-import system.security.cryptography.CryptographicAttributeObjectEnumerator;
+import system.Array;
 
 
 /**
@@ -49,7 +49,7 @@ import system.security.cryptography.CryptographicAttributeObjectEnumerator;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.CryptographicAttributeObjectCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.CryptographicAttributeObjectCollection</a>
  */
-public class CryptographicAttributeObjectCollection extends NetObject implements Iterable<CryptographicAttributeObject> {
+public class CryptographicAttributeObjectCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -184,15 +184,6 @@ public class CryptographicAttributeObjectCollection extends NetObject implements
         }
     }
 
-    public CryptographicAttributeObjectEnumerator GetEnumerator() throws Throwable {
-        return new CryptographicAttributeObjectEnumerator(classInstance);
-    }
-
-    @SuppressWarnings("unchecked")
-    public java.util.Iterator<CryptographicAttributeObject> iterator() {
-        return new CryptographicAttributeObjectEnumerator(classInstance);
-    }
-
     public void CopyTo(CryptographicAttributeObject[] array, int index) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -211,6 +202,15 @@ public class CryptographicAttributeObjectCollection extends NetObject implements
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICollection method available in ICollection to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void CopyTo(Array array, int index) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection to obtain the full interface.");
     }
 
 

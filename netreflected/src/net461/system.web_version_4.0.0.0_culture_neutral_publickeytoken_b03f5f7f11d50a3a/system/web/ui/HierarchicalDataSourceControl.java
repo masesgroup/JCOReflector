@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.web.ui.Control;
 import system.web.ui.Page;
 import system.web.ui.HtmlTextWriter;
+import system.web.ui.HierarchicalDataSourceView;
 import system.web.ui.ClientIDMode;
 import system.web.ui.ControlCollection;
 
@@ -197,6 +198,15 @@ public class HierarchicalDataSourceControl extends Control  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIHierarchicalDataSource method available in IHierarchicalDataSource to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public HierarchicalDataSourceView GetHierarchicalView(java.lang.String viewPath) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIHierarchicalDataSource to obtain the full interface.");
     }
 
 

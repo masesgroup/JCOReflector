@@ -42,6 +42,10 @@ import system.web.ui.webcontrols.Panel;
 import system.web.ui.ControlCollection;
 import system.web.ui.webcontrols.webparts.PartChromeState;
 import system.web.ui.webcontrols.webparts.PartChromeType;
+import system.web.ui.INamingContainer;
+import system.web.ui.INamingContainerImplementation;
+import system.web.ui.webcontrols.ICompositeControlDesignerAccessor;
+import system.web.ui.webcontrols.ICompositeControlDesignerAccessorImplementation;
 
 
 /**
@@ -50,7 +54,7 @@ import system.web.ui.webcontrols.webparts.PartChromeType;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.WebParts.Part" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.WebParts.Part</a>
  */
-public class Part extends Panel  {
+public class Part extends Panel implements system.web.ui.INamingContainer, system.web.ui.webcontrols.ICompositeControlDesignerAccessor {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -155,6 +159,15 @@ public class Part extends Panel  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICompositeControlDesignerAccessor method available in ICompositeControlDesignerAccessor to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void RecreateChildControls() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICompositeControlDesignerAccessor to obtain the full interface.");
     }
 
 

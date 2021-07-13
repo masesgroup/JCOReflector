@@ -43,7 +43,6 @@ import system.security.cryptography.x509certificates.X509Certificate2;
 import system.security.cryptography.x509certificates.X509Certificate2Collection;
 import system.security.cryptography.x509certificates.X509ContentType;
 import system.security.cryptography.x509certificates.X509FindType;
-import system.security.cryptography.x509certificates.X509Certificate2Enumerator;
 import system.security.cryptography.x509certificates.X509KeyStorageFlags;
 
 
@@ -53,7 +52,7 @@ import system.security.cryptography.x509certificates.X509KeyStorageFlags;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.X509Certificates.X509Certificate2Collection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.X509Certificates.X509Certificate2Collection</a>
  */
-public class X509Certificate2Collection extends X509CertificateCollection implements Iterable<X509Certificate2> {
+public class X509Certificate2Collection extends X509CertificateCollection  {
     /**
      * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -255,15 +254,6 @@ public class X509Certificate2Collection extends X509CertificateCollection implem
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
-    }
-
-    public X509Certificate2Enumerator GetEnumerator() throws Throwable {
-        return new X509Certificate2Enumerator(classInstance);
-    }
-
-    @SuppressWarnings("unchecked")
-    public java.util.Iterator<X509Certificate2> iterator() {
-        return new X509Certificate2Enumerator(classInstance);
     }
 
     public void AddRange(X509Certificate2[] certificates) throws Throwable, system.ArgumentNullException {

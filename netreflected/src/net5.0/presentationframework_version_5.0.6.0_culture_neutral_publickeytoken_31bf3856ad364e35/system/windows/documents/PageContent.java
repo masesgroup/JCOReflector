@@ -44,6 +44,8 @@ import system.windows.documents.FixedPage;
 import system.Uri;
 import system.windows.documents.LinkTargetCollection;
 import system.windows.documents.GetPageRootCompletedEventHandler;
+import system.windows.markup.IAddChild;
+import system.windows.markup.IAddChildImplementation;
 
 
 /**
@@ -52,7 +54,7 @@ import system.windows.documents.GetPageRootCompletedEventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.PageContent" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.PageContent</a>
  */
-public class PageContent extends FrameworkElement  {
+public class PageContent extends FrameworkElement implements system.windows.markup.IAddChild {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=5.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -196,6 +198,24 @@ public class PageContent extends FrameworkElement  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIAddChild method available in IAddChild to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void AddChild(NetObject value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIAddChild method available in IAddChild to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void AddText(java.lang.String text) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
 
 

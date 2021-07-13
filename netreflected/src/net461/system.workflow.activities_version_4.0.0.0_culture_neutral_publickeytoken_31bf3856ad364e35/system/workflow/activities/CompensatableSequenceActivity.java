@@ -39,6 +39,10 @@ import java.util.ArrayList;
 
 // Import section
 import system.workflow.activities.SequenceActivity;
+import system.workflow.componentmodel.ActivityExecutionStatus;
+import system.workflow.componentmodel.ActivityExecutionContext;
+import system.workflow.componentmodel.ICompensatableActivity;
+import system.workflow.componentmodel.ICompensatableActivityImplementation;
 
 
 /**
@@ -47,7 +51,7 @@ import system.workflow.activities.SequenceActivity;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.CompensatableSequenceActivity" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.CompensatableSequenceActivity</a>
  */
-public class CompensatableSequenceActivity extends SequenceActivity  {
+public class CompensatableSequenceActivity extends SequenceActivity implements system.workflow.componentmodel.ICompensatableActivity {
     /**
      * Fully assembly qualified name: System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -162,6 +166,15 @@ public class CompensatableSequenceActivity extends SequenceActivity  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICompensatableActivity method available in ICompensatableActivity to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public ActivityExecutionStatus Compensate(ActivityExecutionContext executionContext) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICompensatableActivity to obtain the full interface.");
+    }
+
 
     
     // Properties section

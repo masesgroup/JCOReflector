@@ -42,8 +42,8 @@ import system.xml.XmlNameTable;
 import system.xml.schema.XmlSchema;
 import system.xml.XmlReader;
 import system.xml.XmlResolver;
-import system.xml.schema.XmlSchemaCollectionEnumerator;
 import system.xml.schema.XmlSchemaCollection;
+import system.Array;
 import system.xml.schema.ValidationEventHandler;
 
 
@@ -53,7 +53,7 @@ import system.xml.schema.ValidationEventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.XmlSchemaCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Schema.XmlSchemaCollection</a>
  */
-public class XmlSchemaCollection extends NetObject implements Iterable<XmlSchema> {
+public class XmlSchemaCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -243,15 +243,6 @@ public class XmlSchemaCollection extends NetObject implements Iterable<XmlSchema
         }
     }
 
-    public XmlSchemaCollectionEnumerator GetEnumerator() throws Throwable {
-        return new XmlSchemaCollectionEnumerator(classInstance);
-    }
-
-    @SuppressWarnings("unchecked")
-    public java.util.Iterator<XmlSchema> iterator() {
-        return new XmlSchemaCollectionEnumerator(classInstance);
-    }
-
     public void Add(XmlSchemaCollection schema) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -270,6 +261,15 @@ public class XmlSchemaCollection extends NetObject implements Iterable<XmlSchema
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICollection method available in ICollection to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void CopyTo(Array array, int index) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection to obtain the full interface.");
     }
 
 

@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.xml.linq.XNode;
+import system.collections.IComparer;
+import system.collections.IComparerImplementation;
 
 
 /**
@@ -47,7 +49,7 @@ import system.xml.linq.XNode;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Linq.XNodeDocumentOrderComparer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.Linq.XNodeDocumentOrderComparer</a>
  */
-public class XNodeDocumentOrderComparer extends NetObject  {
+public class XNodeDocumentOrderComparer extends NetObject implements system.collections.IComparer {
     /**
      * Fully assembly qualified name: System.Private.Xml.Linq, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -160,6 +162,15 @@ public class XNodeDocumentOrderComparer extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIComparer method available in IComparer to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public int Compare(NetObject x, NetObject y) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIComparer to obtain the full interface.");
     }
 
 

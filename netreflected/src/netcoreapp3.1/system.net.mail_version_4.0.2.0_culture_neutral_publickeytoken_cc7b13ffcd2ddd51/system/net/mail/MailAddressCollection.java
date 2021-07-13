@@ -46,7 +46,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mail.MailAddressCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mail.MailAddressCollection</a>
  */
-public class MailAddressCollection extends NetObject  {
+public class MailAddressCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Net.Mail, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

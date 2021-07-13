@@ -49,7 +49,7 @@ import system.EventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.DataBindingCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.DataBindingCollection</a>
  */
-public class DataBindingCollection extends NetObject  {
+public class DataBindingCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

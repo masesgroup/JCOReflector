@@ -42,7 +42,7 @@ import system.security.policy.ApplicationTrust;
 import system.security.policy.ApplicationTrustCollection;
 import system.ApplicationIdentity;
 import system.security.policy.ApplicationVersionMatch;
-import system.security.policy.ApplicationTrustEnumerator;
+import system.Array;
 
 
 /**
@@ -51,7 +51,7 @@ import system.security.policy.ApplicationTrustEnumerator;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.ApplicationTrustCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.ApplicationTrustCollection</a>
  */
-public class ApplicationTrustCollection extends NetObject implements Iterable<ApplicationTrust> {
+public class ApplicationTrustCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -171,15 +171,6 @@ public class ApplicationTrustCollection extends NetObject implements Iterable<Ap
         }
     }
 
-    public ApplicationTrustEnumerator GetEnumerator() throws Throwable {
-        return new ApplicationTrustEnumerator(classInstance);
-    }
-
-    @SuppressWarnings("unchecked")
-    public java.util.Iterator<ApplicationTrust> iterator() {
-        return new ApplicationTrustEnumerator(classInstance);
-    }
-
     public void AddRange(ApplicationTrust[] trusts) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NullReferenceException, system.security.SecurityException, system.runtime.serialization.SerializationException, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -258,6 +249,15 @@ public class ApplicationTrustCollection extends NetObject implements Iterable<Ap
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICollection method available in ICollection to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void CopyTo(Array array, int index) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection to obtain the full interface.");
     }
 
 

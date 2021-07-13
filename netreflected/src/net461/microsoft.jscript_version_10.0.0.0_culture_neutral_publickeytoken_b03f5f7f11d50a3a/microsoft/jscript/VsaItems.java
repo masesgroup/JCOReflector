@@ -51,7 +51,7 @@ import microsoft.jscript.vsa.JSVsaItemFlag;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.VsaItems" target="_top">https://docs.microsoft.com/en-us/dotnet/api/Microsoft.JScript.VsaItems</a>
  */
-public class VsaItems extends NetObject  {
+public class VsaItems extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: Microsoft.JScript, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

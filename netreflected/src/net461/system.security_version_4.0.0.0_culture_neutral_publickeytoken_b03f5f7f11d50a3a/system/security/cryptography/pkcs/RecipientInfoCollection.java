@@ -38,7 +38,6 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.security.cryptography.pkcs.RecipientInfoEnumerator;
 import system.Array;
 import system.security.cryptography.pkcs.RecipientInfo;
 
@@ -49,7 +48,7 @@ import system.security.cryptography.pkcs.RecipientInfo;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.RecipientInfoCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.RecipientInfoCollection</a>
  */
-public class RecipientInfoCollection extends NetObject implements Iterable<RecipientInfo> {
+public class RecipientInfoCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -148,15 +147,6 @@ public class RecipientInfoCollection extends NetObject implements Iterable<Recip
     
     // Methods section
     
-    public RecipientInfoEnumerator GetEnumerator() throws Throwable {
-        return new RecipientInfoEnumerator(classInstance);
-    }
-
-    @SuppressWarnings("unchecked")
-    public java.util.Iterator<RecipientInfo> iterator() {
-        return new RecipientInfoEnumerator(classInstance);
-    }
-
     public void CopyTo(Array array, int index) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

@@ -40,7 +40,13 @@ import java.util.ArrayList;
 // Import section
 import system.workflow.activities.WorkflowRole;
 import system.workflow.activities.ActiveDirectoryRole;
+import system.runtime.serialization.SerializationInfo;
+import system.runtime.serialization.StreamingContext;
 import system.directoryservices.DirectoryEntry;
+import system.runtime.serialization.ISerializable;
+import system.runtime.serialization.ISerializableImplementation;
+import system.IDisposable;
+import system.IDisposableImplementation;
 
 
 /**
@@ -49,7 +55,7 @@ import system.directoryservices.DirectoryEntry;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.ActiveDirectoryRole" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.ActiveDirectoryRole</a>
  */
-public class ActiveDirectoryRole extends WorkflowRole implements AutoCloseable {
+public class ActiveDirectoryRole extends WorkflowRole implements system.runtime.serialization.ISerializable, system.IDisposable, AutoCloseable {
     /**
      * Fully assembly qualified name: System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -211,6 +217,24 @@ public class ActiveDirectoryRole extends WorkflowRole implements AutoCloseable {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToISerializable method available in ISerializable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDisposable method available in IDisposable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Dispose() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
     }
 
     public void close() throws Exception {

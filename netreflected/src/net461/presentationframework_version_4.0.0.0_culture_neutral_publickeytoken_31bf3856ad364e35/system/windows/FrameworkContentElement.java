@@ -60,6 +60,8 @@ import system.windows.controls.ContextMenuEventHandler;
 import system.windows.controls.ToolTipEventHandler;
 import system.windows.DependencyPropertyChangedEventHandler;
 import system.windows.RoutedEventHandler;
+import system.windows.markup.IQueryAmbient;
+import system.windows.markup.IQueryAmbientImplementation;
 
 
 /**
@@ -68,7 +70,7 @@ import system.windows.RoutedEventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.FrameworkContentElement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.FrameworkContentElement</a>
  */
-public class FrameworkContentElement extends ContentElement  {
+public class FrameworkContentElement extends ContentElement implements system.windows.markup.IQueryAmbient {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -378,6 +380,15 @@ public class FrameworkContentElement extends ContentElement  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIQueryAmbient method available in IQueryAmbient to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean IsAmbientPropertyAvailable(java.lang.String propertyName) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIQueryAmbient to obtain the full interface.");
     }
 
 

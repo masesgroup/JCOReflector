@@ -42,6 +42,11 @@ import system.servicemodel.EndpointAddress;
 import system.servicemodel.EndpointAddress10;
 import system.xml.XmlQualifiedName;
 import system.xml.schema.XmlSchemaSet;
+import system.xml.schema.XmlSchema;
+import system.xml.XmlReader;
+import system.xml.XmlWriter;
+import system.xml.serialization.IXmlSerializable;
+import system.xml.serialization.IXmlSerializableImplementation;
 
 
 /**
@@ -50,7 +55,7 @@ import system.xml.schema.XmlSchemaSet;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.EndpointAddress10" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.EndpointAddress10</a>
  */
-public class EndpointAddress10 extends NetObject  {
+public class EndpointAddress10 extends NetObject implements system.xml.serialization.IXmlSerializable {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -180,6 +185,33 @@ public class EndpointAddress10 extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIXmlSerializable method available in IXmlSerializable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public XmlSchema GetSchema() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIXmlSerializable method available in IXmlSerializable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ReadXml(XmlReader reader) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIXmlSerializable method available in IXmlSerializable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void WriteXml(XmlWriter writer) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
     }
 
 

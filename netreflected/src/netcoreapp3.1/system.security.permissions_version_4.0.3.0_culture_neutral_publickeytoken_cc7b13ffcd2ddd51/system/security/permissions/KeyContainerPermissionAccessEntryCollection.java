@@ -39,7 +39,6 @@ import java.util.ArrayList;
 
 // Import section
 import system.security.permissions.KeyContainerPermissionAccessEntry;
-import system.security.permissions.KeyContainerPermissionAccessEntryEnumerator;
 import system.Array;
 
 
@@ -49,7 +48,7 @@ import system.Array;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.KeyContainerPermissionAccessEntryCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Permissions.KeyContainerPermissionAccessEntryCollection</a>
  */
-public class KeyContainerPermissionAccessEntryCollection extends NetObject implements Iterable<KeyContainerPermissionAccessEntry> {
+public class KeyContainerPermissionAccessEntryCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -172,15 +171,6 @@ public class KeyContainerPermissionAccessEntryCollection extends NetObject imple
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
-    }
-
-    public KeyContainerPermissionAccessEntryEnumerator GetEnumerator() throws Throwable {
-        return new KeyContainerPermissionAccessEntryEnumerator(classInstance);
-    }
-
-    @SuppressWarnings("unchecked")
-    public java.util.Iterator<KeyContainerPermissionAccessEntry> iterator() {
-        return new KeyContainerPermissionAccessEntryEnumerator(classInstance);
     }
 
     public void Clear() throws Throwable {

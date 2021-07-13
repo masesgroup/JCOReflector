@@ -45,9 +45,13 @@ import system.drawing.Rectangle;
 import system.windows.forms.ItemBoundsPortion;
 import system.windows.forms.ListViewItem;
 import system.windows.forms.SearchDirectionHint;
+import system.runtime.serialization.SerializationInfo;
+import system.runtime.serialization.StreamingContext;
 import system.drawing.Point;
 import system.windows.forms.ImageList;
 import system.windows.forms.ListView;
+import system.runtime.serialization.ISerializable;
+import system.runtime.serialization.ISerializableImplementation;
 
 
 /**
@@ -56,7 +60,7 @@ import system.windows.forms.ListView;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ListViewItem" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.ListViewItem</a>
  */
-public class ListViewItem extends NetObject  {
+public class ListViewItem extends NetObject implements system.runtime.serialization.ISerializable {
     /**
      * Fully assembly qualified name: System.Windows.Forms, Version=5.0.7.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -392,6 +396,15 @@ public class ListViewItem extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToISerializable method available in ISerializable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
     }
 
 

@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.reflection.LocalVariableInfo;
+import system.UInt32;
 
 
 /**

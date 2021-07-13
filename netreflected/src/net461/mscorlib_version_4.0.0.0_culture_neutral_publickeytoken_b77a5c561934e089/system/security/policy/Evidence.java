@@ -49,7 +49,7 @@ import system.Array;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.Evidence" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Policy.Evidence</a>
  */
-public class Evidence extends NetObject  {
+public class Evidence extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

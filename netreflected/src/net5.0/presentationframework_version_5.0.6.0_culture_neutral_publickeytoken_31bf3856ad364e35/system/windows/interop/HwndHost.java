@@ -39,6 +39,11 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.FrameworkElement;
+import system.windows.input.TraversalRequest;
+import system.windows.interop.IKeyboardInputSite;
+import system.windows.interop.IKeyboardInputSiteImplementation;
+import system.windows.interop.IKeyboardInputSink;
+import system.windows.interop.IKeyboardInputSinkImplementation;
 import system.windows.DpiChangedEventHandler;
 
 
@@ -163,6 +168,33 @@ public class HwndHost extends FrameworkElement implements AutoCloseable {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIKeyboardInputSink method available in IKeyboardInputSink to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean HasFocusWithin() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIKeyboardInputSink to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIKeyboardInputSink method available in IKeyboardInputSink to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean TabInto(TraversalRequest request) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIKeyboardInputSink to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIKeyboardInputSink method available in IKeyboardInputSink to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public IKeyboardInputSite RegisterKeyboardInputSink(IKeyboardInputSink sink) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIKeyboardInputSink to obtain the full interface.");
     }
 
     public void close() throws Exception {

@@ -50,6 +50,7 @@ import system.security.cryptography.x509certificates.X509Certificate;
 import system.reflection.TypeFilter;
 import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
+import system.UInt32;
 import system.Guid;
 import system.ModuleHandle;
 import system.reflection.Assembly;

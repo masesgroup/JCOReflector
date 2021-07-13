@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.collections.IComparer;
+import system.collections.IComparerImplementation;
 
 
 /**
@@ -46,7 +48,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Configuration.XPathMessageFilterElementComparer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Configuration.XPathMessageFilterElementComparer</a>
  */
-public class XPathMessageFilterElementComparer extends NetObject  {
+public class XPathMessageFilterElementComparer extends NetObject implements system.collections.IComparer {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -151,6 +153,15 @@ public class XPathMessageFilterElementComparer extends NetObject  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIComparer method available in IComparer to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public int Compare(NetObject x, NetObject y) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIComparer to obtain the full interface.");
+    }
+
 
     
     // Properties section

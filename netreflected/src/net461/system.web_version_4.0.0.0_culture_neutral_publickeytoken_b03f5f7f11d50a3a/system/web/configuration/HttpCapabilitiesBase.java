@@ -46,6 +46,8 @@ import system.io.TextWriter;
 import system.collections.IDictionary;
 import system.collections.IDictionaryImplementation;
 import system.web.configuration.HttpCapabilitiesProvider;
+import system.web.ui.IFilterResolutionService;
+import system.web.ui.IFilterResolutionServiceImplementation;
 
 
 /**
@@ -54,7 +56,7 @@ import system.web.configuration.HttpCapabilitiesProvider;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Configuration.HttpCapabilitiesBase" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Configuration.HttpCapabilitiesBase</a>
  */
-public class HttpCapabilitiesBase extends NetObject  {
+public class HttpCapabilitiesBase extends NetObject implements system.web.ui.IFilterResolutionService {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -226,6 +228,24 @@ public class HttpCapabilitiesBase extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIFilterResolutionService method available in IFilterResolutionService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean EvaluateFilter(java.lang.String filterName) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFilterResolutionService to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIFilterResolutionService method available in IFilterResolutionService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public int CompareFilters(java.lang.String filter1, java.lang.String filter2) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIFilterResolutionService to obtain the full interface.");
     }
 
 

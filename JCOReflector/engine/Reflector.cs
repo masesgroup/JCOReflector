@@ -1620,7 +1620,7 @@ namespace MASES.C2JReflector
 
                         if (interfaceMethod.IsGenericMethod // don't manage generic methods
                             || interfaceMethod.ContainsGenericParameters
-                            || ((withInheritance && !isInterface) ? !interfaceMethod.DeclaringType.IsAssignableFrom(implementableInterface) : false)
+                            || ((withInheritance) ? interfaceMethod.DeclaringType != implementableInterface : false)
                             || (!methodsNameCreated.Contains(methodName) ? false : isDifferentOnlyForRetVal(methodsSignatureCreated, interfaceMethod.ToString(), methodName))
                            ) continue;
 
@@ -1642,7 +1642,7 @@ namespace MASES.C2JReflector
                             var enumeratorMethodName = Const.SpecialNames.METHOD_GETENUMERATOR_NAME;
                             templateToUse = Const.Templates.GetTemplate(Const.Templates.ReflectorEnumerableDeprecatedTemplate);
                             var returnType = string.Empty;
-                            if (!isInterface && EnableInheritance && EnableInterfaceInheritance && interfaceMethod.ReturnType == typeof(IEnumerator))
+                            if (EnableInheritance && EnableInterfaceInheritance && interfaceMethod.ReturnType == typeof(IEnumerator))
                             {
                                 //returnEnumeratorType = string.Empty;
                                 returnType = Const.SpecialNames.NetIEnumerator;
@@ -1667,7 +1667,7 @@ namespace MASES.C2JReflector
                                     continue;
                                 }
 
-                                if (!isInterface && EnableInheritance && EnableInterfaceInheritance && type.GetInterfaces().Contains(typeof(IEnumerable)))
+                                if (EnableInheritance && EnableInterfaceInheritance && type.GetInterfaces().Contains(typeof(IEnumerable)))
                                 {
                                     enumeratorMethodName += type.Name;
                                 }
@@ -1743,7 +1743,7 @@ namespace MASES.C2JReflector
 
                             var exceptionStr = exceptionStringBuilder(interfaceMethod, imports);
 
-                            bool isNewMethodVal = (withInheritance && !isInterface) ? isNewMethod(type, interfaceMethod, allMethods) : false;
+                            bool isNewMethodVal = (withInheritance) ? isNewMethod(type, interfaceMethod, allMethods) : false;
                             string newMethodName = string.Empty;
                             if (isNewMethodVal)
                             {
@@ -2147,7 +2147,7 @@ namespace MASES.C2JReflector
 
                         if (propertiesSignaturesCreated.Contains(item.ToString())
                             || item.IsSpecialName
-                            || ((withInheritance && !isInterface) ? item.DeclaringType != implementableInterface : false)
+                            || ((withInheritance) ? item.DeclaringType != implementableInterface : false)
                             || (!propertiesNameCreated.Contains(propertyName) ? false : isDifferentOnlyForRetVal(propertiesSignaturesCreated, item.ToString(), propertyName))
                            ) continue;
 
@@ -2165,7 +2165,7 @@ namespace MASES.C2JReflector
 
                             var exceptionStr = exceptionStringBuilder(item.GetMethod, imports);
 
-                            bool isNewPropertyVal = (withInheritance && !isInterface) ? isNewProperty(implementableInterface, item, properties, true) : false;
+                            bool isNewPropertyVal = (withInheritance) ? isNewProperty(implementableInterface, item, properties, true) : false;
                             string newPropertyName = string.Empty;
                             if (isNewPropertyVal)
                             {
@@ -2191,7 +2191,7 @@ namespace MASES.C2JReflector
                         {
                             var exceptionStr = exceptionStringBuilder(item.SetMethod, imports);
 
-                            bool isNewPropertyVal = (withInheritance && !isInterface) ? isNewProperty(type, item, properties, false) : false;
+                            bool isNewPropertyVal = (withInheritance) ? isNewProperty(type, item, properties, false) : false;
                             string newPropertyName = string.Empty;
                             if (isNewPropertyVal)
                             {

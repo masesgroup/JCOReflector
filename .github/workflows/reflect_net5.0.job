@@ -13,6 +13,6 @@
   <EnableArray>true</EnableArray>
   <EnableDuplicateMethodNativeArrayWithJCRefOut>true</EnableDuplicateMethodNativeArrayWithJCRefOut>
   <EnableInheritance>true</EnableInheritance>
-  <EnableInterfaceInheritance>false</EnableInterfaceInheritance>
+  <EnableInterfaceInheritance>true</EnableInterfaceInheritance>
   <DryRun>false</DryRun>
 </ReflectorEventArgs>

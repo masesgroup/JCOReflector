@@ -6,6 +6,7 @@
   <SplitFolderByAssembly>true</SplitFolderByAssembly>
   <JDKFolder>jdk</JDKFolder>
   <JDKTarget>Version8</JDKTarget>
+  <JDKToolExtraOptions></JDKToolExtraOptions>
   <JarDestinationFolder>bin/netcoreapp3.1</JarDestinationFolder>
   <WithJARSource>false</WithJARSource>
   <EmbeddingJCOBridge>true</EmbeddingJCOBridge>

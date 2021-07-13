@@ -230,18 +230,8 @@ jobs:
         run: |
           echo "GITHUB_COMMIT_MESSAGE=$(echo $GITHUB_SHA | cut -c 1-7)" >> $GITHUB_ENV
         shell: bash
-
-      - name: Commit source changes
-        uses: EndBug/add-and-commit@v5
-        with:
-          author_name: github-actions
-          author_email: 41898282+github-actions[bot]@users.noreply.github.com
-          add: '.\netreflected\src\*.java'
-          message: Update sources after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
-      - name: Commit source changes
+      - name: Commit statistics changes
         uses: EndBug/add-and-commit@v5
         with:
           author_name: github-actions
@@ -258,6 +248,16 @@ jobs:
           author_email: 41898282+github-actions[bot]@users.noreply.github.com
           add: '.\netreflected\README.md'
           message: Update README.md after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Commit source changes
+        uses: EndBug/add-and-commit@v5
+        with:
+          author_name: github-actions
+          author_email: 41898282+github-actions[bot]@users.noreply.github.com
+          add: '.\netreflected\src\*.java'
+          message: Update sources after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

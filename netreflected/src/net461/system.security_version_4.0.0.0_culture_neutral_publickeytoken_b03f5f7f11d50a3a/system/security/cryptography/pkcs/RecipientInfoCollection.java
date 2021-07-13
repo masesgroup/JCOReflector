@@ -148,14 +148,14 @@ public class RecipientInfoCollection extends NetObject implements Iterable<Recip
     
     // Methods section
     
-    public final RecipientInfoEnumerator GetEnumerator() throws Throwable {
+    public RecipientInfoEnumerator GetEnumerator() throws Throwable {
         return new RecipientInfoEnumerator(classInstance);
     }
 
-	@SuppressWarnings("unchecked")
-	public final java.util.Iterator<RecipientInfo> iterator() {
-		return new RecipientInfoEnumerator(classInstance);
-	}
+    @SuppressWarnings("unchecked")
+    public java.util.Iterator<RecipientInfo> iterator() {
+        return new RecipientInfoEnumerator(classInstance);
+    }
 
     public void CopyTo(Array array, int index) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException {
         if (classInstance == null)

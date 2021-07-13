@@ -194,14 +194,14 @@ public class XmlSchemaObjectCollection extends CollectionBase implements Iterabl
         }
     }
 
-    public final XmlSchemaObjectEnumerator GetEnumerator() throws Throwable {
+    public XmlSchemaObjectEnumerator GetEnumerator() throws Throwable {
         return new XmlSchemaObjectEnumerator(classInstance);
     }
 
-	@SuppressWarnings("unchecked")
-	public final java.util.Iterator<XmlSchemaObject> iterator() {
-		return new XmlSchemaObjectEnumerator(classInstance);
-	}
+    @SuppressWarnings("unchecked")
+    public java.util.Iterator<XmlSchemaObject> iterator() {
+        return new XmlSchemaObjectEnumerator(classInstance);
+    }
 
     public void CopyTo(XmlSchemaObject[] array, int index) throws Throwable {
         if (classInstance == null)

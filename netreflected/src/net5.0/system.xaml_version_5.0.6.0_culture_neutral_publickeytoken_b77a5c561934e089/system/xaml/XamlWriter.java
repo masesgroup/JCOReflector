@@ -50,7 +50,7 @@ import system.xaml.XamlSchemaContext;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.XamlWriter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.XamlWriter</a>
  */
-public class XamlWriter extends NetObject  {
+public class XamlWriter extends NetObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Xaml, Version=5.0.6.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -227,7 +227,20 @@ public class XamlWriter extends NetObject  {
         }
     }
 
-
+    public void close() throws Exception {
+        try {
+            if (classInstance == null)
+                throw new UnsupportedOperationException("classInstance is null.");
+            try {
+                classInstance.Invoke("Dispose");
+            }
+            catch (JCNativeException jcne) {
+                throw translateException(jcne);
+            }
+        } catch (Throwable t) {
+            throw new Exception(t);
+        }
+    }
     
     // Properties section
     

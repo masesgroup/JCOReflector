@@ -182,14 +182,14 @@ public class StringCollection extends NetObject implements Iterable<java.lang.St
         }
     }
 
-    public final StringEnumerator GetEnumerator() throws Throwable {
+    public StringEnumerator GetEnumerator() throws Throwable {
         return new StringEnumerator(classInstance);
     }
 
-	@SuppressWarnings("unchecked")
-	public final java.util.Iterator<java.lang.String> iterator() {
-		return new StringEnumerator(classInstance);
-	}
+    @SuppressWarnings("unchecked")
+    public java.util.Iterator<java.lang.String> iterator() {
+        return new StringEnumerator(classInstance);
+    }
 
     public void AddRange(java.lang.String[] value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)

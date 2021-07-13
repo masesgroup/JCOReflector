@@ -173,14 +173,14 @@ public class AsnEncodedDataCollection extends NetObject implements Iterable<AsnE
         }
     }
 
-    public final AsnEncodedDataEnumerator GetEnumerator() throws Throwable {
+    public AsnEncodedDataEnumerator GetEnumerator() throws Throwable {
         return new AsnEncodedDataEnumerator(classInstance);
     }
 
-	@SuppressWarnings("unchecked")
-	public final java.util.Iterator<AsnEncodedData> iterator() {
-		return new AsnEncodedDataEnumerator(classInstance);
-	}
+    @SuppressWarnings("unchecked")
+    public java.util.Iterator<AsnEncodedData> iterator() {
+        return new AsnEncodedDataEnumerator(classInstance);
+    }
 
     public void CopyTo(AsnEncodedData[] array, int index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)

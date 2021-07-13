@@ -210,14 +210,14 @@ public class BehaviorServiceAdornerCollection extends CollectionBase implements 
         }
     }
 
-    public final BehaviorServiceAdornerCollectionEnumerator GetEnumerator() throws Throwable {
+    public BehaviorServiceAdornerCollectionEnumerator GetEnumerator() throws Throwable {
         return new BehaviorServiceAdornerCollectionEnumerator(classInstance);
     }
 
-	@SuppressWarnings("unchecked")
-	public final java.util.Iterator<Adorner> iterator() {
-		return new BehaviorServiceAdornerCollectionEnumerator(classInstance);
-	}
+    @SuppressWarnings("unchecked")
+    public java.util.Iterator<Adorner> iterator() {
+        return new BehaviorServiceAdornerCollectionEnumerator(classInstance);
+    }
 
     public void AddRange(Adorner[] value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotImplementedException {
         if (classInstance == null)

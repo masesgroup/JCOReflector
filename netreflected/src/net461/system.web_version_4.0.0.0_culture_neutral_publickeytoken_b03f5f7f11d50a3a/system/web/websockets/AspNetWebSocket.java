@@ -51,7 +51,7 @@ import system.net.websockets.WebSocketState;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.WebSockets.AspNetWebSocket" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.WebSockets.AspNetWebSocket</a>
  */
-public class AspNetWebSocket extends WebSocket implements AutoCloseable {
+public class AspNetWebSocket extends WebSocket  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -192,20 +192,7 @@ public class AspNetWebSocket extends WebSocket implements AutoCloseable {
         }
     }
 
-    public void close() throws Exception {
-        try {
-            if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
-            try {
-                classInstance.Invoke("Dispose");
-            }
-            catch (JCNativeException jcne) {
-                throw translateException(jcne);
-            }
-        } catch (Throwable t) {
-            throw new Exception(t);
-        }
-    }
+
     
     // Properties section
     

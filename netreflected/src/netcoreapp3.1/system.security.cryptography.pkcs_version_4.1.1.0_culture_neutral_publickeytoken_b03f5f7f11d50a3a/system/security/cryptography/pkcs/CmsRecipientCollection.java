@@ -186,14 +186,14 @@ public class CmsRecipientCollection extends NetObject implements Iterable<CmsRec
         }
     }
 
-    public final CmsRecipientEnumerator GetEnumerator() throws Throwable {
+    public CmsRecipientEnumerator GetEnumerator() throws Throwable {
         return new CmsRecipientEnumerator(classInstance);
     }
 
-	@SuppressWarnings("unchecked")
-	public final java.util.Iterator<CmsRecipient> iterator() {
-		return new CmsRecipientEnumerator(classInstance);
-	}
+    @SuppressWarnings("unchecked")
+    public java.util.Iterator<CmsRecipient> iterator() {
+        return new CmsRecipientEnumerator(classInstance);
+    }
 
     public void CopyTo(Array array, int index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
         if (classInstance == null)

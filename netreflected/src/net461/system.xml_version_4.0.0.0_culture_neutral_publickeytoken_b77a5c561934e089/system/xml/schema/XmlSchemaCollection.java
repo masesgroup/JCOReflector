@@ -243,14 +243,14 @@ public class XmlSchemaCollection extends NetObject implements Iterable<XmlSchema
         }
     }
 
-    public final XmlSchemaCollectionEnumerator GetEnumerator() throws Throwable {
+    public XmlSchemaCollectionEnumerator GetEnumerator() throws Throwable {
         return new XmlSchemaCollectionEnumerator(classInstance);
     }
 
-	@SuppressWarnings("unchecked")
-	public final java.util.Iterator<XmlSchema> iterator() {
-		return new XmlSchemaCollectionEnumerator(classInstance);
-	}
+    @SuppressWarnings("unchecked")
+    public java.util.Iterator<XmlSchema> iterator() {
+        return new XmlSchemaCollectionEnumerator(classInstance);
+    }
 
     public void Add(XmlSchemaCollection schema) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException {
         if (classInstance == null)

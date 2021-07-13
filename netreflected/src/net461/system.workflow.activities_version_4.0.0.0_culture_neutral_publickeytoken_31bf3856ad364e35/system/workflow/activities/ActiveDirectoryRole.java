@@ -49,7 +49,7 @@ import system.directoryservices.DirectoryEntry;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.ActiveDirectoryRole" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.ActiveDirectoryRole</a>
  */
-public class ActiveDirectoryRole extends WorkflowRole  {
+public class ActiveDirectoryRole extends WorkflowRole implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -213,7 +213,20 @@ public class ActiveDirectoryRole extends WorkflowRole  {
         }
     }
 
-
+    public void close() throws Exception {
+        try {
+            if (classInstance == null)
+                throw new UnsupportedOperationException("classInstance is null.");
+            try {
+                classInstance.Invoke("Dispose");
+            }
+            catch (JCNativeException jcne) {
+                throw translateException(jcne);
+            }
+        } catch (Throwable t) {
+            throw new Exception(t);
+        }
+    }
     
     // Properties section
     

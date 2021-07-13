@@ -184,14 +184,14 @@ public class CryptographicAttributeObjectCollection extends NetObject implements
         }
     }
 
-    public final CryptographicAttributeObjectEnumerator GetEnumerator() throws Throwable {
+    public CryptographicAttributeObjectEnumerator GetEnumerator() throws Throwable {
         return new CryptographicAttributeObjectEnumerator(classInstance);
     }
 
-	@SuppressWarnings("unchecked")
-	public final java.util.Iterator<CryptographicAttributeObject> iterator() {
-		return new CryptographicAttributeObjectEnumerator(classInstance);
-	}
+    @SuppressWarnings("unchecked")
+    public java.util.Iterator<CryptographicAttributeObject> iterator() {
+        return new CryptographicAttributeObjectEnumerator(classInstance);
+    }
 
     public void CopyTo(CryptographicAttributeObject[] array, int index) throws Throwable {
         if (classInstance == null)

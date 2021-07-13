@@ -145,14 +145,14 @@ public class GenericAcl extends NetObject implements Iterable<GenericAce> {
     
     // Methods section
     
-    public final AceEnumerator GetEnumerator() throws Throwable {
+    public AceEnumerator GetEnumerator() throws Throwable {
         return new AceEnumerator(classInstance);
     }
 
-	@SuppressWarnings("unchecked")
-	public final java.util.Iterator<GenericAce> iterator() {
-		return new AceEnumerator(classInstance);
-	}
+    @SuppressWarnings("unchecked")
+    public java.util.Iterator<GenericAce> iterator() {
+        return new AceEnumerator(classInstance);
+    }
 
     public void CopyTo(GenericAce[] array, int index) throws Throwable {
         if (classInstance == null)

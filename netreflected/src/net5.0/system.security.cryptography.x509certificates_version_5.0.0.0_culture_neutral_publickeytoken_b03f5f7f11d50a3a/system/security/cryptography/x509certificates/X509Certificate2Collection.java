@@ -257,14 +257,14 @@ public class X509Certificate2Collection extends X509CertificateCollection implem
         }
     }
 
-    public final X509Certificate2Enumerator GetEnumerator() throws Throwable {
+    public X509Certificate2Enumerator GetEnumerator() throws Throwable {
         return new X509Certificate2Enumerator(classInstance);
     }
 
-	@SuppressWarnings("unchecked")
-	public final java.util.Iterator<X509Certificate2> iterator() {
-		return new X509Certificate2Enumerator(classInstance);
-	}
+    @SuppressWarnings("unchecked")
+    public java.util.Iterator<X509Certificate2> iterator() {
+        return new X509Certificate2Enumerator(classInstance);
+    }
 
     public void AddRange(X509Certificate2[] certificates) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)

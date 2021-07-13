@@ -147,14 +147,14 @@ public class X509ChainElementCollection extends NetObject implements Iterable<X5
     
     // Methods section
     
-    public final X509ChainElementEnumerator GetEnumerator() throws Throwable {
+    public X509ChainElementEnumerator GetEnumerator() throws Throwable {
         return new X509ChainElementEnumerator(classInstance);
     }
 
-	@SuppressWarnings("unchecked")
-	public final java.util.Iterator<X509ChainElement> iterator() {
-		return new X509ChainElementEnumerator(classInstance);
-	}
+    @SuppressWarnings("unchecked")
+    public java.util.Iterator<X509ChainElement> iterator() {
+        return new X509ChainElementEnumerator(classInstance);
+    }
 
     public void CopyTo(X509ChainElement[] array, int index) throws Throwable {
         if (classInstance == null)

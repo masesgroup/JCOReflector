@@ -39,8 +39,14 @@ import java.util.ArrayList;
 
 // Import section
 import system.Attribute;
+import system.servicemodel.description.OperationDescription;
+import system.servicemodel.channels.BindingParameterCollection;
+import system.servicemodel.dispatcher.ClientOperation;
+import system.servicemodel.dispatcher.DispatchOperation;
 import system.servicemodel.ImpersonationOption;
 import system.servicemodel.ReleaseInstanceMode;
+import system.servicemodel.description.IOperationBehavior;
+import system.servicemodel.description.IOperationBehaviorImplementation;
 
 
 /**
@@ -49,7 +55,7 @@ import system.servicemodel.ReleaseInstanceMode;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.OperationBehaviorAttribute" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.OperationBehaviorAttribute</a>
  */
-public class OperationBehaviorAttribute extends Attribute  {
+public class OperationBehaviorAttribute extends Attribute implements system.servicemodel.description.IOperationBehavior {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -154,6 +160,42 @@ public class OperationBehaviorAttribute extends Attribute  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIOperationBehavior method available in IOperationBehavior to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void AddBindingParameters(OperationDescription operationDescription, BindingParameterCollection bindingParameters) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIOperationBehavior to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIOperationBehavior method available in IOperationBehavior to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ApplyClientBehavior(OperationDescription operationDescription, ClientOperation clientOperation) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIOperationBehavior to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIOperationBehavior method available in IOperationBehavior to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ApplyDispatchBehavior(OperationDescription operationDescription, DispatchOperation dispatchOperation) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIOperationBehavior to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIOperationBehavior method available in IOperationBehavior to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Validate(OperationDescription operationDescription) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIOperationBehavior to obtain the full interface.");
+    }
+
 
     
     // Properties section

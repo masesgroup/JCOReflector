@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.web.ui.webcontrols.WebControl;
 import system.web.ui.webcontrols.ListItemType;
 import system.web.ui.HtmlTextWriter;
+import system.web.ui.INamingContainer;
+import system.web.ui.INamingContainerImplementation;
 
 
 /**
@@ -49,7 +51,7 @@ import system.web.ui.HtmlTextWriter;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.DataListItem" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.DataListItem</a>
  */
-public class DataListItem extends WebControl  {
+public class DataListItem extends WebControl implements system.web.ui.INamingContainer {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.windows.automation.peers.FrameworkElementAutomationPeer;
 import system.windows.controls.MenuItem;
 import system.windows.automation.peers.PatternInterface;
+import system.windows.automation.provider.IInvokeProvider;
+import system.windows.automation.provider.IInvokeProviderImplementation;
 
 
 /**
@@ -49,7 +51,7 @@ import system.windows.automation.peers.PatternInterface;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Peers.MenuItemAutomationPeer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Peers.MenuItemAutomationPeer</a>
  */
-public class MenuItemAutomationPeer extends FrameworkElementAutomationPeer  {
+public class MenuItemAutomationPeer extends FrameworkElementAutomationPeer implements system.windows.automation.provider.IInvokeProvider {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=5.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -167,6 +169,42 @@ public class MenuItemAutomationPeer extends FrameworkElementAutomationPeer  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIExpandCollapseProvider method available in IExpandCollapseProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Collapse() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIExpandCollapseProvider to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIExpandCollapseProvider method available in IExpandCollapseProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Expand() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIExpandCollapseProvider to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIInvokeProvider method available in IInvokeProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Invoke() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIInvokeProvider to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIToggleProvider method available in IToggleProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Toggle() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIToggleProvider to obtain the full interface.");
     }
 
 

@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.data.metadata.edm.TypeUsage;
 import system.data.objects.ObjectResult;
 import system.data.objects.MergeOption;
+import system.collections.IList;
+import system.collections.IListImplementation;
 import system.data.objects.ObjectContext;
 import system.data.objects.ObjectParameterCollection;
 
@@ -51,7 +53,7 @@ import system.data.objects.ObjectParameterCollection;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.Objects.ObjectQuery" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.Objects.ObjectQuery</a>
  */
-public class ObjectQuery extends NetObject  {
+public class ObjectQuery extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Data.Entity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -178,6 +180,15 @@ public class ObjectQuery extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIListSource method available in IListSource to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public IList GetList() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIListSource to obtain the full interface.");
     }
 
 

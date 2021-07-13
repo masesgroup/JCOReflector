@@ -46,7 +46,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.GridViewColumnCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.GridViewColumnCollection</a>
  */
-public class GridViewColumnCollection extends NetObject  {
+public class GridViewColumnCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=5.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

@@ -60,6 +60,9 @@ import system.data.MissingSchemaAction;
 import system.data.XmlWriteMode;
 import system.io.TextWriter;
 import system.xml.XmlWriter;
+import system.collections.IList;
+import system.collections.IListImplementation;
+import system.xml.schema.XmlSchema;
 import system.componentmodel.ISite;
 import system.componentmodel.ISiteImplementation;
 import system.data.DataRelationCollection;
@@ -817,6 +820,24 @@ public class DataSet extends MarshalByValueComponent  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIListSource method available in IListSource to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public IList GetList() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIListSource to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIXmlSerializable method available in IXmlSerializable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public XmlSchema GetSchema() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
     }
 
 

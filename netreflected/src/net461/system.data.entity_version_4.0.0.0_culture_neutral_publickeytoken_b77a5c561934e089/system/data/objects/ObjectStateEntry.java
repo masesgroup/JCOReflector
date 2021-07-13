@@ -252,6 +252,42 @@ public class ObjectStateEntry extends NetObject  {
         }
     }
 
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIEntityChangeTracker method available in IEntityChangeTracker to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void EntityComplexMemberChanged(java.lang.String entityMemberName, NetObject complexObject, java.lang.String complexObjectMemberName) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEntityChangeTracker to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIEntityChangeTracker method available in IEntityChangeTracker to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void EntityComplexMemberChanging(java.lang.String entityMemberName, NetObject complexObject, java.lang.String complexObjectMemberName) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEntityChangeTracker to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIEntityChangeTracker method available in IEntityChangeTracker to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void EntityMemberChanged(java.lang.String entityMemberName) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEntityChangeTracker to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIEntityChangeTracker method available in IEntityChangeTracker to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void EntityMemberChanging(java.lang.String entityMemberName) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEntityChangeTracker to obtain the full interface.");
+    }
+
 
     
     // Properties section

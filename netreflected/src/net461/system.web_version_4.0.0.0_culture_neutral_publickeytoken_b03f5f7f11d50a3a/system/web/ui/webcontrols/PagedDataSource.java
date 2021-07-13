@@ -49,7 +49,7 @@ import system.Array;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.PagedDataSource" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.PagedDataSource</a>
  */
-public class PagedDataSource extends NetObject  {
+public class PagedDataSource extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

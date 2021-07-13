@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.data.objects.MergeOption;
 import system.runtime.serialization.StreamingContext;
+import system.data.objects.dataclasses.IEntityWithRelationships;
+import system.data.objects.dataclasses.IEntityWithRelationshipsImplementation;
 import system.data.metadata.edm.RelationshipSet;
 import system.componentmodel.CollectionChangeEventHandler;
 
@@ -186,6 +188,69 @@ public class RelatedEnd extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIRelatedEnd method available in IRelatedEnd to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean Remove(IEntityWithRelationships entity) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRelatedEnd to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIRelatedEnd method available in IRelatedEnd to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean Remove(NetObject entity) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRelatedEnd to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIRelatedEnd method available in IRelatedEnd to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public IEnumerable CreateSourceQuery() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRelatedEnd to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIRelatedEnd method available in IRelatedEnd to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Add(IEntityWithRelationships entity) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRelatedEnd to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIRelatedEnd method available in IRelatedEnd to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Add(NetObject entity) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRelatedEnd to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIRelatedEnd method available in IRelatedEnd to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Attach(IEntityWithRelationships entity) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRelatedEnd to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIRelatedEnd method available in IRelatedEnd to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Attach(NetObject entity) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRelatedEnd to obtain the full interface.");
     }
 
 

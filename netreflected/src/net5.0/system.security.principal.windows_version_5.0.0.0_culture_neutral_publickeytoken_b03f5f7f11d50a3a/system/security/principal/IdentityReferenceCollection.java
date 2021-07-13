@@ -48,7 +48,7 @@ import system.security.principal.IdentityReferenceCollection;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Principal.IdentityReferenceCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Principal.IdentityReferenceCollection</a>
  */
-public class IdentityReferenceCollection extends NetObject  {
+public class IdentityReferenceCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

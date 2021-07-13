@@ -44,6 +44,8 @@ import system.security.IPermission;
 import system.security.IPermissionImplementation;
 import system.security.SecurityElement;
 import system.Array;
+import system.runtime.serialization.IDeserializationCallback;
+import system.runtime.serialization.IDeserializationCallbackImplementation;
 
 
 /**
@@ -52,7 +54,7 @@ import system.Array;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.PermissionSet" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.PermissionSet</a>
  */
-public class PermissionSet extends NetObject  {
+public class PermissionSet extends NetObjectEnumerable implements system.runtime.serialization.IDeserializationCallback {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */
@@ -405,6 +407,15 @@ public class PermissionSet extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDeserializationCallback method available in IDeserializationCallback to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void OnDeserialization(NetObject sender) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDeserializationCallback to obtain the full interface.");
     }
 
 

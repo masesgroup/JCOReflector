@@ -45,6 +45,8 @@ import system.windows.media.Geometry;
 import system.windows.Rect;
 import system.windows.markup.XmlLanguage;
 import system.windows.Point;
+import system.componentmodel.ISupportInitialize;
+import system.componentmodel.ISupportInitializeImplementation;
 
 
 /**
@@ -53,7 +55,7 @@ import system.windows.Point;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.GlyphRun" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.GlyphRun</a>
  */
-public class GlyphRun extends NetObject  {
+public class GlyphRun extends NetObject implements system.componentmodel.ISupportInitialize {
     /**
      * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -231,6 +233,24 @@ public class GlyphRun extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToISupportInitialize method available in ISupportInitialize to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void BeginInit() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToISupportInitialize method available in ISupportInitialize to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void EndInit() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
     }
 
 

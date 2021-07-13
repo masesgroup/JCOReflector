@@ -46,7 +46,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Linq.ParallelQuery" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Linq.ParallelQuery</a>
  */
-public class ParallelQuery extends NetObject  {
+public class ParallelQuery extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Linq.Parallel, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

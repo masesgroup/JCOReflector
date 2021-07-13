@@ -50,6 +50,9 @@ import system.SByte;
 import system.MidpointRounding;
 import system.TypeCode;
 import system.UInt16;
+import system.DateTime;
+import system.runtime.serialization.IDeserializationCallback;
+import system.runtime.serialization.IDeserializationCallbackImplementation;
 
 
 /**
@@ -58,7 +61,7 @@ import system.UInt16;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Decimal" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Decimal</a>
  */
-public class Decimal extends ValueType  {
+public class Decimal extends ValueType implements system.runtime.serialization.IDeserializationCallback {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */
@@ -658,6 +661,150 @@ public class Decimal extends ValueType  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIConvertible method available in IConvertible to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean ToBoolean(IFormatProvider provider) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIConvertible method available in IConvertible to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public byte ToByte(IFormatProvider provider) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIConvertible method available in IConvertible to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public char ToChar(IFormatProvider provider) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIConvertible method available in IConvertible to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public double ToDouble(IFormatProvider provider) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIConvertible method available in IConvertible to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public short ToInt16(IFormatProvider provider) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIConvertible method available in IConvertible to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public int ToInt32(IFormatProvider provider) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIConvertible method available in IConvertible to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public long ToInt64(IFormatProvider provider) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIConvertible method available in IConvertible to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public SByte ToSByte(IFormatProvider provider) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIConvertible method available in IConvertible to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public Single ToSingle(IFormatProvider provider) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIConvertible method available in IConvertible to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public DateTime ToDateTime(IFormatProvider provider) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIConvertible method available in IConvertible to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public Decimal ToDecimal(IFormatProvider provider) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIConvertible method available in IConvertible to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetObject ToType(NetType conversionType, IFormatProvider provider) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIConvertible method available in IConvertible to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public UInt16 ToUInt16(IFormatProvider provider) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIConvertible method available in IConvertible to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public UInt32 ToUInt32(IFormatProvider provider) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIConvertible method available in IConvertible to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public UInt64 ToUInt64(IFormatProvider provider) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIConvertible to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDeserializationCallback method available in IDeserializationCallback to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void OnDeserialization(NetObject sender) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDeserializationCallback to obtain the full interface.");
     }
 
 

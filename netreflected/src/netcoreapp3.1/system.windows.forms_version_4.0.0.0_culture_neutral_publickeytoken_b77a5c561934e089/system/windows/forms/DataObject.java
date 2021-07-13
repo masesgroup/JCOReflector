@@ -42,6 +42,9 @@ import system.windows.forms.TextDataFormat;
 import system.collections.specialized.StringCollection;
 import system.drawing.Image;
 import system.io.Stream;
+import system.runtime.interopservices.comtypes.IEnumFORMATETC;
+import system.runtime.interopservices.comtypes.IEnumFORMATETCImplementation;
+import system.runtime.interopservices.comtypes.DATADIR;
 
 
 /**
@@ -487,6 +490,24 @@ public class DataObject extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDataObject method available in IDataObject to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public IEnumFORMATETC EnumFormatEtc(DATADIR direction) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataObject to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDataObject method available in IDataObject to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void DUnadvise(int connection) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataObject to obtain the full interface.");
     }
 
 

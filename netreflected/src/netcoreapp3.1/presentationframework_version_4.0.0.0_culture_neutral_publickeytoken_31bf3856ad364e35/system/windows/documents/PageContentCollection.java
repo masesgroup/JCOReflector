@@ -47,7 +47,7 @@ import system.windows.documents.PageContent;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.PageContentCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.PageContentCollection</a>
  */
-public class PageContentCollection extends NetObject  {
+public class PageContentCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

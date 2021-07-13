@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.web.ui.webcontrols.webparts.WebPart;
 import system.web.ui.webcontrols.webparts.ProviderConnectionPoint;
+import system.IDisposable;
+import system.IDisposableImplementation;
 
 
 /**
@@ -48,7 +50,7 @@ import system.web.ui.webcontrols.webparts.ProviderConnectionPoint;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartTracker" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.WebParts.WebPartTracker</a>
  */
-public class WebPartTracker extends NetObject implements AutoCloseable {
+public class WebPartTracker extends NetObject implements system.IDisposable, AutoCloseable {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -157,6 +159,15 @@ public class WebPartTracker extends NetObject implements AutoCloseable {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDisposable method available in IDisposable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Dispose() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
+    }
+
     public void close() throws Exception {
         try {
             if (classInstance == null)

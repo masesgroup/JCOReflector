@@ -39,7 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.security.cryptography.AsnEncodedData;
-import system.security.cryptography.AsnEncodedDataEnumerator;
+import system.Array;
 
 
 /**
@@ -48,7 +48,7 @@ import system.security.cryptography.AsnEncodedDataEnumerator;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.AsnEncodedDataCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.AsnEncodedDataCollection</a>
  */
-public class AsnEncodedDataCollection extends NetObject implements Iterable<AsnEncodedData> {
+public class AsnEncodedDataCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Security.Cryptography.Encoding, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -173,15 +173,6 @@ public class AsnEncodedDataCollection extends NetObject implements Iterable<AsnE
         }
     }
 
-    public AsnEncodedDataEnumerator GetEnumerator() throws Throwable {
-        return new AsnEncodedDataEnumerator(classInstance);
-    }
-
-    @SuppressWarnings("unchecked")
-    public java.util.Iterator<AsnEncodedData> iterator() {
-        return new AsnEncodedDataEnumerator(classInstance);
-    }
-
     public void CopyTo(AsnEncodedData[] array, int index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -200,6 +191,15 @@ public class AsnEncodedDataCollection extends NetObject implements Iterable<AsnE
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICollection method available in ICollection to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void CopyTo(Array array, int index) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection to obtain the full interface.");
     }
 
 

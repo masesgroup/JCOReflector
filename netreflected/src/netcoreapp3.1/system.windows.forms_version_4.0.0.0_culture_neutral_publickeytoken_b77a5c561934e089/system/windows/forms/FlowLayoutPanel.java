@@ -42,6 +42,8 @@ import system.windows.forms.Panel;
 import system.windows.forms.Control;
 import system.windows.forms.FlowDirection;
 import system.windows.forms.layout.LayoutEngine;
+import system.componentmodel.IExtenderProvider;
+import system.componentmodel.IExtenderProviderImplementation;
 
 
 /**
@@ -50,7 +52,7 @@ import system.windows.forms.layout.LayoutEngine;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.FlowLayoutPanel" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.FlowLayoutPanel</a>
  */
-public class FlowLayoutPanel extends Panel  {
+public class FlowLayoutPanel extends Panel implements system.componentmodel.IExtenderProvider {
     /**
      * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -173,6 +175,15 @@ public class FlowLayoutPanel extends Panel  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIExtenderProvider method available in IExtenderProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean CanExtend(NetObject extendee) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIExtenderProvider to obtain the full interface.");
     }
 
 

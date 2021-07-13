@@ -54,6 +54,10 @@ import system.componentmodel.ListChangedEventHandler;
 import system.EventHandler;
 import system.windows.forms.BindingCompleteEventHandler;
 import system.windows.forms.BindingManagerDataErrorEventHandler;
+import system.componentmodel.ICancelAddNew;
+import system.componentmodel.ICancelAddNewImplementation;
+import system.componentmodel.ISupportInitialize;
+import system.componentmodel.ISupportInitializeImplementation;
 
 
 /**
@@ -62,7 +66,7 @@ import system.windows.forms.BindingManagerDataErrorEventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.BindingSource" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.BindingSource</a>
  */
-public class BindingSource extends Component  {
+public class BindingSource extends Component implements system.componentmodel.ICancelAddNew, system.componentmodel.ISupportInitialize {
     /**
      * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -498,6 +502,60 @@ public class BindingSource extends Component  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIBindingList method available in IBindingList to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void AddIndex(PropertyDescriptor property) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBindingList to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIBindingList method available in IBindingList to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void RemoveIndex(PropertyDescriptor property) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBindingList to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICancelAddNew method available in ICancelAddNew to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void CancelNew(int itemIndex) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICancelAddNew to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICancelAddNew method available in ICancelAddNew to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void EndNew(int itemIndex) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICancelAddNew to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToISupportInitialize method available in ISupportInitialize to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void BeginInit() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToISupportInitialize method available in ISupportInitialize to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void EndInit() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
     }
 
 

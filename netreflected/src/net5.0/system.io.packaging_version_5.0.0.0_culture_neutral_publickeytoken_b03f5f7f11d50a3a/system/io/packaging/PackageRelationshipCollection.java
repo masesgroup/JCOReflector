@@ -46,7 +46,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.Packaging.PackageRelationshipCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.Packaging.PackageRelationshipCollection</a>
  */
-public class PackageRelationshipCollection extends NetObject  {
+public class PackageRelationshipCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.IO.Packaging, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

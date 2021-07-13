@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.web.ui.webcontrols.FormViewRow;
 import system.web.ui.webcontrols.DataControlRowType;
 import system.web.ui.webcontrols.DataControlRowState;
+import system.web.ui.INamingContainer;
+import system.web.ui.INamingContainerImplementation;
 
 
 /**
@@ -49,7 +51,7 @@ import system.web.ui.webcontrols.DataControlRowState;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.FormViewPagerRow" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.FormViewPagerRow</a>
  */
-public class FormViewPagerRow extends FormViewRow  {
+public class FormViewPagerRow extends FormViewRow implements system.web.ui.INamingContainer {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

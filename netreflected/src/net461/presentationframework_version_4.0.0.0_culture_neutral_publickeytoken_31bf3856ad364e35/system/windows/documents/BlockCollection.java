@@ -47,7 +47,7 @@ import system.windows.documents.Block;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.BlockCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.BlockCollection</a>
  */
-public class BlockCollection extends NetObject  {
+public class BlockCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

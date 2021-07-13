@@ -46,7 +46,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Http.HttpRequestOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Http.HttpRequestOptions</a>
  */
-public class HttpRequestOptions extends NetObject  {
+public class HttpRequestOptions extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Net.Http, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

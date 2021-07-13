@@ -46,6 +46,7 @@ import system.configuration.assemblies.AssemblyHashAlgorithm;
 import system.ActivationContext;
 import system.AppDomain;
 import system.security.policy.Evidence;
+import system.UInt32;
 
 
 /**

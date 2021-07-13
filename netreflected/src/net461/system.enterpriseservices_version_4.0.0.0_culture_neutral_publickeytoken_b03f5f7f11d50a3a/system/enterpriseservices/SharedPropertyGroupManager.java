@@ -47,7 +47,7 @@ import system.enterpriseservices.SharedPropertyGroup;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.EnterpriseServices.SharedPropertyGroupManager" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.EnterpriseServices.SharedPropertyGroupManager</a>
  */
-public class SharedPropertyGroupManager extends NetObject  {
+public class SharedPropertyGroupManager extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

@@ -44,6 +44,8 @@ import system.IServiceProviderImplementation;
 import system.workflow.componentmodel.design.ITypeFilterProvider;
 import system.workflow.componentmodel.design.ITypeFilterProviderImplementation;
 import system.workflow.componentmodel.compiler.TypeProvider;
+import system.IServiceProvider;
+import system.IServiceProviderImplementation;
 
 
 /**
@@ -52,7 +54,7 @@ import system.workflow.componentmodel.compiler.TypeProvider;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.TypeBrowserDialog" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.TypeBrowserDialog</a>
  */
-public class TypeBrowserDialog extends Form  {
+public class TypeBrowserDialog extends Form implements system.IServiceProvider {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -171,6 +173,15 @@ public class TypeBrowserDialog extends Form  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIServiceProvider method available in IServiceProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetObject GetService(NetType serviceType) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceProvider to obtain the full interface.");
+    }
+
 
     
     // Properties section

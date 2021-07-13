@@ -43,9 +43,14 @@ import system.componentmodel.ICollectionView;
 import system.componentmodel.ICollectionViewImplementation;
 import system.IDisposable;
 import system.IDisposableImplementation;
+import system.EventArgs;
 import system.componentmodel.SortDescriptionCollection;
 import system.globalization.CultureInfo;
 import system.windows.data.FilterEventHandler;
+import system.componentmodel.ISupportInitialize;
+import system.componentmodel.ISupportInitializeImplementation;
+import system.windows.IWeakEventListener;
+import system.windows.IWeakEventListenerImplementation;
 
 
 /**
@@ -54,7 +59,7 @@ import system.windows.data.FilterEventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.CollectionViewSource" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.CollectionViewSource</a>
  */
-public class CollectionViewSource extends DependencyObject  {
+public class CollectionViewSource extends DependencyObject implements system.componentmodel.ISupportInitialize, system.windows.IWeakEventListener {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=5.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -189,6 +194,33 @@ public class CollectionViewSource extends DependencyObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToISupportInitialize method available in ISupportInitialize to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void BeginInit() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToISupportInitialize method available in ISupportInitialize to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void EndInit() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIWeakEventListener method available in IWeakEventListener to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean ReceiveWeakEvent(NetType managerType, NetObject sender, EventArgs e) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWeakEventListener to obtain the full interface.");
     }
 
 

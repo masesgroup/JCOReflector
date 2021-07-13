@@ -43,6 +43,10 @@ import system.windows.Style;
 import system.windows.ResourceDictionary;
 import system.windows.SetterBaseCollection;
 import system.windows.TriggerCollection;
+import system.windows.markup.IAddChild;
+import system.windows.markup.IAddChildImplementation;
+import system.windows.markup.IQueryAmbient;
+import system.windows.markup.IQueryAmbientImplementation;
 
 
 /**
@@ -51,7 +55,7 @@ import system.windows.TriggerCollection;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Style" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Style</a>
  */
-public class Style extends DispatcherObject  {
+public class Style extends DispatcherObject implements system.windows.markup.IAddChild, system.windows.markup.IQueryAmbient {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -204,6 +208,42 @@ public class Style extends DispatcherObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToINameScope method available in INameScope to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetObject FindName(java.lang.String name) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToINameScope to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIAddChild method available in IAddChild to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void AddChild(NetObject value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIAddChild method available in IAddChild to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void AddText(java.lang.String text) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIQueryAmbient method available in IQueryAmbient to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean IsAmbientPropertyAvailable(java.lang.String propertyName) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIQueryAmbient to obtain the full interface.");
     }
 
 

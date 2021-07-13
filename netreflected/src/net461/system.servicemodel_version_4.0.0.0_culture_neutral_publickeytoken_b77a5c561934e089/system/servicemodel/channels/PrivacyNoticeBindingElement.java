@@ -40,7 +40,11 @@ import java.util.ArrayList;
 // Import section
 import system.servicemodel.channels.BindingElement;
 import system.servicemodel.channels.PrivacyNoticeBindingElement;
+import system.servicemodel.description.MetadataExporter;
+import system.servicemodel.description.PolicyConversionContext;
 import system.Uri;
+import system.servicemodel.description.IPolicyExportExtension;
+import system.servicemodel.description.IPolicyExportExtensionImplementation;
 
 
 /**
@@ -49,7 +53,7 @@ import system.Uri;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.PrivacyNoticeBindingElement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.PrivacyNoticeBindingElement</a>
  */
-public class PrivacyNoticeBindingElement extends BindingElement  {
+public class PrivacyNoticeBindingElement extends BindingElement implements system.servicemodel.description.IPolicyExportExtension {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -173,6 +177,15 @@ public class PrivacyNoticeBindingElement extends BindingElement  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIPolicyExportExtension method available in IPolicyExportExtension to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ExportPolicy(MetadataExporter exporter, PolicyConversionContext context) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPolicyExportExtension to obtain the full interface.");
     }
 
 

@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.web.ui.webcontrols.webparts.WebPartTransformer;
 import system.web.ui.Control;
+import system.web.ui.webcontrols.webparts.ParametersCallback;
+import system.componentmodel.PropertyDescriptorCollection;
 
 
 /**
@@ -173,6 +175,24 @@ public class RowToParametersTransformer extends WebPartTransformer  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIWebPartParameters method available in IWebPartParameters to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void GetParametersData(ParametersCallback callback) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWebPartParameters to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIWebPartParameters method available in IWebPartParameters to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void SetConsumerSchema(PropertyDescriptorCollection schema) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWebPartParameters to obtain the full interface.");
     }
 
 

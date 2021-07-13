@@ -38,6 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.description.MetadataImporter;
+import system.servicemodel.description.PolicyConversionContext;
+import system.servicemodel.description.IPolicyImportExtension;
+import system.servicemodel.description.IPolicyImportExtensionImplementation;
 
 
 /**
@@ -46,7 +50,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.SecurityBindingElementImporter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.SecurityBindingElementImporter</a>
  */
-public class SecurityBindingElementImporter extends NetObject  {
+public class SecurityBindingElementImporter extends NetObject implements system.servicemodel.description.IPolicyImportExtension {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -151,6 +155,15 @@ public class SecurityBindingElementImporter extends NetObject  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIPolicyImportExtension method available in IPolicyImportExtension to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ImportPolicy(MetadataImporter importer, PolicyConversionContext context) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPolicyImportExtension to obtain the full interface.");
+    }
+
 
     
     // Properties section

@@ -42,8 +42,17 @@ import system.data.sqltypes.SqlBinary;
 import system.io.Stream;
 import system.xml.XmlQualifiedName;
 import system.xml.schema.XmlSchemaSet;
+import system.xml.schema.XmlSchema;
+import system.xml.XmlReader;
+import system.xml.XmlWriter;
+import system.runtime.serialization.SerializationInfo;
+import system.runtime.serialization.StreamingContext;
 import system.data.sqltypes.SqlBytes;
 import system.data.sqltypes.StorageState;
+import system.xml.serialization.IXmlSerializable;
+import system.xml.serialization.IXmlSerializableImplementation;
+import system.runtime.serialization.ISerializable;
+import system.runtime.serialization.ISerializableImplementation;
 
 
 /**
@@ -52,7 +61,7 @@ import system.data.sqltypes.StorageState;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlTypes.SqlBytes" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.SqlTypes.SqlBytes</a>
  */
-public class SqlBytes extends NetObject  {
+public class SqlBytes extends NetObject implements system.xml.serialization.IXmlSerializable, system.runtime.serialization.ISerializable {
     /**
      * Fully assembly qualified name: System.Data.Common, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -267,6 +276,42 @@ public class SqlBytes extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIXmlSerializable method available in IXmlSerializable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public XmlSchema GetSchema() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIXmlSerializable method available in IXmlSerializable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ReadXml(XmlReader reader) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIXmlSerializable method available in IXmlSerializable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void WriteXml(XmlWriter writer) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlSerializable to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToISerializable method available in ISerializable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
     }
 
 

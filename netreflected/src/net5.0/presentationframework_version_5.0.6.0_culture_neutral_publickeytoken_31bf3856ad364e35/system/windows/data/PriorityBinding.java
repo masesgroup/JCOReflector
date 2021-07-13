@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.data.BindingBase;
+import system.windows.markup.IAddChild;
+import system.windows.markup.IAddChildImplementation;
 
 
 /**
@@ -47,7 +49,7 @@ import system.windows.data.BindingBase;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.PriorityBinding" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.PriorityBinding</a>
  */
-public class PriorityBinding extends BindingBase  {
+public class PriorityBinding extends BindingBase implements system.windows.markup.IAddChild {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=5.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -160,6 +162,24 @@ public class PriorityBinding extends BindingBase  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIAddChild method available in IAddChild to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void AddChild(NetObject value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIAddChild method available in IAddChild to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void AddText(java.lang.String text) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
     }
 
 

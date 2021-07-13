@@ -177,6 +177,15 @@ public class MenuDesigner extends HierarchicalDataBoundControlDesigner  {
         }
     }
 
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDataBindingSchemaProvider method available in IDataBindingSchemaProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void RefreshSchema(boolean preferSilent) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataBindingSchemaProvider to obtain the full interface.");
+    }
+
 
     
     // Properties section

@@ -39,7 +39,10 @@ import java.util.ArrayList;
 
 // Import section
 import system.web.HttpContextBase;
+import system.web.HttpApplication;
 import system.web.routing.RouteCollection;
+import system.web.IHttpModule;
+import system.web.IHttpModuleImplementation;
 
 
 /**
@@ -48,7 +51,7 @@ import system.web.routing.RouteCollection;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.Routing.UrlRoutingModule" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.Routing.UrlRoutingModule</a>
  */
-public class UrlRoutingModule extends NetObject  {
+public class UrlRoutingModule extends NetObject implements system.web.IHttpModule {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -171,6 +174,24 @@ public class UrlRoutingModule extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIHttpModule method available in IHttpModule to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Dispose() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIHttpModule to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIHttpModule method available in IHttpModule to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Init(HttpApplication context) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIHttpModule to obtain the full interface.");
     }
 
 

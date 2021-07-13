@@ -41,6 +41,12 @@ import java.util.ArrayList;
 import system.Array;
 import system.collections.IComparer;
 import system.collections.IComparerImplementation;
+import system.collections.IEqualityComparer;
+import system.collections.IEqualityComparerImplementation;
+import system.collections.IStructuralComparable;
+import system.collections.IStructuralComparableImplementation;
+import system.collections.IStructuralEquatable;
+import system.collections.IStructuralEquatableImplementation;
 
 
 /**
@@ -49,7 +55,7 @@ import system.collections.IComparerImplementation;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Array" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Array</a>
  */
-public class Array extends NetObject  {
+public class Array extends NetObjectEnumerable implements system.collections.IStructuralComparable, system.collections.IStructuralEquatable {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */
@@ -762,6 +768,96 @@ public class Array extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIList method available in IList to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean Contains(NetObject value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIList method available in IList to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public int Add(NetObject value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIList method available in IList to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public int IndexOf(NetObject value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIList method available in IList to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Clear() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIList method available in IList to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Insert(int index, NetObject value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIList method available in IList to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Remove(NetObject value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIList method available in IList to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void RemoveAt(int index) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIStructuralComparable method available in IStructuralComparable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public int CompareTo(NetObject other, IComparer comparer) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStructuralComparable to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIStructuralEquatable method available in IStructuralEquatable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean Equals(NetObject other, IEqualityComparer comparer) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStructuralEquatable to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIStructuralEquatable method available in IStructuralEquatable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public int GetHashCode(IEqualityComparer comparer) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIStructuralEquatable to obtain the full interface.");
     }
 
 

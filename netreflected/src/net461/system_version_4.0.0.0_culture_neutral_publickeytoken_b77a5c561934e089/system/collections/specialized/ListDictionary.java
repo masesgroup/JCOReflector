@@ -51,7 +51,7 @@ import system.collections.ICollectionImplementation;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Specialized.ListDictionary" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Collections.Specialized.ListDictionary</a>
  */
-public class ListDictionary extends NetObject  {
+public class ListDictionary extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

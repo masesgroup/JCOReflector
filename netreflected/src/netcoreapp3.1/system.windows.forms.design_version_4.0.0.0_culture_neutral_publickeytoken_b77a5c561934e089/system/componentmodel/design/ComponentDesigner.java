@@ -46,6 +46,8 @@ import system.collections.ICollection;
 import system.collections.ICollectionImplementation;
 import system.componentmodel.design.DesignerActionListCollection;
 import system.componentmodel.design.DesignerVerbCollection;
+import system.componentmodel.design.IDesignerFilter;
+import system.componentmodel.design.IDesignerFilterImplementation;
 
 
 /**
@@ -54,7 +56,7 @@ import system.componentmodel.design.DesignerVerbCollection;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ComponentDesigner" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.ComponentDesigner</a>
  */
-public class ComponentDesigner extends NetObject implements AutoCloseable {
+public class ComponentDesigner extends NetObject implements system.componentmodel.design.IDesignerFilter, AutoCloseable {
     /**
      * Fully assembly qualified name: System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -227,6 +229,60 @@ public class ComponentDesigner extends NetObject implements AutoCloseable {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDesignerFilter method available in IDesignerFilter to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void PostFilterAttributes(IDictionary attributes) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDesignerFilter method available in IDesignerFilter to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void PostFilterEvents(IDictionary events) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDesignerFilter method available in IDesignerFilter to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void PostFilterProperties(IDictionary properties) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDesignerFilter method available in IDesignerFilter to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void PreFilterAttributes(IDictionary attributes) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDesignerFilter method available in IDesignerFilter to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void PreFilterEvents(IDictionary events) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDesignerFilter method available in IDesignerFilter to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void PreFilterProperties(IDictionary properties) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerFilter to obtain the full interface.");
     }
 
     public void close() throws Exception {

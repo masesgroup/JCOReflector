@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.forms.DataGridViewAdvancedCellBorderStyle;
+import system.ICloneable;
+import system.ICloneableImplementation;
 
 
 /**
@@ -47,7 +49,7 @@ import system.windows.forms.DataGridViewAdvancedCellBorderStyle;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewAdvancedBorderStyle" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridViewAdvancedBorderStyle</a>
  */
-public class DataGridViewAdvancedBorderStyle extends NetObject  {
+public class DataGridViewAdvancedBorderStyle extends NetObject implements system.ICloneable {
     /**
      * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -152,6 +154,15 @@ public class DataGridViewAdvancedBorderStyle extends NetObject  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICloneable method available in ICloneable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetObject Clone() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICloneable to obtain the full interface.");
+    }
+
 
     
     // Properties section

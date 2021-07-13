@@ -42,9 +42,19 @@ import system.servicemodel.description.OperationDescription;
 import system.servicemodel.DataContractFormatAttribute;
 import system.runtime.serialization.XmlObjectSerializer;
 import system.xml.XmlDictionaryString;
+import system.servicemodel.channels.BindingParameterCollection;
+import system.servicemodel.dispatcher.ClientOperation;
+import system.servicemodel.dispatcher.DispatchOperation;
+import system.servicemodel.description.WsdlExporter;
+import system.servicemodel.description.WsdlContractConversionContext;
+import system.servicemodel.description.WsdlEndpointConversionContext;
 import system.runtime.serialization.DataContractResolver;
 import system.runtime.serialization.IDataContractSurrogate;
 import system.runtime.serialization.IDataContractSurrogateImplementation;
+import system.servicemodel.description.IOperationBehavior;
+import system.servicemodel.description.IOperationBehaviorImplementation;
+import system.servicemodel.description.IWsdlExportExtension;
+import system.servicemodel.description.IWsdlExportExtensionImplementation;
 
 
 /**
@@ -53,7 +63,7 @@ import system.runtime.serialization.IDataContractSurrogateImplementation;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Description.DataContractSerializerOperationBehavior" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Description.DataContractSerializerOperationBehavior</a>
  */
-public class DataContractSerializerOperationBehavior extends NetObject  {
+public class DataContractSerializerOperationBehavior extends NetObject implements system.servicemodel.description.IOperationBehavior, system.servicemodel.description.IWsdlExportExtension {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -172,6 +182,60 @@ public class DataContractSerializerOperationBehavior extends NetObject  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIOperationBehavior method available in IOperationBehavior to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void AddBindingParameters(OperationDescription operationDescription, BindingParameterCollection bindingParameters) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIOperationBehavior to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIOperationBehavior method available in IOperationBehavior to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ApplyClientBehavior(OperationDescription operationDescription, ClientOperation clientOperation) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIOperationBehavior to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIOperationBehavior method available in IOperationBehavior to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ApplyDispatchBehavior(OperationDescription operationDescription, DispatchOperation dispatchOperation) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIOperationBehavior to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIOperationBehavior method available in IOperationBehavior to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Validate(OperationDescription operationDescription) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIOperationBehavior to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIWsdlExportExtension method available in IWsdlExportExtension to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWsdlExportExtension to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIWsdlExportExtension method available in IWsdlExportExtension to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ExportEndpoint(WsdlExporter exporter, WsdlEndpointConversionContext context) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWsdlExportExtension to obtain the full interface.");
+    }
+
 
     
     // Properties section

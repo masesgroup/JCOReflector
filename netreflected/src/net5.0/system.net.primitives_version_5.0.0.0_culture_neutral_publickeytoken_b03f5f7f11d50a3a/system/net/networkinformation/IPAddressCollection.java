@@ -47,7 +47,7 @@ import system.net.IPAddress;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.NetworkInformation.IPAddressCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.NetworkInformation.IPAddressCollection</a>
  */
-public class IPAddressCollection extends NetObject  {
+public class IPAddressCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Net.Primitives, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

@@ -42,6 +42,8 @@ import system.xaml.NamespaceDeclaration;
 import system.xaml.XamlMember;
 import system.xaml.XamlType;
 import system.xaml.XamlSchemaContext;
+import system.IDisposable;
+import system.IDisposableImplementation;
 
 
 /**
@@ -50,7 +52,7 @@ import system.xaml.XamlSchemaContext;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.XamlWriter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xaml.XamlWriter</a>
  */
-public class XamlWriter extends NetObject implements AutoCloseable {
+public class XamlWriter extends NetObject implements system.IDisposable, AutoCloseable {
     /**
      * Fully assembly qualified name: System.Xaml, Version=5.0.6.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -225,6 +227,15 @@ public class XamlWriter extends NetObject implements AutoCloseable {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDisposable method available in IDisposable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Dispose() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
     }
 
     public void close() throws Exception {

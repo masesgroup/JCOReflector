@@ -169,6 +169,15 @@ public class RangeBaseAutomationPeer extends FrameworkElementAutomationPeer  {
         }
     }
 
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIRangeValueProvider method available in IRangeValueProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void SetValue(double value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRangeValueProvider to obtain the full interface.");
+    }
+
 
     
     // Properties section

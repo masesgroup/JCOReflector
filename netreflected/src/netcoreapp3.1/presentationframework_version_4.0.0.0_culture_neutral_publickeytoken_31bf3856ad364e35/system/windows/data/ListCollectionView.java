@@ -46,6 +46,8 @@ import system.collections.IComparerImplementation;
 import system.componentmodel.NewItemPlaceholderPosition;
 import system.componentmodel.SortDescriptionCollection;
 import system.windows.data.GroupDescriptionSelectorCallback;
+import system.collections.IComparer;
+import system.collections.IComparerImplementation;
 
 
 /**
@@ -54,7 +56,7 @@ import system.windows.data.GroupDescriptionSelectorCallback;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.ListCollectionView" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.ListCollectionView</a>
  */
-public class ListCollectionView extends CollectionView  {
+public class ListCollectionView extends CollectionView implements system.collections.IComparer {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -304,6 +306,15 @@ public class ListCollectionView extends CollectionView  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIComparer method available in IComparer to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public int Compare(NetObject x, NetObject y) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIComparer to obtain the full interface.");
     }
 
 

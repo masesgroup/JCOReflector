@@ -47,6 +47,8 @@ import system.windows.FontStretch;
 import system.windows.FontStyle;
 import system.windows.FontWeight;
 import system.windows.media.FontEmbeddingRight;
+import system.componentmodel.ISupportInitialize;
+import system.componentmodel.ISupportInitializeImplementation;
 
 
 /**
@@ -55,7 +57,7 @@ import system.windows.media.FontEmbeddingRight;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.GlyphTypeface" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.GlyphTypeface</a>
  */
-public class GlyphTypeface extends NetObject  {
+public class GlyphTypeface extends NetObject implements system.componentmodel.ISupportInitialize {
     /**
      * Fully assembly qualified name: PresentationCore, Version=5.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -200,6 +202,24 @@ public class GlyphTypeface extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToISupportInitialize method available in ISupportInitialize to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void BeginInit() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToISupportInitialize method available in ISupportInitialize to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void EndInit() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
     }
 
 

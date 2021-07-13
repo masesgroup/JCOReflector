@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.windows.forms.ContainerControl;
 import system.componentmodel.PropertyTabScope;
+import microsoft.win32.RegistryKey;
 import system.componentmodel.AttributeCollection;
 import system.componentmodel.ISite;
 import system.componentmodel.ISiteImplementation;
@@ -219,6 +220,51 @@ public class PropertyGrid extends ContainerControl  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIComPropertyBrowser method available in IComPropertyBrowser to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean EnsurePendingChangesCommitted() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIComPropertyBrowser to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIComPropertyBrowser method available in IComPropertyBrowser to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void DropDownDone() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIComPropertyBrowser to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIComPropertyBrowser method available in IComPropertyBrowser to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void HandleF4() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIComPropertyBrowser to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIComPropertyBrowser method available in IComPropertyBrowser to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void LoadState(RegistryKey key) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIComPropertyBrowser to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIComPropertyBrowser method available in IComPropertyBrowser to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void SaveState(RegistryKey key) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIComPropertyBrowser to obtain the full interface.");
     }
 
 

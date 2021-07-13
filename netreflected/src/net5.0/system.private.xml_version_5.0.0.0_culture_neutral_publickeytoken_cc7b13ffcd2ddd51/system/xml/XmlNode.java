@@ -57,7 +57,7 @@ import system.xml.XmlNodeType;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlNode" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Xml.XmlNode</a>
  */
-public class XmlNode extends NetObject  {
+public class XmlNode extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Private.Xml, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

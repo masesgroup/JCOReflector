@@ -48,7 +48,7 @@ import system.data.oledb.OleDbError;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.OleDb.OleDbErrorCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.OleDb.OleDbErrorCollection</a>
  */
-public class OleDbErrorCollection extends NetObject  {
+public class OleDbErrorCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

@@ -51,6 +51,7 @@ import system.reflection.CallingConventions;
 import system.runtime.interopservices.CallingConvention;
 import system.diagnostics.symbolstore.ISymbolDocumentWriter;
 import system.diagnostics.symbolstore.ISymbolDocumentWriterImplementation;
+import system.UInt32;
 
 
 /**

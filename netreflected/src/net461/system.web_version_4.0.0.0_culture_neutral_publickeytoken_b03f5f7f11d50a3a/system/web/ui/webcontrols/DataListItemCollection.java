@@ -48,7 +48,7 @@ import system.web.ui.webcontrols.DataListItem;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.DataListItemCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.DataListItemCollection</a>
  */
-public class DataListItemCollection extends NetObject  {
+public class DataListItemCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

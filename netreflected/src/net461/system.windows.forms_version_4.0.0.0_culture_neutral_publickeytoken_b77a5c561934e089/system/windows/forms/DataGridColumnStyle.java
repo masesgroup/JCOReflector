@@ -39,11 +39,14 @@ import java.util.ArrayList;
 
 // Import section
 import system.componentmodel.Component;
+import system.windows.forms.Control;
 import system.componentmodel.PropertyDescriptor;
 import system.windows.forms.AccessibleObject;
 import system.windows.forms.DataGridTableStyle;
 import system.windows.forms.HorizontalAlignment;
 import system.EventHandler;
+import system.windows.forms.IDataGridColumnStyleEditingNotificationService;
+import system.windows.forms.IDataGridColumnStyleEditingNotificationServiceImplementation;
 
 
 /**
@@ -52,7 +55,7 @@ import system.EventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridColumnStyle" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.DataGridColumnStyle</a>
  */
-public class DataGridColumnStyle extends Component  {
+public class DataGridColumnStyle extends Component implements system.windows.forms.IDataGridColumnStyleEditingNotificationService {
     /**
      * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -157,6 +160,15 @@ public class DataGridColumnStyle extends Component  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDataGridColumnStyleEditingNotificationService method available in IDataGridColumnStyleEditingNotificationService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ColumnStartedEditing(Control editingControl) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataGridColumnStyleEditingNotificationService to obtain the full interface.");
     }
 
 

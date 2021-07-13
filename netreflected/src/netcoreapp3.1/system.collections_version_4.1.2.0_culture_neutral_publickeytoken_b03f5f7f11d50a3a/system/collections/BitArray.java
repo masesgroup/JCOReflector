@@ -48,7 +48,7 @@ import system.Array;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Collections.BitArray" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Collections.BitArray</a>
  */
-public class BitArray extends NetObject  {
+public class BitArray extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Collections, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

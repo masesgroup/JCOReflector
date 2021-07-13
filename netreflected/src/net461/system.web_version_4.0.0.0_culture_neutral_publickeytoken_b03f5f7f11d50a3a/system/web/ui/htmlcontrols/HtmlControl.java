@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.web.ui.Control;
 import system.web.ui.AttributeCollection;
 import system.web.ui.CssStyleCollection;
+import system.web.ui.IAttributeAccessor;
+import system.web.ui.IAttributeAccessorImplementation;
 
 
 /**
@@ -49,7 +51,7 @@ import system.web.ui.CssStyleCollection;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.HtmlControls.HtmlControl" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.HtmlControls.HtmlControl</a>
  */
-public class HtmlControl extends Control  {
+public class HtmlControl extends Control implements system.web.ui.IAttributeAccessor {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -146,6 +148,24 @@ public class HtmlControl extends Control  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIAttributeAccessor method available in IAttributeAccessor to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public java.lang.String GetAttribute(java.lang.String key) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAttributeAccessor to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIAttributeAccessor method available in IAttributeAccessor to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void SetAttribute(java.lang.String key, java.lang.String value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAttributeAccessor to obtain the full interface.");
+    }
+
 
     
     // Properties section

@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.globalization.TextInfo;
+import system.runtime.serialization.IDeserializationCallback;
+import system.runtime.serialization.IDeserializationCallbackImplementation;
 
 
 /**
@@ -47,7 +49,7 @@ import system.globalization.TextInfo;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Globalization.TextInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Globalization.TextInfo</a>
  */
-public class TextInfo extends NetObject  {
+public class TextInfo extends NetObject implements system.runtime.serialization.IDeserializationCallback {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */
@@ -216,6 +218,15 @@ public class TextInfo extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDeserializationCallback method available in IDeserializationCallback to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void OnDeserialization(NetObject sender) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDeserializationCallback to obtain the full interface.");
     }
 
 

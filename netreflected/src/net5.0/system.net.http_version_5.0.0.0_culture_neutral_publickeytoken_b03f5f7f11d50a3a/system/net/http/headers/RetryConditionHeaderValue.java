@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.DateTimeOffset;
 import system.TimeSpan;
 import system.net.http.headers.RetryConditionHeaderValue;
+import system.ICloneable;
+import system.ICloneableImplementation;
 
 
 /**
@@ -49,7 +51,7 @@ import system.net.http.headers.RetryConditionHeaderValue;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Http.Headers.RetryConditionHeaderValue" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Http.Headers.RetryConditionHeaderValue</a>
  */
-public class RetryConditionHeaderValue extends NetObject  {
+public class RetryConditionHeaderValue extends NetObject implements system.ICloneable {
     /**
      * Fully assembly qualified name: System.Net.Http, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -177,6 +179,15 @@ public class RetryConditionHeaderValue extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICloneable method available in ICloneable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetObject Clone() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICloneable to obtain the full interface.");
     }
 
 

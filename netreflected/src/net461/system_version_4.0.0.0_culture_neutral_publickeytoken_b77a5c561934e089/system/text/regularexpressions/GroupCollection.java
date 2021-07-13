@@ -48,7 +48,7 @@ import system.text.regularexpressions.Group;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.RegularExpressions.GroupCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.RegularExpressions.GroupCollection</a>
  */
-public class GroupCollection extends NetObject  {
+public class GroupCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

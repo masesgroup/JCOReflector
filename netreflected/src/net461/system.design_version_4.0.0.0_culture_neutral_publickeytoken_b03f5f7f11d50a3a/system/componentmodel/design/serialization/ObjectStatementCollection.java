@@ -49,7 +49,7 @@ import system.codedom.CodeStatementCollection;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.ObjectStatementCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.ObjectStatementCollection</a>
  */
-public class ObjectStatementCollection extends NetObject  {
+public class ObjectStatementCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

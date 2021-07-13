@@ -40,6 +40,12 @@ import java.util.ArrayList;
 // Import section
 import system.windows.controls.GridView;
 import system.windows.controls.ListView;
+import system.windows.automation.peers.PatternInterface;
+import system.windows.automation.peers.AutomationControlType;
+import system.windows.automation.peers.ItemAutomationPeer;
+import system.collections.specialized.NotifyCollectionChangedEventArgs;
+import system.windows.automation.provider.IRawElementProviderSimple;
+import system.windows.automation.provider.IRawElementProviderSimpleImplementation;
 
 
 /**
@@ -157,6 +163,78 @@ public class GridViewAutomationPeer extends NetObject  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIViewAutomationPeer method available in IViewAutomationPeer to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetObject GetPattern(PatternInterface patternInterface) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIViewAutomationPeer to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIViewAutomationPeer method available in IViewAutomationPeer to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public AutomationControlType GetAutomationControlType() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIViewAutomationPeer to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIViewAutomationPeer method available in IViewAutomationPeer to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public ItemAutomationPeer CreateItemAutomationPeer(NetObject item) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIViewAutomationPeer to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIViewAutomationPeer method available in IViewAutomationPeer to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ItemsChanged(NotifyCollectionChangedEventArgs e) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIViewAutomationPeer to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIViewAutomationPeer method available in IViewAutomationPeer to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ViewDetached() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIViewAutomationPeer to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToITableProvider method available in ITableProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public IRawElementProviderSimple[] GetColumnHeaders() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITableProvider to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToITableProvider method available in ITableProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public IRawElementProviderSimple[] GetRowHeaders() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITableProvider to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIGridProvider method available in IGridProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public IRawElementProviderSimple GetItem(int row, int column) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIGridProvider to obtain the full interface.");
+    }
+
 
     
     // Properties section

@@ -45,6 +45,8 @@ import system.net.CookieCollection;
 import system.net.WebHeaderCollection;
 import system.text.Encoding;
 import system.Version;
+import system.IDisposable;
+import system.IDisposableImplementation;
 
 
 /**
@@ -53,7 +55,7 @@ import system.Version;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.HttpListenerResponse" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.HttpListenerResponse</a>
  */
-public class HttpListenerResponse extends NetObject implements AutoCloseable {
+public class HttpListenerResponse extends NetObject implements system.IDisposable, AutoCloseable {
     /**
      * Fully assembly qualified name: System.Net.HttpListener, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -250,6 +252,15 @@ public class HttpListenerResponse extends NetObject implements AutoCloseable {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDisposable method available in IDisposable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Dispose() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
     }
 
     public void close() throws Exception {

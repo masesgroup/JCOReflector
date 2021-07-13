@@ -249,6 +249,51 @@ public class DataGridViewCellCollection extends BaseCollection  {
         }
     }
 
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIList method available in IList to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean Contains(NetObject value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIList method available in IList to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public int Add(NetObject value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIList method available in IList to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public int IndexOf(NetObject value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIList method available in IList to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Insert(int index, NetObject value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIList method available in IList to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Remove(NetObject value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+    }
+
 
     
     // Properties section

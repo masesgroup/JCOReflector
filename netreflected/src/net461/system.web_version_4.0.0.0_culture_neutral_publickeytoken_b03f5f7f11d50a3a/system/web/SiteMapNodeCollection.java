@@ -45,6 +45,7 @@ import system.web.ui.IHierarchyDataImplementation;
 import system.web.ui.webcontrols.SiteMapDataSourceView;
 import system.web.ui.webcontrols.SiteMapDataSource;
 import system.web.ui.webcontrols.SiteMapHierarchicalDataSourceView;
+import system.Array;
 
 
 /**
@@ -53,7 +54,7 @@ import system.web.ui.webcontrols.SiteMapHierarchicalDataSourceView;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.SiteMapNodeCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.SiteMapNodeCollection</a>
  */
-public class SiteMapNodeCollection extends NetObject  {
+public class SiteMapNodeCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -340,6 +341,60 @@ public class SiteMapNodeCollection extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIList method available in IList to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean Contains(NetObject value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIList method available in IList to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public int Add(NetObject value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIList method available in IList to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public int IndexOf(NetObject value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIList method available in IList to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Insert(int index, NetObject value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIList method available in IList to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Remove(NetObject value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICollection method available in ICollection to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void CopyTo(Array array, int index) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection to obtain the full interface.");
     }
 
 

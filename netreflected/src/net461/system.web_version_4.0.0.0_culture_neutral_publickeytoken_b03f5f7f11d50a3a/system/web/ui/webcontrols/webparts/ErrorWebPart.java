@@ -156,6 +156,42 @@ public class ErrorWebPart extends ProxyWebPart  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToITrackingPersonalizable method available in ITrackingPersonalizable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void BeginLoad() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITrackingPersonalizable to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToITrackingPersonalizable method available in ITrackingPersonalizable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void BeginSave() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITrackingPersonalizable to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToITrackingPersonalizable method available in ITrackingPersonalizable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void EndLoad() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITrackingPersonalizable to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToITrackingPersonalizable method available in ITrackingPersonalizable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void EndSave() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITrackingPersonalizable to obtain the full interface.");
+    }
+
 
     
     // Properties section

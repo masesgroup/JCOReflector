@@ -44,9 +44,15 @@ import system.data.DataViewRowState;
 import system.data.DataView;
 import system.data.DataRowView;
 import system.Array;
+import system.componentmodel.ListSortDescriptionCollection;
+import system.componentmodel.PropertyDescriptor;
+import system.componentmodel.ListSortDirection;
+import system.componentmodel.PropertyDescriptorCollection;
 import system.data.DataViewManager;
 import system.componentmodel.ListChangedEventHandler;
 import system.EventHandler;
+import system.componentmodel.ITypedList;
+import system.componentmodel.ITypedListImplementation;
 
 
 /**
@@ -55,7 +61,7 @@ import system.EventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Data.DataView" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Data.DataView</a>
  */
-public class DataView extends MarshalByValueComponent  {
+public class DataView extends MarshalByValueComponent implements system.componentmodel.ITypedList {
     /**
      * Fully assembly qualified name: System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -359,6 +365,150 @@ public class DataView extends MarshalByValueComponent  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIBindingListView method available in IBindingListView to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ApplySort(ListSortDescriptionCollection sorts) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBindingListView to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIBindingListView method available in IBindingListView to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void RemoveFilter() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBindingListView to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIBindingList method available in IBindingList to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public int Find(PropertyDescriptor property, NetObject key) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBindingList to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIBindingList method available in IBindingList to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void AddIndex(PropertyDescriptor property) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBindingList to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIBindingList method available in IBindingList to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ApplySort(PropertyDescriptor property, ListSortDirection direction) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBindingList to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIBindingList method available in IBindingList to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void RemoveIndex(PropertyDescriptor property) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBindingList to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIBindingList method available in IBindingList to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void RemoveSort() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIBindingList to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIList method available in IList to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean Contains(NetObject value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIList method available in IList to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public int Add(NetObject value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIList method available in IList to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public int IndexOf(NetObject value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIList method available in IList to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Clear() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIList method available in IList to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Insert(int index, NetObject value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIList method available in IList to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Remove(NetObject value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIList method available in IList to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void RemoveAt(int index) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToITypedList method available in ITypedList to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public PropertyDescriptorCollection GetItemProperties(PropertyDescriptor[] listAccessors) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITypedList to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToITypedList method available in ITypedList to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public java.lang.String GetListName(PropertyDescriptor[] listAccessors) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITypedList to obtain the full interface.");
     }
 
 

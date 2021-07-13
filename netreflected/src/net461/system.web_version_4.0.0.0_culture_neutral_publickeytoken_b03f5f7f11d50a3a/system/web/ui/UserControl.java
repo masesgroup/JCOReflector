@@ -49,6 +49,8 @@ import system.web.sessionstate.HttpSessionState;
 import system.web.TraceContext;
 import system.web.ui.AttributeCollection;
 import system.web.ui.ControlCachePolicy;
+import system.web.ui.IAttributeAccessor;
+import system.web.ui.IAttributeAccessorImplementation;
 
 
 /**
@@ -57,7 +59,7 @@ import system.web.ui.ControlCachePolicy;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.UserControl" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.UserControl</a>
  */
-public class UserControl extends TemplateControl  {
+public class UserControl extends TemplateControl implements system.web.ui.IAttributeAccessor {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -190,6 +192,24 @@ public class UserControl extends TemplateControl  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIAttributeAccessor method available in IAttributeAccessor to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public java.lang.String GetAttribute(java.lang.String key) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAttributeAccessor to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIAttributeAccessor method available in IAttributeAccessor to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void SetAttribute(java.lang.String key, java.lang.String value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAttributeAccessor to obtain the full interface.");
     }
 
 

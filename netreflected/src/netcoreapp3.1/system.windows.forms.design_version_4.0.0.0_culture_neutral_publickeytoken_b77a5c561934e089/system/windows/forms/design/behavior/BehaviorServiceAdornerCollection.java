@@ -42,7 +42,6 @@ import system.collections.CollectionBase;
 import system.windows.forms.design.behavior.Adorner;
 import system.windows.forms.design.behavior.BehaviorService;
 import system.windows.forms.design.behavior.BehaviorServiceAdornerCollection;
-import system.windows.forms.design.behavior.BehaviorServiceAdornerCollectionEnumerator;
 
 
 /**
@@ -51,7 +50,7 @@ import system.windows.forms.design.behavior.BehaviorServiceAdornerCollectionEnum
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.Behavior.BehaviorServiceAdornerCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.Design.Behavior.BehaviorServiceAdornerCollection</a>
  */
-public class BehaviorServiceAdornerCollection extends CollectionBase implements Iterable<Adorner> {
+public class BehaviorServiceAdornerCollection extends CollectionBase  {
     /**
      * Fully assembly qualified name: System.Windows.Forms.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -208,15 +207,6 @@ public class BehaviorServiceAdornerCollection extends CollectionBase implements 
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
-    }
-
-    public BehaviorServiceAdornerCollectionEnumerator GetEnumerator() throws Throwable {
-        return new BehaviorServiceAdornerCollectionEnumerator(classInstance);
-    }
-
-    @SuppressWarnings("unchecked")
-    public java.util.Iterator<Adorner> iterator() {
-        return new BehaviorServiceAdornerCollectionEnumerator(classInstance);
     }
 
     public void AddRange(Adorner[] value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException {

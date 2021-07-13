@@ -40,6 +40,9 @@ import java.util.ArrayList;
 // Import section
 import system.threading.tasks.Task;
 import system.web.HttpContext;
+import system.IAsyncResult;
+import system.IAsyncResultImplementation;
+import system.AsyncCallback;
 
 
 /**
@@ -164,6 +167,24 @@ public class HttpTaskAsyncHandler extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIHttpAsyncHandler method available in IHttpAsyncHandler to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public IAsyncResult BeginProcessRequest(HttpContext context, AsyncCallback cb, NetObject extraData) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIHttpAsyncHandler to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIHttpAsyncHandler method available in IHttpAsyncHandler to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void EndProcessRequest(IAsyncResult result) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIHttpAsyncHandler to obtain the full interface.");
     }
 
 

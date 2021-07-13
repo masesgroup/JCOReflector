@@ -39,8 +39,13 @@ import java.util.ArrayList;
 
 // Import section
 import system.workflow.componentmodel.Activity;
+import system.IServiceProvider;
+import system.IServiceProviderImplementation;
+import system.workflow.componentmodel.compiler.AccessTypes;
 import system.workflow.componentmodel.WorkflowParameterBindingCollection;
 import system.EventHandler;
+import system.workflow.componentmodel.IDynamicPropertyTypeProvider;
+import system.workflow.componentmodel.IDynamicPropertyTypeProviderImplementation;
 
 
 /**
@@ -49,7 +54,7 @@ import system.EventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.WebServiceOutputActivity" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.Activities.WebServiceOutputActivity</a>
  */
-public class WebServiceOutputActivity extends Activity  {
+public class WebServiceOutputActivity extends Activity implements system.workflow.componentmodel.IDynamicPropertyTypeProvider {
     /**
      * Fully assembly qualified name: System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -164,6 +169,24 @@ public class WebServiceOutputActivity extends Activity  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDynamicPropertyTypeProvider method available in IDynamicPropertyTypeProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetType GetPropertyType(IServiceProvider serviceProvider, java.lang.String propertyName) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDynamicPropertyTypeProvider to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDynamicPropertyTypeProvider method available in IDynamicPropertyTypeProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public AccessTypes GetAccessType(IServiceProvider serviceProvider, java.lang.String propertyName) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDynamicPropertyTypeProvider to obtain the full interface.");
+    }
+
 
     
     // Properties section

@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.windows.automation.peers.TextElementAutomationPeer;
 import system.windows.documents.Table;
 import system.windows.automation.peers.PatternInterface;
+import system.windows.automation.provider.IRawElementProviderSimple;
+import system.windows.automation.provider.IRawElementProviderSimpleImplementation;
 
 
 /**
@@ -167,6 +169,15 @@ public class TableAutomationPeer extends TextElementAutomationPeer  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIGridProvider method available in IGridProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public IRawElementProviderSimple GetItem(int row, int column) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIGridProvider to obtain the full interface.");
     }
 
 

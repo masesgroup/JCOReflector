@@ -42,6 +42,10 @@ import system.IServiceProvider;
 import system.IServiceProviderImplementation;
 import system.componentmodel.design.serialization.CodeDomLocalizationModel;
 import system.globalization.CultureInfo;
+import system.componentmodel.design.serialization.IDesignerSerializationManager;
+import system.componentmodel.design.serialization.IDesignerSerializationManagerImplementation;
+import system.componentmodel.design.serialization.IDesignerSerializationProvider;
+import system.componentmodel.design.serialization.IDesignerSerializationProviderImplementation;
 
 
 /**
@@ -50,7 +54,7 @@ import system.globalization.CultureInfo;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.CodeDomLocalizationProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.Serialization.CodeDomLocalizationProvider</a>
  */
-public class CodeDomLocalizationProvider extends NetObject implements AutoCloseable {
+public class CodeDomLocalizationProvider extends NetObject implements system.componentmodel.design.serialization.IDesignerSerializationProvider, AutoCloseable {
     /**
      * Fully assembly qualified name: System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -177,6 +181,15 @@ public class CodeDomLocalizationProvider extends NetObject implements AutoClosea
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDesignerSerializationProvider method available in IDesignerSerializationProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetObject GetSerializer(IDesignerSerializationManager manager, NetObject currentSerializer, NetType objectType, NetType serializerType) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerSerializationProvider to obtain the full interface.");
     }
 
     public void close() throws Exception {

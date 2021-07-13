@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.componentmodel.design.IDesignerOptionService;
+import system.componentmodel.design.IDesignerOptionServiceImplementation;
 
 
 /**
@@ -46,7 +48,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.DesignerOptionService" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.DesignerOptionService</a>
  */
-public class DesignerOptionService extends NetObject  {
+public class DesignerOptionService extends NetObject implements system.componentmodel.design.IDesignerOptionService {
     /**
      * Fully assembly qualified name: System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -143,6 +145,24 @@ public class DesignerOptionService extends NetObject  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDesignerOptionService method available in IDesignerOptionService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetObject GetOptionValue(java.lang.String pageName, java.lang.String valueName) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerOptionService to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDesignerOptionService method available in IDesignerOptionService to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void SetOptionValue(java.lang.String pageName, java.lang.String valueName, NetObject value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDesignerOptionService to obtain the full interface.");
+    }
+
 
     
     // Properties section

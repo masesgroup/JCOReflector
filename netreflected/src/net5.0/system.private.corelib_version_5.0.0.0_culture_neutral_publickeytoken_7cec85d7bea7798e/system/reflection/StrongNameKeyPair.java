@@ -39,6 +39,12 @@ import java.util.ArrayList;
 
 // Import section
 import system.io.FileStream;
+import system.runtime.serialization.SerializationInfo;
+import system.runtime.serialization.StreamingContext;
+import system.runtime.serialization.IDeserializationCallback;
+import system.runtime.serialization.IDeserializationCallbackImplementation;
+import system.runtime.serialization.ISerializable;
+import system.runtime.serialization.ISerializableImplementation;
 
 
 /**
@@ -47,7 +53,7 @@ import system.io.FileStream;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.StrongNameKeyPair" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Reflection.StrongNameKeyPair</a>
  */
-public class StrongNameKeyPair extends NetObject  {
+public class StrongNameKeyPair extends NetObject implements system.runtime.serialization.IDeserializationCallback, system.runtime.serialization.ISerializable {
     /**
      * Fully assembly qualified name: System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
      */
@@ -176,6 +182,24 @@ public class StrongNameKeyPair extends NetObject  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDeserializationCallback method available in IDeserializationCallback to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void OnDeserialization(NetObject sender) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDeserializationCallback to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToISerializable method available in ISerializable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
+    }
+
 
     
     // Properties section

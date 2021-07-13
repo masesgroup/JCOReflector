@@ -40,10 +40,14 @@ import java.util.ArrayList;
 // Import section
 import system.windows.forms.LayoutSettings;
 import system.windows.forms.TableLayoutPanelCellPosition;
+import system.runtime.serialization.SerializationInfo;
+import system.runtime.serialization.StreamingContext;
 import system.windows.forms.layout.LayoutEngine;
 import system.windows.forms.TableLayoutColumnStyleCollection;
 import system.windows.forms.TableLayoutPanelGrowStyle;
 import system.windows.forms.TableLayoutRowStyleCollection;
+import system.runtime.serialization.ISerializable;
+import system.runtime.serialization.ISerializableImplementation;
 
 
 /**
@@ -52,7 +56,7 @@ import system.windows.forms.TableLayoutRowStyleCollection;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.TableLayoutSettings" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Forms.TableLayoutSettings</a>
  */
-public class TableLayoutSettings extends LayoutSettings  {
+public class TableLayoutSettings extends LayoutSettings implements system.runtime.serialization.ISerializable {
     /**
      * Fully assembly qualified name: System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -250,6 +254,15 @@ public class TableLayoutSettings extends LayoutSettings  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToISerializable method available in ISerializable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
     }
 
 

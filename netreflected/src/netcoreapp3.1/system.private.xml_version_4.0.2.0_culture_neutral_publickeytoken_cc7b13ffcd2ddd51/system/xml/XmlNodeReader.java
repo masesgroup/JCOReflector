@@ -403,6 +403,15 @@ public class XmlNodeReader extends XmlReader  {
         }
     }
 
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIXmlNamespaceResolver method available in IXmlNamespaceResolver to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public java.lang.String LookupPrefix(java.lang.String namespaceName) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIXmlNamespaceResolver to obtain the full interface.");
+    }
+
 
     
     // Properties section

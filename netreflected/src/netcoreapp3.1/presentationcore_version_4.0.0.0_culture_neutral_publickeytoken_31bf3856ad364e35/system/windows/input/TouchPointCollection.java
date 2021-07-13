@@ -46,7 +46,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.TouchPointCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Input.TouchPointCollection</a>
  */
-public class TouchPointCollection extends NetObject  {
+public class TouchPointCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

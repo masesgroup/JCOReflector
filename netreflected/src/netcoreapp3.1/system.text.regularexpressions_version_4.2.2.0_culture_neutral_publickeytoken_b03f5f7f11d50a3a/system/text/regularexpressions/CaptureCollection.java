@@ -48,7 +48,7 @@ import system.text.regularexpressions.Capture;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Text.RegularExpressions.CaptureCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Text.RegularExpressions.CaptureCollection</a>
  */
-public class CaptureCollection extends NetObject  {
+public class CaptureCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Text.RegularExpressions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -165,6 +165,69 @@ public class CaptureCollection extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIList method available in IList to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean Contains(NetObject value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIList method available in IList to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public int Add(NetObject value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIList method available in IList to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public int IndexOf(NetObject value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIList method available in IList to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Clear() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIList method available in IList to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Insert(int index, NetObject value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIList method available in IList to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Remove(NetObject value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIList method available in IList to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void RemoveAt(int index) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIList to obtain the full interface.");
     }
 
 

@@ -40,11 +40,11 @@ import java.util.ArrayList;
 // Import section
 import system.windows.forms.ScrollableControl;
 import system.windows.forms.ValidationConstraints;
+import system.windows.forms.Control;
 import system.drawing.SizeF;
 import system.windows.forms.AutoScaleMode;
 import system.windows.forms.AutoValidate;
 import system.windows.forms.BindingContext;
-import system.windows.forms.Control;
 import system.windows.forms.Form;
 import system.EventHandler;
 
@@ -208,6 +208,15 @@ public class ContainerControl extends ScrollableControl  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIContainerControl method available in IContainerControl to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean ActivateControl(Control active) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContainerControl to obtain the full interface.");
     }
 
 

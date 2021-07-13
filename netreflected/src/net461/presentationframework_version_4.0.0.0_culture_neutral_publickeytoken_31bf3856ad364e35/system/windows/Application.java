@@ -61,6 +61,8 @@ import system.windows.navigation.NavigationStoppedEventHandler;
 import system.windows.SessionEndingCancelEventHandler;
 import system.windows.StartupEventHandler;
 import system.windows.threading.DispatcherUnhandledExceptionEventHandler;
+import system.windows.markup.IQueryAmbient;
+import system.windows.markup.IQueryAmbientImplementation;
 
 
 /**
@@ -69,7 +71,7 @@ import system.windows.threading.DispatcherUnhandledExceptionEventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Application" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Application</a>
  */
-public class Application extends DispatcherObject  {
+public class Application extends DispatcherObject implements system.windows.markup.IQueryAmbient {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -308,6 +310,15 @@ public class Application extends DispatcherObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIQueryAmbient method available in IQueryAmbient to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean IsAmbientPropertyAvailable(java.lang.String propertyName) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIQueryAmbient to obtain the full interface.");
     }
 
 

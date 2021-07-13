@@ -49,7 +49,7 @@ import system.management.MethodData;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Management.MethodDataCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Management.MethodDataCollection</a>
  */
-public class MethodDataCollection extends NetObject  {
+public class MethodDataCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

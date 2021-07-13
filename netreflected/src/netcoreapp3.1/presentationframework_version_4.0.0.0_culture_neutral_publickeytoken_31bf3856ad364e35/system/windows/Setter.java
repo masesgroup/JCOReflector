@@ -42,6 +42,8 @@ import system.windows.SetterBase;
 import system.windows.DependencyProperty;
 import system.windows.markup.XamlSetMarkupExtensionEventArgs;
 import system.windows.markup.XamlSetTypeConverterEventArgs;
+import system.componentmodel.ISupportInitialize;
+import system.componentmodel.ISupportInitializeImplementation;
 
 
 /**
@@ -50,7 +52,7 @@ import system.windows.markup.XamlSetTypeConverterEventArgs;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Setter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Setter</a>
  */
-public class Setter extends SetterBase  {
+public class Setter extends SetterBase implements system.componentmodel.ISupportInitialize {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -193,6 +195,24 @@ public class Setter extends SetterBase  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToISupportInitialize method available in ISupportInitialize to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void BeginInit() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToISupportInitialize method available in ISupportInitialize to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void EndInit() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
     }
 
 

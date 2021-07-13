@@ -44,6 +44,7 @@ import system.windows.IInputElementImplementation;
 import system.windows.input.CaptureMode;
 import system.windows.input.TouchPoint;
 import system.windows.input.TouchPointCollection;
+import system.windows.Point;
 import system.windows.PresentationSource;
 import system.EventHandler;
 
@@ -201,6 +202,24 @@ public class TouchDevice extends InputDevice  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIManipulator method available in IManipulator to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public Point GetPosition(IInputElement relativeTo) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIManipulator to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIManipulator method available in IManipulator to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ManipulationEnded(boolean cancel) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIManipulator to obtain the full interface.");
     }
 
 

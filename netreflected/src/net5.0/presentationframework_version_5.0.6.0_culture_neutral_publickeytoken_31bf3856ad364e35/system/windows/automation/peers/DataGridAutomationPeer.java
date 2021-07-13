@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.windows.automation.peers.ItemsControlAutomationPeer;
 import system.windows.controls.DataGrid;
 import system.windows.automation.peers.PatternInterface;
+import system.windows.automation.provider.IRawElementProviderSimple;
+import system.windows.automation.provider.IRawElementProviderSimpleImplementation;
 
 
 /**
@@ -167,6 +169,42 @@ public class DataGridAutomationPeer extends ItemsControlAutomationPeer  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIGridProvider method available in IGridProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public IRawElementProviderSimple GetItem(int row, int column) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIGridProvider to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToISelectionProvider method available in ISelectionProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public IRawElementProviderSimple[] GetSelection() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISelectionProvider to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToITableProvider method available in ITableProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public IRawElementProviderSimple[] GetColumnHeaders() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITableProvider to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToITableProvider method available in ITableProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public IRawElementProviderSimple[] GetRowHeaders() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITableProvider to obtain the full interface.");
     }
 
 

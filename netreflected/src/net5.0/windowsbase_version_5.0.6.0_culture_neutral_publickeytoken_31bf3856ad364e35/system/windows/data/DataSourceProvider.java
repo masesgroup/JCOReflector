@@ -41,6 +41,8 @@ import java.util.ArrayList;
 import system.IDisposable;
 import system.IDisposableImplementation;
 import system.EventHandler;
+import system.componentmodel.ISupportInitialize;
+import system.componentmodel.ISupportInitializeImplementation;
 
 
 /**
@@ -49,7 +51,7 @@ import system.EventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.DataSourceProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Data.DataSourceProvider</a>
  */
-public class DataSourceProvider extends NetObject  {
+public class DataSourceProvider extends NetObject implements system.componentmodel.ISupportInitialize {
     /**
      * Fully assembly qualified name: WindowsBase, Version=5.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -175,6 +177,24 @@ public class DataSourceProvider extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToISupportInitialize method available in ISupportInitialize to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void BeginInit() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToISupportInitialize method available in ISupportInitialize to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void EndInit() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
     }
 
 

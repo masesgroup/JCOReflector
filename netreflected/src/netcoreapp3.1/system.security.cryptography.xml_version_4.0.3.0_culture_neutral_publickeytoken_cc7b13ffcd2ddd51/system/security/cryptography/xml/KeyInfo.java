@@ -48,7 +48,7 @@ import system.security.cryptography.xml.KeyInfoClause;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Xml.KeyInfo" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Xml.KeyInfo</a>
  */
-public class KeyInfo extends NetObject  {
+public class KeyInfo extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Security.Cryptography.Xml, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

@@ -39,9 +39,18 @@ import java.util.ArrayList;
 
 // Import section
 import system.servicemodel.channels.TransportBindingElement;
+import system.servicemodel.description.WsdlExporter;
+import system.servicemodel.description.WsdlContractConversionContext;
+import system.servicemodel.description.WsdlEndpointConversionContext;
+import system.servicemodel.description.MetadataExporter;
+import system.servicemodel.description.PolicyConversionContext;
 import system.servicemodel.HostNameComparisonMode;
 import system.servicemodel.TransferMode;
 import system.TimeSpan;
+import system.servicemodel.description.IWsdlExportExtension;
+import system.servicemodel.description.IWsdlExportExtensionImplementation;
+import system.servicemodel.description.IPolicyExportExtension;
+import system.servicemodel.description.IPolicyExportExtensionImplementation;
 
 
 /**
@@ -50,7 +59,7 @@ import system.TimeSpan;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement</a>
  */
-public class ConnectionOrientedTransportBindingElement extends TransportBindingElement  {
+public class ConnectionOrientedTransportBindingElement extends TransportBindingElement implements system.servicemodel.description.IWsdlExportExtension, system.servicemodel.description.IPolicyExportExtension {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -165,6 +174,33 @@ public class ConnectionOrientedTransportBindingElement extends TransportBindingE
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIWsdlExportExtension method available in IWsdlExportExtension to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWsdlExportExtension to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIWsdlExportExtension method available in IWsdlExportExtension to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ExportEndpoint(WsdlExporter exporter, WsdlEndpointConversionContext context) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWsdlExportExtension to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIPolicyExportExtension method available in IPolicyExportExtension to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ExportPolicy(MetadataExporter exporter, PolicyConversionContext context) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPolicyExportExtension to obtain the full interface.");
     }
 
 

@@ -196,6 +196,33 @@ public class XmlDataSourceDesigner extends HierarchicalDataSourceDesigner  {
         }
     }
 
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDataSourceDesigner method available in IDataSourceDesigner to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public java.lang.String[] GetViewNames() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataSourceDesigner to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDataSourceDesigner method available in IDataSourceDesigner to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ResumeDataSourceEvents() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataSourceDesigner to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDataSourceDesigner method available in IDataSourceDesigner to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void SuppressDataSourceEvents() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataSourceDesigner to obtain the full interface.");
+    }
+
 
     
     // Properties section

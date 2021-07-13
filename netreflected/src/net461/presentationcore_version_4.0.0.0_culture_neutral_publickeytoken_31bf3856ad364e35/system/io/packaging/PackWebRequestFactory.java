@@ -38,6 +38,10 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.net.WebRequest;
+import system.Uri;
+import system.net.IWebRequestCreate;
+import system.net.IWebRequestCreateImplementation;
 
 
 /**
@@ -46,7 +50,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IO.Packaging.PackWebRequestFactory" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IO.Packaging.PackWebRequestFactory</a>
  */
-public class PackWebRequestFactory extends NetObject  {
+public class PackWebRequestFactory extends NetObject implements system.net.IWebRequestCreate {
     /**
      * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -151,6 +155,15 @@ public class PackWebRequestFactory extends NetObject  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIWebRequestCreate method available in IWebRequestCreate to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public WebRequest Create(Uri uri) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIWebRequestCreate to obtain the full interface.");
+    }
+
 
     
     // Properties section

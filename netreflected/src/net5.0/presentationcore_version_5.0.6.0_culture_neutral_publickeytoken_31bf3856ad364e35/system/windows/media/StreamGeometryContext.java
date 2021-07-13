@@ -42,6 +42,8 @@ import system.windows.threading.DispatcherObject;
 import system.windows.Point;
 import system.windows.Size;
 import system.windows.media.SweepDirection;
+import system.IDisposable;
+import system.IDisposableImplementation;
 
 
 /**
@@ -50,7 +52,7 @@ import system.windows.media.SweepDirection;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.StreamGeometryContext" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Media.StreamGeometryContext</a>
  */
-public class StreamGeometryContext extends DispatcherObject implements AutoCloseable {
+public class StreamGeometryContext extends DispatcherObject implements system.IDisposable, AutoCloseable {
     /**
      * Fully assembly qualified name: PresentationCore, Version=5.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -205,6 +207,15 @@ public class StreamGeometryContext extends DispatcherObject implements AutoClose
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDisposable method available in IDisposable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Dispose() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDisposable to obtain the full interface.");
     }
 
     public void close() throws Exception {

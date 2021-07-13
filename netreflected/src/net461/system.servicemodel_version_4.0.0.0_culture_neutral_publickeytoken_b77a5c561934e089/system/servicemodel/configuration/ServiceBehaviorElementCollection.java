@@ -46,7 +46,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Configuration.ServiceBehaviorElementCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Configuration.ServiceBehaviorElementCollection</a>
  */
-public class ServiceBehaviorElementCollection extends NetObject  {
+public class ServiceBehaviorElementCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

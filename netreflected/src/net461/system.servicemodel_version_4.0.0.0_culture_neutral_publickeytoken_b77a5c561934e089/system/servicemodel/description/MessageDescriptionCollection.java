@@ -47,7 +47,7 @@ import system.servicemodel.description.MessageDescription;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Description.MessageDescriptionCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Description.MessageDescriptionCollection</a>
  */
-public class MessageDescriptionCollection extends NetObject  {
+public class MessageDescriptionCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

@@ -70,6 +70,7 @@ import system.reflection.PropertyInfo;
 import system.security.permissions.SecurityAction;
 import system.security.PermissionSet;
 import system.reflection.emit.CustomAttributeBuilder;
+import system.UInt32;
 import system.Guid;
 import system.reflection.Assembly;
 import system.reflection.emit.TypeToken;

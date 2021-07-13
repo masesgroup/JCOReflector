@@ -41,7 +41,6 @@ import java.util.ArrayList;
 import system.security.cryptography.pkcs.CmsRecipient;
 import system.security.cryptography.pkcs.SubjectIdentifierType;
 import system.security.cryptography.x509certificates.X509Certificate2Collection;
-import system.security.cryptography.pkcs.CmsRecipientEnumerator;
 import system.Array;
 
 
@@ -51,7 +50,7 @@ import system.Array;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.CmsRecipientCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Security.Cryptography.Pkcs.CmsRecipientCollection</a>
  */
-public class CmsRecipientCollection extends NetObject implements Iterable<CmsRecipient> {
+public class CmsRecipientCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.Security.Cryptography.Pkcs, Version=5.0.0.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -184,15 +183,6 @@ public class CmsRecipientCollection extends NetObject implements Iterable<CmsRec
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
-    }
-
-    public CmsRecipientEnumerator GetEnumerator() throws Throwable {
-        return new CmsRecipientEnumerator(classInstance);
-    }
-
-    @SuppressWarnings("unchecked")
-    public java.util.Iterator<CmsRecipient> iterator() {
-        return new CmsRecipientEnumerator(classInstance);
     }
 
     public void CopyTo(Array array, int index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {

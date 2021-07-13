@@ -52,6 +52,7 @@ import system.reflection.ParameterInfo;
 import system.security.permissions.SecurityAction;
 import system.security.PermissionSet;
 import system.reflection.emit.CustomAttributeBuilder;
+import system.UInt32;
 import system.reflection.CallingConventions;
 import system.reflection.MethodAttributes;
 import system.RuntimeMethodHandle;

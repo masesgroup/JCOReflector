@@ -42,6 +42,7 @@ import system.collections.IList;
 import system.collections.IListImplementation;
 import system.componentmodel.design.IDesignerHost;
 import system.componentmodel.design.IDesignerHostImplementation;
+import system.Array;
 
 
 /**
@@ -50,7 +51,7 @@ import system.componentmodel.design.IDesignerHostImplementation;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.DesignerCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ComponentModel.Design.DesignerCollection</a>
  */
-public class DesignerCollection extends NetObject  {
+public class DesignerCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.ComponentModel.TypeConverter, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -169,6 +170,15 @@ public class DesignerCollection extends NetObject  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICollection method available in ICollection to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void CopyTo(Array array, int index) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICollection to obtain the full interface.");
+    }
+
 
     
     // Properties section

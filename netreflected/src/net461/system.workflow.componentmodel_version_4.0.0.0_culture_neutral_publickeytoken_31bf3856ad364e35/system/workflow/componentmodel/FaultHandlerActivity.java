@@ -39,6 +39,11 @@ import java.util.ArrayList;
 
 // Import section
 import system.workflow.componentmodel.CompositeActivity;
+import system.IServiceProvider;
+import system.IServiceProviderImplementation;
+import system.workflow.componentmodel.compiler.AccessTypes;
+import system.workflow.componentmodel.IDynamicPropertyTypeProvider;
+import system.workflow.componentmodel.IDynamicPropertyTypeProviderImplementation;
 
 
 /**
@@ -47,7 +52,7 @@ import system.workflow.componentmodel.CompositeActivity;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.FaultHandlerActivity" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.FaultHandlerActivity</a>
  */
-public class FaultHandlerActivity extends CompositeActivity  {
+public class FaultHandlerActivity extends CompositeActivity implements system.workflow.componentmodel.IDynamicPropertyTypeProvider {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -162,6 +167,33 @@ public class FaultHandlerActivity extends CompositeActivity  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToITypeFilterProvider method available in ITypeFilterProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean CanFilterType(NetType type, boolean throwOnError) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToITypeFilterProvider to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDynamicPropertyTypeProvider method available in IDynamicPropertyTypeProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetType GetPropertyType(IServiceProvider serviceProvider, java.lang.String propertyName) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDynamicPropertyTypeProvider to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDynamicPropertyTypeProvider method available in IDynamicPropertyTypeProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public AccessTypes GetAccessType(IServiceProvider serviceProvider, java.lang.String propertyName) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDynamicPropertyTypeProvider to obtain the full interface.");
+    }
+
 
     
     // Properties section

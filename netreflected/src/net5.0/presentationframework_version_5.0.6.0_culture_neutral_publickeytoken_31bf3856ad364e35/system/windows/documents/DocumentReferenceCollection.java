@@ -48,7 +48,7 @@ import system.collections.specialized.NotifyCollectionChangedEventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.DocumentReferenceCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Documents.DocumentReferenceCollection</a>
  */
-public class DocumentReferenceCollection extends NetObject  {
+public class DocumentReferenceCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=5.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

@@ -47,6 +47,8 @@ import system.web.ui.webcontrols.CallingDataMethodsEventHandler;
 import system.web.ui.webcontrols.CreatingModelDataSourceEventHandler;
 import system.web.ui.webcontrols.RepeaterCommandEventHandler;
 import system.web.ui.webcontrols.RepeaterItemEventHandler;
+import system.web.ui.INamingContainer;
+import system.web.ui.INamingContainerImplementation;
 
 
 /**
@@ -55,7 +57,7 @@ import system.web.ui.webcontrols.RepeaterItemEventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.Repeater" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.Repeater</a>
  */
-public class Repeater extends Control  {
+public class Repeater extends Control implements system.web.ui.INamingContainer {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

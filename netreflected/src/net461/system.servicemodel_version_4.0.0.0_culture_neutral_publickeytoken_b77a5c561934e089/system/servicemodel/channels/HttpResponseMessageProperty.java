@@ -38,8 +38,12 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.channels.IMessageProperty;
+import system.servicemodel.channels.IMessagePropertyImplementation;
 import system.net.HttpStatusCode;
 import system.net.WebHeaderCollection;
+import system.servicemodel.channels.IMessageProperty;
+import system.servicemodel.channels.IMessagePropertyImplementation;
 
 
 /**
@@ -48,7 +52,7 @@ import system.net.WebHeaderCollection;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.HttpResponseMessageProperty" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.HttpResponseMessageProperty</a>
  */
-public class HttpResponseMessageProperty extends NetObject  {
+public class HttpResponseMessageProperty extends NetObject implements system.servicemodel.channels.IMessageProperty {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -153,6 +157,15 @@ public class HttpResponseMessageProperty extends NetObject  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIMessageProperty method available in IMessageProperty to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public IMessageProperty CreateCopy() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIMessageProperty to obtain the full interface.");
+    }
+
 
     
     // Properties section

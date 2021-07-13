@@ -44,6 +44,11 @@ import system.activities.AsyncCodeActivityContext;
 import system.activities.CodeActivityContext;
 import system.activities.NativeActivityContext;
 import system.activities.BookmarkCallback;
+import system.activities.RegistrationContext;
+import system.activities.IExecutionProperty;
+import system.activities.IExecutionPropertyImplementation;
+import system.activities.IPropertyRegistrationCallback;
+import system.activities.IPropertyRegistrationCallbackImplementation;
 
 
 /**
@@ -52,7 +57,7 @@ import system.activities.BookmarkCallback;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Activities.RuntimeTransactionHandle" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Activities.RuntimeTransactionHandle</a>
  */
-public class RuntimeTransactionHandle extends Handle  {
+public class RuntimeTransactionHandle extends Handle implements system.activities.IExecutionProperty, system.activities.IPropertyRegistrationCallback {
     /**
      * Fully assembly qualified name: System.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -218,6 +223,42 @@ public class RuntimeTransactionHandle extends Handle  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIExecutionProperty method available in IExecutionProperty to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void CleanupWorkflowThread() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIExecutionProperty to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIExecutionProperty method available in IExecutionProperty to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void SetupWorkflowThread() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIExecutionProperty to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIPropertyRegistrationCallback method available in IPropertyRegistrationCallback to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Register(RegistrationContext context) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPropertyRegistrationCallback to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIPropertyRegistrationCallback method available in IPropertyRegistrationCallback to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Unregister(RegistrationContext context) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPropertyRegistrationCallback to obtain the full interface.");
     }
 
 

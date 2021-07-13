@@ -53,6 +53,7 @@ import system.reflection.MemberTypes;
 import system.reflection.MethodInfo;
 import system.reflection.PropertyInfo;
 import system.reflection.emit.CustomAttributeBuilder;
+import system.UInt32;
 import system.Guid;
 import system.reflection.Assembly;
 import system.reflection.emit.TypeToken;

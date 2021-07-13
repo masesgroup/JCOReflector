@@ -46,7 +46,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Configuration.ProtocolMappingElementCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Configuration.ProtocolMappingElementCollection</a>
  */
-public class ProtocolMappingElementCollection extends NetObject  {
+public class ProtocolMappingElementCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

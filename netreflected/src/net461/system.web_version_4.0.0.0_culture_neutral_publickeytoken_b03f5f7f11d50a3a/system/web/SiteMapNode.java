@@ -48,6 +48,10 @@ import system.web.SiteMapNodeCollection;
 import system.web.ui.webcontrols.SiteMapDataSourceView;
 import system.web.ui.webcontrols.SiteMapDataSource;
 import system.web.ui.webcontrols.SiteMapHierarchicalDataSourceView;
+import system.web.ui.IHierarchicalEnumerable;
+import system.web.ui.IHierarchicalEnumerableImplementation;
+import system.web.ui.IHierarchyData;
+import system.web.ui.IHierarchyDataImplementation;
 
 
 /**
@@ -278,6 +282,24 @@ public class SiteMapNode extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIHierarchyData method available in IHierarchyData to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public IHierarchicalEnumerable GetChildren() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIHierarchyData to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIHierarchyData method available in IHierarchyData to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public IHierarchyData GetParent() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIHierarchyData to obtain the full interface.");
     }
 
 

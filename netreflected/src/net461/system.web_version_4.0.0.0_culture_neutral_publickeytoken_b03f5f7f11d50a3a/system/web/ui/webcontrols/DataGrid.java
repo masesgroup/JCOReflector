@@ -48,6 +48,8 @@ import system.web.ui.webcontrols.DataGridCommandEventHandler;
 import system.web.ui.webcontrols.DataGridItemEventHandler;
 import system.web.ui.webcontrols.DataGridPageChangedEventHandler;
 import system.web.ui.webcontrols.DataGridSortCommandEventHandler;
+import system.web.ui.INamingContainer;
+import system.web.ui.INamingContainerImplementation;
 
 
 /**
@@ -56,7 +58,7 @@ import system.web.ui.webcontrols.DataGridSortCommandEventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.DataGrid" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.DataGrid</a>
  */
-public class DataGrid extends BaseDataList  {
+public class DataGrid extends BaseDataList implements system.web.ui.INamingContainer {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */

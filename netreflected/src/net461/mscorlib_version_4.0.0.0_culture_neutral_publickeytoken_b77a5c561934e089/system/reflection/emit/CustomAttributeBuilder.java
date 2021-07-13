@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.reflection.ConstructorInfo;
 import system.reflection.FieldInfo;
 import system.reflection.PropertyInfo;
+import system.UInt32;
 
 
 /**

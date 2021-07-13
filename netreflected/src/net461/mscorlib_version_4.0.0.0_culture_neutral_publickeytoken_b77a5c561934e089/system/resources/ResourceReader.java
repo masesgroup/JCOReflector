@@ -47,7 +47,7 @@ import system.io.Stream;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Resources.ResourceReader" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Resources.ResourceReader</a>
  */
-public class ResourceReader extends NetObject implements AutoCloseable {
+public class ResourceReader extends NetObjectEnumerable implements AutoCloseable {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

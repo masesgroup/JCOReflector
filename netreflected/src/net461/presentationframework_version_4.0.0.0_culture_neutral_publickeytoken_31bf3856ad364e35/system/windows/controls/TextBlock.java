@@ -51,6 +51,9 @@ import system.windows.LineStackingStrategy;
 import system.windows.media.Brush;
 import system.windows.media.FontFamily;
 import system.windows.TextAlignment;
+import system.windows.IInputElement;
+import system.windows.IInputElementImplementation;
+import system.windows.UIElement;
 import system.windows.documents.InlineCollection;
 import system.windows.documents.Typography;
 import system.windows.LineBreakCondition;
@@ -59,6 +62,10 @@ import system.windows.TextDecorationCollection;
 import system.windows.TextTrimming;
 import system.windows.TextWrapping;
 import system.windows.Thickness;
+import system.windows.markup.IAddChild;
+import system.windows.markup.IAddChildImplementation;
+import system.IServiceProvider;
+import system.IServiceProviderImplementation;
 
 
 /**
@@ -67,7 +74,7 @@ import system.windows.Thickness;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.TextBlock" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.TextBlock</a>
  */
-public class TextBlock extends FrameworkElement  {
+public class TextBlock extends FrameworkElement implements system.windows.markup.IAddChild, system.IServiceProvider {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -428,6 +435,51 @@ public class TextBlock extends FrameworkElement  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIContentHost method available in IContentHost to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public IInputElement InputHitTest(Point point) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContentHost to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIContentHost method available in IContentHost to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void OnChildDesiredSizeChanged(UIElement child) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContentHost to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIAddChild method available in IAddChild to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void AddChild(NetObject value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIAddChild method available in IAddChild to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void AddText(java.lang.String text) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIServiceProvider method available in IServiceProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetObject GetService(NetType serviceType) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceProvider to obtain the full interface.");
     }
 
 

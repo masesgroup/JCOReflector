@@ -40,6 +40,9 @@ import java.util.ArrayList;
 // Import section
 import system.web.ui.webcontrols.CompositeDataBoundControl;
 import system.web.ui.webcontrols.DetailsViewMode;
+import system.web.ui.webcontrols.IButtonControl;
+import system.web.ui.webcontrols.IButtonControlImplementation;
+import system.web.ui.PostBackOptions;
 import system.web.ui.IAutoFieldGenerator;
 import system.web.ui.IAutoFieldGeneratorImplementation;
 import system.web.ui.ITemplate;
@@ -63,6 +66,14 @@ import system.web.ui.webcontrols.DetailsViewModeEventHandler;
 import system.web.ui.webcontrols.DetailsViewPageEventHandler;
 import system.web.ui.webcontrols.DetailsViewUpdatedEventHandler;
 import system.web.ui.webcontrols.DetailsViewUpdateEventHandler;
+import system.web.ui.webcontrols.ICallbackContainer;
+import system.web.ui.webcontrols.ICallbackContainerImplementation;
+import system.web.ui.ICallbackEventHandler;
+import system.web.ui.ICallbackEventHandlerImplementation;
+import system.web.ui.IPostBackEventHandler;
+import system.web.ui.IPostBackEventHandlerImplementation;
+import system.web.ui.webcontrols.IPostBackContainer;
+import system.web.ui.webcontrols.IPostBackContainerImplementation;
 
 
 /**
@@ -71,7 +82,7 @@ import system.web.ui.webcontrols.DetailsViewUpdateEventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.DetailsView" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.DetailsView</a>
  */
-public class DetailsView extends CompositeDataBoundControl  {
+public class DetailsView extends CompositeDataBoundControl implements system.web.ui.webcontrols.ICallbackContainer, system.web.ui.ICallbackEventHandler, system.web.ui.IPostBackEventHandler, system.web.ui.webcontrols.IPostBackContainer {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -244,6 +255,51 @@ public class DetailsView extends CompositeDataBoundControl  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICallbackContainer method available in ICallbackContainer to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public java.lang.String GetCallbackScript(IButtonControl buttonControl, java.lang.String argument) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICallbackContainer to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICallbackEventHandler method available in ICallbackEventHandler to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public java.lang.String GetCallbackResult() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICallbackEventHandler to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICallbackEventHandler method available in ICallbackEventHandler to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void RaiseCallbackEvent(java.lang.String eventArgument) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICallbackEventHandler to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIPostBackEventHandler method available in IPostBackEventHandler to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void RaisePostBackEvent(java.lang.String eventArgument) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackEventHandler to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIPostBackContainer method available in IPostBackContainer to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public PostBackOptions GetPostBackOptions(IButtonControl buttonControl) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackContainer to obtain the full interface.");
     }
 
 

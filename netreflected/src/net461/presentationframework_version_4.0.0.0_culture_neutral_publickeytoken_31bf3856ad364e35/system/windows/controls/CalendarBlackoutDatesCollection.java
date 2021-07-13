@@ -49,7 +49,7 @@ import system.windows.controls.CalendarDateRange;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.CalendarBlackoutDatesCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.CalendarBlackoutDatesCollection</a>
  */
-public class CalendarBlackoutDatesCollection extends NetObject  {
+public class CalendarBlackoutDatesCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

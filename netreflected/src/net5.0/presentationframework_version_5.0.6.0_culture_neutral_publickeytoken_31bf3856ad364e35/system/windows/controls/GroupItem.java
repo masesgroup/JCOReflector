@@ -39,6 +39,9 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.controls.ContentControl;
+import system.windows.DependencyProperty;
+import system.windows.controls.primitives.IContainItemStorage;
+import system.windows.controls.primitives.IContainItemStorageImplementation;
 
 
 /**
@@ -47,7 +50,7 @@ import system.windows.controls.ContentControl;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.GroupItem" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.GroupItem</a>
  */
-public class GroupItem extends ContentControl  {
+public class GroupItem extends ContentControl implements system.windows.controls.primitives.IContainItemStorage {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=5.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -160,6 +163,51 @@ public class GroupItem extends ContentControl  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIContainItemStorage method available in IContainItemStorage to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetObject ReadItemValue(NetObject item, DependencyProperty dp) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContainItemStorage to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIContainItemStorage method available in IContainItemStorage to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Clear() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContainItemStorage to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIContainItemStorage method available in IContainItemStorage to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ClearItemValue(NetObject item, DependencyProperty dp) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContainItemStorage to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIContainItemStorage method available in IContainItemStorage to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ClearValue(DependencyProperty dp) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContainItemStorage to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIContainItemStorage method available in IContainItemStorage to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void StoreItemValue(NetObject item, DependencyProperty dp, NetObject value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIContainItemStorage to obtain the full interface.");
     }
 
 

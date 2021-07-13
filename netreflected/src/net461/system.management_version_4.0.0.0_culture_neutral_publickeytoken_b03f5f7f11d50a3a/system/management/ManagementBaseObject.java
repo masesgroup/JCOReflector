@@ -42,9 +42,13 @@ import system.componentmodel.Component;
 import system.management.ManagementBaseObject;
 import system.management.ComparisonSettings;
 import system.management.TextFormat;
+import system.runtime.serialization.SerializationInfo;
+import system.runtime.serialization.StreamingContext;
 import system.management.ManagementPath;
 import system.management.PropertyDataCollection;
 import system.management.QualifierDataCollection;
+import system.runtime.serialization.ISerializable;
+import system.runtime.serialization.ISerializableImplementation;
 
 
 /**
@@ -53,7 +57,7 @@ import system.management.QualifierDataCollection;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Management.ManagementBaseObject" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Management.ManagementBaseObject</a>
  */
-public class ManagementBaseObject extends Component  {
+public class ManagementBaseObject extends Component implements system.runtime.serialization.ISerializable {
     /**
      * Fully assembly qualified name: System.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -254,6 +258,15 @@ public class ManagementBaseObject extends Component  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToISerializable method available in ISerializable to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void GetObjectData(SerializationInfo info, StreamingContext context) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISerializable to obtain the full interface.");
     }
 
 

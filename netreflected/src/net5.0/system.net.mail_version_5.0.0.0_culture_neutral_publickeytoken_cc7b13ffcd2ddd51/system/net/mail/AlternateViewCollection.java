@@ -46,7 +46,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mail.AlternateViewCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Mail.AlternateViewCollection</a>
  */
-public class AlternateViewCollection extends NetObject implements AutoCloseable {
+public class AlternateViewCollection extends NetObjectEnumerable implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Net.Mail, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */

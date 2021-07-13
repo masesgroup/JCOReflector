@@ -46,7 +46,7 @@ import java.util.ArrayList;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.MessageQuerySet" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.MessageQuerySet</a>
  */
-public class MessageQuerySet extends NetObject  {
+public class MessageQuerySet extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.ServiceModel.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */

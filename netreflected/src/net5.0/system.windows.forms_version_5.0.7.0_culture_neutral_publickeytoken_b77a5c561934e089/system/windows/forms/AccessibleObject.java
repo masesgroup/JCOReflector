@@ -44,6 +44,14 @@ import system.windows.forms.automation.AutomationNotificationProcessing;
 import system.windows.forms.AccessibleObject;
 import system.windows.forms.AccessibleNavigation;
 import system.windows.forms.AccessibleSelection;
+import system.reflection.BindingFlags;
+import system.reflection.Binder;
+import system.reflection.ParameterModifier;
+import system.globalization.CultureInfo;
+import system.reflection.FieldInfo;
+import system.reflection.MemberInfo;
+import system.reflection.MethodInfo;
+import system.reflection.PropertyInfo;
 import system.drawing.Rectangle;
 import system.windows.forms.AccessibleRole;
 import system.windows.forms.AccessibleStates;
@@ -263,6 +271,150 @@ public class AccessibleObject extends StandardOleMarshalObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIReflect method available in IReflect to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetObject InvokeMember(java.lang.String name, BindingFlags invokeAttr, Binder binder, NetObject target, NetObject[] args, ParameterModifier[] modifiers, CultureInfo culture, java.lang.String[] namedParameters) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflect to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToMETHOD_INTERFACE_NAME method available in METHOD_INTERFACE_NAME to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetObject InvokeMember(java.lang.String dupParam0, BindingFlags dupParam1, Binder dupParam2, NetObject dupParam3, NetObject[] dupParam4, ParameterModifier[] dupParam5, CultureInfo dupParam6, JCORefOut dupParam7) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToMETHOD_INTERFACE_NAME to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIReflect method available in IReflect to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public FieldInfo GetField(java.lang.String name, BindingFlags bindingAttr) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflect to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIReflect method available in IReflect to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public FieldInfo[] GetFields(BindingFlags bindingAttr) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflect to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIReflect method available in IReflect to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public MemberInfo[] GetMember(java.lang.String name, BindingFlags bindingAttr) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflect to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIReflect method available in IReflect to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public MemberInfo[] GetMembers(BindingFlags bindingAttr) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflect to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIReflect method available in IReflect to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public MethodInfo GetMethod(java.lang.String name, BindingFlags bindingAttr) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflect to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIReflect method available in IReflect to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public MethodInfo GetMethod(java.lang.String name, BindingFlags bindingAttr, Binder binder, NetType[] types, ParameterModifier[] modifiers) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflect to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIReflect method available in IReflect to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public MethodInfo[] GetMethods(BindingFlags bindingAttr) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflect to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIReflect method available in IReflect to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public PropertyInfo GetProperty(java.lang.String name, BindingFlags bindingAttr) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflect to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIReflect method available in IReflect to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public PropertyInfo GetProperty(java.lang.String name, BindingFlags bindingAttr, Binder binder, NetType returnType, NetType[] types, ParameterModifier[] modifiers) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflect to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIReflect method available in IReflect to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public PropertyInfo[] GetProperties(BindingFlags bindingAttr) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIReflect to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIAccessible method available in IAccessible to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetObject accHitTest(int xLeft, int yTop) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAccessible to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIAccessible method available in IAccessible to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetObject accNavigate(int navDir, NetObject varStart) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAccessible to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIAccessible method available in IAccessible to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void accDoDefaultAction(NetObject varChild) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAccessible to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIAccessible method available in IAccessible to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void accSelect(int flagsSelect, NetObject varChild) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAccessible to obtain the full interface.");
     }
 
 

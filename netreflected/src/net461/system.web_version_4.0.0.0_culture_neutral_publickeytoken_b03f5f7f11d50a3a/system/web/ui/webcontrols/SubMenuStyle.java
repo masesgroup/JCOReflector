@@ -40,7 +40,16 @@ import java.util.ArrayList;
 // Import section
 import system.web.ui.webcontrols.Style;
 import system.web.ui.StateBag;
+import system.componentmodel.AttributeCollection;
+import system.componentmodel.EventDescriptor;
+import system.componentmodel.EventDescriptorCollection;
+import system.Attribute;
+import system.componentmodel.PropertyDescriptor;
+import system.componentmodel.PropertyDescriptorCollection;
+import system.componentmodel.TypeConverter;
 import system.web.ui.webcontrols.Unit;
+import system.componentmodel.ICustomTypeDescriptor;
+import system.componentmodel.ICustomTypeDescriptorImplementation;
 
 
 /**
@@ -49,7 +58,7 @@ import system.web.ui.webcontrols.Unit;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.SubMenuStyle" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.SubMenuStyle</a>
  */
-public class SubMenuStyle extends Style  {
+public class SubMenuStyle extends Style implements system.componentmodel.ICustomTypeDescriptor {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -192,6 +201,114 @@ public class SubMenuStyle extends Style  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICustomTypeDescriptor method available in ICustomTypeDescriptor to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public AttributeCollection GetAttributes() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICustomTypeDescriptor method available in ICustomTypeDescriptor to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public EventDescriptor GetDefaultEvent() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICustomTypeDescriptor method available in ICustomTypeDescriptor to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public EventDescriptorCollection GetEvents() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICustomTypeDescriptor method available in ICustomTypeDescriptor to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public EventDescriptorCollection GetEvents(Attribute[] attributes) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICustomTypeDescriptor method available in ICustomTypeDescriptor to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public PropertyDescriptor GetDefaultProperty() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICustomTypeDescriptor method available in ICustomTypeDescriptor to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public PropertyDescriptorCollection GetProperties() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICustomTypeDescriptor method available in ICustomTypeDescriptor to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public PropertyDescriptorCollection GetProperties(Attribute[] attributes) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICustomTypeDescriptor method available in ICustomTypeDescriptor to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public TypeConverter GetConverter() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICustomTypeDescriptor method available in ICustomTypeDescriptor to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetObject GetEditor(NetType editorBaseType) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICustomTypeDescriptor method available in ICustomTypeDescriptor to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public NetObject GetPropertyOwner(PropertyDescriptor pd) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICustomTypeDescriptor method available in ICustomTypeDescriptor to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public java.lang.String GetClassName() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToICustomTypeDescriptor method available in ICustomTypeDescriptor to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public java.lang.String GetComponentName() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToICustomTypeDescriptor to obtain the full interface.");
     }
 
 

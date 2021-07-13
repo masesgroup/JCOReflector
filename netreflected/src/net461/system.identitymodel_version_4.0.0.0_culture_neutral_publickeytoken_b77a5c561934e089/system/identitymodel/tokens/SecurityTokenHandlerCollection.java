@@ -54,7 +54,7 @@ import system.xml.XmlWriter;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.SecurityTokenHandlerCollection" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.SecurityTokenHandlerCollection</a>
  */
-public class SecurityTokenHandlerCollection extends NetObject  {
+public class SecurityTokenHandlerCollection extends NetObjectEnumerable  {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */

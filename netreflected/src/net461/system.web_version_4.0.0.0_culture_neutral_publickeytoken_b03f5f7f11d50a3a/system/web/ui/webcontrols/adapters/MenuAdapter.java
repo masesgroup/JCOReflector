@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.web.ui.webcontrols.adapters.WebControlAdapter;
+import system.web.ui.IPostBackEventHandler;
+import system.web.ui.IPostBackEventHandlerImplementation;
 
 
 /**
@@ -47,7 +49,7 @@ import system.web.ui.webcontrols.adapters.WebControlAdapter;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.Adapters.MenuAdapter" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.WebControls.Adapters.MenuAdapter</a>
  */
-public class MenuAdapter extends WebControlAdapter  {
+public class MenuAdapter extends WebControlAdapter implements system.web.ui.IPostBackEventHandler {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -152,6 +154,15 @@ public class MenuAdapter extends WebControlAdapter  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIPostBackEventHandler method available in IPostBackEventHandler to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void RaisePostBackEvent(java.lang.String eventArgument) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackEventHandler to obtain the full interface.");
+    }
+
 
     
     // Properties section

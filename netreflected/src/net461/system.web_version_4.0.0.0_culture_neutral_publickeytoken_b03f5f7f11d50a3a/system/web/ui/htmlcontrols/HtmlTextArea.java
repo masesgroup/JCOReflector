@@ -39,7 +39,10 @@ import java.util.ArrayList;
 
 // Import section
 import system.web.ui.htmlcontrols.HtmlContainerControl;
+import system.collections.specialized.NameValueCollection;
 import system.EventHandler;
+import system.web.ui.IPostBackDataHandler;
+import system.web.ui.IPostBackDataHandlerImplementation;
 
 
 /**
@@ -48,7 +51,7 @@ import system.EventHandler;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.HtmlControls.HtmlTextArea" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.HtmlControls.HtmlTextArea</a>
  */
-public class HtmlTextArea extends HtmlContainerControl  {
+public class HtmlTextArea extends HtmlContainerControl implements system.web.ui.IPostBackDataHandler {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -153,6 +156,24 @@ public class HtmlTextArea extends HtmlContainerControl  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIPostBackDataHandler method available in IPostBackDataHandler to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean LoadPostData(java.lang.String postDataKey, NameValueCollection postCollection) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackDataHandler to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIPostBackDataHandler method available in IPostBackDataHandler to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void RaisePostDataChangedEvent() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIPostBackDataHandler to obtain the full interface.");
+    }
+
 
     
     // Properties section

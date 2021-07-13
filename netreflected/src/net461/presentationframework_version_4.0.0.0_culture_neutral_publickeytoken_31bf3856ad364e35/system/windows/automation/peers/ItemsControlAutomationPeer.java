@@ -40,6 +40,10 @@ import java.util.ArrayList;
 // Import section
 import system.windows.automation.peers.FrameworkElementAutomationPeer;
 import system.windows.automation.peers.PatternInterface;
+import system.windows.automation.provider.IRawElementProviderSimple;
+import system.windows.automation.provider.IRawElementProviderSimpleImplementation;
+import system.windows.automation.provider.IItemContainerProvider;
+import system.windows.automation.provider.IItemContainerProviderImplementation;
 
 
 /**
@@ -48,7 +52,7 @@ import system.windows.automation.peers.PatternInterface;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Peers.ItemsControlAutomationPeer" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Peers.ItemsControlAutomationPeer</a>
  */
-public class ItemsControlAutomationPeer extends FrameworkElementAutomationPeer  {
+public class ItemsControlAutomationPeer extends FrameworkElementAutomationPeer implements system.windows.automation.provider.IItemContainerProvider {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -154,6 +158,15 @@ public class ItemsControlAutomationPeer extends FrameworkElementAutomationPeer  
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIItemContainerProvider method available in IItemContainerProvider to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public IRawElementProviderSimple FindItemByProperty(IRawElementProviderSimple startAfter, int propertyId, NetObject value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerProvider to obtain the full interface.");
     }
 
 

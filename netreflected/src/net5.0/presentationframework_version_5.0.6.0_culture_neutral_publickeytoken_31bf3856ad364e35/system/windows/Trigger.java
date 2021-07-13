@@ -42,6 +42,10 @@ import system.windows.TriggerBase;
 import system.windows.markup.XamlSetTypeConverterEventArgs;
 import system.windows.DependencyProperty;
 import system.windows.SetterBaseCollection;
+import system.windows.markup.IAddChild;
+import system.windows.markup.IAddChildImplementation;
+import system.componentmodel.ISupportInitialize;
+import system.componentmodel.ISupportInitializeImplementation;
 
 
 /**
@@ -50,7 +54,7 @@ import system.windows.SetterBaseCollection;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Trigger" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Trigger</a>
  */
-public class Trigger extends TriggerBase  {
+public class Trigger extends TriggerBase implements system.windows.markup.IAddChild, system.componentmodel.ISupportInitialize {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=5.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -163,6 +167,42 @@ public class Trigger extends TriggerBase  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIAddChild method available in IAddChild to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void AddChild(NetObject value) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIAddChild method available in IAddChild to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void AddText(java.lang.String text) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAddChild to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToISupportInitialize method available in ISupportInitialize to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void BeginInit() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToISupportInitialize method available in ISupportInitialize to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void EndInit() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToISupportInitialize to obtain the full interface.");
     }
 
 

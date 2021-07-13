@@ -43,6 +43,8 @@ import system.identitymodel.selectors.SecurityTokenManager;
 import system.servicemodel.description.ClientCredentials;
 import system.servicemodel.description.ServiceEndpoint;
 import system.servicemodel.dispatcher.ClientRuntime;
+import system.servicemodel.channels.BindingParameterCollection;
+import system.servicemodel.dispatcher.EndpointDispatcher;
 import system.identitymodel.tokens.SecurityTokenHandlerCollectionManager;
 import system.servicemodel.security.HttpDigestClientCredential;
 import system.servicemodel.security.IssuedTokenClientCredential;
@@ -194,6 +196,33 @@ public class ClientCredentials extends SecurityCredentialsManager  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIEndpointBehavior method available in IEndpointBehavior to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void AddBindingParameters(ServiceEndpoint endpoint, BindingParameterCollection bindingParameters) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEndpointBehavior to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIEndpointBehavior method available in IEndpointBehavior to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void ApplyDispatchBehavior(ServiceEndpoint endpoint, EndpointDispatcher endpointDispatcher) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEndpointBehavior to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIEndpointBehavior method available in IEndpointBehavior to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void Validate(ServiceEndpoint endpoint) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIEndpointBehavior to obtain the full interface.");
     }
 
 

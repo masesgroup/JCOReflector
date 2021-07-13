@@ -49,7 +49,7 @@ import system.web.ui.ControlCachePolicy;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.BasePartialCachingControl" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Web.UI.BasePartialCachingControl</a>
  */
-public class BasePartialCachingControl extends Control implements AutoCloseable {
+public class BasePartialCachingControl extends Control  {
     /**
      * Fully assembly qualified name: System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -156,20 +156,7 @@ public class BasePartialCachingControl extends Control implements AutoCloseable 
         }
     }
 
-    public void close() throws Exception {
-        try {
-            if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
-            try {
-                classInstance.Invoke("Dispose");
-            }
-            catch (JCNativeException jcne) {
-                throw translateException(jcne);
-            }
-        } catch (Throwable t) {
-            throw new Exception(t);
-        }
-    }
+
     
     // Properties section
     

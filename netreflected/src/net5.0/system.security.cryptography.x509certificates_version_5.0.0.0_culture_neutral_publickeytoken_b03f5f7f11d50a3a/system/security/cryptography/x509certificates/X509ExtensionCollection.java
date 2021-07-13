@@ -163,14 +163,14 @@ public class X509ExtensionCollection extends NetObject implements Iterable<X509E
         }
     }
 
-    public final X509ExtensionEnumerator GetEnumerator() throws Throwable {
+    public X509ExtensionEnumerator GetEnumerator() throws Throwable {
         return new X509ExtensionEnumerator(classInstance);
     }
 
-	@SuppressWarnings("unchecked")
-	public final java.util.Iterator<X509Extension> iterator() {
-		return new X509ExtensionEnumerator(classInstance);
-	}
+    @SuppressWarnings("unchecked")
+    public java.util.Iterator<X509Extension> iterator() {
+        return new X509ExtensionEnumerator(classInstance);
+    }
 
     public void CopyTo(X509Extension[] array, int index) throws Throwable {
         if (classInstance == null)

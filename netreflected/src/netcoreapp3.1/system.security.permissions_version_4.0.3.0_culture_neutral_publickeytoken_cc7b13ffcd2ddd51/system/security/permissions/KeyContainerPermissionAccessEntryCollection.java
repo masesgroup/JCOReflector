@@ -174,14 +174,14 @@ public class KeyContainerPermissionAccessEntryCollection extends NetObject imple
         }
     }
 
-    public final KeyContainerPermissionAccessEntryEnumerator GetEnumerator() throws Throwable {
+    public KeyContainerPermissionAccessEntryEnumerator GetEnumerator() throws Throwable {
         return new KeyContainerPermissionAccessEntryEnumerator(classInstance);
     }
 
-	@SuppressWarnings("unchecked")
-	public final java.util.Iterator<KeyContainerPermissionAccessEntry> iterator() {
-		return new KeyContainerPermissionAccessEntryEnumerator(classInstance);
-	}
+    @SuppressWarnings("unchecked")
+    public java.util.Iterator<KeyContainerPermissionAccessEntry> iterator() {
+        return new KeyContainerPermissionAccessEntryEnumerator(classInstance);
+    }
 
     public void Clear() throws Throwable {
         if (classInstance == null)

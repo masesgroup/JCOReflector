@@ -49,7 +49,7 @@ import system.security.principal.WindowsIdentity;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.X509WindowsSecurityToken" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.IdentityModel.Tokens.X509WindowsSecurityToken</a>
  */
-public class X509WindowsSecurityToken extends X509SecurityToken implements AutoCloseable {
+public class X509WindowsSecurityToken extends X509SecurityToken  {
     /**
      * Fully assembly qualified name: System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -188,20 +188,7 @@ public class X509WindowsSecurityToken extends X509SecurityToken implements AutoC
         }
     }
 
-    public void close() throws Exception {
-        try {
-            if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
-            try {
-                classInstance.Invoke("Dispose");
-            }
-            catch (JCNativeException jcne) {
-                throw translateException(jcne);
-            }
-        } catch (Throwable t) {
-            throw new Exception(t);
-        }
-    }
+
     
     // Properties section
     

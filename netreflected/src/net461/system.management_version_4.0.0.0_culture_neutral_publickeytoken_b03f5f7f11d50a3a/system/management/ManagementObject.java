@@ -56,7 +56,7 @@ import system.management.DeleteOptions;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Management.ManagementObject" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Management.ManagementObject</a>
  */
-public class ManagementObject extends ManagementBaseObject implements AutoCloseable {
+public class ManagementObject extends ManagementBaseObject  {
     /**
      * Fully assembly qualified name: System.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -607,20 +607,7 @@ public class ManagementObject extends ManagementBaseObject implements AutoClosea
         }
     }
 
-    public void close() throws Exception {
-        try {
-            if (classInstance == null)
-                throw new UnsupportedOperationException("classInstance is null.");
-            try {
-                classInstance.Invoke("Dispose");
-            }
-            catch (JCNativeException jcne) {
-                throw translateException(jcne);
-            }
-        } catch (Throwable t) {
-            throw new Exception(t);
-        }
-    }
+
     
     // Properties section
     

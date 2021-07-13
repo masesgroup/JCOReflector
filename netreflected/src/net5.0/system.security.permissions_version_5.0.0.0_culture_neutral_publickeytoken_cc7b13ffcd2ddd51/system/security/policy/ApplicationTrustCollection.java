@@ -171,14 +171,14 @@ public class ApplicationTrustCollection extends NetObject implements Iterable<Ap
         }
     }
 
-    public final ApplicationTrustEnumerator GetEnumerator() throws Throwable {
+    public ApplicationTrustEnumerator GetEnumerator() throws Throwable {
         return new ApplicationTrustEnumerator(classInstance);
     }
 
-	@SuppressWarnings("unchecked")
-	public final java.util.Iterator<ApplicationTrust> iterator() {
-		return new ApplicationTrustEnumerator(classInstance);
-	}
+    @SuppressWarnings("unchecked")
+    public java.util.Iterator<ApplicationTrust> iterator() {
+        return new ApplicationTrustEnumerator(classInstance);
+    }
 
     public void AddRange(ApplicationTrust[] trusts) throws Throwable {
         if (classInstance == null)

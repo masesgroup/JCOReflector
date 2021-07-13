@@ -167,14 +167,14 @@ public class BamlLocalizationDictionary extends NetObject implements Iterable<Di
         }
     }
 
-    public final BamlLocalizationDictionaryEnumerator GetEnumerator() throws Throwable {
+    public BamlLocalizationDictionaryEnumerator GetEnumerator() throws Throwable {
         return new BamlLocalizationDictionaryEnumerator(classInstance);
     }
 
-	@SuppressWarnings("unchecked")
-	public final java.util.Iterator<DictionaryEntry> iterator() {
-		return new BamlLocalizationDictionaryEnumerator(classInstance);
-	}
+    @SuppressWarnings("unchecked")
+    public java.util.Iterator<DictionaryEntry> iterator() {
+        return new BamlLocalizationDictionaryEnumerator(classInstance);
+    }
 
     public void Add(BamlLocalizableResourceKey key, BamlLocalizableResource value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         if (classInstance == null)

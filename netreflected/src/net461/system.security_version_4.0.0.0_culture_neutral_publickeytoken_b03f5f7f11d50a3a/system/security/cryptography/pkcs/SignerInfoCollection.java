@@ -148,14 +148,14 @@ public class SignerInfoCollection extends NetObject implements Iterable<SignerIn
     
     // Methods section
     
-    public final SignerInfoEnumerator GetEnumerator() throws Throwable {
+    public SignerInfoEnumerator GetEnumerator() throws Throwable {
         return new SignerInfoEnumerator(classInstance);
     }
 
-	@SuppressWarnings("unchecked")
-	public final java.util.Iterator<SignerInfo> iterator() {
-		return new SignerInfoEnumerator(classInstance);
-	}
+    @SuppressWarnings("unchecked")
+    public java.util.Iterator<SignerInfo> iterator() {
+        return new SignerInfoEnumerator(classInstance);
+    }
 
     public void CopyTo(Array array, int index) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException {
         if (classInstance == null)

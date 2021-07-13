@@ -163,14 +163,14 @@ public class OidCollection extends NetObject implements Iterable<Oid> {
         }
     }
 
-    public final OidEnumerator GetEnumerator() throws Throwable {
+    public OidEnumerator GetEnumerator() throws Throwable {
         return new OidEnumerator(classInstance);
     }
 
-	@SuppressWarnings("unchecked")
-	public final java.util.Iterator<Oid> iterator() {
-		return new OidEnumerator(classInstance);
-	}
+    @SuppressWarnings("unchecked")
+    public java.util.Iterator<Oid> iterator() {
+        return new OidEnumerator(classInstance);
+    }
 
     public void CopyTo(Oid[] array, int index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)

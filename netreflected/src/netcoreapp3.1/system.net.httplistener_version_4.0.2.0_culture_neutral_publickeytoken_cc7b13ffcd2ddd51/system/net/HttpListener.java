@@ -56,7 +56,7 @@ import system.security.authentication.extendedprotection.ServiceNameCollection;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.HttpListener" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.HttpListener</a>
  */
-public class HttpListener extends NetObject  {
+public class HttpListener extends NetObject implements AutoCloseable {
     /**
      * Fully assembly qualified name: System.Net.HttpListener, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
      */
@@ -234,7 +234,20 @@ public class HttpListener extends NetObject  {
         }
     }
 
-
+    public void close() throws Exception {
+        try {
+            if (classInstance == null)
+                throw new UnsupportedOperationException("classInstance is null.");
+            try {
+                classInstance.Invoke("Dispose");
+            }
+            catch (JCNativeException jcne) {
+                throw translateException(jcne);
+            }
+        } catch (Throwable t) {
+            throw new Exception(t);
+        }
+    }
     
     // Properties section
     

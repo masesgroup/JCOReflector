@@ -14,5 +14,6 @@
   <EnableDuplicateMethodNativeArrayWithJCRefOut>true</EnableDuplicateMethodNativeArrayWithJCRefOut>
   <EnableInheritance>true</EnableInheritance>
   <EnableInterfaceInheritance>true</EnableInterfaceInheritance>
+  <EnableRefOutParameters>true</EnableRefOutParameters>
   <DryRun>false</DryRun>
 </ReflectorEventArgs>

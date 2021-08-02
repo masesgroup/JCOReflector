@@ -1237,6 +1237,17 @@ namespace MASES.C2JReflector
             return false;
         }
 
+        static bool exportingMethodsDuplicateAvoidance(Type type, string methodName)
+        {
+            if (!EnableRefOutParameters) return false;
+            bool result = false;
+#if !NET_CORE
+            result |= (typeof(Stream).IsAssignableFrom(type) || typeof(TextReader).IsAssignableFrom(type)) &&
+                     (methodName == Const.SpecialNames.METHOD_STREAMREAD_NAME || methodName == Const.SpecialNames.METHOD_STREAMREADBLOCK_NAME);
+#endif
+            return result;
+        }
+
         static string exportingMethods(Type type, IList<Type> imports, IList<Type> implementableInterfaces, bool withInheritance, string destFolder, string assemblyname, out string returnEnumeratorType, out string returnInterfaceSection)
         {
             bool isInterface = false;
@@ -1413,7 +1424,7 @@ namespace MASES.C2JReflector
 
                         StringBuilder inputParams = new StringBuilder();
                         StringBuilder execParams = new StringBuilder();
-
+                        bool builtWithJCORefOut = false;
                         foreach (var parameter in parameters)
                         {
                             string paramType = convertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
@@ -1432,6 +1443,7 @@ namespace MASES.C2JReflector
                                 string typeString = isPrimitive ? Const.Parameters.JCORefOutType : string.Format(Const.Parameters.JCORefOutTypeGenericFormatter, (isArray) ? paramType + Const.SpecialNames.ArrayTrailer : paramType);
                                 inputParams.Append(string.Format(Const.Parameters.INPUT_PARAMETER, typeString, paramName));
                                 formatter = Const.Parameters.INVOKE_PARAMETER_JCOREFOUT;
+                                builtWithJCORefOut = true;
                             }
                             else
                             {
@@ -1484,14 +1496,7 @@ namespace MASES.C2JReflector
                                                                        .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr);
                         }
 
-                        if (EnableDuplicateMethodNativeArrayWithJCRefOut && hasNativeArrayInParameter
-#if !NET_CORE
-                            && !(EnableRefOutParameters &&
-                                 (typeof(Stream).IsAssignableFrom(type) || typeof(TextReader).IsAssignableFrom(type)) &&
-                                 (methodName == Const.SpecialNames.METHOD_STREAMREAD_NAME || methodName == Const.SpecialNames.METHOD_STREAMREADBLOCK_NAME)
-                                )
-#endif
-                           )
+                        if (EnableDuplicateMethodNativeArrayWithJCRefOut && hasNativeArrayInParameter && !builtWithJCORefOut && !exportingMethodsDuplicateAvoidance(type, methodName))
                         {
                             // needs a duplication in method signature
                             inputParams = new StringBuilder();
@@ -1732,7 +1737,7 @@ namespace MASES.C2JReflector
 
                             StringBuilder inputParams = new StringBuilder();
                             StringBuilder execParams = new StringBuilder();
-
+                            bool builtWithJCORefOut = false;
                             foreach (var parameter in parameters)
                             {
                                 string paramType = convertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
@@ -1751,6 +1756,7 @@ namespace MASES.C2JReflector
                                     string typeString = isPrimitive ? Const.Parameters.JCORefOutType : string.Format(Const.Parameters.JCORefOutTypeGenericFormatter, (isArray) ? paramType + Const.SpecialNames.ArrayTrailer : paramType);
                                     inputParams.Append(string.Format(Const.Parameters.INPUT_PARAMETER, typeString, paramName));
                                     formatter = Const.Parameters.INVOKE_PARAMETER_JCOREFOUT;
+                                    builtWithJCORefOut = true;
                                 }
                                 else
                                 {
@@ -1794,14 +1800,7 @@ namespace MASES.C2JReflector
                                                      .Replace(Const.Methods.METHOD_OBJECT, interfaceMethod.IsStatic ? Const.Class.STATIC_CLASS_NAME : Const.Class.INSTANCE_CLASS_NAME)
                                                      .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr);
 
-                            if (EnableDuplicateMethodNativeArrayWithJCRefOut && hasNativeArrayInParameter
-#if !NET_CORE
-                                && !(EnableRefOutParameters &&
-                                     (typeof(Stream).IsAssignableFrom(type) || typeof(TextReader).IsAssignableFrom(type)) &&
-                                     (methodName == Const.SpecialNames.METHOD_STREAMREAD_NAME || methodName == Const.SpecialNames.METHOD_STREAMREADBLOCK_NAME)
-                                    )
-#endif
-                               )
+                            if (EnableDuplicateMethodNativeArrayWithJCRefOut && hasNativeArrayInParameter && !builtWithJCORefOut && !exportingMethodsDuplicateAvoidance(type, methodName))
                             {
                                 // needs a duplication in method signature
                                 inputParams = new StringBuilder();

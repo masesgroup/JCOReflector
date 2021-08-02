@@ -1485,7 +1485,9 @@ namespace MASES.C2JReflector
 
                         if (EnableDuplicateMethodNativeArrayWithJCRefOut && hasNativeArrayInParameter
 #if !NET_CORE
-                                && !(typeof(Stream).IsAssignableFrom(type) && (methodName == Const.SpecialNames.METHOD_STREAMREAD_NAME || methodName == Const.SpecialNames.METHOD_STREAMREADBLOCK_NAME))
+                            && !((typeof(Stream).IsAssignableFrom(type) || typeof(TextReader).IsAssignableFrom(type)) &&
+                                 (methodName == Const.SpecialNames.METHOD_STREAMREAD_NAME || methodName == Const.SpecialNames.METHOD_STREAMREADBLOCK_NAME)
+                                )
 #endif
                            )
                         {
@@ -1791,7 +1793,9 @@ namespace MASES.C2JReflector
 
                             if (EnableDuplicateMethodNativeArrayWithJCRefOut && hasNativeArrayInParameter
 #if !NET_CORE
-                                && !(typeof(Stream).IsAssignableFrom(type) && (methodName == Const.SpecialNames.METHOD_STREAMREAD_NAME || methodName == Const.SpecialNames.METHOD_STREAMREADBLOCK_NAME))
+                                && !((typeof(Stream).IsAssignableFrom(type) || typeof(TextReader).IsAssignableFrom(type)) &&
+                                     (methodName == Const.SpecialNames.METHOD_STREAMREAD_NAME || methodName == Const.SpecialNames.METHOD_STREAMREADBLOCK_NAME)
+                                    )
 #endif
                                )
                             {

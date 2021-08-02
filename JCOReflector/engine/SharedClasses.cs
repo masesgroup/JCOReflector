@@ -320,6 +320,7 @@ namespace MASES.C2JReflector
         public bool EnableDuplicateMethodNativeArrayWithJCRefOut { get; set; }
         public bool EnableInheritance { get; set; }
         public bool EnableInterfaceInheritance { get; set; }
+        public bool EnableRefOutParameters { get; set; }
         public bool DryRun { get; set; }
     }
     #endregion

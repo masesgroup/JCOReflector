@@ -25,6 +25,8 @@
 package org.mases.jcobridge.netreflection;
 
 import org.mases.jcobridge.JCRefOut;
+
+import java.util.ArrayList;
 import java.util.concurrent.atomic.*;
 
 /**
@@ -75,11 +77,23 @@ public class JCORefOut<T> {
      * 
      * @return an instance of {@link JCRefOut}
      */
-    public Object getJCRefOut() {
+    public Object getJCRefOut() throws Throwable {
         if (mrefObj != null) {
-            return JCRefOut.Create((T) mrefObj);
+            if (mrefObj instanceof IJCOBridgeReflected) {
+                IJCOBridgeReflected o = (IJCOBridgeReflected) mrefObj;
+                return JCRefOut.Create(o.getJCOInstance());
+            } else
+                return JCRefOut.Create((T) mrefObj);
         } else {
-            return JCRefOut.Create((T[]) mrefArray);
+            if (mrefArray != null && mrefArray.length > 0 && mrefArray[0] instanceof IJCOBridgeReflected) {
+                ArrayList<Object> retValJCArrayList = new ArrayList<Object>();
+                for (int index = 0; index < mrefArray.length; index++) {
+                    IJCOBridgeReflected o = (IJCOBridgeReflected) mrefArray[index];
+                    retValJCArrayList.add(o.getJCOInstance());
+                }
+                return JCRefOut.Create(retValJCArrayList.toArray());
+            } else
+                return JCRefOut.Create((T[]) mrefArray);
         }
     }
 }

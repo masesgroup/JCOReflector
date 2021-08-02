@@ -84,6 +84,7 @@
                                                       IsEnabled="{Binding ElementName=mainWindow, Path=EnableAbstract, Mode=OneWay}" 
                                                       VerticalContentAlignment="Center" ToolTip="Enable inheritance"/>
                                             <CheckBox Name="cbEnableInterfaceInheritance" Content="Interface Inheritance" IsChecked="False" IsEnabled="{Binding ElementName=mainWindow, Path=EnableInheritance, Mode=OneWay}" VerticalContentAlignment="Center" ToolTip="Enable interface inheritance"/>
+                                            <CheckBox Name="cbEnableRefOutParameters" Content="Ref Out Parameters" IsChecked="False" IsEnabled="{Binding ElementName=mainWindow, Path=EnableRefOutParameters, Mode=OneWay}" VerticalContentAlignment="Center" ToolTip="Enable RefOut Parameters"/>
                                         </DockPanel>
                                     </GroupBox>
                                 </DockPanel>

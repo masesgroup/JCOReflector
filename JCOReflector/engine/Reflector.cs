@@ -50,6 +50,7 @@ namespace MASES.C2JReflector
         static bool EnableDuplicateMethodNativeArrayWithJCRefOut = true;
         static bool EnableInheritance = false;
         static bool EnableInterfaceInheritance = false;
+        static bool EnableRefOutParameters = false;
 
         static LogLevel LogLevel;
         static string SrcDestinationFolder;
@@ -340,6 +341,7 @@ namespace MASES.C2JReflector
             EnableDuplicateMethodNativeArrayWithJCRefOut = args.EnableDuplicateMethodNativeArrayWithJCRefOut;
             EnableInheritance = args.EnableInheritance;
             EnableInterfaceInheritance = args.EnableInterfaceInheritance;
+            EnableRefOutParameters = args.EnableRefOutParameters;
             EnableWrite = !args.DryRun;
 
             string reportStr = string.Empty;
@@ -1416,19 +1418,29 @@ namespace MASES.C2JReflector
                         {
                             string paramType = convertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
                             hasNativeArrayInParameter |= isArray && isPrimitive;
-                            isManaged &= !parameter.IsOut; // out parameters not managed
+                            if (!EnableRefOutParameters)
+                            {
+                                isManaged &= !parameter.IsOut; // out parameters not managed
+                            }
                             if (!isManaged) break; // found not managed type, stop here
                             isPrimitive |= typeof(Delegate).IsAssignableFrom(parameter.ParameterType);
-                            var paramName = checkForkeyword(parameter.Name);
-                            inputParams.Append(string.Format(Const.Parameters.INPUT_PARAMETER, (isArray) ? paramType + (IsParams(parameter) ? Const.SpecialNames.VarArgsTrailer : Const.SpecialNames.ArrayTrailer) : paramType, paramName));
-
-                            string formatter = isPrimitive ? Const.Parameters.INVOKE_PARAMETER_PRIMITIVE : Const.Parameters.INVOKE_PARAMETER_NONPRIMITIVE;
-                            if (!isPrimitive && isArray) formatter = Const.Parameters.INVOKE_PARAMETER_NONPRIMITIVE_ARRAY;
-
+                            string formatter = string.Empty;
                             string objectCaster = string.Empty;
-                            if (isArray && parameters.Length == 1)
+                            var paramName = checkForkeyword(parameter.Name);
+                            if (EnableRefOutParameters && parameter.IsOut)
                             {
-                                objectCaster = "(Object)";
+                                inputParams.Append(string.Format(Const.Parameters.INPUT_PARAMETER, string.Format(Const.Parameters.JCORefOutTypeGenericFormatter, (isArray) ? paramType + Const.SpecialNames.ArrayTrailer : paramType), paramName));
+                                formatter = Const.Parameters.INVOKE_PARAMETER_JCOREFOUT;
+                            }
+                            else
+                            {
+                                inputParams.Append(string.Format(Const.Parameters.INPUT_PARAMETER, (isArray) ? paramType + (IsParams(parameter) ? Const.SpecialNames.VarArgsTrailer : Const.SpecialNames.ArrayTrailer) : paramType, paramName));
+                                formatter = isPrimitive ? Const.Parameters.INVOKE_PARAMETER_PRIMITIVE : Const.Parameters.INVOKE_PARAMETER_NONPRIMITIVE;
+                                if (!isPrimitive && isArray) formatter = Const.Parameters.INVOKE_PARAMETER_NONPRIMITIVE_ARRAY;
+                                if (isArray && parameters.Length == 1)
+                                {
+                                    objectCaster = "(Object)";
+                                }
                             }
 
                             execParams.Append(string.Format(formatter, objectCaster, paramName));
@@ -1489,7 +1501,7 @@ namespace MASES.C2JReflector
 
                                 if (isNativeArrayInParameter)
                                 {
-                                    inputParams.Append(string.Format(Const.Parameters.INPUT_PARAMETER, Const.SpecialNames.JCORefOutType, paramName));
+                                    inputParams.Append(string.Format(Const.Parameters.INPUT_PARAMETER, Const.Parameters.JCORefOutType, paramName));
                                     formatter = Const.Parameters.INVOKE_PARAMETER_JCOREFOUT;
                                 }
                                 else
@@ -1717,19 +1729,29 @@ namespace MASES.C2JReflector
                             {
                                 string paramType = convertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
                                 hasNativeArrayInParameter |= isArray && isPrimitive;
-                                isManaged &= !parameter.IsOut; // out parameters not managed
+                                if (!EnableRefOutParameters)
+                                {
+                                    isManaged &= !parameter.IsOut; // out parameters not managed
+                                }
                                 if (!isManaged) break; // found not managed type, stop here
                                 isPrimitive |= typeof(Delegate).IsAssignableFrom(parameter.ParameterType);
-                                var paramName = checkForkeyword(parameter.Name);
-                                inputParams.Append(string.Format(Const.Parameters.INPUT_PARAMETER, (isArray) ? paramType + (IsParams(parameter) ? Const.SpecialNames.VarArgsTrailer : Const.SpecialNames.ArrayTrailer) : paramType, paramName));
-
-                                string formatter = isPrimitive ? Const.Parameters.INVOKE_PARAMETER_PRIMITIVE : Const.Parameters.INVOKE_PARAMETER_NONPRIMITIVE;
-                                if (!isPrimitive && isArray) formatter = Const.Parameters.INVOKE_PARAMETER_NONPRIMITIVE_ARRAY;
-
+                                string formatter = string.Empty;
                                 string objectCaster = string.Empty;
-                                if (isArray && parameters.Length == 1)
+                                var paramName = checkForkeyword(parameter.Name);
+                                if (EnableRefOutParameters && parameter.IsOut)
                                 {
-                                    objectCaster = "(Object)";
+                                    inputParams.Append(string.Format(Const.Parameters.INPUT_PARAMETER, string.Format(Const.Parameters.JCORefOutTypeGenericFormatter, (isArray) ? paramType + Const.SpecialNames.ArrayTrailer : paramType), paramName));
+                                    formatter = Const.Parameters.INVOKE_PARAMETER_JCOREFOUT;
+                                }
+                                else
+                                {
+                                    inputParams.Append(string.Format(Const.Parameters.INPUT_PARAMETER, (isArray) ? paramType + (IsParams(parameter) ? Const.SpecialNames.VarArgsTrailer : Const.SpecialNames.ArrayTrailer) : paramType, paramName));
+                                    formatter = isPrimitive ? Const.Parameters.INVOKE_PARAMETER_PRIMITIVE : Const.Parameters.INVOKE_PARAMETER_NONPRIMITIVE;
+                                    if (!isPrimitive && isArray) formatter = Const.Parameters.INVOKE_PARAMETER_NONPRIMITIVE_ARRAY;
+                                    if (isArray && parameters.Length == 1)
+                                    {
+                                        objectCaster = "(Object)";
+                                    }
                                 }
 
                                 execParams.Append(string.Format(formatter, objectCaster, paramName));
@@ -1781,7 +1803,7 @@ namespace MASES.C2JReflector
 
                                     if (isNativeArrayInParameter)
                                     {
-                                        inputParams.Append(string.Format(Const.Parameters.INPUT_PARAMETER, Const.SpecialNames.JCORefOutType, paramName));
+                                        inputParams.Append(string.Format(Const.Parameters.INPUT_PARAMETER, Const.Parameters.JCORefOutType, paramName));
                                         formatter = Const.Parameters.INVOKE_PARAMETER_JCOREFOUT;
                                     }
                                     else
@@ -2285,7 +2307,10 @@ namespace MASES.C2JReflector
             foreach (var parameter in parameters)
             {
                 string paramType = convertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
-                isManaged &= !parameter.IsOut; // out parameters not managed
+                if (!EnableRefOutParameters)
+                {
+                    isManaged &= !parameter.IsOut; // out parameters not managed
+                }
                 if (!isManaged) break; // found not managed type, stop here
 
                 var paramName = checkForkeyword(parameter.Name);

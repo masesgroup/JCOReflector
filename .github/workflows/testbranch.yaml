@@ -221,3 +221,24 @@ jobs:
           ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/net461/*;./output" nettest.HelloNETSocket
           ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/net461/*;./output" nettest.HelloNETSocket -async
           rmdir output /s /q
+          
+      - name: Compress release files
+        run: | 
+          Compress-Archive -Path .\bin\netcoreapp3.1\* -DestinationPath .\bin\netcoreapp3.1.zip
+          Compress-Archive -Path .\bin\net5.0\* -DestinationPath .\bin\net5.0.zip
+          Compress-Archive -Path .\bin\net461\* -DestinationPath .\bin\net461.zip
+          
+      - uses: actions/upload-artifact@v2
+        with:
+          name: netcoreapp3.1.zip
+          path: .\bin\netcoreapp3.1.zip
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: net5.0.zip
+          path: .\bin\net5.0.zip
+          
+      - uses: actions/upload-artifact@v2
+        with:
+          name: net461.zip
+          path: .\bin\net461.zip

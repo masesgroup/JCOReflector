@@ -103,6 +103,10 @@ namespace MASES.C2JReflector
             public const string FINAL_KEYWORD = "final ";
             public const string METHOD_DYNAMICINVOKE_NAME = "DynamicInvoke";
             public const string METHOD_GETENUMERATOR_NAME = "GetEnumerator";
+#if !NET_CORE
+            public const string METHOD_STREAMREAD_NAME = "Read";
+            public const string METHOD_STREAMREADBLOCK_NAME = "ReadBlock";
+#endif
         }
 
         public class FileNameAndDirectory

@@ -1483,7 +1483,11 @@ namespace MASES.C2JReflector
                                                                        .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr);
                         }
 
-                        if (EnableDuplicateMethodNativeArrayWithJCRefOut && hasNativeArrayInParameter)
+                        if (EnableDuplicateMethodNativeArrayWithJCRefOut && hasNativeArrayInParameter
+#if !NET_CORE
+                                && !(typeof(Stream).IsAssignableFrom(type) && (methodName == Const.SpecialNames.METHOD_STREAMREAD_NAME || methodName == Const.SpecialNames.METHOD_STREAMREADBLOCK_NAME))
+#endif
+                           )
                         {
                             // needs a duplication in method signature
                             inputParams = new StringBuilder();
@@ -1785,7 +1789,11 @@ namespace MASES.C2JReflector
                                                      .Replace(Const.Methods.METHOD_OBJECT, interfaceMethod.IsStatic ? Const.Class.STATIC_CLASS_NAME : Const.Class.INSTANCE_CLASS_NAME)
                                                      .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr);
 
-                            if (EnableDuplicateMethodNativeArrayWithJCRefOut && hasNativeArrayInParameter)
+                            if (EnableDuplicateMethodNativeArrayWithJCRefOut && hasNativeArrayInParameter
+#if !NET_CORE
+                                && !(typeof(Stream).IsAssignableFrom(type) && (methodName == Const.SpecialNames.METHOD_STREAMREAD_NAME || methodName == Const.SpecialNames.METHOD_STREAMREADBLOCK_NAME))
+#endif
+                               )
                             {
                                 // needs a duplication in method signature
                                 inputParams = new StringBuilder();

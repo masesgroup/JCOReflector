@@ -1429,7 +1429,8 @@ namespace MASES.C2JReflector
                             var paramName = checkForkeyword(parameter.Name);
                             if (EnableRefOutParameters && parameter.IsOut)
                             {
-                                inputParams.Append(string.Format(Const.Parameters.INPUT_PARAMETER, string.Format(Const.Parameters.JCORefOutTypeGenericFormatter, (isArray) ? paramType + Const.SpecialNames.ArrayTrailer : paramType), paramName));
+                                string typeString = isPrimitive ? Const.Parameters.JCORefOutType : string.Format(Const.Parameters.JCORefOutTypeGenericFormatter, (isArray) ? paramType + Const.SpecialNames.ArrayTrailer : paramType);
+                                inputParams.Append(string.Format(Const.Parameters.INPUT_PARAMETER, typeString, paramName));
                                 formatter = Const.Parameters.INVOKE_PARAMETER_JCOREFOUT;
                             }
                             else
@@ -1485,7 +1486,8 @@ namespace MASES.C2JReflector
 
                         if (EnableDuplicateMethodNativeArrayWithJCRefOut && hasNativeArrayInParameter
 #if !NET_CORE
-                            && !((typeof(Stream).IsAssignableFrom(type) || typeof(TextReader).IsAssignableFrom(type)) &&
+                            && !(EnableRefOutParameters &&
+                                 (typeof(Stream).IsAssignableFrom(type) || typeof(TextReader).IsAssignableFrom(type)) &&
                                  (methodName == Const.SpecialNames.METHOD_STREAMREAD_NAME || methodName == Const.SpecialNames.METHOD_STREAMREADBLOCK_NAME)
                                 )
 #endif
@@ -1746,7 +1748,8 @@ namespace MASES.C2JReflector
                                 var paramName = checkForkeyword(parameter.Name);
                                 if (EnableRefOutParameters && parameter.IsOut)
                                 {
-                                    inputParams.Append(string.Format(Const.Parameters.INPUT_PARAMETER, string.Format(Const.Parameters.JCORefOutTypeGenericFormatter, (isArray) ? paramType + Const.SpecialNames.ArrayTrailer : paramType), paramName));
+                                    string typeString = isPrimitive ? Const.Parameters.JCORefOutType : string.Format(Const.Parameters.JCORefOutTypeGenericFormatter, (isArray) ? paramType + Const.SpecialNames.ArrayTrailer : paramType);
+                                    inputParams.Append(string.Format(Const.Parameters.INPUT_PARAMETER, typeString, paramName));
                                     formatter = Const.Parameters.INVOKE_PARAMETER_JCOREFOUT;
                                 }
                                 else
@@ -1793,7 +1796,8 @@ namespace MASES.C2JReflector
 
                             if (EnableDuplicateMethodNativeArrayWithJCRefOut && hasNativeArrayInParameter
 #if !NET_CORE
-                                && !((typeof(Stream).IsAssignableFrom(type) || typeof(TextReader).IsAssignableFrom(type)) &&
+                                && !(EnableRefOutParameters &&
+                                     (typeof(Stream).IsAssignableFrom(type) || typeof(TextReader).IsAssignableFrom(type)) &&
                                      (methodName == Const.SpecialNames.METHOD_STREAMREAD_NAME || methodName == Const.SpecialNames.METHOD_STREAMREADBLOCK_NAME)
                                     )
 #endif
@@ -2638,17 +2642,23 @@ namespace MASES.C2JReflector
             StringBuilder importsToExport = new StringBuilder();
             foreach (var item in imports)
             {
-                if (item.IsInterface)
+                var subItem = item;
+                if (EnableRefOutParameters && item.IsByRef)
                 {
-                    if (isManagedType(item, 0, 1) && item != typeof(IEnumerator) && item != typeof(IEnumerable))
+                    subItem = item.GetElementType();
+                }
+                var name = subItem.Name;
+                if (subItem.IsInterface)
+                {
+                    if (isManagedType(subItem, 0, 1) && subItem != typeof(IEnumerator) && subItem != typeof(IEnumerable))
                     {
-                        importsToExport.AppendLine(string.Format(Const.Imports.IMPORT, item.Namespace.ToLowerInvariant(), item.Name));
-                        importsToExport.AppendLine(string.Format(Const.Imports.IMPORT, item.Namespace.ToLowerInvariant(), item.Name + Const.SpecialNames.ImplementationTrailer));
+                        importsToExport.AppendLine(string.Format(Const.Imports.IMPORT, subItem.Namespace.ToLowerInvariant(), name));
+                        importsToExport.AppendLine(string.Format(Const.Imports.IMPORT, subItem.Namespace.ToLowerInvariant(), name + Const.SpecialNames.ImplementationTrailer));
                     }
                 }
-                else if (isManagedType(item, 0, 1))
+                else if (isManagedType(subItem, 0, 1))
                 {
-                    importsToExport.AppendLine(string.Format(Const.Imports.IMPORT, item.Namespace.ToLowerInvariant(), item.Name));
+                    importsToExport.AppendLine(string.Format(Const.Imports.IMPORT, subItem.Namespace.ToLowerInvariant(), name));
                 }
             }
 
@@ -2657,42 +2667,47 @@ namespace MASES.C2JReflector
 
         static bool isManagedType(Type type, int recursion, int limit)
         {
+            var innerType = type;
             if (recursion == limit) return false; // we don't manage array of arrays
             if (type.FullName == Const.SpecialNames.XamlReader) return false;
-            if (type.IsArray)
+            if (!EnableRefOutParameters && type.IsByRef) // don't check IsByRef if EnableRefOutParameters is true
+                return false;
+            if (EnableRefOutParameters && type.IsByRef)
+            {
+                innerType = type.GetElementType();
+            }
+
+            if (innerType.IsArray)
             {
                 if (!EnableArray) return false;  // uncomment to disable array
-                if (type.Name.Contains(Const.SpecialNames.MultiArrayTrailer)) return false;
-                else if (type.Name.Contains(Const.SpecialNames.ArrayTrailer))
+                if (innerType.Name.Contains(Const.SpecialNames.MultiArrayTrailer)) return false;
+                else if (innerType.Name.Contains(Const.SpecialNames.ArrayTrailer))
                 {
-                    var tmp = type.Name.Substring(0, type.Name.LastIndexOf(Const.SpecialNames.ArrayTrailer));
+                    var tmp = innerType.Name.Substring(0, innerType.Name.LastIndexOf(Const.SpecialNames.ArrayTrailer));
                     if (tmp.Contains(Const.SpecialNames.ArrayTrailer)) return false; // it is [][]
-                    return isManagedType(type.GetElementType(), recursion + 1, limit);
+                    return isManagedType(innerType.GetElementType(), recursion + 1, limit);
                 }
                 else return false;
             }
-            if (typeof(Type).IsAssignableFrom(type)) // special type
+            if (typeof(Type).IsAssignableFrom(innerType)) // special type
             {
                 return true;
             }
-            if (!type.IsPublic // only public types are managed
-                || !(type.IsAnsiClass || type.IsClass || type.IsEnum)
-                 || (EnableAbstract ? false : (type.IsAbstract && !type.IsSealed)) // discard real abstract class for now, but abstract/sealed classes are what in .NET are "public static class"
+            if (!innerType.IsPublic // only public types are managed expect when used in out/ref
+                || !(innerType.IsAnsiClass || innerType.IsClass || innerType.IsEnum)
+                 || (EnableAbstract ? false : (innerType.IsAbstract && !innerType.IsSealed)) // discard real abstract class for now, but abstract/sealed classes are what in .NET are "public static class"
                                                                                    //  || type.IsInterface // discard interfaces for now
-                 || type.IsGenericType || type.IsGenericParameter)
+                 || innerType.IsGenericType || innerType.IsGenericParameter)
             {
                 return false;
             }
-            if (typeof(Delegate).IsAssignableFrom(type)) // delegate types are managed only with events
+            if (typeof(Delegate).IsAssignableFrom(innerType)) // delegate types are managed only with events
             {
-                return exportingDelegate(type, null, null, true);
+                return exportingDelegate(innerType, null, null, true);
             }
-
-            if (type.Name.Contains("IntPtr"))
+            if (innerType.Name.Contains("IntPtr") || innerType.Name.Contains("*"))
                 return false;
-            if (type.Name.Contains("*"))
-                return false;
-            if (type.IsByRef)
+            if (innerType.Name.Contains("`")) // last chance to check for generics
                 return false;
 
             return true;
@@ -2701,9 +2716,9 @@ namespace MASES.C2JReflector
         static string checkForSpecialNames(string name, Type type, out bool needImport)
         {
             needImport = true;
-            if (name == "ArrayList") { needImport = false; return type.Namespace.ToLowerInvariant() + "." + type.Name; }
-            if (name == "Binding") { needImport = false; return type.Namespace.ToLowerInvariant() + "." + type.Name; }
-            if (name == "XamlReader") { needImport = false; return type.Namespace.ToLowerInvariant() + "." + type.Name; }
+            if (name == "ArrayList") { needImport = false; return type.Namespace.ToLowerInvariant() + "." + name; }
+            if (name == "Binding") { needImport = false; return type.Namespace.ToLowerInvariant() + "." + name; }
+            if (name == "XamlReader") { needImport = false; return type.Namespace.ToLowerInvariant() + "." + name; }
             return name;
         }
 
@@ -2712,8 +2727,15 @@ namespace MASES.C2JReflector
             needImport = false;
             isPrimitive = true;
             defaultPrimitiveValue = string.Empty;
-            var fullName = (isArray) ? type.FullName.Substring(0, type.FullName.IndexOf(Const.SpecialNames.ArrayTrailer)) : type.FullName;
-            var name = (isArray) ? type.Name.Substring(0, type.Name.IndexOf(Const.SpecialNames.ArrayTrailer)) : type.Name;
+            var innerType = type;
+            if (EnableRefOutParameters && type.IsByRef)
+            {
+                innerType = type.GetElementType();
+            }
+            var fullName = (isArray) ? innerType.FullName.Substring(0, innerType.FullName.IndexOf(Const.SpecialNames.ArrayTrailer)) : innerType.FullName;
+            string typeName = innerType.Name;
+
+            var name = (isArray) ? typeName.Substring(0, typeName.IndexOf(Const.SpecialNames.ArrayTrailer)) : typeName;
             string retType = string.Empty;
             switch (fullName)
             {
@@ -2729,7 +2751,7 @@ namespace MASES.C2JReflector
                 default:
                     {
                         isPrimitive = false;
-                        retType = checkForSpecialNames(name, type, out needImport);
+                        retType = checkForSpecialNames(name, innerType, out needImport);
                     }
                     break;
             }
@@ -2746,7 +2768,13 @@ namespace MASES.C2JReflector
             if (type == typeof(IEnumerable)) { isSpecial = true; return Const.SpecialNames.NetIEnumerable; }
             if (type == typeof(IEnumerator)) { isSpecial = true; return Const.SpecialNames.NetIEnumerator; }
 
-            return type.Name;
+            string typeName = type.Name;
+            if (EnableRefOutParameters && type.IsByRef)
+            {
+                typeName = typeName.Substring(0, typeName.Length - 1);
+            }
+
+            return typeName;
         }
 
         static string convertType(IList<Type> imports, Type type, out bool isPrimitive, out string defaultPrimitiveValue, out bool isManaged, out bool isSpecial, out bool isArray, bool storeInImports = true)
@@ -2754,24 +2782,29 @@ namespace MASES.C2JReflector
             isPrimitive = true;
             defaultPrimitiveValue = string.Empty;
             isSpecial = false;
-            isArray = type.IsArray || type.Name.Contains("[]");
+            var innerType = type;
+            if (EnableRefOutParameters && type.IsByRef)
+            {
+                innerType = type.GetElementType();
+            }
+            isArray = innerType.IsArray || innerType.Name.Contains("[]");
             isManaged = isManagedType(type, 0, 2);
             bool needImport = true;
             try
             {
                 if (!isManaged) { return string.Empty; }
-                var special = checkIsSpecial((isArray) ? type.GetElementType() : type, out isSpecial);
+                var special = checkIsSpecial((isArray) ? innerType.GetElementType() : innerType, out isSpecial);
                 if (isSpecial) { needImport = false; isPrimitive = false; return special; }
 
-                return checkForPrimitive(type, isArray, out isPrimitive, out defaultPrimitiveValue, out needImport);
+                return checkForPrimitive(innerType, isArray, out isPrimitive, out defaultPrimitiveValue, out needImport);
             }
             finally
             {
                 if (imports != null && storeInImports && needImport && isManaged)
                 {
-                    if (isArray && isManagedType(type.GetElementType(), 0, 1))
+                    if (isArray && isManagedType(innerType.GetElementType(), 0, 1))
                     {
-                        Type innerType = type.GetElementType();
+                        innerType = innerType.GetElementType();
 
                         bool isArrayHere = innerType.IsArray || innerType.Name.Contains(Const.SpecialNames.ArrayTrailer);
                         if (!isArrayHere)
@@ -2780,17 +2813,17 @@ namespace MASES.C2JReflector
                             bool isPrimitiveHere;
                             bool needImportHere;
                             string defaultPrimitiveValueHere;
-                            checkIsSpecial(type.GetElementType(), out isSpecialHere);
-                            checkForPrimitive(type.GetElementType(), isArrayHere, out isPrimitiveHere, out defaultPrimitiveValueHere, out needImportHere);
-                            if (needImportHere && !isPrimitiveHere && !isSpecialHere && !imports.Contains(type.GetElementType()))
+                            checkIsSpecial(innerType, out isSpecialHere);
+                            checkForPrimitive(innerType, isArrayHere, out isPrimitiveHere, out defaultPrimitiveValueHere, out needImportHere);
+                            if (needImportHere && !isPrimitiveHere && !isSpecialHere && !imports.Contains(innerType))
                             {
-                                imports.Add(type.GetElementType());
+                                imports.Add(innerType);
                             }
                         }
                     }
-                    else if (!isPrimitive && !isSpecial && !imports.Contains(type))
+                    else if (!isPrimitive && !isSpecial && !imports.Contains(innerType))
                     {
-                        imports.Add(type);
+                        imports.Add(innerType);
                     }
                 }
             }

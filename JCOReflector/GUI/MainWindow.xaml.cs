@@ -88,7 +88,7 @@ namespace MASES.C2JReflector
 
         // Using a DependencyProperty as the backing store for EnableAbstract.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty EnableInheritanceProperty =
-            DependencyProperty.Register("EnableInheritance", typeof(bool), typeof(MainWindow), new PropertyMetadata(true));
+            DependencyProperty.Register("EnableInheritance", typeof(bool), typeof(MainWindow), new PropertyMetadata(false));
 
         public bool EnableRefOutParameters
         {
@@ -98,7 +98,7 @@ namespace MASES.C2JReflector
 
         // Using a DependencyProperty as the backing store for EnableAbstract.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty EnableRefOutParametersProperty =
-            DependencyProperty.Register("EnableRefOutParameters", typeof(bool), typeof(MainWindow), new PropertyMetadata(true));
+            DependencyProperty.Register("EnableRefOutParameters", typeof(bool), typeof(MainWindow), new PropertyMetadata(false));
 
         public MainWindow()
         {
@@ -177,9 +177,9 @@ namespace MASES.C2JReflector
             args.EnableAbstract = cbExportAbstract.IsChecked.Value;
             args.EnableArray = cbExportArray.IsChecked.Value;
             args.EnableDuplicateMethodNativeArrayWithJCRefOut = cbDuplicateMethodNativeArray.IsChecked.Value;
-            args.EnableInheritance = EnableInheritance;
+            args.EnableInheritance = cbEnableInheritance.IsChecked.Value;
             args.EnableInterfaceInheritance = cbEnableInterfaceInheritance.IsChecked.Value;
-            args.EnableRefOutParameters = EnableRefOutParameters;
+            args.EnableRefOutParameters = cbEnableRefOutParameters.IsChecked.Value;
             args.DryRun = cbDryRun.IsChecked.Value;
 
             if (cbExportToFile.IsChecked.Value)

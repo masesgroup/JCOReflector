@@ -1243,7 +1243,7 @@ namespace MASES.C2JReflector
             bool result = false;
 #if !NET_CORE
             result |= (typeof(Stream).IsAssignableFrom(type) || typeof(TextReader).IsAssignableFrom(type)) &&
-                     (methodName == Const.SpecialNames.METHOD_STREAMREAD_NAME || methodName == Const.SpecialNames.METHOD_STREAMREADBLOCK_NAME);
+                      (methodName == Const.SpecialNames.METHOD_STREAMREAD_NAME || methodName == Const.SpecialNames.METHOD_STREAMREADBLOCK_NAME);
 #endif
             return result;
         }
@@ -1496,7 +1496,7 @@ namespace MASES.C2JReflector
                                                                        .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr);
                         }
 
-                        if (EnableDuplicateMethodNativeArrayWithJCRefOut && hasNativeArrayInParameter && !builtWithJCORefOut && !exportingMethodsDuplicateAvoidance(type, methodName))
+                        if (EnableDuplicateMethodNativeArrayWithJCRefOut && hasNativeArrayInParameter && !builtWithJCORefOut) // && !exportingMethodsDuplicateAvoidance(type, methodName))
                         {
                             // needs a duplication in method signature
                             inputParams = new StringBuilder();
@@ -1800,7 +1800,7 @@ namespace MASES.C2JReflector
                                                      .Replace(Const.Methods.METHOD_OBJECT, interfaceMethod.IsStatic ? Const.Class.STATIC_CLASS_NAME : Const.Class.INSTANCE_CLASS_NAME)
                                                      .Replace(Const.Exceptions.THROWABLE_TEMPLATE, exceptionStr);
 
-                            if (EnableDuplicateMethodNativeArrayWithJCRefOut && hasNativeArrayInParameter && !builtWithJCORefOut && !exportingMethodsDuplicateAvoidance(type, methodName))
+                            if (EnableDuplicateMethodNativeArrayWithJCRefOut && hasNativeArrayInParameter && !builtWithJCORefOut) // && !exportingMethodsDuplicateAvoidance(type, methodName))
                             {
                                 // needs a duplication in method signature
                                 inputParams = new StringBuilder();

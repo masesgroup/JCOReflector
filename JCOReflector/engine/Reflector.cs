@@ -1237,15 +1237,17 @@ namespace MASES.C2JReflector
             return false;
         }
 
-        static bool exportingMethodsDuplicateAvoidance(Type type, string methodName)
+        static bool exportingMethodsAvoidance(Type type, MethodInfo method)
         {
-            if (!EnableRefOutParameters) return false;
-            bool result = false;
-#if !NET_CORE
-            result |= (typeof(Stream).IsAssignableFrom(type) || typeof(TextReader).IsAssignableFrom(type)) &&
-                      (methodName == Const.SpecialNames.METHOD_STREAMREAD_NAME || methodName == Const.SpecialNames.METHOD_STREAMREADBLOCK_NAME);
-#endif
-            return result;
+            if (!EnableRefOutParameters || method.Name != "TryParse") return false;
+            var fullname = type.FullName;
+            if (fullname == "System.Net.Http.Headers.MediaTypeWithQualityHeaderValue" ||
+                fullname == "System.Net.Http.Headers.NameValueWithParametersHeaderValue" ||
+                fullname == "System.Net.Http.Headers.TransferCodingWithQualityHeaderValue")
+            {
+                return true;
+            }
+            return false;
         }
 
         static string exportingMethods(Type type, IList<Type> imports, IList<Type> implementableInterfaces, bool withInheritance, string destFolder, string assemblyname, out string returnEnumeratorType, out string returnInterfaceSection)
@@ -1302,6 +1304,8 @@ namespace MASES.C2JReflector
                 foreach (var item in methods)
                 {
                     var methodName = item.Name;
+
+                    if (exportingMethodsAvoidance(type, item)) continue;
 
                     isPrimitive = true;
                     defaultPrimitiveValue = string.Empty;
@@ -1632,6 +1636,8 @@ namespace MASES.C2JReflector
                     foreach (var interfaceMethod in methods)
                     {
                         var methodName = interfaceMethod.Name;
+
+                        if (exportingMethodsAvoidance(implementableInterface, interfaceMethod)) continue;
 
                         isPrimitive = true;
                         defaultPrimitiveValue = string.Empty;

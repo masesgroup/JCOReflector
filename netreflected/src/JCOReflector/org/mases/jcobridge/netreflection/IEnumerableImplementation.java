@@ -27,9 +27,7 @@ package org.mases.jcobridge.netreflection;
 import org.mases.jcobridge.*;
 
 /**
- * The base .NET class managing System.Collections.IEnumerable, mscorlib,
- * Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends
- * {@link NetObject}.
+ * The base .NET class managing System.Collections.IEnumerable, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Extends {@link NetObject}.
  */
 public class IEnumerableImplementation extends NetObject implements IEnumerable {
     public static final String assemblyFullName = "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";

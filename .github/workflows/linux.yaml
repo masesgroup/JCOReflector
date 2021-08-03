@@ -91,7 +91,7 @@ jobs:
             dotnet bin/net5.0/JCOReflectorCLI.dll createjars .github/workflows/createjars_core5.0_linux.job																  
 
         - name: Build Java test source file
-          run: javac -cp ./bin/netcoreapp3.1/JCOReflector.jar ./netreflected-tests/java/src/hierarchy/*.java ./netreflected-tests/java/src/mscorlib/*.java ./netreflected-tests/java/src/nettest/*.java ./netreflected-tests/java/src/refout/*.java
+          run: javac -cp ./bin/netcoreapp3.1/JCOReflector.jar ./netreflected-tests/java/src/hierarchy/*.java ./netreflected-tests/java/src/mscorlib/*.java ./netreflected-tests/java/src/nettest/*.java ./netreflected-tests/java/src/refout/HelloRefOut.java
 
         - name: Execute Java tests netcoreapp3.1
           run: |
@@ -105,7 +105,7 @@ jobs:
             java -cp "./bin/netcoreapp3.1/JCOReflector.jar;./netreflected-tests/java/src/" refout.HelloRefOut --CoreCLRApp:Microsoft.NETCore.App
 
         - name: Build Java test source file
-          run: javac -cp ./bin/net5.0/JCOReflector.jar ./netreflected-tests/java/src/hierarchy/*.java ./netreflected-tests/java/src/mscorlib/*.java ./netreflected-tests/java/src/nettest/*.java ./netreflected-tests/java/src/refout/*.java
+          run: javac -cp ./bin/net5.0/JCOReflector.jar ./netreflected-tests/java/src/hierarchy/*.java ./netreflected-tests/java/src/mscorlib/*.java ./netreflected-tests/java/src/nettest/*.java ./netreflected-tests/java/src/refout/HelloRefOut.java
 
         - name: Execute Java tests net5.0 
           run: |

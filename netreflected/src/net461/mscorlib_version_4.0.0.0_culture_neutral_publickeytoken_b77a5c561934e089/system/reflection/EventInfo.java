@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.reflection.MemberInfo;
 import system.reflection.MethodInfo;
+import system.Guid;
 import system.UInt32;
 import system.reflection.EventAttributes;
 import system.reflection.MemberTypes;
@@ -272,6 +273,15 @@ public class EventInfo extends MemberInfo  {
      */
     @Deprecated 
     public NetObject[] GetCustomAttributes(NetType attributeType, boolean inherit) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_EventInfo to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static To_EventInfo method available in _EventInfo to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable {
         throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_EventInfo to obtain the full interface.");
     }
 

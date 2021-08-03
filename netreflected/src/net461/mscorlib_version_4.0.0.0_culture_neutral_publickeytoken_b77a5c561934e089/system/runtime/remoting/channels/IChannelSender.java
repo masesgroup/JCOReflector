@@ -113,6 +113,9 @@ public interface IChannelSender extends IJCOBridgeReflected, IChannel {
 
     // Methods section
     
+    public IMessageSink CreateMessageSink(java.lang.String url, NetObject remoteChannelData, JCORefOut objectURI) throws Throwable;
+
+
 
     
     // Properties section

@@ -211,6 +211,26 @@ public class Guid extends ValueType  {
         }
     }
 
+    public static boolean TryParse(java.lang.String input, JCORefOut<Guid> result) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OverflowException, system.FormatException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryParse", input, result.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean TryParseExact(java.lang.String input, java.lang.String format, JCORefOut<Guid> result) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OverflowException, system.FormatException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryParseExact", input, format, result.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public byte[] ToByteArray() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.ArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

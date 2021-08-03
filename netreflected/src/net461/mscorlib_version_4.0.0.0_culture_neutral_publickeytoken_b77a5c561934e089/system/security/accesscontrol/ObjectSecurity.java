@@ -162,6 +162,26 @@ public class ObjectSecurity extends NetObject  {
         }
     }
 
+    public boolean ModifyAccessRule(AccessControlModification modification, AccessRule rule, JCORefOut modified) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("ModifyAccessRule", modification == null ? null : modification.getJCOInstance(), rule == null ? null : rule.getJCOInstance(), modified.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean ModifyAuditRule(AccessControlModification modification, AuditRule rule, JCORefOut modified) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("ModifyAuditRule", modification == null ? null : modification.getJCOInstance(), rule == null ? null : rule.getJCOInstance(), modified.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public byte[] GetSecurityDescriptorBinaryForm() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

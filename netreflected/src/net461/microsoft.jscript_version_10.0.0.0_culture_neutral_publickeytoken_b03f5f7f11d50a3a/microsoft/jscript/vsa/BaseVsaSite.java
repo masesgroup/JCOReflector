@@ -185,6 +185,16 @@ public class BaseVsaSite extends NetObject  {
         }
     }
 
+    public void GetCompiledState(JCORefOut pe, JCORefOut debugInfo) throws Throwable, microsoft.jscript.vsa.JSVsaException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetCompiledState", pe.getJCRefOut(), debugInfo.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Notify(java.lang.String notify, NetObject optional) throws Throwable, microsoft.jscript.vsa.JSVsaException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

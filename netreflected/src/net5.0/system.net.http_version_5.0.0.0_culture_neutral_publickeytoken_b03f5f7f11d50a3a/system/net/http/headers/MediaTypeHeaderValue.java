@@ -158,6 +158,16 @@ public class MediaTypeHeaderValue extends NetObject implements system.ICloneable
     
     // Methods section
     
+    public static boolean TryParse(java.lang.String input, JCORefOut<MediaTypeHeaderValue> parsedValue) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryParse", input, parsedValue.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static MediaTypeHeaderValue Parse(java.lang.String input) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");

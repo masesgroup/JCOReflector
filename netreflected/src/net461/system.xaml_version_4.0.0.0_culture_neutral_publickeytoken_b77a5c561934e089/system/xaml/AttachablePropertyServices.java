@@ -154,6 +154,16 @@ public class AttachablePropertyServices extends NetObject  {
         }
     }
 
+    public static boolean TryGetProperty(NetObject instance, AttachableMemberIdentifier name, JCORefOut<NetObject> value) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryGetProperty", instance == null ? null : instance.getJCOInstance(), name == null ? null : name.getJCOInstance(), value.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static int GetAttachedPropertyCount(NetObject instance) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.threading.ThreadAbortException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");

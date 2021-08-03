@@ -156,6 +156,16 @@ public class PhysicalAddress extends NetObject  {
     
     // Methods section
     
+    public static boolean TryParse(java.lang.String address, JCORefOut<PhysicalAddress> value) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryParse", address, value.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public byte[] GetAddressBytes() throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

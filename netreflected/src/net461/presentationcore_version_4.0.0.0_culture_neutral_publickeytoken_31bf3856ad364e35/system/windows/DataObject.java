@@ -46,9 +46,18 @@ import system.windows.DependencyObject;
 import system.windows.DataObjectCopyingEventHandler;
 import system.windows.DataObjectPastingEventHandler;
 import system.windows.DataObjectSettingDataEventHandler;
+import system.runtime.interopservices.comtypes.FORMATETC;
+import system.runtime.interopservices.comtypes.ADVF;
+import system.runtime.interopservices.comtypes.IAdviseSink;
+import system.runtime.interopservices.comtypes.IAdviseSinkImplementation;
+import system.runtime.interopservices.comtypes.IEnumSTATDATA;
+import system.runtime.interopservices.comtypes.IEnumSTATDATAImplementation;
 import system.runtime.interopservices.comtypes.IEnumFORMATETC;
 import system.runtime.interopservices.comtypes.IEnumFORMATETCImplementation;
 import system.runtime.interopservices.comtypes.DATADIR;
+import system.runtime.interopservices.comtypes.STGMEDIUM;
+import system.runtime.interopservices.comtypes.IDataObject;
+import system.runtime.interopservices.comtypes.IDataObjectImplementation;
 
 
 /**
@@ -57,7 +66,7 @@ import system.runtime.interopservices.comtypes.DATADIR;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.DataObject" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.DataObject</a>
  */
-public class DataObject extends NetObject  {
+public class DataObject extends NetObject implements system.runtime.interopservices.comtypes.IDataObject {
     /**
      * Fully assembly qualified name: PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -581,6 +590,42 @@ public class DataObject extends NetObject  {
      *    Use the static ToIDataObject method available in IDataObject to obtain an object with an invocable method
      */
     @Deprecated 
+    public int DAdvise(FORMATETC pFormatetc, ADVF advf, IAdviseSink adviseSink, JCORefOut connection) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataObject to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDataObject method available in IDataObject to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public int EnumDAdvise(JCORefOut<IEnumSTATDATA> enumAdvise) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataObject to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDataObject method available in IDataObject to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public int GetCanonicalFormatEtc(FORMATETC formatIn, JCORefOut<FORMATETC> formatOut) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataObject to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDataObject method available in IDataObject to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public int QueryGetData(FORMATETC format) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataObject to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDataObject method available in IDataObject to obtain an object with an invocable method
+     */
+    @Deprecated 
     public IEnumFORMATETC EnumFormatEtc(DATADIR direction) throws Throwable {
         throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataObject to obtain the full interface.");
     }
@@ -591,6 +636,33 @@ public class DataObject extends NetObject  {
      */
     @Deprecated 
     public void DUnadvise(int connection) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataObject to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDataObject method available in IDataObject to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void GetData(FORMATETC format, JCORefOut<STGMEDIUM> medium) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataObject to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDataObject method available in IDataObject to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void GetDataHere(FORMATETC format, STGMEDIUM medium) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataObject to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIDataObject method available in IDataObject to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void SetData(FORMATETC formatIn, STGMEDIUM medium, boolean release) throws Throwable {
         throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataObject to obtain the full interface.");
     }
 

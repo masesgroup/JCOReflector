@@ -182,6 +182,16 @@ public class SqlFileStream extends Stream  {
         }
     }
 
+    public int Read(JCORefOut buffer, int offset, int count) throws Throwable, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("Read", buffer.getJCRefOut(), offset, count);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public int ReadByte() throws Throwable, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

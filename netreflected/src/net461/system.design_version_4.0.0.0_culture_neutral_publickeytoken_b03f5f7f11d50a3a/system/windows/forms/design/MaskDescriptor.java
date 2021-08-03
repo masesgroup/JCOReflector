@@ -155,6 +155,16 @@ public class MaskDescriptor extends NetObject  {
         }
     }
 
+    public static boolean IsValidMaskDescriptor(MaskDescriptor maskDescriptor, JCORefOut validationErrorDescription) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.TypeInitializationException, system.configuration.ConfigurationErrorsException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.security.SecurityException, system.IndexOutOfRangeException, system.NullReferenceException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.TimeoutException, system.MulticastNotSupportedException, system.InvalidCastException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("IsValidMaskDescriptor", maskDescriptor == null ? null : maskDescriptor.getJCOInstance(), validationErrorDescription.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

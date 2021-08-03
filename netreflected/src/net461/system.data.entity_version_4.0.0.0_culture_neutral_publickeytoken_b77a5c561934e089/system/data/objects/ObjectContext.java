@@ -189,6 +189,16 @@ public class ObjectContext extends NetObject implements AutoCloseable {
         }
     }
 
+    public boolean TryGetObjectByKey(EntityKey key, JCORefOut<NetObject> value) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.data.MappingException, system.data.MetadataException, system.threading.SynchronizationLockException, system.ObjectDisposedException, system.threading.LockRecursionException, system.NotImplementedException, system.NotSupportedException, system.FormatException, system.data.ProviderIncompatibleException, system.data.EntityCommandExecutionException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("TryGetObjectByKey", key == null ? null : key.getJCOInstance(), value.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public int ExecuteFunction(java.lang.String functionName, ObjectParameter... parameters) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.data.MappingException, system.data.MetadataException, system.threading.SynchronizationLockException, system.NotSupportedException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.PlatformNotSupportedException, system.transactions.TransactionException, system.transactions.TransactionManagerCommunicationException, system.data.EntityCommandExecutionException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

@@ -154,6 +154,16 @@ public class ServiceHealthBehavior extends ServiceHealthBehaviorBase  {
     
     // Methods section
     
+    public void HandleHealthRequest(ServiceHostBase serviceHost, Message httpGetRequest, java.lang.String[] queries, JCORefOut<Message> replyMessage) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("HandleHealthRequest", serviceHost == null ? null : serviceHost.getJCOInstance(), httpGetRequest == null ? null : httpGetRequest.getJCOInstance(), queries, replyMessage.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

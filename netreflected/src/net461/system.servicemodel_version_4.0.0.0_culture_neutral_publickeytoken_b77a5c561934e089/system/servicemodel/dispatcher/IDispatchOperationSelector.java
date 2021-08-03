@@ -37,6 +37,7 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.servicemodel.channels.Message;
 
 
 /**
@@ -109,6 +110,8 @@ public interface IDispatchOperationSelector extends IJCOBridgeReflected {
 
     // Methods section
     
+    public java.lang.String SelectOperation(Message message) throws Throwable;
+
 
     
     // Properties section

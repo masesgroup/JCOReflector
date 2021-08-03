@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.forms.Form;
+import system.windows.forms.Message;
 import system.windows.forms.DialogResult;
 import system.windows.forms.IWin32Window;
 import system.windows.forms.IWin32WindowImplementation;
@@ -160,6 +161,16 @@ public class ComponentEditorForm extends Form  {
     
     // Methods section
     
+    public boolean PreProcessMessage(Message msg) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("PreProcessMessage", msg == null ? null : msg.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public DialogResult ShowForm() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

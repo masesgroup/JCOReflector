@@ -37,6 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.UInt32;
+import system.Guid;
 
 
 /**
@@ -109,6 +111,8 @@ public interface IAccPropServer extends IJCOBridgeReflected {
 
     // Methods section
     
+    public void GetPropValue(byte pIDString, UInt32 dwIDStringLen, Guid idProp, JCORefOut<NetObject> pvarValue, JCORefOut pfHasProp) throws Throwable;
+
 
     
     // Properties section

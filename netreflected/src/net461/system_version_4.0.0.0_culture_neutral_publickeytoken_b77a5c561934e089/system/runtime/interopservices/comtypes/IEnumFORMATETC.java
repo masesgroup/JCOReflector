@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 
 // Import section
 import system.runtime.interopservices.comtypes.FORMATETC;
+import system.runtime.interopservices.comtypes.IEnumFORMATETC;
+import system.runtime.interopservices.comtypes.IEnumFORMATETCImplementation;
 
 
 /**
@@ -110,9 +112,13 @@ public interface IEnumFORMATETC extends IJCOBridgeReflected {
 
     // Methods section
     
+    public int Next(int celt, JCORefOut<FORMATETC[]> rgelt, JCORefOut pceltFetched) throws Throwable;
+
     public int Reset() throws Throwable;
 
     public int Skip(int celt) throws Throwable;
+
+    public void Clone(JCORefOut<IEnumFORMATETC> newEnum) throws Throwable;
 
 
     

@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.web.HttpCookie;
 import system.collections.specialized.NameValueCollection;
 import system.DateTime;
 import system.web.SameSiteMode;
@@ -168,6 +169,16 @@ public class HttpCookie extends NetObject  {
     
     // Methods section
     
+    public static boolean TryParse(java.lang.String input, JCORefOut<HttpCookie> result) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.web.HttpException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.configuration.ConfigurationException, system.threading.ThreadAbortException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OverflowException, system.InvalidCastException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryParse", input, result.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

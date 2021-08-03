@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.data.common.DbCommand;
 import system.data.oracleclient.OracleConnection;
 import system.data.oracleclient.OracleTransaction;
+import system.data.oracleclient.OracleString;
 import system.data.oracleclient.OracleDataReader;
 import system.data.CommandBehavior;
 import system.data.oracleclient.OracleParameter;
@@ -195,6 +196,16 @@ public class OracleCommand extends DbCommand  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Invoke("ExecuteNonQuery");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int ExecuteOracleNonQuery(JCORefOut<OracleString> rowid) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.OverflowException, system.InvalidCastException, system.OutOfMemoryException, system.AccessViolationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("ExecuteOracleNonQuery", rowid.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

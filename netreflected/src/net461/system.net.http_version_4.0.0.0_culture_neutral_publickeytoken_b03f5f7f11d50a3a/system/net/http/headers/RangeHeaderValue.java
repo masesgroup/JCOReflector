@@ -154,6 +154,16 @@ public class RangeHeaderValue extends NetObject implements system.ICloneable {
     
     // Methods section
     
+    public static boolean TryParse(java.lang.String input, JCORefOut<RangeHeaderValue> parsedValue) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryParse", input, parsedValue.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static RangeHeaderValue Parse(java.lang.String input) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");

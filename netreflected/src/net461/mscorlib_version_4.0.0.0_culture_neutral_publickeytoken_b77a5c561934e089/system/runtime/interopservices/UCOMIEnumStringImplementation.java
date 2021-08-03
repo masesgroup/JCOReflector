@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.runtime.interopservices.UCOMIEnumString;
+import system.runtime.interopservices.UCOMIEnumStringImplementation;
 
 
 /**
@@ -132,6 +134,16 @@ public class UCOMIEnumStringImplementation extends NetObject implements UCOMIEnu
 
     // Methods section
     
+    public int Next(int celt, JCORefOut rgelt, JCORefOut pceltFetched) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("Next", celt, rgelt.getJCRefOut(), pceltFetched.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public int Reset() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -147,6 +159,16 @@ public class UCOMIEnumStringImplementation extends NetObject implements UCOMIEnu
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Invoke("Skip", celt);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Clone(JCORefOut<UCOMIEnumString> ppenum) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Clone", ppenum.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

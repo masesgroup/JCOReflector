@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.MarshalByRefObject;
 import system.drawing.drawing2d.GraphicsPath;
+import system.drawing.PointF;
 
 
 /**
@@ -167,11 +168,91 @@ public class GraphicsPathIterator extends MarshalByRefObject implements AutoClos
         }
     }
 
+    public int CopyData(PointF[] points, byte[] types, int startIndex, int endIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("CopyData", toObjectFromArray(points), types, startIndex, endIndex);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int CopyData(PointF[] dupParam0, JCORefOut dupParam1, int dupParam2, int dupParam3) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("CopyData", toObjectFromArray(dupParam0), dupParam1.getJCRefOut(), dupParam2, dupParam3);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int Enumerate(PointF[] points, byte[] types) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("Enumerate", toObjectFromArray(points), types);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int Enumerate(PointF[] dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("Enumerate", toObjectFromArray(dupParam0), dupParam1.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int NextMarker(JCORefOut startIndex, JCORefOut endIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("NextMarker", startIndex.getJCRefOut(), endIndex.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public int NextMarker(GraphicsPath path) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Invoke("NextMarker", path == null ? null : path.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int NextPathType(JCORefOut pathType, JCORefOut startIndex, JCORefOut endIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("NextPathType", pathType.getJCRefOut(), startIndex.getJCRefOut(), endIndex.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int NextSubpath(JCORefOut startIndex, JCORefOut endIndex, JCORefOut isClosed) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("NextSubpath", startIndex.getJCRefOut(), endIndex.getJCRefOut(), isClosed.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int NextSubpath(GraphicsPath path, JCORefOut isClosed) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("NextSubpath", path == null ? null : path.getJCOInstance(), isClosed.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

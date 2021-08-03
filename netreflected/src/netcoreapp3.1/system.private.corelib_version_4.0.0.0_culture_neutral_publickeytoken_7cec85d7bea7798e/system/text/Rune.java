@@ -331,6 +331,56 @@ public class Rune extends ValueType  {
         }
     }
 
+    public static boolean TryCreate(char highSurrogate, char lowSurrogate, JCORefOut<Rune> result) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryCreate", highSurrogate, lowSurrogate, result.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean TryCreate(char ch, JCORefOut<Rune> result) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryCreate", ch, result.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean TryCreate(int value, JCORefOut<Rune> result) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryCreate", value, result.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean TryCreate(UInt32 value, JCORefOut<Rune> result) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryCreate", value == null ? null : value.getJCOInstance(), result.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean TryGetRuneAt(java.lang.String input, int index, JCORefOut<Rune> value) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryGetRuneAt", input, index, value.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static double GetNumericValue(Rune value) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");

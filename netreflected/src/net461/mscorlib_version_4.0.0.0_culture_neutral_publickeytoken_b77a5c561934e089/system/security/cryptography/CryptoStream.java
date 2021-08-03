@@ -172,6 +172,16 @@ public class CryptoStream extends Stream  {
     
     // Methods section
     
+    public int Read(JCORefOut buffer, int offset, int count) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("Read", buffer.getJCRefOut(), offset, count);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public long Seek(long offset, SeekOrigin origin) throws Throwable, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

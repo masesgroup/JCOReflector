@@ -43,12 +43,12 @@ import microsoft.visualbasic.OpenMode;
 import microsoft.visualbasic.SpcInfo;
 import microsoft.visualbasic.TabInfo;
 import system.DateTime;
-import microsoft.visualbasic.OpenAccess;
-import microsoft.visualbasic.OpenShare;
 import system.Single;
 import system.Array;
 import system.Decimal;
 import system.ValueType;
+import microsoft.visualbasic.OpenAccess;
+import microsoft.visualbasic.OpenShare;
 
 
 /**
@@ -402,6 +402,146 @@ public class FileSystem extends NetObject  {
         }
     }
 
+    public static void FileGet(int FileNumber, boolean Value, long RecordNumber) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.IndexOutOfRangeException, system.FormatException, system.security.SecurityException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("FileGet", FileNumber, Value, RecordNumber);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void FileGet(int FileNumber, byte Value, long RecordNumber) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.IndexOutOfRangeException, system.FormatException, system.security.SecurityException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("FileGet", FileNumber, Value, RecordNumber);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void FileGet(int FileNumber, char Value, long RecordNumber) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.IndexOutOfRangeException, system.FormatException, system.security.SecurityException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("FileGet", FileNumber, Value, RecordNumber);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void FileGet(int FileNumber, double Value, long RecordNumber) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.IndexOutOfRangeException, system.FormatException, system.security.SecurityException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("FileGet", FileNumber, Value, RecordNumber);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void FileGet(int FileNumber, short Value, long RecordNumber) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.IndexOutOfRangeException, system.FormatException, system.security.SecurityException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("FileGet", FileNumber, Value, RecordNumber);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void FileGet(int FileNumber, int Value, long RecordNumber) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.IndexOutOfRangeException, system.FormatException, system.security.SecurityException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("FileGet", FileNumber, Value, RecordNumber);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void FileGet(int FileNumber, long Value, long RecordNumber) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.IndexOutOfRangeException, system.FormatException, system.security.SecurityException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("FileGet", FileNumber, Value, RecordNumber);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void FileGet(int FileNumber, Single Value, long RecordNumber) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.IndexOutOfRangeException, system.FormatException, system.security.SecurityException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("FileGet", FileNumber, Value == null ? null : Value.getJCOInstance(), RecordNumber);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void FileGet(int FileNumber, Array Value, long RecordNumber, boolean ArrayIsDynamic, boolean StringIsFixedLength) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.IndexOutOfRangeException, system.FormatException, system.security.SecurityException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("FileGet", FileNumber, Value == null ? null : Value.getJCOInstance(), RecordNumber, ArrayIsDynamic, StringIsFixedLength);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void FileGet(int FileNumber, DateTime Value, long RecordNumber) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.IndexOutOfRangeException, system.FormatException, system.security.SecurityException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("FileGet", FileNumber, Value == null ? null : Value.getJCOInstance(), RecordNumber);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void FileGet(int FileNumber, Decimal Value, long RecordNumber) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.IndexOutOfRangeException, system.FormatException, system.security.SecurityException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("FileGet", FileNumber, Value == null ? null : Value.getJCOInstance(), RecordNumber);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void FileGet(int FileNumber, java.lang.String Value, long RecordNumber, boolean StringIsFixedLength) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.IndexOutOfRangeException, system.FormatException, system.security.SecurityException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("FileGet", FileNumber, Value, RecordNumber, StringIsFixedLength);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void FileGet(int FileNumber, ValueType Value, long RecordNumber) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.IndexOutOfRangeException, system.FormatException, system.security.SecurityException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("FileGet", FileNumber, Value == null ? null : Value.getJCOInstance(), RecordNumber);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void FileGetObject(int FileNumber, NetObject Value, long RecordNumber) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.IndexOutOfRangeException, system.FormatException, system.security.SecurityException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("FileGetObject", FileNumber, Value == null ? null : Value.getJCOInstance(), RecordNumber);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static void FileOpen(int FileNumber, java.lang.String FileName, OpenMode Mode, OpenAccess Access, OpenShare Share, int RecordLength) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.IndexOutOfRangeException, system.FormatException, system.security.SecurityException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException, system.runtime.serialization.SerializationException, system.io.IOException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -567,6 +707,126 @@ public class FileSystem extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("FileWidth", FileNumber, RecordWidth);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void Input(int FileNumber, boolean Value) throws Throwable, system.PlatformNotSupportedException, system.FormatException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Input", FileNumber, Value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void Input(int FileNumber, byte Value) throws Throwable, system.PlatformNotSupportedException, system.FormatException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Input", FileNumber, Value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void Input(int FileNumber, char Value) throws Throwable, system.PlatformNotSupportedException, system.FormatException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Input", FileNumber, Value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void Input(int FileNumber, double Value) throws Throwable, system.PlatformNotSupportedException, system.FormatException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Input", FileNumber, Value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void Input(int FileNumber, short Value) throws Throwable, system.PlatformNotSupportedException, system.FormatException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Input", FileNumber, Value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void Input(int FileNumber, int Value) throws Throwable, system.PlatformNotSupportedException, system.FormatException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Input", FileNumber, Value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void Input(int FileNumber, long Value) throws Throwable, system.PlatformNotSupportedException, system.FormatException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Input", FileNumber, Value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void Input(int FileNumber, Single Value) throws Throwable, system.PlatformNotSupportedException, system.FormatException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Input", FileNumber, Value == null ? null : Value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void Input(int FileNumber, DateTime Value) throws Throwable, system.PlatformNotSupportedException, system.FormatException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Input", FileNumber, Value == null ? null : Value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void Input(int FileNumber, Decimal Value) throws Throwable, system.PlatformNotSupportedException, system.FormatException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Input", FileNumber, Value == null ? null : Value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void Input(int FileNumber, NetObject Value) throws Throwable, system.PlatformNotSupportedException, system.FormatException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Input", FileNumber, Value == null ? null : Value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void Input(int FileNumber, java.lang.String Value) throws Throwable, system.PlatformNotSupportedException, system.FormatException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Input", FileNumber, Value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

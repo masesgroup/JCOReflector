@@ -146,6 +146,28 @@ public class SharedPropertyGroup extends NetObject  {
     
     // Methods section
     
+    public SharedProperty CreateProperty(java.lang.String name, JCORefOut fExists) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateProperty = (JCObject)classInstance.Invoke("CreateProperty", name, fExists.getJCRefOut());
+            return new SharedProperty(objCreateProperty);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SharedProperty CreatePropertyByPosition(int position, JCORefOut fExists) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreatePropertyByPosition = (JCObject)classInstance.Invoke("CreatePropertyByPosition", position, fExists.getJCRefOut());
+            return new SharedProperty(objCreatePropertyByPosition);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public SharedProperty Property(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

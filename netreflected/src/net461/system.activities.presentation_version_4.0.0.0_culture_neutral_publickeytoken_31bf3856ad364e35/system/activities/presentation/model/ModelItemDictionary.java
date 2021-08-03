@@ -186,6 +186,26 @@ public class ModelItemDictionary extends ModelItem  {
         }
     }
 
+    public boolean TryGetValue(ModelItem key, JCORefOut<ModelItem> value) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("TryGetValue", key == null ? null : key.getJCOInstance(), value.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean TryGetValue(NetObject key, JCORefOut<ModelItem> value) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("TryGetValue", key == null ? null : key.getJCOInstance(), value.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ModelItem Add(NetObject key, NetObject value) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

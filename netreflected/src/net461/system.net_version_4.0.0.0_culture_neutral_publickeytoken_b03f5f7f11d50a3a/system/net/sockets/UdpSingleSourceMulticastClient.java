@@ -159,6 +159,16 @@ public class UdpSingleSourceMulticastClient extends NetObject implements AutoClo
     
     // Methods section
     
+    public int EndReceiveFromSource(IAsyncResult result, JCORefOut sourcePort) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.net.sockets.SocketException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("EndReceiveFromSource", result == null ? null : result.getJCOInstance(), sourcePort.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public IAsyncResult BeginJoinGroup(AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

@@ -47,6 +47,7 @@ import system.reflection.metadata.ecma335.MethodSignatureEncoder;
 import system.reflection.metadata.SignatureCallingConvention;
 import system.reflection.metadata.ecma335.FunctionPointerAttributes;
 import system.reflection.metadata.ecma335.SignatureTypeEncoder;
+import system.reflection.metadata.ecma335.ArrayShapeEncoder;
 import system.reflection.metadata.PrimitiveTypeCode;
 
 
@@ -215,6 +216,16 @@ public class SignatureTypeEncoder extends ValueType  {
         try {
             JCObject objSZArray = (JCObject)classInstance.Invoke("SZArray");
             return new SignatureTypeEncoder(objSZArray);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Array(JCORefOut<SignatureTypeEncoder> elementType, JCORefOut<ArrayShapeEncoder> arrayShape) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Array", elementType.getJCRefOut(), arrayShape.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

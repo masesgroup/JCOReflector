@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.web.security.MembershipProvider;
 import system.web.security.MembershipUser;
+import system.web.security.MembershipCreateStatus;
 import system.web.security.MembershipUserCollection;
 import system.collections.specialized.NameValueCollection;
 import system.web.security.MembershipPasswordFormat;
@@ -256,6 +257,17 @@ public class SqlMembershipProvider extends MembershipProvider  {
         }
     }
 
+    public MembershipUser CreateUser(java.lang.String username, java.lang.String password, java.lang.String email, java.lang.String passwordQuestion, java.lang.String passwordAnswer, boolean isApproved, NetObject providerUserKey, JCORefOut<MembershipCreateStatus> status) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.OutOfMemoryException, system.FormatException, system.security.SecurityException, system.ApplicationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.security.cryptography.CryptographicException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.OverflowException, system.RankException, system.NotImplementedException, system.text.regularexpressions.RegexMatchTimeoutException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.io.IOException, system.web.management.SqlExecutionException, system.InvalidTimeZoneException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateUser = (JCObject)classInstance.Invoke("CreateUser", username, password, email, passwordQuestion, passwordAnswer, isApproved, providerUserKey == null ? null : providerUserKey.getJCOInstance(), status.getJCRefOut());
+            return new MembershipUser(objCreateUser);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public MembershipUser GetUser(NetObject providerUserKey, boolean userIsOnline) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.configuration.provider.ProviderException, system.security.SecurityException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.web.HttpException, system.io.IOException, system.FormatException, system.web.management.SqlExecutionException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.diagnostics.tracing.EventSourceException, system.collections.generic.KeyNotFoundException, system.data.sqltypes.SqlNullValueException, system.data.sqlclient.SqlException, system.InvalidCastException, system.OverflowException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.data.sqltypes.SqlTruncateException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -273,6 +285,39 @@ public class SqlMembershipProvider extends MembershipProvider  {
         try {
             JCObject objGetUser = (JCObject)classInstance.Invoke("GetUser", username, userIsOnline);
             return new MembershipUser(objGetUser);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MembershipUserCollection FindUsersByEmail(java.lang.String emailToMatch, int pageIndex, int pageSize, JCORefOut totalRecords) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.threading.AbandonedMutexException, system.configuration.provider.ProviderException, system.security.SecurityException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.web.HttpException, system.io.IOException, system.FormatException, system.web.management.SqlExecutionException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.diagnostics.tracing.EventSourceException, system.collections.generic.KeyNotFoundException, system.data.sqltypes.SqlNullValueException, system.data.sqlclient.SqlException, system.InvalidCastException, system.OverflowException, system.security.cryptography.CryptographicException, system.data.sqltypes.SqlTruncateException, system.threading.tasks.TaskSchedulerException, system.InvalidTimeZoneException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objFindUsersByEmail = (JCObject)classInstance.Invoke("FindUsersByEmail", emailToMatch, pageIndex, pageSize, totalRecords.getJCRefOut());
+            return new MembershipUserCollection(objFindUsersByEmail);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MembershipUserCollection FindUsersByName(java.lang.String usernameToMatch, int pageIndex, int pageSize, JCORefOut totalRecords) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.threading.AbandonedMutexException, system.configuration.provider.ProviderException, system.security.SecurityException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.web.HttpException, system.io.IOException, system.FormatException, system.web.management.SqlExecutionException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.diagnostics.tracing.EventSourceException, system.collections.generic.KeyNotFoundException, system.data.sqltypes.SqlNullValueException, system.data.sqlclient.SqlException, system.InvalidCastException, system.OverflowException, system.security.cryptography.CryptographicException, system.data.sqltypes.SqlTruncateException, system.threading.tasks.TaskSchedulerException, system.InvalidTimeZoneException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objFindUsersByName = (JCObject)classInstance.Invoke("FindUsersByName", usernameToMatch, pageIndex, pageSize, totalRecords.getJCRefOut());
+            return new MembershipUserCollection(objFindUsersByName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MembershipUserCollection GetAllUsers(int pageIndex, int pageSize, JCORefOut totalRecords) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.configuration.provider.ProviderException, system.security.SecurityException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.web.HttpException, system.io.IOException, system.FormatException, system.web.management.SqlExecutionException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.diagnostics.tracing.EventSourceException, system.collections.generic.KeyNotFoundException, system.data.sqltypes.SqlNullValueException, system.data.sqlclient.SqlException, system.InvalidCastException, system.OverflowException, system.security.cryptography.CryptographicException, system.IndexOutOfRangeException, system.data.sqltypes.SqlTruncateException, system.threading.tasks.TaskSchedulerException, system.InvalidTimeZoneException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetAllUsers = (JCObject)classInstance.Invoke("GetAllUsers", pageIndex, pageSize, totalRecords.getJCRefOut());
+            return new MembershipUserCollection(objGetAllUsers);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

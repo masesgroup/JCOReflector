@@ -44,6 +44,7 @@ import system.reflection.Binder;
 import system.globalization.CultureInfo;
 import system.reflection.MethodImplAttributes;
 import system.reflection.ParameterInfo;
+import system.Guid;
 import system.UInt32;
 import system.reflection.MemberTypes;
 
@@ -251,6 +252,15 @@ public class ConstructorInfo extends MethodBase  {
      */
     @Deprecated 
     public ParameterInfo[] GetParameters() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_ConstructorInfo to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static To_ConstructorInfo method available in _ConstructorInfo to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable {
         throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_ConstructorInfo to obtain the full interface.");
     }
 

@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.runtime.interopservices.comtypes.FORMATETC;
+import system.runtime.interopservices.comtypes.STGMEDIUM;
 import system.runtime.interopservices.comtypes.IMoniker;
 import system.runtime.interopservices.comtypes.IMonikerImplementation;
 
@@ -139,6 +141,16 @@ public class IAdviseSinkImplementation extends NetObject implements IAdviseSink 
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("OnClose");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void OnDataChange(FORMATETC format, STGMEDIUM stgmedium) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("OnDataChange", format == null ? null : format.getJCOInstance(), stgmedium == null ? null : stgmedium.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

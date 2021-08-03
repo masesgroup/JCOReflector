@@ -37,6 +37,9 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.servicemodel.channels.Message;
+import system.servicemodel.IClientChannel;
+import system.servicemodel.IClientChannelImplementation;
 
 
 /**
@@ -109,6 +112,10 @@ public interface IClientMessageInspector extends IJCOBridgeReflected {
 
     // Methods section
     
+    public NetObject BeforeSendRequest(Message request, IClientChannel channel) throws Throwable;
+
+    public void AfterReceiveReply(Message reply, NetObject correlationState) throws Throwable;
+
 
     
     // Properties section

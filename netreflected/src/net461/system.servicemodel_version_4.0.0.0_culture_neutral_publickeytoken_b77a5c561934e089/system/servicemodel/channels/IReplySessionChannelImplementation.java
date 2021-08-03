@@ -46,9 +46,9 @@ import system.servicemodel.ICommunicationObject;
 import system.servicemodel.ICommunicationObjectImplementation;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
+import system.servicemodel.channels.RequestContext;
 import system.TimeSpan;
 import system.AsyncCallback;
-import system.servicemodel.channels.RequestContext;
 import system.servicemodel.CommunicationState;
 import system.servicemodel.EndpointAddress;
 import system.EventHandler;
@@ -146,11 +146,31 @@ public class IReplySessionChannelImplementation extends NetObject implements IRe
 
     // Methods section
     
+    public boolean EndTryReceiveRequest(IAsyncResult result, JCORefOut<RequestContext> context) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("EndTryReceiveRequest", result == null ? null : result.getJCOInstance(), context.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean EndWaitForRequest(IAsyncResult result) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("EndWaitForRequest", result == null ? null : result.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean TryReceiveRequest(TimeSpan timeout, JCORefOut<RequestContext> context) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("TryReceiveRequest", timeout == null ? null : timeout.getJCOInstance(), context.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

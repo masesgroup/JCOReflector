@@ -70,8 +70,8 @@ import system.reflection.PropertyInfo;
 import system.security.permissions.SecurityAction;
 import system.security.PermissionSet;
 import system.reflection.emit.CustomAttributeBuilder;
-import system.UInt32;
 import system.Guid;
+import system.UInt32;
 import system.reflection.Assembly;
 import system.reflection.emit.TypeToken;
 import system.reflection.GenericParameterAttributes;
@@ -1031,6 +1031,15 @@ public class TypeBuilder extends TypeInfo  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static To_TypeBuilder method available in _TypeBuilder to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_TypeBuilder to obtain the full interface.");
     }
 
 

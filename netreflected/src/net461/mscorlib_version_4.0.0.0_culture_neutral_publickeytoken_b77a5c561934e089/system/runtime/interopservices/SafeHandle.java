@@ -154,6 +154,16 @@ public class SafeHandle extends CriticalFinalizerObject implements AutoCloseable
         }
     }
 
+    public void DangerousAddRef(boolean success) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("DangerousAddRef", success);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void DangerousRelease() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

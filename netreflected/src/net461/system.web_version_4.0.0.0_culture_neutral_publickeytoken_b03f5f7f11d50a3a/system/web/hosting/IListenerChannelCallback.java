@@ -113,6 +113,8 @@ public interface IListenerChannelCallback extends IJCOBridgeReflected {
 
     public int GetId() throws Throwable;
 
+    public void GetBlob(JCORefOut buffer, int bufferSize) throws Throwable;
+
     public void ReportMessageReceived() throws Throwable;
 
     public void ReportStarted() throws Throwable;

@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.forms.Control;
+import system.windows.forms.Message;
 import system.drawing.Bitmap;
 import system.drawing.Rectangle;
 import system.componentmodel.ISite;
@@ -169,6 +170,16 @@ public class WebBrowserBase extends Control  {
     
     // Methods section
     
+    public boolean PreProcessMessage(Message msg) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("PreProcessMessage", msg == null ? null : msg.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void DrawToBitmapNewWebBrowserBase(Bitmap bitmap, Rectangle targetBounds) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.FormatException, system.componentmodel.Win32Exception, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

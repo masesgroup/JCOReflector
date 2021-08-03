@@ -37,6 +37,11 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.runtime.interopservices.UCOMIEnumConnectionPoints;
+import system.runtime.interopservices.UCOMIEnumConnectionPointsImplementation;
+import system.Guid;
+import system.runtime.interopservices.UCOMIConnectionPoint;
+import system.runtime.interopservices.UCOMIConnectionPointImplementation;
 
 
 /**
@@ -109,6 +114,10 @@ public interface UCOMIConnectionPointContainer extends IJCOBridgeReflected {
 
     // Methods section
     
+    public void EnumConnectionPoints(JCORefOut<UCOMIEnumConnectionPoints> ppEnum) throws Throwable;
+
+    public void FindConnectionPoint(Guid riid, JCORefOut<UCOMIConnectionPoint> ppCP) throws Throwable;
+
 
     
     // Properties section

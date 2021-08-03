@@ -150,6 +150,26 @@ public class CodeActivityPublicEnvironmentAccessor extends ValueType  {
     
     // Methods section
     
+    public boolean TryGetAccessToPublicLocation(LocationReference publicLocation, ArgumentDirection accessDirection, JCORefOut<LocationReference> equivalentLocation) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("TryGetAccessToPublicLocation", publicLocation == null ? null : publicLocation.getJCOInstance(), accessDirection == null ? null : accessDirection.getJCOInstance(), equivalentLocation.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean TryGetReferenceToPublicLocation(LocationReference publicReference, JCORefOut<LocationReference> equivalentReference) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("TryGetReferenceToPublicLocation", publicReference == null ? null : publicReference.getJCOInstance(), equivalentReference.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static CodeActivityPublicEnvironmentAccessor Create(CodeActivityMetadata metadata) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");

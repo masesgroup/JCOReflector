@@ -37,6 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.runtime.interopservices.UCOMIEnumConnections;
+import system.runtime.interopservices.UCOMIEnumConnectionsImplementation;
 
 
 /**
@@ -110,6 +112,8 @@ public interface UCOMIEnumConnections extends IJCOBridgeReflected {
     // Methods section
     
     public int Skip(int celt) throws Throwable;
+
+    public void Clone(JCORefOut<UCOMIEnumConnections> ppenum) throws Throwable;
 
     public void Reset() throws Throwable;
 

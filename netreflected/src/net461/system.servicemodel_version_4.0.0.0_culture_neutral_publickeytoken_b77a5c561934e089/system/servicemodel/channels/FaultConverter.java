@@ -147,6 +147,26 @@ public class FaultConverter extends NetObject  {
     
     // Methods section
     
+    public boolean TryCreateException(Message message, MessageFault fault, JCORefOut<NetException> exception) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("TryCreateException", message == null ? null : message.getJCOInstance(), fault == null ? null : fault.getJCOInstance(), exception.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean TryCreateFaultMessage(NetException exception, JCORefOut<Message> message) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("TryCreateFaultMessage", exception == null ? null : exception.getJCOInstance(), message.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static FaultConverter GetDefaultFaultConverter(MessageVersion version) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");

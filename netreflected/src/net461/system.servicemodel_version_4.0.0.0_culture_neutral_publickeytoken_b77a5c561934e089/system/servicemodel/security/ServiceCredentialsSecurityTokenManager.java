@@ -42,6 +42,7 @@ import system.identitymodel.selectors.SecurityTokenManager;
 import system.servicemodel.description.ServiceCredentials;
 import system.identitymodel.selectors.SecurityTokenAuthenticator;
 import system.identitymodel.selectors.SecurityTokenRequirement;
+import system.identitymodel.selectors.SecurityTokenResolver;
 import system.identitymodel.selectors.SecurityTokenProvider;
 import system.identitymodel.selectors.SecurityTokenSerializer;
 import system.identitymodel.selectors.SecurityTokenVersion;
@@ -163,6 +164,17 @@ public class ServiceCredentialsSecurityTokenManager extends SecurityTokenManager
     
     // Methods section
     
+    public SecurityTokenAuthenticator CreateSecurityTokenAuthenticator(SecurityTokenRequirement tokenRequirement, JCORefOut<SecurityTokenResolver> outOfBandTokenResolver) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.NotSupportedException, system.UriFormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateSecurityTokenAuthenticator = (JCObject)classInstance.Invoke("CreateSecurityTokenAuthenticator", tokenRequirement == null ? null : tokenRequirement.getJCOInstance(), outOfBandTokenResolver.getJCRefOut());
+            return new SecurityTokenAuthenticator(objCreateSecurityTokenAuthenticator);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public SecurityTokenProvider CreateSecurityTokenProvider(SecurityTokenRequirement requirement) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.AccessViolationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

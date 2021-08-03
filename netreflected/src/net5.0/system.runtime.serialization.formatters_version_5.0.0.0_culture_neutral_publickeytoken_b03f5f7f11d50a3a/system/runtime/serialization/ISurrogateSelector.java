@@ -114,6 +114,8 @@ public interface ISurrogateSelector extends IJCOBridgeReflected {
 
     // Methods section
     
+    public ISerializationSurrogate GetSurrogate(NetType type, StreamingContext context, JCORefOut<ISurrogateSelector> selector) throws Throwable;
+
     public ISurrogateSelector GetNextSelector() throws Throwable;
 
     public void ChainSelector(ISurrogateSelector selector) throws Throwable;

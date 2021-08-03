@@ -51,6 +51,7 @@ import system.threading.CompressedStack;
 import system.UInt16;
 import system.UInt32;
 import system.UInt64;
+import system.Guid;
 import system.globalization.CultureInfo;
 import system.runtime.remoting.contexts.Context;
 import system.security.principal.IPrincipal;
@@ -246,11 +247,83 @@ public class Thread extends CriticalFinalizerObject  {
         }
     }
 
+    public static byte VolatileRead(byte address) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (byte)classType.Invoke("VolatileRead", address);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static double VolatileRead(double address) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (double)classType.Invoke("VolatileRead", address);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static short VolatileRead(short address) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (short)classType.Invoke("VolatileRead", address);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static int GetDomainID() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (int)classType.Invoke("GetDomainID");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static int VolatileRead(int address) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (int)classType.Invoke("VolatileRead", address);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static long VolatileRead(long address) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (long)classType.Invoke("VolatileRead", address);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static SByte VolatileRead(SByte address) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objVolatileRead = (JCObject)classType.Invoke("VolatileRead", address == null ? null : address.getJCOInstance());
+            return new SByte(objVolatileRead);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Single VolatileRead(Single address) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objVolatileRead = (JCObject)classType.Invoke("VolatileRead", address == null ? null : address.getJCOInstance());
+            return new Single(objVolatileRead);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -311,6 +384,17 @@ public class Thread extends CriticalFinalizerObject  {
         }
     }
 
+    public static NetObject VolatileRead(NetObject address) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objVolatileRead = (JCObject)classType.Invoke("VolatileRead", address == null ? null : address.getJCOInstance());
+            return new NetObject(objVolatileRead);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ApartmentState GetApartmentState() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -328,6 +412,39 @@ public class Thread extends CriticalFinalizerObject  {
         try {
             JCObject objGetCompressedStack = (JCObject)classInstance.Invoke("GetCompressedStack");
             return new CompressedStack(objGetCompressedStack);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt16 VolatileRead(UInt16 address) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objVolatileRead = (JCObject)classType.Invoke("VolatileRead", address == null ? null : address.getJCOInstance());
+            return new UInt16(objVolatileRead);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt32 VolatileRead(UInt32 address) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objVolatileRead = (JCObject)classType.Invoke("VolatileRead", address == null ? null : address.getJCOInstance());
+            return new UInt32(objVolatileRead);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt64 VolatileRead(UInt64 address) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objVolatileRead = (JCObject)classType.Invoke("VolatileRead", address == null ? null : address.getJCOInstance());
+            return new UInt64(objVolatileRead);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -551,6 +668,125 @@ public class Thread extends CriticalFinalizerObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    public static void VolatileWrite(byte address, byte value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("VolatileWrite", address, value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void VolatileWrite(double address, double value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("VolatileWrite", address, value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void VolatileWrite(short address, short value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("VolatileWrite", address, value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void VolatileWrite(int address, int value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("VolatileWrite", address, value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void VolatileWrite(long address, long value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("VolatileWrite", address, value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void VolatileWrite(SByte address, SByte value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("VolatileWrite", address == null ? null : address.getJCOInstance(), value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void VolatileWrite(Single address, Single value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("VolatileWrite", address == null ? null : address.getJCOInstance(), value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void VolatileWrite(NetObject address, NetObject value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("VolatileWrite", address == null ? null : address.getJCOInstance(), value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void VolatileWrite(UInt16 address, UInt16 value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("VolatileWrite", address == null ? null : address.getJCOInstance(), value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void VolatileWrite(UInt32 address, UInt32 value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("VolatileWrite", address == null ? null : address.getJCOInstance(), value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void VolatileWrite(UInt64 address, UInt64 value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("VolatileWrite", address == null ? null : address.getJCOInstance(), value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static To_Thread method available in _Thread to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_Thread to obtain the full interface.");
     }
 
 

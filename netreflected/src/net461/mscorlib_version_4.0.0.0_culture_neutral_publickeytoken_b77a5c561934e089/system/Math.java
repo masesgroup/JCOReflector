@@ -480,6 +480,16 @@ public class Math extends NetObject  {
         }
     }
 
+    public static int DivRem(int a, int b, JCORefOut result) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (int)classType.Invoke("DivRem", a, b, result.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static int Max(int val1, int val2) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -585,6 +595,16 @@ public class Math extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (long)classType.Invoke("BigMul", a, b);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static long DivRem(long a, long b, JCORefOut result) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (long)classType.Invoke("DivRem", a, b, result.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

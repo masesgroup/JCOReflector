@@ -40,6 +40,9 @@ import java.util.ArrayList;
 // Import section
 import system.runtime.interopservices.comtypes.IMoniker;
 import system.runtime.interopservices.comtypes.IMonikerImplementation;
+import system.runtime.interopservices.comtypes.FILETIME;
+import system.runtime.interopservices.comtypes.IEnumMoniker;
+import system.runtime.interopservices.comtypes.IEnumMonikerImplementation;
 
 
 /**
@@ -134,6 +137,26 @@ public class IRunningObjectTableImplementation extends NetObject implements IRun
 
     // Methods section
     
+    public int GetObject(IMoniker pmkObjectName, JCORefOut<NetObject> ppunkObject) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("GetObject", pmkObjectName == null ? null : pmkObjectName.getJCOInstance(), ppunkObject.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int GetTimeOfLastChange(IMoniker pmkObjectName, JCORefOut<FILETIME> pfiletime) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("GetTimeOfLastChange", pmkObjectName == null ? null : pmkObjectName.getJCOInstance(), pfiletime.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public int IsRunning(IMoniker pmkObjectName) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -149,6 +172,26 @@ public class IRunningObjectTableImplementation extends NetObject implements IRun
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Invoke("Register", grfFlags, punkObject == null ? null : punkObject.getJCOInstance(), pmkObjectName == null ? null : pmkObjectName.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void EnumRunning(JCORefOut<IEnumMoniker> ppenumMoniker) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("EnumRunning", ppenumMoniker.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void NoteChangeTime(int dwRegister, FILETIME pfiletime) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("NoteChangeTime", dwRegister, pfiletime == null ? null : pfiletime.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

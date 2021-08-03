@@ -37,6 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.runtime.interopservices.comtypes.FORMATETC;
+import system.runtime.interopservices.comtypes.STGMEDIUM;
 import system.runtime.interopservices.comtypes.IMoniker;
 import system.runtime.interopservices.comtypes.IMonikerImplementation;
 
@@ -112,6 +114,8 @@ public interface IAdviseSink extends IJCOBridgeReflected {
     // Methods section
     
     public void OnClose() throws Throwable;
+
+    public void OnDataChange(FORMATETC format, STGMEDIUM stgmedium) throws Throwable;
 
     public void OnRename(IMoniker moniker) throws Throwable;
 

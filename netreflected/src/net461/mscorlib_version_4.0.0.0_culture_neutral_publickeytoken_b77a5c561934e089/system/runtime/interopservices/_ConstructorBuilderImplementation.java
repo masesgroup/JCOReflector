@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.Guid;
 import system.UInt32;
 
 
@@ -133,6 +134,16 @@ public class _ConstructorBuilderImplementation extends NetObject implements _Con
 
     // Methods section
     
+    public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetTypeInfoCount", pcTInfo.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

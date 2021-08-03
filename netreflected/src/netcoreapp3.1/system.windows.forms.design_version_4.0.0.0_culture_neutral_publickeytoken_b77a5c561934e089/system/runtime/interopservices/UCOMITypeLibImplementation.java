@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.runtime.interopservices.comtypes.TYPEKIND;
 
 
 /**
@@ -147,6 +148,26 @@ public class UCOMITypeLibImplementation extends NetObject implements UCOMITypeLi
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Invoke("GetTypeInfoCount");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void GetDocumentation(int index, JCORefOut strName, JCORefOut strDocString, JCORefOut dwHelpContext, JCORefOut strHelpFile) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetDocumentation", index, strName.getJCRefOut(), strDocString.getJCRefOut(), dwHelpContext.getJCRefOut(), strHelpFile.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void GetTypeInfoType(int index, JCORefOut<TYPEKIND> pTKind) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetTypeInfoType", index, pTKind.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

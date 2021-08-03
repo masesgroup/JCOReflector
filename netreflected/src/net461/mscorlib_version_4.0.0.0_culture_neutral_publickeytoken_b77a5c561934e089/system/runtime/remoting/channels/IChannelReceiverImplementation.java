@@ -134,6 +134,16 @@ public class IChannelReceiverImplementation extends NetObject implements IChanne
 
     // Methods section
     
+    public java.lang.String Parse(java.lang.String url, JCORefOut objectURI) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("Parse", url, objectURI.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String[] GetUrlsForUri(java.lang.String objectURI) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

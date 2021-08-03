@@ -115,6 +115,8 @@ public interface IAccessible extends IJCOBridgeReflected {
 
     public void accDoDefaultAction(NetObject varChild) throws Throwable;
 
+    public void accLocation(JCORefOut pxLeft, JCORefOut pyTop, JCORefOut pcxWidth, JCORefOut pcyHeight, NetObject varChild) throws Throwable;
+
     public void accSelect(int flagsSelect, NetObject varChild) throws Throwable;
 
 

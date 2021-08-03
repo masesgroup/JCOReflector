@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.xml.linq.XName;
 import system.reflection.MemberInfo;
+import system.xml.XmlNamespaceManager;
 
 
 /**
@@ -145,6 +146,16 @@ public class ParameterXPathQueryGenerator extends NetObject  {
     
     // Methods section
     
+    public static java.lang.String CreateFromDataContractSerializer(XName serviceContractName, java.lang.String operationName, java.lang.String parameterName, boolean isReply, NetType type, MemberInfo[] pathToMember, JCORefOut<XmlNamespaceManager> namespaces) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.runtime.serialization.InvalidDataContractException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("CreateFromDataContractSerializer", serviceContractName == null ? null : serviceContractName.getJCOInstance(), operationName, parameterName, isReply, type == null ? null : type.getJCOInstance(), toObjectFromArray(pathToMember), namespaces.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

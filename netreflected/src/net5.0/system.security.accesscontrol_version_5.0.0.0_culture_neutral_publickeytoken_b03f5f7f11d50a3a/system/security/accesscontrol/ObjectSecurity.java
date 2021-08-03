@@ -162,6 +162,26 @@ public class ObjectSecurity extends NetObject  {
         }
     }
 
+    public boolean ModifyAccessRule(AccessControlModification modification, AccessRule rule, JCORefOut modified) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.threading.LockRecursionException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("ModifyAccessRule", modification == null ? null : modification.getJCOInstance(), rule == null ? null : rule.getJCOInstance(), modified.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean ModifyAuditRule(AccessControlModification modification, AuditRule rule, JCORefOut modified) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.threading.LockRecursionException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("ModifyAuditRule", modification == null ? null : modification.getJCOInstance(), rule == null ? null : rule.getJCOInstance(), modified.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public byte[] GetSecurityDescriptorBinaryForm() throws Throwable, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.threading.LockRecursionException, system.PlatformNotSupportedException, system.ArgumentException, system.threading.WaitHandleCannotBeOpenedException, system.ArgumentNullException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

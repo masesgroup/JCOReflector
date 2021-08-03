@@ -38,6 +38,9 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.channels.Message;
+import system.servicemodel.IClientChannel;
+import system.servicemodel.IClientChannelImplementation;
 
 
 /**
@@ -132,6 +135,27 @@ public class IClientMessageInspectorImplementation extends NetObject implements 
 
     // Methods section
     
+    public NetObject BeforeSendRequest(Message request, IClientChannel channel) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objBeforeSendRequest = (JCObject)classInstance.Invoke("BeforeSendRequest", request == null ? null : request.getJCOInstance(), channel == null ? null : channel.getJCOInstance());
+            return new NetObject(objBeforeSendRequest);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AfterReceiveReply(Message reply, NetObject correlationState) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AfterReceiveReply", reply == null ? null : reply.getJCOInstance(), correlationState == null ? null : correlationState.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

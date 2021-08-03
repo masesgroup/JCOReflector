@@ -42,6 +42,8 @@ import system.runtime.serialization.SurrogateSelector;
 import system.runtime.serialization.ISerializationSurrogate;
 import system.runtime.serialization.ISerializationSurrogateImplementation;
 import system.runtime.serialization.StreamingContext;
+import system.runtime.serialization.ISurrogateSelector;
+import system.runtime.serialization.ISurrogateSelectorImplementation;
 import system.workflow.componentmodel.serialization.ActivitySurrogateSelector;
 
 
@@ -156,6 +158,17 @@ public class ActivitySurrogateSelector extends SurrogateSelector  {
     
     // Methods section
     
+    public ISerializationSurrogate GetSurrogate(NetType type, StreamingContext context, JCORefOut<ISurrogateSelector> selector) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetSurrogate = (JCObject)classInstance.Invoke("GetSurrogate", type == null ? null : type.getJCOInstance(), context == null ? null : context.getJCOInstance(), selector.getJCRefOut());
+            return new ISerializationSurrogateImplementation(objGetSurrogate);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

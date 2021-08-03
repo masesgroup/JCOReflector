@@ -38,6 +38,13 @@ import org.mases.jcobridge.netreflection.*;
 
 // Import section
 import system.runtime.interopservices.INVOKEKIND;
+import system.Guid;
+import system.runtime.interopservices.UCOMITypeLib;
+import system.runtime.interopservices.UCOMITypeLibImplementation;
+import system.runtime.interopservices.UCOMITypeInfo;
+import system.runtime.interopservices.UCOMITypeInfoImplementation;
+import system.runtime.interopservices.UCOMITypeComp;
+import system.runtime.interopservices.UCOMITypeCompImplementation;
 
 
 /**
@@ -110,6 +117,28 @@ public interface UCOMITypeInfo extends IJCOBridgeReflected {
 
     // Methods section
     
+    public void CreateInstance(NetObject pUnkOuter, Guid riid, JCORefOut<NetObject> ppvObj) throws Throwable;
+
+    public void GetContainingTypeLib(JCORefOut<UCOMITypeLib> ppTLB, JCORefOut pIndex) throws Throwable;
+
+    public void GetDllEntry(int memid, INVOKEKIND invKind, JCORefOut pBstrDllName, JCORefOut pBstrName, JCORefOut pwOrdinal) throws Throwable;
+
+    public void GetDocumentation(int index, JCORefOut strName, JCORefOut strDocString, JCORefOut dwHelpContext, JCORefOut strHelpFile) throws Throwable;
+
+    public void GetIDsOfNames(java.lang.String[] rgszNames, int cNames, JCORefOut pMemId) throws Throwable;
+
+    public void GetImplTypeFlags(int index, JCORefOut pImplTypeFlags) throws Throwable;
+
+    public void GetMops(int memid, JCORefOut pBstrMops) throws Throwable;
+
+    public void GetNames(int memid, JCORefOut rgBstrNames, int cMaxNames, JCORefOut pcNames) throws Throwable;
+
+    public void GetRefTypeInfo(int hRef, JCORefOut<UCOMITypeInfo> ppTI) throws Throwable;
+
+    public void GetRefTypeOfImplType(int index, JCORefOut href) throws Throwable;
+
+    public void GetTypeComp(JCORefOut<UCOMITypeComp> ppTComp) throws Throwable;
+
 
     
     // Properties section

@@ -41,6 +41,10 @@ import system.runtime.interopservices.comtypes.IMoniker;
 import system.runtime.interopservices.comtypes.IMonikerImplementation;
 import system.runtime.interopservices.comtypes.IBindCtx;
 import system.runtime.interopservices.comtypes.IBindCtxImplementation;
+import system.Guid;
+import system.runtime.interopservices.comtypes.IEnumMoniker;
+import system.runtime.interopservices.comtypes.IEnumMonikerImplementation;
+import system.runtime.interopservices.comtypes.FILETIME;
 import system.runtime.interopservices.comtypes.IStream;
 import system.runtime.interopservices.comtypes.IStreamImplementation;
 
@@ -121,7 +125,37 @@ public interface IMoniker extends IJCOBridgeReflected {
 
     public int IsRunning(IBindCtx pbc, IMoniker pmkToLeft, IMoniker pmkNewlyRunning) throws Throwable;
 
+    public int IsSystemMoniker(JCORefOut pdwMksys) throws Throwable;
+
+    public void BindToObject(IBindCtx pbc, IMoniker pmkToLeft, Guid riidResult, JCORefOut<NetObject> ppvResult) throws Throwable;
+
+    public void BindToStorage(IBindCtx pbc, IMoniker pmkToLeft, Guid riid, JCORefOut<NetObject> ppvObj) throws Throwable;
+
+    public void CommonPrefixWith(IMoniker pmkOther, JCORefOut<IMoniker> ppmkPrefix) throws Throwable;
+
+    public void ComposeWith(IMoniker pmkRight, boolean fOnlyIfNotGeneric, JCORefOut<IMoniker> ppmkComposite) throws Throwable;
+
+    public void Enum(boolean fForward, JCORefOut<IEnumMoniker> ppenumMoniker) throws Throwable;
+
+    public void GetClassID(JCORefOut<Guid> pClassID) throws Throwable;
+
+    public void GetDisplayName(IBindCtx pbc, IMoniker pmkToLeft, JCORefOut ppszDisplayName) throws Throwable;
+
+    public void GetSizeMax(JCORefOut pcbSize) throws Throwable;
+
+    public void GetTimeOfLastChange(IBindCtx pbc, IMoniker pmkToLeft, JCORefOut<FILETIME> pFileTime) throws Throwable;
+
+    public void Hash(JCORefOut pdwHash) throws Throwable;
+
+    public void Inverse(JCORefOut<IMoniker> ppmk) throws Throwable;
+
     public void Load(IStream pStm) throws Throwable;
+
+    public void ParseDisplayName(IBindCtx pbc, IMoniker pmkToLeft, java.lang.String pszDisplayName, JCORefOut pchEaten, JCORefOut<IMoniker> ppmkOut) throws Throwable;
+
+    public void Reduce(IBindCtx pbc, int dwReduceHowFar, IMoniker ppmkToLeft, JCORefOut<IMoniker> ppmkReduced) throws Throwable;
+
+    public void RelativePathTo(IMoniker pmkOther, JCORefOut<IMoniker> ppmkRelPath) throws Throwable;
 
     public void Save(IStream pStm, boolean fClearDirty) throws Throwable;
 

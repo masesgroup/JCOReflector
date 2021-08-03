@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.forms.Message;
 
 
 /**
@@ -132,6 +133,16 @@ public class IWindowTargetImplementation extends NetObject implements IWindowTar
 
     // Methods section
     
+    public void OnMessage(Message m) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("OnMessage", m == null ? null : m.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.MarshalByRefObject;
 import system.windows.forms.NativeWindow;
 import system.windows.forms.CreateParams;
+import system.windows.forms.Message;
 
 
 /**
@@ -159,6 +160,16 @@ public class NativeWindow extends MarshalByRefObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CreateHandle", cp == null ? null : cp.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void DefWndProc(Message m) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.componentmodel.Win32Exception, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("DefWndProc", m == null ? null : m.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

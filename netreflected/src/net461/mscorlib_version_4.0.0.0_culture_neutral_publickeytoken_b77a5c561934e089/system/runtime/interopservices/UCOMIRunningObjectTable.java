@@ -37,8 +37,11 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.runtime.interopservices.UCOMIEnumMoniker;
+import system.runtime.interopservices.UCOMIEnumMonikerImplementation;
 import system.runtime.interopservices.UCOMIMoniker;
 import system.runtime.interopservices.UCOMIMonikerImplementation;
+import system.runtime.interopservices.FILETIME;
 
 
 /**
@@ -111,7 +114,17 @@ public interface UCOMIRunningObjectTable extends IJCOBridgeReflected {
 
     // Methods section
     
+    public void EnumRunning(JCORefOut<UCOMIEnumMoniker> ppenumMoniker) throws Throwable;
+
+    public void GetObject(UCOMIMoniker pmkObjectName, JCORefOut<NetObject> ppunkObject) throws Throwable;
+
+    public void GetTimeOfLastChange(UCOMIMoniker pmkObjectName, JCORefOut<FILETIME> pfiletime) throws Throwable;
+
     public void IsRunning(UCOMIMoniker pmkObjectName) throws Throwable;
+
+    public void NoteChangeTime(int dwRegister, FILETIME pfiletime) throws Throwable;
+
+    public void Register(int grfFlags, NetObject punkObject, UCOMIMoniker pmkObjectName, JCORefOut pdwRegister) throws Throwable;
 
     public void Revoke(int dwRegister) throws Throwable;
 

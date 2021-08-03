@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.web.hosting.IAppDomainInfoEnum;
+import system.web.hosting.IAppDomainInfoEnumImplementation;
 
 
 /**
@@ -132,6 +134,16 @@ public class IProcessHostImplementation extends NetObject implements IProcessHos
 
     // Methods section
     
+    public void EnumerateAppDomains(JCORefOut<IAppDomainInfoEnum> appDomainInfoEnum) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("EnumerateAppDomains", appDomainInfoEnum.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Shutdown() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -147,6 +159,16 @@ public class IProcessHostImplementation extends NetObject implements IProcessHos
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ShutdownApplication", appId);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void StartApplication(java.lang.String appId, java.lang.String appPath, JCORefOut<NetObject> runtimeInterface) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("StartApplication", appId, appPath, runtimeInterface.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

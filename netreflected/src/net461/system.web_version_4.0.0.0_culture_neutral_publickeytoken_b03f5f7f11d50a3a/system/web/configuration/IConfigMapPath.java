@@ -117,6 +117,12 @@ public interface IConfigMapPath extends IJCOBridgeReflected {
 
     public java.lang.String MapPath(java.lang.String siteID, java.lang.String path) throws Throwable;
 
+    public void GetDefaultSiteNameAndID(JCORefOut siteName, JCORefOut siteID) throws Throwable;
+
+    public void GetPathConfigFilename(java.lang.String siteID, java.lang.String path, JCORefOut directory, JCORefOut baseName) throws Throwable;
+
+    public void ResolveSiteArgument(java.lang.String siteArgument, JCORefOut siteName, JCORefOut siteID) throws Throwable;
+
 
     
     // Properties section

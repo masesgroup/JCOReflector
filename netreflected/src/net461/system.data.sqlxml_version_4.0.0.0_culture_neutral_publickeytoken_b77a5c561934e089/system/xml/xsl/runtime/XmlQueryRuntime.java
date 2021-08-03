@@ -39,18 +39,18 @@ import java.util.ArrayList;
 
 // Import section
 import system.xml.xpath.XPathNavigator;
+import system.xml.xsl.runtime.XmlILIndex;
 import system.xml.xpath.XPathItem;
 import system.xml.schema.XmlTypeCode;
 import system.collections.IList;
 import system.collections.IListImplementation;
 import system.xml.XmlQualifiedName;
+import system.xml.xsl.runtime.XmlQueryOutput;
 import system.xml.xsl.runtime.XmlCollation;
 import system.xml.xsl.runtime.XmlNavigatorFilter;
 import system.xml.xpath.XPathNodeType;
-import system.xml.xsl.runtime.XmlILIndex;
 import system.xml.XmlNameTable;
 import system.xml.xsl.runtime.XmlQueryContext;
-import system.xml.xsl.runtime.XmlQueryOutput;
 import system.xml.xsl.runtime.XsltLibrary;
 
 
@@ -164,6 +164,16 @@ public class XmlQueryRuntime extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("EarlyBoundFunctionExists", name, namespaceUri);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean FindIndex(XPathNavigator context, int indexId, JCORefOut<XmlILIndex> index) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("FindIndex", context == null ? null : context.getJCOInstance(), indexId, index.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -366,6 +376,17 @@ public class XmlQueryRuntime extends NetObject  {
         }
     }
 
+    public XPathNavigator EndRtfConstruction(JCORefOut<XmlQueryOutput> output) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objEndRtfConstruction = (JCObject)classInstance.Invoke("EndRtfConstruction", output.getJCRefOut());
+            return new XPathNavigator(objEndRtfConstruction);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public XPathNavigator TextRtfConstruction(java.lang.String text, java.lang.String baseUri) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -456,6 +477,26 @@ public class XmlQueryRuntime extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetGlobalValue", index, value == null ? null : value.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void StartRtfConstruction(java.lang.String baseUri, JCORefOut<XmlQueryOutput> output) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("StartRtfConstruction", baseUri, output.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void StartSequenceConstruction(JCORefOut<XmlQueryOutput> output) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("StartSequenceConstruction", output.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

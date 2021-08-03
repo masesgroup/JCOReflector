@@ -43,6 +43,7 @@ import system.reflection.Binder;
 import system.globalization.CultureInfo;
 import system.reflection.MethodImplAttributes;
 import system.reflection.ParameterInfo;
+import system.Guid;
 import system.UInt32;
 import system.reflection.CallingConventions;
 import system.reflection.MemberTypes;
@@ -231,6 +232,16 @@ public class _MethodBaseImplementation extends NetObject implements _MethodBase 
             ParameterInfo[] resultingArray = new ParameterInfo[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetTypeInfoCount", pcTInfo.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

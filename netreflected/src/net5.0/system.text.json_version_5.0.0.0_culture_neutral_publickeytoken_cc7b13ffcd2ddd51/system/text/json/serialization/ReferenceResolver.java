@@ -154,6 +154,16 @@ public class ReferenceResolver extends NetObject  {
         }
     }
 
+    public java.lang.String GetReference(NetObject value, JCORefOut alreadyExists) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("GetReference", value == null ? null : value.getJCOInstance(), alreadyExists.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void AddReference(java.lang.String referenceId, NetObject value) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

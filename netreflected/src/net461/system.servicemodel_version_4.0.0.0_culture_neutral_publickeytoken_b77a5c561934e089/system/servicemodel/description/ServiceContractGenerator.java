@@ -43,6 +43,7 @@ import system.configuration.Configuration;
 import system.codedom.CodeTypeReference;
 import system.servicemodel.description.ContractDescription;
 import system.servicemodel.description.ServiceEndpoint;
+import system.servicemodel.configuration.ChannelEndpointElement;
 import system.servicemodel.description.ServiceContractGenerationOptions;
 
 
@@ -193,6 +194,27 @@ public class ServiceContractGenerator extends NetObject  {
         try {
             JCObject objGenerateServiceContractType = (JCObject)classInstance.Invoke("GenerateServiceContractType", contractDescription == null ? null : contractDescription.getJCOInstance());
             return new CodeTypeReference(objGenerateServiceContractType);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CodeTypeReference GenerateServiceEndpoint(ServiceEndpoint endpoint, JCORefOut<ChannelEndpointElement> channelElement) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.reflection.AmbiguousMatchException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException, system.NullReferenceException, system.security.SecurityException, system.security.cryptography.CryptographicException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGenerateServiceEndpoint = (JCObject)classInstance.Invoke("GenerateServiceEndpoint", endpoint == null ? null : endpoint.getJCOInstance(), channelElement.getJCRefOut());
+            return new CodeTypeReference(objGenerateServiceEndpoint);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void GenerateBinding(system.servicemodel.channels.Binding binding, JCORefOut bindingSectionName, JCORefOut configurationName) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.NotSupportedException, system.reflection.AmbiguousMatchException, system.configuration.ConfigurationErrorsException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GenerateBinding", binding == null ? null : binding.getJCOInstance(), bindingSectionName.getJCRefOut(), configurationName.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

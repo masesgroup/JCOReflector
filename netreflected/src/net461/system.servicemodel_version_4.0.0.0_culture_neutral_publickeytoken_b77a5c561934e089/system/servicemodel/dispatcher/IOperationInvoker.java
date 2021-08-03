@@ -114,6 +114,10 @@ public interface IOperationInvoker extends IJCOBridgeReflected {
     
     public IAsyncResult InvokeBegin(NetObject instance, NetObject[] inputs, AsyncCallback callback, NetObject state) throws Throwable;
 
+    public NetObject Invoke(NetObject instance, NetObject[] inputs, JCORefOut<NetObject[]> outputs) throws Throwable;
+
+    public NetObject InvokeEnd(NetObject instance, JCORefOut<NetObject[]> outputs, IAsyncResult result) throws Throwable;
+
     public NetObject[] AllocateInputs() throws Throwable;
 
 

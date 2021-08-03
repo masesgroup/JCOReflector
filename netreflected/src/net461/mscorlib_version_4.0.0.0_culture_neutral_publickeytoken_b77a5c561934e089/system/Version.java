@@ -202,6 +202,16 @@ public class Version extends NetObject  {
         }
     }
 
+    public static boolean TryParse(java.lang.String input, JCORefOut<Version> result) throws Throwable, system.ArgumentNullException, system.FormatException, system.OverflowException, system.ArgumentOutOfRangeException, system.ArgumentException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryParse", input, result.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public int CompareTo(NetObject version) throws Throwable, system.ArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

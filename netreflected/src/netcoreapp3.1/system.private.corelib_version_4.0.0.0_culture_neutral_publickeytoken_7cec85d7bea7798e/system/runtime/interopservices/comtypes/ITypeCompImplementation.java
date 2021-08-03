@@ -38,6 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.runtime.interopservices.comtypes.ITypeInfo;
+import system.runtime.interopservices.comtypes.ITypeInfoImplementation;
+import system.runtime.interopservices.comtypes.DESCKIND;
+import system.runtime.interopservices.comtypes.ITypeComp;
+import system.runtime.interopservices.comtypes.ITypeCompImplementation;
 
 
 /**
@@ -132,6 +137,16 @@ public class ITypeCompImplementation extends NetObject implements ITypeComp {
 
     // Methods section
     
+    public void BindType(java.lang.String szName, int lHashVal, JCORefOut<ITypeInfo> ppTInfo, JCORefOut<ITypeComp> ppTComp) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("BindType", szName, lHashVal, ppTInfo.getJCRefOut(), ppTComp.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

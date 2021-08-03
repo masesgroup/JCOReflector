@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 
 // Import section
 import system.runtime.caching.OnChangedCallback;
+import system.DateTimeOffset;
 
 
 /**
@@ -110,6 +111,8 @@ public interface IFileChangeNotificationSystem extends IJCOBridgeReflected {
 
     // Methods section
     
+    public void StartMonitoring(java.lang.String filePath, OnChangedCallback onChangedCallback, JCORefOut<NetObject> state, JCORefOut<DateTimeOffset> lastWriteTime, JCORefOut fileSize) throws Throwable;
+
     public void StopMonitoring(java.lang.String filePath, NetObject state) throws Throwable;
 
 

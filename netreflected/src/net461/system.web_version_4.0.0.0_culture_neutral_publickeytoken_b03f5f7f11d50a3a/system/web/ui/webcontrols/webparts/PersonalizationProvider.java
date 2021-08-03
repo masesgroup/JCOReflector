@@ -225,6 +225,17 @@ public class PersonalizationProvider extends ProviderBase  {
         }
     }
 
+    public PersonalizationStateInfoCollection FindState(PersonalizationScope scope, PersonalizationStateQuery query, int pageIndex, int pageSize, JCORefOut totalRecords) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objFindState = (JCObject)classInstance.Invoke("FindState", scope == null ? null : scope.getJCOInstance(), query == null ? null : query.getJCOInstance(), pageIndex, pageSize, totalRecords.getJCRefOut());
+            return new PersonalizationStateInfoCollection(objFindState);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void ResetPersonalizationState(WebPartManager webPartManager) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.web.HttpException, system.web.HttpRequestValidationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

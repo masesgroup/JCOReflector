@@ -157,6 +157,16 @@ public class IdentityVerifier extends NetObject  {
         }
     }
 
+    public boolean TryGetIdentity(EndpointAddress reference, JCORefOut<EndpointIdentity> identity) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("TryGetIdentity", reference == null ? null : reference.getJCOInstance(), identity.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static IdentityVerifier CreateDefault() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");

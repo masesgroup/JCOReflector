@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.runtime.interopservices.UCOMIMoniker;
 import system.runtime.interopservices.UCOMIMonikerImplementation;
+import system.runtime.interopservices.UCOMIEnumMoniker;
+import system.runtime.interopservices.UCOMIEnumMonikerImplementation;
 
 
 /**
@@ -134,6 +136,16 @@ public class UCOMIEnumMonikerImplementation extends NetObject implements UCOMIEn
 
     // Methods section
     
+    public int Next(int celt, JCORefOut<UCOMIMoniker[]> rgelt, JCORefOut pceltFetched) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("Next", celt, rgelt.getJCRefOut(), pceltFetched.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public int Reset() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -149,6 +161,16 @@ public class UCOMIEnumMonikerImplementation extends NetObject implements UCOMIEn
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Invoke("Skip", celt);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Clone(JCORefOut<UCOMIEnumMoniker> ppenum) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Clone", ppenum.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

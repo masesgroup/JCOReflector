@@ -167,6 +167,16 @@ public class LanguageSpecificStringDictionary extends NetObjectEnumerable  {
         }
     }
 
+    public boolean TryGetValue(XmlLanguage key, JCORefOut value) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("TryGetValue", key == null ? null : key.getJCOInstance(), value.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Add(XmlLanguage key, java.lang.String value) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

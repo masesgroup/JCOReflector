@@ -190,6 +190,23 @@ public class StringFormat extends MarshalByRefObject implements AutoCloseable {
     
     // Methods section
     
+    public Single[] GetTabStops(JCORefOut<Single> firstTabOffset) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<Single> resultingArrayList = new ArrayList<Single>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetTabStops", firstTabOffset.getJCRefOut());
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new Single(resultingObject));
+            }
+            Single[] resultingArray = new Single[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetObject Clone() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

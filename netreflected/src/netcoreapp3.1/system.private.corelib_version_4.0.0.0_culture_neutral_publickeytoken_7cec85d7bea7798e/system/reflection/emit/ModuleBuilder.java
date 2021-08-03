@@ -65,6 +65,8 @@ import system.reflection.emit.TypeToken;
 import system.reflection.BindingFlags;
 import system.reflection.MemberInfo;
 import system.reflection.MethodBase;
+import system.reflection.PortableExecutableKinds;
+import system.reflection.ImageFileMachine;
 import system.reflection.emit.CustomAttributeBuilder;
 import system.reflection.Assembly;
 
@@ -708,6 +710,16 @@ public class ModuleBuilder extends Module  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("CreateGlobalFunctions");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void GetPEKind(JCORefOut<PortableExecutableKinds> peKind, JCORefOut<ImageFileMachine> machine) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetPEKind", peKind.getJCRefOut(), machine.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

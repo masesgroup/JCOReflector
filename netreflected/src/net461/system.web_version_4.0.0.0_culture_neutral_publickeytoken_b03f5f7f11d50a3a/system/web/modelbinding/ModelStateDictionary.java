@@ -194,6 +194,16 @@ public class ModelStateDictionary extends NetObjectEnumerable  {
         }
     }
 
+    public boolean TryGetValue(java.lang.String key, JCORefOut<ModelState> value) throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("TryGetValue", key, value.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Add(java.lang.String key, ModelState value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

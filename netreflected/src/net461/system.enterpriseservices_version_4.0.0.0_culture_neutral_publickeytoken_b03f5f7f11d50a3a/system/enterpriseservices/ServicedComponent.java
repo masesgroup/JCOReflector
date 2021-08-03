@@ -42,6 +42,8 @@ import system.ContextBoundObject;
 import system.enterpriseservices.ServicedComponent;
 import system.enterpriseservices.IRemoteDispatch;
 import system.enterpriseservices.IRemoteDispatchImplementation;
+import system.enterpriseservices.IServicedComponentInfo;
+import system.enterpriseservices.IServicedComponentInfoImplementation;
 
 
 /**
@@ -50,7 +52,7 @@ import system.enterpriseservices.IRemoteDispatchImplementation;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.EnterpriseServices.ServicedComponent" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.EnterpriseServices.ServicedComponent</a>
  */
-public class ServicedComponent extends ContextBoundObject implements system.enterpriseservices.IRemoteDispatch, AutoCloseable {
+public class ServicedComponent extends ContextBoundObject implements system.enterpriseservices.IRemoteDispatch, system.enterpriseservices.IServicedComponentInfo, AutoCloseable {
     /**
      * Fully assembly qualified name: System.EnterpriseServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
@@ -183,6 +185,15 @@ public class ServicedComponent extends ContextBoundObject implements system.ente
     @Deprecated 
     public java.lang.String RemoteDispatchNotAutoDone(java.lang.String s) throws Throwable {
         throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIRemoteDispatch to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIServicedComponentInfo method available in IServicedComponentInfo to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void GetComponentInfo(int infoMask, JCORefOut infoArray) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServicedComponentInfo to obtain the full interface.");
     }
 
     public void close() throws Exception {

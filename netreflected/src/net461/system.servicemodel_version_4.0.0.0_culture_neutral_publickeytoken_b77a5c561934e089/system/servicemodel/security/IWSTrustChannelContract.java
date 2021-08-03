@@ -136,8 +136,11 @@ public interface IWSTrustChannelContract extends IJCOBridgeReflected, IWSTrustCo
 
     public RequestSecurityTokenResponse Validate(RequestSecurityToken request) throws Throwable;
 
+    public SecurityToken EndIssue(IAsyncResult result, JCORefOut<RequestSecurityTokenResponse> response) throws Throwable;
+
     public SecurityToken Issue(RequestSecurityToken request) throws Throwable;
 
+    public SecurityToken Issue(RequestSecurityToken request, JCORefOut<RequestSecurityTokenResponse> response) throws Throwable;
 
 
 
@@ -145,6 +148,13 @@ public interface IWSTrustChannelContract extends IJCOBridgeReflected, IWSTrustCo
 
 
 
+
+
+    public void EndCancel(IAsyncResult result, JCORefOut<RequestSecurityTokenResponse> response) throws Throwable;
+
+    public void EndRenew(IAsyncResult result, JCORefOut<RequestSecurityTokenResponse> response) throws Throwable;
+
+    public void EndValidate(IAsyncResult result, JCORefOut<RequestSecurityTokenResponse> response) throws Throwable;
 
 
     

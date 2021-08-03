@@ -208,6 +208,17 @@ public class WorkflowMarkupSerializationManager extends NetObject  {
         }
     }
 
+    public XmlQualifiedName GetXmlQualifiedName(NetType type, JCORefOut prefix) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetXmlQualifiedName = (JCObject)classInstance.Invoke("GetXmlQualifiedName", type == null ? null : type.getJCOInstance(), prefix.getJCRefOut());
+            return new XmlQualifiedName(objGetXmlQualifiedName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void AddSerializationProvider(IDesignerSerializationProvider provider) throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

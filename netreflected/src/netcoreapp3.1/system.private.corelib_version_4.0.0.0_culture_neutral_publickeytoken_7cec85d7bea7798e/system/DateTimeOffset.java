@@ -252,6 +252,46 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
         }
     }
 
+    public static boolean TryParse(java.lang.String input, JCORefOut<DateTimeOffset> result) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryParse", input, result.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean TryParse(java.lang.String input, IFormatProvider formatProvider, DateTimeStyles styles, JCORefOut<DateTimeOffset> result) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.TypeInitializationException, system.globalization.CultureNotFoundException, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryParse", input, formatProvider == null ? null : formatProvider.getJCOInstance(), styles == null ? null : styles.getJCOInstance(), result.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean TryParseExact(java.lang.String input, java.lang.String format, IFormatProvider formatProvider, DateTimeStyles styles, JCORefOut<DateTimeOffset> result) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.TypeInitializationException, system.OverflowException, system.FormatException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryParseExact", input, format, formatProvider == null ? null : formatProvider.getJCOInstance(), styles == null ? null : styles.getJCOInstance(), result.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean TryParseExact(java.lang.String input, java.lang.String[] formats, IFormatProvider formatProvider, DateTimeStyles styles, JCORefOut<DateTimeOffset> result) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.TypeInitializationException, system.OverflowException, system.FormatException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryParseExact", input, formats, formatProvider == null ? null : formatProvider.getJCOInstance(), styles == null ? null : styles.getJCOInstance(), result.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static int Compare(DateTimeOffset first, DateTimeOffset second) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");

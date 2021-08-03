@@ -147,6 +147,46 @@ public class SoapServices extends NetObject  {
     
     // Methods section
     
+    public static boolean DecodeXmlNamespaceForClrTypeNamespace(java.lang.String inNamespace, JCORefOut typeNamespace, JCORefOut assemblyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("DecodeXmlNamespaceForClrTypeNamespace", inNamespace, typeNamespace.getJCRefOut(), assemblyName.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean GetTypeAndMethodNameFromSoapAction(java.lang.String soapAction, JCORefOut typeName, JCORefOut methodName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotImplementedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("GetTypeAndMethodNameFromSoapAction", soapAction, typeName.getJCRefOut(), methodName.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean GetXmlElementForInteropType(NetType type, JCORefOut xmlElement, JCORefOut xmlNamespace) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("GetXmlElementForInteropType", type == null ? null : type.getJCOInstance(), xmlElement.getJCRefOut(), xmlNamespace.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean GetXmlTypeForInteropType(NetType type, JCORefOut xmlType, JCORefOut xmlTypeNamespace) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.NotImplementedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("GetXmlTypeForInteropType", type == null ? null : type.getJCOInstance(), xmlType.getJCRefOut(), xmlTypeNamespace.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static boolean IsClrTypeNamespace(java.lang.String namespaceString) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -224,6 +264,26 @@ public class SoapServices extends NetObject  {
         try {
             JCObject objGetInteropTypeFromXmlType = (JCObject)classType.Invoke("GetInteropTypeFromXmlType", xmlType, xmlTypeNamespace);
             return new NetType(objGetInteropTypeFromXmlType);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void GetInteropFieldTypeAndNameFromXmlAttribute(NetType containingType, java.lang.String xmlAttribute, java.lang.String xmlNamespace, JCORefOut<NetType> type, JCORefOut name) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("GetInteropFieldTypeAndNameFromXmlAttribute", containingType == null ? null : containingType.getJCOInstance(), xmlAttribute, xmlNamespace, type.getJCRefOut(), name.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void GetInteropFieldTypeAndNameFromXmlElement(NetType containingType, java.lang.String xmlElement, java.lang.String xmlNamespace, JCORefOut<NetType> type, JCORefOut name) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("GetInteropFieldTypeAndNameFromXmlElement", containingType == null ? null : containingType.getJCOInstance(), xmlElement, xmlNamespace, type.getJCRefOut(), name.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

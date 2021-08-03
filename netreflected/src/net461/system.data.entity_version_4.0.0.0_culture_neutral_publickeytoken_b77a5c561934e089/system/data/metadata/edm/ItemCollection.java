@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.data.metadata.edm.EdmType;
 import system.data.metadata.edm.EntityContainer;
+import system.data.metadata.edm.EdmType;
 import system.data.metadata.edm.DataSpace;
 
 
@@ -146,6 +146,46 @@ public class ItemCollection extends NetObjectEnumerable  {
     
     // Methods section
     
+    public boolean TryGetEntityContainer(java.lang.String name, boolean ignoreCase, JCORefOut<EntityContainer> entityContainer) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("TryGetEntityContainer", name, ignoreCase, entityContainer.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean TryGetEntityContainer(java.lang.String name, JCORefOut<EntityContainer> entityContainer) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("TryGetEntityContainer", name, entityContainer.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean TryGetType(java.lang.String name, java.lang.String namespaceName, boolean ignoreCase, JCORefOut<EdmType> type) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("TryGetType", name, namespaceName, ignoreCase, type.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean TryGetType(java.lang.String name, java.lang.String namespaceName, JCORefOut<EdmType> type) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("TryGetType", name, namespaceName, type.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public EdmType GetType(java.lang.String name, java.lang.String namespaceName) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

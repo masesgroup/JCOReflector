@@ -262,11 +262,33 @@ public class IWSTrustChannelContractImplementation extends NetObject implements 
         }
     }
 
+    public SecurityToken EndIssue(IAsyncResult result, JCORefOut<RequestSecurityTokenResponse> response) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objEndIssue = (JCObject)classInstance.Invoke("EndIssue", result == null ? null : result.getJCOInstance(), response.getJCRefOut());
+            return new SecurityToken(objEndIssue);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public SecurityToken Issue(RequestSecurityToken request) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objIssue = (JCObject)classInstance.Invoke("Issue", request == null ? null : request.getJCOInstance());
+            return new SecurityToken(objIssue);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SecurityToken Issue(RequestSecurityToken request, JCORefOut<RequestSecurityTokenResponse> response) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objIssue = (JCObject)classInstance.Invoke("Issue", request == null ? null : request.getJCOInstance(), response.getJCRefOut());
             return new SecurityToken(objIssue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -356,6 +378,36 @@ public class IWSTrustChannelContractImplementation extends NetObject implements 
         try {
             JCObject objValidate = (JCObject)classInstance.Invoke("Validate", message == null ? null : message.getJCOInstance());
             return new Message(objValidate);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void EndCancel(IAsyncResult result, JCORefOut<RequestSecurityTokenResponse> response) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("EndCancel", result == null ? null : result.getJCOInstance(), response.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void EndRenew(IAsyncResult result, JCORefOut<RequestSecurityTokenResponse> response) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("EndRenew", result == null ? null : result.getJCOInstance(), response.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void EndValidate(IAsyncResult result, JCORefOut<RequestSecurityTokenResponse> response) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("EndValidate", result == null ? null : result.getJCOInstance(), response.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

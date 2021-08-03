@@ -204,6 +204,16 @@ public class IClientFormatterSinkImplementation extends NetObject implements ICl
         }
     }
 
+    public void ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, JCORefOut<ITransportHeaders> responseHeaders, JCORefOut<Stream> responseStream) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ProcessMessage", msg == null ? null : msg.getJCOInstance(), requestHeaders == null ? null : requestHeaders.getJCOInstance(), requestStream == null ? null : requestStream.getJCOInstance(), responseHeaders.getJCRefOut(), responseStream.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

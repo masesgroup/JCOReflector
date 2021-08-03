@@ -172,6 +172,16 @@ public class SymbolResolver extends NetObjectEnumerable  {
         }
     }
 
+    public boolean TryGetValue(java.lang.String key, JCORefOut<NetObject> value) throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("TryGetValue", key, value.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public LocationReferenceEnvironment AsLocationReferenceEnvironment() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

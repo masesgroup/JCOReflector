@@ -178,6 +178,16 @@ public class ContentRangeHeaderValue extends NetObject implements system.IClonea
     
     // Methods section
     
+    public static boolean TryParse(java.lang.String input, JCORefOut<ContentRangeHeaderValue> parsedValue) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryParse", input, parsedValue.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static ContentRangeHeaderValue Parse(java.lang.String input) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");

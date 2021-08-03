@@ -37,6 +37,11 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.runtime.interopservices.comtypes.IEnumConnections;
+import system.runtime.interopservices.comtypes.IEnumConnectionsImplementation;
+import system.Guid;
+import system.runtime.interopservices.comtypes.IConnectionPointContainer;
+import system.runtime.interopservices.comtypes.IConnectionPointContainerImplementation;
 
 
 /**
@@ -109,6 +114,14 @@ public interface IConnectionPoint extends IJCOBridgeReflected {
 
     // Methods section
     
+    public void Advise(NetObject pUnkSink, JCORefOut pdwCookie) throws Throwable;
+
+    public void EnumConnections(JCORefOut<IEnumConnections> ppEnum) throws Throwable;
+
+    public void GetConnectionInterface(JCORefOut<Guid> pIID) throws Throwable;
+
+    public void GetConnectionPointContainer(JCORefOut<IConnectionPointContainer> ppCPC) throws Throwable;
+
     public void Unadvise(int dwCookie) throws Throwable;
 
 

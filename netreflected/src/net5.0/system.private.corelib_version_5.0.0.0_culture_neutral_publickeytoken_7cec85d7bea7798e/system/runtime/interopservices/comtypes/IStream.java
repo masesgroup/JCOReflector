@@ -111,6 +111,8 @@ public interface IStream extends IJCOBridgeReflected {
 
     // Methods section
     
+    public void Clone(JCORefOut<IStream> ppstm) throws Throwable;
+
     public void Commit(int grfCommitFlags) throws Throwable;
 
     public void LockRegion(long libOffset, long cb, int dwLockType) throws Throwable;

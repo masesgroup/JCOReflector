@@ -146,6 +146,28 @@ public class IOperationInvokerImplementation extends NetObject implements IOpera
         }
     }
 
+    public NetObject Invoke(NetObject instance, NetObject[] inputs, JCORefOut<NetObject[]> outputs) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objInvoke = (JCObject)classInstance.Invoke("Invoke", instance == null ? null : instance.getJCOInstance(), toObjectFromArray(inputs), outputs.getJCRefOut());
+            return new NetObject(objInvoke);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject InvokeEnd(NetObject instance, JCORefOut<NetObject[]> outputs, IAsyncResult result) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objInvokeEnd = (JCObject)classInstance.Invoke("InvokeEnd", instance == null ? null : instance.getJCOInstance(), outputs.getJCRefOut(), result == null ? null : result.getJCOInstance());
+            return new NetObject(objInvokeEnd);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetObject[] AllocateInputs() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

@@ -223,6 +223,16 @@ public class SignedXml extends NetObject  {
         }
     }
 
+    public boolean CheckSignatureReturningKey(JCORefOut<AsymmetricAlgorithm> signingKey) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.security.cryptography.CryptographicException, system.RankException, system.ArrayTypeMismatchException, system.TypeLoadException, system.xml.XmlException, system.security.cryptography.CryptographicUnexpectedOperationException, system.OutOfMemoryException, system.xml.xpath.XPathException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("CheckSignatureReturningKey", signingKey.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public XmlElement GetIdElement(XmlDocument document, java.lang.String idValue) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.xml.xpath.XPathException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

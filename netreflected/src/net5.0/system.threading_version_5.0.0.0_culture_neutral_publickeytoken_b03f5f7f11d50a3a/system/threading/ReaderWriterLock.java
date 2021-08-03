@@ -237,6 +237,16 @@ public class ReaderWriterLock extends CriticalFinalizerObject  {
         }
     }
 
+    public void DowngradeFromWriterLock(LockCookie lockCookie) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ApplicationException, system.IndexOutOfRangeException, system.threading.WaitHandleCannotBeOpenedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("DowngradeFromWriterLock", lockCookie == null ? null : lockCookie.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void ReleaseReaderLock() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.ApplicationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.threading.WaitHandleCannotBeOpenedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -252,6 +262,16 @@ public class ReaderWriterLock extends CriticalFinalizerObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReleaseWriterLock");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void RestoreLock(LockCookie lockCookie) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ApplicationException, system.threading.SynchronizationLockException, system.OverflowException, system.threading.WaitHandleCannotBeOpenedException, system.ArrayTypeMismatchException, system.threading.AbandonedMutexException, system.OperationCanceledException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RestoreLock", lockCookie == null ? null : lockCookie.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

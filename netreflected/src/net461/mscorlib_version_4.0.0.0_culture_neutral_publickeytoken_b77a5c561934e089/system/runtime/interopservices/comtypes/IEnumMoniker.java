@@ -39,6 +39,8 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.runtime.interopservices.comtypes.IMoniker;
 import system.runtime.interopservices.comtypes.IMonikerImplementation;
+import system.runtime.interopservices.comtypes.IEnumMoniker;
+import system.runtime.interopservices.comtypes.IEnumMonikerImplementation;
 
 
 /**
@@ -112,6 +114,8 @@ public interface IEnumMoniker extends IJCOBridgeReflected {
     // Methods section
     
     public int Skip(int celt) throws Throwable;
+
+    public void Clone(JCORefOut<IEnumMoniker> ppenum) throws Throwable;
 
     public void Reset() throws Throwable;
 

@@ -37,6 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import accessibility.IAccessible;
+import accessibility.IAccessibleImplementation;
 
 
 /**
@@ -109,6 +111,8 @@ public interface IAccessibleHandler extends IJCOBridgeReflected {
 
     // Methods section
     
+    public void AccessibleObjectFromID(int hwnd, int lObjectID, JCORefOut<IAccessible> pIAccessible) throws Throwable;
+
 
     
     // Properties section

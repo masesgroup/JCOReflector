@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.web.security.MembershipUser;
+import system.web.security.MembershipCreateStatus;
 import system.web.security.MembershipUserCollection;
 import system.web.security.MembershipProvider;
 import system.web.security.MembershipProviderCollection;
@@ -229,6 +230,28 @@ public class Membership extends NetObject  {
         }
     }
 
+    public static MembershipUser CreateUser(java.lang.String username, java.lang.String password, java.lang.String email, java.lang.String passwordQuestion, java.lang.String passwordAnswer, boolean isApproved, NetObject providerUserKey, JCORefOut<MembershipCreateStatus> status) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateUser = (JCObject)classType.Invoke("CreateUser", username, password, email, passwordQuestion, passwordAnswer, isApproved, providerUserKey == null ? null : providerUserKey.getJCOInstance(), status.getJCRefOut());
+            return new MembershipUser(objCreateUser);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static MembershipUser CreateUser(java.lang.String username, java.lang.String password, java.lang.String email, java.lang.String passwordQuestion, java.lang.String passwordAnswer, boolean isApproved, JCORefOut<MembershipCreateStatus> status) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateUser = (JCObject)classType.Invoke("CreateUser", username, password, email, passwordQuestion, passwordAnswer, isApproved, status.getJCRefOut());
+            return new MembershipUser(objCreateUser);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static MembershipUser GetUser() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -306,6 +329,17 @@ public class Membership extends NetObject  {
         }
     }
 
+    public static MembershipUserCollection FindUsersByEmail(java.lang.String emailToMatch, int pageIndex, int pageSize, JCORefOut totalRecords) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objFindUsersByEmail = (JCObject)classType.Invoke("FindUsersByEmail", emailToMatch, pageIndex, pageSize, totalRecords.getJCRefOut());
+            return new MembershipUserCollection(objFindUsersByEmail);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static MembershipUserCollection FindUsersByName(java.lang.String usernameToMatch) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -317,11 +351,33 @@ public class Membership extends NetObject  {
         }
     }
 
+    public static MembershipUserCollection FindUsersByName(java.lang.String usernameToMatch, int pageIndex, int pageSize, JCORefOut totalRecords) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objFindUsersByName = (JCObject)classType.Invoke("FindUsersByName", usernameToMatch, pageIndex, pageSize, totalRecords.getJCRefOut());
+            return new MembershipUserCollection(objFindUsersByName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static MembershipUserCollection GetAllUsers() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objGetAllUsers = (JCObject)classType.Invoke("GetAllUsers");
+            return new MembershipUserCollection(objGetAllUsers);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static MembershipUserCollection GetAllUsers(int pageIndex, int pageSize, JCORefOut totalRecords) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetAllUsers = (JCObject)classType.Invoke("GetAllUsers", pageIndex, pageSize, totalRecords.getJCRefOut());
             return new MembershipUserCollection(objGetAllUsers);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

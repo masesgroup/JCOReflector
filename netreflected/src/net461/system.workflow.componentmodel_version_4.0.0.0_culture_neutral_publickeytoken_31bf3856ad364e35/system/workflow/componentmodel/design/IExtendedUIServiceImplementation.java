@@ -181,6 +181,17 @@ public class IExtendedUIServiceImplementation extends NetObject implements IExte
         }
     }
 
+    public DialogResult AddWebReference(JCORefOut<Uri> url, JCORefOut<NetType> proxyClass) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAddWebReference = (JCObject)classInstance.Invoke("AddWebReference", url.getJCRefOut(), proxyClass.getJCRefOut());
+            return new DialogResult(objAddWebReference);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void AddAssemblyReference(AssemblyName assemblyName) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

@@ -128,6 +128,8 @@ public interface IItemContainerGenerator extends IJCOBridgeReflected {
 
     public DependencyObject GenerateNext() throws Throwable;
 
+    public DependencyObject GenerateNext(JCORefOut isNewlyRealized) throws Throwable;
+
     public void PrepareItemContainer(DependencyObject container) throws Throwable;
 
     public void Remove(GeneratorPosition position, int count) throws Throwable;

@@ -204,6 +204,17 @@ public class IItemContainerGeneratorImplementation extends NetObject implements 
         }
     }
 
+    public DependencyObject GenerateNext(JCORefOut isNewlyRealized) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGenerateNext = (JCObject)classInstance.Invoke("GenerateNext", isNewlyRealized.getJCRefOut());
+            return new DependencyObject(objGenerateNext);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void PrepareItemContainer(DependencyObject container) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.componentmodel.Component;
 import system.windows.forms.Control;
 import system.windows.forms.Keys;
+import system.windows.forms.Message;
 import system.drawing.Graphics;
 import system.drawing.Point;
 import system.drawing.Rectangle;
@@ -293,6 +294,16 @@ public class Control extends Component implements system.windows.forms.IDropTarg
         }
     }
 
+    public boolean PreProcessMessage(Message msg) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("PreProcessMessage", msg == null ? null : msg.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean SelectNextControl(Control ctl, boolean forward, boolean tabStopOnly, boolean nested, boolean wrap) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -462,6 +473,17 @@ public class Control extends Component implements system.windows.forms.IDropTarg
         try {
             JCObject objGetContainerControl = (JCObject)classInstance.Invoke("GetContainerControl");
             return new IContainerControlImplementation(objGetContainerControl);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PreProcessControlState PreProcessControlMessage(Message msg) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objPreProcessControlMessage = (JCObject)classInstance.Invoke("PreProcessControlMessage", msg == null ? null : msg.getJCOInstance());
+            return new PreProcessControlState(objPreProcessControlMessage);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -722,6 +744,16 @@ public class Control extends Component implements system.windows.forms.IDropTarg
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Scale", factor == null ? null : factor.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ScaleBitmapLogicalToDevice(Bitmap logicalBitmap) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ScaleBitmapLogicalToDevice", logicalBitmap == null ? null : logicalBitmap.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

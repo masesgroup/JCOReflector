@@ -157,6 +157,16 @@ public class ObjectReferenceService extends NetObject  {
     
     // Methods section
     
+    public boolean TryGetObject(Guid objectReferenceId, JCORefOut<NetObject> obj) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("TryGetObject", objectReferenceId == null ? null : objectReferenceId.getJCOInstance(), obj.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Guid AcquireObjectReference(int startLine, int startColumn, int endLine, int endColumn) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.MulticastNotSupportedException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

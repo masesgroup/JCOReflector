@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.servicemodel.EndpointAddress;
 import system.Uri;
 import system.servicemodel.channels.Message;
+import system.servicemodel.channels.CallbackContextMessageProperty;
 import system.servicemodel.channels.MessageProperties;
 import system.servicemodel.channels.IMessageProperty;
 import system.servicemodel.channels.IMessagePropertyImplementation;
@@ -161,6 +162,26 @@ public class CallbackContextMessageProperty extends NetObject  {
     
     // Methods section
     
+    public static boolean TryGet(Message message, JCORefOut<CallbackContextMessageProperty> contextMessageProperty) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryGet", message == null ? null : message.getJCOInstance(), contextMessageProperty.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean TryGet(MessageProperties properties, JCORefOut<CallbackContextMessageProperty> contextMessageProperty) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryGet", properties == null ? null : properties.getJCOInstance(), contextMessageProperty.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public IMessageProperty CreateCopy() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

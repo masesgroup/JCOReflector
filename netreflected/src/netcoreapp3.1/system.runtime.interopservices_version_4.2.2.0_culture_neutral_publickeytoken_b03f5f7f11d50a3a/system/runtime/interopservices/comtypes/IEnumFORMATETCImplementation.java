@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.runtime.interopservices.comtypes.FORMATETC;
+import system.runtime.interopservices.comtypes.IEnumFORMATETC;
+import system.runtime.interopservices.comtypes.IEnumFORMATETCImplementation;
 
 
 /**
@@ -133,6 +135,16 @@ public class IEnumFORMATETCImplementation extends NetObject implements IEnumFORM
 
     // Methods section
     
+    public int Next(int celt, JCORefOut<FORMATETC[]> rgelt, JCORefOut pceltFetched) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("Next", celt, rgelt.getJCRefOut(), pceltFetched.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public int Reset() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -148,6 +160,16 @@ public class IEnumFORMATETCImplementation extends NetObject implements IEnumFORM
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Invoke("Skip", celt);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Clone(JCORefOut<IEnumFORMATETC> newEnum) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Clone", newEnum.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

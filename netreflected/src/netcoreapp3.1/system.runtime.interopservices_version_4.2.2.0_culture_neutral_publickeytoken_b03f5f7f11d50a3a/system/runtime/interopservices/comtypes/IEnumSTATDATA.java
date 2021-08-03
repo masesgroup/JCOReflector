@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 
 // Import section
 import system.runtime.interopservices.comtypes.STATDATA;
+import system.runtime.interopservices.comtypes.IEnumSTATDATA;
+import system.runtime.interopservices.comtypes.IEnumSTATDATAImplementation;
 
 
 /**
@@ -110,9 +112,13 @@ public interface IEnumSTATDATA extends IJCOBridgeReflected {
 
     // Methods section
     
+    public int Next(int celt, JCORefOut<STATDATA[]> rgelt, JCORefOut pceltFetched) throws Throwable;
+
     public int Reset() throws Throwable;
 
     public int Skip(int celt) throws Throwable;
+
+    public void Clone(JCORefOut<IEnumSTATDATA> newEnum) throws Throwable;
 
 
     

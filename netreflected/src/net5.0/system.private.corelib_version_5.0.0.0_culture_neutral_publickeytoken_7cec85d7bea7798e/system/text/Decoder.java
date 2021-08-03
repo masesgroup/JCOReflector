@@ -225,6 +225,16 @@ public class Decoder extends NetObject  {
         }
     }
 
+    public void Convert(byte[] bytes, int byteIndex, int byteCount, char[] chars, int charIndex, int charCount, boolean flush, JCORefOut bytesUsed, JCORefOut charsUsed, JCORefOut completed) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Convert", bytes, byteIndex, byteCount, chars, charIndex, charCount, flush, bytesUsed.getJCRefOut(), charsUsed.getJCRefOut(), completed.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Reset() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

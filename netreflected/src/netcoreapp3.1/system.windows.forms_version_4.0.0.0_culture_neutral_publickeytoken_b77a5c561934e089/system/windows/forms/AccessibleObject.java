@@ -198,6 +198,16 @@ public class AccessibleObject extends StandardOleMarshalObject  {
         }
     }
 
+    public int GetHelpTopic(JCORefOut fileName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("GetHelpTopic", fileName.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public AccessibleObject GetChild(int index) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -405,6 +415,15 @@ public class AccessibleObject extends StandardOleMarshalObject  {
      */
     @Deprecated 
     public void accDoDefaultAction(NetObject varChild) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAccessible to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIAccessible method available in IAccessible to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void accLocation(JCORefOut pxLeft, JCORefOut pyTop, JCORefOut pcxWidth, JCORefOut pcyHeight, NetObject varChild) throws Throwable {
         throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAccessible to obtain the full interface.");
     }
 

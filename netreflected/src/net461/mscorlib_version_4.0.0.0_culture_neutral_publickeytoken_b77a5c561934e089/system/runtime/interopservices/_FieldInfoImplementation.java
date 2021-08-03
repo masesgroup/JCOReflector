@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.TypedReference;
+import system.Guid;
 import system.UInt32;
 import system.reflection.BindingFlags;
 import system.reflection.Binder;
@@ -201,6 +202,16 @@ public class _FieldInfoImplementation extends NetObject implements _FieldInfo {
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
             resultingArray = resultingArrayList.toArray(resultingArray);
             return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetTypeInfoCount", pcTInfo.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

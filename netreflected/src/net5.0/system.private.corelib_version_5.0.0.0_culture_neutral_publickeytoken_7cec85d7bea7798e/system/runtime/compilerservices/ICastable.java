@@ -110,6 +110,8 @@ public interface ICastable extends IJCOBridgeReflected {
 
     // Methods section
     
+    public boolean IsInstanceOfInterface(RuntimeTypeHandle interfaceType, JCORefOut<NetException> castError) throws Throwable;
+
     public RuntimeTypeHandle GetImplType(RuntimeTypeHandle interfaceType) throws Throwable;
 
 

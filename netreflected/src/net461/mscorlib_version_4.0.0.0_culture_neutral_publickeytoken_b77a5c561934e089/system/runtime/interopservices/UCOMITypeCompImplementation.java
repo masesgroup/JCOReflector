@@ -38,6 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.runtime.interopservices.UCOMITypeInfo;
+import system.runtime.interopservices.UCOMITypeInfoImplementation;
+import system.runtime.interopservices.DESCKIND;
+import system.runtime.interopservices.UCOMITypeComp;
+import system.runtime.interopservices.UCOMITypeCompImplementation;
 
 
 /**
@@ -132,6 +137,16 @@ public class UCOMITypeCompImplementation extends NetObject implements UCOMITypeC
 
     // Methods section
     
+    public void BindType(java.lang.String szName, int lHashVal, JCORefOut<UCOMITypeInfo> ppTInfo, JCORefOut<UCOMITypeComp> ppTComp) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("BindType", szName, lHashVal, ppTInfo.getJCRefOut(), ppTComp.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

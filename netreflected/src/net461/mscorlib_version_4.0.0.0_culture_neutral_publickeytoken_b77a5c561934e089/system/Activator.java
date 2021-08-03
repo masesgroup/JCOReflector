@@ -46,6 +46,7 @@ import system.configuration.assemblies.AssemblyHashAlgorithm;
 import system.ActivationContext;
 import system.AppDomain;
 import system.security.policy.Evidence;
+import system.Guid;
 import system.UInt32;
 
 
@@ -460,6 +461,15 @@ public class Activator extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static To_Activator method available in _Activator to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_Activator to obtain the full interface.");
     }
 
 

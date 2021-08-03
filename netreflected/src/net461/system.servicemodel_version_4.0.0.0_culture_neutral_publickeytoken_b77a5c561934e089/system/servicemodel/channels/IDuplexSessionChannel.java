@@ -49,9 +49,9 @@ import system.servicemodel.channels.IOutputChannel;
 import system.servicemodel.channels.IOutputChannelImplementation;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
+import system.servicemodel.channels.Message;
 import system.TimeSpan;
 import system.AsyncCallback;
-import system.servicemodel.channels.Message;
 import system.servicemodel.CommunicationState;
 import system.servicemodel.EndpointAddress;
 import system.Uri;
@@ -128,6 +128,8 @@ public interface IDuplexSessionChannel extends IJCOBridgeReflected, IDuplexChann
 
     // Methods section
     
+
+
 
 
 

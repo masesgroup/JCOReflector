@@ -111,6 +111,7 @@ public interface IChannelReceiver extends IJCOBridgeReflected, IChannel {
 
     // Methods section
     
+
     public java.lang.String[] GetUrlsForUri(java.lang.String objectURI) throws Throwable;
 
     public void StartListening(NetObject data) throws Throwable;

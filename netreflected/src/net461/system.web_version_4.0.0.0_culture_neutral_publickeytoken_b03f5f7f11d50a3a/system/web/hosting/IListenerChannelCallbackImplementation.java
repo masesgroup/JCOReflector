@@ -152,6 +152,16 @@ public class IListenerChannelCallbackImplementation extends NetObject implements
         }
     }
 
+    public void GetBlob(JCORefOut buffer, int bufferSize) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetBlob", buffer.getJCRefOut(), bufferSize);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void ReportMessageReceived() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

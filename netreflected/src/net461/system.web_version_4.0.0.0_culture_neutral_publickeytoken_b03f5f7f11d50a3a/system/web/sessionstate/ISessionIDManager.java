@@ -110,6 +110,8 @@ public interface ISessionIDManager extends IJCOBridgeReflected {
 
     // Methods section
     
+    public boolean InitializeRequest(HttpContext context, boolean suppressAutoDetectRedirect, JCORefOut supportSessionIDReissue) throws Throwable;
+
     public boolean Validate(java.lang.String id) throws Throwable;
 
     public java.lang.String CreateSessionID(HttpContext context) throws Throwable;
@@ -119,6 +121,8 @@ public interface ISessionIDManager extends IJCOBridgeReflected {
     public void Initialize() throws Throwable;
 
     public void RemoveSessionID(HttpContext context) throws Throwable;
+
+    public void SaveSessionID(HttpContext context, java.lang.String id, JCORefOut redirected, JCORefOut cookieAdded) throws Throwable;
 
 
     

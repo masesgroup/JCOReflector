@@ -37,6 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.windows.interop.MSG;
+import system.windows.input.ModifierKeys;
 import system.windows.input.TraversalRequest;
 import system.windows.interop.IKeyboardInputSite;
 import system.windows.interop.IKeyboardInputSiteImplementation;
@@ -116,7 +118,13 @@ public interface IKeyboardInputSink extends IJCOBridgeReflected {
     
     public boolean HasFocusWithin() throws Throwable;
 
+    public boolean OnMnemonic(MSG msg, ModifierKeys modifiers) throws Throwable;
+
     public boolean TabInto(TraversalRequest request) throws Throwable;
+
+    public boolean TranslateAccelerator(MSG msg, ModifierKeys modifiers) throws Throwable;
+
+    public boolean TranslateChar(MSG msg, ModifierKeys modifiers) throws Throwable;
 
     public IKeyboardInputSite RegisterKeyboardInputSink(IKeyboardInputSink sink) throws Throwable;
 

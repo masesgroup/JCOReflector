@@ -41,8 +41,8 @@ import java.util.ArrayList;
 import system.net.IPAddress;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
-import system.AsyncCallback;
 import system.net.IPEndPoint;
+import system.AsyncCallback;
 
 
 /**
@@ -160,6 +160,16 @@ public class UdpAnySourceMulticastClient extends NetObject implements AutoClosea
     
     // Methods section
     
+    public int EndReceiveFromGroup(IAsyncResult result, JCORefOut<IPEndPoint> source) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.net.sockets.SocketException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("EndReceiveFromGroup", result == null ? null : result.getJCOInstance(), source.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public IAsyncResult BeginJoinGroup(AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

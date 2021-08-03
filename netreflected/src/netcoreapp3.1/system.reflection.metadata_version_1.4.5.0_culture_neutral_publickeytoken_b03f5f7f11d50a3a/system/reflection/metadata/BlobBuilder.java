@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.reflection.metadata.BlobBuilder;
 import system.io.Stream;
 import system.reflection.metadata.Blob;
+import system.reflection.metadata.BlobWriter;
 import system.DateTime;
 import system.Decimal;
 import system.Guid;
@@ -396,6 +397,16 @@ public class BlobBuilder extends NetObject  {
     }
 
     public void WriteContentTo(BlobBuilder destination) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("WriteContentTo", destination == null ? null : destination.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void WriteContentTo(BlobWriter destination) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.BadImageFormatException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

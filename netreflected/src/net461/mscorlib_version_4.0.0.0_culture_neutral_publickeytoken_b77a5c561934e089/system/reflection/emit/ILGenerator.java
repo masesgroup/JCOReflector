@@ -51,6 +51,7 @@ import system.reflection.CallingConventions;
 import system.runtime.interopservices.CallingConvention;
 import system.diagnostics.symbolstore.ISymbolDocumentWriter;
 import system.diagnostics.symbolstore.ISymbolDocumentWriterImplementation;
+import system.Guid;
 import system.UInt32;
 
 
@@ -541,6 +542,15 @@ public class ILGenerator extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static To_ILGenerator method available in _ILGenerator to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_ILGenerator to obtain the full interface.");
     }
 
 

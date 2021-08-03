@@ -37,6 +37,7 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.Guid;
 
 
 /**
@@ -110,6 +111,10 @@ public interface IPersistFile extends IJCOBridgeReflected {
     // Methods section
     
     public int IsDirty() throws Throwable;
+
+    public void GetClassID(JCORefOut<Guid> pClassID) throws Throwable;
+
+    public void GetCurFile(JCORefOut ppszFileName) throws Throwable;
 
     public void Load(java.lang.String pszFileName, int dwMode) throws Throwable;
 

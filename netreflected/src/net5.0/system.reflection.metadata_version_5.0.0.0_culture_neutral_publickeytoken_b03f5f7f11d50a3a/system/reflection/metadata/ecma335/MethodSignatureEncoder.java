@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.ValueType;
 import system.reflection.metadata.BlobBuilder;
+import system.reflection.metadata.ecma335.ReturnTypeEncoder;
+import system.reflection.metadata.ecma335.ParametersEncoder;
 
 
 /**
@@ -157,6 +159,16 @@ public class MethodSignatureEncoder extends ValueType  {
     
     // Methods section
     
+    public void Parameters(int parameterCount, JCORefOut<ReturnTypeEncoder> returnType, JCORefOut<ParametersEncoder> parameters) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Parameters", parameterCount, returnType.getJCRefOut(), parameters.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

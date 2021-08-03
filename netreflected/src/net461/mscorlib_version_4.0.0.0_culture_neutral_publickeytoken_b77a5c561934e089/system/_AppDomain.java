@@ -48,6 +48,7 @@ import system.reflection.BindingFlags;
 import system.reflection.Binder;
 import system.globalization.CultureInfo;
 import system.CrossAppDomainDelegate;
+import system.Guid;
 import system.UInt32;
 import system.security.policy.PolicyLevel;
 import system.security.principal.PrincipalPolicy;
@@ -202,6 +203,8 @@ public interface _AppDomain extends IJCOBridgeReflected {
     public void ClearShadowCopyPath() throws Throwable;
 
     public void DoCallBack(CrossAppDomainDelegate theDelegate) throws Throwable;
+
+    public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable;
 
     public void SetAppDomainPolicy(PolicyLevel domainPolicy) throws Throwable;
 

@@ -39,6 +39,10 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.runtime.interopservices.UCOMITypeInfo;
 import system.runtime.interopservices.UCOMITypeInfoImplementation;
+import system.runtime.interopservices.UCOMITypeComp;
+import system.runtime.interopservices.UCOMITypeCompImplementation;
+import system.Guid;
+import system.runtime.interopservices.TYPEKIND;
 
 
 /**
@@ -114,6 +118,18 @@ public interface UCOMITypeLib extends IJCOBridgeReflected {
     public boolean IsName(java.lang.String szNameBuf, int lHashVal) throws Throwable;
 
     public int GetTypeInfoCount() throws Throwable;
+
+    public void FindName(java.lang.String szNameBuf, int lHashVal, JCORefOut<UCOMITypeInfo[]> ppTInfo, JCORefOut rgMemId, short pcFound) throws Throwable;
+
+    public void GetDocumentation(int index, JCORefOut strName, JCORefOut strDocString, JCORefOut dwHelpContext, JCORefOut strHelpFile) throws Throwable;
+
+    public void GetTypeComp(JCORefOut<UCOMITypeComp> ppTComp) throws Throwable;
+
+    public void GetTypeInfo(int index, JCORefOut<UCOMITypeInfo> ppTI) throws Throwable;
+
+    public void GetTypeInfoOfGuid(Guid guid, JCORefOut<UCOMITypeInfo> ppTInfo) throws Throwable;
+
+    public void GetTypeInfoType(int index, JCORefOut<TYPEKIND> pTKind) throws Throwable;
 
 
     

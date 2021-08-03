@@ -157,6 +157,17 @@ public class BaseDataBoundControlDesigner extends ControlDesigner  {
         }
     }
 
+    public static DialogResult ShowCreateDataSourceDialog(ControlDesigner controlDesigner, NetType dataSourceType, boolean configure, JCORefOut dataSourceID) throws Throwable, system.InvalidOperationException, system.componentmodel.InvalidEnumArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.RankException, system.MulticastNotSupportedException, system.NotImplementedException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.NullReferenceException, system.configuration.ConfigurationException, system.OutOfMemoryException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.collections.generic.KeyNotFoundException, system.configuration.ConfigurationErrorsException, system.security.SecurityException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objShowCreateDataSourceDialog = (JCObject)classType.Invoke("ShowCreateDataSourceDialog", controlDesigner == null ? null : controlDesigner.getJCOInstance(), dataSourceType == null ? null : dataSourceType.getJCOInstance(), configure, dataSourceID.getJCRefOut());
+            return new DialogResult(objShowCreateDataSourceDialog);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Initialize(IComponent component) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.MulticastNotSupportedException, system.configuration.ConfigurationErrorsException, system.security.SecurityException, system.configuration.ConfigurationException, system.web.HttpException, system.OverflowException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

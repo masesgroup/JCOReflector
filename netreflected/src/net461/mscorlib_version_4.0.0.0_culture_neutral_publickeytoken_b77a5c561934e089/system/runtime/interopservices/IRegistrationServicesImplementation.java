@@ -213,6 +213,16 @@ public class IRegistrationServicesImplementation extends NetObject implements IR
         }
     }
 
+    public void RegisterTypeForComClients(NetType type, Guid g) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RegisterTypeForComClients", type == null ? null : type.getJCOInstance(), g == null ? null : g.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

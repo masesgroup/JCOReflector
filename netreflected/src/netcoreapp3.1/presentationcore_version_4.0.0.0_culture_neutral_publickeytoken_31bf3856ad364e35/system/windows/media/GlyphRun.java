@@ -191,6 +191,17 @@ public class GlyphRun extends NetObject implements system.componentmodel.ISuppor
         }
     }
 
+    public CharacterHit GetCaretCharacterHitFromDistance(double distance, JCORefOut isInside) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetCaretCharacterHitFromDistance = (JCObject)classInstance.Invoke("GetCaretCharacterHitFromDistance", distance, isInside.getJCRefOut());
+            return new CharacterHit(objGetCaretCharacterHitFromDistance);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public CharacterHit GetNextCaretCharacterHit(CharacterHit characterHit) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

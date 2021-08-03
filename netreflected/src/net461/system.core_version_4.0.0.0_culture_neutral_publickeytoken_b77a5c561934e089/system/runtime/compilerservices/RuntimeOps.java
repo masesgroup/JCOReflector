@@ -167,6 +167,16 @@ public class RuntimeOps extends NetObject  {
         }
     }
 
+    public static boolean ExpandoTryGetValue(ExpandoObject expando, NetObject indexClass, int index, java.lang.String name, boolean ignoreCase, JCORefOut<NetObject> value) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("ExpandoTryGetValue", expando == null ? null : expando.getJCOInstance(), indexClass == null ? null : indexClass.getJCOInstance(), index, name, ignoreCase, value.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static Expression Quote(Expression expression, NetObject hoistedLocals, NetObject[] locals) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");

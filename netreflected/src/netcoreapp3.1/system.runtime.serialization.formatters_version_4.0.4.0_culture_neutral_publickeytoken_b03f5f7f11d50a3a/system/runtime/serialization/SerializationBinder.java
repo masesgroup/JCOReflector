@@ -154,6 +154,16 @@ public class SerializationBinder extends NetObject  {
         }
     }
 
+    public void BindToName(NetType serializedType, JCORefOut assemblyName, JCORefOut typeName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("BindToName", serializedType == null ? null : serializedType.getJCOInstance(), assemblyName.getJCRefOut(), typeName.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

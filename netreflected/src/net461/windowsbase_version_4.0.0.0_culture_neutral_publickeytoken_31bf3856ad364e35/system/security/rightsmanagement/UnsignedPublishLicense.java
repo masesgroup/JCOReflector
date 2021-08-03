@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.security.rightsmanagement.PublishLicense;
 import system.security.rightsmanagement.SecureEnvironment;
+import system.security.rightsmanagement.UseLicense;
 import system.Guid;
 import system.security.rightsmanagement.ContentUser;
 import system.Uri;
@@ -166,6 +167,17 @@ public class UnsignedPublishLicense extends NetObject  {
     
     // Methods section
     
+    public PublishLicense Sign(SecureEnvironment secureEnvironment, JCORefOut<UseLicense> authorUseLicense) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.security.rightsmanagement.RightsManagementException, system.FormatException, system.UriFormatException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objSign = (JCObject)classInstance.Invoke("Sign", secureEnvironment == null ? null : secureEnvironment.getJCOInstance(), authorUseLicense.getJCRefOut());
+            return new PublishLicense(objSign);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

@@ -49,6 +49,8 @@ import system.reflection.ParameterModifier;
 import system.reflection.TypeFilter;
 import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
+import system.reflection.PortableExecutableKinds;
+import system.reflection.ImageFileMachine;
 import system.Guid;
 import system.ModuleHandle;
 import system.reflection.Assembly;
@@ -523,6 +525,16 @@ public class Module extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("GetObjectData", info == null ? null : info.getJCOInstance(), context == null ? null : context.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void GetPEKind(JCORefOut<PortableExecutableKinds> peKind, JCORefOut<ImageFileMachine> machine) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetPEKind", peKind.getJCRefOut(), machine.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

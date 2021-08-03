@@ -40,6 +40,9 @@ import java.util.ArrayList;
 // Import section
 import system.ValueType;
 import system.reflection.metadata.BlobBuilder;
+import system.reflection.metadata.ecma335.NamedArgumentTypeEncoder;
+import system.reflection.metadata.ecma335.NameEncoder;
+import system.reflection.metadata.ecma335.LiteralEncoder;
 
 
 /**
@@ -157,6 +160,16 @@ public class NamedArgumentsEncoder extends ValueType  {
     
     // Methods section
     
+    public void AddArgument(boolean isField, JCORefOut<NamedArgumentTypeEncoder> type, JCORefOut<NameEncoder> name, JCORefOut<LiteralEncoder> literal) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddArgument", isField, type.getJCRefOut(), name.getJCRefOut(), literal.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

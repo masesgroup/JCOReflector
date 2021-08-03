@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.forms.Message;
 
 
 /**
@@ -132,6 +133,16 @@ public class IMessageFilterImplementation extends NetObject implements IMessageF
 
     // Methods section
     
+    public boolean PreFilterMessage(Message m) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("PreFilterMessage", m == null ? null : m.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

@@ -130,6 +130,8 @@ public interface IClientChannelSink extends IJCOBridgeReflected, IChannelSinkBas
 
     public void AsyncProcessResponse(IClientResponseChannelSinkStack sinkStack, NetObject state, ITransportHeaders headers, Stream stream) throws Throwable;
 
+    public void ProcessMessage(IMessage msg, ITransportHeaders requestHeaders, Stream requestStream, JCORefOut<ITransportHeaders> responseHeaders, JCORefOut<Stream> responseStream) throws Throwable;
+
 
     
     // Properties section

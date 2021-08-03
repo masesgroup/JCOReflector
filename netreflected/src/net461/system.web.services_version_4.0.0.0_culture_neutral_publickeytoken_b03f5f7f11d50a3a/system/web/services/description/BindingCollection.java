@@ -176,7 +176,7 @@ public class BindingCollection extends ServiceDescriptionBaseCollection  {
         }
     }
 
-    public void CopyTo(system.web.services.description.Binding[][] array, int index) throws Throwable {
+    public void CopyTo(system.web.services.description.Binding[] array, int index) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

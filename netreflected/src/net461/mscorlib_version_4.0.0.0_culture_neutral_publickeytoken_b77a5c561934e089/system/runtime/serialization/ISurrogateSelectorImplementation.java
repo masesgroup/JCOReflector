@@ -137,6 +137,17 @@ public class ISurrogateSelectorImplementation extends NetObject implements ISurr
 
     // Methods section
     
+    public ISerializationSurrogate GetSurrogate(NetType type, StreamingContext context, JCORefOut<ISurrogateSelector> selector) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetSurrogate = (JCObject)classInstance.Invoke("GetSurrogate", type == null ? null : type.getJCOInstance(), context == null ? null : context.getJCOInstance(), selector.getJCRefOut());
+            return new ISerializationSurrogateImplementation(objGetSurrogate);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ISurrogateSelector GetNextSelector() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

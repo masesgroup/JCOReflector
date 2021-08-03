@@ -157,6 +157,16 @@ public class RouteUrlExpressionBuilder extends ExpressionBuilder  {
     
     // Methods section
     
+    public static boolean TryParseRouteExpression(java.lang.String expression, RouteValueDictionary routeValues, JCORefOut routeName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryParseRouteExpression", expression, routeValues == null ? null : routeValues.getJCOInstance(), routeName.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public CodeExpression GetCodeExpression(BoundPropertyEntry entry, NetObject parsedData, ExpressionBuilderContext context) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

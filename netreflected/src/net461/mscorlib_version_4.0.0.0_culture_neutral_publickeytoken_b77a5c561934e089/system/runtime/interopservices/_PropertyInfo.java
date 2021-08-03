@@ -42,6 +42,7 @@ import system.reflection.Binder;
 import system.globalization.CultureInfo;
 import system.reflection.MethodInfo;
 import system.reflection.ParameterInfo;
+import system.Guid;
 import system.UInt32;
 import system.reflection.MemberTypes;
 import system.reflection.PropertyAttributes;
@@ -140,6 +141,8 @@ public interface _PropertyInfo extends IJCOBridgeReflected {
     public MethodInfo[] GetAccessors(boolean nonPublic) throws Throwable;
 
     public ParameterInfo[] GetIndexParameters() throws Throwable;
+
+    public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable;
 
     public void SetValue(NetObject obj, NetObject value, NetObject[] index) throws Throwable;
 

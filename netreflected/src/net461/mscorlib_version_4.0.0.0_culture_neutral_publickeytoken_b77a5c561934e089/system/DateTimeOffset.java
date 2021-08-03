@@ -252,6 +252,46 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
         }
     }
 
+    public static boolean TryParse(java.lang.String input, JCORefOut<DateTimeOffset> result) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.FormatException, system.NullReferenceException, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryParse", input, result.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean TryParse(java.lang.String input, IFormatProvider formatProvider, DateTimeStyles styles, JCORefOut<DateTimeOffset> result) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.NotSupportedException, system.NullReferenceException, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryParse", input, formatProvider == null ? null : formatProvider.getJCOInstance(), styles == null ? null : styles.getJCOInstance(), result.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean TryParseExact(java.lang.String input, java.lang.String format, IFormatProvider formatProvider, DateTimeStyles styles, JCORefOut<DateTimeOffset> result) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.NullReferenceException, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryParseExact", input, format, formatProvider == null ? null : formatProvider.getJCOInstance(), styles == null ? null : styles.getJCOInstance(), result.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean TryParseExact(java.lang.String input, java.lang.String[] formats, IFormatProvider formatProvider, DateTimeStyles styles, JCORefOut<DateTimeOffset> result) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryParseExact", input, formats, formatProvider == null ? null : formatProvider.getJCOInstance(), styles == null ? null : styles.getJCOInstance(), result.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static int Compare(DateTimeOffset first, DateTimeOffset second) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");

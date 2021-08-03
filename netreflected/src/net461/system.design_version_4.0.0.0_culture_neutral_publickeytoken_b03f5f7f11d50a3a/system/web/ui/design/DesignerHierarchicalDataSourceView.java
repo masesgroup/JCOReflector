@@ -149,6 +149,17 @@ public class DesignerHierarchicalDataSourceView extends NetObject  {
     
     // Methods section
     
+    public IHierarchicalEnumerable GetDesignTimeData(JCORefOut isSampleData) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetDesignTimeData = (JCObject)classInstance.Invoke("GetDesignTimeData", isSampleData.getJCRefOut());
+            return new IHierarchicalEnumerableImplementation(objGetDesignTimeData);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

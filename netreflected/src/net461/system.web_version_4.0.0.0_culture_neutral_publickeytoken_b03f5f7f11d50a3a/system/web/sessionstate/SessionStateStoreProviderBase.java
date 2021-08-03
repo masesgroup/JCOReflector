@@ -42,6 +42,8 @@ import system.configuration.provider.ProviderBase;
 import system.web.sessionstate.SessionStateItemExpireCallback;
 import system.web.sessionstate.SessionStateStoreData;
 import system.web.HttpContext;
+import system.TimeSpan;
+import system.web.sessionstate.SessionStateActions;
 
 
 /**
@@ -163,6 +165,28 @@ public class SessionStateStoreProviderBase extends ProviderBase  {
         try {
             JCObject objCreateNewStoreData = (JCObject)classInstance.Invoke("CreateNewStoreData", context == null ? null : context.getJCOInstance(), timeout);
             return new SessionStateStoreData(objCreateNewStoreData);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SessionStateStoreData GetItem(HttpContext context, java.lang.String id, JCORefOut locked, JCORefOut<TimeSpan> lockAge, JCORefOut<NetObject> lockId, JCORefOut<SessionStateActions> actions) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetItem = (JCObject)classInstance.Invoke("GetItem", context == null ? null : context.getJCOInstance(), id, locked.getJCRefOut(), lockAge.getJCRefOut(), lockId.getJCRefOut(), actions.getJCRefOut());
+            return new SessionStateStoreData(objGetItem);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SessionStateStoreData GetItemExclusive(HttpContext context, java.lang.String id, JCORefOut locked, JCORefOut<TimeSpan> lockAge, JCORefOut<NetObject> lockId, JCORefOut<SessionStateActions> actions) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetItemExclusive = (JCObject)classInstance.Invoke("GetItemExclusive", context == null ? null : context.getJCOInstance(), id, locked.getJCRefOut(), lockAge.getJCRefOut(), lockId.getJCRefOut(), actions.getJCRefOut());
+            return new SessionStateStoreData(objGetItemExclusive);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

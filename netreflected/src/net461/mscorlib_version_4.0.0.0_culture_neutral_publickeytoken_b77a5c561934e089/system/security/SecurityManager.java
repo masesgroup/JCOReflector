@@ -213,6 +213,17 @@ public class SecurityManager extends NetObject  {
         }
     }
 
+    public static PermissionSet ResolvePolicy(Evidence evidence, PermissionSet reqdPset, PermissionSet optPset, PermissionSet denyPset, JCORefOut<PermissionSet> denied) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NullReferenceException, system.security.SecurityException, system.MissingMethodException, system.IndexOutOfRangeException, system.MemberAccessException, system.security.XmlSyntaxException, system.security.policy.PolicyException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objResolvePolicy = (JCObject)classType.Invoke("ResolvePolicy", evidence == null ? null : evidence.getJCOInstance(), reqdPset == null ? null : reqdPset.getJCOInstance(), optPset == null ? null : optPset.getJCOInstance(), denyPset == null ? null : denyPset.getJCOInstance(), denied.getJCRefOut());
+            return new PermissionSet(objResolvePolicy);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static PermissionSet ResolvePolicy(Evidence[] evidences) throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NullReferenceException, system.IndexOutOfRangeException, system.MemberAccessException, system.security.XmlSyntaxException, system.security.policy.PolicyException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -252,6 +263,16 @@ public class SecurityManager extends NetObject  {
         try {
             JCObject objLoadPolicyLevelFromString = (JCObject)classType.Invoke("LoadPolicyLevelFromString", str, type == null ? null : type.getJCOInstance());
             return new PolicyLevel(objLoadPolicyLevelFromString);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void GetZoneAndOrigin(JCORefOut<NetArrayList> zone, JCORefOut<NetArrayList> origin) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("GetZoneAndOrigin", zone.getJCRefOut(), origin.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

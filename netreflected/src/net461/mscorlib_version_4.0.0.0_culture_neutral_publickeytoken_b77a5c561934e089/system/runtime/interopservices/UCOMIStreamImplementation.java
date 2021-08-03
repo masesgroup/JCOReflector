@@ -134,6 +134,16 @@ public class UCOMIStreamImplementation extends NetObject implements UCOMIStream 
 
     // Methods section
     
+    public void Clone(JCORefOut<UCOMIStream> ppstm) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Clone", ppstm.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Commit(int grfCommitFlags) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

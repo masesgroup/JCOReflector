@@ -147,6 +147,16 @@ public class DbProviderFactories extends NetObject  {
     
     // Methods section
     
+    public static boolean TryGetFactory(java.lang.String providerInvariantName, JCORefOut<DbProviderFactory> factory) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.TypeLoadException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryGetFactory", providerInvariantName, factory.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static boolean UnregisterFactory(java.lang.String providerInvariantName) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");

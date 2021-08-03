@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.enterpriseservices.InstallationFlags;
 
 
 /**
@@ -132,6 +133,16 @@ public class IRegistrationHelperImplementation extends NetObject implements IReg
 
     // Methods section
     
+    public void InstallAssembly(java.lang.String assembly, JCORefOut application, JCORefOut tlb, InstallationFlags installFlags) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("InstallAssembly", assembly, application.getJCRefOut(), tlb.getJCRefOut(), installFlags == null ? null : installFlags.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void UninstallAssembly(java.lang.String assembly, java.lang.String application) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

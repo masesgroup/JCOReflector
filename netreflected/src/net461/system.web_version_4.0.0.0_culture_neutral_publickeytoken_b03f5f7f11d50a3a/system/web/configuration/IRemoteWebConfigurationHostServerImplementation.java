@@ -132,6 +132,25 @@ public class IRemoteWebConfigurationHostServerImplementation extends NetObject i
 
     // Methods section
     
+    public byte[] GetData(java.lang.String fileName, boolean getReadTimeOnly, JCORefOut readTime) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetData", fileName, getReadTimeOnly, readTime.getJCRefOut());
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+            for(int indexGetData = 0; indexGetData < resultingArrayList.size(); indexGetData++ ) {
+				resultingArray[indexGetData] = (byte)resultingArrayList.get(indexGetData);
+            }
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String DoEncryptOrDecrypt(boolean doEncrypt, java.lang.String xmlString, java.lang.String protectionProviderName, java.lang.String protectionProviderType, java.lang.String[] parameterKeys, java.lang.String[] parameterValues) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -157,6 +176,36 @@ public class IRemoteWebConfigurationHostServerImplementation extends NetObject i
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Invoke("GetFilePaths", webLevel, path, site, locationSubPath);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void GetFileDetails(java.lang.String name, JCORefOut exists, JCORefOut size, JCORefOut createDate, JCORefOut lastWriteDate) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetFileDetails", name, exists.getJCRefOut(), size.getJCRefOut(), createDate.getJCRefOut(), lastWriteDate.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void WriteData(java.lang.String fileName, java.lang.String templateFileName, byte[] data, long readTime) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("WriteData", fileName, templateFileName, data, readTime);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void WriteData(java.lang.String dupParam0, java.lang.String dupParam1, JCORefOut dupParam2, long dupParam3) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("WriteData", dupParam0, dupParam1, dupParam2.getJCRefOut(), dupParam3);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

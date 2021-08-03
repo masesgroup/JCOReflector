@@ -39,8 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.threading.WaitHandle;
-import system.security.accesscontrol.SemaphoreRights;
 import system.security.accesscontrol.SemaphoreSecurity;
+import system.security.accesscontrol.SemaphoreRights;
 import system.threading.Semaphore;
 
 
@@ -164,11 +164,51 @@ public class Semaphore extends WaitHandle  {
         }
     }
 
+    public Semaphore(int initialCount, int maximumCount, java.lang.String name, boolean createdNew) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.threading.WaitHandleCannotBeOpenedException, system.io.IOException, system.UnauthorizedAccessException, system.io.PathTooLongException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(initialCount, maximumCount, name, createdNew));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Semaphore(int initialCount, int maximumCount, java.lang.String name, boolean createdNew, SemaphoreSecurity semaphoreSecurity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.io.IOException, system.UnauthorizedAccessException, system.io.PathTooLongException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(initialCount, maximumCount, name, createdNew, semaphoreSecurity == null ? null : semaphoreSecurity.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
     // Methods section
     
+    public static boolean TryOpenExisting(java.lang.String name, SemaphoreRights rights, JCORefOut<Semaphore> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.IOException, system.UnauthorizedAccessException, system.io.PathTooLongException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryOpenExisting", name, rights == null ? null : rights.getJCOInstance(), result.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean TryOpenExisting(java.lang.String name, JCORefOut<Semaphore> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.io.IOException, system.UnauthorizedAccessException, system.io.PathTooLongException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryOpenExisting", name, result.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public int Release() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.SemaphoreFullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

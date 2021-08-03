@@ -120,6 +120,8 @@ public interface ITypeLibConverter extends IJCOBridgeReflected {
 
     // Methods section
     
+    public boolean GetPrimaryInteropAssembly(Guid g, int major, int minor, int lcid, JCORefOut asmName, JCORefOut asmCodeBase) throws Throwable;
+
     public NetObject ConvertAssemblyToTypeLib(Assembly assembly, java.lang.String typeLibName, TypeLibExporterFlags flags, ITypeLibExporterNotifySink notifySink) throws Throwable;
 
     public AssemblyBuilder ConvertTypeLibToAssembly(NetObject typeLib, java.lang.String asmFileName, int flags, ITypeLibImporterNotifySink notifySink, byte[] publicKey, StrongNameKeyPair keyPair, boolean unsafeInterfaces) throws Throwable;

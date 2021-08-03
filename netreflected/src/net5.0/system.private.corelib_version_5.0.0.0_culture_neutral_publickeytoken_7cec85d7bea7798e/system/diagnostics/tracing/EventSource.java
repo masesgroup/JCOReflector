@@ -285,6 +285,16 @@ public class EventSource extends NetObject implements AutoCloseable {
         }
     }
 
+    public static void SetCurrentThreadActivityId(Guid activityId, JCORefOut<Guid> oldActivityThatWillContinue) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.globalization.CultureNotFoundException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("SetCurrentThreadActivityId", activityId == null ? null : activityId.getJCOInstance(), oldActivityThatWillContinue.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Write(java.lang.String eventName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.FormatException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

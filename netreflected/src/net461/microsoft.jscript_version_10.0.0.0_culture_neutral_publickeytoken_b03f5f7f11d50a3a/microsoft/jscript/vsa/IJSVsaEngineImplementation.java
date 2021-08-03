@@ -231,6 +231,16 @@ public class IJSVsaEngineImplementation extends NetObject implements IJSVsaEngin
         }
     }
 
+    public void SaveCompiledState(JCORefOut pe, JCORefOut pdb) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SaveCompiledState", pe.getJCRefOut(), pdb.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void SaveSourceState(IJSVsaPersistSite site) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

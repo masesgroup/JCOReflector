@@ -183,6 +183,17 @@ public class DataBinder extends NetObject  {
         }
     }
 
+    public static NetObject GetDataItem(NetObject container, JCORefOut foundDataItem) throws Throwable, system.ArgumentNullException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetDataItem = (JCObject)classType.Invoke("GetDataItem", container == null ? null : container.getJCOInstance(), foundDataItem.getJCRefOut());
+            return new NetObject(objGetDataItem);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static NetObject GetIndexedPropertyValue(NetObject container, java.lang.String expr) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.security.SecurityException, system.NullReferenceException, system.web.HttpException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");

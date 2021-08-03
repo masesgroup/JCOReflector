@@ -198,6 +198,17 @@ public class ChannelServices extends NetObject  {
         }
     }
 
+    public static ServerProcessing DispatchMessage(IServerChannelSinkStack sinkStack, IMessage msg, JCORefOut<IMessage> replyMsg) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.runtime.remoting.RemotingException, system.globalization.CultureNotFoundException, system.security.SecurityException, system.InvalidOperationException, system.NotImplementedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NullReferenceException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objDispatchMessage = (JCObject)classType.Invoke("DispatchMessage", sinkStack == null ? null : sinkStack.getJCOInstance(), msg == null ? null : msg.getJCOInstance(), replyMsg.getJCRefOut());
+            return new ServerProcessing(objDispatchMessage);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static IMessage SyncDispatchMessage(IMessage msg) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.runtime.remoting.RemotingException, system.globalization.CultureNotFoundException, system.security.SecurityException, system.InvalidOperationException, system.NotImplementedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NullReferenceException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");

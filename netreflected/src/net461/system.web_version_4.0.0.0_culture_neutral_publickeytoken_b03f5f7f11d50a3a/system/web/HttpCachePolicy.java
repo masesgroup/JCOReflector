@@ -42,6 +42,7 @@ import system.DateTime;
 import system.TimeSpan;
 import system.web.HttpCacheability;
 import system.web.HttpCacheRevalidation;
+import system.web.HttpCacheValidateHandler;
 import system.web.HttpCacheVaryByContentEncodings;
 import system.web.HttpCacheVaryByHeaders;
 import system.web.HttpCacheVaryByParams;
@@ -343,6 +344,16 @@ public class HttpCachePolicy extends NetObject  {
         try {
             JCObject objGetRevalidation = (JCObject)classInstance.Invoke("GetRevalidation");
             return new HttpCacheRevalidation(objGetRevalidation);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddValidationCallback(HttpCacheValidateHandler handler, NetObject data) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddValidationCallback", handler, data == null ? null : data.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

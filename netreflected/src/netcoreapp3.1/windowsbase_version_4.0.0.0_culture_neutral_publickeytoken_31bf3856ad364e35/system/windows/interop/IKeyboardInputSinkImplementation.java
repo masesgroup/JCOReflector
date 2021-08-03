@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.interop.MSG;
+import system.windows.input.ModifierKeys;
 import system.windows.input.TraversalRequest;
 import system.windows.interop.IKeyboardInputSite;
 import system.windows.interop.IKeyboardInputSiteImplementation;
@@ -147,11 +149,41 @@ public class IKeyboardInputSinkImplementation extends NetObject implements IKeyb
         }
     }
 
+    public boolean OnMnemonic(MSG msg, ModifierKeys modifiers) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("OnMnemonic", msg == null ? null : msg.getJCOInstance(), modifiers == null ? null : modifiers.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean TabInto(TraversalRequest request) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("TabInto", request == null ? null : request.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean TranslateAccelerator(MSG msg, ModifierKeys modifiers) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("TranslateAccelerator", msg == null ? null : msg.getJCOInstance(), modifiers == null ? null : modifiers.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean TranslateChar(MSG msg, ModifierKeys modifiers) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("TranslateChar", msg == null ? null : msg.getJCOInstance(), modifiers == null ? null : modifiers.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

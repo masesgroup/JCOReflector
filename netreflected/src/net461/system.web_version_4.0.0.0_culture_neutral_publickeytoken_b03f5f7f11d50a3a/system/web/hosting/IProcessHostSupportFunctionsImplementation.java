@@ -152,6 +152,26 @@ public class IProcessHostSupportFunctionsImplementation extends NetObject implem
         }
     }
 
+    public void GetApplicationProperties(java.lang.String appId, JCORefOut virtualPath, JCORefOut physicalPath, JCORefOut siteName, JCORefOut siteId) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetApplicationProperties", appId, virtualPath.getJCRefOut(), physicalPath.getJCRefOut(), siteName.getJCRefOut(), siteId.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void MapPath(java.lang.String appId, java.lang.String virtualPath, JCORefOut physicalPath) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("MapPath", appId, virtualPath, physicalPath.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

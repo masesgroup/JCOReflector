@@ -143,6 +143,16 @@ public class IAttachedPropertyStoreImplementation extends NetObject implements I
         }
     }
 
+    public boolean TryGetProperty(AttachableMemberIdentifier attachableMemberIdentifier, JCORefOut<NetObject> value) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("TryGetProperty", attachableMemberIdentifier == null ? null : attachableMemberIdentifier.getJCOInstance(), value.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void SetProperty(AttachableMemberIdentifier attachableMemberIdentifier, NetObject value) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

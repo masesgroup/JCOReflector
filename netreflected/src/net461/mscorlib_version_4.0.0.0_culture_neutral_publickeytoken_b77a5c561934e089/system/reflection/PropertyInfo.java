@@ -44,6 +44,7 @@ import system.reflection.Binder;
 import system.globalization.CultureInfo;
 import system.reflection.MethodInfo;
 import system.reflection.ParameterInfo;
+import system.Guid;
 import system.UInt32;
 import system.reflection.MemberTypes;
 import system.reflection.PropertyAttributes;
@@ -390,6 +391,15 @@ public class PropertyInfo extends MemberInfo  {
      */
     @Deprecated 
     public NetObject[] GetCustomAttributes(NetType attributeType, boolean inherit) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_PropertyInfo to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static To_PropertyInfo method available in _PropertyInfo to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable {
         throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_PropertyInfo to obtain the full interface.");
     }
 

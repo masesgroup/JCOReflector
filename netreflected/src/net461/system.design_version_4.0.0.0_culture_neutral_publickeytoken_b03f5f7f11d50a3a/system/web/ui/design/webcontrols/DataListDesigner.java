@@ -177,6 +177,16 @@ public class DataListDesigner extends BaseDataListDesigner  {
         }
     }
 
+    public java.lang.String GetTemplateContent(ITemplateEditingFrame editingFrame, java.lang.String templateName, JCORefOut allowEditing) throws Throwable, system.NullReferenceException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("GetTemplateContent", editingFrame == null ? null : editingFrame.getJCOInstance(), templateName, allowEditing.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Initialize(IComponent component) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.MulticastNotSupportedException, system.configuration.ConfigurationException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

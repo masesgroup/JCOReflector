@@ -147,6 +147,17 @@ public class MetadataAggregator extends NetObject  {
     
     // Methods section
     
+    public Handle GetGenerationHandle(Handle handle, JCORefOut generation) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetGenerationHandle = (JCObject)classInstance.Invoke("GetGenerationHandle", handle == null ? null : handle.getJCOInstance(), generation.getJCRefOut());
+            return new Handle(objGetGenerationHandle);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

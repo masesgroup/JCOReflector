@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.reflection.ConstructorInfo;
 import system.reflection.FieldInfo;
 import system.reflection.PropertyInfo;
+import system.Guid;
 import system.UInt32;
 
 
@@ -189,6 +190,15 @@ public class CustomAttributeBuilder extends NetObject  {
     
     // Methods section
     
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static To_CustomAttributeBuilder method available in _CustomAttributeBuilder to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_CustomAttributeBuilder to obtain the full interface.");
+    }
+
 
     
     // Properties section

@@ -237,6 +237,16 @@ public class ReaderWriterLock extends CriticalFinalizerObject  {
         }
     }
 
+    public void DowngradeFromWriterLock(LockCookie lockCookie) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("DowngradeFromWriterLock", lockCookie == null ? null : lockCookie.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void ReleaseReaderLock() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -252,6 +262,16 @@ public class ReaderWriterLock extends CriticalFinalizerObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReleaseWriterLock");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void RestoreLock(LockCookie lockCookie) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RestoreLock", lockCookie == null ? null : lockCookie.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

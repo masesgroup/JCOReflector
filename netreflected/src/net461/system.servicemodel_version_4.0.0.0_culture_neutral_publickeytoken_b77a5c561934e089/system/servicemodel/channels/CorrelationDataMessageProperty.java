@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.servicemodel.channels.Message;
+import system.servicemodel.channels.CorrelationDataMessageProperty;
 import system.servicemodel.channels.MessageProperties;
 import system.servicemodel.channels.IMessageProperty;
 import system.servicemodel.channels.IMessagePropertyImplementation;
@@ -160,6 +161,36 @@ public class CorrelationDataMessageProperty extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("Remove", name);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean TryGet(Message message, JCORefOut<CorrelationDataMessageProperty> property) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryGet", message == null ? null : message.getJCOInstance(), property.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean TryGet(MessageProperties properties, JCORefOut<CorrelationDataMessageProperty> property) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryGet", properties == null ? null : properties.getJCOInstance(), property.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean TryGetValue(java.lang.String name, JCORefOut value) throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("TryGetValue", name, value.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

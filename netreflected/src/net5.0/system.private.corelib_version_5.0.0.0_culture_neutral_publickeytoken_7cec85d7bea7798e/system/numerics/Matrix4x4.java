@@ -172,11 +172,31 @@ public class Matrix4x4 extends ValueType  {
     
     // Methods section
     
+    public static boolean Decompose(Matrix4x4 matrix, JCORefOut<Vector3> scale, JCORefOut<Quaternion> rotation, JCORefOut<Vector3> translation) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("Decompose", matrix == null ? null : matrix.getJCOInstance(), scale.getJCRefOut(), rotation.getJCRefOut(), translation.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean Equals(Matrix4x4 other) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean Invert(Matrix4x4 matrix, JCORefOut<Matrix4x4> result) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("Invert", matrix == null ? null : matrix.getJCOInstance(), result.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.servicemodel.channels.MessageVersion;
+import system.servicemodel.channels.Message;
 
 
 /**
@@ -138,6 +139,16 @@ public class IErrorHandlerImplementation extends NetObject implements IErrorHand
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("HandleError", error == null ? null : error.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ProvideFault(NetException error, MessageVersion version, Message fault) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ProvideFault", error == null ? null : error.getJCOInstance(), version == null ? null : version.getJCOInstance(), fault == null ? null : fault.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

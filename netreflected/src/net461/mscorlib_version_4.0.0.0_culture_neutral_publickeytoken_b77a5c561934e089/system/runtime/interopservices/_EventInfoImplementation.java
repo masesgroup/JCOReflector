@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.reflection.MethodInfo;
+import system.Guid;
 import system.UInt32;
 import system.reflection.EventAttributes;
 import system.reflection.MemberTypes;
@@ -241,6 +242,16 @@ public class _EventInfoImplementation extends NetObject implements _EventInfo {
         try {
             JCObject objGetRemoveMethod = (JCObject)classInstance.Invoke("GetRemoveMethod", nonPublic);
             return new MethodInfo(objGetRemoveMethod);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetTypeInfoCount", pcTInfo.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -37,6 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.web.hosting.IAppDomainInfoEnum;
+import system.web.hosting.IAppDomainInfoEnumImplementation;
 
 
 /**
@@ -109,9 +111,13 @@ public interface IProcessHost extends IJCOBridgeReflected {
 
     // Methods section
     
+    public void EnumerateAppDomains(JCORefOut<IAppDomainInfoEnum> appDomainInfoEnum) throws Throwable;
+
     public void Shutdown() throws Throwable;
 
     public void ShutdownApplication(java.lang.String appId) throws Throwable;
+
+    public void StartApplication(java.lang.String appId, java.lang.String appPath, JCORefOut<NetObject> runtimeInterface) throws Throwable;
 
 
     

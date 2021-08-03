@@ -161,6 +161,17 @@ public class XmlDesignerHierarchicalDataSourceView extends DesignerHierarchicalD
     
     // Methods section
     
+    public IHierarchicalEnumerable GetDesignTimeData(JCORefOut isSampleData) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.io.PathTooLongException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetDesignTimeData = (JCObject)classInstance.Invoke("GetDesignTimeData", isSampleData.getJCRefOut());
+            return new IHierarchicalEnumerableImplementation(objGetDesignTimeData);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

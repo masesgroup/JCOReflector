@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.runtime.caching.OnChangedCallback;
+import system.DateTimeOffset;
 
 
 /**
@@ -133,6 +134,16 @@ public class IFileChangeNotificationSystemImplementation extends NetObject imple
 
     // Methods section
     
+    public void StartMonitoring(java.lang.String filePath, OnChangedCallback onChangedCallback, JCORefOut<NetObject> state, JCORefOut<DateTimeOffset> lastWriteTime, JCORefOut fileSize) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("StartMonitoring", filePath, onChangedCallback, state.getJCRefOut(), lastWriteTime.getJCRefOut(), fileSize.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void StopMonitoring(java.lang.String filePath, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

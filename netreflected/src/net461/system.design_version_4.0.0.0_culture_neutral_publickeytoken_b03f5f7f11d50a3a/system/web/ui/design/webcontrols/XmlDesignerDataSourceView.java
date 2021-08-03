@@ -159,6 +159,17 @@ public class XmlDesignerDataSourceView extends DesignerDataSourceView  {
     
     // Methods section
     
+    public IEnumerable GetDesignTimeData(int minimumRows, JCORefOut isSampleData) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.io.PathTooLongException, system.NotSupportedException, system.OverflowException, system.MulticastNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetDesignTimeData = (JCObject)classInstance.Invoke("GetDesignTimeData", minimumRows, isSampleData.getJCRefOut());
+            return new IEnumerableImplementation(objGetDesignTimeData);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

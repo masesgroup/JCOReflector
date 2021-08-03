@@ -37,6 +37,7 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.windows.forms.Message;
 
 
 /**
@@ -109,6 +110,8 @@ public interface IMessageFilter extends IJCOBridgeReflected {
 
     // Methods section
     
+    public boolean PreFilterMessage(Message m) throws Throwable;
+
 
     
     // Properties section

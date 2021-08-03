@@ -39,6 +39,10 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.runtime.interopservices.comtypes.ITypeInfo;
 import system.runtime.interopservices.comtypes.ITypeInfoImplementation;
+import system.runtime.interopservices.comtypes.ITypeComp;
+import system.runtime.interopservices.comtypes.ITypeCompImplementation;
+import system.Guid;
+import system.runtime.interopservices.comtypes.TYPEKIND;
 
 
 /**
@@ -114,6 +118,18 @@ public interface ITypeLib extends IJCOBridgeReflected {
     public boolean IsName(java.lang.String szNameBuf, int lHashVal) throws Throwable;
 
     public int GetTypeInfoCount() throws Throwable;
+
+    public void FindName(java.lang.String szNameBuf, int lHashVal, JCORefOut<ITypeInfo[]> ppTInfo, JCORefOut rgMemId, short pcFound) throws Throwable;
+
+    public void GetDocumentation(int index, JCORefOut strName, JCORefOut strDocString, JCORefOut dwHelpContext, JCORefOut strHelpFile) throws Throwable;
+
+    public void GetTypeComp(JCORefOut<ITypeComp> ppTComp) throws Throwable;
+
+    public void GetTypeInfo(int index, JCORefOut<ITypeInfo> ppTI) throws Throwable;
+
+    public void GetTypeInfoOfGuid(Guid guid, JCORefOut<ITypeInfo> ppTInfo) throws Throwable;
+
+    public void GetTypeInfoType(int index, JCORefOut<TYPEKIND> pTKind) throws Throwable;
 
 
     

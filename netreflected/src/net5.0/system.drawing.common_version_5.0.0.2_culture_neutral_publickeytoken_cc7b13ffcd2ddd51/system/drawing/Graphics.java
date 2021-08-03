@@ -410,6 +410,17 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
+    public SizeF MeasureString(java.lang.String text, Font font, SizeF layoutArea, StringFormat stringFormat, JCORefOut charactersFitted, JCORefOut linesFilled) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objMeasureString = (JCObject)classInstance.Invoke("MeasureString", text, font == null ? null : font.getJCOInstance(), layoutArea == null ? null : layoutArea.getJCOInstance(), stringFormat == null ? null : stringFormat.getJCOInstance(), charactersFitted.getJCRefOut(), linesFilled.getJCRefOut());
+            return new SizeF(objMeasureString);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetObject GetContextInfo() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

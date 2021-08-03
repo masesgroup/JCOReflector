@@ -42,6 +42,7 @@ import system.windows.media.FontFamily;
 import system.windows.FontStyle;
 import system.windows.FontWeight;
 import system.windows.FontStretch;
+import system.windows.media.GlyphTypeface;
 import system.windows.media.LanguageSpecificStringDictionary;
 
 
@@ -180,6 +181,16 @@ public class Typeface extends NetObject  {
     
     // Methods section
     
+    public boolean TryGetGlyphTypeface(JCORefOut<GlyphTypeface> glyphTypeface) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.UriFormatException, system.io.FileNotFoundException, system.io.FileFormatException, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("TryGetGlyphTypeface", glyphTypeface.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

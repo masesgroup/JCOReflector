@@ -185,6 +185,16 @@ public class Encoder extends NetObject  {
         }
     }
 
+    public void Convert(char[] chars, int charIndex, int charCount, byte[] bytes, int byteIndex, int byteCount, boolean flush, JCORefOut charsUsed, JCORefOut bytesUsed, JCORefOut completed) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Convert", chars, charIndex, charCount, bytes, byteIndex, byteCount, flush, charsUsed.getJCRefOut(), bytesUsed.getJCRefOut(), completed.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Reset() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

@@ -143,6 +143,16 @@ public class ITypeLibConverterImplementation extends NetObject implements ITypeL
 
     // Methods section
     
+    public boolean GetPrimaryInteropAssembly(Guid g, int major, int minor, int lcid, JCORefOut asmName, JCORefOut asmCodeBase) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("GetPrimaryInteropAssembly", g == null ? null : g.getJCOInstance(), major, minor, lcid, asmName.getJCRefOut(), asmCodeBase.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetObject ConvertAssemblyToTypeLib(Assembly assembly, java.lang.String typeLibName, TypeLibExporterFlags flags, ITypeLibExporterNotifySink notifySink) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

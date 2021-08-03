@@ -171,6 +171,17 @@ public class Binder extends NetObject  {
         }
     }
 
+    public MethodBase BindToMethod(BindingFlags bindingAttr, MethodBase[] match, NetObject[] args, ParameterModifier[] modifiers, CultureInfo culture, java.lang.String[] names, JCORefOut<NetObject> state) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objBindToMethod = (JCObject)classInstance.Invoke("BindToMethod", bindingAttr == null ? null : bindingAttr.getJCOInstance(), toObjectFromArray(match), toObjectFromArray(args), toObjectFromArray(modifiers), culture == null ? null : culture.getJCOInstance(), names, state.getJCRefOut());
+            return new MethodBase(objBindToMethod);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public MethodBase SelectMethod(BindingFlags bindingAttr, MethodBase[] match, NetType[] types, ParameterModifier[] modifiers) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -188,6 +199,16 @@ public class Binder extends NetObject  {
         try {
             JCObject objSelectProperty = (JCObject)classInstance.Invoke("SelectProperty", bindingAttr == null ? null : bindingAttr.getJCOInstance(), toObjectFromArray(match), returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(indexes), toObjectFromArray(modifiers));
             return new PropertyInfo(objSelectProperty);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ReorderArgumentArray(NetObject[] args, NetObject state) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ReorderArgumentArray", toObjectFromArray(args), state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

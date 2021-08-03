@@ -37,6 +37,7 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.windows.forms.Message;
 
 
 /**
@@ -109,6 +110,8 @@ public interface IWindowTarget extends IJCOBridgeReflected {
 
     // Methods section
     
+    public void OnMessage(Message m) throws Throwable;
+
 
     
     // Properties section

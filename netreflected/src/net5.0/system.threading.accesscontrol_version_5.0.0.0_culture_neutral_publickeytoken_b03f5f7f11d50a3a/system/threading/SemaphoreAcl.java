@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.threading.Semaphore;
+import system.security.accesscontrol.SemaphoreSecurity;
 
 
 /**
@@ -144,6 +145,17 @@ public class SemaphoreAcl extends NetObject  {
     
     // Methods section
     
+    public static Semaphore Create(int initialCount, int maximumCount, java.lang.String name, JCORefOut createdNew, SemaphoreSecurity semaphoreSecurity) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.threading.WaitHandleCannotBeOpenedException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreate = (JCObject)classType.Invoke("Create", initialCount, maximumCount, name, createdNew.getJCRefOut(), semaphoreSecurity == null ? null : semaphoreSecurity.getJCOInstance());
+            return new Semaphore(objCreate);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

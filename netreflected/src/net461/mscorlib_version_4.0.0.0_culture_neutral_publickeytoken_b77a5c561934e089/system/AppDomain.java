@@ -61,6 +61,7 @@ import system.security.IPermissionImplementation;
 import system.security.principal.PrincipalPolicy;
 import system.security.principal.IPrincipal;
 import system.security.principal.IPrincipalImplementation;
+import system.Guid;
 import system.UInt32;
 import system.ActivationContext;
 import system.AppDomainManager;
@@ -1115,6 +1116,15 @@ public class AppDomain extends MarshalByRefObject  {
      */
     @Deprecated 
     public NetObject GetLifetimeService() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_AppDomain to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static To_AppDomain method available in _AppDomain to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable {
         throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_AppDomain to obtain the full interface.");
     }
 

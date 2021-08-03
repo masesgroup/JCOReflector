@@ -180,6 +180,16 @@ public class DataGridViewCell extends DataGridViewElement implements AutoCloseab
         }
     }
 
+    public static int MeasureTextHeight(Graphics graphics, java.lang.String text, Font font, int maxWidth, TextFormatFlags flags, JCORefOut widthTruncated) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OutOfMemoryException, system.componentmodel.InvalidEnumArgumentException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (int)classType.Invoke("MeasureTextHeight", graphics == null ? null : graphics.getJCOInstance(), text, font == null ? null : font.getJCOInstance(), maxWidth, flags == null ? null : flags.getJCOInstance(), widthTruncated.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static int MeasureTextWidth(Graphics graphics, java.lang.String text, Font font, int maxHeight, TextFormatFlags flags) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");

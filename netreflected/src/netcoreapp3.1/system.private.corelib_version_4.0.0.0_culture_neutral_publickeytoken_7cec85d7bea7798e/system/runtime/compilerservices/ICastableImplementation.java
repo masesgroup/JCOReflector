@@ -133,6 +133,16 @@ public class ICastableImplementation extends NetObject implements ICastable {
 
     // Methods section
     
+    public boolean IsInstanceOfInterface(RuntimeTypeHandle interfaceType, JCORefOut<NetException> castError) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("IsInstanceOfInterface", interfaceType == null ? null : interfaceType.getJCOInstance(), castError.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public RuntimeTypeHandle GetImplType(RuntimeTypeHandle interfaceType) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

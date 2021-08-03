@@ -244,6 +244,16 @@ public class Monitor extends NetObject  {
         }
     }
 
+    public static void Enter(NetObject obj, boolean lockTaken) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Enter", obj == null ? null : obj.getJCOInstance(), lockTaken);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static void Exit(NetObject obj) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -269,6 +279,36 @@ public class Monitor extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("PulseAll", obj == null ? null : obj.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void TryEnter(NetObject obj, boolean lockTaken) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("TryEnter", obj == null ? null : obj.getJCOInstance(), lockTaken);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void TryEnter(NetObject obj, int millisecondsTimeout, boolean lockTaken) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("TryEnter", obj == null ? null : obj.getJCOInstance(), millisecondsTimeout, lockTaken);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void TryEnter(NetObject obj, TimeSpan timeout, boolean lockTaken) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("TryEnter", obj == null ? null : obj.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance(), lockTaken);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

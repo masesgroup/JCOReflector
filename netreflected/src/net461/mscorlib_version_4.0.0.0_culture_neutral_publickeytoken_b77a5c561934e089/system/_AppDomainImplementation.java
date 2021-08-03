@@ -49,6 +49,7 @@ import system.reflection.BindingFlags;
 import system.reflection.Binder;
 import system.globalization.CultureInfo;
 import system.CrossAppDomainDelegate;
+import system.Guid;
 import system.UInt32;
 import system.security.policy.PolicyLevel;
 import system.security.principal.PrincipalPolicy;
@@ -552,6 +553,16 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DoCallBack", theDelegate);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetTypeInfoCount", pcTInfo.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

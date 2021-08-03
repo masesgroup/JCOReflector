@@ -145,6 +145,26 @@ public class ExpressionMorphHelper extends NetObject  {
     
     // Methods section
     
+    public boolean TryInferReturnType(ActivityWithResult expression, EditingContext context, JCORefOut<NetType> returnType) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("TryInferReturnType", expression == null ? null : expression.getJCOInstance(), context == null ? null : context.getJCOInstance(), returnType.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean TryMorphExpression(ActivityWithResult expression, boolean isLocationExpression, NetType newType, EditingContext context, JCORefOut<ActivityWithResult> newExpression) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("TryMorphExpression", expression == null ? null : expression.getJCOInstance(), isLocationExpression, newType == null ? null : newType.getJCOInstance(), context == null ? null : context.getJCOInstance(), newExpression.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

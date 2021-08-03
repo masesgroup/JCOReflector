@@ -330,6 +330,16 @@ public class StringType extends NetObject  {
         }
     }
 
+    public static void MidStmtStr(java.lang.String sDest, int StartPosition, int MaxInsertLength, java.lang.String sInsert) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.NotSupportedException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("MidStmtStr", sDest, StartPosition, MaxInsertLength, sInsert);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

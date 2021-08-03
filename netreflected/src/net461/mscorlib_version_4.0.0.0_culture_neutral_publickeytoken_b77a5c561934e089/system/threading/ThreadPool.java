@@ -298,6 +298,36 @@ public class ThreadPool extends NetObject  {
         }
     }
 
+    public static void GetAvailableThreads(JCORefOut workerThreads, JCORefOut completionPortThreads) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("GetAvailableThreads", workerThreads.getJCRefOut(), completionPortThreads.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void GetMaxThreads(JCORefOut workerThreads, JCORefOut completionPortThreads) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("GetMaxThreads", workerThreads.getJCRefOut(), completionPortThreads.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void GetMinThreads(JCORefOut workerThreads, JCORefOut completionPortThreads) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("GetMinThreads", workerThreads.getJCRefOut(), completionPortThreads.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

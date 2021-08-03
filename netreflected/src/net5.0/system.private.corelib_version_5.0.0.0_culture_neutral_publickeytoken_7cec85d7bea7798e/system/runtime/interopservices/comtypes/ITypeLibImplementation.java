@@ -40,6 +40,10 @@ import java.util.ArrayList;
 // Import section
 import system.runtime.interopservices.comtypes.ITypeInfo;
 import system.runtime.interopservices.comtypes.ITypeInfoImplementation;
+import system.runtime.interopservices.comtypes.ITypeComp;
+import system.runtime.interopservices.comtypes.ITypeCompImplementation;
+import system.Guid;
+import system.runtime.interopservices.comtypes.TYPEKIND;
 
 
 /**
@@ -149,6 +153,66 @@ public class ITypeLibImplementation extends NetObject implements ITypeLib {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Invoke("GetTypeInfoCount");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void FindName(java.lang.String szNameBuf, int lHashVal, JCORefOut<ITypeInfo[]> ppTInfo, JCORefOut rgMemId, short pcFound) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("FindName", szNameBuf, lHashVal, ppTInfo.getJCRefOut(), rgMemId.getJCRefOut(), pcFound);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void GetDocumentation(int index, JCORefOut strName, JCORefOut strDocString, JCORefOut dwHelpContext, JCORefOut strHelpFile) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetDocumentation", index, strName.getJCRefOut(), strDocString.getJCRefOut(), dwHelpContext.getJCRefOut(), strHelpFile.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void GetTypeComp(JCORefOut<ITypeComp> ppTComp) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetTypeComp", ppTComp.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void GetTypeInfo(int index, JCORefOut<ITypeInfo> ppTI) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetTypeInfo", index, ppTI.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void GetTypeInfoOfGuid(Guid guid, JCORefOut<ITypeInfo> ppTInfo) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetTypeInfoOfGuid", guid == null ? null : guid.getJCOInstance(), ppTInfo.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void GetTypeInfoType(int index, JCORefOut<TYPEKIND> pTKind) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetTypeInfoType", index, pTKind.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

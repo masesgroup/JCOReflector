@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.forms.Message;
 import system.windows.forms.HighDpiMode;
 import system.windows.forms.PowerState;
 import system.threading.ApartmentState;
@@ -160,6 +161,16 @@ public class Application extends NetObject  {
     
     // Methods section
     
+    public static boolean FilterMessage(Message message) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("FilterMessage", message == null ? null : message.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static boolean SetHighDpiMode(HighDpiMode highDpiMode) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");

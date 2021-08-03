@@ -155,6 +155,7 @@ public interface ICscHostObject2 extends IJCOBridgeReflected, ICscHostObject, IT
 
 
 
+
     public boolean SetWin32Manifest(java.lang.String win32Manifest) throws Throwable;
 
 

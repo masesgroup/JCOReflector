@@ -339,6 +339,17 @@ public class WSTrustChannel extends NetObject  {
         }
     }
 
+    public SecurityToken EndIssue(IAsyncResult result, JCORefOut<RequestSecurityTokenResponse> rstr) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException, system.xml.XmlException, system.NotSupportedException, system.MissingMethodException, system.security.cryptography.CryptographicException, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objEndIssue = (JCObject)classInstance.Invoke("EndIssue", result == null ? null : result.getJCOInstance(), rstr.getJCRefOut());
+            return new SecurityToken(objEndIssue);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public SecurityToken GetTokenFromResponse(RequestSecurityToken request, RequestSecurityTokenResponse response) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.InvalidTimeZoneException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -355,6 +366,17 @@ public class WSTrustChannel extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objIssue = (JCObject)classInstance.Invoke("Issue", rst == null ? null : rst.getJCOInstance());
+            return new SecurityToken(objIssue);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SecurityToken Issue(RequestSecurityToken rst, JCORefOut<RequestSecurityTokenResponse> rstr) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.xml.XmlException, system.NotSupportedException, system.MissingMethodException, system.security.cryptography.CryptographicException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objIssue = (JCObject)classInstance.Invoke("Issue", rst == null ? null : rst.getJCOInstance(), rstr.getJCRefOut());
             return new SecurityToken(objIssue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -479,6 +501,16 @@ public class WSTrustChannel extends NetObject  {
         }
     }
 
+    public void EndCancel(IAsyncResult result, JCORefOut<RequestSecurityTokenResponse> rstr) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException, system.xml.XmlException, system.NotSupportedException, system.MissingMethodException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("EndCancel", result == null ? null : result.getJCOInstance(), rstr.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void EndClose(IAsyncResult result) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -494,6 +526,26 @@ public class WSTrustChannel extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("EndOpen", result == null ? null : result.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void EndRenew(IAsyncResult result, JCORefOut<RequestSecurityTokenResponse> rstr) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException, system.xml.XmlException, system.NotSupportedException, system.MissingMethodException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("EndRenew", result == null ? null : result.getJCOInstance(), rstr.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void EndValidate(IAsyncResult result, JCORefOut<RequestSecurityTokenResponse> rstr) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.threading.AbandonedMutexException, system.xml.XmlException, system.NotSupportedException, system.MissingMethodException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("EndValidate", result == null ? null : result.getJCOInstance(), rstr.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

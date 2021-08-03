@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 
 // Import section
 import system.servicemodel.channels.MessageVersion;
+import system.servicemodel.channels.Message;
 
 
 /**
@@ -111,6 +112,8 @@ public interface IErrorHandler extends IJCOBridgeReflected {
     // Methods section
     
     public boolean HandleError(NetException error) throws Throwable;
+
+    public void ProvideFault(NetException error, MessageVersion version, Message fault) throws Throwable;
 
 
     

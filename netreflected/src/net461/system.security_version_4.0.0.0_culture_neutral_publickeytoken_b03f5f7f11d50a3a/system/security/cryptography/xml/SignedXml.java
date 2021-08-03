@@ -223,6 +223,16 @@ public class SignedXml extends NetObject  {
         }
     }
 
+    public boolean CheckSignatureReturningKey(JCORefOut<AsymmetricAlgorithm> signingKey) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.FormatException, system.NotImplementedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.threading.ThreadAbortException, system.MissingMethodException, system.OutOfMemoryException, system.security.SecurityException, system.AccessViolationException, system.RankException, system.UnauthorizedAccessException, system.io.IOException, system.ApplicationException, system.xml.XmlException, system.security.cryptography.CryptographicUnexpectedOperationException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.xml.xpath.XPathException, system.InvalidCastException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("CheckSignatureReturningKey", signingKey.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public XmlElement GetIdElement(XmlDocument document, java.lang.String idValue) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.NotSupportedException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.security.cryptography.CryptographicException, system.xml.xpath.XPathException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.enterpriseservices.SharedPropertyGroup;
+import system.enterpriseservices.PropertyLockMode;
+import system.enterpriseservices.PropertyReleaseMode;
 
 
 /**
@@ -152,6 +154,17 @@ public class SharedPropertyGroupManager extends NetObjectEnumerable  {
     
     // Methods section
     
+    public SharedPropertyGroup CreatePropertyGroup(java.lang.String name, PropertyLockMode dwIsoMode, PropertyReleaseMode dwRelMode, JCORefOut fExist) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreatePropertyGroup = (JCObject)classInstance.Invoke("CreatePropertyGroup", name, dwIsoMode == null ? null : dwIsoMode.getJCOInstance(), dwRelMode == null ? null : dwRelMode.getJCOInstance(), fExist.getJCRefOut());
+            return new SharedPropertyGroup(objCreatePropertyGroup);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public SharedPropertyGroup Group(java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

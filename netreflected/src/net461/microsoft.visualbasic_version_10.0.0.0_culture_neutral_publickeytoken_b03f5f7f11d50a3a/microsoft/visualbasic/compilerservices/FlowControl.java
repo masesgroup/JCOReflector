@@ -148,11 +148,41 @@ public class FlowControl extends NetObject  {
     
     // Methods section
     
+    public static boolean ForEachNextObj(NetObject obj, IEnumerator enumerator) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("ForEachNextObj", obj == null ? null : obj.getJCOInstance(), enumerator == null ? null : enumerator.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean ForLoopInitObj(NetObject Counter, NetObject Start, NetObject Limit, NetObject StepValue, NetObject LoopForResult, NetObject CounterResult) throws Throwable, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.OverflowException, system.InvalidCastException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("ForLoopInitObj", Counter == null ? null : Counter.getJCOInstance(), Start == null ? null : Start.getJCOInstance(), Limit == null ? null : Limit.getJCOInstance(), StepValue == null ? null : StepValue.getJCOInstance(), LoopForResult == null ? null : LoopForResult.getJCOInstance(), CounterResult == null ? null : CounterResult.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static boolean ForNextCheckDec(Decimal count, Decimal limit, Decimal StepValue) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (boolean)classType.Invoke("ForNextCheckDec", count == null ? null : count.getJCOInstance(), limit == null ? null : limit.getJCOInstance(), StepValue == null ? null : StepValue.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean ForNextCheckObj(NetObject Counter, NetObject LoopObj, NetObject CounterResult) throws Throwable, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.globalization.CultureNotFoundException, system.ArgumentException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NullReferenceException, system.OverflowException, system.InvalidCastException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("ForNextCheckObj", Counter == null ? null : Counter.getJCOInstance(), LoopObj == null ? null : LoopObj.getJCOInstance(), CounterResult == null ? null : CounterResult.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

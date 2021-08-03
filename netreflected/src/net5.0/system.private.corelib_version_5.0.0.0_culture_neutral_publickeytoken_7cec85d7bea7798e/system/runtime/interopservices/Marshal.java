@@ -474,6 +474,16 @@ public class Marshal extends NetObject  {
         }
     }
 
+    public static void WriteInt16(JCORefOut<NetObject> ptr, int ofs, char val) throws Throwable, system.PlatformNotSupportedException, system.AccessViolationException, system.ArgumentException, system.OutOfMemoryException, system.runtime.interopservices.MarshalDirectiveException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("WriteInt16", ptr.getJCRefOut(), ofs, val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static void WriteInt16(NetObject ptr, int ofs, short val) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.AccessViolationException, system.ArgumentException, system.OutOfMemoryException, system.runtime.interopservices.MarshalDirectiveException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");

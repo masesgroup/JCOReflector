@@ -144,6 +144,17 @@ public class IXamlNameResolverImplementation extends NetObject implements IXamlN
         }
     }
 
+    public NetObject Resolve(java.lang.String name, JCORefOut isFullyInitialized) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objResolve = (JCObject)classInstance.Invoke("Resolve", name, isFullyInitialized.getJCRefOut());
+            return new NetObject(objResolve);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.forms.Control;
+import system.windows.forms.Message;
 import system.drawing.Bitmap;
 import system.drawing.Rectangle;
 import system.componentmodel.AttributeCollection;
@@ -181,6 +182,16 @@ public class AxHost extends Control implements system.componentmodel.ICustomType
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("HasPropertyPages");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean PreProcessMessage(Message msg) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("PreProcessMessage", msg == null ? null : msg.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

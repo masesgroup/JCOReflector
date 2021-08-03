@@ -187,6 +187,26 @@ public class Expression extends NetObject  {
     
     // Methods section
     
+    public static boolean TryGetActionType(NetType[] typeArgs, JCORefOut<NetType> actionType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryGetActionType", toObjectFromArray(typeArgs), actionType.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean TryGetFuncType(NetType[] typeArgs, JCORefOut<NetType> funcType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryGetFuncType", toObjectFromArray(typeArgs), funcType.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static BinaryExpression Add(Expression left, Expression right) throws Throwable, system.ArgumentNullException, system.FormatException, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");

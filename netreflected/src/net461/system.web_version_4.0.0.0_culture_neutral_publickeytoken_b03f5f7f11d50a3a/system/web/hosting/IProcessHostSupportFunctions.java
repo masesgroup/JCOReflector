@@ -113,6 +113,10 @@ public interface IProcessHostSupportFunctions extends IJCOBridgeReflected {
 
     public java.lang.String GetRootWebConfigFilename() throws Throwable;
 
+    public void GetApplicationProperties(java.lang.String appId, JCORefOut virtualPath, JCORefOut physicalPath, JCORefOut siteName, JCORefOut siteId) throws Throwable;
+
+    public void MapPath(java.lang.String appId, java.lang.String virtualPath, JCORefOut physicalPath) throws Throwable;
+
 
     
     // Properties section

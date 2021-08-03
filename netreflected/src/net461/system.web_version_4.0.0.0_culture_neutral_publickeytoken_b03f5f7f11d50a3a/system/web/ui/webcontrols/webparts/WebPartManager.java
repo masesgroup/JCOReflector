@@ -291,6 +291,17 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
         }
     }
 
+    public WebPart ImportWebPart(XmlReader reader, JCORefOut errorMessage) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.security.SecurityException, system.xml.XmlException, system.TypeLoadException, system.OverflowException, system.FormatException, system.InvalidCastException, system.web.HttpRequestValidationException, system.web.HttpCompileException, system.MulticastNotSupportedException, system.reflection.AmbiguousMatchException, system.io.InvalidDataException, system.RankException, system.collections.generic.KeyNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objImportWebPart = (JCObject)classInstance.Invoke("ImportWebPart", reader == null ? null : reader.getJCOInstance(), errorMessage.getJCRefOut());
+            return new WebPart(objImportWebPart);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public WebPartConnection ConnectWebParts(WebPart provider, ProviderConnectionPoint providerConnectionPoint, WebPart consumer, ConsumerConnectionPoint consumerConnectionPoint) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.OverflowException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

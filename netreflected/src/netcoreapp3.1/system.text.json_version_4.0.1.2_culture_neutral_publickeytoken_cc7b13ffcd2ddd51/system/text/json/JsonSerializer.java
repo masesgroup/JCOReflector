@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.text.json.JsonSerializerOptions;
+import system.text.json.Utf8JsonReader;
 import system.threading.tasks.Task;
 import system.io.Stream;
 import system.threading.CancellationToken;
@@ -172,6 +173,17 @@ public class JsonSerializer extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objDeserialize = (JCObject)classType.Invoke("Deserialize", json, returnType == null ? null : returnType.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            return new NetObject(objDeserialize);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject Deserialize(Utf8JsonReader reader, NetType returnType, JsonSerializerOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.reflection.AmbiguousMatchException, system.MissingMethodException, system.collections.generic.KeyNotFoundException, system.text.json.JsonException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objDeserialize = (JCObject)classType.Invoke("Deserialize", reader == null ? null : reader.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), options == null ? null : options.getJCOInstance());
             return new NetObject(objDeserialize);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

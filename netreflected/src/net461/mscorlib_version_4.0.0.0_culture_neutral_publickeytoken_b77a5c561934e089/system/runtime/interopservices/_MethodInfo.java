@@ -43,6 +43,7 @@ import system.globalization.CultureInfo;
 import system.reflection.MethodImplAttributes;
 import system.reflection.MethodInfo;
 import system.reflection.ParameterInfo;
+import system.Guid;
 import system.UInt32;
 import system.reflection.CallingConventions;
 import system.reflection.ICustomAttributeProvider;
@@ -137,6 +138,8 @@ public interface _MethodInfo extends IJCOBridgeReflected {
     public MethodInfo GetBaseDefinition() throws Throwable;
 
     public ParameterInfo[] GetParameters() throws Throwable;
+
+    public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable;
 
 
     

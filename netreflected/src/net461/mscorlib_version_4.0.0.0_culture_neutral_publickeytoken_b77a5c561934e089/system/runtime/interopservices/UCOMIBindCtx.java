@@ -37,6 +37,11 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.runtime.interopservices.UCOMIEnumString;
+import system.runtime.interopservices.UCOMIEnumStringImplementation;
+import system.runtime.interopservices.BIND_OPTS;
+import system.runtime.interopservices.UCOMIRunningObjectTable;
+import system.runtime.interopservices.UCOMIRunningObjectTableImplementation;
 
 
 /**
@@ -109,6 +114,14 @@ public interface UCOMIBindCtx extends IJCOBridgeReflected {
 
     // Methods section
     
+    public void EnumObjectParam(JCORefOut<UCOMIEnumString> ppenum) throws Throwable;
+
+    public void GetBindOptions(BIND_OPTS pbindopts) throws Throwable;
+
+    public void GetObjectParam(java.lang.String pszKey, JCORefOut<NetObject> ppunk) throws Throwable;
+
+    public void GetRunningObjectTable(JCORefOut<UCOMIRunningObjectTable> pprot) throws Throwable;
+
     public void RegisterObjectBound(NetObject punk) throws Throwable;
 
     public void RegisterObjectParam(java.lang.String pszKey, NetObject punk) throws Throwable;
@@ -118,6 +131,8 @@ public interface UCOMIBindCtx extends IJCOBridgeReflected {
     public void RevokeObjectBound(NetObject punk) throws Throwable;
 
     public void RevokeObjectParam(java.lang.String pszKey) throws Throwable;
+
+    public void SetBindOptions(BIND_OPTS pbindopts) throws Throwable;
 
 
     

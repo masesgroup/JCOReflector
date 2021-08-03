@@ -42,6 +42,8 @@ import system.ValueType;
 import system.reflection.metadata.BlobBuilder;
 import system.reflection.metadata.ecma335.ScalarEncoder;
 import system.reflection.metadata.ecma335.VectorEncoder;
+import system.reflection.metadata.ecma335.CustomAttributeElementTypeEncoder;
+import system.reflection.metadata.ecma335.CustomAttributeArrayTypeEncoder;
 
 
 /**
@@ -176,6 +178,26 @@ public class LiteralEncoder extends ValueType  {
         try {
             JCObject objVector = (JCObject)classInstance.Invoke("Vector");
             return new VectorEncoder(objVector);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void TaggedScalar(JCORefOut<CustomAttributeElementTypeEncoder> type, JCORefOut<ScalarEncoder> scalar) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("TaggedScalar", type.getJCRefOut(), scalar.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void TaggedVector(JCORefOut<CustomAttributeArrayTypeEncoder> arrayType, JCORefOut<VectorEncoder> vector) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("TaggedVector", arrayType.getJCRefOut(), vector.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

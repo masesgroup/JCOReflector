@@ -133,6 +133,16 @@ public class ISessionIDManagerImplementation extends NetObject implements ISessi
 
     // Methods section
     
+    public boolean InitializeRequest(HttpContext context, boolean suppressAutoDetectRedirect, JCORefOut supportSessionIDReissue) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("InitializeRequest", context == null ? null : context.getJCOInstance(), suppressAutoDetectRedirect, supportSessionIDReissue.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean Validate(java.lang.String id) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -178,6 +188,16 @@ public class ISessionIDManagerImplementation extends NetObject implements ISessi
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveSessionID", context == null ? null : context.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SaveSessionID(HttpContext context, java.lang.String id, JCORefOut redirected, JCORefOut cookieAdded) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SaveSessionID", context == null ? null : context.getJCOInstance(), id, redirected.getJCRefOut(), cookieAdded.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -156,6 +156,16 @@ public class LocationReferenceEnvironment extends NetObject  {
         }
     }
 
+    public boolean TryGetLocationReference(java.lang.String name, JCORefOut<LocationReference> result) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("TryGetLocationReference", name, result.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

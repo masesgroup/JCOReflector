@@ -37,6 +37,7 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.UInt64;
 
 
 /**
@@ -109,6 +110,8 @@ public interface IDebugVsaScriptCodeItem extends IJCOBridgeReflected {
 
     // Methods section
     
+    public boolean ParseNamedBreakPoint(java.lang.String input, JCORefOut functionName, JCORefOut nargs, JCORefOut arguments, JCORefOut returnType, JCORefOut<UInt64> offset) throws Throwable;
+
     public NetObject Evaluate() throws Throwable;
 
 

@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import accessibility.IAccessible;
+import accessibility.IAccessibleImplementation;
 
 
 /**
@@ -132,6 +134,16 @@ public class IAccessibleHandlerImplementation extends NetObject implements IAcce
 
     // Methods section
     
+    public void AccessibleObjectFromID(int hwnd, int lObjectID, JCORefOut<IAccessible> pIAccessible) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AccessibleObjectFromID", hwnd, lObjectID, pIAccessible.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

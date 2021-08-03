@@ -49,9 +49,11 @@ import system.net.sockets.SocketOptionLevel;
 import system.net.sockets.SocketOptionName;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
-import system.net.sockets.IOControlCode;
-import system.net.sockets.SocketFlags;
+import system.net.sockets.SocketError;
 import system.net.EndPoint;
+import system.net.sockets.SocketFlags;
+import system.net.sockets.IPPacketInformation;
+import system.net.sockets.IOControlCode;
 import system.AsyncCallback;
 import system.net.sockets.Socket;
 import system.net.IPAddress;
@@ -347,11 +349,51 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
+    public int EndReceive(IAsyncResult asyncResult, JCORefOut<SocketError> errorCode) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.diagnostics.tracing.EventSourceException, system.threading.AbandonedMutexException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("EndReceive", asyncResult == null ? null : asyncResult.getJCOInstance(), errorCode.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int EndReceiveFrom(IAsyncResult asyncResult, EndPoint endPoint) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.net.sockets.SocketException, system.ArrayTypeMismatchException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("EndReceiveFrom", asyncResult == null ? null : asyncResult.getJCOInstance(), endPoint == null ? null : endPoint.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int EndReceiveMessageFrom(IAsyncResult asyncResult, SocketFlags socketFlags, EndPoint endPoint, JCORefOut<IPPacketInformation> ipPacketInformation) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.net.sockets.SocketException, system.ArrayTypeMismatchException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("EndReceiveMessageFrom", asyncResult == null ? null : asyncResult.getJCOInstance(), socketFlags == null ? null : socketFlags.getJCOInstance(), endPoint == null ? null : endPoint.getJCOInstance(), ipPacketInformation.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public int EndSend(IAsyncResult asyncResult) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Invoke("EndSend", asyncResult == null ? null : asyncResult.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int EndSend(IAsyncResult asyncResult, JCORefOut<SocketError> errorCode) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.diagnostics.tracing.EventSourceException, system.threading.AbandonedMutexException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("EndSend", asyncResult == null ? null : asyncResult.getJCOInstance(), errorCode.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -447,6 +489,16 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
+    public int Receive(byte[] buffer, int offset, int size, SocketFlags socketFlags, JCORefOut<SocketError> errorCode) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.net.sockets.SocketException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("Receive", buffer, offset, size, socketFlags == null ? null : socketFlags.getJCOInstance(), errorCode.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public int Receive(byte[] buffer, int size, SocketFlags socketFlags) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.net.sockets.SocketException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -487,6 +539,96 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
+    public int ReceiveFrom(byte[] buffer, int offset, int size, SocketFlags socketFlags, EndPoint remoteEP) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.net.sockets.SocketException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("ReceiveFrom", buffer, offset, size, socketFlags == null ? null : socketFlags.getJCOInstance(), remoteEP == null ? null : remoteEP.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int ReceiveFrom(JCORefOut dupParam0, int dupParam1, int dupParam2, SocketFlags dupParam3, EndPoint dupParam4) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.net.sockets.SocketException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("ReceiveFrom", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int ReceiveFrom(byte[] buffer, int size, SocketFlags socketFlags, EndPoint remoteEP) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.net.sockets.SocketException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("ReceiveFrom", buffer, size, socketFlags == null ? null : socketFlags.getJCOInstance(), remoteEP == null ? null : remoteEP.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int ReceiveFrom(JCORefOut dupParam0, int dupParam1, SocketFlags dupParam2, EndPoint dupParam3) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.net.sockets.SocketException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("ReceiveFrom", dupParam0.getJCRefOut(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3 == null ? null : dupParam3.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int ReceiveFrom(byte[] buffer, EndPoint remoteEP) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.net.sockets.SocketException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("ReceiveFrom", buffer, remoteEP == null ? null : remoteEP.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int ReceiveFrom(JCORefOut dupParam0, EndPoint dupParam1) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.net.sockets.SocketException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("ReceiveFrom", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int ReceiveFrom(byte[] buffer, SocketFlags socketFlags, EndPoint remoteEP) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.net.sockets.SocketException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("ReceiveFrom", buffer, socketFlags == null ? null : socketFlags.getJCOInstance(), remoteEP == null ? null : remoteEP.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int ReceiveFrom(JCORefOut dupParam0, SocketFlags dupParam1, EndPoint dupParam2) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.net.sockets.SocketException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("ReceiveFrom", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance(), dupParam2 == null ? null : dupParam2.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int ReceiveMessageFrom(byte[] buffer, int offset, int size, SocketFlags socketFlags, EndPoint remoteEP, JCORefOut<IPPacketInformation> ipPacketInformation) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.net.sockets.SocketException, system.ArrayTypeMismatchException, system.OverflowException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("ReceiveMessageFrom", buffer, offset, size, socketFlags == null ? null : socketFlags.getJCOInstance(), remoteEP == null ? null : remoteEP.getJCOInstance(), ipPacketInformation.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public int Send(byte[] buffer) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.net.sockets.SocketException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -522,6 +664,16 @@ public class Socket extends NetObject implements AutoCloseable {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Invoke("Send", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int Send(byte[] buffer, int offset, int size, SocketFlags socketFlags, JCORefOut<SocketError> errorCode) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.net.sockets.SocketException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("Send", buffer, offset, size, socketFlags == null ? null : socketFlags.getJCOInstance(), errorCode.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -757,6 +909,61 @@ public class Socket extends NetObject implements AutoCloseable {
         }
     }
 
+    public IAsyncResult BeginReceive(byte[] buffer, int offset, int size, SocketFlags socketFlags, JCORefOut<SocketError> errorCode, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.security.SecurityException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objBeginReceive = (JCObject)classInstance.Invoke("BeginReceive", buffer, offset, size, socketFlags == null ? null : socketFlags.getJCOInstance(), errorCode.getJCRefOut(), callback, state == null ? null : state.getJCOInstance());
+            return new IAsyncResultImplementation(objBeginReceive);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IAsyncResult BeginReceiveFrom(byte[] buffer, int offset, int size, SocketFlags socketFlags, EndPoint remoteEP, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.net.sockets.SocketException, system.ArrayTypeMismatchException, system.security.SecurityException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objBeginReceiveFrom = (JCObject)classInstance.Invoke("BeginReceiveFrom", buffer, offset, size, socketFlags == null ? null : socketFlags.getJCOInstance(), remoteEP == null ? null : remoteEP.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            return new IAsyncResultImplementation(objBeginReceiveFrom);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IAsyncResult BeginReceiveFrom(JCORefOut dupParam0, int dupParam1, int dupParam2, SocketFlags dupParam3, EndPoint dupParam4, AsyncCallback dupParam5, NetObject dupParam6) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.net.sockets.SocketException, system.ArrayTypeMismatchException, system.security.SecurityException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objBeginReceiveFrom = (JCObject)classInstance.Invoke("BeginReceiveFrom", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance(), dupParam5, dupParam6 == null ? null : dupParam6.getJCOInstance());
+            return new IAsyncResultImplementation(objBeginReceiveFrom);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IAsyncResult BeginReceiveMessageFrom(byte[] buffer, int offset, int size, SocketFlags socketFlags, EndPoint remoteEP, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.net.sockets.SocketException, system.OverflowException, system.threading.tasks.TaskSchedulerException, system.security.SecurityException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objBeginReceiveMessageFrom = (JCObject)classInstance.Invoke("BeginReceiveMessageFrom", buffer, offset, size, socketFlags == null ? null : socketFlags.getJCOInstance(), remoteEP == null ? null : remoteEP.getJCOInstance(), callback, state == null ? null : state.getJCOInstance());
+            return new IAsyncResultImplementation(objBeginReceiveMessageFrom);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IAsyncResult BeginReceiveMessageFrom(JCORefOut dupParam0, int dupParam1, int dupParam2, SocketFlags dupParam3, EndPoint dupParam4, AsyncCallback dupParam5, NetObject dupParam6) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.net.sockets.SocketException, system.OverflowException, system.threading.tasks.TaskSchedulerException, system.security.SecurityException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objBeginReceiveMessageFrom = (JCObject)classInstance.Invoke("BeginReceiveMessageFrom", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4 == null ? null : dupParam4.getJCOInstance(), dupParam5, dupParam6 == null ? null : dupParam6.getJCOInstance());
+            return new IAsyncResultImplementation(objBeginReceiveMessageFrom);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public IAsyncResult BeginSend(byte[] buffer, int offset, int size, SocketFlags socketFlags, AsyncCallback callback, NetObject state) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.net.sockets.SocketException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.security.SecurityException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -773,6 +980,17 @@ public class Socket extends NetObject implements AutoCloseable {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objBeginSend = (JCObject)classInstance.Invoke("BeginSend", dupParam0.getJCRefOut(), dupParam1, dupParam2, dupParam3 == null ? null : dupParam3.getJCOInstance(), dupParam4, dupParam5 == null ? null : dupParam5.getJCOInstance());
+            return new IAsyncResultImplementation(objBeginSend);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public IAsyncResult BeginSend(byte[] buffer, int offset, int size, SocketFlags socketFlags, JCORefOut<SocketError> errorCode, AsyncCallback callback, NetObject state) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.net.sockets.SocketException, system.ArrayTypeMismatchException, system.security.SecurityException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objBeginSend = (JCObject)classInstance.Invoke("BeginSend", buffer, offset, size, socketFlags == null ? null : socketFlags.getJCOInstance(), errorCode.getJCRefOut(), callback, state == null ? null : state.getJCOInstance());
             return new IAsyncResultImplementation(objBeginSend);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -840,6 +1058,28 @@ public class Socket extends NetObject implements AutoCloseable {
         try {
             JCObject objAccept = (JCObject)classInstance.Invoke("Accept");
             return new Socket(objAccept);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Socket EndAccept(JCORefOut buffer, JCORefOut bytesTransferred, IAsyncResult asyncResult) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.net.sockets.SocketException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objEndAccept = (JCObject)classInstance.Invoke("EndAccept", buffer.getJCRefOut(), bytesTransferred.getJCRefOut(), asyncResult == null ? null : asyncResult.getJCOInstance());
+            return new Socket(objEndAccept);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Socket EndAccept(JCORefOut buffer, IAsyncResult asyncResult) throws Throwable, system.PlatformNotSupportedException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.OutOfMemoryException, system.ObjectDisposedException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.net.sockets.SocketException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objEndAccept = (JCObject)classInstance.Invoke("EndAccept", buffer.getJCRefOut(), asyncResult == null ? null : asyncResult.getJCOInstance());
+            return new Socket(objEndAccept);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

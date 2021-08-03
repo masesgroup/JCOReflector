@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.Guid;
 
 
 /**
@@ -137,6 +138,26 @@ public class UCOMIPersistFileImplementation extends NetObject implements UCOMIPe
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Invoke("IsDirty");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void GetClassID(JCORefOut<Guid> pClassID) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetClassID", pClassID.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void GetCurFile(JCORefOut ppszFileName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetCurFile", ppszFileName.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 
 // Import section
 import system.TypedReference;
+import system.Guid;
 import system.UInt32;
 import system.reflection.BindingFlags;
 import system.reflection.Binder;
@@ -126,6 +127,8 @@ public interface _FieldInfo extends IJCOBridgeReflected {
     public NetObject[] GetCustomAttributes(boolean inherit) throws Throwable;
 
     public NetObject[] GetCustomAttributes(NetType attributeType, boolean inherit) throws Throwable;
+
+    public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable;
 
     public void SetValue(NetObject obj, NetObject value) throws Throwable;
 

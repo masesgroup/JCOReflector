@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.web.HttpCacheValidateHandler;
 import system.web.HttpCacheability;
 import system.DateTime;
 import system.TimeSpan;
@@ -150,6 +151,16 @@ public class HttpCachePolicyBase extends NetObject  {
     
     // Methods section
     
+    public void AddValidationCallback(HttpCacheValidateHandler handler, NetObject data) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddValidationCallback", handler, data == null ? null : data.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void AppendCacheExtension(java.lang.String extension) throws Throwable, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

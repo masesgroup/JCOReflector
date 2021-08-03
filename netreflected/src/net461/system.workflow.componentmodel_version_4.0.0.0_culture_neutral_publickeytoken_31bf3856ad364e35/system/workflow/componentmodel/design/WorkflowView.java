@@ -47,6 +47,7 @@ import system.drawing.Size;
 import system.workflow.componentmodel.design.WorkflowDesignerMessageFilter;
 import system.io.Stream;
 import system.drawing.imaging.ImageFormat;
+import system.windows.forms.Message;
 import system.drawing.printing.PrintDocument;
 import system.windows.forms.HScrollBar;
 import system.windows.forms.VScrollBar;
@@ -54,6 +55,8 @@ import system.workflow.componentmodel.design.ActivityDesigner;
 import system.EventHandler;
 import system.IServiceProvider;
 import system.IServiceProviderImplementation;
+import system.windows.forms.IMessageFilter;
+import system.windows.forms.IMessageFilterImplementation;
 
 
 /**
@@ -62,7 +65,7 @@ import system.IServiceProviderImplementation;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.WorkflowView" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Workflow.ComponentModel.Design.WorkflowView</a>
  */
-public class WorkflowView extends UserControl implements system.IServiceProvider {
+public class WorkflowView extends UserControl implements system.IServiceProvider, system.windows.forms.IMessageFilter {
     /**
      * Fully assembly qualified name: System.Workflow.ComponentModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -432,6 +435,15 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
     @Deprecated 
     public NetObject GetService(NetType serviceType) throws Throwable {
         throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServiceProvider to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIMessageFilter method available in IMessageFilter to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public boolean PreFilterMessage(Message m) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIMessageFilter to obtain the full interface.");
     }
 
 

@@ -154,6 +154,16 @@ public class RequestValidator extends NetObject  {
     
     // Methods section
     
+    public boolean InvokeIsValidRequestString(HttpContext context, java.lang.String value, RequestValidationSource requestValidationSource, java.lang.String collectionKey, JCORefOut validationFailureIndex) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("InvokeIsValidRequestString", context == null ? null : context.getJCOInstance(), value, requestValidationSource == null ? null : requestValidationSource.getJCOInstance(), collectionKey, validationFailureIndex.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

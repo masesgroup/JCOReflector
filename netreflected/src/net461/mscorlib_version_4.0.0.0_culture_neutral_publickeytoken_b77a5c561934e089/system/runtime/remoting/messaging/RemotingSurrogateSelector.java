@@ -168,6 +168,17 @@ public class RemotingSurrogateSelector extends NetObject  {
         }
     }
 
+    public ISerializationSurrogate GetSurrogate(NetType type, StreamingContext context, JCORefOut<ISurrogateSelector> ssout) throws Throwable, system.ArgumentNullException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetSurrogate = (JCObject)classInstance.Invoke("GetSurrogate", type == null ? null : type.getJCOInstance(), context == null ? null : context.getJCOInstance(), ssout.getJCRefOut());
+            return new ISerializationSurrogateImplementation(objGetSurrogate);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public ISurrogateSelector GetNextSelector() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

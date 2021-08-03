@@ -187,6 +187,16 @@ public class IPAddress extends NetObject  {
         }
     }
 
+    public static boolean TryParse(java.lang.String ipString, JCORefOut<IPAddress> address) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryParse", ipString, address.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public byte[] GetAddressBytes() throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

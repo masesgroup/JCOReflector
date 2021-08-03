@@ -173,6 +173,16 @@ public class ModelBinderDictionary extends NetObjectEnumerable  {
         }
     }
 
+    public boolean TryGetValue(NetType key, JCORefOut<IModelBinder> value) throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("TryGetValue", key == null ? null : key.getJCOInstance(), value.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Add(NetType key, IModelBinder value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

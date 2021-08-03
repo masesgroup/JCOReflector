@@ -135,6 +135,8 @@ public interface IJSVsaEngine extends IJCOBridgeReflected {
 
     public void Run() throws Throwable;
 
+    public void SaveCompiledState(JCORefOut pe, JCORefOut pdb) throws Throwable;
+
     public void SaveSourceState(IJSVsaPersistSite site) throws Throwable;
 
     public void SetOption(java.lang.String name, NetObject value) throws Throwable;

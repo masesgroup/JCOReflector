@@ -132,6 +132,16 @@ public class IApplicationPreloadUtilImplementation extends NetObject implements 
 
     // Methods section
     
+    public void GetApplicationPreloadInfo(java.lang.String context, JCORefOut enabled, JCORefOut startupObjType, JCORefOut parametersForStartupObj) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetApplicationPreloadInfo", context, enabled.getJCRefOut(), startupObjType.getJCRefOut(), parametersForStartupObj.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void ReportApplicationPreloadFailure(java.lang.String context, int errorCode, java.lang.String errorMessage) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

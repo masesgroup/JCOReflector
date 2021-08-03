@@ -43,9 +43,9 @@ import system.servicemodel.ICommunicationObject;
 import system.servicemodel.ICommunicationObjectImplementation;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
+import system.servicemodel.channels.RequestContext;
 import system.TimeSpan;
 import system.AsyncCallback;
-import system.servicemodel.channels.RequestContext;
 import system.servicemodel.CommunicationState;
 import system.servicemodel.EndpointAddress;
 import system.EventHandler;
@@ -121,7 +121,11 @@ public interface IReplyChannel extends IJCOBridgeReflected, IChannel, ICommunica
 
     // Methods section
     
+    public boolean EndTryReceiveRequest(IAsyncResult result, JCORefOut<RequestContext> context) throws Throwable;
+
     public boolean EndWaitForRequest(IAsyncResult result) throws Throwable;
+
+    public boolean TryReceiveRequest(TimeSpan timeout, JCORefOut<RequestContext> context) throws Throwable;
 
     public boolean WaitForRequest(TimeSpan timeout) throws Throwable;
 

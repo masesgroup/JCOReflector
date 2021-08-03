@@ -39,6 +39,9 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.runtime.interopservices.comtypes.IMoniker;
 import system.runtime.interopservices.comtypes.IMonikerImplementation;
+import system.runtime.interopservices.comtypes.FILETIME;
+import system.runtime.interopservices.comtypes.IEnumMoniker;
+import system.runtime.interopservices.comtypes.IEnumMonikerImplementation;
 
 
 /**
@@ -111,9 +114,17 @@ public interface IRunningObjectTable extends IJCOBridgeReflected {
 
     // Methods section
     
+    public int GetObject(IMoniker pmkObjectName, JCORefOut<NetObject> ppunkObject) throws Throwable;
+
+    public int GetTimeOfLastChange(IMoniker pmkObjectName, JCORefOut<FILETIME> pfiletime) throws Throwable;
+
     public int IsRunning(IMoniker pmkObjectName) throws Throwable;
 
     public int Register(int grfFlags, NetObject punkObject, IMoniker pmkObjectName) throws Throwable;
+
+    public void EnumRunning(JCORefOut<IEnumMoniker> ppenumMoniker) throws Throwable;
+
+    public void NoteChangeTime(int dwRegister, FILETIME pfiletime) throws Throwable;
 
     public void Revoke(int dwRegister) throws Throwable;
 

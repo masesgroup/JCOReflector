@@ -168,6 +168,16 @@ public class LicenseManager extends NetObject  {
         }
     }
 
+    public static boolean IsValid(NetType type, NetObject instance, JCORefOut<License> license) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.reflection.AmbiguousMatchException, system.TypeLoadException, system.InvalidOperationException, system.NotImplementedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("IsValid", type == null ? null : type.getJCOInstance(), instance == null ? null : instance.getJCOInstance(), license.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static License Validate(NetType type, NetObject instance) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException, system.reflection.AmbiguousMatchException, system.TypeLoadException, system.InvalidOperationException, system.NotImplementedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.componentmodel.LicenseException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");

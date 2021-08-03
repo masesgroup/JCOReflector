@@ -157,6 +157,16 @@ public class SpinLock extends ValueType  {
     
     // Methods section
     
+    public void Enter(boolean lockTaken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidOperationException, system.NotSupportedException, system.threading.LockRecursionException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Enter", lockTaken);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Exit() throws Throwable, system.InvalidOperationException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -172,6 +182,36 @@ public class SpinLock extends ValueType  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Exit", useMemoryBarrier);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void TryEnter(boolean lockTaken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.OutOfMemoryException, system.threading.LockRecursionException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("TryEnter", lockTaken);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void TryEnter(int millisecondsTimeout, boolean lockTaken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidOperationException, system.NotSupportedException, system.threading.LockRecursionException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("TryEnter", millisecondsTimeout, lockTaken);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void TryEnter(TimeSpan timeout, boolean lockTaken) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.OutOfMemoryException, system.threading.LockRecursionException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("TryEnter", timeout == null ? null : timeout.getJCOInstance(), lockTaken);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.enterpriseservices.BOID;
+import system.enterpriseservices.XACTTRANSINFO;
 
 
 /**
@@ -132,11 +134,31 @@ public class ITransactionImplementation extends NetObject implements ITransactio
 
     // Methods section
     
+    public void Abort(BOID pboidReason, int fRetaining, int fAsync) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Abort", pboidReason == null ? null : pboidReason.getJCOInstance(), fRetaining, fAsync);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Commit(int fRetaining, int grfTC, int grfRM) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Commit", fRetaining, grfTC, grfRM);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void GetTransactionInfo(JCORefOut<XACTTRANSINFO> pinfo) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetTransactionInfo", pinfo.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

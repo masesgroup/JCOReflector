@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.threading.Mutex;
+import system.security.accesscontrol.MutexSecurity;
 
 
 /**
@@ -144,6 +145,17 @@ public class MutexAcl extends NetObject  {
     
     // Methods section
     
+    public static Mutex Create(boolean initiallyOwned, java.lang.String name, JCORefOut createdNew, MutexSecurity mutexSecurity) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.ObjectDisposedException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.RankException, system.ArrayTypeMismatchException, system.threading.SynchronizationLockException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreate = (JCObject)classType.Invoke("Create", initiallyOwned, name, createdNew.getJCRefOut(), mutexSecurity == null ? null : mutexSecurity.getJCOInstance());
+            return new Mutex(objCreate);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

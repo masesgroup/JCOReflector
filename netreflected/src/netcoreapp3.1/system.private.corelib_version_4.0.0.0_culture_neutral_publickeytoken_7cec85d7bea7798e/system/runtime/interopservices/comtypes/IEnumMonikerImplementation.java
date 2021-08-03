@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.runtime.interopservices.comtypes.IMoniker;
 import system.runtime.interopservices.comtypes.IMonikerImplementation;
+import system.runtime.interopservices.comtypes.IEnumMoniker;
+import system.runtime.interopservices.comtypes.IEnumMonikerImplementation;
 
 
 /**
@@ -139,6 +141,16 @@ public class IEnumMonikerImplementation extends NetObject implements IEnumMonike
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Invoke("Skip", celt);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Clone(JCORefOut<IEnumMoniker> ppenum) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Clone", ppenum.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

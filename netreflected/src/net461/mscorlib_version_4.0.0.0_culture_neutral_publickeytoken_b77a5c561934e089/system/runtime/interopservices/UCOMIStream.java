@@ -111,6 +111,8 @@ public interface UCOMIStream extends IJCOBridgeReflected {
 
     // Methods section
     
+    public void Clone(JCORefOut<UCOMIStream> ppstm) throws Throwable;
+
     public void Commit(int grfCommitFlags) throws Throwable;
 
     public void LockRegion(long libOffset, long cb, int dwLockType) throws Throwable;

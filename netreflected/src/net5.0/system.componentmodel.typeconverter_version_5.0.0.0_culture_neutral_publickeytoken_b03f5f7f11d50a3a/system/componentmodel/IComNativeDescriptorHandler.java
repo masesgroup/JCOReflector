@@ -132,6 +132,10 @@ public interface IComNativeDescriptorHandler extends IJCOBridgeReflected {
 
     public NetObject GetEditor(NetObject component, NetType baseEditorType) throws Throwable;
 
+    public NetObject GetPropertyValue(NetObject component, int dispid, boolean success) throws Throwable;
+
+    public NetObject GetPropertyValue(NetObject component, java.lang.String propertyName, boolean success) throws Throwable;
+
     public java.lang.String GetClassName(NetObject component) throws Throwable;
 
     public java.lang.String GetName(NetObject component) throws Throwable;

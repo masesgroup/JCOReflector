@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.configuration.provider.ProviderBase;
 import system.web.caching.CacheDependency;
+import system.DateTime;
 import system.collections.IDictionaryEnumerator;
 import system.collections.IDictionaryEnumeratorImplementation;
 import system.web.caching.CacheInsertOptions;
@@ -150,6 +151,16 @@ public class CacheStoreProvider extends ProviderBase implements AutoCloseable {
     
     // Methods section
     
+    public boolean AddDependent(java.lang.String key, CacheDependency dependency, JCORefOut<DateTime> utcLastUpdated) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("AddDependent", key, dependency == null ? null : dependency.getJCOInstance(), utcLastUpdated.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public long Trim(int percent) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

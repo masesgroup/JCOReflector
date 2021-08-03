@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 
 // Import section
 import system.runtime.interopservices.CustomQueryInterfaceResult;
+import system.Guid;
 
 
 /**

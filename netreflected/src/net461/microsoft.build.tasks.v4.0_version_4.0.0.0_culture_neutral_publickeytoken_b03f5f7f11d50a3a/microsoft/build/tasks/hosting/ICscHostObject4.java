@@ -138,6 +138,7 @@ public interface ICscHostObject4 extends IJCOBridgeReflected, ICscHostObject3, I
 
 
 
+
     public boolean SetHighEntropyVA(boolean highEntropyVA) throws Throwable;
 
 

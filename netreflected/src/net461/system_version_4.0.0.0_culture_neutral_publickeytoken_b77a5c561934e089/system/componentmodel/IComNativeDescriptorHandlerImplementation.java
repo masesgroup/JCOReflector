@@ -227,6 +227,28 @@ public class IComNativeDescriptorHandlerImplementation extends NetObject impleme
         }
     }
 
+    public NetObject GetPropertyValue(NetObject component, int dispid, boolean success) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetPropertyValue = (JCObject)classInstance.Invoke("GetPropertyValue", component == null ? null : component.getJCOInstance(), dispid, success);
+            return new NetObject(objGetPropertyValue);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetObject GetPropertyValue(NetObject component, java.lang.String propertyName, boolean success) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetPropertyValue = (JCObject)classInstance.Invoke("GetPropertyValue", component == null ? null : component.getJCOInstance(), propertyName, success);
+            return new NetObject(objGetPropertyValue);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String GetClassName(NetObject component) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

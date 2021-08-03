@@ -171,6 +171,16 @@ public class UnmanagedMemoryStream extends Stream  {
     
     // Methods section
     
+    public int Read(JCORefOut buffer, int offset, int count) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.NotSupportedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("Read", buffer.getJCRefOut(), offset, count);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public int ReadByte() throws Throwable, system.ObjectDisposedException, system.NotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

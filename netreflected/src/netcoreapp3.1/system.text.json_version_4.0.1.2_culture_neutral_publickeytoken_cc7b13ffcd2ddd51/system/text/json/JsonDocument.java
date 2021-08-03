@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.text.json.Utf8JsonReader;
 import system.text.json.JsonDocument;
 import system.io.Stream;
 import system.text.json.JsonDocumentOptions;
@@ -150,6 +151,16 @@ public class JsonDocument extends NetObject implements AutoCloseable {
     
     // Methods section
     
+    public static boolean TryParseValue(Utf8JsonReader reader, JCORefOut<JsonDocument> document) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.text.json.JsonException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryParseValue", reader == null ? null : reader.getJCOInstance(), document.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static JsonDocument Parse(Stream utf8Json, JsonDocumentOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.text.json.JsonException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -167,6 +178,17 @@ public class JsonDocument extends NetObject implements AutoCloseable {
         try {
             JCObject objParse = (JCObject)classType.Invoke("Parse", json, options == null ? null : options.getJCOInstance());
             return new JsonDocument(objParse);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static JsonDocument ParseValue(Utf8JsonReader reader) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.text.json.JsonException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objParseValue = (JCObject)classType.Invoke("ParseValue", reader == null ? null : reader.getJCOInstance());
+            return new JsonDocument(objParseValue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

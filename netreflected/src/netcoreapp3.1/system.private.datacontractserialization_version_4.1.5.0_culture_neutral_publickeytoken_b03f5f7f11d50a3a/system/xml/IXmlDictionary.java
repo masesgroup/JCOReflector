@@ -110,6 +110,12 @@ public interface IXmlDictionary extends IJCOBridgeReflected {
 
     // Methods section
     
+    public boolean TryLookup(int key, JCORefOut<XmlDictionaryString> result) throws Throwable;
+
+    public boolean TryLookup(java.lang.String value, JCORefOut<XmlDictionaryString> result) throws Throwable;
+
+    public boolean TryLookup(XmlDictionaryString value, JCORefOut<XmlDictionaryString> result) throws Throwable;
+
 
     
     // Properties section

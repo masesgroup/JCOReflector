@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.servicemodel.channels.Message;
 
 
 /**
@@ -132,6 +133,16 @@ public class IDispatchOperationSelectorImplementation extends NetObject implemen
 
     // Methods section
     
+    public java.lang.String SelectOperation(Message message) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("SelectOperation", message == null ? null : message.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

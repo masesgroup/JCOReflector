@@ -147,6 +147,16 @@ public class ServiceHealthBehaviorBase extends NetObject  {
     
     // Methods section
     
+    public void HandleHealthRequest(ServiceHostBase serviceHost, Message httpGetRequest, java.lang.String[] queries, JCORefOut<Message> replyMessage) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("HandleHealthRequest", serviceHost == null ? null : serviceHost.getJCOInstance(), httpGetRequest == null ? null : httpGetRequest.getJCOInstance(), queries, replyMessage.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     /**
      * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
      *    Use the static ToIServiceBehavior method available in IServiceBehavior to obtain an object with an invocable method

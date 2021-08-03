@@ -123,6 +123,7 @@ public interface ICscHostObject3 extends IJCOBridgeReflected, ICscHostObject2, I
 
 
 
+
     public boolean SetApplicationConfiguration(java.lang.String applicationConfiguration) throws Throwable;
 
 

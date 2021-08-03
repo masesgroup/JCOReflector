@@ -640,6 +640,16 @@ public class Math extends NetObject  {
         }
     }
 
+    public static int DivRem(int a, int b, JCORefOut result) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (int)classType.Invoke("DivRem", a, b, result.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static int ILogB(double x) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -760,11 +770,31 @@ public class Math extends NetObject  {
         }
     }
 
+    public static long BigMul(long a, long b, JCORefOut low) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (long)classType.Invoke("BigMul", a, b, low.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static long Clamp(long value, long min, long max) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (long)classType.Invoke("Clamp", value, min, max);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static long DivRem(long a, long b, JCORefOut result) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (long)classType.Invoke("DivRem", a, b, result.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1060,6 +1090,17 @@ public class Math extends NetObject  {
         try {
             JCObject objMin = (JCObject)classType.Invoke("Min", val1 == null ? null : val1.getJCOInstance(), val2 == null ? null : val2.getJCOInstance());
             return new UInt32(objMin);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static UInt64 BigMul(UInt64 a, UInt64 b, JCORefOut<UInt64> low) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objBigMul = (JCObject)classType.Invoke("BigMul", a == null ? null : a.getJCOInstance(), b == null ? null : b.getJCOInstance(), low.getJCRefOut());
+            return new UInt64(objBigMul);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

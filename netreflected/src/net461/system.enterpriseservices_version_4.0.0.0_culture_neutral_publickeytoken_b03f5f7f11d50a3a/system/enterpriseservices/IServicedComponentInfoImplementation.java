@@ -132,6 +132,16 @@ public class IServicedComponentInfoImplementation extends NetObject implements I
 
     // Methods section
     
+    public void GetComponentInfo(int infoMask, JCORefOut infoArray) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetComponentInfo", infoMask, infoArray.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

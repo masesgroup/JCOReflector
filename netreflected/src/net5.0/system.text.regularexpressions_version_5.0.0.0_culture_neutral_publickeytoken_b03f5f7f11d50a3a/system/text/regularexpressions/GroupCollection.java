@@ -38,8 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.Array;
 import system.text.regularexpressions.Group;
+import system.Array;
 
 
 /**
@@ -152,6 +152,16 @@ public class GroupCollection extends NetObjectEnumerable  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("ContainsKey", key);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean TryGetValue(java.lang.String key, JCORefOut<Group> value) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("TryGetValue", key, value.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

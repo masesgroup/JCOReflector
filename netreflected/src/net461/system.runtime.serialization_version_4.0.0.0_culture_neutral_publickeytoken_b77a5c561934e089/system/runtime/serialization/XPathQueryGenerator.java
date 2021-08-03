@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.reflection.MemberInfo;
 import system.text.StringBuilder;
+import system.xml.XmlNamespaceManager;
 
 
 /**
@@ -145,6 +146,26 @@ public class XPathQueryGenerator extends NetObject  {
     
     // Methods section
     
+    public static java.lang.String CreateFromDataContractSerializer(NetType type, MemberInfo[] pathToMember, StringBuilder rootElementXpath, JCORefOut<XmlNamespaceManager> namespaces) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OverflowException, system.OutOfMemoryException, system.NotSupportedException, system.runtime.serialization.InvalidDataContractException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("CreateFromDataContractSerializer", type == null ? null : type.getJCOInstance(), toObjectFromArray(pathToMember), rootElementXpath == null ? null : rootElementXpath.getJCOInstance(), namespaces.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String CreateFromDataContractSerializer(NetType type, MemberInfo[] pathToMember, JCORefOut<XmlNamespaceManager> namespaces) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.NotSupportedException, system.runtime.serialization.InvalidDataContractException, system.NullReferenceException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("CreateFromDataContractSerializer", type == null ? null : type.getJCOInstance(), toObjectFromArray(pathToMember), namespaces.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

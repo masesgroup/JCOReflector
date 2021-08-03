@@ -46,6 +46,7 @@ import system.runtime.interopservices.UCOMITypeLibImplementation;
 import system.reflection.MethodInfo;
 import system.Guid;
 import system.reflection.Assembly;
+import system.runtime.interopservices.ComMemberType;
 import system.runtime.interopservices.comtypes.ITypeInfo;
 import system.runtime.interopservices.comtypes.ITypeInfoImplementation;
 import system.runtime.interopservices.UCOMITypeInfo;
@@ -476,6 +477,17 @@ public class Marshal extends NetObject  {
         }
     }
 
+    public static MemberInfo GetMethodInfoForComSlot(NetType t, int slot, ComMemberType memberType) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetMethodInfoForComSlot = (JCObject)classType.Invoke("GetMethodInfoForComSlot", t == null ? null : t.getJCOInstance(), slot, memberType == null ? null : memberType.getJCOInstance());
+            return new MemberInfo(objGetMethodInfoForComSlot);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static java.lang.String GenerateProgIdForType(NetType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -568,6 +580,16 @@ public class Marshal extends NetObject  {
         }
     }
 
+    public static void GetTypeLibVersionForAssembly(Assembly inputAssembly, JCORefOut majorVersion, JCORefOut minorVersion) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("GetTypeLibVersionForAssembly", inputAssembly == null ? null : inputAssembly.getJCOInstance(), majorVersion.getJCRefOut(), minorVersion.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static void Prelink(MethodInfo m) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -603,6 +625,56 @@ public class Marshal extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("ThrowExceptionForHR", errorCode);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void WriteByte(JCORefOut<NetObject> ptr, int ofs, byte val) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("WriteByte", ptr.getJCRefOut(), ofs, val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void WriteInt16(JCORefOut<NetObject> ptr, int ofs, char val) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("WriteInt16", ptr.getJCRefOut(), ofs, val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void WriteInt16(JCORefOut<NetObject> ptr, int ofs, short val) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("WriteInt16", ptr.getJCRefOut(), ofs, val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void WriteInt32(JCORefOut<NetObject> ptr, int ofs, int val) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("WriteInt32", ptr.getJCRefOut(), ofs, val);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void WriteInt64(JCORefOut<NetObject> ptr, int ofs, long val) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("WriteInt64", ptr.getJCRefOut(), ofs, val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

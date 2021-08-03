@@ -37,6 +37,7 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.windows.forms.Message;
 import system.windows.forms.Menu;
 import system.windows.forms.MenuItem;
 
@@ -112,6 +113,8 @@ public interface IMenuEditorService extends IJCOBridgeReflected {
     // Methods section
     
     public boolean IsActive() throws Throwable;
+
+    public boolean MessageFilter(Message m) throws Throwable;
 
     public Menu GetMenu() throws Throwable;
 

@@ -159,6 +159,17 @@ public class SqlDesignerDataSourceView extends DesignerDataSourceView  {
     
     // Methods section
     
+    public IEnumerable GetDesignTimeData(int minimumRows, JCORefOut isSampleData) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.RankException, system.NullReferenceException, system.NotSupportedException, system.InvalidTimeZoneException, system.OverflowException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetDesignTimeData = (JCObject)classInstance.Invoke("GetDesignTimeData", minimumRows, isSampleData.getJCRefOut());
+            return new IEnumerableImplementation(objGetDesignTimeData);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

@@ -152,6 +152,46 @@ public class DynamicScriptObject extends DynamicObject  {
     
     // Methods section
     
+    public boolean TryGetIndex(GetIndexBinder binder, NetObject[] indexes, JCORefOut<NetObject> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.RankException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.SecurityException, system.io.IOException, system.reflection.TargetParameterCountException, system.MissingMemberException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("TryGetIndex", binder == null ? null : binder.getJCOInstance(), toObjectFromArray(indexes), result.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean TryGetMember(GetMemberBinder binder, JCORefOut<NetObject> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.RankException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.reflection.TargetParameterCountException, system.MissingMethodException, system.MissingMemberException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("TryGetMember", binder == null ? null : binder.getJCOInstance(), result.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean TryInvoke(InvokeBinder binder, NetObject[] args, JCORefOut<NetObject> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.RankException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.reflection.TargetParameterCountException, system.MissingMethodException, system.MissingMemberException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("TryInvoke", binder == null ? null : binder.getJCOInstance(), toObjectFromArray(args), result.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean TryInvokeMember(InvokeMemberBinder binder, NetObject[] args, JCORefOut<NetObject> result) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.RankException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.reflection.TargetParameterCountException, system.MissingMethodException, system.MissingMemberException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("TryInvokeMember", binder == null ? null : binder.getJCOInstance(), toObjectFromArray(args), result.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean TrySetIndex(SetIndexBinder binder, NetObject[] indexes, NetObject value) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.RankException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.reflection.TargetParameterCountException, system.MissingMethodException, system.MissingMemberException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

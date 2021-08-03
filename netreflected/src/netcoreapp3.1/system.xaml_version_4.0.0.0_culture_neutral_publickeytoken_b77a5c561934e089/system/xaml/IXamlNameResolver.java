@@ -112,6 +112,8 @@ public interface IXamlNameResolver extends IJCOBridgeReflected {
     
     public NetObject Resolve(java.lang.String name) throws Throwable;
 
+    public NetObject Resolve(java.lang.String name, JCORefOut isFullyInitialized) throws Throwable;
+
 
     
     // Properties section

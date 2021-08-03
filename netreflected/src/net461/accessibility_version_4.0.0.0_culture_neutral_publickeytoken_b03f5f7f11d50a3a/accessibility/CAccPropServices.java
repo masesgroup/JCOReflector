@@ -39,6 +39,12 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import accessibility.IAccPropServices;
 import accessibility.IAccPropServicesImplementation;
+import accessibility._RemotableHandle;
+import system.UInt32;
+import system.Guid;
+import accessibility.IAccPropServer;
+import accessibility.IAccPropServerImplementation;
+import accessibility.AnnoScope;
 
 
 /**
@@ -111,6 +117,17 @@ public interface CAccPropServices extends IJCOBridgeReflected, IAccPropServices 
 
     // Methods section
     
+
+
+
+
+
+
+
+
+
+
+
 
     
     // Properties section

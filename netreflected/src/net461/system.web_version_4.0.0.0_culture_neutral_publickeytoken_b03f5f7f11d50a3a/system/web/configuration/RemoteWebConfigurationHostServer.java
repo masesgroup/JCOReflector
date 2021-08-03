@@ -151,6 +151,25 @@ public class RemoteWebConfigurationHostServer extends NetObject  {
     
     // Methods section
     
+    public byte[] GetData(java.lang.String fileName, boolean getReadTimeOnly, JCORefOut readTime) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.io.PathTooLongException, system.NullReferenceException, system.security.SecurityException, system.io.IOException, system.io.EndOfStreamException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetData", fileName, getReadTimeOnly, readTime.getJCRefOut());
+            for (Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            byte[] resultingArray = new byte[resultingArrayList.size()];
+            for(int indexGetData = 0; indexGetData < resultingArrayList.size(); indexGetData++ ) {
+				resultingArray[indexGetData] = (byte)resultingArrayList.get(indexGetData);
+            }
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String DoEncryptOrDecrypt(boolean doEncrypt, java.lang.String xmlString, java.lang.String protectionProviderName, java.lang.String protectionProviderType, java.lang.String[] paramKeys, java.lang.String[] paramValues) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.NullReferenceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -176,6 +195,36 @@ public class RemoteWebConfigurationHostServer extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Invoke("GetFilePaths", webLevelAsInt, path, site, locationSubPath);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void GetFileDetails(java.lang.String name, JCORefOut exists, JCORefOut size, JCORefOut createDate, JCORefOut lastWriteDate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetFileDetails", name, exists.getJCRefOut(), size.getJCRefOut(), createDate.getJCRefOut(), lastWriteDate.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void WriteData(java.lang.String fileName, java.lang.String templateFileName, byte[] data, long readTime) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.io.PathTooLongException, system.FormatException, system.NullReferenceException, system.security.SecurityException, system.io.IOException, system.OverflowException, system.SystemException, system.security.accesscontrol.PrivilegeNotHeldException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.InvalidProgramException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("WriteData", fileName, templateFileName, data, readTime);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void WriteData(java.lang.String dupParam0, java.lang.String dupParam1, JCORefOut dupParam2, long dupParam3) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.io.PathTooLongException, system.FormatException, system.NullReferenceException, system.security.SecurityException, system.io.IOException, system.OverflowException, system.SystemException, system.security.accesscontrol.PrivilegeNotHeldException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.InvalidProgramException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("WriteData", dupParam0, dupParam1, dupParam2.getJCRefOut(), dupParam3);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

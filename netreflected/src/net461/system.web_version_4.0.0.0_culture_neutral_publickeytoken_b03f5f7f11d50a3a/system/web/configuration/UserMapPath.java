@@ -196,6 +196,36 @@ public class UserMapPath extends NetObject  {
         }
     }
 
+    public void GetDefaultSiteNameAndID(JCORefOut siteName, JCORefOut siteID) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetDefaultSiteNameAndID", siteName.getJCRefOut(), siteID.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void GetPathConfigFilename(java.lang.String siteID, java.lang.String path, JCORefOut directory, JCORefOut baseName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.OutOfMemoryException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetPathConfigFilename", siteID, path, directory.getJCRefOut(), baseName.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ResolveSiteArgument(java.lang.String siteArgument, JCORefOut siteName, JCORefOut siteID) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ResolveSiteArgument", siteArgument, siteName.getJCRefOut(), siteID.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

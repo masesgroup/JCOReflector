@@ -115,6 +115,8 @@ public interface ICscHostObject extends IJCOBridgeReflected, ITaskHost {
     
     public boolean Compile() throws Throwable;
 
+    public boolean EndInitialization(JCORefOut errorMessage, JCORefOut errorCode) throws Throwable;
+
     public boolean IsDesignTime() throws Throwable;
 
     public boolean IsUpToDate() throws Throwable;

@@ -145,6 +145,16 @@ public class DbProviderManifest extends NetObject  {
     
     // Methods section
     
+    public boolean SupportsEscapingLikeArgument(JCORefOut escapeCharacter) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("SupportsEscapingLikeArgument", escapeCharacter.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public TypeUsage GetEdmType(TypeUsage storeType) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

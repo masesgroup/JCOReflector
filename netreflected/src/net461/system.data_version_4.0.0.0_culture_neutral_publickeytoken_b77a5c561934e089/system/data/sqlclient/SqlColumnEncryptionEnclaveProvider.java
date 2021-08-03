@@ -157,6 +157,26 @@ public class SqlColumnEncryptionEnclaveProvider extends NetObject  {
         }
     }
 
+    public void CreateEnclaveSession(byte[] enclaveAttestationInfo, ECDiffieHellmanCng clientDiffieHellmanKey, java.lang.String attestationUrl, java.lang.String servername, JCORefOut<SqlEnclaveSession> sqlEnclaveSession, JCORefOut counter) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("CreateEnclaveSession", enclaveAttestationInfo, clientDiffieHellmanKey == null ? null : clientDiffieHellmanKey.getJCOInstance(), attestationUrl, servername, sqlEnclaveSession.getJCRefOut(), counter.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void GetEnclaveSession(java.lang.String serverName, java.lang.String attestationUrl, JCORefOut<SqlEnclaveSession> sqlEnclaveSession, JCORefOut counter) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetEnclaveSession", serverName, attestationUrl, sqlEnclaveSession.getJCRefOut(), counter.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void InvalidateEnclaveSession(java.lang.String serverName, java.lang.String enclaveAttestationUrl, SqlEnclaveSession enclaveSession) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

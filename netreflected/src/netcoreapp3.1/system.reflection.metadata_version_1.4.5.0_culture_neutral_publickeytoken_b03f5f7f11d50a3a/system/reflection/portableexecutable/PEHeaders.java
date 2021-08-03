@@ -180,6 +180,16 @@ public class PEHeaders extends NetObject  {
     
     // Methods section
     
+    public boolean TryGetDirectoryOffset(DirectoryEntry directory, JCORefOut offset) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.BadImageFormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("TryGetDirectoryOffset", directory == null ? null : directory.getJCOInstance(), offset.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public int GetContainingSectionIndex(int relativeVirtualAddress) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

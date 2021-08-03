@@ -161,6 +161,17 @@ public class SiteMapDesignerHierarchicalDataSourceView extends DesignerHierarchi
     
     // Methods section
     
+    public IHierarchicalEnumerable GetDesignTimeData(JCORefOut isSampleData) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetDesignTimeData = (JCObject)classInstance.Invoke("GetDesignTimeData", isSampleData.getJCRefOut());
+            return new IHierarchicalEnumerableImplementation(objGetDesignTimeData);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

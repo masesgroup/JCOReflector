@@ -164,6 +164,16 @@ public class IAccessibleImplementation extends NetObject implements IAccessible 
         }
     }
 
+    public void accLocation(JCORefOut pxLeft, JCORefOut pyTop, JCORefOut pcxWidth, JCORefOut pcyHeight, NetObject varChild) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("accLocation", pxLeft.getJCRefOut(), pyTop.getJCRefOut(), pcxWidth.getJCRefOut(), pcyHeight.getJCRefOut(), varChild == null ? null : varChild.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void accSelect(int flagsSelect, NetObject varChild) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

@@ -109,6 +109,8 @@ public interface IChannel extends IJCOBridgeReflected {
 
     // Methods section
     
+    public java.lang.String Parse(java.lang.String url, JCORefOut objectURI) throws Throwable;
+
 
     
     // Properties section

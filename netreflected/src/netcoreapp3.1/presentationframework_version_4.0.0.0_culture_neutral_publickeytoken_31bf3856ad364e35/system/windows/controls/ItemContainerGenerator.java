@@ -49,6 +49,8 @@ import system.EventArgs;
 import system.windows.controls.primitives.GeneratorStatus;
 import system.EventHandler;
 import system.windows.controls.primitives.ItemsChangedEventHandler;
+import system.windows.controls.primitives.IItemContainerGenerator;
+import system.windows.controls.primitives.IItemContainerGeneratorImplementation;
 import system.windows.IWeakEventListener;
 import system.windows.IWeakEventListenerImplementation;
 
@@ -59,7 +61,7 @@ import system.windows.IWeakEventListenerImplementation;
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.ItemContainerGenerator" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Controls.ItemContainerGenerator</a>
  */
-public class ItemContainerGenerator extends NetObject implements system.windows.IWeakEventListener {
+public class ItemContainerGenerator extends NetObject implements system.windows.controls.primitives.IItemContainerGenerator, system.windows.IWeakEventListener {
     /**
      * Fully assembly qualified name: PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
@@ -282,6 +284,15 @@ public class ItemContainerGenerator extends NetObject implements system.windows.
      */
     @Deprecated 
     public DependencyObject GenerateNext() throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerGenerator to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static ToIItemContainerGenerator method available in IItemContainerGenerator to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public DependencyObject GenerateNext(JCORefOut isNewlyRealized) throws Throwable {
         throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerGenerator to obtain the full interface.");
     }
 

@@ -41,6 +41,10 @@ import system.runtime.interopservices.UCOMIBindCtx;
 import system.runtime.interopservices.UCOMIBindCtxImplementation;
 import system.runtime.interopservices.UCOMIMoniker;
 import system.runtime.interopservices.UCOMIMonikerImplementation;
+import system.Guid;
+import system.runtime.interopservices.UCOMIEnumMoniker;
+import system.runtime.interopservices.UCOMIEnumMonikerImplementation;
+import system.runtime.interopservices.FILETIME;
 import system.runtime.interopservices.UCOMIStream;
 import system.runtime.interopservices.UCOMIStreamImplementation;
 
@@ -117,11 +121,41 @@ public interface UCOMIMoniker extends IJCOBridgeReflected {
     
     public int IsDirty() throws Throwable;
 
+    public void BindToObject(UCOMIBindCtx pbc, UCOMIMoniker pmkToLeft, Guid riidResult, JCORefOut<NetObject> ppvResult) throws Throwable;
+
+    public void BindToStorage(UCOMIBindCtx pbc, UCOMIMoniker pmkToLeft, Guid riid, JCORefOut<NetObject> ppvObj) throws Throwable;
+
+    public void CommonPrefixWith(UCOMIMoniker pmkOther, JCORefOut<UCOMIMoniker> ppmkPrefix) throws Throwable;
+
+    public void ComposeWith(UCOMIMoniker pmkRight, boolean fOnlyIfNotGeneric, JCORefOut<UCOMIMoniker> ppmkComposite) throws Throwable;
+
+    public void Enum(boolean fForward, JCORefOut<UCOMIEnumMoniker> ppenumMoniker) throws Throwable;
+
+    public void GetClassID(JCORefOut<Guid> pClassID) throws Throwable;
+
+    public void GetDisplayName(UCOMIBindCtx pbc, UCOMIMoniker pmkToLeft, JCORefOut ppszDisplayName) throws Throwable;
+
+    public void GetSizeMax(JCORefOut pcbSize) throws Throwable;
+
+    public void GetTimeOfLastChange(UCOMIBindCtx pbc, UCOMIMoniker pmkToLeft, JCORefOut<FILETIME> pFileTime) throws Throwable;
+
+    public void Hash(JCORefOut pdwHash) throws Throwable;
+
+    public void Inverse(JCORefOut<UCOMIMoniker> ppmk) throws Throwable;
+
     public void IsEqual(UCOMIMoniker pmkOtherMoniker) throws Throwable;
 
     public void IsRunning(UCOMIBindCtx pbc, UCOMIMoniker pmkToLeft, UCOMIMoniker pmkNewlyRunning) throws Throwable;
 
+    public void IsSystemMoniker(JCORefOut pdwMksys) throws Throwable;
+
     public void Load(UCOMIStream pStm) throws Throwable;
+
+    public void ParseDisplayName(UCOMIBindCtx pbc, UCOMIMoniker pmkToLeft, java.lang.String pszDisplayName, JCORefOut pchEaten, JCORefOut<UCOMIMoniker> ppmkOut) throws Throwable;
+
+    public void Reduce(UCOMIBindCtx pbc, int dwReduceHowFar, UCOMIMoniker ppmkToLeft, JCORefOut<UCOMIMoniker> ppmkReduced) throws Throwable;
+
+    public void RelativePathTo(UCOMIMoniker pmkOther, JCORefOut<UCOMIMoniker> ppmkRelPath) throws Throwable;
 
     public void Save(UCOMIStream pStm, boolean fClearDirty) throws Throwable;
 

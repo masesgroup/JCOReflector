@@ -37,6 +37,7 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.Guid;
 import system.UInt32;
 
 
@@ -110,6 +111,8 @@ public interface _Module extends IJCOBridgeReflected {
 
     // Methods section
     
+    public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable;
+
 
     
     // Properties section

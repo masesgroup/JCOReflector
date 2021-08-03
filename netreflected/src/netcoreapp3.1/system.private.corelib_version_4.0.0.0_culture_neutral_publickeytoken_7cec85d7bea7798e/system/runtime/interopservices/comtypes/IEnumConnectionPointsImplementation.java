@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.runtime.interopservices.comtypes.IConnectionPoint;
 import system.runtime.interopservices.comtypes.IConnectionPointImplementation;
+import system.runtime.interopservices.comtypes.IEnumConnectionPoints;
+import system.runtime.interopservices.comtypes.IEnumConnectionPointsImplementation;
 
 
 /**
@@ -139,6 +141,16 @@ public class IEnumConnectionPointsImplementation extends NetObject implements IE
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Invoke("Skip", celt);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Clone(JCORefOut<IEnumConnectionPoints> ppenum) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Clone", ppenum.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

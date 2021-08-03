@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.reflection.metadata.HandleKind;
+import system.reflection.metadata.ecma335.HeapIndex;
+import system.reflection.metadata.ecma335.TableIndex;
 import system.reflection.metadata.BlobHandle;
 import system.reflection.metadata.GuidHandle;
 import system.reflection.metadata.Handle;
@@ -54,7 +56,6 @@ import system.reflection.metadata.CustomDebugInformationHandle;
 import system.reflection.metadata.DeclarativeSecurityAttributeHandle;
 import system.reflection.metadata.DocumentHandle;
 import system.reflection.metadata.DocumentNameBlobHandle;
-import system.reflection.metadata.ecma335.TableIndex;
 import system.reflection.metadata.EventDefinitionHandle;
 import system.reflection.metadata.ExportedTypeHandle;
 import system.reflection.metadata.FieldDefinitionHandle;
@@ -183,6 +184,26 @@ public class MetadataTokens extends NetObject  {
     
     // Methods section
     
+    public static boolean TryGetHeapIndex(HandleKind type, JCORefOut<HeapIndex> index) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryGetHeapIndex", type == null ? null : type.getJCOInstance(), index.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean TryGetTableIndex(HandleKind type, JCORefOut<TableIndex> index) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryGetTableIndex", type == null ? null : type.getJCOInstance(), index.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static int GetHeapOffset(BlobHandle handle) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");

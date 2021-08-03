@@ -41,9 +41,9 @@ import java.util.ArrayList;
 import system.xaml.XamlType;
 import system.xaml.IXamlNamespaceResolver;
 import system.xaml.IXamlNamespaceResolverImplementation;
+import system.xaml.schema.XamlTypeName;
 import system.xaml.INamespacePrefixLookup;
 import system.xaml.INamespacePrefixLookupImplementation;
-import system.xaml.schema.XamlTypeName;
 
 
 /**
@@ -177,6 +177,16 @@ public class XamlTypeName extends NetObject  {
     
     // Methods section
     
+    public static boolean TryParse(java.lang.String typeName, IXamlNamespaceResolver namespaceResolver, JCORefOut<XamlTypeName> result) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryParse", typeName, namespaceResolver == null ? null : namespaceResolver.getJCOInstance(), result.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String ToString(INamespacePrefixLookup prefixLookup) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

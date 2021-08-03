@@ -136,6 +136,16 @@ public class IAuthorizationPolicyImplementation extends NetObject implements IAu
 
     // Methods section
     
+    public boolean Evaluate(EvaluationContext evaluationContext, NetObject state) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("Evaluate", evaluationContext == null ? null : evaluationContext.getJCOInstance(), state == null ? null : state.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

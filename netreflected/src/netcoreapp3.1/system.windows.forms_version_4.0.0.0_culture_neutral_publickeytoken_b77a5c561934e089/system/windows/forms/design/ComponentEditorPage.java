@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.windows.forms.Panel;
+import system.windows.forms.Message;
 import system.windows.forms.Control;
 import system.componentmodel.IComponent;
 import system.componentmodel.IComponentImplementation;
@@ -151,6 +152,16 @@ public class ComponentEditorPage extends Panel  {
     
     // Methods section
     
+    public boolean IsPageMessage(Message msg) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("IsPageMessage", msg == null ? null : msg.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean SupportsHelp() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

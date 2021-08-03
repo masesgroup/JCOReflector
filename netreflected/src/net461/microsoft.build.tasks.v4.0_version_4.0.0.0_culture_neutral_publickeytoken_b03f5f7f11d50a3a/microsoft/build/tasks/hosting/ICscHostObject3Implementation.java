@@ -150,6 +150,16 @@ public class ICscHostObject3Implementation extends NetObject implements ICscHost
         }
     }
 
+    public boolean EndInitialization(JCORefOut errorMessage, JCORefOut errorCode) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("EndInitialization", errorMessage.getJCRefOut(), errorCode.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean IsDesignTime() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.identitymodel.tokens.BinaryKeyIdentifierClause;
 import system.security.cryptography.x509certificates.X509Certificate2;
+import system.identitymodel.tokens.X509SubjectKeyIdentifierClause;
 
 
 /**
@@ -172,6 +173,16 @@ public class X509SubjectKeyIdentifierClause extends BinaryKeyIdentifierClause  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("Matches", certificate == null ? null : certificate.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean TryCreateFrom(X509Certificate2 certificate, JCORefOut<X509SubjectKeyIdentifierClause> keyIdentifierClause) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ApplicationException, system.TypeLoadException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryCreateFrom", certificate == null ? null : certificate.getJCOInstance(), keyIdentifierClause.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

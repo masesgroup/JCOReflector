@@ -43,6 +43,7 @@ import system.IAsyncResult;
 import system.IAsyncResultImplementation;
 import system.AsyncCallback;
 import system.io.Stream;
+import system.net.TransportContext;
 import system.net.WebResponse;
 import system.DateTime;
 import system.net.cache.RequestCachePolicy;
@@ -205,11 +206,33 @@ public class HttpWebRequest extends WebRequest  {
         }
     }
 
+    public Stream EndGetRequestStream(IAsyncResult asyncResult, JCORefOut<TransportContext> context) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.InvalidOperationException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objEndGetRequestStream = (JCObject)classInstance.Invoke("EndGetRequestStream", asyncResult == null ? null : asyncResult.getJCOInstance(), context.getJCRefOut());
+            return new Stream(objEndGetRequestStream);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Stream GetRequestStream() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.net.ProtocolViolationException, system.security.SecurityException, system.UriFormatException, system.globalization.CultureNotFoundException, system.SystemException, system.net.CookieException, system.net.WebException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetRequestStream = (JCObject)classInstance.Invoke("GetRequestStream");
+            return new Stream(objGetRequestStream);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Stream GetRequestStream(JCORefOut<TransportContext> context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.net.ProtocolViolationException, system.security.SecurityException, system.InvalidCastException, system.MissingMethodException, system.UriFormatException, system.SystemException, system.net.CookieException, system.net.WebException, system.threading.WaitHandleCannotBeOpenedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetRequestStream = (JCObject)classInstance.Invoke("GetRequestStream", context.getJCRefOut());
             return new Stream(objGetRequestStream);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

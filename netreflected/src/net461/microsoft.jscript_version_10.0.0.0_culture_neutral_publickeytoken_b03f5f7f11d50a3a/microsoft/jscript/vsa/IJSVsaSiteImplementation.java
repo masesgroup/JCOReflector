@@ -166,6 +166,16 @@ public class IJSVsaSiteImplementation extends NetObject implements IJSVsaSite {
         }
     }
 
+    public void GetCompiledState(JCORefOut pe, JCORefOut debugInfo) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetCompiledState", pe.getJCRefOut(), debugInfo.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Notify(java.lang.String notify, NetObject info) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

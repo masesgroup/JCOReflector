@@ -38,6 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.runtime.interopservices.comtypes.IEnumConnectionPoints;
+import system.runtime.interopservices.comtypes.IEnumConnectionPointsImplementation;
+import system.Guid;
+import system.runtime.interopservices.comtypes.IConnectionPoint;
+import system.runtime.interopservices.comtypes.IConnectionPointImplementation;
 
 
 /**
@@ -132,6 +137,26 @@ public class IConnectionPointContainerImplementation extends NetObject implement
 
     // Methods section
     
+    public void EnumConnectionPoints(JCORefOut<IEnumConnectionPoints> ppEnum) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("EnumConnectionPoints", ppEnum.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void FindConnectionPoint(Guid riid, JCORefOut<IConnectionPoint> ppCP) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("FindConnectionPoint", riid == null ? null : riid.getJCOInstance(), ppCP.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

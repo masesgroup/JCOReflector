@@ -147,6 +147,50 @@ public class StronglyTypedResourceBuilder extends NetObject  {
     
     // Methods section
     
+    public static CodeCompileUnit Create(IDictionary resourceList, java.lang.String baseName, java.lang.String generatedCodeNamespace, CodeDomProvider codeProvider, boolean internalClass, JCORefOut unmatchable) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.NullReferenceException, system.FormatException, system.NotSupportedException, system.RankException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreate = (JCObject)classType.Invoke("Create", resourceList == null ? null : resourceList.getJCOInstance(), baseName, generatedCodeNamespace, codeProvider == null ? null : codeProvider.getJCOInstance(), internalClass, unmatchable.getJCRefOut());
+            return new CodeCompileUnit(objCreate);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static CodeCompileUnit Create(IDictionary resourceList, java.lang.String baseName, java.lang.String generatedCodeNamespace, java.lang.String resourcesNamespace, CodeDomProvider codeProvider, boolean internalClass, JCORefOut unmatchable) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.NullReferenceException, system.RankException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreate = (JCObject)classType.Invoke("Create", resourceList == null ? null : resourceList.getJCOInstance(), baseName, generatedCodeNamespace, resourcesNamespace, codeProvider == null ? null : codeProvider.getJCOInstance(), internalClass, unmatchable.getJCRefOut());
+            return new CodeCompileUnit(objCreate);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static CodeCompileUnit Create(java.lang.String resxFile, java.lang.String baseName, java.lang.String generatedCodeNamespace, CodeDomProvider codeProvider, boolean internalClass, JCORefOut unmatchable) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.io.PathTooLongException, system.NotSupportedException, system.NullReferenceException, system.security.SecurityException, system.io.IOException, system.xml.XmlException, system.RankException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreate = (JCObject)classType.Invoke("Create", resxFile, baseName, generatedCodeNamespace, codeProvider == null ? null : codeProvider.getJCOInstance(), internalClass, unmatchable.getJCRefOut());
+            return new CodeCompileUnit(objCreate);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static CodeCompileUnit Create(java.lang.String resxFile, java.lang.String baseName, java.lang.String generatedCodeNamespace, java.lang.String resourcesNamespace, CodeDomProvider codeProvider, boolean internalClass, JCORefOut unmatchable) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.DriveNotFoundException, system.OperationCanceledException, system.NullReferenceException, system.security.SecurityException, system.xml.XmlException, system.RankException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreate = (JCObject)classType.Invoke("Create", resxFile, baseName, generatedCodeNamespace, resourcesNamespace, codeProvider == null ? null : codeProvider.getJCOInstance(), internalClass, unmatchable.getJCRefOut());
+            return new CodeCompileUnit(objCreate);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static java.lang.String VerifyResourceName(java.lang.String key, CodeDomProvider provider) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");

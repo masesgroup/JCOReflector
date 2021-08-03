@@ -37,6 +37,7 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.enterpriseservices.InstallationFlags;
 
 
 /**
@@ -109,6 +110,8 @@ public interface IRegistrationHelper extends IJCOBridgeReflected {
 
     // Methods section
     
+    public void InstallAssembly(java.lang.String assembly, JCORefOut application, JCORefOut tlb, InstallationFlags installFlags) throws Throwable;
+
     public void UninstallAssembly(java.lang.String assembly, java.lang.String application) throws Throwable;
 
 

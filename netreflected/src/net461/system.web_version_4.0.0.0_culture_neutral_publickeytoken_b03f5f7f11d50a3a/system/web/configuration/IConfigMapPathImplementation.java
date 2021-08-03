@@ -172,6 +172,36 @@ public class IConfigMapPathImplementation extends NetObject implements IConfigMa
         }
     }
 
+    public void GetDefaultSiteNameAndID(JCORefOut siteName, JCORefOut siteID) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetDefaultSiteNameAndID", siteName.getJCRefOut(), siteID.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void GetPathConfigFilename(java.lang.String siteID, java.lang.String path, JCORefOut directory, JCORefOut baseName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetPathConfigFilename", siteID, path, directory.getJCRefOut(), baseName.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ResolveSiteArgument(java.lang.String siteArgument, JCORefOut siteName, JCORefOut siteID) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ResolveSiteArgument", siteArgument, siteName.getJCRefOut(), siteID.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

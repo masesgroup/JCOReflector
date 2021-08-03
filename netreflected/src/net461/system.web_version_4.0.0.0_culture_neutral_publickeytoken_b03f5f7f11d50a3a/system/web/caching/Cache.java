@@ -43,6 +43,7 @@ import system.DateTime;
 import system.TimeSpan;
 import system.web.caching.CacheItemPriority;
 import system.web.caching.CacheItemRemovedCallback;
+import system.web.caching.CacheItemUpdateCallback;
 
 
 /**
@@ -224,6 +225,16 @@ public class Cache extends NetObjectEnumerable  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Insert", key, value == null ? null : value.getJCOInstance(), dependencies == null ? null : dependencies.getJCOInstance(), absoluteExpiration == null ? null : absoluteExpiration.getJCOInstance(), slidingExpiration == null ? null : slidingExpiration.getJCOInstance(), priority == null ? null : priority.getJCOInstance(), onRemoveCallback);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Insert(java.lang.String key, NetObject value, CacheDependency dependencies, DateTime absoluteExpiration, TimeSpan slidingExpiration, CacheItemUpdateCallback onUpdateCallback) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidTimeZoneException, system.OverflowException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.security.SecurityException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.diagnostics.tracing.EventSourceException, system.threading.WaitHandleCannotBeOpenedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Insert", key, value == null ? null : value.getJCOInstance(), dependencies == null ? null : dependencies.getJCOInstance(), absoluteExpiration == null ? null : absoluteExpiration.getJCOInstance(), slidingExpiration == null ? null : slidingExpiration.getJCOInstance(), onUpdateCallback);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

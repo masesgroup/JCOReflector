@@ -37,6 +37,12 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import accessibility._RemotableHandle;
+import system.UInt32;
+import system.Guid;
+import accessibility.IAccPropServer;
+import accessibility.IAccPropServerImplementation;
+import accessibility.AnnoScope;
 
 
 /**
@@ -109,6 +115,28 @@ public interface IAccPropServices extends IJCOBridgeReflected {
 
     // Methods section
     
+    public void ClearHmenuProps(_RemotableHandle hmenu, UInt32 idChild, Guid paProps, int cProps) throws Throwable;
+
+    public void ClearHwndProps(_RemotableHandle hwnd, UInt32 idObject, UInt32 idChild, Guid paProps, int cProps) throws Throwable;
+
+    public void ClearProps(byte pIDString, UInt32 dwIDStringLen, Guid paProps, int cProps) throws Throwable;
+
+    public void SetHmenuProp(_RemotableHandle hmenu, UInt32 idChild, Guid idProp, NetObject var) throws Throwable;
+
+    public void SetHmenuPropServer(_RemotableHandle hmenu, UInt32 idChild, Guid paProps, int cProps, IAccPropServer pServer, AnnoScope AnnoScope) throws Throwable;
+
+    public void SetHmenuPropStr(_RemotableHandle hmenu, UInt32 idChild, Guid idProp, java.lang.String str) throws Throwable;
+
+    public void SetHwndProp(_RemotableHandle hwnd, UInt32 idObject, UInt32 idChild, Guid idProp, NetObject var) throws Throwable;
+
+    public void SetHwndPropServer(_RemotableHandle hwnd, UInt32 idObject, UInt32 idChild, Guid paProps, int cProps, IAccPropServer pServer, AnnoScope AnnoScope) throws Throwable;
+
+    public void SetHwndPropStr(_RemotableHandle hwnd, UInt32 idObject, UInt32 idChild, Guid idProp, java.lang.String str) throws Throwable;
+
+    public void SetPropServer(byte pIDString, UInt32 dwIDStringLen, Guid paProps, int cProps, IAccPropServer pServer, AnnoScope AnnoScope) throws Throwable;
+
+    public void SetPropValue(byte pIDString, UInt32 dwIDStringLen, Guid idProp, NetObject var) throws Throwable;
+
 
     
     // Properties section

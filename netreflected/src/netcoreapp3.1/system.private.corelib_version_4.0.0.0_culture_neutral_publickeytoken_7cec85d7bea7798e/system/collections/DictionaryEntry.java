@@ -156,6 +156,16 @@ public class DictionaryEntry extends ValueType  {
     
     // Methods section
     
+    public void Deconstruct(JCORefOut<NetObject> key, JCORefOut<NetObject> value) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Deconstruct", key.getJCRefOut(), value.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

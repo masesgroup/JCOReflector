@@ -52,8 +52,8 @@ import system.reflection.MemberFilter;
 import system.reflection.MethodInfo;
 import system.reflection.PropertyInfo;
 import system.reflection.TypeFilter;
-import system.UInt32;
 import system.Guid;
+import system.UInt32;
 import system.reflection.Assembly;
 import system.reflection.Module;
 import system.reflection.TypeAttributes;
@@ -247,6 +247,8 @@ public interface _Type extends IJCOBridgeReflected {
     public NetType[] GetNestedTypes() throws Throwable;
 
     public NetType[] GetNestedTypes(BindingFlags bindingAttr) throws Throwable;
+
+    public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable;
 
 
     

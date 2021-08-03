@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.threading.EventWaitHandle;
 import system.threading.EventResetMode;
+import system.security.accesscontrol.EventWaitHandleSecurity;
 
 
 /**
@@ -145,6 +146,17 @@ public class EventWaitHandleAcl extends NetObject  {
     
     // Methods section
     
+    public static EventWaitHandle Create(boolean initialState, EventResetMode mode, java.lang.String name, JCORefOut createdNew, EventWaitHandleSecurity eventSecurity) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.threading.WaitHandleCannotBeOpenedException, system.FormatException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreate = (JCObject)classType.Invoke("Create", initialState, mode == null ? null : mode.getJCOInstance(), name, createdNew.getJCRefOut(), eventSecurity == null ? null : eventSecurity.getJCOInstance());
+            return new EventWaitHandle(objCreate);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

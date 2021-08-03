@@ -39,6 +39,8 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.runtime.interopservices.comtypes.IConnectionPoint;
 import system.runtime.interopservices.comtypes.IConnectionPointImplementation;
+import system.runtime.interopservices.comtypes.IEnumConnectionPoints;
+import system.runtime.interopservices.comtypes.IEnumConnectionPointsImplementation;
 
 
 /**
@@ -112,6 +114,8 @@ public interface IEnumConnectionPoints extends IJCOBridgeReflected {
     // Methods section
     
     public int Skip(int celt) throws Throwable;
+
+    public void Clone(JCORefOut<IEnumConnectionPoints> ppenum) throws Throwable;
 
     public void Reset() throws Throwable;
 

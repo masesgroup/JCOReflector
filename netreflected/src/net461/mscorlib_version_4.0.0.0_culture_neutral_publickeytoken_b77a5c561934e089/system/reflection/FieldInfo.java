@@ -46,6 +46,7 @@ import system.RuntimeTypeHandle;
 import system.reflection.BindingFlags;
 import system.reflection.Binder;
 import system.globalization.CultureInfo;
+import system.Guid;
 import system.UInt32;
 import system.reflection.FieldAttributes;
 import system.reflection.MemberTypes;
@@ -297,6 +298,15 @@ public class FieldInfo extends MemberInfo  {
      */
     @Deprecated 
     public NetObject[] GetCustomAttributes(NetType attributeType, boolean inherit) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_FieldInfo to obtain the full interface.");
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static To_FieldInfo method available in _FieldInfo to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable {
         throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_FieldInfo to obtain the full interface.");
     }
 

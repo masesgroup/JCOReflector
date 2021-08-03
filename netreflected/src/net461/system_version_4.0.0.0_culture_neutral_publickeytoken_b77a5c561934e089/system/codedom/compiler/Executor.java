@@ -144,6 +144,26 @@ public class Executor extends NetObject  {
     
     // Methods section
     
+    public static int ExecWaitWithCapture(java.lang.String cmd, TempFileCollection tempFiles, java.lang.String outputName, java.lang.String errorName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.IndexOutOfRangeException, system.security.SecurityException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.RankException, system.threading.AbandonedMutexException, system.runtime.interopservices.ExternalException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (int)classType.Invoke("ExecWaitWithCapture", cmd, tempFiles == null ? null : tempFiles.getJCOInstance(), outputName, errorName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static int ExecWaitWithCapture(java.lang.String cmd, java.lang.String currentDir, TempFileCollection tempFiles, java.lang.String outputName, java.lang.String errorName) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.security.SecurityException, system.ArgumentException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.NotSupportedException, system.io.IOException, system.RankException, system.threading.AbandonedMutexException, system.runtime.interopservices.ExternalException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (int)classType.Invoke("ExecWaitWithCapture", cmd, currentDir, tempFiles == null ? null : tempFiles.getJCOInstance(), outputName, errorName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static void ExecWait(java.lang.String cmd, TempFileCollection tempFiles) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.security.SecurityException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.OutOfMemoryException, system.RankException, system.threading.AbandonedMutexException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");

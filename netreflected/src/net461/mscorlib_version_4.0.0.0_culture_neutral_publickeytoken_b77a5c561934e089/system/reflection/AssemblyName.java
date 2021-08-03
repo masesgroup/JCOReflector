@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.reflection.AssemblyName;
 import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
+import system.Guid;
 import system.UInt32;
 import system.configuration.assemblies.AssemblyHashAlgorithm;
 import system.configuration.assemblies.AssemblyVersionCompatibility;
@@ -301,6 +302,15 @@ public class AssemblyName extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static To_AssemblyName method available in _AssemblyName to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_AssemblyName to obtain the full interface.");
     }
 
 

@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.forms.Message;
 import system.windows.forms.Menu;
 import system.windows.forms.MenuItem;
 
@@ -139,6 +140,16 @@ public class IMenuEditorServiceImplementation extends NetObject implements IMenu
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("IsActive");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean MessageFilter(Message m) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("MessageFilter", m == null ? null : m.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

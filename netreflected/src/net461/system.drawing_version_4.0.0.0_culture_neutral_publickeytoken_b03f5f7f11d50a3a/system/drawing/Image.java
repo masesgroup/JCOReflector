@@ -48,6 +48,7 @@ import system.drawing.imaging.EncoderParameters;
 import system.Guid;
 import system.drawing.imaging.PropertyItem;
 import system.drawing.RectangleF;
+import system.drawing.GraphicsUnit;
 import system.drawing.RotateFlipType;
 import system.drawing.imaging.ImageCodecInfo;
 import system.drawing.imaging.ImageFormat;
@@ -296,6 +297,17 @@ public class Image extends MarshalByRefObject implements system.runtime.serializ
         try {
             JCObject objGetPropertyItem = (JCObject)classInstance.Invoke("GetPropertyItem", propid);
             return new PropertyItem(objGetPropertyItem);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public RectangleF GetBounds(GraphicsUnit pageUnit) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetBounds = (JCObject)classInstance.Invoke("GetBounds", pageUnit == null ? null : pageUnit.getJCOInstance());
+            return new RectangleF(objGetBounds);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

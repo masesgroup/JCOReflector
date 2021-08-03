@@ -50,8 +50,10 @@ import system.security.cryptography.x509certificates.X509Certificate;
 import system.reflection.TypeFilter;
 import system.runtime.serialization.SerializationInfo;
 import system.runtime.serialization.StreamingContext;
-import system.UInt32;
+import system.reflection.PortableExecutableKinds;
+import system.reflection.ImageFileMachine;
 import system.Guid;
+import system.UInt32;
 import system.ModuleHandle;
 import system.reflection.Assembly;
 
@@ -539,6 +541,25 @@ public class Module extends NetObject  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    public void GetPEKind(JCORefOut<PortableExecutableKinds> peKind, JCORefOut<ImageFileMachine> machine) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetPEKind", peKind.getJCRefOut(), machine.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static To_Module method available in _Module to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_Module to obtain the full interface.");
     }
 
 

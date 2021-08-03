@@ -37,6 +37,11 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.runtime.interopservices.comtypes.ITypeInfo;
+import system.runtime.interopservices.comtypes.ITypeInfoImplementation;
+import system.runtime.interopservices.comtypes.DESCKIND;
+import system.runtime.interopservices.comtypes.ITypeComp;
+import system.runtime.interopservices.comtypes.ITypeCompImplementation;
 
 
 /**
@@ -109,6 +114,8 @@ public interface ITypeComp extends IJCOBridgeReflected {
 
     // Methods section
     
+    public void BindType(java.lang.String szName, int lHashVal, JCORefOut<ITypeInfo> ppTInfo, JCORefOut<ITypeComp> ppTComp) throws Throwable;
+
 
     
     // Properties section

@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.MarshalByRefObject;
+import system.web.hosting.IAppDomainInfoEnum;
+import system.web.hosting.IAppDomainInfoEnumImplementation;
 import system.web.hosting.IProcessPingCallback;
 import system.web.hosting.IProcessPingCallbackImplementation;
 import system.web.hosting.IApplicationPreloadUtil;
@@ -173,6 +175,16 @@ public class ProcessHost extends MarshalByRefObject  {
         }
     }
 
+    public void EnumerateAppDomains(JCORefOut<IAppDomainInfoEnum> appDomainInfoEnum) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.web.HttpException, system.ArgumentNullException, system.NullReferenceException, system.MemberAccessException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.FormatException, system.OverflowException, system.NotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("EnumerateAppDomains", appDomainInfoEnum.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Ping(IProcessPingCallback callback) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.NotSupportedException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -228,6 +240,16 @@ public class ProcessHost extends MarshalByRefObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("StartAppDomainProtocolListenerChannel", appId, protocolId, listenerChannelCallback == null ? null : listenerChannelCallback.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void StartApplication(java.lang.String appId, java.lang.String appPath, JCORefOut<NetObject> runtimeInterface) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.io.PathTooLongException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.web.HttpException, system.OutOfMemoryException, system.TypeLoadException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.configuration.ConfigurationErrorsException, system.configuration.provider.ProviderException, system.SystemException, system.configuration.ConfigurationException, system.threading.SemaphoreFullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("StartApplication", appId, appPath, runtimeInterface.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

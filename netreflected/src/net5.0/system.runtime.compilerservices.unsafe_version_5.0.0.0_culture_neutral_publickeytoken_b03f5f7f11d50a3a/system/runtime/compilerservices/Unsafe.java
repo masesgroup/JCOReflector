@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.UInt32;
 
 
 /**
@@ -143,6 +144,46 @@ public class Unsafe extends NetObject  {
     
     // Methods section
     
+    public static void CopyBlock(byte destination, byte source, UInt32 byteCount) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("CopyBlock", destination, source, byteCount == null ? null : byteCount.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void CopyBlockUnaligned(byte destination, byte source, UInt32 byteCount) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("CopyBlockUnaligned", destination, source, byteCount == null ? null : byteCount.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void InitBlock(byte startAddress, byte value, UInt32 byteCount) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("InitBlock", startAddress, value, byteCount == null ? null : byteCount.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void InitBlockUnaligned(byte startAddress, byte value, UInt32 byteCount) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("InitBlockUnaligned", startAddress, value, byteCount == null ? null : byteCount.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

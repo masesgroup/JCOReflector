@@ -177,6 +177,16 @@ public class DataGridDesigner extends BaseDataListDesigner  {
         }
     }
 
+    public java.lang.String GetTemplateContent(ITemplateEditingFrame editingFrame, java.lang.String templateName, JCORefOut allowEditing) throws Throwable, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("GetTemplateContent", editingFrame == null ? null : editingFrame.getJCOInstance(), templateName, allowEditing.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetType GetTemplatePropertyParentType(java.lang.String templateName) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

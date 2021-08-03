@@ -40,8 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.net.EndPoint;
 import system.net.IPAddress;
-import system.net.SocketAddress;
 import system.net.IPEndPoint;
+import system.net.SocketAddress;
 import system.net.sockets.AddressFamily;
 
 
@@ -170,6 +170,16 @@ public class IPEndPoint extends EndPoint  {
     
     // Methods section
     
+    public static boolean TryParse(java.lang.String s, JCORefOut<IPEndPoint> result) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryParse", s, result.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public EndPoint Create(SocketAddress socketAddress) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.runtime.serialization.DataContractResolver;
+import system.xml.XmlDictionaryString;
 
 
 /**
@@ -152,6 +153,16 @@ public class ProxyDataContractResolver extends DataContractResolver  {
     
     // Methods section
     
+    public boolean TryResolveType(NetType dataContractType, NetType declaredType, DataContractResolver knownTypeResolver, JCORefOut<XmlDictionaryString> typeName, JCORefOut<XmlDictionaryString> typeNamespace) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.NotSupportedException, system.runtime.serialization.InvalidDataContractException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("TryResolveType", dataContractType == null ? null : dataContractType.getJCOInstance(), declaredType == null ? null : declaredType.getJCOInstance(), knownTypeResolver == null ? null : knownTypeResolver.getJCOInstance(), typeName.getJCRefOut(), typeNamespace.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetType ResolveName(java.lang.String typeName, java.lang.String typeNamespace, NetType declaredType, DataContractResolver knownTypeResolver) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

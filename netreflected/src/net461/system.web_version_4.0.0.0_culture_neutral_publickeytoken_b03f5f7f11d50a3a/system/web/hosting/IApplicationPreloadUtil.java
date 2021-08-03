@@ -109,6 +109,8 @@ public interface IApplicationPreloadUtil extends IJCOBridgeReflected {
 
     // Methods section
     
+    public void GetApplicationPreloadInfo(java.lang.String context, JCORefOut enabled, JCORefOut startupObjType, JCORefOut parametersForStartupObj) throws Throwable;
+
     public void ReportApplicationPreloadFailure(java.lang.String context, int errorCode, java.lang.String errorMessage) throws Throwable;
 
 

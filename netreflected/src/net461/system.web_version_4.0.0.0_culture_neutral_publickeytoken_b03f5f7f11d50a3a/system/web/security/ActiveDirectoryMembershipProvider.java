@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.web.security.MembershipProvider;
 import system.web.security.MembershipUser;
+import system.web.security.MembershipCreateStatus;
 import system.web.security.MembershipUserCollection;
 import system.collections.specialized.NameValueCollection;
 import system.web.security.ActiveDirectoryConnectionProtection;
@@ -257,6 +258,17 @@ public class ActiveDirectoryMembershipProvider extends MembershipProvider  {
         }
     }
 
+    public MembershipUser CreateUser(java.lang.String username, java.lang.String password, java.lang.String email, java.lang.String passwordQuestion, java.lang.String passwordAnswer, boolean isApproved, NetObject providerUserKey, JCORefOut<MembershipCreateStatus> status) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.configuration.provider.ProviderException, system.OutOfMemoryException, system.NullReferenceException, system.MemberAccessException, system.io.PathTooLongException, system.OverflowException, system.RankException, system.security.SecurityException, system.text.regularexpressions.RegexMatchTimeoutException, system.security.cryptography.CryptographicException, system.web.HttpException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.AccessViolationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateUser = (JCObject)classInstance.Invoke("CreateUser", username, password, email, passwordQuestion, passwordAnswer, isApproved, providerUserKey == null ? null : providerUserKey.getJCOInstance(), status.getJCRefOut());
+            return new MembershipUser(objCreateUser);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public MembershipUser GetUser(NetObject providerUserKey, boolean userIsOnline) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.web.HttpException, system.componentmodel.InvalidEnumArgumentException, system.AccessViolationException, system.configuration.provider.ProviderException, system.OverflowException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -274,6 +286,39 @@ public class ActiveDirectoryMembershipProvider extends MembershipProvider  {
         try {
             JCObject objGetUser = (JCObject)classInstance.Invoke("GetUser", username, userIsOnline);
             return new MembershipUser(objGetUser);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MembershipUserCollection FindUsersByEmail(java.lang.String emailToMatch, int pageIndex, int pageSize, JCORefOut totalRecords) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.web.HttpException, system.componentmodel.InvalidEnumArgumentException, system.AccessViolationException, system.configuration.provider.ProviderException, system.OverflowException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objFindUsersByEmail = (JCObject)classInstance.Invoke("FindUsersByEmail", emailToMatch, pageIndex, pageSize, totalRecords.getJCRefOut());
+            return new MembershipUserCollection(objFindUsersByEmail);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MembershipUserCollection FindUsersByName(java.lang.String usernameToMatch, int pageIndex, int pageSize, JCORefOut totalRecords) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.web.HttpException, system.componentmodel.InvalidEnumArgumentException, system.AccessViolationException, system.configuration.provider.ProviderException, system.OverflowException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objFindUsersByName = (JCObject)classInstance.Invoke("FindUsersByName", usernameToMatch, pageIndex, pageSize, totalRecords.getJCRefOut());
+            return new MembershipUserCollection(objFindUsersByName);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MembershipUserCollection GetAllUsers(int pageIndex, int pageSize, JCORefOut totalRecords) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetAllUsers = (JCObject)classInstance.Invoke("GetAllUsers", pageIndex, pageSize, totalRecords.getJCRefOut());
+            return new MembershipUserCollection(objGetAllUsers);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

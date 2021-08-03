@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.formats.asn1.Asn1Tag;
+import system.UInt32;
+import system.UInt64;
 import system.collections.BitArray;
 import system.DateTimeOffset;
 import system.Enum;

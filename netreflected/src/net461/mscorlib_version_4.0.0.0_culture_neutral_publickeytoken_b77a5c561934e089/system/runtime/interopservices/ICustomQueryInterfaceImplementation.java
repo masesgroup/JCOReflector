@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.runtime.interopservices.CustomQueryInterfaceResult;
+import system.Guid;
 
 
 /**

@@ -40,8 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.data.metadata.edm.MetadataWorkspace;
 import system.data.EntityKey;
-import system.data.objects.dataclasses.RelationshipManager;
 import system.data.objects.ObjectStateEntry;
+import system.data.objects.dataclasses.RelationshipManager;
 import system.data.EntityState;
 import system.componentmodel.CollectionChangeEventHandler;
 
@@ -161,6 +161,36 @@ public class ObjectStateManager extends NetObject  {
     
     // Methods section
     
+    public boolean TryGetObjectStateEntry(EntityKey key, JCORefOut<ObjectStateEntry> entry) throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.collections.generic.KeyNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("TryGetObjectStateEntry", key == null ? null : key.getJCOInstance(), entry.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean TryGetObjectStateEntry(NetObject entity, JCORefOut<ObjectStateEntry> entry) throws Throwable, system.ArgumentNullException, system.NullReferenceException, system.ArgumentException, system.collections.generic.KeyNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("TryGetObjectStateEntry", entity == null ? null : entity.getJCOInstance(), entry.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean TryGetRelationshipManager(NetObject entity, JCORefOut<RelationshipManager> relationshipManager) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("TryGetRelationshipManager", entity == null ? null : entity.getJCOInstance(), relationshipManager.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public RelationshipManager GetRelationshipManager(NetObject entity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

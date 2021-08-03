@@ -244,6 +244,16 @@ public class RegistrationServices extends NetObject  {
         }
     }
 
+    public void RegisterTypeForComClients(NetType type, Guid g) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RegisterTypeForComClients", type == null ? null : type.getJCOInstance(), g == null ? null : g.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void UnregisterTypeForComClients(int cookie) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

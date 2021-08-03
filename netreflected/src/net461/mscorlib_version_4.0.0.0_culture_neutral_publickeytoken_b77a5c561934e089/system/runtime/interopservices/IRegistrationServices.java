@@ -126,6 +126,8 @@ public interface IRegistrationServices extends IJCOBridgeReflected {
 
     public NetType[] GetRegistrableTypesInAssembly(Assembly assembly) throws Throwable;
 
+    public void RegisterTypeForComClients(NetType type, Guid g) throws Throwable;
+
 
     
     // Properties section

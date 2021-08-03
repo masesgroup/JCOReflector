@@ -42,6 +42,10 @@ import system.runtime.interopservices.comtypes.IMoniker;
 import system.runtime.interopservices.comtypes.IMonikerImplementation;
 import system.runtime.interopservices.comtypes.IBindCtx;
 import system.runtime.interopservices.comtypes.IBindCtxImplementation;
+import system.Guid;
+import system.runtime.interopservices.comtypes.IEnumMoniker;
+import system.runtime.interopservices.comtypes.IEnumMonikerImplementation;
+import system.runtime.interopservices.comtypes.FILETIME;
 import system.runtime.interopservices.comtypes.IStream;
 import system.runtime.interopservices.comtypes.IStreamImplementation;
 
@@ -168,11 +172,161 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
         }
     }
 
+    public int IsSystemMoniker(JCORefOut pdwMksys) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("IsSystemMoniker", pdwMksys.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void BindToObject(IBindCtx pbc, IMoniker pmkToLeft, Guid riidResult, JCORefOut<NetObject> ppvResult) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("BindToObject", pbc == null ? null : pbc.getJCOInstance(), pmkToLeft == null ? null : pmkToLeft.getJCOInstance(), riidResult == null ? null : riidResult.getJCOInstance(), ppvResult.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void BindToStorage(IBindCtx pbc, IMoniker pmkToLeft, Guid riid, JCORefOut<NetObject> ppvObj) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("BindToStorage", pbc == null ? null : pbc.getJCOInstance(), pmkToLeft == null ? null : pmkToLeft.getJCOInstance(), riid == null ? null : riid.getJCOInstance(), ppvObj.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void CommonPrefixWith(IMoniker pmkOther, JCORefOut<IMoniker> ppmkPrefix) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("CommonPrefixWith", pmkOther == null ? null : pmkOther.getJCOInstance(), ppmkPrefix.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ComposeWith(IMoniker pmkRight, boolean fOnlyIfNotGeneric, JCORefOut<IMoniker> ppmkComposite) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ComposeWith", pmkRight == null ? null : pmkRight.getJCOInstance(), fOnlyIfNotGeneric, ppmkComposite.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Enum(boolean fForward, JCORefOut<IEnumMoniker> ppenumMoniker) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Enum", fForward, ppenumMoniker.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void GetClassID(JCORefOut<Guid> pClassID) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetClassID", pClassID.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void GetDisplayName(IBindCtx pbc, IMoniker pmkToLeft, JCORefOut ppszDisplayName) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetDisplayName", pbc == null ? null : pbc.getJCOInstance(), pmkToLeft == null ? null : pmkToLeft.getJCOInstance(), ppszDisplayName.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void GetSizeMax(JCORefOut pcbSize) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetSizeMax", pcbSize.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void GetTimeOfLastChange(IBindCtx pbc, IMoniker pmkToLeft, JCORefOut<FILETIME> pFileTime) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetTimeOfLastChange", pbc == null ? null : pbc.getJCOInstance(), pmkToLeft == null ? null : pmkToLeft.getJCOInstance(), pFileTime.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Hash(JCORefOut pdwHash) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Hash", pdwHash.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Inverse(JCORefOut<IMoniker> ppmk) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Inverse", ppmk.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Load(IStream pStm) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Load", pStm == null ? null : pStm.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ParseDisplayName(IBindCtx pbc, IMoniker pmkToLeft, java.lang.String pszDisplayName, JCORefOut pchEaten, JCORefOut<IMoniker> ppmkOut) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ParseDisplayName", pbc == null ? null : pbc.getJCOInstance(), pmkToLeft == null ? null : pmkToLeft.getJCOInstance(), pszDisplayName, pchEaten.getJCRefOut(), ppmkOut.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Reduce(IBindCtx pbc, int dwReduceHowFar, IMoniker ppmkToLeft, JCORefOut<IMoniker> ppmkReduced) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Reduce", pbc == null ? null : pbc.getJCOInstance(), dwReduceHowFar, ppmkToLeft == null ? null : ppmkToLeft.getJCOInstance(), ppmkReduced.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void RelativePathTo(IMoniker pmkOther, JCORefOut<IMoniker> ppmkRelPath) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RelativePathTo", pmkOther == null ? null : pmkOther.getJCOInstance(), ppmkRelPath.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

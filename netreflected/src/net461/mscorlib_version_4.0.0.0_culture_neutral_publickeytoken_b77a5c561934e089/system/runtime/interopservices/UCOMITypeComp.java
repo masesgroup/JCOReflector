@@ -37,6 +37,11 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.runtime.interopservices.UCOMITypeInfo;
+import system.runtime.interopservices.UCOMITypeInfoImplementation;
+import system.runtime.interopservices.DESCKIND;
+import system.runtime.interopservices.UCOMITypeComp;
+import system.runtime.interopservices.UCOMITypeCompImplementation;
 
 
 /**
@@ -109,6 +114,8 @@ public interface UCOMITypeComp extends IJCOBridgeReflected {
 
     // Methods section
     
+    public void BindType(java.lang.String szName, int lHashVal, JCORefOut<UCOMITypeInfo> ppTInfo, JCORefOut<UCOMITypeComp> ppTComp) throws Throwable;
+
 
     
     // Properties section

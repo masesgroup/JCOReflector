@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.reflection.MemberInfo;
 import system.text.StringBuilder;
+import system.xml.XmlNamespaceManager;
 
 
 /**
@@ -145,6 +146,26 @@ public class XPathQueryGenerator extends NetObject  {
     
     // Methods section
     
+    public static java.lang.String CreateFromDataContractSerializer(NetType type, MemberInfo[] pathToMember, StringBuilder rootElementXpath, JCORefOut<XmlNamespaceManager> namespaces) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("CreateFromDataContractSerializer", type == null ? null : type.getJCOInstance(), toObjectFromArray(pathToMember), rootElementXpath == null ? null : rootElementXpath.getJCOInstance(), namespaces.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String CreateFromDataContractSerializer(NetType type, MemberInfo[] pathToMember, JCORefOut<XmlNamespaceManager> namespaces) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("CreateFromDataContractSerializer", type == null ? null : type.getJCOInstance(), toObjectFromArray(pathToMember), namespaces.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

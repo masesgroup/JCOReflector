@@ -37,6 +37,7 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.Guid;
 import system.UInt32;
 import system.reflection.MemberTypes;
 
@@ -116,6 +117,8 @@ public interface _MemberInfo extends IJCOBridgeReflected {
     public NetObject[] GetCustomAttributes(boolean inherit) throws Throwable;
 
     public NetObject[] GetCustomAttributes(NetType attributeType, boolean inherit) throws Throwable;
+
+    public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable;
 
 
     

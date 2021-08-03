@@ -123,6 +123,8 @@ public interface IExtendedUIService extends IJCOBridgeReflected {
 
     public Uri GetUrlForProxyClass(NetType proxyClass) throws Throwable;
 
+    public DialogResult AddWebReference(JCORefOut<Uri> url, JCORefOut<NetType> proxyClass) throws Throwable;
+
     public void AddAssemblyReference(AssemblyName assemblyName) throws Throwable;
 
     public void AddDesignerActions(DesignerAction[] actions) throws Throwable;

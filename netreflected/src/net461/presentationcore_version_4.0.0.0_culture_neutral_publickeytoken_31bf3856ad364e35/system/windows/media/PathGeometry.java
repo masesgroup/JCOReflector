@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.windows.media.Geometry;
 import system.windows.media.PathGeometry;
+import system.windows.Point;
 import system.windows.media.FillRule;
 import system.windows.media.PathFigureCollection;
 import system.windows.Rect;
@@ -224,6 +225,16 @@ public class PathGeometry extends Geometry  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Clear");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void GetPointAtFractionLength(double progress, JCORefOut<Point> point, JCORefOut<Point> tangent) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.MissingMethodException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetPointAtFractionLength", progress, point.getJCRefOut(), tangent.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

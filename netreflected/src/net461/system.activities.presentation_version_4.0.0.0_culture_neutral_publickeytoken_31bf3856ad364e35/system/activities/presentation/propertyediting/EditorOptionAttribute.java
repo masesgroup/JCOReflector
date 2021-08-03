@@ -152,6 +152,16 @@ public class EditorOptionAttribute extends Attribute  {
     
     // Methods section
     
+    public static boolean TryGetOptionValue(IEnumerable attributes, java.lang.String optionName, JCORefOut<NetObject> optionValue) throws Throwable, system.NullReferenceException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryGetOptionValue", attributes == null ? null : attributes.getJCOInstance(), optionName, optionValue.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

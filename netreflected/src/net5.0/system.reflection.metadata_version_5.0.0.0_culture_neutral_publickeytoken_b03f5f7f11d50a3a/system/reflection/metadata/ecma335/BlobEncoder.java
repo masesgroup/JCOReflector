@@ -47,6 +47,8 @@ import system.reflection.metadata.SignatureCallingConvention;
 import system.reflection.metadata.ecma335.NamedArgumentsEncoder;
 import system.reflection.metadata.ecma335.PermissionSetEncoder;
 import system.reflection.metadata.ecma335.SignatureTypeEncoder;
+import system.reflection.metadata.ecma335.FixedArgumentsEncoder;
+import system.reflection.metadata.ecma335.CustomAttributeNamedArgumentsEncoder;
 
 
 /**
@@ -247,6 +249,16 @@ public class BlobEncoder extends ValueType  {
         try {
             JCObject objTypeSpecificationSignature = (JCObject)classInstance.Invoke("TypeSpecificationSignature");
             return new SignatureTypeEncoder(objTypeSpecificationSignature);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void CustomAttributeSignature(JCORefOut<FixedArgumentsEncoder> fixedArguments, JCORefOut<CustomAttributeNamedArgumentsEncoder> namedArguments) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("CustomAttributeSignature", fixedArguments.getJCRefOut(), namedArguments.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

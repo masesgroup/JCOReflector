@@ -165,6 +165,16 @@ public class XamlSchemaContext extends NetObject  {
     
     // Methods section
     
+    public boolean TryGetCompatibleXamlNamespace(java.lang.String xamlNamespace, JCORefOut compatibleNamespace) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.xaml.XamlSchemaException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("TryGetCompatibleXamlNamespace", xamlNamespace, compatibleNamespace.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public java.lang.String GetPreferredPrefix(java.lang.String xmlns) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.InvalidOperationException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.xaml.XamlSchemaException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

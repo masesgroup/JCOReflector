@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.runtime.serialization.DataContractResolver;
+import system.xml.XmlDictionaryString;
 
 
 /**
@@ -144,6 +145,16 @@ public class DataContractResolver extends NetObject  {
     
     // Methods section
     
+    public boolean TryResolveType(NetType type, NetType declaredType, DataContractResolver knownTypeResolver, JCORefOut<XmlDictionaryString> typeName, JCORefOut<XmlDictionaryString> typeNamespace) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("TryResolveType", type == null ? null : type.getJCOInstance(), declaredType == null ? null : declaredType.getJCOInstance(), knownTypeResolver == null ? null : knownTypeResolver.getJCOInstance(), typeName.getJCRefOut(), typeNamespace.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetType ResolveName(java.lang.String typeName, java.lang.String typeNamespace, NetType declaredType, DataContractResolver knownTypeResolver) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

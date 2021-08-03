@@ -165,6 +165,26 @@ public class TextReader extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
+    public int Read(JCORefOut buffer, int index, int count) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("Read", buffer.getJCRefOut(), index, count);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int ReadBlock(JCORefOut buffer, int index, int count) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("ReadBlock", buffer.getJCRefOut(), index, count);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static TextReader Synchronized(TextReader reader) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");

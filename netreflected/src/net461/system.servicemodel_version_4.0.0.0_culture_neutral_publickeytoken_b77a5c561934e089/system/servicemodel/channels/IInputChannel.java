@@ -43,9 +43,9 @@ import system.servicemodel.ICommunicationObject;
 import system.servicemodel.ICommunicationObjectImplementation;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
+import system.servicemodel.channels.Message;
 import system.TimeSpan;
 import system.AsyncCallback;
-import system.servicemodel.channels.Message;
 import system.servicemodel.CommunicationState;
 import system.servicemodel.EndpointAddress;
 import system.EventHandler;
@@ -121,7 +121,11 @@ public interface IInputChannel extends IJCOBridgeReflected, IChannel, ICommunica
 
     // Methods section
     
+    public boolean EndTryReceive(IAsyncResult result, JCORefOut<Message> message) throws Throwable;
+
     public boolean EndWaitForMessage(IAsyncResult result) throws Throwable;
+
+    public boolean TryReceive(TimeSpan timeout, JCORefOut<Message> message) throws Throwable;
 
     public boolean WaitForMessage(TimeSpan timeout) throws Throwable;
 

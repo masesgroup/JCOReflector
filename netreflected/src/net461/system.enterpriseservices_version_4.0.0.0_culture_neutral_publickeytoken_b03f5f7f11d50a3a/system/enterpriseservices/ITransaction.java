@@ -37,6 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.enterpriseservices.BOID;
+import system.enterpriseservices.XACTTRANSINFO;
 
 
 /**
@@ -109,7 +111,11 @@ public interface ITransaction extends IJCOBridgeReflected {
 
     // Methods section
     
+    public void Abort(BOID pboidReason, int fRetaining, int fAsync) throws Throwable;
+
     public void Commit(int fRetaining, int grfTC, int grfRM) throws Throwable;
+
+    public void GetTransactionInfo(JCORefOut<XACTTRANSINFO> pinfo) throws Throwable;
 
 
     

@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.Guid;
+import system.workflow.runtime.tracking.SqlTrackingWorkflowInstance;
 
 
 /**
@@ -162,6 +163,16 @@ public class SqlTrackingQuery extends NetObject  {
     
     // Methods section
     
+    public boolean TryGetWorkflow(Guid workflowInstanceId, JCORefOut<SqlTrackingWorkflowInstance> workflowInstance) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.FormatException, system.data.sqltypes.SqlNullValueException, system.data.sqlclient.SqlException, system.InvalidCastException, system.OverflowException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.data.sqltypes.SqlTruncateException, system.threading.tasks.TaskSchedulerException, system.TypeLoadException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("TryGetWorkflow", workflowInstanceId == null ? null : workflowInstanceId.getJCOInstance(), workflowInstance.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

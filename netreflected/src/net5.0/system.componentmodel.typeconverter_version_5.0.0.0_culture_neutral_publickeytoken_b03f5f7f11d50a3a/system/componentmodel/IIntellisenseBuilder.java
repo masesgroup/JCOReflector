@@ -109,6 +109,8 @@ public interface IIntellisenseBuilder extends IJCOBridgeReflected {
 
     // Methods section
     
+    public boolean Show(java.lang.String language, java.lang.String value, java.lang.String newValue) throws Throwable;
+
 
     
     // Properties section

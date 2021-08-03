@@ -162,11 +162,31 @@ public class Semaphore extends WaitHandle  {
         }
     }
 
+    public Semaphore(int initialCount, int maximumCount, java.lang.String name, boolean createdNew) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.threading.WaitHandleCannotBeOpenedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(initialCount, maximumCount, name, createdNew));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
 
     
     // Methods section
     
+    public static boolean TryOpenExisting(java.lang.String name, JCORefOut<Semaphore> result) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryOpenExisting", name, result.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public int Release() throws Throwable, system.ArgumentNullException, system.threading.SemaphoreFullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

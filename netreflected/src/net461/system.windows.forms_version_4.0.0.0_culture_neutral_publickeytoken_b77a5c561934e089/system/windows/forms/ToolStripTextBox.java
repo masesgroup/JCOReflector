@@ -161,7 +161,7 @@ public class ToolStripTextBox extends ToolStripControlHost  {
         }
     }
 
-    public ToolStripTextBox(java.lang.String name) throws Throwable, system.componentmodel.Win32Exception, system.ArgumentException, system.ArgumentNullException, system.security.SecurityException, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+    public ToolStripTextBox(java.lang.String name) throws Throwable, system.componentmodel.Win32Exception, system.ArgumentException, system.ArgumentNullException, system.security.SecurityException, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

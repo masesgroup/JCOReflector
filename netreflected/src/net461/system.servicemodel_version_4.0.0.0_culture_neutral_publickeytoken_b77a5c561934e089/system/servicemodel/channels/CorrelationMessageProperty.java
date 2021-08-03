@@ -40,6 +40,7 @@ import java.util.ArrayList;
 // Import section
 import system.runtime.durableinstancing.InstanceKey;
 import system.servicemodel.channels.Message;
+import system.servicemodel.channels.CorrelationMessageProperty;
 import system.servicemodel.channels.MessageProperties;
 
 
@@ -148,6 +149,26 @@ public class CorrelationMessageProperty extends NetObject  {
     
     // Methods section
     
+    public static boolean TryGet(Message message, JCORefOut<CorrelationMessageProperty> property) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryGet", message == null ? null : message.getJCOInstance(), property.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean TryGet(MessageProperties properties, JCORefOut<CorrelationMessageProperty> property) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryGet", properties == null ? null : properties.getJCOInstance(), property.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

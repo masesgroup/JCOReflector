@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.windows.forms.Message;
 import system.windows.forms.PowerState;
 import system.threading.ApartmentState;
 import system.windows.forms.IMessageFilter;
@@ -159,6 +160,16 @@ public class Application extends NetObject  {
     
     // Methods section
     
+    public static boolean FilterMessage(Message message) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("FilterMessage", message == null ? null : message.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static boolean SetSuspendState(PowerState state, boolean force, boolean disableWakeEvent) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");

@@ -169,6 +169,16 @@ public class Matrix3x2 extends ValueType  {
         }
     }
 
+    public static boolean Invert(Matrix3x2 matrix, JCORefOut<Matrix3x2> result) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("Invert", matrix == null ? null : matrix.getJCOInstance(), result.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public Single GetDeterminant() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

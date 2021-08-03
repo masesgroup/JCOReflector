@@ -72,6 +72,8 @@ import system.resources.IResourceWriterImplementation;
 import system.reflection.ResourceAttributes;
 import system.security.cryptography.x509certificates.X509Certificate;
 import system.io.Stream;
+import system.reflection.PortableExecutableKinds;
+import system.reflection.ImageFileMachine;
 import system.reflection.emit.CustomAttributeBuilder;
 import system.UInt32;
 import system.reflection.Assembly;
@@ -805,6 +807,16 @@ public class ModuleBuilder extends Module  {
         }
     }
 
+    public void GetPEKind(JCORefOut<PortableExecutableKinds> peKind, JCORefOut<ImageFileMachine> machine) throws Throwable, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetPEKind", peKind.getJCRefOut(), machine.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void SetCustomAttribute(ConstructorInfo con, byte[] binaryAttribute) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.MissingMethodException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -863,6 +875,15 @@ public class ModuleBuilder extends Module  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static To_ModuleBuilder method available in _ModuleBuilder to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_ModuleBuilder to obtain the full interface.");
     }
 
 

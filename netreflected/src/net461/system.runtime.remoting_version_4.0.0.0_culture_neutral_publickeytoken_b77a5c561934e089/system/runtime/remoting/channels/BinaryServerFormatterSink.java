@@ -171,6 +171,17 @@ public class BinaryServerFormatterSink extends NetObject  {
         }
     }
 
+    public ServerProcessing ProcessMessage(IServerChannelSinkStack sinkStack, IMessage requestMsg, ITransportHeaders requestHeaders, Stream requestStream, JCORefOut<IMessage> responseMsg, JCORefOut<ITransportHeaders> responseHeaders, JCORefOut<Stream> responseStream) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.NullReferenceException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.runtime.remoting.RemotingException, system.security.SecurityException, system.runtime.serialization.SerializationException, system.configuration.ConfigurationErrorsException, system.InvalidCastException, system.web.HttpException, system.web.HttpRequestValidationException, system.UriFormatException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objProcessMessage = (JCObject)classInstance.Invoke("ProcessMessage", sinkStack == null ? null : sinkStack.getJCOInstance(), requestMsg == null ? null : requestMsg.getJCOInstance(), requestHeaders == null ? null : requestHeaders.getJCOInstance(), requestStream == null ? null : requestStream.getJCOInstance(), responseMsg.getJCRefOut(), responseHeaders.getJCRefOut(), responseStream.getJCRefOut());
+            return new ServerProcessing(objProcessMessage);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void AsyncProcessResponse(IServerResponseChannelSinkStack sinkStack, NetObject state, IMessage msg, ITransportHeaders headers, Stream stream) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.web.HttpException, system.web.HttpRequestValidationException, system.UriFormatException, system.OutOfMemoryException, system.runtime.remoting.RemotingException, system.NullReferenceException, system.runtime.serialization.SerializationException, system.security.SecurityException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

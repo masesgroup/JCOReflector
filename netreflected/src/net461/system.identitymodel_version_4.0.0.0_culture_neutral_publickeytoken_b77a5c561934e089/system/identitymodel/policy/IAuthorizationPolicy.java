@@ -113,6 +113,8 @@ public interface IAuthorizationPolicy extends IJCOBridgeReflected, IAuthorizatio
 
     // Methods section
     
+    public boolean Evaluate(EvaluationContext evaluationContext, NetObject state) throws Throwable;
+
 
     
     // Properties section

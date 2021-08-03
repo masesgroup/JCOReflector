@@ -39,6 +39,8 @@ import org.mases.jcobridge.netreflection.*;
 // Import section
 import system.runtime.interopservices.UCOMIMoniker;
 import system.runtime.interopservices.UCOMIMonikerImplementation;
+import system.runtime.interopservices.UCOMIEnumMoniker;
+import system.runtime.interopservices.UCOMIEnumMonikerImplementation;
 
 
 /**
@@ -111,9 +113,13 @@ public interface UCOMIEnumMoniker extends IJCOBridgeReflected {
 
     // Methods section
     
+    public int Next(int celt, JCORefOut<UCOMIMoniker[]> rgelt, JCORefOut pceltFetched) throws Throwable;
+
     public int Reset() throws Throwable;
 
     public int Skip(int celt) throws Throwable;
+
+    public void Clone(JCORefOut<UCOMIEnumMoniker> ppenum) throws Throwable;
 
 
     

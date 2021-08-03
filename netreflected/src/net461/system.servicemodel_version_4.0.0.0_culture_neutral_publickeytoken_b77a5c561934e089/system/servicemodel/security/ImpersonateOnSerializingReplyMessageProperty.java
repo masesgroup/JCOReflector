@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.servicemodel.channels.Message;
+import system.servicemodel.security.ImpersonateOnSerializingReplyMessageProperty;
 import system.servicemodel.channels.MessageProperties;
 import system.servicemodel.channels.IMessageProperty;
 import system.servicemodel.channels.IMessagePropertyImplementation;
@@ -153,12 +154,42 @@ public class ImpersonateOnSerializingReplyMessageProperty extends NetObject  {
     
     // Methods section
     
+    public static boolean TryGet(Message message, JCORefOut<ImpersonateOnSerializingReplyMessageProperty> property) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryGet", message == null ? null : message.getJCOInstance(), property.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean TryGet(MessageProperties properties, JCORefOut<ImpersonateOnSerializingReplyMessageProperty> property) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryGet", properties == null ? null : properties.getJCOInstance(), property.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public IMessageProperty CreateCopy() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objCreateCopy = (JCObject)classInstance.Invoke("CreateCopy");
             return new IMessagePropertyImplementation(objCreateCopy);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void StartImpersonation(JCORefOut<IDisposable> impersonationContext, JCORefOut<IPrincipal> originalPrincipal, JCORefOut isThreadPrincipalSet) throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.componentmodel.InvalidEnumArgumentException, system.security.SecurityException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("StartImpersonation", impersonationContext.getJCRefOut(), originalPrincipal.getJCRefOut(), isThreadPrincipalSet.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -48,9 +48,9 @@ import system.servicemodel.channels.IOutputChannel;
 import system.servicemodel.channels.IOutputChannelImplementation;
 import system.IAsyncResult;
 import system.IAsyncResultImplementation;
+import system.servicemodel.channels.Message;
 import system.TimeSpan;
 import system.AsyncCallback;
-import system.servicemodel.channels.Message;
 import system.servicemodel.CommunicationState;
 import system.servicemodel.EndpointAddress;
 import system.Uri;
@@ -149,11 +149,31 @@ public class IDuplexChannelImplementation extends NetObject implements IDuplexCh
 
     // Methods section
     
+    public boolean EndTryReceive(IAsyncResult result, JCORefOut<Message> message) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("EndTryReceive", result == null ? null : result.getJCOInstance(), message.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean EndWaitForMessage(IAsyncResult result) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("EndWaitForMessage", result == null ? null : result.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean TryReceive(TimeSpan timeout, JCORefOut<Message> message) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("TryReceive", timeout == null ? null : timeout.getJCOInstance(), message.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

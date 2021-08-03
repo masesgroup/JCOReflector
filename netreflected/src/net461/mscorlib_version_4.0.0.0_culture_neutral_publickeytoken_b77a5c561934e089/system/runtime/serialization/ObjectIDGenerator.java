@@ -151,6 +151,26 @@ public class ObjectIDGenerator extends NetObject  {
     
     // Methods section
     
+    public long GetId(NetObject obj, JCORefOut firstTime) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.runtime.serialization.SerializationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (long)classInstance.Invoke("GetId", obj == null ? null : obj.getJCOInstance(), firstTime.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public long HasId(NetObject obj, JCORefOut firstTime) throws Throwable, system.ArgumentNullException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (long)classInstance.Invoke("HasId", obj == null ? null : obj.getJCOInstance(), firstTime.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

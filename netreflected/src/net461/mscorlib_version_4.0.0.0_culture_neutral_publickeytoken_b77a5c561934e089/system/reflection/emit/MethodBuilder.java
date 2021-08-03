@@ -55,6 +55,7 @@ import system.security.PermissionSet;
 import system.reflection.ConstructorInfo;
 import system.reflection.emit.CustomAttributeBuilder;
 import system.reflection.emit.UnmanagedMarshal;
+import system.Guid;
 import system.UInt32;
 import system.reflection.CallingConventions;
 import system.reflection.ICustomAttributeProvider;
@@ -508,6 +509,15 @@ public class MethodBuilder extends MethodInfo  {
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
+    }
+
+    /**
+     * @deprecated Not for public use because the method is implemented in .NET with an explicit interface.
+     *    Use the static To_MethodBuilder method available in _MethodBuilder to obtain an object with an invocable method
+     */
+    @Deprecated 
+    public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable {
+        throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use To_MethodBuilder to obtain the full interface.");
     }
 
 

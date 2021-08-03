@@ -37,6 +37,8 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.runtime.interopservices.comtypes.IEnumString;
+import system.runtime.interopservices.comtypes.IEnumStringImplementation;
 
 
 /**
@@ -110,6 +112,8 @@ public interface IEnumString extends IJCOBridgeReflected {
     // Methods section
     
     public int Skip(int celt) throws Throwable;
+
+    public void Clone(JCORefOut<IEnumString> ppenum) throws Throwable;
 
     public void Reset() throws Throwable;
 

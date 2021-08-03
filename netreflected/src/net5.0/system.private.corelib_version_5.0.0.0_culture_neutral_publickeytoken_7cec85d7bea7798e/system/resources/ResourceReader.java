@@ -186,6 +186,16 @@ public class ResourceReader extends NetObjectEnumerable implements AutoCloseable
         }
     }
 
+    public void GetResourceData(java.lang.String resourceName, JCORefOut resourceType, JCORefOut resourceData) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.BadImageFormatException, system.io.IOException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetResourceData", resourceName, resourceType.getJCRefOut(), resourceData.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void close() throws Exception {
         try {
             if (classInstance == null)

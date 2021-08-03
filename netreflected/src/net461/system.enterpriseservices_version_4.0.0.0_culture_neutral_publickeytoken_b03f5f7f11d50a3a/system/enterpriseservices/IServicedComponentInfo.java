@@ -109,6 +109,8 @@ public interface IServicedComponentInfo extends IJCOBridgeReflected {
 
     // Methods section
     
+    public void GetComponentInfo(int infoMask, JCORefOut infoArray) throws Throwable;
+
 
     
     // Properties section

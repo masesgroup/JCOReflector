@@ -38,9 +38,16 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.runtime.interopservices.comtypes.FORMATETC;
+import system.runtime.interopservices.comtypes.ADVF;
+import system.runtime.interopservices.comtypes.IAdviseSink;
+import system.runtime.interopservices.comtypes.IAdviseSinkImplementation;
+import system.runtime.interopservices.comtypes.IEnumSTATDATA;
+import system.runtime.interopservices.comtypes.IEnumSTATDATAImplementation;
 import system.runtime.interopservices.comtypes.IEnumFORMATETC;
 import system.runtime.interopservices.comtypes.IEnumFORMATETCImplementation;
 import system.runtime.interopservices.comtypes.DATADIR;
+import system.runtime.interopservices.comtypes.STGMEDIUM;
 
 
 /**
@@ -135,6 +142,46 @@ public class IDataObjectImplementation extends NetObject implements IDataObject 
 
     // Methods section
     
+    public int DAdvise(FORMATETC pFormatetc, ADVF advf, IAdviseSink adviseSink, JCORefOut connection) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("DAdvise", pFormatetc == null ? null : pFormatetc.getJCOInstance(), advf == null ? null : advf.getJCOInstance(), adviseSink == null ? null : adviseSink.getJCOInstance(), connection.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int EnumDAdvise(JCORefOut<IEnumSTATDATA> enumAdvise) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("EnumDAdvise", enumAdvise.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int GetCanonicalFormatEtc(FORMATETC formatIn, JCORefOut<FORMATETC> formatOut) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("GetCanonicalFormatEtc", formatIn == null ? null : formatIn.getJCOInstance(), formatOut.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int QueryGetData(FORMATETC format) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("QueryGetData", format == null ? null : format.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public IEnumFORMATETC EnumFormatEtc(DATADIR direction) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -151,6 +198,36 @@ public class IDataObjectImplementation extends NetObject implements IDataObject 
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("DUnadvise", connection);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void GetData(FORMATETC format, JCORefOut<STGMEDIUM> medium) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetData", format == null ? null : format.getJCOInstance(), medium.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void GetDataHere(FORMATETC format, STGMEDIUM medium) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetDataHere", format == null ? null : format.getJCOInstance(), medium == null ? null : medium.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetData(FORMATETC formatIn, STGMEDIUM medium, boolean release) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetData", formatIn == null ? null : formatIn.getJCOInstance(), medium == null ? null : medium.getJCOInstance(), release);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

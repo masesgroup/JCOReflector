@@ -264,6 +264,26 @@ public class BigInteger extends ValueType  {
         }
     }
 
+    public static boolean TryParse(java.lang.String value, NumberStyles style, IFormatProvider provider, JCORefOut<BigInteger> result) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryParse", value, style == null ? null : style.getJCOInstance(), provider == null ? null : provider.getJCOInstance(), result.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean TryParse(java.lang.String value, JCORefOut<BigInteger> result) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryParse", value, result.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public byte[] ToByteArray() throws Throwable, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -391,6 +411,17 @@ public class BigInteger extends ValueType  {
         try {
             JCObject objDivide = (JCObject)classType.Invoke("Divide", dividend == null ? null : dividend.getJCOInstance(), divisor == null ? null : divisor.getJCOInstance());
             return new BigInteger(objDivide);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static BigInteger DivRem(BigInteger dividend, BigInteger divisor, JCORefOut<BigInteger> remainder) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objDivRem = (JCObject)classType.Invoke("DivRem", dividend == null ? null : dividend.getJCOInstance(), divisor == null ? null : divisor.getJCOInstance(), remainder.getJCRefOut());
+            return new BigInteger(objDivRem);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

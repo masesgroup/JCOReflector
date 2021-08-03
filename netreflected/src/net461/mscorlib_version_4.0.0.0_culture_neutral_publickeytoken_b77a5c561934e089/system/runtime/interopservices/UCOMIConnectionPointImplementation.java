@@ -38,6 +38,11 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.runtime.interopservices.UCOMIEnumConnections;
+import system.runtime.interopservices.UCOMIEnumConnectionsImplementation;
+import system.Guid;
+import system.runtime.interopservices.UCOMIConnectionPointContainer;
+import system.runtime.interopservices.UCOMIConnectionPointContainerImplementation;
 
 
 /**
@@ -132,6 +137,46 @@ public class UCOMIConnectionPointImplementation extends NetObject implements UCO
 
     // Methods section
     
+    public void Advise(NetObject pUnkSink, JCORefOut pdwCookie) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Advise", pUnkSink == null ? null : pUnkSink.getJCOInstance(), pdwCookie.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void EnumConnections(JCORefOut<UCOMIEnumConnections> ppEnum) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("EnumConnections", ppEnum.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void GetConnectionInterface(JCORefOut<Guid> pIID) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetConnectionInterface", pIID.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void GetConnectionPointContainer(JCORefOut<UCOMIConnectionPointContainer> ppCPC) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetConnectionPointContainer", ppCPC.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Unadvise(int dwCookie) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

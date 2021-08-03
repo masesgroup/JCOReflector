@@ -39,6 +39,7 @@ import java.util.ArrayList;
 
 // Import section
 import system.servicemodel.OperationContext;
+import system.servicemodel.channels.Message;
 
 
 /**
@@ -157,6 +158,16 @@ public class ServiceAuthorizationManager extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("CheckAccess", operationContext == null ? null : operationContext.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean CheckAccess(OperationContext operationContext, Message message) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("CheckAccess", operationContext == null ? null : operationContext.getJCOInstance(), message == null ? null : message.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -40,6 +40,13 @@ import org.mases.jcobridge.netreflection.*;
 import system.runtime.interopservices.comtypes.ITypeInfo;
 import system.runtime.interopservices.comtypes.ITypeInfoImplementation;
 import system.runtime.interopservices.comtypes.INVOKEKIND;
+import system.Guid;
+import system.runtime.interopservices.comtypes.ITypeLib;
+import system.runtime.interopservices.comtypes.ITypeLibImplementation;
+import system.runtime.interopservices.comtypes.IMPLTYPEFLAGS;
+import system.runtime.interopservices.comtypes.ITypeComp;
+import system.runtime.interopservices.comtypes.ITypeCompImplementation;
+import system.runtime.interopservices.comtypes.TYPEKIND;
 
 
 /**
@@ -112,6 +119,46 @@ public interface ITypeInfo2 extends IJCOBridgeReflected, ITypeInfo {
 
     // Methods section
     
+    public void CreateInstance(NetObject pUnkOuter, Guid riid, JCORefOut<NetObject> ppvObj) throws Throwable;
+
+    public void GetContainingTypeLib(JCORefOut<ITypeLib> ppTLB, JCORefOut pIndex) throws Throwable;
+
+    public void GetCustData(Guid guid, JCORefOut<NetObject> pVarVal) throws Throwable;
+
+    public void GetDocumentation(int index, JCORefOut strName, JCORefOut strDocString, JCORefOut dwHelpContext, JCORefOut strHelpFile) throws Throwable;
+
+    public void GetDocumentation2(int memid, JCORefOut pbstrHelpString, JCORefOut pdwHelpStringContext, JCORefOut pbstrHelpStringDll) throws Throwable;
+
+    public void GetFuncCustData(int index, Guid guid, JCORefOut<NetObject> pVarVal) throws Throwable;
+
+    public void GetFuncIndexOfMemId(int memid, INVOKEKIND invKind, JCORefOut pFuncIndex) throws Throwable;
+
+    public void GetIDsOfNames(java.lang.String[] rgszNames, int cNames, JCORefOut pMemId) throws Throwable;
+
+    public void GetImplTypeCustData(int index, Guid guid, JCORefOut<NetObject> pVarVal) throws Throwable;
+
+    public void GetImplTypeFlags(int index, JCORefOut<IMPLTYPEFLAGS> pImplTypeFlags) throws Throwable;
+
+    public void GetMops(int memid, JCORefOut pBstrMops) throws Throwable;
+
+    public void GetNames(int memid, JCORefOut rgBstrNames, int cMaxNames, JCORefOut pcNames) throws Throwable;
+
+    public void GetParamCustData(int indexFunc, int indexParam, Guid guid, JCORefOut<NetObject> pVarVal) throws Throwable;
+
+    public void GetRefTypeInfo(int hRef, JCORefOut<ITypeInfo> ppTI) throws Throwable;
+
+    public void GetRefTypeOfImplType(int index, JCORefOut href) throws Throwable;
+
+    public void GetTypeComp(JCORefOut<ITypeComp> ppTComp) throws Throwable;
+
+    public void GetTypeFlags(JCORefOut pTypeFlags) throws Throwable;
+
+    public void GetTypeKind(JCORefOut<TYPEKIND> pTypeKind) throws Throwable;
+
+    public void GetVarCustData(int index, Guid guid, JCORefOut<NetObject> pVarVal) throws Throwable;
+
+    public void GetVarIndexOfMemId(int memid, JCORefOut pVarIndex) throws Throwable;
+
 
     
     // Properties section

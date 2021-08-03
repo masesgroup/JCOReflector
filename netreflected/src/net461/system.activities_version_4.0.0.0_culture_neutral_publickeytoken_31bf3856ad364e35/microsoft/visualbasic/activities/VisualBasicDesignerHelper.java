@@ -40,6 +40,8 @@ import java.util.ArrayList;
 // Import section
 import system.activities.Activity;
 import system.activities.ActivityWithResult;
+import system.activities.expressionparser.SourceExpressionException;
+import microsoft.visualbasic.activities.VisualBasicSettings;
 import system.activities.validation.Constraint;
 
 
@@ -146,6 +148,28 @@ public class VisualBasicDesignerHelper extends NetObject  {
     
     // Methods section
     
+    public static Activity RecompileVisualBasicReference(ActivityWithResult visualBasicReference, JCORefOut<NetType> returnType, JCORefOut<SourceExpressionException> compileError, JCORefOut<VisualBasicSettings> vbSettings) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadAbortException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.ApplicationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objRecompileVisualBasicReference = (JCObject)classType.Invoke("RecompileVisualBasicReference", visualBasicReference == null ? null : visualBasicReference.getJCOInstance(), returnType.getJCRefOut(), compileError.getJCRefOut(), vbSettings.getJCRefOut());
+            return new Activity(objRecompileVisualBasicReference);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Activity RecompileVisualBasicValue(ActivityWithResult visualBasicValue, JCORefOut<NetType> returnType, JCORefOut<SourceExpressionException> compileError, JCORefOut<VisualBasicSettings> vbSettings) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.ThreadAbortException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.ApplicationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objRecompileVisualBasicValue = (JCObject)classType.Invoke("RecompileVisualBasicValue", visualBasicValue == null ? null : visualBasicValue.getJCOInstance(), returnType.getJCRefOut(), compileError.getJCRefOut(), vbSettings.getJCRefOut());
+            return new Activity(objRecompileVisualBasicValue);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

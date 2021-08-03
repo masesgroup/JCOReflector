@@ -50,6 +50,9 @@ import system.printing.PrintSystemJobInfo;
 import system.printing.ValidationResult;
 import system.printing.PrintTicketScope;
 import system.windows.xps.XpsDocumentWriter;
+import system.printing.PrintDocumentImageableArea;
+import system.windows.controls.PageRangeSelection;
+import system.windows.controls.PageRange;
 import system.printing.PrintQueue;
 import system.printing.PrintDriver;
 import system.printing.PrintJobSettings;
@@ -387,11 +390,66 @@ public class PrintQueue extends PrintSystemObject  {
         }
     }
 
+    public static XpsDocumentWriter CreateXpsDocumentWriter(double width, double height) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.componentmodel.Win32Exception, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.MulticastNotSupportedException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateXpsDocumentWriter = (JCObject)classType.Invoke("CreateXpsDocumentWriter", width, height);
+            return new XpsDocumentWriter(objCreateXpsDocumentWriter);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static XpsDocumentWriter CreateXpsDocumentWriter(PrintDocumentImageableArea documentImageableArea) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.printing.PrintQueueException, system.ArgumentException, system.OutOfMemoryException, system.ObjectDisposedException, system.MulticastNotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateXpsDocumentWriter = (JCObject)classType.Invoke("CreateXpsDocumentWriter", documentImageableArea == null ? null : documentImageableArea.getJCOInstance());
+            return new XpsDocumentWriter(objCreateXpsDocumentWriter);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static XpsDocumentWriter CreateXpsDocumentWriter(PrintDocumentImageableArea documentImageableArea, PageRangeSelection pageRangeSelection, PageRange pageRange) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.printing.PrintQueueException, system.ArgumentException, system.OutOfMemoryException, system.ObjectDisposedException, system.MulticastNotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateXpsDocumentWriter = (JCObject)classType.Invoke("CreateXpsDocumentWriter", documentImageableArea == null ? null : documentImageableArea.getJCOInstance(), pageRangeSelection == null ? null : pageRangeSelection.getJCOInstance(), pageRange == null ? null : pageRange.getJCOInstance());
+            return new XpsDocumentWriter(objCreateXpsDocumentWriter);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static XpsDocumentWriter CreateXpsDocumentWriter(PrintQueue printQueue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objCreateXpsDocumentWriter = (JCObject)classType.Invoke("CreateXpsDocumentWriter", printQueue == null ? null : printQueue.getJCOInstance());
+            return new XpsDocumentWriter(objCreateXpsDocumentWriter);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static XpsDocumentWriter CreateXpsDocumentWriter(java.lang.String jobDescription, PrintDocumentImageableArea documentImageableArea) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.componentmodel.Win32Exception, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.MulticastNotSupportedException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateXpsDocumentWriter = (JCObject)classType.Invoke("CreateXpsDocumentWriter", jobDescription, documentImageableArea == null ? null : documentImageableArea.getJCOInstance());
+            return new XpsDocumentWriter(objCreateXpsDocumentWriter);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static XpsDocumentWriter CreateXpsDocumentWriter(java.lang.String jobDescription, PrintDocumentImageableArea documentImageableArea, PageRangeSelection pageRangeSelection, PageRange pageRange) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.printing.PrintingNotSupportedException, system.printing.PrintQueueException, system.componentmodel.Win32Exception, system.ArgumentException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.MulticastNotSupportedException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateXpsDocumentWriter = (JCObject)classType.Invoke("CreateXpsDocumentWriter", jobDescription, documentImageableArea == null ? null : documentImageableArea.getJCOInstance(), pageRangeSelection == null ? null : pageRangeSelection.getJCOInstance(), pageRange == null ? null : pageRange.getJCOInstance());
             return new XpsDocumentWriter(objCreateXpsDocumentWriter);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

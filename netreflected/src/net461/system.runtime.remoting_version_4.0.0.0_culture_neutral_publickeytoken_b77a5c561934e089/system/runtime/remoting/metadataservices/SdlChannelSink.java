@@ -182,6 +182,17 @@ public class SdlChannelSink extends NetObject  {
         }
     }
 
+    public ServerProcessing ProcessMessage(IServerChannelSinkStack sinkStack, IMessage requestMsg, ITransportHeaders requestHeaders, Stream requestStream, JCORefOut<IMessage> responseMsg, JCORefOut<ITransportHeaders> responseHeaders, JCORefOut<Stream> responseStream) throws Throwable, system.NullReferenceException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.NotImplementedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.runtime.remoting.RemotingException, system.web.HttpException, system.web.HttpRequestValidationException, system.UriFormatException, system.OutOfMemoryException, system.net.sockets.SocketException, system.AccessViolationException, system.security.SecurityException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objProcessMessage = (JCObject)classInstance.Invoke("ProcessMessage", sinkStack == null ? null : sinkStack.getJCOInstance(), requestMsg == null ? null : requestMsg.getJCOInstance(), requestHeaders == null ? null : requestHeaders.getJCOInstance(), requestStream == null ? null : requestStream.getJCOInstance(), responseMsg.getJCRefOut(), responseHeaders.getJCRefOut(), responseStream.getJCRefOut());
+            return new ServerProcessing(objProcessMessage);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void AsyncProcessResponse(IServerResponseChannelSinkStack sinkStack, NetObject state, IMessage msg, ITransportHeaders headers, Stream stream) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

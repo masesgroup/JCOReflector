@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 
 // Import section
 import system.reflection.MethodInfo;
+import system.Guid;
 import system.UInt32;
 import system.reflection.EventAttributes;
 import system.reflection.MemberTypes;
@@ -130,6 +131,8 @@ public interface _EventInfo extends IJCOBridgeReflected {
     public MethodInfo GetRemoveMethod() throws Throwable;
 
     public MethodInfo GetRemoveMethod(boolean nonPublic) throws Throwable;
+
+    public void GetTypeInfoCount(JCORefOut<UInt32> pcTInfo) throws Throwable;
 
 
     

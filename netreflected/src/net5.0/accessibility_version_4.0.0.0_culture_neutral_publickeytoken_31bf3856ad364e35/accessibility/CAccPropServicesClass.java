@@ -39,6 +39,12 @@ import java.util.ArrayList;
 
 // Import section
 import system.__ComObject;
+import accessibility._RemotableHandle;
+import system.UInt32;
+import system.Guid;
+import accessibility.IAccPropServer;
+import accessibility.IAccPropServerImplementation;
+import accessibility.AnnoScope;
 
 
 /**
@@ -152,6 +158,116 @@ public class CAccPropServicesClass extends __ComObject  {
     
     // Methods section
     
+    public void ClearHmenuProps(_RemotableHandle hmenu, UInt32 idChild, Guid paProps, int cProps) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ClearHmenuProps", hmenu == null ? null : hmenu.getJCOInstance(), idChild == null ? null : idChild.getJCOInstance(), paProps == null ? null : paProps.getJCOInstance(), cProps);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ClearHwndProps(_RemotableHandle hwnd, UInt32 idObject, UInt32 idChild, Guid paProps, int cProps) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ClearHwndProps", hwnd == null ? null : hwnd.getJCOInstance(), idObject == null ? null : idObject.getJCOInstance(), idChild == null ? null : idChild.getJCOInstance(), paProps == null ? null : paProps.getJCOInstance(), cProps);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ClearProps(byte pIDString, UInt32 dwIDStringLen, Guid paProps, int cProps) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ClearProps", pIDString, dwIDStringLen == null ? null : dwIDStringLen.getJCOInstance(), paProps == null ? null : paProps.getJCOInstance(), cProps);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetHmenuProp(_RemotableHandle hmenu, UInt32 idChild, Guid idProp, NetObject var) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetHmenuProp", hmenu == null ? null : hmenu.getJCOInstance(), idChild == null ? null : idChild.getJCOInstance(), idProp == null ? null : idProp.getJCOInstance(), var == null ? null : var.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetHmenuPropServer(_RemotableHandle hmenu, UInt32 idChild, Guid paProps, int cProps, IAccPropServer pServer, AnnoScope AnnoScope) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetHmenuPropServer", hmenu == null ? null : hmenu.getJCOInstance(), idChild == null ? null : idChild.getJCOInstance(), paProps == null ? null : paProps.getJCOInstance(), cProps, pServer == null ? null : pServer.getJCOInstance(), AnnoScope == null ? null : AnnoScope.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetHmenuPropStr(_RemotableHandle hmenu, UInt32 idChild, Guid idProp, java.lang.String str) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetHmenuPropStr", hmenu == null ? null : hmenu.getJCOInstance(), idChild == null ? null : idChild.getJCOInstance(), idProp == null ? null : idProp.getJCOInstance(), str);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetHwndProp(_RemotableHandle hwnd, UInt32 idObject, UInt32 idChild, Guid idProp, NetObject var) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetHwndProp", hwnd == null ? null : hwnd.getJCOInstance(), idObject == null ? null : idObject.getJCOInstance(), idChild == null ? null : idChild.getJCOInstance(), idProp == null ? null : idProp.getJCOInstance(), var == null ? null : var.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetHwndPropServer(_RemotableHandle hwnd, UInt32 idObject, UInt32 idChild, Guid paProps, int cProps, IAccPropServer pServer, AnnoScope AnnoScope) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetHwndPropServer", hwnd == null ? null : hwnd.getJCOInstance(), idObject == null ? null : idObject.getJCOInstance(), idChild == null ? null : idChild.getJCOInstance(), paProps == null ? null : paProps.getJCOInstance(), cProps, pServer == null ? null : pServer.getJCOInstance(), AnnoScope == null ? null : AnnoScope.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetHwndPropStr(_RemotableHandle hwnd, UInt32 idObject, UInt32 idChild, Guid idProp, java.lang.String str) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetHwndPropStr", hwnd == null ? null : hwnd.getJCOInstance(), idObject == null ? null : idObject.getJCOInstance(), idChild == null ? null : idChild.getJCOInstance(), idProp == null ? null : idProp.getJCOInstance(), str);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetPropServer(byte pIDString, UInt32 dwIDStringLen, Guid paProps, int cProps, IAccPropServer pServer, AnnoScope AnnoScope) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetPropServer", pIDString, dwIDStringLen == null ? null : dwIDStringLen.getJCOInstance(), paProps == null ? null : paProps.getJCOInstance(), cProps, pServer == null ? null : pServer.getJCOInstance(), AnnoScope == null ? null : AnnoScope.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetPropValue(byte pIDString, UInt32 dwIDStringLen, Guid idProp, NetObject var) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetPropValue", pIDString, dwIDStringLen == null ? null : dwIDStringLen.getJCOInstance(), idProp == null ? null : idProp.getJCOInstance(), var == null ? null : var.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

@@ -38,6 +38,8 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.UInt32;
+import system.Guid;
 
 
 /**
@@ -132,6 +134,16 @@ public class IAccPropServerImplementation extends NetObject implements IAccPropS
 
     // Methods section
     
+    public void GetPropValue(byte pIDString, UInt32 dwIDStringLen, Guid idProp, JCORefOut<NetObject> pvarValue, JCORefOut pfHasProp) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("GetPropValue", pIDString, dwIDStringLen == null ? null : dwIDStringLen.getJCOInstance(), idProp == null ? null : idProp.getJCOInstance(), pvarValue.getJCRefOut(), pfHasProp.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section

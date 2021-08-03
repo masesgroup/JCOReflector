@@ -144,6 +144,180 @@ public class Interlocked extends NetObject  {
     
     // Methods section
     
+    public static double CompareExchange(double location1, double value, double comparand) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (double)classType.Invoke("CompareExchange", location1, value, comparand);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static double Exchange(double location1, double value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (double)classType.Invoke("Exchange", location1, value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static int Add(int location1, int value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (int)classType.Invoke("Add", location1, value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static int CompareExchange(int location1, int value, int comparand) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (int)classType.Invoke("CompareExchange", location1, value, comparand);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static int Decrement(int location) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (int)classType.Invoke("Decrement", location);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static int Exchange(int location1, int value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (int)classType.Invoke("Exchange", location1, value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static int Increment(int location) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (int)classType.Invoke("Increment", location);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static long Add(long location1, long value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (long)classType.Invoke("Add", location1, value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static long CompareExchange(long location1, long value, long comparand) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (long)classType.Invoke("CompareExchange", location1, value, comparand);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static long Decrement(long location) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (long)classType.Invoke("Decrement", location);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static long Exchange(long location1, long value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (long)classType.Invoke("Exchange", location1, value);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static long Increment(long location) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (long)classType.Invoke("Increment", location);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static long Read(long location) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (long)classType.Invoke("Read", location);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Single CompareExchange(Single location1, Single value, Single comparand) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCompareExchange = (JCObject)classType.Invoke("CompareExchange", location1 == null ? null : location1.getJCOInstance(), value == null ? null : value.getJCOInstance(), comparand == null ? null : comparand.getJCOInstance());
+            return new Single(objCompareExchange);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Single Exchange(Single location1, Single value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objExchange = (JCObject)classType.Invoke("Exchange", location1 == null ? null : location1.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            return new Single(objExchange);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject CompareExchange(NetObject location1, NetObject value, NetObject comparand) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCompareExchange = (JCObject)classType.Invoke("CompareExchange", location1 == null ? null : location1.getJCOInstance(), value == null ? null : value.getJCOInstance(), comparand == null ? null : comparand.getJCOInstance());
+            return new NetObject(objCompareExchange);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static NetObject Exchange(NetObject location1, NetObject value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objExchange = (JCObject)classType.Invoke("Exchange", location1 == null ? null : location1.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            return new NetObject(objExchange);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static void MemoryBarrier() throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");

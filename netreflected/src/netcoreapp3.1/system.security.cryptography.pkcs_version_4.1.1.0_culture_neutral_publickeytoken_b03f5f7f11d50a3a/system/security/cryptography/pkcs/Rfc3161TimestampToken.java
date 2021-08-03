@@ -39,6 +39,8 @@ import java.util.ArrayList;
 
 // Import section
 import system.security.cryptography.pkcs.SignerInfo;
+import system.security.cryptography.x509certificates.X509Certificate2;
+import system.security.cryptography.x509certificates.X509Certificate2Collection;
 import system.security.cryptography.pkcs.SignedCms;
 import system.security.cryptography.pkcs.Rfc3161TimestampTokenInfo;
 
@@ -148,6 +150,16 @@ public class Rfc3161TimestampToken extends NetObject  {
     
     // Methods section
     
+    public boolean VerifySignatureForSignerInfo(SignerInfo signerInfo, JCORefOut<X509Certificate2> signerCertificate, X509Certificate2Collection extraCandidates) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.security.cryptography.CryptographicException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("VerifySignatureForSignerInfo", signerInfo == null ? null : signerInfo.getJCOInstance(), signerCertificate.getJCRefOut(), extraCandidates == null ? null : extraCandidates.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public SignedCms AsSignedCms() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

@@ -265,6 +265,17 @@ public class TextPointer extends ContentPosition  {
         }
     }
 
+    public TextPointer GetLineStartPosition(int count, JCORefOut actualCount) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetLineStartPosition = (JCObject)classInstance.Invoke("GetLineStartPosition", count, actualCount.getJCRefOut());
+            return new TextPointer(objGetLineStartPosition);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public TextPointer GetNextContextPosition(LogicalDirection direction) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

@@ -144,6 +144,16 @@ public class ComponentDispatcher extends NetObject  {
     
     // Methods section
     
+    public static boolean RaiseThreadMessage(MSG msg) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("RaiseThreadMessage", msg == null ? null : msg.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static void PopModal() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentNullException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");

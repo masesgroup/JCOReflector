@@ -134,6 +134,16 @@ public class IStreamImplementation extends NetObject implements IStream {
 
     // Methods section
     
+    public void Clone(JCORefOut<IStream> ppstm) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Clone", ppstm.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public void Commit(int grfCommitFlags) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

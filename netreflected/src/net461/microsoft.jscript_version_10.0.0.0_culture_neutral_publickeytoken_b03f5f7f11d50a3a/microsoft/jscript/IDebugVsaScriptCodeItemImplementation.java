@@ -38,6 +38,7 @@ import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
+import system.UInt64;
 
 
 /**
@@ -132,6 +133,16 @@ public class IDebugVsaScriptCodeItemImplementation extends NetObject implements 
 
     // Methods section
     
+    public boolean ParseNamedBreakPoint(java.lang.String input, JCORefOut functionName, JCORefOut nargs, JCORefOut arguments, JCORefOut returnType, JCORefOut<UInt64> offset) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("ParseNamedBreakPoint", input, functionName.getJCRefOut(), nargs.getJCRefOut(), arguments.getJCRefOut(), returnType.getJCRefOut(), offset.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetObject Evaluate() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");

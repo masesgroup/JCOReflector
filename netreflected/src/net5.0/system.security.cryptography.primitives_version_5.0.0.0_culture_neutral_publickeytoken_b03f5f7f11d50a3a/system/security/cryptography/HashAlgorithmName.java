@@ -167,6 +167,16 @@ public class HashAlgorithmName extends ValueType  {
         }
     }
 
+    public static boolean TryFromOid(java.lang.String oidValue, JCORefOut<HashAlgorithmName> value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryFromOid", oidValue, value.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static HashAlgorithmName FromOid(java.lang.String oidValue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");

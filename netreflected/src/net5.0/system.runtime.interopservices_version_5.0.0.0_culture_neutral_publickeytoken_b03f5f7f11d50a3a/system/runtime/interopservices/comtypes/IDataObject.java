@@ -37,9 +37,16 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
+import system.runtime.interopservices.comtypes.FORMATETC;
+import system.runtime.interopservices.comtypes.ADVF;
+import system.runtime.interopservices.comtypes.IAdviseSink;
+import system.runtime.interopservices.comtypes.IAdviseSinkImplementation;
+import system.runtime.interopservices.comtypes.IEnumSTATDATA;
+import system.runtime.interopservices.comtypes.IEnumSTATDATAImplementation;
 import system.runtime.interopservices.comtypes.IEnumFORMATETC;
 import system.runtime.interopservices.comtypes.IEnumFORMATETCImplementation;
 import system.runtime.interopservices.comtypes.DATADIR;
+import system.runtime.interopservices.comtypes.STGMEDIUM;
 
 
 /**
@@ -112,9 +119,23 @@ public interface IDataObject extends IJCOBridgeReflected {
 
     // Methods section
     
+    public int DAdvise(FORMATETC pFormatetc, ADVF advf, IAdviseSink adviseSink, JCORefOut connection) throws Throwable;
+
+    public int EnumDAdvise(JCORefOut<IEnumSTATDATA> enumAdvise) throws Throwable;
+
+    public int GetCanonicalFormatEtc(FORMATETC formatIn, JCORefOut<FORMATETC> formatOut) throws Throwable;
+
+    public int QueryGetData(FORMATETC format) throws Throwable;
+
     public IEnumFORMATETC EnumFormatEtc(DATADIR direction) throws Throwable;
 
     public void DUnadvise(int connection) throws Throwable;
+
+    public void GetData(FORMATETC format, JCORefOut<STGMEDIUM> medium) throws Throwable;
+
+    public void GetDataHere(FORMATETC format, STGMEDIUM medium) throws Throwable;
+
+    public void SetData(FORMATETC formatIn, STGMEDIUM medium, boolean release) throws Throwable;
 
 
     

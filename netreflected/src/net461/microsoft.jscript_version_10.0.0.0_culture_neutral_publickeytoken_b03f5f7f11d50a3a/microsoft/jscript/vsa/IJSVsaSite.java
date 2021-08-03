@@ -117,6 +117,8 @@ public interface IJSVsaSite extends IJCOBridgeReflected {
 
     public NetObject GetGlobalInstance(java.lang.String name) throws Throwable;
 
+    public void GetCompiledState(JCORefOut pe, JCORefOut debugInfo) throws Throwable;
+
     public void Notify(java.lang.String notify, NetObject info) throws Throwable;
 
 

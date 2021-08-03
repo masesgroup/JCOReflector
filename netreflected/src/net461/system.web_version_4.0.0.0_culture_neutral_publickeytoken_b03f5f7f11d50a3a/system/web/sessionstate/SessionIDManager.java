@@ -152,6 +152,16 @@ public class SessionIDManager extends NetObject  {
     
     // Methods section
     
+    public boolean InitializeRequest(HttpContext context, boolean suppressAutoDetectRedirect, JCORefOut supportSessionIDReissue) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.NotSupportedException, system.configuration.ConfigurationException, system.InvalidCastException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.configuration.provider.ProviderException, system.ApplicationException, system.OverflowException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("InitializeRequest", context == null ? null : context.getJCOInstance(), suppressAutoDetectRedirect, supportSessionIDReissue.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public boolean Validate(java.lang.String id) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -217,6 +227,16 @@ public class SessionIDManager extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveSessionID", context == null ? null : context.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SaveSessionID(HttpContext context, java.lang.String id, JCORefOut redirected, JCORefOut cookieAdded) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotImplementedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.IndexOutOfRangeException, system.threading.ThreadAbortException, system.NotSupportedException, system.configuration.ConfigurationException, system.InvalidCastException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.web.HttpRequestValidationException, system.OutOfMemoryException, system.ApplicationException, system.UriFormatException, system.OverflowException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SaveSessionID", context == null ? null : context.getJCOInstance(), id, redirected.getJCRefOut(), cookieAdded.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

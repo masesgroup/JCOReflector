@@ -1,11 +1,3 @@
-package refout
-
-import org.mases.jcobridge.netreflection._
-import sun.tools.java.Environment
-import system.Console
-import system.Environment
-import system.UInt32
-
 /*
  *  MIT License
  *
@@ -29,7 +21,13 @@ import system.UInt32
  *  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  *  SOFTWARE.
  */
+ 
+package refout
 
+import org.mases.jcobridge.netreflection._
+import system.Console
+import system.Environment
+import system.UInt32
 
 object HelloRefOut {
     def main(args: Array[String]): Unit = {

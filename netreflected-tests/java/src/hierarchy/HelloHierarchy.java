@@ -85,7 +85,7 @@ public class HelloHierarchy {
             if(str.getCanWrite()) result += " Hierarchy dispose NOT OK";
             
             Console.WriteLine(result);
-            Console.WriteLine("Exiting");
+            Console.WriteLine("Exiting with success");
             Environment.Exit(0);
         } catch (FileNotFoundException fnfe) {
             fnfe.printStackTrace();

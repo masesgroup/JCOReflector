@@ -85,7 +85,6 @@ namespace MASES.C2JReflector
             public const string VarArgsTrailer = "...";
             public const string ArrayTrailer = "[]";
             public const string MultiArrayTrailer = "[,";
-            public const string JCORefOutType = "JCORefOut";
             public const string NativeStringType = "java.lang.String";
             public const string IJCOBridgeReflected = "IJCOBridgeReflected";
             public const string NetObject = "NetObject";
@@ -104,6 +103,10 @@ namespace MASES.C2JReflector
             public const string FINAL_KEYWORD = "final ";
             public const string METHOD_DYNAMICINVOKE_NAME = "DynamicInvoke";
             public const string METHOD_GETENUMERATOR_NAME = "GetEnumerator";
+#if !NET_CORE
+            public const string METHOD_STREAMREAD_NAME = "Read";
+            public const string METHOD_STREAMREADBLOCK_NAME = "ReadBlock";
+#endif
         }
 
         public class FileNameAndDirectory
@@ -472,6 +475,8 @@ namespace MASES.C2JReflector
             public const string INVOKE_PARAMETER_NONPRIMITIVE = ", {1} == null ? null : {0}{1}.getJCOInstance()";
             public const string INVOKE_PARAMETER_NONPRIMITIVE_ARRAY = ", {0}toObjectFromArray({1})";
             public const string INVOKE_PARAMETER_JCOREFOUT = ", {0}{1}.getJCRefOut()";
+            public const string JCORefOutType = "JCORefOut";
+            public const string JCORefOutTypeGenericFormatter = "JCORefOut<{0}>";
         }
 
         public class CTor

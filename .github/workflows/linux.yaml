@@ -91,7 +91,7 @@ jobs:
             dotnet bin/net5.0/JCOReflectorCLI.dll createjars .github/workflows/createjars_core5.0_linux.job																  
 
         - name: Build Java test source file
-          run: javac -cp ./bin/netcoreapp3.1/JCOReflector.jar ./netreflected-tests/java/src/hierarchy/*.java ./netreflected-tests/java/src/mscorlib/*.java ./netreflected-tests/java/src/nettest/*.java
+          run: javac -cp ./bin/netcoreapp3.1/JCOReflector.jar ./netreflected-tests/java/src/hierarchy/*.java ./netreflected-tests/java/src/mscorlib/*.java ./netreflected-tests/java/src/nettest/*.java ./netreflected-tests/java/src/refout/*.java
 
         - name: Execute Java tests netcoreapp3.1
           run: |
@@ -102,9 +102,10 @@ jobs:
             java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloIterator --CoreCLRApp:Microsoft.NETCore.App
             java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/java/src/" nettest.HelloNETSocket -server 127.0.0.1 --CoreCLRApp:Microsoft.NETCore.App
             java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/java/src/" nettest.HelloNETSocket -async -server 127.0.0.1 --CoreCLRApp:Microsoft.NETCore.App
+            java -cp "./bin/netcoreapp3.1/JCOReflector.jar;./netreflected-tests/java/src/" refout.HelloRefOut --CoreCLRApp:Microsoft.NETCore.App
 
         - name: Build Java test source file
-          run: javac -cp ./bin/net5.0/JCOReflector.jar ./netreflected-tests/java/src/hierarchy/*.java ./netreflected-tests/java/src/mscorlib/*.java ./netreflected-tests/java/src/nettest/*.java
+          run: javac -cp ./bin/net5.0/JCOReflector.jar ./netreflected-tests/java/src/hierarchy/*.java ./netreflected-tests/java/src/mscorlib/*.java ./netreflected-tests/java/src/nettest/*.java ./netreflected-tests/java/src/refout/*.java
 
         - name: Execute Java tests net5.0 
           run: |
@@ -115,6 +116,7 @@ jobs:
             java -cp "./bin/net5.0/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloIterator 
             java -cp "./bin/net5.0/JCOReflector.jar:./netreflected-tests/java/src/" nettest.HelloNETSocket -server 127.0.0.1 
             java -cp "./bin/net5.0/JCOReflector.jar:./netreflected-tests/java/src/" nettest.HelloNETSocket -async -server 127.0.0.1
+            java -cp "./bin/net5.0/JCOReflector.jar;./netreflected-tests/java/src/" refout.HelloRefOut
 
         - name: Download and install Scala package
           run: |
@@ -129,7 +131,7 @@ jobs:
           run: |
             source "$HOME/.sdkman/bin/sdkman-init.sh"
             mkdir ./netreflected-tests/scala/output
-            scalac -cp "./bin/netcoreapp3.1/*" -d ./netreflected-tests/scala/output ./netreflected-tests/scala/src/main/scala/hierarchy/* ./netreflected-tests/scala/src/main/scala/mscorlib/* ./netreflected-tests/scala/src/main/scala/nettest/*
+            scalac -cp "./bin/netcoreapp3.1/*" -d ./netreflected-tests/scala/output ./netreflected-tests/scala/src/main/scala/hierarchy/* ./netreflected-tests/scala/src/main/scala/mscorlib/* ./netreflected-tests/scala/src/main/scala/nettest/* ./netreflected-tests/scala/src/main/scala/refout/*
 
         - name: Execute Scala tests .NET Core 3.1
           run: |
@@ -141,13 +143,14 @@ jobs:
             scala -nobootcp -toolcp "./bin/netcoreapp3.1/*:./netreflected-tests/scala/output" mscorlib.HelloIterator --CoreCLRApp:Microsoft.NETCore.App
             scala -nobootcp -toolcp "./bin/netcoreapp3.1/*:./netreflected-tests/scala/output" nettest.HelloNETSocket --CoreCLRApp:Microsoft.NETCore.App
             scala -nobootcp -toolcp "./bin/netcoreapp3.1/*:./netreflected-tests/scala/output" nettest.HelloNETSocket -async --CoreCLRApp:Microsoft.NETCore.App
+            scala -nobootcp -toolcp "./bin/netcoreapp3.1/*:./netreflected-tests/scala/output" refout.HelloRefOut
             rm -rf ./netreflected-tests/scala/output
 
         - name: Build Scala test source file .NET Core 5.0
           run: |
             source "$HOME/.sdkman/bin/sdkman-init.sh"
             mkdir ./netreflected-tests/scala/output
-            scalac -cp "./bin/net5.0/*" -d ./netreflected-tests/scala/output ./netreflected-tests/scala/src/main/scala/hierarchy/* ./netreflected-tests/scala/src/main/scala/mscorlib/* ./netreflected-tests/scala/src/main/scala/nettest/*
+            scalac -cp "./bin/net5.0/*" -d ./netreflected-tests/scala/output ./netreflected-tests/scala/src/main/scala/hierarchy/* ./netreflected-tests/scala/src/main/scala/mscorlib/* ./netreflected-tests/scala/src/main/scala/nettest/* ./netreflected-tests/scala/src/main/scala/refout/*
 
         - name: Execute Scala tests .NET Core 5.0
           run: |
@@ -159,4 +162,5 @@ jobs:
             scala -nobootcp -toolcp "./bin/net5.0/*:./netreflected-tests/scala/output" mscorlib.HelloIterator
             scala -nobootcp -toolcp "./bin/net5.0/*:./netreflected-tests/scala/output" nettest.HelloNETSocket
             scala -nobootcp -toolcp "./bin/net5.0/*:./netreflected-tests/scala/output" nettest.HelloNETSocket -async
+            scala -nobootcp -toolcp "./bin/net5.0/*:./netreflected-tests/scala/output" refout.HelloRefOut
             rm -rf ./netreflected-tests/scala/output

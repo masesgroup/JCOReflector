@@ -29,9 +29,6 @@ import org.mases.jcobridge.netreflection.IJCOBridgeReflected;
 import org.mases.jcobridge.netreflection.JCOBridgeInstance;
 import org.mases.jcobridge.netreflection.NetType;
 
-import java.util.ArrayList;
-import java.util.Collection;
-
 /**
  * The base .NET class managing System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089. Implements {@link IEnumerable}
  */

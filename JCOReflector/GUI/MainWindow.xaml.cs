@@ -90,6 +90,16 @@ namespace MASES.C2JReflector
         public static readonly DependencyProperty EnableInheritanceProperty =
             DependencyProperty.Register("EnableInheritance", typeof(bool), typeof(MainWindow), new PropertyMetadata(true));
 
+        public bool EnableRefOutParameters
+        {
+            get { return (bool)GetValue(EnableRefOutParametersProperty); }
+            set { SetValue(EnableRefOutParametersProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for EnableAbstract.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty EnableRefOutParametersProperty =
+            DependencyProperty.Register("EnableRefOutParameters", typeof(bool), typeof(MainWindow), new PropertyMetadata(false));
+
         public MainWindow()
         {
             InitializeComponent();
@@ -169,6 +179,7 @@ namespace MASES.C2JReflector
             args.EnableDuplicateMethodNativeArrayWithJCRefOut = cbDuplicateMethodNativeArray.IsChecked.Value;
             args.EnableInheritance = cbEnableInheritance.IsChecked.Value;
             args.EnableInterfaceInheritance = cbEnableInterfaceInheritance.IsChecked.Value;
+            args.EnableRefOutParameters = cbEnableRefOutParameters.IsChecked.Value;
             args.DryRun = cbDryRun.IsChecked.Value;
 
             if (cbExportToFile.IsChecked.Value)

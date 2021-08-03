@@ -1,0 +1,96 @@
+/*
+ *  MIT License
+ *
+ *  Copyright (c) 2021 MASES s.r.l.
+ *
+ *  Permission is hereby granted, free of charge, to any person obtaining a copy
+ *  of this software and associated documentation files (the "Software"), to deal
+ *  in the Software without restriction, including without limitation the rights
+ *  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ *  copies of the Software, and to permit persons to whom the Software is
+ *  furnished to do so, subject to the following conditions:
+ *
+ *  The above copyright notice and this permission notice shall be included in all
+ *  copies or substantial portions of the Software.
+ *
+ *  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ *  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ *  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ *  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ *  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ *  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ *  SOFTWARE.
+ */
+
+package refout;
+
+import org.mases.jcobridge.netreflection.*;
+
+public class HelloRefOutBase {
+    public static void main(String[] args) {
+        JCOReflector.setCommandLineArgs(args);
+        try {
+            boolean isOK = true;
+            String testVal;
+            Byte checkByte = 10;
+            testVal = checkByte.toString();
+            Byte valByte = 4;
+            system.Byte.TryParse(testVal, JCORefOut.Create(valByte));
+            if (valByte == system.Byte.Parse(testVal))
+                System.out.println("Test Byte is OK");
+            else {
+                System.out.println(String.format("Test Byte not OK: %d", valByte));
+                isOK &= false;
+            }
+
+            Double checkDouble = 10.1;
+            testVal = checkDouble.toString();
+            Double valDouble = 4.3;
+            system.Double.TryParse(testVal, JCORefOut.Create(valDouble));
+            if (valDouble == system.Double.Parse(testVal))
+                System.out.println("Test Double is OK");
+            else {
+                System.out.println(String.format("Test Double not OK: %f", valDouble));
+                isOK &= false;
+            }
+
+            Short checkShort = 10;
+            testVal = checkShort.toString();
+            Short valShort = 4;
+            system.Int16.TryParse(testVal, JCORefOut.Create(valShort));
+            if (valShort == system.Int16.Parse(testVal))
+                System.out.println("Test Int16 is OK");
+            else {
+                System.out.println(String.format("Test Int16 not OK: %d", valShort));
+                isOK &= false;
+            }
+
+            Integer checkInteger = 10;
+            testVal = checkInteger.toString();
+            Integer valInteger = 4;
+            system.Int32.TryParse(testVal, JCORefOut.Create(valInteger));
+            if (valInteger == system.Int32.Parse(testVal))
+                System.out.println("Test Int32 is OK");
+            else {
+                System.out.println(String.format("Test Int32 not OK: %d", valInteger));
+                isOK &= false;
+            }
+
+            Long checkLong = 10L;
+            testVal = checkLong.toString();
+            Long valLong = 4L;
+            system.Int64.TryParse(testVal, JCORefOut.Create(valLong));
+            if (valLong == system.Int64.Parse(testVal))
+                System.out.println("Test Int64 is OK");
+            else {
+                System.out.println(String.format("Test Int64 not OK: %d", valLong));
+                isOK &= false;
+            }
+
+            System.exit(isOK ? 0 : 1);
+        } catch (Throwable tre) {
+            tre.printStackTrace();
+            System.exit(1);
+        }
+    }
+}

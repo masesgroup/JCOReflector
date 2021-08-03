@@ -31,8 +31,6 @@
  * </auto-generated>
  *************************************************************************************/
 
-
-
 package accessibility;
 
 import org.mases.jcobridge.*;

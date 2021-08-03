@@ -145,7 +145,7 @@ jobs:
             scala -nobootcp -toolcp "./bin/netcoreapp3.1/*:./netreflected-tests/scala/output" mscorlib.HelloIterator --CoreCLRApp:Microsoft.NETCore.App
             scala -nobootcp -toolcp "./bin/netcoreapp3.1/*:./netreflected-tests/scala/output" nettest.HelloNETSocket --CoreCLRApp:Microsoft.NETCore.App
             scala -nobootcp -toolcp "./bin/netcoreapp3.1/*:./netreflected-tests/scala/output" nettest.HelloNETSocket -async --CoreCLRApp:Microsoft.NETCore.App
-            scala -nobootcp -toolcp "./bin/netcoreapp3.1/*:./netreflected-tests/scala/output" refout.HelloRefOut
+            scala -nobootcp -toolcp "./bin/netcoreapp3.1/*:./netreflected-tests/scala/output" refout.HelloRefOut --CoreCLRApp:Microsoft.NETCore.App
             rm -rf ./netreflected-tests/scala/output
 
         - name: Build Scala test source file .NET Core 5.0

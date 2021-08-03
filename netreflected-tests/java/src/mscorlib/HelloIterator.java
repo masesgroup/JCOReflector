@@ -40,6 +40,7 @@ public class HelloIterator {
                 Console.WriteLine(drive); 
                 //System.out.println(drive); viable Alternative
             }
+            Console.WriteLine("Exiting with success");
             Environment.Exit(0);
         }
         catch (Throwable tre) {

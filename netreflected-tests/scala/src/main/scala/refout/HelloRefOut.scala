@@ -1,3 +1,11 @@
+package refout
+
+import org.mases.jcobridge.netreflection._
+import sun.tools.java.Environment
+import system.Console
+import system.Environment
+import system.UInt32
+
 /*
  *  MIT License
  *
@@ -22,43 +30,32 @@
  *  SOFTWARE.
  */
 
-package mscorlib;
 
-import org.mases.jcobridge.netreflection.*;
+object HelloRefOut {
+    def main(args: Array[String]): Unit = {
+        JCOReflector.setCommandLineArgs(args)
+        try {
+            var value = 0
+            val i = UInt32.Parse(value.toString)
 
-import system.Console;
-import system.Environment;
-import system.threading.Thread;
-import system.threading.ThreadStart;
-import system.timers.Timer;
-
-public class HelloNETEvent {
-    public static void main(String[] args) {
-        JCOReflector.setCommandLineArgs(args);
-        try (Timer timer = new Timer();){
-            TimerElapsed elapsed = new TimerElapsed();
-            
-            timer.addElapsed(elapsed);
-            timer.setInterval(1000);
-
-            Thread thread = new Thread(new ThreadStart() {
-                public void Invoke() {
-                    try {
-                        System.out.println("Running thread.");
-                        timer.setEnabled(true);
-                    } catch (Throwable e) {
-                        e.printStackTrace();
-                    }
+            while ( {
+                value < 1000
+            }) {
+                val valueStr = value.toString
+                UInt32.TryParse(valueStr, JCORefOut.Create(i))
+                if (i.CompareTo(UInt32.Parse(valueStr)) != 0) {
+                    Console.WriteLine("Error in parsing")
+                    system.Environment.Exit(1)
                 }
-            });
-            thread.Start();
-            Thread.Sleep(10000);
-            timer.Stop();
-            timer.removeElapsed(elapsed);
-            Console.WriteLine("Exiting with success");
-            Environment.Exit(0);
-        } catch (Throwable tre) {
-            tre.printStackTrace();
+
+                value += 1
+            }
+            Console.WriteLine("Exiting with success")
+            system.Environment.Exit(0)
+        } catch {
+            case tre: Throwable =>
+                tre.printStackTrace()
+                System.exit(1)
         }
     }
 }

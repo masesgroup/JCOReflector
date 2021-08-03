@@ -22,44 +22,33 @@
  *  SOFTWARE.
  */
 
-package mscorlib;
+package refout;
 
 import org.mases.jcobridge.netreflection.*;
 
-import system.*;
-import system.io.*;
-import system.text.Encoding;
+import system.Console;
+import system.Environment;
+import system.UInt32;
 
-public class HelloNET {
+public class HelloRefOut {
     public static void main(String[] args) {
         JCOReflector.setCommandLineArgs(args);
         try {
-            String filename = "test.txt";
-            String result = "";
-            if (!File.Exists(filename)) {
-                File.WriteAllText(filename, "First Java string");
+            Integer value = 0;
+            UInt32 i = UInt32.Parse(value.toString());
+            for (; value < 1000; value++) {
+                String valueStr = value.toString();
+                UInt32.TryParse(valueStr, JCORefOut.Create(i));
+                if (i.CompareTo(UInt32.Parse(valueStr)) != 0) {
+                    Console.WriteLine("Error in parsing");
+                    Environment.Exit(1);
+                }
             }
-            result = File.ReadAllText(filename);
-            
-            Console.WriteLine(result);
-            result = result + " Java Execution";
-            File.WriteAllText(filename, result);
-
-            int byteCount = Encoding.getASCII().GetByteCount(result);
-            byte[] resByte = File.ReadAllBytes(filename);
-            if (byteCount == resByte.length)
-            {
-                Console.WriteLine("{0} and result have equals array lengths. The length is {1}", new NetObject(filename), new NetObject(byteCount));
-            }
-            Console.WriteLine("Writing array on file.");
-            File.WriteAllBytes("test2.txt", resByte);
-            Console.WriteLine(result);
             Console.WriteLine("Exiting with success");
-			Environment.Exit(0);
-        } catch (FileNotFoundException fnfe) {
-            fnfe.printStackTrace();
+            Environment.Exit(0);
         } catch (Throwable tre) {
             tre.printStackTrace();
+            System.exit(1);
         }
     }
 }

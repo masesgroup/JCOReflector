@@ -55,6 +55,7 @@ public class HelloInterfaces {
                 Console.WriteLine(netObject.ToString()); 
                 //System.out.println(netObject.ToString()); viable Alternative
             }
+            Console.WriteLine("Exiting with success");
             Environment.Exit(0);
         }
         catch (Throwable tre) {

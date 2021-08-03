@@ -27,6 +27,7 @@ package nettest;
 import org.mases.jcobridge.netreflection.*;
 
 import system.ArgumentNullException;
+import system.Console;
 import system.Environment;
 import system.InvalidOperationException;
 import system.security.SecurityException;
@@ -76,6 +77,7 @@ public class HelloNETSocket {
         threadServer.Join(5000);
         threadClient.Join(5000);
         // close the application
+        Console.WriteLine("Exiting with success");
         Environment.Exit(0);
         return;
     }

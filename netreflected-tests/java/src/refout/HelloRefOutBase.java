@@ -25,6 +25,7 @@
 package refout;
 
 import org.mases.jcobridge.netreflection.*;
+import java.util.concurrent.atomic.*;
 
 public class HelloRefOutBase {
     public static void main(String[] args) {
@@ -32,22 +33,35 @@ public class HelloRefOutBase {
         try {
             boolean isOK = true;
             String testVal;
+            Boolean checkBoolean = true;
+            testVal = checkBoolean.toString();
+            AtomicBoolean valBoolean = new AtomicBoolean(false);
+            system.Boolean.TryParse(testVal, JCORefOut.Create(valBoolean));
+            if (valBoolean.get() == system.Boolean.Parse(testVal))
+                System.out.println("Test Boolean is OK");
+            else {
+                System.out.println(String.format("Test Boolean not OK: %b", valBoolean));
+                isOK &= false;
+            }
+
             Byte checkByte = 10;
             testVal = checkByte.toString();
             Byte valByte = 4;
-            system.Byte.TryParse(testVal, JCORefOut.Create(valByte));
-            if (valByte == system.Byte.Parse(testVal))
+            AtomicReference<Byte> valRefByte = new AtomicReference<Byte>(valByte);
+            system.Byte.TryParse(testVal, JCORefOut.Create(valRefByte));
+            if (valRefByte.get() == system.Byte.Parse(testVal))
                 System.out.println("Test Byte is OK");
             else {
                 System.out.println(String.format("Test Byte not OK: %d", valByte));
-                isOK &= false;
+                isOK &= false; 
             }
 
             Double checkDouble = 10.1;
             testVal = checkDouble.toString();
             Double valDouble = 4.3;
-            system.Double.TryParse(testVal, JCORefOut.Create(valDouble));
-            if (valDouble == system.Double.Parse(testVal))
+            AtomicReference<Double> valRefDouble = new AtomicReference<Double>(valDouble);
+            system.Double.TryParse(testVal, JCORefOut.Create(valRefDouble));
+            if (valRefDouble.get() == system.Double.Parse(testVal))
                 System.out.println("Test Double is OK");
             else {
                 System.out.println(String.format("Test Double not OK: %f", valDouble));
@@ -57,8 +71,9 @@ public class HelloRefOutBase {
             Short checkShort = 10;
             testVal = checkShort.toString();
             Short valShort = 4;
-            system.Int16.TryParse(testVal, JCORefOut.Create(valShort));
-            if (valShort == system.Int16.Parse(testVal))
+            AtomicReference<Short> valRefShort = new AtomicReference<Short>(valShort);
+            system.Int16.TryParse(testVal, JCORefOut.Create(valRefShort));
+            if (valRefShort.get() == system.Int16.Parse(testVal))
                 System.out.println("Test Int16 is OK");
             else {
                 System.out.println(String.format("Test Int16 not OK: %d", valShort));
@@ -67,9 +82,9 @@ public class HelloRefOutBase {
 
             Integer checkInteger = 10;
             testVal = checkInteger.toString();
-            Integer valInteger = 4;
+            AtomicInteger valInteger = new AtomicInteger(4);
             system.Int32.TryParse(testVal, JCORefOut.Create(valInteger));
-            if (valInteger == system.Int32.Parse(testVal))
+            if (valInteger.get() == system.Int32.Parse(testVal))
                 System.out.println("Test Int32 is OK");
             else {
                 System.out.println(String.format("Test Int32 not OK: %d", valInteger));
@@ -78,9 +93,9 @@ public class HelloRefOutBase {
 
             Long checkLong = 10L;
             testVal = checkLong.toString();
-            Long valLong = 4L;
+            AtomicLong valLong = new AtomicLong(4L);
             system.Int64.TryParse(testVal, JCORefOut.Create(valLong));
-            if (valLong == system.Int64.Parse(testVal))
+            if (valLong.get() == system.Int64.Parse(testVal))
                 System.out.println("Test Int64 is OK");
             else {
                 System.out.println(String.format("Test Int64 not OK: %d", valLong));

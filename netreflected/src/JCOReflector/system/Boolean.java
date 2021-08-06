@@ -28,12 +28,12 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 /**
- * The base .NET class managing System.Int64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
+ * The base .NET class managing System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Int64" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Int64</a>
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Boolean" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Boolean</a>
  */
-public class Int64 extends NetObject  {
+public class Boolean extends NetObject  {
     /**
      * Fully assembly qualified name: mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
      */
@@ -43,9 +43,9 @@ public class Int64 extends NetObject  {
      */
     public static final String assemblyShortName = "mscorlib";
     /**
-     * Qualified class name: System.Int64
+     * Qualified class name: System.Boolean
      */
-    public static final String className = "System.Int64";
+    public static final String className = "System.Boolean";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
     /**
      * The type managed from JCOBridge. See {@link JCType}
@@ -79,7 +79,7 @@ public class Int64 extends NetObject  {
         }
     }
 
-    public Int64(Object instance) throws Throwable {
+    public Boolean(Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,21 +112,21 @@ public class Int64 extends NetObject  {
         return classType;
     }
     /**
-     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Int64}, a cast assert is made to check if types are compatible.
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link Boolean}, a cast assert is made to check if types are compatible.
      * @param from {@link IJCOBridgeReflected} instance to be casted
-     * @return {@link Int64} instance
+     * @return {@link Boolean} instance
      * @throws java.lang.Throwable in case of error during cast operation
      */
-    public static Int64 cast(IJCOBridgeReflected from) throws Throwable {
+    public static Boolean cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
-        return new Int64(from.getJCOInstance());
+        return new Boolean(from.getJCOInstance());
     }
 
     // Constructors section
     
     // Methods section
     
-    public boolean Equals(long obj) throws Throwable {
+    public boolean Equals(boolean obj) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -166,7 +166,7 @@ public class Int64 extends NetObject  {
         }
     }
 
-    public int CompareTo(long value) throws Throwable {
+    public int CompareTo(boolean value) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -217,41 +217,41 @@ public class Int64 extends NetObject  {
         }
     }
 */
-    public static long Parse(java.lang.String s) throws Throwable {
+    public static boolean Parse(java.lang.String s) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (long)classType.Invoke("Parse", s);
+            return (boolean)classType.Invoke("Parse", s);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 /*
-    public static long Parse(java.lang.String s, NumberStyles style) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.FormatException, system.OverflowException {
+    public static boolean Parse(java.lang.String s, NumberStyles style) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (long)classType.Invoke("Parse", s, style == null ? null : style.getJCOInstance());
+            return (boolean)classType.Invoke("Parse", s, style == null ? null : style.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static long Parse(java.lang.String s, NumberStyles style, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.FormatException, system.OverflowException {
+    public static boolean Parse(java.lang.String s, NumberStyles style, IFormatProvider provider) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (long)classType.Invoke("Parse", s, style == null ? null : style.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
+            return (boolean)classType.Invoke("Parse", s, style == null ? null : style.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static long Parse(java.lang.String s, IFormatProvider provider) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.FormatException, system.OverflowException {
+    public static boolean Parse(java.lang.String s, IFormatProvider provider) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (long)classType.Invoke("Parse", s, provider == null ? null : provider.getJCOInstance());
+            return (boolean)classType.Invoke("Parse", s, provider == null ? null : provider.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

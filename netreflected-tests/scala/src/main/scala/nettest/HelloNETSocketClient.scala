@@ -27,8 +27,8 @@ package nettest
 import java.util
 import org.mases.jcobridge.netreflection.JCORefOut
 import org.mases.jcobridge.netreflection.NetObject
-import system._
 import system.diagnostics.tracing.EventSourceException
+import system._
 import system.net._
 import system.net.sockets._
 import system.resources.MissingManifestResourceException
@@ -46,7 +46,7 @@ object HelloNETSocketClient {
   // Incoming data from the client.
   var data: String = null
 
-  def StartClient(asyncMode: Boolean, address: String, port: Int): Unit = { // Data buffer for incoming data
+  def StartClient(asyncMode: scala.Boolean, address: String, port: Int): Unit = { // Data buffer for incoming data
     // Connect to a remote device.
     val bytes: scala.Array[scala.Byte] = new scala.Array[scala.Byte](1024)
 

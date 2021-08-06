@@ -28,6 +28,7 @@ import java.util
 import org.mases.jcobridge.netreflection.JCORefOut
 import org.mases.jcobridge.netreflection.NetObject
 import system.diagnostics.tracing.EventSourceException
+import system._
 import system.net._
 import system.net.sockets._
 import system.resources.MissingManifestResourceException

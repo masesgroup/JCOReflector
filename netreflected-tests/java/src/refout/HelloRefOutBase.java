@@ -53,7 +53,7 @@ public class HelloRefOutBase {
                 System.out.println("Test Byte is OK");
             else {
                 System.out.println(String.format("Test Byte not OK: %d", valByte));
-                isOK &= false; 
+                isOK &= false;
             }
 
             Double checkDouble = 10.1;

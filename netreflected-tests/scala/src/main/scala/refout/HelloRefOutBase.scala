@@ -25,6 +25,7 @@
 package refout
 
 import org.mases.jcobridge.netreflection._
+
 import java.util.concurrent.atomic._
 
 object HelloRefOutBase {
@@ -44,7 +45,7 @@ object HelloRefOutBase {
       }
       val checkByte = 10
       testVal = checkByte.toString
-      val valByte = 4 : Byte
+      val valByte = 4: Byte
       val valRefByte = new AtomicReference[Byte](valByte)
       system.Byte.TryParse(testVal, JCORefOut.Create(valRefByte))
       if (valRefByte.get == system.Byte.Parse(testVal)) System.out.println("Test Byte is OK")
@@ -64,7 +65,7 @@ object HelloRefOutBase {
       }
       val checkShort = 10
       testVal = checkShort.toString
-      val valShort = 4 : Short
+      val valShort = 4: Short
       val valRefShort = new AtomicReference[Short](valShort)
       system.Int16.TryParse(testVal, JCORefOut.Create(valRefShort))
       if (valRefShort.get == system.Int16.Parse(testVal)) System.out.println("Test Int16 is OK")

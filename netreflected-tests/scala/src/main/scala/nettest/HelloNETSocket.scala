@@ -33,7 +33,7 @@ import system.threading.Thread
 import system.threading.ThreadStart
 
 object HelloNETSocket {
-  private[nettest] var asyncMode = false
+  private[nettest] var asyncMode = false : Boolean
   private[nettest] var serverAddress = "0.0.0.0"
 
   @throws[ArgumentNullException]

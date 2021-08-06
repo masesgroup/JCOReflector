@@ -43,7 +43,7 @@ object HelloNETSocketServer {
   // Incoming data from the client.
   var data: String = null
 
-  def StartListening(asyncMode: Boolean, address: String, port: Int): Unit = { // Data buffer for incoming data.
+  def StartListening(asyncMode: scala.Boolean, address: String, port: Int): Unit = { // Data buffer for incoming data.
     val bytes = new scala.Array[scala.Byte](1024)
     var ipAddress : IPAddress = null
     // Establish the local endpoint for the socket.

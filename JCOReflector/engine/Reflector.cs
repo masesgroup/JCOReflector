@@ -312,6 +312,37 @@ namespace MASES.C2JReflector
             return res;
         }
 
+        static void writeExtraClasses(ReflectorEventArgs args)
+        {
+            string destFolder = assemblyDestinationFolder(SrcDestinationFolder, new AssemblyName(Const.SpecialNames.JCOReflectorGeneratedFolder), SplitByAssembly);
+            var jcoBridgeOptionsFile = Path.Combine(destFolder, Const.FileNameAndDirectory.OrgSubDirectory,
+                                                     Const.FileNameAndDirectory.MasesSubDirectory,
+                                                     Const.FileNameAndDirectory.JCOBridgeSubDirectory,
+                                                     Const.FileNameAndDirectory.NetreflectionSubDirectory,
+                                                     Const.FileNameAndDirectory.JCOReflectorOptionsFile);
+
+            var jcoBridgeOptionsTemplate = Const.Templates.GetTemplate(Const.Templates.JCOReflectorOptionsTemplate);
+            StringBuilder assembyStrSb = new StringBuilder();
+            foreach (var item in args.AssemblyNames)
+            {
+                assembyStrSb.AppendFormat("\"{0}\", ", item);
+            }
+            var assembyStr = assembyStrSb.ToString();
+            assembyStr = assembyStr.Substring(0, assembyStr.Length - 2);
+
+            var jcoBridgeOptionsContent = jcoBridgeOptionsTemplate.Replace(Const.Options.Assembly_Names_Value, assembyStr)
+                                                                  .Replace(Const.Options.Create_Exception_Thrown_Clause_Value, CreateExceptionThrownClause ? "true" : "false")
+                                                                  .Replace(Const.Options.Exception_Thrown_Clause_Depth_Value, ExceptionThrownClauseDepth.ToString())
+                                                                  .Replace(Const.Options.Enable_Abstract_Value, EnableAbstract ? "true" : "false")
+                                                                  .Replace(Const.Options.Enable_Array_Value, EnableArray ? "true" : "false")
+                                                                  .Replace(Const.Options.Enable_Duplicate_Method_Native_Array_With_JCORefOut_Value, EnableDuplicateMethodNativeArrayWithJCRefOut ? "true" : "false")
+                                                                  .Replace(Const.Options.Enable_Inheritance_Value, EnableInheritance ? "true" : "false")
+                                                                  .Replace(Const.Options.Enable_Interface_Inheritance_Value, EnableInterfaceInheritance ? "true" : "false")
+                                                                  .Replace(Const.Options.Enable_RefOut_Parameters_Value, EnableRefOutParameters ? "true" : "false");
+
+            writeFile(jcoBridgeOptionsFile, jcoBridgeOptionsContent);
+        }
+
         public static async Task ExecuteAction(object o)
         {
             bool failed = false;
@@ -344,33 +375,7 @@ namespace MASES.C2JReflector
             EnableRefOutParameters = args.EnableRefOutParameters;
             EnableWrite = !args.DryRun;
 
-            string destFolder = assemblyDestinationFolder(SrcDestinationFolder, new AssemblyName(Const.SpecialNames.JCOReflectorGeneratedFolder), SplitByAssembly);
-            var jcoBridgeOptionsFile = Path.Combine(destFolder, Const.FileNameAndDirectory.OrgSubDirectory,
-                                                     Const.FileNameAndDirectory.MasesSubDirectory,
-                                                     Const.FileNameAndDirectory.JCOBridgeSubDirectory,
-                                                     Const.FileNameAndDirectory.NetreflectionSubDirectory,
-                                                     Const.FileNameAndDirectory.JCOReflectorOptionsFile);
-
-            var jcoBridgeOptionsTemplate = Const.Templates.GetTemplate(Const.Templates.JCOReflectorOptionsTemplate);
-            StringBuilder assembyStrSb = new StringBuilder();
-            foreach (var item in args.AssemblyNames)
-            {
-                assembyStrSb.AppendFormat("\"{0}\", ", item);
-            }
-            var assembyStr = assembyStrSb.ToString();
-            assembyStr = assembyStr.Substring(0, assembyStr.Length - 2);
-
-            var jcoBridgeOptionsContent = jcoBridgeOptionsTemplate.Replace(Const.Options.Assembly_Names_Value, assembyStr)
-                                                                  .Replace(Const.Options.Create_Exception_Thrown_Clause_Value, CreateExceptionThrownClause ? "true" : "false")
-                                                                  .Replace(Const.Options.Exception_Thrown_Clause_Depth_Value, ExceptionThrownClauseDepth.ToString())
-                                                                  .Replace(Const.Options.Enable_Abstract_Value, EnableAbstract ? "true" : "false")
-                                                                  .Replace(Const.Options.Enable_Array_Value, EnableArray ? "true" : "false")
-                                                                  .Replace(Const.Options.Enable_Duplicate_Method_Native_Array_With_JCORefOut_Value, EnableDuplicateMethodNativeArrayWithJCRefOut ? "true" : "false")
-                                                                  .Replace(Const.Options.Enable_Inheritance_Value, EnableInheritance ? "true" : "false")
-                                                                  .Replace(Const.Options.Enable_Interface_Inheritance_Value, EnableInterfaceInheritance ? "true" : "false")
-                                                                  .Replace(Const.Options.Enable_RefOut_Parameters_Value, EnableRefOutParameters ? "true" : "false");
-
-            writeFile(jcoBridgeOptionsFile, jcoBridgeOptionsContent);
+            writeExtraClasses(args);
 
             string reportStr = string.Empty;
             string statisticsCsv = string.Empty;

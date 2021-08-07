@@ -68,6 +68,8 @@
     <EmbeddedResource Include="JCObjectReflectorClassSetPropertyDeprecated.template" />
 
     <EmbeddedResource Include="JCOPOMJCOReflector.template" />
+
+    <EmbeddedResource Include="JCOReflectorOptions.template" />
   </ItemGroup>
 
   <ItemGroup>

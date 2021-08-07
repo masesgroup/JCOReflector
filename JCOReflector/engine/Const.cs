@@ -107,6 +107,7 @@ namespace MASES.C2JReflector
             public const string METHOD_STREAMREAD_NAME = "Read";
             public const string METHOD_STREAMREADBLOCK_NAME = "ReadBlock";
 #endif
+            public const string JCOReflectorGeneratedFolder = "JCOReflectorGenerated";
         }
 
         public class FileNameAndDirectory
@@ -146,6 +147,7 @@ namespace MASES.C2JReflector
             public const string CompiledFilter = "*.class";
             public const string CompiledPattern = "{0}.jar";
             public const string JCOBridgeEmbeddedFile = "JCOBridge.zip";
+            public const string JCOReflectorOptionsFile = "JCOReflectorOptions.java";
 #if NET_CORE
 #if NET5_0
             public static string[] JCOBridgeFiles = new string[]
@@ -344,6 +346,8 @@ namespace MASES.C2JReflector
                 ManifestTemplate,
 
                 POMJCOReflector,
+
+                JCOReflectorOptionsTemplate,
             };
 
             static Templates()
@@ -432,6 +436,8 @@ namespace MASES.C2JReflector
             public const string ManifestTemplate = "JCOManifest.template";
 
             public const string POMJCOReflector = "JCOPOMJCOReflector.template";
+
+            public const string JCOReflectorOptionsTemplate = "JCOReflectorOptions.template";
         }
 
         public class Imports
@@ -662,6 +668,19 @@ namespace MASES.C2JReflector
             public const string REPORT_FILE_TO_WRITE = "README.md";
             public const string REPORT_BEGIN_PLACEHOLDER = "[//]: # \"BeginReport {0}\"";
             public const string REPORT_END_PLACEHOLDER = "[//]: # \"EndReport {0}\"";
+        }
+
+        public class Options
+        {
+            public const string Assembly_Names_Value = "Assembly_Names_Value";
+            public const string Create_Exception_Thrown_Clause_Value = "Create_Exception_Thrown_Clause_Value";
+            public const string Exception_Thrown_Clause_Depth_Value = "Exception_Thrown_Clause_Depth_Value";
+            public const string Enable_Abstract_Value = "Enable_Abstract_Value";
+            public const string Enable_Array_Value = "Enable_Array_Value";
+            public const string Enable_Duplicate_Method_Native_Array_With_JCORefOut_Value = "Enable_Duplicate_Method_Native_Array_With_JCORefOut_Value";
+            public const string Enable_Inheritance_Value = "Enable_Inheritance_Value";
+            public const string Enable_Interface_Inheritance_Value = "Enable_Interface_Inheritance_Value";
+            public const string Enable_RefOut_Parameters_Value = "Enable_RefOut_Parameters_Value";
         }
     }
 }

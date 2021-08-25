@@ -83,7 +83,7 @@ public class IEnumeratorImplementation extends NetObject implements IEnumerator 
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

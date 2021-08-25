@@ -107,6 +107,7 @@ namespace MASES.C2JReflector
             public const string METHOD_STREAMREAD_NAME = "Read";
             public const string METHOD_STREAMREADBLOCK_NAME = "ReadBlock";
 #endif
+            public const string OBJECT_CASTER_NAME = "(java.lang.Object)";
         }
 
         public class FileNameAndDirectory
@@ -574,9 +575,9 @@ namespace MASES.C2JReflector
 
             public static string CONVERTER_BLOCK_PARAMETER_PRIMITIVE_ARRAY = "            CONVERTER_BLOCK_PARAM_TYPE[] CONVERTER_BLOCK_PARAM_NAME = null;" + Environment.NewLine +
                                                                              "            if (argsFromJCOBridge[CONVERTER_BLOCK_PARAM_INDEX] != null) {" + Environment.NewLine +
-                                                                             "                ArrayList<Object> resultingArrayListCONVERTER_BLOCK_PARAM_INDEX = new ArrayList<Object>();" + Environment.NewLine +
+                                                                             "                ArrayList<java.lang.Object> resultingArrayListCONVERTER_BLOCK_PARAM_INDEX = new ArrayList<java.lang.Object>();" + Environment.NewLine +
                                                                              "                JCObject resultingObjects = (JCObject)argsFromJCOBridge[CONVERTER_BLOCK_PARAM_INDEX];" + Environment.NewLine +
-                                                                             "                for (Object resultingObjectCONVERTER_BLOCK_PARAM_INDEX : resultingObjects) {" + Environment.NewLine +
+                                                                             "                for (java.lang.Object resultingObjectCONVERTER_BLOCK_PARAM_INDEX : resultingObjects) {" + Environment.NewLine +
                                                                              "                    resultingArrayListCONVERTER_BLOCK_PARAM_INDEX.add(resultingObjectCONVERTER_BLOCK_PARAM_INDEX);" + Environment.NewLine +
                                                                              "                }" + Environment.NewLine +
                                                                              "                CONVERTER_BLOCK_PARAM_NAME = new CONVERTER_BLOCK_PARAM_TYPE[resultingArrayListCONVERTER_BLOCK_PARAM_INDEX.size()];" + Environment.NewLine +
@@ -589,7 +590,7 @@ namespace MASES.C2JReflector
                                                                                 "            if (argsFromJCOBridge[CONVERTER_BLOCK_PARAM_INDEX] != null) {" + Environment.NewLine +
                                                                                 "                ArrayList<CONVERTER_BLOCK_PARAM_TYPE> resultingArrayListCONVERTER_BLOCK_PARAM_INDEX = new ArrayList<CONVERTER_BLOCK_PARAM_TYPE>();" + Environment.NewLine +
                                                                                 "                JCObject resultingObjects = (JCObject)argsFromJCOBridge[CONVERTER_BLOCK_PARAM_INDEX];" + Environment.NewLine +
-                                                                                "                for (Object resultingObjectCONVERTER_BLOCK_PARAM_INDEX : resultingObjects) {" + Environment.NewLine +
+                                                                                "                for (java.lang.Object resultingObjectCONVERTER_BLOCK_PARAM_INDEX : resultingObjects) {" + Environment.NewLine +
                                                                                 "                    resultingArrayListCONVERTER_BLOCK_PARAM_INDEX.add(new CONVERTER_BLOCK_IMPLEMENTATION_PARAM_TYPE(resultingObjectCONVERTER_BLOCK_PARAM_INDEX));" + Environment.NewLine +
                                                                                 "                }" + Environment.NewLine +
                                                                                 "                CONVERTER_BLOCK_PARAM_NAME = new CONVERTER_BLOCK_PARAM_TYPE[resultingArrayListCONVERTER_BLOCK_PARAM_INDEX.size()];" + Environment.NewLine +
@@ -605,11 +606,11 @@ namespace MASES.C2JReflector
             public const string DELEGATE_RETURN_STATEMENTTYPE = "DELEGATE_RETURN_STATEMENTTYPE";
             public const string DELEGATE_RETURN_STATEMENT_OBJECT = "            return (retVal == null) ? null : retVal.getJCOInstance();";
             public static string DELEGATE_RETURN_STATEMENT_OBJECT_ARRAY = "            if (retVal == null) return retVal;" + Environment.NewLine +
-                                                                          "            ArrayList<Object> retValJCArrayList = new ArrayList<Object>();" + Environment.NewLine +
+                                                                          "            ArrayList<java.lang.Object> retValJCArrayList = new ArrayList<java.lang.Object>();" + Environment.NewLine +
                                                                           "            for (DELEGATE_RETURN_STATEMENTTYPE retValJCObject : retVal) {" + Environment.NewLine +
                                                                           "                retValJCArrayList.add(retValJCObject.getJCOInstance());" + Environment.NewLine +
                                                                           "            }" + Environment.NewLine +
-                                                                          "            return (Object)retValJCArrayList.toArray();";
+                                                                          "            return (java.lang.Object)retValJCArrayList.toArray();";
         }
 
         public class Enumerator

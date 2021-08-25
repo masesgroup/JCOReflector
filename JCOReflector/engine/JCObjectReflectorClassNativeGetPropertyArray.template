@@ -2,7 +2,7 @@
         if (PROPERTY_OBJECT == null)
             throw new UnsupportedOperationException("PROPERTY_OBJECT is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)PROPERTY_OBJECT.Get("PROPERTY_NAME"PROPERTY_INVOKE_PARAMETERS);
             for (Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);

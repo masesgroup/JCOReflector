@@ -96,7 +96,7 @@ public class PACKAGE_CLASS_NAME extends PACKAGE_CLASS_BASE_CLASS {
         super();
     }
 
-    public PACKAGE_CLASS_NAME(Object instance) {
+    public PACKAGE_CLASS_NAME(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -130,7 +130,7 @@ public class PACKAGE_CLASS_NAME extends PACKAGE_CLASS_BASE_CLASS {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

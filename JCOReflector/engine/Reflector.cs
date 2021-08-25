@@ -1048,7 +1048,7 @@ namespace MASES.C2JReflector
                     string objectCaster = string.Empty;
                     if (isArray && parameters.Length == 1)
                     {
-                        objectCaster = "(Object)";
+                        objectCaster = Const.SpecialNames.OBJECT_CASTER_NAME;
                     }
                     newObjectParams.Append(string.Format(formatter, objectCaster, paramName));
                 }
@@ -1456,7 +1456,7 @@ namespace MASES.C2JReflector
                                 if (!isPrimitive && isArray) formatter = Const.Parameters.INVOKE_PARAMETER_NONPRIMITIVE_ARRAY;
                                 if (isArray && parameters.Length == 1)
                                 {
-                                    objectCaster = "(Object)";
+                                    objectCaster = Const.SpecialNames.OBJECT_CASTER_NAME;
                                 }
                             }
 
@@ -1529,7 +1529,7 @@ namespace MASES.C2JReflector
                                 string objectCaster = string.Empty;
                                 if (isArray && parameters.Length == 1)
                                 {
-                                    objectCaster = "(Object)";
+                                    objectCaster = Const.SpecialNames.OBJECT_CASTER_NAME;
                                 }
 
                                 execParams.Append(string.Format(formatter, objectCaster, paramName));
@@ -1771,7 +1771,7 @@ namespace MASES.C2JReflector
                                     if (!isPrimitive && isArray) formatter = Const.Parameters.INVOKE_PARAMETER_NONPRIMITIVE_ARRAY;
                                     if (isArray && parameters.Length == 1)
                                     {
-                                        objectCaster = "(Object)";
+                                        objectCaster = Const.SpecialNames.OBJECT_CASTER_NAME;
                                     }
                                 }
 
@@ -1835,7 +1835,7 @@ namespace MASES.C2JReflector
                                     string objectCaster = string.Empty;
                                     if (isArray && parameters.Length == 1)
                                     {
-                                        objectCaster = "(Object)";
+                                        objectCaster = Const.SpecialNames.OBJECT_CASTER_NAME;
                                     }
 
                                     execParams.Append(string.Format(formatter, objectCaster, paramName));
@@ -2362,7 +2362,7 @@ namespace MASES.C2JReflector
                 string objectCaster = string.Empty;
                 if (isArray && parameters.Length == 1)
                 {
-                    objectCaster = "(Object)";
+                    objectCaster = Const.SpecialNames.OBJECT_CASTER_NAME;
                 }
 
                 dynamicInvokeExecParams.Append(string.Format(dynamicFormatter, objectCaster, paramName));

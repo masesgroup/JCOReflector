@@ -51,8 +51,10 @@ object HelloNet {
 		} catch {
 			case fnfe: FileNotFoundException =>
 				fnfe.printStackTrace()
+				System.exit(-1)
 			case tre: Throwable =>
 				tre.printStackTrace()
+				System.exit(-1)
 		}
 	}
 }

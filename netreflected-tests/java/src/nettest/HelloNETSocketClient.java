@@ -118,13 +118,16 @@ public class HelloNETSocketClient {
             }
         } catch (Exception e) {
             e.printStackTrace();
+            System.exit(-1);
         } catch (ArgumentException | InvalidOperationException
                  | IndexOutOfRangeException | NotSupportedException
                 | MissingManifestResourceException  | FormatException
                 | EventSourceException e) {
             e.printStackTrace();
+            System.exit(-1);
         } catch (Throwable e) {
             e.printStackTrace();
+            System.exit(-1);
         }
         System.out.println("Client exited correctly");
     }

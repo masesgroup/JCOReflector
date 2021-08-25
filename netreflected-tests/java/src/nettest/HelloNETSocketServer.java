@@ -121,8 +121,10 @@ public class HelloNETSocketServer {
                 | ArgumentException | InvalidOperationException 
                 | ArrayTypeMismatchException e) {
             e.printStackTrace();
+            System.exit(-1);
         } catch (Throwable e) {
             e.printStackTrace();
+            System.exit(-1);
         }
         System.out.println("Server exited correctly");
     }

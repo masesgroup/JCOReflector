@@ -121,10 +121,13 @@ object HelloNETSocketClient {
     } catch {
       case e: Exception =>
         e.printStackTrace()
+        System.exit(-1)
       case e@(_: ArgumentException | _: InvalidOperationException | _: IndexOutOfRangeException | _: NotSupportedException | _: MissingManifestResourceException | _: FormatException | _: EventSourceException) =>
         e.printStackTrace()
+        System.exit(-1)
       case e: Throwable =>
         e.printStackTrace()
+        System.exit(-1)
     }
     System.out.println("Client exited correctly")
   }

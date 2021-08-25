@@ -47,6 +47,7 @@ object HelloNETEvent {
           } catch {
             case e: Throwable =>
               e.printStackTrace()
+              System.exit(-1)
           }
         }
       })
@@ -58,6 +59,7 @@ object HelloNETEvent {
     } catch {
       case tre: Throwable =>
         tre.printStackTrace()
+        System.exit(-1)
     } finally if (timer != null) timer.close()
   }
 }

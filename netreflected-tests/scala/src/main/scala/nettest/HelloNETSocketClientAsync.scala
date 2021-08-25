@@ -84,6 +84,7 @@ object HelloNETSocketClientAsync { // The port number for the remote device.
     } catch {
       case e: Exception =>
         Console.WriteLine(e.getMessage)
+        System.exit(-1)
     }
     null
   }

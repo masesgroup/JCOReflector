@@ -41,14 +41,14 @@ public class HelloRefOut {
                 UInt32.TryParse(valueStr, JCORefOut.Create(i));
                 if (i.CompareTo(UInt32.Parse(valueStr)) != 0) {
                     Console.WriteLine("Error in parsing");
-                    Environment.Exit(1);
+                    Environment.Exit(-1);
                 }
             }
             Console.WriteLine("Exiting with success");
             Environment.Exit(0);
         } catch (Throwable tre) {
             tre.printStackTrace();
-            System.exit(1);
+            System.exit(-1);
         }
     }
 }

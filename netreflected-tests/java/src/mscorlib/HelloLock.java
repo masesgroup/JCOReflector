@@ -40,7 +40,7 @@ public class HelloLock {
                 }
                 else {
                     System.out.println("Failed to acquire lock");
-                    System.exit(1);
+                    System.exit(-1);
                 }
             } finally {
                 Monitor.Exit(object);
@@ -49,6 +49,7 @@ public class HelloLock {
             System.exit(0);
         } catch (Throwable tre) {
             tre.printStackTrace();
+            System.exit(-1);
         }
     }
 }

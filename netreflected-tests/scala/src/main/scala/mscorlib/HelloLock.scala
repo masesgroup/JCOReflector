@@ -31,21 +31,21 @@ object HelloLock {
   def main(args: Array[String]): Unit = {
     JCOReflector.setCommandLineArgs(args)
     try {
-      val `object` = new Object
+      val obj = new system.Object
       val lockTaken = false
       try {
-        Monitor.Enter(`object`, lockTaken)
+        Monitor.Enter(obj, lockTaken)
         if (lockTaken) System.out.println("Lock taken")
         else {
           System.out.println("Failed to acquire lock")
-          System.exit(1)
+          System.exit(-1)
         }
-      } finally Monitor.Exit(`object`)
+      } finally Monitor.Exit(obj)
       System.out.println("Exiting with success")
       System.exit(0)
-    } catch {
-      case tre: Throwable =>
-        tre.printStackTrace()
+    } catch (Throwable tre) {
+      tre.printStackTrace()
+      System.exit(-1)
     }
   }
 }

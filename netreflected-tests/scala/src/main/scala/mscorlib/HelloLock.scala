@@ -24,18 +24,20 @@
 
 package mscorlib
 
+import org.mases.jcobridge.netreflection.JCORefOut
 import org.mases.jcobridge.netreflection.JCOReflector
-import system.threading.Monitor
+
+import java.util.concurrent.atomic.AtomicBoolean
 
 object HelloLock {
   def main(args: Array[String]): Unit = {
     JCOReflector.setCommandLineArgs(args)
     try {
       val obj = new system.Object
-      val lockTaken = false
+      val lockTaken = new AtomicBoolean(false)
       try {
-        Monitor.Enter(obj, lockTaken)
-        if (lockTaken) System.out.println("Lock taken")
+        Monitor.Enter(obj, JCORefOut.Create(lockTaken))
+        if (lockTaken.get) System.out.println("Lock taken")
         else {
           System.out.println("Failed to acquire lock")
           System.exit(-1)
@@ -43,9 +45,10 @@ object HelloLock {
       } finally Monitor.Exit(obj)
       System.out.println("Exiting with success")
       System.exit(0)
-    } catch (Throwable tre) {
-      tre.printStackTrace()
-      System.exit(-1)
+    } catch {
+      case tre: Throwable =>
+        tre.printStackTrace()
+        System.exit(-1)
     }
   }
 }

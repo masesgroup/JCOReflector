@@ -21,12 +21,12 @@
  *  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  *  SOFTWARE.
  */
-
 package mscorlib
 
+import org.mases.jcobridge.netreflection.JCORefOut
 import org.mases.jcobridge.netreflection.JCOReflector
-import system.Object
 import system.threading.Monitor
+import java.util.concurrent.atomic.AtomicBoolean
 
 object HelloLock {
     @JvmStatic
@@ -34,10 +34,10 @@ object HelloLock {
         JCOReflector.setCommandLineArgs(args)
         try {
             val obj = system.Object()
-            val lockTaken = false
+            val lockTaken = AtomicBoolean(false)
             try {
-                Monitor.Enter(obj, lockTaken)
-                if (lockTaken) {
+                Monitor.Enter(obj, JCORefOut.Create(lockTaken))
+                if (lockTaken.get()) {
                     println("Lock taken")
                 } else {
                     println("Failed to acquire lock")

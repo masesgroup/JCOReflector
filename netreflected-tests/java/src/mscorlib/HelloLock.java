@@ -24,18 +24,20 @@
 
 package mscorlib;
 
+import org.mases.jcobridge.netreflection.JCORefOut;
 import org.mases.jcobridge.netreflection.JCOReflector;
 import system.threading.Monitor;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 public class HelloLock {
     public static void main(String[] args) {
         JCOReflector.setCommandLineArgs(args);
         try {
             system.Object object = new system.Object();
-            boolean lockTaken = false;
+            AtomicBoolean lockTaken = new AtomicBoolean(false);
             try {
-                Monitor.Enter(object, lockTaken);
-                if (lockTaken) {
+                Monitor.Enter(object, JCORefOut.Create(lockTaken));
+                if (lockTaken.get()) {
                     System.out.println("Lock taken");
                 }
                 else {

@@ -135,17 +135,17 @@ jobs:
             mkdir ./netreflected-tests/scala/output
             scalac -cp "./bin/netcoreapp3.1/*" -d ./netreflected-tests/scala/output ./netreflected-tests/scala/src/main/scala/hierarchy/* ./netreflected-tests/scala/src/main/scala/mscorlib/* ./netreflected-tests/scala/src/main/scala/nettest/* ./netreflected-tests/scala/src/main/scala/refout/*
 
-         -run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/netcoreapp3.1/*:./netreflected-tests/scala/output" mscorlib.HelloLock --CoreCLRApp:Microsoft.NETCore.App
-         -run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/netcoreapp3.1/*:./netreflected-tests/scala/output" mscorlib.HelloNet --CoreCLRApp:Microsoft.NETCore.App
-         -run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/netcoreapp3.1/*:./netreflected-tests/scala/output" mscorlib.HelloNETEvent --CoreCLRApp:Microsoft.NETCore.App
-         -run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/netcoreapp3.1/*:./netreflected-tests/scala/output" mscorlib.HelloIterator --CoreCLRApp:Microsoft.NETCore.App
-         -run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/netcoreapp3.1/*:./netreflected-tests/scala/output" hierarchy.HelloHierarchy --CoreCLRApp:Microsoft.NETCore.App
-         -run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/netcoreapp3.1/*:./netreflected-tests/scala/output" hierarchy.HelloInterfaces --CoreCLRApp:Microsoft.NETCore.App
-         -run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/netcoreapp3.1/*:./netreflected-tests/scala/output" nettest.HelloNETSocket --CoreCLRApp:Microsoft.NETCore.App
-         -run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/netcoreapp3.1/*:./netreflected-tests/scala/output" nettest.HelloNETSocket -async --CoreCLRApp:Microsoft.NETCore.App
-         -run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/netcoreapp3.1/*:./netreflected-tests/scala/output" refout.HelloRefOutBase --CoreCLRApp:Microsoft.NETCore.App
-         -run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/netcoreapp3.1/*:./netreflected-tests/scala/output" refout.HelloRefOut --CoreCLRApp:Microsoft.NETCore.App
-         -run: rm -rf ./netreflected-tests/scala/output
+        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/netcoreapp3.1/*:./netreflected-tests/scala/output" mscorlib.HelloLock --CoreCLRApp:Microsoft.NETCore.App
+        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/netcoreapp3.1/*:./netreflected-tests/scala/output" mscorlib.HelloNet --CoreCLRApp:Microsoft.NETCore.App
+        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/netcoreapp3.1/*:./netreflected-tests/scala/output" mscorlib.HelloNETEvent --CoreCLRApp:Microsoft.NETCore.App
+        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/netcoreapp3.1/*:./netreflected-tests/scala/output" mscorlib.HelloIterator --CoreCLRApp:Microsoft.NETCore.App
+        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/netcoreapp3.1/*:./netreflected-tests/scala/output" hierarchy.HelloHierarchy --CoreCLRApp:Microsoft.NETCore.App
+        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/netcoreapp3.1/*:./netreflected-tests/scala/output" hierarchy.HelloInterfaces --CoreCLRApp:Microsoft.NETCore.App
+        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/netcoreapp3.1/*:./netreflected-tests/scala/output" nettest.HelloNETSocket --CoreCLRApp:Microsoft.NETCore.App
+        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/netcoreapp3.1/*:./netreflected-tests/scala/output" nettest.HelloNETSocket -async --CoreCLRApp:Microsoft.NETCore.App
+        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/netcoreapp3.1/*:./netreflected-tests/scala/output" refout.HelloRefOutBase --CoreCLRApp:Microsoft.NETCore.App
+        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/netcoreapp3.1/*:./netreflected-tests/scala/output" refout.HelloRefOut --CoreCLRApp:Microsoft.NETCore.App
+        - run: rm -rf ./netreflected-tests/scala/output
 
         - name: Build Scala test source file .NET Core 5.0
           run: |
@@ -153,14 +153,14 @@ jobs:
             mkdir ./netreflected-tests/scala/output
             scalac -cp "./bin/net5.0/*" -d ./netreflected-tests/scala/output ./netreflected-tests/scala/src/main/scala/hierarchy/* ./netreflected-tests/scala/src/main/scala/mscorlib/* ./netreflected-tests/scala/src/main/scala/nettest/* ./netreflected-tests/scala/src/main/scala/refout/*
 
-         -run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net5.0/*:./netreflected-tests/scala/output" mscorlib.HelloLock
-         -run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net5.0/*:./netreflected-tests/scala/output" mscorlib.HelloNet
-         -run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net5.0/*:./netreflected-tests/scala/output" mscorlib.HelloNETEvent
-         -run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net5.0/*:./netreflected-tests/scala/output" mscorlib.HelloIterator
-         -run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net5.0/*:./netreflected-tests/scala/output" hierarchy.HelloHierarchy
-         -run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net5.0/*:./netreflected-tests/scala/output" hierarchy.HelloInterfaces
-         -run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net5.0/*:./netreflected-tests/scala/output" nettest.HelloNETSocket
-         -run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net5.0/*:./netreflected-tests/scala/output" nettest.HelloNETSocket -async
-         -run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net5.0/*:./netreflected-tests/scala/output" refout.HelloRefOutBase
-         -run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net5.0/*:./netreflected-tests/scala/output" refout.HelloRefOut
-         -run: rm -rf ./netreflected-tests/scala/output
+        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net5.0/*:./netreflected-tests/scala/output" mscorlib.HelloLock
+        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net5.0/*:./netreflected-tests/scala/output" mscorlib.HelloNet
+        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net5.0/*:./netreflected-tests/scala/output" mscorlib.HelloNETEvent
+        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net5.0/*:./netreflected-tests/scala/output" mscorlib.HelloIterator
+        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net5.0/*:./netreflected-tests/scala/output" hierarchy.HelloHierarchy
+        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net5.0/*:./netreflected-tests/scala/output" hierarchy.HelloInterfaces
+        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net5.0/*:./netreflected-tests/scala/output" nettest.HelloNETSocket
+        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net5.0/*:./netreflected-tests/scala/output" nettest.HelloNETSocket -async
+        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net5.0/*:./netreflected-tests/scala/output" refout.HelloRefOutBase
+        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net5.0/*:./netreflected-tests/scala/output" refout.HelloRefOut
+        - run: rm -rf ./netreflected-tests/scala/output

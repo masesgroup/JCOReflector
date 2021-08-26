@@ -94,7 +94,7 @@ public class ITransactionImplementation extends NetObject implements ITransactio
         }
     }
 
-    public ITransactionImplementation(Object instance) throws Throwable {
+    public ITransactionImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class ITransactionImplementation extends NetObject implements ITransactio
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -134,11 +134,11 @@ public class ITransactionImplementation extends NetObject implements ITransactio
 
     // Methods section
     
-    public void Abort(BOID pboidReason, int fRetaining, int fAsync) throws Throwable {
+    public void Abort(JCORefOut<BOID> pboidReason, int fRetaining, int fAsync) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Abort", pboidReason == null ? null : pboidReason.getJCOInstance(), fRetaining, fAsync);
+            classInstance.Invoke("Abort", pboidReason.getJCRefOut(), fRetaining, fAsync);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -100,7 +100,7 @@ public class SizeFConverter extends TypeConverter  {
         }
     }
 
-    public SizeFConverter(Object instance) throws Throwable {
+    public SizeFConverter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class SizeFConverter extends TypeConverter  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -94,7 +94,7 @@ public class ColorBlend extends NetObject  {
         }
     }
 
-    public ColorBlend(Object instance) throws Throwable {
+    public ColorBlend(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class ColorBlend extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -173,7 +173,7 @@ public class ColorBlend extends NetObject  {
         try {
             ArrayList<Single> resultingArrayList = new ArrayList<Single>();
             JCObject resultingObjects = (JCObject)classInstance.Get("Positions");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Single(resultingObject));
             }
             Single[] resultingArray = new Single[resultingArrayList.size()];
@@ -200,7 +200,7 @@ public class ColorBlend extends NetObject  {
         try {
             ArrayList<Color> resultingArrayList = new ArrayList<Color>();
             JCObject resultingObjects = (JCObject)classInstance.Get("Colors");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Color(resultingObject));
             }
             Color[] resultingArray = new Color[resultingArrayList.size()];

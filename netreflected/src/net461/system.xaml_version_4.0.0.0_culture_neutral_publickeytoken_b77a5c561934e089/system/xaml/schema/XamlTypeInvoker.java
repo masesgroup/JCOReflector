@@ -95,7 +95,7 @@ public class XamlTypeInvoker extends NetObject  {
         }
     }
 
-    public XamlTypeInvoker(Object instance) throws Throwable {
+    public XamlTypeInvoker(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class XamlTypeInvoker extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -173,7 +173,7 @@ public class XamlTypeInvoker extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateInstance = (JCObject)classInstance.Invoke("CreateInstance", (Object)toObjectFromArray(arguments));
+            JCObject objCreateInstance = (JCObject)classInstance.Invoke("CreateInstance", (java.lang.Object)toObjectFromArray(arguments));
             return new NetObject(objCreateInstance);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

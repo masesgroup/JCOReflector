@@ -100,7 +100,7 @@ public class BitmapEncoder extends DispatcherObject  {
         }
     }
 
-    public BitmapEncoder(Object instance) throws Throwable {
+    public BitmapEncoder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class BitmapEncoder extends DispatcherObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

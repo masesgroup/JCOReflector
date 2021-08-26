@@ -104,7 +104,7 @@ public class MethodInfo extends MethodBase  {
         }
     }
 
-    public MethodInfo(Object instance) throws Throwable {
+    public MethodInfo(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -124,7 +124,7 @@ public class MethodInfo extends MethodBase  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -181,7 +181,7 @@ public class MethodInfo extends MethodBase  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objMakeGenericMethod = (JCObject)classInstance.Invoke("MakeGenericMethod", (Object)toObjectFromArray(typeArguments));
+            JCObject objMakeGenericMethod = (JCObject)classInstance.Invoke("MakeGenericMethod", (java.lang.Object)toObjectFromArray(typeArguments));
             return new MethodInfo(objMakeGenericMethod);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -194,7 +194,7 @@ public class MethodInfo extends MethodBase  {
         try {
             ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetGenericArguments");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetType(resultingObject));
             }
             NetType[] resultingArray = new NetType[resultingArrayList.size()];

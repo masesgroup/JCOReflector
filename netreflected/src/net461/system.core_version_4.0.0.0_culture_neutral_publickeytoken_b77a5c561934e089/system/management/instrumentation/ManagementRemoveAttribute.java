@@ -93,7 +93,7 @@ public class ManagementRemoveAttribute extends ManagementMemberAttribute  {
         }
     }
 
-    public ManagementRemoveAttribute(Object instance) throws Throwable {
+    public ManagementRemoveAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class ManagementRemoveAttribute extends ManagementMemberAttribute  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

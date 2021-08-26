@@ -94,7 +94,7 @@ public class WebEventProvider extends ProviderBase  {
         }
     }
 
-    public WebEventProvider(Object instance) throws Throwable {
+    public WebEventProvider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class WebEventProvider extends ProviderBase  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

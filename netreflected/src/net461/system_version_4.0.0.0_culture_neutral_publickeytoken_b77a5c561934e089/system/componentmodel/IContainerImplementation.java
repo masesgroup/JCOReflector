@@ -97,7 +97,7 @@ public class IContainerImplementation extends NetObject implements IContainer {
         }
     }
 
-    public IContainerImplementation(Object instance) throws Throwable {
+    public IContainerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class IContainerImplementation extends NetObject implements IContainer {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

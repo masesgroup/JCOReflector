@@ -99,7 +99,7 @@ public class RowUpdatedEventArgs extends EventArgs  {
         }
     }
 
-    public RowUpdatedEventArgs(Object instance) throws Throwable {
+    public RowUpdatedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class RowUpdatedEventArgs extends EventArgs  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -166,7 +166,7 @@ public class RowUpdatedEventArgs extends EventArgs  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("CopyToRows", (Object)toObjectFromArray(array));
+            classInstance.Invoke("CopyToRows", (java.lang.Object)toObjectFromArray(array));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

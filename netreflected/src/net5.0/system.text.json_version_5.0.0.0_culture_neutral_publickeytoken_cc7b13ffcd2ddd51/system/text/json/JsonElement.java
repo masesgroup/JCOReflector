@@ -105,7 +105,7 @@ public class JsonElement extends ValueType  {
         }
     }
 
-    public JsonElement(Object instance) throws Throwable {
+    public JsonElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -125,7 +125,7 @@ public class JsonElement extends ValueType  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -168,7 +168,7 @@ public class JsonElement extends ValueType  {
         }
     }
 
-    public boolean TryGetByte(JCORefOut value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
+    public boolean TryGetByte(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -218,7 +218,7 @@ public class JsonElement extends ValueType  {
         }
     }
 
-    public boolean TryGetDouble(JCORefOut value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException, system.OverflowException {
+    public boolean TryGetDouble(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Double>> value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException, system.OverflowException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -238,7 +238,7 @@ public class JsonElement extends ValueType  {
         }
     }
 
-    public boolean TryGetInt16(JCORefOut value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
+    public boolean TryGetInt16(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Short>> value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -248,7 +248,7 @@ public class JsonElement extends ValueType  {
         }
     }
 
-    public boolean TryGetInt32(JCORefOut value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
+    public boolean TryGetInt32(JCORefOut<java.util.concurrent.atomic.AtomicInteger> value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -258,7 +258,7 @@ public class JsonElement extends ValueType  {
         }
     }
 
-    public boolean TryGetInt64(JCORefOut value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
+    public boolean TryGetInt64(JCORefOut<java.util.concurrent.atomic.AtomicLong> value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -352,9 +352,9 @@ public class JsonElement extends ValueType  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetBytesFromBase64");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];

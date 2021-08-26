@@ -96,7 +96,7 @@ public class LocalVariableTypeEncoder extends ValueType  {
         }
     }
 
-    public LocalVariableTypeEncoder(Object instance) throws Throwable {
+    public LocalVariableTypeEncoder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class LocalVariableTypeEncoder extends ValueType  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

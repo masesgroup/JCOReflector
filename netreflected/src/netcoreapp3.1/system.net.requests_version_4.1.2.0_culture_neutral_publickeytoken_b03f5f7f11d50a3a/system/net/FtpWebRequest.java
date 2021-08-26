@@ -107,7 +107,7 @@ public class FtpWebRequest extends WebRequest  {
         }
     }
 
-    public FtpWebRequest(Object instance) throws Throwable {
+    public FtpWebRequest(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -127,7 +127,7 @@ public class FtpWebRequest extends WebRequest  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

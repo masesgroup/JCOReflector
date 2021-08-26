@@ -92,7 +92,7 @@ public class IValidatorImplementation extends NetObject implements IValidator {
         }
     }
 
-    public IValidatorImplementation(Object instance) throws Throwable {
+    public IValidatorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class IValidatorImplementation extends NetObject implements IValidator {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

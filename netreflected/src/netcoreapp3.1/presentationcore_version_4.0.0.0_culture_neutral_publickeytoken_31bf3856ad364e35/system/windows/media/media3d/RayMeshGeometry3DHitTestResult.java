@@ -95,7 +95,7 @@ public class RayMeshGeometry3DHitTestResult extends RayHitTestResult  {
         }
     }
 
-    public RayMeshGeometry3DHitTestResult(Object instance) throws Throwable {
+    public RayMeshGeometry3DHitTestResult(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class RayMeshGeometry3DHitTestResult extends RayHitTestResult  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -96,9 +96,9 @@ public interface IServicedComponentInfo extends IJCOBridgeReflected {
     /**
      * Returns the instantiated class
      * 
-     * @return An {@link Object} representing the instance of the instantiated Class
+     * @return An {@link java.lang.Object} representing the instance of the instantiated Class
      */
-    public Object getJCOInstance();
+    public java.lang.Object getJCOInstance();
 
     /**
      * Returns the instantiated class Type
@@ -109,7 +109,7 @@ public interface IServicedComponentInfo extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void GetComponentInfo(int infoMask, JCORefOut infoArray) throws Throwable;
+    public void GetComponentInfo(JCORefOut<java.util.concurrent.atomic.AtomicInteger> infoMask, JCORefOut infoArray) throws Throwable;
 
 
     

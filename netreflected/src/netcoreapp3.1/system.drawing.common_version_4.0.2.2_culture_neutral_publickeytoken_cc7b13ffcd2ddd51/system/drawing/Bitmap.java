@@ -104,7 +104,7 @@ public class Bitmap extends Image  {
         }
     }
 
-    public Bitmap(Object instance) throws Throwable {
+    public Bitmap(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -124,7 +124,7 @@ public class Bitmap extends Image  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -97,7 +97,7 @@ public class RegisterAssembly extends AppDomainIsolatedTaskExtension  {
         }
     }
 
-    public RegisterAssembly(Object instance) throws Throwable {
+    public RegisterAssembly(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class RegisterAssembly extends AppDomainIsolatedTaskExtension  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -238,7 +238,7 @@ public class RegisterAssembly extends AppDomainIsolatedTaskExtension  {
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
             JCObject resultingObjects = (JCObject)classInstance.Get("Assemblies");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
@@ -265,7 +265,7 @@ public class RegisterAssembly extends AppDomainIsolatedTaskExtension  {
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
             JCObject resultingObjects = (JCObject)classInstance.Get("TypeLibFiles");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];

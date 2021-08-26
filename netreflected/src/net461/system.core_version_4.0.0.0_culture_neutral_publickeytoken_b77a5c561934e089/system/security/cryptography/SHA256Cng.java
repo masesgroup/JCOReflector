@@ -93,7 +93,7 @@ public class SHA256Cng extends SHA256  {
         }
     }
 
-    public SHA256Cng(Object instance) throws Throwable {
+    public SHA256Cng(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class SHA256Cng extends SHA256  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

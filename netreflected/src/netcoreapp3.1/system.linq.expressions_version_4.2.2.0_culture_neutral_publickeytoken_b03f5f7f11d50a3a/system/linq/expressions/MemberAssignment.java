@@ -95,7 +95,7 @@ public class MemberAssignment extends MemberBinding  {
         }
     }
 
-    public MemberAssignment(Object instance) throws Throwable {
+    public MemberAssignment(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class MemberAssignment extends MemberBinding  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

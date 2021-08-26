@@ -101,7 +101,7 @@ public class ToolStripItemTextRenderEventArgs extends ToolStripItemRenderEventAr
         }
     }
 
-    public ToolStripItemTextRenderEventArgs(Object instance) throws Throwable {
+    public ToolStripItemTextRenderEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -121,7 +121,7 @@ public class ToolStripItemTextRenderEventArgs extends ToolStripItemRenderEventAr
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

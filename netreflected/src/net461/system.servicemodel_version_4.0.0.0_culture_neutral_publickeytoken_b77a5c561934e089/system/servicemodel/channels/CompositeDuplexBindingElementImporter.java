@@ -96,7 +96,7 @@ public class CompositeDuplexBindingElementImporter extends NetObject implements 
         }
     }
 
-    public CompositeDuplexBindingElementImporter(Object instance) throws Throwable {
+    public CompositeDuplexBindingElementImporter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class CompositeDuplexBindingElementImporter extends NetObject implements 
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

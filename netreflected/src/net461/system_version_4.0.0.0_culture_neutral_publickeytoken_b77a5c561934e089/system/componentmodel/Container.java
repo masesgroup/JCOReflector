@@ -95,7 +95,7 @@ public class Container extends NetObject implements AutoCloseable {
         }
     }
 
-    public Container(Object instance) throws Throwable {
+    public Container(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class Container extends NetObject implements AutoCloseable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -92,7 +92,7 @@ public class IAsyncErrorNotifyImplementation extends NetObject implements IAsync
         }
     }
 
-    public IAsyncErrorNotifyImplementation(Object instance) throws Throwable {
+    public IAsyncErrorNotifyImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class IAsyncErrorNotifyImplementation extends NetObject implements IAsync
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

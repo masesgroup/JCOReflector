@@ -97,7 +97,7 @@ public class HttpResponseHeaders extends HttpHeaders  {
         }
     }
 
-    public HttpResponseHeaders(Object instance) throws Throwable {
+    public HttpResponseHeaders(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class HttpResponseHeaders extends HttpHeaders  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

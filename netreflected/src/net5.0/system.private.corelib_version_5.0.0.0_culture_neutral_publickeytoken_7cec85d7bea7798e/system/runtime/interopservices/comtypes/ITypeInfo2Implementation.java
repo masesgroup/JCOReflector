@@ -102,7 +102,7 @@ public class ITypeInfo2Implementation extends NetObject implements ITypeInfo2 {
         }
     }
 
-    public ITypeInfo2Implementation(Object instance) throws Throwable {
+    public ITypeInfo2Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -122,7 +122,7 @@ public class ITypeInfo2Implementation extends NetObject implements ITypeInfo2 {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -142,17 +142,17 @@ public class ITypeInfo2Implementation extends NetObject implements ITypeInfo2 {
 
     // Methods section
     
-    public void CreateInstance(NetObject pUnkOuter, Guid riid, JCORefOut<NetObject> ppvObj) throws Throwable {
+    public void CreateInstance(NetObject pUnkOuter, JCORefOut<Guid> riid, JCORefOut<NetObject> ppvObj) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("CreateInstance", pUnkOuter == null ? null : pUnkOuter.getJCOInstance(), riid == null ? null : riid.getJCOInstance(), ppvObj.getJCRefOut());
+            classInstance.Invoke("CreateInstance", pUnkOuter == null ? null : pUnkOuter.getJCOInstance(), riid.getJCRefOut(), ppvObj.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void GetContainingTypeLib(JCORefOut<ITypeLib> ppTLB, JCORefOut pIndex) throws Throwable {
+    public void GetContainingTypeLib(JCORefOut<ITypeLib> ppTLB, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pIndex) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -162,17 +162,17 @@ public class ITypeInfo2Implementation extends NetObject implements ITypeInfo2 {
         }
     }
 
-    public void GetCustData(Guid guid, JCORefOut<NetObject> pVarVal) throws Throwable {
+    public void GetCustData(JCORefOut<Guid> guid, JCORefOut<NetObject> pVarVal) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("GetCustData", guid == null ? null : guid.getJCOInstance(), pVarVal.getJCRefOut());
+            classInstance.Invoke("GetCustData", guid.getJCRefOut(), pVarVal.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void GetDocumentation(int index, JCORefOut strName, JCORefOut strDocString, JCORefOut dwHelpContext, JCORefOut strHelpFile) throws Throwable {
+    public void GetDocumentation(int index, JCORefOut strName, JCORefOut strDocString, JCORefOut<java.util.concurrent.atomic.AtomicInteger> dwHelpContext, JCORefOut strHelpFile) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -182,7 +182,7 @@ public class ITypeInfo2Implementation extends NetObject implements ITypeInfo2 {
         }
     }
 
-    public void GetDocumentation2(int memid, JCORefOut pbstrHelpString, JCORefOut pdwHelpStringContext, JCORefOut pbstrHelpStringDll) throws Throwable {
+    public void GetDocumentation2(int memid, JCORefOut pbstrHelpString, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pdwHelpStringContext, JCORefOut pbstrHelpStringDll) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -192,17 +192,17 @@ public class ITypeInfo2Implementation extends NetObject implements ITypeInfo2 {
         }
     }
 
-    public void GetFuncCustData(int index, Guid guid, JCORefOut<NetObject> pVarVal) throws Throwable {
+    public void GetFuncCustData(int index, JCORefOut<Guid> guid, JCORefOut<NetObject> pVarVal) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("GetFuncCustData", index, guid == null ? null : guid.getJCOInstance(), pVarVal.getJCRefOut());
+            classInstance.Invoke("GetFuncCustData", index, guid.getJCRefOut(), pVarVal.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void GetFuncIndexOfMemId(int memid, INVOKEKIND invKind, JCORefOut pFuncIndex) throws Throwable {
+    public void GetFuncIndexOfMemId(int memid, INVOKEKIND invKind, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pFuncIndex) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -222,11 +222,11 @@ public class ITypeInfo2Implementation extends NetObject implements ITypeInfo2 {
         }
     }
 
-    public void GetImplTypeCustData(int index, Guid guid, JCORefOut<NetObject> pVarVal) throws Throwable {
+    public void GetImplTypeCustData(int index, JCORefOut<Guid> guid, JCORefOut<NetObject> pVarVal) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("GetImplTypeCustData", index, guid == null ? null : guid.getJCOInstance(), pVarVal.getJCRefOut());
+            classInstance.Invoke("GetImplTypeCustData", index, guid.getJCRefOut(), pVarVal.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,7 +252,7 @@ public class ITypeInfo2Implementation extends NetObject implements ITypeInfo2 {
         }
     }
 
-    public void GetNames(int memid, JCORefOut rgBstrNames, int cMaxNames, JCORefOut pcNames) throws Throwable {
+    public void GetNames(int memid, JCORefOut rgBstrNames, int cMaxNames, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pcNames) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -262,11 +262,11 @@ public class ITypeInfo2Implementation extends NetObject implements ITypeInfo2 {
         }
     }
 
-    public void GetParamCustData(int indexFunc, int indexParam, Guid guid, JCORefOut<NetObject> pVarVal) throws Throwable {
+    public void GetParamCustData(int indexFunc, int indexParam, JCORefOut<Guid> guid, JCORefOut<NetObject> pVarVal) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("GetParamCustData", indexFunc, indexParam, guid == null ? null : guid.getJCOInstance(), pVarVal.getJCRefOut());
+            classInstance.Invoke("GetParamCustData", indexFunc, indexParam, guid.getJCRefOut(), pVarVal.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -282,7 +282,7 @@ public class ITypeInfo2Implementation extends NetObject implements ITypeInfo2 {
         }
     }
 
-    public void GetRefTypeOfImplType(int index, JCORefOut href) throws Throwable {
+    public void GetRefTypeOfImplType(int index, JCORefOut<java.util.concurrent.atomic.AtomicInteger> href) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -302,7 +302,7 @@ public class ITypeInfo2Implementation extends NetObject implements ITypeInfo2 {
         }
     }
 
-    public void GetTypeFlags(JCORefOut pTypeFlags) throws Throwable {
+    public void GetTypeFlags(JCORefOut<java.util.concurrent.atomic.AtomicInteger> pTypeFlags) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -322,17 +322,17 @@ public class ITypeInfo2Implementation extends NetObject implements ITypeInfo2 {
         }
     }
 
-    public void GetVarCustData(int index, Guid guid, JCORefOut<NetObject> pVarVal) throws Throwable {
+    public void GetVarCustData(int index, JCORefOut<Guid> guid, JCORefOut<NetObject> pVarVal) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("GetVarCustData", index, guid == null ? null : guid.getJCOInstance(), pVarVal.getJCRefOut());
+            classInstance.Invoke("GetVarCustData", index, guid.getJCRefOut(), pVarVal.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void GetVarIndexOfMemId(int memid, JCORefOut pVarIndex) throws Throwable {
+    public void GetVarIndexOfMemId(int memid, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pVarIndex) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

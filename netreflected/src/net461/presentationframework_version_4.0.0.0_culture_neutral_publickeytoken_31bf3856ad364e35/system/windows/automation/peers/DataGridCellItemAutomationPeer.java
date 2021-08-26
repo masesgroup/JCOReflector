@@ -103,7 +103,7 @@ public class DataGridCellItemAutomationPeer extends AutomationPeer implements sy
         }
     }
 
-    public DataGridCellItemAutomationPeer(Object instance) throws Throwable {
+    public DataGridCellItemAutomationPeer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -123,7 +123,7 @@ public class DataGridCellItemAutomationPeer extends AutomationPeer implements sy
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

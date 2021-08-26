@@ -92,7 +92,7 @@ public class IContractBehaviorAttributeImplementation extends NetObject implemen
         }
     }
 
-    public IContractBehaviorAttributeImplementation(Object instance) throws Throwable {
+    public IContractBehaviorAttributeImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class IContractBehaviorAttributeImplementation extends NetObject implemen
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

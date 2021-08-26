@@ -97,7 +97,7 @@ public class LocalCertificateSelectionCallback extends JCDelegate implements IJC
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return this;
     }
 
@@ -105,7 +105,7 @@ public class LocalCertificateSelectionCallback extends JCDelegate implements IJC
         return classType;
     }
 
-    public final Object EventRaised(Object... argsFromJCOBridge) {
+    public final java.lang.Object EventRaised(java.lang.Object... argsFromJCOBridge) {
         try
         {
             NetObject sender = argsFromJCOBridge[0] == null ? null : new NetObject(argsFromJCOBridge[0]);
@@ -114,9 +114,9 @@ public class LocalCertificateSelectionCallback extends JCDelegate implements IJC
             X509Certificate remoteCertificate = argsFromJCOBridge[3] == null ? null : new X509Certificate(argsFromJCOBridge[3]);
             java.lang.String[] acceptableIssuers = null;
             if (argsFromJCOBridge[4] != null) {
-                ArrayList<Object> resultingArrayList4 = new ArrayList<Object>();
+                ArrayList<java.lang.Object> resultingArrayList4 = new ArrayList<java.lang.Object>();
                 JCObject resultingObjects = (JCObject)argsFromJCOBridge[4];
-                for (Object resultingObject4 : resultingObjects) {
+                for (java.lang.Object resultingObject4 : resultingObjects) {
                     resultingArrayList4.add(resultingObject4);
                 }
                 acceptableIssuers = new java.lang.String[resultingArrayList4.size()];
@@ -142,7 +142,7 @@ public class LocalCertificateSelectionCallback extends JCDelegate implements IJC
         }
     }
 
-    public final Object DelegateInvoked(Object... argsFromJCOBridge) {
+    public final java.lang.Object DelegateInvoked(java.lang.Object... argsFromJCOBridge) {
         try
         {
             NetObject sender = argsFromJCOBridge[0] == null ? null : new NetObject(argsFromJCOBridge[0]);
@@ -151,9 +151,9 @@ public class LocalCertificateSelectionCallback extends JCDelegate implements IJC
             X509Certificate remoteCertificate = argsFromJCOBridge[3] == null ? null : new X509Certificate(argsFromJCOBridge[3]);
             java.lang.String[] acceptableIssuers = null;
             if (argsFromJCOBridge[4] != null) {
-                ArrayList<Object> resultingArrayList4 = new ArrayList<Object>();
+                ArrayList<java.lang.Object> resultingArrayList4 = new ArrayList<java.lang.Object>();
                 JCObject resultingObjects = (JCObject)argsFromJCOBridge[4];
-                for (Object resultingObject4 : resultingObjects) {
+                for (java.lang.Object resultingObject4 : resultingObjects) {
                     resultingArrayList4.add(resultingObject4);
                 }
                 acceptableIssuers = new java.lang.String[resultingArrayList4.size()];
@@ -188,7 +188,7 @@ public class LocalCertificateSelectionCallback extends JCDelegate implements IJC
         callerInstance = instance;
     }
 
-    public LocalCertificateSelectionCallback(Object instance) throws Throwable {
+    public LocalCertificateSelectionCallback(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         if (instance == null) throw new IllegalArgumentException("Instance cannot be null");
         if (instance instanceof ILocalCertificateSelectionCallback) {
@@ -200,7 +200,7 @@ public class LocalCertificateSelectionCallback extends JCDelegate implements IJC
                     String.format("Class %s is not supported.", instance.getClass().getTypeName()));
     }
 
-    protected final static <T extends IJCOBridgeReflected> Object toObjectFromArray(T[] input) {
+    protected final static <T extends IJCOBridgeReflected> java.lang.Object toObjectFromArray(T[] input) {
         return JCOBridgeInstance.toObjectFromArray(input);
     }
 

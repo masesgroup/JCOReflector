@@ -101,7 +101,7 @@ public class Color extends ValueType implements system.IFormattable {
         }
     }
 
-    public Color(Object instance) throws Throwable {
+    public Color(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -121,7 +121,7 @@ public class Color extends ValueType implements system.IFormattable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -190,7 +190,7 @@ public class Color extends ValueType implements system.IFormattable {
         try {
             ArrayList<Single> resultingArrayList = new ArrayList<Single>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetNativeColorValues");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Single(resultingObject));
             }
             Single[] resultingArray = new Single[resultingArrayList.size()];

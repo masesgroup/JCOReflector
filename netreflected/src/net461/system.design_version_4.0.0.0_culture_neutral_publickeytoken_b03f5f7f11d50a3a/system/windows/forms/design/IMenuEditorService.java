@@ -99,9 +99,9 @@ public interface IMenuEditorService extends IJCOBridgeReflected {
     /**
      * Returns the instantiated class
      * 
-     * @return An {@link Object} representing the instance of the instantiated Class
+     * @return An {@link java.lang.Object} representing the instance of the instantiated Class
      */
-    public Object getJCOInstance();
+    public java.lang.Object getJCOInstance();
 
     /**
      * Returns the instantiated class Type
@@ -114,7 +114,7 @@ public interface IMenuEditorService extends IJCOBridgeReflected {
     
     public boolean IsActive() throws Throwable;
 
-    public boolean MessageFilter(Message m) throws Throwable;
+    public boolean MessageFilter(JCORefOut<Message> m) throws Throwable;
 
     public Menu GetMenu() throws Throwable;
 

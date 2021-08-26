@@ -97,7 +97,7 @@ public class CreateUserWizardDesigner extends WizardDesigner  {
         }
     }
 
-    public CreateUserWizardDesigner(Object instance) throws Throwable {
+    public CreateUserWizardDesigner(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class CreateUserWizardDesigner extends WizardDesigner  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

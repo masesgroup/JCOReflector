@@ -108,7 +108,7 @@ public class BindingDirection extends NetObject  {
         }
     }
 
-    public BindingDirection(Object instance) {
+    public BindingDirection(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class BindingDirection extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

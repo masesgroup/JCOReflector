@@ -100,7 +100,7 @@ public class PEReader extends NetObject implements AutoCloseable {
         }
     }
 
-    public PEReader(Object instance) throws Throwable {
+    public PEReader(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class PEReader extends NetObject implements AutoCloseable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -95,7 +95,7 @@ public class ServiceDebugBehavior extends NetObject  {
         }
     }
 
-    public ServiceDebugBehavior(Object instance) throws Throwable {
+    public ServiceDebugBehavior(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class ServiceDebugBehavior extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

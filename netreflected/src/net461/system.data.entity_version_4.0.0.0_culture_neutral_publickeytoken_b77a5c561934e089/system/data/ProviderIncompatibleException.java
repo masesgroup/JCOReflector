@@ -97,7 +97,7 @@ public class ProviderIncompatibleException extends EntityException {
         super();
     }
 
-    public ProviderIncompatibleException(Object instance) {
+    public ProviderIncompatibleException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class ProviderIncompatibleException extends EntityException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

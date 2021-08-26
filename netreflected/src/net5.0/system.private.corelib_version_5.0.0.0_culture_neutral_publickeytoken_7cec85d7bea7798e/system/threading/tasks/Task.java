@@ -104,7 +104,7 @@ public class Task extends NetObject implements AutoCloseable {
         }
     }
 
-    public Task(Object instance) throws Throwable {
+    public Task(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -124,7 +124,7 @@ public class Task extends NetObject implements AutoCloseable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -261,7 +261,7 @@ public class Task extends NetObject implements AutoCloseable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classType.Invoke("WaitAny", (Object)toObjectFromArray(tasks));
+            return (int)classType.Invoke("WaitAny", (java.lang.Object)toObjectFromArray(tasks));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -432,7 +432,7 @@ public class Task extends NetObject implements AutoCloseable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objWhenAll = (JCObject)classType.Invoke("WhenAll", (Object)toObjectFromArray(tasks));
+            JCObject objWhenAll = (JCObject)classType.Invoke("WhenAll", (java.lang.Object)toObjectFromArray(tasks));
             return new Task(objWhenAll);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -513,7 +513,7 @@ public class Task extends NetObject implements AutoCloseable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("WaitAll", (Object)toObjectFromArray(tasks));
+            classType.Invoke("WaitAll", (java.lang.Object)toObjectFromArray(tasks));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

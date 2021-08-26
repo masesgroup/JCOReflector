@@ -98,7 +98,7 @@ public class WorkflowApplicationUnloadedException extends WorkflowApplicationExc
         super();
     }
 
-    public WorkflowApplicationUnloadedException(Object instance) {
+    public WorkflowApplicationUnloadedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -132,7 +132,7 @@ public class WorkflowApplicationUnloadedException extends WorkflowApplicationExc
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

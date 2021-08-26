@@ -98,7 +98,7 @@ public class MembershipProvider extends ProviderBase  {
         }
     }
 
-    public MembershipProvider(Object instance) throws Throwable {
+    public MembershipProvider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class MembershipProvider extends ProviderBase  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -272,7 +272,7 @@ public class MembershipProvider extends ProviderBase  {
         }
     }
 
-    public MembershipUserCollection FindUsersByEmail(java.lang.String emailToMatch, int pageIndex, int pageSize, JCORefOut totalRecords) throws Throwable {
+    public MembershipUserCollection FindUsersByEmail(java.lang.String emailToMatch, int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -283,7 +283,7 @@ public class MembershipProvider extends ProviderBase  {
         }
     }
 
-    public MembershipUserCollection FindUsersByName(java.lang.String usernameToMatch, int pageIndex, int pageSize, JCORefOut totalRecords) throws Throwable {
+    public MembershipUserCollection FindUsersByName(java.lang.String usernameToMatch, int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -294,7 +294,7 @@ public class MembershipProvider extends ProviderBase  {
         }
     }
 
-    public MembershipUserCollection GetAllUsers(int pageIndex, int pageSize, JCORefOut totalRecords) throws Throwable {
+    public MembershipUserCollection GetAllUsers(int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

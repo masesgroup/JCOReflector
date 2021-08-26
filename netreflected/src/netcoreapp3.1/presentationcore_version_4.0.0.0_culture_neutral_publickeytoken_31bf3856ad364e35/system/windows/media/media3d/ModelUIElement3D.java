@@ -94,7 +94,7 @@ public class ModelUIElement3D extends UIElement3D  {
         }
     }
 
-    public ModelUIElement3D(Object instance) throws Throwable {
+    public ModelUIElement3D(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class ModelUIElement3D extends UIElement3D  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

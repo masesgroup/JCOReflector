@@ -98,7 +98,7 @@ public class ITaskItem2Implementation extends NetObject implements ITaskItem2 {
         }
     }
 
-    public ITaskItem2Implementation(Object instance) throws Throwable {
+    public ITaskItem2Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class ITaskItem2Implementation extends NetObject implements ITaskItem2 {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

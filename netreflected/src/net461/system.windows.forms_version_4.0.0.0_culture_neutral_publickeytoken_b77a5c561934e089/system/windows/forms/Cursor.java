@@ -102,7 +102,7 @@ public class Cursor extends NetObject implements system.runtime.serialization.IS
         }
     }
 
-    public Cursor(Object instance) throws Throwable {
+    public Cursor(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -122,7 +122,7 @@ public class Cursor extends NetObject implements system.runtime.serialization.IS
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

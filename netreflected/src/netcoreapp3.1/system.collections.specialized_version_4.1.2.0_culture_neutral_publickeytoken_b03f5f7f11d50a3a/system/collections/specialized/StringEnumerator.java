@@ -106,7 +106,7 @@ public class StringEnumerator extends NetObject implements Iterator<java.lang.St
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

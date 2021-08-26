@@ -95,7 +95,7 @@ public class BezierSegment extends PathSegment  {
         }
     }
 
-    public BezierSegment(Object instance) throws Throwable {
+    public BezierSegment(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class BezierSegment extends PathSegment  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -94,7 +94,7 @@ public class AssemblyManifest extends Manifest  {
         }
     }
 
-    public AssemblyManifest(Object instance) throws Throwable {
+    public AssemblyManifest(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class AssemblyManifest extends Manifest  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -163,7 +163,7 @@ public class AssemblyManifest extends Manifest  {
         try {
             ArrayList<ProxyStub> resultingArrayList = new ArrayList<ProxyStub>();
             JCObject resultingObjects = (JCObject)classInstance.Get("ExternalProxyStubs");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ProxyStub(resultingObject));
             }
             ProxyStub[] resultingArray = new ProxyStub[resultingArrayList.size()];
@@ -180,7 +180,7 @@ public class AssemblyManifest extends Manifest  {
         try {
             ArrayList<ProxyStub> resultingArrayList = new ArrayList<ProxyStub>();
             JCObject resultingObjects = (JCObject)classInstance.Get("XmlExternalProxyStubs");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ProxyStub(resultingObject));
             }
             ProxyStub[] resultingArray = new ProxyStub[resultingArrayList.size()];

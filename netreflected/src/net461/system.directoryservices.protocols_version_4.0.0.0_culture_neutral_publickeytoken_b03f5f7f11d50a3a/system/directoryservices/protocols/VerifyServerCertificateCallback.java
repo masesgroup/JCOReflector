@@ -98,7 +98,7 @@ public class VerifyServerCertificateCallback extends JCDelegate implements IJCEv
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return this;
     }
 
@@ -106,14 +106,14 @@ public class VerifyServerCertificateCallback extends JCDelegate implements IJCEv
         return classType;
     }
 
-    public final Object EventRaised(Object... argsFromJCOBridge) {
+    public final java.lang.Object EventRaised(java.lang.Object... argsFromJCOBridge) {
         try
         {
             LdapConnection connection = argsFromJCOBridge[0] == null ? null : new LdapConnection(argsFromJCOBridge[0]);
             X509Certificate certificate = argsFromJCOBridge[1] == null ? null : new X509Certificate(argsFromJCOBridge[1]);
 
 
-            Object retVal = null;
+            java.lang.Object retVal = null;
             if (callerInstance != null)	{
                 retVal = callerInstance.Invoke(connection, certificate);
             } else {
@@ -128,14 +128,14 @@ public class VerifyServerCertificateCallback extends JCDelegate implements IJCEv
         }
     }
 
-    public final Object DelegateInvoked(Object... argsFromJCOBridge) {
+    public final java.lang.Object DelegateInvoked(java.lang.Object... argsFromJCOBridge) {
         try
         {
             LdapConnection connection = argsFromJCOBridge[0] == null ? null : new LdapConnection(argsFromJCOBridge[0]);
             X509Certificate certificate = argsFromJCOBridge[1] == null ? null : new X509Certificate(argsFromJCOBridge[1]);
 
 
-            Object retVal = null;
+            java.lang.Object retVal = null;
             if (callerInstance != null)	{
                 retVal = callerInstance.Invoke(connection, certificate);
             } else {
@@ -159,7 +159,7 @@ public class VerifyServerCertificateCallback extends JCDelegate implements IJCEv
         callerInstance = instance;
     }
 
-    public VerifyServerCertificateCallback(Object instance) throws Throwable {
+    public VerifyServerCertificateCallback(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         if (instance == null) throw new IllegalArgumentException("Instance cannot be null");
         if (instance instanceof IVerifyServerCertificateCallback) {
@@ -171,7 +171,7 @@ public class VerifyServerCertificateCallback extends JCDelegate implements IJCEv
                     String.format("Class %s is not supported.", instance.getClass().getTypeName()));
     }
 
-    protected final static <T extends IJCOBridgeReflected> Object toObjectFromArray(T[] input) {
+    protected final static <T extends IJCOBridgeReflected> java.lang.Object toObjectFromArray(T[] input) {
         return JCOBridgeInstance.toObjectFromArray(input);
     }
 

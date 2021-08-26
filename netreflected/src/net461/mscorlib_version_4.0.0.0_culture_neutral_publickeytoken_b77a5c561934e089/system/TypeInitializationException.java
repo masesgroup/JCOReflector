@@ -99,7 +99,7 @@ public class TypeInitializationException extends SystemException {
         super();
     }
 
-    public TypeInitializationException(Object instance) {
+    public TypeInitializationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -133,7 +133,7 @@ public class TypeInitializationException extends SystemException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

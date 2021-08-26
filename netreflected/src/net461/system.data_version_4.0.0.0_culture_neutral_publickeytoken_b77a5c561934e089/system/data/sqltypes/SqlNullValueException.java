@@ -97,7 +97,7 @@ public class SqlNullValueException extends SqlTypeException {
         super();
     }
 
-    public SqlNullValueException(Object instance) {
+    public SqlNullValueException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class SqlNullValueException extends SqlTypeException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -101,7 +101,7 @@ public class CollectionView extends DispatcherObject  {
         }
     }
 
-    public CollectionView(Object instance) throws Throwable {
+    public CollectionView(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -121,7 +121,7 @@ public class CollectionView extends DispatcherObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -98,7 +98,7 @@ public class ToolBarTray extends FrameworkElement implements system.windows.mark
         }
     }
 
-    public ToolBarTray(Object instance) throws Throwable {
+    public ToolBarTray(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class ToolBarTray extends FrameworkElement implements system.windows.mark
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

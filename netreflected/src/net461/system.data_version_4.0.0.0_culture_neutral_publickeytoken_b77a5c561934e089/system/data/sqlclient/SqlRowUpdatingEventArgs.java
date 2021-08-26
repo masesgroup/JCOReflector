@@ -99,7 +99,7 @@ public class SqlRowUpdatingEventArgs extends RowUpdatingEventArgs  {
         }
     }
 
-    public SqlRowUpdatingEventArgs(Object instance) throws Throwable {
+    public SqlRowUpdatingEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class SqlRowUpdatingEventArgs extends RowUpdatingEventArgs  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -99,7 +99,7 @@ public class CheckBox extends WebControl implements system.web.ui.IPostBackDataH
         }
     }
 
-    public CheckBox(Object instance) throws Throwable {
+    public CheckBox(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class CheckBox extends WebControl implements system.web.ui.IPostBackDataH
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

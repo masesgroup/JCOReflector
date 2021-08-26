@@ -99,7 +99,7 @@ public class CultureNotFoundException extends ArgumentException {
         super();
     }
 
-    public CultureNotFoundException(Object instance) {
+    public CultureNotFoundException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -133,7 +133,7 @@ public class CultureNotFoundException extends ArgumentException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

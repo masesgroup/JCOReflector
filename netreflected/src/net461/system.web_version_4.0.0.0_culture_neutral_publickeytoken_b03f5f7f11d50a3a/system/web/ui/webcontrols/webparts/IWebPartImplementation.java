@@ -92,7 +92,7 @@ public class IWebPartImplementation extends NetObject implements IWebPart {
         }
     }
 
-    public IWebPartImplementation(Object instance) throws Throwable {
+    public IWebPartImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class IWebPartImplementation extends NetObject implements IWebPart {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -98,7 +98,7 @@ public class HttpResponseMessageProperty extends NetObject implements system.ser
         }
     }
 
-    public HttpResponseMessageProperty(Object instance) throws Throwable {
+    public HttpResponseMessageProperty(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class HttpResponseMessageProperty extends NetObject implements system.ser
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

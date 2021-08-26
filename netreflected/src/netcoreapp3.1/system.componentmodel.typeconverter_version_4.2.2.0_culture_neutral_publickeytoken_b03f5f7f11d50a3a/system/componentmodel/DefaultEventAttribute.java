@@ -93,7 +93,7 @@ public class DefaultEventAttribute extends Attribute  {
         }
     }
 
-    public DefaultEventAttribute(Object instance) throws Throwable {
+    public DefaultEventAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class DefaultEventAttribute extends Attribute  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

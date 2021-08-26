@@ -98,7 +98,7 @@ public class Hash extends EvidenceBase  {
         }
     }
 
-    public Hash(Object instance) throws Throwable {
+    public Hash(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class Hash extends EvidenceBase  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -165,9 +165,9 @@ public class Hash extends EvidenceBase  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GenerateHash", hashAlg == null ? null : hashAlg.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -184,7 +184,7 @@ public class Hash extends EvidenceBase  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateMD5 = (JCObject)classType.Invoke("CreateMD5", (Object)md5);
+            JCObject objCreateMD5 = (JCObject)classType.Invoke("CreateMD5", (java.lang.Object)md5);
             return new Hash(objCreateMD5);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -195,7 +195,7 @@ public class Hash extends EvidenceBase  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateMD5 = (JCObject)classType.Invoke("CreateMD5", (Object)dupParam0.getJCRefOut());
+            JCObject objCreateMD5 = (JCObject)classType.Invoke("CreateMD5", (java.lang.Object)dupParam0.getJCRefOut());
             return new Hash(objCreateMD5);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -206,7 +206,7 @@ public class Hash extends EvidenceBase  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateSHA1 = (JCObject)classType.Invoke("CreateSHA1", (Object)sha1);
+            JCObject objCreateSHA1 = (JCObject)classType.Invoke("CreateSHA1", (java.lang.Object)sha1);
             return new Hash(objCreateSHA1);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -217,7 +217,7 @@ public class Hash extends EvidenceBase  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateSHA1 = (JCObject)classType.Invoke("CreateSHA1", (Object)dupParam0.getJCRefOut());
+            JCObject objCreateSHA1 = (JCObject)classType.Invoke("CreateSHA1", (java.lang.Object)dupParam0.getJCRefOut());
             return new Hash(objCreateSHA1);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -228,7 +228,7 @@ public class Hash extends EvidenceBase  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateSHA256 = (JCObject)classType.Invoke("CreateSHA256", (Object)sha256);
+            JCObject objCreateSHA256 = (JCObject)classType.Invoke("CreateSHA256", (java.lang.Object)sha256);
             return new Hash(objCreateSHA256);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -239,7 +239,7 @@ public class Hash extends EvidenceBase  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateSHA256 = (JCObject)classType.Invoke("CreateSHA256", (Object)dupParam0.getJCRefOut());
+            JCObject objCreateSHA256 = (JCObject)classType.Invoke("CreateSHA256", (java.lang.Object)dupParam0.getJCRefOut());
             return new Hash(objCreateSHA256);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -264,9 +264,9 @@ public class Hash extends EvidenceBase  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Get("MD5");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -283,9 +283,9 @@ public class Hash extends EvidenceBase  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Get("SHA1");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -302,9 +302,9 @@ public class Hash extends EvidenceBase  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Get("SHA256");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];

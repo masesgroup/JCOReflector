@@ -95,7 +95,7 @@ public class ECCurve extends ValueType  {
         }
     }
 
-    public ECCurve(Object instance) throws Throwable {
+    public ECCurve(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class ECCurve extends ValueType  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

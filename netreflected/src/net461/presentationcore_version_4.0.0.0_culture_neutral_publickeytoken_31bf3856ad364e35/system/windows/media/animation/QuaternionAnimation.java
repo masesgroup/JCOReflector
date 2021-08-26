@@ -99,7 +99,7 @@ public class QuaternionAnimation extends QuaternionAnimationBase  {
         }
     }
 
-    public QuaternionAnimation(Object instance) throws Throwable {
+    public QuaternionAnimation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class QuaternionAnimation extends QuaternionAnimationBase  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -97,7 +97,7 @@ public class InertiaProcessor2D extends NetObject  {
         }
     }
 
-    public InertiaProcessor2D(Object instance) throws Throwable {
+    public InertiaProcessor2D(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class InertiaProcessor2D extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

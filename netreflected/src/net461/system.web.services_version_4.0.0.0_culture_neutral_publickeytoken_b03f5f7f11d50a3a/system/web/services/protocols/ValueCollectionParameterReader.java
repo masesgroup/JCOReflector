@@ -95,7 +95,7 @@ public class ValueCollectionParameterReader extends MimeParameterReader  {
         }
     }
 
-    public ValueCollectionParameterReader(Object instance) throws Throwable {
+    public ValueCollectionParameterReader(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class ValueCollectionParameterReader extends MimeParameterReader  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

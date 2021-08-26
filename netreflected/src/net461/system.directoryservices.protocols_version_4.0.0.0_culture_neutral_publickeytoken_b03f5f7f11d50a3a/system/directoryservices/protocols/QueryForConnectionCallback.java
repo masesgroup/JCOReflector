@@ -98,7 +98,7 @@ public class QueryForConnectionCallback extends JCDelegate implements IJCEventEm
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return this;
     }
 
@@ -106,7 +106,7 @@ public class QueryForConnectionCallback extends JCDelegate implements IJCEventEm
         return classType;
     }
 
-    public final Object EventRaised(Object... argsFromJCOBridge) {
+    public final java.lang.Object EventRaised(java.lang.Object... argsFromJCOBridge) {
         try
         {
             LdapConnection primaryConnection = argsFromJCOBridge[0] == null ? null : new LdapConnection(argsFromJCOBridge[0]);
@@ -132,7 +132,7 @@ public class QueryForConnectionCallback extends JCDelegate implements IJCEventEm
         }
     }
 
-    public final Object DelegateInvoked(Object... argsFromJCOBridge) {
+    public final java.lang.Object DelegateInvoked(java.lang.Object... argsFromJCOBridge) {
         try
         {
             LdapConnection primaryConnection = argsFromJCOBridge[0] == null ? null : new LdapConnection(argsFromJCOBridge[0]);
@@ -167,7 +167,7 @@ public class QueryForConnectionCallback extends JCDelegate implements IJCEventEm
         callerInstance = instance;
     }
 
-    public QueryForConnectionCallback(Object instance) throws Throwable {
+    public QueryForConnectionCallback(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         if (instance == null) throw new IllegalArgumentException("Instance cannot be null");
         if (instance instanceof IQueryForConnectionCallback) {
@@ -179,7 +179,7 @@ public class QueryForConnectionCallback extends JCDelegate implements IJCEventEm
                     String.format("Class %s is not supported.", instance.getClass().getTypeName()));
     }
 
-    protected final static <T extends IJCOBridgeReflected> Object toObjectFromArray(T[] input) {
+    protected final static <T extends IJCOBridgeReflected> java.lang.Object toObjectFromArray(T[] input) {
         return JCOBridgeInstance.toObjectFromArray(input);
     }
 

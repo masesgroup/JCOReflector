@@ -100,9 +100,9 @@ public interface UCOMIEnumMoniker extends IJCOBridgeReflected {
     /**
      * Returns the instantiated class
      * 
-     * @return An {@link Object} representing the instance of the instantiated Class
+     * @return An {@link java.lang.Object} representing the instance of the instantiated Class
      */
-    public Object getJCOInstance();
+    public java.lang.Object getJCOInstance();
 
     /**
      * Returns the instantiated class Type
@@ -113,7 +113,7 @@ public interface UCOMIEnumMoniker extends IJCOBridgeReflected {
 
     // Methods section
     
-    public int Next(int celt, JCORefOut<UCOMIMoniker[]> rgelt, JCORefOut pceltFetched) throws Throwable;
+    public int Next(int celt, JCORefOut<UCOMIMoniker[]> rgelt, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pceltFetched) throws Throwable;
 
     public int Reset() throws Throwable;
 

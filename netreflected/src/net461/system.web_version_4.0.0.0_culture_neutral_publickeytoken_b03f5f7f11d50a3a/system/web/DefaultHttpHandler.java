@@ -96,7 +96,7 @@ public class DefaultHttpHandler extends NetObject  {
         }
     }
 
-    public DefaultHttpHandler(Object instance) throws Throwable {
+    public DefaultHttpHandler(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class DefaultHttpHandler extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

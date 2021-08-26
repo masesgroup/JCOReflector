@@ -98,7 +98,7 @@ public class FontTypeConverter extends ExpandableObjectConverter  {
         }
     }
 
-    public FontTypeConverter(Object instance) throws Throwable {
+    public FontTypeConverter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class FontTypeConverter extends ExpandableObjectConverter  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

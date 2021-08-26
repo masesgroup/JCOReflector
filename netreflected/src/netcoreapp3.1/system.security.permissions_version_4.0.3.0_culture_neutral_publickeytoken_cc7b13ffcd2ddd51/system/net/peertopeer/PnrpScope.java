@@ -108,7 +108,7 @@ public class PnrpScope extends NetObject  {
         }
     }
 
-    public PnrpScope(Object instance) {
+    public PnrpScope(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class PnrpScope extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

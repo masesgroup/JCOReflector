@@ -108,7 +108,7 @@ public class Pkcs12ConfidentialityMode extends NetObject  {
         }
     }
 
-    public Pkcs12ConfidentialityMode(Object instance) {
+    public Pkcs12ConfidentialityMode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class Pkcs12ConfidentialityMode extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

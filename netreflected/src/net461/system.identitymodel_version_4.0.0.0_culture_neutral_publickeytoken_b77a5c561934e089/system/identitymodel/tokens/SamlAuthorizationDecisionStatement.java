@@ -101,7 +101,7 @@ public class SamlAuthorizationDecisionStatement extends SamlSubjectStatement  {
         }
     }
 
-    public SamlAuthorizationDecisionStatement(Object instance) throws Throwable {
+    public SamlAuthorizationDecisionStatement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -121,7 +121,7 @@ public class SamlAuthorizationDecisionStatement extends SamlSubjectStatement  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

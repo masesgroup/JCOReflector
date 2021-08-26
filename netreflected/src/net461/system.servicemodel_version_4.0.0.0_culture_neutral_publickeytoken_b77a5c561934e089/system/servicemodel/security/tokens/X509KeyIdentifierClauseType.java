@@ -108,7 +108,7 @@ public class X509KeyIdentifierClauseType extends NetObject  {
         }
     }
 
-    public X509KeyIdentifierClauseType(Object instance) {
+    public X509KeyIdentifierClauseType(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class X509KeyIdentifierClauseType extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

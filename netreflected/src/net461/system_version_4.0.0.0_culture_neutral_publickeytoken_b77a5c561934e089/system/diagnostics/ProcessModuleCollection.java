@@ -94,7 +94,7 @@ public class ProcessModuleCollection extends ReadOnlyCollectionBase  {
         }
     }
 
-    public ProcessModuleCollection(Object instance) throws Throwable {
+    public ProcessModuleCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class ProcessModuleCollection extends ReadOnlyCollectionBase  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -146,7 +146,7 @@ public class ProcessModuleCollection extends ReadOnlyCollectionBase  {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((Object)toObjectFromArray(processModules)));
+            setJCOInstance((JCObject)classType.NewObject((java.lang.Object)toObjectFromArray(processModules)));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

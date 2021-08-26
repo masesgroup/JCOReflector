@@ -95,7 +95,7 @@ public class SourceFilter extends TraceFilter  {
         }
     }
 
-    public SourceFilter(Object instance) throws Throwable {
+    public SourceFilter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class SourceFilter extends TraceFilter  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

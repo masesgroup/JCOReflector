@@ -97,7 +97,7 @@ public class ReadOnlyException extends DataException {
         super();
     }
 
-    public ReadOnlyException(Object instance) {
+    public ReadOnlyException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class ReadOnlyException extends DataException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

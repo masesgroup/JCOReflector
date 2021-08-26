@@ -93,7 +93,7 @@ public class BmpBitmapEncoder extends BitmapEncoder  {
         }
     }
 
-    public BmpBitmapEncoder(Object instance) throws Throwable {
+    public BmpBitmapEncoder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class BmpBitmapEncoder extends BitmapEncoder  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

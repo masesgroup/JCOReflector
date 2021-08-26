@@ -93,7 +93,7 @@ public class ITransformerConfigurationControlImplementation extends NetObject im
         }
     }
 
-    public ITransformerConfigurationControlImplementation(Object instance) throws Throwable {
+    public ITransformerConfigurationControlImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class ITransformerConfigurationControlImplementation extends NetObject im
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -96,7 +96,7 @@ public class VirtualizationCacheLengthConverter extends TypeConverter  {
         }
     }
 
-    public VirtualizationCacheLengthConverter(Object instance) throws Throwable {
+    public VirtualizationCacheLengthConverter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class VirtualizationCacheLengthConverter extends TypeConverter  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

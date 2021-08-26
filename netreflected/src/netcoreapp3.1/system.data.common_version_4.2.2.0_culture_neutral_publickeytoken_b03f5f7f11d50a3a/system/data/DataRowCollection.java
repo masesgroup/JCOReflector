@@ -95,7 +95,7 @@ public class DataRowCollection extends InternalDataCollectionBase  {
         }
     }
 
-    public DataRowCollection(Object instance) throws Throwable {
+    public DataRowCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class DataRowCollection extends InternalDataCollectionBase  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -162,7 +162,7 @@ public class DataRowCollection extends InternalDataCollectionBase  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Contains", (Object)toObjectFromArray(keys));
+            return (boolean)classInstance.Invoke("Contains", (java.lang.Object)toObjectFromArray(keys));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,7 +182,7 @@ public class DataRowCollection extends InternalDataCollectionBase  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objAdd = (JCObject)classInstance.Invoke("Add", (Object)toObjectFromArray(values));
+            JCObject objAdd = (JCObject)classInstance.Invoke("Add", (java.lang.Object)toObjectFromArray(values));
             return new DataRow(objAdd);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -204,7 +204,7 @@ public class DataRowCollection extends InternalDataCollectionBase  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objFind = (JCObject)classInstance.Invoke("Find", (Object)toObjectFromArray(keys));
+            JCObject objFind = (JCObject)classInstance.Invoke("Find", (java.lang.Object)toObjectFromArray(keys));
             return new DataRow(objFind);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

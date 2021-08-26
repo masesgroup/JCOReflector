@@ -108,7 +108,7 @@ public class TreeNodeStates extends NetObject  {
         }
     }
 
-    public TreeNodeStates(Object instance) {
+    public TreeNodeStates(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class TreeNodeStates extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

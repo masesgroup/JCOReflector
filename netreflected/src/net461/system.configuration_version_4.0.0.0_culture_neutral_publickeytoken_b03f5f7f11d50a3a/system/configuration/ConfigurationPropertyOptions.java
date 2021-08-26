@@ -108,7 +108,7 @@ public class ConfigurationPropertyOptions extends NetObject  {
         }
     }
 
-    public ConfigurationPropertyOptions(Object instance) {
+    public ConfigurationPropertyOptions(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class ConfigurationPropertyOptions extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

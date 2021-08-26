@@ -108,7 +108,7 @@ public class DeleteDirectoryOption extends NetObject  {
         }
     }
 
-    public DeleteDirectoryOption(Object instance) {
+    public DeleteDirectoryOption(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class DeleteDirectoryOption extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

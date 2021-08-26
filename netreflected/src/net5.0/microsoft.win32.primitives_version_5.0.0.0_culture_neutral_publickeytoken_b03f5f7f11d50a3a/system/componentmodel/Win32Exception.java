@@ -99,7 +99,7 @@ public class Win32Exception extends ExternalException {
         super();
     }
 
-    public Win32Exception(Object instance) {
+    public Win32Exception(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -133,7 +133,7 @@ public class Win32Exception extends ExternalException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

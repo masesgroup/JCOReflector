@@ -111,7 +111,7 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
         }
     }
 
-    public WorkflowView(Object instance) throws Throwable {
+    public WorkflowView(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -442,7 +442,7 @@ public class WorkflowView extends UserControl implements system.IServiceProvider
      *    Use the static ToIMessageFilter method available in IMessageFilter to obtain an object with an invocable method
      */
     @Deprecated 
-    public boolean PreFilterMessage(Message m) throws Throwable {
+    public boolean PreFilterMessage(JCORefOut<Message> m) throws Throwable {
         throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIMessageFilter to obtain the full interface.");
     }
 

@@ -94,7 +94,7 @@ public class ServiceAuthorizationManager extends NetObject  {
         }
     }
 
-    public ServiceAuthorizationManager(Object instance) throws Throwable {
+    public ServiceAuthorizationManager(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class ServiceAuthorizationManager extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -163,11 +163,11 @@ public class ServiceAuthorizationManager extends NetObject  {
         }
     }
 
-    public boolean CheckAccess(OperationContext operationContext, Message message) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
+    public boolean CheckAccess(OperationContext operationContext, JCORefOut<Message> message) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OverflowException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("CheckAccess", operationContext == null ? null : operationContext.getJCOInstance(), message == null ? null : message.getJCOInstance());
+            return (boolean)classInstance.Invoke("CheckAccess", operationContext == null ? null : operationContext.getJCOInstance(), message.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

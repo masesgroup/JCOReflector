@@ -102,7 +102,7 @@ public class XNode extends XObject  {
         }
     }
 
-    public XNode(Object instance) throws Throwable {
+    public XNode(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -122,7 +122,7 @@ public class XNode extends XObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -261,7 +261,7 @@ public class XNode extends XObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddAfterSelf", (Object)toObjectFromArray(content));
+            classInstance.Invoke("AddAfterSelf", (java.lang.Object)toObjectFromArray(content));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,7 +281,7 @@ public class XNode extends XObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddBeforeSelf", (Object)toObjectFromArray(content));
+            classInstance.Invoke("AddBeforeSelf", (java.lang.Object)toObjectFromArray(content));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -311,7 +311,7 @@ public class XNode extends XObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("ReplaceWith", (Object)toObjectFromArray(content));
+            classInstance.Invoke("ReplaceWith", (java.lang.Object)toObjectFromArray(content));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

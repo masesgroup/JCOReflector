@@ -94,7 +94,7 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
         }
     }
 
-    public PassportIdentity(Object instance) throws Throwable {
+    public PassportIdentity(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

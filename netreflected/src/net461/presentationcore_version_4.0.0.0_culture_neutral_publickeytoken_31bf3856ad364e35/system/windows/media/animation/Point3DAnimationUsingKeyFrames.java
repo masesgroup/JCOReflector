@@ -97,7 +97,7 @@ public class Point3DAnimationUsingKeyFrames extends Point3DAnimationBase impleme
         }
     }
 
-    public Point3DAnimationUsingKeyFrames(Object instance) throws Throwable {
+    public Point3DAnimationUsingKeyFrames(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class Point3DAnimationUsingKeyFrames extends Point3DAnimationBase impleme
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -108,7 +108,7 @@ public class Base64FormattingOptions extends NetObject  {
         }
     }
 
-    public Base64FormattingOptions(Object instance) {
+    public Base64FormattingOptions(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class Base64FormattingOptions extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

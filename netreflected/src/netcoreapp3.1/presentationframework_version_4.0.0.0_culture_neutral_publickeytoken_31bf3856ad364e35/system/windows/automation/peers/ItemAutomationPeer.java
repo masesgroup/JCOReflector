@@ -97,7 +97,7 @@ public class ItemAutomationPeer extends AutomationPeer implements system.windows
         }
     }
 
-    public ItemAutomationPeer(Object instance) throws Throwable {
+    public ItemAutomationPeer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class ItemAutomationPeer extends AutomationPeer implements system.windows
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -97,7 +97,7 @@ public class SecurityMessageSerializationException extends SystemException {
         super();
     }
 
-    public SecurityMessageSerializationException(Object instance) {
+    public SecurityMessageSerializationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class SecurityMessageSerializationException extends SystemException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

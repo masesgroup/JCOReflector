@@ -97,7 +97,7 @@ public class MissingMethodException extends MissingMemberException {
         super();
     }
 
-    public MissingMethodException(Object instance) {
+    public MissingMethodException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class MissingMethodException extends MissingMemberException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -98,7 +98,7 @@ public class DesignerHierarchicalDataSourceView extends NetObject  {
         }
     }
 
-    public DesignerHierarchicalDataSourceView(Object instance) throws Throwable {
+    public DesignerHierarchicalDataSourceView(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class DesignerHierarchicalDataSourceView extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -149,7 +149,7 @@ public class DesignerHierarchicalDataSourceView extends NetObject  {
     
     // Methods section
     
-    public IHierarchicalEnumerable GetDesignTimeData(JCORefOut isSampleData) throws Throwable {
+    public IHierarchicalEnumerable GetDesignTimeData(JCORefOut<java.util.concurrent.atomic.AtomicBoolean> isSampleData) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

@@ -94,7 +94,7 @@ public class IWebPartRowImplementation extends NetObject implements IWebPartRow 
         }
     }
 
-    public IWebPartRowImplementation(Object instance) throws Throwable {
+    public IWebPartRowImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class IWebPartRowImplementation extends NetObject implements IWebPartRow 
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

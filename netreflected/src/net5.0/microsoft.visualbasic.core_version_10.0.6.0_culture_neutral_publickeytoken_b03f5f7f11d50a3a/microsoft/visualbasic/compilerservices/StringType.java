@@ -97,7 +97,7 @@ public class StringType extends NetObject  {
         }
     }
 
-    public StringType(Object instance) throws Throwable {
+    public StringType(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class StringType extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -330,11 +330,11 @@ public class StringType extends NetObject  {
         }
     }
 
-    public static void MidStmtStr(java.lang.String sDest, int StartPosition, int MaxInsertLength, java.lang.String sInsert) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.NotSupportedException, system.InvalidOperationException {
+    public static void MidStmtStr(JCORefOut sDest, int StartPosition, int MaxInsertLength, java.lang.String sInsert) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.NotSupportedException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("MidStmtStr", sDest, StartPosition, MaxInsertLength, sInsert);
+            classType.Invoke("MidStmtStr", sDest.getJCRefOut(), StartPosition, MaxInsertLength, sInsert);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

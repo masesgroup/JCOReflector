@@ -94,7 +94,7 @@ public class IDesignerSerializationProviderImplementation extends NetObject impl
         }
     }
 
-    public IDesignerSerializationProviderImplementation(Object instance) throws Throwable {
+    public IDesignerSerializationProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class IDesignerSerializationProviderImplementation extends NetObject impl
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

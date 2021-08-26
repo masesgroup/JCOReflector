@@ -92,7 +92,7 @@ public class IProfileNotificationImplementation extends NetObject implements IPr
         }
     }
 
-    public IProfileNotificationImplementation(Object instance) throws Throwable {
+    public IProfileNotificationImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class IProfileNotificationImplementation extends NetObject implements IPr
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

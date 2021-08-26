@@ -92,7 +92,7 @@ public class ICustomMarshalerImplementation extends NetObject implements ICustom
         }
     }
 
-    public ICustomMarshalerImplementation(Object instance) throws Throwable {
+    public ICustomMarshalerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class ICustomMarshalerImplementation extends NetObject implements ICustom
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

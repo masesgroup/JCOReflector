@@ -100,7 +100,7 @@ public class MainMenu extends Menu  {
         }
     }
 
-    public MainMenu(Object instance) throws Throwable {
+    public MainMenu(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class MainMenu extends Menu  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -169,7 +169,7 @@ public class MainMenu extends Menu  {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((Object)toObjectFromArray(items)));
+            setJCOInstance((JCObject)classType.NewObject((java.lang.Object)toObjectFromArray(items)));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

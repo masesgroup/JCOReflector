@@ -100,7 +100,7 @@ public class IMethodReturnMessageImplementation extends NetObject implements IMe
         }
     }
 
-    public IMethodReturnMessageImplementation(Object instance) throws Throwable {
+    public IMethodReturnMessageImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class IMethodReturnMessageImplementation extends NetObject implements IMe
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -266,7 +266,7 @@ public class IMethodReturnMessageImplementation extends NetObject implements IMe
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
             JCObject resultingObjects = (JCObject)classInstance.Get("Args");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
@@ -283,7 +283,7 @@ public class IMethodReturnMessageImplementation extends NetObject implements IMe
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
             JCObject resultingObjects = (JCObject)classInstance.Get("OutArgs");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];

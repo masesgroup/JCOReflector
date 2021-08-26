@@ -94,7 +94,7 @@ public class Pkcs9DocumentName extends Pkcs9AttributeObject  {
         }
     }
 
-    public Pkcs9DocumentName(Object instance) throws Throwable {
+    public Pkcs9DocumentName(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class Pkcs9DocumentName extends Pkcs9AttributeObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -153,7 +153,7 @@ public class Pkcs9DocumentName extends Pkcs9AttributeObject  {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((Object)encodedDocumentName));
+            setJCOInstance((JCObject)classType.NewObject((java.lang.Object)encodedDocumentName));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

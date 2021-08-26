@@ -97,7 +97,7 @@ public class IUnvalidatedValueProviderSourceImplementation extends NetObject imp
         }
     }
 
-    public IUnvalidatedValueProviderSourceImplementation(Object instance) throws Throwable {
+    public IUnvalidatedValueProviderSourceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class IUnvalidatedValueProviderSourceImplementation extends NetObject imp
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

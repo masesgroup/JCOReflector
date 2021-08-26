@@ -94,7 +94,7 @@ public class Transactions extends NetObject  {
         }
     }
 
-    public Transactions(Object instance) throws Throwable {
+    public Transactions(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class Transactions extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -163,11 +163,11 @@ public class Transactions extends NetObject  {
         }
     }
 
-    public static void InvokeTransacted(TransactedCallback callback, TransactionOption mode, boolean transactionAborted) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.web.HttpException, system.PlatformNotSupportedException {
+    public static void InvokeTransacted(TransactedCallback callback, TransactionOption mode, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> transactionAborted) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.NotImplementedException, system.NotSupportedException, system.InvalidOperationException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.web.HttpException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("InvokeTransacted", callback, mode == null ? null : mode.getJCOInstance(), transactionAborted);
+            classType.Invoke("InvokeTransacted", callback, mode == null ? null : mode.getJCOInstance(), transactionAborted.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

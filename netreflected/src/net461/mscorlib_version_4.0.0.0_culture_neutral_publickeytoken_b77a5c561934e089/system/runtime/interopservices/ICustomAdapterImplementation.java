@@ -92,7 +92,7 @@ public class ICustomAdapterImplementation extends NetObject implements ICustomAd
         }
     }
 
-    public ICustomAdapterImplementation(Object instance) throws Throwable {
+    public ICustomAdapterImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class ICustomAdapterImplementation extends NetObject implements ICustomAd
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -97,7 +97,7 @@ public class ArgumentNullException extends ArgumentException {
         super();
     }
 
-    public ArgumentNullException(Object instance) {
+    public ArgumentNullException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class ArgumentNullException extends ArgumentException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

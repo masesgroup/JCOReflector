@@ -105,7 +105,7 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
         }
     }
 
-    public TextBox(Object instance) throws Throwable {
+    public TextBox(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -125,7 +125,7 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

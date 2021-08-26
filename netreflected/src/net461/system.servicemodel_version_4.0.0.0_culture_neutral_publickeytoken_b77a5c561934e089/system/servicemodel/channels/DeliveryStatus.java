@@ -108,7 +108,7 @@ public class DeliveryStatus extends NetObject  {
         }
     }
 
-    public DeliveryStatus(Object instance) {
+    public DeliveryStatus(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class DeliveryStatus extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

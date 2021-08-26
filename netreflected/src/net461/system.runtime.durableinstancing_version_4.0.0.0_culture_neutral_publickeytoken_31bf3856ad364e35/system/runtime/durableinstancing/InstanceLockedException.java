@@ -101,7 +101,7 @@ public class InstanceLockedException extends InstancePersistenceCommandException
         super();
     }
 
-    public InstanceLockedException(Object instance) {
+    public InstanceLockedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -135,7 +135,7 @@ public class InstanceLockedException extends InstancePersistenceCommandException
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

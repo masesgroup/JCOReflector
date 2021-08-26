@@ -105,7 +105,7 @@ public class ConnectionOrientedTransportBindingElement extends TransportBindingE
         }
     }
 
-    public ConnectionOrientedTransportBindingElement(Object instance) throws Throwable {
+    public ConnectionOrientedTransportBindingElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -125,7 +125,7 @@ public class ConnectionOrientedTransportBindingElement extends TransportBindingE
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

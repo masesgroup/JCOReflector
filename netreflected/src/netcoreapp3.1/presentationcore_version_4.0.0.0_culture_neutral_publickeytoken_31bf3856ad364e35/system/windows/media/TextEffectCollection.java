@@ -96,7 +96,7 @@ public class TextEffectCollection extends Animatable  {
         }
     }
 
-    public TextEffectCollection(Object instance) throws Throwable {
+    public TextEffectCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class TextEffectCollection extends Animatable  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

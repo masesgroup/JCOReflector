@@ -97,7 +97,7 @@ public class DataSetViewSchema extends NetObject  {
         }
     }
 
-    public DataSetViewSchema(Object instance) throws Throwable {
+    public DataSetViewSchema(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class DataSetViewSchema extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -166,7 +166,7 @@ public class DataSetViewSchema extends NetObject  {
         try {
             ArrayList<IDataSourceFieldSchema> resultingArrayList = new ArrayList<IDataSourceFieldSchema>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFields");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IDataSourceFieldSchemaImplementation(resultingObject));
             }
             IDataSourceFieldSchema[] resultingArray = new IDataSourceFieldSchema[resultingArrayList.size()];
@@ -183,7 +183,7 @@ public class DataSetViewSchema extends NetObject  {
         try {
             ArrayList<IDataSourceViewSchema> resultingArrayList = new ArrayList<IDataSourceViewSchema>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetChildren");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IDataSourceViewSchemaImplementation(resultingObject));
             }
             IDataSourceViewSchema[] resultingArray = new IDataSourceViewSchema[resultingArrayList.size()];

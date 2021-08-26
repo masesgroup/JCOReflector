@@ -97,7 +97,7 @@ public class InvalidConstraintException extends DataException {
         super();
     }
 
-    public InvalidConstraintException(Object instance) {
+    public InvalidConstraintException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class InvalidConstraintException extends DataException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

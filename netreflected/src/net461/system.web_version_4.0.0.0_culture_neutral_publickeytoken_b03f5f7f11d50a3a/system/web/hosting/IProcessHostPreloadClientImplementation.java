@@ -92,7 +92,7 @@ public class IProcessHostPreloadClientImplementation extends NetObject implement
         }
     }
 
-    public IProcessHostPreloadClientImplementation(Object instance) throws Throwable {
+    public IProcessHostPreloadClientImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class IProcessHostPreloadClientImplementation extends NetObject implement
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -136,7 +136,7 @@ public class IProcessHostPreloadClientImplementation extends NetObject implement
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Preload", (Object)parameters);
+            classInstance.Invoke("Preload", (java.lang.Object)parameters);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -146,7 +146,7 @@ public class IProcessHostPreloadClientImplementation extends NetObject implement
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Preload", (Object)dupParam0.getJCRefOut());
+            classInstance.Invoke("Preload", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -97,7 +97,7 @@ public class GroupDescriptionSelectorCallback extends JCDelegate implements IJCE
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return this;
     }
 
@@ -105,7 +105,7 @@ public class GroupDescriptionSelectorCallback extends JCDelegate implements IJCE
         return classType;
     }
 
-    public final Object EventRaised(Object... argsFromJCOBridge) {
+    public final java.lang.Object EventRaised(java.lang.Object... argsFromJCOBridge) {
         try
         {
             CollectionViewGroup group = argsFromJCOBridge[0] == null ? null : new CollectionViewGroup(argsFromJCOBridge[0]);
@@ -127,7 +127,7 @@ public class GroupDescriptionSelectorCallback extends JCDelegate implements IJCE
         }
     }
 
-    public final Object DelegateInvoked(Object... argsFromJCOBridge) {
+    public final java.lang.Object DelegateInvoked(java.lang.Object... argsFromJCOBridge) {
         try
         {
             CollectionViewGroup group = argsFromJCOBridge[0] == null ? null : new CollectionViewGroup(argsFromJCOBridge[0]);
@@ -158,7 +158,7 @@ public class GroupDescriptionSelectorCallback extends JCDelegate implements IJCE
         callerInstance = instance;
     }
 
-    public GroupDescriptionSelectorCallback(Object instance) throws Throwable {
+    public GroupDescriptionSelectorCallback(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         if (instance == null) throw new IllegalArgumentException("Instance cannot be null");
         if (instance instanceof IGroupDescriptionSelectorCallback) {
@@ -170,7 +170,7 @@ public class GroupDescriptionSelectorCallback extends JCDelegate implements IJCE
                     String.format("Class %s is not supported.", instance.getClass().getTypeName()));
     }
 
-    protected final static <T extends IJCOBridgeReflected> Object toObjectFromArray(T[] input) {
+    protected final static <T extends IJCOBridgeReflected> java.lang.Object toObjectFromArray(T[] input) {
         return JCOBridgeInstance.toObjectFromArray(input);
     }
 

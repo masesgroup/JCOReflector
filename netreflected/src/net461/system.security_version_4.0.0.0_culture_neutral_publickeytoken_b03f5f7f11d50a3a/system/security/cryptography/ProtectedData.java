@@ -93,7 +93,7 @@ public class ProtectedData extends NetObject  {
         }
     }
 
-    public ProtectedData(Object instance) throws Throwable {
+    public ProtectedData(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class ProtectedData extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -148,9 +148,9 @@ public class ProtectedData extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classType.Invoke("Protect", userData, optionalEntropy, scope == null ? null : scope.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -167,9 +167,9 @@ public class ProtectedData extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classType.Invoke("Protect", dupParam0.getJCRefOut(), dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -186,9 +186,9 @@ public class ProtectedData extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classType.Invoke("Unprotect", encryptedData, optionalEntropy, scope == null ? null : scope.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -205,9 +205,9 @@ public class ProtectedData extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classType.Invoke("Unprotect", dupParam0.getJCRefOut(), dupParam1.getJCRefOut(), dupParam2 == null ? null : dupParam2.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];

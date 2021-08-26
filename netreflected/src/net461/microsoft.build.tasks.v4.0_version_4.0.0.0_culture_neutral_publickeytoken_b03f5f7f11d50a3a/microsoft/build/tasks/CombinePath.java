@@ -95,7 +95,7 @@ public class CombinePath extends TaskExtension  {
         }
     }
 
-    public CombinePath(Object instance) throws Throwable {
+    public CombinePath(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class CombinePath extends TaskExtension  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -174,7 +174,7 @@ public class CombinePath extends TaskExtension  {
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
             JCObject resultingObjects = (JCObject)classInstance.Get("CombinedPaths");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
@@ -201,7 +201,7 @@ public class CombinePath extends TaskExtension  {
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
             JCObject resultingObjects = (JCObject)classInstance.Get("Paths");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];

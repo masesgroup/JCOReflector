@@ -100,7 +100,7 @@ public class TileBrush extends Brush  {
         }
     }
 
-    public TileBrush(Object instance) throws Throwable {
+    public TileBrush(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class TileBrush extends Brush  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -103,7 +103,7 @@ public class MetadataExchangeClient extends NetObject  {
         }
     }
 
-    public MetadataExchangeClient(Object instance) throws Throwable {
+    public MetadataExchangeClient(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -123,7 +123,7 @@ public class MetadataExchangeClient extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

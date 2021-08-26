@@ -102,7 +102,7 @@ public class BitmapFrame extends BitmapSource  {
         }
     }
 
-    public BitmapFrame(Object instance) throws Throwable {
+    public BitmapFrame(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -122,7 +122,7 @@ public class BitmapFrame extends BitmapSource  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

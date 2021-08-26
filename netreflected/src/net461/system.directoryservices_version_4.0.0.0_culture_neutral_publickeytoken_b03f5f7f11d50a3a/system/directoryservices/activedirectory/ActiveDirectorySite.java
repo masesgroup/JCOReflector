@@ -104,7 +104,7 @@ public class ActiveDirectorySite extends NetObject implements AutoCloseable {
         }
     }
 
-    public ActiveDirectorySite(Object instance) throws Throwable {
+    public ActiveDirectorySite(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -124,7 +124,7 @@ public class ActiveDirectorySite extends NetObject implements AutoCloseable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

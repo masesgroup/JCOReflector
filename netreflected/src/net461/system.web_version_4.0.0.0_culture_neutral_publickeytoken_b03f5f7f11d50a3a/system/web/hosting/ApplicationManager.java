@@ -100,7 +100,7 @@ public class ApplicationManager extends MarshalByRefObject  {
         }
     }
 
-    public ApplicationManager(Object instance) throws Throwable {
+    public ApplicationManager(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class ApplicationManager extends MarshalByRefObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -202,7 +202,7 @@ public class ApplicationManager extends MarshalByRefObject  {
         try {
             ArrayList<ApplicationInfo> resultingArrayList = new ArrayList<ApplicationInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetRunningApplications");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ApplicationInfo(resultingObject));
             }
             ApplicationInfo[] resultingArray = new ApplicationInfo[resultingArrayList.size()];

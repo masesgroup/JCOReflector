@@ -99,7 +99,7 @@ public class PropertyConstraintException extends ConstraintException {
         super();
     }
 
-    public PropertyConstraintException(Object instance) {
+    public PropertyConstraintException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -133,7 +133,7 @@ public class PropertyConstraintException extends ConstraintException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

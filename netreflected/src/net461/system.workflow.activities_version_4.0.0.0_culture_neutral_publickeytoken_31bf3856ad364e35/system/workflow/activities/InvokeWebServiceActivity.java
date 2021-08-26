@@ -99,7 +99,7 @@ public class InvokeWebServiceActivity extends Activity implements system.workflo
         }
     }
 
-    public InvokeWebServiceActivity(Object instance) throws Throwable {
+    public InvokeWebServiceActivity(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class InvokeWebServiceActivity extends Activity implements system.workflo
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

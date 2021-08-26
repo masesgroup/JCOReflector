@@ -97,7 +97,7 @@ public class WSTrust13RequestSerializer extends WSTrustRequestSerializer  {
         }
     }
 
-    public WSTrust13RequestSerializer(Object instance) throws Throwable {
+    public WSTrust13RequestSerializer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class WSTrust13RequestSerializer extends WSTrustRequestSerializer  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -97,7 +97,7 @@ public class X509Store extends NetObject implements AutoCloseable {
         }
     }
 
-    public X509Store(Object instance) throws Throwable {
+    public X509Store(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class X509Store extends NetObject implements AutoCloseable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -93,7 +93,7 @@ public class IExpressionsAccessorImplementation extends NetObject implements IEx
         }
     }
 
-    public IExpressionsAccessorImplementation(Object instance) throws Throwable {
+    public IExpressionsAccessorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class IExpressionsAccessorImplementation extends NetObject implements IEx
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

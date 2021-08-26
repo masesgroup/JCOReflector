@@ -103,7 +103,7 @@ public class IDataReaderImplementation extends NetObject implements IDataReader 
         }
     }
 
-    public IDataReaderImplementation(Object instance) throws Throwable {
+    public IDataReaderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -123,7 +123,7 @@ public class IDataReaderImplementation extends NetObject implements IDataReader 
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -247,7 +247,7 @@ public class IDataReaderImplementation extends NetObject implements IDataReader 
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("GetValues", (Object)toObjectFromArray(values));
+            return (int)classInstance.Invoke("GetValues", (java.lang.Object)toObjectFromArray(values));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

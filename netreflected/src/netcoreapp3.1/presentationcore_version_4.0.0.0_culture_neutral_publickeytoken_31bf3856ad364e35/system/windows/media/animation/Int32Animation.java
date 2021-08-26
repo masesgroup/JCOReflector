@@ -98,7 +98,7 @@ public class Int32Animation extends Int32AnimationBase  {
         }
     }
 
-    public Int32Animation(Object instance) throws Throwable {
+    public Int32Animation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class Int32Animation extends Int32AnimationBase  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

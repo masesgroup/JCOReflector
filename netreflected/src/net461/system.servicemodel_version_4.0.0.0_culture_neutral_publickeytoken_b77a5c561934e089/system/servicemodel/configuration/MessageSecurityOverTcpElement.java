@@ -95,7 +95,7 @@ public class MessageSecurityOverTcpElement extends ServiceModelConfigurationElem
         }
     }
 
-    public MessageSecurityOverTcpElement(Object instance) throws Throwable {
+    public MessageSecurityOverTcpElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class MessageSecurityOverTcpElement extends ServiceModelConfigurationElem
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

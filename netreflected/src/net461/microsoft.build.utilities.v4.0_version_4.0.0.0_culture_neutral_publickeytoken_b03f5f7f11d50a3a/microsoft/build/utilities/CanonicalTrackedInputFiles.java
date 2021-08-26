@@ -98,7 +98,7 @@ public class CanonicalTrackedInputFiles extends NetObject  {
         }
     }
 
-    public CanonicalTrackedInputFiles(Object instance) throws Throwable {
+    public CanonicalTrackedInputFiles(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class CanonicalTrackedInputFiles extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -217,7 +217,7 @@ public class CanonicalTrackedInputFiles extends NetObject  {
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("ComputeSourcesNeedingCompilation");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
@@ -234,7 +234,7 @@ public class CanonicalTrackedInputFiles extends NetObject  {
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("ComputeSourcesNeedingCompilation", searchForSubRootsInCompositeRootingMarkers);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
@@ -269,7 +269,7 @@ public class CanonicalTrackedInputFiles extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("RemoveDependenciesFromEntryIfMissing", (Object)toObjectFromArray(source));
+            classInstance.Invoke("RemoveDependenciesFromEntryIfMissing", (java.lang.Object)toObjectFromArray(source));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -319,7 +319,7 @@ public class CanonicalTrackedInputFiles extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("RemoveEntriesForSource", (Object)toObjectFromArray(source));
+            classInstance.Invoke("RemoveEntriesForSource", (java.lang.Object)toObjectFromArray(source));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -96,7 +96,7 @@ public class PrintQueueCollection extends PrintSystemObjects  {
         }
     }
 
-    public PrintQueueCollection(Object instance) throws Throwable {
+    public PrintQueueCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class PrintQueueCollection extends PrintSystemObjects  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -93,7 +93,7 @@ public class XmlDsigC14NWithCommentsTransform extends XmlDsigC14NTransform  {
         }
     }
 
-    public XmlDsigC14NWithCommentsTransform(Object instance) throws Throwable {
+    public XmlDsigC14NWithCommentsTransform(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class XmlDsigC14NWithCommentsTransform extends XmlDsigC14NTransform  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

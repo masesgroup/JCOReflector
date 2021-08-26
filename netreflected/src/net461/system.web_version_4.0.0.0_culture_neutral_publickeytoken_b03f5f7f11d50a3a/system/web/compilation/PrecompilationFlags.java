@@ -108,7 +108,7 @@ public class PrecompilationFlags extends NetObject  {
         }
     }
 
-    public PrecompilationFlags(Object instance) {
+    public PrecompilationFlags(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class PrecompilationFlags extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

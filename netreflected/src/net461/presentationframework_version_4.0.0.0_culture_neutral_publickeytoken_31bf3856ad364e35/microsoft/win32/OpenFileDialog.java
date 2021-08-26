@@ -94,7 +94,7 @@ public class OpenFileDialog extends FileDialog  {
         }
     }
 
-    public OpenFileDialog(Object instance) throws Throwable {
+    public OpenFileDialog(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class OpenFileDialog extends FileDialog  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -170,7 +170,7 @@ public class OpenFileDialog extends FileDialog  {
         try {
             ArrayList<Stream> resultingArrayList = new ArrayList<Stream>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("OpenFiles");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Stream(resultingObject));
             }
             Stream[] resultingArray = new Stream[resultingArrayList.size()];

@@ -94,7 +94,7 @@ public class IDesignerGlyphProviderServiceImplementation extends NetObject imple
         }
     }
 
-    public IDesignerGlyphProviderServiceImplementation(Object instance) throws Throwable {
+    public IDesignerGlyphProviderServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class IDesignerGlyphProviderServiceImplementation extends NetObject imple
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

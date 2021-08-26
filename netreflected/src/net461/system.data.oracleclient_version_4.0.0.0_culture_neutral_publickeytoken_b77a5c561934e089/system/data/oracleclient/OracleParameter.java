@@ -99,7 +99,7 @@ public class OracleParameter extends DbParameter implements system.ICloneable {
         }
     }
 
-    public OracleParameter(Object instance) throws Throwable {
+    public OracleParameter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class OracleParameter extends DbParameter implements system.ICloneable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

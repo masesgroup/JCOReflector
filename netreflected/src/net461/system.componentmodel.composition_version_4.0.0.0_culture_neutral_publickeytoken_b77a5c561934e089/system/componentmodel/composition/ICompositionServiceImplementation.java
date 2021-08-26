@@ -93,7 +93,7 @@ public class ICompositionServiceImplementation extends NetObject implements ICom
         }
     }
 
-    public ICompositionServiceImplementation(Object instance) throws Throwable {
+    public ICompositionServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class ICompositionServiceImplementation extends NetObject implements ICom
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

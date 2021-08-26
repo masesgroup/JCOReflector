@@ -95,7 +95,7 @@ public class ParallelActivityDesigner extends StructuredCompositeActivityDesigne
         }
     }
 
-    public ParallelActivityDesigner(Object instance) throws Throwable {
+    public ParallelActivityDesigner(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class ParallelActivityDesigner extends StructuredCompositeActivityDesigne
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

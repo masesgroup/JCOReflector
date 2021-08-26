@@ -109,7 +109,7 @@ public class ControlDesigner extends ComponentDesigner  {
         }
     }
 
-    public ControlDesigner(Object instance) throws Throwable {
+    public ControlDesigner(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -129,7 +129,7 @@ public class ControlDesigner extends ComponentDesigner  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

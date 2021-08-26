@@ -94,7 +94,7 @@ public class StylusPointsReplacedEventArgs extends EventArgs  {
         }
     }
 
-    public StylusPointsReplacedEventArgs(Object instance) throws Throwable {
+    public StylusPointsReplacedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class StylusPointsReplacedEventArgs extends EventArgs  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

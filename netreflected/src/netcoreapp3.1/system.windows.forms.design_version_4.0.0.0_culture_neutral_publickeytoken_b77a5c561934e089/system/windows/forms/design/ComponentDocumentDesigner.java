@@ -104,7 +104,7 @@ public class ComponentDocumentDesigner extends ComponentDesigner implements syst
         }
     }
 
-    public ComponentDocumentDesigner(Object instance) throws Throwable {
+    public ComponentDocumentDesigner(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -124,7 +124,7 @@ public class ComponentDocumentDesigner extends ComponentDesigner implements syst
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

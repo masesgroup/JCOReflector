@@ -102,7 +102,7 @@ public class Rect extends ValueType implements system.IFormattable {
         }
     }
 
-    public Rect(Object instance) throws Throwable {
+    public Rect(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -122,7 +122,7 @@ public class Rect extends ValueType implements system.IFormattable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

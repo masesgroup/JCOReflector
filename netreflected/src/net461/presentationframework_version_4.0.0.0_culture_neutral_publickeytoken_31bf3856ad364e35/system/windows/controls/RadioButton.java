@@ -93,7 +93,7 @@ public class RadioButton extends ToggleButton  {
         }
     }
 
-    public RadioButton(Object instance) throws Throwable {
+    public RadioButton(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class RadioButton extends ToggleButton  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

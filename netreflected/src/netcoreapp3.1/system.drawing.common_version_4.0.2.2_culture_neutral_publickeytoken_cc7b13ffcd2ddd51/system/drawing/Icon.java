@@ -101,7 +101,7 @@ public class Icon extends MarshalByRefObject implements system.runtime.serializa
         }
     }
 
-    public Icon(Object instance) throws Throwable {
+    public Icon(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -121,7 +121,7 @@ public class Icon extends MarshalByRefObject implements system.runtime.serializa
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

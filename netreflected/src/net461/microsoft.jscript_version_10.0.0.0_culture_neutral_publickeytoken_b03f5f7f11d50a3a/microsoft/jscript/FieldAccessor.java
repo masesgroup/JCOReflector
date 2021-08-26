@@ -92,7 +92,7 @@ public class FieldAccessor extends NetObject  {
         }
     }
 
-    public FieldAccessor(Object instance) throws Throwable {
+    public FieldAccessor(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class FieldAccessor extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

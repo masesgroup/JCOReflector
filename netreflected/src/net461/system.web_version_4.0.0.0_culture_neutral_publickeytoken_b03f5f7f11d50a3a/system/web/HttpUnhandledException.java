@@ -97,7 +97,7 @@ public class HttpUnhandledException extends HttpException {
         super();
     }
 
-    public HttpUnhandledException(Object instance) {
+    public HttpUnhandledException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class HttpUnhandledException extends HttpException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

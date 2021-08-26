@@ -97,7 +97,7 @@ public class BerConversionException extends DirectoryException {
         super();
     }
 
-    public BerConversionException(Object instance) {
+    public BerConversionException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class BerConversionException extends DirectoryException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -94,7 +94,7 @@ public class UrlParameterReader extends ValueCollectionParameterReader  {
         }
     }
 
-    public UrlParameterReader(Object instance) throws Throwable {
+    public UrlParameterReader(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class UrlParameterReader extends ValueCollectionParameterReader  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -159,7 +159,7 @@ public class UrlParameterReader extends ValueCollectionParameterReader  {
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("Read", request == null ? null : request.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];

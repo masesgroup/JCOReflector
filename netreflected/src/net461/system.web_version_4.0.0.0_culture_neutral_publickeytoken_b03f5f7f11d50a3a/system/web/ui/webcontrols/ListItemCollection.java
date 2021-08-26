@@ -94,7 +94,7 @@ public class ListItemCollection extends NetObjectEnumerable  {
         }
     }
 
-    public ListItemCollection(Object instance) throws Throwable {
+    public ListItemCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class ListItemCollection extends NetObjectEnumerable  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -219,7 +219,7 @@ public class ListItemCollection extends NetObjectEnumerable  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddRange", (Object)toObjectFromArray(items));
+            classInstance.Invoke("AddRange", (java.lang.Object)toObjectFromArray(items));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

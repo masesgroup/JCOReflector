@@ -92,7 +92,7 @@ public class IRootObjectProviderImplementation extends NetObject implements IRoo
         }
     }
 
-    public IRootObjectProviderImplementation(Object instance) throws Throwable {
+    public IRootObjectProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class IRootObjectProviderImplementation extends NetObject implements IRoo
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

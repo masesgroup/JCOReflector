@@ -99,7 +99,7 @@ public class XmlSchemaInferenceException extends XmlSchemaException {
         super();
     }
 
-    public XmlSchemaInferenceException(Object instance) {
+    public XmlSchemaInferenceException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -133,7 +133,7 @@ public class XmlSchemaInferenceException extends XmlSchemaException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

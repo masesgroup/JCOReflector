@@ -94,7 +94,7 @@ public class AsymmetricAlgorithm extends NetObject implements AutoCloseable {
         }
     }
 
-    public AsymmetricAlgorithm(Object instance) throws Throwable {
+    public AsymmetricAlgorithm(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class AsymmetricAlgorithm extends NetObject implements AutoCloseable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -250,7 +250,7 @@ public class AsymmetricAlgorithm extends NetObject implements AutoCloseable {
         try {
             ArrayList<KeySizes> resultingArrayList = new ArrayList<KeySizes>();
             JCObject resultingObjects = (JCObject)classInstance.Get("LegalKeySizes");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new KeySizes(resultingObject));
             }
             KeySizes[] resultingArray = new KeySizes[resultingArrayList.size()];

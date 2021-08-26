@@ -103,7 +103,7 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
         }
     }
 
-    public MemoryMappedFile(Object instance) throws Throwable {
+    public MemoryMappedFile(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -123,7 +123,7 @@ public class MemoryMappedFile extends NetObject implements AutoCloseable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

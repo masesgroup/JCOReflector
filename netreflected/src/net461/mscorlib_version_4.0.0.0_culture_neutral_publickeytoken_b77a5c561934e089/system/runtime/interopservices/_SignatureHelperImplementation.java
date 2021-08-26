@@ -94,7 +94,7 @@ public class _SignatureHelperImplementation extends NetObject implements _Signat
         }
     }
 
-    public _SignatureHelperImplementation(Object instance) throws Throwable {
+    public _SignatureHelperImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class _SignatureHelperImplementation extends NetObject implements _Signat
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

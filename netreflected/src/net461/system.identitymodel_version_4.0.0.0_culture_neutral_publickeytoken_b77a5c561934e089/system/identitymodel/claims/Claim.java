@@ -98,7 +98,7 @@ public class Claim extends NetObject  {
         }
     }
 
-    public Claim(Object instance) throws Throwable {
+    public Claim(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class Claim extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -187,7 +187,7 @@ public class Claim extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateHashClaim = (JCObject)classType.Invoke("CreateHashClaim", (Object)hash);
+            JCObject objCreateHashClaim = (JCObject)classType.Invoke("CreateHashClaim", (java.lang.Object)hash);
             return new Claim(objCreateHashClaim);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -198,7 +198,7 @@ public class Claim extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateHashClaim = (JCObject)classType.Invoke("CreateHashClaim", (Object)dupParam0.getJCRefOut());
+            JCObject objCreateHashClaim = (JCObject)classType.Invoke("CreateHashClaim", (java.lang.Object)dupParam0.getJCRefOut());
             return new Claim(objCreateHashClaim);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -253,7 +253,7 @@ public class Claim extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateThumbprintClaim = (JCObject)classType.Invoke("CreateThumbprintClaim", (Object)thumbprint);
+            JCObject objCreateThumbprintClaim = (JCObject)classType.Invoke("CreateThumbprintClaim", (java.lang.Object)thumbprint);
             return new Claim(objCreateThumbprintClaim);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -264,7 +264,7 @@ public class Claim extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateThumbprintClaim = (JCObject)classType.Invoke("CreateThumbprintClaim", (Object)dupParam0.getJCRefOut());
+            JCObject objCreateThumbprintClaim = (JCObject)classType.Invoke("CreateThumbprintClaim", (java.lang.Object)dupParam0.getJCRefOut());
             return new Claim(objCreateThumbprintClaim);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

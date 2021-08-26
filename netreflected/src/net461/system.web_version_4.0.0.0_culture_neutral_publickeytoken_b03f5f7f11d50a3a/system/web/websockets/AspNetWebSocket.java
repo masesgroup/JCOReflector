@@ -97,7 +97,7 @@ public class AspNetWebSocket extends WebSocket  {
         }
     }
 
-    public AspNetWebSocket(Object instance) throws Throwable {
+    public AspNetWebSocket(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class AspNetWebSocket extends WebSocket  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

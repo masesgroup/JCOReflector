@@ -93,7 +93,7 @@ public class ISymbolDocumentWriterImplementation extends NetObject implements IS
         }
     }
 
-    public ISymbolDocumentWriterImplementation(Object instance) throws Throwable {
+    public ISymbolDocumentWriterImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class ISymbolDocumentWriterImplementation extends NetObject implements IS
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -157,7 +157,7 @@ public class ISymbolDocumentWriterImplementation extends NetObject implements IS
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetSource", (Object)source);
+            classInstance.Invoke("SetSource", (java.lang.Object)source);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,7 +167,7 @@ public class ISymbolDocumentWriterImplementation extends NetObject implements IS
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetSource", (Object)dupParam0.getJCRefOut());
+            classInstance.Invoke("SetSource", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -95,7 +95,7 @@ public class HttpUtility extends NetObject  {
         }
     }
 
-    public HttpUtility(Object instance) throws Throwable {
+    public HttpUtility(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class HttpUtility extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -158,9 +158,9 @@ public class HttpUtility extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("UrlDecodeToBytes", (Object)bytes);
-            for (Object resultingObject : resultingObjects) {
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
+            JCObject resultingObjects = (JCObject)classType.Invoke("UrlDecodeToBytes", (java.lang.Object)bytes);
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -177,9 +177,9 @@ public class HttpUtility extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("UrlDecodeToBytes", (Object)dupParam0.getJCRefOut());
-            for (Object resultingObject : resultingObjects) {
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
+            JCObject resultingObjects = (JCObject)classType.Invoke("UrlDecodeToBytes", (java.lang.Object)dupParam0.getJCRefOut());
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -196,9 +196,9 @@ public class HttpUtility extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classType.Invoke("UrlDecodeToBytes", bytes, offset, count);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -215,9 +215,9 @@ public class HttpUtility extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classType.Invoke("UrlDecodeToBytes", dupParam0.getJCRefOut(), dupParam1, dupParam2);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -234,9 +234,9 @@ public class HttpUtility extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classType.Invoke("UrlDecodeToBytes", str);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -253,9 +253,9 @@ public class HttpUtility extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classType.Invoke("UrlDecodeToBytes", str, e == null ? null : e.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -272,9 +272,9 @@ public class HttpUtility extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("UrlEncodeToBytes", (Object)bytes);
-            for (Object resultingObject : resultingObjects) {
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
+            JCObject resultingObjects = (JCObject)classType.Invoke("UrlEncodeToBytes", (java.lang.Object)bytes);
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -291,9 +291,9 @@ public class HttpUtility extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("UrlEncodeToBytes", (Object)dupParam0.getJCRefOut());
-            for (Object resultingObject : resultingObjects) {
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
+            JCObject resultingObjects = (JCObject)classType.Invoke("UrlEncodeToBytes", (java.lang.Object)dupParam0.getJCRefOut());
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -310,9 +310,9 @@ public class HttpUtility extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classType.Invoke("UrlEncodeToBytes", bytes, offset, count);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -329,9 +329,9 @@ public class HttpUtility extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classType.Invoke("UrlEncodeToBytes", dupParam0.getJCRefOut(), dupParam1, dupParam2);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -348,9 +348,9 @@ public class HttpUtility extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classType.Invoke("UrlEncodeToBytes", str);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -367,9 +367,9 @@ public class HttpUtility extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classType.Invoke("UrlEncodeToBytes", str, e == null ? null : e.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -386,9 +386,9 @@ public class HttpUtility extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classType.Invoke("UrlEncodeUnicodeToBytes", str);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -547,7 +547,7 @@ public class HttpUtility extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Invoke("UrlEncode", (Object)bytes);
+            return (java.lang.String)classType.Invoke("UrlEncode", (java.lang.Object)bytes);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -557,7 +557,7 @@ public class HttpUtility extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Invoke("UrlEncode", (Object)dupParam0.getJCRefOut());
+            return (java.lang.String)classType.Invoke("UrlEncode", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

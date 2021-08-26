@@ -95,7 +95,7 @@ public class AxisAngleRotation3D extends Rotation3D  {
         }
     }
 
-    public AxisAngleRotation3D(Object instance) throws Throwable {
+    public AxisAngleRotation3D(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class AxisAngleRotation3D extends Rotation3D  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -94,7 +94,7 @@ public class Encoder extends NetObject  {
         }
     }
 
-    public Encoder(Object instance) throws Throwable {
+    public Encoder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class Encoder extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -185,7 +185,7 @@ public class Encoder extends NetObject  {
         }
     }
 
-    public void Convert(char[] chars, int charIndex, int charCount, byte[] bytes, int byteIndex, int byteCount, boolean flush, JCORefOut charsUsed, JCORefOut bytesUsed, JCORefOut completed) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public void Convert(char[] chars, int charIndex, int charCount, byte[] bytes, int byteIndex, int byteCount, boolean flush, JCORefOut<java.util.concurrent.atomic.AtomicInteger> charsUsed, JCORefOut<java.util.concurrent.atomic.AtomicInteger> bytesUsed, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> completed) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

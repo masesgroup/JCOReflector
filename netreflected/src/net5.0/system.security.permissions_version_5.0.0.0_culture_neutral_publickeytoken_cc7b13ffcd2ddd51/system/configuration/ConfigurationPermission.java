@@ -97,7 +97,7 @@ public class ConfigurationPermission extends CodeAccessPermission  {
         }
     }
 
-    public ConfigurationPermission(Object instance) throws Throwable {
+    public ConfigurationPermission(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class ConfigurationPermission extends CodeAccessPermission  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

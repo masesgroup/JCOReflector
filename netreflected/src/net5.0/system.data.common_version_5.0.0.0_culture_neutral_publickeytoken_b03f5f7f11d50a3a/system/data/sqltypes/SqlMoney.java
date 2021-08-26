@@ -111,7 +111,7 @@ public class SqlMoney extends ValueType implements system.xml.serialization.IXml
         }
     }
 
-    public SqlMoney(Object instance) throws Throwable {
+    public SqlMoney(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class SqlMoney extends ValueType implements system.xml.serialization.IXml
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

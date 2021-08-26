@@ -93,7 +93,7 @@ public class EdmScalarPropertyAttribute extends EdmPropertyAttribute  {
         }
     }
 
-    public EdmScalarPropertyAttribute(Object instance) throws Throwable {
+    public EdmScalarPropertyAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class EdmScalarPropertyAttribute extends EdmPropertyAttribute  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

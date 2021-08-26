@@ -93,7 +93,7 @@ public class VBArrayConstructor extends ScriptFunction  {
         }
     }
 
-    public VBArrayConstructor(Object instance) throws Throwable {
+    public VBArrayConstructor(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class VBArrayConstructor extends ScriptFunction  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -150,7 +150,7 @@ public class VBArrayConstructor extends ScriptFunction  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateInstance = (JCObject)classInstance.Invoke("CreateInstance", (Object)toObjectFromArray(args));
+            JCObject objCreateInstance = (JCObject)classInstance.Invoke("CreateInstance", (java.lang.Object)toObjectFromArray(args));
             return new NetObject(objCreateInstance);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

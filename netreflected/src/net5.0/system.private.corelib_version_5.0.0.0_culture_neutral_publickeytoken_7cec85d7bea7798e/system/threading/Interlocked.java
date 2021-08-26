@@ -95,7 +95,7 @@ public class Interlocked extends NetObject  {
         }
     }
 
-    public Interlocked(Object instance) throws Throwable {
+    public Interlocked(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class Interlocked extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -146,380 +146,275 @@ public class Interlocked extends NetObject  {
     
     // Methods section
     
-    public static double CompareExchange(double location1, double value, double comparand) throws Throwable {
+    public static double CompareExchange(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Double>> location1, double value, double comparand) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (double)classType.Invoke("CompareExchange", location1, value, comparand);
+            return (double)classType.Invoke("CompareExchange", location1.getJCRefOut(), value, comparand);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static double Exchange(double location1, double value) throws Throwable {
+    public static double Exchange(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Double>> location1, double value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (double)classType.Invoke("Exchange", location1, value);
+            return (double)classType.Invoke("Exchange", location1.getJCRefOut(), value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static int Add(int location1, int value) throws Throwable {
+    public static int Add(JCORefOut<java.util.concurrent.atomic.AtomicInteger> location1, int value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classType.Invoke("Add", location1, value);
+            return (int)classType.Invoke("Add", location1.getJCRefOut(), value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static int And(int location1, int value) throws Throwable {
+    public static int And(JCORefOut<java.util.concurrent.atomic.AtomicInteger> location1, int value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classType.Invoke("And", location1, value);
+            return (int)classType.Invoke("And", location1.getJCRefOut(), value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static int CompareExchange(int location1, int value, int comparand) throws Throwable {
+    public static int CompareExchange(JCORefOut<java.util.concurrent.atomic.AtomicInteger> location1, int value, int comparand) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classType.Invoke("CompareExchange", location1, value, comparand);
+            return (int)classType.Invoke("CompareExchange", location1.getJCRefOut(), value, comparand);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static int Decrement(int location) throws Throwable {
+    public static int Exchange(JCORefOut<java.util.concurrent.atomic.AtomicInteger> location1, int value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classType.Invoke("Decrement", location);
+            return (int)classType.Invoke("Exchange", location1.getJCRefOut(), value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static int Exchange(int location1, int value) throws Throwable {
+    public static int Or(JCORefOut<java.util.concurrent.atomic.AtomicInteger> location1, int value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classType.Invoke("Exchange", location1, value);
+            return (int)classType.Invoke("Or", location1.getJCRefOut(), value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static int Increment(int location) throws Throwable {
+    public static long Add(JCORefOut<java.util.concurrent.atomic.AtomicLong> location1, long value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classType.Invoke("Increment", location);
+            return (long)classType.Invoke("Add", location1.getJCRefOut(), value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static int Or(int location1, int value) throws Throwable {
+    public static long And(JCORefOut<java.util.concurrent.atomic.AtomicLong> location1, long value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classType.Invoke("Or", location1, value);
+            return (long)classType.Invoke("And", location1.getJCRefOut(), value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static long Add(long location1, long value) throws Throwable {
+    public static long CompareExchange(JCORefOut<java.util.concurrent.atomic.AtomicLong> location1, long value, long comparand) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (long)classType.Invoke("Add", location1, value);
+            return (long)classType.Invoke("CompareExchange", location1.getJCRefOut(), value, comparand);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static long And(long location1, long value) throws Throwable {
+    public static long Exchange(JCORefOut<java.util.concurrent.atomic.AtomicLong> location1, long value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (long)classType.Invoke("And", location1, value);
+            return (long)classType.Invoke("Exchange", location1.getJCRefOut(), value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static long CompareExchange(long location1, long value, long comparand) throws Throwable {
+    public static long Or(JCORefOut<java.util.concurrent.atomic.AtomicLong> location1, long value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (long)classType.Invoke("CompareExchange", location1, value, comparand);
+            return (long)classType.Invoke("Or", location1.getJCRefOut(), value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static long Decrement(long location) throws Throwable {
+    public static Single CompareExchange(JCORefOut<Single> location1, Single value, Single comparand) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (long)classType.Invoke("Decrement", location);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static long Exchange(long location1, long value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (long)classType.Invoke("Exchange", location1, value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static long Increment(long location) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (long)classType.Invoke("Increment", location);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static long Or(long location1, long value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (long)classType.Invoke("Or", location1, value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static long Read(long location) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (long)classType.Invoke("Read", location);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Single CompareExchange(Single location1, Single value, Single comparand) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCompareExchange = (JCObject)classType.Invoke("CompareExchange", location1 == null ? null : location1.getJCOInstance(), value == null ? null : value.getJCOInstance(), comparand == null ? null : comparand.getJCOInstance());
+            JCObject objCompareExchange = (JCObject)classType.Invoke("CompareExchange", location1.getJCRefOut(), value == null ? null : value.getJCOInstance(), comparand == null ? null : comparand.getJCOInstance());
             return new Single(objCompareExchange);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Single Exchange(Single location1, Single value) throws Throwable {
+    public static Single Exchange(JCORefOut<Single> location1, Single value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objExchange = (JCObject)classType.Invoke("Exchange", location1 == null ? null : location1.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            JCObject objExchange = (JCObject)classType.Invoke("Exchange", location1.getJCRefOut(), value == null ? null : value.getJCOInstance());
             return new Single(objExchange);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static NetObject CompareExchange(NetObject location1, NetObject value, NetObject comparand) throws Throwable {
+    public static NetObject CompareExchange(JCORefOut<NetObject> location1, NetObject value, NetObject comparand) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCompareExchange = (JCObject)classType.Invoke("CompareExchange", location1 == null ? null : location1.getJCOInstance(), value == null ? null : value.getJCOInstance(), comparand == null ? null : comparand.getJCOInstance());
+            JCObject objCompareExchange = (JCObject)classType.Invoke("CompareExchange", location1.getJCRefOut(), value == null ? null : value.getJCOInstance(), comparand == null ? null : comparand.getJCOInstance());
             return new NetObject(objCompareExchange);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static NetObject Exchange(NetObject location1, NetObject value) throws Throwable {
+    public static NetObject Exchange(JCORefOut<NetObject> location1, NetObject value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objExchange = (JCObject)classType.Invoke("Exchange", location1 == null ? null : location1.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            JCObject objExchange = (JCObject)classType.Invoke("Exchange", location1.getJCRefOut(), value == null ? null : value.getJCOInstance());
             return new NetObject(objExchange);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static UInt32 Add(UInt32 location1, UInt32 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
+    public static UInt32 Add(JCORefOut<UInt32> location1, UInt32 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objAdd = (JCObject)classType.Invoke("Add", location1 == null ? null : location1.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            JCObject objAdd = (JCObject)classType.Invoke("Add", location1.getJCRefOut(), value == null ? null : value.getJCOInstance());
             return new UInt32(objAdd);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static UInt32 And(UInt32 location1, UInt32 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
+    public static UInt32 And(JCORefOut<UInt32> location1, UInt32 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objAnd = (JCObject)classType.Invoke("And", location1 == null ? null : location1.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            JCObject objAnd = (JCObject)classType.Invoke("And", location1.getJCRefOut(), value == null ? null : value.getJCOInstance());
             return new UInt32(objAnd);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static UInt32 CompareExchange(UInt32 location1, UInt32 value, UInt32 comparand) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
+    public static UInt32 CompareExchange(JCORefOut<UInt32> location1, UInt32 value, UInt32 comparand) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCompareExchange = (JCObject)classType.Invoke("CompareExchange", location1 == null ? null : location1.getJCOInstance(), value == null ? null : value.getJCOInstance(), comparand == null ? null : comparand.getJCOInstance());
+            JCObject objCompareExchange = (JCObject)classType.Invoke("CompareExchange", location1.getJCRefOut(), value == null ? null : value.getJCOInstance(), comparand == null ? null : comparand.getJCOInstance());
             return new UInt32(objCompareExchange);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static UInt32 Decrement(UInt32 location) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
+    public static UInt32 Exchange(JCORefOut<UInt32> location1, UInt32 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objDecrement = (JCObject)classType.Invoke("Decrement", location == null ? null : location.getJCOInstance());
-            return new UInt32(objDecrement);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static UInt32 Exchange(UInt32 location1, UInt32 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objExchange = (JCObject)classType.Invoke("Exchange", location1 == null ? null : location1.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            JCObject objExchange = (JCObject)classType.Invoke("Exchange", location1.getJCRefOut(), value == null ? null : value.getJCOInstance());
             return new UInt32(objExchange);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static UInt32 Increment(UInt32 location) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static UInt32 Or(JCORefOut<UInt32> location1, UInt32 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objIncrement = (JCObject)classType.Invoke("Increment", location == null ? null : location.getJCOInstance());
-            return new UInt32(objIncrement);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static UInt32 Or(UInt32 location1, UInt32 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objOr = (JCObject)classType.Invoke("Or", location1 == null ? null : location1.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            JCObject objOr = (JCObject)classType.Invoke("Or", location1.getJCRefOut(), value == null ? null : value.getJCOInstance());
             return new UInt32(objOr);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static UInt64 Add(UInt64 location1, UInt64 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
+    public static UInt64 Add(JCORefOut<UInt64> location1, UInt64 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objAdd = (JCObject)classType.Invoke("Add", location1 == null ? null : location1.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            JCObject objAdd = (JCObject)classType.Invoke("Add", location1.getJCRefOut(), value == null ? null : value.getJCOInstance());
             return new UInt64(objAdd);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static UInt64 And(UInt64 location1, UInt64 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
+    public static UInt64 And(JCORefOut<UInt64> location1, UInt64 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objAnd = (JCObject)classType.Invoke("And", location1 == null ? null : location1.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            JCObject objAnd = (JCObject)classType.Invoke("And", location1.getJCRefOut(), value == null ? null : value.getJCOInstance());
             return new UInt64(objAnd);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static UInt64 CompareExchange(UInt64 location1, UInt64 value, UInt64 comparand) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
+    public static UInt64 CompareExchange(JCORefOut<UInt64> location1, UInt64 value, UInt64 comparand) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCompareExchange = (JCObject)classType.Invoke("CompareExchange", location1 == null ? null : location1.getJCOInstance(), value == null ? null : value.getJCOInstance(), comparand == null ? null : comparand.getJCOInstance());
+            JCObject objCompareExchange = (JCObject)classType.Invoke("CompareExchange", location1.getJCRefOut(), value == null ? null : value.getJCOInstance(), comparand == null ? null : comparand.getJCOInstance());
             return new UInt64(objCompareExchange);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static UInt64 Decrement(UInt64 location) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
+    public static UInt64 Exchange(JCORefOut<UInt64> location1, UInt64 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objDecrement = (JCObject)classType.Invoke("Decrement", location == null ? null : location.getJCOInstance());
-            return new UInt64(objDecrement);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static UInt64 Exchange(UInt64 location1, UInt64 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objExchange = (JCObject)classType.Invoke("Exchange", location1 == null ? null : location1.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            JCObject objExchange = (JCObject)classType.Invoke("Exchange", location1.getJCRefOut(), value == null ? null : value.getJCOInstance());
             return new UInt64(objExchange);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static UInt64 Increment(UInt64 location) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static UInt64 Or(JCORefOut<UInt64> location1, UInt64 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objIncrement = (JCObject)classType.Invoke("Increment", location == null ? null : location.getJCOInstance());
-            return new UInt64(objIncrement);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static UInt64 Or(UInt64 location1, UInt64 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objOr = (JCObject)classType.Invoke("Or", location1 == null ? null : location1.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            JCObject objOr = (JCObject)classType.Invoke("Or", location1.getJCRefOut(), value == null ? null : value.getJCOInstance());
             return new UInt64(objOr);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static UInt64 Read(UInt64 location) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objRead = (JCObject)classType.Invoke("Read", location == null ? null : location.getJCOInstance());
-            return new UInt64(objRead);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

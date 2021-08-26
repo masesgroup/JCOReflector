@@ -102,7 +102,7 @@ public class IDataEnvironmentImplementation extends NetObject implements IDataEn
         }
     }
 
-    public IDataEnvironmentImplementation(Object instance) throws Throwable {
+    public IDataEnvironmentImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -122,7 +122,7 @@ public class IDataEnvironmentImplementation extends NetObject implements IDataEn
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

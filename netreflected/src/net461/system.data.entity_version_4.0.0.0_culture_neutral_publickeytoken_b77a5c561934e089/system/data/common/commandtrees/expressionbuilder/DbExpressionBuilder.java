@@ -149,7 +149,7 @@ public class DbExpressionBuilder extends NetObject  {
         }
     }
 
-    public DbExpressionBuilder(Object instance) throws Throwable {
+    public DbExpressionBuilder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -169,7 +169,7 @@ public class DbExpressionBuilder extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -754,7 +754,7 @@ public class DbExpressionBuilder extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objNewCollection = (JCObject)classType.Invoke("NewCollection", (Object)toObjectFromArray(elements));
+            JCObject objNewCollection = (JCObject)classType.Invoke("NewCollection", (java.lang.Object)toObjectFromArray(elements));
             return new DbNewInstanceExpression(objNewCollection);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -101,7 +101,7 @@ public class ImpersonateOnSerializingReplyMessageProperty extends NetObject  {
         }
     }
 
-    public ImpersonateOnSerializingReplyMessageProperty(Object instance) throws Throwable {
+    public ImpersonateOnSerializingReplyMessageProperty(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -121,7 +121,7 @@ public class ImpersonateOnSerializingReplyMessageProperty extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -185,7 +185,7 @@ public class ImpersonateOnSerializingReplyMessageProperty extends NetObject  {
         }
     }
 
-    public void StartImpersonation(JCORefOut<IDisposable> impersonationContext, JCORefOut<IPrincipal> originalPrincipal, JCORefOut isThreadPrincipalSet) throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.componentmodel.InvalidEnumArgumentException, system.security.SecurityException {
+    public void StartImpersonation(JCORefOut<IDisposable> impersonationContext, JCORefOut<IPrincipal> originalPrincipal, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> isThreadPrincipalSet) throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.OutOfMemoryException, system.InvalidOperationException, system.NotImplementedException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException, system.security.cryptography.CryptographicException, system.componentmodel.InvalidEnumArgumentException, system.security.SecurityException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

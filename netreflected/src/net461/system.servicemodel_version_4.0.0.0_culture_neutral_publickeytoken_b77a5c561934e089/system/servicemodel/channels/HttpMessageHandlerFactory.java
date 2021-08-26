@@ -93,7 +93,7 @@ public class HttpMessageHandlerFactory extends NetObject  {
         }
     }
 
-    public HttpMessageHandlerFactory(Object instance) throws Throwable {
+    public HttpMessageHandlerFactory(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class HttpMessageHandlerFactory extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -145,7 +145,7 @@ public class HttpMessageHandlerFactory extends NetObject  {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((Object)toObjectFromArray(handlers)));
+            setJCOInstance((JCObject)classType.NewObject((java.lang.Object)toObjectFromArray(handlers)));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

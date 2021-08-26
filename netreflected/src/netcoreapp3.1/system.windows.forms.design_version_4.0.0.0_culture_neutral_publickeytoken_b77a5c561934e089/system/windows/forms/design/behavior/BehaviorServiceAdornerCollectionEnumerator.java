@@ -107,7 +107,7 @@ public class BehaviorServiceAdornerCollectionEnumerator extends NetObject implem
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

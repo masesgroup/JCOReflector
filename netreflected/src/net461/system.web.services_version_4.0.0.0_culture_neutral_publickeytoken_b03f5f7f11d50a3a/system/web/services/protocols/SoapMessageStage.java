@@ -108,7 +108,7 @@ public class SoapMessageStage extends NetObject  {
         }
     }
 
-    public SoapMessageStage(Object instance) {
+    public SoapMessageStage(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class SoapMessageStage extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

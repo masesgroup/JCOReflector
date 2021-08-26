@@ -97,7 +97,7 @@ public class SecurityTokenExpiredException extends SecurityTokenValidationExcept
         super();
     }
 
-    public SecurityTokenExpiredException(Object instance) {
+    public SecurityTokenExpiredException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class SecurityTokenExpiredException extends SecurityTokenValidationExcept
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

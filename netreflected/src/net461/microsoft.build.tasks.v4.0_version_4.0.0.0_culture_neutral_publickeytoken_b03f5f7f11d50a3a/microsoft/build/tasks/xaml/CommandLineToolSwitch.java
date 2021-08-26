@@ -95,7 +95,7 @@ public class CommandLineToolSwitch extends NetObject  {
         }
     }
 
-    public CommandLineToolSwitch(Object instance) throws Throwable {
+    public CommandLineToolSwitch(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class CommandLineToolSwitch extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -334,7 +334,7 @@ public class CommandLineToolSwitch extends NetObject  {
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
             JCObject resultingObjects = (JCObject)classInstance.Get("TaskItemArray");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
@@ -580,9 +580,9 @@ public class CommandLineToolSwitch extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Get("StringList");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];

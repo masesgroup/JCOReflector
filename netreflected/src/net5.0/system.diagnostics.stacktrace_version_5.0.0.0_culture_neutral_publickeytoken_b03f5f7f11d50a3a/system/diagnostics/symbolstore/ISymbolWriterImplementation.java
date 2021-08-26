@@ -99,7 +99,7 @@ public class ISymbolWriterImplementation extends NetObject implements ISymbolWri
         }
     }
 
-    public ISymbolWriterImplementation(Object instance) throws Throwable {
+    public ISymbolWriterImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class ISymbolWriterImplementation extends NetObject implements ISymbolWri
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

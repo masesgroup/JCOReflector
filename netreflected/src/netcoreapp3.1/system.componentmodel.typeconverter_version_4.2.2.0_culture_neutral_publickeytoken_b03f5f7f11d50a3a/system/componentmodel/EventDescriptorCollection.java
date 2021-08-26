@@ -97,7 +97,7 @@ public class EventDescriptorCollection extends NetObjectEnumerable  {
         }
     }
 
-    public EventDescriptorCollection(Object instance) throws Throwable {
+    public EventDescriptorCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class EventDescriptorCollection extends NetObjectEnumerable  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -149,7 +149,7 @@ public class EventDescriptorCollection extends NetObjectEnumerable  {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((Object)toObjectFromArray(events)));
+            setJCOInstance((JCObject)classType.NewObject((java.lang.Object)toObjectFromArray(events)));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,7 +237,7 @@ public class EventDescriptorCollection extends NetObjectEnumerable  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objSort = (JCObject)classInstance.Invoke("Sort", (Object)names);
+            JCObject objSort = (JCObject)classInstance.Invoke("Sort", (java.lang.Object)names);
             return new EventDescriptorCollection(objSort);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -248,7 +248,7 @@ public class EventDescriptorCollection extends NetObjectEnumerable  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objSort = (JCObject)classInstance.Invoke("Sort", (Object)dupParam0.getJCRefOut());
+            JCObject objSort = (JCObject)classInstance.Invoke("Sort", (java.lang.Object)dupParam0.getJCRefOut());
             return new EventDescriptorCollection(objSort);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

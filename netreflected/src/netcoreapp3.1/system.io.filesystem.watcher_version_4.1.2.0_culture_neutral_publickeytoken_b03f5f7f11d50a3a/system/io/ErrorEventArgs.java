@@ -93,7 +93,7 @@ public class ErrorEventArgs extends EventArgs  {
         }
     }
 
-    public ErrorEventArgs(Object instance) throws Throwable {
+    public ErrorEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class ErrorEventArgs extends EventArgs  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

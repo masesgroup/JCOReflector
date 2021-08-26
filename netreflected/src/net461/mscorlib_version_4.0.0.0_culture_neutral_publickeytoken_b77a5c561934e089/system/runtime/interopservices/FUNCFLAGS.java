@@ -108,7 +108,7 @@ public class FUNCFLAGS extends NetObject  {
         }
     }
 
-    public FUNCFLAGS(Object instance) {
+    public FUNCFLAGS(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class FUNCFLAGS extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

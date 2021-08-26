@@ -96,7 +96,7 @@ public class HttpServerUtility extends NetObject  {
         }
     }
 
-    public HttpServerUtility(Object instance) throws Throwable {
+    public HttpServerUtility(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class HttpServerUtility extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -153,9 +153,9 @@ public class HttpServerUtility extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classType.Invoke("UrlTokenDecode", input);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -276,7 +276,7 @@ public class HttpServerUtility extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Invoke("UrlTokenEncode", (Object)input);
+            return (java.lang.String)classType.Invoke("UrlTokenEncode", (java.lang.Object)input);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -286,7 +286,7 @@ public class HttpServerUtility extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Invoke("UrlTokenEncode", (Object)dupParam0.getJCRefOut());
+            return (java.lang.String)classType.Invoke("UrlTokenEncode", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

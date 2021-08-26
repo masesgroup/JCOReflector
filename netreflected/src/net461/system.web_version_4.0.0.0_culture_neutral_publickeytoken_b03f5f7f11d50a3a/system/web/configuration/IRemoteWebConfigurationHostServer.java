@@ -96,9 +96,9 @@ public interface IRemoteWebConfigurationHostServer extends IJCOBridgeReflected {
     /**
      * Returns the instantiated class
      * 
-     * @return An {@link Object} representing the instance of the instantiated Class
+     * @return An {@link java.lang.Object} representing the instance of the instantiated Class
      */
-    public Object getJCOInstance();
+    public java.lang.Object getJCOInstance();
 
     /**
      * Returns the instantiated class Type
@@ -109,7 +109,7 @@ public interface IRemoteWebConfigurationHostServer extends IJCOBridgeReflected {
 
     // Methods section
     
-    public byte[] GetData(java.lang.String fileName, boolean getReadTimeOnly, JCORefOut readTime) throws Throwable;
+    public byte[] GetData(java.lang.String fileName, boolean getReadTimeOnly, JCORefOut<java.util.concurrent.atomic.AtomicLong> readTime) throws Throwable;
 
     public java.lang.String DoEncryptOrDecrypt(boolean doEncrypt, java.lang.String xmlString, java.lang.String protectionProviderName, java.lang.String protectionProviderType, java.lang.String[] parameterKeys, java.lang.String[] parameterValues) throws Throwable;
 
@@ -117,11 +117,9 @@ public interface IRemoteWebConfigurationHostServer extends IJCOBridgeReflected {
 
     public java.lang.String GetFilePaths(int webLevel, java.lang.String path, java.lang.String site, java.lang.String locationSubPath) throws Throwable;
 
-    public void GetFileDetails(java.lang.String name, JCORefOut exists, JCORefOut size, JCORefOut createDate, JCORefOut lastWriteDate) throws Throwable;
+    public void GetFileDetails(java.lang.String name, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> exists, JCORefOut<java.util.concurrent.atomic.AtomicLong> size, JCORefOut<java.util.concurrent.atomic.AtomicLong> createDate, JCORefOut<java.util.concurrent.atomic.AtomicLong> lastWriteDate) throws Throwable;
 
-    public void WriteData(java.lang.String fileName, java.lang.String templateFileName, byte[] data, long readTime) throws Throwable;
-
-    public void WriteData(java.lang.String dupParam0, java.lang.String dupParam1, JCORefOut dupParam2, long dupParam3) throws Throwable;
+    public void WriteData(java.lang.String fileName, java.lang.String templateFileName, byte[] data, JCORefOut<java.util.concurrent.atomic.AtomicLong> readTime) throws Throwable;
 
 
     

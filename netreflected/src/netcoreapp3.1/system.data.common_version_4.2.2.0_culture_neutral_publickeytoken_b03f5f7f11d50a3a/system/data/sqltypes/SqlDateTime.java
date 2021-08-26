@@ -105,7 +105,7 @@ public class SqlDateTime extends ValueType implements system.xml.serialization.I
         }
     }
 
-    public SqlDateTime(Object instance) throws Throwable {
+    public SqlDateTime(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -125,7 +125,7 @@ public class SqlDateTime extends ValueType implements system.xml.serialization.I
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

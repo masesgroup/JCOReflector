@@ -95,7 +95,7 @@ public class IXsltContextFunctionImplementation extends NetObject implements IXs
         }
     }
 
-    public IXsltContextFunctionImplementation(Object instance) throws Throwable {
+    public IXsltContextFunctionImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class IXsltContextFunctionImplementation extends NetObject implements IXs
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -187,7 +187,7 @@ public class IXsltContextFunctionImplementation extends NetObject implements IXs
         try {
             ArrayList<XPathResultType> resultingArrayList = new ArrayList<XPathResultType>();
             JCObject resultingObjects = (JCObject)classInstance.Get("ArgTypes");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new XPathResultType(resultingObject));
             }
             XPathResultType[] resultingArray = new XPathResultType[resultingArrayList.size()];

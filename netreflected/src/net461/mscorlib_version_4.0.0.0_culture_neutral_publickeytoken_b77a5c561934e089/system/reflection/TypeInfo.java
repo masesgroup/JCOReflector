@@ -99,7 +99,7 @@ public class TypeInfo extends NetObject implements system.reflection.IReflectabl
         }
     }
 
-    public TypeInfo(Object instance) throws Throwable {
+    public TypeInfo(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class TypeInfo extends NetObject implements system.reflection.IReflectabl
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -245,7 +245,7 @@ public class TypeInfo extends NetObject implements system.reflection.IReflectabl
         try {
             ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
             JCObject resultingObjects = (JCObject)classInstance.Get("GenericTypeParameters");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetType(resultingObject));
             }
             NetType[] resultingArray = new NetType[resultingArrayList.size()];

@@ -95,7 +95,7 @@ public class CacheControlHeaderValue extends NetObject implements system.IClonea
         }
     }
 
-    public CacheControlHeaderValue(Object instance) throws Throwable {
+    public CacheControlHeaderValue(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class CacheControlHeaderValue extends NetObject implements system.IClonea
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

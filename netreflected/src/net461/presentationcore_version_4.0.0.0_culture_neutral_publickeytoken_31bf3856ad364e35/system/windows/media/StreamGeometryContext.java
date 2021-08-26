@@ -98,7 +98,7 @@ public class StreamGeometryContext extends DispatcherObject implements system.ID
         }
     }
 
-    public StreamGeometryContext(Object instance) throws Throwable {
+    public StreamGeometryContext(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class StreamGeometryContext extends DispatcherObject implements system.ID
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

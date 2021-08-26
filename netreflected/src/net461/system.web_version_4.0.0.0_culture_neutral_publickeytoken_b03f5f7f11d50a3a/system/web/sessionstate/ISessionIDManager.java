@@ -97,9 +97,9 @@ public interface ISessionIDManager extends IJCOBridgeReflected {
     /**
      * Returns the instantiated class
      * 
-     * @return An {@link Object} representing the instance of the instantiated Class
+     * @return An {@link java.lang.Object} representing the instance of the instantiated Class
      */
-    public Object getJCOInstance();
+    public java.lang.Object getJCOInstance();
 
     /**
      * Returns the instantiated class Type
@@ -110,7 +110,7 @@ public interface ISessionIDManager extends IJCOBridgeReflected {
 
     // Methods section
     
-    public boolean InitializeRequest(HttpContext context, boolean suppressAutoDetectRedirect, JCORefOut supportSessionIDReissue) throws Throwable;
+    public boolean InitializeRequest(HttpContext context, boolean suppressAutoDetectRedirect, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> supportSessionIDReissue) throws Throwable;
 
     public boolean Validate(java.lang.String id) throws Throwable;
 
@@ -122,7 +122,7 @@ public interface ISessionIDManager extends IJCOBridgeReflected {
 
     public void RemoveSessionID(HttpContext context) throws Throwable;
 
-    public void SaveSessionID(HttpContext context, java.lang.String id, JCORefOut redirected, JCORefOut cookieAdded) throws Throwable;
+    public void SaveSessionID(HttpContext context, java.lang.String id, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> redirected, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> cookieAdded) throws Throwable;
 
 
     

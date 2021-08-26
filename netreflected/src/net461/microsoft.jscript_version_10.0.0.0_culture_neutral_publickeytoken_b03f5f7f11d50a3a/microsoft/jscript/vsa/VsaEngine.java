@@ -114,7 +114,7 @@ public class VsaEngine extends BaseVsaEngine  {
         }
     }
 
-    public VsaEngine(Object instance) throws Throwable {
+    public VsaEngine(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -134,7 +134,7 @@ public class VsaEngine extends BaseVsaEngine  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

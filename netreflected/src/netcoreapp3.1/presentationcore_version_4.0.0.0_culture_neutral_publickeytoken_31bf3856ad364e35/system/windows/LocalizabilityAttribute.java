@@ -96,7 +96,7 @@ public class LocalizabilityAttribute extends Attribute  {
         }
     }
 
-    public LocalizabilityAttribute(Object instance) throws Throwable {
+    public LocalizabilityAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class LocalizabilityAttribute extends Attribute  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

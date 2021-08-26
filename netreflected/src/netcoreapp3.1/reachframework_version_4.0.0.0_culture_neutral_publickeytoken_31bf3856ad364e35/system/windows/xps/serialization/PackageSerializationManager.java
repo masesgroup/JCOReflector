@@ -94,7 +94,7 @@ public class PackageSerializationManager extends NetObject implements system.IDi
         }
     }
 
-    public PackageSerializationManager(Object instance) throws Throwable {
+    public PackageSerializationManager(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class PackageSerializationManager extends NetObject implements system.IDi
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

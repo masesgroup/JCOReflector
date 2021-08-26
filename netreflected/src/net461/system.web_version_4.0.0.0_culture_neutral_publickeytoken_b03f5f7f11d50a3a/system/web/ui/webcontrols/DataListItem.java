@@ -97,7 +97,7 @@ public class DataListItem extends WebControl implements system.web.ui.INamingCon
         }
     }
 
-    public DataListItem(Object instance) throws Throwable {
+    public DataListItem(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class DataListItem extends WebControl implements system.web.ui.INamingCon
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

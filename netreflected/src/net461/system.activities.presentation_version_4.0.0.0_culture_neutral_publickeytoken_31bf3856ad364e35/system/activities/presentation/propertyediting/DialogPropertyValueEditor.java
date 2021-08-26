@@ -97,7 +97,7 @@ public class DialogPropertyValueEditor extends PropertyValueEditor  {
         }
     }
 
-    public DialogPropertyValueEditor(Object instance) throws Throwable {
+    public DialogPropertyValueEditor(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class DialogPropertyValueEditor extends PropertyValueEditor  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

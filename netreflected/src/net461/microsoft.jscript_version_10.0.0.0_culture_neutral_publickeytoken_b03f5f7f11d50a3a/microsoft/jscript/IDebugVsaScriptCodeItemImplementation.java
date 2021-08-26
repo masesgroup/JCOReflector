@@ -93,7 +93,7 @@ public class IDebugVsaScriptCodeItemImplementation extends NetObject implements 
         }
     }
 
-    public IDebugVsaScriptCodeItemImplementation(Object instance) throws Throwable {
+    public IDebugVsaScriptCodeItemImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class IDebugVsaScriptCodeItemImplementation extends NetObject implements 
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -133,7 +133,7 @@ public class IDebugVsaScriptCodeItemImplementation extends NetObject implements 
 
     // Methods section
     
-    public boolean ParseNamedBreakPoint(java.lang.String input, JCORefOut functionName, JCORefOut nargs, JCORefOut arguments, JCORefOut returnType, JCORefOut<UInt64> offset) throws Throwable {
+    public boolean ParseNamedBreakPoint(java.lang.String input, JCORefOut functionName, JCORefOut<java.util.concurrent.atomic.AtomicInteger> nargs, JCORefOut arguments, JCORefOut returnType, JCORefOut<UInt64> offset) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

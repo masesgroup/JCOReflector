@@ -95,7 +95,7 @@ public class CssStyleCollection extends NetObject  {
         }
     }
 
-    public CssStyleCollection(Object instance) throws Throwable {
+    public CssStyleCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class CssStyleCollection extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -101,7 +101,7 @@ public class LogicalMethodInfo extends NetObject  {
         }
     }
 
-    public LogicalMethodInfo(Object instance) throws Throwable {
+    public LogicalMethodInfo(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -121,7 +121,7 @@ public class LogicalMethodInfo extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -212,7 +212,7 @@ public class LogicalMethodInfo extends NetObject  {
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("EndInvoke", target == null ? null : target.getJCOInstance(), asyncResult == null ? null : asyncResult.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
@@ -229,7 +229,7 @@ public class LogicalMethodInfo extends NetObject  {
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetCustomAttributes", type == null ? null : type.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
@@ -246,7 +246,7 @@ public class LogicalMethodInfo extends NetObject  {
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("Invoke", target == null ? null : target.getJCOInstance(), toObjectFromArray(values));
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
@@ -262,8 +262,8 @@ public class LogicalMethodInfo extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             ArrayList<LogicalMethodInfo> resultingArrayList = new ArrayList<LogicalMethodInfo>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("Create", (Object)toObjectFromArray(methodInfos));
-            for (Object resultingObject : resultingObjects) {
+            JCObject resultingObjects = (JCObject)classType.Invoke("Create", (java.lang.Object)toObjectFromArray(methodInfos));
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new LogicalMethodInfo(resultingObject));
             }
             LogicalMethodInfo[] resultingArray = new LogicalMethodInfo[resultingArrayList.size()];
@@ -280,7 +280,7 @@ public class LogicalMethodInfo extends NetObject  {
         try {
             ArrayList<LogicalMethodInfo> resultingArrayList = new ArrayList<LogicalMethodInfo>();
             JCObject resultingObjects = (JCObject)classType.Invoke("Create", toObjectFromArray(methodInfos), types == null ? null : types.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new LogicalMethodInfo(resultingObject));
             }
             LogicalMethodInfo[] resultingArray = new LogicalMethodInfo[resultingArrayList.size()];
@@ -409,7 +409,7 @@ public class LogicalMethodInfo extends NetObject  {
         try {
             ArrayList<ParameterInfo> resultingArrayList = new ArrayList<ParameterInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Get("InParameters");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ParameterInfo(resultingObject));
             }
             ParameterInfo[] resultingArray = new ParameterInfo[resultingArrayList.size()];
@@ -426,7 +426,7 @@ public class LogicalMethodInfo extends NetObject  {
         try {
             ArrayList<ParameterInfo> resultingArrayList = new ArrayList<ParameterInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Get("OutParameters");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ParameterInfo(resultingObject));
             }
             ParameterInfo[] resultingArray = new ParameterInfo[resultingArrayList.size()];
@@ -443,7 +443,7 @@ public class LogicalMethodInfo extends NetObject  {
         try {
             ArrayList<ParameterInfo> resultingArrayList = new ArrayList<ParameterInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Get("Parameters");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ParameterInfo(resultingObject));
             }
             ParameterInfo[] resultingArray = new ParameterInfo[resultingArrayList.size()];

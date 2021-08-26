@@ -108,7 +108,7 @@ public class Border3DStyle extends NetObject  {
         }
     }
 
-    public Border3DStyle(Object instance) {
+    public Border3DStyle(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class Border3DStyle extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

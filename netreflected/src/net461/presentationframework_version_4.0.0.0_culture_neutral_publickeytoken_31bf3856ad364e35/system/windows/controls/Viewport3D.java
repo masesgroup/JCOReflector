@@ -97,7 +97,7 @@ public class Viewport3D extends FrameworkElement implements system.windows.marku
         }
     }
 
-    public Viewport3D(Object instance) throws Throwable {
+    public Viewport3D(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class Viewport3D extends FrameworkElement implements system.windows.marku
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

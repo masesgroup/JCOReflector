@@ -99,7 +99,7 @@ public class TypedDataSetGeneratorException extends DataException {
         super();
     }
 
-    public TypedDataSetGeneratorException(Object instance) {
+    public TypedDataSetGeneratorException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -133,7 +133,7 @@ public class TypedDataSetGeneratorException extends DataException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

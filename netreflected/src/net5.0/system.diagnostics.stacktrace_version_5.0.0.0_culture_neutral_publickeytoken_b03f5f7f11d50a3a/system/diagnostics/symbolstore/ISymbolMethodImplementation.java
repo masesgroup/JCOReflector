@@ -101,7 +101,7 @@ public class ISymbolMethodImplementation extends NetObject implements ISymbolMet
         }
     }
 
-    public ISymbolMethodImplementation(Object instance) throws Throwable {
+    public ISymbolMethodImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -121,7 +121,7 @@ public class ISymbolMethodImplementation extends NetObject implements ISymbolMet
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -175,9 +175,9 @@ public class ISymbolMethodImplementation extends NetObject implements ISymbolMet
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetRanges", document == null ? null : document.getJCOInstance(), line, column);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             int[] resultingArray = new int[resultingArrayList.size()];
@@ -218,7 +218,7 @@ public class ISymbolMethodImplementation extends NetObject implements ISymbolMet
         try {
             ArrayList<ISymbolVariable> resultingArrayList = new ArrayList<ISymbolVariable>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetParameters");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ISymbolVariableImplementation(resultingObject));
             }
             ISymbolVariable[] resultingArray = new ISymbolVariable[resultingArrayList.size()];

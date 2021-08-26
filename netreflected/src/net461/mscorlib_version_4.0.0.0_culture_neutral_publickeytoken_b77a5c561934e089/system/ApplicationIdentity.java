@@ -96,7 +96,7 @@ public class ApplicationIdentity extends NetObject implements system.runtime.ser
         }
     }
 
-    public ApplicationIdentity(Object instance) throws Throwable {
+    public ApplicationIdentity(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class ApplicationIdentity extends NetObject implements system.runtime.ser
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

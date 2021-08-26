@@ -99,7 +99,7 @@ public class DirectoryServicesCOMException extends COMException {
         super();
     }
 
-    public DirectoryServicesCOMException(Object instance) {
+    public DirectoryServicesCOMException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -133,7 +133,7 @@ public class DirectoryServicesCOMException extends COMException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

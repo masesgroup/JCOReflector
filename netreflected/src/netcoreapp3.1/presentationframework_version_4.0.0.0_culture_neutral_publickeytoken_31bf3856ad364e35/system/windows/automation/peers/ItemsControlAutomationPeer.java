@@ -98,7 +98,7 @@ public class ItemsControlAutomationPeer extends FrameworkElementAutomationPeer i
         }
     }
 
-    public ItemsControlAutomationPeer(Object instance) throws Throwable {
+    public ItemsControlAutomationPeer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class ItemsControlAutomationPeer extends FrameworkElementAutomationPeer i
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

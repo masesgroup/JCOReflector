@@ -95,7 +95,7 @@ public class Parallel extends NetObject  {
         }
     }
 
-    public Parallel(Object instance) throws Throwable {
+    public Parallel(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class Parallel extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -150,7 +150,7 @@ public class Parallel extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("Invoke", (Object)toObjectFromArray(actions));
+            classType.Invoke("Invoke", (java.lang.Object)toObjectFromArray(actions));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

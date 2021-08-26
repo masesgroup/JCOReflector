@@ -93,7 +93,7 @@ public class Ipv6Element extends ConfigurationElement  {
         }
     }
 
-    public Ipv6Element(Object instance) throws Throwable {
+    public Ipv6Element(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class Ipv6Element extends ConfigurationElement  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

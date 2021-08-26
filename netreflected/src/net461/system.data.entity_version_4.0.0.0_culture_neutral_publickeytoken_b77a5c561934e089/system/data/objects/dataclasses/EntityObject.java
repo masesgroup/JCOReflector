@@ -99,7 +99,7 @@ public class EntityObject extends StructuralObject implements system.data.object
         }
     }
 
-    public EntityObject(Object instance) throws Throwable {
+    public EntityObject(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class EntityObject extends StructuralObject implements system.data.object
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

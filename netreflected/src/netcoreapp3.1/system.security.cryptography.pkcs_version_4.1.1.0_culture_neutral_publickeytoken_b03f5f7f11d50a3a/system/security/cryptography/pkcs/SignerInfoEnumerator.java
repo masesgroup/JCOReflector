@@ -107,7 +107,7 @@ public class SignerInfoEnumerator extends NetObject implements Iterator<SignerIn
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

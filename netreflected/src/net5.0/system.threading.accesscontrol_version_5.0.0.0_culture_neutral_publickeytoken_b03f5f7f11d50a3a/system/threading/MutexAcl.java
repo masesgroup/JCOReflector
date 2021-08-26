@@ -94,7 +94,7 @@ public class MutexAcl extends NetObject  {
         }
     }
 
-    public MutexAcl(Object instance) throws Throwable {
+    public MutexAcl(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class MutexAcl extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -145,7 +145,7 @@ public class MutexAcl extends NetObject  {
     
     // Methods section
     
-    public static Mutex Create(boolean initiallyOwned, java.lang.String name, JCORefOut createdNew, MutexSecurity mutexSecurity) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.ObjectDisposedException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.RankException, system.ArrayTypeMismatchException, system.threading.SynchronizationLockException {
+    public static Mutex Create(boolean initiallyOwned, java.lang.String name, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> createdNew, MutexSecurity mutexSecurity) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException, system.ObjectDisposedException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.RankException, system.ArrayTypeMismatchException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {

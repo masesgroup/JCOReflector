@@ -99,7 +99,7 @@ public class GlobalCatalog extends DomainController  {
         }
     }
 
-    public GlobalCatalog(Object instance) throws Throwable {
+    public GlobalCatalog(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class GlobalCatalog extends DomainController  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

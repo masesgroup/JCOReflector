@@ -108,7 +108,7 @@ public class DataGridViewEditMode extends NetObject  {
         }
     }
 
-    public DataGridViewEditMode(Object instance) {
+    public DataGridViewEditMode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class DataGridViewEditMode extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

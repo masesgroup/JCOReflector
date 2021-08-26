@@ -100,7 +100,7 @@ public class NetworkInterface extends NetObject  {
         }
     }
 
-    public NetworkInterface(Object instance) throws Throwable {
+    public NetworkInterface(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class NetworkInterface extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -210,7 +210,7 @@ public class NetworkInterface extends NetObject  {
         try {
             ArrayList<NetworkInterface> resultingArrayList = new ArrayList<NetworkInterface>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetAllNetworkInterfaces");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetworkInterface(resultingObject));
             }
             NetworkInterface[] resultingArray = new NetworkInterface[resultingArrayList.size()];

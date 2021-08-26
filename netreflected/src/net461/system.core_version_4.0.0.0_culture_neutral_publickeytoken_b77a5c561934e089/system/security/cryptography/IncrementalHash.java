@@ -94,7 +94,7 @@ public class IncrementalHash extends NetObject implements AutoCloseable {
         }
     }
 
-    public IncrementalHash(Object instance) throws Throwable {
+    public IncrementalHash(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class IncrementalHash extends NetObject implements AutoCloseable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -151,9 +151,9 @@ public class IncrementalHash extends NetObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetHashAndReset");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -203,7 +203,7 @@ public class IncrementalHash extends NetObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AppendData", (Object)data);
+            classInstance.Invoke("AppendData", (java.lang.Object)data);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -213,7 +213,7 @@ public class IncrementalHash extends NetObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AppendData", (Object)dupParam0.getJCRefOut());
+            classInstance.Invoke("AppendData", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -94,7 +94,7 @@ public class IMessagePropertyImplementation extends NetObject implements IMessag
         }
     }
 
-    public IMessagePropertyImplementation(Object instance) throws Throwable {
+    public IMessagePropertyImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class IMessagePropertyImplementation extends NetObject implements IMessag
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

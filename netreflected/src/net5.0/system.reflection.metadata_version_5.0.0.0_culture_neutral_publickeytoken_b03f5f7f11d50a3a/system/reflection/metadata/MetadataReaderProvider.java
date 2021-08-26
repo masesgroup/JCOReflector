@@ -98,7 +98,7 @@ public class MetadataReaderProvider extends NetObject implements AutoCloseable {
         }
     }
 
-    public MetadataReaderProvider(Object instance) throws Throwable {
+    public MetadataReaderProvider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class MetadataReaderProvider extends NetObject implements AutoCloseable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

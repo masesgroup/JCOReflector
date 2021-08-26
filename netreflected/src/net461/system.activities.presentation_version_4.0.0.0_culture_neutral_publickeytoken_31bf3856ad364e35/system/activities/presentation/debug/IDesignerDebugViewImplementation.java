@@ -94,7 +94,7 @@ public class IDesignerDebugViewImplementation extends NetObject implements IDesi
         }
     }
 
-    public IDesignerDebugViewImplementation(Object instance) throws Throwable {
+    public IDesignerDebugViewImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class IDesignerDebugViewImplementation extends NetObject implements IDesi
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

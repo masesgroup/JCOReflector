@@ -99,7 +99,7 @@ public class ClientViaBehavior extends NetObject implements system.servicemodel.
         }
     }
 
-    public ClientViaBehavior(Object instance) throws Throwable {
+    public ClientViaBehavior(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class ClientViaBehavior extends NetObject implements system.servicemodel.
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

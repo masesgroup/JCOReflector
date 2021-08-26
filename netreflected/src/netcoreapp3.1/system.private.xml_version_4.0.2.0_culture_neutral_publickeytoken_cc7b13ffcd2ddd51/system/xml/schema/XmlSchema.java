@@ -107,7 +107,7 @@ public class XmlSchema extends XmlSchemaObject  {
         }
     }
 
-    public XmlSchema(Object instance) throws Throwable {
+    public XmlSchema(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -127,7 +127,7 @@ public class XmlSchema extends XmlSchemaObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -531,7 +531,7 @@ public class XmlSchema extends XmlSchemaObject  {
         try {
             ArrayList<XmlAttribute> resultingArrayList = new ArrayList<XmlAttribute>();
             JCObject resultingObjects = (JCObject)classInstance.Get("UnhandledAttributes");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new XmlAttribute(resultingObject));
             }
             XmlAttribute[] resultingArray = new XmlAttribute[resultingArrayList.size()];

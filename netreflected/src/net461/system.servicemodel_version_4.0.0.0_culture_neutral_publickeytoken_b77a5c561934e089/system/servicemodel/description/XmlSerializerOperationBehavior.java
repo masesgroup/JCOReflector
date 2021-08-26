@@ -104,7 +104,7 @@ public class XmlSerializerOperationBehavior extends NetObject implements system.
         }
     }
 
-    public XmlSerializerOperationBehavior(Object instance) throws Throwable {
+    public XmlSerializerOperationBehavior(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -124,7 +124,7 @@ public class XmlSerializerOperationBehavior extends NetObject implements system.
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

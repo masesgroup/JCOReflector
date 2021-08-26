@@ -96,7 +96,7 @@ public class Int16KeyFrameCollection extends Freezable  {
         }
     }
 
-    public Int16KeyFrameCollection(Object instance) throws Throwable {
+    public Int16KeyFrameCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class Int16KeyFrameCollection extends Freezable  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

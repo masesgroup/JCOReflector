@@ -113,7 +113,7 @@ public class _TypeImplementation extends NetObject implements _Type {
         }
     }
 
-    public _TypeImplementation(Object instance) throws Throwable {
+    public _TypeImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -133,7 +133,7 @@ public class _TypeImplementation extends NetObject implements _Type {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -263,7 +263,7 @@ public class _TypeImplementation extends NetObject implements _Type {
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetCustomAttributes", inherit);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
@@ -280,7 +280,7 @@ public class _TypeImplementation extends NetObject implements _Type {
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetCustomAttributes", attributeType == null ? null : attributeType.getJCOInstance(), inherit);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
@@ -317,7 +317,7 @@ public class _TypeImplementation extends NetObject implements _Type {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetConstructor = (JCObject)classInstance.Invoke("GetConstructor", (Object)toObjectFromArray(types));
+            JCObject objGetConstructor = (JCObject)classInstance.Invoke("GetConstructor", (java.lang.Object)toObjectFromArray(types));
             return new ConstructorInfo(objGetConstructor);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -330,7 +330,7 @@ public class _TypeImplementation extends NetObject implements _Type {
         try {
             ArrayList<ConstructorInfo> resultingArrayList = new ArrayList<ConstructorInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetConstructors");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ConstructorInfo(resultingObject));
             }
             ConstructorInfo[] resultingArray = new ConstructorInfo[resultingArrayList.size()];
@@ -347,7 +347,7 @@ public class _TypeImplementation extends NetObject implements _Type {
         try {
             ArrayList<ConstructorInfo> resultingArrayList = new ArrayList<ConstructorInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetConstructors", bindingAttr == null ? null : bindingAttr.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ConstructorInfo(resultingObject));
             }
             ConstructorInfo[] resultingArray = new ConstructorInfo[resultingArrayList.size()];
@@ -386,7 +386,7 @@ public class _TypeImplementation extends NetObject implements _Type {
         try {
             ArrayList<EventInfo> resultingArrayList = new ArrayList<EventInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetEvents");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new EventInfo(resultingObject));
             }
             EventInfo[] resultingArray = new EventInfo[resultingArrayList.size()];
@@ -403,7 +403,7 @@ public class _TypeImplementation extends NetObject implements _Type {
         try {
             ArrayList<EventInfo> resultingArrayList = new ArrayList<EventInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetEvents", bindingAttr == null ? null : bindingAttr.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new EventInfo(resultingObject));
             }
             EventInfo[] resultingArray = new EventInfo[resultingArrayList.size()];
@@ -442,7 +442,7 @@ public class _TypeImplementation extends NetObject implements _Type {
         try {
             ArrayList<FieldInfo> resultingArrayList = new ArrayList<FieldInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFields");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new FieldInfo(resultingObject));
             }
             FieldInfo[] resultingArray = new FieldInfo[resultingArrayList.size()];
@@ -459,7 +459,7 @@ public class _TypeImplementation extends NetObject implements _Type {
         try {
             ArrayList<FieldInfo> resultingArrayList = new ArrayList<FieldInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFields", bindingAttr == null ? null : bindingAttr.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new FieldInfo(resultingObject));
             }
             FieldInfo[] resultingArray = new FieldInfo[resultingArrayList.size()];
@@ -487,7 +487,7 @@ public class _TypeImplementation extends NetObject implements _Type {
         try {
             ArrayList<MemberInfo> resultingArrayList = new ArrayList<MemberInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("FindMembers", memberType == null ? null : memberType.getJCOInstance(), bindingAttr == null ? null : bindingAttr.getJCOInstance(), filter, filterCriteria == null ? null : filterCriteria.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MemberInfo(resultingObject));
             }
             MemberInfo[] resultingArray = new MemberInfo[resultingArrayList.size()];
@@ -504,7 +504,7 @@ public class _TypeImplementation extends NetObject implements _Type {
         try {
             ArrayList<MemberInfo> resultingArrayList = new ArrayList<MemberInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetDefaultMembers");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MemberInfo(resultingObject));
             }
             MemberInfo[] resultingArray = new MemberInfo[resultingArrayList.size()];
@@ -521,7 +521,7 @@ public class _TypeImplementation extends NetObject implements _Type {
         try {
             ArrayList<MemberInfo> resultingArrayList = new ArrayList<MemberInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetMember", name);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MemberInfo(resultingObject));
             }
             MemberInfo[] resultingArray = new MemberInfo[resultingArrayList.size()];
@@ -538,7 +538,7 @@ public class _TypeImplementation extends NetObject implements _Type {
         try {
             ArrayList<MemberInfo> resultingArrayList = new ArrayList<MemberInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetMember", name, bindingAttr == null ? null : bindingAttr.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MemberInfo(resultingObject));
             }
             MemberInfo[] resultingArray = new MemberInfo[resultingArrayList.size()];
@@ -555,7 +555,7 @@ public class _TypeImplementation extends NetObject implements _Type {
         try {
             ArrayList<MemberInfo> resultingArrayList = new ArrayList<MemberInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetMember", name, type == null ? null : type.getJCOInstance(), bindingAttr == null ? null : bindingAttr.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MemberInfo(resultingObject));
             }
             MemberInfo[] resultingArray = new MemberInfo[resultingArrayList.size()];
@@ -572,7 +572,7 @@ public class _TypeImplementation extends NetObject implements _Type {
         try {
             ArrayList<MemberInfo> resultingArrayList = new ArrayList<MemberInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetMembers");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MemberInfo(resultingObject));
             }
             MemberInfo[] resultingArray = new MemberInfo[resultingArrayList.size()];
@@ -589,7 +589,7 @@ public class _TypeImplementation extends NetObject implements _Type {
         try {
             ArrayList<MemberInfo> resultingArrayList = new ArrayList<MemberInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetMembers", bindingAttr == null ? null : bindingAttr.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MemberInfo(resultingObject));
             }
             MemberInfo[] resultingArray = new MemberInfo[resultingArrayList.size()];
@@ -672,7 +672,7 @@ public class _TypeImplementation extends NetObject implements _Type {
         try {
             ArrayList<MethodInfo> resultingArrayList = new ArrayList<MethodInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetMethods");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MethodInfo(resultingObject));
             }
             MethodInfo[] resultingArray = new MethodInfo[resultingArrayList.size()];
@@ -689,7 +689,7 @@ public class _TypeImplementation extends NetObject implements _Type {
         try {
             ArrayList<MethodInfo> resultingArrayList = new ArrayList<MethodInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetMethods", bindingAttr == null ? null : bindingAttr.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MethodInfo(resultingObject));
             }
             MethodInfo[] resultingArray = new MethodInfo[resultingArrayList.size()];
@@ -783,7 +783,7 @@ public class _TypeImplementation extends NetObject implements _Type {
         try {
             ArrayList<PropertyInfo> resultingArrayList = new ArrayList<PropertyInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetProperties");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new PropertyInfo(resultingObject));
             }
             PropertyInfo[] resultingArray = new PropertyInfo[resultingArrayList.size()];
@@ -800,7 +800,7 @@ public class _TypeImplementation extends NetObject implements _Type {
         try {
             ArrayList<PropertyInfo> resultingArrayList = new ArrayList<PropertyInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetProperties", bindingAttr == null ? null : bindingAttr.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new PropertyInfo(resultingObject));
             }
             PropertyInfo[] resultingArray = new PropertyInfo[resultingArrayList.size()];
@@ -872,7 +872,7 @@ public class _TypeImplementation extends NetObject implements _Type {
         try {
             ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("FindInterfaces", filter, filterCriteria == null ? null : filterCriteria.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetType(resultingObject));
             }
             NetType[] resultingArray = new NetType[resultingArrayList.size()];
@@ -889,7 +889,7 @@ public class _TypeImplementation extends NetObject implements _Type {
         try {
             ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetInterfaces");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetType(resultingObject));
             }
             NetType[] resultingArray = new NetType[resultingArrayList.size()];
@@ -906,7 +906,7 @@ public class _TypeImplementation extends NetObject implements _Type {
         try {
             ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetNestedTypes");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetType(resultingObject));
             }
             NetType[] resultingArray = new NetType[resultingArrayList.size()];
@@ -923,7 +923,7 @@ public class _TypeImplementation extends NetObject implements _Type {
         try {
             ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetNestedTypes", bindingAttr == null ? null : bindingAttr.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetType(resultingObject));
             }
             NetType[] resultingArray = new NetType[resultingArrayList.size()];

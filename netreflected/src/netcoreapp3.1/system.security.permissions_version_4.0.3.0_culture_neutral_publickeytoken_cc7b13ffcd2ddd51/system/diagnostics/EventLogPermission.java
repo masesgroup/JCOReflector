@@ -97,7 +97,7 @@ public class EventLogPermission extends ResourcePermissionBase  {
         }
     }
 
-    public EventLogPermission(Object instance) throws Throwable {
+    public EventLogPermission(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class EventLogPermission extends ResourcePermissionBase  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -166,7 +166,7 @@ public class EventLogPermission extends ResourcePermissionBase  {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((Object)toObjectFromArray(permissionAccessEntries)));
+            setJCOInstance((JCObject)classType.NewObject((java.lang.Object)toObjectFromArray(permissionAccessEntries)));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

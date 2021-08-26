@@ -100,7 +100,7 @@ public class DBConcurrencyException extends SystemException {
         super();
     }
 
-    public DBConcurrencyException(Object instance) {
+    public DBConcurrencyException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -134,7 +134,7 @@ public class DBConcurrencyException extends SystemException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -177,7 +177,7 @@ public class DBConcurrencyException extends SystemException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("CopyToRows", (Object)toObjectFromArray(array));
+            classInstance.Invoke("CopyToRows", (java.lang.Object)toObjectFromArray(array));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

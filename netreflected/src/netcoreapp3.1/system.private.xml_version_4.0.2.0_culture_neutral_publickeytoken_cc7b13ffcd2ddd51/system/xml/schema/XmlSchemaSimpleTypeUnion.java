@@ -96,7 +96,7 @@ public class XmlSchemaSimpleTypeUnion extends XmlSchemaSimpleTypeContent  {
         }
     }
 
-    public XmlSchemaSimpleTypeUnion(Object instance) throws Throwable {
+    public XmlSchemaSimpleTypeUnion(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class XmlSchemaSimpleTypeUnion extends XmlSchemaSimpleTypeContent  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -176,7 +176,7 @@ public class XmlSchemaSimpleTypeUnion extends XmlSchemaSimpleTypeContent  {
         try {
             ArrayList<XmlSchemaSimpleType> resultingArrayList = new ArrayList<XmlSchemaSimpleType>();
             JCObject resultingObjects = (JCObject)classInstance.Get("BaseMemberTypes");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new XmlSchemaSimpleType(resultingObject));
             }
             XmlSchemaSimpleType[] resultingArray = new XmlSchemaSimpleType[resultingArrayList.size()];
@@ -193,7 +193,7 @@ public class XmlSchemaSimpleTypeUnion extends XmlSchemaSimpleTypeContent  {
         try {
             ArrayList<XmlQualifiedName> resultingArrayList = new ArrayList<XmlQualifiedName>();
             JCObject resultingObjects = (JCObject)classInstance.Get("MemberTypes");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new XmlQualifiedName(resultingObject));
             }
             XmlQualifiedName[] resultingArray = new XmlQualifiedName[resultingArrayList.size()];

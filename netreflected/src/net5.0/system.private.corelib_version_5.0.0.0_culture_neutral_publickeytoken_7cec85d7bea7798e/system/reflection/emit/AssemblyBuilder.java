@@ -106,7 +106,7 @@ public class AssemblyBuilder extends Assembly  {
         }
     }
 
-    public AssemblyBuilder(Object instance) throws Throwable {
+    public AssemblyBuilder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -126,7 +126,7 @@ public class AssemblyBuilder extends Assembly  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -186,7 +186,7 @@ public class AssemblyBuilder extends Assembly  {
         try {
             ArrayList<FileStream> resultingArrayList = new ArrayList<FileStream>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFiles", getResourceModules);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new FileStream(resultingObject));
             }
             FileStream[] resultingArray = new FileStream[resultingArrayList.size()];
@@ -225,7 +225,7 @@ public class AssemblyBuilder extends Assembly  {
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetCustomAttributes", inherit);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
@@ -242,7 +242,7 @@ public class AssemblyBuilder extends Assembly  {
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetCustomAttributes", attributeType == null ? null : attributeType.getJCOInstance(), inherit);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
@@ -292,7 +292,7 @@ public class AssemblyBuilder extends Assembly  {
         try {
             ArrayList<AssemblyName> resultingArrayList = new ArrayList<AssemblyName>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetReferencedAssemblies");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new AssemblyName(resultingObject));
             }
             AssemblyName[] resultingArray = new AssemblyName[resultingArrayList.size()];
@@ -375,7 +375,7 @@ public class AssemblyBuilder extends Assembly  {
         try {
             ArrayList<Module> resultingArrayList = new ArrayList<Module>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetLoadedModules", getResourceModules);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Module(resultingObject));
             }
             Module[] resultingArray = new Module[resultingArrayList.size()];
@@ -392,7 +392,7 @@ public class AssemblyBuilder extends Assembly  {
         try {
             ArrayList<Module> resultingArrayList = new ArrayList<Module>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetModules", getResourceModules);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Module(resultingObject));
             }
             Module[] resultingArray = new Module[resultingArrayList.size()];
@@ -407,9 +407,9 @@ public class AssemblyBuilder extends Assembly  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetManifestResourceNames");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];
@@ -439,7 +439,7 @@ public class AssemblyBuilder extends Assembly  {
         try {
             ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetExportedTypes");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetType(resultingObject));
             }
             NetType[] resultingArray = new NetType[resultingArrayList.size()];

@@ -108,7 +108,7 @@ public class EnterpriseServicesInteropOption extends NetObject  {
         }
     }
 
-    public EnterpriseServicesInteropOption(Object instance) {
+    public EnterpriseServicesInteropOption(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class EnterpriseServicesInteropOption extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

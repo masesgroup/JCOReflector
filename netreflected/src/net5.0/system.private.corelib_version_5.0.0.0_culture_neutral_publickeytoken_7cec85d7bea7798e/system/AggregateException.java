@@ -99,7 +99,7 @@ public class AggregateException extends NetException {
         super();
     }
 
-    public AggregateException(Object instance) {
+    public AggregateException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -133,7 +133,7 @@ public class AggregateException extends NetException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -162,7 +162,7 @@ public class AggregateException extends NetException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((Object)toObjectFromArray(innerExceptions)));
+            setJCOInstance((JCObject)classType.NewObject((java.lang.Object)toObjectFromArray(innerExceptions)));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

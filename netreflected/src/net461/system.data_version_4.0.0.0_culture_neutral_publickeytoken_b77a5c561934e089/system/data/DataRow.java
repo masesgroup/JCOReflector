@@ -98,7 +98,7 @@ public class DataRow extends NetObject  {
         }
     }
 
-    public DataRow(Object instance) throws Throwable {
+    public DataRow(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class DataRow extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -207,7 +207,7 @@ public class DataRow extends NetObject  {
         try {
             ArrayList<DataColumn> resultingArrayList = new ArrayList<DataColumn>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetColumnsInError");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataColumn(resultingObject));
             }
             DataColumn[] resultingArray = new DataColumn[resultingArrayList.size()];
@@ -268,7 +268,7 @@ public class DataRow extends NetObject  {
         try {
             ArrayList<DataRow> resultingArrayList = new ArrayList<DataRow>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetChildRows", relation == null ? null : relation.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataRow(resultingObject));
             }
             DataRow[] resultingArray = new DataRow[resultingArrayList.size()];
@@ -285,7 +285,7 @@ public class DataRow extends NetObject  {
         try {
             ArrayList<DataRow> resultingArrayList = new ArrayList<DataRow>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetChildRows", relation == null ? null : relation.getJCOInstance(), version == null ? null : version.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataRow(resultingObject));
             }
             DataRow[] resultingArray = new DataRow[resultingArrayList.size()];
@@ -302,7 +302,7 @@ public class DataRow extends NetObject  {
         try {
             ArrayList<DataRow> resultingArrayList = new ArrayList<DataRow>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetChildRows", relationName);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataRow(resultingObject));
             }
             DataRow[] resultingArray = new DataRow[resultingArrayList.size()];
@@ -319,7 +319,7 @@ public class DataRow extends NetObject  {
         try {
             ArrayList<DataRow> resultingArrayList = new ArrayList<DataRow>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetChildRows", relationName, version == null ? null : version.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataRow(resultingObject));
             }
             DataRow[] resultingArray = new DataRow[resultingArrayList.size()];
@@ -336,7 +336,7 @@ public class DataRow extends NetObject  {
         try {
             ArrayList<DataRow> resultingArrayList = new ArrayList<DataRow>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetParentRows", relation == null ? null : relation.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataRow(resultingObject));
             }
             DataRow[] resultingArray = new DataRow[resultingArrayList.size()];
@@ -353,7 +353,7 @@ public class DataRow extends NetObject  {
         try {
             ArrayList<DataRow> resultingArrayList = new ArrayList<DataRow>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetParentRows", relation == null ? null : relation.getJCOInstance(), version == null ? null : version.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataRow(resultingObject));
             }
             DataRow[] resultingArray = new DataRow[resultingArrayList.size()];
@@ -370,7 +370,7 @@ public class DataRow extends NetObject  {
         try {
             ArrayList<DataRow> resultingArrayList = new ArrayList<DataRow>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetParentRows", relationName);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataRow(resultingObject));
             }
             DataRow[] resultingArray = new DataRow[resultingArrayList.size()];
@@ -387,7 +387,7 @@ public class DataRow extends NetObject  {
         try {
             ArrayList<DataRow> resultingArrayList = new ArrayList<DataRow>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetParentRows", relationName, version == null ? null : version.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataRow(resultingObject));
             }
             DataRow[] resultingArray = new DataRow[resultingArrayList.size()];
@@ -610,7 +610,7 @@ public class DataRow extends NetObject  {
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
             JCObject resultingObjects = (JCObject)classInstance.Get("ItemArray");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];

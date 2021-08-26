@@ -93,7 +93,7 @@ public class SHA512CryptoServiceProvider extends SHA512  {
         }
     }
 
-    public SHA512CryptoServiceProvider(Object instance) throws Throwable {
+    public SHA512CryptoServiceProvider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class SHA512CryptoServiceProvider extends SHA512  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

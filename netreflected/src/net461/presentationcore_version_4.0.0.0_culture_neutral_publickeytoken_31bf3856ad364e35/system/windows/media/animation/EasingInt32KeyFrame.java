@@ -96,7 +96,7 @@ public class EasingInt32KeyFrame extends Int32KeyFrame  {
         }
     }
 
-    public EasingInt32KeyFrame(Object instance) throws Throwable {
+    public EasingInt32KeyFrame(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class EasingInt32KeyFrame extends Int32KeyFrame  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -94,7 +94,7 @@ public class DataContractSerializerElement extends BehaviorExtensionElement  {
         }
     }
 
-    public DataContractSerializerElement(Object instance) throws Throwable {
+    public DataContractSerializerElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class DataContractSerializerElement extends BehaviorExtensionElement  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -94,7 +94,7 @@ public class XmlDsigBase64Transform extends Transform  {
         }
     }
 
-    public XmlDsigBase64Transform(Object instance) throws Throwable {
+    public XmlDsigBase64Transform(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class XmlDsigBase64Transform extends Transform  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

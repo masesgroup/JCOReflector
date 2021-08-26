@@ -99,9 +99,9 @@ public interface IRegistrationServices extends IJCOBridgeReflected {
     /**
      * Returns the instantiated class
      * 
-     * @return An {@link Object} representing the instance of the instantiated Class
+     * @return An {@link java.lang.Object} representing the instance of the instantiated Class
      */
-    public Object getJCOInstance();
+    public java.lang.Object getJCOInstance();
 
     /**
      * Returns the instantiated class Type
@@ -126,7 +126,7 @@ public interface IRegistrationServices extends IJCOBridgeReflected {
 
     public NetType[] GetRegistrableTypesInAssembly(Assembly assembly) throws Throwable;
 
-    public void RegisterTypeForComClients(NetType type, Guid g) throws Throwable;
+    public void RegisterTypeForComClients(NetType type, JCORefOut<Guid> g) throws Throwable;
 
 
     

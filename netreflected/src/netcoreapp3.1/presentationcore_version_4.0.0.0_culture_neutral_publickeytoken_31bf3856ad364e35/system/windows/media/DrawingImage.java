@@ -96,7 +96,7 @@ public class DrawingImage extends ImageSource  {
         }
     }
 
-    public DrawingImage(Object instance) throws Throwable {
+    public DrawingImage(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class DrawingImage extends ImageSource  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

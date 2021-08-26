@@ -94,7 +94,7 @@ public class ValidationErrorCollection extends NetObjectEnumerable  {
         }
     }
 
-    public ValidationErrorCollection(Object instance) throws Throwable {
+    public ValidationErrorCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class ValidationErrorCollection extends NetObjectEnumerable  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -169,7 +169,7 @@ public class ValidationErrorCollection extends NetObjectEnumerable  {
         try {
             ArrayList<ValidationError> resultingArrayList = new ArrayList<ValidationError>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("ToArray");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ValidationError(resultingObject));
             }
             ValidationError[] resultingArray = new ValidationError[resultingArrayList.size()];

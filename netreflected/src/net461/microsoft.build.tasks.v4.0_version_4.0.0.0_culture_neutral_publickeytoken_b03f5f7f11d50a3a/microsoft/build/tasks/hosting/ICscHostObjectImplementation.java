@@ -96,7 +96,7 @@ public class ICscHostObjectImplementation extends NetObject implements ICscHostO
         }
     }
 
-    public ICscHostObjectImplementation(Object instance) throws Throwable {
+    public ICscHostObjectImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class ICscHostObjectImplementation extends NetObject implements ICscHostO
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -146,7 +146,7 @@ public class ICscHostObjectImplementation extends NetObject implements ICscHostO
         }
     }
 
-    public boolean EndInitialization(JCORefOut errorMessage, JCORefOut errorCode) throws Throwable {
+    public boolean EndInitialization(JCORefOut errorMessage, JCORefOut<java.util.concurrent.atomic.AtomicInteger> errorCode) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -180,7 +180,7 @@ public class ICscHostObjectImplementation extends NetObject implements ICscHostO
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("SetAdditionalLibPaths", (Object)additionalLibPaths);
+            return (boolean)classInstance.Invoke("SetAdditionalLibPaths", (java.lang.Object)additionalLibPaths);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,7 +190,7 @@ public class ICscHostObjectImplementation extends NetObject implements ICscHostO
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("SetAdditionalLibPaths", (Object)dupParam0.getJCRefOut());
+            return (boolean)classInstance.Invoke("SetAdditionalLibPaths", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +200,7 @@ public class ICscHostObjectImplementation extends NetObject implements ICscHostO
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("SetAddModules", (Object)addModules);
+            return (boolean)classInstance.Invoke("SetAddModules", (java.lang.Object)addModules);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,7 +210,7 @@ public class ICscHostObjectImplementation extends NetObject implements ICscHostO
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("SetAddModules", (Object)dupParam0.getJCRefOut());
+            return (boolean)classInstance.Invoke("SetAddModules", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -380,7 +380,7 @@ public class ICscHostObjectImplementation extends NetObject implements ICscHostO
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("SetLinkResources", (Object)toObjectFromArray(linkResources));
+            return (boolean)classInstance.Invoke("SetLinkResources", (java.lang.Object)toObjectFromArray(linkResources));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -470,7 +470,7 @@ public class ICscHostObjectImplementation extends NetObject implements ICscHostO
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("SetReferences", (Object)toObjectFromArray(references));
+            return (boolean)classInstance.Invoke("SetReferences", (java.lang.Object)toObjectFromArray(references));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -480,7 +480,7 @@ public class ICscHostObjectImplementation extends NetObject implements ICscHostO
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("SetResources", (Object)toObjectFromArray(resources));
+            return (boolean)classInstance.Invoke("SetResources", (java.lang.Object)toObjectFromArray(resources));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -490,7 +490,7 @@ public class ICscHostObjectImplementation extends NetObject implements ICscHostO
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("SetResponseFiles", (Object)toObjectFromArray(responseFiles));
+            return (boolean)classInstance.Invoke("SetResponseFiles", (java.lang.Object)toObjectFromArray(responseFiles));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -500,7 +500,7 @@ public class ICscHostObjectImplementation extends NetObject implements ICscHostO
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("SetSources", (Object)toObjectFromArray(sources));
+            return (boolean)classInstance.Invoke("SetSources", (java.lang.Object)toObjectFromArray(sources));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

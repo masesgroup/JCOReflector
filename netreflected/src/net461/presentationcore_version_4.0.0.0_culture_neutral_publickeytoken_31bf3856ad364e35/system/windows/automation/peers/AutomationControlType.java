@@ -108,7 +108,7 @@ public class AutomationControlType extends NetObject  {
         }
     }
 
-    public AutomationControlType(Object instance) {
+    public AutomationControlType(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class AutomationControlType extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

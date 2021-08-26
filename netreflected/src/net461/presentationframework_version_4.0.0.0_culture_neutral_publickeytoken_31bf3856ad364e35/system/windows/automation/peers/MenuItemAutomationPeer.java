@@ -97,7 +97,7 @@ public class MenuItemAutomationPeer extends FrameworkElementAutomationPeer imple
         }
     }
 
-    public MenuItemAutomationPeer(Object instance) throws Throwable {
+    public MenuItemAutomationPeer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class MenuItemAutomationPeer extends FrameworkElementAutomationPeer imple
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

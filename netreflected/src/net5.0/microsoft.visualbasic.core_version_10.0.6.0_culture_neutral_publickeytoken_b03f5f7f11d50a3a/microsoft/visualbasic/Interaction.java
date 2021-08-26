@@ -96,7 +96,7 @@ public class Interaction extends NetObject  {
         }
     }
 
-    public Interaction(Object instance) throws Throwable {
+    public Interaction(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class Interaction extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -229,7 +229,7 @@ public class Interaction extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objSwitch = (JCObject)classType.Invoke("Switch", (Object)toObjectFromArray(VarExpr));
+            JCObject objSwitch = (JCObject)classType.Invoke("Switch", (java.lang.Object)toObjectFromArray(VarExpr));
             return new NetObject(objSwitch);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

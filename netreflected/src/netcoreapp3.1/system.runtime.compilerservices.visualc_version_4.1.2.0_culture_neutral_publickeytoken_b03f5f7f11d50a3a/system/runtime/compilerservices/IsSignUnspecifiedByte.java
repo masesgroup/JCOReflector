@@ -92,7 +92,7 @@ public class IsSignUnspecifiedByte extends NetObject  {
         }
     }
 
-    public IsSignUnspecifiedByte(Object instance) throws Throwable {
+    public IsSignUnspecifiedByte(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class IsSignUnspecifiedByte extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -106,9 +106,9 @@ public interface UCOMIMoniker extends IJCOBridgeReflected {
     /**
      * Returns the instantiated class
      * 
-     * @return An {@link Object} representing the instance of the instantiated Class
+     * @return An {@link java.lang.Object} representing the instance of the instantiated Class
      */
-    public Object getJCOInstance();
+    public java.lang.Object getJCOInstance();
 
     /**
      * Returns the instantiated class Type
@@ -121,9 +121,9 @@ public interface UCOMIMoniker extends IJCOBridgeReflected {
     
     public int IsDirty() throws Throwable;
 
-    public void BindToObject(UCOMIBindCtx pbc, UCOMIMoniker pmkToLeft, Guid riidResult, JCORefOut<NetObject> ppvResult) throws Throwable;
+    public void BindToObject(UCOMIBindCtx pbc, UCOMIMoniker pmkToLeft, JCORefOut<Guid> riidResult, JCORefOut<NetObject> ppvResult) throws Throwable;
 
-    public void BindToStorage(UCOMIBindCtx pbc, UCOMIMoniker pmkToLeft, Guid riid, JCORefOut<NetObject> ppvObj) throws Throwable;
+    public void BindToStorage(UCOMIBindCtx pbc, UCOMIMoniker pmkToLeft, JCORefOut<Guid> riid, JCORefOut<NetObject> ppvObj) throws Throwable;
 
     public void CommonPrefixWith(UCOMIMoniker pmkOther, JCORefOut<UCOMIMoniker> ppmkPrefix) throws Throwable;
 
@@ -135,11 +135,11 @@ public interface UCOMIMoniker extends IJCOBridgeReflected {
 
     public void GetDisplayName(UCOMIBindCtx pbc, UCOMIMoniker pmkToLeft, JCORefOut ppszDisplayName) throws Throwable;
 
-    public void GetSizeMax(JCORefOut pcbSize) throws Throwable;
+    public void GetSizeMax(JCORefOut<java.util.concurrent.atomic.AtomicLong> pcbSize) throws Throwable;
 
     public void GetTimeOfLastChange(UCOMIBindCtx pbc, UCOMIMoniker pmkToLeft, JCORefOut<FILETIME> pFileTime) throws Throwable;
 
-    public void Hash(JCORefOut pdwHash) throws Throwable;
+    public void Hash(JCORefOut<java.util.concurrent.atomic.AtomicInteger> pdwHash) throws Throwable;
 
     public void Inverse(JCORefOut<UCOMIMoniker> ppmk) throws Throwable;
 
@@ -147,13 +147,13 @@ public interface UCOMIMoniker extends IJCOBridgeReflected {
 
     public void IsRunning(UCOMIBindCtx pbc, UCOMIMoniker pmkToLeft, UCOMIMoniker pmkNewlyRunning) throws Throwable;
 
-    public void IsSystemMoniker(JCORefOut pdwMksys) throws Throwable;
+    public void IsSystemMoniker(JCORefOut<java.util.concurrent.atomic.AtomicInteger> pdwMksys) throws Throwable;
 
     public void Load(UCOMIStream pStm) throws Throwable;
 
-    public void ParseDisplayName(UCOMIBindCtx pbc, UCOMIMoniker pmkToLeft, java.lang.String pszDisplayName, JCORefOut pchEaten, JCORefOut<UCOMIMoniker> ppmkOut) throws Throwable;
+    public void ParseDisplayName(UCOMIBindCtx pbc, UCOMIMoniker pmkToLeft, java.lang.String pszDisplayName, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pchEaten, JCORefOut<UCOMIMoniker> ppmkOut) throws Throwable;
 
-    public void Reduce(UCOMIBindCtx pbc, int dwReduceHowFar, UCOMIMoniker ppmkToLeft, JCORefOut<UCOMIMoniker> ppmkReduced) throws Throwable;
+    public void Reduce(UCOMIBindCtx pbc, int dwReduceHowFar, JCORefOut<UCOMIMoniker> ppmkToLeft, JCORefOut<UCOMIMoniker> ppmkReduced) throws Throwable;
 
     public void RelativePathTo(UCOMIMoniker pmkOther, JCORefOut<UCOMIMoniker> ppmkRelPath) throws Throwable;
 

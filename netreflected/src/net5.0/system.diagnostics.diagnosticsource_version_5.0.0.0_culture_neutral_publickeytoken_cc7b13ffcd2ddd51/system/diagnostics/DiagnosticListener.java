@@ -96,7 +96,7 @@ public class DiagnosticListener extends DiagnosticSource implements AutoCloseabl
         }
     }
 
-    public DiagnosticListener(Object instance) throws Throwable {
+    public DiagnosticListener(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class DiagnosticListener extends DiagnosticSource implements AutoCloseabl
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

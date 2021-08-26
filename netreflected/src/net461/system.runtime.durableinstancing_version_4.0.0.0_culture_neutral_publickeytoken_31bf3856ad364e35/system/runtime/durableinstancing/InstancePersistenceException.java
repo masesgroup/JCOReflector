@@ -99,7 +99,7 @@ public class InstancePersistenceException extends NetException {
         super();
     }
 
-    public InstancePersistenceException(Object instance) {
+    public InstancePersistenceException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -133,7 +133,7 @@ public class InstancePersistenceException extends NetException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -108,7 +108,7 @@ public class CngKeyHandleOpenOptions extends NetObject  {
         }
     }
 
-    public CngKeyHandleOpenOptions(Object instance) {
+    public CngKeyHandleOpenOptions(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class CngKeyHandleOpenOptions extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

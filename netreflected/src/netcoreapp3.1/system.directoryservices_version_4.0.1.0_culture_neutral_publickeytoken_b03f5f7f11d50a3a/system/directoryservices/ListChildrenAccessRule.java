@@ -97,7 +97,7 @@ public class ListChildrenAccessRule extends ActiveDirectoryAccessRule  {
         }
     }
 
-    public ListChildrenAccessRule(Object instance) throws Throwable {
+    public ListChildrenAccessRule(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class ListChildrenAccessRule extends ActiveDirectoryAccessRule  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

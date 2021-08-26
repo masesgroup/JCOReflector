@@ -96,7 +96,7 @@ public class FigureStructure extends SemanticBasicElement implements system.wind
         }
     }
 
-    public FigureStructure(Object instance) throws Throwable {
+    public FigureStructure(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class FigureStructure extends SemanticBasicElement implements system.wind
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

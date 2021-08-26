@@ -100,7 +100,7 @@ public class SoundPlayer extends Component implements system.runtime.serializati
         }
     }
 
-    public SoundPlayer(Object instance) throws Throwable {
+    public SoundPlayer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class SoundPlayer extends Component implements system.runtime.serializati
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

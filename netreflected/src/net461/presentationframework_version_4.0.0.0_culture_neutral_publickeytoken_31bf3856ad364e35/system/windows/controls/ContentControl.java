@@ -97,7 +97,7 @@ public class ContentControl extends Control implements system.windows.markup.IAd
         }
     }
 
-    public ContentControl(Object instance) throws Throwable {
+    public ContentControl(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class ContentControl extends Control implements system.windows.markup.IAd
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

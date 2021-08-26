@@ -94,7 +94,7 @@ public class DpapiDataProtector extends DataProtector  {
         }
     }
 
-    public DpapiDataProtector(Object instance) throws Throwable {
+    public DpapiDataProtector(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class DpapiDataProtector extends DataProtector  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -161,7 +161,7 @@ public class DpapiDataProtector extends DataProtector  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsReprotectRequired", (Object)encryptedData);
+            return (boolean)classInstance.Invoke("IsReprotectRequired", (java.lang.Object)encryptedData);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,7 +171,7 @@ public class DpapiDataProtector extends DataProtector  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsReprotectRequired", (Object)dupParam0.getJCRefOut());
+            return (boolean)classInstance.Invoke("IsReprotectRequired", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

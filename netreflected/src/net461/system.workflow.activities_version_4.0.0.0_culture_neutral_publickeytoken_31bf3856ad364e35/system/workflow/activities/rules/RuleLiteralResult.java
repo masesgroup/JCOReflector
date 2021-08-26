@@ -93,7 +93,7 @@ public class RuleLiteralResult extends RuleExpressionResult  {
         }
     }
 
-    public RuleLiteralResult(Object instance) throws Throwable {
+    public RuleLiteralResult(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class RuleLiteralResult extends RuleExpressionResult  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -97,7 +97,7 @@ public class ThicknessAnimationUsingKeyFrames extends ThicknessAnimationBase imp
         }
     }
 
-    public ThicknessAnimationUsingKeyFrames(Object instance) throws Throwable {
+    public ThicknessAnimationUsingKeyFrames(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class ThicknessAnimationUsingKeyFrames extends ThicknessAnimationBase imp
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

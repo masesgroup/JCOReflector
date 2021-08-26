@@ -99,7 +99,7 @@ public class CurrencyManager extends BindingManagerBase  {
         }
     }
 
-    public CurrencyManager(Object instance) throws Throwable {
+    public CurrencyManager(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class CurrencyManager extends BindingManagerBase  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -96,7 +96,7 @@ public class DiscoveryClientReferenceCollection extends DictionaryBase  {
         }
     }
 
-    public DiscoveryClientReferenceCollection(Object instance) throws Throwable {
+    public DiscoveryClientReferenceCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class DiscoveryClientReferenceCollection extends DictionaryBase  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

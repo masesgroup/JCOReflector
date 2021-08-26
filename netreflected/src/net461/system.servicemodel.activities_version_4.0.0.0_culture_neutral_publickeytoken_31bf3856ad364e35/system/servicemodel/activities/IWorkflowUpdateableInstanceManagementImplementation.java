@@ -99,7 +99,7 @@ public class IWorkflowUpdateableInstanceManagementImplementation extends NetObje
         }
     }
 
-    public IWorkflowUpdateableInstanceManagementImplementation(Object instance) throws Throwable {
+    public IWorkflowUpdateableInstanceManagementImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class IWorkflowUpdateableInstanceManagementImplementation extends NetObje
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -97,7 +97,7 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         }
     }
 
-    public HttpBrowserCapabilitiesBase(Object instance) throws Throwable {
+    public HttpBrowserCapabilitiesBase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -184,7 +184,7 @@ public class HttpBrowserCapabilitiesBase extends NetObject  {
         try {
             ArrayList<Version> resultingArrayList = new ArrayList<Version>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetClrVersions");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Version(resultingObject));
             }
             Version[] resultingArray = new Version[resultingArrayList.size()];

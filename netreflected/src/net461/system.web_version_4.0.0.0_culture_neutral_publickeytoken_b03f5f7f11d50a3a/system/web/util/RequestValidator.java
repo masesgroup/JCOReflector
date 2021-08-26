@@ -95,7 +95,7 @@ public class RequestValidator extends NetObject  {
         }
     }
 
-    public RequestValidator(Object instance) throws Throwable {
+    public RequestValidator(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class RequestValidator extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -154,7 +154,7 @@ public class RequestValidator extends NetObject  {
     
     // Methods section
     
-    public boolean InvokeIsValidRequestString(HttpContext context, java.lang.String value, RequestValidationSource requestValidationSource, java.lang.String collectionKey, JCORefOut validationFailureIndex) throws Throwable {
+    public boolean InvokeIsValidRequestString(HttpContext context, java.lang.String value, RequestValidationSource requestValidationSource, java.lang.String collectionKey, JCORefOut<java.util.concurrent.atomic.AtomicInteger> validationFailureIndex) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

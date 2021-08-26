@@ -92,7 +92,7 @@ public class CategorySchema extends NetObject  {
         }
     }
 
-    public CategorySchema(Object instance) throws Throwable {
+    public CategorySchema(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class CategorySchema extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -95,7 +95,7 @@ public class TextEndOfLine extends TextRun  {
         }
     }
 
-    public TextEndOfLine(Object instance) throws Throwable {
+    public TextEndOfLine(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class TextEndOfLine extends TextRun  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

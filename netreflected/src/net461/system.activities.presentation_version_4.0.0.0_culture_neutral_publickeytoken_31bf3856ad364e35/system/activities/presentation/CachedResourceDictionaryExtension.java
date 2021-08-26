@@ -96,7 +96,7 @@ public class CachedResourceDictionaryExtension extends MarkupExtension  {
         }
     }
 
-    public CachedResourceDictionaryExtension(Object instance) throws Throwable {
+    public CachedResourceDictionaryExtension(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class CachedResourceDictionaryExtension extends MarkupExtension  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

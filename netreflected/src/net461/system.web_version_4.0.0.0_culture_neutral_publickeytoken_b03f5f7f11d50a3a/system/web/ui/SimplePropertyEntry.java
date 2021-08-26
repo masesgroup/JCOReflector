@@ -93,7 +93,7 @@ public class SimplePropertyEntry extends PropertyEntry  {
         }
     }
 
-    public SimplePropertyEntry(Object instance) throws Throwable {
+    public SimplePropertyEntry(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class SimplePropertyEntry extends PropertyEntry  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -99,7 +99,7 @@ public class MembershipCreateUserException extends NetException {
         super();
     }
 
-    public MembershipCreateUserException(Object instance) {
+    public MembershipCreateUserException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -133,7 +133,7 @@ public class MembershipCreateUserException extends NetException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

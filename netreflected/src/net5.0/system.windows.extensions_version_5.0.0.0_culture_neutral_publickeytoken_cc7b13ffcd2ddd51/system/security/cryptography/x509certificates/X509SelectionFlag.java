@@ -108,7 +108,7 @@ public class X509SelectionFlag extends NetObject  {
         }
     }
 
-    public X509SelectionFlag(Object instance) {
+    public X509SelectionFlag(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class X509SelectionFlag extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -96,7 +96,7 @@ public class ProfileProvider extends SettingsProvider  {
         }
     }
 
-    public ProfileProvider(Object instance) throws Throwable {
+    public ProfileProvider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class ProfileProvider extends SettingsProvider  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -161,7 +161,7 @@ public class ProfileProvider extends SettingsProvider  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("DeleteProfiles", (Object)usernames);
+            return (int)classInstance.Invoke("DeleteProfiles", (java.lang.Object)usernames);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,7 +171,7 @@ public class ProfileProvider extends SettingsProvider  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("DeleteProfiles", (Object)dupParam0.getJCRefOut());
+            return (int)classInstance.Invoke("DeleteProfiles", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +197,7 @@ public class ProfileProvider extends SettingsProvider  {
         }
     }
 
-    public ProfileInfoCollection FindInactiveProfilesByUserName(ProfileAuthenticationOption authenticationOption, java.lang.String usernameToMatch, DateTime userInactiveSinceDate, int pageIndex, int pageSize, JCORefOut totalRecords) throws Throwable {
+    public ProfileInfoCollection FindInactiveProfilesByUserName(ProfileAuthenticationOption authenticationOption, java.lang.String usernameToMatch, DateTime userInactiveSinceDate, int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -208,7 +208,7 @@ public class ProfileProvider extends SettingsProvider  {
         }
     }
 
-    public ProfileInfoCollection FindProfilesByUserName(ProfileAuthenticationOption authenticationOption, java.lang.String usernameToMatch, int pageIndex, int pageSize, JCORefOut totalRecords) throws Throwable {
+    public ProfileInfoCollection FindProfilesByUserName(ProfileAuthenticationOption authenticationOption, java.lang.String usernameToMatch, int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -219,7 +219,7 @@ public class ProfileProvider extends SettingsProvider  {
         }
     }
 
-    public ProfileInfoCollection GetAllInactiveProfiles(ProfileAuthenticationOption authenticationOption, DateTime userInactiveSinceDate, int pageIndex, int pageSize, JCORefOut totalRecords) throws Throwable {
+    public ProfileInfoCollection GetAllInactiveProfiles(ProfileAuthenticationOption authenticationOption, DateTime userInactiveSinceDate, int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -230,7 +230,7 @@ public class ProfileProvider extends SettingsProvider  {
         }
     }
 
-    public ProfileInfoCollection GetAllProfiles(ProfileAuthenticationOption authenticationOption, int pageIndex, int pageSize, JCORefOut totalRecords) throws Throwable {
+    public ProfileInfoCollection GetAllProfiles(ProfileAuthenticationOption authenticationOption, int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

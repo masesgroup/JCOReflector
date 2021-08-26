@@ -97,7 +97,7 @@ public class MdiClient extends Control  {
         }
     }
 
-    public MdiClient(Object instance) throws Throwable {
+    public MdiClient(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class MdiClient extends Control  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -176,7 +176,7 @@ public class MdiClient extends Control  {
         try {
             ArrayList<Form> resultingArrayList = new ArrayList<Form>();
             JCObject resultingObjects = (JCObject)classInstance.Get("MdiChildren");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Form(resultingObject));
             }
             Form[] resultingArray = new Form[resultingArrayList.size()];

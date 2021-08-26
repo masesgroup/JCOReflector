@@ -99,7 +99,7 @@ public class ObjectDisposedException extends InvalidOperationException {
         super();
     }
 
-    public ObjectDisposedException(Object instance) {
+    public ObjectDisposedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -133,7 +133,7 @@ public class ObjectDisposedException extends InvalidOperationException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

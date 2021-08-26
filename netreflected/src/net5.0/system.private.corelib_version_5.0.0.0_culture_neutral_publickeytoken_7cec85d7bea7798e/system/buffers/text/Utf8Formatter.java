@@ -102,7 +102,7 @@ public class Utf8Formatter extends NetObject  {
         }
     }
 
-    public Utf8Formatter(Object instance) throws Throwable {
+    public Utf8Formatter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -122,7 +122,7 @@ public class Utf8Formatter extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

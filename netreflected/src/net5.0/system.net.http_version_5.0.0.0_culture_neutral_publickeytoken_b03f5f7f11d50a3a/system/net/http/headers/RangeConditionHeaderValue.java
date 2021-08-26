@@ -97,7 +97,7 @@ public class RangeConditionHeaderValue extends NetObject implements system.IClon
         }
     }
 
-    public RangeConditionHeaderValue(Object instance) throws Throwable {
+    public RangeConditionHeaderValue(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class RangeConditionHeaderValue extends NetObject implements system.IClon
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

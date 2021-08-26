@@ -111,7 +111,7 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
         }
     }
 
-    public IDuplexSessionChannelImplementation(Object instance) throws Throwable {
+    public IDuplexSessionChannelImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class IDuplexSessionChannelImplementation extends NetObject implements ID
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

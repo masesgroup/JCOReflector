@@ -96,7 +96,7 @@ public class Selection extends ContextItem  {
         }
     }
 
-    public Selection(Object instance) throws Throwable {
+    public Selection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class Selection extends ContextItem  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -155,7 +155,7 @@ public class Selection extends ContextItem  {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((Object)toObjectFromArray(selectedObjects)));
+            setJCOInstance((JCObject)classType.NewObject((java.lang.Object)toObjectFromArray(selectedObjects)));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

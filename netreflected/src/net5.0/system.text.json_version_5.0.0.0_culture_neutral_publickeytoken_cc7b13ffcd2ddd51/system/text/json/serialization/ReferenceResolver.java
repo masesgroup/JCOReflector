@@ -92,7 +92,7 @@ public class ReferenceResolver extends NetObject  {
         }
     }
 
-    public ReferenceResolver(Object instance) throws Throwable {
+    public ReferenceResolver(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class ReferenceResolver extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -154,7 +154,7 @@ public class ReferenceResolver extends NetObject  {
         }
     }
 
-    public java.lang.String GetReference(NetObject value, JCORefOut alreadyExists) throws Throwable {
+    public java.lang.String GetReference(NetObject value, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> alreadyExists) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

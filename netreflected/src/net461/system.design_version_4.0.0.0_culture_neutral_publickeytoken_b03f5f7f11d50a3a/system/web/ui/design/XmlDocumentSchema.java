@@ -95,7 +95,7 @@ public class XmlDocumentSchema extends NetObject  {
         }
     }
 
-    public XmlDocumentSchema(Object instance) throws Throwable {
+    public XmlDocumentSchema(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class XmlDocumentSchema extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -164,7 +164,7 @@ public class XmlDocumentSchema extends NetObject  {
         try {
             ArrayList<IDataSourceViewSchema> resultingArrayList = new ArrayList<IDataSourceViewSchema>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetViews");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IDataSourceViewSchemaImplementation(resultingObject));
             }
             IDataSourceViewSchema[] resultingArray = new IDataSourceViewSchema[resultingArrayList.size()];

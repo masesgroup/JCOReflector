@@ -96,7 +96,7 @@ public class IdentityValidationException extends NetException {
         super();
     }
 
-    public IdentityValidationException(Object instance) {
+    public IdentityValidationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -130,7 +130,7 @@ public class IdentityValidationException extends NetException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

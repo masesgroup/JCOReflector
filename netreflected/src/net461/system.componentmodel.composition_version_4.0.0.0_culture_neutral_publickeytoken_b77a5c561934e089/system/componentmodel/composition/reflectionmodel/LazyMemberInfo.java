@@ -95,7 +95,7 @@ public class LazyMemberInfo extends ValueType  {
         }
     }
 
-    public LazyMemberInfo(Object instance) throws Throwable {
+    public LazyMemberInfo(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class LazyMemberInfo extends ValueType  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -174,7 +174,7 @@ public class LazyMemberInfo extends ValueType  {
         try {
             ArrayList<MemberInfo> resultingArrayList = new ArrayList<MemberInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetAccessors");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MemberInfo(resultingObject));
             }
             MemberInfo[] resultingArray = new MemberInfo[resultingArrayList.size()];

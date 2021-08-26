@@ -108,7 +108,7 @@ public class FileAttribute extends NetObject  {
         }
     }
 
-    public FileAttribute(Object instance) {
+    public FileAttribute(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class FileAttribute extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

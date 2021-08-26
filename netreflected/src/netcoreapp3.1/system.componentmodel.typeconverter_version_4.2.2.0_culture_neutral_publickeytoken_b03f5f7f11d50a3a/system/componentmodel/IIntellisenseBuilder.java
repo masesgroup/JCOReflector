@@ -96,9 +96,9 @@ public interface IIntellisenseBuilder extends IJCOBridgeReflected {
     /**
      * Returns the instantiated class
      * 
-     * @return An {@link Object} representing the instance of the instantiated Class
+     * @return An {@link java.lang.Object} representing the instance of the instantiated Class
      */
-    public Object getJCOInstance();
+    public java.lang.Object getJCOInstance();
 
     /**
      * Returns the instantiated class Type
@@ -109,7 +109,7 @@ public interface IIntellisenseBuilder extends IJCOBridgeReflected {
 
     // Methods section
     
-    public boolean Show(java.lang.String language, java.lang.String value, java.lang.String newValue) throws Throwable;
+    public boolean Show(java.lang.String language, java.lang.String value, JCORefOut newValue) throws Throwable;
 
 
     

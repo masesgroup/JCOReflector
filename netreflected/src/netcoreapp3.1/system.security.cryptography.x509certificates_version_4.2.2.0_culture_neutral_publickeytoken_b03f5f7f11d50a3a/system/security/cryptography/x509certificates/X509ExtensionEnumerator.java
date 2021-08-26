@@ -107,7 +107,7 @@ public class X509ExtensionEnumerator extends NetObject implements Iterator<X509E
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

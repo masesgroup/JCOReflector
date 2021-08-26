@@ -108,7 +108,7 @@ public class CustomErrorsModes extends NetObject  {
         }
     }
 
-    public CustomErrorsModes(Object instance) {
+    public CustomErrorsModes(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class CustomErrorsModes extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

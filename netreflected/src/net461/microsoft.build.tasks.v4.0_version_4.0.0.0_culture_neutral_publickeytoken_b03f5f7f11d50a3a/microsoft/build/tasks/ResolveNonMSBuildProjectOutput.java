@@ -95,7 +95,7 @@ public class ResolveNonMSBuildProjectOutput extends ResolveProjectBase  {
         }
     }
 
-    public ResolveNonMSBuildProjectOutput(Object instance) throws Throwable {
+    public ResolveNonMSBuildProjectOutput(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class ResolveNonMSBuildProjectOutput extends ResolveProjectBase  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -174,7 +174,7 @@ public class ResolveNonMSBuildProjectOutput extends ResolveProjectBase  {
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
             JCObject resultingObjects = (JCObject)classInstance.Get("ResolvedOutputPaths");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];
@@ -201,7 +201,7 @@ public class ResolveNonMSBuildProjectOutput extends ResolveProjectBase  {
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
             JCObject resultingObjects = (JCObject)classInstance.Get("UnresolvedProjectReferences");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];

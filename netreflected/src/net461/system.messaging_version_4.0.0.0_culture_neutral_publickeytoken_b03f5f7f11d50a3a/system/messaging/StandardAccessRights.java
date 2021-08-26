@@ -108,7 +108,7 @@ public class StandardAccessRights extends NetObject  {
         }
     }
 
-    public StandardAccessRights(Object instance) {
+    public StandardAccessRights(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class StandardAccessRights extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

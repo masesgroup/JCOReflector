@@ -99,7 +99,7 @@ public class RelativeSource extends MarkupExtension implements system.componentm
         }
     }
 
-    public RelativeSource(Object instance) throws Throwable {
+    public RelativeSource(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class RelativeSource extends MarkupExtension implements system.componentm
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

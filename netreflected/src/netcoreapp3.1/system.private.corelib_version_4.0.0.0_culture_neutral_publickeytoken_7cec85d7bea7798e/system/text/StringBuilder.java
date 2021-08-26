@@ -105,7 +105,7 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
         }
     }
 
-    public StringBuilder(Object instance) throws Throwable {
+    public StringBuilder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -125,7 +125,7 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -292,7 +292,7 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objAppend = (JCObject)classInstance.Invoke("Append", (Object)value);
+            JCObject objAppend = (JCObject)classInstance.Invoke("Append", (java.lang.Object)value);
             return new StringBuilder(objAppend);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -303,7 +303,7 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objAppend = (JCObject)classInstance.Invoke("Append", (Object)dupParam0.getJCRefOut());
+            JCObject objAppend = (JCObject)classInstance.Invoke("Append", (java.lang.Object)dupParam0.getJCRefOut());
             return new StringBuilder(objAppend);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

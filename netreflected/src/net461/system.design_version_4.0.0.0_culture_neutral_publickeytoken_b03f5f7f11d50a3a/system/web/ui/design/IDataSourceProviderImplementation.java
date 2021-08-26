@@ -92,7 +92,7 @@ public class IDataSourceProviderImplementation extends NetObject implements IDat
         }
     }
 
-    public IDataSourceProviderImplementation(Object instance) throws Throwable {
+    public IDataSourceProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class IDataSourceProviderImplementation extends NetObject implements IDat
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

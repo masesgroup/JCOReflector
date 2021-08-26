@@ -93,7 +93,7 @@ public class Pkcs12KeyBag extends Pkcs12SafeBag  {
         }
     }
 
-    public Pkcs12KeyBag(Object instance) throws Throwable {
+    public Pkcs12KeyBag(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class Pkcs12KeyBag extends Pkcs12SafeBag  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

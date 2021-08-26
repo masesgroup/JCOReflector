@@ -95,7 +95,7 @@ public class ViewCollection extends ControlCollection  {
         }
     }
 
-    public ViewCollection(Object instance) throws Throwable {
+    public ViewCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class ViewCollection extends ControlCollection  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

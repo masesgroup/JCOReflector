@@ -97,7 +97,7 @@ public class InvalidExpressionException extends DataException {
         super();
     }
 
-    public InvalidExpressionException(Object instance) {
+    public InvalidExpressionException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class InvalidExpressionException extends DataException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

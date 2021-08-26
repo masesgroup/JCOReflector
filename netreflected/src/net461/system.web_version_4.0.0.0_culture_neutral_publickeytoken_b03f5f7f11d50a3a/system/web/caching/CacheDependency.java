@@ -94,7 +94,7 @@ public class CacheDependency extends NetObject implements AutoCloseable {
         }
     }
 
-    public CacheDependency(Object instance) throws Throwable {
+    public CacheDependency(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class CacheDependency extends NetObject implements AutoCloseable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -166,7 +166,7 @@ public class CacheDependency extends NetObject implements AutoCloseable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((Object)filenames));
+            setJCOInstance((JCObject)classType.NewObject((java.lang.Object)filenames));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,9 +251,9 @@ public class CacheDependency extends NetObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFileDependencies");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];

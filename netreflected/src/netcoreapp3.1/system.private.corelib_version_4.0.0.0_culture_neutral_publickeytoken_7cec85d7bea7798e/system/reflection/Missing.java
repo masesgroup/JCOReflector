@@ -96,7 +96,7 @@ public class Missing extends NetObject implements system.runtime.serialization.I
         }
     }
 
-    public Missing(Object instance) throws Throwable {
+    public Missing(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class Missing extends NetObject implements system.runtime.serialization.I
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -104,7 +104,7 @@ public class BlobBuilder extends NetObject  {
         }
     }
 
-    public BlobBuilder(Object instance) throws Throwable {
+    public BlobBuilder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -124,7 +124,7 @@ public class BlobBuilder extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -181,9 +181,9 @@ public class BlobBuilder extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("ToArray");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -200,9 +200,9 @@ public class BlobBuilder extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("ToArray", start, byteCount);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -320,7 +320,7 @@ public class BlobBuilder extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("WriteBytes", (Object)buffer);
+            classInstance.Invoke("WriteBytes", (java.lang.Object)buffer);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -330,7 +330,7 @@ public class BlobBuilder extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("WriteBytes", (Object)dupParam0.getJCRefOut());
+            classInstance.Invoke("WriteBytes", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -406,11 +406,11 @@ public class BlobBuilder extends NetObject  {
         }
     }
 
-    public void WriteContentTo(BlobWriter destination) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.BadImageFormatException {
+    public void WriteContentTo(JCORefOut<BlobWriter> destination) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("WriteContentTo", destination == null ? null : destination.getJCOInstance());
+            classInstance.Invoke("WriteContentTo", destination.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -610,7 +610,7 @@ public class BlobBuilder extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("WriteUTF16", (Object)value);
+            classInstance.Invoke("WriteUTF16", (java.lang.Object)value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -620,7 +620,7 @@ public class BlobBuilder extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("WriteUTF16", (Object)dupParam0.getJCRefOut());
+            classInstance.Invoke("WriteUTF16", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

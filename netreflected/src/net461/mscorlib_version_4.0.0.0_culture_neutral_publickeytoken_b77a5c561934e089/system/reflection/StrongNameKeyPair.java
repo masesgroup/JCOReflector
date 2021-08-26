@@ -99,7 +99,7 @@ public class StrongNameKeyPair extends NetObject implements system.runtime.seria
         }
     }
 
-    public StrongNameKeyPair(Object instance) throws Throwable {
+    public StrongNameKeyPair(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class StrongNameKeyPair extends NetObject implements system.runtime.seria
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -151,7 +151,7 @@ public class StrongNameKeyPair extends NetObject implements system.runtime.seria
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((Object)keyPairArray));
+            setJCOInstance((JCObject)classType.NewObject((java.lang.Object)keyPairArray));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -208,9 +208,9 @@ public class StrongNameKeyPair extends NetObject implements system.runtime.seria
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Get("PublicKey");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];

@@ -92,7 +92,7 @@ public class IDataErrorInfoImplementation extends NetObject implements IDataErro
         }
     }
 
-    public IDataErrorInfoImplementation(Object instance) throws Throwable {
+    public IDataErrorInfoImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class IDataErrorInfoImplementation extends NetObject implements IDataErro
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -96,7 +96,7 @@ public class Manipulation2DCompletedEventArgs extends EventArgs  {
         }
     }
 
-    public Manipulation2DCompletedEventArgs(Object instance) throws Throwable {
+    public Manipulation2DCompletedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class Manipulation2DCompletedEventArgs extends EventArgs  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -97,7 +97,7 @@ public class FormViewPagerRow extends FormViewRow implements system.web.ui.INami
         }
     }
 
-    public FormViewPagerRow(Object instance) throws Throwable {
+    public FormViewPagerRow(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class FormViewPagerRow extends FormViewRow implements system.web.ui.INami
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

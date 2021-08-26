@@ -97,7 +97,7 @@ public class DbSpatialServices extends NetObject  {
         }
     }
 
-    public DbSpatialServices(Object instance) throws Throwable {
+    public DbSpatialServices(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class DbSpatialServices extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -312,9 +312,9 @@ public class DbSpatialServices extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("AsBinary", geographyValue == null ? null : geographyValue.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -331,9 +331,9 @@ public class DbSpatialServices extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("AsBinary", geometryValue == null ? null : geometryValue.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -476,7 +476,7 @@ public class DbSpatialServices extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGeographyFromBinary = (JCObject)classInstance.Invoke("GeographyFromBinary", (Object)wellKnownBinary);
+            JCObject objGeographyFromBinary = (JCObject)classInstance.Invoke("GeographyFromBinary", (java.lang.Object)wellKnownBinary);
             return new DbGeography(objGeographyFromBinary);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -487,7 +487,7 @@ public class DbSpatialServices extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGeographyFromBinary = (JCObject)classInstance.Invoke("GeographyFromBinary", (Object)dupParam0.getJCRefOut());
+            JCObject objGeographyFromBinary = (JCObject)classInstance.Invoke("GeographyFromBinary", (java.lang.Object)dupParam0.getJCRefOut());
             return new DbGeography(objGeographyFromBinary);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -916,7 +916,7 @@ public class DbSpatialServices extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGeometryFromBinary = (JCObject)classInstance.Invoke("GeometryFromBinary", (Object)wellKnownBinary);
+            JCObject objGeometryFromBinary = (JCObject)classInstance.Invoke("GeometryFromBinary", (java.lang.Object)wellKnownBinary);
             return new DbGeometry(objGeometryFromBinary);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -927,7 +927,7 @@ public class DbSpatialServices extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGeometryFromBinary = (JCObject)classInstance.Invoke("GeometryFromBinary", (Object)dupParam0.getJCRefOut());
+            JCObject objGeometryFromBinary = (JCObject)classInstance.Invoke("GeometryFromBinary", (java.lang.Object)dupParam0.getJCRefOut());
             return new DbGeometry(objGeometryFromBinary);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

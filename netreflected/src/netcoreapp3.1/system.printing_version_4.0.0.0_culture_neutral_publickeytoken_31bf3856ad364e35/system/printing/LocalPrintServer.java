@@ -96,7 +96,7 @@ public class LocalPrintServer extends PrintServer  {
         }
     }
 
-    public LocalPrintServer(Object instance) throws Throwable {
+    public LocalPrintServer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class LocalPrintServer extends PrintServer  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -155,7 +155,7 @@ public class LocalPrintServer extends PrintServer  {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((Object)toObjectFromArray(propertiesFilter)));
+            setJCOInstance((JCObject)classType.NewObject((java.lang.Object)toObjectFromArray(propertiesFilter)));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -185,7 +185,7 @@ public class LocalPrintServer extends PrintServer  {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((Object)propertiesFilter));
+            setJCOInstance((JCObject)classType.NewObject((java.lang.Object)propertiesFilter));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

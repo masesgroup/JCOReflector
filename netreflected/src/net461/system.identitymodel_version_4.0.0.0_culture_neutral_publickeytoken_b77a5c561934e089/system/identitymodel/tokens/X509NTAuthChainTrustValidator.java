@@ -95,7 +95,7 @@ public class X509NTAuthChainTrustValidator extends X509CertificateValidator  {
         }
     }
 
-    public X509NTAuthChainTrustValidator(Object instance) throws Throwable {
+    public X509NTAuthChainTrustValidator(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class X509NTAuthChainTrustValidator extends X509CertificateValidator  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

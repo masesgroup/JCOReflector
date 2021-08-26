@@ -94,7 +94,7 @@ public class INameCreationServiceImplementation extends NetObject implements INa
         }
     }
 
-    public INameCreationServiceImplementation(Object instance) throws Throwable {
+    public INameCreationServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class INameCreationServiceImplementation extends NetObject implements INa
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -99,7 +99,7 @@ public class InstanceCompleteException extends InstancePersistenceCommandExcepti
         super();
     }
 
-    public InstanceCompleteException(Object instance) {
+    public InstanceCompleteException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -133,7 +133,7 @@ public class InstanceCompleteException extends InstancePersistenceCommandExcepti
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

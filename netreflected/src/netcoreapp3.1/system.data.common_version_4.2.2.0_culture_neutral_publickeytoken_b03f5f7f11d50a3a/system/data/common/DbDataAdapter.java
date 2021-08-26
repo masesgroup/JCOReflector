@@ -102,7 +102,7 @@ public class DbDataAdapter extends DataAdapter implements system.ICloneable {
         }
     }
 
-    public DbDataAdapter(Object instance) throws Throwable {
+    public DbDataAdapter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -122,7 +122,7 @@ public class DbDataAdapter extends DataAdapter implements system.ICloneable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -207,7 +207,7 @@ public class DbDataAdapter extends DataAdapter implements system.ICloneable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("Update", (Object)toObjectFromArray(dataRows));
+            return (int)classInstance.Invoke("Update", (java.lang.Object)toObjectFromArray(dataRows));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -260,7 +260,7 @@ public class DbDataAdapter extends DataAdapter implements system.ICloneable {
         try {
             ArrayList<DataTable> resultingArrayList = new ArrayList<DataTable>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("FillSchema", dataSet == null ? null : dataSet.getJCOInstance(), schemaType == null ? null : schemaType.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataTable(resultingObject));
             }
             DataTable[] resultingArray = new DataTable[resultingArrayList.size()];
@@ -277,7 +277,7 @@ public class DbDataAdapter extends DataAdapter implements system.ICloneable {
         try {
             ArrayList<DataTable> resultingArrayList = new ArrayList<DataTable>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("FillSchema", dataSet == null ? null : dataSet.getJCOInstance(), schemaType == null ? null : schemaType.getJCOInstance(), srcTable);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataTable(resultingObject));
             }
             DataTable[] resultingArray = new DataTable[resultingArrayList.size()];
@@ -294,7 +294,7 @@ public class DbDataAdapter extends DataAdapter implements system.ICloneable {
         try {
             ArrayList<IDataParameter> resultingArrayList = new ArrayList<IDataParameter>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFillParameters");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IDataParameterImplementation(resultingObject));
             }
             IDataParameter[] resultingArray = new IDataParameter[resultingArrayList.size()];

@@ -96,7 +96,7 @@ public class HeaderHandler extends JCDelegate implements IJCEventEmit, IJCOBridg
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return this;
     }
 
@@ -104,14 +104,14 @@ public class HeaderHandler extends JCDelegate implements IJCEventEmit, IJCOBridg
         return classType;
     }
 
-    public final Object EventRaised(Object... argsFromJCOBridge) {
+    public final java.lang.Object EventRaised(java.lang.Object... argsFromJCOBridge) {
         try
         {
             Header[] headers = null;
             if (argsFromJCOBridge[0] != null) {
                 ArrayList<Header> resultingArrayList0 = new ArrayList<Header>();
                 JCObject resultingObjects = (JCObject)argsFromJCOBridge[0];
-                for (Object resultingObject0 : resultingObjects) {
+                for (java.lang.Object resultingObject0 : resultingObjects) {
                     resultingArrayList0.add(new Header(resultingObject0));
                 }
                 headers = new Header[resultingArrayList0.size()];
@@ -135,14 +135,14 @@ public class HeaderHandler extends JCDelegate implements IJCEventEmit, IJCOBridg
         }
     }
 
-    public final Object DelegateInvoked(Object... argsFromJCOBridge) {
+    public final java.lang.Object DelegateInvoked(java.lang.Object... argsFromJCOBridge) {
         try
         {
             Header[] headers = null;
             if (argsFromJCOBridge[0] != null) {
                 ArrayList<Header> resultingArrayList0 = new ArrayList<Header>();
                 JCObject resultingObjects = (JCObject)argsFromJCOBridge[0];
-                for (Object resultingObject0 : resultingObjects) {
+                for (java.lang.Object resultingObject0 : resultingObjects) {
                     resultingArrayList0.add(new Header(resultingObject0));
                 }
                 headers = new Header[resultingArrayList0.size()];
@@ -175,7 +175,7 @@ public class HeaderHandler extends JCDelegate implements IJCEventEmit, IJCOBridg
         callerInstance = instance;
     }
 
-    public HeaderHandler(Object instance) throws Throwable {
+    public HeaderHandler(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         if (instance == null) throw new IllegalArgumentException("Instance cannot be null");
         if (instance instanceof IHeaderHandler) {
@@ -187,7 +187,7 @@ public class HeaderHandler extends JCDelegate implements IJCEventEmit, IJCOBridg
                     String.format("Class %s is not supported.", instance.getClass().getTypeName()));
     }
 
-    protected final static <T extends IJCOBridgeReflected> Object toObjectFromArray(T[] input) {
+    protected final static <T extends IJCOBridgeReflected> java.lang.Object toObjectFromArray(T[] input) {
         return JCOBridgeInstance.toObjectFromArray(input);
     }
 
@@ -199,7 +199,7 @@ public class HeaderHandler extends JCDelegate implements IJCEventEmit, IJCOBridg
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objDynamicInvoke = (JCObject)classInstance.Invoke("DynamicInvoke", (Object)toObjectFromArray(headers));
+            JCObject objDynamicInvoke = (JCObject)classInstance.Invoke("DynamicInvoke", (java.lang.Object)toObjectFromArray(headers));
             return new NetObject(objDynamicInvoke);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

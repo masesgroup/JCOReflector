@@ -101,7 +101,7 @@ public class IRawElementProviderFragmentRootImplementation extends NetObject imp
         }
     }
 
-    public IRawElementProviderFragmentRootImplementation(Object instance) throws Throwable {
+    public IRawElementProviderFragmentRootImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -121,7 +121,7 @@ public class IRawElementProviderFragmentRootImplementation extends NetObject imp
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -145,9 +145,9 @@ public class IRawElementProviderFragmentRootImplementation extends NetObject imp
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetRuntimeId");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             int[] resultingArray = new int[resultingArrayList.size()];
@@ -221,7 +221,7 @@ public class IRawElementProviderFragmentRootImplementation extends NetObject imp
         try {
             ArrayList<IRawElementProviderSimple> resultingArrayList = new ArrayList<IRawElementProviderSimple>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetEmbeddedFragmentRoots");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IRawElementProviderSimpleImplementation(resultingObject));
             }
             IRawElementProviderSimple[] resultingArray = new IRawElementProviderSimple[resultingArrayList.size()];

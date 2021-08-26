@@ -97,7 +97,7 @@ public class XmlDeserializationEvents extends ValueType  {
         }
     }
 
-    public XmlDeserializationEvents(Object instance) throws Throwable {
+    public XmlDeserializationEvents(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class XmlDeserializationEvents extends ValueType  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

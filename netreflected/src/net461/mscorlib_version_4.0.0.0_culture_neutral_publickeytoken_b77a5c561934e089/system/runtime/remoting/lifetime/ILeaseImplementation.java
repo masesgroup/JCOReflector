@@ -96,7 +96,7 @@ public class ILeaseImplementation extends NetObject implements ILease {
         }
     }
 
-    public ILeaseImplementation(Object instance) throws Throwable {
+    public ILeaseImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class ILeaseImplementation extends NetObject implements ILease {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

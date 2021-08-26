@@ -99,7 +99,7 @@ public class ReflectionTypeLoadException extends SystemException {
         super();
     }
 
-    public ReflectionTypeLoadException(Object instance) {
+    public ReflectionTypeLoadException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -133,7 +133,7 @@ public class ReflectionTypeLoadException extends SystemException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -202,7 +202,7 @@ public class ReflectionTypeLoadException extends SystemException {
         try {
             ArrayList<NetException> resultingArrayList = new ArrayList<NetException>();
             JCObject resultingObjects = (JCObject)classInstance.Get("LoaderExceptions");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetException(resultingObject));
             }
             NetException[] resultingArray = new NetException[resultingArrayList.size()];
@@ -219,7 +219,7 @@ public class ReflectionTypeLoadException extends SystemException {
         try {
             ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
             JCObject resultingObjects = (JCObject)classInstance.Get("Types");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetType(resultingObject));
             }
             NetType[] resultingArray = new NetType[resultingArrayList.size()];

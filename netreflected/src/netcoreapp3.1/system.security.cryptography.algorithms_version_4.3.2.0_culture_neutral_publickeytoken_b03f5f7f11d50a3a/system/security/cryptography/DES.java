@@ -94,7 +94,7 @@ public class DES extends SymmetricAlgorithm  {
         }
     }
 
-    public DES(Object instance) throws Throwable {
+    public DES(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class DES extends SymmetricAlgorithm  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -149,7 +149,7 @@ public class DES extends SymmetricAlgorithm  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classType.Invoke("IsSemiWeakKey", (Object)rgbKey);
+            return (boolean)classType.Invoke("IsSemiWeakKey", (java.lang.Object)rgbKey);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -159,7 +159,7 @@ public class DES extends SymmetricAlgorithm  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classType.Invoke("IsSemiWeakKey", (Object)dupParam0.getJCRefOut());
+            return (boolean)classType.Invoke("IsSemiWeakKey", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,7 +169,7 @@ public class DES extends SymmetricAlgorithm  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classType.Invoke("IsWeakKey", (Object)rgbKey);
+            return (boolean)classType.Invoke("IsWeakKey", (java.lang.Object)rgbKey);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +179,7 @@ public class DES extends SymmetricAlgorithm  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classType.Invoke("IsWeakKey", (Object)dupParam0.getJCRefOut());
+            return (boolean)classType.Invoke("IsWeakKey", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

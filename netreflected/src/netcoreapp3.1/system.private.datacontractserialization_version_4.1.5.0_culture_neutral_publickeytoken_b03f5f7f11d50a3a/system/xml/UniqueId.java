@@ -93,7 +93,7 @@ public class UniqueId extends NetObject  {
         }
     }
 
-    public UniqueId(Object instance) throws Throwable {
+    public UniqueId(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class UniqueId extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -152,7 +152,7 @@ public class UniqueId extends NetObject  {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((Object)guid));
+            setJCOInstance((JCObject)classType.NewObject((java.lang.Object)guid));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

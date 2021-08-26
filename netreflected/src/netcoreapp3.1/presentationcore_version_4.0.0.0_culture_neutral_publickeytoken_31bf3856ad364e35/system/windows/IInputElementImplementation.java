@@ -104,7 +104,7 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         }
     }
 
-    public IInputElementImplementation(Object instance) throws Throwable {
+    public IInputElementImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -124,7 +124,7 @@ public class IInputElementImplementation extends NetObject implements IInputElem
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

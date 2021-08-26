@@ -107,7 +107,7 @@ public class MessageQueueEnumerator extends NetObject implements Iterator<Messag
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

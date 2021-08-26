@@ -95,7 +95,7 @@ public class TransactionInterop extends NetObject  {
         }
     }
 
-    public TransactionInterop(Object instance) throws Throwable {
+    public TransactionInterop(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class TransactionInterop extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -150,9 +150,9 @@ public class TransactionInterop extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetExportCookie", transaction == null ? null : transaction.getJCOInstance(), whereabouts);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -169,9 +169,9 @@ public class TransactionInterop extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetExportCookie", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1.getJCRefOut());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -188,9 +188,9 @@ public class TransactionInterop extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetTransmitterPropagationToken", transaction == null ? null : transaction.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -207,9 +207,9 @@ public class TransactionInterop extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetWhereabouts");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -248,7 +248,7 @@ public class TransactionInterop extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetTransactionFromExportCookie = (JCObject)classType.Invoke("GetTransactionFromExportCookie", (Object)cookie);
+            JCObject objGetTransactionFromExportCookie = (JCObject)classType.Invoke("GetTransactionFromExportCookie", (java.lang.Object)cookie);
             return new Transaction(objGetTransactionFromExportCookie);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -259,7 +259,7 @@ public class TransactionInterop extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetTransactionFromExportCookie = (JCObject)classType.Invoke("GetTransactionFromExportCookie", (Object)dupParam0.getJCRefOut());
+            JCObject objGetTransactionFromExportCookie = (JCObject)classType.Invoke("GetTransactionFromExportCookie", (java.lang.Object)dupParam0.getJCRefOut());
             return new Transaction(objGetTransactionFromExportCookie);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -270,7 +270,7 @@ public class TransactionInterop extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetTransactionFromTransmitterPropagationToken = (JCObject)classType.Invoke("GetTransactionFromTransmitterPropagationToken", (Object)propagationToken);
+            JCObject objGetTransactionFromTransmitterPropagationToken = (JCObject)classType.Invoke("GetTransactionFromTransmitterPropagationToken", (java.lang.Object)propagationToken);
             return new Transaction(objGetTransactionFromTransmitterPropagationToken);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -281,7 +281,7 @@ public class TransactionInterop extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetTransactionFromTransmitterPropagationToken = (JCObject)classType.Invoke("GetTransactionFromTransmitterPropagationToken", (Object)dupParam0.getJCRefOut());
+            JCObject objGetTransactionFromTransmitterPropagationToken = (JCObject)classType.Invoke("GetTransactionFromTransmitterPropagationToken", (java.lang.Object)dupParam0.getJCRefOut());
             return new Transaction(objGetTransactionFromTransmitterPropagationToken);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

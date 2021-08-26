@@ -99,7 +99,7 @@ public class DriveInfo extends NetObject implements system.runtime.serialization
         }
     }
 
-    public DriveInfo(Object instance) throws Throwable {
+    public DriveInfo(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class DriveInfo extends NetObject implements system.runtime.serialization
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -168,7 +168,7 @@ public class DriveInfo extends NetObject implements system.runtime.serialization
         try {
             ArrayList<DriveInfo> resultingArrayList = new ArrayList<DriveInfo>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetDrives");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DriveInfo(resultingObject));
             }
             DriveInfo[] resultingArray = new DriveInfo[resultingArrayList.size()];

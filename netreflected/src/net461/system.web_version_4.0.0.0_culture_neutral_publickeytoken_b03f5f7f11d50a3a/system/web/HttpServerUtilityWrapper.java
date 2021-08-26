@@ -98,7 +98,7 @@ public class HttpServerUtilityWrapper extends HttpServerUtilityBase  {
         }
     }
 
-    public HttpServerUtilityWrapper(Object instance) throws Throwable {
+    public HttpServerUtilityWrapper(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class HttpServerUtilityWrapper extends HttpServerUtilityBase  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -165,9 +165,9 @@ public class HttpServerUtilityWrapper extends HttpServerUtilityBase  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("UrlTokenDecode", input);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -288,7 +288,7 @@ public class HttpServerUtilityWrapper extends HttpServerUtilityBase  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Invoke("UrlTokenEncode", (Object)input);
+            return (java.lang.String)classInstance.Invoke("UrlTokenEncode", (java.lang.Object)input);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,7 +298,7 @@ public class HttpServerUtilityWrapper extends HttpServerUtilityBase  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Invoke("UrlTokenEncode", (Object)dupParam0.getJCRefOut());
+            return (java.lang.String)classInstance.Invoke("UrlTokenEncode", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

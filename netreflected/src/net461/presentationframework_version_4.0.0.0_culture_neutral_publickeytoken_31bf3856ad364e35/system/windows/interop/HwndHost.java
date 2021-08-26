@@ -101,7 +101,7 @@ public class HwndHost extends FrameworkElement implements AutoCloseable {
         }
     }
 
-    public HwndHost(Object instance) throws Throwable {
+    public HwndHost(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -121,7 +121,7 @@ public class HwndHost extends FrameworkElement implements AutoCloseable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -186,7 +186,7 @@ public class HwndHost extends FrameworkElement implements AutoCloseable {
      *    Use the static ToIKeyboardInputSink method available in IKeyboardInputSink to obtain an object with an invocable method
      */
     @Deprecated 
-    public boolean OnMnemonic(MSG msg, ModifierKeys modifiers) throws Throwable {
+    public boolean OnMnemonic(JCORefOut<MSG> msg, ModifierKeys modifiers) throws Throwable {
         throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIKeyboardInputSink to obtain the full interface.");
     }
 
@@ -204,7 +204,7 @@ public class HwndHost extends FrameworkElement implements AutoCloseable {
      *    Use the static ToIKeyboardInputSink method available in IKeyboardInputSink to obtain an object with an invocable method
      */
     @Deprecated 
-    public boolean TranslateAccelerator(MSG msg, ModifierKeys modifiers) throws Throwable {
+    public boolean TranslateAccelerator(JCORefOut<MSG> msg, ModifierKeys modifiers) throws Throwable {
         throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIKeyboardInputSink to obtain the full interface.");
     }
 
@@ -213,7 +213,7 @@ public class HwndHost extends FrameworkElement implements AutoCloseable {
      *    Use the static ToIKeyboardInputSink method available in IKeyboardInputSink to obtain an object with an invocable method
      */
     @Deprecated 
-    public boolean TranslateChar(MSG msg, ModifierKeys modifiers) throws Throwable {
+    public boolean TranslateChar(JCORefOut<MSG> msg, ModifierKeys modifiers) throws Throwable {
         throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIKeyboardInputSink to obtain the full interface.");
     }
 

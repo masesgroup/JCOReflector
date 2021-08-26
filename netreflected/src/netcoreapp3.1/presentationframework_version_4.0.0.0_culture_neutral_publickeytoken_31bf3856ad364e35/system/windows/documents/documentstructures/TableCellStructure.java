@@ -96,7 +96,7 @@ public class TableCellStructure extends SemanticBasicElement implements system.w
         }
     }
 
-    public TableCellStructure(Object instance) throws Throwable {
+    public TableCellStructure(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class TableCellStructure extends SemanticBasicElement implements system.w
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

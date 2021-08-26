@@ -108,7 +108,7 @@ public class Module extends NetObject  {
         }
     }
 
-    public Module(Object instance) throws Throwable {
+    public Module(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -128,7 +128,7 @@ public class Module extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -183,9 +183,9 @@ public class Module extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("ResolveSignature", metadataToken);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -204,7 +204,7 @@ public class Module extends NetObject  {
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetCustomAttributes", inherit);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
@@ -221,7 +221,7 @@ public class Module extends NetObject  {
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetCustomAttributes", attributeType == null ? null : attributeType.getJCOInstance(), inherit);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
@@ -282,7 +282,7 @@ public class Module extends NetObject  {
         try {
             ArrayList<FieldInfo> resultingArrayList = new ArrayList<FieldInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFields");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new FieldInfo(resultingObject));
             }
             FieldInfo[] resultingArray = new FieldInfo[resultingArrayList.size()];
@@ -299,7 +299,7 @@ public class Module extends NetObject  {
         try {
             ArrayList<FieldInfo> resultingArrayList = new ArrayList<FieldInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFields", bindingFlags == null ? null : bindingFlags.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new FieldInfo(resultingObject));
             }
             FieldInfo[] resultingArray = new FieldInfo[resultingArrayList.size()];
@@ -393,7 +393,7 @@ public class Module extends NetObject  {
         try {
             ArrayList<MethodInfo> resultingArrayList = new ArrayList<MethodInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetMethods");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MethodInfo(resultingObject));
             }
             MethodInfo[] resultingArray = new MethodInfo[resultingArrayList.size()];
@@ -410,7 +410,7 @@ public class Module extends NetObject  {
         try {
             ArrayList<MethodInfo> resultingArrayList = new ArrayList<MethodInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetMethods", bindingFlags == null ? null : bindingFlags.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MethodInfo(resultingObject));
             }
             MethodInfo[] resultingArray = new MethodInfo[resultingArrayList.size()];
@@ -492,7 +492,7 @@ public class Module extends NetObject  {
         try {
             ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("FindTypes", filter, filterCriteria == null ? null : filterCriteria.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetType(resultingObject));
             }
             NetType[] resultingArray = new NetType[resultingArrayList.size()];
@@ -509,7 +509,7 @@ public class Module extends NetObject  {
         try {
             ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetTypes");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetType(resultingObject));
             }
             NetType[] resultingArray = new NetType[resultingArrayList.size()];

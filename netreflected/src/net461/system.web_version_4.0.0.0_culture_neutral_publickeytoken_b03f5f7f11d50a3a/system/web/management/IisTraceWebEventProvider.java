@@ -95,7 +95,7 @@ public class IisTraceWebEventProvider extends WebEventProvider  {
         }
     }
 
-    public IisTraceWebEventProvider(Object instance) throws Throwable {
+    public IisTraceWebEventProvider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class IisTraceWebEventProvider extends WebEventProvider  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

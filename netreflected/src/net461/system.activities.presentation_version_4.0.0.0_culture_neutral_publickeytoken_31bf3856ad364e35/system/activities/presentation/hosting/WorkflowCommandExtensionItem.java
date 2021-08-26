@@ -95,7 +95,7 @@ public class WorkflowCommandExtensionItem extends ContextItem  {
         }
     }
 
-    public WorkflowCommandExtensionItem(Object instance) throws Throwable {
+    public WorkflowCommandExtensionItem(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class WorkflowCommandExtensionItem extends ContextItem  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

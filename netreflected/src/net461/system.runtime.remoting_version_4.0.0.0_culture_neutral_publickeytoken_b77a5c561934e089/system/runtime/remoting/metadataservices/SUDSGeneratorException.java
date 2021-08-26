@@ -96,7 +96,7 @@ public class SUDSGeneratorException extends NetException {
         super();
     }
 
-    public SUDSGeneratorException(Object instance) {
+    public SUDSGeneratorException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -130,7 +130,7 @@ public class SUDSGeneratorException extends NetException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

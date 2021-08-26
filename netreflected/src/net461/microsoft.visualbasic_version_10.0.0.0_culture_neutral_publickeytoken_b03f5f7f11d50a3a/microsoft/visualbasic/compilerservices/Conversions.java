@@ -100,7 +100,7 @@ public class Conversions extends NetObject  {
         }
     }
 
-    public Conversions(Object instance) throws Throwable {
+    public Conversions(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class Conversions extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -217,9 +217,9 @@ public class Conversions extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classType.Invoke("ToCharArrayRankOne", Value == null ? null : Value.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             char[] resultingArray = new char[resultingArrayList.size()];
@@ -236,9 +236,9 @@ public class Conversions extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classType.Invoke("ToCharArrayRankOne", Value);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             char[] resultingArray = new char[resultingArrayList.size()];
@@ -466,7 +466,7 @@ public class Conversions extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Invoke("FromCharArray", (Object)Value);
+            return (java.lang.String)classType.Invoke("FromCharArray", (java.lang.Object)Value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -476,7 +476,7 @@ public class Conversions extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Invoke("FromCharArray", (Object)dupParam0.getJCRefOut());
+            return (java.lang.String)classType.Invoke("FromCharArray", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

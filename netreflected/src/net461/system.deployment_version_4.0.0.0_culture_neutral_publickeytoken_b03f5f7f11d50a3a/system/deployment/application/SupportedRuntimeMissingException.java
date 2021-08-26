@@ -99,7 +99,7 @@ public class SupportedRuntimeMissingException extends DependentPlatformMissingEx
         super();
     }
 
-    public SupportedRuntimeMissingException(Object instance) {
+    public SupportedRuntimeMissingException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -133,7 +133,7 @@ public class SupportedRuntimeMissingException extends DependentPlatformMissingEx
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

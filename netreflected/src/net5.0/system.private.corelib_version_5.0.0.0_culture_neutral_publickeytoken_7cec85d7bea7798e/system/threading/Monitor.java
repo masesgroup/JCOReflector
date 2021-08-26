@@ -93,7 +93,7 @@ public class Monitor extends NetObject  {
         }
     }
 
-    public Monitor(Object instance) throws Throwable {
+    public Monitor(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class Monitor extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -244,11 +244,11 @@ public class Monitor extends NetObject  {
         }
     }
 
-    public static void Enter(NetObject obj, boolean lockTaken) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
+    public static void Enter(NetObject obj, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> lockTaken) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("Enter", obj == null ? null : obj.getJCOInstance(), lockTaken);
+            classType.Invoke("Enter", obj == null ? null : obj.getJCOInstance(), lockTaken.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,31 +284,31 @@ public class Monitor extends NetObject  {
         }
     }
 
-    public static void TryEnter(NetObject obj, boolean lockTaken) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
+    public static void TryEnter(NetObject obj, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> lockTaken) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("TryEnter", obj == null ? null : obj.getJCOInstance(), lockTaken);
+            classType.Invoke("TryEnter", obj == null ? null : obj.getJCOInstance(), lockTaken.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void TryEnter(NetObject obj, int millisecondsTimeout, boolean lockTaken) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
+    public static void TryEnter(NetObject obj, int millisecondsTimeout, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> lockTaken) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("TryEnter", obj == null ? null : obj.getJCOInstance(), millisecondsTimeout, lockTaken);
+            classType.Invoke("TryEnter", obj == null ? null : obj.getJCOInstance(), millisecondsTimeout, lockTaken.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void TryEnter(NetObject obj, TimeSpan timeout, boolean lockTaken) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
+    public static void TryEnter(NetObject obj, TimeSpan timeout, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> lockTaken) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("TryEnter", obj == null ? null : obj.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance(), lockTaken);
+            classType.Invoke("TryEnter", obj == null ? null : obj.getJCOInstance(), timeout == null ? null : timeout.getJCOInstance(), lockTaken.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

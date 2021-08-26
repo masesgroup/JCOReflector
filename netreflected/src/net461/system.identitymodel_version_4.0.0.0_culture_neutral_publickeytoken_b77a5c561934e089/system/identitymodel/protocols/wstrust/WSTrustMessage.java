@@ -98,7 +98,7 @@ public class WSTrustMessage extends OpenObject  {
         }
     }
 
-    public WSTrustMessage(Object instance) throws Throwable {
+    public WSTrustMessage(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class WSTrustMessage extends OpenObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

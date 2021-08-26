@@ -93,7 +93,7 @@ public class UCOMITypeLibImplementation extends NetObject implements UCOMITypeLi
         }
     }
 
-    public UCOMITypeLibImplementation(Object instance) throws Throwable {
+    public UCOMITypeLibImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class UCOMITypeLibImplementation extends NetObject implements UCOMITypeLi
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -153,7 +153,7 @@ public class UCOMITypeLibImplementation extends NetObject implements UCOMITypeLi
         }
     }
 
-    public void GetDocumentation(int index, JCORefOut strName, JCORefOut strDocString, JCORefOut dwHelpContext, JCORefOut strHelpFile) throws Throwable {
+    public void GetDocumentation(int index, JCORefOut strName, JCORefOut strDocString, JCORefOut<java.util.concurrent.atomic.AtomicInteger> dwHelpContext, JCORefOut strHelpFile) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

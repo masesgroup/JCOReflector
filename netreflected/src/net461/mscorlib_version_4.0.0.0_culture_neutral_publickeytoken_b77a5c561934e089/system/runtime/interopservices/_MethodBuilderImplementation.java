@@ -94,7 +94,7 @@ public class _MethodBuilderImplementation extends NetObject implements _MethodBu
         }
     }
 
-    public _MethodBuilderImplementation(Object instance) throws Throwable {
+    public _MethodBuilderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class _MethodBuilderImplementation extends NetObject implements _MethodBu
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

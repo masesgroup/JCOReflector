@@ -99,7 +99,7 @@ public class NetCodeGroup extends CodeGroup  {
         }
     }
 
-    public NetCodeGroup(Object instance) throws Throwable {
+    public NetCodeGroup(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class NetCodeGroup extends CodeGroup  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -168,7 +168,7 @@ public class NetCodeGroup extends CodeGroup  {
         try {
             ArrayList<DictionaryEntry> resultingArrayList = new ArrayList<DictionaryEntry>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetConnectAccessRules");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DictionaryEntry(resultingObject));
             }
             DictionaryEntry[] resultingArray = new DictionaryEntry[resultingArrayList.size()];

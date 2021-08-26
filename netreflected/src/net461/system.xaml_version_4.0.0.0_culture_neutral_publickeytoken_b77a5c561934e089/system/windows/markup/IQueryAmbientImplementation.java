@@ -92,7 +92,7 @@ public class IQueryAmbientImplementation extends NetObject implements IQueryAmbi
         }
     }
 
-    public IQueryAmbientImplementation(Object instance) throws Throwable {
+    public IQueryAmbientImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class IQueryAmbientImplementation extends NetObject implements IQueryAmbi
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

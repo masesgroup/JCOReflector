@@ -92,7 +92,7 @@ public class IDataSourceViewSchemaAccessorImplementation extends NetObject imple
         }
     }
 
-    public IDataSourceViewSchemaAccessorImplementation(Object instance) throws Throwable {
+    public IDataSourceViewSchemaAccessorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class IDataSourceViewSchemaAccessorImplementation extends NetObject imple
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

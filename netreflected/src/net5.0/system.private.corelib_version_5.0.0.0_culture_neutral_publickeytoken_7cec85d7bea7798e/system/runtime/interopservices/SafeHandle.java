@@ -93,7 +93,7 @@ public class SafeHandle extends CriticalFinalizerObject implements AutoCloseable
         }
     }
 
-    public SafeHandle(Object instance) throws Throwable {
+    public SafeHandle(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class SafeHandle extends CriticalFinalizerObject implements AutoCloseable
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -154,11 +154,11 @@ public class SafeHandle extends CriticalFinalizerObject implements AutoCloseable
         }
     }
 
-    public void DangerousAddRef(boolean success) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public void DangerousAddRef(JCORefOut<java.util.concurrent.atomic.AtomicBoolean> success) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("DangerousAddRef", success);
+            classInstance.Invoke("DangerousAddRef", success.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

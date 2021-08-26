@@ -102,7 +102,7 @@ public class TimeZoneInfo extends NetObject implements system.runtime.serializat
         }
     }
 
-    public TimeZoneInfo(Object instance) throws Throwable {
+    public TimeZoneInfo(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -122,7 +122,7 @@ public class TimeZoneInfo extends NetObject implements system.runtime.serializat
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -362,7 +362,7 @@ public class TimeZoneInfo extends NetObject implements system.runtime.serializat
         try {
             ArrayList<TimeSpan> resultingArrayList = new ArrayList<TimeSpan>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetAmbiguousTimeOffsets", dateTime == null ? null : dateTime.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new TimeSpan(resultingObject));
             }
             TimeSpan[] resultingArray = new TimeSpan[resultingArrayList.size()];
@@ -379,7 +379,7 @@ public class TimeZoneInfo extends NetObject implements system.runtime.serializat
         try {
             ArrayList<TimeSpan> resultingArrayList = new ArrayList<TimeSpan>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetAmbiguousTimeOffsets", dateTimeOffset == null ? null : dateTimeOffset.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new TimeSpan(resultingObject));
             }
             TimeSpan[] resultingArray = new TimeSpan[resultingArrayList.size()];

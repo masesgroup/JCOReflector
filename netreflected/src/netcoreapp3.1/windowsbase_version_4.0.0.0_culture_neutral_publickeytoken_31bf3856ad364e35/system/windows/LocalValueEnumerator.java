@@ -107,7 +107,7 @@ public class LocalValueEnumerator extends NetObject implements Iterator<LocalVal
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

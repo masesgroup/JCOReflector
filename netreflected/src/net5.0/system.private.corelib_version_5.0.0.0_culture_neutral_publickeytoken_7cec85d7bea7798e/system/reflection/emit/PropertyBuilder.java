@@ -104,7 +104,7 @@ public class PropertyBuilder extends PropertyInfo  {
         }
     }
 
-    public PropertyBuilder(Object instance) throws Throwable {
+    public PropertyBuilder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -124,7 +124,7 @@ public class PropertyBuilder extends PropertyInfo  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -195,7 +195,7 @@ public class PropertyBuilder extends PropertyInfo  {
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetCustomAttributes", inherit);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
@@ -212,7 +212,7 @@ public class PropertyBuilder extends PropertyInfo  {
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetCustomAttributes", attributeType == null ? null : attributeType.getJCOInstance(), inherit);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
@@ -251,7 +251,7 @@ public class PropertyBuilder extends PropertyInfo  {
         try {
             ArrayList<MethodInfo> resultingArrayList = new ArrayList<MethodInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetAccessors", nonPublic);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MethodInfo(resultingObject));
             }
             MethodInfo[] resultingArray = new MethodInfo[resultingArrayList.size()];
@@ -268,7 +268,7 @@ public class PropertyBuilder extends PropertyInfo  {
         try {
             ArrayList<ParameterInfo> resultingArrayList = new ArrayList<ParameterInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetIndexParameters");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ParameterInfo(resultingObject));
             }
             ParameterInfo[] resultingArray = new ParameterInfo[resultingArrayList.size()];

@@ -97,7 +97,7 @@ public class StringAnimationUsingKeyFrames extends StringAnimationBase implement
         }
     }
 
-    public StringAnimationUsingKeyFrames(Object instance) throws Throwable {
+    public StringAnimationUsingKeyFrames(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class StringAnimationUsingKeyFrames extends StringAnimationBase implement
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

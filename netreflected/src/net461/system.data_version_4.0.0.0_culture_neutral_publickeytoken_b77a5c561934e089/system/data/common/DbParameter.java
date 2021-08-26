@@ -96,7 +96,7 @@ public class DbParameter extends MarshalByRefObject  {
         }
     }
 
-    public DbParameter(Object instance) throws Throwable {
+    public DbParameter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class DbParameter extends MarshalByRefObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

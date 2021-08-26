@@ -93,7 +93,7 @@ public class PlaceHolder extends Control  {
         }
     }
 
-    public PlaceHolder(Object instance) throws Throwable {
+    public PlaceHolder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class PlaceHolder extends Control  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

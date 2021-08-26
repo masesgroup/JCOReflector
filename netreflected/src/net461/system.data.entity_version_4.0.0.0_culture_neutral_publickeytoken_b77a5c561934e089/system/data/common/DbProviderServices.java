@@ -103,7 +103,7 @@ public class DbProviderServices extends NetObject  {
         }
     }
 
-    public DbProviderServices(Object instance) throws Throwable {
+    public DbProviderServices(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -123,7 +123,7 @@ public class DbProviderServices extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

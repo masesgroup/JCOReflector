@@ -95,7 +95,7 @@ public class ToolboxComponentsCreatedEventArgs extends EventArgs  {
         }
     }
 
-    public ToolboxComponentsCreatedEventArgs(Object instance) throws Throwable {
+    public ToolboxComponentsCreatedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class ToolboxComponentsCreatedEventArgs extends EventArgs  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -147,7 +147,7 @@ public class ToolboxComponentsCreatedEventArgs extends EventArgs  {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((Object)toObjectFromArray(components)));
+            setJCOInstance((JCObject)classType.NewObject((java.lang.Object)toObjectFromArray(components)));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,7 +168,7 @@ public class ToolboxComponentsCreatedEventArgs extends EventArgs  {
         try {
             ArrayList<IComponent> resultingArrayList = new ArrayList<IComponent>();
             JCObject resultingObjects = (JCObject)classInstance.Get("Components");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IComponentImplementation(resultingObject));
             }
             IComponent[] resultingArray = new IComponent[resultingArrayList.size()];

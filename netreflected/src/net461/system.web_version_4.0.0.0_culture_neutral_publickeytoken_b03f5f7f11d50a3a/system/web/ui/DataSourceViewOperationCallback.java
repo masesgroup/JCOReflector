@@ -96,7 +96,7 @@ public class DataSourceViewOperationCallback extends JCDelegate implements IJCEv
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return this;
     }
 
@@ -104,14 +104,14 @@ public class DataSourceViewOperationCallback extends JCDelegate implements IJCEv
         return classType;
     }
 
-    public final Object EventRaised(Object... argsFromJCOBridge) {
+    public final java.lang.Object EventRaised(java.lang.Object... argsFromJCOBridge) {
         try
         {
             int affectedRecords = argsFromJCOBridge[0] == null ? null : (int)argsFromJCOBridge[0];
             NetException ex = argsFromJCOBridge[1] == null ? null : new NetException(argsFromJCOBridge[1]);
 
 
-            Object retVal = null;
+            java.lang.Object retVal = null;
             if (callerInstance != null)	{
                 retVal = callerInstance.Invoke(affectedRecords, ex);
             } else {
@@ -126,14 +126,14 @@ public class DataSourceViewOperationCallback extends JCDelegate implements IJCEv
         }
     }
 
-    public final Object DelegateInvoked(Object... argsFromJCOBridge) {
+    public final java.lang.Object DelegateInvoked(java.lang.Object... argsFromJCOBridge) {
         try
         {
             int affectedRecords = argsFromJCOBridge[0] == null ? null : (int)argsFromJCOBridge[0];
             NetException ex = argsFromJCOBridge[1] == null ? null : new NetException(argsFromJCOBridge[1]);
 
 
-            Object retVal = null;
+            java.lang.Object retVal = null;
             if (callerInstance != null)	{
                 retVal = callerInstance.Invoke(affectedRecords, ex);
             } else {
@@ -157,7 +157,7 @@ public class DataSourceViewOperationCallback extends JCDelegate implements IJCEv
         callerInstance = instance;
     }
 
-    public DataSourceViewOperationCallback(Object instance) throws Throwable {
+    public DataSourceViewOperationCallback(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         if (instance == null) throw new IllegalArgumentException("Instance cannot be null");
         if (instance instanceof IDataSourceViewOperationCallback) {
@@ -169,7 +169,7 @@ public class DataSourceViewOperationCallback extends JCDelegate implements IJCEv
                     String.format("Class %s is not supported.", instance.getClass().getTypeName()));
     }
 
-    protected final static <T extends IJCOBridgeReflected> Object toObjectFromArray(T[] input) {
+    protected final static <T extends IJCOBridgeReflected> java.lang.Object toObjectFromArray(T[] input) {
         return JCOBridgeInstance.toObjectFromArray(input);
     }
 

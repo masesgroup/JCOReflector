@@ -95,7 +95,7 @@ public class ISponsorImplementation extends NetObject implements ISponsor {
         }
     }
 
-    public ISponsorImplementation(Object instance) throws Throwable {
+    public ISponsorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class ISponsorImplementation extends NetObject implements ISponsor {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

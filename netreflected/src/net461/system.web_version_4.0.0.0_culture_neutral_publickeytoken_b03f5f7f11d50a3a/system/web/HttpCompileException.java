@@ -100,7 +100,7 @@ public class HttpCompileException extends HttpException {
         super();
     }
 
-    public HttpCompileException(Object instance) {
+    public HttpCompileException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -134,7 +134,7 @@ public class HttpCompileException extends HttpException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

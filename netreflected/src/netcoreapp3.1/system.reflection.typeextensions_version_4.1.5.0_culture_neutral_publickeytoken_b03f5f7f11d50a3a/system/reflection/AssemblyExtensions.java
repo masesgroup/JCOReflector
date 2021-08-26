@@ -94,7 +94,7 @@ public class AssemblyExtensions extends NetObject  {
         }
     }
 
-    public AssemblyExtensions(Object instance) throws Throwable {
+    public AssemblyExtensions(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class AssemblyExtensions extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -151,7 +151,7 @@ public class AssemblyExtensions extends NetObject  {
         try {
             ArrayList<Module> resultingArrayList = new ArrayList<Module>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetModules", assembly == null ? null : assembly.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Module(resultingObject));
             }
             Module[] resultingArray = new Module[resultingArrayList.size()];
@@ -168,7 +168,7 @@ public class AssemblyExtensions extends NetObject  {
         try {
             ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetExportedTypes", assembly == null ? null : assembly.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetType(resultingObject));
             }
             NetType[] resultingArray = new NetType[resultingArrayList.size()];
@@ -185,7 +185,7 @@ public class AssemblyExtensions extends NetObject  {
         try {
             ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetTypes", assembly == null ? null : assembly.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetType(resultingObject));
             }
             NetType[] resultingArray = new NetType[resultingArrayList.size()];

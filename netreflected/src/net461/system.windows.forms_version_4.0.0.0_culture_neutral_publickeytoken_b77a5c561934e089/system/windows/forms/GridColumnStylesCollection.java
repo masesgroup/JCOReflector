@@ -96,7 +96,7 @@ public class GridColumnStylesCollection extends BaseCollection  {
         }
     }
 
-    public GridColumnStylesCollection(Object instance) throws Throwable {
+    public GridColumnStylesCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class GridColumnStylesCollection extends BaseCollection  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -203,7 +203,7 @@ public class GridColumnStylesCollection extends BaseCollection  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddRange", (Object)toObjectFromArray(columns));
+            classInstance.Invoke("AddRange", (java.lang.Object)toObjectFromArray(columns));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

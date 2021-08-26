@@ -95,7 +95,7 @@ public class ControlIDConverter extends StringConverter  {
         }
     }
 
-    public ControlIDConverter(Object instance) throws Throwable {
+    public ControlIDConverter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class ControlIDConverter extends StringConverter  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

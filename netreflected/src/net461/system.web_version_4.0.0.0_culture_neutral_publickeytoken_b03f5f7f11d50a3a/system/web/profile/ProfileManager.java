@@ -98,7 +98,7 @@ public class ProfileManager extends NetObject  {
         }
     }
 
-    public ProfileManager(Object instance) throws Throwable {
+    public ProfileManager(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class ProfileManager extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -173,7 +173,7 @@ public class ProfileManager extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classType.Invoke("DeleteProfiles", (Object)usernames);
+            return (int)classType.Invoke("DeleteProfiles", (java.lang.Object)usernames);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,7 +183,7 @@ public class ProfileManager extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classType.Invoke("DeleteProfiles", (Object)dupParam0.getJCRefOut());
+            return (int)classType.Invoke("DeleteProfiles", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,7 +230,7 @@ public class ProfileManager extends NetObject  {
         }
     }
 
-    public static ProfileInfoCollection FindInactiveProfilesByUserName(ProfileAuthenticationOption authenticationOption, java.lang.String usernameToMatch, DateTime userInactiveSinceDate, int pageIndex, int pageSize, JCORefOut totalRecords) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.security.SecurityException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException {
+    public static ProfileInfoCollection FindInactiveProfilesByUserName(ProfileAuthenticationOption authenticationOption, java.lang.String usernameToMatch, DateTime userInactiveSinceDate, int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.security.SecurityException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -252,7 +252,7 @@ public class ProfileManager extends NetObject  {
         }
     }
 
-    public static ProfileInfoCollection FindProfilesByUserName(ProfileAuthenticationOption authenticationOption, java.lang.String usernameToMatch, int pageIndex, int pageSize, JCORefOut totalRecords) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.security.SecurityException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException {
+    public static ProfileInfoCollection FindProfilesByUserName(ProfileAuthenticationOption authenticationOption, java.lang.String usernameToMatch, int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.security.SecurityException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -274,7 +274,7 @@ public class ProfileManager extends NetObject  {
         }
     }
 
-    public static ProfileInfoCollection GetAllInactiveProfiles(ProfileAuthenticationOption authenticationOption, DateTime userInactiveSinceDate, int pageIndex, int pageSize, JCORefOut totalRecords) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException {
+    public static ProfileInfoCollection GetAllInactiveProfiles(ProfileAuthenticationOption authenticationOption, DateTime userInactiveSinceDate, int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -296,7 +296,7 @@ public class ProfileManager extends NetObject  {
         }
     }
 
-    public static ProfileInfoCollection GetAllProfiles(ProfileAuthenticationOption authenticationOption, int pageIndex, int pageSize, JCORefOut totalRecords) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException {
+    public static ProfileInfoCollection GetAllProfiles(ProfileAuthenticationOption authenticationOption, int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable, system.ArgumentException, system.security.SecurityException, system.ArgumentNullException, system.InvalidOperationException, system.NotSupportedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {

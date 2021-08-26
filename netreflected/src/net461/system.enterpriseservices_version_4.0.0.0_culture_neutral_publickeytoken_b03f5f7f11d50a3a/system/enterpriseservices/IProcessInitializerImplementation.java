@@ -92,7 +92,7 @@ public class IProcessInitializerImplementation extends NetObject implements IPro
         }
     }
 
-    public IProcessInitializerImplementation(Object instance) throws Throwable {
+    public IProcessInitializerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class IProcessInitializerImplementation extends NetObject implements IPro
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

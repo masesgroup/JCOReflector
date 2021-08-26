@@ -96,7 +96,7 @@ public class ValidationManager extends NetObject  {
         }
     }
 
-    public ValidationManager(Object instance) throws Throwable {
+    public ValidationManager(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class ValidationManager extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -186,7 +186,7 @@ public class ValidationManager extends NetObject  {
         try {
             ArrayList<Validator> resultingArrayList = new ArrayList<Validator>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetValidators", type == null ? null : type.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Validator(resultingObject));
             }
             Validator[] resultingArray = new Validator[resultingArrayList.size()];

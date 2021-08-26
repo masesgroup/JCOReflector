@@ -95,7 +95,7 @@ public class SafeBuffer extends SafeHandleZeroOrMinusOneIsInvalid  {
         }
     }
 
-    public SafeBuffer(Object instance) throws Throwable {
+    public SafeBuffer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class SafeBuffer extends SafeHandleZeroOrMinusOneIsInvalid  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

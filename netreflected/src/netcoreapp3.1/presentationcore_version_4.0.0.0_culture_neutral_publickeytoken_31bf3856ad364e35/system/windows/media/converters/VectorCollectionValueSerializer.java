@@ -95,7 +95,7 @@ public class VectorCollectionValueSerializer extends ValueSerializer  {
         }
     }
 
-    public VectorCollectionValueSerializer(Object instance) throws Throwable {
+    public VectorCollectionValueSerializer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class VectorCollectionValueSerializer extends ValueSerializer  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

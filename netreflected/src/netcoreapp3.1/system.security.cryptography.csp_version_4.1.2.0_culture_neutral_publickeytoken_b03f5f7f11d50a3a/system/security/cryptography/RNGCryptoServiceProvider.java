@@ -94,7 +94,7 @@ public class RNGCryptoServiceProvider extends RandomNumberGenerator  {
         }
     }
 
-    public RNGCryptoServiceProvider(Object instance) throws Throwable {
+    public RNGCryptoServiceProvider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class RNGCryptoServiceProvider extends RandomNumberGenerator  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -153,7 +153,7 @@ public class RNGCryptoServiceProvider extends RandomNumberGenerator  {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((Object)rgb));
+            setJCOInstance((JCObject)classType.NewObject((java.lang.Object)rgb));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +187,7 @@ public class RNGCryptoServiceProvider extends RandomNumberGenerator  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("GetBytes", (Object)data);
+            classInstance.Invoke("GetBytes", (java.lang.Object)data);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +197,7 @@ public class RNGCryptoServiceProvider extends RandomNumberGenerator  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("GetBytes", (Object)dupParam0.getJCRefOut());
+            classInstance.Invoke("GetBytes", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,7 +227,7 @@ public class RNGCryptoServiceProvider extends RandomNumberGenerator  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("GetNonZeroBytes", (Object)data);
+            classInstance.Invoke("GetNonZeroBytes", (java.lang.Object)data);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -237,7 +237,7 @@ public class RNGCryptoServiceProvider extends RandomNumberGenerator  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("GetNonZeroBytes", (Object)dupParam0.getJCRefOut());
+            classInstance.Invoke("GetNonZeroBytes", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

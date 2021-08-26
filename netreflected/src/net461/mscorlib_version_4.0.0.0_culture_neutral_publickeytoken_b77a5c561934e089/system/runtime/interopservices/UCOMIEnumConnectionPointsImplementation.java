@@ -96,7 +96,7 @@ public class UCOMIEnumConnectionPointsImplementation extends NetObject implement
         }
     }
 
-    public UCOMIEnumConnectionPointsImplementation(Object instance) throws Throwable {
+    public UCOMIEnumConnectionPointsImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class UCOMIEnumConnectionPointsImplementation extends NetObject implement
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -136,7 +136,7 @@ public class UCOMIEnumConnectionPointsImplementation extends NetObject implement
 
     // Methods section
     
-    public int Next(int celt, JCORefOut<UCOMIConnectionPoint[]> rgelt, JCORefOut pceltFetched) throws Throwable {
+    public int Next(int celt, JCORefOut<UCOMIConnectionPoint[]> rgelt, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pceltFetched) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

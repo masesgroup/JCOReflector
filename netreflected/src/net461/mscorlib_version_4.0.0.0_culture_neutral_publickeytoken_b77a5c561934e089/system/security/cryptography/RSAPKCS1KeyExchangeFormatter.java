@@ -95,7 +95,7 @@ public class RSAPKCS1KeyExchangeFormatter extends AsymmetricKeyExchangeFormatter
         }
     }
 
-    public RSAPKCS1KeyExchangeFormatter(Object instance) throws Throwable {
+    public RSAPKCS1KeyExchangeFormatter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class RSAPKCS1KeyExchangeFormatter extends AsymmetricKeyExchangeFormatter
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -168,9 +168,9 @@ public class RSAPKCS1KeyExchangeFormatter extends AsymmetricKeyExchangeFormatter
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("CreateKeyExchange", (Object)rgbData);
-            for (Object resultingObject : resultingObjects) {
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("CreateKeyExchange", (java.lang.Object)rgbData);
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -187,9 +187,9 @@ public class RSAPKCS1KeyExchangeFormatter extends AsymmetricKeyExchangeFormatter
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("CreateKeyExchange", (Object)dupParam0.getJCRefOut());
-            for (Object resultingObject : resultingObjects) {
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("CreateKeyExchange", (java.lang.Object)dupParam0.getJCRefOut());
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -206,9 +206,9 @@ public class RSAPKCS1KeyExchangeFormatter extends AsymmetricKeyExchangeFormatter
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("CreateKeyExchange", rgbData, symAlgType == null ? null : symAlgType.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -225,9 +225,9 @@ public class RSAPKCS1KeyExchangeFormatter extends AsymmetricKeyExchangeFormatter
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("CreateKeyExchange", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];

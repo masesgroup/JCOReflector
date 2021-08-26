@@ -95,7 +95,7 @@ public class VScrollBar extends ScrollBar  {
         }
     }
 
-    public VScrollBar(Object instance) throws Throwable {
+    public VScrollBar(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class VScrollBar extends ScrollBar  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

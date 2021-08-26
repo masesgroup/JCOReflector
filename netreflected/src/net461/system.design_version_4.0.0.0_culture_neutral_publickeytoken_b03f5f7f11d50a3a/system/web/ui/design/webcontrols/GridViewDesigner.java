@@ -100,7 +100,7 @@ public class GridViewDesigner extends DataBoundControlDesigner  {
         }
     }
 
-    public GridViewDesigner(Object instance) throws Throwable {
+    public GridViewDesigner(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class GridViewDesigner extends DataBoundControlDesigner  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

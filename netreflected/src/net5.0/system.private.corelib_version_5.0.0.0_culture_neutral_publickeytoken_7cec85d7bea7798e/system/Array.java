@@ -101,7 +101,7 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
         }
     }
 
-    public Array(Object instance) throws Throwable {
+    public Array(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -121,7 +121,7 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -428,7 +428,7 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", (Object)indices);
+            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", (java.lang.Object)indices);
             return new NetObject(objGetValue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -439,7 +439,7 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", (Object)dupParam0.getJCRefOut());
+            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", (java.lang.Object)dupParam0.getJCRefOut());
             return new NetObject(objGetValue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -483,7 +483,7 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", (Object)indices);
+            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", (java.lang.Object)indices);
             return new NetObject(objGetValue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

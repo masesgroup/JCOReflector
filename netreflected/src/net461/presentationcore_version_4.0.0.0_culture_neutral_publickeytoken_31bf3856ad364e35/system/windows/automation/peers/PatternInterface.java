@@ -108,7 +108,7 @@ public class PatternInterface extends NetObject  {
         }
     }
 
-    public PatternInterface(Object instance) {
+    public PatternInterface(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class PatternInterface extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -94,7 +94,7 @@ public class X509SecurityTokenAuthenticator extends SecurityTokenAuthenticator  
         }
     }
 
-    public X509SecurityTokenAuthenticator(Object instance) throws Throwable {
+    public X509SecurityTokenAuthenticator(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class X509SecurityTokenAuthenticator extends SecurityTokenAuthenticator  
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

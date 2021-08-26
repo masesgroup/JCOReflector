@@ -95,7 +95,7 @@ public class Action extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBrid
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return this;
     }
 
@@ -103,7 +103,7 @@ public class Action extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBrid
         return classType;
     }
 
-    public final void EventRaised(Object... argsFromJCOBridge) {
+    public final void EventRaised(java.lang.Object... argsFromJCOBridge) {
         try
         {
 
@@ -120,7 +120,7 @@ public class Action extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBrid
         }
     }
 
-    public final void DelegateInvoked(Object... argsFromJCOBridge) {
+    public final void DelegateInvoked(java.lang.Object... argsFromJCOBridge) {
         try
         {
 
@@ -146,7 +146,7 @@ public class Action extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBrid
         callerInstance = instance;
     }
 
-    public Action(Object instance) throws Throwable {
+    public Action(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         if (instance == null) throw new IllegalArgumentException("Instance cannot be null");
         if (instance instanceof IAction) {
@@ -158,7 +158,7 @@ public class Action extends JCVoidDelegate implements IJCVoidEventEmit, IJCOBrid
                     String.format("Class %s is not supported.", instance.getClass().getTypeName()));
     }
 
-    protected final static <T extends IJCOBridgeReflected> Object toObjectFromArray(T[] input) {
+    protected final static <T extends IJCOBridgeReflected> java.lang.Object toObjectFromArray(T[] input) {
         return JCOBridgeInstance.toObjectFromArray(input);
     }
 

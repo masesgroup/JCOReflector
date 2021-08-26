@@ -98,7 +98,7 @@ public class WorkflowApplicationTerminatedException extends WorkflowApplicationC
         super();
     }
 
-    public WorkflowApplicationTerminatedException(Object instance) {
+    public WorkflowApplicationTerminatedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -132,7 +132,7 @@ public class WorkflowApplicationTerminatedException extends WorkflowApplicationC
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

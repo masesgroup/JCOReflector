@@ -97,7 +97,7 @@ public class PrintingCanceledException extends PrintJobException {
         super();
     }
 
-    public PrintingCanceledException(Object instance) {
+    public PrintingCanceledException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class PrintingCanceledException extends PrintJobException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

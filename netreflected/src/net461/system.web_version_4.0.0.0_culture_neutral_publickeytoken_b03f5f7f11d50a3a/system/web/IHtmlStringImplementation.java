@@ -92,7 +92,7 @@ public class IHtmlStringImplementation extends NetObject implements IHtmlString 
         }
     }
 
-    public IHtmlStringImplementation(Object instance) throws Throwable {
+    public IHtmlStringImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class IHtmlStringImplementation extends NetObject implements IHtmlString 
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

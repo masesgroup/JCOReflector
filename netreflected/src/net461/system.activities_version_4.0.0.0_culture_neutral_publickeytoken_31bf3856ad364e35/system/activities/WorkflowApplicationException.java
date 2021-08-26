@@ -99,7 +99,7 @@ public class WorkflowApplicationException extends NetException {
         super();
     }
 
-    public WorkflowApplicationException(Object instance) {
+    public WorkflowApplicationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -133,7 +133,7 @@ public class WorkflowApplicationException extends NetException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

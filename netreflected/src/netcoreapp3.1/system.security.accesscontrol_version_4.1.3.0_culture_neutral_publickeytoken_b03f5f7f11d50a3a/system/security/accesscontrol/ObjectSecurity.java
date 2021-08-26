@@ -101,7 +101,7 @@ public class ObjectSecurity extends NetObject  {
         }
     }
 
-    public ObjectSecurity(Object instance) throws Throwable {
+    public ObjectSecurity(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -121,7 +121,7 @@ public class ObjectSecurity extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -162,7 +162,7 @@ public class ObjectSecurity extends NetObject  {
         }
     }
 
-    public boolean ModifyAccessRule(AccessControlModification modification, AccessRule rule, JCORefOut modified) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.LockRecursionException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
+    public boolean ModifyAccessRule(AccessControlModification modification, AccessRule rule, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> modified) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.LockRecursionException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -172,7 +172,7 @@ public class ObjectSecurity extends NetObject  {
         }
     }
 
-    public boolean ModifyAuditRule(AccessControlModification modification, AuditRule rule, JCORefOut modified) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.LockRecursionException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
+    public boolean ModifyAuditRule(AccessControlModification modification, AuditRule rule, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> modified) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.LockRecursionException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -186,9 +186,9 @@ public class ObjectSecurity extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetSecurityDescriptorBinaryForm");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -319,7 +319,7 @@ public class ObjectSecurity extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetSecurityDescriptorBinaryForm", (Object)binaryForm);
+            classInstance.Invoke("SetSecurityDescriptorBinaryForm", (java.lang.Object)binaryForm);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -329,7 +329,7 @@ public class ObjectSecurity extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetSecurityDescriptorBinaryForm", (Object)dupParam0.getJCRefOut());
+            classInstance.Invoke("SetSecurityDescriptorBinaryForm", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

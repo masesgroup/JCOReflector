@@ -106,7 +106,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
         }
     }
 
-    public XmlWriter(Object instance) throws Throwable {
+    public XmlWriter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -126,7 +126,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

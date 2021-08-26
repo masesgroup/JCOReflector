@@ -93,7 +93,7 @@ public class HierarchicalDataBoundControlAdapter extends WebControlAdapter  {
         }
     }
 
-    public HierarchicalDataBoundControlAdapter(Object instance) throws Throwable {
+    public HierarchicalDataBoundControlAdapter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class HierarchicalDataBoundControlAdapter extends WebControlAdapter  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

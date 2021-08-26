@@ -96,7 +96,7 @@ public class IHelpServiceImplementation extends NetObject implements IHelpServic
         }
     }
 
-    public IHelpServiceImplementation(Object instance) throws Throwable {
+    public IHelpServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class IHelpServiceImplementation extends NetObject implements IHelpServic
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

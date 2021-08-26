@@ -94,7 +94,7 @@ public class TextEncoderSettings extends NetObject  {
         }
     }
 
-    public TextEncoderSettings(Object instance) throws Throwable {
+    public TextEncoderSettings(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class TextEncoderSettings extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -163,7 +163,7 @@ public class TextEncoderSettings extends NetObject  {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((Object)toObjectFromArray(allowedRanges)));
+            setJCOInstance((JCObject)classType.NewObject((java.lang.Object)toObjectFromArray(allowedRanges)));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +187,7 @@ public class TextEncoderSettings extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AllowCharacters", (Object)characters);
+            classInstance.Invoke("AllowCharacters", (java.lang.Object)characters);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -197,7 +197,7 @@ public class TextEncoderSettings extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AllowCharacters", (Object)dupParam0.getJCRefOut());
+            classInstance.Invoke("AllowCharacters", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,7 +217,7 @@ public class TextEncoderSettings extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AllowRanges", (Object)toObjectFromArray(ranges));
+            classInstance.Invoke("AllowRanges", (java.lang.Object)toObjectFromArray(ranges));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -247,7 +247,7 @@ public class TextEncoderSettings extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("ForbidCharacters", (Object)characters);
+            classInstance.Invoke("ForbidCharacters", (java.lang.Object)characters);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,7 +257,7 @@ public class TextEncoderSettings extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("ForbidCharacters", (Object)dupParam0.getJCRefOut());
+            classInstance.Invoke("ForbidCharacters", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,7 +277,7 @@ public class TextEncoderSettings extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("ForbidRanges", (Object)toObjectFromArray(ranges));
+            classInstance.Invoke("ForbidRanges", (java.lang.Object)toObjectFromArray(ranges));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -94,7 +94,7 @@ public class DiscreteStringKeyFrame extends StringKeyFrame  {
         }
     }
 
-    public DiscreteStringKeyFrame(Object instance) throws Throwable {
+    public DiscreteStringKeyFrame(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class DiscreteStringKeyFrame extends StringKeyFrame  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

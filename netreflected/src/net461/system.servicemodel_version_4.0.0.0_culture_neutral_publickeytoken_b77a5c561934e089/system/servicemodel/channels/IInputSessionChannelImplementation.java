@@ -106,7 +106,7 @@ public class IInputSessionChannelImplementation extends NetObject implements IIn
         }
     }
 
-    public IInputSessionChannelImplementation(Object instance) throws Throwable {
+    public IInputSessionChannelImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -126,7 +126,7 @@ public class IInputSessionChannelImplementation extends NetObject implements IIn
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

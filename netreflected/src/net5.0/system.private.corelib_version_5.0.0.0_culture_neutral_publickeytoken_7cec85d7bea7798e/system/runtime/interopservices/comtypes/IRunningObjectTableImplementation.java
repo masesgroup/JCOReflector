@@ -97,7 +97,7 @@ public class IRunningObjectTableImplementation extends NetObject implements IRun
         }
     }
 
-    public IRunningObjectTableImplementation(Object instance) throws Throwable {
+    public IRunningObjectTableImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class IRunningObjectTableImplementation extends NetObject implements IRun
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -187,11 +187,11 @@ public class IRunningObjectTableImplementation extends NetObject implements IRun
         }
     }
 
-    public void NoteChangeTime(int dwRegister, FILETIME pfiletime) throws Throwable {
+    public void NoteChangeTime(int dwRegister, JCORefOut<FILETIME> pfiletime) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("NoteChangeTime", dwRegister, pfiletime == null ? null : pfiletime.getJCOInstance());
+            classInstance.Invoke("NoteChangeTime", dwRegister, pfiletime.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

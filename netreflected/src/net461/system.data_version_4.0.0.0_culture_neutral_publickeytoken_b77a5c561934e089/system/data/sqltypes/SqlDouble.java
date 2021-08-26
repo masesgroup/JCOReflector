@@ -110,7 +110,7 @@ public class SqlDouble extends ValueType implements system.xml.serialization.IXm
         }
     }
 
-    public SqlDouble(Object instance) throws Throwable {
+    public SqlDouble(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -130,7 +130,7 @@ public class SqlDouble extends ValueType implements system.xml.serialization.IXm
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

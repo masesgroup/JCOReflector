@@ -98,7 +98,7 @@ public class IDesignerEventServiceImplementation extends NetObject implements ID
         }
     }
 
-    public IDesignerEventServiceImplementation(Object instance) throws Throwable {
+    public IDesignerEventServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class IDesignerEventServiceImplementation extends NetObject implements ID
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

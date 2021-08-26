@@ -94,7 +94,7 @@ public class ExpressionBuilderCollection extends ConfigurationElementCollection 
         }
     }
 
-    public ExpressionBuilderCollection(Object instance) throws Throwable {
+    public ExpressionBuilderCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class ExpressionBuilderCollection extends ConfigurationElementCollection 
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

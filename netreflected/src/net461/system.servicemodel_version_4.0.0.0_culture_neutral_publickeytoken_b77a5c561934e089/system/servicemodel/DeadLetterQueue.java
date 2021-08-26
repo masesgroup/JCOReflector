@@ -108,7 +108,7 @@ public class DeadLetterQueue extends NetObject  {
         }
     }
 
-    public DeadLetterQueue(Object instance) {
+    public DeadLetterQueue(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class DeadLetterQueue extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -98,7 +98,7 @@ public class SiteMapDesignerHierarchicalDataSourceView extends DesignerHierarchi
         }
     }
 
-    public SiteMapDesignerHierarchicalDataSourceView(Object instance) throws Throwable {
+    public SiteMapDesignerHierarchicalDataSourceView(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class SiteMapDesignerHierarchicalDataSourceView extends DesignerHierarchi
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -161,7 +161,7 @@ public class SiteMapDesignerHierarchicalDataSourceView extends DesignerHierarchi
     
     // Methods section
     
-    public IHierarchicalEnumerable GetDesignTimeData(JCORefOut isSampleData) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
+    public IHierarchicalEnumerable GetDesignTimeData(JCORefOut<java.util.concurrent.atomic.AtomicBoolean> isSampleData) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

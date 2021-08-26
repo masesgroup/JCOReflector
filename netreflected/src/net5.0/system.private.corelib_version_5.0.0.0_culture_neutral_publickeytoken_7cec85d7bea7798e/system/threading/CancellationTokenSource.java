@@ -95,7 +95,7 @@ public class CancellationTokenSource extends NetObject implements AutoCloseable 
         }
     }
 
-    public CancellationTokenSource(Object instance) throws Throwable {
+    public CancellationTokenSource(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class CancellationTokenSource extends NetObject implements AutoCloseable 
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -200,7 +200,7 @@ public class CancellationTokenSource extends NetObject implements AutoCloseable 
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateLinkedTokenSource = (JCObject)classType.Invoke("CreateLinkedTokenSource", (Object)toObjectFromArray(tokens));
+            JCObject objCreateLinkedTokenSource = (JCObject)classType.Invoke("CreateLinkedTokenSource", (java.lang.Object)toObjectFromArray(tokens));
             return new CancellationTokenSource(objCreateLinkedTokenSource);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

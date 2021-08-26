@@ -97,7 +97,7 @@ public class TaiwanCalendar extends Calendar  {
         }
     }
 
-    public TaiwanCalendar(Object instance) throws Throwable {
+    public TaiwanCalendar(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class TaiwanCalendar extends Calendar  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

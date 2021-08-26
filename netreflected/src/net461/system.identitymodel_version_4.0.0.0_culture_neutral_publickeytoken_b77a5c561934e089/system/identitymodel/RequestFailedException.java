@@ -97,7 +97,7 @@ public class RequestFailedException extends RequestException {
         super();
     }
 
-    public RequestFailedException(Object instance) {
+    public RequestFailedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class RequestFailedException extends RequestException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

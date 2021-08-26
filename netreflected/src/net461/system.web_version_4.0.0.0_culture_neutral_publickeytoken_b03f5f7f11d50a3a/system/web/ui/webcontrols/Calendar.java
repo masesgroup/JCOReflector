@@ -107,7 +107,7 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
         }
     }
 
-    public Calendar(Object instance) throws Throwable {
+    public Calendar(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -127,7 +127,7 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

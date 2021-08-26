@@ -97,7 +97,7 @@ public class TableAutomationPeer extends TextElementAutomationPeer  {
         }
     }
 
-    public TableAutomationPeer(Object instance) throws Throwable {
+    public TableAutomationPeer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class TableAutomationPeer extends TextElementAutomationPeer  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

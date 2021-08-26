@@ -94,7 +94,7 @@ public class RIPEMD160 extends HashAlgorithm  {
         }
     }
 
-    public RIPEMD160(Object instance) throws Throwable {
+    public RIPEMD160(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class RIPEMD160 extends HashAlgorithm  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

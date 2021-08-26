@@ -94,7 +94,7 @@ public class IAppDomainInfoEnumImplementation extends NetObject implements IAppD
         }
     }
 
-    public IAppDomainInfoEnumImplementation(Object instance) throws Throwable {
+    public IAppDomainInfoEnumImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class IAppDomainInfoEnumImplementation extends NetObject implements IAppD
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

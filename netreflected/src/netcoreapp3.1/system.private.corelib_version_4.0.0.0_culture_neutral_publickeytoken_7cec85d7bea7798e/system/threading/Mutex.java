@@ -94,7 +94,7 @@ public class Mutex extends WaitHandle  {
         }
     }
 
-    public Mutex(Object instance) throws Throwable {
+    public Mutex(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class Mutex extends WaitHandle  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

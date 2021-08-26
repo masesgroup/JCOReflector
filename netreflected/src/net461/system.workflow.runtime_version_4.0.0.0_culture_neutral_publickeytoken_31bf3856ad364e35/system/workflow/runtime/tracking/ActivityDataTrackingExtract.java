@@ -94,7 +94,7 @@ public class ActivityDataTrackingExtract extends TrackingExtract  {
         }
     }
 
-    public ActivityDataTrackingExtract(Object instance) throws Throwable {
+    public ActivityDataTrackingExtract(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class ActivityDataTrackingExtract extends TrackingExtract  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -97,7 +97,7 @@ public class LinkButton extends WebControl implements system.web.ui.IPostBackEve
         }
     }
 
-    public LinkButton(Object instance) throws Throwable {
+    public LinkButton(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class LinkButton extends WebControl implements system.web.ui.IPostBackEve
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

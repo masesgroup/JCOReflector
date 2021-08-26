@@ -97,7 +97,7 @@ public class PersonalizationAdministration extends NetObject  {
         }
     }
 
-    public PersonalizationAdministration(Object instance) throws Throwable {
+    public PersonalizationAdministration(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class PersonalizationAdministration extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -252,7 +252,7 @@ public class PersonalizationAdministration extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classType.Invoke("ResetSharedState", (Object)paths);
+            return (int)classType.Invoke("ResetSharedState", (java.lang.Object)paths);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -262,7 +262,7 @@ public class PersonalizationAdministration extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classType.Invoke("ResetSharedState", (Object)dupParam0.getJCRefOut());
+            return (int)classType.Invoke("ResetSharedState", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,7 +312,7 @@ public class PersonalizationAdministration extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classType.Invoke("ResetUserState", (Object)usernames);
+            return (int)classType.Invoke("ResetUserState", (java.lang.Object)usernames);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -322,7 +322,7 @@ public class PersonalizationAdministration extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classType.Invoke("ResetUserState", (Object)dupParam0.getJCRefOut());
+            return (int)classType.Invoke("ResetUserState", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -339,7 +339,7 @@ public class PersonalizationAdministration extends NetObject  {
         }
     }
 
-    public static PersonalizationStateInfoCollection FindInactiveUserState(java.lang.String pathToMatch, java.lang.String usernameToMatch, DateTime userInactiveSinceDate, int pageIndex, int pageSize, JCORefOut totalRecords) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
+    public static PersonalizationStateInfoCollection FindInactiveUserState(java.lang.String pathToMatch, java.lang.String usernameToMatch, DateTime userInactiveSinceDate, int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -361,7 +361,7 @@ public class PersonalizationAdministration extends NetObject  {
         }
     }
 
-    public static PersonalizationStateInfoCollection FindSharedState(java.lang.String pathToMatch, int pageIndex, int pageSize, JCORefOut totalRecords) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
+    public static PersonalizationStateInfoCollection FindSharedState(java.lang.String pathToMatch, int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -383,7 +383,7 @@ public class PersonalizationAdministration extends NetObject  {
         }
     }
 
-    public static PersonalizationStateInfoCollection FindUserState(java.lang.String pathToMatch, java.lang.String usernameToMatch, int pageIndex, int pageSize, JCORefOut totalRecords) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
+    public static PersonalizationStateInfoCollection FindUserState(java.lang.String pathToMatch, java.lang.String usernameToMatch, int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -405,7 +405,7 @@ public class PersonalizationAdministration extends NetObject  {
         }
     }
 
-    public static PersonalizationStateInfoCollection GetAllInactiveUserState(DateTime userInactiveSinceDate, int pageIndex, int pageSize, JCORefOut totalRecords) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
+    public static PersonalizationStateInfoCollection GetAllInactiveUserState(DateTime userInactiveSinceDate, int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -427,7 +427,7 @@ public class PersonalizationAdministration extends NetObject  {
         }
     }
 
-    public static PersonalizationStateInfoCollection GetAllState(PersonalizationScope scope, int pageIndex, int pageSize, JCORefOut totalRecords) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
+    public static PersonalizationStateInfoCollection GetAllState(PersonalizationScope scope, int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.reflection.TargetParameterCountException, system.NotSupportedException, system.web.HttpException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {

@@ -93,7 +93,7 @@ public class HostedTransportConfiguration extends NetObject  {
         }
     }
 
-    public HostedTransportConfiguration(Object instance) throws Throwable {
+    public HostedTransportConfiguration(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class HostedTransportConfiguration extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -150,7 +150,7 @@ public class HostedTransportConfiguration extends NetObject  {
         try {
             ArrayList<Uri> resultingArrayList = new ArrayList<Uri>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetBaseAddresses", virtualPath);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Uri(resultingObject));
             }
             Uri[] resultingArray = new Uri[resultingArrayList.size()];

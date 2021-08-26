@@ -96,7 +96,7 @@ public class IJSVsaCodeItemImplementation extends NetObject implements IJSVsaCod
         }
     }
 
-    public IJSVsaCodeItemImplementation(Object instance) throws Throwable {
+    public IJSVsaCodeItemImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class IJSVsaCodeItemImplementation extends NetObject implements IJSVsaCod
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

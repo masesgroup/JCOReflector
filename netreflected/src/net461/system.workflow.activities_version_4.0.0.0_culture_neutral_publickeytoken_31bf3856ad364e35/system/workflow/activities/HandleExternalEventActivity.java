@@ -102,7 +102,7 @@ public class HandleExternalEventActivity extends Activity implements system.work
         }
     }
 
-    public HandleExternalEventActivity(Object instance) throws Throwable {
+    public HandleExternalEventActivity(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -122,7 +122,7 @@ public class HandleExternalEventActivity extends Activity implements system.work
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -113,7 +113,7 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
         }
     }
 
-    public Menu(Object instance) throws Throwable {
+    public Menu(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -133,7 +133,7 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -95,7 +95,7 @@ public class ISessionStateItemCollectionImplementation extends IEnumerableImplem
         }
     }
 
-    public ISessionStateItemCollectionImplementation(Object instance) throws Throwable {
+    public ISessionStateItemCollectionImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class ISessionStateItemCollectionImplementation extends IEnumerableImplem
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

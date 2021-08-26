@@ -93,7 +93,7 @@ public class SoapServerProtocolFactory extends ServerProtocolFactory  {
         }
     }
 
-    public SoapServerProtocolFactory(Object instance) throws Throwable {
+    public SoapServerProtocolFactory(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class SoapServerProtocolFactory extends ServerProtocolFactory  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

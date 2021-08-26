@@ -97,7 +97,7 @@ public class ActivationObject extends ScriptObject  {
         }
     }
 
-    public ActivationObject(Object instance) throws Throwable {
+    public ActivationObject(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class ActivationObject extends ScriptObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -209,7 +209,7 @@ public class ActivationObject extends ScriptObject  {
         try {
             ArrayList<MemberInfo> resultingArrayList = new ArrayList<MemberInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetMember", name, bindingAttr == null ? null : bindingAttr.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MemberInfo(resultingObject));
             }
             MemberInfo[] resultingArray = new MemberInfo[resultingArrayList.size()];
@@ -226,7 +226,7 @@ public class ActivationObject extends ScriptObject  {
         try {
             ArrayList<MemberInfo> resultingArrayList = new ArrayList<MemberInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetMembers", bindingAttr == null ? null : bindingAttr.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MemberInfo(resultingObject));
             }
             MemberInfo[] resultingArray = new MemberInfo[resultingArrayList.size()];

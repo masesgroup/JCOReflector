@@ -93,7 +93,7 @@ public class BinaryKeyIdentifierClause extends SecurityKeyIdentifierClause  {
         }
     }
 
-    public BinaryKeyIdentifierClause(Object instance) throws Throwable {
+    public BinaryKeyIdentifierClause(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class BinaryKeyIdentifierClause extends SecurityKeyIdentifierClause  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -148,7 +148,7 @@ public class BinaryKeyIdentifierClause extends SecurityKeyIdentifierClause  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Matches", (Object)data);
+            return (boolean)classInstance.Invoke("Matches", (java.lang.Object)data);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -158,7 +158,7 @@ public class BinaryKeyIdentifierClause extends SecurityKeyIdentifierClause  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Matches", (Object)dupParam0.getJCRefOut());
+            return (boolean)classInstance.Invoke("Matches", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,9 +198,9 @@ public class BinaryKeyIdentifierClause extends SecurityKeyIdentifierClause  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetBuffer");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];

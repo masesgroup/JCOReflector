@@ -95,7 +95,7 @@ public class ActiveDirectorySubnetCollection extends CollectionBase  {
         }
     }
 
-    public ActiveDirectorySubnetCollection(Object instance) throws Throwable {
+    public ActiveDirectorySubnetCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class ActiveDirectorySubnetCollection extends CollectionBase  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -182,7 +182,7 @@ public class ActiveDirectorySubnetCollection extends CollectionBase  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddRange", (Object)toObjectFromArray(subnets));
+            classInstance.Invoke("AddRange", (java.lang.Object)toObjectFromArray(subnets));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

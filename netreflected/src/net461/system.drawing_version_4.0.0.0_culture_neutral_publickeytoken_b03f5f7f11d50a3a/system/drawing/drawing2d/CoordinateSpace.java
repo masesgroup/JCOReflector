@@ -108,7 +108,7 @@ public class CoordinateSpace extends NetObject  {
         }
     }
 
-    public CoordinateSpace(Object instance) {
+    public CoordinateSpace(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class CoordinateSpace extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -100,7 +100,7 @@ public class WebResponse extends MarshalByRefObject implements system.runtime.se
         }
     }
 
-    public WebResponse(Object instance) throws Throwable {
+    public WebResponse(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class WebResponse extends MarshalByRefObject implements system.runtime.se
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

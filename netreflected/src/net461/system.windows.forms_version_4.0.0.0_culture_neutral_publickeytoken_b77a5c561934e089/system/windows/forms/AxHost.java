@@ -127,7 +127,7 @@ public class AxHost extends Control implements system.componentmodel.ICustomType
         }
     }
 
-    public AxHost(Object instance) throws Throwable {
+    public AxHost(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -147,7 +147,7 @@ public class AxHost extends Control implements system.componentmodel.ICustomType
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -188,11 +188,11 @@ public class AxHost extends Control implements system.componentmodel.ICustomType
         }
     }
 
-    public boolean PreProcessMessage(Message msg) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
+    public boolean PreProcessMessage(JCORefOut<Message> msg) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("PreProcessMessage", msg == null ? null : msg.getJCOInstance());
+            return (boolean)classInstance.Invoke("PreProcessMessage", msg.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

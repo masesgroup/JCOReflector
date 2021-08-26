@@ -99,7 +99,7 @@ public class InstanceLockLostException extends InstancePersistenceCommandExcepti
         super();
     }
 
-    public InstanceLockLostException(Object instance) {
+    public InstanceLockLostException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -133,7 +133,7 @@ public class InstanceLockLostException extends InstancePersistenceCommandExcepti
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

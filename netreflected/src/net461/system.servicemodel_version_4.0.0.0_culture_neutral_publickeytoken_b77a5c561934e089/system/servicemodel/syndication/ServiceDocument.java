@@ -98,7 +98,7 @@ public class ServiceDocument extends NetObject  {
         }
     }
 
-    public ServiceDocument(Object instance) throws Throwable {
+    public ServiceDocument(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class ServiceDocument extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

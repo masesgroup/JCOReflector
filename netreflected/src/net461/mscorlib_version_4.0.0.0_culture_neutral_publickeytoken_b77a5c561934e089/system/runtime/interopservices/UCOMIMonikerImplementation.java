@@ -102,7 +102,7 @@ public class UCOMIMonikerImplementation extends NetObject implements UCOMIMonike
         }
     }
 
-    public UCOMIMonikerImplementation(Object instance) throws Throwable {
+    public UCOMIMonikerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -122,7 +122,7 @@ public class UCOMIMonikerImplementation extends NetObject implements UCOMIMonike
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -152,21 +152,21 @@ public class UCOMIMonikerImplementation extends NetObject implements UCOMIMonike
         }
     }
 
-    public void BindToObject(UCOMIBindCtx pbc, UCOMIMoniker pmkToLeft, Guid riidResult, JCORefOut<NetObject> ppvResult) throws Throwable {
+    public void BindToObject(UCOMIBindCtx pbc, UCOMIMoniker pmkToLeft, JCORefOut<Guid> riidResult, JCORefOut<NetObject> ppvResult) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("BindToObject", pbc == null ? null : pbc.getJCOInstance(), pmkToLeft == null ? null : pmkToLeft.getJCOInstance(), riidResult == null ? null : riidResult.getJCOInstance(), ppvResult.getJCRefOut());
+            classInstance.Invoke("BindToObject", pbc == null ? null : pbc.getJCOInstance(), pmkToLeft == null ? null : pmkToLeft.getJCOInstance(), riidResult.getJCRefOut(), ppvResult.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void BindToStorage(UCOMIBindCtx pbc, UCOMIMoniker pmkToLeft, Guid riid, JCORefOut<NetObject> ppvObj) throws Throwable {
+    public void BindToStorage(UCOMIBindCtx pbc, UCOMIMoniker pmkToLeft, JCORefOut<Guid> riid, JCORefOut<NetObject> ppvObj) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("BindToStorage", pbc == null ? null : pbc.getJCOInstance(), pmkToLeft == null ? null : pmkToLeft.getJCOInstance(), riid == null ? null : riid.getJCOInstance(), ppvObj.getJCRefOut());
+            classInstance.Invoke("BindToStorage", pbc == null ? null : pbc.getJCOInstance(), pmkToLeft == null ? null : pmkToLeft.getJCOInstance(), riid.getJCRefOut(), ppvObj.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -222,7 +222,7 @@ public class UCOMIMonikerImplementation extends NetObject implements UCOMIMonike
         }
     }
 
-    public void GetSizeMax(JCORefOut pcbSize) throws Throwable {
+    public void GetSizeMax(JCORefOut<java.util.concurrent.atomic.AtomicLong> pcbSize) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -242,7 +242,7 @@ public class UCOMIMonikerImplementation extends NetObject implements UCOMIMonike
         }
     }
 
-    public void Hash(JCORefOut pdwHash) throws Throwable {
+    public void Hash(JCORefOut<java.util.concurrent.atomic.AtomicInteger> pdwHash) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -282,7 +282,7 @@ public class UCOMIMonikerImplementation extends NetObject implements UCOMIMonike
         }
     }
 
-    public void IsSystemMoniker(JCORefOut pdwMksys) throws Throwable {
+    public void IsSystemMoniker(JCORefOut<java.util.concurrent.atomic.AtomicInteger> pdwMksys) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -302,7 +302,7 @@ public class UCOMIMonikerImplementation extends NetObject implements UCOMIMonike
         }
     }
 
-    public void ParseDisplayName(UCOMIBindCtx pbc, UCOMIMoniker pmkToLeft, java.lang.String pszDisplayName, JCORefOut pchEaten, JCORefOut<UCOMIMoniker> ppmkOut) throws Throwable {
+    public void ParseDisplayName(UCOMIBindCtx pbc, UCOMIMoniker pmkToLeft, java.lang.String pszDisplayName, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pchEaten, JCORefOut<UCOMIMoniker> ppmkOut) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -312,11 +312,11 @@ public class UCOMIMonikerImplementation extends NetObject implements UCOMIMonike
         }
     }
 
-    public void Reduce(UCOMIBindCtx pbc, int dwReduceHowFar, UCOMIMoniker ppmkToLeft, JCORefOut<UCOMIMoniker> ppmkReduced) throws Throwable {
+    public void Reduce(UCOMIBindCtx pbc, int dwReduceHowFar, JCORefOut<UCOMIMoniker> ppmkToLeft, JCORefOut<UCOMIMoniker> ppmkReduced) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Reduce", pbc == null ? null : pbc.getJCOInstance(), dwReduceHowFar, ppmkToLeft == null ? null : ppmkToLeft.getJCOInstance(), ppmkReduced.getJCRefOut());
+            classInstance.Invoke("Reduce", pbc == null ? null : pbc.getJCOInstance(), dwReduceHowFar, ppmkToLeft.getJCRefOut(), ppmkReduced.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

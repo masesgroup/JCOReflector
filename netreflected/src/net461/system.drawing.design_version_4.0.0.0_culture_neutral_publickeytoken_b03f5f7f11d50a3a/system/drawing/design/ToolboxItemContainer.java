@@ -101,7 +101,7 @@ public class ToolboxItemContainer extends NetObject implements system.runtime.se
         }
     }
 
-    public ToolboxItemContainer(Object instance) throws Throwable {
+    public ToolboxItemContainer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -121,7 +121,7 @@ public class ToolboxItemContainer extends NetObject implements system.runtime.se
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

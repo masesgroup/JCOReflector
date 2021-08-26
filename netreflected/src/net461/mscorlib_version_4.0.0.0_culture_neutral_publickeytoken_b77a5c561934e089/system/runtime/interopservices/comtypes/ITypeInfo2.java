@@ -106,9 +106,9 @@ public interface ITypeInfo2 extends IJCOBridgeReflected, ITypeInfo {
     /**
      * Returns the instantiated class
      * 
-     * @return An {@link Object} representing the instance of the instantiated Class
+     * @return An {@link java.lang.Object} representing the instance of the instantiated Class
      */
-    public Object getJCOInstance();
+    public java.lang.Object getJCOInstance();
 
     /**
      * Returns the instantiated class Type
@@ -119,45 +119,45 @@ public interface ITypeInfo2 extends IJCOBridgeReflected, ITypeInfo {
 
     // Methods section
     
-    public void CreateInstance(NetObject pUnkOuter, Guid riid, JCORefOut<NetObject> ppvObj) throws Throwable;
+    public void CreateInstance(NetObject pUnkOuter, JCORefOut<Guid> riid, JCORefOut<NetObject> ppvObj) throws Throwable;
 
-    public void GetContainingTypeLib(JCORefOut<ITypeLib> ppTLB, JCORefOut pIndex) throws Throwable;
+    public void GetContainingTypeLib(JCORefOut<ITypeLib> ppTLB, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pIndex) throws Throwable;
 
-    public void GetCustData(Guid guid, JCORefOut<NetObject> pVarVal) throws Throwable;
+    public void GetCustData(JCORefOut<Guid> guid, JCORefOut<NetObject> pVarVal) throws Throwable;
 
-    public void GetDocumentation(int index, JCORefOut strName, JCORefOut strDocString, JCORefOut dwHelpContext, JCORefOut strHelpFile) throws Throwable;
+    public void GetDocumentation(int index, JCORefOut strName, JCORefOut strDocString, JCORefOut<java.util.concurrent.atomic.AtomicInteger> dwHelpContext, JCORefOut strHelpFile) throws Throwable;
 
-    public void GetDocumentation2(int memid, JCORefOut pbstrHelpString, JCORefOut pdwHelpStringContext, JCORefOut pbstrHelpStringDll) throws Throwable;
+    public void GetDocumentation2(int memid, JCORefOut pbstrHelpString, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pdwHelpStringContext, JCORefOut pbstrHelpStringDll) throws Throwable;
 
-    public void GetFuncCustData(int index, Guid guid, JCORefOut<NetObject> pVarVal) throws Throwable;
+    public void GetFuncCustData(int index, JCORefOut<Guid> guid, JCORefOut<NetObject> pVarVal) throws Throwable;
 
-    public void GetFuncIndexOfMemId(int memid, INVOKEKIND invKind, JCORefOut pFuncIndex) throws Throwable;
+    public void GetFuncIndexOfMemId(int memid, INVOKEKIND invKind, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pFuncIndex) throws Throwable;
 
     public void GetIDsOfNames(java.lang.String[] rgszNames, int cNames, JCORefOut pMemId) throws Throwable;
 
-    public void GetImplTypeCustData(int index, Guid guid, JCORefOut<NetObject> pVarVal) throws Throwable;
+    public void GetImplTypeCustData(int index, JCORefOut<Guid> guid, JCORefOut<NetObject> pVarVal) throws Throwable;
 
     public void GetImplTypeFlags(int index, JCORefOut<IMPLTYPEFLAGS> pImplTypeFlags) throws Throwable;
 
     public void GetMops(int memid, JCORefOut pBstrMops) throws Throwable;
 
-    public void GetNames(int memid, JCORefOut rgBstrNames, int cMaxNames, JCORefOut pcNames) throws Throwable;
+    public void GetNames(int memid, JCORefOut rgBstrNames, int cMaxNames, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pcNames) throws Throwable;
 
-    public void GetParamCustData(int indexFunc, int indexParam, Guid guid, JCORefOut<NetObject> pVarVal) throws Throwable;
+    public void GetParamCustData(int indexFunc, int indexParam, JCORefOut<Guid> guid, JCORefOut<NetObject> pVarVal) throws Throwable;
 
     public void GetRefTypeInfo(int hRef, JCORefOut<ITypeInfo> ppTI) throws Throwable;
 
-    public void GetRefTypeOfImplType(int index, JCORefOut href) throws Throwable;
+    public void GetRefTypeOfImplType(int index, JCORefOut<java.util.concurrent.atomic.AtomicInteger> href) throws Throwable;
 
     public void GetTypeComp(JCORefOut<ITypeComp> ppTComp) throws Throwable;
 
-    public void GetTypeFlags(JCORefOut pTypeFlags) throws Throwable;
+    public void GetTypeFlags(JCORefOut<java.util.concurrent.atomic.AtomicInteger> pTypeFlags) throws Throwable;
 
     public void GetTypeKind(JCORefOut<TYPEKIND> pTypeKind) throws Throwable;
 
-    public void GetVarCustData(int index, Guid guid, JCORefOut<NetObject> pVarVal) throws Throwable;
+    public void GetVarCustData(int index, JCORefOut<Guid> guid, JCORefOut<NetObject> pVarVal) throws Throwable;
 
-    public void GetVarIndexOfMemId(int memid, JCORefOut pVarIndex) throws Throwable;
+    public void GetVarIndexOfMemId(int memid, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pVarIndex) throws Throwable;
 
 
     

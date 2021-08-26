@@ -96,7 +96,7 @@ public class TickBar extends FrameworkElement  {
         }
     }
 
-    public TickBar(Object instance) throws Throwable {
+    public TickBar(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class TickBar extends FrameworkElement  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

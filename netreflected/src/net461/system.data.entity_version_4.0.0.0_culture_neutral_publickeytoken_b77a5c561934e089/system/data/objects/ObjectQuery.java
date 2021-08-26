@@ -99,7 +99,7 @@ public class ObjectQuery extends NetObjectEnumerable  {
         }
     }
 
-    public ObjectQuery(Object instance) throws Throwable {
+    public ObjectQuery(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class ObjectQuery extends NetObjectEnumerable  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

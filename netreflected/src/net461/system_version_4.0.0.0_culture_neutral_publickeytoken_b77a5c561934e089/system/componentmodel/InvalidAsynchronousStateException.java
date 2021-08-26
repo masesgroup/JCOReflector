@@ -97,7 +97,7 @@ public class InvalidAsynchronousStateException extends ArgumentException {
         super();
     }
 
-    public InvalidAsynchronousStateException(Object instance) {
+    public InvalidAsynchronousStateException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class InvalidAsynchronousStateException extends ArgumentException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -101,7 +101,7 @@ public class HttpClientChannel extends BaseChannelWithProperties  {
         }
     }
 
-    public HttpClientChannel(Object instance) throws Throwable {
+    public HttpClientChannel(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -121,7 +121,7 @@ public class HttpClientChannel extends BaseChannelWithProperties  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

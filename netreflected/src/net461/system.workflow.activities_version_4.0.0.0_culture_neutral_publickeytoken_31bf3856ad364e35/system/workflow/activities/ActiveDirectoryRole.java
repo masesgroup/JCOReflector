@@ -101,7 +101,7 @@ public class ActiveDirectoryRole extends WorkflowRole implements system.runtime.
         }
     }
 
-    public ActiveDirectoryRole(Object instance) throws Throwable {
+    public ActiveDirectoryRole(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -121,7 +121,7 @@ public class ActiveDirectoryRole extends WorkflowRole implements system.runtime.
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

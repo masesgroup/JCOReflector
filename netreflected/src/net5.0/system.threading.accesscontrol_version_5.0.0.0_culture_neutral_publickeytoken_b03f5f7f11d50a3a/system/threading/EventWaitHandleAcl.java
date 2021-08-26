@@ -95,7 +95,7 @@ public class EventWaitHandleAcl extends NetObject  {
         }
     }
 
-    public EventWaitHandleAcl(Object instance) throws Throwable {
+    public EventWaitHandleAcl(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class EventWaitHandleAcl extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -146,7 +146,7 @@ public class EventWaitHandleAcl extends NetObject  {
     
     // Methods section
     
-    public static EventWaitHandle Create(boolean initialState, EventResetMode mode, java.lang.String name, JCORefOut createdNew, EventWaitHandleSecurity eventSecurity) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.threading.WaitHandleCannotBeOpenedException, system.FormatException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
+    public static EventWaitHandle Create(boolean initialState, EventResetMode mode, java.lang.String name, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> createdNew, EventWaitHandleSecurity eventSecurity) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.threading.WaitHandleCannotBeOpenedException, system.FormatException, system.threading.LockRecursionException, system.threading.AbandonedMutexException, system.threading.SynchronizationLockException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {

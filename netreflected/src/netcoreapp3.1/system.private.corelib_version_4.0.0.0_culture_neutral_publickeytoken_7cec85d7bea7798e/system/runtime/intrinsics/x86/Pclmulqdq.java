@@ -93,7 +93,7 @@ public class Pclmulqdq extends Sse2  {
         }
     }
 
-    public Pclmulqdq(Object instance) throws Throwable {
+    public Pclmulqdq(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class Pclmulqdq extends Sse2  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

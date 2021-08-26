@@ -100,7 +100,7 @@ public class PeerEndPoint extends NetObject implements system.runtime.serializat
         }
     }
 
-    public PeerEndPoint(Object instance) throws Throwable {
+    public PeerEndPoint(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class PeerEndPoint extends NetObject implements system.runtime.serializat
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -107,7 +107,7 @@ public class ObjectDataSourceView extends DataSourceView  {
         }
     }
 
-    public ObjectDataSourceView(Object instance) throws Throwable {
+    public ObjectDataSourceView(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -127,7 +127,7 @@ public class ObjectDataSourceView extends DataSourceView  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -104,7 +104,7 @@ public class Pkcs12SafeContents extends NetObject  {
         }
     }
 
-    public Pkcs12SafeContents(Object instance) throws Throwable {
+    public Pkcs12SafeContents(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -124,7 +124,7 @@ public class Pkcs12SafeContents extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -243,7 +243,7 @@ public class Pkcs12SafeContents extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Decrypt", (Object)passwordBytes);
+            classInstance.Invoke("Decrypt", (java.lang.Object)passwordBytes);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -253,7 +253,7 @@ public class Pkcs12SafeContents extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Decrypt", (Object)dupParam0.getJCRefOut());
+            classInstance.Invoke("Decrypt", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

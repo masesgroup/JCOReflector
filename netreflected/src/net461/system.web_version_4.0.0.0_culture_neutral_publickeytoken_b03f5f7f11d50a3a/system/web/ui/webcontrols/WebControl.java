@@ -105,7 +105,7 @@ public class WebControl extends Control implements system.web.ui.IAttributeAcces
         }
     }
 
-    public WebControl(Object instance) throws Throwable {
+    public WebControl(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -125,7 +125,7 @@ public class WebControl extends Control implements system.web.ui.IAttributeAcces
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

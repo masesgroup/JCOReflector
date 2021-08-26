@@ -125,7 +125,7 @@ public class FrameworkElement extends UIElement implements system.windows.markup
         }
     }
 
-    public FrameworkElement(Object instance) throws Throwable {
+    public FrameworkElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -145,7 +145,7 @@ public class FrameworkElement extends UIElement implements system.windows.markup
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

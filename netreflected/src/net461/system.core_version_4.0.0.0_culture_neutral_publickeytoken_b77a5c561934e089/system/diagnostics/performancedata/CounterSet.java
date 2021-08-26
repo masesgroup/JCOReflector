@@ -96,7 +96,7 @@ public class CounterSet extends NetObject implements AutoCloseable {
         }
     }
 
-    public CounterSet(Object instance) throws Throwable {
+    public CounterSet(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class CounterSet extends NetObject implements AutoCloseable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

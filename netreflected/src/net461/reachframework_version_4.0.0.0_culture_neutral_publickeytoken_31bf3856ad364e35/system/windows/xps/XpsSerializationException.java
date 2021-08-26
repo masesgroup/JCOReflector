@@ -97,7 +97,7 @@ public class XpsSerializationException extends XpsException {
         super();
     }
 
-    public XpsSerializationException(Object instance) {
+    public XpsSerializationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class XpsSerializationException extends XpsException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

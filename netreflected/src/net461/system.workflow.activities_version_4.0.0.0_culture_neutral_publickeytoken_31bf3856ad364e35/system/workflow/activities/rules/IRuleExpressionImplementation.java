@@ -100,7 +100,7 @@ public class IRuleExpressionImplementation extends NetObject implements IRuleExp
         }
     }
 
-    public IRuleExpressionImplementation(Object instance) throws Throwable {
+    public IRuleExpressionImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class IRuleExpressionImplementation extends NetObject implements IRuleExp
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -99,7 +99,7 @@ public class PrintCommitAttributesException extends PrintSystemException {
         super();
     }
 
-    public PrintCommitAttributesException(Object instance) {
+    public PrintCommitAttributesException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -133,7 +133,7 @@ public class PrintCommitAttributesException extends PrintSystemException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

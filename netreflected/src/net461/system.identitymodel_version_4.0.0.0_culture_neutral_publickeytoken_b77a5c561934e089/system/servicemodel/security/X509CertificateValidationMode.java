@@ -108,7 +108,7 @@ public class X509CertificateValidationMode extends NetObject  {
         }
     }
 
-    public X509CertificateValidationMode(Object instance) {
+    public X509CertificateValidationMode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class X509CertificateValidationMode extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

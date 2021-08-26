@@ -94,7 +94,7 @@ public class SortRequestControl extends DirectoryControl  {
         }
     }
 
-    public SortRequestControl(Object instance) throws Throwable {
+    public SortRequestControl(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class SortRequestControl extends DirectoryControl  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -146,7 +146,7 @@ public class SortRequestControl extends DirectoryControl  {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((Object)toObjectFromArray(sortKeys)));
+            setJCOInstance((JCObject)classType.NewObject((java.lang.Object)toObjectFromArray(sortKeys)));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,9 +181,9 @@ public class SortRequestControl extends DirectoryControl  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetValue");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -206,7 +206,7 @@ public class SortRequestControl extends DirectoryControl  {
         try {
             ArrayList<SortKey> resultingArrayList = new ArrayList<SortKey>();
             JCObject resultingObjects = (JCObject)classInstance.Get("SortKeys");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new SortKey(resultingObject));
             }
             SortKey[] resultingArray = new SortKey[resultingArrayList.size()];

@@ -96,7 +96,7 @@ public class DynamicILInfo extends NetObject  {
         }
     }
 
-    public DynamicILInfo(Object instance) throws Throwable {
+    public DynamicILInfo(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class DynamicILInfo extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -153,7 +153,7 @@ public class DynamicILInfo extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("GetTokenFor", (Object)signature);
+            return (int)classInstance.Invoke("GetTokenFor", (java.lang.Object)signature);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,7 +163,7 @@ public class DynamicILInfo extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("GetTokenFor", (Object)dupParam0.getJCRefOut());
+            return (int)classInstance.Invoke("GetTokenFor", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -263,7 +263,7 @@ public class DynamicILInfo extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetExceptions", (Object)exceptions);
+            classInstance.Invoke("SetExceptions", (java.lang.Object)exceptions);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,7 +273,7 @@ public class DynamicILInfo extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetExceptions", (Object)dupParam0.getJCRefOut());
+            classInstance.Invoke("SetExceptions", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -283,7 +283,7 @@ public class DynamicILInfo extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetLocalSignature", (Object)localSignature);
+            classInstance.Invoke("SetLocalSignature", (java.lang.Object)localSignature);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -293,7 +293,7 @@ public class DynamicILInfo extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetLocalSignature", (Object)dupParam0.getJCRefOut());
+            classInstance.Invoke("SetLocalSignature", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

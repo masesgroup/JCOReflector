@@ -104,7 +104,7 @@ public class CustomPeerResolverService extends NetObject  {
         }
     }
 
-    public CustomPeerResolverService(Object instance) throws Throwable {
+    public CustomPeerResolverService(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -124,7 +124,7 @@ public class CustomPeerResolverService extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

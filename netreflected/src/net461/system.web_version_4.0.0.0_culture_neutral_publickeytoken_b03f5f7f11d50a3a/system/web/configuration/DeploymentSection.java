@@ -93,7 +93,7 @@ public class DeploymentSection extends ConfigurationSection  {
         }
     }
 
-    public DeploymentSection(Object instance) throws Throwable {
+    public DeploymentSection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class DeploymentSection extends ConfigurationSection  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -98,7 +98,7 @@ public class ConfigurationManager extends NetObject  {
         }
     }
 
-    public ConfigurationManager(Object instance) throws Throwable {
+    public ConfigurationManager(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class ConfigurationManager extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

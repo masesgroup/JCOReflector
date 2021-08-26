@@ -97,7 +97,7 @@ public class EasingQuaternionKeyFrame extends QuaternionKeyFrame  {
         }
     }
 
-    public EasingQuaternionKeyFrame(Object instance) throws Throwable {
+    public EasingQuaternionKeyFrame(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class EasingQuaternionKeyFrame extends QuaternionKeyFrame  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

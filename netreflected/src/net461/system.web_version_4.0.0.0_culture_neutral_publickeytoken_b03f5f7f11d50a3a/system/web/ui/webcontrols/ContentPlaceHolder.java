@@ -95,7 +95,7 @@ public class ContentPlaceHolder extends Control implements system.web.ui.INaming
         }
     }
 
-    public ContentPlaceHolder(Object instance) throws Throwable {
+    public ContentPlaceHolder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class ContentPlaceHolder extends Control implements system.web.ui.INaming
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

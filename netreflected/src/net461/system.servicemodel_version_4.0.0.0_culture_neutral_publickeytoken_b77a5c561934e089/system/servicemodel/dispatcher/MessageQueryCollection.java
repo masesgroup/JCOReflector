@@ -92,7 +92,7 @@ public class MessageQueryCollection extends NetObjectEnumerable  {
         }
     }
 
-    public MessageQueryCollection(Object instance) throws Throwable {
+    public MessageQueryCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class MessageQueryCollection extends NetObjectEnumerable  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

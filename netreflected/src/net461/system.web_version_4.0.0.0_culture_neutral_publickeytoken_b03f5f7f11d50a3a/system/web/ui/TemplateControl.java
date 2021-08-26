@@ -100,7 +100,7 @@ public class TemplateControl extends Control implements system.web.ui.INamingCon
         }
     }
 
-    public TemplateControl(Object instance) throws Throwable {
+    public TemplateControl(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class TemplateControl extends Control implements system.web.ui.INamingCon
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -97,7 +97,7 @@ public class PanelStyle extends Style  {
         }
     }
 
-    public PanelStyle(Object instance) throws Throwable {
+    public PanelStyle(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class PanelStyle extends Style  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -102,7 +102,7 @@ public class OrderedDictionary extends NetObjectEnumerable implements system.run
         }
     }
 
-    public OrderedDictionary(Object instance) throws Throwable {
+    public OrderedDictionary(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -122,7 +122,7 @@ public class OrderedDictionary extends NetObjectEnumerable implements system.run
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

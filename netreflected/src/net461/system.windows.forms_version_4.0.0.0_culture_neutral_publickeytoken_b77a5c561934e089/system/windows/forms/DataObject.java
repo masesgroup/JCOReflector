@@ -108,7 +108,7 @@ public class DataObject extends NetObject implements system.runtime.interopservi
         }
     }
 
-    public DataObject(Object instance) throws Throwable {
+    public DataObject(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -128,7 +128,7 @@ public class DataObject extends NetObject implements system.runtime.interopservi
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -357,9 +357,9 @@ public class DataObject extends NetObject implements system.runtime.interopservi
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFormats");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];
@@ -376,9 +376,9 @@ public class DataObject extends NetObject implements system.runtime.interopservi
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFormats", autoConvert);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];
@@ -395,7 +395,7 @@ public class DataObject extends NetObject implements system.runtime.interopservi
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetAudio", (Object)audioBytes);
+            classInstance.Invoke("SetAudio", (java.lang.Object)audioBytes);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -405,7 +405,7 @@ public class DataObject extends NetObject implements system.runtime.interopservi
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetAudio", (Object)dupParam0.getJCRefOut());
+            classInstance.Invoke("SetAudio", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -506,7 +506,7 @@ public class DataObject extends NetObject implements system.runtime.interopservi
      *    Use the static ToIDataObject method available in IDataObject to obtain an object with an invocable method
      */
     @Deprecated 
-    public int DAdvise(FORMATETC pFormatetc, ADVF advf, IAdviseSink adviseSink, JCORefOut connection) throws Throwable {
+    public int DAdvise(JCORefOut<FORMATETC> pFormatetc, ADVF advf, IAdviseSink adviseSink, JCORefOut<java.util.concurrent.atomic.AtomicInteger> connection) throws Throwable {
         throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataObject to obtain the full interface.");
     }
 
@@ -524,7 +524,7 @@ public class DataObject extends NetObject implements system.runtime.interopservi
      *    Use the static ToIDataObject method available in IDataObject to obtain an object with an invocable method
      */
     @Deprecated 
-    public int GetCanonicalFormatEtc(FORMATETC formatIn, JCORefOut<FORMATETC> formatOut) throws Throwable {
+    public int GetCanonicalFormatEtc(JCORefOut<FORMATETC> formatIn, JCORefOut<FORMATETC> formatOut) throws Throwable {
         throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataObject to obtain the full interface.");
     }
 
@@ -533,7 +533,7 @@ public class DataObject extends NetObject implements system.runtime.interopservi
      *    Use the static ToIDataObject method available in IDataObject to obtain an object with an invocable method
      */
     @Deprecated 
-    public int QueryGetData(FORMATETC format) throws Throwable {
+    public int QueryGetData(JCORefOut<FORMATETC> format) throws Throwable {
         throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataObject to obtain the full interface.");
     }
 
@@ -560,7 +560,7 @@ public class DataObject extends NetObject implements system.runtime.interopservi
      *    Use the static ToIDataObject method available in IDataObject to obtain an object with an invocable method
      */
     @Deprecated 
-    public void GetData(FORMATETC format, JCORefOut<STGMEDIUM> medium) throws Throwable {
+    public void GetData(JCORefOut<FORMATETC> format, JCORefOut<STGMEDIUM> medium) throws Throwable {
         throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataObject to obtain the full interface.");
     }
 
@@ -569,7 +569,7 @@ public class DataObject extends NetObject implements system.runtime.interopservi
      *    Use the static ToIDataObject method available in IDataObject to obtain an object with an invocable method
      */
     @Deprecated 
-    public void GetDataHere(FORMATETC format, STGMEDIUM medium) throws Throwable {
+    public void GetDataHere(JCORefOut<FORMATETC> format, JCORefOut<STGMEDIUM> medium) throws Throwable {
         throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataObject to obtain the full interface.");
     }
 
@@ -578,7 +578,7 @@ public class DataObject extends NetObject implements system.runtime.interopservi
      *    Use the static ToIDataObject method available in IDataObject to obtain an object with an invocable method
      */
     @Deprecated 
-    public void SetData(FORMATETC formatIn, STGMEDIUM medium, boolean release) throws Throwable {
+    public void SetData(JCORefOut<FORMATETC> formatIn, JCORefOut<STGMEDIUM> medium, boolean release) throws Throwable {
         throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIDataObject to obtain the full interface.");
     }
 

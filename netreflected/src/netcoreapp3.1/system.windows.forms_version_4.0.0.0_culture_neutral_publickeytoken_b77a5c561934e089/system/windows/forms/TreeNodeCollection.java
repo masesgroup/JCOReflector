@@ -94,7 +94,7 @@ public class TreeNodeCollection extends NetObjectEnumerable  {
         }
     }
 
-    public TreeNodeCollection(Object instance) throws Throwable {
+    public TreeNodeCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class TreeNodeCollection extends NetObjectEnumerable  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -335,7 +335,7 @@ public class TreeNodeCollection extends NetObjectEnumerable  {
         try {
             ArrayList<TreeNode> resultingArrayList = new ArrayList<TreeNode>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("Find", key, searchAllChildren);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new TreeNode(resultingObject));
             }
             TreeNode[] resultingArray = new TreeNode[resultingArrayList.size()];
@@ -350,7 +350,7 @@ public class TreeNodeCollection extends NetObjectEnumerable  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddRange", (Object)toObjectFromArray(nodes));
+            classInstance.Invoke("AddRange", (java.lang.Object)toObjectFromArray(nodes));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

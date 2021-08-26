@@ -99,7 +99,7 @@ public class IGeneratedTaskImplementation extends NetObject implements IGenerate
         }
     }
 
-    public IGeneratedTaskImplementation(Object instance) throws Throwable {
+    public IGeneratedTaskImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class IGeneratedTaskImplementation extends NetObject implements IGenerate
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

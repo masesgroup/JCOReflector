@@ -93,7 +93,7 @@ public class FontCollection extends NetObject implements AutoCloseable {
         }
     }
 
-    public FontCollection(Object instance) throws Throwable {
+    public FontCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class FontCollection extends NetObject implements AutoCloseable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -177,7 +177,7 @@ public class FontCollection extends NetObject implements AutoCloseable {
         try {
             ArrayList<FontFamily> resultingArrayList = new ArrayList<FontFamily>();
             JCObject resultingObjects = (JCObject)classInstance.Get("Families");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new FontFamily(resultingObject));
             }
             FontFamily[] resultingArray = new FontFamily[resultingArrayList.size()];

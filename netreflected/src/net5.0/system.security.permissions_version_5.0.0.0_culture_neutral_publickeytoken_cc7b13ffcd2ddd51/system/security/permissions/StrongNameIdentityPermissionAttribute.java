@@ -96,7 +96,7 @@ public class StrongNameIdentityPermissionAttribute extends CodeAccessSecurityAtt
         }
     }
 
-    public StrongNameIdentityPermissionAttribute(Object instance) throws Throwable {
+    public StrongNameIdentityPermissionAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class StrongNameIdentityPermissionAttribute extends CodeAccessSecurityAtt
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

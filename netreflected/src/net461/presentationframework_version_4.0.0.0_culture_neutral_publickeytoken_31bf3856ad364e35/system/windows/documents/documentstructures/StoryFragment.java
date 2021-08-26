@@ -95,7 +95,7 @@ public class StoryFragment extends NetObjectEnumerable implements system.windows
         }
     }
 
-    public StoryFragment(Object instance) throws Throwable {
+    public StoryFragment(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class StoryFragment extends NetObjectEnumerable implements system.windows
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

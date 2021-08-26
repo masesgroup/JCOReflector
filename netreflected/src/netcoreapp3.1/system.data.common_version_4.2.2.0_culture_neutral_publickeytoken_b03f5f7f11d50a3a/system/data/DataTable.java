@@ -134,7 +134,7 @@ public class DataTable extends MarshalByValueComponent  {
         }
     }
 
-    public DataTable(Object instance) throws Throwable {
+    public DataTable(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -154,7 +154,7 @@ public class DataTable extends MarshalByValueComponent  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -252,7 +252,7 @@ public class DataTable extends MarshalByValueComponent  {
         try {
             ArrayList<DataRow> resultingArrayList = new ArrayList<DataRow>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetErrors");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataRow(resultingObject));
             }
             DataRow[] resultingArray = new DataRow[resultingArrayList.size()];
@@ -269,7 +269,7 @@ public class DataTable extends MarshalByValueComponent  {
         try {
             ArrayList<DataRow> resultingArrayList = new ArrayList<DataRow>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("Select");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataRow(resultingObject));
             }
             DataRow[] resultingArray = new DataRow[resultingArrayList.size()];
@@ -286,7 +286,7 @@ public class DataTable extends MarshalByValueComponent  {
         try {
             ArrayList<DataRow> resultingArrayList = new ArrayList<DataRow>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("Select", filterExpression);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataRow(resultingObject));
             }
             DataRow[] resultingArray = new DataRow[resultingArrayList.size()];
@@ -303,7 +303,7 @@ public class DataTable extends MarshalByValueComponent  {
         try {
             ArrayList<DataRow> resultingArrayList = new ArrayList<DataRow>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("Select", filterExpression, sort);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataRow(resultingObject));
             }
             DataRow[] resultingArray = new DataRow[resultingArrayList.size()];
@@ -320,7 +320,7 @@ public class DataTable extends MarshalByValueComponent  {
         try {
             ArrayList<DataRow> resultingArrayList = new ArrayList<DataRow>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("Select", filterExpression, sort, recordStates == null ? null : recordStates.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataRow(resultingObject));
             }
             DataRow[] resultingArray = new DataRow[resultingArrayList.size()];
@@ -991,7 +991,7 @@ public class DataTable extends MarshalByValueComponent  {
         try {
             ArrayList<DataColumn> resultingArrayList = new ArrayList<DataColumn>();
             JCObject resultingObjects = (JCObject)classInstance.Get("PrimaryKey");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataColumn(resultingObject));
             }
             DataColumn[] resultingArray = new DataColumn[resultingArrayList.size()];

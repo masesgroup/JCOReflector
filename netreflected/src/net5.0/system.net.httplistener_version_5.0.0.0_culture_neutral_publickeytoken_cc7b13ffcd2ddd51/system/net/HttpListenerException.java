@@ -97,7 +97,7 @@ public class HttpListenerException extends Win32Exception {
         super();
     }
 
-    public HttpListenerException(Object instance) {
+    public HttpListenerException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class HttpListenerException extends Win32Exception {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

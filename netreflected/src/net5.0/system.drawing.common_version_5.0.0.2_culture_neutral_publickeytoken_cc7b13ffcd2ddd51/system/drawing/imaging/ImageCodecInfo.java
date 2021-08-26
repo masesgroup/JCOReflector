@@ -95,7 +95,7 @@ public class ImageCodecInfo extends NetObject  {
         }
     }
 
-    public ImageCodecInfo(Object instance) throws Throwable {
+    public ImageCodecInfo(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class ImageCodecInfo extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -154,7 +154,7 @@ public class ImageCodecInfo extends NetObject  {
         try {
             ArrayList<ImageCodecInfo> resultingArrayList = new ArrayList<ImageCodecInfo>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetImageDecoders");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ImageCodecInfo(resultingObject));
             }
             ImageCodecInfo[] resultingArray = new ImageCodecInfo[resultingArrayList.size()];
@@ -171,7 +171,7 @@ public class ImageCodecInfo extends NetObject  {
         try {
             ArrayList<ImageCodecInfo> resultingArrayList = new ArrayList<ImageCodecInfo>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetImageEncoders");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ImageCodecInfo(resultingObject));
             }
             ImageCodecInfo[] resultingArray = new ImageCodecInfo[resultingArrayList.size()];

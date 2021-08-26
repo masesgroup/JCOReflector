@@ -98,7 +98,7 @@ public class Clipboard extends NetObject  {
         }
     }
 
-    public Clipboard(Object instance) throws Throwable {
+    public Clipboard(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class Clipboard extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -318,7 +318,7 @@ public class Clipboard extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("SetAudio", (Object)audioBytes);
+            classType.Invoke("SetAudio", (java.lang.Object)audioBytes);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -328,7 +328,7 @@ public class Clipboard extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("SetAudio", (Object)dupParam0.getJCRefOut());
+            classType.Invoke("SetAudio", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

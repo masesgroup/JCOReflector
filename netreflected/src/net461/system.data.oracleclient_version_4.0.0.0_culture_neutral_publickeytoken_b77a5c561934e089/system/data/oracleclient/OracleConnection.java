@@ -105,7 +105,7 @@ public class OracleConnection extends DbConnection implements system.ICloneable 
         }
     }
 
-    public OracleConnection(Object instance) throws Throwable {
+    public OracleConnection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -125,7 +125,7 @@ public class OracleConnection extends DbConnection implements system.ICloneable 
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -96,7 +96,7 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public WaitHandle(Object instance) throws Throwable {
+    public WaitHandle(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -181,7 +181,7 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classType.Invoke("WaitAll", (Object)toObjectFromArray(waitHandles));
+            return (boolean)classType.Invoke("WaitAll", (java.lang.Object)toObjectFromArray(waitHandles));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,7 +281,7 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classType.Invoke("WaitAny", (Object)toObjectFromArray(waitHandles));
+            return (int)classType.Invoke("WaitAny", (java.lang.Object)toObjectFromArray(waitHandles));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -97,7 +97,7 @@ public class Dns extends NetObject  {
         }
     }
 
-    public Dns(Object instance) throws Throwable {
+    public Dns(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class Dns extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -209,7 +209,7 @@ public class Dns extends NetObject  {
         try {
             ArrayList<IPAddress> resultingArrayList = new ArrayList<IPAddress>();
             JCObject resultingObjects = (JCObject)classType.Invoke("EndGetHostAddresses", asyncResult == null ? null : asyncResult.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IPAddress(resultingObject));
             }
             IPAddress[] resultingArray = new IPAddress[resultingArrayList.size()];
@@ -226,7 +226,7 @@ public class Dns extends NetObject  {
         try {
             ArrayList<IPAddress> resultingArrayList = new ArrayList<IPAddress>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetHostAddresses", hostNameOrAddress);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IPAddress(resultingObject));
             }
             IPAddress[] resultingArray = new IPAddress[resultingArrayList.size()];

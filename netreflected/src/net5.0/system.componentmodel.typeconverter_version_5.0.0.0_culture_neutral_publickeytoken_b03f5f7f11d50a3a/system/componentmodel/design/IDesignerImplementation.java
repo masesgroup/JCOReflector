@@ -97,7 +97,7 @@ public class IDesignerImplementation extends NetObject implements IDesigner {
         }
     }
 
-    public IDesignerImplementation(Object instance) throws Throwable {
+    public IDesignerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class IDesignerImplementation extends NetObject implements IDesigner {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

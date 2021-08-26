@@ -96,7 +96,7 @@ public class MailWebEventProvider extends BufferedWebEventProvider  {
         }
     }
 
-    public MailWebEventProvider(Object instance) throws Throwable {
+    public MailWebEventProvider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class MailWebEventProvider extends BufferedWebEventProvider  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

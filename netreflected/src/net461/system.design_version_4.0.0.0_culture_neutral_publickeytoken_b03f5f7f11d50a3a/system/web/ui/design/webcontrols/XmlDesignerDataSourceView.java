@@ -96,7 +96,7 @@ public class XmlDesignerDataSourceView extends DesignerDataSourceView  {
         }
     }
 
-    public XmlDesignerDataSourceView(Object instance) throws Throwable {
+    public XmlDesignerDataSourceView(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class XmlDesignerDataSourceView extends DesignerDataSourceView  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -159,7 +159,7 @@ public class XmlDesignerDataSourceView extends DesignerDataSourceView  {
     
     // Methods section
     
-    public IEnumerable GetDesignTimeData(int minimumRows, JCORefOut isSampleData) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.io.PathTooLongException, system.NotSupportedException, system.OverflowException, system.MulticastNotSupportedException {
+    public IEnumerable GetDesignTimeData(int minimumRows, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> isSampleData) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.io.PathTooLongException, system.NotSupportedException, system.OverflowException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

@@ -96,7 +96,7 @@ public class MessageProperties extends NetObjectEnumerable implements AutoClosea
         }
     }
 
-    public MessageProperties(Object instance) throws Throwable {
+    public MessageProperties(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class MessageProperties extends NetObjectEnumerable implements AutoClosea
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

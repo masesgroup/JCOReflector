@@ -110,7 +110,7 @@ public class XmlDictionaryReader extends XmlReader  {
         }
     }
 
-    public XmlDictionaryReader(Object instance) throws Throwable {
+    public XmlDictionaryReader(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -130,7 +130,7 @@ public class XmlDictionaryReader extends XmlReader  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -231,7 +231,7 @@ public class XmlDictionaryReader extends XmlReader  {
         }
     }
 
-    public boolean TryGetArrayLength(JCORefOut count) throws Throwable {
+    public boolean TryGetArrayLength(JCORefOut<java.util.concurrent.atomic.AtomicInteger> count) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -241,7 +241,7 @@ public class XmlDictionaryReader extends XmlReader  {
         }
     }
 
-    public boolean TryGetBase64ContentLength(JCORefOut length) throws Throwable {
+    public boolean TryGetBase64ContentLength(JCORefOut<java.util.concurrent.atomic.AtomicInteger> length) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -285,9 +285,9 @@ public class XmlDictionaryReader extends XmlReader  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadBooleanArray", localName, namespaceUri);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             boolean[] resultingArray = new boolean[resultingArrayList.size()];
@@ -304,9 +304,9 @@ public class XmlDictionaryReader extends XmlReader  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadBooleanArray", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             boolean[] resultingArray = new boolean[resultingArrayList.size()];
@@ -323,9 +323,9 @@ public class XmlDictionaryReader extends XmlReader  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadContentAsBase64");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -342,9 +342,9 @@ public class XmlDictionaryReader extends XmlReader  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadContentAsBinHex");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -361,9 +361,9 @@ public class XmlDictionaryReader extends XmlReader  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadElementContentAsBase64");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -380,9 +380,9 @@ public class XmlDictionaryReader extends XmlReader  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadElementContentAsBinHex");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -409,9 +409,9 @@ public class XmlDictionaryReader extends XmlReader  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadDoubleArray", localName, namespaceUri);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             double[] resultingArray = new double[resultingArrayList.size()];
@@ -428,9 +428,9 @@ public class XmlDictionaryReader extends XmlReader  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadDoubleArray", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             double[] resultingArray = new double[resultingArrayList.size()];
@@ -447,9 +447,9 @@ public class XmlDictionaryReader extends XmlReader  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadInt16Array", localName, namespaceUri);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             short[] resultingArray = new short[resultingArrayList.size()];
@@ -466,9 +466,9 @@ public class XmlDictionaryReader extends XmlReader  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadInt16Array", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             short[] resultingArray = new short[resultingArrayList.size()];
@@ -785,9 +785,9 @@ public class XmlDictionaryReader extends XmlReader  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadInt32Array", localName, namespaceUri);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             int[] resultingArray = new int[resultingArrayList.size()];
@@ -804,9 +804,9 @@ public class XmlDictionaryReader extends XmlReader  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadInt32Array", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             int[] resultingArray = new int[resultingArrayList.size()];
@@ -833,9 +833,9 @@ public class XmlDictionaryReader extends XmlReader  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadInt64Array", localName, namespaceUri);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             long[] resultingArray = new long[resultingArrayList.size()];
@@ -852,9 +852,9 @@ public class XmlDictionaryReader extends XmlReader  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadInt64Array", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             long[] resultingArray = new long[resultingArrayList.size()];
@@ -895,7 +895,7 @@ public class XmlDictionaryReader extends XmlReader  {
         try {
             ArrayList<Single> resultingArrayList = new ArrayList<Single>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadSingleArray", localName, namespaceUri);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Single(resultingObject));
             }
             Single[] resultingArray = new Single[resultingArrayList.size()];
@@ -912,7 +912,7 @@ public class XmlDictionaryReader extends XmlReader  {
         try {
             ArrayList<Single> resultingArrayList = new ArrayList<Single>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadSingleArray", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Single(resultingObject));
             }
             Single[] resultingArray = new Single[resultingArrayList.size()];
@@ -940,7 +940,7 @@ public class XmlDictionaryReader extends XmlReader  {
         try {
             ArrayList<DateTime> resultingArrayList = new ArrayList<DateTime>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadDateTimeArray", localName, namespaceUri);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DateTime(resultingObject));
             }
             DateTime[] resultingArray = new DateTime[resultingArrayList.size()];
@@ -957,7 +957,7 @@ public class XmlDictionaryReader extends XmlReader  {
         try {
             ArrayList<DateTime> resultingArrayList = new ArrayList<DateTime>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadDateTimeArray", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DateTime(resultingObject));
             }
             DateTime[] resultingArray = new DateTime[resultingArrayList.size()];
@@ -996,7 +996,7 @@ public class XmlDictionaryReader extends XmlReader  {
         try {
             ArrayList<Decimal> resultingArrayList = new ArrayList<Decimal>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadDecimalArray", localName, namespaceUri);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Decimal(resultingObject));
             }
             Decimal[] resultingArray = new Decimal[resultingArrayList.size()];
@@ -1013,7 +1013,7 @@ public class XmlDictionaryReader extends XmlReader  {
         try {
             ArrayList<Decimal> resultingArrayList = new ArrayList<Decimal>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadDecimalArray", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Decimal(resultingObject));
             }
             Decimal[] resultingArray = new Decimal[resultingArrayList.size()];
@@ -1052,7 +1052,7 @@ public class XmlDictionaryReader extends XmlReader  {
         try {
             ArrayList<Guid> resultingArrayList = new ArrayList<Guid>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadGuidArray", localName, namespaceUri);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Guid(resultingObject));
             }
             Guid[] resultingArray = new Guid[resultingArrayList.size()];
@@ -1069,7 +1069,7 @@ public class XmlDictionaryReader extends XmlReader  {
         try {
             ArrayList<Guid> resultingArrayList = new ArrayList<Guid>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadGuidArray", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Guid(resultingObject));
             }
             Guid[] resultingArray = new Guid[resultingArrayList.size()];
@@ -1111,7 +1111,7 @@ public class XmlDictionaryReader extends XmlReader  {
         }
     }
 
-    public java.lang.String ReadContentAsString(java.lang.String[] strings, JCORefOut index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException {
+    public java.lang.String ReadContentAsString(java.lang.String[] strings, JCORefOut<java.util.concurrent.atomic.AtomicInteger> index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -1121,7 +1121,7 @@ public class XmlDictionaryReader extends XmlReader  {
         }
     }
 
-    public java.lang.String ReadContentAsString(XmlDictionaryString[] strings, JCORefOut index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException {
+    public java.lang.String ReadContentAsString(XmlDictionaryString[] strings, JCORefOut<java.util.concurrent.atomic.AtomicInteger> index) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -1179,7 +1179,7 @@ public class XmlDictionaryReader extends XmlReader  {
         try {
             ArrayList<TimeSpan> resultingArrayList = new ArrayList<TimeSpan>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadTimeSpanArray", localName, namespaceUri);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new TimeSpan(resultingObject));
             }
             TimeSpan[] resultingArray = new TimeSpan[resultingArrayList.size()];
@@ -1196,7 +1196,7 @@ public class XmlDictionaryReader extends XmlReader  {
         try {
             ArrayList<TimeSpan> resultingArrayList = new ArrayList<TimeSpan>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadTimeSpanArray", localName == null ? null : localName.getJCOInstance(), namespaceUri == null ? null : namespaceUri.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new TimeSpan(resultingObject));
             }
             TimeSpan[] resultingArray = new TimeSpan[resultingArrayList.size()];

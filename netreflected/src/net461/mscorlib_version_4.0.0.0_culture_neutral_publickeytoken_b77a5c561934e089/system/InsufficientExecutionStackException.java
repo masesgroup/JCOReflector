@@ -97,7 +97,7 @@ public class InsufficientExecutionStackException extends SystemException {
         super();
     }
 
-    public InsufficientExecutionStackException(Object instance) {
+    public InsufficientExecutionStackException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class InsufficientExecutionStackException extends SystemException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

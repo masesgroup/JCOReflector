@@ -97,7 +97,7 @@ public class OverflowException extends ArithmeticException {
         super();
     }
 
-    public OverflowException(Object instance) {
+    public OverflowException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class OverflowException extends ArithmeticException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -100,7 +100,7 @@ public class TemplatedControlDesigner extends ControlDesigner  {
         }
     }
 
-    public TemplatedControlDesigner(Object instance) throws Throwable {
+    public TemplatedControlDesigner(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class TemplatedControlDesigner extends ControlDesigner  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -172,7 +172,7 @@ public class TemplatedControlDesigner extends ControlDesigner  {
         }
     }
 
-    public java.lang.String GetTemplateContent(ITemplateEditingFrame editingFrame, java.lang.String templateName, JCORefOut allowEditing) throws Throwable {
+    public java.lang.String GetTemplateContent(ITemplateEditingFrame editingFrame, java.lang.String templateName, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> allowEditing) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -199,7 +199,7 @@ public class TemplatedControlDesigner extends ControlDesigner  {
         try {
             ArrayList<TemplateEditingVerb> resultingArrayList = new ArrayList<TemplateEditingVerb>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetTemplateEditingVerbs");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new TemplateEditingVerb(resultingObject));
             }
             TemplateEditingVerb[] resultingArray = new TemplateEditingVerb[resultingArrayList.size()];

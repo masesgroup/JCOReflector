@@ -97,7 +97,7 @@ public class XamlTaskFactory extends NetObject  {
         }
     }
 
-    public XamlTaskFactory(Object instance) throws Throwable {
+    public XamlTaskFactory(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class XamlTaskFactory extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -173,7 +173,7 @@ public class XamlTaskFactory extends NetObject  {
         try {
             ArrayList<TaskPropertyInfo> resultingArrayList = new ArrayList<TaskPropertyInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetTaskParameters");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new TaskPropertyInfo(resultingObject));
             }
             TaskPropertyInfo[] resultingArray = new TaskPropertyInfo[resultingArrayList.size()];

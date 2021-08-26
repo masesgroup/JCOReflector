@@ -95,7 +95,7 @@ public class MembershipProviderCollection extends ProviderCollection  {
         }
     }
 
-    public MembershipProviderCollection(Object instance) throws Throwable {
+    public MembershipProviderCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class MembershipProviderCollection extends ProviderCollection  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

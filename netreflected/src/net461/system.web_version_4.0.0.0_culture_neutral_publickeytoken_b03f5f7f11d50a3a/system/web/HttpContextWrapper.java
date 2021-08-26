@@ -119,7 +119,7 @@ public class HttpContextWrapper extends HttpContextBase  {
         }
     }
 
-    public HttpContextWrapper(Object instance) throws Throwable {
+    public HttpContextWrapper(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -139,7 +139,7 @@ public class HttpContextWrapper extends HttpContextBase  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

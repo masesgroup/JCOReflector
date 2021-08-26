@@ -102,7 +102,7 @@ public class Console extends NetObject  {
         }
     }
 
-    public Console(Object instance) throws Throwable {
+    public Console(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -122,7 +122,7 @@ public class Console extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -415,7 +415,7 @@ public class Console extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("Write", (Object)buffer);
+            classType.Invoke("Write", (java.lang.Object)buffer);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -425,7 +425,7 @@ public class Console extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("Write", (Object)dupParam0.getJCRefOut());
+            classType.Invoke("Write", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -615,7 +615,7 @@ public class Console extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("WriteLine", (Object)buffer);
+            classType.Invoke("WriteLine", (java.lang.Object)buffer);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -625,7 +625,7 @@ public class Console extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("WriteLine", (Object)dupParam0.getJCRefOut());
+            classType.Invoke("WriteLine", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

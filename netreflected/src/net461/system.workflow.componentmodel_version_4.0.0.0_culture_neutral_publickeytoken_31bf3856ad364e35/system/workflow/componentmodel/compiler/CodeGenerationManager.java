@@ -96,7 +96,7 @@ public class CodeGenerationManager extends NetObject  {
         }
     }
 
-    public CodeGenerationManager(Object instance) throws Throwable {
+    public CodeGenerationManager(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class CodeGenerationManager extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -176,7 +176,7 @@ public class CodeGenerationManager extends NetObject  {
         try {
             ArrayList<ActivityCodeGenerator> resultingArrayList = new ArrayList<ActivityCodeGenerator>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetCodeGenerators", type == null ? null : type.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ActivityCodeGenerator(resultingObject));
             }
             ActivityCodeGenerator[] resultingArray = new ActivityCodeGenerator[resultingArrayList.size()];

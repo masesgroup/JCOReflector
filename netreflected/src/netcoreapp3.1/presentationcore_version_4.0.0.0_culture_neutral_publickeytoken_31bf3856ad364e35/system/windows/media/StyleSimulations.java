@@ -108,7 +108,7 @@ public class StyleSimulations extends NetObject  {
         }
     }
 
-    public StyleSimulations(Object instance) {
+    public StyleSimulations(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class StyleSimulations extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

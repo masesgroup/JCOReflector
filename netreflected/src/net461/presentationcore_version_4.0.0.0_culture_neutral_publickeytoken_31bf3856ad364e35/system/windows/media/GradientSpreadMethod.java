@@ -108,7 +108,7 @@ public class GradientSpreadMethod extends NetObject  {
         }
     }
 
-    public GradientSpreadMethod(Object instance) {
+    public GradientSpreadMethod(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class GradientSpreadMethod extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

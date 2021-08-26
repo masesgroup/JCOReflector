@@ -102,7 +102,7 @@ public class MetadataWorkspace extends NetObject  {
         }
     }
 
-    public MetadataWorkspace(Object instance) throws Throwable {
+    public MetadataWorkspace(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -122,7 +122,7 @@ public class MetadataWorkspace extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -94,7 +94,7 @@ public class _AssemblyNameImplementation extends NetObject implements _AssemblyN
         }
     }
 
-    public _AssemblyNameImplementation(Object instance) throws Throwable {
+    public _AssemblyNameImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class _AssemblyNameImplementation extends NetObject implements _AssemblyN
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

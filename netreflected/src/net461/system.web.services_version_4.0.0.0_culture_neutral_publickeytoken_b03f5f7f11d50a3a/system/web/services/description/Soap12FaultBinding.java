@@ -93,7 +93,7 @@ public class Soap12FaultBinding extends SoapFaultBinding  {
         }
     }
 
-    public Soap12FaultBinding(Object instance) throws Throwable {
+    public Soap12FaultBinding(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class Soap12FaultBinding extends SoapFaultBinding  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -97,7 +97,7 @@ public class MessageHeaderException extends ProtocolException {
         super();
     }
 
-    public MessageHeaderException(Object instance) {
+    public MessageHeaderException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class MessageHeaderException extends ProtocolException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

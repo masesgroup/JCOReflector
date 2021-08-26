@@ -92,7 +92,7 @@ public class IAppDomainInfoImplementation extends NetObject implements IAppDomai
         }
     }
 
-    public IAppDomainInfoImplementation(Object instance) throws Throwable {
+    public IAppDomainInfoImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class IAppDomainInfoImplementation extends NetObject implements IAppDomai
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

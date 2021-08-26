@@ -97,7 +97,7 @@ public class InvalidRequestException extends RequestException {
         super();
     }
 
-    public InvalidRequestException(Object instance) {
+    public InvalidRequestException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class InvalidRequestException extends RequestException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -95,7 +95,7 @@ public class IDesignerDataSchemaImplementation extends NetObject implements IDes
         }
     }
 
-    public IDesignerDataSchemaImplementation(Object instance) throws Throwable {
+    public IDesignerDataSchemaImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class IDesignerDataSchemaImplementation extends NetObject implements IDes
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -92,7 +92,7 @@ public class IStateManagerImplementation extends NetObject implements IStateMana
         }
     }
 
-    public IStateManagerImplementation(Object instance) throws Throwable {
+    public IStateManagerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class IStateManagerImplementation extends NetObject implements IStateMana
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

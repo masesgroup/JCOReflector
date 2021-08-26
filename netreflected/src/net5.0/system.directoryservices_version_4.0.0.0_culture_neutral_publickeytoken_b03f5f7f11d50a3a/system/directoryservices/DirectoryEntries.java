@@ -94,7 +94,7 @@ public class DirectoryEntries extends NetObjectEnumerable  {
         }
     }
 
-    public DirectoryEntries(Object instance) throws Throwable {
+    public DirectoryEntries(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class DirectoryEntries extends NetObjectEnumerable  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

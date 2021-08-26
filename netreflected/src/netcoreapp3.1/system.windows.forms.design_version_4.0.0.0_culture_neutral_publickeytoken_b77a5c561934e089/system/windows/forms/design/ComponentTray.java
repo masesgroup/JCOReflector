@@ -103,7 +103,7 @@ public class ComponentTray extends ScrollableControl implements system.component
         }
     }
 
-    public ComponentTray(Object instance) throws Throwable {
+    public ComponentTray(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -123,7 +123,7 @@ public class ComponentTray extends ScrollableControl implements system.component
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

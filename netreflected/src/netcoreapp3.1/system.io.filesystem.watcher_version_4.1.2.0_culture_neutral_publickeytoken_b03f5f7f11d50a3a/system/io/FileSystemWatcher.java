@@ -103,7 +103,7 @@ public class FileSystemWatcher extends Component  {
         }
     }
 
-    public FileSystemWatcher(Object instance) throws Throwable {
+    public FileSystemWatcher(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -123,7 +123,7 @@ public class FileSystemWatcher extends Component  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

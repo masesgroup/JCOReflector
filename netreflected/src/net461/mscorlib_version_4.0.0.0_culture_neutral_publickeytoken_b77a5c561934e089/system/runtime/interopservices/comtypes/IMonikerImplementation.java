@@ -102,7 +102,7 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
         }
     }
 
-    public IMonikerImplementation(Object instance) throws Throwable {
+    public IMonikerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -122,7 +122,7 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -172,7 +172,7 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
         }
     }
 
-    public int IsSystemMoniker(JCORefOut pdwMksys) throws Throwable {
+    public int IsSystemMoniker(JCORefOut<java.util.concurrent.atomic.AtomicInteger> pdwMksys) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -182,21 +182,21 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
         }
     }
 
-    public void BindToObject(IBindCtx pbc, IMoniker pmkToLeft, Guid riidResult, JCORefOut<NetObject> ppvResult) throws Throwable {
+    public void BindToObject(IBindCtx pbc, IMoniker pmkToLeft, JCORefOut<Guid> riidResult, JCORefOut<NetObject> ppvResult) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("BindToObject", pbc == null ? null : pbc.getJCOInstance(), pmkToLeft == null ? null : pmkToLeft.getJCOInstance(), riidResult == null ? null : riidResult.getJCOInstance(), ppvResult.getJCRefOut());
+            classInstance.Invoke("BindToObject", pbc == null ? null : pbc.getJCOInstance(), pmkToLeft == null ? null : pmkToLeft.getJCOInstance(), riidResult.getJCRefOut(), ppvResult.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void BindToStorage(IBindCtx pbc, IMoniker pmkToLeft, Guid riid, JCORefOut<NetObject> ppvObj) throws Throwable {
+    public void BindToStorage(IBindCtx pbc, IMoniker pmkToLeft, JCORefOut<Guid> riid, JCORefOut<NetObject> ppvObj) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("BindToStorage", pbc == null ? null : pbc.getJCOInstance(), pmkToLeft == null ? null : pmkToLeft.getJCOInstance(), riid == null ? null : riid.getJCOInstance(), ppvObj.getJCRefOut());
+            classInstance.Invoke("BindToStorage", pbc == null ? null : pbc.getJCOInstance(), pmkToLeft == null ? null : pmkToLeft.getJCOInstance(), riid.getJCRefOut(), ppvObj.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,7 +252,7 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
         }
     }
 
-    public void GetSizeMax(JCORefOut pcbSize) throws Throwable {
+    public void GetSizeMax(JCORefOut<java.util.concurrent.atomic.AtomicLong> pcbSize) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -272,7 +272,7 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
         }
     }
 
-    public void Hash(JCORefOut pdwHash) throws Throwable {
+    public void Hash(JCORefOut<java.util.concurrent.atomic.AtomicInteger> pdwHash) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -302,7 +302,7 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
         }
     }
 
-    public void ParseDisplayName(IBindCtx pbc, IMoniker pmkToLeft, java.lang.String pszDisplayName, JCORefOut pchEaten, JCORefOut<IMoniker> ppmkOut) throws Throwable {
+    public void ParseDisplayName(IBindCtx pbc, IMoniker pmkToLeft, java.lang.String pszDisplayName, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pchEaten, JCORefOut<IMoniker> ppmkOut) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -312,11 +312,11 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
         }
     }
 
-    public void Reduce(IBindCtx pbc, int dwReduceHowFar, IMoniker ppmkToLeft, JCORefOut<IMoniker> ppmkReduced) throws Throwable {
+    public void Reduce(IBindCtx pbc, int dwReduceHowFar, JCORefOut<IMoniker> ppmkToLeft, JCORefOut<IMoniker> ppmkReduced) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Reduce", pbc == null ? null : pbc.getJCOInstance(), dwReduceHowFar, ppmkToLeft == null ? null : ppmkToLeft.getJCOInstance(), ppmkReduced.getJCRefOut());
+            classInstance.Invoke("Reduce", pbc == null ? null : pbc.getJCOInstance(), dwReduceHowFar, ppmkToLeft.getJCRefOut(), ppmkReduced.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

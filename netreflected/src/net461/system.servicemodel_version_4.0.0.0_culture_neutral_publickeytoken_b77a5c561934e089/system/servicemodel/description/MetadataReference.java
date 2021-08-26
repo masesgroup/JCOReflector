@@ -99,7 +99,7 @@ public class MetadataReference extends NetObject implements system.xml.serializa
         }
     }
 
-    public MetadataReference(Object instance) throws Throwable {
+    public MetadataReference(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class MetadataReference extends NetObject implements system.xml.serializa
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

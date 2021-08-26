@@ -92,7 +92,7 @@ public class CallConvThiscall extends NetObject  {
         }
     }
 
-    public CallConvThiscall(Object instance) throws Throwable {
+    public CallConvThiscall(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class CallConvThiscall extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

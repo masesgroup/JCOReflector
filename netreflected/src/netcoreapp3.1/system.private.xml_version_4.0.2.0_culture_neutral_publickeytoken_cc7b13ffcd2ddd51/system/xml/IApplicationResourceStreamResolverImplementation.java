@@ -94,7 +94,7 @@ public class IApplicationResourceStreamResolverImplementation extends NetObject 
         }
     }
 
-    public IApplicationResourceStreamResolverImplementation(Object instance) throws Throwable {
+    public IApplicationResourceStreamResolverImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class IApplicationResourceStreamResolverImplementation extends NetObject 
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

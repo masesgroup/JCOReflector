@@ -92,7 +92,7 @@ public class IActivationFactoryImplementation extends NetObject implements IActi
         }
     }
 
-    public IActivationFactoryImplementation(Object instance) throws Throwable {
+    public IActivationFactoryImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class IActivationFactoryImplementation extends NetObject implements IActi
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

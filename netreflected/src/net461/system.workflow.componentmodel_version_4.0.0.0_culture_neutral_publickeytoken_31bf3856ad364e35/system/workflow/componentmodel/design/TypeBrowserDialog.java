@@ -100,7 +100,7 @@ public class TypeBrowserDialog extends Form implements system.IServiceProvider {
         }
     }
 
-    public TypeBrowserDialog(Object instance) throws Throwable {
+    public TypeBrowserDialog(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class TypeBrowserDialog extends Form implements system.IServiceProvider {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -94,7 +94,7 @@ public class TypeSchema extends NetObject  {
         }
     }
 
-    public TypeSchema(Object instance) throws Throwable {
+    public TypeSchema(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class TypeSchema extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -163,7 +163,7 @@ public class TypeSchema extends NetObject  {
         try {
             ArrayList<IDataSourceViewSchema> resultingArrayList = new ArrayList<IDataSourceViewSchema>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetViews");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IDataSourceViewSchemaImplementation(resultingObject));
             }
             IDataSourceViewSchema[] resultingArray = new IDataSourceViewSchema[resultingArrayList.size()];

@@ -93,7 +93,7 @@ public class CodeSnippetTypeMember extends CodeTypeMember  {
         }
     }
 
-    public CodeSnippetTypeMember(Object instance) throws Throwable {
+    public CodeSnippetTypeMember(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class CodeSnippetTypeMember extends CodeTypeMember  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

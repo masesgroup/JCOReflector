@@ -108,7 +108,7 @@ public class X509ChainTrustMode extends NetObject  {
         }
     }
 
-    public X509ChainTrustMode(Object instance) {
+    public X509ChainTrustMode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class X509ChainTrustMode extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

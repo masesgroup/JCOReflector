@@ -98,7 +98,7 @@ public class RemotingConfiguration extends NetObject  {
         }
     }
 
-    public RemotingConfiguration(Object instance) throws Throwable {
+    public RemotingConfiguration(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class RemotingConfiguration extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -197,7 +197,7 @@ public class RemotingConfiguration extends NetObject  {
         try {
             ArrayList<ActivatedClientTypeEntry> resultingArrayList = new ArrayList<ActivatedClientTypeEntry>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetRegisteredActivatedClientTypes");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ActivatedClientTypeEntry(resultingObject));
             }
             ActivatedClientTypeEntry[] resultingArray = new ActivatedClientTypeEntry[resultingArrayList.size()];
@@ -214,7 +214,7 @@ public class RemotingConfiguration extends NetObject  {
         try {
             ArrayList<ActivatedServiceTypeEntry> resultingArrayList = new ArrayList<ActivatedServiceTypeEntry>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetRegisteredActivatedServiceTypes");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ActivatedServiceTypeEntry(resultingObject));
             }
             ActivatedServiceTypeEntry[] resultingArray = new ActivatedServiceTypeEntry[resultingArrayList.size()];
@@ -253,7 +253,7 @@ public class RemotingConfiguration extends NetObject  {
         try {
             ArrayList<WellKnownClientTypeEntry> resultingArrayList = new ArrayList<WellKnownClientTypeEntry>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetRegisteredWellKnownClientTypes");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new WellKnownClientTypeEntry(resultingObject));
             }
             WellKnownClientTypeEntry[] resultingArray = new WellKnownClientTypeEntry[resultingArrayList.size()];
@@ -270,7 +270,7 @@ public class RemotingConfiguration extends NetObject  {
         try {
             ArrayList<WellKnownServiceTypeEntry> resultingArrayList = new ArrayList<WellKnownServiceTypeEntry>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetRegisteredWellKnownServiceTypes");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new WellKnownServiceTypeEntry(resultingObject));
             }
             WellKnownServiceTypeEntry[] resultingArray = new WellKnownServiceTypeEntry[resultingArrayList.size()];

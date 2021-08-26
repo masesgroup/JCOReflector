@@ -99,7 +99,7 @@ public class FileLoadException extends IOException {
         super();
     }
 
-    public FileLoadException(Object instance) {
+    public FileLoadException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -133,7 +133,7 @@ public class FileLoadException extends IOException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

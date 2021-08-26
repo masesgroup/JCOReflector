@@ -93,7 +93,7 @@ public class RandomNumberGenerator extends NetObject implements AutoCloseable {
         }
     }
 
-    public RandomNumberGenerator(Object instance) throws Throwable {
+    public RandomNumberGenerator(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class RandomNumberGenerator extends NetObject implements AutoCloseable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -200,7 +200,7 @@ public class RandomNumberGenerator extends NetObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("GetBytes", (Object)data);
+            classInstance.Invoke("GetBytes", (java.lang.Object)data);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -210,7 +210,7 @@ public class RandomNumberGenerator extends NetObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("GetBytes", (Object)dupParam0.getJCRefOut());
+            classInstance.Invoke("GetBytes", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,7 +240,7 @@ public class RandomNumberGenerator extends NetObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("GetNonZeroBytes", (Object)data);
+            classInstance.Invoke("GetNonZeroBytes", (java.lang.Object)data);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,7 +250,7 @@ public class RandomNumberGenerator extends NetObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("GetNonZeroBytes", (Object)dupParam0.getJCRefOut());
+            classInstance.Invoke("GetNonZeroBytes", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

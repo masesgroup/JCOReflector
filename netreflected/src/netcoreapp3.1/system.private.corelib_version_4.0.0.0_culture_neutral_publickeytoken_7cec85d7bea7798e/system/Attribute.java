@@ -97,7 +97,7 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public Attribute(Object instance) throws Throwable {
+    public Attribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class Attribute extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -342,7 +342,7 @@ public class Attribute extends NetObject  {
         try {
             ArrayList<Attribute> resultingArrayList = new ArrayList<Attribute>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Attribute(resultingObject));
             }
             Attribute[] resultingArray = new Attribute[resultingArrayList.size()];
@@ -359,7 +359,7 @@ public class Attribute extends NetObject  {
         try {
             ArrayList<Attribute> resultingArrayList = new ArrayList<Attribute>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance(), inherit);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Attribute(resultingObject));
             }
             Attribute[] resultingArray = new Attribute[resultingArrayList.size()];
@@ -376,7 +376,7 @@ public class Attribute extends NetObject  {
         try {
             ArrayList<Attribute> resultingArrayList = new ArrayList<Attribute>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Attribute(resultingObject));
             }
             Attribute[] resultingArray = new Attribute[resultingArrayList.size()];
@@ -393,7 +393,7 @@ public class Attribute extends NetObject  {
         try {
             ArrayList<Attribute> resultingArrayList = new ArrayList<Attribute>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance(), inherit);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Attribute(resultingObject));
             }
             Attribute[] resultingArray = new Attribute[resultingArrayList.size()];
@@ -410,7 +410,7 @@ public class Attribute extends NetObject  {
         try {
             ArrayList<Attribute> resultingArrayList = new ArrayList<Attribute>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Attribute(resultingObject));
             }
             Attribute[] resultingArray = new Attribute[resultingArrayList.size()];
@@ -427,7 +427,7 @@ public class Attribute extends NetObject  {
         try {
             ArrayList<Attribute> resultingArrayList = new ArrayList<Attribute>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance(), inherit);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Attribute(resultingObject));
             }
             Attribute[] resultingArray = new Attribute[resultingArrayList.size()];
@@ -444,7 +444,7 @@ public class Attribute extends NetObject  {
         try {
             ArrayList<Attribute> resultingArrayList = new ArrayList<Attribute>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance(), type == null ? null : type.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Attribute(resultingObject));
             }
             Attribute[] resultingArray = new Attribute[resultingArrayList.size()];
@@ -461,7 +461,7 @@ public class Attribute extends NetObject  {
         try {
             ArrayList<Attribute> resultingArrayList = new ArrayList<Attribute>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance(), type == null ? null : type.getJCOInstance(), inherit);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Attribute(resultingObject));
             }
             Attribute[] resultingArray = new Attribute[resultingArrayList.size()];
@@ -478,7 +478,7 @@ public class Attribute extends NetObject  {
         try {
             ArrayList<Attribute> resultingArrayList = new ArrayList<Attribute>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Attribute(resultingObject));
             }
             Attribute[] resultingArray = new Attribute[resultingArrayList.size()];
@@ -495,7 +495,7 @@ public class Attribute extends NetObject  {
         try {
             ArrayList<Attribute> resultingArrayList = new ArrayList<Attribute>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance(), inherit);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Attribute(resultingObject));
             }
             Attribute[] resultingArray = new Attribute[resultingArrayList.size()];
@@ -512,7 +512,7 @@ public class Attribute extends NetObject  {
         try {
             ArrayList<Attribute> resultingArrayList = new ArrayList<Attribute>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Attribute(resultingObject));
             }
             Attribute[] resultingArray = new Attribute[resultingArrayList.size()];
@@ -529,7 +529,7 @@ public class Attribute extends NetObject  {
         try {
             ArrayList<Attribute> resultingArrayList = new ArrayList<Attribute>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance(), inherit);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Attribute(resultingObject));
             }
             Attribute[] resultingArray = new Attribute[resultingArrayList.size()];
@@ -546,7 +546,7 @@ public class Attribute extends NetObject  {
         try {
             ArrayList<Attribute> resultingArrayList = new ArrayList<Attribute>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Attribute(resultingObject));
             }
             Attribute[] resultingArray = new Attribute[resultingArrayList.size()];
@@ -563,7 +563,7 @@ public class Attribute extends NetObject  {
         try {
             ArrayList<Attribute> resultingArrayList = new ArrayList<Attribute>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance(), inherit);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Attribute(resultingObject));
             }
             Attribute[] resultingArray = new Attribute[resultingArrayList.size()];
@@ -580,7 +580,7 @@ public class Attribute extends NetObject  {
         try {
             ArrayList<Attribute> resultingArrayList = new ArrayList<Attribute>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Attribute(resultingObject));
             }
             Attribute[] resultingArray = new Attribute[resultingArrayList.size()];
@@ -597,7 +597,7 @@ public class Attribute extends NetObject  {
         try {
             ArrayList<Attribute> resultingArrayList = new ArrayList<Attribute>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance(), inherit);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Attribute(resultingObject));
             }
             Attribute[] resultingArray = new Attribute[resultingArrayList.size()];

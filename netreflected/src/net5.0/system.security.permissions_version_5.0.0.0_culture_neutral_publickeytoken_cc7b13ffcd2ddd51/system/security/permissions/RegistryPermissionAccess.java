@@ -108,7 +108,7 @@ public class RegistryPermissionAccess extends NetObject  {
         }
     }
 
-    public RegistryPermissionAccess(Object instance) {
+    public RegistryPermissionAccess(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class RegistryPermissionAccess extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

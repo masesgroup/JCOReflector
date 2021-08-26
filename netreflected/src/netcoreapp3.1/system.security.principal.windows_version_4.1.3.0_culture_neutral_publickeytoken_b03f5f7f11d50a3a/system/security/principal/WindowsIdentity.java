@@ -106,7 +106,7 @@ public class WindowsIdentity extends ClaimsIdentity implements system.runtime.se
         }
     }
 
-    public WindowsIdentity(Object instance) throws Throwable {
+    public WindowsIdentity(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -126,7 +126,7 @@ public class WindowsIdentity extends ClaimsIdentity implements system.runtime.se
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

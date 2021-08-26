@@ -93,7 +93,7 @@ public class IBindingConfigurationElementImplementation extends NetObject implem
         }
     }
 
-    public IBindingConfigurationElementImplementation(Object instance) throws Throwable {
+    public IBindingConfigurationElementImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class IBindingConfigurationElementImplementation extends NetObject implem
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

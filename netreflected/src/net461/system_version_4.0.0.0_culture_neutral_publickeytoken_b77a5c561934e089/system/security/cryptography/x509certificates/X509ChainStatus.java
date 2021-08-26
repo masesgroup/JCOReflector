@@ -94,7 +94,7 @@ public class X509ChainStatus extends ValueType  {
         }
     }
 
-    public X509ChainStatus(Object instance) throws Throwable {
+    public X509ChainStatus(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class X509ChainStatus extends ValueType  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

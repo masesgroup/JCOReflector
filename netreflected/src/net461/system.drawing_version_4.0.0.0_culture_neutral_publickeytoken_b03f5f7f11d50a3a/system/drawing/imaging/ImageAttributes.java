@@ -101,7 +101,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
         }
     }
 
-    public ImageAttributes(Object instance) throws Throwable {
+    public ImageAttributes(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -121,7 +121,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -365,7 +365,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetBrushRemapTable", (Object)toObjectFromArray(map));
+            classInstance.Invoke("SetBrushRemapTable", (java.lang.Object)toObjectFromArray(map));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -535,7 +535,7 @@ public class ImageAttributes extends NetObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetRemapTable", (Object)toObjectFromArray(map));
+            classInstance.Invoke("SetRemapTable", (java.lang.Object)toObjectFromArray(map));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

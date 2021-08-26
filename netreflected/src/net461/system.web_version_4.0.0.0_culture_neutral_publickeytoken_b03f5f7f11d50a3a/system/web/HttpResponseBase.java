@@ -110,7 +110,7 @@ public class HttpResponseBase extends NetObject  {
         }
     }
 
-    public HttpResponseBase(Object instance) throws Throwable {
+    public HttpResponseBase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -130,7 +130,7 @@ public class HttpResponseBase extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -197,7 +197,7 @@ public class HttpResponseBase extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddCacheDependency", (Object)toObjectFromArray(dependencies));
+            classInstance.Invoke("AddCacheDependency", (java.lang.Object)toObjectFromArray(dependencies));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,7 +217,7 @@ public class HttpResponseBase extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddCacheItemDependencies", (Object)cacheKeys);
+            classInstance.Invoke("AddCacheItemDependencies", (java.lang.Object)cacheKeys);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,7 +227,7 @@ public class HttpResponseBase extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddCacheItemDependencies", (Object)dupParam0.getJCRefOut());
+            classInstance.Invoke("AddCacheItemDependencies", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -257,7 +257,7 @@ public class HttpResponseBase extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddFileDependencies", (Object)filenames);
+            classInstance.Invoke("AddFileDependencies", (java.lang.Object)filenames);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,7 +267,7 @@ public class HttpResponseBase extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddFileDependencies", (Object)dupParam0.getJCRefOut());
+            classInstance.Invoke("AddFileDependencies", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -327,7 +327,7 @@ public class HttpResponseBase extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("BinaryWrite", (Object)buffer);
+            classInstance.Invoke("BinaryWrite", (java.lang.Object)buffer);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -337,7 +337,7 @@ public class HttpResponseBase extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("BinaryWrite", (Object)dupParam0.getJCRefOut());
+            classInstance.Invoke("BinaryWrite", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

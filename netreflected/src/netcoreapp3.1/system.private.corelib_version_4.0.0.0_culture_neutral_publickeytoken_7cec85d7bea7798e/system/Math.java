@@ -99,7 +99,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public Math(Object instance) throws Throwable {
+    public Math(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class Math extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -640,7 +640,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static int DivRem(int a, int b, JCORefOut result) throws Throwable {
+    public static int DivRem(int a, int b, JCORefOut<java.util.concurrent.atomic.AtomicInteger> result) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -780,7 +780,7 @@ public class Math extends NetObject  {
         }
     }
 
-    public static long DivRem(long a, long b, JCORefOut result) throws Throwable {
+    public static long DivRem(long a, long b, JCORefOut<java.util.concurrent.atomic.AtomicLong> result) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {

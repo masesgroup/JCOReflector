@@ -97,9 +97,9 @@ public interface IDebugVsaScriptCodeItem extends IJCOBridgeReflected {
     /**
      * Returns the instantiated class
      * 
-     * @return An {@link Object} representing the instance of the instantiated Class
+     * @return An {@link java.lang.Object} representing the instance of the instantiated Class
      */
-    public Object getJCOInstance();
+    public java.lang.Object getJCOInstance();
 
     /**
      * Returns the instantiated class Type
@@ -110,7 +110,7 @@ public interface IDebugVsaScriptCodeItem extends IJCOBridgeReflected {
 
     // Methods section
     
-    public boolean ParseNamedBreakPoint(java.lang.String input, JCORefOut functionName, JCORefOut nargs, JCORefOut arguments, JCORefOut returnType, JCORefOut<UInt64> offset) throws Throwable;
+    public boolean ParseNamedBreakPoint(java.lang.String input, JCORefOut functionName, JCORefOut<java.util.concurrent.atomic.AtomicInteger> nargs, JCORefOut arguments, JCORefOut returnType, JCORefOut<UInt64> offset) throws Throwable;
 
     public NetObject Evaluate() throws Throwable;
 

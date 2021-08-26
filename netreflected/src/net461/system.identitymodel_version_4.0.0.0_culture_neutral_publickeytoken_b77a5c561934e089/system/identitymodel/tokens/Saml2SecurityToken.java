@@ -96,7 +96,7 @@ public class Saml2SecurityToken extends SecurityToken  {
         }
     }
 
-    public Saml2SecurityToken(Object instance) throws Throwable {
+    public Saml2SecurityToken(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class Saml2SecurityToken extends SecurityToken  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -95,7 +95,7 @@ public class ListViewGroupCollection extends NetObjectEnumerable  {
         }
     }
 
-    public ListViewGroupCollection(Object instance) throws Throwable {
+    public ListViewGroupCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class ListViewGroupCollection extends NetObjectEnumerable  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -193,7 +193,7 @@ public class ListViewGroupCollection extends NetObjectEnumerable  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddRange", (Object)toObjectFromArray(groups));
+            classInstance.Invoke("AddRange", (java.lang.Object)toObjectFromArray(groups));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -97,7 +97,7 @@ public class UCOMIRunningObjectTableImplementation extends NetObject implements 
         }
     }
 
-    public UCOMIRunningObjectTableImplementation(Object instance) throws Throwable {
+    public UCOMIRunningObjectTableImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class UCOMIRunningObjectTableImplementation extends NetObject implements 
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -177,17 +177,17 @@ public class UCOMIRunningObjectTableImplementation extends NetObject implements 
         }
     }
 
-    public void NoteChangeTime(int dwRegister, FILETIME pfiletime) throws Throwable {
+    public void NoteChangeTime(int dwRegister, JCORefOut<FILETIME> pfiletime) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("NoteChangeTime", dwRegister, pfiletime == null ? null : pfiletime.getJCOInstance());
+            classInstance.Invoke("NoteChangeTime", dwRegister, pfiletime.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void Register(int grfFlags, NetObject punkObject, UCOMIMoniker pmkObjectName, JCORefOut pdwRegister) throws Throwable {
+    public void Register(int grfFlags, NetObject punkObject, UCOMIMoniker pmkObjectName, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pdwRegister) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

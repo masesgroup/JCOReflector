@@ -94,7 +94,7 @@ public class IExtenderListServiceImplementation extends NetObject implements IEx
         }
     }
 
-    public IExtenderListServiceImplementation(Object instance) throws Throwable {
+    public IExtenderListServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class IExtenderListServiceImplementation extends NetObject implements IEx
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -140,7 +140,7 @@ public class IExtenderListServiceImplementation extends NetObject implements IEx
         try {
             ArrayList<IExtenderProvider> resultingArrayList = new ArrayList<IExtenderProvider>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetExtenderProviders");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IExtenderProviderImplementation(resultingObject));
             }
             IExtenderProvider[] resultingArray = new IExtenderProvider[resultingArrayList.size()];

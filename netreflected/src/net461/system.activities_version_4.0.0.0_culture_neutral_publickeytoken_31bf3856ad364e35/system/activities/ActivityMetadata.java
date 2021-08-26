@@ -100,7 +100,7 @@ public class ActivityMetadata extends ValueType  {
         }
     }
 
-    public ActivityMetadata(Object instance) throws Throwable {
+    public ActivityMetadata(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class ActivityMetadata extends ValueType  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

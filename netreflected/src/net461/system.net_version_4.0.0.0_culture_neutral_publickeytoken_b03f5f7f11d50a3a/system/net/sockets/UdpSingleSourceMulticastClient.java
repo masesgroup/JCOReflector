@@ -96,7 +96,7 @@ public class UdpSingleSourceMulticastClient extends NetObject implements AutoClo
         }
     }
 
-    public UdpSingleSourceMulticastClient(Object instance) throws Throwable {
+    public UdpSingleSourceMulticastClient(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class UdpSingleSourceMulticastClient extends NetObject implements AutoClo
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -159,7 +159,7 @@ public class UdpSingleSourceMulticastClient extends NetObject implements AutoClo
     
     // Methods section
     
-    public int EndReceiveFromSource(IAsyncResult result, JCORefOut sourcePort) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.net.sockets.SocketException {
+    public int EndReceiveFromSource(IAsyncResult result, JCORefOut<java.util.concurrent.atomic.AtomicInteger> sourcePort) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

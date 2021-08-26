@@ -106,7 +106,7 @@ public class TextElementEnumerator extends NetObject implements Iterator<NetObje
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

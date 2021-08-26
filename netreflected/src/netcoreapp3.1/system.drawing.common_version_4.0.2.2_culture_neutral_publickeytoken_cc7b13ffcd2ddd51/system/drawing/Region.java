@@ -103,7 +103,7 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public Region(Object instance) throws Throwable {
+    public Region(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -123,7 +123,7 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -410,7 +410,7 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
         try {
             ArrayList<RectangleF> resultingArrayList = new ArrayList<RectangleF>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetRegionScans", matrix == null ? null : matrix.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new RectangleF(resultingObject));
             }
             RectangleF[] resultingArray = new RectangleF[resultingArrayList.size()];

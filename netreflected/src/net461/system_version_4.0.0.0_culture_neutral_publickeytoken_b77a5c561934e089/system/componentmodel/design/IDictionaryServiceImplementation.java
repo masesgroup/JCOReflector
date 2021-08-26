@@ -92,7 +92,7 @@ public class IDictionaryServiceImplementation extends NetObject implements IDict
         }
     }
 
-    public IDictionaryServiceImplementation(Object instance) throws Throwable {
+    public IDictionaryServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class IDictionaryServiceImplementation extends NetObject implements IDict
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

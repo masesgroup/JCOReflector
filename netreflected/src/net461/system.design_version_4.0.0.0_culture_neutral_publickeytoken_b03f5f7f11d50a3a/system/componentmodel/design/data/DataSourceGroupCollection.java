@@ -94,7 +94,7 @@ public class DataSourceGroupCollection extends CollectionBase  {
         }
     }
 
-    public DataSourceGroupCollection(Object instance) throws Throwable {
+    public DataSourceGroupCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class DataSourceGroupCollection extends CollectionBase  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

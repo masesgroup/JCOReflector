@@ -94,7 +94,7 @@ public class FrameworkElementAutomationPeer extends UIElementAutomationPeer  {
         }
     }
 
-    public FrameworkElementAutomationPeer(Object instance) throws Throwable {
+    public FrameworkElementAutomationPeer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class FrameworkElementAutomationPeer extends UIElementAutomationPeer  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

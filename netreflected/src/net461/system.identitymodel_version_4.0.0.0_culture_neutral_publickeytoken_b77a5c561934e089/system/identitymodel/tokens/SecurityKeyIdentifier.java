@@ -94,7 +94,7 @@ public class SecurityKeyIdentifier extends NetObjectEnumerable  {
         }
     }
 
-    public SecurityKeyIdentifier(Object instance) throws Throwable {
+    public SecurityKeyIdentifier(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class SecurityKeyIdentifier extends NetObjectEnumerable  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -153,7 +153,7 @@ public class SecurityKeyIdentifier extends NetObjectEnumerable  {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((Object)toObjectFromArray(clauses)));
+            setJCOInstance((JCObject)classType.NewObject((java.lang.Object)toObjectFromArray(clauses)));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

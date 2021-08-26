@@ -111,7 +111,7 @@ public class AppDomain extends MarshalByRefObject  {
         }
     }
 
-    public AppDomain(Object instance) throws Throwable {
+    public AppDomain(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class AppDomain extends MarshalByRefObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -386,7 +386,7 @@ public class AppDomain extends MarshalByRefObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objLoad = (JCObject)classInstance.Invoke("Load", (Object)rawAssembly);
+            JCObject objLoad = (JCObject)classInstance.Invoke("Load", (java.lang.Object)rawAssembly);
             return new Assembly(objLoad);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -397,7 +397,7 @@ public class AppDomain extends MarshalByRefObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objLoad = (JCObject)classInstance.Invoke("Load", (Object)dupParam0.getJCRefOut());
+            JCObject objLoad = (JCObject)classInstance.Invoke("Load", (java.lang.Object)dupParam0.getJCRefOut());
             return new Assembly(objLoad);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -454,7 +454,7 @@ public class AppDomain extends MarshalByRefObject  {
         try {
             ArrayList<Assembly> resultingArrayList = new ArrayList<Assembly>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetAssemblies");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Assembly(resultingObject));
             }
             Assembly[] resultingArray = new Assembly[resultingArrayList.size()];
@@ -471,7 +471,7 @@ public class AppDomain extends MarshalByRefObject  {
         try {
             ArrayList<Assembly> resultingArrayList = new ArrayList<Assembly>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("ReflectionOnlyGetAssemblies");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Assembly(resultingObject));
             }
             Assembly[] resultingArray = new Assembly[resultingArrayList.size()];

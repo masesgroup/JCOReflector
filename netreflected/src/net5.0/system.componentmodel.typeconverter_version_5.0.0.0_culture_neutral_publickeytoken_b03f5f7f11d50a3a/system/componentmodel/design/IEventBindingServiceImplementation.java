@@ -100,7 +100,7 @@ public class IEventBindingServiceImplementation extends NetObject implements IEv
         }
     }
 
-    public IEventBindingServiceImplementation(Object instance) throws Throwable {
+    public IEventBindingServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class IEventBindingServiceImplementation extends NetObject implements IEv
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

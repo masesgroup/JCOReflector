@@ -102,7 +102,7 @@ public class PipeStream extends Stream  {
         }
     }
 
-    public PipeStream(Object instance) throws Throwable {
+    public PipeStream(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -122,7 +122,7 @@ public class PipeStream extends Stream  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -93,7 +93,7 @@ public class DisablePrivateReflectionAttribute extends Attribute  {
         }
     }
 
-    public DisablePrivateReflectionAttribute(Object instance) throws Throwable {
+    public DisablePrivateReflectionAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class DisablePrivateReflectionAttribute extends Attribute  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

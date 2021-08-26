@@ -100,7 +100,7 @@ public class SyncFromAllServersOperationException extends ActiveDirectoryOperati
         super();
     }
 
-    public SyncFromAllServersOperationException(Object instance) {
+    public SyncFromAllServersOperationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -134,7 +134,7 @@ public class SyncFromAllServersOperationException extends ActiveDirectoryOperati
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -193,7 +193,7 @@ public class SyncFromAllServersOperationException extends ActiveDirectoryOperati
         try {
             ArrayList<SyncFromAllServersErrorInformation> resultingArrayList = new ArrayList<SyncFromAllServersErrorInformation>();
             JCObject resultingObjects = (JCObject)classInstance.Get("ErrorInformation");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new SyncFromAllServersErrorInformation(resultingObject));
             }
             SyncFromAllServersErrorInformation[] resultingArray = new SyncFromAllServersErrorInformation[resultingArrayList.size()];

@@ -92,7 +92,7 @@ public class StrongNamePublicKeyBlob extends NetObject  {
         }
     }
 
-    public StrongNamePublicKeyBlob(Object instance) throws Throwable {
+    public StrongNamePublicKeyBlob(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class StrongNamePublicKeyBlob extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -144,7 +144,7 @@ public class StrongNamePublicKeyBlob extends NetObject  {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((Object)publicKey));
+            setJCOInstance((JCObject)classType.NewObject((java.lang.Object)publicKey));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

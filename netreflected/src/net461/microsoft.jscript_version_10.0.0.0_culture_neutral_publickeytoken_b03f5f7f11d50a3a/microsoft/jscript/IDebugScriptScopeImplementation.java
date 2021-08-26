@@ -92,7 +92,7 @@ public class IDebugScriptScopeImplementation extends NetObject implements IDebug
         }
     }
 
-    public IDebugScriptScopeImplementation(Object instance) throws Throwable {
+    public IDebugScriptScopeImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class IDebugScriptScopeImplementation extends NetObject implements IDebug
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

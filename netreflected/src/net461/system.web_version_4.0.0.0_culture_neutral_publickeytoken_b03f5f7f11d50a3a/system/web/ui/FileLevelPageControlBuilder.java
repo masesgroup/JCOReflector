@@ -94,7 +94,7 @@ public class FileLevelPageControlBuilder extends RootBuilder  {
         }
     }
 
-    public FileLevelPageControlBuilder(Object instance) throws Throwable {
+    public FileLevelPageControlBuilder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class FileLevelPageControlBuilder extends RootBuilder  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

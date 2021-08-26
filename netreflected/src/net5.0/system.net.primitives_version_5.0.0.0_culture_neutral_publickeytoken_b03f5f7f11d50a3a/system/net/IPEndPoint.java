@@ -97,7 +97,7 @@ public class IPEndPoint extends EndPoint  {
         }
     }
 
-    public IPEndPoint(Object instance) throws Throwable {
+    public IPEndPoint(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class IPEndPoint extends EndPoint  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

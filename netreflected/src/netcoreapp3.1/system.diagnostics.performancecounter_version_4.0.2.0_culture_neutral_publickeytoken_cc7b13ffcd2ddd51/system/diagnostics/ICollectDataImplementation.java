@@ -92,7 +92,7 @@ public class ICollectDataImplementation extends NetObject implements ICollectDat
         }
     }
 
-    public ICollectDataImplementation(Object instance) throws Throwable {
+    public ICollectDataImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class ICollectDataImplementation extends NetObject implements ICollectDat
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

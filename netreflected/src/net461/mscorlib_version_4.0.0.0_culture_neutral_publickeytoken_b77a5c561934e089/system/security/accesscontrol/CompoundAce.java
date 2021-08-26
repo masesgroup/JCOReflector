@@ -96,7 +96,7 @@ public class CompoundAce extends KnownAce  {
         }
     }
 
-    public CompoundAce(Object instance) throws Throwable {
+    public CompoundAce(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class CompoundAce extends KnownAce  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

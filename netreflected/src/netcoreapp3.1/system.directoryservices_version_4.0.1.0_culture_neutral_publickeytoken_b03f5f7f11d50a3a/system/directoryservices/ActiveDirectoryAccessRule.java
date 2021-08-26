@@ -98,7 +98,7 @@ public class ActiveDirectoryAccessRule extends ObjectAccessRule  {
         }
     }
 
-    public ActiveDirectoryAccessRule(Object instance) throws Throwable {
+    public ActiveDirectoryAccessRule(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class ActiveDirectoryAccessRule extends ObjectAccessRule  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

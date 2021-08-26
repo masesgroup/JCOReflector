@@ -105,7 +105,7 @@ public class Pen extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public Pen(Object instance) throws Throwable {
+    public Pen(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -125,7 +125,7 @@ public class Pen extends MarshalByRefObject implements AutoCloseable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -405,7 +405,7 @@ public class Pen extends MarshalByRefObject implements AutoCloseable {
         try {
             ArrayList<Single> resultingArrayList = new ArrayList<Single>();
             JCObject resultingObjects = (JCObject)classInstance.Get("CompoundArray");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Single(resultingObject));
             }
             Single[] resultingArray = new Single[resultingArrayList.size()];
@@ -432,7 +432,7 @@ public class Pen extends MarshalByRefObject implements AutoCloseable {
         try {
             ArrayList<Single> resultingArrayList = new ArrayList<Single>();
             JCObject resultingObjects = (JCObject)classInstance.Get("DashPattern");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Single(resultingObject));
             }
             Single[] resultingArray = new Single[resultingArrayList.size()];

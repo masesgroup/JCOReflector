@@ -93,7 +93,7 @@ public class IWSTrustFeb2005SyncContractImplementation extends NetObject impleme
         }
     }
 
-    public IWSTrustFeb2005SyncContractImplementation(Object instance) throws Throwable {
+    public IWSTrustFeb2005SyncContractImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class IWSTrustFeb2005SyncContractImplementation extends NetObject impleme
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -100,7 +100,7 @@ public class TaskLoggingHelper extends MarshalByRefObject  {
         }
     }
 
-    public TaskLoggingHelper(Object instance) throws Throwable {
+    public TaskLoggingHelper(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class TaskLoggingHelper extends MarshalByRefObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

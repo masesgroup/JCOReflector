@@ -93,7 +93,7 @@ public class BufferManager extends NetObject  {
         }
     }
 
-    public BufferManager(Object instance) throws Throwable {
+    public BufferManager(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class BufferManager extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -148,9 +148,9 @@ public class BufferManager extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("TakeBuffer", bufferSize);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -188,7 +188,7 @@ public class BufferManager extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("ReturnBuffer", (Object)buffer);
+            classInstance.Invoke("ReturnBuffer", (java.lang.Object)buffer);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +198,7 @@ public class BufferManager extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("ReturnBuffer", (Object)dupParam0.getJCRefOut());
+            classInstance.Invoke("ReturnBuffer", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

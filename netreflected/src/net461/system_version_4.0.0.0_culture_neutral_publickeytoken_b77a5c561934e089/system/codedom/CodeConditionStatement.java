@@ -95,7 +95,7 @@ public class CodeConditionStatement extends CodeStatement  {
         }
     }
 
-    public CodeConditionStatement(Object instance) throws Throwable {
+    public CodeConditionStatement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class CodeConditionStatement extends CodeStatement  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

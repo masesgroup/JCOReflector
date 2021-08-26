@@ -93,7 +93,7 @@ public class IDispatchOperationSelectorImplementation extends NetObject implemen
         }
     }
 
-    public IDispatchOperationSelectorImplementation(Object instance) throws Throwable {
+    public IDispatchOperationSelectorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class IDispatchOperationSelectorImplementation extends NetObject implemen
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -133,11 +133,11 @@ public class IDispatchOperationSelectorImplementation extends NetObject implemen
 
     // Methods section
     
-    public java.lang.String SelectOperation(Message message) throws Throwable {
+    public java.lang.String SelectOperation(JCORefOut<Message> message) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Invoke("SelectOperation", message == null ? null : message.getJCOInstance());
+            return (java.lang.String)classInstance.Invoke("SelectOperation", message.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

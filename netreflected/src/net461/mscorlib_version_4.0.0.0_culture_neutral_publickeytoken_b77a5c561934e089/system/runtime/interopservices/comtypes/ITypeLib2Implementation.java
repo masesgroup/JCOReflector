@@ -100,7 +100,7 @@ public class ITypeLib2Implementation extends NetObject implements ITypeLib2 {
         }
     }
 
-    public ITypeLib2Implementation(Object instance) throws Throwable {
+    public ITypeLib2Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class ITypeLib2Implementation extends NetObject implements ITypeLib2 {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -160,27 +160,27 @@ public class ITypeLib2Implementation extends NetObject implements ITypeLib2 {
         }
     }
 
-    public void FindName(java.lang.String szNameBuf, int lHashVal, JCORefOut<ITypeInfo[]> ppTInfo, JCORefOut rgMemId, short pcFound) throws Throwable {
+    public void FindName(java.lang.String szNameBuf, int lHashVal, JCORefOut<ITypeInfo[]> ppTInfo, JCORefOut rgMemId, JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Short>> pcFound) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("FindName", szNameBuf, lHashVal, ppTInfo.getJCRefOut(), rgMemId.getJCRefOut(), pcFound);
+            classInstance.Invoke("FindName", szNameBuf, lHashVal, ppTInfo.getJCRefOut(), rgMemId.getJCRefOut(), pcFound.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void GetCustData(Guid guid, JCORefOut<NetObject> pVarVal) throws Throwable {
+    public void GetCustData(JCORefOut<Guid> guid, JCORefOut<NetObject> pVarVal) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("GetCustData", guid == null ? null : guid.getJCOInstance(), pVarVal.getJCRefOut());
+            classInstance.Invoke("GetCustData", guid.getJCRefOut(), pVarVal.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void GetDocumentation(int index, JCORefOut strName, JCORefOut strDocString, JCORefOut dwHelpContext, JCORefOut strHelpFile) throws Throwable {
+    public void GetDocumentation(int index, JCORefOut strName, JCORefOut strDocString, JCORefOut<java.util.concurrent.atomic.AtomicInteger> dwHelpContext, JCORefOut strHelpFile) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -190,7 +190,7 @@ public class ITypeLib2Implementation extends NetObject implements ITypeLib2 {
         }
     }
 
-    public void GetDocumentation2(int index, JCORefOut pbstrHelpString, JCORefOut pdwHelpStringContext, JCORefOut pbstrHelpStringDll) throws Throwable {
+    public void GetDocumentation2(int index, JCORefOut pbstrHelpString, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pdwHelpStringContext, JCORefOut pbstrHelpStringDll) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -220,11 +220,11 @@ public class ITypeLib2Implementation extends NetObject implements ITypeLib2 {
         }
     }
 
-    public void GetTypeInfoOfGuid(Guid guid, JCORefOut<ITypeInfo> ppTInfo) throws Throwable {
+    public void GetTypeInfoOfGuid(JCORefOut<Guid> guid, JCORefOut<ITypeInfo> ppTInfo) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("GetTypeInfoOfGuid", guid == null ? null : guid.getJCOInstance(), ppTInfo.getJCRefOut());
+            classInstance.Invoke("GetTypeInfoOfGuid", guid.getJCRefOut(), ppTInfo.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -96,7 +96,7 @@ public class MouseGesture extends InputGesture  {
         }
     }
 
-    public MouseGesture(Object instance) throws Throwable {
+    public MouseGesture(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class MouseGesture extends InputGesture  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

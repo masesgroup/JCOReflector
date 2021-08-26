@@ -96,7 +96,7 @@ public class SinkProviderData extends NetObject  {
         }
     }
 
-    public SinkProviderData(Object instance) throws Throwable {
+    public SinkProviderData(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class SinkProviderData extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

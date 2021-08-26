@@ -105,7 +105,7 @@ public class ActivityDesignerTheme extends DesignerTheme  {
         }
     }
 
-    public ActivityDesignerTheme(Object instance) throws Throwable {
+    public ActivityDesignerTheme(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -125,7 +125,7 @@ public class ActivityDesignerTheme extends DesignerTheme  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

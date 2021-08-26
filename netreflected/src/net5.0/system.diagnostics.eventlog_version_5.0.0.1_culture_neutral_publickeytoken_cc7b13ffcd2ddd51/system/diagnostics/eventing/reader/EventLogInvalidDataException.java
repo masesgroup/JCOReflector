@@ -97,7 +97,7 @@ public class EventLogInvalidDataException extends EventLogException {
         super();
     }
 
-    public EventLogInvalidDataException(Object instance) {
+    public EventLogInvalidDataException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class EventLogInvalidDataException extends EventLogException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

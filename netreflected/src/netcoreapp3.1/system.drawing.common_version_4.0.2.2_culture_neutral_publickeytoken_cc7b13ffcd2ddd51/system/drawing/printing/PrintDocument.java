@@ -99,7 +99,7 @@ public class PrintDocument extends Component  {
         }
     }
 
-    public PrintDocument(Object instance) throws Throwable {
+    public PrintDocument(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class PrintDocument extends Component  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

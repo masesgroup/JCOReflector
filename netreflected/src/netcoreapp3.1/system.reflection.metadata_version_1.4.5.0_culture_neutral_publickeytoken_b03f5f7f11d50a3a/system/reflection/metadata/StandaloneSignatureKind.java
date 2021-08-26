@@ -108,7 +108,7 @@ public class StandaloneSignatureKind extends NetObject  {
         }
     }
 
-    public StandaloneSignatureKind(Object instance) {
+    public StandaloneSignatureKind(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class StandaloneSignatureKind extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

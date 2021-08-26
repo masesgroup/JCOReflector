@@ -106,9 +106,9 @@ public interface IMoniker extends IJCOBridgeReflected {
     /**
      * Returns the instantiated class
      * 
-     * @return An {@link Object} representing the instance of the instantiated Class
+     * @return An {@link java.lang.Object} representing the instance of the instantiated Class
      */
-    public Object getJCOInstance();
+    public java.lang.Object getJCOInstance();
 
     /**
      * Returns the instantiated class Type
@@ -125,11 +125,11 @@ public interface IMoniker extends IJCOBridgeReflected {
 
     public int IsRunning(IBindCtx pbc, IMoniker pmkToLeft, IMoniker pmkNewlyRunning) throws Throwable;
 
-    public int IsSystemMoniker(JCORefOut pdwMksys) throws Throwable;
+    public int IsSystemMoniker(JCORefOut<java.util.concurrent.atomic.AtomicInteger> pdwMksys) throws Throwable;
 
-    public void BindToObject(IBindCtx pbc, IMoniker pmkToLeft, Guid riidResult, JCORefOut<NetObject> ppvResult) throws Throwable;
+    public void BindToObject(IBindCtx pbc, IMoniker pmkToLeft, JCORefOut<Guid> riidResult, JCORefOut<NetObject> ppvResult) throws Throwable;
 
-    public void BindToStorage(IBindCtx pbc, IMoniker pmkToLeft, Guid riid, JCORefOut<NetObject> ppvObj) throws Throwable;
+    public void BindToStorage(IBindCtx pbc, IMoniker pmkToLeft, JCORefOut<Guid> riid, JCORefOut<NetObject> ppvObj) throws Throwable;
 
     public void CommonPrefixWith(IMoniker pmkOther, JCORefOut<IMoniker> ppmkPrefix) throws Throwable;
 
@@ -141,19 +141,19 @@ public interface IMoniker extends IJCOBridgeReflected {
 
     public void GetDisplayName(IBindCtx pbc, IMoniker pmkToLeft, JCORefOut ppszDisplayName) throws Throwable;
 
-    public void GetSizeMax(JCORefOut pcbSize) throws Throwable;
+    public void GetSizeMax(JCORefOut<java.util.concurrent.atomic.AtomicLong> pcbSize) throws Throwable;
 
     public void GetTimeOfLastChange(IBindCtx pbc, IMoniker pmkToLeft, JCORefOut<FILETIME> pFileTime) throws Throwable;
 
-    public void Hash(JCORefOut pdwHash) throws Throwable;
+    public void Hash(JCORefOut<java.util.concurrent.atomic.AtomicInteger> pdwHash) throws Throwable;
 
     public void Inverse(JCORefOut<IMoniker> ppmk) throws Throwable;
 
     public void Load(IStream pStm) throws Throwable;
 
-    public void ParseDisplayName(IBindCtx pbc, IMoniker pmkToLeft, java.lang.String pszDisplayName, JCORefOut pchEaten, JCORefOut<IMoniker> ppmkOut) throws Throwable;
+    public void ParseDisplayName(IBindCtx pbc, IMoniker pmkToLeft, java.lang.String pszDisplayName, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pchEaten, JCORefOut<IMoniker> ppmkOut) throws Throwable;
 
-    public void Reduce(IBindCtx pbc, int dwReduceHowFar, IMoniker ppmkToLeft, JCORefOut<IMoniker> ppmkReduced) throws Throwable;
+    public void Reduce(IBindCtx pbc, int dwReduceHowFar, JCORefOut<IMoniker> ppmkToLeft, JCORefOut<IMoniker> ppmkReduced) throws Throwable;
 
     public void RelativePathTo(IMoniker pmkOther, JCORefOut<IMoniker> ppmkRelPath) throws Throwable;
 

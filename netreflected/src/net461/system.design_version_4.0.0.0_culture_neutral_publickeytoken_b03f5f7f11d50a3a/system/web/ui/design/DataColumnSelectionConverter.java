@@ -96,7 +96,7 @@ public class DataColumnSelectionConverter extends TypeConverter  {
         }
     }
 
-    public DataColumnSelectionConverter(Object instance) throws Throwable {
+    public DataColumnSelectionConverter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class DataColumnSelectionConverter extends TypeConverter  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

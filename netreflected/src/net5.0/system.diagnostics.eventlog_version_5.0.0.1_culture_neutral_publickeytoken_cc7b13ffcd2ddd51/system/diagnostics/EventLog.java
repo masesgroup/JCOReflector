@@ -102,7 +102,7 @@ public class EventLog extends Component  {
         }
     }
 
-    public EventLog(Object instance) throws Throwable {
+    public EventLog(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -122,7 +122,7 @@ public class EventLog extends Component  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -237,7 +237,7 @@ public class EventLog extends Component  {
         try {
             ArrayList<EventLog> resultingArrayList = new ArrayList<EventLog>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetEventLogs");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new EventLog(resultingObject));
             }
             EventLog[] resultingArray = new EventLog[resultingArrayList.size()];
@@ -254,7 +254,7 @@ public class EventLog extends Component  {
         try {
             ArrayList<EventLog> resultingArrayList = new ArrayList<EventLog>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetEventLogs", machineName);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new EventLog(resultingObject));
             }
             EventLog[] resultingArray = new EventLog[resultingArrayList.size()];

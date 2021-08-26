@@ -98,7 +98,7 @@ public class ComponentEditorForm extends Form  {
         }
     }
 
-    public ComponentEditorForm(Object instance) throws Throwable {
+    public ComponentEditorForm(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class ComponentEditorForm extends Form  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -161,11 +161,11 @@ public class ComponentEditorForm extends Form  {
     
     // Methods section
     
-    public boolean PreProcessMessage(Message msg) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException {
+    public boolean PreProcessMessage(JCORefOut<Message> msg) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("PreProcessMessage", msg == null ? null : msg.getJCOInstance());
+            return (boolean)classInstance.Invoke("PreProcessMessage", msg.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

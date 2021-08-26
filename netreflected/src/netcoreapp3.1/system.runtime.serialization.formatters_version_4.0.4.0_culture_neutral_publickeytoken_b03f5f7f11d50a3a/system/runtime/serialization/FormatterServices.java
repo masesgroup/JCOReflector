@@ -98,7 +98,7 @@ public class FormatterServices extends NetObject  {
         }
     }
 
-    public FormatterServices(Object instance) throws Throwable {
+    public FormatterServices(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class FormatterServices extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -188,7 +188,7 @@ public class FormatterServices extends NetObject  {
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetObjectData", obj == null ? null : obj.getJCOInstance(), toObjectFromArray(members));
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
@@ -205,7 +205,7 @@ public class FormatterServices extends NetObject  {
         try {
             ArrayList<MemberInfo> resultingArrayList = new ArrayList<MemberInfo>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetSerializableMembers", type == null ? null : type.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MemberInfo(resultingObject));
             }
             MemberInfo[] resultingArray = new MemberInfo[resultingArrayList.size()];
@@ -222,7 +222,7 @@ public class FormatterServices extends NetObject  {
         try {
             ArrayList<MemberInfo> resultingArrayList = new ArrayList<MemberInfo>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetSerializableMembers", type == null ? null : type.getJCOInstance(), context == null ? null : context.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MemberInfo(resultingObject));
             }
             MemberInfo[] resultingArray = new MemberInfo[resultingArrayList.size()];

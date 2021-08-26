@@ -103,9 +103,9 @@ public interface IKeyboardInputSink extends IJCOBridgeReflected {
     /**
      * Returns the instantiated class
      * 
-     * @return An {@link Object} representing the instance of the instantiated Class
+     * @return An {@link java.lang.Object} representing the instance of the instantiated Class
      */
-    public Object getJCOInstance();
+    public java.lang.Object getJCOInstance();
 
     /**
      * Returns the instantiated class Type
@@ -118,13 +118,13 @@ public interface IKeyboardInputSink extends IJCOBridgeReflected {
     
     public boolean HasFocusWithin() throws Throwable;
 
-    public boolean OnMnemonic(MSG msg, ModifierKeys modifiers) throws Throwable;
+    public boolean OnMnemonic(JCORefOut<MSG> msg, ModifierKeys modifiers) throws Throwable;
 
     public boolean TabInto(TraversalRequest request) throws Throwable;
 
-    public boolean TranslateAccelerator(MSG msg, ModifierKeys modifiers) throws Throwable;
+    public boolean TranslateAccelerator(JCORefOut<MSG> msg, ModifierKeys modifiers) throws Throwable;
 
-    public boolean TranslateChar(MSG msg, ModifierKeys modifiers) throws Throwable;
+    public boolean TranslateChar(JCORefOut<MSG> msg, ModifierKeys modifiers) throws Throwable;
 
     public IKeyboardInputSite RegisterKeyboardInputSink(IKeyboardInputSink sink) throws Throwable;
 

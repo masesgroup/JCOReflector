@@ -100,7 +100,7 @@ public class ContextBindingElement extends BindingElement implements system.serv
         }
     }
 
-    public ContextBindingElement(Object instance) throws Throwable {
+    public ContextBindingElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class ContextBindingElement extends BindingElement implements system.serv
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

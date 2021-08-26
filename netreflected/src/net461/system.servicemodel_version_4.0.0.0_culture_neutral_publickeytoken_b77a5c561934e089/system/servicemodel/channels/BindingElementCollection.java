@@ -94,7 +94,7 @@ public class BindingElementCollection extends NetObjectEnumerable  {
         }
     }
 
-    public BindingElementCollection(Object instance) throws Throwable {
+    public BindingElementCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class BindingElementCollection extends NetObjectEnumerable  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -153,7 +153,7 @@ public class BindingElementCollection extends NetObjectEnumerable  {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((Object)toObjectFromArray(elements)));
+            setJCOInstance((JCObject)classType.NewObject((java.lang.Object)toObjectFromArray(elements)));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,7 +188,7 @@ public class BindingElementCollection extends NetObjectEnumerable  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddRange", (Object)toObjectFromArray(elements));
+            classInstance.Invoke("AddRange", (java.lang.Object)toObjectFromArray(elements));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -95,7 +95,7 @@ public class ReaderWriterLock extends CriticalFinalizerObject  {
         }
     }
 
-    public ReaderWriterLock(Object instance) throws Throwable {
+    public ReaderWriterLock(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class ReaderWriterLock extends CriticalFinalizerObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -237,11 +237,11 @@ public class ReaderWriterLock extends CriticalFinalizerObject  {
         }
     }
 
-    public void DowngradeFromWriterLock(LockCookie lockCookie) throws Throwable {
+    public void DowngradeFromWriterLock(JCORefOut<LockCookie> lockCookie) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("DowngradeFromWriterLock", lockCookie == null ? null : lockCookie.getJCOInstance());
+            classInstance.Invoke("DowngradeFromWriterLock", lockCookie.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,11 +267,11 @@ public class ReaderWriterLock extends CriticalFinalizerObject  {
         }
     }
 
-    public void RestoreLock(LockCookie lockCookie) throws Throwable {
+    public void RestoreLock(JCORefOut<LockCookie> lockCookie) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("RestoreLock", lockCookie == null ? null : lockCookie.getJCOInstance());
+            classInstance.Invoke("RestoreLock", lockCookie.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

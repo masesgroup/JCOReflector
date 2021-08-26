@@ -101,7 +101,7 @@ public class PersonalizationProvider extends ProviderBase  {
         }
     }
 
-    public PersonalizationProvider(Object instance) throws Throwable {
+    public PersonalizationProvider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -121,7 +121,7 @@ public class PersonalizationProvider extends ProviderBase  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -225,7 +225,7 @@ public class PersonalizationProvider extends ProviderBase  {
         }
     }
 
-    public PersonalizationStateInfoCollection FindState(PersonalizationScope scope, PersonalizationStateQuery query, int pageIndex, int pageSize, JCORefOut totalRecords) throws Throwable {
+    public PersonalizationStateInfoCollection FindState(PersonalizationScope scope, PersonalizationStateQuery query, int pageIndex, int pageSize, JCORefOut<java.util.concurrent.atomic.AtomicInteger> totalRecords) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

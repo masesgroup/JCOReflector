@@ -95,7 +95,7 @@ public class EditorZone extends EditorZoneBase  {
         }
     }
 
-    public EditorZone(Object instance) throws Throwable {
+    public EditorZone(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class EditorZone extends EditorZoneBase  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

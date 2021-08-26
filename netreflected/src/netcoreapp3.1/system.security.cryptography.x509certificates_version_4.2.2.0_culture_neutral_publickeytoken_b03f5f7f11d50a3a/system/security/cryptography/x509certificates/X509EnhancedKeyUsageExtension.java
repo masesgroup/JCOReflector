@@ -95,7 +95,7 @@ public class X509EnhancedKeyUsageExtension extends X509Extension  {
         }
     }
 
-    public X509EnhancedKeyUsageExtension(Object instance) throws Throwable {
+    public X509EnhancedKeyUsageExtension(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class X509EnhancedKeyUsageExtension extends X509Extension  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

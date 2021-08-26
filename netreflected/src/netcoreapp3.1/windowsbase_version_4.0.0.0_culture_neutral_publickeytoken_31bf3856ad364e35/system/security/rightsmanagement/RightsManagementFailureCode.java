@@ -108,7 +108,7 @@ public class RightsManagementFailureCode extends NetObject  {
         }
     }
 
-    public RightsManagementFailureCode(Object instance) {
+    public RightsManagementFailureCode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class RightsManagementFailureCode extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -108,7 +108,7 @@ public class Border3DSide extends NetObject  {
         }
     }
 
-    public Border3DSide(Object instance) {
+    public Border3DSide(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class Border3DSide extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

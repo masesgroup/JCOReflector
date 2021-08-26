@@ -95,7 +95,7 @@ public class X509SigningCredentials extends SigningCredentials  {
         }
     }
 
-    public X509SigningCredentials(Object instance) throws Throwable {
+    public X509SigningCredentials(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class X509SigningCredentials extends SigningCredentials  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -114,7 +114,7 @@ public class HttpWebRequest extends WebRequest  {
         }
     }
 
-    public HttpWebRequest(Object instance) throws Throwable {
+    public HttpWebRequest(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -134,7 +134,7 @@ public class HttpWebRequest extends WebRequest  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

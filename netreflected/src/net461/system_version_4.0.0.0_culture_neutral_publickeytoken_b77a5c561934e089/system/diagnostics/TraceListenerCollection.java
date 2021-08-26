@@ -95,7 +95,7 @@ public class TraceListenerCollection extends NetObjectEnumerable  {
         }
     }
 
-    public TraceListenerCollection(Object instance) throws Throwable {
+    public TraceListenerCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class TraceListenerCollection extends NetObjectEnumerable  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -182,7 +182,7 @@ public class TraceListenerCollection extends NetObjectEnumerable  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddRange", (Object)toObjectFromArray(value));
+            classInstance.Invoke("AddRange", (java.lang.Object)toObjectFromArray(value));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

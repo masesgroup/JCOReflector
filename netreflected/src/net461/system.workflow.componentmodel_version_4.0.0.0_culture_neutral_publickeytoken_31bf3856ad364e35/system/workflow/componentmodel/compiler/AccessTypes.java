@@ -108,7 +108,7 @@ public class AccessTypes extends NetObject  {
         }
     }
 
-    public AccessTypes(Object instance) {
+    public AccessTypes(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class AccessTypes extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -94,7 +94,7 @@ public class TextEndOfParagraph extends TextEndOfLine  {
         }
     }
 
-    public TextEndOfParagraph(Object instance) throws Throwable {
+    public TextEndOfParagraph(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class TextEndOfParagraph extends TextEndOfLine  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

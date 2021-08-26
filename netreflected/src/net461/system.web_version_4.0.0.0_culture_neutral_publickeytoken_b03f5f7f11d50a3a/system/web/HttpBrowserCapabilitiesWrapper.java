@@ -99,7 +99,7 @@ public class HttpBrowserCapabilitiesWrapper extends HttpBrowserCapabilitiesBase 
         }
     }
 
-    public HttpBrowserCapabilitiesWrapper(Object instance) throws Throwable {
+    public HttpBrowserCapabilitiesWrapper(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class HttpBrowserCapabilitiesWrapper extends HttpBrowserCapabilitiesBase 
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -198,7 +198,7 @@ public class HttpBrowserCapabilitiesWrapper extends HttpBrowserCapabilitiesBase 
         try {
             ArrayList<Version> resultingArrayList = new ArrayList<Version>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetClrVersions");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Version(resultingObject));
             }
             Version[] resultingArray = new Version[resultingArrayList.size()];

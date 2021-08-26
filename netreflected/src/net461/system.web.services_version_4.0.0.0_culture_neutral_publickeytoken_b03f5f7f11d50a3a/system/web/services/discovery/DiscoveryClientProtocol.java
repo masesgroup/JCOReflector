@@ -101,7 +101,7 @@ public class DiscoveryClientProtocol extends HttpWebClientProtocol  {
         }
     }
 
-    public DiscoveryClientProtocol(Object instance) throws Throwable {
+    public DiscoveryClientProtocol(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -121,7 +121,7 @@ public class DiscoveryClientProtocol extends HttpWebClientProtocol  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -160,22 +160,22 @@ public class DiscoveryClientProtocol extends HttpWebClientProtocol  {
     
     // Methods section
     
-    public Stream Download(java.lang.String url) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.UriFormatException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.InvalidCastException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.net.WebException, system.OverflowException {
+    public Stream Download(JCORefOut url) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.UriFormatException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.InvalidCastException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.net.WebException, system.OverflowException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objDownload = (JCObject)classInstance.Invoke("Download", url);
+            JCObject objDownload = (JCObject)classInstance.Invoke("Download", url.getJCRefOut());
             return new Stream(objDownload);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public Stream Download(java.lang.String url, java.lang.String contentType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.configuration.ConfigurationException, system.UriFormatException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.InvalidCastException, system.NotSupportedException, system.MissingMethodException, system.FormatException, system.net.WebException, system.OverflowException {
+    public Stream Download(JCORefOut url, JCORefOut contentType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.MemberAccessException, system.NullReferenceException, system.configuration.ConfigurationException, system.UriFormatException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.MulticastNotSupportedException, system.InvalidCastException, system.NotSupportedException, system.MissingMethodException, system.FormatException, system.net.WebException, system.OverflowException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objDownload = (JCObject)classInstance.Invoke("Download", url, contentType);
+            JCObject objDownload = (JCObject)classInstance.Invoke("Download", url.getJCRefOut(), contentType.getJCRefOut());
             return new Stream(objDownload);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

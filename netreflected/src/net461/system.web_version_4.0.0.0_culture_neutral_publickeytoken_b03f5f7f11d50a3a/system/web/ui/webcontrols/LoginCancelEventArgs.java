@@ -93,7 +93,7 @@ public class LoginCancelEventArgs extends EventArgs  {
         }
     }
 
-    public LoginCancelEventArgs(Object instance) throws Throwable {
+    public LoginCancelEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class LoginCancelEventArgs extends EventArgs  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

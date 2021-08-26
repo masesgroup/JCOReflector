@@ -92,7 +92,7 @@ public class IIntellisenseBuilderImplementation extends NetObject implements IIn
         }
     }
 
-    public IIntellisenseBuilderImplementation(Object instance) throws Throwable {
+    public IIntellisenseBuilderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class IIntellisenseBuilderImplementation extends NetObject implements IIn
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -132,11 +132,11 @@ public class IIntellisenseBuilderImplementation extends NetObject implements IIn
 
     // Methods section
     
-    public boolean Show(java.lang.String language, java.lang.String value, java.lang.String newValue) throws Throwable {
+    public boolean Show(java.lang.String language, java.lang.String value, JCORefOut newValue) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Show", language, value, newValue);
+            return (boolean)classInstance.Invoke("Show", language, value, newValue.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

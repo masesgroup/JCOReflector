@@ -103,9 +103,9 @@ public interface IComNativeDescriptorHandler extends IJCOBridgeReflected {
     /**
      * Returns the instantiated class
      * 
-     * @return An {@link Object} representing the instance of the instantiated Class
+     * @return An {@link java.lang.Object} representing the instance of the instantiated Class
      */
-    public Object getJCOInstance();
+    public java.lang.Object getJCOInstance();
 
     /**
      * Returns the instantiated class Type
@@ -132,9 +132,9 @@ public interface IComNativeDescriptorHandler extends IJCOBridgeReflected {
 
     public NetObject GetEditor(NetObject component, NetType baseEditorType) throws Throwable;
 
-    public NetObject GetPropertyValue(NetObject component, int dispid, boolean success) throws Throwable;
+    public NetObject GetPropertyValue(NetObject component, int dispid, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> success) throws Throwable;
 
-    public NetObject GetPropertyValue(NetObject component, java.lang.String propertyName, boolean success) throws Throwable;
+    public NetObject GetPropertyValue(NetObject component, java.lang.String propertyName, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> success) throws Throwable;
 
     public java.lang.String GetClassName(NetObject component) throws Throwable;
 

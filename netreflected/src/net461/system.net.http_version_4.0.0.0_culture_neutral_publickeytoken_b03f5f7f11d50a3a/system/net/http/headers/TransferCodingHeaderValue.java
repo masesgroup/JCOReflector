@@ -95,7 +95,7 @@ public class TransferCodingHeaderValue extends NetObject implements system.IClon
         }
     }
 
-    public TransferCodingHeaderValue(Object instance) throws Throwable {
+    public TransferCodingHeaderValue(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class TransferCodingHeaderValue extends NetObject implements system.IClon
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

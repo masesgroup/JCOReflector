@@ -97,7 +97,7 @@ public class InstrumentationException extends InstrumentationBaseException {
         super();
     }
 
-    public InstrumentationException(Object instance) {
+    public InstrumentationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class InstrumentationException extends InstrumentationBaseException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

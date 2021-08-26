@@ -95,7 +95,7 @@ public class ToolCreatedEventArgs extends RoutedEventArgs  {
         }
     }
 
-    public ToolCreatedEventArgs(Object instance) throws Throwable {
+    public ToolCreatedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class ToolCreatedEventArgs extends RoutedEventArgs  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -158,7 +158,7 @@ public class ToolCreatedEventArgs extends RoutedEventArgs  {
         try {
             ArrayList<IComponent> resultingArrayList = new ArrayList<IComponent>();
             JCObject resultingObjects = (JCObject)classInstance.Get("Components");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IComponentImplementation(resultingObject));
             }
             IComponent[] resultingArray = new IComponent[resultingArrayList.size()];

@@ -99,7 +99,7 @@ public class StrongNameIdentityPermission extends CodeAccessPermission  {
         }
     }
 
-    public StrongNameIdentityPermission(Object instance) throws Throwable {
+    public StrongNameIdentityPermission(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class StrongNameIdentityPermission extends CodeAccessPermission  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

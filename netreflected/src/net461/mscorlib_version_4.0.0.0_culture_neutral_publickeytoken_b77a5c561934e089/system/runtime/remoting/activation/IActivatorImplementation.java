@@ -99,7 +99,7 @@ public class IActivatorImplementation extends NetObject implements IActivator {
         }
     }
 
-    public IActivatorImplementation(Object instance) throws Throwable {
+    public IActivatorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class IActivatorImplementation extends NetObject implements IActivator {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

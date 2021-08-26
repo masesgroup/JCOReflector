@@ -92,7 +92,7 @@ public class IDefineEventImplementation extends NetObject implements IDefineEven
         }
     }
 
-    public IDefineEventImplementation(Object instance) throws Throwable {
+    public IDefineEventImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class IDefineEventImplementation extends NetObject implements IDefineEven
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

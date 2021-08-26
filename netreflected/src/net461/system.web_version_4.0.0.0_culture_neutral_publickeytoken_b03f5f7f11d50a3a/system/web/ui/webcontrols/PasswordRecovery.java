@@ -105,7 +105,7 @@ public class PasswordRecovery extends CompositeControl  {
         }
     }
 
-    public PasswordRecovery(Object instance) throws Throwable {
+    public PasswordRecovery(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -125,7 +125,7 @@ public class PasswordRecovery extends CompositeControl  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

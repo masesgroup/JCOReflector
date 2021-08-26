@@ -99,7 +99,7 @@ public class UdpClient extends NetObject implements AutoCloseable {
         }
     }
 
-    public UdpClient(Object instance) throws Throwable {
+    public UdpClient(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class UdpClient extends NetObject implements AutoCloseable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -208,13 +208,13 @@ public class UdpClient extends NetObject implements AutoCloseable {
     
     // Methods section
     
-    public byte[] EndReceive(IAsyncResult asyncResult, IPEndPoint remoteEP) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.ArrayTypeMismatchException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.net.sockets.SocketException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException {
+    public byte[] EndReceive(IAsyncResult asyncResult, JCORefOut<IPEndPoint> remoteEP) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.ArrayTypeMismatchException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.net.sockets.SocketException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("EndReceive", asyncResult == null ? null : asyncResult.getJCOInstance(), remoteEP == null ? null : remoteEP.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("EndReceive", asyncResult == null ? null : asyncResult.getJCOInstance(), remoteEP.getJCRefOut());
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -227,13 +227,13 @@ public class UdpClient extends NetObject implements AutoCloseable {
         }
     }
 
-    public byte[] Receive(IPEndPoint remoteEP) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException {
+    public byte[] Receive(JCORefOut<IPEndPoint> remoteEP) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.net.sockets.SocketException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("Receive", remoteEP == null ? null : remoteEP.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("Receive", remoteEP.getJCRefOut());
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];

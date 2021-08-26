@@ -95,7 +95,7 @@ public class AppDomainInitializer extends JCVoidDelegate implements IJCVoidEvent
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return this;
     }
 
@@ -103,14 +103,14 @@ public class AppDomainInitializer extends JCVoidDelegate implements IJCVoidEvent
         return classType;
     }
 
-    public final void EventRaised(Object... argsFromJCOBridge) {
+    public final void EventRaised(java.lang.Object... argsFromJCOBridge) {
         try
         {
             java.lang.String[] args = null;
             if (argsFromJCOBridge[0] != null) {
-                ArrayList<Object> resultingArrayList0 = new ArrayList<Object>();
+                ArrayList<java.lang.Object> resultingArrayList0 = new ArrayList<java.lang.Object>();
                 JCObject resultingObjects = (JCObject)argsFromJCOBridge[0];
-                for (Object resultingObject0 : resultingObjects) {
+                for (java.lang.Object resultingObject0 : resultingObjects) {
                     resultingArrayList0.add(resultingObject0);
                 }
                 args = new java.lang.String[resultingArrayList0.size()];
@@ -133,14 +133,14 @@ public class AppDomainInitializer extends JCVoidDelegate implements IJCVoidEvent
         }
     }
 
-    public final void DelegateInvoked(Object... argsFromJCOBridge) {
+    public final void DelegateInvoked(java.lang.Object... argsFromJCOBridge) {
         try
         {
             java.lang.String[] args = null;
             if (argsFromJCOBridge[0] != null) {
-                ArrayList<Object> resultingArrayList0 = new ArrayList<Object>();
+                ArrayList<java.lang.Object> resultingArrayList0 = new ArrayList<java.lang.Object>();
                 JCObject resultingObjects = (JCObject)argsFromJCOBridge[0];
-                for (Object resultingObject0 : resultingObjects) {
+                for (java.lang.Object resultingObject0 : resultingObjects) {
                     resultingArrayList0.add(resultingObject0);
                 }
                 args = new java.lang.String[resultingArrayList0.size()];
@@ -172,7 +172,7 @@ public class AppDomainInitializer extends JCVoidDelegate implements IJCVoidEvent
         callerInstance = instance;
     }
 
-    public AppDomainInitializer(Object instance) throws Throwable {
+    public AppDomainInitializer(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         if (instance == null) throw new IllegalArgumentException("Instance cannot be null");
         if (instance instanceof IAppDomainInitializer) {
@@ -184,7 +184,7 @@ public class AppDomainInitializer extends JCVoidDelegate implements IJCVoidEvent
                     String.format("Class %s is not supported.", instance.getClass().getTypeName()));
     }
 
-    protected final static <T extends IJCOBridgeReflected> Object toObjectFromArray(T[] input) {
+    protected final static <T extends IJCOBridgeReflected> java.lang.Object toObjectFromArray(T[] input) {
         return JCOBridgeInstance.toObjectFromArray(input);
     }
 
@@ -196,7 +196,7 @@ public class AppDomainInitializer extends JCVoidDelegate implements IJCVoidEvent
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("DynamicInvoke", (Object)args);
+            classInstance.Invoke("DynamicInvoke", (java.lang.Object)args);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

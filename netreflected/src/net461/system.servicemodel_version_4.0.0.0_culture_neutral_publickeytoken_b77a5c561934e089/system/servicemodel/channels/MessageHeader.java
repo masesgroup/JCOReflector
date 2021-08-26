@@ -98,7 +98,7 @@ public class MessageHeader extends MessageHeaderInfo  {
         }
     }
 
-    public MessageHeader(Object instance) throws Throwable {
+    public MessageHeader(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class MessageHeader extends MessageHeaderInfo  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

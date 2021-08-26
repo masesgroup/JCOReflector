@@ -94,7 +94,7 @@ public class _PropertyBuilderImplementation extends NetObject implements _Proper
         }
     }
 
-    public _PropertyBuilderImplementation(Object instance) throws Throwable {
+    public _PropertyBuilderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class _PropertyBuilderImplementation extends NetObject implements _Proper
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

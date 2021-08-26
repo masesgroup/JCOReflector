@@ -100,9 +100,9 @@ public interface ICscHostObject extends IJCOBridgeReflected, ITaskHost {
     /**
      * Returns the instantiated class
      * 
-     * @return An {@link Object} representing the instance of the instantiated Class
+     * @return An {@link java.lang.Object} representing the instance of the instantiated Class
      */
-    public Object getJCOInstance();
+    public java.lang.Object getJCOInstance();
 
     /**
      * Returns the instantiated class Type
@@ -115,7 +115,7 @@ public interface ICscHostObject extends IJCOBridgeReflected, ITaskHost {
     
     public boolean Compile() throws Throwable;
 
-    public boolean EndInitialization(JCORefOut errorMessage, JCORefOut errorCode) throws Throwable;
+    public boolean EndInitialization(JCORefOut errorMessage, JCORefOut<java.util.concurrent.atomic.AtomicInteger> errorCode) throws Throwable;
 
     public boolean IsDesignTime() throws Throwable;
 

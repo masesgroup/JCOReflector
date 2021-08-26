@@ -97,7 +97,7 @@ public class VisualStateManager extends DependencyObject  {
         }
     }
 
-    public VisualStateManager(Object instance) throws Throwable {
+    public VisualStateManager(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class VisualStateManager extends DependencyObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

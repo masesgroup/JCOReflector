@@ -102,7 +102,7 @@ public class XmlElement extends XmlLinkedNode  {
         }
     }
 
-    public XmlElement(Object instance) throws Throwable {
+    public XmlElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -122,7 +122,7 @@ public class XmlElement extends XmlLinkedNode  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -97,7 +97,7 @@ public class DetailsViewPagerRow extends DetailsViewRow implements system.web.ui
         }
     }
 
-    public DetailsViewPagerRow(Object instance) throws Throwable {
+    public DetailsViewPagerRow(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class DetailsViewPagerRow extends DetailsViewRow implements system.web.ui
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -99,7 +99,7 @@ public class UnsupportedTokenTypeBadRequestException extends BadRequestException
         super();
     }
 
-    public UnsupportedTokenTypeBadRequestException(Object instance) {
+    public UnsupportedTokenTypeBadRequestException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -133,7 +133,7 @@ public class UnsupportedTokenTypeBadRequestException extends BadRequestException
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

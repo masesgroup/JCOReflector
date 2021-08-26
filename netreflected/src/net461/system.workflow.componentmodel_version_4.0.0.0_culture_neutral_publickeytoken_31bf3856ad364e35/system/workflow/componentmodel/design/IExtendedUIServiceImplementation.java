@@ -98,7 +98,7 @@ public class IExtendedUIServiceImplementation extends NetObject implements IExte
         }
     }
 
-    public IExtendedUIServiceImplementation(Object instance) throws Throwable {
+    public IExtendedUIServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class IExtendedUIServiceImplementation extends NetObject implements IExte
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -206,7 +206,7 @@ public class IExtendedUIServiceImplementation extends NetObject implements IExte
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddDesignerActions", (Object)toObjectFromArray(actions));
+            classInstance.Invoke("AddDesignerActions", (java.lang.Object)toObjectFromArray(actions));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -94,7 +94,7 @@ public class _LocalBuilderImplementation extends NetObject implements _LocalBuil
         }
     }
 
-    public _LocalBuilderImplementation(Object instance) throws Throwable {
+    public _LocalBuilderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class _LocalBuilderImplementation extends NetObject implements _LocalBuil
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

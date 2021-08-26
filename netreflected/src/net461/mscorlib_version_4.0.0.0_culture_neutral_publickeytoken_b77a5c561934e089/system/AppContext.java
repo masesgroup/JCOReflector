@@ -92,7 +92,7 @@ public class AppContext extends NetObject  {
         }
     }
 
-    public AppContext(Object instance) throws Throwable {
+    public AppContext(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class AppContext extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -143,7 +143,7 @@ public class AppContext extends NetObject  {
     
     // Methods section
     
-    public static boolean TryGetSwitch(java.lang.String switchName, JCORefOut isEnabled) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException {
+    public static boolean TryGetSwitch(java.lang.String switchName, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> isEnabled) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {

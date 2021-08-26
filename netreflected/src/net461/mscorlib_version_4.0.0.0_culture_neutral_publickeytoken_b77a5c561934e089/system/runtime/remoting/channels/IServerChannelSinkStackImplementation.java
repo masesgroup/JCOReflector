@@ -103,7 +103,7 @@ public class IServerChannelSinkStackImplementation extends NetObject implements 
         }
     }
 
-    public IServerChannelSinkStackImplementation(Object instance) throws Throwable {
+    public IServerChannelSinkStackImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -123,7 +123,7 @@ public class IServerChannelSinkStackImplementation extends NetObject implements 
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

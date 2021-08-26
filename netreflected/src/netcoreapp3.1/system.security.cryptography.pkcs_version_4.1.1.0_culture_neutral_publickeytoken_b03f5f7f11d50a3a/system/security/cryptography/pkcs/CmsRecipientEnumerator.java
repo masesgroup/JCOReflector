@@ -107,7 +107,7 @@ public class CmsRecipientEnumerator extends NetObject implements Iterator<CmsRec
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -108,7 +108,7 @@ public class VirtualReferenceType extends NetObject  {
         }
     }
 
-    public VirtualReferenceType(Object instance) {
+    public VirtualReferenceType(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class VirtualReferenceType extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

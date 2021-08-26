@@ -93,7 +93,7 @@ public class InArgumentConverter extends TypeConverterBase  {
         }
     }
 
-    public InArgumentConverter(Object instance) throws Throwable {
+    public InArgumentConverter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class InArgumentConverter extends TypeConverterBase  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

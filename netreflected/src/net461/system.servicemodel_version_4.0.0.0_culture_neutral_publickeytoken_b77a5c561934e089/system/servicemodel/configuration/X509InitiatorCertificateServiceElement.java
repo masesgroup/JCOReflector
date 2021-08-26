@@ -96,7 +96,7 @@ public class X509InitiatorCertificateServiceElement extends ConfigurationElement
         }
     }
 
-    public X509InitiatorCertificateServiceElement(Object instance) throws Throwable {
+    public X509InitiatorCertificateServiceElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class X509InitiatorCertificateServiceElement extends ConfigurationElement
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

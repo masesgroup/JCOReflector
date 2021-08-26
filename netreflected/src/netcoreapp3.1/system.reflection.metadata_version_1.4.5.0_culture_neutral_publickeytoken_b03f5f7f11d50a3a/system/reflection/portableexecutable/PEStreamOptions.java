@@ -108,7 +108,7 @@ public class PEStreamOptions extends NetObject  {
         }
     }
 
-    public PEStreamOptions(Object instance) {
+    public PEStreamOptions(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class PEStreamOptions extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

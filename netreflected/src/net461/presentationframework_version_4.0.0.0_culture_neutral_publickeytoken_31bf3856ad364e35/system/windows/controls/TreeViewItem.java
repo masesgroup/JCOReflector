@@ -94,7 +94,7 @@ public class TreeViewItem extends HeaderedItemsControl  {
         }
     }
 
-    public TreeViewItem(Object instance) throws Throwable {
+    public TreeViewItem(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class TreeViewItem extends HeaderedItemsControl  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

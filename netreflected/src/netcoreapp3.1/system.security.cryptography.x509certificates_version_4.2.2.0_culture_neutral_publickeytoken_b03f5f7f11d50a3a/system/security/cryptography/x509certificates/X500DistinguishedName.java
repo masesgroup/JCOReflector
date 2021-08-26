@@ -95,7 +95,7 @@ public class X500DistinguishedName extends AsnEncodedData  {
         }
     }
 
-    public X500DistinguishedName(Object instance) throws Throwable {
+    public X500DistinguishedName(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class X500DistinguishedName extends AsnEncodedData  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -147,7 +147,7 @@ public class X500DistinguishedName extends AsnEncodedData  {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((Object)encodedDistinguishedName));
+            setJCOInstance((JCObject)classType.NewObject((java.lang.Object)encodedDistinguishedName));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

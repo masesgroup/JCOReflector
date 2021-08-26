@@ -95,7 +95,7 @@ public class PriorityBinding extends BindingBase implements system.windows.marku
         }
     }
 
-    public PriorityBinding(Object instance) throws Throwable {
+    public PriorityBinding(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class PriorityBinding extends BindingBase implements system.windows.marku
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

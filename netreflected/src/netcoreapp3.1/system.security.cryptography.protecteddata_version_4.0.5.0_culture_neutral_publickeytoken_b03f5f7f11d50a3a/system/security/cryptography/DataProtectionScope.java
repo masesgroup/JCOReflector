@@ -108,7 +108,7 @@ public class DataProtectionScope extends NetObject  {
         }
     }
 
-    public DataProtectionScope(Object instance) {
+    public DataProtectionScope(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class DataProtectionScope extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

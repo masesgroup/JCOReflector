@@ -97,7 +97,7 @@ public class BaseDataListComponentEditor extends WindowsFormsComponentEditor  {
         }
     }
 
-    public BaseDataListComponentEditor(Object instance) throws Throwable {
+    public BaseDataListComponentEditor(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class BaseDataListComponentEditor extends WindowsFormsComponentEditor  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

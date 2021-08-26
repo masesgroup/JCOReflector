@@ -95,7 +95,7 @@ public class SqlDataSourceSelectingEventArgs extends SqlDataSourceCommandEventAr
         }
     }
 
-    public SqlDataSourceSelectingEventArgs(Object instance) throws Throwable {
+    public SqlDataSourceSelectingEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class SqlDataSourceSelectingEventArgs extends SqlDataSourceCommandEventAr
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

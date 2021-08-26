@@ -96,7 +96,7 @@ public class DataGridItem extends TableRow implements system.web.ui.INamingConta
         }
     }
 
-    public DataGridItem(Object instance) throws Throwable {
+    public DataGridItem(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class DataGridItem extends TableRow implements system.web.ui.INamingConta
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

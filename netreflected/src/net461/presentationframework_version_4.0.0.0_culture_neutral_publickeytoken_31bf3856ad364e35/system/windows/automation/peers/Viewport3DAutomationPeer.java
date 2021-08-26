@@ -94,7 +94,7 @@ public class Viewport3DAutomationPeer extends FrameworkElementAutomationPeer  {
         }
     }
 
-    public Viewport3DAutomationPeer(Object instance) throws Throwable {
+    public Viewport3DAutomationPeer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class Viewport3DAutomationPeer extends FrameworkElementAutomationPeer  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

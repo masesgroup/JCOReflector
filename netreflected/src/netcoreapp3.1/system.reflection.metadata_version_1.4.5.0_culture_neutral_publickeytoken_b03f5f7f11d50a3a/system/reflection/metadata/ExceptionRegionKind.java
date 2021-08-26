@@ -108,7 +108,7 @@ public class ExceptionRegionKind extends NetObject  {
         }
     }
 
-    public ExceptionRegionKind(Object instance) {
+    public ExceptionRegionKind(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class ExceptionRegionKind extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

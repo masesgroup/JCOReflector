@@ -95,7 +95,7 @@ public class JsonFormatGeneratorStatics extends NetObject  {
         }
     }
 
-    public JsonFormatGeneratorStatics(Object instance) throws Throwable {
+    public JsonFormatGeneratorStatics(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class JsonFormatGeneratorStatics extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -519,7 +519,7 @@ public class JsonFormatGeneratorStatics extends NetObject  {
         try {
             ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
             JCObject resultingObjects = (JCObject)classType.Get("SerInfoCtorArgs");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetType(resultingObject));
             }
             NetType[] resultingArray = new NetType[resultingArrayList.size()];

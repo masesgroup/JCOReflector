@@ -95,7 +95,7 @@ public class StringWithQualityHeaderValue extends NetObject implements system.IC
         }
     }
 
-    public StringWithQualityHeaderValue(Object instance) throws Throwable {
+    public StringWithQualityHeaderValue(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class StringWithQualityHeaderValue extends NetObject implements system.IC
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

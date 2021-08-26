@@ -97,7 +97,7 @@ public class HostProtectionAttribute extends CodeAccessSecurityAttribute  {
         }
     }
 
-    public HostProtectionAttribute(Object instance) throws Throwable {
+    public HostProtectionAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class HostProtectionAttribute extends CodeAccessSecurityAttribute  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

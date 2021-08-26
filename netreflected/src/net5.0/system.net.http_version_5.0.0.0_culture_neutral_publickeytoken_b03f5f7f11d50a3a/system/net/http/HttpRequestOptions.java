@@ -92,7 +92,7 @@ public class HttpRequestOptions extends NetObjectEnumerable  {
         }
     }
 
-    public HttpRequestOptions(Object instance) throws Throwable {
+    public HttpRequestOptions(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class HttpRequestOptions extends NetObjectEnumerable  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

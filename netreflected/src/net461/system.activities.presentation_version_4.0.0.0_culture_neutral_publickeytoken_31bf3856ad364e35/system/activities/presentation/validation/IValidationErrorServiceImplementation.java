@@ -92,7 +92,7 @@ public class IValidationErrorServiceImplementation extends NetObject implements 
         }
     }
 
-    public IValidationErrorServiceImplementation(Object instance) throws Throwable {
+    public IValidationErrorServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class IValidationErrorServiceImplementation extends NetObject implements 
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

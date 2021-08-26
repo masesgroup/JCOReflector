@@ -96,7 +96,7 @@ public class ContentMergeIterator extends ValueType  {
         }
     }
 
-    public ContentMergeIterator(Object instance) throws Throwable {
+    public ContentMergeIterator(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class ContentMergeIterator extends ValueType  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

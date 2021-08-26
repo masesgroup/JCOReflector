@@ -97,7 +97,7 @@ public class KeyValuePairModelBinderProvider extends ModelBinderProvider  {
         }
     }
 
-    public KeyValuePairModelBinderProvider(Object instance) throws Throwable {
+    public KeyValuePairModelBinderProvider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class KeyValuePairModelBinderProvider extends ModelBinderProvider  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

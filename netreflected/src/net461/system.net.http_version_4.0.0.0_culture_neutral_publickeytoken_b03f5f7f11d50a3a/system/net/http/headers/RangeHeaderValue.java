@@ -95,7 +95,7 @@ public class RangeHeaderValue extends NetObject implements system.ICloneable {
         }
     }
 
-    public RangeHeaderValue(Object instance) throws Throwable {
+    public RangeHeaderValue(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class RangeHeaderValue extends NetObject implements system.ICloneable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

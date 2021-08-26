@@ -108,7 +108,7 @@ public class EdgeProfile extends NetObject  {
         }
     }
 
-    public EdgeProfile(Object instance) {
+    public EdgeProfile(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class EdgeProfile extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

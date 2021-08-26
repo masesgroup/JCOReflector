@@ -99,7 +99,7 @@ public class EntitySqlException extends EntityException {
         super();
     }
 
-    public EntitySqlException(Object instance) {
+    public EntitySqlException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -133,7 +133,7 @@ public class EntitySqlException extends EntityException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

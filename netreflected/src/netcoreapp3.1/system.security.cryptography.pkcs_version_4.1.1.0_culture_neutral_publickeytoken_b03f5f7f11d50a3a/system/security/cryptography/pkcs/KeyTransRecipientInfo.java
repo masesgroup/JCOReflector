@@ -95,7 +95,7 @@ public class KeyTransRecipientInfo extends RecipientInfo  {
         }
     }
 
-    public KeyTransRecipientInfo(Object instance) throws Throwable {
+    public KeyTransRecipientInfo(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class KeyTransRecipientInfo extends RecipientInfo  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

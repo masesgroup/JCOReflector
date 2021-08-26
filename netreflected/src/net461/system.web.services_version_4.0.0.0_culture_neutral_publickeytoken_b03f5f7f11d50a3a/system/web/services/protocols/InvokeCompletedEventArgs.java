@@ -93,7 +93,7 @@ public class InvokeCompletedEventArgs extends AsyncCompletedEventArgs  {
         }
     }
 
-    public InvokeCompletedEventArgs(Object instance) throws Throwable {
+    public InvokeCompletedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class InvokeCompletedEventArgs extends AsyncCompletedEventArgs  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -156,7 +156,7 @@ public class InvokeCompletedEventArgs extends AsyncCompletedEventArgs  {
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
             JCObject resultingObjects = (JCObject)classInstance.Get("Results");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];

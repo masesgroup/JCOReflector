@@ -100,7 +100,7 @@ public class IServerChannelSinkProviderImplementation extends NetObject implemen
         }
     }
 
-    public IServerChannelSinkProviderImplementation(Object instance) throws Throwable {
+    public IServerChannelSinkProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class IServerChannelSinkProviderImplementation extends NetObject implemen
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

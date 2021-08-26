@@ -92,7 +92,7 @@ public class IResourceUrlGeneratorImplementation extends NetObject implements IR
         }
     }
 
-    public IResourceUrlGeneratorImplementation(Object instance) throws Throwable {
+    public IResourceUrlGeneratorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class IResourceUrlGeneratorImplementation extends NetObject implements IR
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

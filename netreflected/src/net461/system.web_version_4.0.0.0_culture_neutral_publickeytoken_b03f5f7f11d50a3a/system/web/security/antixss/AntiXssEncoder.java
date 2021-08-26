@@ -99,7 +99,7 @@ public class AntiXssEncoder extends HttpEncoder  {
         }
     }
 
-    public AntiXssEncoder(Object instance) throws Throwable {
+    public AntiXssEncoder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class AntiXssEncoder extends HttpEncoder  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -102,7 +102,7 @@ public class XmlSchemaImporter extends SchemaImporter  {
         }
     }
 
-    public XmlSchemaImporter(Object instance) throws Throwable {
+    public XmlSchemaImporter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -122,7 +122,7 @@ public class XmlSchemaImporter extends SchemaImporter  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -242,7 +242,7 @@ public class XmlSchemaImporter extends SchemaImporter  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objImportMembersMapping = (JCObject)classInstance.Invoke("ImportMembersMapping", (Object)toObjectFromArray(names));
+            JCObject objImportMembersMapping = (JCObject)classInstance.Invoke("ImportMembersMapping", (java.lang.Object)toObjectFromArray(names));
             return new XmlMembersMapping(objImportMembersMapping);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -108,7 +108,7 @@ public class MemberAttributes extends NetObject  {
         }
     }
 
-    public MemberAttributes(Object instance) {
+    public MemberAttributes(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class MemberAttributes extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

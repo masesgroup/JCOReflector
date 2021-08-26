@@ -94,7 +94,7 @@ public class JsonNumberHandlingAttribute extends JsonAttribute  {
         }
     }
 
-    public JsonNumberHandlingAttribute(Object instance) throws Throwable {
+    public JsonNumberHandlingAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class JsonNumberHandlingAttribute extends JsonAttribute  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

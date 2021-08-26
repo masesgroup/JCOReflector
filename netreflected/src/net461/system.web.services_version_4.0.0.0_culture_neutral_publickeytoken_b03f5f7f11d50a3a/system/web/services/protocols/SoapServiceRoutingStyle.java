@@ -108,7 +108,7 @@ public class SoapServiceRoutingStyle extends NetObject  {
         }
     }
 
-    public SoapServiceRoutingStyle(Object instance) {
+    public SoapServiceRoutingStyle(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class SoapServiceRoutingStyle extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

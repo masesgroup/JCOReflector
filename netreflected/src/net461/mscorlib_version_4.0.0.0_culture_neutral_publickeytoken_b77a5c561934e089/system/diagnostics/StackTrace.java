@@ -94,7 +94,7 @@ public class StackTrace extends NetObject  {
         }
     }
 
-    public StackTrace(Object instance) throws Throwable {
+    public StackTrace(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class StackTrace extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -260,7 +260,7 @@ public class StackTrace extends NetObject  {
         try {
             ArrayList<StackFrame> resultingArrayList = new ArrayList<StackFrame>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFrames");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new StackFrame(resultingObject));
             }
             StackFrame[] resultingArray = new StackFrame[resultingArrayList.size()];

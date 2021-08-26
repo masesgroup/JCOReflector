@@ -99,7 +99,7 @@ public class Atom10FeedFormatter extends SyndicationFeedFormatter implements sys
         }
     }
 
-    public Atom10FeedFormatter(Object instance) throws Throwable {
+    public Atom10FeedFormatter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class Atom10FeedFormatter extends SyndicationFeedFormatter implements sys
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

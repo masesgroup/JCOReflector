@@ -96,7 +96,7 @@ public class StreamWriter extends TextWriter  {
         }
     }
 
-    public StreamWriter(Object instance) throws Throwable {
+    public StreamWriter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class StreamWriter extends TextWriter  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -373,7 +373,7 @@ public class StreamWriter extends TextWriter  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Write", (Object)buffer);
+            classInstance.Invoke("Write", (java.lang.Object)buffer);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -383,7 +383,7 @@ public class StreamWriter extends TextWriter  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Write", (Object)dupParam0.getJCRefOut());
+            classInstance.Invoke("Write", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

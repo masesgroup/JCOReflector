@@ -96,7 +96,7 @@ public class IEnumMonikerImplementation extends NetObject implements IEnumMonike
         }
     }
 
-    public IEnumMonikerImplementation(Object instance) throws Throwable {
+    public IEnumMonikerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class IEnumMonikerImplementation extends NetObject implements IEnumMonike
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

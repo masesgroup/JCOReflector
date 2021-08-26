@@ -105,7 +105,7 @@ public class CodeGenerator extends NetObject implements system.codedom.compiler.
         }
     }
 
-    public CodeGenerator(Object instance) throws Throwable {
+    public CodeGenerator(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -125,7 +125,7 @@ public class CodeGenerator extends NetObject implements system.codedom.compiler.
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

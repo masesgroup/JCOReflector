@@ -108,7 +108,7 @@ public class DesignerSerializationVisibility extends NetObject  {
         }
     }
 
-    public DesignerSerializationVisibility(Object instance) {
+    public DesignerSerializationVisibility(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class DesignerSerializationVisibility extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

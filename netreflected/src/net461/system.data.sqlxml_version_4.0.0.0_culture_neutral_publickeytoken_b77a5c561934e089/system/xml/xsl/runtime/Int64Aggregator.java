@@ -93,7 +93,7 @@ public class Int64Aggregator extends ValueType  {
         }
     }
 
-    public Int64Aggregator(Object instance) throws Throwable {
+    public Int64Aggregator(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class Int64Aggregator extends ValueType  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

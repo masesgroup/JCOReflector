@@ -94,7 +94,7 @@ public class SchemaNameCollection extends NetObjectEnumerable  {
         }
     }
 
-    public SchemaNameCollection(Object instance) throws Throwable {
+    public SchemaNameCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class SchemaNameCollection extends NetObjectEnumerable  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -191,7 +191,7 @@ public class SchemaNameCollection extends NetObjectEnumerable  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddRange", (Object)value);
+            classInstance.Invoke("AddRange", (java.lang.Object)value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -201,7 +201,7 @@ public class SchemaNameCollection extends NetObjectEnumerable  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddRange", (Object)dupParam0.getJCRefOut());
+            classInstance.Invoke("AddRange", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

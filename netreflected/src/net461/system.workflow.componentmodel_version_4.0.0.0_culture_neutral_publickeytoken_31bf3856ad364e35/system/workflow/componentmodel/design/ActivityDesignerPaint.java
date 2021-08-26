@@ -105,7 +105,7 @@ public class ActivityDesignerPaint extends NetObject  {
         }
     }
 
-    public ActivityDesignerPaint(Object instance) throws Throwable {
+    public ActivityDesignerPaint(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -125,7 +125,7 @@ public class ActivityDesignerPaint extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

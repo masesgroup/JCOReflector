@@ -96,7 +96,7 @@ public class IssuedSecurityTokenParameters extends SecurityTokenParameters  {
         }
     }
 
-    public IssuedSecurityTokenParameters(Object instance) throws Throwable {
+    public IssuedSecurityTokenParameters(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class IssuedSecurityTokenParameters extends SecurityTokenParameters  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

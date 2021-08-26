@@ -101,7 +101,7 @@ public class GlyphRun extends NetObject implements system.componentmodel.ISuppor
         }
     }
 
-    public GlyphRun(Object instance) throws Throwable {
+    public GlyphRun(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -121,7 +121,7 @@ public class GlyphRun extends NetObject implements system.componentmodel.ISuppor
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -191,7 +191,7 @@ public class GlyphRun extends NetObject implements system.componentmodel.ISuppor
         }
     }
 
-    public CharacterHit GetCaretCharacterHitFromDistance(double distance, JCORefOut isInside) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException {
+    public CharacterHit GetCaretCharacterHitFromDistance(double distance, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> isInside) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

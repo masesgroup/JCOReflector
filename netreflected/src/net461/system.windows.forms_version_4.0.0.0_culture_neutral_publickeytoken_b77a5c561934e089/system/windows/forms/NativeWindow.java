@@ -96,7 +96,7 @@ public class NativeWindow extends MarshalByRefObject  {
         }
     }
 
-    public NativeWindow(Object instance) throws Throwable {
+    public NativeWindow(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class NativeWindow extends MarshalByRefObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -165,11 +165,11 @@ public class NativeWindow extends MarshalByRefObject  {
         }
     }
 
-    public void DefWndProc(Message m) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException {
+    public void DefWndProc(JCORefOut<Message> m) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("DefWndProc", m == null ? null : m.getJCOInstance());
+            classInstance.Invoke("DefWndProc", m.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

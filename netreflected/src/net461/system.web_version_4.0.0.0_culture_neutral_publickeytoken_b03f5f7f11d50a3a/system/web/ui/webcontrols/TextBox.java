@@ -99,7 +99,7 @@ public class TextBox extends WebControl implements system.web.ui.IPostBackDataHa
         }
     }
 
-    public TextBox(Object instance) throws Throwable {
+    public TextBox(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class TextBox extends WebControl implements system.web.ui.IPostBackDataHa
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

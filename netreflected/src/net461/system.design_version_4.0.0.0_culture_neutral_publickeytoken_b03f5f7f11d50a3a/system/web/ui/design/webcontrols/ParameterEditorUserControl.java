@@ -98,7 +98,7 @@ public class ParameterEditorUserControl extends UserControl  {
         }
     }
 
-    public ParameterEditorUserControl(Object instance) throws Throwable {
+    public ParameterEditorUserControl(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class ParameterEditorUserControl extends UserControl  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -167,7 +167,7 @@ public class ParameterEditorUserControl extends UserControl  {
         try {
             ArrayList<Parameter> resultingArrayList = new ArrayList<Parameter>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetParameters");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Parameter(resultingObject));
             }
             Parameter[] resultingArray = new Parameter[resultingArrayList.size()];
@@ -182,7 +182,7 @@ public class ParameterEditorUserControl extends UserControl  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddParameters", (Object)toObjectFromArray(parameters));
+            classInstance.Invoke("AddParameters", (java.lang.Object)toObjectFromArray(parameters));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -95,7 +95,7 @@ public class IRegistrationServicesImplementation extends NetObject implements IR
         }
     }
 
-    public IRegistrationServicesImplementation(Object instance) throws Throwable {
+    public IRegistrationServicesImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class IRegistrationServicesImplementation extends NetObject implements IR
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -202,7 +202,7 @@ public class IRegistrationServicesImplementation extends NetObject implements IR
         try {
             ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetRegistrableTypesInAssembly", assembly == null ? null : assembly.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetType(resultingObject));
             }
             NetType[] resultingArray = new NetType[resultingArrayList.size()];
@@ -213,11 +213,11 @@ public class IRegistrationServicesImplementation extends NetObject implements IR
         }
     }
 
-    public void RegisterTypeForComClients(NetType type, Guid g) throws Throwable {
+    public void RegisterTypeForComClients(NetType type, JCORefOut<Guid> g) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("RegisterTypeForComClients", type == null ? null : type.getJCOInstance(), g == null ? null : g.getJCOInstance());
+            classInstance.Invoke("RegisterTypeForComClients", type == null ? null : type.getJCOInstance(), g.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

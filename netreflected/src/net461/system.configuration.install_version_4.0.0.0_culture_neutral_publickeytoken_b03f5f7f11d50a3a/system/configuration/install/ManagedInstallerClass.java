@@ -94,7 +94,7 @@ public class ManagedInstallerClass extends NetObject implements system.configura
         }
     }
 
-    public ManagedInstallerClass(Object instance) throws Throwable {
+    public ManagedInstallerClass(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class ManagedInstallerClass extends NetObject implements system.configura
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -157,7 +157,7 @@ public class ManagedInstallerClass extends NetObject implements system.configura
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("InstallHelper", (Object)args);
+            classType.Invoke("InstallHelper", (java.lang.Object)args);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,7 +167,7 @@ public class ManagedInstallerClass extends NetObject implements system.configura
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("InstallHelper", (Object)dupParam0.getJCRefOut());
+            classType.Invoke("InstallHelper", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

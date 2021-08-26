@@ -97,7 +97,7 @@ public class Volatile extends NetObject  {
         }
     }
 
-    public Volatile(Object instance) throws Throwable {
+    public Volatile(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class Volatile extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -148,226 +148,111 @@ public class Volatile extends NetObject  {
     
     // Methods section
     
-    public static boolean Read(boolean location) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+    public static void Write(JCORefOut<java.util.concurrent.atomic.AtomicBoolean> location, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classType.Invoke("Read", location);
+            classType.Invoke("Write", location.getJCRefOut(), value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static byte Read(byte location) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+    public static void Write(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> location, byte value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (byte)classType.Invoke("Read", location);
+            classType.Invoke("Write", location.getJCRefOut(), value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static double Read(double location) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+    public static void Write(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Double>> location, double value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (double)classType.Invoke("Read", location);
+            classType.Invoke("Write", location.getJCRefOut(), value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static short Read(short location) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+    public static void Write(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Short>> location, short value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (short)classType.Invoke("Read", location);
+            classType.Invoke("Write", location.getJCRefOut(), value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static int Read(int location) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+    public static void Write(JCORefOut<java.util.concurrent.atomic.AtomicInteger> location, int value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classType.Invoke("Read", location);
+            classType.Invoke("Write", location.getJCRefOut(), value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static long Read(long location) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+    public static void Write(JCORefOut<java.util.concurrent.atomic.AtomicLong> location, long value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (long)classType.Invoke("Read", location);
+            classType.Invoke("Write", location.getJCRefOut(), value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static SByte Read(SByte location) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+    public static void Write(JCORefOut<SByte> location, SByte value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objRead = (JCObject)classType.Invoke("Read", location == null ? null : location.getJCOInstance());
-            return new SByte(objRead);
+            classType.Invoke("Write", location.getJCRefOut(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Single Read(Single location) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+    public static void Write(JCORefOut<Single> location, Single value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objRead = (JCObject)classType.Invoke("Read", location == null ? null : location.getJCOInstance());
-            return new Single(objRead);
+            classType.Invoke("Write", location.getJCRefOut(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static UInt16 Read(UInt16 location) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+    public static void Write(JCORefOut<UInt16> location, UInt16 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objRead = (JCObject)classType.Invoke("Read", location == null ? null : location.getJCOInstance());
-            return new UInt16(objRead);
+            classType.Invoke("Write", location.getJCRefOut(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static UInt32 Read(UInt32 location) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+    public static void Write(JCORefOut<UInt32> location, UInt32 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objRead = (JCObject)classType.Invoke("Read", location == null ? null : location.getJCOInstance());
-            return new UInt32(objRead);
+            classType.Invoke("Write", location.getJCRefOut(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static UInt64 Read(UInt64 location) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+    public static void Write(JCORefOut<UInt64> location, UInt64 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objRead = (JCObject)classType.Invoke("Read", location == null ? null : location.getJCOInstance());
-            return new UInt64(objRead);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void Write(boolean location, boolean value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("Write", location, value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void Write(byte location, byte value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("Write", location, value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void Write(double location, double value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("Write", location, value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void Write(short location, short value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("Write", location, value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void Write(int location, int value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("Write", location, value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void Write(long location, long value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("Write", location, value);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void Write(SByte location, SByte value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("Write", location == null ? null : location.getJCOInstance(), value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void Write(Single location, Single value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("Write", location == null ? null : location.getJCOInstance(), value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void Write(UInt16 location, UInt16 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("Write", location == null ? null : location.getJCOInstance(), value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void Write(UInt32 location, UInt32 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("Write", location == null ? null : location.getJCOInstance(), value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void Write(UInt64 location, UInt64 value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("Write", location == null ? null : location.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            classType.Invoke("Write", location.getJCRefOut(), value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

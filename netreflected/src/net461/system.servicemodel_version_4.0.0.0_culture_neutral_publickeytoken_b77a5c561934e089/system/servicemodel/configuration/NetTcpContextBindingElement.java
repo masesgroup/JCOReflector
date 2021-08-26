@@ -95,7 +95,7 @@ public class NetTcpContextBindingElement extends NetTcpBindingElement  {
         }
     }
 
-    public NetTcpContextBindingElement(Object instance) throws Throwable {
+    public NetTcpContextBindingElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class NetTcpContextBindingElement extends NetTcpBindingElement  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

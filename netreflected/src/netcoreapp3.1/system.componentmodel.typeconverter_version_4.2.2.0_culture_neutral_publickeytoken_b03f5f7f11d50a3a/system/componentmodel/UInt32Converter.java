@@ -93,7 +93,7 @@ public class UInt32Converter extends BaseNumberConverter  {
         }
     }
 
-    public UInt32Converter(Object instance) throws Throwable {
+    public UInt32Converter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class UInt32Converter extends BaseNumberConverter  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -96,7 +96,7 @@ public class FileTracker extends NetObject  {
         }
     }
 
-    public FileTracker(Object instance) throws Throwable {
+    public FileTracker(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class FileTracker extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -246,7 +246,7 @@ public class FileTracker extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Invoke("CreateRootingMarkerResponseFile", (Object)toObjectFromArray(sources));
+            return (java.lang.String)classType.Invoke("CreateRootingMarkerResponseFile", (java.lang.Object)toObjectFromArray(sources));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -316,7 +316,7 @@ public class FileTracker extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Invoke("FormatRootingMarker", (Object)toObjectFromArray(sources));
+            return (java.lang.String)classType.Invoke("FormatRootingMarker", (java.lang.Object)toObjectFromArray(sources));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

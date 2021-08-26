@@ -96,7 +96,7 @@ public class DataRelationCollection extends InternalDataCollectionBase  {
         }
     }
 
-    public DataRelationCollection(Object instance) throws Throwable {
+    public DataRelationCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class DataRelationCollection extends InternalDataCollectionBase  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -267,7 +267,7 @@ public class DataRelationCollection extends InternalDataCollectionBase  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddRange", (Object)toObjectFromArray(relations));
+            classInstance.Invoke("AddRange", (java.lang.Object)toObjectFromArray(relations));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

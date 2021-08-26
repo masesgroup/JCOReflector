@@ -92,7 +92,7 @@ public class IChannelImplementation extends NetObject implements IChannel {
         }
     }
 
-    public IChannelImplementation(Object instance) throws Throwable {
+    public IChannelImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class IChannelImplementation extends NetObject implements IChannel {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

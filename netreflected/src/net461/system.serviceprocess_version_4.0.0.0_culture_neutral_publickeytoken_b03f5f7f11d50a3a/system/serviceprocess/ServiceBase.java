@@ -95,7 +95,7 @@ public class ServiceBase extends Component  {
         }
     }
 
-    public ServiceBase(Object instance) throws Throwable {
+    public ServiceBase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class ServiceBase extends Component  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -178,7 +178,7 @@ public class ServiceBase extends Component  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("Run", (Object)toObjectFromArray(services));
+            classType.Invoke("Run", (java.lang.Object)toObjectFromArray(services));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

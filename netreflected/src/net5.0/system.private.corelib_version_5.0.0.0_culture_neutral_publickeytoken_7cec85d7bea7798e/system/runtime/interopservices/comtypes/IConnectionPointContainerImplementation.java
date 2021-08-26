@@ -97,7 +97,7 @@ public class IConnectionPointContainerImplementation extends NetObject implement
         }
     }
 
-    public IConnectionPointContainerImplementation(Object instance) throws Throwable {
+    public IConnectionPointContainerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class IConnectionPointContainerImplementation extends NetObject implement
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -147,11 +147,11 @@ public class IConnectionPointContainerImplementation extends NetObject implement
         }
     }
 
-    public void FindConnectionPoint(Guid riid, JCORefOut<IConnectionPoint> ppCP) throws Throwable {
+    public void FindConnectionPoint(JCORefOut<Guid> riid, JCORefOut<IConnectionPoint> ppCP) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("FindConnectionPoint", riid == null ? null : riid.getJCOInstance(), ppCP.getJCRefOut());
+            classInstance.Invoke("FindConnectionPoint", riid.getJCRefOut(), ppCP.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

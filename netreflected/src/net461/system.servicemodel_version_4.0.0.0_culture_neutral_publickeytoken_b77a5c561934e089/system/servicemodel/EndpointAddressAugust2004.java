@@ -101,7 +101,7 @@ public class EndpointAddressAugust2004 extends NetObject implements system.xml.s
         }
     }
 
-    public EndpointAddressAugust2004(Object instance) throws Throwable {
+    public EndpointAddressAugust2004(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -121,7 +121,7 @@ public class EndpointAddressAugust2004 extends NetObject implements system.xml.s
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

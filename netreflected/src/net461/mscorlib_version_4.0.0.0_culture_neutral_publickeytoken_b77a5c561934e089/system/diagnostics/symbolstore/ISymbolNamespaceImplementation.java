@@ -96,7 +96,7 @@ public class ISymbolNamespaceImplementation extends NetObject implements ISymbol
         }
     }
 
-    public ISymbolNamespaceImplementation(Object instance) throws Throwable {
+    public ISymbolNamespaceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class ISymbolNamespaceImplementation extends NetObject implements ISymbol
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -142,7 +142,7 @@ public class ISymbolNamespaceImplementation extends NetObject implements ISymbol
         try {
             ArrayList<ISymbolNamespace> resultingArrayList = new ArrayList<ISymbolNamespace>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetNamespaces");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ISymbolNamespaceImplementation(resultingObject));
             }
             ISymbolNamespace[] resultingArray = new ISymbolNamespace[resultingArrayList.size()];
@@ -159,7 +159,7 @@ public class ISymbolNamespaceImplementation extends NetObject implements ISymbol
         try {
             ArrayList<ISymbolVariable> resultingArrayList = new ArrayList<ISymbolVariable>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetVariables");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ISymbolVariableImplementation(resultingObject));
             }
             ISymbolVariable[] resultingArray = new ISymbolVariable[resultingArrayList.size()];

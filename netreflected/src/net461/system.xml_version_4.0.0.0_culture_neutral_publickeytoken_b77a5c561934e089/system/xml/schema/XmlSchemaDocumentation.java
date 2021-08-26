@@ -94,7 +94,7 @@ public class XmlSchemaDocumentation extends XmlSchemaObject  {
         }
     }
 
-    public XmlSchemaDocumentation(Object instance) throws Throwable {
+    public XmlSchemaDocumentation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class XmlSchemaDocumentation extends XmlSchemaObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -203,7 +203,7 @@ public class XmlSchemaDocumentation extends XmlSchemaObject  {
         try {
             ArrayList<XmlNode> resultingArrayList = new ArrayList<XmlNode>();
             JCObject resultingObjects = (JCObject)classInstance.Get("Markup");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new XmlNode(resultingObject));
             }
             XmlNode[] resultingArray = new XmlNode[resultingArrayList.size()];

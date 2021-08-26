@@ -97,7 +97,7 @@ public class OdbcDataAdapter extends DbDataAdapter  {
         }
     }
 
-    public OdbcDataAdapter(Object instance) throws Throwable {
+    public OdbcDataAdapter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class OdbcDataAdapter extends DbDataAdapter  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

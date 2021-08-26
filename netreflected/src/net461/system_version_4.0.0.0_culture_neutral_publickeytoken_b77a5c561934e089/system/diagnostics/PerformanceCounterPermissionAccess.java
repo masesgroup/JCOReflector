@@ -108,7 +108,7 @@ public class PerformanceCounterPermissionAccess extends NetObject  {
         }
     }
 
-    public PerformanceCounterPermissionAccess(Object instance) {
+    public PerformanceCounterPermissionAccess(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class PerformanceCounterPermissionAccess extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

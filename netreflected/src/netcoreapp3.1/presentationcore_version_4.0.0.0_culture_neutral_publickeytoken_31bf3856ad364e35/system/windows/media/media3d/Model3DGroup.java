@@ -95,7 +95,7 @@ public class Model3DGroup extends Model3D  {
         }
     }
 
-    public Model3DGroup(Object instance) throws Throwable {
+    public Model3DGroup(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class Model3DGroup extends Model3D  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

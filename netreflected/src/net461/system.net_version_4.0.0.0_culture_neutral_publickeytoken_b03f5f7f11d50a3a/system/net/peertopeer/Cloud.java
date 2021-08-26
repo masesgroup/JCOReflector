@@ -99,7 +99,7 @@ public class Cloud extends NetObject implements system.runtime.serialization.ISe
         }
     }
 
-    public Cloud(Object instance) throws Throwable {
+    public Cloud(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class Cloud extends NetObject implements system.runtime.serialization.ISe
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

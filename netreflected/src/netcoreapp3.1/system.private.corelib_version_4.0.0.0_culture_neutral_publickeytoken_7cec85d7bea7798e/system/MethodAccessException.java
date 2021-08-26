@@ -97,7 +97,7 @@ public class MethodAccessException extends MemberAccessException {
         super();
     }
 
-    public MethodAccessException(Object instance) {
+    public MethodAccessException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class MethodAccessException extends MemberAccessException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

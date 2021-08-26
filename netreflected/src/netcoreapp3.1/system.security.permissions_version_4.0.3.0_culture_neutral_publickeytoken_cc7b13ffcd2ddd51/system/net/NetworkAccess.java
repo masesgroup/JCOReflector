@@ -108,7 +108,7 @@ public class NetworkAccess extends NetObject  {
         }
     }
 
-    public NetworkAccess(Object instance) {
+    public NetworkAccess(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class NetworkAccess extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

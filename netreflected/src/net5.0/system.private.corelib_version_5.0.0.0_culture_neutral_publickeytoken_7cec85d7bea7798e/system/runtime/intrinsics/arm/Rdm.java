@@ -93,7 +93,7 @@ public class Rdm extends AdvSimd  {
         }
     }
 
-    public Rdm(Object instance) throws Throwable {
+    public Rdm(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class Rdm extends AdvSimd  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

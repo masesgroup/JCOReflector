@@ -108,7 +108,7 @@ public class XmlSortOrder extends NetObject  {
         }
     }
 
-    public XmlSortOrder(Object instance) {
+    public XmlSortOrder(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class XmlSortOrder extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

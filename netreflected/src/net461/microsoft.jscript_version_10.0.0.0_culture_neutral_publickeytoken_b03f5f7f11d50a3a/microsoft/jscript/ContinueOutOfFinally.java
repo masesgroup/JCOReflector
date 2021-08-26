@@ -99,7 +99,7 @@ public class ContinueOutOfFinally extends ApplicationException {
         super();
     }
 
-    public ContinueOutOfFinally(Object instance) {
+    public ContinueOutOfFinally(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -133,7 +133,7 @@ public class ContinueOutOfFinally extends ApplicationException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

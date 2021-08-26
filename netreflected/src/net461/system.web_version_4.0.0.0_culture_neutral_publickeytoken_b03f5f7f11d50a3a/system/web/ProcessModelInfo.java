@@ -93,7 +93,7 @@ public class ProcessModelInfo extends NetObject  {
         }
     }
 
-    public ProcessModelInfo(Object instance) throws Throwable {
+    public ProcessModelInfo(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class ProcessModelInfo extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -169,7 +169,7 @@ public class ProcessModelInfo extends NetObject  {
         try {
             ArrayList<ProcessInfo> resultingArrayList = new ArrayList<ProcessInfo>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetHistory", numRecords);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ProcessInfo(resultingObject));
             }
             ProcessInfo[] resultingArray = new ProcessInfo[resultingArrayList.size()];

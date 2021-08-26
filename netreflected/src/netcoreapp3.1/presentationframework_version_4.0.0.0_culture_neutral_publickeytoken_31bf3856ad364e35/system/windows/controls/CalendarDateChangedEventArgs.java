@@ -93,7 +93,7 @@ public class CalendarDateChangedEventArgs extends RoutedEventArgs  {
         }
     }
 
-    public CalendarDateChangedEventArgs(Object instance) throws Throwable {
+    public CalendarDateChangedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class CalendarDateChangedEventArgs extends RoutedEventArgs  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

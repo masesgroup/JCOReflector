@@ -93,7 +93,7 @@ public class WorkflowWebService extends WebService  {
         }
     }
 
-    public WorkflowWebService(Object instance) throws Throwable {
+    public WorkflowWebService(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class WorkflowWebService extends WebService  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

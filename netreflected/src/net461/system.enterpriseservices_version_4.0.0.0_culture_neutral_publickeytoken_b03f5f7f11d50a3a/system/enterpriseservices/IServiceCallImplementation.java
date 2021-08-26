@@ -92,7 +92,7 @@ public class IServiceCallImplementation extends NetObject implements IServiceCal
         }
     }
 
-    public IServiceCallImplementation(Object instance) throws Throwable {
+    public IServiceCallImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class IServiceCallImplementation extends NetObject implements IServiceCal
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

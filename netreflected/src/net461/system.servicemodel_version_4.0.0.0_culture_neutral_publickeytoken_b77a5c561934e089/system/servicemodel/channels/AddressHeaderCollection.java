@@ -94,7 +94,7 @@ public class AddressHeaderCollection extends NetObjectEnumerable  {
         }
     }
 
-    public AddressHeaderCollection(Object instance) throws Throwable {
+    public AddressHeaderCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class AddressHeaderCollection extends NetObjectEnumerable  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -170,7 +170,7 @@ public class AddressHeaderCollection extends NetObjectEnumerable  {
         try {
             ArrayList<AddressHeader> resultingArrayList = new ArrayList<AddressHeader>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("FindAll", name, ns);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new AddressHeader(resultingObject));
             }
             AddressHeader[] resultingArray = new AddressHeader[resultingArrayList.size()];

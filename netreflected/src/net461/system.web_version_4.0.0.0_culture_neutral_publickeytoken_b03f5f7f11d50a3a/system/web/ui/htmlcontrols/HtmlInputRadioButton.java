@@ -97,7 +97,7 @@ public class HtmlInputRadioButton extends HtmlInputControl implements system.web
         }
     }
 
-    public HtmlInputRadioButton(Object instance) throws Throwable {
+    public HtmlInputRadioButton(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class HtmlInputRadioButton extends HtmlInputControl implements system.web
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -92,7 +92,7 @@ public class DataBinder extends NetObject  {
         }
     }
 
-    public DataBinder(Object instance) throws Throwable {
+    public DataBinder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class DataBinder extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -183,7 +183,7 @@ public class DataBinder extends NetObject  {
         }
     }
 
-    public static NetObject GetDataItem(NetObject container, JCORefOut foundDataItem) throws Throwable, system.ArgumentNullException {
+    public static NetObject GetDataItem(NetObject container, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> foundDataItem) throws Throwable, system.ArgumentNullException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {

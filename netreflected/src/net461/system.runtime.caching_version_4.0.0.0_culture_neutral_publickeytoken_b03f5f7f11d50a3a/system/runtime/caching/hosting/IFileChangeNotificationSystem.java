@@ -98,9 +98,9 @@ public interface IFileChangeNotificationSystem extends IJCOBridgeReflected {
     /**
      * Returns the instantiated class
      * 
-     * @return An {@link Object} representing the instance of the instantiated Class
+     * @return An {@link java.lang.Object} representing the instance of the instantiated Class
      */
-    public Object getJCOInstance();
+    public java.lang.Object getJCOInstance();
 
     /**
      * Returns the instantiated class Type
@@ -111,7 +111,7 @@ public interface IFileChangeNotificationSystem extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void StartMonitoring(java.lang.String filePath, OnChangedCallback onChangedCallback, JCORefOut<NetObject> state, JCORefOut<DateTimeOffset> lastWriteTime, JCORefOut fileSize) throws Throwable;
+    public void StartMonitoring(java.lang.String filePath, OnChangedCallback onChangedCallback, JCORefOut<NetObject> state, JCORefOut<DateTimeOffset> lastWriteTime, JCORefOut<java.util.concurrent.atomic.AtomicLong> fileSize) throws Throwable;
 
     public void StopMonitoring(java.lang.String filePath, NetObject state) throws Throwable;
 

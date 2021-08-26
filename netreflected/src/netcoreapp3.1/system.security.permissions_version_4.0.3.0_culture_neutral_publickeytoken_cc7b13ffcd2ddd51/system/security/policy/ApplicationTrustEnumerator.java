@@ -107,7 +107,7 @@ public class ApplicationTrustEnumerator extends NetObject implements Iterator<Ap
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

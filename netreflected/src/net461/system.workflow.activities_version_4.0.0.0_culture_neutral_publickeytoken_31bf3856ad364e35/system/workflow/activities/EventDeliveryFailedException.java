@@ -97,7 +97,7 @@ public class EventDeliveryFailedException extends SystemException {
         super();
     }
 
-    public EventDeliveryFailedException(Object instance) {
+    public EventDeliveryFailedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class EventDeliveryFailedException extends SystemException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -96,7 +96,7 @@ public class StorageInfo extends NetObject  {
         }
     }
 
-    public StorageInfo(Object instance) throws Throwable {
+    public StorageInfo(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class StorageInfo extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -197,7 +197,7 @@ public class StorageInfo extends NetObject  {
         try {
             ArrayList<StorageInfo> resultingArrayList = new ArrayList<StorageInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetSubStorages");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new StorageInfo(resultingObject));
             }
             StorageInfo[] resultingArray = new StorageInfo[resultingArrayList.size()];
@@ -247,7 +247,7 @@ public class StorageInfo extends NetObject  {
         try {
             ArrayList<StreamInfo> resultingArrayList = new ArrayList<StreamInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetStreams");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new StreamInfo(resultingObject));
             }
             StreamInfo[] resultingArray = new StreamInfo[resultingArrayList.size()];

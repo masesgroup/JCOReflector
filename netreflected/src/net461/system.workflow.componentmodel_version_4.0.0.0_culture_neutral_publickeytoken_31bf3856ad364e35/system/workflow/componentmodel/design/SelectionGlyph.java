@@ -95,7 +95,7 @@ public class SelectionGlyph extends DesignerGlyph  {
         }
     }
 
-    public SelectionGlyph(Object instance) throws Throwable {
+    public SelectionGlyph(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class SelectionGlyph extends DesignerGlyph  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -163,7 +163,7 @@ public class SelectionGlyph extends DesignerGlyph  {
         try {
             ArrayList<Rectangle> resultingArrayList = new ArrayList<Rectangle>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetGrabHandles", designer == null ? null : designer.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Rectangle(resultingObject));
             }
             Rectangle[] resultingArray = new Rectangle[resultingArrayList.size()];

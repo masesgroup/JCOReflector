@@ -97,7 +97,7 @@ public class TransactionPromotionException extends TransactionException {
         super();
     }
 
-    public TransactionPromotionException(Object instance) {
+    public TransactionPromotionException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class TransactionPromotionException extends TransactionException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

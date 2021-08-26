@@ -93,7 +93,7 @@ public class PrintTicketProperty extends PrintProperty  {
         }
     }
 
-    public PrintTicketProperty(Object instance) throws Throwable {
+    public PrintTicketProperty(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class PrintTicketProperty extends PrintProperty  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

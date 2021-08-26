@@ -98,7 +98,7 @@ public class DataGridDesigner extends BaseDataListDesigner  {
         }
     }
 
-    public DataGridDesigner(Object instance) throws Throwable {
+    public DataGridDesigner(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class DataGridDesigner extends BaseDataListDesigner  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -177,7 +177,7 @@ public class DataGridDesigner extends BaseDataListDesigner  {
         }
     }
 
-    public java.lang.String GetTemplateContent(ITemplateEditingFrame editingFrame, java.lang.String templateName, JCORefOut allowEditing) throws Throwable, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ArgumentNullException {
+    public java.lang.String GetTemplateContent(ITemplateEditingFrame editingFrame, java.lang.String templateName, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> allowEditing) throws Throwable, system.ArgumentOutOfRangeException, system.NullReferenceException, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

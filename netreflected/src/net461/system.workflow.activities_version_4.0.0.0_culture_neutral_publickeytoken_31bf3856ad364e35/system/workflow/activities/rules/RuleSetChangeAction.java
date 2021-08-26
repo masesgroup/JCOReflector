@@ -93,7 +93,7 @@ public class RuleSetChangeAction extends WorkflowChangeAction  {
         }
     }
 
-    public RuleSetChangeAction(Object instance) throws Throwable {
+    public RuleSetChangeAction(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class RuleSetChangeAction extends WorkflowChangeAction  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -92,7 +92,7 @@ public class UserTrackPointCollection extends NetObjectEnumerable  {
         }
     }
 
-    public UserTrackPointCollection(Object instance) throws Throwable {
+    public UserTrackPointCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class UserTrackPointCollection extends NetObjectEnumerable  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

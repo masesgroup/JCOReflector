@@ -108,7 +108,7 @@ public class RegistryValueOptions extends NetObject  {
         }
     }
 
-    public RegistryValueOptions(Object instance) {
+    public RegistryValueOptions(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class RegistryValueOptions extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

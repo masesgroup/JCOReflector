@@ -99,7 +99,7 @@ public class WorkflowUpdateableControlClient extends NetObject  {
         }
     }
 
-    public WorkflowUpdateableControlClient(Object instance) throws Throwable {
+    public WorkflowUpdateableControlClient(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class WorkflowUpdateableControlClient extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

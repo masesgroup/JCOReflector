@@ -98,7 +98,7 @@ public class HttpMethodConstraint extends NetObject implements system.web.routin
         }
     }
 
-    public HttpMethodConstraint(Object instance) throws Throwable {
+    public HttpMethodConstraint(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class HttpMethodConstraint extends NetObject implements system.web.routin
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -150,7 +150,7 @@ public class HttpMethodConstraint extends NetObject implements system.web.routin
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((Object)allowedMethods));
+            setJCOInstance((JCObject)classType.NewObject((java.lang.Object)allowedMethods));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

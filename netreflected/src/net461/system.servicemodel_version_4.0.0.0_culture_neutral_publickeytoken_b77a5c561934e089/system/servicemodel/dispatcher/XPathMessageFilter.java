@@ -106,7 +106,7 @@ public class XPathMessageFilter extends MessageFilter implements system.xml.seri
         }
     }
 
-    public XPathMessageFilter(Object instance) throws Throwable {
+    public XPathMessageFilter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -126,7 +126,7 @@ public class XPathMessageFilter extends MessageFilter implements system.xml.seri
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

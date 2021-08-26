@@ -93,7 +93,7 @@ public class XmlSchemaContent extends XmlSchemaAnnotated  {
         }
     }
 
-    public XmlSchemaContent(Object instance) throws Throwable {
+    public XmlSchemaContent(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class XmlSchemaContent extends XmlSchemaAnnotated  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

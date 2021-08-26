@@ -99,7 +99,7 @@ public class CultureInfo extends NetObject  {
         }
     }
 
-    public CultureInfo(Object instance) throws Throwable {
+    public CultureInfo(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class CultureInfo extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -286,7 +286,7 @@ public class CultureInfo extends NetObject  {
         try {
             ArrayList<CultureInfo> resultingArrayList = new ArrayList<CultureInfo>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetCultures", types == null ? null : types.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new CultureInfo(resultingObject));
             }
             CultureInfo[] resultingArray = new CultureInfo[resultingArrayList.size()];
@@ -400,7 +400,7 @@ public class CultureInfo extends NetObject  {
         try {
             ArrayList<Calendar> resultingArrayList = new ArrayList<Calendar>();
             JCObject resultingObjects = (JCObject)classInstance.Get("OptionalCalendars");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Calendar(resultingObject));
             }
             Calendar[] resultingArray = new Calendar[resultingArrayList.size()];

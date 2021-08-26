@@ -95,7 +95,7 @@ public class PropertyTabAttribute extends Attribute  {
         }
     }
 
-    public PropertyTabAttribute(Object instance) throws Throwable {
+    public PropertyTabAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class PropertyTabAttribute extends Attribute  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -214,7 +214,7 @@ public class PropertyTabAttribute extends Attribute  {
         try {
             ArrayList<PropertyTabScope> resultingArrayList = new ArrayList<PropertyTabScope>();
             JCObject resultingObjects = (JCObject)classInstance.Get("TabScopes");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new PropertyTabScope(resultingObject));
             }
             PropertyTabScope[] resultingArray = new PropertyTabScope[resultingArrayList.size()];
@@ -241,7 +241,7 @@ public class PropertyTabAttribute extends Attribute  {
         try {
             ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
             JCObject resultingObjects = (JCObject)classInstance.Get("TabClasses");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetType(resultingObject));
             }
             NetType[] resultingArray = new NetType[resultingArrayList.size()];

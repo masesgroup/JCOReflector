@@ -107,7 +107,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public Marshal(Object instance) throws Throwable {
+    public Marshal(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -127,7 +127,7 @@ public class Marshal extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -477,11 +477,11 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static MemberInfo GetMethodInfoForComSlot(NetType t, int slot, ComMemberType memberType) throws Throwable {
+    public static MemberInfo GetMethodInfoForComSlot(NetType t, int slot, JCORefOut<ComMemberType> memberType) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetMethodInfoForComSlot = (JCObject)classType.Invoke("GetMethodInfoForComSlot", t == null ? null : t.getJCOInstance(), slot, memberType == null ? null : memberType.getJCOInstance());
+            JCObject objGetMethodInfoForComSlot = (JCObject)classType.Invoke("GetMethodInfoForComSlot", t == null ? null : t.getJCOInstance(), slot, memberType.getJCRefOut());
             return new MemberInfo(objGetMethodInfoForComSlot);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -580,7 +580,7 @@ public class Marshal extends NetObject  {
         }
     }
 
-    public static void GetTypeLibVersionForAssembly(Assembly inputAssembly, JCORefOut majorVersion, JCORefOut minorVersion) throws Throwable, system.ArgumentNullException, system.ArgumentException {
+    public static void GetTypeLibVersionForAssembly(Assembly inputAssembly, JCORefOut<java.util.concurrent.atomic.AtomicInteger> majorVersion, JCORefOut<java.util.concurrent.atomic.AtomicInteger> minorVersion) throws Throwable, system.ArgumentNullException, system.ArgumentException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {

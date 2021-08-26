@@ -99,7 +99,7 @@ public class InstanceHandleConflictException extends InstancePersistenceCommandE
         super();
     }
 
-    public InstanceHandleConflictException(Object instance) {
+    public InstanceHandleConflictException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -133,7 +133,7 @@ public class InstanceHandleConflictException extends InstancePersistenceCommandE
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

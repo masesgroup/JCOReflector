@@ -94,7 +94,7 @@ public class BoundPropertyEntry extends PropertyEntry  {
         }
     }
 
-    public BoundPropertyEntry(Object instance) throws Throwable {
+    public BoundPropertyEntry(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class BoundPropertyEntry extends PropertyEntry  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

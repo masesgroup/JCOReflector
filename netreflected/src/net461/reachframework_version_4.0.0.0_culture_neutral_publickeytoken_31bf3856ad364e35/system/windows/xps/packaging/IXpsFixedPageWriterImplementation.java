@@ -105,7 +105,7 @@ public class IXpsFixedPageWriterImplementation extends NetObject implements IXps
         }
     }
 
-    public IXpsFixedPageWriterImplementation(Object instance) throws Throwable {
+    public IXpsFixedPageWriterImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -125,7 +125,7 @@ public class IXpsFixedPageWriterImplementation extends NetObject implements IXps
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

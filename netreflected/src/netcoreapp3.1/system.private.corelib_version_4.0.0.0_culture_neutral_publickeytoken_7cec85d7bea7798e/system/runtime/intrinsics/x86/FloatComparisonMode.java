@@ -108,7 +108,7 @@ public class FloatComparisonMode extends NetObject  {
         }
     }
 
-    public FloatComparisonMode(Object instance) {
+    public FloatComparisonMode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class FloatComparisonMode extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

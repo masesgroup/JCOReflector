@@ -94,7 +94,7 @@ public class AssemblyLoadEventArgs extends EventArgs  {
         }
     }
 
-    public AssemblyLoadEventArgs(Object instance) throws Throwable {
+    public AssemblyLoadEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class AssemblyLoadEventArgs extends EventArgs  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -97,7 +97,7 @@ public class MissingPrimaryKeyException extends DataException {
         super();
     }
 
-    public MissingPrimaryKeyException(Object instance) {
+    public MissingPrimaryKeyException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class MissingPrimaryKeyException extends DataException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

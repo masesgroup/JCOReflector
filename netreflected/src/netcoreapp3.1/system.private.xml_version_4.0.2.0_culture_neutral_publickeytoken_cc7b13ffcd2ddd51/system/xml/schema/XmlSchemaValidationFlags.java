@@ -108,7 +108,7 @@ public class XmlSchemaValidationFlags extends NetObject  {
         }
     }
 
-    public XmlSchemaValidationFlags(Object instance) {
+    public XmlSchemaValidationFlags(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class XmlSchemaValidationFlags extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

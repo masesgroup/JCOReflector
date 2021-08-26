@@ -108,7 +108,7 @@ public class ChannelBindingKind extends NetObject  {
         }
     }
 
-    public ChannelBindingKind(Object instance) {
+    public ChannelBindingKind(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class ChannelBindingKind extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

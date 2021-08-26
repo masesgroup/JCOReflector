@@ -93,7 +93,7 @@ public class AggregateCatalog extends ComposablePartCatalog  {
         }
     }
 
-    public AggregateCatalog(Object instance) throws Throwable {
+    public AggregateCatalog(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class AggregateCatalog extends ComposablePartCatalog  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -152,7 +152,7 @@ public class AggregateCatalog extends ComposablePartCatalog  {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((Object)toObjectFromArray(catalogs)));
+            setJCOInstance((JCObject)classType.NewObject((java.lang.Object)toObjectFromArray(catalogs)));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

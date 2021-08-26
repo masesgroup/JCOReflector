@@ -98,7 +98,7 @@ public class ITypeLibImplementation extends NetObject implements ITypeLib {
         }
     }
 
-    public ITypeLibImplementation(Object instance) throws Throwable {
+    public ITypeLibImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class ITypeLibImplementation extends NetObject implements ITypeLib {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -158,17 +158,17 @@ public class ITypeLibImplementation extends NetObject implements ITypeLib {
         }
     }
 
-    public void FindName(java.lang.String szNameBuf, int lHashVal, JCORefOut<ITypeInfo[]> ppTInfo, JCORefOut rgMemId, short pcFound) throws Throwable {
+    public void FindName(java.lang.String szNameBuf, int lHashVal, JCORefOut<ITypeInfo[]> ppTInfo, JCORefOut rgMemId, JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Short>> pcFound) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("FindName", szNameBuf, lHashVal, ppTInfo.getJCRefOut(), rgMemId.getJCRefOut(), pcFound);
+            classInstance.Invoke("FindName", szNameBuf, lHashVal, ppTInfo.getJCRefOut(), rgMemId.getJCRefOut(), pcFound.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void GetDocumentation(int index, JCORefOut strName, JCORefOut strDocString, JCORefOut dwHelpContext, JCORefOut strHelpFile) throws Throwable {
+    public void GetDocumentation(int index, JCORefOut strName, JCORefOut strDocString, JCORefOut<java.util.concurrent.atomic.AtomicInteger> dwHelpContext, JCORefOut strHelpFile) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -198,11 +198,11 @@ public class ITypeLibImplementation extends NetObject implements ITypeLib {
         }
     }
 
-    public void GetTypeInfoOfGuid(Guid guid, JCORefOut<ITypeInfo> ppTInfo) throws Throwable {
+    public void GetTypeInfoOfGuid(JCORefOut<Guid> guid, JCORefOut<ITypeInfo> ppTInfo) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("GetTypeInfoOfGuid", guid == null ? null : guid.getJCOInstance(), ppTInfo.getJCRefOut());
+            classInstance.Invoke("GetTypeInfoOfGuid", guid.getJCRefOut(), ppTInfo.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

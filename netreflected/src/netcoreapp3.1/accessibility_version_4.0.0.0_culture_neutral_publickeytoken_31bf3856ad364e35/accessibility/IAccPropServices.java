@@ -102,9 +102,9 @@ public interface IAccPropServices extends IJCOBridgeReflected {
     /**
      * Returns the instantiated class
      * 
-     * @return An {@link Object} representing the instance of the instantiated Class
+     * @return An {@link java.lang.Object} representing the instance of the instantiated Class
      */
-    public Object getJCOInstance();
+    public java.lang.Object getJCOInstance();
 
     /**
      * Returns the instantiated class Type
@@ -115,27 +115,27 @@ public interface IAccPropServices extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void ClearHmenuProps(_RemotableHandle hmenu, UInt32 idChild, Guid paProps, int cProps) throws Throwable;
+    public void ClearHmenuProps(JCORefOut<_RemotableHandle> hmenu, UInt32 idChild, JCORefOut<Guid> paProps, int cProps) throws Throwable;
 
-    public void ClearHwndProps(_RemotableHandle hwnd, UInt32 idObject, UInt32 idChild, Guid paProps, int cProps) throws Throwable;
+    public void ClearHwndProps(JCORefOut<_RemotableHandle> hwnd, UInt32 idObject, UInt32 idChild, JCORefOut<Guid> paProps, int cProps) throws Throwable;
 
-    public void ClearProps(byte pIDString, UInt32 dwIDStringLen, Guid paProps, int cProps) throws Throwable;
+    public void ClearProps(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> pIDString, UInt32 dwIDStringLen, JCORefOut<Guid> paProps, int cProps) throws Throwable;
 
-    public void SetHmenuProp(_RemotableHandle hmenu, UInt32 idChild, Guid idProp, NetObject var) throws Throwable;
+    public void SetHmenuProp(JCORefOut<_RemotableHandle> hmenu, UInt32 idChild, Guid idProp, NetObject var) throws Throwable;
 
-    public void SetHmenuPropServer(_RemotableHandle hmenu, UInt32 idChild, Guid paProps, int cProps, IAccPropServer pServer, AnnoScope AnnoScope) throws Throwable;
+    public void SetHmenuPropServer(JCORefOut<_RemotableHandle> hmenu, UInt32 idChild, JCORefOut<Guid> paProps, int cProps, IAccPropServer pServer, AnnoScope AnnoScope) throws Throwable;
 
-    public void SetHmenuPropStr(_RemotableHandle hmenu, UInt32 idChild, Guid idProp, java.lang.String str) throws Throwable;
+    public void SetHmenuPropStr(JCORefOut<_RemotableHandle> hmenu, UInt32 idChild, Guid idProp, java.lang.String str) throws Throwable;
 
-    public void SetHwndProp(_RemotableHandle hwnd, UInt32 idObject, UInt32 idChild, Guid idProp, NetObject var) throws Throwable;
+    public void SetHwndProp(JCORefOut<_RemotableHandle> hwnd, UInt32 idObject, UInt32 idChild, Guid idProp, NetObject var) throws Throwable;
 
-    public void SetHwndPropServer(_RemotableHandle hwnd, UInt32 idObject, UInt32 idChild, Guid paProps, int cProps, IAccPropServer pServer, AnnoScope AnnoScope) throws Throwable;
+    public void SetHwndPropServer(JCORefOut<_RemotableHandle> hwnd, UInt32 idObject, UInt32 idChild, JCORefOut<Guid> paProps, int cProps, IAccPropServer pServer, AnnoScope AnnoScope) throws Throwable;
 
-    public void SetHwndPropStr(_RemotableHandle hwnd, UInt32 idObject, UInt32 idChild, Guid idProp, java.lang.String str) throws Throwable;
+    public void SetHwndPropStr(JCORefOut<_RemotableHandle> hwnd, UInt32 idObject, UInt32 idChild, Guid idProp, java.lang.String str) throws Throwable;
 
-    public void SetPropServer(byte pIDString, UInt32 dwIDStringLen, Guid paProps, int cProps, IAccPropServer pServer, AnnoScope AnnoScope) throws Throwable;
+    public void SetPropServer(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> pIDString, UInt32 dwIDStringLen, JCORefOut<Guid> paProps, int cProps, IAccPropServer pServer, AnnoScope AnnoScope) throws Throwable;
 
-    public void SetPropValue(byte pIDString, UInt32 dwIDStringLen, Guid idProp, NetObject var) throws Throwable;
+    public void SetPropValue(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> pIDString, UInt32 dwIDStringLen, Guid idProp, NetObject var) throws Throwable;
 
 
     

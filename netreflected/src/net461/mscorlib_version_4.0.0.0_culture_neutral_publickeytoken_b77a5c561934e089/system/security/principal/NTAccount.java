@@ -93,7 +93,7 @@ public class NTAccount extends IdentityReference  {
         }
     }
 
-    public NTAccount(Object instance) throws Throwable {
+    public NTAccount(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class NTAccount extends IdentityReference  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

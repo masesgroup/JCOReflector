@@ -107,7 +107,7 @@ public class DbDataRecord extends NetObject implements system.componentmodel.ICu
         }
     }
 
-    public DbDataRecord(Object instance) throws Throwable {
+    public DbDataRecord(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -127,7 +127,7 @@ public class DbDataRecord extends NetObject implements system.componentmodel.ICu
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -242,7 +242,7 @@ public class DbDataRecord extends NetObject implements system.componentmodel.ICu
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("GetValues", (Object)toObjectFromArray(values));
+            return (int)classInstance.Invoke("GetValues", (java.lang.Object)toObjectFromArray(values));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

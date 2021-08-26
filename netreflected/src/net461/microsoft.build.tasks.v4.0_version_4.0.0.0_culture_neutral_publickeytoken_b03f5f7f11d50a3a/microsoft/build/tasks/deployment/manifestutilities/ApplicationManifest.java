@@ -98,7 +98,7 @@ public class ApplicationManifest extends AssemblyManifest  {
         }
     }
 
-    public ApplicationManifest(Object instance) throws Throwable {
+    public ApplicationManifest(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class ApplicationManifest extends AssemblyManifest  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -288,7 +288,7 @@ public class ApplicationManifest extends AssemblyManifest  {
         try {
             ArrayList<FileAssociation> resultingArrayList = new ArrayList<FileAssociation>();
             JCObject resultingObjects = (JCObject)classInstance.Get("XmlFileAssociations");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new FileAssociation(resultingObject));
             }
             FileAssociation[] resultingArray = new FileAssociation[resultingArrayList.size()];

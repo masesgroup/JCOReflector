@@ -109,7 +109,7 @@ public class AccessibleObject extends StandardOleMarshalObject  {
         }
     }
 
-    public AccessibleObject(Object instance) throws Throwable {
+    public AccessibleObject(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -129,7 +129,7 @@ public class AccessibleObject extends StandardOleMarshalObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -423,7 +423,7 @@ public class AccessibleObject extends StandardOleMarshalObject  {
      *    Use the static ToIAccessible method available in IAccessible to obtain an object with an invocable method
      */
     @Deprecated 
-    public void accLocation(JCORefOut pxLeft, JCORefOut pyTop, JCORefOut pcxWidth, JCORefOut pcyHeight, NetObject varChild) throws Throwable {
+    public void accLocation(JCORefOut<java.util.concurrent.atomic.AtomicInteger> pxLeft, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pyTop, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pcxWidth, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pcyHeight, NetObject varChild) throws Throwable {
         throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIAccessible to obtain the full interface.");
     }
 

@@ -95,7 +95,7 @@ public class SwitchAttribute extends Attribute  {
         }
     }
 
-    public SwitchAttribute(Object instance) throws Throwable {
+    public SwitchAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class SwitchAttribute extends Attribute  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -164,7 +164,7 @@ public class SwitchAttribute extends Attribute  {
         try {
             ArrayList<SwitchAttribute> resultingArrayList = new ArrayList<SwitchAttribute>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetAll", assembly == null ? null : assembly.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new SwitchAttribute(resultingObject));
             }
             SwitchAttribute[] resultingArray = new SwitchAttribute[resultingArrayList.size()];

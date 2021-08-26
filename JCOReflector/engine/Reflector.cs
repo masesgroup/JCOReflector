@@ -149,7 +149,7 @@ namespace MASES.C2JReflector
 
                     if (!Directory.Exists(CsvDestinationFolder)) Directory.CreateDirectory(CsvDestinationFolder);
                     csvFileName = Path.GetFullPath(Path.Combine(CsvDestinationFolder, Const.Framework.RuntimeFolder, Const.FileNameAndDirectory.StatisticsFilename));
-                    File.WriteAllText(csvFileName, csvString);
+                    writeFile(csvFileName, csvString);
                 }
             }
             catch (Exception ex)
@@ -413,7 +413,7 @@ namespace MASES.C2JReflector
                     sb.AppendLine(reportStr);
                     var endText = readmeContent.Substring(readmeContent.IndexOf(endTag));
                     sb.Append(endText);
-                    File.WriteAllText(reportfile, sb.ToString());
+                    writeFile(reportfile, sb.ToString());
                 }
 
                 string statisticsError;

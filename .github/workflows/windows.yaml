@@ -74,9 +74,9 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Build JCOReflectorCLI
         run: |
-          dotnet build --no-incremental --framework netcoreapp3.1 JCOReflector\JCOReflectorCLI.sln
-          dotnet build --no-incremental --framework net5.0 JCOReflector\JCOReflectorCLI.sln  
-          dotnet build --no-incremental --framework net461 JCOReflector\JCOReflectorCLI.sln  
+          dotnet build --no-incremental --framework netcoreapp3.1 --configuration Release JCOReflector\JCOReflectorCLI.sln
+          dotnet build --no-incremental --framework net5.0 --configuration Release JCOReflector\JCOReflectorCLI.sln  
+          dotnet build --no-incremental --framework net461 --configuration Release JCOReflector\JCOReflectorCLI.sln  
 
       # Runs a set of commands using the runners shell
       - name: Copy configuration file
@@ -265,7 +265,10 @@ jobs:
         run: |
           echo "GITHUB_COMMIT_MESSAGE=$(echo $GITHUB_SHA | cut -c 1-7)" >> $GITHUB_ENV
         shell: bash
-          
+
+      - name: Build NuGet Packages
+        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" JCOReflector\JCOReflectorCLI.sln
+    
       - name: Commit statistics changes
         uses: EndBug/add-and-commit@v5
         with:
@@ -298,15 +301,20 @@ jobs:
 
       - uses: actions/upload-artifact@v2
         with:
-          name: netcoreapp3.1.zip
+          name: NuGet
+          path: .\bin\*nupkg
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: netcoreapp3.1
           path: .\bin\netcoreapp3.1.zip
 
       - uses: actions/upload-artifact@v2
         with:
-          name: net5.0.zip
+          name: net5.0
           path: .\bin\net5.0.zip
           
       - uses: actions/upload-artifact@v2
         with:
-          name: net461.zip
+          name: net461
           path: .\bin\net461.zip

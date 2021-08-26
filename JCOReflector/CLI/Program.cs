@@ -31,6 +31,29 @@ namespace MASES.C2JReflector
 {
     class Program
     {
+        static void showHelp()
+        {
+            var assembly = typeof(Program).Assembly;
+
+#if !NET_CORE
+            var title = "JCOReflector Builder - CLR to JVM reflection class generator (.NET Framework)";
+#else
+#if NET5_0
+            var title = "JCOReflector Builder - CLR to JVM reflection class generator (.NET 5)";
+#else
+            var title = "JCOReflector Builder - CLR to JVM reflection class generator (.NET Core)";
+#endif
+#endif
+
+            Console.WriteLine(title + " - Version " + assembly.GetName().Version.ToString());
+            Console.WriteLine(assembly.GetName().Name + " <OPERATION> <CONFIGURATION FILE> -jdk=<JDKFOLDER> -commit=<COMMIT_TO_WRITE_ON_HELP>");
+            Console.WriteLine();
+            Console.WriteLine("OPERATION: reflect, build, builddocs, createjars, createsnapshotpoms, createreleasepoms");
+            Console.WriteLine("CONFIGURATION FILE: a file containing the information to complete each OPERATION.");
+            Console.WriteLine("-jdk: valid only if OPERATION are build, builddocs and createjars. Overrides value found in CONFIGURATION FILE");
+            Console.WriteLine("-commit: valid only if OPERATION is builddocs. It is manadatory");
+        }
+
         static void Main(string[] args)
         {
             const string REFLECT = "reflect";
@@ -359,26 +382,6 @@ namespace MASES.C2JReflector
             if (args.Failed) Environment.ExitCode = -1;
         }
 
-        static void showHelp()
-        {
-            var assembly = typeof(Program).Assembly;
-
-#if !NET_CORE
-            var title = "JCOReflector Builder - CLR to JVM reflection class generator (.NET Framework)";
-#else
-#if NET5_0
-            var title = "JCOReflector Builder - CLR to JVM reflection class generator (.NET 5)";
-#else
-            var title = "JCOReflector Builder - CLR to JVM reflection class generator (.NET Core)";
-#endif
-#endif
-
-            Console.WriteLine(title + " - Version " + assembly.GetName().Version.ToString());
-            Console.WriteLine(assembly.GetName().Name + " <OPERATION> <CONFIGURATION FILE> -jdk=<JDKFOLDER>");
-            Console.WriteLine();
-            Console.WriteLine("OPERATION: reflect, build, builddocs, createjars");
-            Console.WriteLine("CONFIGURATION FILE: a file containing the information to complete each OPERATION.");
-            Console.WriteLine("-jdk: valid only if OPERATION are build, builddocs and createjars. Overrides value found in CONFIGURATION FILE");
-        }
+        
     }
 }

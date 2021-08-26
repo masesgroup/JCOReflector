@@ -96,7 +96,7 @@ public class WarningHeaderValue extends NetObject implements system.ICloneable {
         }
     }
 
-    public WarningHeaderValue(Object instance) throws Throwable {
+    public WarningHeaderValue(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class WarningHeaderValue extends NetObject implements system.ICloneable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

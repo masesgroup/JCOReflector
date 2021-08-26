@@ -97,7 +97,7 @@ public class NetHttpBindingElement extends HttpBindingBaseElement  {
         }
     }
 
-    public NetHttpBindingElement(Object instance) throws Throwable {
+    public NetHttpBindingElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class NetHttpBindingElement extends HttpBindingBaseElement  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

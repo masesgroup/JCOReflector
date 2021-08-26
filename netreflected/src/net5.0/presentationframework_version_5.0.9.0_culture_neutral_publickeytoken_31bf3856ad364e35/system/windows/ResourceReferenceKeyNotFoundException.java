@@ -99,7 +99,7 @@ public class ResourceReferenceKeyNotFoundException extends InvalidOperationExcep
         super();
     }
 
-    public ResourceReferenceKeyNotFoundException(Object instance) {
+    public ResourceReferenceKeyNotFoundException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -133,7 +133,7 @@ public class ResourceReferenceKeyNotFoundException extends InvalidOperationExcep
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

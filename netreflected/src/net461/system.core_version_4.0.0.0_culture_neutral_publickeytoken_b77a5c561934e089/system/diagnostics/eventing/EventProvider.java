@@ -94,7 +94,7 @@ public class EventProvider extends NetObject implements AutoCloseable {
         }
     }
 
-    public EventProvider(Object instance) throws Throwable {
+    public EventProvider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class EventProvider extends NetObject implements AutoCloseable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -177,21 +177,21 @@ public class EventProvider extends NetObject implements AutoCloseable {
         }
     }
 
-    public boolean WriteEvent(EventDescriptor eventDescriptor, NetObject... eventPayload) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.FormatException {
+    public boolean WriteEvent(JCORefOut<EventDescriptor> eventDescriptor, NetObject... eventPayload) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("WriteEvent", eventDescriptor == null ? null : eventDescriptor.getJCOInstance(), toObjectFromArray(eventPayload));
+            return (boolean)classInstance.Invoke("WriteEvent", eventDescriptor.getJCRefOut(), toObjectFromArray(eventPayload));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean WriteEvent(EventDescriptor eventDescriptor, java.lang.String data) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public boolean WriteEvent(JCORefOut<EventDescriptor> eventDescriptor, java.lang.String data) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("WriteEvent", eventDescriptor == null ? null : eventDescriptor.getJCOInstance(), data);
+            return (boolean)classInstance.Invoke("WriteEvent", eventDescriptor.getJCRefOut(), data);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,11 +217,11 @@ public class EventProvider extends NetObject implements AutoCloseable {
         }
     }
 
-    public boolean WriteTransferEvent(EventDescriptor eventDescriptor, Guid relatedActivityId, NetObject... eventPayload) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException {
+    public boolean WriteTransferEvent(JCORefOut<EventDescriptor> eventDescriptor, Guid relatedActivityId, NetObject... eventPayload) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("WriteTransferEvent", eventDescriptor == null ? null : eventDescriptor.getJCOInstance(), relatedActivityId == null ? null : relatedActivityId.getJCOInstance(), toObjectFromArray(eventPayload));
+            return (boolean)classInstance.Invoke("WriteTransferEvent", eventDescriptor.getJCRefOut(), relatedActivityId == null ? null : relatedActivityId.getJCOInstance(), toObjectFromArray(eventPayload));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,11 +258,11 @@ public class EventProvider extends NetObject implements AutoCloseable {
         }
     }
 
-    public static void SetActivityId(Guid id) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException {
+    public static void SetActivityId(JCORefOut<Guid> id) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.security.SecurityException, system.ArgumentOutOfRangeException, system.NullReferenceException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("SetActivityId", id == null ? null : id.getJCOInstance());
+            classType.Invoke("SetActivityId", id.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

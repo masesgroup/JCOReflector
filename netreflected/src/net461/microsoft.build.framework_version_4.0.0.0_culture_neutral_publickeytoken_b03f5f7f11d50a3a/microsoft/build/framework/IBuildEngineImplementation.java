@@ -98,7 +98,7 @@ public class IBuildEngineImplementation extends NetObject implements IBuildEngin
         }
     }
 
-    public IBuildEngineImplementation(Object instance) throws Throwable {
+    public IBuildEngineImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class IBuildEngineImplementation extends NetObject implements IBuildEngin
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

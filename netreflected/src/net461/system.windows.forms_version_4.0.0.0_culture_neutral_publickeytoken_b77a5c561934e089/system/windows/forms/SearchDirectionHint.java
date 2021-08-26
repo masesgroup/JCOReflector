@@ -108,7 +108,7 @@ public class SearchDirectionHint extends NetObject  {
         }
     }
 
-    public SearchDirectionHint(Object instance) {
+    public SearchDirectionHint(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class SearchDirectionHint extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

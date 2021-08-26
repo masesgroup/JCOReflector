@@ -103,9 +103,9 @@ public interface IFixedTypeInfo extends IJCOBridgeReflected {
     /**
      * Returns the instantiated class
      * 
-     * @return An {@link Object} representing the instance of the instantiated Class
+     * @return An {@link java.lang.Object} representing the instance of the instantiated Class
      */
-    public Object getJCOInstance();
+    public java.lang.Object getJCOInstance();
 
     /**
      * Returns the instantiated class Type
@@ -116,11 +116,11 @@ public interface IFixedTypeInfo extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void CreateInstance(NetObject pUnkOuter, Guid riid, JCORefOut<NetObject> ppvObj) throws Throwable;
+    public void CreateInstance(NetObject pUnkOuter, JCORefOut<Guid> riid, JCORefOut<NetObject> ppvObj) throws Throwable;
 
-    public void GetContainingTypeLib(JCORefOut<ITypeLib> ppTLB, JCORefOut pIndex) throws Throwable;
+    public void GetContainingTypeLib(JCORefOut<ITypeLib> ppTLB, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pIndex) throws Throwable;
 
-    public void GetDocumentation(int index, JCORefOut strName, JCORefOut strDocString, JCORefOut dwHelpContext, JCORefOut strHelpFile) throws Throwable;
+    public void GetDocumentation(int index, JCORefOut strName, JCORefOut strDocString, JCORefOut<java.util.concurrent.atomic.AtomicInteger> dwHelpContext, JCORefOut strHelpFile) throws Throwable;
 
     public void GetIDsOfNames(java.lang.String[] rgszNames, int cNames, JCORefOut pMemId) throws Throwable;
 
@@ -128,7 +128,7 @@ public interface IFixedTypeInfo extends IJCOBridgeReflected {
 
     public void GetMops(int memid, JCORefOut pBstrMops) throws Throwable;
 
-    public void GetNames(int memid, JCORefOut rgBstrNames, int cMaxNames, JCORefOut pcNames) throws Throwable;
+    public void GetNames(int memid, JCORefOut rgBstrNames, int cMaxNames, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pcNames) throws Throwable;
 
     public void GetTypeComp(JCORefOut<ITypeComp> ppTComp) throws Throwable;
 

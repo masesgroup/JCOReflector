@@ -93,7 +93,7 @@ public class __MIDL_IWinTypes_0009 extends ValueType  {
         }
     }
 
-    public __MIDL_IWinTypes_0009(Object instance) throws Throwable {
+    public __MIDL_IWinTypes_0009(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class __MIDL_IWinTypes_0009 extends ValueType  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -108,7 +108,7 @@ public class DataGridViewComboBoxDisplayStyle extends NetObject  {
         }
     }
 
-    public DataGridViewComboBoxDisplayStyle(Object instance) {
+    public DataGridViewComboBoxDisplayStyle(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class DataGridViewComboBoxDisplayStyle extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -92,7 +92,7 @@ public class IScrollItemProviderImplementation extends NetObject implements IScr
         }
     }
 
-    public IScrollItemProviderImplementation(Object instance) throws Throwable {
+    public IScrollItemProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class IScrollItemProviderImplementation extends NetObject implements IScr
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

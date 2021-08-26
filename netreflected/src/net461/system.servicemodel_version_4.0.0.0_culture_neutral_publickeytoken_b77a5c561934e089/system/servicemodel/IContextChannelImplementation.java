@@ -107,7 +107,7 @@ public class IContextChannelImplementation extends NetObject implements IContext
         }
     }
 
-    public IContextChannelImplementation(Object instance) throws Throwable {
+    public IContextChannelImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -127,7 +127,7 @@ public class IContextChannelImplementation extends NetObject implements IContext
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -93,7 +93,7 @@ public class SharedPropertyGroup extends NetObject  {
         }
     }
 
-    public SharedPropertyGroup(Object instance) throws Throwable {
+    public SharedPropertyGroup(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class SharedPropertyGroup extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -146,7 +146,7 @@ public class SharedPropertyGroup extends NetObject  {
     
     // Methods section
     
-    public SharedProperty CreateProperty(java.lang.String name, JCORefOut fExists) throws Throwable {
+    public SharedProperty CreateProperty(java.lang.String name, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> fExists) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -157,7 +157,7 @@ public class SharedPropertyGroup extends NetObject  {
         }
     }
 
-    public SharedProperty CreatePropertyByPosition(int position, JCORefOut fExists) throws Throwable {
+    public SharedProperty CreatePropertyByPosition(int position, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> fExists) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

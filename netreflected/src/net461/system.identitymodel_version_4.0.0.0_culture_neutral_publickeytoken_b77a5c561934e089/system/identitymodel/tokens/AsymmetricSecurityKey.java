@@ -97,7 +97,7 @@ public class AsymmetricSecurityKey extends SecurityKey  {
         }
     }
 
-    public AsymmetricSecurityKey(Object instance) throws Throwable {
+    public AsymmetricSecurityKey(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class AsymmetricSecurityKey extends SecurityKey  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

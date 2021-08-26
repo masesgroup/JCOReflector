@@ -94,7 +94,7 @@ public class UCOMIStreamImplementation extends NetObject implements UCOMIStream 
         }
     }
 
-    public UCOMIStreamImplementation(Object instance) throws Throwable {
+    public UCOMIStreamImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class UCOMIStreamImplementation extends NetObject implements UCOMIStream 
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

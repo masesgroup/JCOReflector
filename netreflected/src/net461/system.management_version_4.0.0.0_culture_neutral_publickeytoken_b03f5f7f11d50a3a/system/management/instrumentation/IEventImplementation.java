@@ -92,7 +92,7 @@ public class IEventImplementation extends NetObject implements IEvent {
         }
     }
 
-    public IEventImplementation(Object instance) throws Throwable {
+    public IEventImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class IEventImplementation extends NetObject implements IEvent {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

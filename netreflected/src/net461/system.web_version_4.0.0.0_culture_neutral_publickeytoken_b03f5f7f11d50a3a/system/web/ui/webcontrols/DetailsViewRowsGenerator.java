@@ -93,7 +93,7 @@ public class DetailsViewRowsGenerator extends AutoFieldsGenerator  {
         }
     }
 
-    public DetailsViewRowsGenerator(Object instance) throws Throwable {
+    public DetailsViewRowsGenerator(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class DetailsViewRowsGenerator extends AutoFieldsGenerator  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -108,7 +108,7 @@ public class QueryBuilderMode extends NetObject  {
         }
     }
 
-    public QueryBuilderMode(Object instance) {
+    public QueryBuilderMode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class QueryBuilderMode extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

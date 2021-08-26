@@ -105,7 +105,7 @@ public class BitmapDecoder extends DispatcherObject  {
         }
     }
 
-    public BitmapDecoder(Object instance) throws Throwable {
+    public BitmapDecoder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -125,7 +125,7 @@ public class BitmapDecoder extends DispatcherObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

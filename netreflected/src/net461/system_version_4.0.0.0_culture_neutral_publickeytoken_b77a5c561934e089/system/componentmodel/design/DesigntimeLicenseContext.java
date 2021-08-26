@@ -95,7 +95,7 @@ public class DesigntimeLicenseContext extends LicenseContext  {
         }
     }
 
-    public DesigntimeLicenseContext(Object instance) throws Throwable {
+    public DesigntimeLicenseContext(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class DesigntimeLicenseContext extends LicenseContext  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

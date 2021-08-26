@@ -98,7 +98,7 @@ public class SecurityManager extends NetObject  {
         }
     }
 
-    public SecurityManager(Object instance) throws Throwable {
+    public SecurityManager(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class SecurityManager extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -228,7 +228,7 @@ public class SecurityManager extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objResolvePolicy = (JCObject)classType.Invoke("ResolvePolicy", (Object)toObjectFromArray(evidences));
+            JCObject objResolvePolicy = (JCObject)classType.Invoke("ResolvePolicy", (java.lang.Object)toObjectFromArray(evidences));
             return new PermissionSet(objResolvePolicy);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

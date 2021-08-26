@@ -94,7 +94,7 @@ public class XmlSerializerNamespaces extends NetObject  {
         }
     }
 
-    public XmlSerializerNamespaces(Object instance) throws Throwable {
+    public XmlSerializerNamespaces(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class XmlSerializerNamespaces extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -163,7 +163,7 @@ public class XmlSerializerNamespaces extends NetObject  {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((Object)toObjectFromArray(namespaces)));
+            setJCOInstance((JCObject)classType.NewObject((java.lang.Object)toObjectFromArray(namespaces)));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -179,7 +179,7 @@ public class XmlSerializerNamespaces extends NetObject  {
         try {
             ArrayList<XmlQualifiedName> resultingArrayList = new ArrayList<XmlQualifiedName>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("ToArray");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new XmlQualifiedName(resultingObject));
             }
             XmlQualifiedName[] resultingArray = new XmlQualifiedName[resultingArrayList.size()];

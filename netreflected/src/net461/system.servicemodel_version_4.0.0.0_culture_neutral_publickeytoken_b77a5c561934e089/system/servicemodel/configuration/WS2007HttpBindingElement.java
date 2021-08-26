@@ -93,7 +93,7 @@ public class WS2007HttpBindingElement extends WSHttpBindingElement  {
         }
     }
 
-    public WS2007HttpBindingElement(Object instance) throws Throwable {
+    public WS2007HttpBindingElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class WS2007HttpBindingElement extends WSHttpBindingElement  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

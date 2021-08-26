@@ -102,7 +102,7 @@ public class ResXResourceReader extends NetObjectEnumerable implements system.ID
         }
     }
 
-    public ResXResourceReader(Object instance) throws Throwable {
+    public ResXResourceReader(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -122,7 +122,7 @@ public class ResXResourceReader extends NetObjectEnumerable implements system.ID
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

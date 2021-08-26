@@ -94,7 +94,7 @@ public class InteropTrackingRecord extends CustomTrackingRecord  {
         }
     }
 
-    public InteropTrackingRecord(Object instance) throws Throwable {
+    public InteropTrackingRecord(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class InteropTrackingRecord extends CustomTrackingRecord  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

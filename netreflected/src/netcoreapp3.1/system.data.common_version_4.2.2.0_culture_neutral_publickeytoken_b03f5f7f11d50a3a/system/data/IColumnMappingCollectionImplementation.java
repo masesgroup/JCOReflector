@@ -99,7 +99,7 @@ public class IColumnMappingCollectionImplementation extends IEnumerableImplement
         }
     }
 
-    public IColumnMappingCollectionImplementation(Object instance) throws Throwable {
+    public IColumnMappingCollectionImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class IColumnMappingCollectionImplementation extends IEnumerableImplement
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

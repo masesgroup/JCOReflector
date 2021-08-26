@@ -100,7 +100,7 @@ public class ForestTrustCollisionException extends ActiveDirectoryOperationExcep
         super();
     }
 
-    public ForestTrustCollisionException(Object instance) {
+    public ForestTrustCollisionException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -134,7 +134,7 @@ public class ForestTrustCollisionException extends ActiveDirectoryOperationExcep
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

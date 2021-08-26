@@ -101,7 +101,7 @@ public class CompositeDesignerTheme extends ActivityDesignerTheme  {
         }
     }
 
-    public CompositeDesignerTheme(Object instance) throws Throwable {
+    public CompositeDesignerTheme(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -121,7 +121,7 @@ public class CompositeDesignerTheme extends ActivityDesignerTheme  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -100,7 +100,7 @@ public class Vector3D extends ValueType implements system.IFormattable {
         }
     }
 
-    public Vector3D(Object instance) throws Throwable {
+    public Vector3D(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class Vector3D extends ValueType implements system.IFormattable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

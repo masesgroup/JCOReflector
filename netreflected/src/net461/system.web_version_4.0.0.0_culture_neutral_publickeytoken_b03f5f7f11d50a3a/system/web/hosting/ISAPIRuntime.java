@@ -95,7 +95,7 @@ public class ISAPIRuntime extends MarshalByRefObject implements system.web.hosti
         }
     }
 
-    public ISAPIRuntime(Object instance) throws Throwable {
+    public ISAPIRuntime(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class ISAPIRuntime extends MarshalByRefObject implements system.web.hosti
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

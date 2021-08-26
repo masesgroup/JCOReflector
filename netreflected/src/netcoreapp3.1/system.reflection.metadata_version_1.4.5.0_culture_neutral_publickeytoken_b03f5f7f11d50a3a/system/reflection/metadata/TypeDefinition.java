@@ -108,7 +108,7 @@ public class TypeDefinition extends ValueType  {
         }
     }
 
-    public TypeDefinition(Object instance) throws Throwable {
+    public TypeDefinition(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -128,7 +128,7 @@ public class TypeDefinition extends ValueType  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

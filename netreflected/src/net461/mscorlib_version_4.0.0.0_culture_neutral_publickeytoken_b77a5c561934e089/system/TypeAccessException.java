@@ -97,7 +97,7 @@ public class TypeAccessException extends TypeLoadException {
         super();
     }
 
-    public TypeAccessException(Object instance) {
+    public TypeAccessException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class TypeAccessException extends TypeLoadException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -93,7 +93,7 @@ public class DataGridCellsPanel extends VirtualizingPanel  {
         }
     }
 
-    public DataGridCellsPanel(Object instance) throws Throwable {
+    public DataGridCellsPanel(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class DataGridCellsPanel extends VirtualizingPanel  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

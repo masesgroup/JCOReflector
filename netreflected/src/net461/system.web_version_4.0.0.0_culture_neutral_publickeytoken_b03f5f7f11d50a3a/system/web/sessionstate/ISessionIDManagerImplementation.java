@@ -93,7 +93,7 @@ public class ISessionIDManagerImplementation extends NetObject implements ISessi
         }
     }
 
-    public ISessionIDManagerImplementation(Object instance) throws Throwable {
+    public ISessionIDManagerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class ISessionIDManagerImplementation extends NetObject implements ISessi
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -133,7 +133,7 @@ public class ISessionIDManagerImplementation extends NetObject implements ISessi
 
     // Methods section
     
-    public boolean InitializeRequest(HttpContext context, boolean suppressAutoDetectRedirect, JCORefOut supportSessionIDReissue) throws Throwable {
+    public boolean InitializeRequest(HttpContext context, boolean suppressAutoDetectRedirect, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> supportSessionIDReissue) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -193,7 +193,7 @@ public class ISessionIDManagerImplementation extends NetObject implements ISessi
         }
     }
 
-    public void SaveSessionID(HttpContext context, java.lang.String id, JCORefOut redirected, JCORefOut cookieAdded) throws Throwable {
+    public void SaveSessionID(HttpContext context, java.lang.String id, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> redirected, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> cookieAdded) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

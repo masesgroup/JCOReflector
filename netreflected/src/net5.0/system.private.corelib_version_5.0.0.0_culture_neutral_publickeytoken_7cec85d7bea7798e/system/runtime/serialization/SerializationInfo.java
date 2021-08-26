@@ -103,7 +103,7 @@ public class SerializationInfo extends NetObject  {
         }
     }
 
-    public SerializationInfo(Object instance) throws Throwable {
+    public SerializationInfo(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -123,7 +123,7 @@ public class SerializationInfo extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -546,11 +546,11 @@ public class SerializationInfo extends NetObject  {
         }
     }
 
-    public static void ThrowIfDeserializationInProgress(java.lang.String switchSuffix, int cachedValue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.runtime.serialization.SerializationException {
+    public static void ThrowIfDeserializationInProgress(java.lang.String switchSuffix, JCORefOut<java.util.concurrent.atomic.AtomicInteger> cachedValue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.runtime.serialization.SerializationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("ThrowIfDeserializationInProgress", switchSuffix, cachedValue);
+            classType.Invoke("ThrowIfDeserializationInProgress", switchSuffix, cachedValue.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

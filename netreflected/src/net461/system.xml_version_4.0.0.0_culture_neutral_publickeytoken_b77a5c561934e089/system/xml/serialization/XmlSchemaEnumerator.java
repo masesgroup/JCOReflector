@@ -107,7 +107,7 @@ public class XmlSchemaEnumerator extends NetObject implements Iterator<XmlSchema
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

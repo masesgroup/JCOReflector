@@ -97,7 +97,7 @@ public class SynchronizationLockException extends SystemException {
         super();
     }
 
-    public SynchronizationLockException(Object instance) {
+    public SynchronizationLockException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class SynchronizationLockException extends SystemException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

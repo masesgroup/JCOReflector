@@ -96,7 +96,7 @@ public class JavaScriptEncoder extends TextEncoder  {
         }
     }
 
-    public JavaScriptEncoder(Object instance) throws Throwable {
+    public JavaScriptEncoder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class JavaScriptEncoder extends TextEncoder  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -162,7 +162,7 @@ public class JavaScriptEncoder extends TextEncoder  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", (Object)toObjectFromArray(allowedRanges));
+            JCObject objCreate = (JCObject)classType.Invoke("Create", (java.lang.Object)toObjectFromArray(allowedRanges));
             return new JavaScriptEncoder(objCreate);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

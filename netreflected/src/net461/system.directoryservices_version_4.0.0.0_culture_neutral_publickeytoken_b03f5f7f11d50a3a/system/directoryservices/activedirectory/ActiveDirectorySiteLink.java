@@ -99,7 +99,7 @@ public class ActiveDirectorySiteLink extends NetObject implements AutoCloseable 
         }
     }
 
-    public ActiveDirectorySiteLink(Object instance) throws Throwable {
+    public ActiveDirectorySiteLink(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class ActiveDirectorySiteLink extends NetObject implements AutoCloseable 
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

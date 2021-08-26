@@ -104,9 +104,9 @@ public interface UCOMITypeInfo extends IJCOBridgeReflected {
     /**
      * Returns the instantiated class
      * 
-     * @return An {@link Object} representing the instance of the instantiated Class
+     * @return An {@link java.lang.Object} representing the instance of the instantiated Class
      */
-    public Object getJCOInstance();
+    public java.lang.Object getJCOInstance();
 
     /**
      * Returns the instantiated class Type
@@ -117,25 +117,25 @@ public interface UCOMITypeInfo extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void CreateInstance(NetObject pUnkOuter, Guid riid, JCORefOut<NetObject> ppvObj) throws Throwable;
+    public void CreateInstance(NetObject pUnkOuter, JCORefOut<Guid> riid, JCORefOut<NetObject> ppvObj) throws Throwable;
 
-    public void GetContainingTypeLib(JCORefOut<UCOMITypeLib> ppTLB, JCORefOut pIndex) throws Throwable;
+    public void GetContainingTypeLib(JCORefOut<UCOMITypeLib> ppTLB, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pIndex) throws Throwable;
 
-    public void GetDllEntry(int memid, INVOKEKIND invKind, JCORefOut pBstrDllName, JCORefOut pBstrName, JCORefOut pwOrdinal) throws Throwable;
+    public void GetDllEntry(int memid, INVOKEKIND invKind, JCORefOut pBstrDllName, JCORefOut pBstrName, JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Short>> pwOrdinal) throws Throwable;
 
-    public void GetDocumentation(int index, JCORefOut strName, JCORefOut strDocString, JCORefOut dwHelpContext, JCORefOut strHelpFile) throws Throwable;
+    public void GetDocumentation(int index, JCORefOut strName, JCORefOut strDocString, JCORefOut<java.util.concurrent.atomic.AtomicInteger> dwHelpContext, JCORefOut strHelpFile) throws Throwable;
 
     public void GetIDsOfNames(java.lang.String[] rgszNames, int cNames, JCORefOut pMemId) throws Throwable;
 
-    public void GetImplTypeFlags(int index, JCORefOut pImplTypeFlags) throws Throwable;
+    public void GetImplTypeFlags(int index, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pImplTypeFlags) throws Throwable;
 
     public void GetMops(int memid, JCORefOut pBstrMops) throws Throwable;
 
-    public void GetNames(int memid, JCORefOut rgBstrNames, int cMaxNames, JCORefOut pcNames) throws Throwable;
+    public void GetNames(int memid, JCORefOut rgBstrNames, int cMaxNames, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pcNames) throws Throwable;
 
     public void GetRefTypeInfo(int hRef, JCORefOut<UCOMITypeInfo> ppTI) throws Throwable;
 
-    public void GetRefTypeOfImplType(int index, JCORefOut href) throws Throwable;
+    public void GetRefTypeOfImplType(int index, JCORefOut<java.util.concurrent.atomic.AtomicInteger> href) throws Throwable;
 
     public void GetTypeComp(JCORefOut<UCOMITypeComp> ppTComp) throws Throwable;
 

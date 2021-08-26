@@ -97,7 +97,7 @@ public class ReturnOutOfFinally extends ApplicationException {
         super();
     }
 
-    public ReturnOutOfFinally(Object instance) {
+    public ReturnOutOfFinally(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class ReturnOutOfFinally extends ApplicationException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

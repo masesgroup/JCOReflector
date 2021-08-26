@@ -114,7 +114,7 @@ public class RichTextBox extends TextBoxBase  {
         }
     }
 
-    public RichTextBox(Object instance) throws Throwable {
+    public RichTextBox(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -134,7 +134,7 @@ public class RichTextBox extends TextBoxBase  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -177,7 +177,7 @@ public class RichTextBox extends TextBoxBase  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("Find", (Object)characterSet);
+            return (int)classInstance.Invoke("Find", (java.lang.Object)characterSet);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,7 +187,7 @@ public class RichTextBox extends TextBoxBase  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("Find", (Object)dupParam0.getJCRefOut());
+            return (int)classInstance.Invoke("Find", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -662,9 +662,9 @@ public class RichTextBox extends TextBoxBase  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Get("SelectionTabs");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             int[] resultingArray = new int[resultingArrayList.size()];

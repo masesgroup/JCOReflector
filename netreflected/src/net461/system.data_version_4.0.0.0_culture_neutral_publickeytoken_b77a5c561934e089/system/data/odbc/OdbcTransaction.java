@@ -95,7 +95,7 @@ public class OdbcTransaction extends DbTransaction  {
         }
     }
 
-    public OdbcTransaction(Object instance) throws Throwable {
+    public OdbcTransaction(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class OdbcTransaction extends DbTransaction  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

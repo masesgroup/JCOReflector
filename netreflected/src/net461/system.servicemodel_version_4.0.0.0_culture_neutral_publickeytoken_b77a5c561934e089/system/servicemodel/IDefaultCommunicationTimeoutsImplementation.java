@@ -93,7 +93,7 @@ public class IDefaultCommunicationTimeoutsImplementation extends NetObject imple
         }
     }
 
-    public IDefaultCommunicationTimeoutsImplementation(Object instance) throws Throwable {
+    public IDefaultCommunicationTimeoutsImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class IDefaultCommunicationTimeoutsImplementation extends NetObject imple
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

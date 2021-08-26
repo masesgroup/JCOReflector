@@ -97,9 +97,9 @@ public interface UCOMITypeLib extends IJCOBridgeReflected {
     /**
      * Returns the instantiated class
      * 
-     * @return An {@link Object} representing the instance of the instantiated Class
+     * @return An {@link java.lang.Object} representing the instance of the instantiated Class
      */
-    public Object getJCOInstance();
+    public java.lang.Object getJCOInstance();
 
     /**
      * Returns the instantiated class Type
@@ -114,7 +114,7 @@ public interface UCOMITypeLib extends IJCOBridgeReflected {
 
     public int GetTypeInfoCount() throws Throwable;
 
-    public void GetDocumentation(int index, JCORefOut strName, JCORefOut strDocString, JCORefOut dwHelpContext, JCORefOut strHelpFile) throws Throwable;
+    public void GetDocumentation(int index, JCORefOut strName, JCORefOut strDocString, JCORefOut<java.util.concurrent.atomic.AtomicInteger> dwHelpContext, JCORefOut strHelpFile) throws Throwable;
 
     public void GetTypeInfoType(int index, JCORefOut<TYPEKIND> pTKind) throws Throwable;
 

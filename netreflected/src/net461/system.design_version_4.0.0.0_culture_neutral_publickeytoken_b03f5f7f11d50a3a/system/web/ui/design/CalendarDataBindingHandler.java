@@ -96,7 +96,7 @@ public class CalendarDataBindingHandler extends DataBindingHandler  {
         }
     }
 
-    public CalendarDataBindingHandler(Object instance) throws Throwable {
+    public CalendarDataBindingHandler(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class CalendarDataBindingHandler extends DataBindingHandler  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -97,7 +97,7 @@ public class SerializationStore extends NetObject implements system.IDisposable,
         }
     }
 
-    public SerializationStore(Object instance) throws Throwable {
+    public SerializationStore(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class SerializationStore extends NetObject implements system.IDisposable,
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

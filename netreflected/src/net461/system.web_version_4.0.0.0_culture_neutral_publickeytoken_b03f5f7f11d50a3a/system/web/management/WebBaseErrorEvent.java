@@ -93,7 +93,7 @@ public class WebBaseErrorEvent extends WebManagementEvent  {
         }
     }
 
-    public WebBaseErrorEvent(Object instance) throws Throwable {
+    public WebBaseErrorEvent(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class WebBaseErrorEvent extends WebManagementEvent  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

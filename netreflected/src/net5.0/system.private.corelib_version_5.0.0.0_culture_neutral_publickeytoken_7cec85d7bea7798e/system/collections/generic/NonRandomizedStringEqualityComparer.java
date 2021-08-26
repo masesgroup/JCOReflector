@@ -96,7 +96,7 @@ public class NonRandomizedStringEqualityComparer extends NetObject implements sy
         }
     }
 
-    public NonRandomizedStringEqualityComparer(Object instance) throws Throwable {
+    public NonRandomizedStringEqualityComparer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class NonRandomizedStringEqualityComparer extends NetObject implements sy
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

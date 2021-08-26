@@ -96,7 +96,7 @@ public class SqlDesignerDataSourceView extends DesignerDataSourceView  {
         }
     }
 
-    public SqlDesignerDataSourceView(Object instance) throws Throwable {
+    public SqlDesignerDataSourceView(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class SqlDesignerDataSourceView extends DesignerDataSourceView  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -159,7 +159,7 @@ public class SqlDesignerDataSourceView extends DesignerDataSourceView  {
     
     // Methods section
     
-    public IEnumerable GetDesignTimeData(int minimumRows, JCORefOut isSampleData) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.RankException, system.NullReferenceException, system.NotSupportedException, system.InvalidTimeZoneException, system.OverflowException {
+    public IEnumerable GetDesignTimeData(int minimumRows, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> isSampleData) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.collections.generic.KeyNotFoundException, system.RankException, system.NullReferenceException, system.NotSupportedException, system.InvalidTimeZoneException, system.OverflowException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

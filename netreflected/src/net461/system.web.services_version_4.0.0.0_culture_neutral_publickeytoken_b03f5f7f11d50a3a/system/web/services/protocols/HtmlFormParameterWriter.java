@@ -95,7 +95,7 @@ public class HtmlFormParameterWriter extends UrlEncodedParameterWriter  {
         }
     }
 
-    public HtmlFormParameterWriter(Object instance) throws Throwable {
+    public HtmlFormParameterWriter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class HtmlFormParameterWriter extends UrlEncodedParameterWriter  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

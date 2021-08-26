@@ -96,7 +96,7 @@ public class RuntimeBinderException extends NetException {
         super();
     }
 
-    public RuntimeBinderException(Object instance) {
+    public RuntimeBinderException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -130,7 +130,7 @@ public class RuntimeBinderException extends NetException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -104,7 +104,7 @@ public class PathGradientBrush extends Brush  {
         }
     }
 
-    public PathGradientBrush(Object instance) throws Throwable {
+    public PathGradientBrush(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -124,7 +124,7 @@ public class PathGradientBrush extends Brush  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -166,7 +166,7 @@ public class PathGradientBrush extends Brush  {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((Object)toObjectFromArray(points)));
+            setJCOInstance((JCObject)classType.NewObject((java.lang.Object)toObjectFromArray(points)));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -186,7 +186,7 @@ public class PathGradientBrush extends Brush  {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((Object)toObjectFromArray(points)));
+            setJCOInstance((JCObject)classType.NewObject((java.lang.Object)toObjectFromArray(points)));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -379,7 +379,7 @@ public class PathGradientBrush extends Brush  {
         try {
             ArrayList<Color> resultingArrayList = new ArrayList<Color>();
             JCObject resultingObjects = (JCObject)classInstance.Get("SurroundColors");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Color(resultingObject));
             }
             Color[] resultingArray = new Color[resultingArrayList.size()];

@@ -92,7 +92,7 @@ public class Soap12FaultCodes extends NetObject  {
         }
     }
 
-    public Soap12FaultCodes(Object instance) throws Throwable {
+    public Soap12FaultCodes(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class Soap12FaultCodes extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -94,7 +94,7 @@ public class TrackedDependencies extends NetObject  {
         }
     }
 
-    public TrackedDependencies(Object instance) throws Throwable {
+    public TrackedDependencies(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class TrackedDependencies extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -150,8 +150,8 @@ public class TrackedDependencies extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             ArrayList<ITaskItem> resultingArrayList = new ArrayList<ITaskItem>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("ExpandWildcards", (Object)toObjectFromArray(expand));
-            for (Object resultingObject : resultingObjects) {
+            JCObject resultingObjects = (JCObject)classType.Invoke("ExpandWildcards", (java.lang.Object)toObjectFromArray(expand));
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITaskItemImplementation(resultingObject));
             }
             ITaskItem[] resultingArray = new ITaskItem[resultingArrayList.size()];

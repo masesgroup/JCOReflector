@@ -95,7 +95,7 @@ public class ThemeDictionaryExtension extends MarkupExtension  {
         }
     }
 
-    public ThemeDictionaryExtension(Object instance) throws Throwable {
+    public ThemeDictionaryExtension(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class ThemeDictionaryExtension extends MarkupExtension  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

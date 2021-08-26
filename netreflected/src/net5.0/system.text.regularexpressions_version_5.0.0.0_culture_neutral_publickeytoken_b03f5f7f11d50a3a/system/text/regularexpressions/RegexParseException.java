@@ -100,7 +100,7 @@ public class RegexParseException extends ArgumentException {
         super();
     }
 
-    public RegexParseException(Object instance) {
+    public RegexParseException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -134,7 +134,7 @@ public class RegexParseException extends ArgumentException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

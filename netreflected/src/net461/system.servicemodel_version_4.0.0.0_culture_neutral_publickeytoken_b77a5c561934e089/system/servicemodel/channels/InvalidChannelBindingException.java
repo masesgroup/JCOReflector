@@ -96,7 +96,7 @@ public class InvalidChannelBindingException extends NetException {
         super();
     }
 
-    public InvalidChannelBindingException(Object instance) {
+    public InvalidChannelBindingException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -130,7 +130,7 @@ public class InvalidChannelBindingException extends NetException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

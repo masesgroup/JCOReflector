@@ -108,7 +108,7 @@ public class AudienceUriMode extends NetObject  {
         }
     }
 
-    public AudienceUriMode(Object instance) {
+    public AudienceUriMode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class AudienceUriMode extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

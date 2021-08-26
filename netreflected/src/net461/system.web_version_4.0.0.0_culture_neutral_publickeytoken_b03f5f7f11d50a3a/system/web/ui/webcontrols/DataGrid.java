@@ -104,7 +104,7 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
         }
     }
 
-    public DataGrid(Object instance) throws Throwable {
+    public DataGrid(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -124,7 +124,7 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

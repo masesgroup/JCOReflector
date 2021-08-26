@@ -94,7 +94,7 @@ public class IDynamicMetaObjectProviderImplementation extends NetObject implemen
         }
     }
 
-    public IDynamicMetaObjectProviderImplementation(Object instance) throws Throwable {
+    public IDynamicMetaObjectProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class IDynamicMetaObjectProviderImplementation extends NetObject implemen
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -99,7 +99,7 @@ public class BadImageFormatException extends SystemException {
         super();
     }
 
-    public BadImageFormatException(Object instance) {
+    public BadImageFormatException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -133,7 +133,7 @@ public class BadImageFormatException extends SystemException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

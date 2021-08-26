@@ -93,7 +93,7 @@ public class CodeThisReferenceExpression extends CodeExpression  {
         }
     }
 
-    public CodeThisReferenceExpression(Object instance) throws Throwable {
+    public CodeThisReferenceExpression(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class CodeThisReferenceExpression extends CodeExpression  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

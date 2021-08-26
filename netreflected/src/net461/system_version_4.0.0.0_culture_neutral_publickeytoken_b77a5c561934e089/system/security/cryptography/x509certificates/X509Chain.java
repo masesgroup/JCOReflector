@@ -98,7 +98,7 @@ public class X509Chain extends NetObject implements AutoCloseable {
         }
     }
 
-    public X509Chain(Object instance) throws Throwable {
+    public X509Chain(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class X509Chain extends NetObject implements AutoCloseable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -274,7 +274,7 @@ public class X509Chain extends NetObject implements AutoCloseable {
         try {
             ArrayList<X509ChainStatus> resultingArrayList = new ArrayList<X509ChainStatus>();
             JCObject resultingObjects = (JCObject)classInstance.Get("ChainStatus");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new X509ChainStatus(resultingObject));
             }
             X509ChainStatus[] resultingArray = new X509ChainStatus[resultingArrayList.size()];

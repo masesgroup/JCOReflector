@@ -93,7 +93,7 @@ public class IWindowTargetImplementation extends NetObject implements IWindowTar
         }
     }
 
-    public IWindowTargetImplementation(Object instance) throws Throwable {
+    public IWindowTargetImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class IWindowTargetImplementation extends NetObject implements IWindowTar
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -133,11 +133,11 @@ public class IWindowTargetImplementation extends NetObject implements IWindowTar
 
     // Methods section
     
-    public void OnMessage(Message m) throws Throwable {
+    public void OnMessage(JCORefOut<Message> m) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("OnMessage", m == null ? null : m.getJCOInstance());
+            classInstance.Invoke("OnMessage", m.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

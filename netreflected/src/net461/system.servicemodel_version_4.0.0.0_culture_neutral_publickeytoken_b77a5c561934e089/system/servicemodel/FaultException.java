@@ -103,7 +103,7 @@ public class FaultException extends CommunicationException {
         super();
     }
 
-    public FaultException(Object instance) {
+    public FaultException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -137,7 +137,7 @@ public class FaultException extends CommunicationException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

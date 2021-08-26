@@ -93,7 +93,7 @@ public class SHA256Managed extends SHA256  {
         }
     }
 
-    public SHA256Managed(Object instance) throws Throwable {
+    public SHA256Managed(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class SHA256Managed extends SHA256  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

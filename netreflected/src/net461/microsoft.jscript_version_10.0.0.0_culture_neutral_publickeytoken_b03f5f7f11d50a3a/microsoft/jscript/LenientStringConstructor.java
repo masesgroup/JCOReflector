@@ -93,7 +93,7 @@ public class LenientStringConstructor extends StringConstructor  {
         }
     }
 
-    public LenientStringConstructor(Object instance) throws Throwable {
+    public LenientStringConstructor(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class LenientStringConstructor extends StringConstructor  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

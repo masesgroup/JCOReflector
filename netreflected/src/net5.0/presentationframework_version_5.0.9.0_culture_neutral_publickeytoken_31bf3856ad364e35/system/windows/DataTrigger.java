@@ -98,7 +98,7 @@ public class DataTrigger extends TriggerBase implements system.windows.markup.IA
         }
     }
 
-    public DataTrigger(Object instance) throws Throwable {
+    public DataTrigger(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class DataTrigger extends TriggerBase implements system.windows.markup.IA
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

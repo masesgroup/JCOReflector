@@ -101,9 +101,9 @@ public interface UCOMIConnectionPoint extends IJCOBridgeReflected {
     /**
      * Returns the instantiated class
      * 
-     * @return An {@link Object} representing the instance of the instantiated Class
+     * @return An {@link java.lang.Object} representing the instance of the instantiated Class
      */
-    public Object getJCOInstance();
+    public java.lang.Object getJCOInstance();
 
     /**
      * Returns the instantiated class Type
@@ -114,7 +114,7 @@ public interface UCOMIConnectionPoint extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void Advise(NetObject pUnkSink, JCORefOut pdwCookie) throws Throwable;
+    public void Advise(NetObject pUnkSink, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pdwCookie) throws Throwable;
 
     public void EnumConnections(JCORefOut<UCOMIEnumConnections> ppEnum) throws Throwable;
 

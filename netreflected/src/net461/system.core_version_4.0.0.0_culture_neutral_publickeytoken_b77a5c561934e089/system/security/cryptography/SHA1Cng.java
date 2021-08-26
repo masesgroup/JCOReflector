@@ -93,7 +93,7 @@ public class SHA1Cng extends SHA1  {
         }
     }
 
-    public SHA1Cng(Object instance) throws Throwable {
+    public SHA1Cng(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class SHA1Cng extends SHA1  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

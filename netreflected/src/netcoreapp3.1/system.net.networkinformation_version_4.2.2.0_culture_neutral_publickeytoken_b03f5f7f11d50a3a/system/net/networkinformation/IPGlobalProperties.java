@@ -105,7 +105,7 @@ public class IPGlobalProperties extends NetObject  {
         }
     }
 
-    public IPGlobalProperties(Object instance) throws Throwable {
+    public IPGlobalProperties(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -125,7 +125,7 @@ public class IPGlobalProperties extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -173,7 +173,7 @@ public class IPGlobalProperties extends NetObject  {
         try {
             ArrayList<IPEndPoint> resultingArrayList = new ArrayList<IPEndPoint>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetActiveTcpListeners");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IPEndPoint(resultingObject));
             }
             IPEndPoint[] resultingArray = new IPEndPoint[resultingArrayList.size()];
@@ -190,7 +190,7 @@ public class IPGlobalProperties extends NetObject  {
         try {
             ArrayList<IPEndPoint> resultingArrayList = new ArrayList<IPEndPoint>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetActiveUdpListeners");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IPEndPoint(resultingObject));
             }
             IPEndPoint[] resultingArray = new IPEndPoint[resultingArrayList.size()];
@@ -262,7 +262,7 @@ public class IPGlobalProperties extends NetObject  {
         try {
             ArrayList<TcpConnectionInformation> resultingArrayList = new ArrayList<TcpConnectionInformation>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetActiveTcpConnections");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new TcpConnectionInformation(resultingObject));
             }
             TcpConnectionInformation[] resultingArray = new TcpConnectionInformation[resultingArrayList.size()];

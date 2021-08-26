@@ -96,7 +96,7 @@ public class ToolStripDropDownMenu extends ToolStripDropDown  {
         }
     }
 
-    public ToolStripDropDownMenu(Object instance) throws Throwable {
+    public ToolStripDropDownMenu(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class ToolStripDropDownMenu extends ToolStripDropDown  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

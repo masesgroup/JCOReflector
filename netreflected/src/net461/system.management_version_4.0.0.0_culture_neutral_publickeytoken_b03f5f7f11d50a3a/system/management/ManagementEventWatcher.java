@@ -99,7 +99,7 @@ public class ManagementEventWatcher extends Component  {
         }
     }
 
-    public ManagementEventWatcher(Object instance) throws Throwable {
+    public ManagementEventWatcher(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class ManagementEventWatcher extends Component  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -101,7 +101,7 @@ public class TouchDevice extends InputDevice  {
         }
     }
 
-    public TouchDevice(Object instance) throws Throwable {
+    public TouchDevice(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -121,7 +121,7 @@ public class TouchDevice extends InputDevice  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

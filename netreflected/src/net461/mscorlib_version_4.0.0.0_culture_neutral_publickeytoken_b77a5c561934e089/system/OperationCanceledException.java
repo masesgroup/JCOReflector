@@ -98,7 +98,7 @@ public class OperationCanceledException extends SystemException {
         super();
     }
 
-    public OperationCanceledException(Object instance) {
+    public OperationCanceledException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -132,7 +132,7 @@ public class OperationCanceledException extends SystemException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

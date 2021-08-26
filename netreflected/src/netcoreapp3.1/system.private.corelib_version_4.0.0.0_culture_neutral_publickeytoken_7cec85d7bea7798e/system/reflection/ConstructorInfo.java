@@ -97,7 +97,7 @@ public class ConstructorInfo extends MethodBase  {
         }
     }
 
-    public ConstructorInfo(Object instance) throws Throwable {
+    public ConstructorInfo(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class ConstructorInfo extends MethodBase  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -152,7 +152,7 @@ public class ConstructorInfo extends MethodBase  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objInvoke = (JCObject)classInstance.Invoke("Invoke", (Object)toObjectFromArray(parameters));
+            JCObject objInvoke = (JCObject)classInstance.Invoke("Invoke", (java.lang.Object)toObjectFromArray(parameters));
             return new NetObject(objInvoke);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -93,7 +93,7 @@ public class IXamlNameResolverImplementation extends NetObject implements IXamlN
         }
     }
 
-    public IXamlNameResolverImplementation(Object instance) throws Throwable {
+    public IXamlNameResolverImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class IXamlNameResolverImplementation extends NetObject implements IXamlN
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -144,7 +144,7 @@ public class IXamlNameResolverImplementation extends NetObject implements IXamlN
         }
     }
 
-    public NetObject Resolve(java.lang.String name, JCORefOut isFullyInitialized) throws Throwable {
+    public NetObject Resolve(java.lang.String name, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> isFullyInitialized) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

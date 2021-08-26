@@ -105,7 +105,7 @@ public class DsmlSoapHttpConnection extends DsmlSoapConnection  {
         }
     }
 
-    public DsmlSoapHttpConnection(Object instance) throws Throwable {
+    public DsmlSoapHttpConnection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -125,7 +125,7 @@ public class DsmlSoapHttpConnection extends DsmlSoapConnection  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

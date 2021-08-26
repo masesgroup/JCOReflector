@@ -94,7 +94,7 @@ public class IChannelSinkBaseImplementation extends NetObject implements IChanne
         }
     }
 
-    public IChannelSinkBaseImplementation(Object instance) throws Throwable {
+    public IChannelSinkBaseImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class IChannelSinkBaseImplementation extends NetObject implements IChanne
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

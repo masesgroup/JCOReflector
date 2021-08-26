@@ -108,7 +108,7 @@ public class RichTextBoxSelectionAttribute extends NetObject  {
         }
     }
 
-    public RichTextBoxSelectionAttribute(Object instance) {
+    public RichTextBoxSelectionAttribute(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class RichTextBoxSelectionAttribute extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

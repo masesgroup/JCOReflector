@@ -102,7 +102,7 @@ public class DataTableMapping extends MarshalByRefObject implements system.IClon
         }
     }
 
-    public DataTableMapping(Object instance) throws Throwable {
+    public DataTableMapping(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -122,7 +122,7 @@ public class DataTableMapping extends MarshalByRefObject implements system.IClon
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

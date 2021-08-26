@@ -99,7 +99,7 @@ public class IItemContainerGeneratorImplementation extends NetObject implements 
         }
     }
 
-    public IItemContainerGeneratorImplementation(Object instance) throws Throwable {
+    public IItemContainerGeneratorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class IItemContainerGeneratorImplementation extends NetObject implements 
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -204,7 +204,7 @@ public class IItemContainerGeneratorImplementation extends NetObject implements 
         }
     }
 
-    public DependencyObject GenerateNext(JCORefOut isNewlyRealized) throws Throwable {
+    public DependencyObject GenerateNext(JCORefOut<java.util.concurrent.atomic.AtomicBoolean> isNewlyRealized) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

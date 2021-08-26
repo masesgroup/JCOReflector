@@ -95,7 +95,7 @@ public class RC2CryptoServiceProvider extends RC2  {
         }
     }
 
-    public RC2CryptoServiceProvider(Object instance) throws Throwable {
+    public RC2CryptoServiceProvider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class RC2CryptoServiceProvider extends RC2  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

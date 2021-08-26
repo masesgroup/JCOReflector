@@ -97,7 +97,7 @@ public class HtmlInputFile extends HtmlInputControl implements system.web.ui.IPo
         }
     }
 
-    public HtmlInputFile(Object instance) throws Throwable {
+    public HtmlInputFile(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class HtmlInputFile extends HtmlInputControl implements system.web.ui.IPo
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

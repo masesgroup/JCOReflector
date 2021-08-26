@@ -100,7 +100,7 @@ public class EntityDataReader extends DbDataReader  {
         }
     }
 
-    public EntityDataReader(Object instance) throws Throwable {
+    public EntityDataReader(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class EntityDataReader extends DbDataReader  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -257,7 +257,7 @@ public class EntityDataReader extends DbDataReader  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("GetProviderSpecificValues", (Object)toObjectFromArray(values));
+            return (int)classInstance.Invoke("GetProviderSpecificValues", (java.lang.Object)toObjectFromArray(values));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -267,7 +267,7 @@ public class EntityDataReader extends DbDataReader  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("GetValues", (Object)toObjectFromArray(values));
+            return (int)classInstance.Invoke("GetValues", (java.lang.Object)toObjectFromArray(values));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

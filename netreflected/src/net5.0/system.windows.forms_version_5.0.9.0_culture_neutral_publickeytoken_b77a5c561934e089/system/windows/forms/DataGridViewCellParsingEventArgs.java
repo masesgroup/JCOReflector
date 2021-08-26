@@ -94,7 +94,7 @@ public class DataGridViewCellParsingEventArgs extends ConvertEventArgs  {
         }
     }
 
-    public DataGridViewCellParsingEventArgs(Object instance) throws Throwable {
+    public DataGridViewCellParsingEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class DataGridViewCellParsingEventArgs extends ConvertEventArgs  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

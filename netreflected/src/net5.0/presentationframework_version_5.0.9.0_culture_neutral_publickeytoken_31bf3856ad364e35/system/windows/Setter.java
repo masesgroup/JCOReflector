@@ -98,7 +98,7 @@ public class Setter extends SetterBase implements system.componentmodel.ISupport
         }
     }
 
-    public Setter(Object instance) throws Throwable {
+    public Setter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class Setter extends SetterBase implements system.componentmodel.ISupport
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -95,7 +95,7 @@ public class DbPropertyExpression extends DbExpression  {
         }
     }
 
-    public DbPropertyExpression(Object instance) throws Throwable {
+    public DbPropertyExpression(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class DbPropertyExpression extends DbExpression  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

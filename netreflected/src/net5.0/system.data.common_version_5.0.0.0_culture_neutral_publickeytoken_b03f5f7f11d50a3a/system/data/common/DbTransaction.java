@@ -98,7 +98,7 @@ public class DbTransaction extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public DbTransaction(Object instance) throws Throwable {
+    public DbTransaction(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class DbTransaction extends MarshalByRefObject implements AutoCloseable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

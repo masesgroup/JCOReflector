@@ -114,7 +114,7 @@ public class Image extends MarshalByRefObject implements system.runtime.serializ
         }
     }
 
-    public Image(Object instance) throws Throwable {
+    public Image(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -134,7 +134,7 @@ public class Image extends MarshalByRefObject implements system.runtime.serializ
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -302,11 +302,11 @@ public class Image extends MarshalByRefObject implements system.runtime.serializ
         }
     }
 
-    public RectangleF GetBounds(GraphicsUnit pageUnit) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
+    public RectangleF GetBounds(JCORefOut<GraphicsUnit> pageUnit) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetBounds = (JCObject)classInstance.Invoke("GetBounds", pageUnit == null ? null : pageUnit.getJCOInstance());
+            JCObject objGetBounds = (JCObject)classInstance.Invoke("GetBounds", pageUnit.getJCRefOut());
             return new RectangleF(objGetBounds);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -494,9 +494,9 @@ public class Image extends MarshalByRefObject implements system.runtime.serializ
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Get("PropertyIdList");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             int[] resultingArray = new int[resultingArrayList.size()];
@@ -580,7 +580,7 @@ public class Image extends MarshalByRefObject implements system.runtime.serializ
         try {
             ArrayList<PropertyItem> resultingArrayList = new ArrayList<PropertyItem>();
             JCObject resultingObjects = (JCObject)classInstance.Get("PropertyItems");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new PropertyItem(resultingObject));
             }
             PropertyItem[] resultingArray = new PropertyItem[resultingArrayList.size()];
@@ -619,7 +619,7 @@ public class Image extends MarshalByRefObject implements system.runtime.serializ
         try {
             ArrayList<Guid> resultingArrayList = new ArrayList<Guid>();
             JCObject resultingObjects = (JCObject)classInstance.Get("FrameDimensionsList");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Guid(resultingObject));
             }
             Guid[] resultingArray = new Guid[resultingArrayList.size()];

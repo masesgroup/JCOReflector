@@ -103,7 +103,7 @@ public class ITypeLibConverterImplementation extends NetObject implements ITypeL
         }
     }
 
-    public ITypeLibConverterImplementation(Object instance) throws Throwable {
+    public ITypeLibConverterImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -123,7 +123,7 @@ public class ITypeLibConverterImplementation extends NetObject implements ITypeL
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

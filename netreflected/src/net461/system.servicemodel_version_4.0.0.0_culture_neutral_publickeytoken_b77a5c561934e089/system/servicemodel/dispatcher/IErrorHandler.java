@@ -98,9 +98,9 @@ public interface IErrorHandler extends IJCOBridgeReflected {
     /**
      * Returns the instantiated class
      * 
-     * @return An {@link Object} representing the instance of the instantiated Class
+     * @return An {@link java.lang.Object} representing the instance of the instantiated Class
      */
-    public Object getJCOInstance();
+    public java.lang.Object getJCOInstance();
 
     /**
      * Returns the instantiated class Type
@@ -113,7 +113,7 @@ public interface IErrorHandler extends IJCOBridgeReflected {
     
     public boolean HandleError(NetException error) throws Throwable;
 
-    public void ProvideFault(NetException error, MessageVersion version, Message fault) throws Throwable;
+    public void ProvideFault(NetException error, MessageVersion version, JCORefOut<Message> fault) throws Throwable;
 
 
     

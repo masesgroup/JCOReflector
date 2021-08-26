@@ -96,9 +96,9 @@ public interface IListenerChannelCallback extends IJCOBridgeReflected {
     /**
      * Returns the instantiated class
      * 
-     * @return An {@link Object} representing the instance of the instantiated Class
+     * @return An {@link java.lang.Object} representing the instance of the instantiated Class
      */
-    public Object getJCOInstance();
+    public java.lang.Object getJCOInstance();
 
     /**
      * Returns the instantiated class Type
@@ -113,7 +113,7 @@ public interface IListenerChannelCallback extends IJCOBridgeReflected {
 
     public int GetId() throws Throwable;
 
-    public void GetBlob(JCORefOut buffer, int bufferSize) throws Throwable;
+    public void GetBlob(JCORefOut buffer, JCORefOut<java.util.concurrent.atomic.AtomicInteger> bufferSize) throws Throwable;
 
     public void ReportMessageReceived() throws Throwable;
 

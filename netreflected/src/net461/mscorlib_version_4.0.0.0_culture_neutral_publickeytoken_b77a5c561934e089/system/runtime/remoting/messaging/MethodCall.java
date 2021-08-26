@@ -101,7 +101,7 @@ public class MethodCall extends NetObject  {
         }
     }
 
-    public MethodCall(Object instance) throws Throwable {
+    public MethodCall(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -121,7 +121,7 @@ public class MethodCall extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -153,7 +153,7 @@ public class MethodCall extends NetObject  {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((Object)toObjectFromArray(h1)));
+            setJCOInstance((JCObject)classType.NewObject((java.lang.Object)toObjectFromArray(h1)));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -200,7 +200,7 @@ public class MethodCall extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objHeaderHandler = (JCObject)classInstance.Invoke("HeaderHandler", (Object)toObjectFromArray(h));
+            JCObject objHeaderHandler = (JCObject)classInstance.Invoke("HeaderHandler", (java.lang.Object)toObjectFromArray(h));
             return new NetObject(objHeaderHandler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -329,7 +329,7 @@ public class MethodCall extends NetObject  {
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
             JCObject resultingObjects = (JCObject)classInstance.Get("Args");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
@@ -346,7 +346,7 @@ public class MethodCall extends NetObject  {
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
             JCObject resultingObjects = (JCObject)classInstance.Get("InArgs");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];

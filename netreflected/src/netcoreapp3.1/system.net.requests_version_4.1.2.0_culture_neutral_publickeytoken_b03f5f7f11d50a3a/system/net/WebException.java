@@ -101,7 +101,7 @@ public class WebException extends InvalidOperationException {
         super();
     }
 
-    public WebException(Object instance) {
+    public WebException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -135,7 +135,7 @@ public class WebException extends InvalidOperationException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

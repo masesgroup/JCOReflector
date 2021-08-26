@@ -96,7 +96,7 @@ public class SearchResultAttributeCollection extends DictionaryBase  {
         }
     }
 
-    public SearchResultAttributeCollection(Object instance) throws Throwable {
+    public SearchResultAttributeCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class SearchResultAttributeCollection extends DictionaryBase  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

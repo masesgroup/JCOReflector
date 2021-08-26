@@ -92,7 +92,7 @@ public class IExecutionPropertyImplementation extends NetObject implements IExec
         }
     }
 
-    public IExecutionPropertyImplementation(Object instance) throws Throwable {
+    public IExecutionPropertyImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class IExecutionPropertyImplementation extends NetObject implements IExec
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -96,7 +96,7 @@ public class HttpStaticObjectsCollectionWrapper extends HttpStaticObjectsCollect
         }
     }
 
-    public HttpStaticObjectsCollectionWrapper(Object instance) throws Throwable {
+    public HttpStaticObjectsCollectionWrapper(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class HttpStaticObjectsCollectionWrapper extends HttpStaticObjectsCollect
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

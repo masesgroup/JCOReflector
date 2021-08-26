@@ -94,7 +94,7 @@ public class DirectoryAttribute extends CollectionBase  {
         }
     }
 
-    public DirectoryAttribute(Object instance) throws Throwable {
+    public DirectoryAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class DirectoryAttribute extends CollectionBase  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -207,7 +207,7 @@ public class DirectoryAttribute extends CollectionBase  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("Add", (Object)value);
+            return (int)classInstance.Invoke("Add", (java.lang.Object)value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -217,7 +217,7 @@ public class DirectoryAttribute extends CollectionBase  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("Add", (Object)dupParam0.getJCRefOut());
+            return (int)classInstance.Invoke("Add", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,7 +259,7 @@ public class DirectoryAttribute extends CollectionBase  {
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetValues", valuesType == null ? null : valuesType.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
@@ -274,7 +274,7 @@ public class DirectoryAttribute extends CollectionBase  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddRange", (Object)toObjectFromArray(values));
+            classInstance.Invoke("AddRange", (java.lang.Object)toObjectFromArray(values));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

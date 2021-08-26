@@ -97,7 +97,7 @@ public class IBindCtxImplementation extends NetObject implements IBindCtx {
         }
     }
 
-    public IBindCtxImplementation(Object instance) throws Throwable {
+    public IBindCtxImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class IBindCtxImplementation extends NetObject implements IBindCtx {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -157,11 +157,11 @@ public class IBindCtxImplementation extends NetObject implements IBindCtx {
         }
     }
 
-    public void GetBindOptions(BIND_OPTS pbindopts) throws Throwable {
+    public void GetBindOptions(JCORefOut<BIND_OPTS> pbindopts) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("GetBindOptions", pbindopts == null ? null : pbindopts.getJCOInstance());
+            classInstance.Invoke("GetBindOptions", pbindopts.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -227,11 +227,11 @@ public class IBindCtxImplementation extends NetObject implements IBindCtx {
         }
     }
 
-    public void SetBindOptions(BIND_OPTS pbindopts) throws Throwable {
+    public void SetBindOptions(JCORefOut<BIND_OPTS> pbindopts) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetBindOptions", pbindopts == null ? null : pbindopts.getJCOInstance());
+            classInstance.Invoke("SetBindOptions", pbindopts.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

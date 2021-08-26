@@ -98,7 +98,7 @@ public class SoapServerMethod extends NetObject  {
         }
     }
 
-    public SoapServerMethod(Object instance) throws Throwable {
+    public SoapServerMethod(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class SoapServerMethod extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -229,7 +229,7 @@ public class SoapServerMethod extends NetObject  {
         try {
             ArrayList<SoapHeaderMapping> resultingArrayList = new ArrayList<SoapHeaderMapping>();
             JCObject resultingObjects = (JCObject)classInstance.Get("InHeaderMappings");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new SoapHeaderMapping(resultingObject));
             }
             SoapHeaderMapping[] resultingArray = new SoapHeaderMapping[resultingArrayList.size()];
@@ -246,7 +246,7 @@ public class SoapServerMethod extends NetObject  {
         try {
             ArrayList<SoapHeaderMapping> resultingArrayList = new ArrayList<SoapHeaderMapping>();
             JCObject resultingObjects = (JCObject)classInstance.Get("OutHeaderMappings");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new SoapHeaderMapping(resultingObject));
             }
             SoapHeaderMapping[] resultingArray = new SoapHeaderMapping[resultingArrayList.size()];

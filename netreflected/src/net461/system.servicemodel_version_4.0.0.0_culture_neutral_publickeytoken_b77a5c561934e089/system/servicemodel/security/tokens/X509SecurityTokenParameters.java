@@ -95,7 +95,7 @@ public class X509SecurityTokenParameters extends SecurityTokenParameters  {
         }
     }
 
-    public X509SecurityTokenParameters(Object instance) throws Throwable {
+    public X509SecurityTokenParameters(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class X509SecurityTokenParameters extends SecurityTokenParameters  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

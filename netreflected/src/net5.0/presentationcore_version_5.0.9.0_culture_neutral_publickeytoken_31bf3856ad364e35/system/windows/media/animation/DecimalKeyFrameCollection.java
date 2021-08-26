@@ -96,7 +96,7 @@ public class DecimalKeyFrameCollection extends Freezable  {
         }
     }
 
-    public DecimalKeyFrameCollection(Object instance) throws Throwable {
+    public DecimalKeyFrameCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class DecimalKeyFrameCollection extends Freezable  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

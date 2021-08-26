@@ -92,7 +92,7 @@ public class IServicedComponentInfoImplementation extends NetObject implements I
         }
     }
 
-    public IServicedComponentInfoImplementation(Object instance) throws Throwable {
+    public IServicedComponentInfoImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class IServicedComponentInfoImplementation extends NetObject implements I
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -132,11 +132,11 @@ public class IServicedComponentInfoImplementation extends NetObject implements I
 
     // Methods section
     
-    public void GetComponentInfo(int infoMask, JCORefOut infoArray) throws Throwable {
+    public void GetComponentInfo(JCORefOut<java.util.concurrent.atomic.AtomicInteger> infoMask, JCORefOut infoArray) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("GetComponentInfo", infoMask, infoArray.getJCRefOut());
+            classInstance.Invoke("GetComponentInfo", infoMask.getJCRefOut(), infoArray.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

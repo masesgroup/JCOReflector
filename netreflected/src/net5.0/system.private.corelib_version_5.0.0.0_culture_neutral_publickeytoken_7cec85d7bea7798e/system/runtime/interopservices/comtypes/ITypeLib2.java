@@ -104,9 +104,9 @@ public interface ITypeLib2 extends IJCOBridgeReflected, ITypeLib {
     /**
      * Returns the instantiated class
      * 
-     * @return An {@link Object} representing the instance of the instantiated Class
+     * @return An {@link java.lang.Object} representing the instance of the instantiated Class
      */
-    public Object getJCOInstance();
+    public java.lang.Object getJCOInstance();
 
     /**
      * Returns the instantiated class Type
@@ -121,19 +121,19 @@ public interface ITypeLib2 extends IJCOBridgeReflected, ITypeLib {
 
     public int GetTypeInfoCount() throws Throwable;
 
-    public void FindName(java.lang.String szNameBuf, int lHashVal, JCORefOut<ITypeInfo[]> ppTInfo, JCORefOut rgMemId, short pcFound) throws Throwable;
+    public void FindName(java.lang.String szNameBuf, int lHashVal, JCORefOut<ITypeInfo[]> ppTInfo, JCORefOut rgMemId, JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Short>> pcFound) throws Throwable;
 
-    public void GetCustData(Guid guid, JCORefOut<NetObject> pVarVal) throws Throwable;
+    public void GetCustData(JCORefOut<Guid> guid, JCORefOut<NetObject> pVarVal) throws Throwable;
 
-    public void GetDocumentation(int index, JCORefOut strName, JCORefOut strDocString, JCORefOut dwHelpContext, JCORefOut strHelpFile) throws Throwable;
+    public void GetDocumentation(int index, JCORefOut strName, JCORefOut strDocString, JCORefOut<java.util.concurrent.atomic.AtomicInteger> dwHelpContext, JCORefOut strHelpFile) throws Throwable;
 
-    public void GetDocumentation2(int index, JCORefOut pbstrHelpString, JCORefOut pdwHelpStringContext, JCORefOut pbstrHelpStringDll) throws Throwable;
+    public void GetDocumentation2(int index, JCORefOut pbstrHelpString, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pdwHelpStringContext, JCORefOut pbstrHelpStringDll) throws Throwable;
 
     public void GetTypeComp(JCORefOut<ITypeComp> ppTComp) throws Throwable;
 
     public void GetTypeInfo(int index, JCORefOut<ITypeInfo> ppTI) throws Throwable;
 
-    public void GetTypeInfoOfGuid(Guid guid, JCORefOut<ITypeInfo> ppTInfo) throws Throwable;
+    public void GetTypeInfoOfGuid(JCORefOut<Guid> guid, JCORefOut<ITypeInfo> ppTInfo) throws Throwable;
 
     public void GetTypeInfoType(int index, JCORefOut<TYPEKIND> pTKind) throws Throwable;
 

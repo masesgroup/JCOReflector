@@ -105,7 +105,7 @@ public class CollectionViewSource extends DependencyObject implements system.com
         }
     }
 
-    public CollectionViewSource(Object instance) throws Throwable {
+    public CollectionViewSource(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -125,7 +125,7 @@ public class CollectionViewSource extends DependencyObject implements system.com
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

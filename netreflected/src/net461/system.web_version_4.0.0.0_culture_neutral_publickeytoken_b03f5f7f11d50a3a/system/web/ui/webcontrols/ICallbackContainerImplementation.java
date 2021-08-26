@@ -94,7 +94,7 @@ public class ICallbackContainerImplementation extends NetObject implements ICall
         }
     }
 
-    public ICallbackContainerImplementation(Object instance) throws Throwable {
+    public ICallbackContainerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class ICallbackContainerImplementation extends NetObject implements ICall
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

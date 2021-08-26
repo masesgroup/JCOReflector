@@ -101,7 +101,7 @@ public class StringFormat extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public StringFormat(Object instance) throws Throwable {
+    public StringFormat(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -121,7 +121,7 @@ public class StringFormat extends MarshalByRefObject implements AutoCloseable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -196,7 +196,7 @@ public class StringFormat extends MarshalByRefObject implements AutoCloseable {
         try {
             ArrayList<Single> resultingArrayList = new ArrayList<Single>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetTabStops", firstTabOffset.getJCRefOut());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Single(resultingObject));
             }
             Single[] resultingArray = new Single[resultingArrayList.size()];
@@ -242,7 +242,7 @@ public class StringFormat extends MarshalByRefObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetMeasurableCharacterRanges", (Object)toObjectFromArray(ranges));
+            classInstance.Invoke("SetMeasurableCharacterRanges", (java.lang.Object)toObjectFromArray(ranges));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

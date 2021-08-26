@@ -93,7 +93,7 @@ public class ITokenColorInfoImplementation extends NetObject implements ITokenCo
         }
     }
 
-    public ITokenColorInfoImplementation(Object instance) throws Throwable {
+    public ITokenColorInfoImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class ITokenColorInfoImplementation extends NetObject implements ITokenCo
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

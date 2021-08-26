@@ -99,7 +99,7 @@ public class FormsAuthenticationConfiguration extends ConfigurationElement  {
         }
     }
 
-    public FormsAuthenticationConfiguration(Object instance) throws Throwable {
+    public FormsAuthenticationConfiguration(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class FormsAuthenticationConfiguration extends ConfigurationElement  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

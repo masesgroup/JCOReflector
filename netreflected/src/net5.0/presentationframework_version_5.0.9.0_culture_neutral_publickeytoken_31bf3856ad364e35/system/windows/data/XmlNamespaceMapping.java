@@ -95,7 +95,7 @@ public class XmlNamespaceMapping extends NetObject implements system.componentmo
         }
     }
 
-    public XmlNamespaceMapping(Object instance) throws Throwable {
+    public XmlNamespaceMapping(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class XmlNamespaceMapping extends NetObject implements system.componentmo
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

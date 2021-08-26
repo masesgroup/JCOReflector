@@ -93,7 +93,7 @@ public class ServerValidateEventArgs extends EventArgs  {
         }
     }
 
-    public ServerValidateEventArgs(Object instance) throws Throwable {
+    public ServerValidateEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class ServerValidateEventArgs extends EventArgs  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

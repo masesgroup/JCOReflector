@@ -108,7 +108,7 @@ public class FontEmbeddingRight extends NetObject  {
         }
     }
 
-    public FontEmbeddingRight(Object instance) {
+    public FontEmbeddingRight(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class FontEmbeddingRight extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

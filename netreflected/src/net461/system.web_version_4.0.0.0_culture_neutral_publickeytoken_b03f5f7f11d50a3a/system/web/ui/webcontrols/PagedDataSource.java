@@ -95,7 +95,7 @@ public class PagedDataSource extends NetObjectEnumerable  {
         }
     }
 
-    public PagedDataSource(Object instance) throws Throwable {
+    public PagedDataSource(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class PagedDataSource extends NetObjectEnumerable  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -158,7 +158,7 @@ public class PagedDataSource extends NetObjectEnumerable  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetItemProperties = (JCObject)classInstance.Invoke("GetItemProperties", (Object)toObjectFromArray(listAccessors));
+            JCObject objGetItemProperties = (JCObject)classInstance.Invoke("GetItemProperties", (java.lang.Object)toObjectFromArray(listAccessors));
             return new PropertyDescriptorCollection(objGetItemProperties);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -169,7 +169,7 @@ public class PagedDataSource extends NetObjectEnumerable  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Invoke("GetListName", (Object)toObjectFromArray(listAccessors));
+            return (java.lang.String)classInstance.Invoke("GetListName", (java.lang.Object)toObjectFromArray(listAccessors));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -99,7 +99,7 @@ public class TrackingProfileDeserializationException extends SystemException {
         super();
     }
 
-    public TrackingProfileDeserializationException(Object instance) {
+    public TrackingProfileDeserializationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -133,7 +133,7 @@ public class TrackingProfileDeserializationException extends SystemException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

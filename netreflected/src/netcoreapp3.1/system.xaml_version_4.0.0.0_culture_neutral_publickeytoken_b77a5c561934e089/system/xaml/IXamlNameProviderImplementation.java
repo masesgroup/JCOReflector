@@ -92,7 +92,7 @@ public class IXamlNameProviderImplementation extends NetObject implements IXamlN
         }
     }
 
-    public IXamlNameProviderImplementation(Object instance) throws Throwable {
+    public IXamlNameProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class IXamlNameProviderImplementation extends NetObject implements IXamlN
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

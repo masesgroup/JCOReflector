@@ -119,7 +119,7 @@ public class ActivityDesigner extends NetObject implements system.componentmodel
         }
     }
 
-    public ActivityDesigner(Object instance) throws Throwable {
+    public ActivityDesigner(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -139,7 +139,7 @@ public class ActivityDesigner extends NetObject implements system.componentmodel
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

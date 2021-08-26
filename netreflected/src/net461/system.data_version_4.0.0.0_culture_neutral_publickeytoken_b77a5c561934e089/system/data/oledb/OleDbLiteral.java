@@ -108,7 +108,7 @@ public class OleDbLiteral extends NetObject  {
         }
     }
 
-    public OleDbLiteral(Object instance) {
+    public OleDbLiteral(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class OleDbLiteral extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

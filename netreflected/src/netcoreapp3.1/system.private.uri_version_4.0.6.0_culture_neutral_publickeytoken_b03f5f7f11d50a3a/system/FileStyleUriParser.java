@@ -93,7 +93,7 @@ public class FileStyleUriParser extends UriParser  {
         }
     }
 
-    public FileStyleUriParser(Object instance) throws Throwable {
+    public FileStyleUriParser(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class FileStyleUriParser extends UriParser  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -100,7 +100,7 @@ public class PrintSystemJobInfo extends PrintSystemObject  {
         }
     }
 
-    public PrintSystemJobInfo(Object instance) throws Throwable {
+    public PrintSystemJobInfo(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class PrintSystemJobInfo extends PrintSystemObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

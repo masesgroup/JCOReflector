@@ -96,7 +96,7 @@ public class DoubleAnimationUsingPath extends DoubleAnimationBase  {
         }
     }
 
-    public DoubleAnimationUsingPath(Object instance) throws Throwable {
+    public DoubleAnimationUsingPath(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class DoubleAnimationUsingPath extends DoubleAnimationBase  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

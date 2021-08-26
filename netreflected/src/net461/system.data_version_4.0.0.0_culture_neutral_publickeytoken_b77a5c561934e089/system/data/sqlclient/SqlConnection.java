@@ -113,7 +113,7 @@ public class SqlConnection extends DbConnection implements system.ICloneable {
         }
     }
 
-    public SqlConnection(Object instance) throws Throwable {
+    public SqlConnection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -133,7 +133,7 @@ public class SqlConnection extends DbConnection implements system.ICloneable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

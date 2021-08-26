@@ -97,7 +97,7 @@ public class CollectionModelBinderProvider extends ModelBinderProvider  {
         }
     }
 
-    public CollectionModelBinderProvider(Object instance) throws Throwable {
+    public CollectionModelBinderProvider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class CollectionModelBinderProvider extends ModelBinderProvider  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

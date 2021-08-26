@@ -99,7 +99,7 @@ public class DynamicScriptObject extends DynamicObject  {
         }
     }
 
-    public DynamicScriptObject(Object instance) throws Throwable {
+    public DynamicScriptObject(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class DynamicScriptObject extends DynamicObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

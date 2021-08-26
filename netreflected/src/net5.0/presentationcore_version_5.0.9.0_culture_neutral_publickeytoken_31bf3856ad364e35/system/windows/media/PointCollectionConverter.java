@@ -96,7 +96,7 @@ public class PointCollectionConverter extends TypeConverter  {
         }
     }
 
-    public PointCollectionConverter(Object instance) throws Throwable {
+    public PointCollectionConverter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class PointCollectionConverter extends TypeConverter  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

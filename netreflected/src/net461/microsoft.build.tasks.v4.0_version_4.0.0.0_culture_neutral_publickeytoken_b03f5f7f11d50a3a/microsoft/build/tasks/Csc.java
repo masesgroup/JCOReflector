@@ -93,7 +93,7 @@ public class Csc extends ManagedCompiler  {
         }
     }
 
-    public Csc(Object instance) throws Throwable {
+    public Csc(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class Csc extends ManagedCompiler  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

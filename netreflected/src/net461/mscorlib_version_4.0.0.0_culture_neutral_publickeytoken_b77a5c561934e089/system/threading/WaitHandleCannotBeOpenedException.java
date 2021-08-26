@@ -97,7 +97,7 @@ public class WaitHandleCannotBeOpenedException extends ApplicationException {
         super();
     }
 
-    public WaitHandleCannotBeOpenedException(Object instance) {
+    public WaitHandleCannotBeOpenedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class WaitHandleCannotBeOpenedException extends ApplicationException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

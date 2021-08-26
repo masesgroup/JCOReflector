@@ -108,7 +108,7 @@ public class ExtendedDN extends NetObject  {
         }
     }
 
-    public ExtendedDN(Object instance) {
+    public ExtendedDN(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class ExtendedDN extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

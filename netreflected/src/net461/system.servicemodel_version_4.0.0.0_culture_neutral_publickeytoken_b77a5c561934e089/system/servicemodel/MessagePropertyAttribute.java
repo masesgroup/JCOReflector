@@ -93,7 +93,7 @@ public class MessagePropertyAttribute extends Attribute  {
         }
     }
 
-    public MessagePropertyAttribute(Object instance) throws Throwable {
+    public MessagePropertyAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class MessagePropertyAttribute extends Attribute  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

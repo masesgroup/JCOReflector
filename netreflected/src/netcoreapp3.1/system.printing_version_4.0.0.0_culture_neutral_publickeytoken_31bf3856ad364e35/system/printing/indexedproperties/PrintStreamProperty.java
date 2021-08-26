@@ -93,7 +93,7 @@ public class PrintStreamProperty extends PrintProperty  {
         }
     }
 
-    public PrintStreamProperty(Object instance) throws Throwable {
+    public PrintStreamProperty(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class PrintStreamProperty extends PrintProperty  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -98,7 +98,7 @@ public class CustomPopupPlacementCallback extends JCDelegate implements IJCEvent
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return this;
     }
 
@@ -106,7 +106,7 @@ public class CustomPopupPlacementCallback extends JCDelegate implements IJCEvent
         return classType;
     }
 
-    public final Object EventRaised(Object... argsFromJCOBridge) {
+    public final java.lang.Object EventRaised(java.lang.Object... argsFromJCOBridge) {
         try
         {
             Size popupSize = argsFromJCOBridge[0] == null ? null : new Size(argsFromJCOBridge[0]);
@@ -121,11 +121,11 @@ public class CustomPopupPlacementCallback extends JCDelegate implements IJCEvent
                 retVal = Invoke(popupSize, targetSize, offset);
             }
             if (retVal == null) return retVal;
-            ArrayList<Object> retValJCArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> retValJCArrayList = new ArrayList<java.lang.Object>();
             for (CustomPopupPlacement retValJCObject : retVal) {
                 retValJCArrayList.add(retValJCObject.getJCOInstance());
             }
-            return (Object)retValJCArrayList.toArray();
+            return (java.lang.Object)retValJCArrayList.toArray();
         }
         catch (Throwable throwableFromJCEvent)
         {
@@ -134,7 +134,7 @@ public class CustomPopupPlacementCallback extends JCDelegate implements IJCEvent
         }
     }
 
-    public final Object DelegateInvoked(Object... argsFromJCOBridge) {
+    public final java.lang.Object DelegateInvoked(java.lang.Object... argsFromJCOBridge) {
         try
         {
             Size popupSize = argsFromJCOBridge[0] == null ? null : new Size(argsFromJCOBridge[0]);
@@ -149,11 +149,11 @@ public class CustomPopupPlacementCallback extends JCDelegate implements IJCEvent
                 retVal = Invoke(popupSize, targetSize, offset);
             }
             if (retVal == null) return retVal;
-            ArrayList<Object> retValJCArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> retValJCArrayList = new ArrayList<java.lang.Object>();
             for (CustomPopupPlacement retValJCObject : retVal) {
                 retValJCArrayList.add(retValJCObject.getJCOInstance());
             }
-            return (Object)retValJCArrayList.toArray();
+            return (java.lang.Object)retValJCArrayList.toArray();
         }
         catch (Throwable throwableFromJCEvent)
         {
@@ -171,7 +171,7 @@ public class CustomPopupPlacementCallback extends JCDelegate implements IJCEvent
         callerInstance = instance;
     }
 
-    public CustomPopupPlacementCallback(Object instance) throws Throwable {
+    public CustomPopupPlacementCallback(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         if (instance == null) throw new IllegalArgumentException("Instance cannot be null");
         if (instance instanceof ICustomPopupPlacementCallback) {
@@ -183,7 +183,7 @@ public class CustomPopupPlacementCallback extends JCDelegate implements IJCEvent
                     String.format("Class %s is not supported.", instance.getClass().getTypeName()));
     }
 
-    protected final static <T extends IJCOBridgeReflected> Object toObjectFromArray(T[] input) {
+    protected final static <T extends IJCOBridgeReflected> java.lang.Object toObjectFromArray(T[] input) {
         return JCOBridgeInstance.toObjectFromArray(input);
     }
 
@@ -197,7 +197,7 @@ public class CustomPopupPlacementCallback extends JCDelegate implements IJCEvent
         try {
             ArrayList<CustomPopupPlacement> resultingArrayList = new ArrayList<CustomPopupPlacement>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("DynamicInvoke", popupSize == null ? null : popupSize.getJCOInstance(), targetSize == null ? null : targetSize.getJCOInstance(), offset == null ? null : offset.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new CustomPopupPlacement(resultingObject));
             }
             CustomPopupPlacement[] resultingArray = new CustomPopupPlacement[resultingArrayList.size()];

@@ -101,7 +101,7 @@ public class IEngine2Implementation extends NetObject implements IEngine2 {
         }
     }
 
-    public IEngine2Implementation(Object instance) throws Throwable {
+    public IEngine2Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -121,7 +121,7 @@ public class IEngine2Implementation extends NetObject implements IEngine2 {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

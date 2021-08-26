@@ -105,7 +105,7 @@ public class SqlGuid extends ValueType implements system.xml.serialization.IXmlS
         }
     }
 
-    public SqlGuid(Object instance) throws Throwable {
+    public SqlGuid(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -125,7 +125,7 @@ public class SqlGuid extends ValueType implements system.xml.serialization.IXmlS
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -157,7 +157,7 @@ public class SqlGuid extends ValueType implements system.xml.serialization.IXmlS
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((Object)value));
+            setJCOInstance((JCObject)classType.NewObject((java.lang.Object)value));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,9 +202,9 @@ public class SqlGuid extends ValueType implements system.xml.serialization.IXmlS
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("ToByteArray");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];

@@ -102,7 +102,7 @@ public class WindowsFormsApplicationBase extends ConsoleApplicationBase  {
         }
     }
 
-    public WindowsFormsApplicationBase(Object instance) throws Throwable {
+    public WindowsFormsApplicationBase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -122,7 +122,7 @@ public class WindowsFormsApplicationBase extends ConsoleApplicationBase  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -185,7 +185,7 @@ public class WindowsFormsApplicationBase extends ConsoleApplicationBase  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Run", (Object)commandLine);
+            classInstance.Invoke("Run", (java.lang.Object)commandLine);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -195,7 +195,7 @@ public class WindowsFormsApplicationBase extends ConsoleApplicationBase  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Run", (Object)dupParam0.getJCRefOut());
+            classInstance.Invoke("Run", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

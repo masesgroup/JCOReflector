@@ -97,7 +97,7 @@ public class XamlParseException extends XamlException {
         super();
     }
 
-    public XamlParseException(Object instance) {
+    public XamlParseException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class XamlParseException extends XamlException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -108,7 +108,7 @@ public class NotifyCollectionChangedAction extends NetObject  {
         }
     }
 
-    public NotifyCollectionChangedAction(Object instance) {
+    public NotifyCollectionChangedAction(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class NotifyCollectionChangedAction extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

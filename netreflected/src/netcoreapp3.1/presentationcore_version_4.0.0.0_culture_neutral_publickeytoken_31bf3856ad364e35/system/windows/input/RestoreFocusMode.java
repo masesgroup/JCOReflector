@@ -108,7 +108,7 @@ public class RestoreFocusMode extends NetObject  {
         }
     }
 
-    public RestoreFocusMode(Object instance) {
+    public RestoreFocusMode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class RestoreFocusMode extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

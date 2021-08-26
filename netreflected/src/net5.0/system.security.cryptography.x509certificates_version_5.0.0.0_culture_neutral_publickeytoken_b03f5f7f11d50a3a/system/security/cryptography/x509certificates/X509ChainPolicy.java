@@ -100,7 +100,7 @@ public class X509ChainPolicy extends NetObject  {
         }
     }
 
-    public X509ChainPolicy(Object instance) throws Throwable {
+    public X509ChainPolicy(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class X509ChainPolicy extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -25,7 +25,6 @@
 package refout
 
 import org.mases.jcobridge.netreflection._
-
 import java.util.concurrent.atomic._
 
 object HelloRefOutBase {
@@ -92,11 +91,11 @@ object HelloRefOutBase {
         isOK &= false
       }
       System.exit(if (isOK) 0
-      else 1)
+      else -1)
     } catch {
       case tre: Throwable =>
         tre.printStackTrace()
-        System.exit(1)
+        System.exit(-1)
     }
   }
 }

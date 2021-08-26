@@ -95,7 +95,7 @@ public class DeleteIndexBinder extends DynamicMetaObjectBinder  {
         }
     }
 
-    public DeleteIndexBinder(Object instance) throws Throwable {
+    public DeleteIndexBinder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class DeleteIndexBinder extends DynamicMetaObjectBinder  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

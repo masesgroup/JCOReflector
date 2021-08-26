@@ -96,7 +96,7 @@ public class EventSetterHandlerConverter extends TypeConverter  {
         }
     }
 
-    public EventSetterHandlerConverter(Object instance) throws Throwable {
+    public EventSetterHandlerConverter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class EventSetterHandlerConverter extends TypeConverter  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

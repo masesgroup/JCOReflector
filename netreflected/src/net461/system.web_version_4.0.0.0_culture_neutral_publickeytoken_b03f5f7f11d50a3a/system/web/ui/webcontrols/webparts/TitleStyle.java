@@ -93,7 +93,7 @@ public class TitleStyle extends TableItemStyle  {
         }
     }
 
-    public TitleStyle(Object instance) throws Throwable {
+    public TitleStyle(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class TitleStyle extends TableItemStyle  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

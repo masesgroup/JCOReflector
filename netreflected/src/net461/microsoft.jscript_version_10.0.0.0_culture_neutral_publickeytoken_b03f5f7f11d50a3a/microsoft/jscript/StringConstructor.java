@@ -94,7 +94,7 @@ public class StringConstructor extends ScriptFunction  {
         }
     }
 
-    public StringConstructor(Object instance) throws Throwable {
+    public StringConstructor(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class StringConstructor extends ScriptFunction  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -151,7 +151,7 @@ public class StringConstructor extends ScriptFunction  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateInstance = (JCObject)classInstance.Invoke("CreateInstance", (Object)toObjectFromArray(args));
+            JCObject objCreateInstance = (JCObject)classInstance.Invoke("CreateInstance", (java.lang.Object)toObjectFromArray(args));
             return new StringObject(objCreateInstance);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -162,7 +162,7 @@ public class StringConstructor extends ScriptFunction  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (java.lang.String)classType.Invoke("fromCharCode", (Object)toObjectFromArray(args));
+            return (java.lang.String)classType.Invoke("fromCharCode", (java.lang.Object)toObjectFromArray(args));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

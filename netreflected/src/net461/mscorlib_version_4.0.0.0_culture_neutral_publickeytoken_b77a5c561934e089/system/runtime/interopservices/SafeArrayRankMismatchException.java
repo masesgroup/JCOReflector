@@ -97,7 +97,7 @@ public class SafeArrayRankMismatchException extends SystemException {
         super();
     }
 
-    public SafeArrayRankMismatchException(Object instance) {
+    public SafeArrayRankMismatchException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class SafeArrayRankMismatchException extends SystemException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

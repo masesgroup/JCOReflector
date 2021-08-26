@@ -95,7 +95,7 @@ public class AxParameterData extends NetObject  {
         }
     }
 
-    public AxParameterData(Object instance) throws Throwable {
+    public AxParameterData(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class AxParameterData extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -193,8 +193,8 @@ public class AxParameterData extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             ArrayList<AxParameterData> resultingArrayList = new ArrayList<AxParameterData>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("Convert", (Object)toObjectFromArray(infos));
-            for (Object resultingObject : resultingObjects) {
+            JCObject resultingObjects = (JCObject)classType.Invoke("Convert", (java.lang.Object)toObjectFromArray(infos));
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new AxParameterData(resultingObject));
             }
             AxParameterData[] resultingArray = new AxParameterData[resultingArrayList.size()];
@@ -211,7 +211,7 @@ public class AxParameterData extends NetObject  {
         try {
             ArrayList<AxParameterData> resultingArrayList = new ArrayList<AxParameterData>();
             JCObject resultingObjects = (JCObject)classType.Invoke("Convert", toObjectFromArray(infos), ignoreByRefs);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new AxParameterData(resultingObject));
             }
             AxParameterData[] resultingArray = new AxParameterData[resultingArrayList.size()];

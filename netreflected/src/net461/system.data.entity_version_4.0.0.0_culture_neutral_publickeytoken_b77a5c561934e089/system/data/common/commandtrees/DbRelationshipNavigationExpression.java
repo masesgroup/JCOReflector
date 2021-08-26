@@ -96,7 +96,7 @@ public class DbRelationshipNavigationExpression extends DbExpression  {
         }
     }
 
-    public DbRelationshipNavigationExpression(Object instance) throws Throwable {
+    public DbRelationshipNavigationExpression(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class DbRelationshipNavigationExpression extends DbExpression  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

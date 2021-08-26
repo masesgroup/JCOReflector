@@ -93,7 +93,7 @@ public class ComponentDispatcher extends NetObject  {
         }
     }
 
-    public ComponentDispatcher(Object instance) throws Throwable {
+    public ComponentDispatcher(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class ComponentDispatcher extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -144,11 +144,11 @@ public class ComponentDispatcher extends NetObject  {
     
     // Methods section
     
-    public static boolean RaiseThreadMessage(MSG msg) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException {
+    public static boolean RaiseThreadMessage(JCORefOut<MSG> msg) throws Throwable, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classType.Invoke("RaiseThreadMessage", msg == null ? null : msg.getJCOInstance());
+            return (boolean)classType.Invoke("RaiseThreadMessage", msg.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

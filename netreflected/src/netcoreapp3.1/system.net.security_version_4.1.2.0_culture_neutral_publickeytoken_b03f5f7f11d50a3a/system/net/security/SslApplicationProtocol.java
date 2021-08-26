@@ -94,7 +94,7 @@ public class SslApplicationProtocol extends ValueType  {
         }
     }
 
-    public SslApplicationProtocol(Object instance) throws Throwable {
+    public SslApplicationProtocol(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class SslApplicationProtocol extends ValueType  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -146,7 +146,7 @@ public class SslApplicationProtocol extends ValueType  {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((Object)protocol));
+            setJCOInstance((JCObject)classType.NewObject((java.lang.Object)protocol));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

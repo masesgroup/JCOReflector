@@ -96,7 +96,7 @@ public class IMultipleDragEnabledCompositeViewImplementation extends NetObject i
         }
     }
 
-    public IMultipleDragEnabledCompositeViewImplementation(Object instance) throws Throwable {
+    public IMultipleDragEnabledCompositeViewImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class IMultipleDragEnabledCompositeViewImplementation extends NetObject i
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

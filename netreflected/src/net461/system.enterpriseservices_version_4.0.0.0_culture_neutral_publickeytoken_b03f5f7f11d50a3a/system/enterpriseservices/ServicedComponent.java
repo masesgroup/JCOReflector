@@ -98,7 +98,7 @@ public class ServicedComponent extends ContextBoundObject implements system.ente
         }
     }
 
-    public ServicedComponent(Object instance) throws Throwable {
+    public ServicedComponent(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class ServicedComponent extends ContextBoundObject implements system.ente
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -192,7 +192,7 @@ public class ServicedComponent extends ContextBoundObject implements system.ente
      *    Use the static ToIServicedComponentInfo method available in IServicedComponentInfo to obtain an object with an invocable method
      */
     @Deprecated 
-    public void GetComponentInfo(int infoMask, JCORefOut infoArray) throws Throwable {
+    public void GetComponentInfo(JCORefOut<java.util.concurrent.atomic.AtomicInteger> infoMask, JCORefOut infoArray) throws Throwable {
         throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIServicedComponentInfo to obtain the full interface.");
     }
 

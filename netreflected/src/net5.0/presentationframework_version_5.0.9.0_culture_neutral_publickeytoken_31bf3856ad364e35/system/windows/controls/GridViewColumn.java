@@ -97,7 +97,7 @@ public class GridViewColumn extends DependencyObject  {
         }
     }
 
-    public GridViewColumn(Object instance) throws Throwable {
+    public GridViewColumn(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class GridViewColumn extends DependencyObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

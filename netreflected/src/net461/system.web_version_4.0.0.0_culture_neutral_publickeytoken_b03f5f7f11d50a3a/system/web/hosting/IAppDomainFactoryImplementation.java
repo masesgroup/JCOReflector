@@ -92,7 +92,7 @@ public class IAppDomainFactoryImplementation extends NetObject implements IAppDo
         }
     }
 
-    public IAppDomainFactoryImplementation(Object instance) throws Throwable {
+    public IAppDomainFactoryImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class IAppDomainFactoryImplementation extends NetObject implements IAppDo
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

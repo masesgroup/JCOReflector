@@ -98,7 +98,7 @@ public class XamlException extends NetException {
         super();
     }
 
-    public XamlException(Object instance) {
+    public XamlException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -132,7 +132,7 @@ public class XamlException extends NetException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

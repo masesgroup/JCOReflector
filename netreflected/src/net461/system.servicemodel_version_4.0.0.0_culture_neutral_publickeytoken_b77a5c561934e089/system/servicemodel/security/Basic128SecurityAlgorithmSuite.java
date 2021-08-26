@@ -93,7 +93,7 @@ public class Basic128SecurityAlgorithmSuite extends SecurityAlgorithmSuite  {
         }
     }
 
-    public Basic128SecurityAlgorithmSuite(Object instance) throws Throwable {
+    public Basic128SecurityAlgorithmSuite(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class Basic128SecurityAlgorithmSuite extends SecurityAlgorithmSuite  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

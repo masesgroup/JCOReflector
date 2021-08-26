@@ -94,7 +94,7 @@ public class TableRowCollection extends NetObjectEnumerable  {
         }
     }
 
-    public TableRowCollection(Object instance) throws Throwable {
+    public TableRowCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class TableRowCollection extends NetObjectEnumerable  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -181,7 +181,7 @@ public class TableRowCollection extends NetObjectEnumerable  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddRange", (Object)toObjectFromArray(rows));
+            classInstance.Invoke("AddRange", (java.lang.Object)toObjectFromArray(rows));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

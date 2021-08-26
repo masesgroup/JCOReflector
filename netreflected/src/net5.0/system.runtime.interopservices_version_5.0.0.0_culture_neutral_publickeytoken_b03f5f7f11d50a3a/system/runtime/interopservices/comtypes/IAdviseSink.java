@@ -100,9 +100,9 @@ public interface IAdviseSink extends IJCOBridgeReflected {
     /**
      * Returns the instantiated class
      * 
-     * @return An {@link Object} representing the instance of the instantiated Class
+     * @return An {@link java.lang.Object} representing the instance of the instantiated Class
      */
-    public Object getJCOInstance();
+    public java.lang.Object getJCOInstance();
 
     /**
      * Returns the instantiated class Type
@@ -115,7 +115,7 @@ public interface IAdviseSink extends IJCOBridgeReflected {
     
     public void OnClose() throws Throwable;
 
-    public void OnDataChange(FORMATETC format, STGMEDIUM stgmedium) throws Throwable;
+    public void OnDataChange(JCORefOut<FORMATETC> format, JCORefOut<STGMEDIUM> stgmedium) throws Throwable;
 
     public void OnRename(IMoniker moniker) throws Throwable;
 

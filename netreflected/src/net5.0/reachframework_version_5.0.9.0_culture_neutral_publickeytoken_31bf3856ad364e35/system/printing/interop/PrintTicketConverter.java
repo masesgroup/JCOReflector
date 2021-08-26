@@ -95,7 +95,7 @@ public class PrintTicketConverter extends NetObject implements AutoCloseable {
         }
     }
 
-    public PrintTicketConverter(Object instance) throws Throwable {
+    public PrintTicketConverter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class PrintTicketConverter extends NetObject implements AutoCloseable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -162,9 +162,9 @@ public class PrintTicketConverter extends NetObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("ConvertPrintTicketToDevMode", printTicket == null ? null : printTicket.getJCOInstance(), baseType == null ? null : baseType.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -181,9 +181,9 @@ public class PrintTicketConverter extends NetObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("ConvertPrintTicketToDevMode", printTicket == null ? null : printTicket.getJCOInstance(), baseType == null ? null : baseType.getJCOInstance(), scope == null ? null : scope.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -200,7 +200,7 @@ public class PrintTicketConverter extends NetObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objConvertDevModeToPrintTicket = (JCObject)classInstance.Invoke("ConvertDevModeToPrintTicket", (Object)devMode);
+            JCObject objConvertDevModeToPrintTicket = (JCObject)classInstance.Invoke("ConvertDevModeToPrintTicket", (java.lang.Object)devMode);
             return new PrintTicket(objConvertDevModeToPrintTicket);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -211,7 +211,7 @@ public class PrintTicketConverter extends NetObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objConvertDevModeToPrintTicket = (JCObject)classInstance.Invoke("ConvertDevModeToPrintTicket", (Object)dupParam0.getJCRefOut());
+            JCObject objConvertDevModeToPrintTicket = (JCObject)classInstance.Invoke("ConvertDevModeToPrintTicket", (java.lang.Object)dupParam0.getJCRefOut());
             return new PrintTicket(objConvertDevModeToPrintTicket);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

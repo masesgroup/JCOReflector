@@ -94,7 +94,7 @@ public class IEntityWithChangeTrackerImplementation extends NetObject implements
         }
     }
 
-    public IEntityWithChangeTrackerImplementation(Object instance) throws Throwable {
+    public IEntityWithChangeTrackerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class IEntityWithChangeTrackerImplementation extends NetObject implements
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -96,7 +96,7 @@ public class JsonContent extends HttpContent  {
         }
     }
 
-    public JsonContent(Object instance) throws Throwable {
+    public JsonContent(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class JsonContent extends HttpContent  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

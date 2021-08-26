@@ -99,7 +99,7 @@ public class ProtocolViolationException extends InvalidOperationException {
         super();
     }
 
-    public ProtocolViolationException(Object instance) {
+    public ProtocolViolationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -133,7 +133,7 @@ public class ProtocolViolationException extends InvalidOperationException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

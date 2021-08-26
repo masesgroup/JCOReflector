@@ -96,7 +96,7 @@ public class PathFigureCollectionConverter extends TypeConverter  {
         }
     }
 
-    public PathFigureCollectionConverter(Object instance) throws Throwable {
+    public PathFigureCollectionConverter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class PathFigureCollectionConverter extends TypeConverter  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -108,7 +108,7 @@ public class X509KeyStorageFlags extends NetObject  {
         }
     }
 
-    public X509KeyStorageFlags(Object instance) {
+    public X509KeyStorageFlags(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class X509KeyStorageFlags extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

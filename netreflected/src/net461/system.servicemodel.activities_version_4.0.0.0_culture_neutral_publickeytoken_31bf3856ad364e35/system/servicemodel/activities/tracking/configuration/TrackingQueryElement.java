@@ -94,7 +94,7 @@ public class TrackingQueryElement extends TrackingConfigurationElement  {
         }
     }
 
-    public TrackingQueryElement(Object instance) throws Throwable {
+    public TrackingQueryElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class TrackingQueryElement extends TrackingConfigurationElement  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

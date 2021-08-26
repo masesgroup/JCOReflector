@@ -98,7 +98,7 @@ public class Binder extends NetObject  {
         }
     }
 
-    public Binder(Object instance) throws Throwable {
+    public Binder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class Binder extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -171,11 +171,11 @@ public class Binder extends NetObject  {
         }
     }
 
-    public MethodBase BindToMethod(BindingFlags bindingAttr, MethodBase[] match, NetObject[] args, ParameterModifier[] modifiers, CultureInfo culture, java.lang.String[] names, JCORefOut<NetObject> state) throws Throwable {
+    public MethodBase BindToMethod(BindingFlags bindingAttr, MethodBase[] match, JCORefOut<NetObject[]> args, ParameterModifier[] modifiers, CultureInfo culture, java.lang.String[] names, JCORefOut<NetObject> state) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objBindToMethod = (JCObject)classInstance.Invoke("BindToMethod", bindingAttr == null ? null : bindingAttr.getJCOInstance(), toObjectFromArray(match), toObjectFromArray(args), toObjectFromArray(modifiers), culture == null ? null : culture.getJCOInstance(), names, state.getJCRefOut());
+            JCObject objBindToMethod = (JCObject)classInstance.Invoke("BindToMethod", bindingAttr == null ? null : bindingAttr.getJCOInstance(), toObjectFromArray(match), args.getJCRefOut(), toObjectFromArray(modifiers), culture == null ? null : culture.getJCOInstance(), names, state.getJCRefOut());
             return new MethodBase(objBindToMethod);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -204,11 +204,11 @@ public class Binder extends NetObject  {
         }
     }
 
-    public void ReorderArgumentArray(NetObject[] args, NetObject state) throws Throwable {
+    public void ReorderArgumentArray(JCORefOut<NetObject[]> args, NetObject state) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("ReorderArgumentArray", toObjectFromArray(args), state == null ? null : state.getJCOInstance());
+            classInstance.Invoke("ReorderArgumentArray", args.getJCRefOut(), state == null ? null : state.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

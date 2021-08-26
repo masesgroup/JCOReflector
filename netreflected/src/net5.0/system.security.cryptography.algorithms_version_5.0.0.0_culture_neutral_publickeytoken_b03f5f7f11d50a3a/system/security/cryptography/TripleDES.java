@@ -94,7 +94,7 @@ public class TripleDES extends SymmetricAlgorithm  {
         }
     }
 
-    public TripleDES(Object instance) throws Throwable {
+    public TripleDES(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class TripleDES extends SymmetricAlgorithm  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -149,7 +149,7 @@ public class TripleDES extends SymmetricAlgorithm  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classType.Invoke("IsWeakKey", (Object)rgbKey);
+            return (boolean)classType.Invoke("IsWeakKey", (java.lang.Object)rgbKey);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -159,7 +159,7 @@ public class TripleDES extends SymmetricAlgorithm  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classType.Invoke("IsWeakKey", (Object)dupParam0.getJCRefOut());
+            return (boolean)classType.Invoke("IsWeakKey", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

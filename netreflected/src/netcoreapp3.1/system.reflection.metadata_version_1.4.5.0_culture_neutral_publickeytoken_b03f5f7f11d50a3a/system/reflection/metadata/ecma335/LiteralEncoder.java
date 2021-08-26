@@ -98,7 +98,7 @@ public class LiteralEncoder extends ValueType  {
         }
     }
 
-    public LiteralEncoder(Object instance) throws Throwable {
+    public LiteralEncoder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class LiteralEncoder extends ValueType  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -101,7 +101,7 @@ public class ToolStripProgressBar extends ToolStripControlHost  {
         }
     }
 
-    public ToolStripProgressBar(Object instance) throws Throwable {
+    public ToolStripProgressBar(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -121,7 +121,7 @@ public class ToolStripProgressBar extends ToolStripControlHost  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

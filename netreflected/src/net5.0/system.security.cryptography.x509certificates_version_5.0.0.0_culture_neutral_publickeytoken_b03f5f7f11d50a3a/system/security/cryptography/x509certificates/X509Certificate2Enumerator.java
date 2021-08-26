@@ -107,7 +107,7 @@ public class X509Certificate2Enumerator extends NetObject implements Iterator<X5
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

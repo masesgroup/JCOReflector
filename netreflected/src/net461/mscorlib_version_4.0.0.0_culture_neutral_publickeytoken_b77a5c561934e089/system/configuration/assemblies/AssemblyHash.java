@@ -94,7 +94,7 @@ public class AssemblyHash extends ValueType  {
         }
     }
 
-    public AssemblyHash(Object instance) throws Throwable {
+    public AssemblyHash(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class AssemblyHash extends ValueType  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -146,7 +146,7 @@ public class AssemblyHash extends ValueType  {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((Object)value));
+            setJCOInstance((JCObject)classType.NewObject((java.lang.Object)value));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,9 +171,9 @@ public class AssemblyHash extends ValueType  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetValue");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -201,7 +201,7 @@ public class AssemblyHash extends ValueType  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetValue", (Object)value);
+            classInstance.Invoke("SetValue", (java.lang.Object)value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,7 +211,7 @@ public class AssemblyHash extends ValueType  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetValue", (Object)dupParam0.getJCRefOut());
+            classInstance.Invoke("SetValue", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

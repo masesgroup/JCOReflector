@@ -92,7 +92,7 @@ public class IApplicationPreloadUtilImplementation extends NetObject implements 
         }
     }
 
-    public IApplicationPreloadUtilImplementation(Object instance) throws Throwable {
+    public IApplicationPreloadUtilImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class IApplicationPreloadUtilImplementation extends NetObject implements 
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -132,7 +132,7 @@ public class IApplicationPreloadUtilImplementation extends NetObject implements 
 
     // Methods section
     
-    public void GetApplicationPreloadInfo(java.lang.String context, JCORefOut enabled, JCORefOut startupObjType, JCORefOut parametersForStartupObj) throws Throwable {
+    public void GetApplicationPreloadInfo(java.lang.String context, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> enabled, JCORefOut startupObjType, JCORefOut parametersForStartupObj) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

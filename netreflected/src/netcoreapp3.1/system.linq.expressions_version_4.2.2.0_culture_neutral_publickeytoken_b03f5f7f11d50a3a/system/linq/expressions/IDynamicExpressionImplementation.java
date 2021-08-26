@@ -95,7 +95,7 @@ public class IDynamicExpressionImplementation extends NetObject implements IDyna
         }
     }
 
-    public IDynamicExpressionImplementation(Object instance) throws Throwable {
+    public IDynamicExpressionImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class IDynamicExpressionImplementation extends NetObject implements IDyna
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -150,7 +150,7 @@ public class IDynamicExpressionImplementation extends NetObject implements IDyna
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objRewrite = (JCObject)classInstance.Invoke("Rewrite", (Object)toObjectFromArray(args));
+            JCObject objRewrite = (JCObject)classInstance.Invoke("Rewrite", (java.lang.Object)toObjectFromArray(args));
             return new Expression(objRewrite);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

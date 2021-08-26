@@ -95,7 +95,7 @@ public class BeginStoryboard extends TriggerAction  {
         }
     }
 
-    public BeginStoryboard(Object instance) throws Throwable {
+    public BeginStoryboard(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class BeginStoryboard extends TriggerAction  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -97,7 +97,7 @@ public class PersonalizationDictionary extends NetObjectEnumerable  {
         }
     }
 
-    public PersonalizationDictionary(Object instance) throws Throwable {
+    public PersonalizationDictionary(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class PersonalizationDictionary extends NetObjectEnumerable  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

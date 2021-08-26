@@ -99,7 +99,7 @@ public class EntityConnection extends DbConnection  {
         }
     }
 
-    public EntityConnection(Object instance) throws Throwable {
+    public EntityConnection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class EntityConnection extends DbConnection  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

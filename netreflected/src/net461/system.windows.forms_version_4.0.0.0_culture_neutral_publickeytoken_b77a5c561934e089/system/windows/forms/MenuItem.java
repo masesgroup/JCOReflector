@@ -99,7 +99,7 @@ public class MenuItem extends Menu  {
         }
     }
 
-    public MenuItem(Object instance) throws Throwable {
+    public MenuItem(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class MenuItem extends Menu  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -98,7 +98,7 @@ public class DataRelation extends NetObject  {
         }
     }
 
-    public DataRelation(Object instance) throws Throwable {
+    public DataRelation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class DataRelation extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -241,7 +241,7 @@ public class DataRelation extends NetObject  {
         try {
             ArrayList<DataColumn> resultingArrayList = new ArrayList<DataColumn>();
             JCObject resultingObjects = (JCObject)classInstance.Get("ChildColumns");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataColumn(resultingObject));
             }
             DataColumn[] resultingArray = new DataColumn[resultingArrayList.size()];
@@ -258,7 +258,7 @@ public class DataRelation extends NetObject  {
         try {
             ArrayList<DataColumn> resultingArrayList = new ArrayList<DataColumn>();
             JCObject resultingObjects = (JCObject)classInstance.Get("ParentColumns");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataColumn(resultingObject));
             }
             DataColumn[] resultingArray = new DataColumn[resultingArrayList.size()];

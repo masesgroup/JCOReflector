@@ -96,7 +96,7 @@ public class BarrierPostPhaseException extends NetException {
         super();
     }
 
-    public BarrierPostPhaseException(Object instance) {
+    public BarrierPostPhaseException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -130,7 +130,7 @@ public class BarrierPostPhaseException extends NetException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

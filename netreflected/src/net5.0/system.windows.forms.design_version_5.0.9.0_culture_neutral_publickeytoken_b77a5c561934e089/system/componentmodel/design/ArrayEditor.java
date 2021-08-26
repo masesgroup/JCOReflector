@@ -93,7 +93,7 @@ public class ArrayEditor extends CollectionEditor  {
         }
     }
 
-    public ArrayEditor(Object instance) throws Throwable {
+    public ArrayEditor(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class ArrayEditor extends CollectionEditor  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -92,7 +92,7 @@ public class IHashCodeProviderImplementation extends NetObject implements IHashC
         }
     }
 
-    public IHashCodeProviderImplementation(Object instance) throws Throwable {
+    public IHashCodeProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class IHashCodeProviderImplementation extends NetObject implements IHashC
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

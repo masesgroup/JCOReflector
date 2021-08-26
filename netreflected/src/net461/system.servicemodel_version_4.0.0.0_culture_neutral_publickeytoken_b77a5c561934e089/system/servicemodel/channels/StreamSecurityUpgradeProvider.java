@@ -94,7 +94,7 @@ public class StreamSecurityUpgradeProvider extends StreamUpgradeProvider  {
         }
     }
 
-    public StreamSecurityUpgradeProvider(Object instance) throws Throwable {
+    public StreamSecurityUpgradeProvider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class StreamSecurityUpgradeProvider extends StreamUpgradeProvider  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

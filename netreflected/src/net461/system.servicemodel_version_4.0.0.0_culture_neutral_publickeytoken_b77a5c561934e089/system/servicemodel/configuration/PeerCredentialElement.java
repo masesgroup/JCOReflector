@@ -96,7 +96,7 @@ public class PeerCredentialElement extends ConfigurationElement  {
         }
     }
 
-    public PeerCredentialElement(Object instance) throws Throwable {
+    public PeerCredentialElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class PeerCredentialElement extends ConfigurationElement  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

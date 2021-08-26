@@ -102,7 +102,7 @@ public class RichTextBox extends TextBoxBase implements system.windows.markup.IA
         }
     }
 
-    public RichTextBox(Object instance) throws Throwable {
+    public RichTextBox(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -122,7 +122,7 @@ public class RichTextBox extends TextBoxBase implements system.windows.markup.IA
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

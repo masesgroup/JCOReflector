@@ -94,7 +94,7 @@ public class FilteredCatalog extends ComposablePartCatalog  {
         }
     }
 
-    public FilteredCatalog(Object instance) throws Throwable {
+    public FilteredCatalog(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class FilteredCatalog extends ComposablePartCatalog  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

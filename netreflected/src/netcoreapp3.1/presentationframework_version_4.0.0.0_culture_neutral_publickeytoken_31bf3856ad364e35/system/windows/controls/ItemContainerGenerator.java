@@ -107,7 +107,7 @@ public class ItemContainerGenerator extends NetObject implements system.windows.
         }
     }
 
-    public ItemContainerGenerator(Object instance) throws Throwable {
+    public ItemContainerGenerator(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -127,7 +127,7 @@ public class ItemContainerGenerator extends NetObject implements system.windows.
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -292,7 +292,7 @@ public class ItemContainerGenerator extends NetObject implements system.windows.
      *    Use the static ToIItemContainerGenerator method available in IItemContainerGenerator to obtain an object with an invocable method
      */
     @Deprecated 
-    public DependencyObject GenerateNext(JCORefOut isNewlyRealized) throws Throwable {
+    public DependencyObject GenerateNext(JCORefOut<java.util.concurrent.atomic.AtomicBoolean> isNewlyRealized) throws Throwable {
         throw new UnsupportedOperationException("Not for public use because the method is implemented with an explicit interface. Use ToIItemContainerGenerator to obtain the full interface.");
     }
 

@@ -100,7 +100,7 @@ public class AsymmetricSecurityBindingElement extends SecurityBindingElement imp
         }
     }
 
-    public AsymmetricSecurityBindingElement(Object instance) throws Throwable {
+    public AsymmetricSecurityBindingElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class AsymmetricSecurityBindingElement extends SecurityBindingElement imp
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

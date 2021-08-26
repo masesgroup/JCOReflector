@@ -94,7 +94,7 @@ public class StrokeCollectionChangedEventArgs extends EventArgs  {
         }
     }
 
-    public StrokeCollectionChangedEventArgs(Object instance) throws Throwable {
+    public StrokeCollectionChangedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class StrokeCollectionChangedEventArgs extends EventArgs  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

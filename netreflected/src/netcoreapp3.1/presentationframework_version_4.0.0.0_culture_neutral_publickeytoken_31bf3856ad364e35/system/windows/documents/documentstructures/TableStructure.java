@@ -96,7 +96,7 @@ public class TableStructure extends SemanticBasicElement implements system.windo
         }
     }
 
-    public TableStructure(Object instance) throws Throwable {
+    public TableStructure(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class TableStructure extends SemanticBasicElement implements system.windo
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

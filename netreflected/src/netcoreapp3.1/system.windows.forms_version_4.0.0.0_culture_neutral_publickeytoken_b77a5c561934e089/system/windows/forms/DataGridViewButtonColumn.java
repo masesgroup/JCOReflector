@@ -96,7 +96,7 @@ public class DataGridViewButtonColumn extends DataGridViewColumn  {
         }
     }
 
-    public DataGridViewButtonColumn(Object instance) throws Throwable {
+    public DataGridViewButtonColumn(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class DataGridViewButtonColumn extends DataGridViewColumn  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

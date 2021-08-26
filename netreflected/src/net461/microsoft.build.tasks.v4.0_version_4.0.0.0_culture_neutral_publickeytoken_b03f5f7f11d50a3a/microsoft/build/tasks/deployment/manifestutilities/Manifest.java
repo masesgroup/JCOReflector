@@ -99,7 +99,7 @@ public class Manifest extends NetObject  {
         }
     }
 
-    public Manifest(Object instance) throws Throwable {
+    public Manifest(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class Manifest extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -164,7 +164,7 @@ public class Manifest extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("ResolveFiles", (Object)searchPaths);
+            classInstance.Invoke("ResolveFiles", (java.lang.Object)searchPaths);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -174,7 +174,7 @@ public class Manifest extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("ResolveFiles", (Object)dupParam0.getJCRefOut());
+            classInstance.Invoke("ResolveFiles", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -303,7 +303,7 @@ public class Manifest extends NetObject  {
         try {
             ArrayList<AssemblyReference> resultingArrayList = new ArrayList<AssemblyReference>();
             JCObject resultingObjects = (JCObject)classInstance.Get("XmlAssemblyReferences");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new AssemblyReference(resultingObject));
             }
             AssemblyReference[] resultingArray = new AssemblyReference[resultingArrayList.size()];
@@ -341,7 +341,7 @@ public class Manifest extends NetObject  {
         try {
             ArrayList<FileReference> resultingArrayList = new ArrayList<FileReference>();
             JCObject resultingObjects = (JCObject)classInstance.Get("XmlFileReferences");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new FileReference(resultingObject));
             }
             FileReference[] resultingArray = new FileReference[resultingArrayList.size()];

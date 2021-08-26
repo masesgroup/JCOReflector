@@ -96,7 +96,7 @@ public class EasingInt16KeyFrame extends Int16KeyFrame  {
         }
     }
 
-    public EasingInt16KeyFrame(Object instance) throws Throwable {
+    public EasingInt16KeyFrame(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class EasingInt16KeyFrame extends Int16KeyFrame  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

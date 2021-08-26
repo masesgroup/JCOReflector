@@ -97,7 +97,7 @@ public class ColorAnimationUsingKeyFrames extends ColorAnimationBase implements 
         }
     }
 
-    public ColorAnimationUsingKeyFrames(Object instance) throws Throwable {
+    public ColorAnimationUsingKeyFrames(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class ColorAnimationUsingKeyFrames extends ColorAnimationBase implements 
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

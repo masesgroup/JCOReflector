@@ -96,7 +96,7 @@ public class BitmapEffect extends Animatable  {
         }
     }
 
-    public BitmapEffect(Object instance) throws Throwable {
+    public BitmapEffect(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class BitmapEffect extends Animatable  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

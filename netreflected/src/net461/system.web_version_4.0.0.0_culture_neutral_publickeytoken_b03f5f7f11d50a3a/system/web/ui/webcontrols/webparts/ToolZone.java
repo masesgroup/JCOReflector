@@ -98,7 +98,7 @@ public class ToolZone extends WebZone implements system.web.ui.IPostBackEventHan
         }
     }
 
-    public ToolZone(Object instance) throws Throwable {
+    public ToolZone(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class ToolZone extends WebZone implements system.web.ui.IPostBackEventHan
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

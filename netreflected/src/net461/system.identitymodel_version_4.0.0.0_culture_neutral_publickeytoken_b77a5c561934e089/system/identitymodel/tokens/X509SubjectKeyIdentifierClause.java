@@ -95,7 +95,7 @@ public class X509SubjectKeyIdentifierClause extends BinaryKeyIdentifierClause  {
         }
     }
 
-    public X509SubjectKeyIdentifierClause(Object instance) throws Throwable {
+    public X509SubjectKeyIdentifierClause(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class X509SubjectKeyIdentifierClause extends BinaryKeyIdentifierClause  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -147,7 +147,7 @@ public class X509SubjectKeyIdentifierClause extends BinaryKeyIdentifierClause  {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((Object)ski));
+            setJCOInstance((JCObject)classType.NewObject((java.lang.Object)ski));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,9 +192,9 @@ public class X509SubjectKeyIdentifierClause extends BinaryKeyIdentifierClause  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetX509SubjectKeyIdentifier");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];

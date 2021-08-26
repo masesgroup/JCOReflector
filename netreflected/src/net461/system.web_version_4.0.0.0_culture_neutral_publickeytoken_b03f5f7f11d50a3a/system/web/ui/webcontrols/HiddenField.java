@@ -97,7 +97,7 @@ public class HiddenField extends Control implements system.web.ui.IPostBackDataH
         }
     }
 
-    public HiddenField(Object instance) throws Throwable {
+    public HiddenField(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class HiddenField extends Control implements system.web.ui.IPostBackDataH
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

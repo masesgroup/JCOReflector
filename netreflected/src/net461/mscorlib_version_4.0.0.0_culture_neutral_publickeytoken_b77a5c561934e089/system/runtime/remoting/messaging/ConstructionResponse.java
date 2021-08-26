@@ -98,7 +98,7 @@ public class ConstructionResponse extends MethodResponse  {
         }
     }
 
-    public ConstructionResponse(Object instance) throws Throwable {
+    public ConstructionResponse(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class ConstructionResponse extends MethodResponse  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

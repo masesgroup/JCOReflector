@@ -99,7 +99,7 @@ public class SiteMapDataSource extends HierarchicalDataSourceControl  {
         }
     }
 
-    public SiteMapDataSource(Object instance) throws Throwable {
+    public SiteMapDataSource(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class SiteMapDataSource extends HierarchicalDataSourceControl  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -108,7 +108,7 @@ public class X500DistinguishedNameFlags extends NetObject  {
         }
     }
 
-    public X500DistinguishedNameFlags(Object instance) {
+    public X500DistinguishedNameFlags(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class X500DistinguishedNameFlags extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

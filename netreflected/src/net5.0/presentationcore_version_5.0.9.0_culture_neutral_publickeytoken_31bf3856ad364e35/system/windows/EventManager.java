@@ -94,7 +94,7 @@ public class EventManager extends NetObject  {
         }
     }
 
-    public EventManager(Object instance) throws Throwable {
+    public EventManager(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class EventManager extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -162,7 +162,7 @@ public class EventManager extends NetObject  {
         try {
             ArrayList<RoutedEvent> resultingArrayList = new ArrayList<RoutedEvent>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetRoutedEvents");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new RoutedEvent(resultingObject));
             }
             RoutedEvent[] resultingArray = new RoutedEvent[resultingArrayList.size()];
@@ -179,7 +179,7 @@ public class EventManager extends NetObject  {
         try {
             ArrayList<RoutedEvent> resultingArrayList = new ArrayList<RoutedEvent>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetRoutedEventsForOwner", ownerType == null ? null : ownerType.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new RoutedEvent(resultingObject));
             }
             RoutedEvent[] resultingArray = new RoutedEvent[resultingArrayList.size()];

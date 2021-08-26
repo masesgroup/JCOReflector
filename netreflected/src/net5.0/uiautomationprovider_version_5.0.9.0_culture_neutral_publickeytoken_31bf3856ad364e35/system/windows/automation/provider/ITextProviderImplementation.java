@@ -98,7 +98,7 @@ public class ITextProviderImplementation extends NetObject implements ITextProvi
         }
     }
 
-    public ITextProviderImplementation(Object instance) throws Throwable {
+    public ITextProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class ITextProviderImplementation extends NetObject implements ITextProvi
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -166,7 +166,7 @@ public class ITextProviderImplementation extends NetObject implements ITextProvi
         try {
             ArrayList<ITextRangeProvider> resultingArrayList = new ArrayList<ITextRangeProvider>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetSelection");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITextRangeProviderImplementation(resultingObject));
             }
             ITextRangeProvider[] resultingArray = new ITextRangeProvider[resultingArrayList.size()];
@@ -183,7 +183,7 @@ public class ITextProviderImplementation extends NetObject implements ITextProvi
         try {
             ArrayList<ITextRangeProvider> resultingArrayList = new ArrayList<ITextRangeProvider>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetVisibleRanges");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITextRangeProviderImplementation(resultingObject));
             }
             ITextRangeProvider[] resultingArray = new ITextRangeProvider[resultingArrayList.size()];

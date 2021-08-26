@@ -99,7 +99,7 @@ public class FlowDocumentReader extends Control implements system.windows.markup
         }
     }
 
-    public FlowDocumentReader(Object instance) throws Throwable {
+    public FlowDocumentReader(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class FlowDocumentReader extends Control implements system.windows.markup
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

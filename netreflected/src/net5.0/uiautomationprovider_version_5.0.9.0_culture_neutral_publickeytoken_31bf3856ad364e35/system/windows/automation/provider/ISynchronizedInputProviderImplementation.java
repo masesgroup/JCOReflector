@@ -93,7 +93,7 @@ public class ISynchronizedInputProviderImplementation extends NetObject implemen
         }
     }
 
-    public ISynchronizedInputProviderImplementation(Object instance) throws Throwable {
+    public ISynchronizedInputProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class ISynchronizedInputProviderImplementation extends NetObject implemen
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

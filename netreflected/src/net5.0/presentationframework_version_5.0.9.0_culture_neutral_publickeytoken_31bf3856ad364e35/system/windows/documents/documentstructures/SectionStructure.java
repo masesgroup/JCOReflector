@@ -96,7 +96,7 @@ public class SectionStructure extends SemanticBasicElement implements system.win
         }
     }
 
-    public SectionStructure(Object instance) throws Throwable {
+    public SectionStructure(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class SectionStructure extends SemanticBasicElement implements system.win
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -107,7 +107,7 @@ public class FormattedText extends NetObject  {
         }
     }
 
-    public FormattedText(Object instance) throws Throwable {
+    public FormattedText(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -127,7 +127,7 @@ public class FormattedText extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -224,9 +224,9 @@ public class FormattedText extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetMaxTextWidths");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             double[] resultingArray = new double[resultingArrayList.size()];
@@ -456,7 +456,7 @@ public class FormattedText extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetMaxTextWidths", (Object)maxTextWidths);
+            classInstance.Invoke("SetMaxTextWidths", (java.lang.Object)maxTextWidths);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -466,7 +466,7 @@ public class FormattedText extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetMaxTextWidths", (Object)dupParam0.getJCRefOut());
+            classInstance.Invoke("SetMaxTextWidths", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

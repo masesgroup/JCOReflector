@@ -97,7 +97,7 @@ public class CryptoSignedXmlRecursionException extends XmlException {
         super();
     }
 
-    public CryptoSignedXmlRecursionException(Object instance) {
+    public CryptoSignedXmlRecursionException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class CryptoSignedXmlRecursionException extends XmlException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

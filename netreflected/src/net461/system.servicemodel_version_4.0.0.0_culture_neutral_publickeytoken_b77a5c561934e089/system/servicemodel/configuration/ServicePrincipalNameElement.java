@@ -93,7 +93,7 @@ public class ServicePrincipalNameElement extends ConfigurationElement  {
         }
     }
 
-    public ServicePrincipalNameElement(Object instance) throws Throwable {
+    public ServicePrincipalNameElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class ServicePrincipalNameElement extends ConfigurationElement  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

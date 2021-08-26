@@ -94,7 +94,7 @@ public class NamespaceCollection extends ConfigurationElementCollection  {
         }
     }
 
-    public NamespaceCollection(Object instance) throws Throwable {
+    public NamespaceCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class NamespaceCollection extends ConfigurationElementCollection  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

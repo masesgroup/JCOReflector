@@ -99,7 +99,7 @@ public class NotifyOfNewConnectionCallback extends JCDelegate implements IJCEven
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return this;
     }
 
@@ -107,7 +107,7 @@ public class NotifyOfNewConnectionCallback extends JCDelegate implements IJCEven
         return classType;
     }
 
-    public final Object EventRaised(Object... argsFromJCOBridge) {
+    public final java.lang.Object EventRaised(java.lang.Object... argsFromJCOBridge) {
         try
         {
             LdapConnection primaryConnection = argsFromJCOBridge[0] == null ? null : new LdapConnection(argsFromJCOBridge[0]);
@@ -120,7 +120,7 @@ public class NotifyOfNewConnectionCallback extends JCDelegate implements IJCEven
             int errorCodeFromBind = argsFromJCOBridge[7] == null ? null : (int)argsFromJCOBridge[7];
 
 
-            Object retVal = null;
+            java.lang.Object retVal = null;
             if (callerInstance != null)	{
                 retVal = callerInstance.Invoke(primaryConnection, referralFromConnection, newDistinguishedName, identifier, newConnection, credential, currentUserToken, errorCodeFromBind);
             } else {
@@ -135,7 +135,7 @@ public class NotifyOfNewConnectionCallback extends JCDelegate implements IJCEven
         }
     }
 
-    public final Object DelegateInvoked(Object... argsFromJCOBridge) {
+    public final java.lang.Object DelegateInvoked(java.lang.Object... argsFromJCOBridge) {
         try
         {
             LdapConnection primaryConnection = argsFromJCOBridge[0] == null ? null : new LdapConnection(argsFromJCOBridge[0]);
@@ -148,7 +148,7 @@ public class NotifyOfNewConnectionCallback extends JCDelegate implements IJCEven
             int errorCodeFromBind = argsFromJCOBridge[7] == null ? null : (int)argsFromJCOBridge[7];
 
 
-            Object retVal = null;
+            java.lang.Object retVal = null;
             if (callerInstance != null)	{
                 retVal = callerInstance.Invoke(primaryConnection, referralFromConnection, newDistinguishedName, identifier, newConnection, credential, currentUserToken, errorCodeFromBind);
             } else {
@@ -172,7 +172,7 @@ public class NotifyOfNewConnectionCallback extends JCDelegate implements IJCEven
         callerInstance = instance;
     }
 
-    public NotifyOfNewConnectionCallback(Object instance) throws Throwable {
+    public NotifyOfNewConnectionCallback(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         if (instance == null) throw new IllegalArgumentException("Instance cannot be null");
         if (instance instanceof INotifyOfNewConnectionCallback) {
@@ -184,7 +184,7 @@ public class NotifyOfNewConnectionCallback extends JCDelegate implements IJCEven
                     String.format("Class %s is not supported.", instance.getClass().getTypeName()));
     }
 
-    protected final static <T extends IJCOBridgeReflected> Object toObjectFromArray(T[] input) {
+    protected final static <T extends IJCOBridgeReflected> java.lang.Object toObjectFromArray(T[] input) {
         return JCOBridgeInstance.toObjectFromArray(input);
     }
 

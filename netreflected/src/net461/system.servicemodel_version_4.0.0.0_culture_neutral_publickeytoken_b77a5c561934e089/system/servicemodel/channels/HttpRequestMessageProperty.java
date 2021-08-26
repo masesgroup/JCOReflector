@@ -97,7 +97,7 @@ public class HttpRequestMessageProperty extends NetObject implements system.serv
         }
     }
 
-    public HttpRequestMessageProperty(Object instance) throws Throwable {
+    public HttpRequestMessageProperty(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class HttpRequestMessageProperty extends NetObject implements system.serv
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

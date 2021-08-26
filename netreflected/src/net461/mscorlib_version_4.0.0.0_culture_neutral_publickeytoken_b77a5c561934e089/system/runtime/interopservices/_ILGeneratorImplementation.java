@@ -94,7 +94,7 @@ public class _ILGeneratorImplementation extends NetObject implements _ILGenerato
         }
     }
 
-    public _ILGeneratorImplementation(Object instance) throws Throwable {
+    public _ILGeneratorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class _ILGeneratorImplementation extends NetObject implements _ILGenerato
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

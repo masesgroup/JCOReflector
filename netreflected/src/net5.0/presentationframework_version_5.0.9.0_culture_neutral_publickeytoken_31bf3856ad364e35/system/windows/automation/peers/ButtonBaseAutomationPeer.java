@@ -93,7 +93,7 @@ public class ButtonBaseAutomationPeer extends FrameworkElementAutomationPeer  {
         }
     }
 
-    public ButtonBaseAutomationPeer(Object instance) throws Throwable {
+    public ButtonBaseAutomationPeer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class ButtonBaseAutomationPeer extends FrameworkElementAutomationPeer  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

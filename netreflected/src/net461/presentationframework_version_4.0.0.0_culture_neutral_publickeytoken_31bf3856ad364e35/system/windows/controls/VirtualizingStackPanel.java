@@ -99,7 +99,7 @@ public class VirtualizingStackPanel extends VirtualizingPanel  {
         }
     }
 
-    public VirtualizingStackPanel(Object instance) throws Throwable {
+    public VirtualizingStackPanel(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class VirtualizingStackPanel extends VirtualizingPanel  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

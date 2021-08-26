@@ -100,7 +100,7 @@ public class Point3DCollection extends Freezable implements system.IFormattable 
         }
     }
 
-    public Point3DCollection(Object instance) throws Throwable {
+    public Point3DCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class Point3DCollection extends Freezable implements system.IFormattable 
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

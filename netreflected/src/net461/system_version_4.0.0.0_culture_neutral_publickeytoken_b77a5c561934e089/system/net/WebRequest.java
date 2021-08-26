@@ -115,7 +115,7 @@ public class WebRequest extends MarshalByRefObject implements system.runtime.ser
         }
     }
 
-    public WebRequest(Object instance) throws Throwable {
+    public WebRequest(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -135,7 +135,7 @@ public class WebRequest extends MarshalByRefObject implements system.runtime.ser
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

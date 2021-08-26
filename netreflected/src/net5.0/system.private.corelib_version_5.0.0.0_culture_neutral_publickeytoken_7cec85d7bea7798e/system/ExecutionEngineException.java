@@ -97,7 +97,7 @@ public class ExecutionEngineException extends SystemException {
         super();
     }
 
-    public ExecutionEngineException(Object instance) {
+    public ExecutionEngineException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class ExecutionEngineException extends SystemException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -45,6 +45,7 @@ object HelloNETEvent {
                             timer.enabled = true
                         } catch (e: Throwable) {
                             e.printStackTrace()
+                            System.exit(-1)
                         }
                     }
                 })
@@ -56,6 +57,7 @@ object HelloNETEvent {
             }
         } catch (tre: Throwable) {
             tre.printStackTrace()
+            System.exit(-1)
         }
     }
 }

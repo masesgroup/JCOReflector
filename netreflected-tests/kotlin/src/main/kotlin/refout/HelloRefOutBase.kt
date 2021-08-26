@@ -92,10 +92,10 @@ object HelloRefOutBase {
                 println(String.format("Test Int64 not OK: %d", valLong))
                 isOK = isOK and false
             }
-            System.exit(if (isOK) 0 else 1)
+            System.exit(if (isOK) 0 else -1)
         } catch (tre: Throwable) {
             tre.printStackTrace()
-            System.exit(1)
+            System.exit(-1)
         }
     }
 }

@@ -97,7 +97,7 @@ public class XamlObjectWriterException extends XamlException {
         super();
     }
 
-    public XamlObjectWriterException(Object instance) {
+    public XamlObjectWriterException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class XamlObjectWriterException extends XamlException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

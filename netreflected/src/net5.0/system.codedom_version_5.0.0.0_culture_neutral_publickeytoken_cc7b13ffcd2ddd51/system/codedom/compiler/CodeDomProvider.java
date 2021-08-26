@@ -116,7 +116,7 @@ public class CodeDomProvider extends Component  {
         }
     }
 
-    public CodeDomProvider(Object instance) throws Throwable {
+    public CodeDomProvider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -136,7 +136,7 @@ public class CodeDomProvider extends Component  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -246,7 +246,7 @@ public class CodeDomProvider extends Component  {
         try {
             ArrayList<CompilerInfo> resultingArrayList = new ArrayList<CompilerInfo>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetAllCompilerInfo");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new CompilerInfo(resultingObject));
             }
             CompilerInfo[] resultingArray = new CompilerInfo[resultingArrayList.size()];

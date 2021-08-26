@@ -104,7 +104,7 @@ public class IReplyChannelImplementation extends NetObject implements IReplyChan
         }
     }
 
-    public IReplyChannelImplementation(Object instance) throws Throwable {
+    public IReplyChannelImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -124,7 +124,7 @@ public class IReplyChannelImplementation extends NetObject implements IReplyChan
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

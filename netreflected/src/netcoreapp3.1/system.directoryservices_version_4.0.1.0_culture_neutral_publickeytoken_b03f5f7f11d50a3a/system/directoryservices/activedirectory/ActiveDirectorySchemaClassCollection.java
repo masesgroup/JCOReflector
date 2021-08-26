@@ -96,7 +96,7 @@ public class ActiveDirectorySchemaClassCollection extends CollectionBase  {
         }
     }
 
-    public ActiveDirectorySchemaClassCollection(Object instance) throws Throwable {
+    public ActiveDirectorySchemaClassCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class ActiveDirectorySchemaClassCollection extends CollectionBase  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -183,7 +183,7 @@ public class ActiveDirectorySchemaClassCollection extends CollectionBase  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddRange", (Object)toObjectFromArray(schemaClasses));
+            classInstance.Invoke("AddRange", (java.lang.Object)toObjectFromArray(schemaClasses));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

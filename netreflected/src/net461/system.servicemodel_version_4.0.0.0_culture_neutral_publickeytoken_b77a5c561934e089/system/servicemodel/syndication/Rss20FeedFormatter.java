@@ -99,7 +99,7 @@ public class Rss20FeedFormatter extends SyndicationFeedFormatter implements syst
         }
     }
 
-    public Rss20FeedFormatter(Object instance) throws Throwable {
+    public Rss20FeedFormatter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class Rss20FeedFormatter extends SyndicationFeedFormatter implements syst
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -106,7 +106,7 @@ public class Stroke extends NetObject  {
         }
     }
 
-    public Stroke(Object instance) throws Throwable {
+    public Stroke(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -126,7 +126,7 @@ public class Stroke extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -225,7 +225,7 @@ public class Stroke extends NetObject  {
         try {
             ArrayList<Guid> resultingArrayList = new ArrayList<Guid>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetPropertyDataIds");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Guid(resultingObject));
             }
             Guid[] resultingArray = new Guid[resultingArrayList.size()];

@@ -108,7 +108,7 @@ public class Viewport3DVisual extends Visual  {
         }
     }
 
-    public Viewport3DVisual(Object instance) throws Throwable {
+    public Viewport3DVisual(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -128,7 +128,7 @@ public class Viewport3DVisual extends Visual  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

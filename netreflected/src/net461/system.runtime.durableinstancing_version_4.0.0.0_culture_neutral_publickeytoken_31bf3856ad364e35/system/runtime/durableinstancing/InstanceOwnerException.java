@@ -101,7 +101,7 @@ public class InstanceOwnerException extends InstancePersistenceException {
         super();
     }
 
-    public InstanceOwnerException(Object instance) {
+    public InstanceOwnerException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -135,7 +135,7 @@ public class InstanceOwnerException extends InstancePersistenceException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

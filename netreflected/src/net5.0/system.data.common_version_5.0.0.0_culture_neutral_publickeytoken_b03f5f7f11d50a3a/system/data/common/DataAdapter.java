@@ -103,7 +103,7 @@ public class DataAdapter extends Component  {
         }
     }
 
-    public DataAdapter(Object instance) throws Throwable {
+    public DataAdapter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -123,7 +123,7 @@ public class DataAdapter extends Component  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -202,7 +202,7 @@ public class DataAdapter extends Component  {
         try {
             ArrayList<DataTable> resultingArrayList = new ArrayList<DataTable>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("FillSchema", dataSet == null ? null : dataSet.getJCOInstance(), schemaType == null ? null : schemaType.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataTable(resultingObject));
             }
             DataTable[] resultingArray = new DataTable[resultingArrayList.size()];
@@ -219,7 +219,7 @@ public class DataAdapter extends Component  {
         try {
             ArrayList<IDataParameter> resultingArrayList = new ArrayList<IDataParameter>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFillParameters");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IDataParameterImplementation(resultingObject));
             }
             IDataParameter[] resultingArray = new IDataParameter[resultingArrayList.size()];

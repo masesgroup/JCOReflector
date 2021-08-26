@@ -108,7 +108,7 @@ public class DataGridViewContentAlignment extends NetObject  {
         }
     }
 
-    public DataGridViewContentAlignment(Object instance) {
+    public DataGridViewContentAlignment(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class DataGridViewContentAlignment extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

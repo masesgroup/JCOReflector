@@ -96,7 +96,7 @@ public class IDispatchMessageInspectorImplementation extends NetObject implement
         }
     }
 
-    public IDispatchMessageInspectorImplementation(Object instance) throws Throwable {
+    public IDispatchMessageInspectorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class IDispatchMessageInspectorImplementation extends NetObject implement
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -136,22 +136,22 @@ public class IDispatchMessageInspectorImplementation extends NetObject implement
 
     // Methods section
     
-    public NetObject AfterReceiveRequest(Message request, IClientChannel channel, InstanceContext instanceContext) throws Throwable {
+    public NetObject AfterReceiveRequest(JCORefOut<Message> request, IClientChannel channel, InstanceContext instanceContext) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objAfterReceiveRequest = (JCObject)classInstance.Invoke("AfterReceiveRequest", request == null ? null : request.getJCOInstance(), channel == null ? null : channel.getJCOInstance(), instanceContext == null ? null : instanceContext.getJCOInstance());
+            JCObject objAfterReceiveRequest = (JCObject)classInstance.Invoke("AfterReceiveRequest", request.getJCRefOut(), channel == null ? null : channel.getJCOInstance(), instanceContext == null ? null : instanceContext.getJCOInstance());
             return new NetObject(objAfterReceiveRequest);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void BeforeSendReply(Message reply, NetObject correlationState) throws Throwable {
+    public void BeforeSendReply(JCORefOut<Message> reply, NetObject correlationState) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("BeforeSendReply", reply == null ? null : reply.getJCOInstance(), correlationState == null ? null : correlationState.getJCOInstance());
+            classInstance.Invoke("BeforeSendReply", reply.getJCRefOut(), correlationState == null ? null : correlationState.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

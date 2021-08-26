@@ -94,7 +94,7 @@ public class _EnumBuilderImplementation extends NetObject implements _EnumBuilde
         }
     }
 
-    public _EnumBuilderImplementation(Object instance) throws Throwable {
+    public _EnumBuilderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class _EnumBuilderImplementation extends NetObject implements _EnumBuilde
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

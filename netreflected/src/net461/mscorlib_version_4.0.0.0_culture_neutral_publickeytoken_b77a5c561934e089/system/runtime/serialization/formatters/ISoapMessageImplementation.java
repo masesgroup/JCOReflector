@@ -93,7 +93,7 @@ public class ISoapMessageImplementation extends NetObject implements ISoapMessag
         }
     }
 
-    public ISoapMessageImplementation(Object instance) throws Throwable {
+    public ISoapMessageImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class ISoapMessageImplementation extends NetObject implements ISoapMessag
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -143,7 +143,7 @@ public class ISoapMessageImplementation extends NetObject implements ISoapMessag
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
             JCObject resultingObjects = (JCObject)classInstance.Get("ParamValues");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
@@ -170,7 +170,7 @@ public class ISoapMessageImplementation extends NetObject implements ISoapMessag
         try {
             ArrayList<Header> resultingArrayList = new ArrayList<Header>();
             JCObject resultingObjects = (JCObject)classInstance.Get("Headers");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Header(resultingObject));
             }
             Header[] resultingArray = new Header[resultingArrayList.size()];
@@ -235,9 +235,9 @@ public class ISoapMessageImplementation extends NetObject implements ISoapMessag
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Get("ParamNames");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];
@@ -266,7 +266,7 @@ public class ISoapMessageImplementation extends NetObject implements ISoapMessag
         try {
             ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
             JCObject resultingObjects = (JCObject)classInstance.Get("ParamTypes");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetType(resultingObject));
             }
             NetType[] resultingArray = new NetType[resultingArrayList.size()];

@@ -96,7 +96,7 @@ public class HttpServerUtilityBase extends NetObject  {
         }
     }
 
-    public HttpServerUtilityBase(Object instance) throws Throwable {
+    public HttpServerUtilityBase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class HttpServerUtilityBase extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -151,9 +151,9 @@ public class HttpServerUtilityBase extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("UrlTokenDecode", input);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -274,7 +274,7 @@ public class HttpServerUtilityBase extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Invoke("UrlTokenEncode", (Object)input);
+            return (java.lang.String)classInstance.Invoke("UrlTokenEncode", (java.lang.Object)input);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -284,7 +284,7 @@ public class HttpServerUtilityBase extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Invoke("UrlTokenEncode", (Object)dupParam0.getJCRefOut());
+            return (java.lang.String)classInstance.Invoke("UrlTokenEncode", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

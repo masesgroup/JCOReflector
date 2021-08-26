@@ -93,7 +93,7 @@ public class TypedDataSetSchemaImporterExtensionFx35 extends TypedDataSetSchemaI
         }
     }
 
-    public TypedDataSetSchemaImporterExtensionFx35(Object instance) throws Throwable {
+    public TypedDataSetSchemaImporterExtensionFx35(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class TypedDataSetSchemaImporterExtensionFx35 extends TypedDataSetSchemaI
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

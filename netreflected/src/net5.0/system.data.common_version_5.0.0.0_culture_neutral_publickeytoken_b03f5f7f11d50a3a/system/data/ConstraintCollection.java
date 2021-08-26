@@ -96,7 +96,7 @@ public class ConstraintCollection extends InternalDataCollectionBase  {
         }
     }
 
-    public ConstraintCollection(Object instance) throws Throwable {
+    public ConstraintCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class ConstraintCollection extends InternalDataCollectionBase  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -247,7 +247,7 @@ public class ConstraintCollection extends InternalDataCollectionBase  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddRange", (Object)toObjectFromArray(constraints));
+            classInstance.Invoke("AddRange", (java.lang.Object)toObjectFromArray(constraints));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

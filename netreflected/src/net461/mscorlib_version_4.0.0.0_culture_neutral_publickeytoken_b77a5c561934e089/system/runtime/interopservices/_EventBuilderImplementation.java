@@ -94,7 +94,7 @@ public class _EventBuilderImplementation extends NetObject implements _EventBuil
         }
     }
 
-    public _EventBuilderImplementation(Object instance) throws Throwable {
+    public _EventBuilderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class _EventBuilderImplementation extends NetObject implements _EventBuil
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -94,7 +94,7 @@ public class IAsyncStateMachineImplementation extends NetObject implements IAsyn
         }
     }
 
-    public IAsyncStateMachineImplementation(Object instance) throws Throwable {
+    public IAsyncStateMachineImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class IAsyncStateMachineImplementation extends NetObject implements IAsyn
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

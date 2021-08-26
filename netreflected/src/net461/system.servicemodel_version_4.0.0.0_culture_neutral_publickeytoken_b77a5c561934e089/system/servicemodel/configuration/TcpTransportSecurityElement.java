@@ -97,7 +97,7 @@ public class TcpTransportSecurityElement extends ServiceModelConfigurationElemen
         }
     }
 
-    public TcpTransportSecurityElement(Object instance) throws Throwable {
+    public TcpTransportSecurityElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class TcpTransportSecurityElement extends ServiceModelConfigurationElemen
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -94,7 +94,7 @@ public class TrackingServices extends NetObject  {
         }
     }
 
-    public TrackingServices(Object instance) throws Throwable {
+    public TrackingServices(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class TrackingServices extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -183,7 +183,7 @@ public class TrackingServices extends NetObject  {
         try {
             ArrayList<ITrackingHandler> resultingArrayList = new ArrayList<ITrackingHandler>();
             JCObject resultingObjects = (JCObject)classType.Get("RegisteredHandlers");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ITrackingHandlerImplementation(resultingObject));
             }
             ITrackingHandler[] resultingArray = new ITrackingHandler[resultingArrayList.size()];

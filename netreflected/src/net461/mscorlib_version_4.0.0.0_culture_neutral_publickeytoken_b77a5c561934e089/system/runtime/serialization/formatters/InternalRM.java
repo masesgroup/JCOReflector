@@ -92,7 +92,7 @@ public class InternalRM extends NetObject  {
         }
     }
 
-    public InternalRM(Object instance) throws Throwable {
+    public InternalRM(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class InternalRM extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -165,7 +165,7 @@ public class InternalRM extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("InfoSoap", (Object)toObjectFromArray(messages));
+            classType.Invoke("InfoSoap", (java.lang.Object)toObjectFromArray(messages));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

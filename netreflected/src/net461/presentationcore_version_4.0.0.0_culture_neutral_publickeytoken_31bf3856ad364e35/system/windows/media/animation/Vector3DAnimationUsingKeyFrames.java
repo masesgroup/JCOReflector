@@ -97,7 +97,7 @@ public class Vector3DAnimationUsingKeyFrames extends Vector3DAnimationBase imple
         }
     }
 
-    public Vector3DAnimationUsingKeyFrames(Object instance) throws Throwable {
+    public Vector3DAnimationUsingKeyFrames(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class Vector3DAnimationUsingKeyFrames extends Vector3DAnimationBase imple
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

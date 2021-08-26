@@ -93,7 +93,7 @@ public class ReferenceAssemblyAttribute extends Attribute  {
         }
     }
 
-    public ReferenceAssemblyAttribute(Object instance) throws Throwable {
+    public ReferenceAssemblyAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class ReferenceAssemblyAttribute extends Attribute  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

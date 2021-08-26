@@ -95,7 +95,7 @@ public class WebRequestErrorEvent extends WebBaseErrorEvent  {
         }
     }
 
-    public WebRequestErrorEvent(Object instance) throws Throwable {
+    public WebRequestErrorEvent(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class WebRequestErrorEvent extends WebBaseErrorEvent  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

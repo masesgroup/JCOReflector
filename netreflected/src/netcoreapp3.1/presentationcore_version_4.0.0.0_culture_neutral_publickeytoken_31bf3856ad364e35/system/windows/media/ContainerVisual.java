@@ -110,7 +110,7 @@ public class ContainerVisual extends Visual  {
         }
     }
 
-    public ContainerVisual(Object instance) throws Throwable {
+    public ContainerVisual(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -130,7 +130,7 @@ public class ContainerVisual extends Visual  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

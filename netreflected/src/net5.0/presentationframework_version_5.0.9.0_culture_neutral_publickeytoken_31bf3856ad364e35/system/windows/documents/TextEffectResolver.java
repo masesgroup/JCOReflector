@@ -95,7 +95,7 @@ public class TextEffectResolver extends NetObject  {
         }
     }
 
-    public TextEffectResolver(Object instance) throws Throwable {
+    public TextEffectResolver(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class TextEffectResolver extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -152,7 +152,7 @@ public class TextEffectResolver extends NetObject  {
         try {
             ArrayList<TextEffectTarget> resultingArrayList = new ArrayList<TextEffectTarget>();
             JCObject resultingObjects = (JCObject)classType.Invoke("Resolve", startPosition == null ? null : startPosition.getJCOInstance(), endPosition == null ? null : endPosition.getJCOInstance(), effect == null ? null : effect.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new TextEffectTarget(resultingObject));
             }
             TextEffectTarget[] resultingArray = new TextEffectTarget[resultingArrayList.size()];

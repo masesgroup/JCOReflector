@@ -95,7 +95,7 @@ public class DynamicDiscoveryDocument extends NetObject  {
         }
     }
 
-    public DynamicDiscoveryDocument(Object instance) throws Throwable {
+    public DynamicDiscoveryDocument(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class DynamicDiscoveryDocument extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -185,7 +185,7 @@ public class DynamicDiscoveryDocument extends NetObject  {
         try {
             ArrayList<ExcludePathInfo> resultingArrayList = new ArrayList<ExcludePathInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Get("ExcludePaths");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ExcludePathInfo(resultingObject));
             }
             ExcludePathInfo[] resultingArray = new ExcludePathInfo[resultingArrayList.size()];

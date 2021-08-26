@@ -110,7 +110,7 @@ public class SqlBoolean extends ValueType implements system.xml.serialization.IX
         }
     }
 
-    public SqlBoolean(Object instance) throws Throwable {
+    public SqlBoolean(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -130,7 +130,7 @@ public class SqlBoolean extends ValueType implements system.xml.serialization.IX
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -101,7 +101,7 @@ public class BaseDataListDesigner extends TemplatedControlDesigner  {
         }
     }
 
-    public BaseDataListDesigner(Object instance) throws Throwable {
+    public BaseDataListDesigner(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -121,7 +121,7 @@ public class BaseDataListDesigner extends TemplatedControlDesigner  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

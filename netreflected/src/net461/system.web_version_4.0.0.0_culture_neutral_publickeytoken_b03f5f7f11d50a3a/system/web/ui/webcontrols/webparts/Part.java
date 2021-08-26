@@ -100,7 +100,7 @@ public class Part extends Panel implements system.web.ui.INamingContainer, syste
         }
     }
 
-    public Part(Object instance) throws Throwable {
+    public Part(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class Part extends Panel implements system.web.ui.INamingContainer, syste
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

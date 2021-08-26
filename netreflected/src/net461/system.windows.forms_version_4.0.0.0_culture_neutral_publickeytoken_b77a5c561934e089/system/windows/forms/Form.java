@@ -124,7 +124,7 @@ public class Form extends ContainerControl  {
         }
     }
 
-    public Form(Object instance) throws Throwable {
+    public Form(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -144,7 +144,7 @@ public class Form extends ContainerControl  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -961,7 +961,7 @@ public class Form extends ContainerControl  {
         try {
             ArrayList<Form> resultingArrayList = new ArrayList<Form>();
             JCObject resultingObjects = (JCObject)classInstance.Get("MdiChildren");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Form(resultingObject));
             }
             Form[] resultingArray = new Form[resultingArrayList.size()];
@@ -978,7 +978,7 @@ public class Form extends ContainerControl  {
         try {
             ArrayList<Form> resultingArrayList = new ArrayList<Form>();
             JCObject resultingObjects = (JCObject)classInstance.Get("OwnedForms");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Form(resultingObject));
             }
             Form[] resultingArray = new Form[resultingArrayList.size()];

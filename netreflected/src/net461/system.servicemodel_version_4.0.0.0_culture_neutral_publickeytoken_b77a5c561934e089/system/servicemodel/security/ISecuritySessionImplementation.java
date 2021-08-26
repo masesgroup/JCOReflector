@@ -95,7 +95,7 @@ public class ISecuritySessionImplementation extends NetObject implements ISecuri
         }
     }
 
-    public ISecuritySessionImplementation(Object instance) throws Throwable {
+    public ISecuritySessionImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class ISecuritySessionImplementation extends NetObject implements ISecuri
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

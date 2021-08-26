@@ -99,7 +99,7 @@ public class ReliableSessionBindingElement extends BindingElement implements sys
         }
     }
 
-    public ReliableSessionBindingElement(Object instance) throws Throwable {
+    public ReliableSessionBindingElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class ReliableSessionBindingElement extends BindingElement implements sys
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

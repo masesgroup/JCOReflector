@@ -99,9 +99,9 @@ public interface IClientMessageInspector extends IJCOBridgeReflected {
     /**
      * Returns the instantiated class
      * 
-     * @return An {@link Object} representing the instance of the instantiated Class
+     * @return An {@link java.lang.Object} representing the instance of the instantiated Class
      */
-    public Object getJCOInstance();
+    public java.lang.Object getJCOInstance();
 
     /**
      * Returns the instantiated class Type
@@ -112,9 +112,9 @@ public interface IClientMessageInspector extends IJCOBridgeReflected {
 
     // Methods section
     
-    public NetObject BeforeSendRequest(Message request, IClientChannel channel) throws Throwable;
+    public NetObject BeforeSendRequest(JCORefOut<Message> request, IClientChannel channel) throws Throwable;
 
-    public void AfterReceiveReply(Message reply, NetObject correlationState) throws Throwable;
+    public void AfterReceiveReply(JCORefOut<Message> reply, NetObject correlationState) throws Throwable;
 
 
     

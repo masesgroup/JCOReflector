@@ -107,7 +107,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public GraphicsPath(Object instance) throws Throwable {
+    public GraphicsPath(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -127,7 +127,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -515,7 +515,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddBeziers", (Object)toObjectFromArray(points));
+            classInstance.Invoke("AddBeziers", (java.lang.Object)toObjectFromArray(points));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -525,7 +525,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddBeziers", (Object)toObjectFromArray(points));
+            classInstance.Invoke("AddBeziers", (java.lang.Object)toObjectFromArray(points));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -535,7 +535,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddClosedCurve", (Object)toObjectFromArray(points));
+            classInstance.Invoke("AddClosedCurve", (java.lang.Object)toObjectFromArray(points));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -555,7 +555,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddClosedCurve", (Object)toObjectFromArray(points));
+            classInstance.Invoke("AddClosedCurve", (java.lang.Object)toObjectFromArray(points));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -575,7 +575,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddCurve", (Object)toObjectFromArray(points));
+            classInstance.Invoke("AddCurve", (java.lang.Object)toObjectFromArray(points));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -605,7 +605,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddCurve", (Object)toObjectFromArray(points));
+            classInstance.Invoke("AddCurve", (java.lang.Object)toObjectFromArray(points));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -715,7 +715,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddLines", (Object)toObjectFromArray(points));
+            classInstance.Invoke("AddLines", (java.lang.Object)toObjectFromArray(points));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -725,7 +725,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddLines", (Object)toObjectFromArray(points));
+            classInstance.Invoke("AddLines", (java.lang.Object)toObjectFromArray(points));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -775,7 +775,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddPolygon", (Object)toObjectFromArray(points));
+            classInstance.Invoke("AddPolygon", (java.lang.Object)toObjectFromArray(points));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -785,7 +785,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddPolygon", (Object)toObjectFromArray(points));
+            classInstance.Invoke("AddPolygon", (java.lang.Object)toObjectFromArray(points));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -815,7 +815,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddRectangles", (Object)toObjectFromArray(rects));
+            classInstance.Invoke("AddRectangles", (java.lang.Object)toObjectFromArray(rects));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -825,7 +825,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddRectangles", (Object)toObjectFromArray(rects));
+            classInstance.Invoke("AddRectangles", (java.lang.Object)toObjectFromArray(rects));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1082,9 +1082,9 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Get("PathTypes");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -1145,7 +1145,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
         try {
             ArrayList<PointF> resultingArrayList = new ArrayList<PointF>();
             JCObject resultingObjects = (JCObject)classInstance.Get("PathPoints");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new PointF(resultingObject));
             }
             PointF[] resultingArray = new PointF[resultingArrayList.size()];

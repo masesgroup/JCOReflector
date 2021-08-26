@@ -99,7 +99,7 @@ public class Transform3D extends GeneralTransform3D  {
         }
     }
 
-    public Transform3D(Object instance) throws Throwable {
+    public Transform3D(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class Transform3D extends GeneralTransform3D  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -230,7 +230,7 @@ public class Transform3D extends GeneralTransform3D  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Transform", (Object)toObjectFromArray(points));
+            classInstance.Invoke("Transform", (java.lang.Object)toObjectFromArray(points));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -240,7 +240,7 @@ public class Transform3D extends GeneralTransform3D  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Transform", (Object)toObjectFromArray(points));
+            classInstance.Invoke("Transform", (java.lang.Object)toObjectFromArray(points));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -250,7 +250,7 @@ public class Transform3D extends GeneralTransform3D  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Transform", (Object)toObjectFromArray(vectors));
+            classInstance.Invoke("Transform", (java.lang.Object)toObjectFromArray(vectors));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

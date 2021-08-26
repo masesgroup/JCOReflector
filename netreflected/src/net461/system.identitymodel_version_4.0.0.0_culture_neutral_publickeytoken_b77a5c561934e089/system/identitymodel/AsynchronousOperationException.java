@@ -96,7 +96,7 @@ public class AsynchronousOperationException extends NetException {
         super();
     }
 
-    public AsynchronousOperationException(Object instance) {
+    public AsynchronousOperationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -130,7 +130,7 @@ public class AsynchronousOperationException extends NetException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -100,7 +100,7 @@ public class Connector extends NetObject implements system.IDisposable, AutoClos
         }
     }
 
-    public Connector(Object instance) throws Throwable {
+    public Connector(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class Connector extends NetObject implements system.IDisposable, AutoClos
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

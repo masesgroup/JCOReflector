@@ -108,7 +108,7 @@ public class XmlSchemaValidator extends NetObject  {
         }
     }
 
-    public XmlSchemaValidator(Object instance) throws Throwable {
+    public XmlSchemaValidator(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -128,7 +128,7 @@ public class XmlSchemaValidator extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -221,7 +221,7 @@ public class XmlSchemaValidator extends NetObject  {
         try {
             ArrayList<XmlSchemaAttribute> resultingArrayList = new ArrayList<XmlSchemaAttribute>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetExpectedAttributes");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new XmlSchemaAttribute(resultingObject));
             }
             XmlSchemaAttribute[] resultingArray = new XmlSchemaAttribute[resultingArrayList.size()];
@@ -238,7 +238,7 @@ public class XmlSchemaValidator extends NetObject  {
         try {
             ArrayList<XmlSchemaParticle> resultingArrayList = new ArrayList<XmlSchemaParticle>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetExpectedParticles");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new XmlSchemaParticle(resultingObject));
             }
             XmlSchemaParticle[] resultingArray = new XmlSchemaParticle[resultingArrayList.size()];

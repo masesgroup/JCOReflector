@@ -97,9 +97,9 @@ public interface IWindowTarget extends IJCOBridgeReflected {
     /**
      * Returns the instantiated class
      * 
-     * @return An {@link Object} representing the instance of the instantiated Class
+     * @return An {@link java.lang.Object} representing the instance of the instantiated Class
      */
-    public Object getJCOInstance();
+    public java.lang.Object getJCOInstance();
 
     /**
      * Returns the instantiated class Type
@@ -110,7 +110,7 @@ public interface IWindowTarget extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void OnMessage(Message m) throws Throwable;
+    public void OnMessage(JCORefOut<Message> m) throws Throwable;
 
 
     

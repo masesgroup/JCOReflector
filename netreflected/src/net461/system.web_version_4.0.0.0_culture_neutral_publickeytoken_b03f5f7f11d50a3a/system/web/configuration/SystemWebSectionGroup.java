@@ -128,7 +128,7 @@ public class SystemWebSectionGroup extends ConfigurationSectionGroup  {
         }
     }
 
-    public SystemWebSectionGroup(Object instance) throws Throwable {
+    public SystemWebSectionGroup(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -148,7 +148,7 @@ public class SystemWebSectionGroup extends ConfigurationSectionGroup  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

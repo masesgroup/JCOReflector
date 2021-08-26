@@ -100,7 +100,7 @@ public class SqlParameter extends DbParameter implements system.ICloneable {
         }
     }
 
-    public SqlParameter(Object instance) throws Throwable {
+    public SqlParameter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class SqlParameter extends DbParameter implements system.ICloneable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

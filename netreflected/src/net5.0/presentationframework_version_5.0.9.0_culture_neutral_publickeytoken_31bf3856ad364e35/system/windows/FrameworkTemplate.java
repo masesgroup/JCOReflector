@@ -101,7 +101,7 @@ public class FrameworkTemplate extends DispatcherObject implements system.window
         }
     }
 
-    public FrameworkTemplate(Object instance) throws Throwable {
+    public FrameworkTemplate(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -121,7 +121,7 @@ public class FrameworkTemplate extends DispatcherObject implements system.window
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

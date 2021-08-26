@@ -95,7 +95,7 @@ public class Rotation3DKeyFrame extends Freezable  {
         }
     }
 
-    public Rotation3DKeyFrame(Object instance) throws Throwable {
+    public Rotation3DKeyFrame(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class Rotation3DKeyFrame extends Freezable  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

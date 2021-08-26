@@ -97,7 +97,7 @@ public class XamlInternalException extends XamlException {
         super();
     }
 
-    public XamlInternalException(Object instance) {
+    public XamlInternalException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class XamlInternalException extends XamlException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

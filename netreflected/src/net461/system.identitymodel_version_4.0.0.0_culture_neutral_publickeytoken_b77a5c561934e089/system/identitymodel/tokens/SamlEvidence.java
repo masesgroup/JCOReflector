@@ -97,7 +97,7 @@ public class SamlEvidence extends NetObject  {
         }
     }
 
-    public SamlEvidence(Object instance) throws Throwable {
+    public SamlEvidence(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class SamlEvidence extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -104,7 +104,7 @@ public class CompositeActivityDesigner extends ActivityDesigner  {
         }
     }
 
-    public CompositeActivityDesigner(Object instance) throws Throwable {
+    public CompositeActivityDesigner(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -124,7 +124,7 @@ public class CompositeActivityDesigner extends ActivityDesigner  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -193,7 +193,7 @@ public class CompositeActivityDesigner extends ActivityDesigner  {
         try {
             ArrayList<Activity> resultingArrayList = new ArrayList<Activity>();
             JCObject resultingObjects = (JCObject)classType.Invoke("DeserializeActivitiesFromDataObject", serviceProvider == null ? null : serviceProvider.getJCOInstance(), dataObj == null ? null : dataObj.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Activity(resultingObject));
             }
             Activity[] resultingArray = new Activity[resultingArrayList.size()];
@@ -210,7 +210,7 @@ public class CompositeActivityDesigner extends ActivityDesigner  {
         try {
             ArrayList<ActivityDesigner> resultingArrayList = new ArrayList<ActivityDesigner>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetIntersectingDesigners", topLevelDesigner == null ? null : topLevelDesigner.getJCOInstance(), rectangle == null ? null : rectangle.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ActivityDesigner(resultingObject));
             }
             ActivityDesigner[] resultingArray = new ActivityDesigner[resultingArrayList.size()];

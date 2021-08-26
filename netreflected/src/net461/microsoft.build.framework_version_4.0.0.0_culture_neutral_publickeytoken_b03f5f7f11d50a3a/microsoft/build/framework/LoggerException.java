@@ -98,7 +98,7 @@ public class LoggerException extends NetException {
         super();
     }
 
-    public LoggerException(Object instance) {
+    public LoggerException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -132,7 +132,7 @@ public class LoggerException extends NetException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

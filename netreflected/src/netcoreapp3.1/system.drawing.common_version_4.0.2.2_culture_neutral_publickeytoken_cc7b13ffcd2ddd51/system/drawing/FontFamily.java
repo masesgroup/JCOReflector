@@ -98,7 +98,7 @@ public class FontFamily extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public FontFamily(Object instance) throws Throwable {
+    public FontFamily(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class FontFamily extends MarshalByRefObject implements AutoCloseable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -237,7 +237,7 @@ public class FontFamily extends MarshalByRefObject implements AutoCloseable {
         try {
             ArrayList<FontFamily> resultingArrayList = new ArrayList<FontFamily>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetFamilies", graphics == null ? null : graphics.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new FontFamily(resultingObject));
             }
             FontFamily[] resultingArray = new FontFamily[resultingArrayList.size()];
@@ -324,7 +324,7 @@ public class FontFamily extends MarshalByRefObject implements AutoCloseable {
         try {
             ArrayList<FontFamily> resultingArrayList = new ArrayList<FontFamily>();
             JCObject resultingObjects = (JCObject)classType.Get("Families");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new FontFamily(resultingObject));
             }
             FontFamily[] resultingArray = new FontFamily[resultingArrayList.size()];

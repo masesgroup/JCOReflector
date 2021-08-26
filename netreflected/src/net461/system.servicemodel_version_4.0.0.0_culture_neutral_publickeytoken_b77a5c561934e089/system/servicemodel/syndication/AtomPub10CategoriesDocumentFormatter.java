@@ -99,7 +99,7 @@ public class AtomPub10CategoriesDocumentFormatter extends CategoriesDocumentForm
         }
     }
 
-    public AtomPub10CategoriesDocumentFormatter(Object instance) throws Throwable {
+    public AtomPub10CategoriesDocumentFormatter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class AtomPub10CategoriesDocumentFormatter extends CategoriesDocumentForm
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

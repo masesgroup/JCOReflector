@@ -108,7 +108,7 @@ public class TransferEncoding extends NetObject  {
         }
     }
 
-    public TransferEncoding(Object instance) {
+    public TransferEncoding(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class TransferEncoding extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

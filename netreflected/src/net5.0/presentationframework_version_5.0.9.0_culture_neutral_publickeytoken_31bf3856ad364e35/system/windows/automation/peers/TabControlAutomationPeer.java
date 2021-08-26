@@ -94,7 +94,7 @@ public class TabControlAutomationPeer extends SelectorAutomationPeer  {
         }
     }
 
-    public TabControlAutomationPeer(Object instance) throws Throwable {
+    public TabControlAutomationPeer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class TabControlAutomationPeer extends SelectorAutomationPeer  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

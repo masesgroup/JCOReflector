@@ -97,7 +97,7 @@ public class ITableProviderImplementation extends NetObject implements ITablePro
         }
     }
 
-    public ITableProviderImplementation(Object instance) throws Throwable {
+    public ITableProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class ITableProviderImplementation extends NetObject implements ITablePro
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -154,7 +154,7 @@ public class ITableProviderImplementation extends NetObject implements ITablePro
         try {
             ArrayList<IRawElementProviderSimple> resultingArrayList = new ArrayList<IRawElementProviderSimple>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetColumnHeaders");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IRawElementProviderSimpleImplementation(resultingObject));
             }
             IRawElementProviderSimple[] resultingArray = new IRawElementProviderSimple[resultingArrayList.size()];
@@ -171,7 +171,7 @@ public class ITableProviderImplementation extends NetObject implements ITablePro
         try {
             ArrayList<IRawElementProviderSimple> resultingArrayList = new ArrayList<IRawElementProviderSimple>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetRowHeaders");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IRawElementProviderSimpleImplementation(resultingObject));
             }
             IRawElementProviderSimple[] resultingArray = new IRawElementProviderSimple[resultingArrayList.size()];

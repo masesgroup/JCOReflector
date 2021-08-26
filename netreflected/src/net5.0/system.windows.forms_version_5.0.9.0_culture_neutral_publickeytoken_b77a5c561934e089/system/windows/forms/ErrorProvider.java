@@ -105,7 +105,7 @@ public class ErrorProvider extends Component implements system.componentmodel.IS
         }
     }
 
-    public ErrorProvider(Object instance) throws Throwable {
+    public ErrorProvider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -125,7 +125,7 @@ public class ErrorProvider extends Component implements system.componentmodel.IS
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

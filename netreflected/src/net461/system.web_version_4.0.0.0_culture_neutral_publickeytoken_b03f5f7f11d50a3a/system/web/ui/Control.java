@@ -110,7 +110,7 @@ public class Control extends NetObject implements system.web.ui.IParserAccessor,
         }
     }
 
-    public Control(Object instance) throws Throwable {
+    public Control(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -130,7 +130,7 @@ public class Control extends NetObject implements system.web.ui.IParserAccessor,
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

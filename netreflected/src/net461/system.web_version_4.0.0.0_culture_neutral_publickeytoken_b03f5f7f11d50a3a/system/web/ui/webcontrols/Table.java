@@ -100,7 +100,7 @@ public class Table extends WebControl implements system.web.ui.IPostBackEventHan
         }
     }
 
-    public Table(Object instance) throws Throwable {
+    public Table(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class Table extends WebControl implements system.web.ui.IPostBackEventHan
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

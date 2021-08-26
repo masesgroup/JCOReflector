@@ -99,7 +99,7 @@ public class D3DImage extends ImageSource  {
         }
     }
 
-    public D3DImage(Object instance) throws Throwable {
+    public D3DImage(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class D3DImage extends ImageSource  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

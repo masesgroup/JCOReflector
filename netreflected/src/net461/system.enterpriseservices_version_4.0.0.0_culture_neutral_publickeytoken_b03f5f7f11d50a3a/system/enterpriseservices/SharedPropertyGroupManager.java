@@ -95,7 +95,7 @@ public class SharedPropertyGroupManager extends NetObjectEnumerable  {
         }
     }
 
-    public SharedPropertyGroupManager(Object instance) throws Throwable {
+    public SharedPropertyGroupManager(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class SharedPropertyGroupManager extends NetObjectEnumerable  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -154,11 +154,11 @@ public class SharedPropertyGroupManager extends NetObjectEnumerable  {
     
     // Methods section
     
-    public SharedPropertyGroup CreatePropertyGroup(java.lang.String name, PropertyLockMode dwIsoMode, PropertyReleaseMode dwRelMode, JCORefOut fExist) throws Throwable {
+    public SharedPropertyGroup CreatePropertyGroup(java.lang.String name, JCORefOut<PropertyLockMode> dwIsoMode, JCORefOut<PropertyReleaseMode> dwRelMode, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> fExist) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreatePropertyGroup = (JCObject)classInstance.Invoke("CreatePropertyGroup", name, dwIsoMode == null ? null : dwIsoMode.getJCOInstance(), dwRelMode == null ? null : dwRelMode.getJCOInstance(), fExist.getJCRefOut());
+            JCObject objCreatePropertyGroup = (JCObject)classInstance.Invoke("CreatePropertyGroup", name, dwIsoMode.getJCRefOut(), dwRelMode.getJCRefOut(), fExist.getJCRefOut());
             return new SharedPropertyGroup(objCreatePropertyGroup);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -96,7 +96,7 @@ public class TemplateKey extends ResourceKey implements system.componentmodel.IS
         }
     }
 
-    public TemplateKey(Object instance) throws Throwable {
+    public TemplateKey(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class TemplateKey extends ResourceKey implements system.componentmodel.IS
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

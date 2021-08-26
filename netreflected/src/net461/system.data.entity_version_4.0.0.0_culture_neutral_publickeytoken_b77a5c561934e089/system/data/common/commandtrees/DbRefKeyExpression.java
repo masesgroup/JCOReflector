@@ -94,7 +94,7 @@ public class DbRefKeyExpression extends DbUnaryExpression  {
         }
     }
 
-    public DbRefKeyExpression(Object instance) throws Throwable {
+    public DbRefKeyExpression(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class DbRefKeyExpression extends DbUnaryExpression  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

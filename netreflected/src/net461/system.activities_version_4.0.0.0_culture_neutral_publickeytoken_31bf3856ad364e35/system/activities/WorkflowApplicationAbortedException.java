@@ -98,7 +98,7 @@ public class WorkflowApplicationAbortedException extends WorkflowApplicationExce
         super();
     }
 
-    public WorkflowApplicationAbortedException(Object instance) {
+    public WorkflowApplicationAbortedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -132,7 +132,7 @@ public class WorkflowApplicationAbortedException extends WorkflowApplicationExce
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

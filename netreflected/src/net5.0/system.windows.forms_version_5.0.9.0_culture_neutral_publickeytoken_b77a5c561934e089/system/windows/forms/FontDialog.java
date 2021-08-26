@@ -96,7 +96,7 @@ public class FontDialog extends CommonDialog  {
         }
     }
 
-    public FontDialog(Object instance) throws Throwable {
+    public FontDialog(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class FontDialog extends CommonDialog  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -92,7 +92,7 @@ public class IUrlResolutionServiceImplementation extends NetObject implements IU
         }
     }
 
-    public IUrlResolutionServiceImplementation(Object instance) throws Throwable {
+    public IUrlResolutionServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class IUrlResolutionServiceImplementation extends NetObject implements IU
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

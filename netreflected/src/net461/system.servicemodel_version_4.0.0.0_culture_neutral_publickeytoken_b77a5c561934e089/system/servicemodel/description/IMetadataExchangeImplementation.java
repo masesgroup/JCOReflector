@@ -96,7 +96,7 @@ public class IMetadataExchangeImplementation extends NetObject implements IMetad
         }
     }
 
-    public IMetadataExchangeImplementation(Object instance) throws Throwable {
+    public IMetadataExchangeImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class IMetadataExchangeImplementation extends NetObject implements IMetad
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

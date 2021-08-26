@@ -92,7 +92,7 @@ public class IIdentityImplementation extends NetObject implements IIdentity {
         }
     }
 
-    public IIdentityImplementation(Object instance) throws Throwable {
+    public IIdentityImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class IIdentityImplementation extends NetObject implements IIdentity {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

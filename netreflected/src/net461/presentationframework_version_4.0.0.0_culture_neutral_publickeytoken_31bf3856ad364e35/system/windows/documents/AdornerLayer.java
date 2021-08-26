@@ -99,7 +99,7 @@ public class AdornerLayer extends FrameworkElement  {
         }
     }
 
-    public AdornerLayer(Object instance) throws Throwable {
+    public AdornerLayer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class AdornerLayer extends FrameworkElement  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -158,7 +158,7 @@ public class AdornerLayer extends FrameworkElement  {
         try {
             ArrayList<Adorner> resultingArrayList = new ArrayList<Adorner>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetAdorners", element == null ? null : element.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Adorner(resultingObject));
             }
             Adorner[] resultingArray = new Adorner[resultingArrayList.size()];

@@ -173,7 +173,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
         }
     }
 
-    public DataGridView(Object instance) throws Throwable {
+    public DataGridView(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -193,7 +193,7 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

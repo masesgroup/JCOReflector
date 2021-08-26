@@ -97,7 +97,7 @@ public class CustomAttributeFormatException extends FormatException {
         super();
     }
 
-    public CustomAttributeFormatException(Object instance) {
+    public CustomAttributeFormatException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class CustomAttributeFormatException extends FormatException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

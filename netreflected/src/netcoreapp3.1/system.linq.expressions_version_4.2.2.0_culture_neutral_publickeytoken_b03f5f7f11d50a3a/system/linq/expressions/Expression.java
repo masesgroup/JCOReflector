@@ -136,7 +136,7 @@ public class Expression extends NetObject  {
         }
     }
 
-    public Expression(Object instance) throws Throwable {
+    public Expression(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -156,7 +156,7 @@ public class Expression extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -1300,7 +1300,7 @@ public class Expression extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objBlock = (JCObject)classType.Invoke("Block", (Object)toObjectFromArray(expressions));
+            JCObject objBlock = (JCObject)classType.Invoke("Block", (java.lang.Object)toObjectFromArray(expressions));
             return new BlockExpression(objBlock);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -2444,7 +2444,7 @@ public class Expression extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objRuntimeVariables = (JCObject)classType.Invoke("RuntimeVariables", (Object)toObjectFromArray(variables));
+            JCObject objRuntimeVariables = (JCObject)classType.Invoke("RuntimeVariables", (java.lang.Object)toObjectFromArray(variables));
             return new RuntimeVariablesExpression(objRuntimeVariables);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -3060,7 +3060,7 @@ public class Expression extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetActionType = (JCObject)classType.Invoke("GetActionType", (Object)toObjectFromArray(typeArgs));
+            JCObject objGetActionType = (JCObject)classType.Invoke("GetActionType", (java.lang.Object)toObjectFromArray(typeArgs));
             return new NetType(objGetActionType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -3071,7 +3071,7 @@ public class Expression extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetDelegateType = (JCObject)classType.Invoke("GetDelegateType", (Object)toObjectFromArray(typeArgs));
+            JCObject objGetDelegateType = (JCObject)classType.Invoke("GetDelegateType", (java.lang.Object)toObjectFromArray(typeArgs));
             return new NetType(objGetDelegateType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -3082,7 +3082,7 @@ public class Expression extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetFuncType = (JCObject)classType.Invoke("GetFuncType", (Object)toObjectFromArray(typeArgs));
+            JCObject objGetFuncType = (JCObject)classType.Invoke("GetFuncType", (java.lang.Object)toObjectFromArray(typeArgs));
             return new NetType(objGetFuncType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

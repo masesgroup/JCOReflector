@@ -128,7 +128,7 @@ public class ToolStripItem extends Component implements system.windows.forms.IDr
         }
     }
 
-    public ToolStripItem(Object instance) throws Throwable {
+    public ToolStripItem(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -148,7 +148,7 @@ public class ToolStripItem extends Component implements system.windows.forms.IDr
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

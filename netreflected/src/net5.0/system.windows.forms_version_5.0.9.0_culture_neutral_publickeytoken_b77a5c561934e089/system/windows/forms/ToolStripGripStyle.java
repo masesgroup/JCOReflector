@@ -108,7 +108,7 @@ public class ToolStripGripStyle extends NetObject  {
         }
     }
 
-    public ToolStripGripStyle(Object instance) {
+    public ToolStripGripStyle(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class ToolStripGripStyle extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

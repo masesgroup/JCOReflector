@@ -96,7 +96,7 @@ public class Transform3DGroup extends Transform3D  {
         }
     }
 
-    public Transform3DGroup(Object instance) throws Throwable {
+    public Transform3DGroup(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class Transform3DGroup extends Transform3D  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

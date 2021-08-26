@@ -98,7 +98,7 @@ public class PeerName extends NetObject implements system.runtime.serialization.
         }
     }
 
-    public PeerName(Object instance) throws Throwable {
+    public PeerName(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class PeerName extends NetObject implements system.runtime.serialization.
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

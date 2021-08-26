@@ -97,7 +97,7 @@ public class IOrderedDictionaryImplementation extends IEnumerableImplementation 
         }
     }
 
-    public IOrderedDictionaryImplementation(Object instance) throws Throwable {
+    public IOrderedDictionaryImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class IOrderedDictionaryImplementation extends IEnumerableImplementation 
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

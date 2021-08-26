@@ -94,7 +94,7 @@ public class TransferCodingWithQualityHeaderValue extends TransferCodingHeaderVa
         }
     }
 
-    public TransferCodingWithQualityHeaderValue(Object instance) throws Throwable {
+    public TransferCodingWithQualityHeaderValue(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class TransferCodingWithQualityHeaderValue extends TransferCodingHeaderVa
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

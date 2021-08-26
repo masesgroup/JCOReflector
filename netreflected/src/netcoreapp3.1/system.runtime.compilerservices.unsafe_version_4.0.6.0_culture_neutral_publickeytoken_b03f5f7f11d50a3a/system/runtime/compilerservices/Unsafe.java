@@ -93,7 +93,7 @@ public class Unsafe extends NetObject  {
         }
     }
 
-    public Unsafe(Object instance) throws Throwable {
+    public Unsafe(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class Unsafe extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -144,41 +144,41 @@ public class Unsafe extends NetObject  {
     
     // Methods section
     
-    public static void CopyBlock(byte destination, byte source, UInt32 byteCount) throws Throwable {
+    public static void CopyBlock(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> destination, JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> source, UInt32 byteCount) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("CopyBlock", destination, source, byteCount == null ? null : byteCount.getJCOInstance());
+            classType.Invoke("CopyBlock", destination.getJCRefOut(), source.getJCRefOut(), byteCount == null ? null : byteCount.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void CopyBlockUnaligned(byte destination, byte source, UInt32 byteCount) throws Throwable {
+    public static void CopyBlockUnaligned(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> destination, JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> source, UInt32 byteCount) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("CopyBlockUnaligned", destination, source, byteCount == null ? null : byteCount.getJCOInstance());
+            classType.Invoke("CopyBlockUnaligned", destination.getJCRefOut(), source.getJCRefOut(), byteCount == null ? null : byteCount.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void InitBlock(byte startAddress, byte value, UInt32 byteCount) throws Throwable {
+    public static void InitBlock(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> startAddress, byte value, UInt32 byteCount) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("InitBlock", startAddress, value, byteCount == null ? null : byteCount.getJCOInstance());
+            classType.Invoke("InitBlock", startAddress.getJCRefOut(), value, byteCount == null ? null : byteCount.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static void InitBlockUnaligned(byte startAddress, byte value, UInt32 byteCount) throws Throwable {
+    public static void InitBlockUnaligned(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> startAddress, byte value, UInt32 byteCount) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("InitBlockUnaligned", startAddress, value, byteCount == null ? null : byteCount.getJCOInstance());
+            classType.Invoke("InitBlockUnaligned", startAddress.getJCRefOut(), value, byteCount == null ? null : byteCount.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

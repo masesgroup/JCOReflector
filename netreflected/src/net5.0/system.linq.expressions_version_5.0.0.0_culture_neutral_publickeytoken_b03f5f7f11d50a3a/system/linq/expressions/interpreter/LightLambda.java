@@ -92,7 +92,7 @@ public class LightLambda extends NetObject  {
         }
     }
 
-    public LightLambda(Object instance) throws Throwable {
+    public LightLambda(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class LightLambda extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -149,7 +149,7 @@ public class LightLambda extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objRun = (JCObject)classInstance.Invoke("Run", (Object)toObjectFromArray(arguments));
+            JCObject objRun = (JCObject)classInstance.Invoke("Run", (java.lang.Object)toObjectFromArray(arguments));
             return new NetObject(objRun);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -160,7 +160,7 @@ public class LightLambda extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objRunVoid = (JCObject)classInstance.Invoke("RunVoid", (Object)toObjectFromArray(arguments));
+            JCObject objRunVoid = (JCObject)classInstance.Invoke("RunVoid", (java.lang.Object)toObjectFromArray(arguments));
             return new NetObject(objRunVoid);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

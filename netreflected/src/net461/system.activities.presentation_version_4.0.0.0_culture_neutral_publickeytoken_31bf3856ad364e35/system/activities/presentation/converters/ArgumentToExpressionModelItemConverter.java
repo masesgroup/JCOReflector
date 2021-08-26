@@ -93,7 +93,7 @@ public class ArgumentToExpressionModelItemConverter extends NetObject  {
         }
     }
 
-    public ArgumentToExpressionModelItemConverter(Object instance) throws Throwable {
+    public ArgumentToExpressionModelItemConverter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class ArgumentToExpressionModelItemConverter extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -169,7 +169,7 @@ public class ArgumentToExpressionModelItemConverter extends NetObject  {
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("ConvertBack", value == null ? null : value.getJCOInstance(), toObjectFromArray(targetTypes), parameter == null ? null : parameter.getJCOInstance(), culture == null ? null : culture.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];

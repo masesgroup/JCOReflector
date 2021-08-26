@@ -95,7 +95,7 @@ public class SqlColumnEncryptionEnclaveProvider extends NetObject  {
         }
     }
 
-    public SqlColumnEncryptionEnclaveProvider(Object instance) throws Throwable {
+    public SqlColumnEncryptionEnclaveProvider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class SqlColumnEncryptionEnclaveProvider extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -157,7 +157,7 @@ public class SqlColumnEncryptionEnclaveProvider extends NetObject  {
         }
     }
 
-    public void CreateEnclaveSession(byte[] enclaveAttestationInfo, ECDiffieHellmanCng clientDiffieHellmanKey, java.lang.String attestationUrl, java.lang.String servername, JCORefOut<SqlEnclaveSession> sqlEnclaveSession, JCORefOut counter) throws Throwable {
+    public void CreateEnclaveSession(byte[] enclaveAttestationInfo, ECDiffieHellmanCng clientDiffieHellmanKey, java.lang.String attestationUrl, java.lang.String servername, JCORefOut<SqlEnclaveSession> sqlEnclaveSession, JCORefOut<java.util.concurrent.atomic.AtomicLong> counter) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -167,7 +167,7 @@ public class SqlColumnEncryptionEnclaveProvider extends NetObject  {
         }
     }
 
-    public void GetEnclaveSession(java.lang.String serverName, java.lang.String attestationUrl, JCORefOut<SqlEnclaveSession> sqlEnclaveSession, JCORefOut counter) throws Throwable {
+    public void GetEnclaveSession(java.lang.String serverName, java.lang.String attestationUrl, JCORefOut<SqlEnclaveSession> sqlEnclaveSession, JCORefOut<java.util.concurrent.atomic.AtomicLong> counter) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

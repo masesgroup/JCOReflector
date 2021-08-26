@@ -103,7 +103,7 @@ public class _ConstructorInfoImplementation extends NetObject implements _Constr
         }
     }
 
-    public _ConstructorInfoImplementation(Object instance) throws Throwable {
+    public _ConstructorInfoImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -123,7 +123,7 @@ public class _ConstructorInfoImplementation extends NetObject implements _Constr
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -190,7 +190,7 @@ public class _ConstructorInfoImplementation extends NetObject implements _Constr
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objInvoke_5 = (JCObject)classInstance.Invoke("Invoke_5", (Object)toObjectFromArray(parameters));
+            JCObject objInvoke_5 = (JCObject)classInstance.Invoke("Invoke_5", (java.lang.Object)toObjectFromArray(parameters));
             return new NetObject(objInvoke_5);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -203,7 +203,7 @@ public class _ConstructorInfoImplementation extends NetObject implements _Constr
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetCustomAttributes", inherit);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
@@ -220,7 +220,7 @@ public class _ConstructorInfoImplementation extends NetObject implements _Constr
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetCustomAttributes", attributeType == null ? null : attributeType.getJCOInstance(), inherit);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
@@ -248,7 +248,7 @@ public class _ConstructorInfoImplementation extends NetObject implements _Constr
         try {
             ArrayList<ParameterInfo> resultingArrayList = new ArrayList<ParameterInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetParameters");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ParameterInfo(resultingObject));
             }
             ParameterInfo[] resultingArray = new ParameterInfo[resultingArrayList.size()];

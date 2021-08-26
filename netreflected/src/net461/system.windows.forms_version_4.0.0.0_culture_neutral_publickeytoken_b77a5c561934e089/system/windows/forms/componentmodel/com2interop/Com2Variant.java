@@ -92,7 +92,7 @@ public class Com2Variant extends NetObject  {
         }
     }
 
-    public Com2Variant(Object instance) throws Throwable {
+    public Com2Variant(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class Com2Variant extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

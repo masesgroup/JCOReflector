@@ -124,7 +124,7 @@ public class MessageQueue extends Component  {
         }
     }
 
-    public MessageQueue(Object instance) throws Throwable {
+    public MessageQueue(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -144,7 +144,7 @@ public class MessageQueue extends Component  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -766,7 +766,7 @@ public class MessageQueue extends Component  {
         try {
             ArrayList<Message> resultingArrayList = new ArrayList<Message>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetAllMessages");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Message(resultingObject));
             }
             Message[] resultingArray = new Message[resultingArrayList.size()];
@@ -827,7 +827,7 @@ public class MessageQueue extends Component  {
         try {
             ArrayList<MessageQueue> resultingArrayList = new ArrayList<MessageQueue>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetPrivateQueuesByMachine", machineName);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MessageQueue(resultingObject));
             }
             MessageQueue[] resultingArray = new MessageQueue[resultingArrayList.size()];
@@ -844,7 +844,7 @@ public class MessageQueue extends Component  {
         try {
             ArrayList<MessageQueue> resultingArrayList = new ArrayList<MessageQueue>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetPublicQueues");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MessageQueue(resultingObject));
             }
             MessageQueue[] resultingArray = new MessageQueue[resultingArrayList.size()];
@@ -861,7 +861,7 @@ public class MessageQueue extends Component  {
         try {
             ArrayList<MessageQueue> resultingArrayList = new ArrayList<MessageQueue>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetPublicQueues", criteria == null ? null : criteria.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MessageQueue(resultingObject));
             }
             MessageQueue[] resultingArray = new MessageQueue[resultingArrayList.size()];
@@ -878,7 +878,7 @@ public class MessageQueue extends Component  {
         try {
             ArrayList<MessageQueue> resultingArrayList = new ArrayList<MessageQueue>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetPublicQueuesByCategory", category == null ? null : category.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MessageQueue(resultingObject));
             }
             MessageQueue[] resultingArray = new MessageQueue[resultingArrayList.size()];
@@ -895,7 +895,7 @@ public class MessageQueue extends Component  {
         try {
             ArrayList<MessageQueue> resultingArrayList = new ArrayList<MessageQueue>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetPublicQueuesByLabel", label);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MessageQueue(resultingObject));
             }
             MessageQueue[] resultingArray = new MessageQueue[resultingArrayList.size()];
@@ -912,7 +912,7 @@ public class MessageQueue extends Component  {
         try {
             ArrayList<MessageQueue> resultingArrayList = new ArrayList<MessageQueue>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetPublicQueuesByMachine", machineName);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MessageQueue(resultingObject));
             }
             MessageQueue[] resultingArray = new MessageQueue[resultingArrayList.size()];

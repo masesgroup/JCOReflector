@@ -92,7 +92,7 @@ public class IEasingFunctionImplementation extends NetObject implements IEasingF
         }
     }
 
-    public IEasingFunctionImplementation(Object instance) throws Throwable {
+    public IEasingFunctionImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class IEasingFunctionImplementation extends NetObject implements IEasingF
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

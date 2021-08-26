@@ -102,7 +102,7 @@ public class EventBindingService extends NetObject implements system.componentmo
         }
     }
 
-    public EventBindingService(Object instance) throws Throwable {
+    public EventBindingService(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -122,7 +122,7 @@ public class EventBindingService extends NetObject implements system.componentmo
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

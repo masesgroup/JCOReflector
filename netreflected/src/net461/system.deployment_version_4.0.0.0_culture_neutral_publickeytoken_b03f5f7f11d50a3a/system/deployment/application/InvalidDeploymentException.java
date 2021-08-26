@@ -97,7 +97,7 @@ public class InvalidDeploymentException extends DeploymentException {
         super();
     }
 
-    public InvalidDeploymentException(Object instance) {
+    public InvalidDeploymentException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class InvalidDeploymentException extends DeploymentException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

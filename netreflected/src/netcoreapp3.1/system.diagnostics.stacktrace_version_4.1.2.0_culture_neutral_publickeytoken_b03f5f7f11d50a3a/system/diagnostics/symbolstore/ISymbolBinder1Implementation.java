@@ -94,7 +94,7 @@ public class ISymbolBinder1Implementation extends NetObject implements ISymbolBi
         }
     }
 
-    public ISymbolBinder1Implementation(Object instance) throws Throwable {
+    public ISymbolBinder1Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class ISymbolBinder1Implementation extends NetObject implements ISymbolBi
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

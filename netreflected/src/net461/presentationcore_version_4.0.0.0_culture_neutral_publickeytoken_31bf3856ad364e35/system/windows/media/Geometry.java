@@ -106,7 +106,7 @@ public class Geometry extends Animatable implements system.IFormattable {
         }
     }
 
-    public Geometry(Object instance) throws Throwable {
+    public Geometry(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -126,7 +126,7 @@ public class Geometry extends Animatable implements system.IFormattable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -96,7 +96,7 @@ public class CatalogPart extends Part  {
         }
     }
 
-    public CatalogPart(Object instance) throws Throwable {
+    public CatalogPart(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class CatalogPart extends Part  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

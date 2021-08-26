@@ -97,7 +97,7 @@ public class AudienceUriValidationFailedException extends SecurityTokenValidatio
         super();
     }
 
-    public AudienceUriValidationFailedException(Object instance) {
+    public AudienceUriValidationFailedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class AudienceUriValidationFailedException extends SecurityTokenValidatio
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

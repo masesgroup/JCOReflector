@@ -96,7 +96,7 @@ public class FollowingSiblingMergeIterator extends ValueType  {
         }
     }
 
-    public FollowingSiblingMergeIterator(Object instance) throws Throwable {
+    public FollowingSiblingMergeIterator(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class FollowingSiblingMergeIterator extends ValueType  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

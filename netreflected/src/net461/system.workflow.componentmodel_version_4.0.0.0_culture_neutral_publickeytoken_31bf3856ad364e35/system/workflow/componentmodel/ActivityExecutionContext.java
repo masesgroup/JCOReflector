@@ -97,7 +97,7 @@ public class ActivityExecutionContext extends NetObject implements system.IDispo
         }
     }
 
-    public ActivityExecutionContext(Object instance) throws Throwable {
+    public ActivityExecutionContext(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class ActivityExecutionContext extends NetObject implements system.IDispo
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

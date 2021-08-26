@@ -93,7 +93,7 @@ public class IPersonalizableImplementation extends NetObject implements IPersona
         }
     }
 
-    public IPersonalizableImplementation(Object instance) throws Throwable {
+    public IPersonalizableImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class IPersonalizableImplementation extends NetObject implements IPersona
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

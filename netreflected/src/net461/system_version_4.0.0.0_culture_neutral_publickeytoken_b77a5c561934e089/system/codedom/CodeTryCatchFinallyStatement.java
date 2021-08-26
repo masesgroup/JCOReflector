@@ -96,7 +96,7 @@ public class CodeTryCatchFinallyStatement extends CodeStatement  {
         }
     }
 
-    public CodeTryCatchFinallyStatement(Object instance) throws Throwable {
+    public CodeTryCatchFinallyStatement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class CodeTryCatchFinallyStatement extends CodeStatement  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

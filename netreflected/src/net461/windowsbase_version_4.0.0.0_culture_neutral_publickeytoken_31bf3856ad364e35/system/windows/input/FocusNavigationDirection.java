@@ -108,7 +108,7 @@ public class FocusNavigationDirection extends NetObject  {
         }
     }
 
-    public FocusNavigationDirection(Object instance) {
+    public FocusNavigationDirection(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class FocusNavigationDirection extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

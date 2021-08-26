@@ -108,7 +108,7 @@ public class ToolboxItem extends NetObject implements system.runtime.serializati
         }
     }
 
-    public ToolboxItem(Object instance) throws Throwable {
+    public ToolboxItem(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -128,7 +128,7 @@ public class ToolboxItem extends NetObject implements system.runtime.serializati
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -183,7 +183,7 @@ public class ToolboxItem extends NetObject implements system.runtime.serializati
         try {
             ArrayList<IComponent> resultingArrayList = new ArrayList<IComponent>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("CreateComponents");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IComponentImplementation(resultingObject));
             }
             IComponent[] resultingArray = new IComponent[resultingArrayList.size()];
@@ -200,7 +200,7 @@ public class ToolboxItem extends NetObject implements system.runtime.serializati
         try {
             ArrayList<IComponent> resultingArrayList = new ArrayList<IComponent>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("CreateComponents", host == null ? null : host.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IComponentImplementation(resultingObject));
             }
             IComponent[] resultingArray = new IComponent[resultingArrayList.size()];
@@ -217,7 +217,7 @@ public class ToolboxItem extends NetObject implements system.runtime.serializati
         try {
             ArrayList<IComponent> resultingArrayList = new ArrayList<IComponent>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("CreateComponents", host == null ? null : host.getJCOInstance(), defaultValues == null ? null : defaultValues.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IComponentImplementation(resultingObject));
             }
             IComponent[] resultingArray = new IComponent[resultingArrayList.size()];
@@ -403,7 +403,7 @@ public class ToolboxItem extends NetObject implements system.runtime.serializati
         try {
             ArrayList<AssemblyName> resultingArrayList = new ArrayList<AssemblyName>();
             JCObject resultingObjects = (JCObject)classInstance.Get("DependentAssemblies");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new AssemblyName(resultingObject));
             }
             AssemblyName[] resultingArray = new AssemblyName[resultingArrayList.size()];

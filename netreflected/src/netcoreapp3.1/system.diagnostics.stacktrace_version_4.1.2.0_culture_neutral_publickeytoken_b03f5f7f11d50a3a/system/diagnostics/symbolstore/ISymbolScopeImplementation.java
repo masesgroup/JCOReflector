@@ -100,7 +100,7 @@ public class ISymbolScopeImplementation extends NetObject implements ISymbolScop
         }
     }
 
-    public ISymbolScopeImplementation(Object instance) throws Throwable {
+    public ISymbolScopeImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class ISymbolScopeImplementation extends NetObject implements ISymbolScop
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -146,7 +146,7 @@ public class ISymbolScopeImplementation extends NetObject implements ISymbolScop
         try {
             ArrayList<ISymbolNamespace> resultingArrayList = new ArrayList<ISymbolNamespace>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetNamespaces");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ISymbolNamespaceImplementation(resultingObject));
             }
             ISymbolNamespace[] resultingArray = new ISymbolNamespace[resultingArrayList.size()];
@@ -163,7 +163,7 @@ public class ISymbolScopeImplementation extends NetObject implements ISymbolScop
         try {
             ArrayList<ISymbolScope> resultingArrayList = new ArrayList<ISymbolScope>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetChildren");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ISymbolScopeImplementation(resultingObject));
             }
             ISymbolScope[] resultingArray = new ISymbolScope[resultingArrayList.size()];
@@ -180,7 +180,7 @@ public class ISymbolScopeImplementation extends NetObject implements ISymbolScop
         try {
             ArrayList<ISymbolVariable> resultingArrayList = new ArrayList<ISymbolVariable>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetLocals");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ISymbolVariableImplementation(resultingObject));
             }
             ISymbolVariable[] resultingArray = new ISymbolVariable[resultingArrayList.size()];

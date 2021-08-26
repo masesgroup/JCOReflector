@@ -103,7 +103,7 @@ public class Repeater extends Control implements system.web.ui.INamingContainer 
         }
     }
 
-    public Repeater(Object instance) throws Throwable {
+    public Repeater(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -123,7 +123,7 @@ public class Repeater extends Control implements system.web.ui.INamingContainer 
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -96,7 +96,7 @@ public class TextSimpleMarkerProperties extends TextMarkerProperties  {
         }
     }
 
-    public TextSimpleMarkerProperties(Object instance) throws Throwable {
+    public TextSimpleMarkerProperties(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class TextSimpleMarkerProperties extends TextMarkerProperties  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

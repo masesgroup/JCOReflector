@@ -96,7 +96,7 @@ public class FileReference extends BaseReference  {
         }
     }
 
-    public FileReference(Object instance) throws Throwable {
+    public FileReference(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class FileReference extends BaseReference  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -195,7 +195,7 @@ public class FileReference extends BaseReference  {
         try {
             ArrayList<ComClass> resultingArrayList = new ArrayList<ComClass>();
             JCObject resultingObjects = (JCObject)classInstance.Get("ComClasses");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ComClass(resultingObject));
             }
             ComClass[] resultingArray = new ComClass[resultingArrayList.size()];
@@ -212,7 +212,7 @@ public class FileReference extends BaseReference  {
         try {
             ArrayList<ComClass> resultingArrayList = new ArrayList<ComClass>();
             JCObject resultingObjects = (JCObject)classInstance.Get("XmlComClasses");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ComClass(resultingObject));
             }
             ComClass[] resultingArray = new ComClass[resultingArrayList.size()];
@@ -239,7 +239,7 @@ public class FileReference extends BaseReference  {
         try {
             ArrayList<ProxyStub> resultingArrayList = new ArrayList<ProxyStub>();
             JCObject resultingObjects = (JCObject)classInstance.Get("ProxyStubs");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ProxyStub(resultingObject));
             }
             ProxyStub[] resultingArray = new ProxyStub[resultingArrayList.size()];
@@ -256,7 +256,7 @@ public class FileReference extends BaseReference  {
         try {
             ArrayList<ProxyStub> resultingArrayList = new ArrayList<ProxyStub>();
             JCObject resultingObjects = (JCObject)classInstance.Get("XmlProxyStubs");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ProxyStub(resultingObject));
             }
             ProxyStub[] resultingArray = new ProxyStub[resultingArrayList.size()];
@@ -283,7 +283,7 @@ public class FileReference extends BaseReference  {
         try {
             ArrayList<TypeLib> resultingArrayList = new ArrayList<TypeLib>();
             JCObject resultingObjects = (JCObject)classInstance.Get("TypeLibs");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new TypeLib(resultingObject));
             }
             TypeLib[] resultingArray = new TypeLib[resultingArrayList.size()];
@@ -300,7 +300,7 @@ public class FileReference extends BaseReference  {
         try {
             ArrayList<TypeLib> resultingArrayList = new ArrayList<TypeLib>();
             JCObject resultingObjects = (JCObject)classInstance.Get("XmlTypeLibs");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new TypeLib(resultingObject));
             }
             TypeLib[] resultingArray = new TypeLib[resultingArrayList.size()];

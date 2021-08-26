@@ -96,7 +96,7 @@ public class Decorator extends FrameworkElement implements system.windows.markup
         }
     }
 
-    public Decorator(Object instance) throws Throwable {
+    public Decorator(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class Decorator extends FrameworkElement implements system.windows.markup
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

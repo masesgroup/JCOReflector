@@ -100,7 +100,7 @@ public class IUIServiceImplementation extends NetObject implements IUIService {
         }
     }
 
-    public IUIServiceImplementation(Object instance) throws Throwable {
+    public IUIServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class IUIServiceImplementation extends NetObject implements IUIService {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

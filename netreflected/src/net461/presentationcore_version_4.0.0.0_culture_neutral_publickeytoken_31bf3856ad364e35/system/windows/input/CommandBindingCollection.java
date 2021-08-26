@@ -98,7 +98,7 @@ public class CommandBindingCollection extends NetObjectEnumerable  {
         }
     }
 
-    public CommandBindingCollection(Object instance) throws Throwable {
+    public CommandBindingCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class CommandBindingCollection extends NetObjectEnumerable  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

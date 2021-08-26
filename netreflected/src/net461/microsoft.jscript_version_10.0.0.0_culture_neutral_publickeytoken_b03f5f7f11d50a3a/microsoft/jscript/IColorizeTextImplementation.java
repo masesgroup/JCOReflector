@@ -95,7 +95,7 @@ public class IColorizeTextImplementation extends NetObject implements IColorizeT
         }
     }
 
-    public IColorizeTextImplementation(Object instance) throws Throwable {
+    public IColorizeTextImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class IColorizeTextImplementation extends NetObject implements IColorizeT
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

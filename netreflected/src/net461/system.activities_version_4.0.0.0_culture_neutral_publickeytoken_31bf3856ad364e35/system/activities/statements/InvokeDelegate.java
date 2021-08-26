@@ -95,7 +95,7 @@ public class InvokeDelegate extends NativeActivity  {
         }
     }
 
-    public InvokeDelegate(Object instance) throws Throwable {
+    public InvokeDelegate(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class InvokeDelegate extends NativeActivity  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

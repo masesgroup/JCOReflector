@@ -99,7 +99,7 @@ public class TemplateEditingService extends NetObject implements AutoCloseable {
         }
     }
 
-    public TemplateEditingService(Object instance) throws Throwable {
+    public TemplateEditingService(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class TemplateEditingService extends NetObject implements AutoCloseable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

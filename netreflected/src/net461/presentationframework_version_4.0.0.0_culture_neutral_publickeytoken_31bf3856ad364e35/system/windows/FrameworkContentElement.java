@@ -116,7 +116,7 @@ public class FrameworkContentElement extends ContentElement implements system.wi
         }
     }
 
-    public FrameworkContentElement(Object instance) throws Throwable {
+    public FrameworkContentElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -136,7 +136,7 @@ public class FrameworkContentElement extends ContentElement implements system.wi
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

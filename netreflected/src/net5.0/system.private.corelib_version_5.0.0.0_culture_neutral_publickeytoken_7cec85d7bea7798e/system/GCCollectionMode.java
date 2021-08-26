@@ -108,7 +108,7 @@ public class GCCollectionMode extends NetObject  {
         }
     }
 
-    public GCCollectionMode(Object instance) {
+    public GCCollectionMode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class GCCollectionMode extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

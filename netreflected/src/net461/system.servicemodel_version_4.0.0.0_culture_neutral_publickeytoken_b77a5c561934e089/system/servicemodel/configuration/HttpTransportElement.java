@@ -103,7 +103,7 @@ public class HttpTransportElement extends TransportElement  {
         }
     }
 
-    public HttpTransportElement(Object instance) throws Throwable {
+    public HttpTransportElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -123,7 +123,7 @@ public class HttpTransportElement extends TransportElement  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

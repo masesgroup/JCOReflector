@@ -96,7 +96,7 @@ public class ImageFormatLimitationException extends NetException {
         super();
     }
 
-    public ImageFormatLimitationException(Object instance) {
+    public ImageFormatLimitationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -130,7 +130,7 @@ public class ImageFormatLimitationException extends NetException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

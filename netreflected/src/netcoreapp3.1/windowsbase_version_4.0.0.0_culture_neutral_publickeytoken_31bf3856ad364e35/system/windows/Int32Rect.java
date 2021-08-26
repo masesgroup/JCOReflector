@@ -98,7 +98,7 @@ public class Int32Rect extends ValueType implements system.IFormattable {
         }
     }
 
-    public Int32Rect(Object instance) throws Throwable {
+    public Int32Rect(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class Int32Rect extends ValueType implements system.IFormattable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -96,7 +96,7 @@ public class HyperLinkDataBindingHandler extends DataBindingHandler  {
         }
     }
 
-    public HyperLinkDataBindingHandler(Object instance) throws Throwable {
+    public HyperLinkDataBindingHandler(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class HyperLinkDataBindingHandler extends DataBindingHandler  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

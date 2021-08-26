@@ -108,7 +108,7 @@ public class ToolTipIcon extends NetObject  {
         }
     }
 
-    public ToolTipIcon(Object instance) {
+    public ToolTipIcon(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class ToolTipIcon extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

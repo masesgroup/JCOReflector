@@ -96,7 +96,7 @@ public class X509SubjectKeyIdentifierExtension extends X509Extension  {
         }
     }
 
-    public X509SubjectKeyIdentifierExtension(Object instance) throws Throwable {
+    public X509SubjectKeyIdentifierExtension(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class X509SubjectKeyIdentifierExtension extends X509Extension  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

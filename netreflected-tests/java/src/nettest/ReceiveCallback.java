@@ -58,6 +58,7 @@ public class ReceiveCallback extends AsyncCallback {
             }
         } catch (Throwable e) {
             e.printStackTrace();
+            System.exit(-1);
         }
     }
 }

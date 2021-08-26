@@ -97,7 +97,7 @@ public class CodeTypeReference extends CodeObject  {
         }
     }
 
-    public CodeTypeReference(Object instance) throws Throwable {
+    public CodeTypeReference(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class CodeTypeReference extends CodeObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

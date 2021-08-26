@@ -93,7 +93,7 @@ public class FlowDecision extends FlowNode  {
         }
     }
 
-    public FlowDecision(Object instance) throws Throwable {
+    public FlowDecision(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class FlowDecision extends FlowNode  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

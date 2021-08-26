@@ -81,6 +81,7 @@ object HelloNETSocketClientAsync {
             client.Close(0)
         } catch (e: Exception) {
             Console.WriteLine(e.message)
+            System.exit(-1)
         }
     }
 
@@ -97,6 +98,7 @@ object HelloNETSocketClientAsync {
             )
         } catch (e: Exception) {
             Console.WriteLine(e.message)
+            System.exit(-1)
         }
         return null
     }

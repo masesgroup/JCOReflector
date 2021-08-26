@@ -100,7 +100,7 @@ public class HtmlTextWriter extends TextWriter  {
         }
     }
 
-    public HtmlTextWriter(Object instance) throws Throwable {
+    public HtmlTextWriter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class HtmlTextWriter extends TextWriter  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -377,7 +377,7 @@ public class HtmlTextWriter extends TextWriter  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Write", (Object)buffer);
+            classInstance.Invoke("Write", (java.lang.Object)buffer);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -387,7 +387,7 @@ public class HtmlTextWriter extends TextWriter  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Write", (Object)dupParam0.getJCRefOut());
+            classInstance.Invoke("Write", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -627,7 +627,7 @@ public class HtmlTextWriter extends TextWriter  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("WriteLine", (Object)buffer);
+            classInstance.Invoke("WriteLine", (java.lang.Object)buffer);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -637,7 +637,7 @@ public class HtmlTextWriter extends TextWriter  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("WriteLine", (Object)dupParam0.getJCRefOut());
+            classInstance.Invoke("WriteLine", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

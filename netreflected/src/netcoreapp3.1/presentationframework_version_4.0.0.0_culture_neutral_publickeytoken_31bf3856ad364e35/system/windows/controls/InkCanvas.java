@@ -115,7 +115,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
         }
     }
 
-    public InkCanvas(Object instance) throws Throwable {
+    public InkCanvas(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -135,7 +135,7 @@ public class InkCanvas extends FrameworkElement implements system.windows.markup
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

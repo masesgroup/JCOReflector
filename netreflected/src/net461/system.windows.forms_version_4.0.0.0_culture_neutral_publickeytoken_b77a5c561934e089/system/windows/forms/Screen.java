@@ -96,7 +96,7 @@ public class Screen extends NetObject  {
         }
     }
 
-    public Screen(Object instance) throws Throwable {
+    public Screen(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class Screen extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -321,7 +321,7 @@ public class Screen extends NetObject  {
         try {
             ArrayList<Screen> resultingArrayList = new ArrayList<Screen>();
             JCObject resultingObjects = (JCObject)classType.Get("AllScreens");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Screen(resultingObject));
             }
             Screen[] resultingArray = new Screen[resultingArrayList.size()];

@@ -107,7 +107,7 @@ public class WebBrowser extends WebBrowserBase  {
         }
     }
 
-    public WebBrowser(Object instance) throws Throwable {
+    public WebBrowser(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -127,7 +127,7 @@ public class WebBrowser extends WebBrowserBase  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

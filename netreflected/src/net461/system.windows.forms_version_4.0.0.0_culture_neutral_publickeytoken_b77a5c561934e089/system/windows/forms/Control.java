@@ -155,7 +155,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
         }
     }
 
-    public Control(Object instance) throws Throwable {
+    public Control(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -175,7 +175,7 @@ public class Control extends Component implements system.windows.forms.IDropTarg
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -294,11 +294,11 @@ public class Control extends Component implements system.windows.forms.IDropTarg
         }
     }
 
-    public boolean PreProcessMessage(Message msg) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException {
+    public boolean PreProcessMessage(JCORefOut<Message> msg) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("PreProcessMessage", msg == null ? null : msg.getJCOInstance());
+            return (boolean)classInstance.Invoke("PreProcessMessage", msg.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -478,11 +478,11 @@ public class Control extends Component implements system.windows.forms.IDropTarg
         }
     }
 
-    public PreProcessControlState PreProcessControlMessage(Message msg) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
+    public PreProcessControlState PreProcessControlMessage(JCORefOut<Message> msg) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.security.SecurityException, system.NullReferenceException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objPreProcessControlMessage = (JCObject)classInstance.Invoke("PreProcessControlMessage", msg == null ? null : msg.getJCOInstance());
+            JCObject objPreProcessControlMessage = (JCObject)classInstance.Invoke("PreProcessControlMessage", msg.getJCRefOut());
             return new PreProcessControlState(objPreProcessControlMessage);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -749,11 +749,11 @@ public class Control extends Component implements system.windows.forms.IDropTarg
         }
     }
 
-    public void ScaleBitmapLogicalToDevice(Bitmap logicalBitmap) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException {
+    public void ScaleBitmapLogicalToDevice(JCORefOut<Bitmap> logicalBitmap) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.ArgumentException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("ScaleBitmapLogicalToDevice", logicalBitmap == null ? null : logicalBitmap.getJCOInstance());
+            classInstance.Invoke("ScaleBitmapLogicalToDevice", logicalBitmap.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

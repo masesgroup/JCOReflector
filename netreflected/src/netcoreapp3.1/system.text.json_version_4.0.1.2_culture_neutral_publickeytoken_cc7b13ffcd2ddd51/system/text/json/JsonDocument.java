@@ -98,7 +98,7 @@ public class JsonDocument extends NetObject implements AutoCloseable {
         }
     }
 
-    public JsonDocument(Object instance) throws Throwable {
+    public JsonDocument(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class JsonDocument extends NetObject implements AutoCloseable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -151,11 +151,11 @@ public class JsonDocument extends NetObject implements AutoCloseable {
     
     // Methods section
     
-    public static boolean TryParseValue(Utf8JsonReader reader, JCORefOut<JsonDocument> document) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.text.json.JsonException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
+    public static boolean TryParseValue(JCORefOut<Utf8JsonReader> reader, JCORefOut<JsonDocument> document) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.text.json.JsonException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classType.Invoke("TryParseValue", reader == null ? null : reader.getJCOInstance(), document.getJCRefOut());
+            return (boolean)classType.Invoke("TryParseValue", reader.getJCRefOut(), document.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,11 +183,11 @@ public class JsonDocument extends NetObject implements AutoCloseable {
         }
     }
 
-    public static JsonDocument ParseValue(Utf8JsonReader reader) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.text.json.JsonException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
+    public static JsonDocument ParseValue(JCORefOut<Utf8JsonReader> reader) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.text.json.JsonException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objParseValue = (JCObject)classType.Invoke("ParseValue", reader == null ? null : reader.getJCOInstance());
+            JCObject objParseValue = (JCObject)classType.Invoke("ParseValue", reader.getJCRefOut());
             return new JsonDocument(objParseValue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

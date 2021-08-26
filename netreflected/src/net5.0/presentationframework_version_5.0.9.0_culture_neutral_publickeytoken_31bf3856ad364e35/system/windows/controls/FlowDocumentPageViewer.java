@@ -95,7 +95,7 @@ public class FlowDocumentPageViewer extends DocumentViewerBase  {
         }
     }
 
-    public FlowDocumentPageViewer(Object instance) throws Throwable {
+    public FlowDocumentPageViewer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class FlowDocumentPageViewer extends DocumentViewerBase  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -95,7 +95,7 @@ public class Int64AnimationBase extends AnimationTimeline  {
         }
     }
 
-    public Int64AnimationBase(Object instance) throws Throwable {
+    public Int64AnimationBase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class Int64AnimationBase extends AnimationTimeline  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

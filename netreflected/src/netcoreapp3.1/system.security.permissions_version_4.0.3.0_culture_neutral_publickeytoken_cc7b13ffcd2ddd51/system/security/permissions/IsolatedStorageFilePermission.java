@@ -97,7 +97,7 @@ public class IsolatedStorageFilePermission extends IsolatedStoragePermission  {
         }
     }
 
-    public IsolatedStorageFilePermission(Object instance) throws Throwable {
+    public IsolatedStorageFilePermission(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class IsolatedStorageFilePermission extends IsolatedStoragePermission  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -96,7 +96,7 @@ public class XmlReturnReader extends MimeReturnReader  {
         }
     }
 
-    public XmlReturnReader(Object instance) throws Throwable {
+    public XmlReturnReader(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class XmlReturnReader extends MimeReturnReader  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -182,8 +182,8 @@ public class XmlReturnReader extends MimeReturnReader  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetInitializers", (Object)toObjectFromArray(methodInfos));
-            for (Object resultingObject : resultingObjects) {
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetInitializers", (java.lang.Object)toObjectFromArray(methodInfos));
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];

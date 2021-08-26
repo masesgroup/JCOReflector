@@ -94,7 +94,7 @@ public class IAmbientProviderImplementation extends NetObject implements IAmbien
         }
     }
 
-    public IAmbientProviderImplementation(Object instance) throws Throwable {
+    public IAmbientProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class IAmbientProviderImplementation extends NetObject implements IAmbien
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -138,7 +138,7 @@ public class IAmbientProviderImplementation extends NetObject implements IAmbien
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetFirstAmbientValue = (JCObject)classInstance.Invoke("GetFirstAmbientValue", (Object)toObjectFromArray(types));
+            JCObject objGetFirstAmbientValue = (JCObject)classInstance.Invoke("GetFirstAmbientValue", (java.lang.Object)toObjectFromArray(types));
             return new NetObject(objGetFirstAmbientValue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

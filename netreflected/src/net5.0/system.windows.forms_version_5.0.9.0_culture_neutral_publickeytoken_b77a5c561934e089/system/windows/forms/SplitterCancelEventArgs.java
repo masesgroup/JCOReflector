@@ -93,7 +93,7 @@ public class SplitterCancelEventArgs extends CancelEventArgs  {
         }
     }
 
-    public SplitterCancelEventArgs(Object instance) throws Throwable {
+    public SplitterCancelEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class SplitterCancelEventArgs extends CancelEventArgs  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

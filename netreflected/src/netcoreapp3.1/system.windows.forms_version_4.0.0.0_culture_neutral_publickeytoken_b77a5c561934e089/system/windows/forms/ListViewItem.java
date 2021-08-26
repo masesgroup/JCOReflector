@@ -106,7 +106,7 @@ public class ListViewItem extends NetObject implements system.runtime.serializat
         }
     }
 
-    public ListViewItem(Object instance) throws Throwable {
+    public ListViewItem(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -126,7 +126,7 @@ public class ListViewItem extends NetObject implements system.runtime.serializat
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -225,7 +225,7 @@ public class ListViewItem extends NetObject implements system.runtime.serializat
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((Object)items));
+            setJCOInstance((JCObject)classType.NewObject((java.lang.Object)items));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

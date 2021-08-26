@@ -98,7 +98,7 @@ public class ToolStripItemCollection extends ArrangedElementCollection  {
         }
     }
 
-    public ToolStripItemCollection(Object instance) throws Throwable {
+    public ToolStripItemCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class ToolStripItemCollection extends ArrangedElementCollection  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -261,7 +261,7 @@ public class ToolStripItemCollection extends ArrangedElementCollection  {
         try {
             ArrayList<ToolStripItem> resultingArrayList = new ArrayList<ToolStripItem>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("Find", key, searchAllChildren);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ToolStripItem(resultingObject));
             }
             ToolStripItem[] resultingArray = new ToolStripItem[resultingArrayList.size()];
@@ -276,7 +276,7 @@ public class ToolStripItemCollection extends ArrangedElementCollection  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddRange", (Object)toObjectFromArray(toolStripItems));
+            classInstance.Invoke("AddRange", (java.lang.Object)toObjectFromArray(toolStripItems));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

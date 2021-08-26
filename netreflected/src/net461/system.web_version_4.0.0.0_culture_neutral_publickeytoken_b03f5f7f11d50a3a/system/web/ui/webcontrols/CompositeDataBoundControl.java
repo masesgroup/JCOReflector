@@ -96,7 +96,7 @@ public class CompositeDataBoundControl extends DataBoundControl implements syste
         }
     }
 
-    public CompositeDataBoundControl(Object instance) throws Throwable {
+    public CompositeDataBoundControl(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class CompositeDataBoundControl extends DataBoundControl implements syste
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

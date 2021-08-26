@@ -95,7 +95,7 @@ public class UrlEncodedParameterWriter extends MimeParameterWriter  {
         }
     }
 
-    public UrlEncodedParameterWriter(Object instance) throws Throwable {
+    public UrlEncodedParameterWriter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class UrlEncodedParameterWriter extends MimeParameterWriter  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

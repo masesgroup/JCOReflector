@@ -97,7 +97,7 @@ public class CompletionCallback extends JCVoidDelegate implements IJCVoidEventEm
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return this;
     }
 
@@ -105,7 +105,7 @@ public class CompletionCallback extends JCVoidDelegate implements IJCVoidEventEm
         return classType;
     }
 
-    public final void EventRaised(Object... argsFromJCOBridge) {
+    public final void EventRaised(java.lang.Object... argsFromJCOBridge) {
         try
         {
             NativeActivityContext context = argsFromJCOBridge[0] == null ? null : new NativeActivityContext(argsFromJCOBridge[0]);
@@ -124,7 +124,7 @@ public class CompletionCallback extends JCVoidDelegate implements IJCVoidEventEm
         }
     }
 
-    public final void DelegateInvoked(Object... argsFromJCOBridge) {
+    public final void DelegateInvoked(java.lang.Object... argsFromJCOBridge) {
         try
         {
             NativeActivityContext context = argsFromJCOBridge[0] == null ? null : new NativeActivityContext(argsFromJCOBridge[0]);
@@ -152,7 +152,7 @@ public class CompletionCallback extends JCVoidDelegate implements IJCVoidEventEm
         callerInstance = instance;
     }
 
-    public CompletionCallback(Object instance) throws Throwable {
+    public CompletionCallback(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         if (instance == null) throw new IllegalArgumentException("Instance cannot be null");
         if (instance instanceof ICompletionCallback) {
@@ -164,7 +164,7 @@ public class CompletionCallback extends JCVoidDelegate implements IJCVoidEventEm
                     String.format("Class %s is not supported.", instance.getClass().getTypeName()));
     }
 
-    protected final static <T extends IJCOBridgeReflected> Object toObjectFromArray(T[] input) {
+    protected final static <T extends IJCOBridgeReflected> java.lang.Object toObjectFromArray(T[] input) {
         return JCOBridgeInstance.toObjectFromArray(input);
     }
 

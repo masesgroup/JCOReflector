@@ -94,7 +94,7 @@ public class DirectoryServerCollection extends CollectionBase  {
         }
     }
 
-    public DirectoryServerCollection(Object instance) throws Throwable {
+    public DirectoryServerCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class DirectoryServerCollection extends CollectionBase  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -181,7 +181,7 @@ public class DirectoryServerCollection extends CollectionBase  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddRange", (Object)toObjectFromArray(servers));
+            classInstance.Invoke("AddRange", (java.lang.Object)toObjectFromArray(servers));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

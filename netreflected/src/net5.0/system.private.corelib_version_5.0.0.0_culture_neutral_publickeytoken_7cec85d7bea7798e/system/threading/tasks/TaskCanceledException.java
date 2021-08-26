@@ -99,7 +99,7 @@ public class TaskCanceledException extends OperationCanceledException {
         super();
     }
 
-    public TaskCanceledException(Object instance) {
+    public TaskCanceledException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -133,7 +133,7 @@ public class TaskCanceledException extends OperationCanceledException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

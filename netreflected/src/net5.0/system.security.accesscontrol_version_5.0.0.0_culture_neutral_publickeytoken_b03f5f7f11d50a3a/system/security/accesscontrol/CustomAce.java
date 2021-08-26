@@ -95,7 +95,7 @@ public class CustomAce extends GenericAce  {
         }
     }
 
-    public CustomAce(Object instance) throws Throwable {
+    public CustomAce(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class CustomAce extends GenericAce  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -162,9 +162,9 @@ public class CustomAce extends GenericAce  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetOpaque");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -201,7 +201,7 @@ public class CustomAce extends GenericAce  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetOpaque", (Object)opaque);
+            classInstance.Invoke("SetOpaque", (java.lang.Object)opaque);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -211,7 +211,7 @@ public class CustomAce extends GenericAce  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetOpaque", (Object)dupParam0.getJCRefOut());
+            classInstance.Invoke("SetOpaque", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

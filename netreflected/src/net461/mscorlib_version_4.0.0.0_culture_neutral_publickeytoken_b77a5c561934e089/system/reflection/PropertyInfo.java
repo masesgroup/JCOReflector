@@ -102,7 +102,7 @@ public class PropertyInfo extends MemberInfo  {
         }
     }
 
-    public PropertyInfo(Object instance) throws Throwable {
+    public PropertyInfo(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -122,7 +122,7 @@ public class PropertyInfo extends MemberInfo  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -258,7 +258,7 @@ public class PropertyInfo extends MemberInfo  {
         try {
             ArrayList<MethodInfo> resultingArrayList = new ArrayList<MethodInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetAccessors");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MethodInfo(resultingObject));
             }
             MethodInfo[] resultingArray = new MethodInfo[resultingArrayList.size()];
@@ -275,7 +275,7 @@ public class PropertyInfo extends MemberInfo  {
         try {
             ArrayList<MethodInfo> resultingArrayList = new ArrayList<MethodInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetAccessors", nonPublic);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MethodInfo(resultingObject));
             }
             MethodInfo[] resultingArray = new MethodInfo[resultingArrayList.size()];
@@ -292,7 +292,7 @@ public class PropertyInfo extends MemberInfo  {
         try {
             ArrayList<ParameterInfo> resultingArrayList = new ArrayList<ParameterInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetIndexParameters");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ParameterInfo(resultingObject));
             }
             ParameterInfo[] resultingArray = new ParameterInfo[resultingArrayList.size()];
@@ -309,7 +309,7 @@ public class PropertyInfo extends MemberInfo  {
         try {
             ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetOptionalCustomModifiers");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetType(resultingObject));
             }
             NetType[] resultingArray = new NetType[resultingArrayList.size()];
@@ -326,7 +326,7 @@ public class PropertyInfo extends MemberInfo  {
         try {
             ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetRequiredCustomModifiers");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetType(resultingObject));
             }
             NetType[] resultingArray = new NetType[resultingArrayList.size()];

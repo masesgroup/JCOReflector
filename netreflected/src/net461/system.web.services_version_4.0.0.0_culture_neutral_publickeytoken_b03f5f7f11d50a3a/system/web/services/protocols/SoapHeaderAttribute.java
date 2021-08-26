@@ -94,7 +94,7 @@ public class SoapHeaderAttribute extends Attribute  {
         }
     }
 
-    public SoapHeaderAttribute(Object instance) throws Throwable {
+    public SoapHeaderAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class SoapHeaderAttribute extends Attribute  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

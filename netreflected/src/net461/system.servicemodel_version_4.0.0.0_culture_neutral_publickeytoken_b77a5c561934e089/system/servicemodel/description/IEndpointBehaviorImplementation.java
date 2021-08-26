@@ -96,7 +96,7 @@ public class IEndpointBehaviorImplementation extends NetObject implements IEndpo
         }
     }
 
-    public IEndpointBehaviorImplementation(Object instance) throws Throwable {
+    public IEndpointBehaviorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class IEndpointBehaviorImplementation extends NetObject implements IEndpo
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

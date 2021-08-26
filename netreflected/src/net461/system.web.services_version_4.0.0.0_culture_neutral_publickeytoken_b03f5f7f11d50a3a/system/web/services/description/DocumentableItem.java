@@ -96,7 +96,7 @@ public class DocumentableItem extends NetObject  {
         }
     }
 
-    public DocumentableItem(Object instance) throws Throwable {
+    public DocumentableItem(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class DocumentableItem extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -209,7 +209,7 @@ public class DocumentableItem extends NetObject  {
         try {
             ArrayList<XmlAttribute> resultingArrayList = new ArrayList<XmlAttribute>();
             JCObject resultingObjects = (JCObject)classInstance.Get("ExtensibleAttributes");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new XmlAttribute(resultingObject));
             }
             XmlAttribute[] resultingArray = new XmlAttribute[resultingArrayList.size()];

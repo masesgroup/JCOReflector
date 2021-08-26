@@ -97,7 +97,7 @@ public class InvalidCredentialException extends AuthenticationException {
         super();
     }
 
-    public InvalidCredentialException(Object instance) {
+    public InvalidCredentialException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class InvalidCredentialException extends AuthenticationException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

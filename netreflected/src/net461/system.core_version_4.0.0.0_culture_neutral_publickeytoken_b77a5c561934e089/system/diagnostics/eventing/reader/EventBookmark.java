@@ -96,7 +96,7 @@ public class EventBookmark extends NetObject implements system.runtime.serializa
         }
     }
 
-    public EventBookmark(Object instance) throws Throwable {
+    public EventBookmark(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class EventBookmark extends NetObject implements system.runtime.serializa
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

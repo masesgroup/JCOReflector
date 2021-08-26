@@ -108,7 +108,7 @@ public class DataGridViewTriState extends NetObject  {
         }
     }
 
-    public DataGridViewTriState(Object instance) {
+    public DataGridViewTriState(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class DataGridViewTriState extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

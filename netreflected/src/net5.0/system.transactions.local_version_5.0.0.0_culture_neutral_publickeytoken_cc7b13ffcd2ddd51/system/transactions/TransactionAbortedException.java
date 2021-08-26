@@ -97,7 +97,7 @@ public class TransactionAbortedException extends TransactionException {
         super();
     }
 
-    public TransactionAbortedException(Object instance) {
+    public TransactionAbortedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class TransactionAbortedException extends TransactionException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

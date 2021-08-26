@@ -97,7 +97,7 @@ public class DataColumn extends MarshalByValueComponent  {
         }
     }
 
-    public DataColumn(Object instance) throws Throwable {
+    public DataColumn(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class DataColumn extends MarshalByValueComponent  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

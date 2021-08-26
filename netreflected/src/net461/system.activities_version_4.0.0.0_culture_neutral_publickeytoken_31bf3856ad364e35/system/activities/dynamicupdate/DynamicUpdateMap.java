@@ -95,7 +95,7 @@ public class DynamicUpdateMap extends NetObject  {
         }
     }
 
-    public DynamicUpdateMap(Object instance) throws Throwable {
+    public DynamicUpdateMap(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class DynamicUpdateMap extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -152,7 +152,7 @@ public class DynamicUpdateMap extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objMerge = (JCObject)classType.Invoke("Merge", (Object)toObjectFromArray(maps));
+            JCObject objMerge = (JCObject)classType.Invoke("Merge", (java.lang.Object)toObjectFromArray(maps));
             return new DynamicUpdateMap(objMerge);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

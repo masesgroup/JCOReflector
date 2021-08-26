@@ -97,7 +97,7 @@ public class ChangeRejectedException extends CompositionException {
         super();
     }
 
-    public ChangeRejectedException(Object instance) {
+    public ChangeRejectedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class ChangeRejectedException extends CompositionException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

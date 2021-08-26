@@ -93,7 +93,7 @@ public class NetworkProgressChangedEventArgs extends ProgressChangedEventArgs  {
         }
     }
 
-    public NetworkProgressChangedEventArgs(Object instance) throws Throwable {
+    public NetworkProgressChangedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class NetworkProgressChangedEventArgs extends ProgressChangedEventArgs  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

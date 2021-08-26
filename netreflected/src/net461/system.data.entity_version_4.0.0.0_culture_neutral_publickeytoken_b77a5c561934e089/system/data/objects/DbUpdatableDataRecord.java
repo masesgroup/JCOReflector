@@ -101,7 +101,7 @@ public class DbUpdatableDataRecord extends DbDataRecord  {
         }
     }
 
-    public DbUpdatableDataRecord(Object instance) throws Throwable {
+    public DbUpdatableDataRecord(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -121,7 +121,7 @@ public class DbUpdatableDataRecord extends DbDataRecord  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -236,7 +236,7 @@ public class DbUpdatableDataRecord extends DbDataRecord  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("GetValues", (Object)toObjectFromArray(values));
+            return (int)classInstance.Invoke("GetValues", (java.lang.Object)toObjectFromArray(values));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -246,7 +246,7 @@ public class DbUpdatableDataRecord extends DbDataRecord  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("SetValues", (Object)toObjectFromArray(values));
+            return (int)classInstance.Invoke("SetValues", (java.lang.Object)toObjectFromArray(values));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

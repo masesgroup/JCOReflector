@@ -100,7 +100,7 @@ public class WorkflowApplicationInstance extends NetObject  {
         }
     }
 
-    public WorkflowApplicationInstance(Object instance) throws Throwable {
+    public WorkflowApplicationInstance(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class WorkflowApplicationInstance extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

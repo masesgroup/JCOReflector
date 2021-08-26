@@ -95,7 +95,7 @@ public class Bmi1 extends X86Base  {
         }
     }
 
-    public Bmi1(Object instance) throws Throwable {
+    public Bmi1(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class Bmi1 extends X86Base  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

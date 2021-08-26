@@ -112,7 +112,7 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
         }
     }
 
-    public FlowDocument(Object instance) throws Throwable {
+    public FlowDocument(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -132,7 +132,7 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

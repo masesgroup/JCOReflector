@@ -97,7 +97,7 @@ public class PerformanceCounterCategory extends NetObject  {
         }
     }
 
-    public PerformanceCounterCategory(Object instance) throws Throwable {
+    public PerformanceCounterCategory(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class PerformanceCounterCategory extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -273,7 +273,7 @@ public class PerformanceCounterCategory extends NetObject  {
         try {
             ArrayList<PerformanceCounter> resultingArrayList = new ArrayList<PerformanceCounter>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetCounters");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new PerformanceCounter(resultingObject));
             }
             PerformanceCounter[] resultingArray = new PerformanceCounter[resultingArrayList.size()];
@@ -290,7 +290,7 @@ public class PerformanceCounterCategory extends NetObject  {
         try {
             ArrayList<PerformanceCounter> resultingArrayList = new ArrayList<PerformanceCounter>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetCounters", instanceName);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new PerformanceCounter(resultingObject));
             }
             PerformanceCounter[] resultingArray = new PerformanceCounter[resultingArrayList.size()];
@@ -351,7 +351,7 @@ public class PerformanceCounterCategory extends NetObject  {
         try {
             ArrayList<PerformanceCounterCategory> resultingArrayList = new ArrayList<PerformanceCounterCategory>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetCategories");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new PerformanceCounterCategory(resultingObject));
             }
             PerformanceCounterCategory[] resultingArray = new PerformanceCounterCategory[resultingArrayList.size()];
@@ -368,7 +368,7 @@ public class PerformanceCounterCategory extends NetObject  {
         try {
             ArrayList<PerformanceCounterCategory> resultingArrayList = new ArrayList<PerformanceCounterCategory>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetCategories", machineName);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new PerformanceCounterCategory(resultingObject));
             }
             PerformanceCounterCategory[] resultingArray = new PerformanceCounterCategory[resultingArrayList.size()];
@@ -383,9 +383,9 @@ public class PerformanceCounterCategory extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetInstanceNames");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];

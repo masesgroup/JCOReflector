@@ -99,7 +99,7 @@ public class WebSocket extends NetObject implements AutoCloseable {
         }
     }
 
-    public WebSocket(Object instance) throws Throwable {
+    public WebSocket(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class WebSocket extends NetObject implements AutoCloseable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

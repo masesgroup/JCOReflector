@@ -92,7 +92,7 @@ public class IComparableImplementation extends NetObject implements IComparable 
         }
     }
 
-    public IComparableImplementation(Object instance) throws Throwable {
+    public IComparableImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class IComparableImplementation extends NetObject implements IComparable 
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

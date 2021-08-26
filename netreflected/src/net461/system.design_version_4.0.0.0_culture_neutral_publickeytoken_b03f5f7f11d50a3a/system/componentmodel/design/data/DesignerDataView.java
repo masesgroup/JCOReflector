@@ -93,7 +93,7 @@ public class DesignerDataView extends DesignerDataTableBase  {
         }
     }
 
-    public DesignerDataView(Object instance) throws Throwable {
+    public DesignerDataView(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class DesignerDataView extends DesignerDataTableBase  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

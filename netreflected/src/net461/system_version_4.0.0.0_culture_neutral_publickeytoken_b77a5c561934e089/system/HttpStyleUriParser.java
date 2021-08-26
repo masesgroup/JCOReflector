@@ -93,7 +93,7 @@ public class HttpStyleUriParser extends UriParser  {
         }
     }
 
-    public HttpStyleUriParser(Object instance) throws Throwable {
+    public HttpStyleUriParser(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class HttpStyleUriParser extends UriParser  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

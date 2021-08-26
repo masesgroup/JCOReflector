@@ -96,7 +96,7 @@ public class Content extends Control implements system.web.ui.INamingContainer {
         }
     }
 
-    public Content(Object instance) throws Throwable {
+    public Content(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class Content extends Control implements system.web.ui.INamingContainer {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

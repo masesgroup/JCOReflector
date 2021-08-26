@@ -96,7 +96,7 @@ public class KeyInfoX509Data extends KeyInfoClause  {
         }
     }
 
-    public KeyInfoX509Data(Object instance) throws Throwable {
+    public KeyInfoX509Data(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class KeyInfoX509Data extends KeyInfoClause  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -155,7 +155,7 @@ public class KeyInfoX509Data extends KeyInfoClause  {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((Object)rgbCert));
+            setJCOInstance((JCObject)classType.NewObject((java.lang.Object)rgbCert));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,7 +220,7 @@ public class KeyInfoX509Data extends KeyInfoClause  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddSubjectKeyId", (Object)subjectKeyId);
+            classInstance.Invoke("AddSubjectKeyId", (java.lang.Object)subjectKeyId);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,7 +230,7 @@ public class KeyInfoX509Data extends KeyInfoClause  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddSubjectKeyId", (Object)dupParam0.getJCRefOut());
+            classInstance.Invoke("AddSubjectKeyId", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -274,9 +274,9 @@ public class KeyInfoX509Data extends KeyInfoClause  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Get("CRL");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];

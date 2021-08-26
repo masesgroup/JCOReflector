@@ -96,7 +96,7 @@ public class SizeKeyFrameCollection extends Freezable  {
         }
     }
 
-    public SizeKeyFrameCollection(Object instance) throws Throwable {
+    public SizeKeyFrameCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class SizeKeyFrameCollection extends Freezable  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -108,7 +108,7 @@ public class PrintQueueIndexedProperty extends NetObject  {
         }
     }
 
-    public PrintQueueIndexedProperty(Object instance) {
+    public PrintQueueIndexedProperty(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class PrintQueueIndexedProperty extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

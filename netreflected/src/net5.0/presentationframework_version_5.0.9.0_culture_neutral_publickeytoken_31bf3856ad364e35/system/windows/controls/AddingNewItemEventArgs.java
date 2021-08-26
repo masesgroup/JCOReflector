@@ -93,7 +93,7 @@ public class AddingNewItemEventArgs extends EventArgs  {
         }
     }
 
-    public AddingNewItemEventArgs(Object instance) throws Throwable {
+    public AddingNewItemEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class AddingNewItemEventArgs extends EventArgs  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -96,7 +96,7 @@ public class X509SecurityToken extends SecurityToken implements AutoCloseable {
         }
     }
 
-    public X509SecurityToken(Object instance) throws Throwable {
+    public X509SecurityToken(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class X509SecurityToken extends SecurityToken implements AutoCloseable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

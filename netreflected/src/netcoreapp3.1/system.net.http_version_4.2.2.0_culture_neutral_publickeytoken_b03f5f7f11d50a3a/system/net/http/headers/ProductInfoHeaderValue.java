@@ -96,7 +96,7 @@ public class ProductInfoHeaderValue extends NetObject implements system.ICloneab
         }
     }
 
-    public ProductInfoHeaderValue(Object instance) throws Throwable {
+    public ProductInfoHeaderValue(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class ProductInfoHeaderValue extends NetObject implements system.ICloneab
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

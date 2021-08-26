@@ -100,7 +100,7 @@ public class BufferedStream extends Stream  {
         }
     }
 
-    public BufferedStream(Object instance) throws Throwable {
+    public BufferedStream(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class BufferedStream extends Stream  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

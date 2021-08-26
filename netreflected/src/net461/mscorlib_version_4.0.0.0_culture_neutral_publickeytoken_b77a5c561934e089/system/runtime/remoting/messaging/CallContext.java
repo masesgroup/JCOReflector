@@ -93,7 +93,7 @@ public class CallContext extends NetObject  {
         }
     }
 
-    public CallContext(Object instance) throws Throwable {
+    public CallContext(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class CallContext extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -174,7 +174,7 @@ public class CallContext extends NetObject  {
         try {
             ArrayList<Header> resultingArrayList = new ArrayList<Header>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetHeaders");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Header(resultingObject));
             }
             Header[] resultingArray = new Header[resultingArrayList.size()];
@@ -219,7 +219,7 @@ public class CallContext extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("SetHeaders", (Object)toObjectFromArray(headers));
+            classType.Invoke("SetHeaders", (java.lang.Object)toObjectFromArray(headers));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -46,6 +46,7 @@ public class ConnectCallback extends AsyncCallback {
             HelloNETSocketClientAsync.connectDone.Set();
         } catch (Throwable e) {
             e.printStackTrace();
+            System.exit(-1);
         }
     }
 }

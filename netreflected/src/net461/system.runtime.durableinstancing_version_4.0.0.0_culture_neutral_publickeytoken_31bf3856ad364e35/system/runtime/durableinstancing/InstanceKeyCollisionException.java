@@ -102,7 +102,7 @@ public class InstanceKeyCollisionException extends InstancePersistenceCommandExc
         super();
     }
 
-    public InstanceKeyCollisionException(Object instance) {
+    public InstanceKeyCollisionException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -136,7 +136,7 @@ public class InstanceKeyCollisionException extends InstancePersistenceCommandExc
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

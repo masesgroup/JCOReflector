@@ -94,7 +94,7 @@ public class XmlSchemaSimpleContent extends XmlSchemaContentModel  {
         }
     }
 
-    public XmlSchemaSimpleContent(Object instance) throws Throwable {
+    public XmlSchemaSimpleContent(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class XmlSchemaSimpleContent extends XmlSchemaContentModel  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

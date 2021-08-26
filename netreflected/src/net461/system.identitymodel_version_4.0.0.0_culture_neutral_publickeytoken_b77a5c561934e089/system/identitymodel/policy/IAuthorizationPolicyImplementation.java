@@ -96,7 +96,7 @@ public class IAuthorizationPolicyImplementation extends NetObject implements IAu
         }
     }
 
-    public IAuthorizationPolicyImplementation(Object instance) throws Throwable {
+    public IAuthorizationPolicyImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class IAuthorizationPolicyImplementation extends NetObject implements IAu
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -136,11 +136,11 @@ public class IAuthorizationPolicyImplementation extends NetObject implements IAu
 
     // Methods section
     
-    public boolean Evaluate(EvaluationContext evaluationContext, NetObject state) throws Throwable {
+    public boolean Evaluate(EvaluationContext evaluationContext, JCORefOut<NetObject> state) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("Evaluate", evaluationContext == null ? null : evaluationContext.getJCOInstance(), state == null ? null : state.getJCOInstance());
+            return (boolean)classInstance.Invoke("Evaluate", evaluationContext == null ? null : evaluationContext.getJCOInstance(), state.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

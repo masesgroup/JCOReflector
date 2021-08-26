@@ -100,7 +100,7 @@ public class Rune extends ValueType implements system.IComparable {
         }
     }
 
-    public Rune(Object instance) throws Throwable {
+    public Rune(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class Rune extends ValueType implements system.IComparable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -99,7 +99,7 @@ public class PrintServerException extends PrintSystemException {
         super();
     }
 
-    public PrintServerException(Object instance) {
+    public PrintServerException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -133,7 +133,7 @@ public class PrintServerException extends PrintSystemException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

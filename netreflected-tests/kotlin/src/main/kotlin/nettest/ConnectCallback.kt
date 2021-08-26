@@ -43,6 +43,7 @@ class ConnectCallback : AsyncCallback() {
             HelloNETSocketClientAsync.connectDone?.Set()
         } catch (e: Throwable) {
             e.printStackTrace()
+            System.exit(-1)
         }
     }
 }

@@ -96,7 +96,7 @@ public class AutomationProperties extends NetObject  {
         }
     }
 
-    public AutomationProperties(Object instance) throws Throwable {
+    public AutomationProperties(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class AutomationProperties extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

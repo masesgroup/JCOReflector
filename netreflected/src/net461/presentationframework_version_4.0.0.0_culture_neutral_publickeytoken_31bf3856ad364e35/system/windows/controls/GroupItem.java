@@ -96,7 +96,7 @@ public class GroupItem extends ContentControl implements system.windows.controls
         }
     }
 
-    public GroupItem(Object instance) throws Throwable {
+    public GroupItem(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class GroupItem extends ContentControl implements system.windows.controls
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

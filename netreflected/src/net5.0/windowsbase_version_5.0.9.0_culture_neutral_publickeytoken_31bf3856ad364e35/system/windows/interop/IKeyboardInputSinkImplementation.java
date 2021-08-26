@@ -99,7 +99,7 @@ public class IKeyboardInputSinkImplementation extends NetObject implements IKeyb
         }
     }
 
-    public IKeyboardInputSinkImplementation(Object instance) throws Throwable {
+    public IKeyboardInputSinkImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class IKeyboardInputSinkImplementation extends NetObject implements IKeyb
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -149,11 +149,11 @@ public class IKeyboardInputSinkImplementation extends NetObject implements IKeyb
         }
     }
 
-    public boolean OnMnemonic(MSG msg, ModifierKeys modifiers) throws Throwable {
+    public boolean OnMnemonic(JCORefOut<MSG> msg, ModifierKeys modifiers) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("OnMnemonic", msg == null ? null : msg.getJCOInstance(), modifiers == null ? null : modifiers.getJCOInstance());
+            return (boolean)classInstance.Invoke("OnMnemonic", msg.getJCRefOut(), modifiers == null ? null : modifiers.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -169,21 +169,21 @@ public class IKeyboardInputSinkImplementation extends NetObject implements IKeyb
         }
     }
 
-    public boolean TranslateAccelerator(MSG msg, ModifierKeys modifiers) throws Throwable {
+    public boolean TranslateAccelerator(JCORefOut<MSG> msg, ModifierKeys modifiers) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("TranslateAccelerator", msg == null ? null : msg.getJCOInstance(), modifiers == null ? null : modifiers.getJCOInstance());
+            return (boolean)classInstance.Invoke("TranslateAccelerator", msg.getJCRefOut(), modifiers == null ? null : modifiers.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean TranslateChar(MSG msg, ModifierKeys modifiers) throws Throwable {
+    public boolean TranslateChar(JCORefOut<MSG> msg, ModifierKeys modifiers) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("TranslateChar", msg == null ? null : msg.getJCOInstance(), modifiers == null ? null : modifiers.getJCOInstance());
+            return (boolean)classInstance.Invoke("TranslateChar", msg.getJCRefOut(), modifiers == null ? null : modifiers.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

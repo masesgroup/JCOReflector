@@ -107,7 +107,7 @@ public class AceEnumerator extends NetObject implements Iterator<GenericAce> {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

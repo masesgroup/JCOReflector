@@ -49,6 +49,7 @@ class ReceiveCallback extends AsyncCallback {
     } catch {
       case e: Throwable =>
         e.printStackTrace()
+        System.exit(-1)
     }
   }
 }

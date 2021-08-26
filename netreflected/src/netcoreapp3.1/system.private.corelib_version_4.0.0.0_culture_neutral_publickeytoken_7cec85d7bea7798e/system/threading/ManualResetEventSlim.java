@@ -95,7 +95,7 @@ public class ManualResetEventSlim extends NetObject implements AutoCloseable {
         }
     }
 
-    public ManualResetEventSlim(Object instance) throws Throwable {
+    public ManualResetEventSlim(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class ManualResetEventSlim extends NetObject implements AutoCloseable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

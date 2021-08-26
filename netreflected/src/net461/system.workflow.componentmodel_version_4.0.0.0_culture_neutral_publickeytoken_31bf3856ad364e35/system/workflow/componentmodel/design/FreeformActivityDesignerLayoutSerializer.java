@@ -93,7 +93,7 @@ public class FreeformActivityDesignerLayoutSerializer extends CompositeActivityD
         }
     }
 
-    public FreeformActivityDesignerLayoutSerializer(Object instance) throws Throwable {
+    public FreeformActivityDesignerLayoutSerializer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class FreeformActivityDesignerLayoutSerializer extends CompositeActivityD
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -99,7 +99,7 @@ public class DesignTimeTemplateParser extends NetObject  {
         }
     }
 
-    public DesignTimeTemplateParser(Object instance) throws Throwable {
+    public DesignTimeTemplateParser(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class DesignTimeTemplateParser extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -167,7 +167,7 @@ public class DesignTimeTemplateParser extends NetObject  {
         try {
             ArrayList<Control> resultingArrayList = new ArrayList<Control>();
             JCObject resultingObjects = (JCObject)classType.Invoke("ParseControls", data == null ? null : data.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Control(resultingObject));
             }
             Control[] resultingArray = new Control[resultingArrayList.size()];

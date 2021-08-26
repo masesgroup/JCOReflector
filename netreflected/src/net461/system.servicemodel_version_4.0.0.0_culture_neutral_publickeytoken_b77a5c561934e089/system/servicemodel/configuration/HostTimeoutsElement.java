@@ -94,7 +94,7 @@ public class HostTimeoutsElement extends ConfigurationElement  {
         }
     }
 
-    public HostTimeoutsElement(Object instance) throws Throwable {
+    public HostTimeoutsElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class HostTimeoutsElement extends ConfigurationElement  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

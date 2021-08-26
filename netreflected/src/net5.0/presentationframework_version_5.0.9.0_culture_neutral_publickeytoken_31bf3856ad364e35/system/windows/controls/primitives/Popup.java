@@ -102,7 +102,7 @@ public class Popup extends FrameworkElement implements system.windows.markup.IAd
         }
     }
 
-    public Popup(Object instance) throws Throwable {
+    public Popup(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -122,7 +122,7 @@ public class Popup extends FrameworkElement implements system.windows.markup.IAd
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

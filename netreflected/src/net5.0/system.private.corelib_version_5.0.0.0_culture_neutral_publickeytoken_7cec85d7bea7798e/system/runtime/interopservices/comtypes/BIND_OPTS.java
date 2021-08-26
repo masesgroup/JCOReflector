@@ -93,7 +93,7 @@ public class BIND_OPTS extends ValueType  {
         }
     }
 
-    public BIND_OPTS(Object instance) throws Throwable {
+    public BIND_OPTS(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class BIND_OPTS extends ValueType  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

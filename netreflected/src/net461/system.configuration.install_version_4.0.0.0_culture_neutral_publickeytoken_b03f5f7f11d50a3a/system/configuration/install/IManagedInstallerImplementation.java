@@ -92,7 +92,7 @@ public class IManagedInstallerImplementation extends NetObject implements IManag
         }
     }
 
-    public IManagedInstallerImplementation(Object instance) throws Throwable {
+    public IManagedInstallerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class IManagedInstallerImplementation extends NetObject implements IManag
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

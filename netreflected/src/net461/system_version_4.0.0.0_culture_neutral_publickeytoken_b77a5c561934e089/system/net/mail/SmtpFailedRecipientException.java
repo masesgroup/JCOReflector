@@ -100,7 +100,7 @@ public class SmtpFailedRecipientException extends SmtpException {
         super();
     }
 
-    public SmtpFailedRecipientException(Object instance) {
+    public SmtpFailedRecipientException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -134,7 +134,7 @@ public class SmtpFailedRecipientException extends SmtpException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

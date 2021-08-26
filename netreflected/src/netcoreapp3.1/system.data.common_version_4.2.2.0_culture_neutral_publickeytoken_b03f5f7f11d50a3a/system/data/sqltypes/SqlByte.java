@@ -110,7 +110,7 @@ public class SqlByte extends ValueType implements system.xml.serialization.IXmlS
         }
     }
 
-    public SqlByte(Object instance) throws Throwable {
+    public SqlByte(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -130,7 +130,7 @@ public class SqlByte extends ValueType implements system.xml.serialization.IXmlS
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

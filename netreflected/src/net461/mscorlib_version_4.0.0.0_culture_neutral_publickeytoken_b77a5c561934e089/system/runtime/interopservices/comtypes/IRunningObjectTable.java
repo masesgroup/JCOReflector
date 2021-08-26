@@ -101,9 +101,9 @@ public interface IRunningObjectTable extends IJCOBridgeReflected {
     /**
      * Returns the instantiated class
      * 
-     * @return An {@link Object} representing the instance of the instantiated Class
+     * @return An {@link java.lang.Object} representing the instance of the instantiated Class
      */
-    public Object getJCOInstance();
+    public java.lang.Object getJCOInstance();
 
     /**
      * Returns the instantiated class Type
@@ -124,7 +124,7 @@ public interface IRunningObjectTable extends IJCOBridgeReflected {
 
     public void EnumRunning(JCORefOut<IEnumMoniker> ppenumMoniker) throws Throwable;
 
-    public void NoteChangeTime(int dwRegister, FILETIME pfiletime) throws Throwable;
+    public void NoteChangeTime(int dwRegister, JCORefOut<FILETIME> pfiletime) throws Throwable;
 
     public void Revoke(int dwRegister) throws Throwable;
 

@@ -111,7 +111,7 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
         }
     }
 
-    public TreeView(Object instance) throws Throwable {
+    public TreeView(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class TreeView extends HierarchicalDataBoundControl implements system.web
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

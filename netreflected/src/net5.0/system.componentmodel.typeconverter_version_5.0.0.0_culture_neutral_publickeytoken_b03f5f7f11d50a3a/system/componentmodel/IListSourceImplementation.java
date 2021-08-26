@@ -94,7 +94,7 @@ public class IListSourceImplementation extends NetObject implements IListSource 
         }
     }
 
-    public IListSourceImplementation(Object instance) throws Throwable {
+    public IListSourceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class IListSourceImplementation extends NetObject implements IListSource 
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

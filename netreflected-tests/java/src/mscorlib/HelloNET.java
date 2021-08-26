@@ -58,8 +58,10 @@ public class HelloNET {
 			Environment.Exit(0);
         } catch (FileNotFoundException fnfe) {
             fnfe.printStackTrace();
+            System.exit(-1);
         } catch (Throwable tre) {
             tre.printStackTrace();
+            System.exit(-1);
         }
     }
 }

@@ -94,7 +94,7 @@ public class DesignerOptionService extends NetObject implements system.component
         }
     }
 
-    public DesignerOptionService(Object instance) throws Throwable {
+    public DesignerOptionService(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class DesignerOptionService extends NetObject implements system.component
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

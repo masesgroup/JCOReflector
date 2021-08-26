@@ -93,7 +93,7 @@ public class RIPEMD160Managed extends RIPEMD160  {
         }
     }
 
-    public RIPEMD160Managed(Object instance) throws Throwable {
+    public RIPEMD160Managed(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class RIPEMD160Managed extends RIPEMD160  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

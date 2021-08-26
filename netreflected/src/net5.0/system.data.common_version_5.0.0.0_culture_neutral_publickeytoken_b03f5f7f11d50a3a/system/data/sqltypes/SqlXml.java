@@ -101,7 +101,7 @@ public class SqlXml extends NetObject implements system.xml.serialization.IXmlSe
         }
     }
 
-    public SqlXml(Object instance) throws Throwable {
+    public SqlXml(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -121,7 +121,7 @@ public class SqlXml extends NetObject implements system.xml.serialization.IXmlSe
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

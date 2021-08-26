@@ -99,7 +99,7 @@ public class IComNativeDescriptorHandlerImplementation extends NetObject impleme
         }
     }
 
-    public IComNativeDescriptorHandlerImplementation(Object instance) throws Throwable {
+    public IComNativeDescriptorHandlerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class IComNativeDescriptorHandlerImplementation extends NetObject impleme
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -227,22 +227,22 @@ public class IComNativeDescriptorHandlerImplementation extends NetObject impleme
         }
     }
 
-    public NetObject GetPropertyValue(NetObject component, int dispid, boolean success) throws Throwable {
+    public NetObject GetPropertyValue(NetObject component, int dispid, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> success) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetPropertyValue = (JCObject)classInstance.Invoke("GetPropertyValue", component == null ? null : component.getJCOInstance(), dispid, success);
+            JCObject objGetPropertyValue = (JCObject)classInstance.Invoke("GetPropertyValue", component == null ? null : component.getJCOInstance(), dispid, success.getJCRefOut());
             return new NetObject(objGetPropertyValue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public NetObject GetPropertyValue(NetObject component, java.lang.String propertyName, boolean success) throws Throwable {
+    public NetObject GetPropertyValue(NetObject component, java.lang.String propertyName, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> success) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetPropertyValue = (JCObject)classInstance.Invoke("GetPropertyValue", component == null ? null : component.getJCOInstance(), propertyName, success);
+            JCObject objGetPropertyValue = (JCObject)classInstance.Invoke("GetPropertyValue", component == null ? null : component.getJCOInstance(), propertyName, success.getJCRefOut());
             return new NetObject(objGetPropertyValue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

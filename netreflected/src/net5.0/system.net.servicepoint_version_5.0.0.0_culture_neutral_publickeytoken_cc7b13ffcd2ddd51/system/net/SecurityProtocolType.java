@@ -108,7 +108,7 @@ public class SecurityProtocolType extends NetObject  {
         }
     }
 
-    public SecurityProtocolType(Object instance) {
+    public SecurityProtocolType(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class SecurityProtocolType extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

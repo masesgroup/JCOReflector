@@ -99,7 +99,7 @@ public class Rotation3DAnimation extends Rotation3DAnimationBase  {
         }
     }
 
-    public Rotation3DAnimation(Object instance) throws Throwable {
+    public Rotation3DAnimation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class Rotation3DAnimation extends Rotation3DAnimationBase  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

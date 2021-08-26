@@ -103,7 +103,7 @@ public class ConfigurationErrorsException extends ConfigurationException {
         super();
     }
 
-    public ConfigurationErrorsException(Object instance) {
+    public ConfigurationErrorsException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -137,7 +137,7 @@ public class ConfigurationErrorsException extends ConfigurationException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

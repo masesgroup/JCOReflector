@@ -92,7 +92,7 @@ public class X509CertificateTrustedIssuerElementCollection extends NetObjectEnum
         }
     }
 
-    public X509CertificateTrustedIssuerElementCollection(Object instance) throws Throwable {
+    public X509CertificateTrustedIssuerElementCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class X509CertificateTrustedIssuerElementCollection extends NetObjectEnum
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

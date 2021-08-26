@@ -107,7 +107,7 @@ public class ClientCredentials extends SecurityCredentialsManager  {
         }
     }
 
-    public ClientCredentials(Object instance) throws Throwable {
+    public ClientCredentials(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -127,7 +127,7 @@ public class ClientCredentials extends SecurityCredentialsManager  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

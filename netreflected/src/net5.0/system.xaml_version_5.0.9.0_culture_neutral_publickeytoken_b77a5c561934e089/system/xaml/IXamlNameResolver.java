@@ -97,9 +97,9 @@ public interface IXamlNameResolver extends IJCOBridgeReflected {
     /**
      * Returns the instantiated class
      * 
-     * @return An {@link Object} representing the instance of the instantiated Class
+     * @return An {@link java.lang.Object} representing the instance of the instantiated Class
      */
-    public Object getJCOInstance();
+    public java.lang.Object getJCOInstance();
 
     /**
      * Returns the instantiated class Type
@@ -112,7 +112,7 @@ public interface IXamlNameResolver extends IJCOBridgeReflected {
     
     public NetObject Resolve(java.lang.String name) throws Throwable;
 
-    public NetObject Resolve(java.lang.String name, JCORefOut isFullyInitialized) throws Throwable;
+    public NetObject Resolve(java.lang.String name, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> isFullyInitialized) throws Throwable;
 
 
     

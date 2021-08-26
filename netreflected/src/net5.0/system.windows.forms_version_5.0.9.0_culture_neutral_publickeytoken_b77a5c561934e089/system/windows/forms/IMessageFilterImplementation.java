@@ -93,7 +93,7 @@ public class IMessageFilterImplementation extends NetObject implements IMessageF
         }
     }
 
-    public IMessageFilterImplementation(Object instance) throws Throwable {
+    public IMessageFilterImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class IMessageFilterImplementation extends NetObject implements IMessageF
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -133,11 +133,11 @@ public class IMessageFilterImplementation extends NetObject implements IMessageF
 
     // Methods section
     
-    public boolean PreFilterMessage(Message m) throws Throwable {
+    public boolean PreFilterMessage(JCORefOut<Message> m) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("PreFilterMessage", m == null ? null : m.getJCOInstance());
+            return (boolean)classInstance.Invoke("PreFilterMessage", m.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

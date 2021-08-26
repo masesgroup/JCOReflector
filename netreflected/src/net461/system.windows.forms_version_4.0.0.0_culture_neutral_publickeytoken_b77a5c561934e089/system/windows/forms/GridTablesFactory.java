@@ -94,7 +94,7 @@ public class GridTablesFactory extends NetObject  {
         }
     }
 
-    public GridTablesFactory(Object instance) throws Throwable {
+    public GridTablesFactory(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class GridTablesFactory extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -153,7 +153,7 @@ public class GridTablesFactory extends NetObject  {
         try {
             ArrayList<DataGridTableStyle> resultingArrayList = new ArrayList<DataGridTableStyle>();
             JCObject resultingObjects = (JCObject)classType.Invoke("CreateGridTables", gridTable == null ? null : gridTable.getJCOInstance(), dataSource == null ? null : dataSource.getJCOInstance(), dataMember, bindingManager == null ? null : bindingManager.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataGridTableStyle(resultingObject));
             }
             DataGridTableStyle[] resultingArray = new DataGridTableStyle[resultingArrayList.size()];

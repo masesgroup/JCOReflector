@@ -108,7 +108,7 @@ public class ReplicationSecurityLevel extends NetObject  {
         }
     }
 
-    public ReplicationSecurityLevel(Object instance) {
+    public ReplicationSecurityLevel(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class ReplicationSecurityLevel extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

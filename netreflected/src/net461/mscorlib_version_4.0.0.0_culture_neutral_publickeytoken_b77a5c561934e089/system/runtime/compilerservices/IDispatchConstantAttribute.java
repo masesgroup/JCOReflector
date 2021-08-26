@@ -93,7 +93,7 @@ public class IDispatchConstantAttribute extends CustomConstantAttribute  {
         }
     }
 
-    public IDispatchConstantAttribute(Object instance) throws Throwable {
+    public IDispatchConstantAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class IDispatchConstantAttribute extends CustomConstantAttribute  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

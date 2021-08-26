@@ -95,7 +95,7 @@ public class GeometryHitTestResult extends HitTestResult  {
         }
     }
 
-    public GeometryHitTestResult(Object instance) throws Throwable {
+    public GeometryHitTestResult(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class GeometryHitTestResult extends HitTestResult  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

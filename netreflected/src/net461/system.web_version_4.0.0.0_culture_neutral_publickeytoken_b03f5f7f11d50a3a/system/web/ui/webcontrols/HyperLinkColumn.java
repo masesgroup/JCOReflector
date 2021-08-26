@@ -95,7 +95,7 @@ public class HyperLinkColumn extends DataGridColumn  {
         }
     }
 
-    public HyperLinkColumn(Object instance) throws Throwable {
+    public HyperLinkColumn(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class HyperLinkColumn extends DataGridColumn  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

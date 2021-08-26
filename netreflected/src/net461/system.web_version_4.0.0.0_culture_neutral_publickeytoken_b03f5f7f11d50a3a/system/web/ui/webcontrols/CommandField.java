@@ -96,7 +96,7 @@ public class CommandField extends ButtonFieldBase  {
         }
     }
 
-    public CommandField(Object instance) throws Throwable {
+    public CommandField(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class CommandField extends ButtonFieldBase  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

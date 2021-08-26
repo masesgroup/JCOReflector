@@ -96,7 +96,7 @@ public class IWSTrust13AsyncContractImplementation extends NetObject implements 
         }
     }
 
-    public IWSTrust13AsyncContractImplementation(Object instance) throws Throwable {
+    public IWSTrust13AsyncContractImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class IWSTrust13AsyncContractImplementation extends NetObject implements 
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

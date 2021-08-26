@@ -92,7 +92,7 @@ public class INameScopeImplementation extends NetObject implements INameScope {
         }
     }
 
-    public INameScopeImplementation(Object instance) throws Throwable {
+    public INameScopeImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class INameScopeImplementation extends NetObject implements INameScope {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

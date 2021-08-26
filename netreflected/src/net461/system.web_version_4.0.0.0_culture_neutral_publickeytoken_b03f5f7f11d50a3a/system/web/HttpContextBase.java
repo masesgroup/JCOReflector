@@ -117,7 +117,7 @@ public class HttpContextBase extends NetObject  {
         }
     }
 
-    public HttpContextBase(Object instance) throws Throwable {
+    public HttpContextBase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -137,7 +137,7 @@ public class HttpContextBase extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -478,7 +478,7 @@ public class HttpContextBase extends NetObject  {
         try {
             ArrayList<NetException> resultingArrayList = new ArrayList<NetException>();
             JCObject resultingObjects = (JCObject)classInstance.Get("AllErrors");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetException(resultingObject));
             }
             NetException[] resultingArray = new NetException[resultingArrayList.size()];

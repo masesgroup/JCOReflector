@@ -94,7 +94,7 @@ public class ComponentResourceKey extends ResourceKey  {
         }
     }
 
-    public ComponentResourceKey(Object instance) throws Throwable {
+    public ComponentResourceKey(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class ComponentResourceKey extends ResourceKey  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

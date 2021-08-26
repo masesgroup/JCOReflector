@@ -99,7 +99,7 @@ public class ServiceController extends Component  {
         }
     }
 
-    public ServiceController(Object instance) throws Throwable {
+    public ServiceController(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class ServiceController extends Component  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -184,7 +184,7 @@ public class ServiceController extends Component  {
         try {
             ArrayList<ServiceController> resultingArrayList = new ArrayList<ServiceController>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetDevices");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ServiceController(resultingObject));
             }
             ServiceController[] resultingArray = new ServiceController[resultingArrayList.size()];
@@ -201,7 +201,7 @@ public class ServiceController extends Component  {
         try {
             ArrayList<ServiceController> resultingArrayList = new ArrayList<ServiceController>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetDevices", machineName);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ServiceController(resultingObject));
             }
             ServiceController[] resultingArray = new ServiceController[resultingArrayList.size()];
@@ -218,7 +218,7 @@ public class ServiceController extends Component  {
         try {
             ArrayList<ServiceController> resultingArrayList = new ArrayList<ServiceController>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetServices");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ServiceController(resultingObject));
             }
             ServiceController[] resultingArray = new ServiceController[resultingArrayList.size()];
@@ -235,7 +235,7 @@ public class ServiceController extends Component  {
         try {
             ArrayList<ServiceController> resultingArrayList = new ArrayList<ServiceController>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetServices", machineName);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ServiceController(resultingObject));
             }
             ServiceController[] resultingArray = new ServiceController[resultingArrayList.size()];
@@ -310,7 +310,7 @@ public class ServiceController extends Component  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Start", (Object)args);
+            classInstance.Invoke("Start", (java.lang.Object)args);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -320,7 +320,7 @@ public class ServiceController extends Component  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Start", (Object)dupParam0.getJCRefOut());
+            classInstance.Invoke("Start", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -407,7 +407,7 @@ public class ServiceController extends Component  {
         try {
             ArrayList<ServiceController> resultingArrayList = new ArrayList<ServiceController>();
             JCObject resultingObjects = (JCObject)classInstance.Get("DependentServices");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ServiceController(resultingObject));
             }
             ServiceController[] resultingArray = new ServiceController[resultingArrayList.size()];
@@ -424,7 +424,7 @@ public class ServiceController extends Component  {
         try {
             ArrayList<ServiceController> resultingArrayList = new ArrayList<ServiceController>();
             JCObject resultingObjects = (JCObject)classInstance.Get("ServicesDependedOn");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ServiceController(resultingObject));
             }
             ServiceController[] resultingArray = new ServiceController[resultingArrayList.size()];

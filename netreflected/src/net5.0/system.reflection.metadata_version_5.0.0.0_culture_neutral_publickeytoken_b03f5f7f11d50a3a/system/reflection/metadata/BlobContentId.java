@@ -96,7 +96,7 @@ public class BlobContentId extends ValueType  {
         }
     }
 
-    public BlobContentId(Object instance) throws Throwable {
+    public BlobContentId(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class BlobContentId extends ValueType  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -148,7 +148,7 @@ public class BlobContentId extends ValueType  {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((Object)id));
+            setJCOInstance((JCObject)classType.NewObject((java.lang.Object)id));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,7 +183,7 @@ public class BlobContentId extends ValueType  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objFromHash = (JCObject)classType.Invoke("FromHash", (Object)hashCode);
+            JCObject objFromHash = (JCObject)classType.Invoke("FromHash", (java.lang.Object)hashCode);
             return new BlobContentId(objFromHash);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -194,7 +194,7 @@ public class BlobContentId extends ValueType  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objFromHash = (JCObject)classType.Invoke("FromHash", (Object)dupParam0.getJCRefOut());
+            JCObject objFromHash = (JCObject)classType.Invoke("FromHash", (java.lang.Object)dupParam0.getJCRefOut());
             return new BlobContentId(objFromHash);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

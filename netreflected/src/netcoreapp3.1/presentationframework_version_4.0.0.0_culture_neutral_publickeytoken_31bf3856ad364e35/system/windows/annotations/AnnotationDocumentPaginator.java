@@ -100,7 +100,7 @@ public class AnnotationDocumentPaginator extends DocumentPaginator  {
         }
     }
 
-    public AnnotationDocumentPaginator(Object instance) throws Throwable {
+    public AnnotationDocumentPaginator(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class AnnotationDocumentPaginator extends DocumentPaginator  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

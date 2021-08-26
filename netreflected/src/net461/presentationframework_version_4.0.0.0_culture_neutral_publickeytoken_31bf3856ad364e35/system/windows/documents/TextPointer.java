@@ -99,7 +99,7 @@ public class TextPointer extends ContentPosition  {
         }
     }
 
-    public TextPointer(Object instance) throws Throwable {
+    public TextPointer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class TextPointer extends ContentPosition  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -265,7 +265,7 @@ public class TextPointer extends ContentPosition  {
         }
     }
 
-    public TextPointer GetLineStartPosition(int count, JCORefOut actualCount) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
+    public TextPointer GetLineStartPosition(int count, JCORefOut<java.util.concurrent.atomic.AtomicInteger> actualCount) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

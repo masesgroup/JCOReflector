@@ -95,7 +95,7 @@ public class NameValueHeaderValue extends NetObject implements system.ICloneable
         }
     }
 
-    public NameValueHeaderValue(Object instance) throws Throwable {
+    public NameValueHeaderValue(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class NameValueHeaderValue extends NetObject implements system.ICloneable
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

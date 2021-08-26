@@ -101,9 +101,9 @@ public interface UCOMIRunningObjectTable extends IJCOBridgeReflected {
     /**
      * Returns the instantiated class
      * 
-     * @return An {@link Object} representing the instance of the instantiated Class
+     * @return An {@link java.lang.Object} representing the instance of the instantiated Class
      */
-    public Object getJCOInstance();
+    public java.lang.Object getJCOInstance();
 
     /**
      * Returns the instantiated class Type
@@ -122,9 +122,9 @@ public interface UCOMIRunningObjectTable extends IJCOBridgeReflected {
 
     public void IsRunning(UCOMIMoniker pmkObjectName) throws Throwable;
 
-    public void NoteChangeTime(int dwRegister, FILETIME pfiletime) throws Throwable;
+    public void NoteChangeTime(int dwRegister, JCORefOut<FILETIME> pfiletime) throws Throwable;
 
-    public void Register(int grfFlags, NetObject punkObject, UCOMIMoniker pmkObjectName, JCORefOut pdwRegister) throws Throwable;
+    public void Register(int grfFlags, NetObject punkObject, UCOMIMoniker pmkObjectName, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pdwRegister) throws Throwable;
 
     public void Revoke(int dwRegister) throws Throwable;
 

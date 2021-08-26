@@ -95,7 +95,7 @@ public class XmlNodeList extends NetObjectEnumerable implements system.IDisposab
         }
     }
 
-    public XmlNodeList(Object instance) throws Throwable {
+    public XmlNodeList(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class XmlNodeList extends NetObjectEnumerable implements system.IDisposab
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

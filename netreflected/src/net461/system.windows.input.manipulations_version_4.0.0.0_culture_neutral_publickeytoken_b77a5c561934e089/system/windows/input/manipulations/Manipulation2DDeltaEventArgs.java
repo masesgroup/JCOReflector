@@ -96,7 +96,7 @@ public class Manipulation2DDeltaEventArgs extends EventArgs  {
         }
     }
 
-    public Manipulation2DDeltaEventArgs(Object instance) throws Throwable {
+    public Manipulation2DDeltaEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class Manipulation2DDeltaEventArgs extends EventArgs  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

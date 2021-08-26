@@ -96,7 +96,7 @@ public class DataAnnotationsModelValidator extends ModelValidator  {
         }
     }
 
-    public DataAnnotationsModelValidator(Object instance) throws Throwable {
+    public DataAnnotationsModelValidator(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class DataAnnotationsModelValidator extends ModelValidator  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

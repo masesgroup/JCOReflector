@@ -97,7 +97,7 @@ public class AssemblyCatalog extends ComposablePartCatalog  {
         }
     }
 
-    public AssemblyCatalog(Object instance) throws Throwable {
+    public AssemblyCatalog(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class AssemblyCatalog extends ComposablePartCatalog  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

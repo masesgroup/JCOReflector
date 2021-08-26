@@ -96,7 +96,7 @@ public class ControlType extends AutomationIdentifier  {
         }
     }
 
-    public ControlType(Object instance) throws Throwable {
+    public ControlType(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class ControlType extends AutomationIdentifier  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -155,7 +155,7 @@ public class ControlType extends AutomationIdentifier  {
         try {
             ArrayList<AutomationPattern> resultingArrayList = new ArrayList<AutomationPattern>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetNeverSupportedPatterns");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new AutomationPattern(resultingObject));
             }
             AutomationPattern[] resultingArray = new AutomationPattern[resultingArrayList.size()];
@@ -172,7 +172,7 @@ public class ControlType extends AutomationIdentifier  {
         try {
             ArrayList<AutomationProperty> resultingArrayList = new ArrayList<AutomationProperty>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetRequiredProperties");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new AutomationProperty(resultingObject));
             }
             AutomationProperty[] resultingArray = new AutomationProperty[resultingArrayList.size()];

@@ -99,7 +99,7 @@ public class OleDbParameter extends DbParameter implements system.ICloneable {
         }
     }
 
-    public OleDbParameter(Object instance) throws Throwable {
+    public OleDbParameter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class OleDbParameter extends DbParameter implements system.ICloneable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

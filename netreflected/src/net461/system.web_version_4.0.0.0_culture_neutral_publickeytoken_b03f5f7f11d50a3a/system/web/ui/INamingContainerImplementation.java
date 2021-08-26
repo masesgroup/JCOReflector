@@ -92,7 +92,7 @@ public class INamingContainerImplementation extends NetObject implements INaming
         }
     }
 
-    public INamingContainerImplementation(Object instance) throws Throwable {
+    public INamingContainerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class INamingContainerImplementation extends NetObject implements INaming
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

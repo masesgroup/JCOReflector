@@ -107,7 +107,7 @@ public class Decimal extends ValueType implements system.runtime.serialization.I
         }
     }
 
-    public Decimal(Object instance) throws Throwable {
+    public Decimal(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -127,7 +127,7 @@ public class Decimal extends ValueType implements system.runtime.serialization.I
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -189,7 +189,7 @@ public class Decimal extends ValueType implements system.runtime.serialization.I
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((Object)bits));
+            setJCOInstance((JCObject)classType.NewObject((java.lang.Object)bits));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -354,9 +354,9 @@ public class Decimal extends ValueType implements system.runtime.serialization.I
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetBits", d == null ? null : d.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             int[] resultingArray = new int[resultingArrayList.size()];

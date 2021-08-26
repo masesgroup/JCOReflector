@@ -97,7 +97,7 @@ public class Message extends NamedItem  {
         }
     }
 
-    public Message(Object instance) throws Throwable {
+    public Message(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class Message extends NamedItem  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -172,8 +172,8 @@ public class Message extends NamedItem  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<MessagePart> resultingArrayList = new ArrayList<MessagePart>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("FindPartsByName", (Object)partNames);
-            for (Object resultingObject : resultingObjects) {
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("FindPartsByName", (java.lang.Object)partNames);
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MessagePart(resultingObject));
             }
             MessagePart[] resultingArray = new MessagePart[resultingArrayList.size()];
@@ -189,8 +189,8 @@ public class Message extends NamedItem  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<MessagePart> resultingArrayList = new ArrayList<MessagePart>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("FindPartsByName", (Object)dupParam0.getJCRefOut());
-            for (Object resultingObject : resultingObjects) {
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("FindPartsByName", (java.lang.Object)dupParam0.getJCRefOut());
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MessagePart(resultingObject));
             }
             MessagePart[] resultingArray = new MessagePart[resultingArrayList.size()];

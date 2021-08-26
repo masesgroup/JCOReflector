@@ -104,7 +104,7 @@ public class UpDownBase extends ContainerControl  {
         }
     }
 
-    public UpDownBase(Object instance) throws Throwable {
+    public UpDownBase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -124,7 +124,7 @@ public class UpDownBase extends ContainerControl  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

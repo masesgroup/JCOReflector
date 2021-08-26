@@ -99,7 +99,7 @@ public class DropDownList extends ListControl implements system.web.ui.IPostBack
         }
     }
 
-    public DropDownList(Object instance) throws Throwable {
+    public DropDownList(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class DropDownList extends ListControl implements system.web.ui.IPostBack
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

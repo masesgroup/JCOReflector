@@ -108,7 +108,7 @@ public class CallingConvention extends NetObject  {
         }
     }
 
-    public CallingConvention(Object instance) {
+    public CallingConvention(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class CallingConvention extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

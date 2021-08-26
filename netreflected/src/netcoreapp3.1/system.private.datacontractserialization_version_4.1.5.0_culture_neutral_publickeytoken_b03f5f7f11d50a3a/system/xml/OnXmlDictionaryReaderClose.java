@@ -96,7 +96,7 @@ public class OnXmlDictionaryReaderClose extends JCVoidDelegate implements IJCVoi
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return this;
     }
 
@@ -104,7 +104,7 @@ public class OnXmlDictionaryReaderClose extends JCVoidDelegate implements IJCVoi
         return classType;
     }
 
-    public final void EventRaised(Object... argsFromJCOBridge) {
+    public final void EventRaised(java.lang.Object... argsFromJCOBridge) {
         try
         {
             XmlDictionaryReader reader = argsFromJCOBridge[0] == null ? null : new XmlDictionaryReader(argsFromJCOBridge[0]);
@@ -122,7 +122,7 @@ public class OnXmlDictionaryReaderClose extends JCVoidDelegate implements IJCVoi
         }
     }
 
-    public final void DelegateInvoked(Object... argsFromJCOBridge) {
+    public final void DelegateInvoked(java.lang.Object... argsFromJCOBridge) {
         try
         {
             XmlDictionaryReader reader = argsFromJCOBridge[0] == null ? null : new XmlDictionaryReader(argsFromJCOBridge[0]);
@@ -149,7 +149,7 @@ public class OnXmlDictionaryReaderClose extends JCVoidDelegate implements IJCVoi
         callerInstance = instance;
     }
 
-    public OnXmlDictionaryReaderClose(Object instance) throws Throwable {
+    public OnXmlDictionaryReaderClose(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         if (instance == null) throw new IllegalArgumentException("Instance cannot be null");
         if (instance instanceof IOnXmlDictionaryReaderClose) {
@@ -161,7 +161,7 @@ public class OnXmlDictionaryReaderClose extends JCVoidDelegate implements IJCVoi
                     String.format("Class %s is not supported.", instance.getClass().getTypeName()));
     }
 
-    protected final static <T extends IJCOBridgeReflected> Object toObjectFromArray(T[] input) {
+    protected final static <T extends IJCOBridgeReflected> java.lang.Object toObjectFromArray(T[] input) {
         return JCOBridgeInstance.toObjectFromArray(input);
     }
 

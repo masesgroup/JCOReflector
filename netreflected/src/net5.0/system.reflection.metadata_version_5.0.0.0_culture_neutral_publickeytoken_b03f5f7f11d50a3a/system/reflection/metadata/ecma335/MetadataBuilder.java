@@ -152,7 +152,7 @@ public class MetadataBuilder extends NetObject  {
         }
     }
 
-    public MetadataBuilder(Object instance) throws Throwable {
+    public MetadataBuilder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -172,7 +172,7 @@ public class MetadataBuilder extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -262,7 +262,7 @@ public class MetadataBuilder extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetOrAddBlob = (JCObject)classInstance.Invoke("GetOrAddBlob", (Object)value);
+            JCObject objGetOrAddBlob = (JCObject)classInstance.Invoke("GetOrAddBlob", (java.lang.Object)value);
             return new BlobHandle(objGetOrAddBlob);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -273,7 +273,7 @@ public class MetadataBuilder extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetOrAddBlob = (JCObject)classInstance.Invoke("GetOrAddBlob", (Object)dupParam0.getJCRefOut());
+            JCObject objGetOrAddBlob = (JCObject)classInstance.Invoke("GetOrAddBlob", (java.lang.Object)dupParam0.getJCRefOut());
             return new BlobHandle(objGetOrAddBlob);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

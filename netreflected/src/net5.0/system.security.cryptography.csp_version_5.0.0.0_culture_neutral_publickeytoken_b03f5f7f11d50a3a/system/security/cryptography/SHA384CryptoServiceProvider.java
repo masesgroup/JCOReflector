@@ -93,7 +93,7 @@ public class SHA384CryptoServiceProvider extends SHA384  {
         }
     }
 
-    public SHA384CryptoServiceProvider(Object instance) throws Throwable {
+    public SHA384CryptoServiceProvider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class SHA384CryptoServiceProvider extends SHA384  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -100,7 +100,7 @@ public class Matrix extends ValueType implements system.IFormattable {
         }
     }
 
-    public Matrix(Object instance) throws Throwable {
+    public Matrix(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class Matrix extends ValueType implements system.IFormattable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -381,7 +381,7 @@ public class Matrix extends ValueType implements system.IFormattable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Transform", (Object)toObjectFromArray(points));
+            classInstance.Invoke("Transform", (java.lang.Object)toObjectFromArray(points));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -391,7 +391,7 @@ public class Matrix extends ValueType implements system.IFormattable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Transform", (Object)toObjectFromArray(vectors));
+            classInstance.Invoke("Transform", (java.lang.Object)toObjectFromArray(vectors));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

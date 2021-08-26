@@ -92,7 +92,7 @@ public class IUserControlTypeResolutionServiceImplementation extends NetObject i
         }
     }
 
-    public IUserControlTypeResolutionServiceImplementation(Object instance) throws Throwable {
+    public IUserControlTypeResolutionServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class IUserControlTypeResolutionServiceImplementation extends NetObject i
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

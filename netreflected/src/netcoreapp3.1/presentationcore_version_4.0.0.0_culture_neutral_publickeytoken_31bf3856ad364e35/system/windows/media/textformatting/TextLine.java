@@ -99,7 +99,7 @@ public class TextLine extends NetObject implements AutoCloseable {
         }
     }
 
-    public TextLine(Object instance) throws Throwable {
+    public TextLine(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class TextLine extends NetObject implements AutoCloseable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -208,7 +208,7 @@ public class TextLine extends NetObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCollapse = (JCObject)classInstance.Invoke("Collapse", (Object)toObjectFromArray(collapsingPropertiesList));
+            JCObject objCollapse = (JCObject)classInstance.Invoke("Collapse", (java.lang.Object)toObjectFromArray(collapsingPropertiesList));
             return new TextLine(objCollapse);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

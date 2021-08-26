@@ -128,7 +128,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public Graphics(Object instance) throws Throwable {
+    public Graphics(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -148,7 +148,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -333,7 +333,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
         try {
             ArrayList<Region> resultingArrayList = new ArrayList<Region>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("MeasureCharacterRanges", text, font == null ? null : font.getJCOInstance(), layoutRect == null ? null : layoutRect.getJCOInstance(), stringFormat == null ? null : stringFormat.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Region(resultingObject));
             }
             Region[] resultingArray = new Region[resultingArrayList.size()];
@@ -410,7 +410,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public SizeF MeasureString(java.lang.String text, Font font, SizeF layoutArea, StringFormat stringFormat, JCORefOut charactersFitted, JCORefOut linesFilled) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException {
+    public SizeF MeasureString(java.lang.String text, Font font, SizeF layoutArea, StringFormat stringFormat, JCORefOut<java.util.concurrent.atomic.AtomicInteger> charactersFitted, JCORefOut<java.util.concurrent.atomic.AtomicInteger> linesFilled) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -436,7 +436,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddMetafileComment", (Object)data);
+            classInstance.Invoke("AddMetafileComment", (java.lang.Object)data);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -446,7 +446,7 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddMetafileComment", (Object)dupParam0.getJCRefOut());
+            classInstance.Invoke("AddMetafileComment", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

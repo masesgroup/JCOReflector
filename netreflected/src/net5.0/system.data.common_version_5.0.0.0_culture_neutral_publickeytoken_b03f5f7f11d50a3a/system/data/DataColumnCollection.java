@@ -95,7 +95,7 @@ public class DataColumnCollection extends InternalDataCollectionBase  {
         }
     }
 
-    public DataColumnCollection(Object instance) throws Throwable {
+    public DataColumnCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class DataColumnCollection extends InternalDataCollectionBase  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -246,7 +246,7 @@ public class DataColumnCollection extends InternalDataCollectionBase  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddRange", (Object)toObjectFromArray(columns));
+            classInstance.Invoke("AddRange", (java.lang.Object)toObjectFromArray(columns));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -94,7 +94,7 @@ public class CancellationScope extends NativeActivity  {
         }
     }
 
-    public CancellationScope(Object instance) throws Throwable {
+    public CancellationScope(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class CancellationScope extends NativeActivity  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

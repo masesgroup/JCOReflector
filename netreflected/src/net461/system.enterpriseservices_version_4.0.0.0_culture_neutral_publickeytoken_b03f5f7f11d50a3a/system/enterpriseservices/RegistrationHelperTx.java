@@ -95,7 +95,7 @@ public class RegistrationHelperTx extends ServicedComponent  {
         }
     }
 
-    public RegistrationHelperTx(Object instance) throws Throwable {
+    public RegistrationHelperTx(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class RegistrationHelperTx extends ServicedComponent  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -164,31 +164,31 @@ public class RegistrationHelperTx extends ServicedComponent  {
         }
     }
 
-    public void InstallAssembly(java.lang.String assembly, java.lang.String application, java.lang.String tlb, InstallationFlags installFlags, NetObject sync) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.enterpriseservices.RegistrationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.UnauthorizedAccessException, system.io.IOException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public void InstallAssembly(java.lang.String assembly, JCORefOut application, JCORefOut tlb, InstallationFlags installFlags, NetObject sync) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.enterpriseservices.RegistrationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.UnauthorizedAccessException, system.io.IOException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("InstallAssembly", assembly, application, tlb, installFlags == null ? null : installFlags.getJCOInstance(), sync == null ? null : sync.getJCOInstance());
+            classInstance.Invoke("InstallAssembly", assembly, application.getJCRefOut(), tlb.getJCRefOut(), installFlags == null ? null : installFlags.getJCOInstance(), sync == null ? null : sync.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void InstallAssembly(java.lang.String assembly, java.lang.String application, java.lang.String partition, java.lang.String tlb, InstallationFlags installFlags, NetObject sync) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.enterpriseservices.RegistrationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.UnauthorizedAccessException, system.io.IOException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public void InstallAssembly(java.lang.String assembly, JCORefOut application, java.lang.String partition, JCORefOut tlb, InstallationFlags installFlags, NetObject sync) throws Throwable, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.security.SecurityException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.enterpriseservices.RegistrationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.io.PathTooLongException, system.UnauthorizedAccessException, system.io.IOException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("InstallAssembly", assembly, application, partition, tlb, installFlags == null ? null : installFlags.getJCOInstance(), sync == null ? null : sync.getJCOInstance());
+            classInstance.Invoke("InstallAssembly", assembly, application.getJCRefOut(), partition, tlb.getJCRefOut(), installFlags == null ? null : installFlags.getJCOInstance(), sync == null ? null : sync.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void InstallAssemblyFromConfig(RegistrationConfig regConfig, NetObject sync) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.NotSupportedException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.enterpriseservices.RegistrationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
+    public void InstallAssemblyFromConfig(JCORefOut<RegistrationConfig> regConfig, NetObject sync) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.NotSupportedException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.enterpriseservices.RegistrationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("InstallAssemblyFromConfig", regConfig == null ? null : regConfig.getJCOInstance(), sync == null ? null : sync.getJCOInstance());
+            classInstance.Invoke("InstallAssemblyFromConfig", regConfig.getJCRefOut(), sync == null ? null : sync.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,11 +214,11 @@ public class RegistrationHelperTx extends ServicedComponent  {
         }
     }
 
-    public void UninstallAssemblyFromConfig(RegistrationConfig regConfig, NetObject sync) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.NotSupportedException, system.NotImplementedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.enterpriseservices.RegistrationException, system.UnauthorizedAccessException, system.io.IOException {
+    public void UninstallAssemblyFromConfig(JCORefOut<RegistrationConfig> regConfig, NetObject sync) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.security.SecurityException, system.NotSupportedException, system.NotImplementedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.io.PathTooLongException, system.IndexOutOfRangeException, system.enterpriseservices.RegistrationException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("UninstallAssemblyFromConfig", regConfig == null ? null : regConfig.getJCOInstance(), sync == null ? null : sync.getJCOInstance());
+            classInstance.Invoke("UninstallAssemblyFromConfig", regConfig.getJCRefOut(), sync == null ? null : sync.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

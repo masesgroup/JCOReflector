@@ -95,7 +95,7 @@ public class ISupportInitializeNotificationImplementation extends NetObject impl
         }
     }
 
-    public ISupportInitializeNotificationImplementation(Object instance) throws Throwable {
+    public ISupportInitializeNotificationImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class ISupportInitializeNotificationImplementation extends NetObject impl
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

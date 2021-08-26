@@ -99,7 +99,7 @@ public class InputLanguageManager extends DispatcherObject  {
         }
     }
 
-    public InputLanguageManager(Object instance) throws Throwable {
+    public InputLanguageManager(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class InputLanguageManager extends DispatcherObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

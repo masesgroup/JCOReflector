@@ -108,7 +108,7 @@ public class FlowDirections extends NetObject  {
         }
     }
 
-    public FlowDirections(Object instance) {
+    public FlowDirections(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class FlowDirections extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

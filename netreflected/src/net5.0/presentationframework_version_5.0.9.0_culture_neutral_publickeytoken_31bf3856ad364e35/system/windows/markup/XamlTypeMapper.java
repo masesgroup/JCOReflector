@@ -94,7 +94,7 @@ public class XamlTypeMapper extends NetObject  {
         }
     }
 
-    public XamlTypeMapper(Object instance) throws Throwable {
+    public XamlTypeMapper(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class XamlTypeMapper extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -146,7 +146,7 @@ public class XamlTypeMapper extends NetObject  {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((Object)assemblyNames));
+            setJCOInstance((JCObject)classType.NewObject((java.lang.Object)assemblyNames));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

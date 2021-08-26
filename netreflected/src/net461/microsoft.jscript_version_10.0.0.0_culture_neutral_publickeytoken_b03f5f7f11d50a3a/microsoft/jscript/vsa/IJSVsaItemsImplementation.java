@@ -96,7 +96,7 @@ public class IJSVsaItemsImplementation extends IEnumerableImplementation impleme
         }
     }
 
-    public IJSVsaItemsImplementation(Object instance) throws Throwable {
+    public IJSVsaItemsImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class IJSVsaItemsImplementation extends IEnumerableImplementation impleme
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

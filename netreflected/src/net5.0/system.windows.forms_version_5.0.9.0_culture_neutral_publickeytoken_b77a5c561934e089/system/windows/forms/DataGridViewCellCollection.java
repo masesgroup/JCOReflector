@@ -96,7 +96,7 @@ public class DataGridViewCellCollection extends BaseCollection  {
         }
     }
 
-    public DataGridViewCellCollection(Object instance) throws Throwable {
+    public DataGridViewCellCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class DataGridViewCellCollection extends BaseCollection  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -193,7 +193,7 @@ public class DataGridViewCellCollection extends BaseCollection  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddRange", (Object)toObjectFromArray(dataGridViewCells));
+            classInstance.Invoke("AddRange", (java.lang.Object)toObjectFromArray(dataGridViewCells));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

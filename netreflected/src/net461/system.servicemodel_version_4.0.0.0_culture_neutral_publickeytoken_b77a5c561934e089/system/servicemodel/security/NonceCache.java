@@ -93,7 +93,7 @@ public class NonceCache extends NetObject  {
         }
     }
 
-    public NonceCache(Object instance) throws Throwable {
+    public NonceCache(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class NonceCache extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -148,7 +148,7 @@ public class NonceCache extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("CheckNonce", (Object)nonce);
+            return (boolean)classInstance.Invoke("CheckNonce", (java.lang.Object)nonce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -158,7 +158,7 @@ public class NonceCache extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("CheckNonce", (Object)dupParam0.getJCRefOut());
+            return (boolean)classInstance.Invoke("CheckNonce", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,7 +168,7 @@ public class NonceCache extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("TryAddNonce", (Object)nonce);
+            return (boolean)classInstance.Invoke("TryAddNonce", (java.lang.Object)nonce);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -178,7 +178,7 @@ public class NonceCache extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("TryAddNonce", (Object)dupParam0.getJCRefOut());
+            return (boolean)classInstance.Invoke("TryAddNonce", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

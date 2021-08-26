@@ -107,7 +107,7 @@ public class SqlBulkCopy extends NetObject implements system.IDisposable, AutoCl
         }
     }
 
-    public SqlBulkCopy(Object instance) throws Throwable {
+    public SqlBulkCopy(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -127,7 +127,7 @@ public class SqlBulkCopy extends NetObject implements system.IDisposable, AutoCl
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -226,7 +226,7 @@ public class SqlBulkCopy extends NetObject implements system.IDisposable, AutoCl
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objWriteToServerAsync = (JCObject)classInstance.Invoke("WriteToServerAsync", (Object)toObjectFromArray(rows));
+            JCObject objWriteToServerAsync = (JCObject)classInstance.Invoke("WriteToServerAsync", (java.lang.Object)toObjectFromArray(rows));
             return new Task(objWriteToServerAsync);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -334,7 +334,7 @@ public class SqlBulkCopy extends NetObject implements system.IDisposable, AutoCl
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("WriteToServer", (Object)toObjectFromArray(rows));
+            classInstance.Invoke("WriteToServer", (java.lang.Object)toObjectFromArray(rows));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

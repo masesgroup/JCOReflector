@@ -94,7 +94,7 @@ public class TemplateGroup extends NetObject  {
         }
     }
 
-    public TemplateGroup(Object instance) throws Throwable {
+    public TemplateGroup(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class TemplateGroup extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -207,7 +207,7 @@ public class TemplateGroup extends NetObject  {
         try {
             ArrayList<TemplateDefinition> resultingArrayList = new ArrayList<TemplateDefinition>();
             JCObject resultingObjects = (JCObject)classInstance.Get("Templates");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new TemplateDefinition(resultingObject));
             }
             TemplateDefinition[] resultingArray = new TemplateDefinition[resultingArrayList.size()];

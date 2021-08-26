@@ -96,7 +96,7 @@ public class ObjectDesignerDataSourceView extends DesignerDataSourceView  {
         }
     }
 
-    public ObjectDesignerDataSourceView(Object instance) throws Throwable {
+    public ObjectDesignerDataSourceView(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class ObjectDesignerDataSourceView extends DesignerDataSourceView  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -159,7 +159,7 @@ public class ObjectDesignerDataSourceView extends DesignerDataSourceView  {
     
     // Methods section
     
-    public IEnumerable GetDesignTimeData(int minimumRows, JCORefOut isSampleData) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException, system.data.DataException, system.RankException, system.NullReferenceException, system.NotImplementedException, system.InvalidTimeZoneException {
+    public IEnumerable GetDesignTimeData(int minimumRows, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> isSampleData) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.NotSupportedException, system.OverflowException, system.data.DataException, system.RankException, system.NullReferenceException, system.NotImplementedException, system.InvalidTimeZoneException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

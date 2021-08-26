@@ -108,7 +108,7 @@ public class XmlSerializer extends NetObject  {
         }
     }
 
-    public XmlSerializer(Object instance) throws Throwable {
+    public XmlSerializer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -128,7 +128,7 @@ public class XmlSerializer extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -342,8 +342,8 @@ public class XmlSerializer extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             ArrayList<XmlSerializer> resultingArrayList = new ArrayList<XmlSerializer>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("FromMappings", (Object)toObjectFromArray(mappings));
-            for (Object resultingObject : resultingObjects) {
+            JCObject resultingObjects = (JCObject)classType.Invoke("FromMappings", (java.lang.Object)toObjectFromArray(mappings));
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new XmlSerializer(resultingObject));
             }
             XmlSerializer[] resultingArray = new XmlSerializer[resultingArrayList.size()];
@@ -360,7 +360,7 @@ public class XmlSerializer extends NetObject  {
         try {
             ArrayList<XmlSerializer> resultingArrayList = new ArrayList<XmlSerializer>();
             JCObject resultingObjects = (JCObject)classType.Invoke("FromMappings", toObjectFromArray(mappings), type == null ? null : type.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new XmlSerializer(resultingObject));
             }
             XmlSerializer[] resultingArray = new XmlSerializer[resultingArrayList.size()];
@@ -376,8 +376,8 @@ public class XmlSerializer extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             ArrayList<XmlSerializer> resultingArrayList = new ArrayList<XmlSerializer>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("FromTypes", (Object)toObjectFromArray(types));
-            for (Object resultingObject : resultingObjects) {
+            JCObject resultingObjects = (JCObject)classType.Invoke("FromTypes", (java.lang.Object)toObjectFromArray(types));
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new XmlSerializer(resultingObject));
             }
             XmlSerializer[] resultingArray = new XmlSerializer[resultingArrayList.size()];

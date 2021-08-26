@@ -94,7 +94,7 @@ public class DataGridViewAutoSizeColumnsModeEventArgs extends EventArgs  {
         }
     }
 
-    public DataGridViewAutoSizeColumnsModeEventArgs(Object instance) throws Throwable {
+    public DataGridViewAutoSizeColumnsModeEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class DataGridViewAutoSizeColumnsModeEventArgs extends EventArgs  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -146,7 +146,7 @@ public class DataGridViewAutoSizeColumnsModeEventArgs extends EventArgs  {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((Object)toObjectFromArray(previousModes)));
+            setJCOInstance((JCObject)classType.NewObject((java.lang.Object)toObjectFromArray(previousModes)));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,7 +167,7 @@ public class DataGridViewAutoSizeColumnsModeEventArgs extends EventArgs  {
         try {
             ArrayList<DataGridViewAutoSizeColumnMode> resultingArrayList = new ArrayList<DataGridViewAutoSizeColumnMode>();
             JCObject resultingObjects = (JCObject)classInstance.Get("PreviousModes");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataGridViewAutoSizeColumnMode(resultingObject));
             }
             DataGridViewAutoSizeColumnMode[] resultingArray = new DataGridViewAutoSizeColumnMode[resultingArrayList.size()];

@@ -97,7 +97,7 @@ public class Rfc3161TimestampToken extends NetObject  {
         }
     }
 
-    public Rfc3161TimestampToken(Object instance) throws Throwable {
+    public Rfc3161TimestampToken(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class Rfc3161TimestampToken extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

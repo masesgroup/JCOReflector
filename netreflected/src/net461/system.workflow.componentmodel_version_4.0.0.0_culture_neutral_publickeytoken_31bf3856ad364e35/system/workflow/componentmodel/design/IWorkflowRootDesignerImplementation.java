@@ -103,7 +103,7 @@ public class IWorkflowRootDesignerImplementation extends NetObject implements IW
         }
     }
 
-    public IWorkflowRootDesignerImplementation(Object instance) throws Throwable {
+    public IWorkflowRootDesignerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -123,7 +123,7 @@ public class IWorkflowRootDesignerImplementation extends NetObject implements IW
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -225,7 +225,7 @@ public class IWorkflowRootDesignerImplementation extends NetObject implements IW
         try {
             ArrayList<ViewTechnology> resultingArrayList = new ArrayList<ViewTechnology>();
             JCObject resultingObjects = (JCObject)classInstance.Get("SupportedTechnologies");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ViewTechnology(resultingObject));
             }
             ViewTechnology[] resultingArray = new ViewTechnology[resultingArrayList.size()];

@@ -93,7 +93,7 @@ public class ICom2PropertyPageDisplayServiceImplementation extends NetObject imp
         }
     }
 
-    public ICom2PropertyPageDisplayServiceImplementation(Object instance) throws Throwable {
+    public ICom2PropertyPageDisplayServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class ICom2PropertyPageDisplayServiceImplementation extends NetObject imp
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

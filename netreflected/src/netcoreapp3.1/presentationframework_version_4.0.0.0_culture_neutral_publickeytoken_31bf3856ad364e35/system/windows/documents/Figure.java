@@ -99,7 +99,7 @@ public class Figure extends AnchoredBlock  {
         }
     }
 
-    public Figure(Object instance) throws Throwable {
+    public Figure(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class Figure extends AnchoredBlock  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

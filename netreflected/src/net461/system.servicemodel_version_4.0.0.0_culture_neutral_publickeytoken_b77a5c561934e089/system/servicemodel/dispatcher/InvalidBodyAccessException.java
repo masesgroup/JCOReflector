@@ -97,7 +97,7 @@ public class InvalidBodyAccessException extends SystemException {
         super();
     }
 
-    public InvalidBodyAccessException(Object instance) {
+    public InvalidBodyAccessException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class InvalidBodyAccessException extends SystemException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

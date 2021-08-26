@@ -108,7 +108,7 @@ public class ColorAdjustType extends NetObject  {
         }
     }
 
-    public ColorAdjustType(Object instance) {
+    public ColorAdjustType(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class ColorAdjustType extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

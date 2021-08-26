@@ -100,7 +100,7 @@ public class Matrix extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public Matrix(Object instance) throws Throwable {
+    public Matrix(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class Matrix extends MarshalByRefObject implements AutoCloseable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -334,7 +334,7 @@ public class Matrix extends MarshalByRefObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("TransformPoints", (Object)toObjectFromArray(pts));
+            classInstance.Invoke("TransformPoints", (java.lang.Object)toObjectFromArray(pts));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -344,7 +344,7 @@ public class Matrix extends MarshalByRefObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("TransformPoints", (Object)toObjectFromArray(pts));
+            classInstance.Invoke("TransformPoints", (java.lang.Object)toObjectFromArray(pts));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -354,7 +354,7 @@ public class Matrix extends MarshalByRefObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("TransformVectors", (Object)toObjectFromArray(pts));
+            classInstance.Invoke("TransformVectors", (java.lang.Object)toObjectFromArray(pts));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -364,7 +364,7 @@ public class Matrix extends MarshalByRefObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("TransformVectors", (Object)toObjectFromArray(pts));
+            classInstance.Invoke("TransformVectors", (java.lang.Object)toObjectFromArray(pts));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -394,7 +394,7 @@ public class Matrix extends MarshalByRefObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("VectorTransformPoints", (Object)toObjectFromArray(pts));
+            classInstance.Invoke("VectorTransformPoints", (java.lang.Object)toObjectFromArray(pts));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -465,7 +465,7 @@ public class Matrix extends MarshalByRefObject implements AutoCloseable {
         try {
             ArrayList<Single> resultingArrayList = new ArrayList<Single>();
             JCObject resultingObjects = (JCObject)classInstance.Get("Elements");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Single(resultingObject));
             }
             Single[] resultingArray = new Single[resultingArrayList.size()];

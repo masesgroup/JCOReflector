@@ -99,7 +99,7 @@ public class FixedDocument extends FrameworkContentElement implements system.win
         }
     }
 
-    public FixedDocument(Object instance) throws Throwable {
+    public FixedDocument(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class FixedDocument extends FrameworkContentElement implements system.win
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

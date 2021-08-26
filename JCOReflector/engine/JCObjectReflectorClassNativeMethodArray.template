@@ -2,9 +2,9 @@
         if (METHOD_OBJECT == null)
             throw new UnsupportedOperationException("METHOD_OBJECT is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)METHOD_OBJECT.Invoke("METHOD_NAME"METHOD_INVOKE_PARAMETERS);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             METHOD_RETURN_TYPE[] resultingArray = new METHOD_RETURN_TYPE[resultingArrayList.size()];

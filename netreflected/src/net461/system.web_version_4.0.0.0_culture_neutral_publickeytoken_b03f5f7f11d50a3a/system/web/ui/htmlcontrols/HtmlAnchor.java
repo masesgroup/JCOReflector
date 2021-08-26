@@ -96,7 +96,7 @@ public class HtmlAnchor extends HtmlContainerControl implements system.web.ui.IP
         }
     }
 
-    public HtmlAnchor(Object instance) throws Throwable {
+    public HtmlAnchor(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class HtmlAnchor extends HtmlContainerControl implements system.web.ui.IP
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

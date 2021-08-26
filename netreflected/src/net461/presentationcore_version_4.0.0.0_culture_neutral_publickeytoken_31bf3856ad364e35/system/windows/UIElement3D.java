@@ -119,7 +119,7 @@ public class UIElement3D extends Visual3D  {
         }
     }
 
-    public UIElement3D(Object instance) throws Throwable {
+    public UIElement3D(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -139,7 +139,7 @@ public class UIElement3D extends Visual3D  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

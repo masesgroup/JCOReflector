@@ -95,7 +95,7 @@ public class Sse42 extends Sse41  {
         }
     }
 
-    public Sse42(Object instance) throws Throwable {
+    public Sse42(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class Sse42 extends Sse41  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

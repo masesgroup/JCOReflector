@@ -98,7 +98,7 @@ public class DeployManifest extends Manifest  {
         }
     }
 
-    public DeployManifest(Object instance) throws Throwable {
+    public DeployManifest(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class DeployManifest extends Manifest  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -327,7 +327,7 @@ public class DeployManifest extends Manifest  {
         try {
             ArrayList<CompatibleFramework> resultingArrayList = new ArrayList<CompatibleFramework>();
             JCObject resultingObjects = (JCObject)classInstance.Get("XmlCompatibleFrameworks");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new CompatibleFramework(resultingObject));
             }
             CompatibleFramework[] resultingArray = new CompatibleFramework[resultingArrayList.size()];

@@ -97,7 +97,7 @@ public class EndOfFile extends ParserException {
         super();
     }
 
-    public EndOfFile(Object instance) {
+    public EndOfFile(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class EndOfFile extends ParserException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -92,7 +92,7 @@ public class IPGlobalStatistics extends NetObject  {
         }
     }
 
-    public IPGlobalStatistics(Object instance) throws Throwable {
+    public IPGlobalStatistics(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class IPGlobalStatistics extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

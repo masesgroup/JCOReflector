@@ -93,7 +93,7 @@ public class EncoderParameters extends NetObject implements AutoCloseable {
         }
     }
 
-    public EncoderParameters(Object instance) throws Throwable {
+    public EncoderParameters(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class EncoderParameters extends NetObject implements AutoCloseable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -195,7 +195,7 @@ public class EncoderParameters extends NetObject implements AutoCloseable {
         try {
             ArrayList<EncoderParameter> resultingArrayList = new ArrayList<EncoderParameter>();
             JCObject resultingObjects = (JCObject)classInstance.Get("Param");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new EncoderParameter(resultingObject));
             }
             EncoderParameter[] resultingArray = new EncoderParameter[resultingArrayList.size()];

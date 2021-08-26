@@ -95,7 +95,7 @@ public class ActivatedClientTypeEntry extends TypeEntry  {
         }
     }
 
-    public ActivatedClientTypeEntry(Object instance) throws Throwable {
+    public ActivatedClientTypeEntry(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class ActivatedClientTypeEntry extends TypeEntry  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -178,7 +178,7 @@ public class ActivatedClientTypeEntry extends TypeEntry  {
         try {
             ArrayList<IContextAttribute> resultingArrayList = new ArrayList<IContextAttribute>();
             JCObject resultingObjects = (JCObject)classInstance.Get("ContextAttributes");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IContextAttributeImplementation(resultingObject));
             }
             IContextAttribute[] resultingArray = new IContextAttribute[resultingArrayList.size()];

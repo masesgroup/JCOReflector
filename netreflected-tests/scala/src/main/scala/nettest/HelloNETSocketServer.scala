@@ -126,8 +126,10 @@ object HelloNETSocketServer {
     } catch {
       case e@(_: Exception | _: PlatformNotSupportedException | _: ArgumentException | _: InvalidOperationException | _: ArrayTypeMismatchException) =>
         e.printStackTrace()
+        System.exit(-1)
       case e: Throwable =>
         e.printStackTrace()
+        System.exit(-1)
     }
     System.out.println("Server exited correctly")
   }

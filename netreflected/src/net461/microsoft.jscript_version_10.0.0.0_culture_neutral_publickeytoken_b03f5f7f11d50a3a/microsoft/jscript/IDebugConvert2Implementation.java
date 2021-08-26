@@ -93,7 +93,7 @@ public class IDebugConvert2Implementation extends NetObject implements IDebugCon
         }
     }
 
-    public IDebugConvert2Implementation(Object instance) throws Throwable {
+    public IDebugConvert2Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class IDebugConvert2Implementation extends NetObject implements IDebugCon
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

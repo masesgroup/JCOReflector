@@ -108,7 +108,7 @@ public class XpsDigSigPartAlteringRestrictions extends NetObject  {
         }
     }
 
-    public XpsDigSigPartAlteringRestrictions(Object instance) {
+    public XpsDigSigPartAlteringRestrictions(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class XpsDigSigPartAlteringRestrictions extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -112,7 +112,7 @@ public class IClientChannelImplementation extends NetObject implements IClientCh
         }
     }
 
-    public IClientChannelImplementation(Object instance) throws Throwable {
+    public IClientChannelImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -132,7 +132,7 @@ public class IClientChannelImplementation extends NetObject implements IClientCh
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

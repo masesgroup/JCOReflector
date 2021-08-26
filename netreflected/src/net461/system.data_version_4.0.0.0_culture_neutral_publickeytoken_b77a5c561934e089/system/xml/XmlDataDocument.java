@@ -102,7 +102,7 @@ public class XmlDataDocument extends XmlDocument  {
         }
     }
 
-    public XmlDataDocument(Object instance) throws Throwable {
+    public XmlDataDocument(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -122,7 +122,7 @@ public class XmlDataDocument extends XmlDocument  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

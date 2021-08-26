@@ -93,7 +93,7 @@ public class NativeObjectSecurity extends CommonObjectSecurity  {
         }
     }
 
-    public NativeObjectSecurity(Object instance) throws Throwable {
+    public NativeObjectSecurity(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class NativeObjectSecurity extends CommonObjectSecurity  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

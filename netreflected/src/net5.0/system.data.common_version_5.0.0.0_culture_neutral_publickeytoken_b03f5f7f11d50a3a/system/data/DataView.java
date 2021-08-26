@@ -107,7 +107,7 @@ public class DataView extends MarshalByValueComponent implements system.componen
         }
     }
 
-    public DataView(Object instance) throws Throwable {
+    public DataView(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -127,7 +127,7 @@ public class DataView extends MarshalByValueComponent implements system.componen
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -210,7 +210,7 @@ public class DataView extends MarshalByValueComponent implements system.componen
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("Find", (Object)toObjectFromArray(key));
+            return (int)classInstance.Invoke("Find", (java.lang.Object)toObjectFromArray(key));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -233,7 +233,7 @@ public class DataView extends MarshalByValueComponent implements system.componen
         try {
             ArrayList<DataRowView> resultingArrayList = new ArrayList<DataRowView>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("FindRows", key == null ? null : key.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataRowView(resultingObject));
             }
             DataRowView[] resultingArray = new DataRowView[resultingArrayList.size()];
@@ -249,8 +249,8 @@ public class DataView extends MarshalByValueComponent implements system.componen
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<DataRowView> resultingArrayList = new ArrayList<DataRowView>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("FindRows", (Object)toObjectFromArray(key));
-            for (Object resultingObject : resultingObjects) {
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("FindRows", (java.lang.Object)toObjectFromArray(key));
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataRowView(resultingObject));
             }
             DataRowView[] resultingArray = new DataRowView[resultingArrayList.size()];

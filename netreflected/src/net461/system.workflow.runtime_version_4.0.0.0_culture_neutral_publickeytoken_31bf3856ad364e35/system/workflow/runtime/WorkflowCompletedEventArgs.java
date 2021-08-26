@@ -94,7 +94,7 @@ public class WorkflowCompletedEventArgs extends WorkflowEventArgs  {
         }
     }
 
-    public WorkflowCompletedEventArgs(Object instance) throws Throwable {
+    public WorkflowCompletedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class WorkflowCompletedEventArgs extends WorkflowEventArgs  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

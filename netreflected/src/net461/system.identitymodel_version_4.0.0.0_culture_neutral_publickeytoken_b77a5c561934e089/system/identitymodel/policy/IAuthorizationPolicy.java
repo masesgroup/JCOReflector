@@ -100,9 +100,9 @@ public interface IAuthorizationPolicy extends IJCOBridgeReflected, IAuthorizatio
     /**
      * Returns the instantiated class
      * 
-     * @return An {@link Object} representing the instance of the instantiated Class
+     * @return An {@link java.lang.Object} representing the instance of the instantiated Class
      */
-    public Object getJCOInstance();
+    public java.lang.Object getJCOInstance();
 
     /**
      * Returns the instantiated class Type
@@ -113,7 +113,7 @@ public interface IAuthorizationPolicy extends IJCOBridgeReflected, IAuthorizatio
 
     // Methods section
     
-    public boolean Evaluate(EvaluationContext evaluationContext, NetObject state) throws Throwable;
+    public boolean Evaluate(EvaluationContext evaluationContext, JCORefOut<NetObject> state) throws Throwable;
 
 
     

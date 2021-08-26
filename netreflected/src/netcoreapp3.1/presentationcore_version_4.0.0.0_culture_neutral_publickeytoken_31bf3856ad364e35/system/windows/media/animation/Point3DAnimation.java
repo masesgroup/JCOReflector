@@ -99,7 +99,7 @@ public class Point3DAnimation extends Point3DAnimationBase  {
         }
     }
 
-    public Point3DAnimation(Object instance) throws Throwable {
+    public Point3DAnimation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class Point3DAnimation extends Point3DAnimationBase  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

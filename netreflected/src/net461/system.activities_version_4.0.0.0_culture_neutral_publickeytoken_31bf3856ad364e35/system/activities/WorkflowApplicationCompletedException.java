@@ -98,7 +98,7 @@ public class WorkflowApplicationCompletedException extends WorkflowApplicationEx
         super();
     }
 
-    public WorkflowApplicationCompletedException(Object instance) {
+    public WorkflowApplicationCompletedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -132,7 +132,7 @@ public class WorkflowApplicationCompletedException extends WorkflowApplicationEx
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

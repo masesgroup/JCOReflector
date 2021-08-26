@@ -94,7 +94,7 @@ public class InternalRemotingServices extends NetObject  {
         }
     }
 
-    public InternalRemotingServices(Object instance) throws Throwable {
+    public InternalRemotingServices(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class InternalRemotingServices extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -188,7 +188,7 @@ public class InternalRemotingServices extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("RemotingTrace", (Object)toObjectFromArray(messages));
+            classType.Invoke("RemotingTrace", (java.lang.Object)toObjectFromArray(messages));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

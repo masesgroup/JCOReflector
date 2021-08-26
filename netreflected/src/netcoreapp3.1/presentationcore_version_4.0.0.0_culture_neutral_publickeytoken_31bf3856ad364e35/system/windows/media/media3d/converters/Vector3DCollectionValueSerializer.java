@@ -95,7 +95,7 @@ public class Vector3DCollectionValueSerializer extends ValueSerializer  {
         }
     }
 
-    public Vector3DCollectionValueSerializer(Object instance) throws Throwable {
+    public Vector3DCollectionValueSerializer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class Vector3DCollectionValueSerializer extends ValueSerializer  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

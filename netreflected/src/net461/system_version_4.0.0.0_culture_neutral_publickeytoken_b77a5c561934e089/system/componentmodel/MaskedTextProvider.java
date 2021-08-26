@@ -94,7 +94,7 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
-    public MaskedTextProvider(Object instance) throws Throwable {
+    public MaskedTextProvider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class MaskedTextProvider extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -227,7 +227,7 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
-    public boolean Add(char input, JCORefOut testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException {
+    public boolean Add(char input, JCORefOut<java.util.concurrent.atomic.AtomicInteger> testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -247,7 +247,7 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
-    public boolean Add(java.lang.String input, JCORefOut testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException {
+    public boolean Add(java.lang.String input, JCORefOut<java.util.concurrent.atomic.AtomicInteger> testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -277,7 +277,7 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
-    public boolean InsertAt(char input, int position, JCORefOut testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException {
+    public boolean InsertAt(char input, int position, JCORefOut<java.util.concurrent.atomic.AtomicInteger> testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -297,7 +297,7 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
-    public boolean InsertAt(java.lang.String input, int position, JCORefOut testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException {
+    public boolean InsertAt(java.lang.String input, int position, JCORefOut<java.util.concurrent.atomic.AtomicInteger> testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -367,7 +367,7 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
-    public boolean Remove(JCORefOut testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.ArgumentOutOfRangeException {
+    public boolean Remove(JCORefOut<java.util.concurrent.atomic.AtomicInteger> testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -397,7 +397,7 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
-    public boolean RemoveAt(int startPosition, int endPosition, JCORefOut testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentException {
+    public boolean RemoveAt(int startPosition, int endPosition, JCORefOut<java.util.concurrent.atomic.AtomicInteger> testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -417,7 +417,7 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
-    public boolean Replace(char input, int position, JCORefOut testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException {
+    public boolean Replace(char input, int position, JCORefOut<java.util.concurrent.atomic.AtomicInteger> testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -427,7 +427,7 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
-    public boolean Replace(char input, int startPosition, int endPosition, JCORefOut testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
+    public boolean Replace(char input, int startPosition, int endPosition, JCORefOut<java.util.concurrent.atomic.AtomicInteger> testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -447,7 +447,7 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
-    public boolean Replace(java.lang.String input, int position, JCORefOut testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException {
+    public boolean Replace(java.lang.String input, int position, JCORefOut<java.util.concurrent.atomic.AtomicInteger> testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -457,7 +457,7 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
-    public boolean Replace(java.lang.String input, int startPosition, int endPosition, JCORefOut testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException {
+    public boolean Replace(java.lang.String input, int startPosition, int endPosition, JCORefOut<java.util.concurrent.atomic.AtomicInteger> testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -477,7 +477,7 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
-    public boolean Set(java.lang.String input, JCORefOut testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException {
+    public boolean Set(java.lang.String input, JCORefOut<java.util.concurrent.atomic.AtomicInteger> testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -517,7 +517,7 @@ public class MaskedTextProvider extends NetObject  {
         }
     }
 
-    public boolean VerifyString(java.lang.String input, JCORefOut testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
+    public boolean VerifyString(java.lang.String input, JCORefOut<java.util.concurrent.atomic.AtomicInteger> testPosition, JCORefOut<MaskedTextResultHint> resultHint) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

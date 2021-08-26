@@ -92,7 +92,7 @@ public class IChannelInfoImplementation extends NetObject implements IChannelInf
         }
     }
 
-    public IChannelInfoImplementation(Object instance) throws Throwable {
+    public IChannelInfoImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class IChannelInfoImplementation extends NetObject implements IChannelInf
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -142,7 +142,7 @@ public class IChannelInfoImplementation extends NetObject implements IChannelInf
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
             JCObject resultingObjects = (JCObject)classInstance.Get("ChannelData");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];

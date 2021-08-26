@@ -108,7 +108,7 @@ public class FontSubsetterCommitPolicies extends NetObject  {
         }
     }
 
-    public FontSubsetterCommitPolicies(Object instance) {
+    public FontSubsetterCommitPolicies(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class FontSubsetterCommitPolicies extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

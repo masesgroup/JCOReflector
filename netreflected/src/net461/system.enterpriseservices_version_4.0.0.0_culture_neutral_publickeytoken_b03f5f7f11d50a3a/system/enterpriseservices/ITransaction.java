@@ -98,9 +98,9 @@ public interface ITransaction extends IJCOBridgeReflected {
     /**
      * Returns the instantiated class
      * 
-     * @return An {@link Object} representing the instance of the instantiated Class
+     * @return An {@link java.lang.Object} representing the instance of the instantiated Class
      */
-    public Object getJCOInstance();
+    public java.lang.Object getJCOInstance();
 
     /**
      * Returns the instantiated class Type
@@ -111,7 +111,7 @@ public interface ITransaction extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void Abort(BOID pboidReason, int fRetaining, int fAsync) throws Throwable;
+    public void Abort(JCORefOut<BOID> pboidReason, int fRetaining, int fAsync) throws Throwable;
 
     public void Commit(int fRetaining, int grfTC, int grfRM) throws Throwable;
 

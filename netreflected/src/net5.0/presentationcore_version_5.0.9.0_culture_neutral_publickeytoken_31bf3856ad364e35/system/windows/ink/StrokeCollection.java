@@ -105,7 +105,7 @@ public class StrokeCollection extends NetObjectEnumerable  {
         }
     }
 
-    public StrokeCollection(Object instance) throws Throwable {
+    public StrokeCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -125,7 +125,7 @@ public class StrokeCollection extends NetObjectEnumerable  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -200,7 +200,7 @@ public class StrokeCollection extends NetObjectEnumerable  {
         try {
             ArrayList<Guid> resultingArrayList = new ArrayList<Guid>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetPropertyDataIds");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Guid(resultingObject));
             }
             Guid[] resultingArray = new Guid[resultingArrayList.size()];

@@ -102,7 +102,7 @@ public class CodeDomSerializerException extends SystemException {
         super();
     }
 
-    public CodeDomSerializerException(Object instance) {
+    public CodeDomSerializerException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -136,7 +136,7 @@ public class CodeDomSerializerException extends SystemException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

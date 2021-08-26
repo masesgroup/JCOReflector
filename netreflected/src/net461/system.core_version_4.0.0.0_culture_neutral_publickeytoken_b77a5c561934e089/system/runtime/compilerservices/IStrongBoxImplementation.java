@@ -92,7 +92,7 @@ public class IStrongBoxImplementation extends NetObject implements IStrongBox {
         }
     }
 
-    public IStrongBoxImplementation(Object instance) throws Throwable {
+    public IStrongBoxImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class IStrongBoxImplementation extends NetObject implements IStrongBox {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

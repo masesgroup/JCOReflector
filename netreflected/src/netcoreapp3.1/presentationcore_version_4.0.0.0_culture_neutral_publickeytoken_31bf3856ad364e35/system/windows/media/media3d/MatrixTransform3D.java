@@ -95,7 +95,7 @@ public class MatrixTransform3D extends Transform3D  {
         }
     }
 
-    public MatrixTransform3D(Object instance) throws Throwable {
+    public MatrixTransform3D(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class MatrixTransform3D extends Transform3D  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

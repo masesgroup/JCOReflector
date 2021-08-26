@@ -121,7 +121,7 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
         }
     }
 
-    public HttpContext(Object instance) throws Throwable {
+    public HttpContext(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -141,7 +141,7 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -534,7 +534,7 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
         try {
             ArrayList<NetException> resultingArrayList = new ArrayList<NetException>();
             JCObject resultingObjects = (JCObject)classInstance.Get("AllErrors");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetException(resultingObject));
             }
             NetException[] resultingArray = new NetException[resultingArrayList.size()];

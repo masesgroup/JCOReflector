@@ -120,7 +120,7 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
         }
     }
 
-    public TextBlock(Object instance) throws Throwable {
+    public TextBlock(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -140,7 +140,7 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

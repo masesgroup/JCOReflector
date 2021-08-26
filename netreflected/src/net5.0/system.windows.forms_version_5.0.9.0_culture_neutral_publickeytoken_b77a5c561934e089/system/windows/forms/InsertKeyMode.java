@@ -108,7 +108,7 @@ public class InsertKeyMode extends NetObject  {
         }
     }
 
-    public InsertKeyMode(Object instance) {
+    public InsertKeyMode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class InsertKeyMode extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

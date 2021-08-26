@@ -95,7 +95,7 @@ public class SplineInt64KeyFrame extends Int64KeyFrame  {
         }
     }
 
-    public SplineInt64KeyFrame(Object instance) throws Throwable {
+    public SplineInt64KeyFrame(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class SplineInt64KeyFrame extends Int64KeyFrame  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -108,7 +108,7 @@ public class PropertyFilterOptions extends NetObject  {
         }
     }
 
-    public PropertyFilterOptions(Object instance) {
+    public PropertyFilterOptions(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class PropertyFilterOptions extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

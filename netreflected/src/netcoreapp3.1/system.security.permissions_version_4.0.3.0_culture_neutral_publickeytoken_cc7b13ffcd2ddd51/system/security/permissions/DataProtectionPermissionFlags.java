@@ -108,7 +108,7 @@ public class DataProtectionPermissionFlags extends NetObject  {
         }
     }
 
-    public DataProtectionPermissionFlags(Object instance) {
+    public DataProtectionPermissionFlags(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class DataProtectionPermissionFlags extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

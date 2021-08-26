@@ -93,7 +93,7 @@ public class _RemotableHandle extends ValueType  {
         }
     }
 
-    public _RemotableHandle(Object instance) throws Throwable {
+    public _RemotableHandle(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class _RemotableHandle extends ValueType  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

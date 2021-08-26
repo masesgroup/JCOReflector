@@ -101,7 +101,7 @@ public class HttpListenerResponse extends NetObject implements system.IDisposabl
         }
     }
 
-    public HttpListenerResponse(Object instance) throws Throwable {
+    public HttpListenerResponse(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -121,7 +121,7 @@ public class HttpListenerResponse extends NetObject implements system.IDisposabl
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

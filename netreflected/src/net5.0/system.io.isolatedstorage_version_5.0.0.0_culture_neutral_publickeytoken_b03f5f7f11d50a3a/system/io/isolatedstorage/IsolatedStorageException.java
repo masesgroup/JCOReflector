@@ -96,7 +96,7 @@ public class IsolatedStorageException extends NetException {
         super();
     }
 
-    public IsolatedStorageException(Object instance) {
+    public IsolatedStorageException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -130,7 +130,7 @@ public class IsolatedStorageException extends NetException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

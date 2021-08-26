@@ -98,7 +98,7 @@ public class DbExpression extends NetObject  {
         }
     }
 
-    public DbExpression(Object instance) throws Throwable {
+    public DbExpression(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class DbExpression extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -153,7 +153,7 @@ public class DbExpression extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objFromBinary = (JCObject)classType.Invoke("FromBinary", (Object)value);
+            JCObject objFromBinary = (JCObject)classType.Invoke("FromBinary", (java.lang.Object)value);
             return new DbExpression(objFromBinary);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -164,7 +164,7 @@ public class DbExpression extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objFromBinary = (JCObject)classType.Invoke("FromBinary", (Object)dupParam0.getJCRefOut());
+            JCObject objFromBinary = (JCObject)classType.Invoke("FromBinary", (java.lang.Object)dupParam0.getJCRefOut());
             return new DbExpression(objFromBinary);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

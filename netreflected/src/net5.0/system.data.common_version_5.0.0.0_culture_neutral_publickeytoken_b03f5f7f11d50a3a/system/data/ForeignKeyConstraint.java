@@ -97,7 +97,7 @@ public class ForeignKeyConstraint extends Constraint  {
         }
     }
 
-    public ForeignKeyConstraint(Object instance) throws Throwable {
+    public ForeignKeyConstraint(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class ForeignKeyConstraint extends Constraint  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -241,7 +241,7 @@ public class ForeignKeyConstraint extends Constraint  {
         try {
             ArrayList<DataColumn> resultingArrayList = new ArrayList<DataColumn>();
             JCObject resultingObjects = (JCObject)classInstance.Get("Columns");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataColumn(resultingObject));
             }
             DataColumn[] resultingArray = new DataColumn[resultingArrayList.size()];
@@ -258,7 +258,7 @@ public class ForeignKeyConstraint extends Constraint  {
         try {
             ArrayList<DataColumn> resultingArrayList = new ArrayList<DataColumn>();
             JCObject resultingObjects = (JCObject)classInstance.Get("RelatedColumns");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataColumn(resultingObject));
             }
             DataColumn[] resultingArray = new DataColumn[resultingArrayList.size()];

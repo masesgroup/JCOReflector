@@ -96,7 +96,7 @@ public class BasicHttpSecurityElement extends ServiceModelConfigurationElement  
         }
     }
 
-    public BasicHttpSecurityElement(Object instance) throws Throwable {
+    public BasicHttpSecurityElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class BasicHttpSecurityElement extends ServiceModelConfigurationElement  
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

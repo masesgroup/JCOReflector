@@ -94,7 +94,7 @@ public class IFileChangeNotificationSystemImplementation extends NetObject imple
         }
     }
 
-    public IFileChangeNotificationSystemImplementation(Object instance) throws Throwable {
+    public IFileChangeNotificationSystemImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class IFileChangeNotificationSystemImplementation extends NetObject imple
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -134,7 +134,7 @@ public class IFileChangeNotificationSystemImplementation extends NetObject imple
 
     // Methods section
     
-    public void StartMonitoring(java.lang.String filePath, OnChangedCallback onChangedCallback, JCORefOut<NetObject> state, JCORefOut<DateTimeOffset> lastWriteTime, JCORefOut fileSize) throws Throwable {
+    public void StartMonitoring(java.lang.String filePath, OnChangedCallback onChangedCallback, JCORefOut<NetObject> state, JCORefOut<DateTimeOffset> lastWriteTime, JCORefOut<java.util.concurrent.atomic.AtomicLong> fileSize) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

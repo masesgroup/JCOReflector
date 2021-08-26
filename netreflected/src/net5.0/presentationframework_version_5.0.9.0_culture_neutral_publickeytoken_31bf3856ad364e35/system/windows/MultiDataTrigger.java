@@ -97,7 +97,7 @@ public class MultiDataTrigger extends TriggerBase implements system.windows.mark
         }
     }
 
-    public MultiDataTrigger(Object instance) throws Throwable {
+    public MultiDataTrigger(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class MultiDataTrigger extends TriggerBase implements system.windows.mark
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

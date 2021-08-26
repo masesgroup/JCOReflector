@@ -108,7 +108,7 @@ public class UrlBuilderOptions extends NetObject  {
         }
     }
 
-    public UrlBuilderOptions(Object instance) {
+    public UrlBuilderOptions(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class UrlBuilderOptions extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

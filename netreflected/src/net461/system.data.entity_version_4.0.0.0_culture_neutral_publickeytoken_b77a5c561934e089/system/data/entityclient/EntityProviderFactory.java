@@ -103,7 +103,7 @@ public class EntityProviderFactory extends DbProviderFactory implements system.I
         }
     }
 
-    public EntityProviderFactory(Object instance) throws Throwable {
+    public EntityProviderFactory(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -123,7 +123,7 @@ public class EntityProviderFactory extends DbProviderFactory implements system.I
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

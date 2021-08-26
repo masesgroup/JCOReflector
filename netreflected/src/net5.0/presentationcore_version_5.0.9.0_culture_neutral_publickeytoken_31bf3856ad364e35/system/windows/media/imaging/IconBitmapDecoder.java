@@ -97,7 +97,7 @@ public class IconBitmapDecoder extends BitmapDecoder  {
         }
     }
 
-    public IconBitmapDecoder(Object instance) throws Throwable {
+    public IconBitmapDecoder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class IconBitmapDecoder extends BitmapDecoder  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

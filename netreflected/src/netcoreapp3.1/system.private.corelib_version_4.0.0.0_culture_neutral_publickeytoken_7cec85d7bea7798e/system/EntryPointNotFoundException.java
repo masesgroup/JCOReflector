@@ -97,7 +97,7 @@ public class EntryPointNotFoundException extends TypeLoadException {
         super();
     }
 
-    public EntryPointNotFoundException(Object instance) {
+    public EntryPointNotFoundException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class EntryPointNotFoundException extends TypeLoadException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

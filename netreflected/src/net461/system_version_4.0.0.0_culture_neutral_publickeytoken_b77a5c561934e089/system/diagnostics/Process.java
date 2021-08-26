@@ -109,7 +109,7 @@ public class Process extends Component  {
         }
     }
 
-    public Process(Object instance) throws Throwable {
+    public Process(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -129,7 +129,7 @@ public class Process extends Component  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -312,7 +312,7 @@ public class Process extends Component  {
         try {
             ArrayList<Process> resultingArrayList = new ArrayList<Process>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetProcesses");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Process(resultingObject));
             }
             Process[] resultingArray = new Process[resultingArrayList.size()];
@@ -329,7 +329,7 @@ public class Process extends Component  {
         try {
             ArrayList<Process> resultingArrayList = new ArrayList<Process>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetProcesses", machineName);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Process(resultingObject));
             }
             Process[] resultingArray = new Process[resultingArrayList.size()];
@@ -346,7 +346,7 @@ public class Process extends Component  {
         try {
             ArrayList<Process> resultingArrayList = new ArrayList<Process>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetProcessesByName", processName);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Process(resultingObject));
             }
             Process[] resultingArray = new Process[resultingArrayList.size()];
@@ -363,7 +363,7 @@ public class Process extends Component  {
         try {
             ArrayList<Process> resultingArrayList = new ArrayList<Process>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetProcessesByName", processName, machineName);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Process(resultingObject));
             }
             Process[] resultingArray = new Process[resultingArrayList.size()];

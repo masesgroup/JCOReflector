@@ -98,7 +98,7 @@ public class SyncUpdateCallback extends JCDelegate implements IJCEventEmit, IJCO
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return this;
     }
 
@@ -106,7 +106,7 @@ public class SyncUpdateCallback extends JCDelegate implements IJCEventEmit, IJCO
         return classType;
     }
 
-    public final Object EventRaised(Object... argsFromJCOBridge) {
+    public final java.lang.Object EventRaised(java.lang.Object... argsFromJCOBridge) {
         try
         {
             SyncFromAllServersEvent eventType = argsFromJCOBridge[0] == null ? null : new SyncFromAllServersEvent(argsFromJCOBridge[0]);
@@ -115,7 +115,7 @@ public class SyncUpdateCallback extends JCDelegate implements IJCEventEmit, IJCO
             SyncFromAllServersOperationException exception = argsFromJCOBridge[3] == null ? null : new SyncFromAllServersOperationException(argsFromJCOBridge[3]);
 
 
-            Object retVal = null;
+            java.lang.Object retVal = null;
             if (callerInstance != null)	{
                 retVal = callerInstance.Invoke(eventType, targetServer, sourceServer, exception);
             } else {
@@ -130,7 +130,7 @@ public class SyncUpdateCallback extends JCDelegate implements IJCEventEmit, IJCO
         }
     }
 
-    public final Object DelegateInvoked(Object... argsFromJCOBridge) {
+    public final java.lang.Object DelegateInvoked(java.lang.Object... argsFromJCOBridge) {
         try
         {
             SyncFromAllServersEvent eventType = argsFromJCOBridge[0] == null ? null : new SyncFromAllServersEvent(argsFromJCOBridge[0]);
@@ -139,7 +139,7 @@ public class SyncUpdateCallback extends JCDelegate implements IJCEventEmit, IJCO
             SyncFromAllServersOperationException exception = argsFromJCOBridge[3] == null ? null : new SyncFromAllServersOperationException(argsFromJCOBridge[3]);
 
 
-            Object retVal = null;
+            java.lang.Object retVal = null;
             if (callerInstance != null)	{
                 retVal = callerInstance.Invoke(eventType, targetServer, sourceServer, exception);
             } else {
@@ -163,7 +163,7 @@ public class SyncUpdateCallback extends JCDelegate implements IJCEventEmit, IJCO
         callerInstance = instance;
     }
 
-    public SyncUpdateCallback(Object instance) throws Throwable {
+    public SyncUpdateCallback(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         if (instance == null) throw new IllegalArgumentException("Instance cannot be null");
         if (instance instanceof ISyncUpdateCallback) {
@@ -175,7 +175,7 @@ public class SyncUpdateCallback extends JCDelegate implements IJCEventEmit, IJCO
                     String.format("Class %s is not supported.", instance.getClass().getTypeName()));
     }
 
-    protected final static <T extends IJCOBridgeReflected> Object toObjectFromArray(T[] input) {
+    protected final static <T extends IJCOBridgeReflected> java.lang.Object toObjectFromArray(T[] input) {
         return JCOBridgeInstance.toObjectFromArray(input);
     }
 

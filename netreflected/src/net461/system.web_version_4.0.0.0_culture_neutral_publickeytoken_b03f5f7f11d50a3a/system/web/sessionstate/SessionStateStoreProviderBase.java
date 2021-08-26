@@ -98,7 +98,7 @@ public class SessionStateStoreProviderBase extends ProviderBase  {
         }
     }
 
-    public SessionStateStoreProviderBase(Object instance) throws Throwable {
+    public SessionStateStoreProviderBase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class SessionStateStoreProviderBase extends ProviderBase  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -170,7 +170,7 @@ public class SessionStateStoreProviderBase extends ProviderBase  {
         }
     }
 
-    public SessionStateStoreData GetItem(HttpContext context, java.lang.String id, JCORefOut locked, JCORefOut<TimeSpan> lockAge, JCORefOut<NetObject> lockId, JCORefOut<SessionStateActions> actions) throws Throwable {
+    public SessionStateStoreData GetItem(HttpContext context, java.lang.String id, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> locked, JCORefOut<TimeSpan> lockAge, JCORefOut<NetObject> lockId, JCORefOut<SessionStateActions> actions) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -181,7 +181,7 @@ public class SessionStateStoreProviderBase extends ProviderBase  {
         }
     }
 
-    public SessionStateStoreData GetItemExclusive(HttpContext context, java.lang.String id, JCORefOut locked, JCORefOut<TimeSpan> lockAge, JCORefOut<NetObject> lockId, JCORefOut<SessionStateActions> actions) throws Throwable {
+    public SessionStateStoreData GetItemExclusive(HttpContext context, java.lang.String id, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> locked, JCORefOut<TimeSpan> lockAge, JCORefOut<NetObject> lockId, JCORefOut<SessionStateActions> actions) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

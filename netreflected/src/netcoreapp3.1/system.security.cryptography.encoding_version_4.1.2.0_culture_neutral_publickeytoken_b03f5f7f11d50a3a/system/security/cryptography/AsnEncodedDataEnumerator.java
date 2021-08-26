@@ -107,7 +107,7 @@ public class AsnEncodedDataEnumerator extends NetObject implements Iterator<AsnE
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

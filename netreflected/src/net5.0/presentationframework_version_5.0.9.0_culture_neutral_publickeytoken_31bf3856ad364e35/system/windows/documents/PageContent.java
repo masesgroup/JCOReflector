@@ -100,7 +100,7 @@ public class PageContent extends FrameworkElement implements system.windows.mark
         }
     }
 
-    public PageContent(Object instance) throws Throwable {
+    public PageContent(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class PageContent extends FrameworkElement implements system.windows.mark
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

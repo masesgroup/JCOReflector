@@ -100,7 +100,7 @@ public class RegistrationException extends SystemException {
         super();
     }
 
-    public RegistrationException(Object instance) {
+    public RegistrationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -134,7 +134,7 @@ public class RegistrationException extends SystemException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -183,7 +183,7 @@ public class RegistrationException extends SystemException {
         try {
             ArrayList<RegistrationErrorInfo> resultingArrayList = new ArrayList<RegistrationErrorInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Get("ErrorInfo");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new RegistrationErrorInfo(resultingObject));
             }
             RegistrationErrorInfo[] resultingArray = new RegistrationErrorInfo[resultingArrayList.size()];

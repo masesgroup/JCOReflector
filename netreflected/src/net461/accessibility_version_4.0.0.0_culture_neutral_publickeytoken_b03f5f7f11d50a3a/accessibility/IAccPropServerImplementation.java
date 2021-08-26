@@ -94,7 +94,7 @@ public class IAccPropServerImplementation extends NetObject implements IAccPropS
         }
     }
 
-    public IAccPropServerImplementation(Object instance) throws Throwable {
+    public IAccPropServerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class IAccPropServerImplementation extends NetObject implements IAccPropS
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -134,11 +134,11 @@ public class IAccPropServerImplementation extends NetObject implements IAccPropS
 
     // Methods section
     
-    public void GetPropValue(byte pIDString, UInt32 dwIDStringLen, Guid idProp, JCORefOut<NetObject> pvarValue, JCORefOut pfHasProp) throws Throwable {
+    public void GetPropValue(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> pIDString, UInt32 dwIDStringLen, Guid idProp, JCORefOut<NetObject> pvarValue, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pfHasProp) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("GetPropValue", pIDString, dwIDStringLen == null ? null : dwIDStringLen.getJCOInstance(), idProp == null ? null : idProp.getJCOInstance(), pvarValue.getJCRefOut(), pfHasProp.getJCRefOut());
+            classInstance.Invoke("GetPropValue", pIDString.getJCRefOut(), dwIDStringLen == null ? null : dwIDStringLen.getJCOInstance(), idProp == null ? null : idProp.getJCOInstance(), pvarValue.getJCRefOut(), pfHasProp.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

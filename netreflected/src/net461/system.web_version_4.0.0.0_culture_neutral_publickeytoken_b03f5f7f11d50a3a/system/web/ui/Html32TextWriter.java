@@ -95,7 +95,7 @@ public class Html32TextWriter extends HtmlTextWriter  {
         }
     }
 
-    public Html32TextWriter(Object instance) throws Throwable {
+    public Html32TextWriter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class Html32TextWriter extends HtmlTextWriter  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

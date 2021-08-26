@@ -107,7 +107,7 @@ public class BlobReader extends ValueType  {
         }
     }
 
-    public BlobReader(Object instance) throws Throwable {
+    public BlobReader(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -127,7 +127,7 @@ public class BlobReader extends ValueType  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -170,7 +170,7 @@ public class BlobReader extends ValueType  {
         }
     }
 
-    public boolean TryReadCompressedInteger(JCORefOut value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.BadImageFormatException {
+    public boolean TryReadCompressedInteger(JCORefOut<java.util.concurrent.atomic.AtomicInteger> value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -180,7 +180,7 @@ public class BlobReader extends ValueType  {
         }
     }
 
-    public boolean TryReadCompressedSignedInteger(JCORefOut value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.BadImageFormatException {
+    public boolean TryReadCompressedSignedInteger(JCORefOut<java.util.concurrent.atomic.AtomicInteger> value) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -204,9 +204,9 @@ public class BlobReader extends ValueType  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("ReadBytes", byteCount);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];

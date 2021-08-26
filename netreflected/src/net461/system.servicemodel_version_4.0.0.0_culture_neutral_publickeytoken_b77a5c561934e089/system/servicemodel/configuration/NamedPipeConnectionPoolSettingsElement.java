@@ -94,7 +94,7 @@ public class NamedPipeConnectionPoolSettingsElement extends ServiceModelConfigur
         }
     }
 
-    public NamedPipeConnectionPoolSettingsElement(Object instance) throws Throwable {
+    public NamedPipeConnectionPoolSettingsElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class NamedPipeConnectionPoolSettingsElement extends ServiceModelConfigur
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

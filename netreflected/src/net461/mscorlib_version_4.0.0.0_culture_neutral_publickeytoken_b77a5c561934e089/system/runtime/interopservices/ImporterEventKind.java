@@ -108,7 +108,7 @@ public class ImporterEventKind extends NetObject  {
         }
     }
 
-    public ImporterEventKind(Object instance) {
+    public ImporterEventKind(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class ImporterEventKind extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

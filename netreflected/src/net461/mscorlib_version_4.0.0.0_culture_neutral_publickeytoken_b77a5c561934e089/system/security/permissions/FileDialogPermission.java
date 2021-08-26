@@ -98,7 +98,7 @@ public class FileDialogPermission extends CodeAccessPermission  {
         }
     }
 
-    public FileDialogPermission(Object instance) throws Throwable {
+    public FileDialogPermission(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class FileDialogPermission extends CodeAccessPermission  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

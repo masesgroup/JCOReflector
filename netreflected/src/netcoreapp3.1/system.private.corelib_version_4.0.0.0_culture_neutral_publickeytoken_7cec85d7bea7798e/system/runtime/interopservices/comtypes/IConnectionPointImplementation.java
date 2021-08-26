@@ -97,7 +97,7 @@ public class IConnectionPointImplementation extends NetObject implements IConnec
         }
     }
 
-    public IConnectionPointImplementation(Object instance) throws Throwable {
+    public IConnectionPointImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class IConnectionPointImplementation extends NetObject implements IConnec
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -137,7 +137,7 @@ public class IConnectionPointImplementation extends NetObject implements IConnec
 
     // Methods section
     
-    public void Advise(NetObject pUnkSink, JCORefOut pdwCookie) throws Throwable {
+    public void Advise(NetObject pUnkSink, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pdwCookie) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

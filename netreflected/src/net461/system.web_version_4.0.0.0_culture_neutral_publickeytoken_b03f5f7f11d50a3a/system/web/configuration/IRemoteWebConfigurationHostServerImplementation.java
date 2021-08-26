@@ -92,7 +92,7 @@ public class IRemoteWebConfigurationHostServerImplementation extends NetObject i
         }
     }
 
-    public IRemoteWebConfigurationHostServerImplementation(Object instance) throws Throwable {
+    public IRemoteWebConfigurationHostServerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class IRemoteWebConfigurationHostServerImplementation extends NetObject i
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -132,13 +132,13 @@ public class IRemoteWebConfigurationHostServerImplementation extends NetObject i
 
     // Methods section
     
-    public byte[] GetData(java.lang.String fileName, boolean getReadTimeOnly, JCORefOut readTime) throws Throwable {
+    public byte[] GetData(java.lang.String fileName, boolean getReadTimeOnly, JCORefOut<java.util.concurrent.atomic.AtomicLong> readTime) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetData", fileName, getReadTimeOnly, readTime.getJCRefOut());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -181,7 +181,7 @@ public class IRemoteWebConfigurationHostServerImplementation extends NetObject i
         }
     }
 
-    public void GetFileDetails(java.lang.String name, JCORefOut exists, JCORefOut size, JCORefOut createDate, JCORefOut lastWriteDate) throws Throwable {
+    public void GetFileDetails(java.lang.String name, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> exists, JCORefOut<java.util.concurrent.atomic.AtomicLong> size, JCORefOut<java.util.concurrent.atomic.AtomicLong> createDate, JCORefOut<java.util.concurrent.atomic.AtomicLong> lastWriteDate) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -191,21 +191,11 @@ public class IRemoteWebConfigurationHostServerImplementation extends NetObject i
         }
     }
 
-    public void WriteData(java.lang.String fileName, java.lang.String templateFileName, byte[] data, long readTime) throws Throwable {
+    public void WriteData(java.lang.String fileName, java.lang.String templateFileName, byte[] data, JCORefOut<java.util.concurrent.atomic.AtomicLong> readTime) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("WriteData", fileName, templateFileName, data, readTime);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void WriteData(java.lang.String dupParam0, java.lang.String dupParam1, JCORefOut dupParam2, long dupParam3) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("WriteData", dupParam0, dupParam1, dupParam2.getJCRefOut(), dupParam3);
+            classInstance.Invoke("WriteData", fileName, templateFileName, data, readTime.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

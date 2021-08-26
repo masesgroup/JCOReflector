@@ -96,7 +96,7 @@ public class WebColorConverter extends ColorConverter  {
         }
     }
 
-    public WebColorConverter(Object instance) throws Throwable {
+    public WebColorConverter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class WebColorConverter extends ColorConverter  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

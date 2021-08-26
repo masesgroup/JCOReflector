@@ -97,7 +97,7 @@ public class EntityKey extends NetObject  {
         }
     }
 
-    public EntityKey(Object instance) throws Throwable {
+    public EntityKey(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class EntityKey extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -227,7 +227,7 @@ public class EntityKey extends NetObject  {
         try {
             ArrayList<EntityKeyMember> resultingArrayList = new ArrayList<EntityKeyMember>();
             JCObject resultingObjects = (JCObject)classInstance.Get("EntityKeyValues");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new EntityKeyMember(resultingObject));
             }
             EntityKeyMember[] resultingArray = new EntityKeyMember[resultingArrayList.size()];

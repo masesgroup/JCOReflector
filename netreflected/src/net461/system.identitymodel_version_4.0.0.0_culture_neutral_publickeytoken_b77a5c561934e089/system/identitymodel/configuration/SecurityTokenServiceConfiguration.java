@@ -100,7 +100,7 @@ public class SecurityTokenServiceConfiguration extends IdentityConfiguration  {
         }
     }
 
-    public SecurityTokenServiceConfiguration(Object instance) throws Throwable {
+    public SecurityTokenServiceConfiguration(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class SecurityTokenServiceConfiguration extends IdentityConfiguration  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

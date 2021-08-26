@@ -99,7 +99,7 @@ public class Int32Collection extends Freezable implements system.IFormattable {
         }
     }
 
-    public Int32Collection(Object instance) throws Throwable {
+    public Int32Collection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class Int32Collection extends Freezable implements system.IFormattable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

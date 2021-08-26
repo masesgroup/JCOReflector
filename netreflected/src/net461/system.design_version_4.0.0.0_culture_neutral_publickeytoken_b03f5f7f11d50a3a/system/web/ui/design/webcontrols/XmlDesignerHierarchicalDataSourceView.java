@@ -98,7 +98,7 @@ public class XmlDesignerHierarchicalDataSourceView extends DesignerHierarchicalD
         }
     }
 
-    public XmlDesignerHierarchicalDataSourceView(Object instance) throws Throwable {
+    public XmlDesignerHierarchicalDataSourceView(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class XmlDesignerHierarchicalDataSourceView extends DesignerHierarchicalD
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -161,7 +161,7 @@ public class XmlDesignerHierarchicalDataSourceView extends DesignerHierarchicalD
     
     // Methods section
     
-    public IHierarchicalEnumerable GetDesignTimeData(JCORefOut isSampleData) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.io.PathTooLongException, system.NotSupportedException {
+    public IHierarchicalEnumerable GetDesignTimeData(JCORefOut<java.util.concurrent.atomic.AtomicBoolean> isSampleData) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.io.PathTooLongException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

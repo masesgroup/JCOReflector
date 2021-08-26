@@ -96,7 +96,7 @@ public class ProjectionCamera extends Camera  {
         }
     }
 
-    public ProjectionCamera(Object instance) throws Throwable {
+    public ProjectionCamera(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class ProjectionCamera extends Camera  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

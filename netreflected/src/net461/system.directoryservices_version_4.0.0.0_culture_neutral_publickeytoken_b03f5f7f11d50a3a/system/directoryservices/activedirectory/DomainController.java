@@ -112,7 +112,7 @@ public class DomainController extends DirectoryServer  {
         }
     }
 
-    public DomainController(Object instance) throws Throwable {
+    public DomainController(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -132,7 +132,7 @@ public class DomainController extends DirectoryServer  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

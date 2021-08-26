@@ -97,7 +97,7 @@ public class GroupStyleSelector extends JCDelegate implements IJCEventEmit, IJCO
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return this;
     }
 
@@ -105,7 +105,7 @@ public class GroupStyleSelector extends JCDelegate implements IJCEventEmit, IJCO
         return classType;
     }
 
-    public final Object EventRaised(Object... argsFromJCOBridge) {
+    public final java.lang.Object EventRaised(java.lang.Object... argsFromJCOBridge) {
         try
         {
             CollectionViewGroup group = argsFromJCOBridge[0] == null ? null : new CollectionViewGroup(argsFromJCOBridge[0]);
@@ -127,7 +127,7 @@ public class GroupStyleSelector extends JCDelegate implements IJCEventEmit, IJCO
         }
     }
 
-    public final Object DelegateInvoked(Object... argsFromJCOBridge) {
+    public final java.lang.Object DelegateInvoked(java.lang.Object... argsFromJCOBridge) {
         try
         {
             CollectionViewGroup group = argsFromJCOBridge[0] == null ? null : new CollectionViewGroup(argsFromJCOBridge[0]);
@@ -158,7 +158,7 @@ public class GroupStyleSelector extends JCDelegate implements IJCEventEmit, IJCO
         callerInstance = instance;
     }
 
-    public GroupStyleSelector(Object instance) throws Throwable {
+    public GroupStyleSelector(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         if (instance == null) throw new IllegalArgumentException("Instance cannot be null");
         if (instance instanceof IGroupStyleSelector) {
@@ -170,7 +170,7 @@ public class GroupStyleSelector extends JCDelegate implements IJCEventEmit, IJCO
                     String.format("Class %s is not supported.", instance.getClass().getTypeName()));
     }
 
-    protected final static <T extends IJCOBridgeReflected> Object toObjectFromArray(T[] input) {
+    protected final static <T extends IJCOBridgeReflected> java.lang.Object toObjectFromArray(T[] input) {
         return JCOBridgeInstance.toObjectFromArray(input);
     }
 

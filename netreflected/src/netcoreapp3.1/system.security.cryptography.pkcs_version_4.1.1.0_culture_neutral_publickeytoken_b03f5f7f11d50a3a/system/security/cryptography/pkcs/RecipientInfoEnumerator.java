@@ -107,7 +107,7 @@ public class RecipientInfoEnumerator extends NetObject implements Iterator<Recip
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

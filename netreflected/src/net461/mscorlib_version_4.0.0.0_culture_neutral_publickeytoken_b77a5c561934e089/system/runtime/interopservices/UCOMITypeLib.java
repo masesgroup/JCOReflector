@@ -102,9 +102,9 @@ public interface UCOMITypeLib extends IJCOBridgeReflected {
     /**
      * Returns the instantiated class
      * 
-     * @return An {@link Object} representing the instance of the instantiated Class
+     * @return An {@link java.lang.Object} representing the instance of the instantiated Class
      */
-    public Object getJCOInstance();
+    public java.lang.Object getJCOInstance();
 
     /**
      * Returns the instantiated class Type
@@ -119,15 +119,15 @@ public interface UCOMITypeLib extends IJCOBridgeReflected {
 
     public int GetTypeInfoCount() throws Throwable;
 
-    public void FindName(java.lang.String szNameBuf, int lHashVal, JCORefOut<UCOMITypeInfo[]> ppTInfo, JCORefOut rgMemId, short pcFound) throws Throwable;
+    public void FindName(java.lang.String szNameBuf, int lHashVal, JCORefOut<UCOMITypeInfo[]> ppTInfo, JCORefOut rgMemId, JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Short>> pcFound) throws Throwable;
 
-    public void GetDocumentation(int index, JCORefOut strName, JCORefOut strDocString, JCORefOut dwHelpContext, JCORefOut strHelpFile) throws Throwable;
+    public void GetDocumentation(int index, JCORefOut strName, JCORefOut strDocString, JCORefOut<java.util.concurrent.atomic.AtomicInteger> dwHelpContext, JCORefOut strHelpFile) throws Throwable;
 
     public void GetTypeComp(JCORefOut<UCOMITypeComp> ppTComp) throws Throwable;
 
     public void GetTypeInfo(int index, JCORefOut<UCOMITypeInfo> ppTI) throws Throwable;
 
-    public void GetTypeInfoOfGuid(Guid guid, JCORefOut<UCOMITypeInfo> ppTInfo) throws Throwable;
+    public void GetTypeInfoOfGuid(JCORefOut<Guid> guid, JCORefOut<UCOMITypeInfo> ppTInfo) throws Throwable;
 
     public void GetTypeInfoType(int index, JCORefOut<TYPEKIND> pTKind) throws Throwable;
 

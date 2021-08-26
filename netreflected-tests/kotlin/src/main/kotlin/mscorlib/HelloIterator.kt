@@ -41,6 +41,7 @@ object HelloIterator {
             Environment.Exit(0)
         } catch (tre: Throwable) {
             tre.printStackTrace()
+            System.exit(-1)
         }
     }
 }

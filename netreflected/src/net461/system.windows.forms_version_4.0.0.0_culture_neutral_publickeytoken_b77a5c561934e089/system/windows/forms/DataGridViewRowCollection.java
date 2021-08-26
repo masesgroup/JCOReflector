@@ -97,7 +97,7 @@ public class DataGridViewRowCollection extends NetObjectEnumerable  {
         }
     }
 
-    public DataGridViewRowCollection(Object instance) throws Throwable {
+    public DataGridViewRowCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class DataGridViewRowCollection extends NetObjectEnumerable  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -194,7 +194,7 @@ public class DataGridViewRowCollection extends NetObjectEnumerable  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("Add", (Object)toObjectFromArray(values));
+            return (int)classInstance.Invoke("Add", (java.lang.Object)toObjectFromArray(values));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -356,7 +356,7 @@ public class DataGridViewRowCollection extends NetObjectEnumerable  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddRange", (Object)toObjectFromArray(dataGridViewRows));
+            classInstance.Invoke("AddRange", (java.lang.Object)toObjectFromArray(dataGridViewRows));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

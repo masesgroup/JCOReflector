@@ -97,7 +97,7 @@ public class DeploymentDownloadException extends DeploymentException {
         super();
     }
 
-    public DeploymentDownloadException(Object instance) {
+    public DeploymentDownloadException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class DeploymentDownloadException extends DeploymentException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

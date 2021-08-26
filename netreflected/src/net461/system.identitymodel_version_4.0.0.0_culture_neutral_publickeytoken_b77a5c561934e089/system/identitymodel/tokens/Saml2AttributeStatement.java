@@ -94,7 +94,7 @@ public class Saml2AttributeStatement extends Saml2Statement  {
         }
     }
 
-    public Saml2AttributeStatement(Object instance) throws Throwable {
+    public Saml2AttributeStatement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class Saml2AttributeStatement extends Saml2Statement  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

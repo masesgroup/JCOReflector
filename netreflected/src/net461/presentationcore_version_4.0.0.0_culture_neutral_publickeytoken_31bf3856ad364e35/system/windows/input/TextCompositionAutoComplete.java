@@ -108,7 +108,7 @@ public class TextCompositionAutoComplete extends NetObject  {
         }
     }
 
-    public TextCompositionAutoComplete(Object instance) {
+    public TextCompositionAutoComplete(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class TextCompositionAutoComplete extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -95,7 +95,7 @@ public class CatalogPartDesigner extends PartDesigner  {
         }
     }
 
-    public CatalogPartDesigner(Object instance) throws Throwable {
+    public CatalogPartDesigner(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class CatalogPartDesigner extends PartDesigner  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

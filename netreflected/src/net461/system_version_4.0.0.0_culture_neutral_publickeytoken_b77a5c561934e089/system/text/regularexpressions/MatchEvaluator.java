@@ -97,7 +97,7 @@ public class MatchEvaluator extends JCDelegate implements IJCEventEmit, IJCOBrid
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return this;
     }
 
@@ -105,13 +105,13 @@ public class MatchEvaluator extends JCDelegate implements IJCEventEmit, IJCOBrid
         return classType;
     }
 
-    public final Object EventRaised(Object... argsFromJCOBridge) {
+    public final java.lang.Object EventRaised(java.lang.Object... argsFromJCOBridge) {
         try
         {
             Match match = argsFromJCOBridge[0] == null ? null : new Match(argsFromJCOBridge[0]);
 
 
-            Object retVal = null;
+            java.lang.Object retVal = null;
             if (callerInstance != null)	{
                 retVal = callerInstance.Invoke(match);
             } else {
@@ -126,13 +126,13 @@ public class MatchEvaluator extends JCDelegate implements IJCEventEmit, IJCOBrid
         }
     }
 
-    public final Object DelegateInvoked(Object... argsFromJCOBridge) {
+    public final java.lang.Object DelegateInvoked(java.lang.Object... argsFromJCOBridge) {
         try
         {
             Match match = argsFromJCOBridge[0] == null ? null : new Match(argsFromJCOBridge[0]);
 
 
-            Object retVal = null;
+            java.lang.Object retVal = null;
             if (callerInstance != null)	{
                 retVal = callerInstance.Invoke(match);
             } else {
@@ -156,7 +156,7 @@ public class MatchEvaluator extends JCDelegate implements IJCEventEmit, IJCOBrid
         callerInstance = instance;
     }
 
-    public MatchEvaluator(Object instance) throws Throwable {
+    public MatchEvaluator(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         if (instance == null) throw new IllegalArgumentException("Instance cannot be null");
         if (instance instanceof IMatchEvaluator) {
@@ -168,7 +168,7 @@ public class MatchEvaluator extends JCDelegate implements IJCEventEmit, IJCOBrid
                     String.format("Class %s is not supported.", instance.getClass().getTypeName()));
     }
 
-    protected final static <T extends IJCOBridgeReflected> Object toObjectFromArray(T[] input) {
+    protected final static <T extends IJCOBridgeReflected> java.lang.Object toObjectFromArray(T[] input) {
         return JCOBridgeInstance.toObjectFromArray(input);
     }
 

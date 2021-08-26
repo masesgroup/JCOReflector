@@ -98,7 +98,7 @@ public class CodeCompiler extends CodeGenerator implements system.codedom.compil
         }
     }
 
-    public CodeCompiler(Object instance) throws Throwable {
+    public CodeCompiler(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class CodeCompiler extends CodeGenerator implements system.codedom.compil
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -97,7 +97,7 @@ public class UrlRoutingModule extends NetObject implements system.web.IHttpModul
         }
     }
 
-    public UrlRoutingModule(Object instance) throws Throwable {
+    public UrlRoutingModule(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class UrlRoutingModule extends NetObject implements system.web.IHttpModul
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -106,7 +106,7 @@ public class MonthCalendar extends Control  {
         }
     }
 
-    public MonthCalendar(Object instance) throws Throwable {
+    public MonthCalendar(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -126,7 +126,7 @@ public class MonthCalendar extends Control  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -551,7 +551,7 @@ public class MonthCalendar extends Control  {
         try {
             ArrayList<DateTime> resultingArrayList = new ArrayList<DateTime>();
             JCObject resultingObjects = (JCObject)classInstance.Get("AnnuallyBoldedDates");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DateTime(resultingObject));
             }
             DateTime[] resultingArray = new DateTime[resultingArrayList.size()];
@@ -578,7 +578,7 @@ public class MonthCalendar extends Control  {
         try {
             ArrayList<DateTime> resultingArrayList = new ArrayList<DateTime>();
             JCObject resultingObjects = (JCObject)classInstance.Get("BoldedDates");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DateTime(resultingObject));
             }
             DateTime[] resultingArray = new DateTime[resultingArrayList.size()];
@@ -605,7 +605,7 @@ public class MonthCalendar extends Control  {
         try {
             ArrayList<DateTime> resultingArrayList = new ArrayList<DateTime>();
             JCObject resultingObjects = (JCObject)classInstance.Get("MonthlyBoldedDates");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DateTime(resultingObject));
             }
             DateTime[] resultingArray = new DateTime[resultingArrayList.size()];

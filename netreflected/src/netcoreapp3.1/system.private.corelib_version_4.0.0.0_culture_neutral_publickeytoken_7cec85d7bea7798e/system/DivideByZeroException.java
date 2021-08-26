@@ -97,7 +97,7 @@ public class DivideByZeroException extends ArithmeticException {
         super();
     }
 
-    public DivideByZeroException(Object instance) {
+    public DivideByZeroException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class DivideByZeroException extends ArithmeticException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

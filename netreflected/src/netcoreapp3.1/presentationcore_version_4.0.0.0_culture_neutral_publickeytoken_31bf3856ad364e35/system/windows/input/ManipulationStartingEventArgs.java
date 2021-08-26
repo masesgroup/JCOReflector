@@ -98,7 +98,7 @@ public class ManipulationStartingEventArgs extends InputEventArgs  {
         }
     }
 
-    public ManipulationStartingEventArgs(Object instance) throws Throwable {
+    public ManipulationStartingEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class ManipulationStartingEventArgs extends InputEventArgs  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

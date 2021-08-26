@@ -93,7 +93,7 @@ public class Sse3 extends Sse2  {
         }
     }
 
-    public Sse3(Object instance) throws Throwable {
+    public Sse3(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class Sse3 extends Sse2  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

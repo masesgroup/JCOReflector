@@ -100,7 +100,7 @@ public class RuleEvaluationIncompatibleTypesException extends RuleException {
         super();
     }
 
-    public RuleEvaluationIncompatibleTypesException(Object instance) {
+    public RuleEvaluationIncompatibleTypesException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -134,7 +134,7 @@ public class RuleEvaluationIncompatibleTypesException extends RuleException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

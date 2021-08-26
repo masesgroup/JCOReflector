@@ -94,7 +94,7 @@ public class IDataSourceSchemaImplementation extends NetObject implements IDataS
         }
     }
 
-    public IDataSourceSchemaImplementation(Object instance) throws Throwable {
+    public IDataSourceSchemaImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class IDataSourceSchemaImplementation extends NetObject implements IDataS
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -140,7 +140,7 @@ public class IDataSourceSchemaImplementation extends NetObject implements IDataS
         try {
             ArrayList<IDataSourceViewSchema> resultingArrayList = new ArrayList<IDataSourceViewSchema>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetViews");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IDataSourceViewSchemaImplementation(resultingObject));
             }
             IDataSourceViewSchema[] resultingArray = new IDataSourceViewSchema[resultingArrayList.size()];

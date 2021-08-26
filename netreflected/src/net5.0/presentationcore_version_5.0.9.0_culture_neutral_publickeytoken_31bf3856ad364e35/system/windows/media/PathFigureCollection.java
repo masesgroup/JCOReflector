@@ -100,7 +100,7 @@ public class PathFigureCollection extends Animatable implements system.IFormatta
         }
     }
 
-    public PathFigureCollection(Object instance) throws Throwable {
+    public PathFigureCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class PathFigureCollection extends Animatable implements system.IFormatta
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

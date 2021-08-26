@@ -108,7 +108,7 @@ public class KeyAgreeKeyChoice extends NetObject  {
         }
     }
 
-    public KeyAgreeKeyChoice(Object instance) {
+    public KeyAgreeKeyChoice(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class KeyAgreeKeyChoice extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

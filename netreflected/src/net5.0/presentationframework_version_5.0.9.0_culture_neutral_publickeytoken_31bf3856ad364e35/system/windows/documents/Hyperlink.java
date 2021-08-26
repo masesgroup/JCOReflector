@@ -102,7 +102,7 @@ public class Hyperlink extends Span  {
         }
     }
 
-    public Hyperlink(Object instance) throws Throwable {
+    public Hyperlink(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -122,7 +122,7 @@ public class Hyperlink extends Span  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -109,7 +109,7 @@ public class DataGridViewCell extends DataGridViewElement implements AutoCloseab
         }
     }
 
-    public DataGridViewCell(Object instance) throws Throwable {
+    public DataGridViewCell(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -129,7 +129,7 @@ public class DataGridViewCell extends DataGridViewElement implements AutoCloseab
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -180,7 +180,7 @@ public class DataGridViewCell extends DataGridViewElement implements AutoCloseab
         }
     }
 
-    public static int MeasureTextHeight(Graphics graphics, java.lang.String text, Font font, int maxWidth, TextFormatFlags flags, JCORefOut widthTruncated) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
+    public static int MeasureTextHeight(Graphics graphics, java.lang.String text, Font font, int maxWidth, TextFormatFlags flags, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> widthTruncated) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.FormatException, system.componentmodel.InvalidEnumArgumentException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {

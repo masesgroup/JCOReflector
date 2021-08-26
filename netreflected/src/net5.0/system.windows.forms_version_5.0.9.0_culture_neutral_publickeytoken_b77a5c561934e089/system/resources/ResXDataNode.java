@@ -101,7 +101,7 @@ public class ResXDataNode extends NetObject implements system.runtime.serializat
         }
     }
 
-    public ResXDataNode(Object instance) throws Throwable {
+    public ResXDataNode(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -121,7 +121,7 @@ public class ResXDataNode extends NetObject implements system.runtime.serializat
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -200,7 +200,7 @@ public class ResXDataNode extends NetObject implements system.runtime.serializat
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", (Object)toObjectFromArray(names));
+            JCObject objGetValue = (JCObject)classInstance.Invoke("GetValue", (java.lang.Object)toObjectFromArray(names));
             return new NetObject(objGetValue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -221,7 +221,7 @@ public class ResXDataNode extends NetObject implements system.runtime.serializat
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (java.lang.String)classInstance.Invoke("GetValueTypeName", (Object)toObjectFromArray(names));
+            return (java.lang.String)classInstance.Invoke("GetValueTypeName", (java.lang.Object)toObjectFromArray(names));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

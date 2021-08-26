@@ -106,9 +106,9 @@ public interface IDataObject extends IJCOBridgeReflected {
     /**
      * Returns the instantiated class
      * 
-     * @return An {@link Object} representing the instance of the instantiated Class
+     * @return An {@link java.lang.Object} representing the instance of the instantiated Class
      */
-    public Object getJCOInstance();
+    public java.lang.Object getJCOInstance();
 
     /**
      * Returns the instantiated class Type
@@ -119,23 +119,23 @@ public interface IDataObject extends IJCOBridgeReflected {
 
     // Methods section
     
-    public int DAdvise(FORMATETC pFormatetc, ADVF advf, IAdviseSink adviseSink, JCORefOut connection) throws Throwable;
+    public int DAdvise(JCORefOut<FORMATETC> pFormatetc, ADVF advf, IAdviseSink adviseSink, JCORefOut<java.util.concurrent.atomic.AtomicInteger> connection) throws Throwable;
 
     public int EnumDAdvise(JCORefOut<IEnumSTATDATA> enumAdvise) throws Throwable;
 
-    public int GetCanonicalFormatEtc(FORMATETC formatIn, JCORefOut<FORMATETC> formatOut) throws Throwable;
+    public int GetCanonicalFormatEtc(JCORefOut<FORMATETC> formatIn, JCORefOut<FORMATETC> formatOut) throws Throwable;
 
-    public int QueryGetData(FORMATETC format) throws Throwable;
+    public int QueryGetData(JCORefOut<FORMATETC> format) throws Throwable;
 
     public IEnumFORMATETC EnumFormatEtc(DATADIR direction) throws Throwable;
 
     public void DUnadvise(int connection) throws Throwable;
 
-    public void GetData(FORMATETC format, JCORefOut<STGMEDIUM> medium) throws Throwable;
+    public void GetData(JCORefOut<FORMATETC> format, JCORefOut<STGMEDIUM> medium) throws Throwable;
 
-    public void GetDataHere(FORMATETC format, STGMEDIUM medium) throws Throwable;
+    public void GetDataHere(JCORefOut<FORMATETC> format, JCORefOut<STGMEDIUM> medium) throws Throwable;
 
-    public void SetData(FORMATETC formatIn, STGMEDIUM medium, boolean release) throws Throwable;
+    public void SetData(JCORefOut<FORMATETC> formatIn, JCORefOut<STGMEDIUM> medium, boolean release) throws Throwable;
 
 
     

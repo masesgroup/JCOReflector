@@ -97,7 +97,7 @@ public class FilterInvalidBodyAccessException extends InvalidBodyAccessException
         super();
     }
 
-    public FilterInvalidBodyAccessException(Object instance) {
+    public FilterInvalidBodyAccessException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class FilterInvalidBodyAccessException extends InvalidBodyAccessException
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

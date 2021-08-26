@@ -93,7 +93,7 @@ public class IBuildMessageImplementation extends NetObject implements IBuildMess
         }
     }
 
-    public IBuildMessageImplementation(Object instance) throws Throwable {
+    public IBuildMessageImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class IBuildMessageImplementation extends NetObject implements IBuildMess
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

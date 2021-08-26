@@ -96,9 +96,9 @@ public interface IAccessible extends IJCOBridgeReflected {
     /**
      * Returns the instantiated class
      * 
-     * @return An {@link Object} representing the instance of the instantiated Class
+     * @return An {@link java.lang.Object} representing the instance of the instantiated Class
      */
-    public Object getJCOInstance();
+    public java.lang.Object getJCOInstance();
 
     /**
      * Returns the instantiated class Type
@@ -115,7 +115,7 @@ public interface IAccessible extends IJCOBridgeReflected {
 
     public void accDoDefaultAction(NetObject varChild) throws Throwable;
 
-    public void accLocation(JCORefOut pxLeft, JCORefOut pyTop, JCORefOut pcxWidth, JCORefOut pcyHeight, NetObject varChild) throws Throwable;
+    public void accLocation(JCORefOut<java.util.concurrent.atomic.AtomicInteger> pxLeft, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pyTop, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pcxWidth, JCORefOut<java.util.concurrent.atomic.AtomicInteger> pcyHeight, NetObject varChild) throws Throwable;
 
     public void accSelect(int flagsSelect, NetObject varChild) throws Throwable;
 

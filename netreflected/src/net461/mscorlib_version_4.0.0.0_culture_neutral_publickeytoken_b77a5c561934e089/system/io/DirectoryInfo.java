@@ -98,7 +98,7 @@ public class DirectoryInfo extends FileSystemInfo  {
         }
     }
 
-    public DirectoryInfo(Object instance) throws Throwable {
+    public DirectoryInfo(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class DirectoryInfo extends FileSystemInfo  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -189,7 +189,7 @@ public class DirectoryInfo extends FileSystemInfo  {
         try {
             ArrayList<DirectoryInfo> resultingArrayList = new ArrayList<DirectoryInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetDirectories");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DirectoryInfo(resultingObject));
             }
             DirectoryInfo[] resultingArray = new DirectoryInfo[resultingArrayList.size()];
@@ -206,7 +206,7 @@ public class DirectoryInfo extends FileSystemInfo  {
         try {
             ArrayList<DirectoryInfo> resultingArrayList = new ArrayList<DirectoryInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetDirectories", searchPattern);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DirectoryInfo(resultingObject));
             }
             DirectoryInfo[] resultingArray = new DirectoryInfo[resultingArrayList.size()];
@@ -223,7 +223,7 @@ public class DirectoryInfo extends FileSystemInfo  {
         try {
             ArrayList<DirectoryInfo> resultingArrayList = new ArrayList<DirectoryInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetDirectories", searchPattern, searchOption == null ? null : searchOption.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DirectoryInfo(resultingObject));
             }
             DirectoryInfo[] resultingArray = new DirectoryInfo[resultingArrayList.size()];
@@ -240,7 +240,7 @@ public class DirectoryInfo extends FileSystemInfo  {
         try {
             ArrayList<FileInfo> resultingArrayList = new ArrayList<FileInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFiles");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new FileInfo(resultingObject));
             }
             FileInfo[] resultingArray = new FileInfo[resultingArrayList.size()];
@@ -257,7 +257,7 @@ public class DirectoryInfo extends FileSystemInfo  {
         try {
             ArrayList<FileInfo> resultingArrayList = new ArrayList<FileInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFiles", searchPattern);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new FileInfo(resultingObject));
             }
             FileInfo[] resultingArray = new FileInfo[resultingArrayList.size()];
@@ -274,7 +274,7 @@ public class DirectoryInfo extends FileSystemInfo  {
         try {
             ArrayList<FileInfo> resultingArrayList = new ArrayList<FileInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFiles", searchPattern, searchOption == null ? null : searchOption.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new FileInfo(resultingObject));
             }
             FileInfo[] resultingArray = new FileInfo[resultingArrayList.size()];
@@ -291,7 +291,7 @@ public class DirectoryInfo extends FileSystemInfo  {
         try {
             ArrayList<FileSystemInfo> resultingArrayList = new ArrayList<FileSystemInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFileSystemInfos");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new FileSystemInfo(resultingObject));
             }
             FileSystemInfo[] resultingArray = new FileSystemInfo[resultingArrayList.size()];
@@ -308,7 +308,7 @@ public class DirectoryInfo extends FileSystemInfo  {
         try {
             ArrayList<FileSystemInfo> resultingArrayList = new ArrayList<FileSystemInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFileSystemInfos", searchPattern);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new FileSystemInfo(resultingObject));
             }
             FileSystemInfo[] resultingArray = new FileSystemInfo[resultingArrayList.size()];
@@ -325,7 +325,7 @@ public class DirectoryInfo extends FileSystemInfo  {
         try {
             ArrayList<FileSystemInfo> resultingArrayList = new ArrayList<FileSystemInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFileSystemInfos", searchPattern, searchOption == null ? null : searchOption.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new FileSystemInfo(resultingObject));
             }
             FileSystemInfo[] resultingArray = new FileSystemInfo[resultingArrayList.size()];

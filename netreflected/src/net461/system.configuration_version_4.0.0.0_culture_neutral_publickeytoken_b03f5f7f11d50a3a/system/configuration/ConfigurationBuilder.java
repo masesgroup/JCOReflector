@@ -95,7 +95,7 @@ public class ConfigurationBuilder extends ProviderBase  {
         }
     }
 
-    public ConfigurationBuilder(Object instance) throws Throwable {
+    public ConfigurationBuilder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class ConfigurationBuilder extends ProviderBase  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

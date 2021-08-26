@@ -99,7 +99,7 @@ public class CustomTypeDescriptor extends NetObject  {
         }
     }
 
-    public CustomTypeDescriptor(Object instance) throws Throwable {
+    public CustomTypeDescriptor(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class CustomTypeDescriptor extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -187,7 +187,7 @@ public class CustomTypeDescriptor extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetEvents = (JCObject)classInstance.Invoke("GetEvents", (Object)toObjectFromArray(attributes));
+            JCObject objGetEvents = (JCObject)classInstance.Invoke("GetEvents", (java.lang.Object)toObjectFromArray(attributes));
             return new EventDescriptorCollection(objGetEvents);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -220,7 +220,7 @@ public class CustomTypeDescriptor extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetProperties = (JCObject)classInstance.Invoke("GetProperties", (Object)toObjectFromArray(attributes));
+            JCObject objGetProperties = (JCObject)classInstance.Invoke("GetProperties", (java.lang.Object)toObjectFromArray(attributes));
             return new PropertyDescriptorCollection(objGetProperties);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

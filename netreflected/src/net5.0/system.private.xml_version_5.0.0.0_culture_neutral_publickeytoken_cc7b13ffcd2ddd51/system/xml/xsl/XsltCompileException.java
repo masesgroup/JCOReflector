@@ -99,7 +99,7 @@ public class XsltCompileException extends XsltException {
         super();
     }
 
-    public XsltCompileException(Object instance) {
+    public XsltCompileException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -133,7 +133,7 @@ public class XsltCompileException extends XsltException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

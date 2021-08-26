@@ -95,7 +95,7 @@ public class FieldCallback extends JCVoidDelegate implements IJCVoidEventEmit, I
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return this;
     }
 
@@ -103,7 +103,7 @@ public class FieldCallback extends JCVoidDelegate implements IJCVoidEventEmit, I
         return classType;
     }
 
-    public final void EventRaised(Object... argsFromJCOBridge) {
+    public final void EventRaised(java.lang.Object... argsFromJCOBridge) {
         try
         {
             NetObject fieldValue = argsFromJCOBridge[0] == null ? null : new NetObject(argsFromJCOBridge[0]);
@@ -121,7 +121,7 @@ public class FieldCallback extends JCVoidDelegate implements IJCVoidEventEmit, I
         }
     }
 
-    public final void DelegateInvoked(Object... argsFromJCOBridge) {
+    public final void DelegateInvoked(java.lang.Object... argsFromJCOBridge) {
         try
         {
             NetObject fieldValue = argsFromJCOBridge[0] == null ? null : new NetObject(argsFromJCOBridge[0]);
@@ -148,7 +148,7 @@ public class FieldCallback extends JCVoidDelegate implements IJCVoidEventEmit, I
         callerInstance = instance;
     }
 
-    public FieldCallback(Object instance) throws Throwable {
+    public FieldCallback(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         if (instance == null) throw new IllegalArgumentException("Instance cannot be null");
         if (instance instanceof IFieldCallback) {
@@ -160,7 +160,7 @@ public class FieldCallback extends JCVoidDelegate implements IJCVoidEventEmit, I
                     String.format("Class %s is not supported.", instance.getClass().getTypeName()));
     }
 
-    protected final static <T extends IJCOBridgeReflected> Object toObjectFromArray(T[] input) {
+    protected final static <T extends IJCOBridgeReflected> java.lang.Object toObjectFromArray(T[] input) {
         return JCOBridgeInstance.toObjectFromArray(input);
     }
 

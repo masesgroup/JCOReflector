@@ -93,7 +93,7 @@ public class IThemeResolutionServiceImplementation extends NetObject implements 
         }
     }
 
-    public IThemeResolutionServiceImplementation(Object instance) throws Throwable {
+    public IThemeResolutionServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class IThemeResolutionServiceImplementation extends NetObject implements 
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -161,7 +161,7 @@ public class IThemeResolutionServiceImplementation extends NetObject implements 
         try {
             ArrayList<ThemeProvider> resultingArrayList = new ArrayList<ThemeProvider>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetAllThemeProviders");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ThemeProvider(resultingObject));
             }
             ThemeProvider[] resultingArray = new ThemeProvider[resultingArrayList.size()];

@@ -97,7 +97,7 @@ public class XamlObjectReaderException extends XamlException {
         super();
     }
 
-    public XamlObjectReaderException(Object instance) {
+    public XamlObjectReaderException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class XamlObjectReaderException extends XamlException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

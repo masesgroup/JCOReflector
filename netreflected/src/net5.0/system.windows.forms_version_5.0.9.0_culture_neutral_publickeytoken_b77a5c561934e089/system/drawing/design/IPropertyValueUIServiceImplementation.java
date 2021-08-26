@@ -98,7 +98,7 @@ public class IPropertyValueUIServiceImplementation extends NetObject implements 
         }
     }
 
-    public IPropertyValueUIServiceImplementation(Object instance) throws Throwable {
+    public IPropertyValueUIServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class IPropertyValueUIServiceImplementation extends NetObject implements 
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -144,7 +144,7 @@ public class IPropertyValueUIServiceImplementation extends NetObject implements 
         try {
             ArrayList<PropertyValueUIItem> resultingArrayList = new ArrayList<PropertyValueUIItem>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetPropertyUIValueItems", context == null ? null : context.getJCOInstance(), propDesc == null ? null : propDesc.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new PropertyValueUIItem(resultingObject));
             }
             PropertyValueUIItem[] resultingArray = new PropertyValueUIItem[resultingArrayList.size()];

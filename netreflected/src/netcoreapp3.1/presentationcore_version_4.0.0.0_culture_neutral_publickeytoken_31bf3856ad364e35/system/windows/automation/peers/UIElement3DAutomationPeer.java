@@ -95,7 +95,7 @@ public class UIElement3DAutomationPeer extends AutomationPeer  {
         }
     }
 
-    public UIElement3DAutomationPeer(Object instance) throws Throwable {
+    public UIElement3DAutomationPeer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class UIElement3DAutomationPeer extends AutomationPeer  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

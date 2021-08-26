@@ -103,7 +103,7 @@ public class GlyphTypeface extends NetObject implements system.componentmodel.IS
         }
     }
 
-    public GlyphTypeface(Object instance) throws Throwable {
+    public GlyphTypeface(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -123,7 +123,7 @@ public class GlyphTypeface extends NetObject implements system.componentmodel.IS
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

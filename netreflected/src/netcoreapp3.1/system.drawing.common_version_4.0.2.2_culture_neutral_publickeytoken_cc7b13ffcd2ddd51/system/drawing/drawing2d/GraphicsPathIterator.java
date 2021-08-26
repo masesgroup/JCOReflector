@@ -95,7 +95,7 @@ public class GraphicsPathIterator extends MarshalByRefObject implements AutoClos
         }
     }
 
-    public GraphicsPathIterator(Object instance) throws Throwable {
+    public GraphicsPathIterator(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class GraphicsPathIterator extends MarshalByRefObject implements AutoClos
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -168,47 +168,27 @@ public class GraphicsPathIterator extends MarshalByRefObject implements AutoClos
         }
     }
 
-    public int CopyData(PointF[] points, byte[] types, int startIndex, int endIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
+    public int CopyData(JCORefOut<PointF[]> points, JCORefOut types, int startIndex, int endIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("CopyData", toObjectFromArray(points), types, startIndex, endIndex);
+            return (int)classInstance.Invoke("CopyData", points.getJCRefOut(), types.getJCRefOut(), startIndex, endIndex);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public int CopyData(PointF[] dupParam0, JCORefOut dupParam1, int dupParam2, int dupParam3) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
+    public int Enumerate(JCORefOut<PointF[]> points, JCORefOut types) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("CopyData", toObjectFromArray(dupParam0), dupParam1.getJCRefOut(), dupParam2, dupParam3);
+            return (int)classInstance.Invoke("Enumerate", points.getJCRefOut(), types.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public int Enumerate(PointF[] points, byte[] types) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("Enumerate", toObjectFromArray(points), types);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int Enumerate(PointF[] dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("Enumerate", toObjectFromArray(dupParam0), dupParam1.getJCRefOut());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int NextMarker(JCORefOut startIndex, JCORefOut endIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
+    public int NextMarker(JCORefOut<java.util.concurrent.atomic.AtomicInteger> startIndex, JCORefOut<java.util.concurrent.atomic.AtomicInteger> endIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -228,7 +208,7 @@ public class GraphicsPathIterator extends MarshalByRefObject implements AutoClos
         }
     }
 
-    public int NextPathType(JCORefOut pathType, JCORefOut startIndex, JCORefOut endIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
+    public int NextPathType(JCORefOut<java.util.concurrent.atomic.AtomicReference<java.lang.Byte>> pathType, JCORefOut<java.util.concurrent.atomic.AtomicInteger> startIndex, JCORefOut<java.util.concurrent.atomic.AtomicInteger> endIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -238,7 +218,7 @@ public class GraphicsPathIterator extends MarshalByRefObject implements AutoClos
         }
     }
 
-    public int NextSubpath(JCORefOut startIndex, JCORefOut endIndex, JCORefOut isClosed) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
+    public int NextSubpath(JCORefOut<java.util.concurrent.atomic.AtomicInteger> startIndex, JCORefOut<java.util.concurrent.atomic.AtomicInteger> endIndex, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> isClosed) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -248,7 +228,7 @@ public class GraphicsPathIterator extends MarshalByRefObject implements AutoClos
         }
     }
 
-    public int NextSubpath(GraphicsPath path, JCORefOut isClosed) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
+    public int NextSubpath(GraphicsPath path, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> isClosed) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

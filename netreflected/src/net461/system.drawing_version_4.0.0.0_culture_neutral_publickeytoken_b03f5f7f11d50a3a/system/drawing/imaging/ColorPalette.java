@@ -93,7 +93,7 @@ public class ColorPalette extends NetObject  {
         }
     }
 
-    public ColorPalette(Object instance) throws Throwable {
+    public ColorPalette(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class ColorPalette extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -166,7 +166,7 @@ public class ColorPalette extends NetObject  {
         try {
             ArrayList<Color> resultingArrayList = new ArrayList<Color>();
             JCObject resultingObjects = (JCObject)classInstance.Get("Entries");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Color(resultingObject));
             }
             Color[] resultingArray = new Color[resultingArrayList.size()];

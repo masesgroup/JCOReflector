@@ -105,7 +105,7 @@ public class RadioButtonList extends ListControl implements system.web.ui.INamin
         }
     }
 
-    public RadioButtonList(Object instance) throws Throwable {
+    public RadioButtonList(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -125,7 +125,7 @@ public class RadioButtonList extends ListControl implements system.web.ui.INamin
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

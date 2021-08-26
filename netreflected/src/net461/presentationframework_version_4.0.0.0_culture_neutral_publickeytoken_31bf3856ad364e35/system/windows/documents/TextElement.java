@@ -104,7 +104,7 @@ public class TextElement extends FrameworkContentElement implements system.windo
         }
     }
 
-    public TextElement(Object instance) throws Throwable {
+    public TextElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -124,7 +124,7 @@ public class TextElement extends FrameworkContentElement implements system.windo
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -97,7 +97,7 @@ public class EndOfStreamException extends IOException {
         super();
     }
 
-    public EndOfStreamException(Object instance) {
+    public EndOfStreamException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class EndOfStreamException extends IOException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

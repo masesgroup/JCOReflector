@@ -97,7 +97,7 @@ public class ListBoxItemAutomationPeer extends SelectorItemAutomationPeer implem
         }
     }
 
-    public ListBoxItemAutomationPeer(Object instance) throws Throwable {
+    public ListBoxItemAutomationPeer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class ListBoxItemAutomationPeer extends SelectorItemAutomationPeer implem
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

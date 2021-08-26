@@ -97,7 +97,7 @@ public class WmpBitmapDecoder extends BitmapDecoder  {
         }
     }
 
-    public WmpBitmapDecoder(Object instance) throws Throwable {
+    public WmpBitmapDecoder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class WmpBitmapDecoder extends BitmapDecoder  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

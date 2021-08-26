@@ -100,7 +100,7 @@ public class FixedPage extends FrameworkElement implements system.windows.markup
         }
     }
 
-    public FixedPage(Object instance) throws Throwable {
+    public FixedPage(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class FixedPage extends FrameworkElement implements system.windows.markup
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

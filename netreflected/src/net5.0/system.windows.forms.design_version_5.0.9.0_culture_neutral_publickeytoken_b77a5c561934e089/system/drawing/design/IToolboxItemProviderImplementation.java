@@ -93,7 +93,7 @@ public class IToolboxItemProviderImplementation extends NetObject implements ITo
         }
     }
 
-    public IToolboxItemProviderImplementation(Object instance) throws Throwable {
+    public IToolboxItemProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class IToolboxItemProviderImplementation extends NetObject implements ITo
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

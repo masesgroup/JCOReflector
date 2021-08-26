@@ -106,7 +106,7 @@ public class ServiceModelSectionGroup extends ConfigurationSectionGroup  {
         }
     }
 
-    public ServiceModelSectionGroup(Object instance) throws Throwable {
+    public ServiceModelSectionGroup(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -126,7 +126,7 @@ public class ServiceModelSectionGroup extends ConfigurationSectionGroup  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

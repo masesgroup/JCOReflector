@@ -93,7 +93,7 @@ public class IPHostEntry extends NetObject  {
         }
     }
 
-    public IPHostEntry(Object instance) throws Throwable {
+    public IPHostEntry(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class IPHostEntry extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -162,7 +162,7 @@ public class IPHostEntry extends NetObject  {
         try {
             ArrayList<IPAddress> resultingArrayList = new ArrayList<IPAddress>();
             JCObject resultingObjects = (JCObject)classInstance.Get("AddressList");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IPAddress(resultingObject));
             }
             IPAddress[] resultingArray = new IPAddress[resultingArrayList.size()];
@@ -207,9 +207,9 @@ public class IPHostEntry extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Get("Aliases");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];

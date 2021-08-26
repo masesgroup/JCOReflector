@@ -110,7 +110,7 @@ public class IDuplexContextChannelImplementation extends NetObject implements ID
         }
     }
 
-    public IDuplexContextChannelImplementation(Object instance) throws Throwable {
+    public IDuplexContextChannelImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -130,7 +130,7 @@ public class IDuplexContextChannelImplementation extends NetObject implements ID
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

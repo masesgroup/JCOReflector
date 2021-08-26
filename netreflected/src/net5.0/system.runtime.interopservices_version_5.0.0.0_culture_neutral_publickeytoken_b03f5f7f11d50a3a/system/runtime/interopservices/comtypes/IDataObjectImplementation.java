@@ -102,7 +102,7 @@ public class IDataObjectImplementation extends NetObject implements IDataObject 
         }
     }
 
-    public IDataObjectImplementation(Object instance) throws Throwable {
+    public IDataObjectImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -122,7 +122,7 @@ public class IDataObjectImplementation extends NetObject implements IDataObject 
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -142,11 +142,11 @@ public class IDataObjectImplementation extends NetObject implements IDataObject 
 
     // Methods section
     
-    public int DAdvise(FORMATETC pFormatetc, ADVF advf, IAdviseSink adviseSink, JCORefOut connection) throws Throwable {
+    public int DAdvise(JCORefOut<FORMATETC> pFormatetc, ADVF advf, IAdviseSink adviseSink, JCORefOut<java.util.concurrent.atomic.AtomicInteger> connection) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("DAdvise", pFormatetc == null ? null : pFormatetc.getJCOInstance(), advf == null ? null : advf.getJCOInstance(), adviseSink == null ? null : adviseSink.getJCOInstance(), connection.getJCRefOut());
+            return (int)classInstance.Invoke("DAdvise", pFormatetc.getJCRefOut(), advf == null ? null : advf.getJCOInstance(), adviseSink == null ? null : adviseSink.getJCOInstance(), connection.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -162,21 +162,21 @@ public class IDataObjectImplementation extends NetObject implements IDataObject 
         }
     }
 
-    public int GetCanonicalFormatEtc(FORMATETC formatIn, JCORefOut<FORMATETC> formatOut) throws Throwable {
+    public int GetCanonicalFormatEtc(JCORefOut<FORMATETC> formatIn, JCORefOut<FORMATETC> formatOut) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("GetCanonicalFormatEtc", formatIn == null ? null : formatIn.getJCOInstance(), formatOut.getJCRefOut());
+            return (int)classInstance.Invoke("GetCanonicalFormatEtc", formatIn.getJCRefOut(), formatOut.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public int QueryGetData(FORMATETC format) throws Throwable {
+    public int QueryGetData(JCORefOut<FORMATETC> format) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("QueryGetData", format == null ? null : format.getJCOInstance());
+            return (int)classInstance.Invoke("QueryGetData", format.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,31 +203,31 @@ public class IDataObjectImplementation extends NetObject implements IDataObject 
         }
     }
 
-    public void GetData(FORMATETC format, JCORefOut<STGMEDIUM> medium) throws Throwable {
+    public void GetData(JCORefOut<FORMATETC> format, JCORefOut<STGMEDIUM> medium) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("GetData", format == null ? null : format.getJCOInstance(), medium.getJCRefOut());
+            classInstance.Invoke("GetData", format.getJCRefOut(), medium.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void GetDataHere(FORMATETC format, STGMEDIUM medium) throws Throwable {
+    public void GetDataHere(JCORefOut<FORMATETC> format, JCORefOut<STGMEDIUM> medium) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("GetDataHere", format == null ? null : format.getJCOInstance(), medium == null ? null : medium.getJCOInstance());
+            classInstance.Invoke("GetDataHere", format.getJCRefOut(), medium.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void SetData(FORMATETC formatIn, STGMEDIUM medium, boolean release) throws Throwable {
+    public void SetData(JCORefOut<FORMATETC> formatIn, JCORefOut<STGMEDIUM> medium, boolean release) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetData", formatIn == null ? null : formatIn.getJCOInstance(), medium == null ? null : medium.getJCOInstance(), release);
+            classInstance.Invoke("SetData", formatIn.getJCRefOut(), medium.getJCRefOut(), release);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -94,7 +94,7 @@ public class SearchResultReference extends NetObject  {
         }
     }
 
-    public SearchResultReference(Object instance) throws Throwable {
+    public SearchResultReference(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class SearchResultReference extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -157,7 +157,7 @@ public class SearchResultReference extends NetObject  {
         try {
             ArrayList<DirectoryControl> resultingArrayList = new ArrayList<DirectoryControl>();
             JCObject resultingObjects = (JCObject)classInstance.Get("Controls");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DirectoryControl(resultingObject));
             }
             DirectoryControl[] resultingArray = new DirectoryControl[resultingArrayList.size()];
@@ -174,7 +174,7 @@ public class SearchResultReference extends NetObject  {
         try {
             ArrayList<Uri> resultingArrayList = new ArrayList<Uri>();
             JCObject resultingObjects = (JCObject)classInstance.Get("Reference");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Uri(resultingObject));
             }
             Uri[] resultingArray = new Uri[resultingArrayList.size()];

@@ -96,7 +96,7 @@ public class X509DataSecurityKeyIdentifierClauseSerializer extends SecurityKeyId
         }
     }
 
-    public X509DataSecurityKeyIdentifierClauseSerializer(Object instance) throws Throwable {
+    public X509DataSecurityKeyIdentifierClauseSerializer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class X509DataSecurityKeyIdentifierClauseSerializer extends SecurityKeyId
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

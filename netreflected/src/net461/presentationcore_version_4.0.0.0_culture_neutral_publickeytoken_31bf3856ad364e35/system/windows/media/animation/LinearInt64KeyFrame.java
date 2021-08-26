@@ -94,7 +94,7 @@ public class LinearInt64KeyFrame extends Int64KeyFrame  {
         }
     }
 
-    public LinearInt64KeyFrame(Object instance) throws Throwable {
+    public LinearInt64KeyFrame(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class LinearInt64KeyFrame extends Int64KeyFrame  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -99,7 +99,7 @@ public class NotFiniteNumberException extends ArithmeticException {
         super();
     }
 
-    public NotFiniteNumberException(Object instance) {
+    public NotFiniteNumberException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -133,7 +133,7 @@ public class NotFiniteNumberException extends ArithmeticException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

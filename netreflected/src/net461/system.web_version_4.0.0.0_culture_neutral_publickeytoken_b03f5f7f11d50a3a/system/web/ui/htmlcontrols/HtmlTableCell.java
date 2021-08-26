@@ -93,7 +93,7 @@ public class HtmlTableCell extends HtmlContainerControl  {
         }
     }
 
-    public HtmlTableCell(Object instance) throws Throwable {
+    public HtmlTableCell(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class HtmlTableCell extends HtmlContainerControl  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

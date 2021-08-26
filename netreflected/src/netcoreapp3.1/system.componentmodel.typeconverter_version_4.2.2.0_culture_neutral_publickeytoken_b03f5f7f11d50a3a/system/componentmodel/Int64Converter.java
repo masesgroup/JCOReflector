@@ -93,7 +93,7 @@ public class Int64Converter extends BaseNumberConverter  {
         }
     }
 
-    public Int64Converter(Object instance) throws Throwable {
+    public Int64Converter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class Int64Converter extends BaseNumberConverter  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

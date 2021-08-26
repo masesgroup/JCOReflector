@@ -101,7 +101,7 @@ Parsed assemblies are:
 >   * Delegates = 557
 >   * Classes
 >     * Constructors = 11699
->     * Methods = 35843
+>     * Methods = 35787
 >     * Properties = 31911
 >     * Events = 2391
 > * Implemented Types = 12311
@@ -113,8 +113,8 @@ Parsed assemblies are:
 >   * Classes = 9222
 >     * Exceptions = 396
 >     * Constructors = 10192
->     * Methods = 30519
->       * Duplicated Methods = 1012
+>     * Methods = 30468
+>       * Duplicated Methods = 999
 >     * Properties = 29770
 >     * Events = 2185
 > * Discarded Types = 30966
@@ -399,7 +399,7 @@ Parsed assemblies are:
 >   * Delegates = 367
 >   * Classes
 >     * Constructors = 6403
->     * Methods = 26113
+>     * Methods = 26057
 >     * Properties = 17746
 >     * Events = 1725
 > * Implemented Types = 6974
@@ -411,8 +411,8 @@ Parsed assemblies are:
 >   * Classes = 5027
 >     * Exceptions = 229
 >     * Constructors = 5540
->     * Methods = 19912
->       * Duplicated Methods = 737
+>     * Methods = 19861
+>       * Duplicated Methods = 726
 >     * Properties = 16607
 >     * Events = 1620
 > * Discarded Types = 17378
@@ -781,7 +781,7 @@ Parsed assemblies are:
 >   * Delegates = 363
 >   * Classes
 >     * Constructors = 6504
->     * Methods = 28374
+>     * Methods = 28312
 >     * Properties = 18027
 >     * Events = 1733
 > * Implemented Types = 7089
@@ -793,8 +793,8 @@ Parsed assemblies are:
 >   * Classes = 5121
 >     * Exceptions = 233
 >     * Constructors = 5615
->     * Methods = 20281
->       * Duplicated Methods = 769
+>     * Methods = 20224
+>       * Duplicated Methods = 758
 >     * Properties = 16860
 >     * Events = 1626
 > * Discarded Types = 18287

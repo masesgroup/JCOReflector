@@ -96,7 +96,7 @@ public class IAdviseSinkImplementation extends NetObject implements IAdviseSink 
         }
     }
 
-    public IAdviseSinkImplementation(Object instance) throws Throwable {
+    public IAdviseSinkImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class IAdviseSinkImplementation extends NetObject implements IAdviseSink 
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -146,11 +146,11 @@ public class IAdviseSinkImplementation extends NetObject implements IAdviseSink 
         }
     }
 
-    public void OnDataChange(FORMATETC format, STGMEDIUM stgmedium) throws Throwable {
+    public void OnDataChange(JCORefOut<FORMATETC> format, JCORefOut<STGMEDIUM> stgmedium) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("OnDataChange", format == null ? null : format.getJCOInstance(), stgmedium == null ? null : stgmedium.getJCOInstance());
+            classInstance.Invoke("OnDataChange", format.getJCRefOut(), stgmedium.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

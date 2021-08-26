@@ -95,7 +95,7 @@ public class PathFigureCollectionValueSerializer extends ValueSerializer  {
         }
     }
 
-    public PathFigureCollectionValueSerializer(Object instance) throws Throwable {
+    public PathFigureCollectionValueSerializer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class PathFigureCollectionValueSerializer extends ValueSerializer  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

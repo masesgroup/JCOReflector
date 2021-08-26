@@ -97,7 +97,7 @@ public class SyntaxErrorException extends InvalidExpressionException {
         super();
     }
 
-    public SyntaxErrorException(Object instance) {
+    public SyntaxErrorException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class SyntaxErrorException extends InvalidExpressionException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

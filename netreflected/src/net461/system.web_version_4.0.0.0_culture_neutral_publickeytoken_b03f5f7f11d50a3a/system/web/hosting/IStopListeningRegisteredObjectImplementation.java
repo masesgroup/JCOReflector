@@ -94,7 +94,7 @@ public class IStopListeningRegisteredObjectImplementation extends NetObject impl
         }
     }
 
-    public IStopListeningRegisteredObjectImplementation(Object instance) throws Throwable {
+    public IStopListeningRegisteredObjectImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class IStopListeningRegisteredObjectImplementation extends NetObject impl
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

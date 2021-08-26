@@ -92,7 +92,7 @@ public class IInstanceImplementation extends NetObject implements IInstance {
         }
     }
 
-    public IInstanceImplementation(Object instance) throws Throwable {
+    public IInstanceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class IInstanceImplementation extends NetObject implements IInstance {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

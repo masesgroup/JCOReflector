@@ -99,7 +99,7 @@ public class AtomPub10ServiceDocumentFormatter extends ServiceDocumentFormatter 
         }
     }
 
-    public AtomPub10ServiceDocumentFormatter(Object instance) throws Throwable {
+    public AtomPub10ServiceDocumentFormatter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class AtomPub10ServiceDocumentFormatter extends ServiceDocumentFormatter 
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

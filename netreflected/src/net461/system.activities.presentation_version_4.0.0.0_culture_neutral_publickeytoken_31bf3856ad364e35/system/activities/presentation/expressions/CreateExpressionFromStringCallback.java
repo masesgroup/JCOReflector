@@ -96,7 +96,7 @@ public class CreateExpressionFromStringCallback extends JCDelegate implements IJ
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return this;
     }
 
@@ -104,7 +104,7 @@ public class CreateExpressionFromStringCallback extends JCDelegate implements IJ
         return classType;
     }
 
-    public final Object EventRaised(Object... argsFromJCOBridge) {
+    public final java.lang.Object EventRaised(java.lang.Object... argsFromJCOBridge) {
         try
         {
             java.lang.String expressionText = argsFromJCOBridge[0] == null ? null : (java.lang.String)argsFromJCOBridge[0];
@@ -127,7 +127,7 @@ public class CreateExpressionFromStringCallback extends JCDelegate implements IJ
         }
     }
 
-    public final Object DelegateInvoked(Object... argsFromJCOBridge) {
+    public final java.lang.Object DelegateInvoked(java.lang.Object... argsFromJCOBridge) {
         try
         {
             java.lang.String expressionText = argsFromJCOBridge[0] == null ? null : (java.lang.String)argsFromJCOBridge[0];
@@ -159,7 +159,7 @@ public class CreateExpressionFromStringCallback extends JCDelegate implements IJ
         callerInstance = instance;
     }
 
-    public CreateExpressionFromStringCallback(Object instance) throws Throwable {
+    public CreateExpressionFromStringCallback(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         if (instance == null) throw new IllegalArgumentException("Instance cannot be null");
         if (instance instanceof ICreateExpressionFromStringCallback) {
@@ -171,7 +171,7 @@ public class CreateExpressionFromStringCallback extends JCDelegate implements IJ
                     String.format("Class %s is not supported.", instance.getClass().getTypeName()));
     }
 
-    protected final static <T extends IJCOBridgeReflected> Object toObjectFromArray(T[] input) {
+    protected final static <T extends IJCOBridgeReflected> java.lang.Object toObjectFromArray(T[] input) {
         return JCOBridgeInstance.toObjectFromArray(input);
     }
 

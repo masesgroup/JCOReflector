@@ -108,7 +108,7 @@ public class SuffixOrigin extends NetObject  {
         }
     }
 
-    public SuffixOrigin(Object instance) {
+    public SuffixOrigin(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class SuffixOrigin extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

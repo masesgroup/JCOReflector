@@ -95,7 +95,7 @@ public class MaterialGroup extends Material  {
         }
     }
 
-    public MaterialGroup(Object instance) throws Throwable {
+    public MaterialGroup(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class MaterialGroup extends Material  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -99,7 +99,7 @@ public class WebPartZoneDesigner extends WebPartZoneBaseDesigner  {
         }
     }
 
-    public WebPartZoneDesigner(Object instance) throws Throwable {
+    public WebPartZoneDesigner(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class WebPartZoneDesigner extends WebPartZoneBaseDesigner  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

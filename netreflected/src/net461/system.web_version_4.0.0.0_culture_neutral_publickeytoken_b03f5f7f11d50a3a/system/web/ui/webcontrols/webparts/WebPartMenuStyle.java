@@ -106,7 +106,7 @@ public class WebPartMenuStyle extends TableStyle implements system.componentmode
         }
     }
 
-    public WebPartMenuStyle(Object instance) throws Throwable {
+    public WebPartMenuStyle(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -126,7 +126,7 @@ public class WebPartMenuStyle extends TableStyle implements system.componentmode
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

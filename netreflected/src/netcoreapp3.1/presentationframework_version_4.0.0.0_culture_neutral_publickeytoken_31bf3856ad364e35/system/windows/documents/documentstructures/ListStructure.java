@@ -96,7 +96,7 @@ public class ListStructure extends SemanticBasicElement implements system.window
         }
     }
 
-    public ListStructure(Object instance) throws Throwable {
+    public ListStructure(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class ListStructure extends SemanticBasicElement implements system.window
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

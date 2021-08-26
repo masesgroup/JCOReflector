@@ -96,7 +96,7 @@ public class KeyboardInputProviderAcquireFocusEventHandler extends JCVoidDelegat
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return this;
     }
 
@@ -104,7 +104,7 @@ public class KeyboardInputProviderAcquireFocusEventHandler extends JCVoidDelegat
         return classType;
     }
 
-    public final void EventRaised(Object... argsFromJCOBridge) {
+    public final void EventRaised(java.lang.Object... argsFromJCOBridge) {
         try
         {
             NetObject sender = argsFromJCOBridge[0] == null ? null : new NetObject(argsFromJCOBridge[0]);
@@ -123,7 +123,7 @@ public class KeyboardInputProviderAcquireFocusEventHandler extends JCVoidDelegat
         }
     }
 
-    public final void DelegateInvoked(Object... argsFromJCOBridge) {
+    public final void DelegateInvoked(java.lang.Object... argsFromJCOBridge) {
         try
         {
             NetObject sender = argsFromJCOBridge[0] == null ? null : new NetObject(argsFromJCOBridge[0]);
@@ -151,7 +151,7 @@ public class KeyboardInputProviderAcquireFocusEventHandler extends JCVoidDelegat
         callerInstance = instance;
     }
 
-    public KeyboardInputProviderAcquireFocusEventHandler(Object instance) throws Throwable {
+    public KeyboardInputProviderAcquireFocusEventHandler(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         if (instance == null) throw new IllegalArgumentException("Instance cannot be null");
         if (instance instanceof IKeyboardInputProviderAcquireFocusEventHandler) {
@@ -163,7 +163,7 @@ public class KeyboardInputProviderAcquireFocusEventHandler extends JCVoidDelegat
                     String.format("Class %s is not supported.", instance.getClass().getTypeName()));
     }
 
-    protected final static <T extends IJCOBridgeReflected> Object toObjectFromArray(T[] input) {
+    protected final static <T extends IJCOBridgeReflected> java.lang.Object toObjectFromArray(T[] input) {
         return JCOBridgeInstance.toObjectFromArray(input);
     }
 

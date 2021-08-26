@@ -95,7 +95,7 @@ public class AddedActivityAction extends ActivityChangeAction  {
         }
     }
 
-    public AddedActivityAction(Object instance) throws Throwable {
+    public AddedActivityAction(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class AddedActivityAction extends ActivityChangeAction  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

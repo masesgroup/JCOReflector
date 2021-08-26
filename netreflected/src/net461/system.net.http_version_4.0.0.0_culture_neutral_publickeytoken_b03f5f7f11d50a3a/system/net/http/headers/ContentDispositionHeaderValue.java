@@ -95,7 +95,7 @@ public class ContentDispositionHeaderValue extends NetObject implements system.I
         }
     }
 
-    public ContentDispositionHeaderValue(Object instance) throws Throwable {
+    public ContentDispositionHeaderValue(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class ContentDispositionHeaderValue extends NetObject implements system.I
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

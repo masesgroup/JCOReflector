@@ -96,7 +96,7 @@ public class XmlWhitespace extends XmlCharacterData  {
         }
     }
 
-    public XmlWhitespace(Object instance) throws Throwable {
+    public XmlWhitespace(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class XmlWhitespace extends XmlCharacterData  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

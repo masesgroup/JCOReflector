@@ -97,7 +97,7 @@ public class DllNotFoundException extends TypeLoadException {
         super();
     }
 
-    public DllNotFoundException(Object instance) {
+    public DllNotFoundException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class DllNotFoundException extends TypeLoadException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

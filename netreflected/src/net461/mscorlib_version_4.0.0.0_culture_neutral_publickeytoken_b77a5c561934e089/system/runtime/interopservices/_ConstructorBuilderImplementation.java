@@ -94,7 +94,7 @@ public class _ConstructorBuilderImplementation extends NetObject implements _Con
         }
     }
 
-    public _ConstructorBuilderImplementation(Object instance) throws Throwable {
+    public _ConstructorBuilderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class _ConstructorBuilderImplementation extends NetObject implements _Con
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

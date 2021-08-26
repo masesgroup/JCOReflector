@@ -98,7 +98,7 @@ public class XDocumentType extends XNode  {
         }
     }
 
-    public XDocumentType(Object instance) throws Throwable {
+    public XDocumentType(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class XDocumentType extends XNode  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

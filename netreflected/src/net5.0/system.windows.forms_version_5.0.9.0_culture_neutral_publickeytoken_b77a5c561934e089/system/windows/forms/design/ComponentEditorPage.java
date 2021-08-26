@@ -101,7 +101,7 @@ public class ComponentEditorPage extends Panel  {
         }
     }
 
-    public ComponentEditorPage(Object instance) throws Throwable {
+    public ComponentEditorPage(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -121,7 +121,7 @@ public class ComponentEditorPage extends Panel  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -152,11 +152,11 @@ public class ComponentEditorPage extends Panel  {
     
     // Methods section
     
-    public boolean IsPageMessage(Message msg) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException {
+    public boolean IsPageMessage(JCORefOut<Message> msg) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.NotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsPageMessage", msg == null ? null : msg.getJCOInstance());
+            return (boolean)classInstance.Invoke("IsPageMessage", msg.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

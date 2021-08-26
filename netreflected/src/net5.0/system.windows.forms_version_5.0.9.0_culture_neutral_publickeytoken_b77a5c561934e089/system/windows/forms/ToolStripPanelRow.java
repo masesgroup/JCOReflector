@@ -100,7 +100,7 @@ public class ToolStripPanelRow extends Component  {
         }
     }
 
-    public ToolStripPanelRow(Object instance) throws Throwable {
+    public ToolStripPanelRow(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class ToolStripPanelRow extends Component  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -205,7 +205,7 @@ public class ToolStripPanelRow extends Component  {
         try {
             ArrayList<Control> resultingArrayList = new ArrayList<Control>();
             JCObject resultingObjects = (JCObject)classInstance.Get("Controls");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Control(resultingObject));
             }
             Control[] resultingArray = new Control[resultingArrayList.size()];

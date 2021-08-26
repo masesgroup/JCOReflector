@@ -96,7 +96,7 @@ public class SiteDelegate1 extends JCDelegate implements IJCEventEmit, IJCOBridg
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return this;
     }
 
@@ -104,7 +104,7 @@ public class SiteDelegate1 extends JCDelegate implements IJCEventEmit, IJCOBridg
         return classType;
     }
 
-    public final Object EventRaised(Object... argsFromJCOBridge) {
+    public final java.lang.Object EventRaised(java.lang.Object... argsFromJCOBridge) {
         try
         {
             CallSite site = argsFromJCOBridge[0] == null ? null : new CallSite(argsFromJCOBridge[0]);
@@ -127,7 +127,7 @@ public class SiteDelegate1 extends JCDelegate implements IJCEventEmit, IJCOBridg
         }
     }
 
-    public final Object DelegateInvoked(Object... argsFromJCOBridge) {
+    public final java.lang.Object DelegateInvoked(java.lang.Object... argsFromJCOBridge) {
         try
         {
             CallSite site = argsFromJCOBridge[0] == null ? null : new CallSite(argsFromJCOBridge[0]);
@@ -159,7 +159,7 @@ public class SiteDelegate1 extends JCDelegate implements IJCEventEmit, IJCOBridg
         callerInstance = instance;
     }
 
-    public SiteDelegate1(Object instance) throws Throwable {
+    public SiteDelegate1(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         if (instance == null) throw new IllegalArgumentException("Instance cannot be null");
         if (instance instanceof ISiteDelegate1) {
@@ -171,7 +171,7 @@ public class SiteDelegate1 extends JCDelegate implements IJCEventEmit, IJCOBridg
                     String.format("Class %s is not supported.", instance.getClass().getTypeName()));
     }
 
-    protected final static <T extends IJCOBridgeReflected> Object toObjectFromArray(T[] input) {
+    protected final static <T extends IJCOBridgeReflected> java.lang.Object toObjectFromArray(T[] input) {
         return JCOBridgeInstance.toObjectFromArray(input);
     }
 

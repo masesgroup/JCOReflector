@@ -108,7 +108,7 @@ public class AuthenticationMode extends NetObject  {
         }
     }
 
-    public AuthenticationMode(Object instance) {
+    public AuthenticationMode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class AuthenticationMode extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

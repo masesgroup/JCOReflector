@@ -93,7 +93,7 @@ public class IToggleProviderImplementation extends NetObject implements IToggleP
         }
     }
 
-    public IToggleProviderImplementation(Object instance) throws Throwable {
+    public IToggleProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class IToggleProviderImplementation extends NetObject implements IToggleP
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -94,7 +94,7 @@ public class IErrorHandlerImplementation extends NetObject implements IErrorHand
         }
     }
 
-    public IErrorHandlerImplementation(Object instance) throws Throwable {
+    public IErrorHandlerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class IErrorHandlerImplementation extends NetObject implements IErrorHand
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -144,11 +144,11 @@ public class IErrorHandlerImplementation extends NetObject implements IErrorHand
         }
     }
 
-    public void ProvideFault(NetException error, MessageVersion version, Message fault) throws Throwable {
+    public void ProvideFault(NetException error, MessageVersion version, JCORefOut<Message> fault) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("ProvideFault", error == null ? null : error.getJCOInstance(), version == null ? null : version.getJCOInstance(), fault == null ? null : fault.getJCOInstance());
+            classInstance.Invoke("ProvideFault", error == null ? null : error.getJCOInstance(), version == null ? null : version.getJCOInstance(), fault.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

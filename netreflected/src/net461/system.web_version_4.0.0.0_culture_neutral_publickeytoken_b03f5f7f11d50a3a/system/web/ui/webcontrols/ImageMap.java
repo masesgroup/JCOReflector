@@ -98,7 +98,7 @@ public class ImageMap extends Image implements system.web.ui.IPostBackEventHandl
         }
     }
 
-    public ImageMap(Object instance) throws Throwable {
+    public ImageMap(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class ImageMap extends Image implements system.web.ui.IPostBackEventHandl
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

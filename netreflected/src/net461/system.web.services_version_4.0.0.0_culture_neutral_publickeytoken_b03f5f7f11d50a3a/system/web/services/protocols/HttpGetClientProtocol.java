@@ -93,7 +93,7 @@ public class HttpGetClientProtocol extends HttpSimpleClientProtocol  {
         }
     }
 
-    public HttpGetClientProtocol(Object instance) throws Throwable {
+    public HttpGetClientProtocol(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class HttpGetClientProtocol extends HttpSimpleClientProtocol  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

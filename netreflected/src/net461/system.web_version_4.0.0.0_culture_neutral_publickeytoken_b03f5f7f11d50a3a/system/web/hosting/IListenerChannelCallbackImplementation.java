@@ -92,7 +92,7 @@ public class IListenerChannelCallbackImplementation extends NetObject implements
         }
     }
 
-    public IListenerChannelCallbackImplementation(Object instance) throws Throwable {
+    public IListenerChannelCallbackImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class IListenerChannelCallbackImplementation extends NetObject implements
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -152,11 +152,11 @@ public class IListenerChannelCallbackImplementation extends NetObject implements
         }
     }
 
-    public void GetBlob(JCORefOut buffer, int bufferSize) throws Throwable {
+    public void GetBlob(JCORefOut buffer, JCORefOut<java.util.concurrent.atomic.AtomicInteger> bufferSize) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("GetBlob", buffer.getJCRefOut(), bufferSize);
+            classInstance.Invoke("GetBlob", buffer.getJCRefOut(), bufferSize.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

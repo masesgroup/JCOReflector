@@ -110,7 +110,7 @@ public class DrawingContext extends DispatcherObject implements system.IDisposab
         }
     }
 
-    public DrawingContext(Object instance) throws Throwable {
+    public DrawingContext(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -130,7 +130,7 @@ public class DrawingContext extends DispatcherObject implements system.IDisposab
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

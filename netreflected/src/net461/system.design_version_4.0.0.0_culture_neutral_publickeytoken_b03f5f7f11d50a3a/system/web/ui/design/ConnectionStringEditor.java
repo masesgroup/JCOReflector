@@ -98,7 +98,7 @@ public class ConnectionStringEditor extends UITypeEditor  {
         }
     }
 
-    public ConnectionStringEditor(Object instance) throws Throwable {
+    public ConnectionStringEditor(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class ConnectionStringEditor extends UITypeEditor  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

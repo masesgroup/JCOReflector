@@ -111,7 +111,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
         }
     }
 
-    public XmlDictionaryWriter(Object instance) throws Throwable {
+    public XmlDictionaryWriter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class XmlDictionaryWriter extends XmlWriter  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

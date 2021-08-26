@@ -111,7 +111,7 @@ public class MethodBuilder extends MethodInfo  {
         }
     }
 
-    public MethodBuilder(Object instance) throws Throwable {
+    public MethodBuilder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class MethodBuilder extends MethodInfo  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -191,7 +191,7 @@ public class MethodBuilder extends MethodInfo  {
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetCustomAttributes", inherit);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
@@ -208,7 +208,7 @@ public class MethodBuilder extends MethodInfo  {
         try {
             ArrayList<NetObject> resultingArrayList = new ArrayList<NetObject>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetCustomAttributes", attributeType == null ? null : attributeType.getJCOInstance(), inherit);
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetObject(resultingObject));
             }
             NetObject[] resultingArray = new NetObject[resultingArrayList.size()];
@@ -224,8 +224,8 @@ public class MethodBuilder extends MethodInfo  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<GenericTypeParameterBuilder> resultingArrayList = new ArrayList<GenericTypeParameterBuilder>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("DefineGenericParameters", (Object)names);
-            for (Object resultingObject : resultingObjects) {
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("DefineGenericParameters", (java.lang.Object)names);
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new GenericTypeParameterBuilder(resultingObject));
             }
             GenericTypeParameterBuilder[] resultingArray = new GenericTypeParameterBuilder[resultingArrayList.size()];
@@ -241,8 +241,8 @@ public class MethodBuilder extends MethodInfo  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<GenericTypeParameterBuilder> resultingArrayList = new ArrayList<GenericTypeParameterBuilder>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("DefineGenericParameters", (Object)dupParam0.getJCRefOut());
-            for (Object resultingObject : resultingObjects) {
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("DefineGenericParameters", (java.lang.Object)dupParam0.getJCRefOut());
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new GenericTypeParameterBuilder(resultingObject));
             }
             GenericTypeParameterBuilder[] resultingArray = new GenericTypeParameterBuilder[resultingArrayList.size()];
@@ -334,7 +334,7 @@ public class MethodBuilder extends MethodInfo  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objMakeGenericMethod = (JCObject)classInstance.Invoke("MakeGenericMethod", (Object)toObjectFromArray(typeArguments));
+            JCObject objMakeGenericMethod = (JCObject)classInstance.Invoke("MakeGenericMethod", (java.lang.Object)toObjectFromArray(typeArguments));
             return new MethodInfo(objMakeGenericMethod);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -358,7 +358,7 @@ public class MethodBuilder extends MethodInfo  {
         try {
             ArrayList<ParameterInfo> resultingArrayList = new ArrayList<ParameterInfo>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetParameters");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new ParameterInfo(resultingObject));
             }
             ParameterInfo[] resultingArray = new ParameterInfo[resultingArrayList.size()];
@@ -375,7 +375,7 @@ public class MethodBuilder extends MethodInfo  {
         try {
             ArrayList<NetType> resultingArrayList = new ArrayList<NetType>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetGenericArguments");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new NetType(resultingObject));
             }
             NetType[] resultingArray = new NetType[resultingArrayList.size()];
@@ -430,7 +430,7 @@ public class MethodBuilder extends MethodInfo  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetParameters", (Object)toObjectFromArray(parameterTypes));
+            classInstance.Invoke("SetParameters", (java.lang.Object)toObjectFromArray(parameterTypes));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

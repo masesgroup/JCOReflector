@@ -102,7 +102,7 @@ public class BindingExpressionBase extends Expression implements system.windows.
         }
     }
 
-    public BindingExpressionBase(Object instance) throws Throwable {
+    public BindingExpressionBase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -122,7 +122,7 @@ public class BindingExpressionBase extends Expression implements system.windows.
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

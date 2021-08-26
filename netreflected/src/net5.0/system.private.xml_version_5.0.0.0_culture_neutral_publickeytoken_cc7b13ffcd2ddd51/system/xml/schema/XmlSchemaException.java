@@ -100,7 +100,7 @@ public class XmlSchemaException extends SystemException {
         super();
     }
 
-    public XmlSchemaException(Object instance) {
+    public XmlSchemaException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -134,7 +134,7 @@ public class XmlSchemaException extends SystemException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

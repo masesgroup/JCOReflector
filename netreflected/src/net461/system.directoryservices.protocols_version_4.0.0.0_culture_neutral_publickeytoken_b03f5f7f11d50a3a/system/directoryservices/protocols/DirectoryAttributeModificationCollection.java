@@ -95,7 +95,7 @@ public class DirectoryAttributeModificationCollection extends CollectionBase  {
         }
     }
 
-    public DirectoryAttributeModificationCollection(Object instance) throws Throwable {
+    public DirectoryAttributeModificationCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class DirectoryAttributeModificationCollection extends CollectionBase  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -188,7 +188,7 @@ public class DirectoryAttributeModificationCollection extends CollectionBase  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddRange", (Object)toObjectFromArray(attributes));
+            classInstance.Invoke("AddRange", (java.lang.Object)toObjectFromArray(attributes));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

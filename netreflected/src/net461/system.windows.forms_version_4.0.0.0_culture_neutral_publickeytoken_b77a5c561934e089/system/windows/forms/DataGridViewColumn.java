@@ -104,7 +104,7 @@ public class DataGridViewColumn extends DataGridViewBand  {
         }
     }
 
-    public DataGridViewColumn(Object instance) throws Throwable {
+    public DataGridViewColumn(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -124,7 +124,7 @@ public class DataGridViewColumn extends DataGridViewBand  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

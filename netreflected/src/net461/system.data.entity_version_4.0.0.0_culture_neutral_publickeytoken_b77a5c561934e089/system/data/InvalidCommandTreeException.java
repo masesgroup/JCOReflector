@@ -97,7 +97,7 @@ public class InvalidCommandTreeException extends DataException {
         super();
     }
 
-    public InvalidCommandTreeException(Object instance) {
+    public InvalidCommandTreeException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class InvalidCommandTreeException extends DataException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

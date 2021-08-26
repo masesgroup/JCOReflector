@@ -99,7 +99,7 @@ public class Vector3DAnimation extends Vector3DAnimationBase  {
         }
     }
 
-    public Vector3DAnimation(Object instance) throws Throwable {
+    public Vector3DAnimation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class Vector3DAnimation extends Vector3DAnimationBase  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

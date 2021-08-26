@@ -96,7 +96,7 @@ public class ExpandoObject extends NetObjectEnumerable implements system.dynamic
         }
     }
 
-    public ExpandoObject(Object instance) throws Throwable {
+    public ExpandoObject(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class ExpandoObject extends NetObjectEnumerable implements system.dynamic
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

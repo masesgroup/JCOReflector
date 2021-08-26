@@ -97,7 +97,7 @@ public class OptimisticConcurrencyException extends UpdateException {
         super();
     }
 
-    public OptimisticConcurrencyException(Object instance) {
+    public OptimisticConcurrencyException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class OptimisticConcurrencyException extends UpdateException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -97,7 +97,7 @@ public class Int16AnimationUsingKeyFrames extends Int16AnimationBase implements 
         }
     }
 
-    public Int16AnimationUsingKeyFrames(Object instance) throws Throwable {
+    public Int16AnimationUsingKeyFrames(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class Int16AnimationUsingKeyFrames extends Int16AnimationBase implements 
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

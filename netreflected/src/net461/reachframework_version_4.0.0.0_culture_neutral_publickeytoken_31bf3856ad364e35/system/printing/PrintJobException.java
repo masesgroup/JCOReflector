@@ -99,7 +99,7 @@ public class PrintJobException extends PrintSystemException {
         super();
     }
 
-    public PrintJobException(Object instance) {
+    public PrintJobException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -133,7 +133,7 @@ public class PrintJobException extends PrintSystemException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

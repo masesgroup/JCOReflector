@@ -107,7 +107,7 @@ public class SecurityException extends SystemException {
         super();
     }
 
-    public SecurityException(Object instance) {
+    public SecurityException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -141,7 +141,7 @@ public class SecurityException extends SystemException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

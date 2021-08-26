@@ -107,7 +107,7 @@ public class BamlLocalizationDictionaryEnumerator extends NetObject implements I
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

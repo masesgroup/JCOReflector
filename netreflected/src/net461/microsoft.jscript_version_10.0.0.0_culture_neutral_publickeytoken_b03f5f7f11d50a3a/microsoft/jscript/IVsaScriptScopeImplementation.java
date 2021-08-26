@@ -97,7 +97,7 @@ public class IVsaScriptScopeImplementation extends NetObject implements IVsaScri
         }
     }
 
-    public IVsaScriptScopeImplementation(Object instance) throws Throwable {
+    public IVsaScriptScopeImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class IVsaScriptScopeImplementation extends NetObject implements IVsaScri
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

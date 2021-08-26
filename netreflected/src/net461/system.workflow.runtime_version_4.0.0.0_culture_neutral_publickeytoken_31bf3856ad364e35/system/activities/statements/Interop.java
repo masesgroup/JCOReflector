@@ -102,7 +102,7 @@ public class Interop extends NativeActivity implements system.componentmodel.ICu
         }
     }
 
-    public Interop(Object instance) throws Throwable {
+    public Interop(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -122,7 +122,7 @@ public class Interop extends NativeActivity implements system.componentmodel.ICu
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

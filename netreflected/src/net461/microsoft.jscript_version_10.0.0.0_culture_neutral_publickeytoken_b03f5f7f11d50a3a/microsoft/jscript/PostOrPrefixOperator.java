@@ -93,7 +93,7 @@ public class PostOrPrefixOperator extends UnaryOp  {
         }
     }
 
-    public PostOrPrefixOperator(Object instance) throws Throwable {
+    public PostOrPrefixOperator(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class PostOrPrefixOperator extends UnaryOp  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -156,11 +156,11 @@ public class PostOrPrefixOperator extends UnaryOp  {
     
     // Methods section
     
-    public NetObject EvaluatePostOrPrefix(NetObject v) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotImplementedException, microsoft.jscript.JScriptException, microsoft.jscript.EndOfFile, system.MissingMethodException, system.OverflowException, system.FormatException, system.ArithmeticException {
+    public NetObject EvaluatePostOrPrefix(JCORefOut<NetObject> v) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotImplementedException, microsoft.jscript.JScriptException, microsoft.jscript.EndOfFile, system.MissingMethodException, system.OverflowException, system.FormatException, system.ArithmeticException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objEvaluatePostOrPrefix = (JCObject)classInstance.Invoke("EvaluatePostOrPrefix", v == null ? null : v.getJCOInstance());
+            JCObject objEvaluatePostOrPrefix = (JCObject)classInstance.Invoke("EvaluatePostOrPrefix", v.getJCRefOut());
             return new NetObject(objEvaluatePostOrPrefix);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

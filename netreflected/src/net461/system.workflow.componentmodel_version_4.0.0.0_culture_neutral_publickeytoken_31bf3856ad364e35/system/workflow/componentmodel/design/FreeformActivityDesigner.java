@@ -103,7 +103,7 @@ public class FreeformActivityDesigner extends CompositeActivityDesigner  {
         }
     }
 
-    public FreeformActivityDesigner(Object instance) throws Throwable {
+    public FreeformActivityDesigner(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -123,7 +123,7 @@ public class FreeformActivityDesigner extends CompositeActivityDesigner  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

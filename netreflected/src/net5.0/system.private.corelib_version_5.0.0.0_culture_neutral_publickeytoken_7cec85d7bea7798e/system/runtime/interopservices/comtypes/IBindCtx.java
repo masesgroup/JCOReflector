@@ -101,9 +101,9 @@ public interface IBindCtx extends IJCOBridgeReflected {
     /**
      * Returns the instantiated class
      * 
-     * @return An {@link Object} representing the instance of the instantiated Class
+     * @return An {@link java.lang.Object} representing the instance of the instantiated Class
      */
-    public Object getJCOInstance();
+    public java.lang.Object getJCOInstance();
 
     /**
      * Returns the instantiated class Type
@@ -118,7 +118,7 @@ public interface IBindCtx extends IJCOBridgeReflected {
 
     public void EnumObjectParam(JCORefOut<IEnumString> ppenum) throws Throwable;
 
-    public void GetBindOptions(BIND_OPTS pbindopts) throws Throwable;
+    public void GetBindOptions(JCORefOut<BIND_OPTS> pbindopts) throws Throwable;
 
     public void GetObjectParam(java.lang.String pszKey, JCORefOut<NetObject> ppunk) throws Throwable;
 
@@ -132,7 +132,7 @@ public interface IBindCtx extends IJCOBridgeReflected {
 
     public void RevokeObjectBound(NetObject punk) throws Throwable;
 
-    public void SetBindOptions(BIND_OPTS pbindopts) throws Throwable;
+    public void SetBindOptions(JCORefOut<BIND_OPTS> pbindopts) throws Throwable;
 
 
     

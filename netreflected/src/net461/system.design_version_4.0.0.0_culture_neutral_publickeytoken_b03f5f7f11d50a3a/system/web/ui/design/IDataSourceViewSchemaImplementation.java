@@ -96,7 +96,7 @@ public class IDataSourceViewSchemaImplementation extends NetObject implements ID
         }
     }
 
-    public IDataSourceViewSchemaImplementation(Object instance) throws Throwable {
+    public IDataSourceViewSchemaImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class IDataSourceViewSchemaImplementation extends NetObject implements ID
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -142,7 +142,7 @@ public class IDataSourceViewSchemaImplementation extends NetObject implements ID
         try {
             ArrayList<IDataSourceFieldSchema> resultingArrayList = new ArrayList<IDataSourceFieldSchema>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetFields");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IDataSourceFieldSchemaImplementation(resultingObject));
             }
             IDataSourceFieldSchema[] resultingArray = new IDataSourceFieldSchema[resultingArrayList.size()];
@@ -159,7 +159,7 @@ public class IDataSourceViewSchemaImplementation extends NetObject implements ID
         try {
             ArrayList<IDataSourceViewSchema> resultingArrayList = new ArrayList<IDataSourceViewSchema>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetChildren");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IDataSourceViewSchemaImplementation(resultingObject));
             }
             IDataSourceViewSchema[] resultingArray = new IDataSourceViewSchema[resultingArrayList.size()];

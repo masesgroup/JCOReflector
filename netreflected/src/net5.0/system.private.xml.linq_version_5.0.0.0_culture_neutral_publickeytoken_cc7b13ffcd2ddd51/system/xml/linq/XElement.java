@@ -111,7 +111,7 @@ public class XElement extends XContainer implements system.xml.serialization.IXm
         }
     }
 
-    public XElement(Object instance) throws Throwable {
+    public XElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class XElement extends XContainer implements system.xml.serialization.IXm
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -445,7 +445,7 @@ public class XElement extends XContainer implements system.xml.serialization.IXm
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("ReplaceAll", (Object)toObjectFromArray(content));
+            classInstance.Invoke("ReplaceAll", (java.lang.Object)toObjectFromArray(content));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -465,7 +465,7 @@ public class XElement extends XContainer implements system.xml.serialization.IXm
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("ReplaceAttributes", (Object)toObjectFromArray(content));
+            classInstance.Invoke("ReplaceAttributes", (java.lang.Object)toObjectFromArray(content));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

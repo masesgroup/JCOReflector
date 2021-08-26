@@ -94,7 +94,7 @@ public class _ParameterBuilderImplementation extends NetObject implements _Param
         }
     }
 
-    public _ParameterBuilderImplementation(Object instance) throws Throwable {
+    public _ParameterBuilderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class _ParameterBuilderImplementation extends NetObject implements _Param
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -96,7 +96,7 @@ public class Point3DKeyFrameCollection extends Freezable  {
         }
     }
 
-    public Point3DKeyFrameCollection(Object instance) throws Throwable {
+    public Point3DKeyFrameCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class Point3DKeyFrameCollection extends Freezable  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

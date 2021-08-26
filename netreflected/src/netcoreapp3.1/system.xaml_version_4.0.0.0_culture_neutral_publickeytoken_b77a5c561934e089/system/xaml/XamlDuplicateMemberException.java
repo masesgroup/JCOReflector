@@ -101,7 +101,7 @@ public class XamlDuplicateMemberException extends XamlException {
         super();
     }
 
-    public XamlDuplicateMemberException(Object instance) {
+    public XamlDuplicateMemberException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -135,7 +135,7 @@ public class XamlDuplicateMemberException extends XamlException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

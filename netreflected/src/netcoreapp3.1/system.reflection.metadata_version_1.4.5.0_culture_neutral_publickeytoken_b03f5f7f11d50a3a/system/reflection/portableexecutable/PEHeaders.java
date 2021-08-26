@@ -97,7 +97,7 @@ public class PEHeaders extends NetObject  {
         }
     }
 
-    public PEHeaders(Object instance) throws Throwable {
+    public PEHeaders(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class PEHeaders extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -180,7 +180,7 @@ public class PEHeaders extends NetObject  {
     
     // Methods section
     
-    public boolean TryGetDirectoryOffset(DirectoryEntry directory, JCORefOut offset) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.BadImageFormatException {
+    public boolean TryGetDirectoryOffset(DirectoryEntry directory, JCORefOut<java.util.concurrent.atomic.AtomicInteger> offset) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.BadImageFormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

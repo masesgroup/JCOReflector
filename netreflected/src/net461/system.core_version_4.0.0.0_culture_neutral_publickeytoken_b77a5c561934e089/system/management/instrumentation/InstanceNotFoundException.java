@@ -97,7 +97,7 @@ public class InstanceNotFoundException extends InstrumentationException {
         super();
     }
 
-    public InstanceNotFoundException(Object instance) {
+    public InstanceNotFoundException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class InstanceNotFoundException extends InstrumentationException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

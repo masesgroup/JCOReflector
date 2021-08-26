@@ -102,7 +102,7 @@ public class XmlCodeExporter extends CodeExporter  {
         }
     }
 
-    public XmlCodeExporter(Object instance) throws Throwable {
+    public XmlCodeExporter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -122,7 +122,7 @@ public class XmlCodeExporter extends CodeExporter  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -96,7 +96,7 @@ public class MetadataStringComparer extends ValueType  {
         }
     }
 
-    public MetadataStringComparer(Object instance) throws Throwable {
+    public MetadataStringComparer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class MetadataStringComparer extends ValueType  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

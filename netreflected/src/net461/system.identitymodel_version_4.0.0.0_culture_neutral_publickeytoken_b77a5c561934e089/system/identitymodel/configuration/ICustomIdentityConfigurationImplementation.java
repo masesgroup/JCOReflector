@@ -93,7 +93,7 @@ public class ICustomIdentityConfigurationImplementation extends NetObject implem
         }
     }
 
-    public ICustomIdentityConfigurationImplementation(Object instance) throws Throwable {
+    public ICustomIdentityConfigurationImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class ICustomIdentityConfigurationImplementation extends NetObject implem
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

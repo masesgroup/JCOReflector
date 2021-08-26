@@ -99,7 +99,7 @@ public class ThreadPool extends NetObject  {
         }
     }
 
-    public ThreadPool(Object instance) throws Throwable {
+    public ThreadPool(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class ThreadPool extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -298,7 +298,7 @@ public class ThreadPool extends NetObject  {
         }
     }
 
-    public static void GetAvailableThreads(JCORefOut workerThreads, JCORefOut completionPortThreads) throws Throwable {
+    public static void GetAvailableThreads(JCORefOut<java.util.concurrent.atomic.AtomicInteger> workerThreads, JCORefOut<java.util.concurrent.atomic.AtomicInteger> completionPortThreads) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -308,7 +308,7 @@ public class ThreadPool extends NetObject  {
         }
     }
 
-    public static void GetMaxThreads(JCORefOut workerThreads, JCORefOut completionPortThreads) throws Throwable {
+    public static void GetMaxThreads(JCORefOut<java.util.concurrent.atomic.AtomicInteger> workerThreads, JCORefOut<java.util.concurrent.atomic.AtomicInteger> completionPortThreads) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -318,7 +318,7 @@ public class ThreadPool extends NetObject  {
         }
     }
 
-    public static void GetMinThreads(JCORefOut workerThreads, JCORefOut completionPortThreads) throws Throwable {
+    public static void GetMinThreads(JCORefOut<java.util.concurrent.atomic.AtomicInteger> workerThreads, JCORefOut<java.util.concurrent.atomic.AtomicInteger> completionPortThreads) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {

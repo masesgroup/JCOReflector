@@ -95,7 +95,7 @@ public class DesignerVerbCollection extends CollectionBase  {
         }
     }
 
-    public DesignerVerbCollection(Object instance) throws Throwable {
+    public DesignerVerbCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class DesignerVerbCollection extends CollectionBase  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -154,7 +154,7 @@ public class DesignerVerbCollection extends CollectionBase  {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((Object)toObjectFromArray(value)));
+            setJCOInstance((JCObject)classType.NewObject((java.lang.Object)toObjectFromArray(value)));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,7 +198,7 @@ public class DesignerVerbCollection extends CollectionBase  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddRange", (Object)toObjectFromArray(value));
+            classInstance.Invoke("AddRange", (java.lang.Object)toObjectFromArray(value));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

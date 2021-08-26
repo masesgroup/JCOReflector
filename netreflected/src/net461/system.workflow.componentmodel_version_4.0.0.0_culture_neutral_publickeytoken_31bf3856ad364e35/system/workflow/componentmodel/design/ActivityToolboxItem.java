@@ -98,7 +98,7 @@ public class ActivityToolboxItem extends ToolboxItem  {
         }
     }
 
-    public ActivityToolboxItem(Object instance) throws Throwable {
+    public ActivityToolboxItem(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class ActivityToolboxItem extends ToolboxItem  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -173,7 +173,7 @@ public class ActivityToolboxItem extends ToolboxItem  {
         try {
             ArrayList<IComponent> resultingArrayList = new ArrayList<IComponent>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("CreateComponentsWithUI", host == null ? null : host.getJCOInstance());
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new IComponentImplementation(resultingObject));
             }
             IComponent[] resultingArray = new IComponent[resultingArrayList.size()];

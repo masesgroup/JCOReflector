@@ -108,7 +108,7 @@ public class WindowInteractionState extends NetObject  {
         }
     }
 
-    public WindowInteractionState(Object instance) {
+    public WindowInteractionState(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class WindowInteractionState extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

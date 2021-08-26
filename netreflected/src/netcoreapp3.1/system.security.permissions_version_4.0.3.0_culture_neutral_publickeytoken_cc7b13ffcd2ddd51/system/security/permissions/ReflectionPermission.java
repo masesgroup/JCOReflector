@@ -98,7 +98,7 @@ public class ReflectionPermission extends CodeAccessPermission  {
         }
     }
 
-    public ReflectionPermission(Object instance) throws Throwable {
+    public ReflectionPermission(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class ReflectionPermission extends CodeAccessPermission  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

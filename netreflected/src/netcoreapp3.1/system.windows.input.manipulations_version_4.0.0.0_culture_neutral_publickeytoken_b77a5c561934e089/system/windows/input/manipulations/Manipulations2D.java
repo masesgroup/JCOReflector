@@ -108,7 +108,7 @@ public class Manipulations2D extends NetObject  {
         }
     }
 
-    public Manipulations2D(Object instance) {
+    public Manipulations2D(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class Manipulations2D extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

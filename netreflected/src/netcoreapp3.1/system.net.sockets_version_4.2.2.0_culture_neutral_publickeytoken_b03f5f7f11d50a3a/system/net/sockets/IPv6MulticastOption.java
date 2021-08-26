@@ -93,7 +93,7 @@ public class IPv6MulticastOption extends NetObject  {
         }
     }
 
-    public IPv6MulticastOption(Object instance) throws Throwable {
+    public IPv6MulticastOption(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class IPv6MulticastOption extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

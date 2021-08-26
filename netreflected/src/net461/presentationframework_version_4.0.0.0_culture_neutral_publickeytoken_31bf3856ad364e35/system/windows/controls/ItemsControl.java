@@ -109,7 +109,7 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
         }
     }
 
-    public ItemsControl(Object instance) throws Throwable {
+    public ItemsControl(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -129,7 +129,7 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

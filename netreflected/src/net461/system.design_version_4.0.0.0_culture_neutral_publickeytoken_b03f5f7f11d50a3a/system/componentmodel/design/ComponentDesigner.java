@@ -102,7 +102,7 @@ public class ComponentDesigner extends NetObject implements system.componentmode
         }
     }
 
-    public ComponentDesigner(Object instance) throws Throwable {
+    public ComponentDesigner(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -122,7 +122,7 @@ public class ComponentDesigner extends NetObject implements system.componentmode
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

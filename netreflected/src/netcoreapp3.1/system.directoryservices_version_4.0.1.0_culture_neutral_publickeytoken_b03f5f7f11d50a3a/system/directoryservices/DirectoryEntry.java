@@ -100,7 +100,7 @@ public class DirectoryEntry extends Component  {
         }
     }
 
-    public DirectoryEntry(Object instance) throws Throwable {
+    public DirectoryEntry(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class DirectoryEntry extends Component  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -327,7 +327,7 @@ public class DirectoryEntry extends Component  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("RefreshCache", (Object)propertyNames);
+            classInstance.Invoke("RefreshCache", (java.lang.Object)propertyNames);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -337,7 +337,7 @@ public class DirectoryEntry extends Component  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("RefreshCache", (Object)dupParam0.getJCRefOut());
+            classInstance.Invoke("RefreshCache", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

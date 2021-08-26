@@ -96,7 +96,7 @@ public class SessionStateItemExpireCallback extends JCVoidDelegate implements IJ
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return this;
     }
 
@@ -104,7 +104,7 @@ public class SessionStateItemExpireCallback extends JCVoidDelegate implements IJ
         return classType;
     }
 
-    public final void EventRaised(Object... argsFromJCOBridge) {
+    public final void EventRaised(java.lang.Object... argsFromJCOBridge) {
         try
         {
             java.lang.String id = argsFromJCOBridge[0] == null ? null : (java.lang.String)argsFromJCOBridge[0];
@@ -123,7 +123,7 @@ public class SessionStateItemExpireCallback extends JCVoidDelegate implements IJ
         }
     }
 
-    public final void DelegateInvoked(Object... argsFromJCOBridge) {
+    public final void DelegateInvoked(java.lang.Object... argsFromJCOBridge) {
         try
         {
             java.lang.String id = argsFromJCOBridge[0] == null ? null : (java.lang.String)argsFromJCOBridge[0];
@@ -151,7 +151,7 @@ public class SessionStateItemExpireCallback extends JCVoidDelegate implements IJ
         callerInstance = instance;
     }
 
-    public SessionStateItemExpireCallback(Object instance) throws Throwable {
+    public SessionStateItemExpireCallback(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         if (instance == null) throw new IllegalArgumentException("Instance cannot be null");
         if (instance instanceof ISessionStateItemExpireCallback) {
@@ -163,7 +163,7 @@ public class SessionStateItemExpireCallback extends JCVoidDelegate implements IJ
                     String.format("Class %s is not supported.", instance.getClass().getTypeName()));
     }
 
-    protected final static <T extends IJCOBridgeReflected> Object toObjectFromArray(T[] input) {
+    protected final static <T extends IJCOBridgeReflected> java.lang.Object toObjectFromArray(T[] input) {
         return JCOBridgeInstance.toObjectFromArray(input);
     }
 

@@ -102,7 +102,7 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
         }
     }
 
-    public BinaryWriter(Object instance) throws Throwable {
+    public BinaryWriter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -122,7 +122,7 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -260,7 +260,7 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Write", (Object)buffer);
+            classInstance.Invoke("Write", (java.lang.Object)buffer);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -270,7 +270,7 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Write", (Object)dupParam0.getJCRefOut());
+            classInstance.Invoke("Write", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -310,7 +310,7 @@ public class BinaryWriter extends NetObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Write", (Object)chars);
+            classInstance.Invoke("Write", (java.lang.Object)chars);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

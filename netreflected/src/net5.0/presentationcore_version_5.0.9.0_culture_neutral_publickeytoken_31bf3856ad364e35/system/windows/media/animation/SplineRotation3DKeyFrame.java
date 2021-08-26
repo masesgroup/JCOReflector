@@ -96,7 +96,7 @@ public class SplineRotation3DKeyFrame extends Rotation3DKeyFrame  {
         }
     }
 
-    public SplineRotation3DKeyFrame(Object instance) throws Throwable {
+    public SplineRotation3DKeyFrame(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class SplineRotation3DKeyFrame extends Rotation3DKeyFrame  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

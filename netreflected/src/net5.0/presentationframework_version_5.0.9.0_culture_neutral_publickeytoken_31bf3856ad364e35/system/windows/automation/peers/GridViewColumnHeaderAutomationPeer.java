@@ -97,7 +97,7 @@ public class GridViewColumnHeaderAutomationPeer extends FrameworkElementAutomati
         }
     }
 
-    public GridViewColumnHeaderAutomationPeer(Object instance) throws Throwable {
+    public GridViewColumnHeaderAutomationPeer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class GridViewColumnHeaderAutomationPeer extends FrameworkElementAutomati
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

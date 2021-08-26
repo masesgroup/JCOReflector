@@ -103,7 +103,7 @@ public class Font extends MarshalByRefObject implements system.runtime.serializa
         }
     }
 
-    public Font(Object instance) throws Throwable {
+    public Font(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -123,7 +123,7 @@ public class Font extends MarshalByRefObject implements system.runtime.serializa
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

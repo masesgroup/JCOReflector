@@ -99,7 +99,7 @@ public class MsmqPoisonMessageException extends PoisonMessageException {
         super();
     }
 
-    public MsmqPoisonMessageException(Object instance) {
+    public MsmqPoisonMessageException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -133,7 +133,7 @@ public class MsmqPoisonMessageException extends PoisonMessageException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

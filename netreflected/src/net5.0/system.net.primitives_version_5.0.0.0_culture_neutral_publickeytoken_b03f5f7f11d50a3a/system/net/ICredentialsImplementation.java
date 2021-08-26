@@ -94,7 +94,7 @@ public class ICredentialsImplementation extends NetObject implements ICredential
         }
     }
 
-    public ICredentialsImplementation(Object instance) throws Throwable {
+    public ICredentialsImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class ICredentialsImplementation extends NetObject implements ICredential
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -97,7 +97,7 @@ public class BadRequestException extends RequestException {
         super();
     }
 
-    public BadRequestException(Object instance) {
+    public BadRequestException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class BadRequestException extends RequestException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -97,7 +97,7 @@ public class IPermissionImplementation extends NetObject implements IPermission 
         }
     }
 
-    public IPermissionImplementation(Object instance) throws Throwable {
+    public IPermissionImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class IPermissionImplementation extends NetObject implements IPermission 
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

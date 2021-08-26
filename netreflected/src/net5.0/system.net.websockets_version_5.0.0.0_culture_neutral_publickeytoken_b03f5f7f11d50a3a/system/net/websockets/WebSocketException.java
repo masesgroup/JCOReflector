@@ -100,7 +100,7 @@ public class WebSocketException extends Win32Exception {
         super();
     }
 
-    public WebSocketException(Object instance) {
+    public WebSocketException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -134,7 +134,7 @@ public class WebSocketException extends Win32Exception {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

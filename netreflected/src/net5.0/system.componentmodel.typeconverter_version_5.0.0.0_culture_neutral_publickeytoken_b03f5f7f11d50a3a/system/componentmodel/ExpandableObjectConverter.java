@@ -97,7 +97,7 @@ public class ExpandableObjectConverter extends TypeConverter  {
         }
     }
 
-    public ExpandableObjectConverter(Object instance) throws Throwable {
+    public ExpandableObjectConverter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class ExpandableObjectConverter extends TypeConverter  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

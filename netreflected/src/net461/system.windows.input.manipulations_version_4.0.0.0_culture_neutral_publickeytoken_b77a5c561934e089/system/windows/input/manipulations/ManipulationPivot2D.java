@@ -94,7 +94,7 @@ public class ManipulationPivot2D extends ManipulationParameters2D  {
         }
     }
 
-    public ManipulationPivot2D(Object instance) throws Throwable {
+    public ManipulationPivot2D(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class ManipulationPivot2D extends ManipulationParameters2D  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

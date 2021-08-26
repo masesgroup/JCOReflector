@@ -108,7 +108,7 @@ public class D3DResourceType extends NetObject  {
         }
     }
 
-    public D3DResourceType(Object instance) {
+    public D3DResourceType(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class D3DResourceType extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

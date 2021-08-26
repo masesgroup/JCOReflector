@@ -96,7 +96,7 @@ public class NetTcpSecurityElement extends ServiceModelConfigurationElement  {
         }
     }
 
-    public NetTcpSecurityElement(Object instance) throws Throwable {
+    public NetTcpSecurityElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class NetTcpSecurityElement extends ServiceModelConfigurationElement  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

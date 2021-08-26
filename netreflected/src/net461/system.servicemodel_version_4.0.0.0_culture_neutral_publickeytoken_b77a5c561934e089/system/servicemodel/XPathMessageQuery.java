@@ -96,7 +96,7 @@ public class XPathMessageQuery extends MessageQuery  {
         }
     }
 
-    public XPathMessageQuery(Object instance) throws Throwable {
+    public XPathMessageQuery(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class XPathMessageQuery extends MessageQuery  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

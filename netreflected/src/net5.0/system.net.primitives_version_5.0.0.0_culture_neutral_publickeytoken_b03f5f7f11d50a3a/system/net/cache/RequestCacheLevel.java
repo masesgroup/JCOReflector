@@ -108,7 +108,7 @@ public class RequestCacheLevel extends NetObject  {
         }
     }
 
-    public RequestCacheLevel(Object instance) {
+    public RequestCacheLevel(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class RequestCacheLevel extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

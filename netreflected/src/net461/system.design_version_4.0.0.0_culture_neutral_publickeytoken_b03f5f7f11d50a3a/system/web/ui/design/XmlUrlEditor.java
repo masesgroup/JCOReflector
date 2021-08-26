@@ -93,7 +93,7 @@ public class XmlUrlEditor extends UrlEditor  {
         }
     }
 
-    public XmlUrlEditor(Object instance) throws Throwable {
+    public XmlUrlEditor(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class XmlUrlEditor extends UrlEditor  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

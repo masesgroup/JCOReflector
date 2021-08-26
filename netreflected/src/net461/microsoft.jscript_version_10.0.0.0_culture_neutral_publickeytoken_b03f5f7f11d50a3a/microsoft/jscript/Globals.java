@@ -93,7 +93,7 @@ public class Globals extends NetObject  {
         }
     }
 
-    public Globals(Object instance) throws Throwable {
+    public Globals(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class Globals extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -150,7 +150,7 @@ public class Globals extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objConstructArray = (JCObject)classType.Invoke("ConstructArray", (Object)toObjectFromArray(args));
+            JCObject objConstructArray = (JCObject)classType.Invoke("ConstructArray", (java.lang.Object)toObjectFromArray(args));
             return new ArrayObject(objConstructArray);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -161,7 +161,7 @@ public class Globals extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objConstructArrayLiteral = (JCObject)classType.Invoke("ConstructArrayLiteral", (Object)toObjectFromArray(args));
+            JCObject objConstructArrayLiteral = (JCObject)classType.Invoke("ConstructArrayLiteral", (java.lang.Object)toObjectFromArray(args));
             return new ArrayObject(objConstructArrayLiteral);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

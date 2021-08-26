@@ -97,7 +97,7 @@ public class MsmqException extends ExternalException {
         super();
     }
 
-    public MsmqException(Object instance) {
+    public MsmqException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class MsmqException extends ExternalException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

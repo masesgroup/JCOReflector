@@ -94,7 +94,7 @@ public class DbGeometry extends NetObject  {
         }
     }
 
-    public DbGeometry(Object instance) throws Throwable {
+    public DbGeometry(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class DbGeometry extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -241,9 +241,9 @@ public class DbGeometry extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("AsBinary");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -282,7 +282,7 @@ public class DbGeometry extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objFromBinary = (JCObject)classType.Invoke("FromBinary", (Object)wellKnownBinary);
+            JCObject objFromBinary = (JCObject)classType.Invoke("FromBinary", (java.lang.Object)wellKnownBinary);
             return new DbGeometry(objFromBinary);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -293,7 +293,7 @@ public class DbGeometry extends NetObject  {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objFromBinary = (JCObject)classType.Invoke("FromBinary", (Object)dupParam0.getJCRefOut());
+            JCObject objFromBinary = (JCObject)classType.Invoke("FromBinary", (java.lang.Object)dupParam0.getJCRefOut());
             return new DbGeometry(objFromBinary);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

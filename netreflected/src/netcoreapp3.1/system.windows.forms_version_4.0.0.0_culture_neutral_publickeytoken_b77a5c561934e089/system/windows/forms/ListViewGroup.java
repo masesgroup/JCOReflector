@@ -98,7 +98,7 @@ public class ListViewGroup extends NetObject implements system.runtime.serializa
         }
     }
 
-    public ListViewGroup(Object instance) throws Throwable {
+    public ListViewGroup(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class ListViewGroup extends NetObject implements system.runtime.serializa
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

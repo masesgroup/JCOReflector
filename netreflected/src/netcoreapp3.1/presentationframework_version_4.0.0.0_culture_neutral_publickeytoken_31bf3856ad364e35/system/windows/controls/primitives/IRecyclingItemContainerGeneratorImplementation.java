@@ -101,7 +101,7 @@ public class IRecyclingItemContainerGeneratorImplementation extends NetObject im
         }
     }
 
-    public IRecyclingItemContainerGeneratorImplementation(Object instance) throws Throwable {
+    public IRecyclingItemContainerGeneratorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -121,7 +121,7 @@ public class IRecyclingItemContainerGeneratorImplementation extends NetObject im
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -206,7 +206,7 @@ public class IRecyclingItemContainerGeneratorImplementation extends NetObject im
         }
     }
 
-    public DependencyObject GenerateNext(JCORefOut isNewlyRealized) throws Throwable {
+    public DependencyObject GenerateNext(JCORefOut<java.util.concurrent.atomic.AtomicBoolean> isNewlyRealized) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

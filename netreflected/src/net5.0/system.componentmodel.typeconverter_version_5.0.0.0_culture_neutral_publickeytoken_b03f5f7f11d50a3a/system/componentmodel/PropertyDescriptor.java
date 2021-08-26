@@ -98,7 +98,7 @@ public class PropertyDescriptor extends MemberDescriptor  {
         }
     }
 
-    public PropertyDescriptor(Object instance) throws Throwable {
+    public PropertyDescriptor(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -118,7 +118,7 @@ public class PropertyDescriptor extends MemberDescriptor  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -184,7 +184,7 @@ public class PropertyDescriptor extends MemberDescriptor  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetChildProperties = (JCObject)classInstance.Invoke("GetChildProperties", (Object)toObjectFromArray(filter));
+            JCObject objGetChildProperties = (JCObject)classInstance.Invoke("GetChildProperties", (java.lang.Object)toObjectFromArray(filter));
             return new PropertyDescriptorCollection(objGetChildProperties);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -96,7 +96,7 @@ public class MenuItem extends NetObject implements system.ICloneable {
         }
     }
 
-    public MenuItem(Object instance) throws Throwable {
+    public MenuItem(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class MenuItem extends NetObject implements system.ICloneable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -105,7 +105,7 @@ public class TextWriter extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public TextWriter(Object instance) throws Throwable {
+    public TextWriter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -125,7 +125,7 @@ public class TextWriter extends MarshalByRefObject implements AutoCloseable {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -193,7 +193,7 @@ public class TextWriter extends MarshalByRefObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objWriteAsync = (JCObject)classInstance.Invoke("WriteAsync", (Object)buffer);
+            JCObject objWriteAsync = (JCObject)classInstance.Invoke("WriteAsync", (java.lang.Object)buffer);
             return new Task(objWriteAsync);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -204,7 +204,7 @@ public class TextWriter extends MarshalByRefObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objWriteAsync = (JCObject)classInstance.Invoke("WriteAsync", (Object)dupParam0.getJCRefOut());
+            JCObject objWriteAsync = (JCObject)classInstance.Invoke("WriteAsync", (java.lang.Object)dupParam0.getJCRefOut());
             return new Task(objWriteAsync);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -281,7 +281,7 @@ public class TextWriter extends MarshalByRefObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objWriteLineAsync = (JCObject)classInstance.Invoke("WriteLineAsync", (Object)buffer);
+            JCObject objWriteLineAsync = (JCObject)classInstance.Invoke("WriteLineAsync", (java.lang.Object)buffer);
             return new Task(objWriteLineAsync);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -292,7 +292,7 @@ public class TextWriter extends MarshalByRefObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objWriteLineAsync = (JCObject)classInstance.Invoke("WriteLineAsync", (Object)dupParam0.getJCRefOut());
+            JCObject objWriteLineAsync = (JCObject)classInstance.Invoke("WriteLineAsync", (java.lang.Object)dupParam0.getJCRefOut());
             return new Task(objWriteLineAsync);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -408,7 +408,7 @@ public class TextWriter extends MarshalByRefObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Write", (Object)buffer);
+            classInstance.Invoke("Write", (java.lang.Object)buffer);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -418,7 +418,7 @@ public class TextWriter extends MarshalByRefObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Write", (Object)dupParam0.getJCRefOut());
+            classInstance.Invoke("Write", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -618,7 +618,7 @@ public class TextWriter extends MarshalByRefObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("WriteLine", (Object)buffer);
+            classInstance.Invoke("WriteLine", (java.lang.Object)buffer);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -628,7 +628,7 @@ public class TextWriter extends MarshalByRefObject implements AutoCloseable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("WriteLine", (Object)dupParam0.getJCRefOut());
+            classInstance.Invoke("WriteLine", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

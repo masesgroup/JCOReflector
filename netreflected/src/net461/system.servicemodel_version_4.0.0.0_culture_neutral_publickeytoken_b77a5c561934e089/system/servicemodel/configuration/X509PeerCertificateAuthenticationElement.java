@@ -97,7 +97,7 @@ public class X509PeerCertificateAuthenticationElement extends ConfigurationEleme
         }
     }
 
-    public X509PeerCertificateAuthenticationElement(Object instance) throws Throwable {
+    public X509PeerCertificateAuthenticationElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class X509PeerCertificateAuthenticationElement extends ConfigurationEleme
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

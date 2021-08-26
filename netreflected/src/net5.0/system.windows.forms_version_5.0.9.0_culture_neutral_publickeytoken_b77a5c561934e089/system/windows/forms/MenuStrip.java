@@ -96,7 +96,7 @@ public class MenuStrip extends ToolStrip  {
         }
     }
 
-    public MenuStrip(Object instance) throws Throwable {
+    public MenuStrip(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class MenuStrip extends ToolStrip  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

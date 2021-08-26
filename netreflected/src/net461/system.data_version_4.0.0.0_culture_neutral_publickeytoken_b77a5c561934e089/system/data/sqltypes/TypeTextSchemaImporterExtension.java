@@ -93,7 +93,7 @@ public class TypeTextSchemaImporterExtension extends SqlTypesSchemaImporterExten
         }
     }
 
-    public TypeTextSchemaImporterExtension(Object instance) throws Throwable {
+    public TypeTextSchemaImporterExtension(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class TypeTextSchemaImporterExtension extends SqlTypesSchemaImporterExten
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

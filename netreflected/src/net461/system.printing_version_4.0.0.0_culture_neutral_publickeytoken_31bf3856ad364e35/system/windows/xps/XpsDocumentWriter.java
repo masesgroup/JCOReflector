@@ -101,7 +101,7 @@ public class XpsDocumentWriter extends SerializerWriter  {
         }
     }
 
-    public XpsDocumentWriter(Object instance) throws Throwable {
+    public XpsDocumentWriter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -121,7 +121,7 @@ public class XpsDocumentWriter extends SerializerWriter  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

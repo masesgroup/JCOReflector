@@ -108,7 +108,7 @@ public class XmlSchemaUse extends NetObject  {
         }
     }
 
-    public XmlSchemaUse(Object instance) {
+    public XmlSchemaUse(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class XmlSchemaUse extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

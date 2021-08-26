@@ -108,7 +108,7 @@ public class AuthenticationLevel extends NetObject  {
         }
     }
 
-    public AuthenticationLevel(Object instance) {
+    public AuthenticationLevel(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class AuthenticationLevel extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

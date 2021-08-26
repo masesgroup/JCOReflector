@@ -96,9 +96,9 @@ public interface IApplicationPreloadUtil extends IJCOBridgeReflected {
     /**
      * Returns the instantiated class
      * 
-     * @return An {@link Object} representing the instance of the instantiated Class
+     * @return An {@link java.lang.Object} representing the instance of the instantiated Class
      */
-    public Object getJCOInstance();
+    public java.lang.Object getJCOInstance();
 
     /**
      * Returns the instantiated class Type
@@ -109,7 +109,7 @@ public interface IApplicationPreloadUtil extends IJCOBridgeReflected {
 
     // Methods section
     
-    public void GetApplicationPreloadInfo(java.lang.String context, JCORefOut enabled, JCORefOut startupObjType, JCORefOut parametersForStartupObj) throws Throwable;
+    public void GetApplicationPreloadInfo(java.lang.String context, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> enabled, JCORefOut startupObjType, JCORefOut parametersForStartupObj) throws Throwable;
 
     public void ReportApplicationPreloadFailure(java.lang.String context, int errorCode, java.lang.String errorMessage) throws Throwable;
 

@@ -95,7 +95,7 @@ public class IMenuEditorServiceImplementation extends NetObject implements IMenu
         }
     }
 
-    public IMenuEditorServiceImplementation(Object instance) throws Throwable {
+    public IMenuEditorServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class IMenuEditorServiceImplementation extends NetObject implements IMenu
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -145,11 +145,11 @@ public class IMenuEditorServiceImplementation extends NetObject implements IMenu
         }
     }
 
-    public boolean MessageFilter(Message m) throws Throwable {
+    public boolean MessageFilter(JCORefOut<Message> m) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("MessageFilter", m == null ? null : m.getJCOInstance());
+            return (boolean)classInstance.Invoke("MessageFilter", m.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

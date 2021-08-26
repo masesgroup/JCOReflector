@@ -97,7 +97,7 @@ public class EasingVector3DKeyFrame extends Vector3DKeyFrame  {
         }
     }
 
-    public EasingVector3DKeyFrame(Object instance) throws Throwable {
+    public EasingVector3DKeyFrame(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class EasingVector3DKeyFrame extends Vector3DKeyFrame  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

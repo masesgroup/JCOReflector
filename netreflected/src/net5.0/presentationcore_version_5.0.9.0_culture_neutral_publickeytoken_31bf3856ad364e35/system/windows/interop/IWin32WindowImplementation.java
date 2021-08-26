@@ -92,7 +92,7 @@ public class IWin32WindowImplementation extends NetObject implements IWin32Windo
         }
     }
 
-    public IWin32WindowImplementation(Object instance) throws Throwable {
+    public IWin32WindowImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class IWin32WindowImplementation extends NetObject implements IWin32Windo
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

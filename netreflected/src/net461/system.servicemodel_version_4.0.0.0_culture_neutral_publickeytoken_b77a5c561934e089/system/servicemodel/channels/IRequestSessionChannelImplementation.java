@@ -107,7 +107,7 @@ public class IRequestSessionChannelImplementation extends NetObject implements I
         }
     }
 
-    public IRequestSessionChannelImplementation(Object instance) throws Throwable {
+    public IRequestSessionChannelImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -127,7 +127,7 @@ public class IRequestSessionChannelImplementation extends NetObject implements I
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

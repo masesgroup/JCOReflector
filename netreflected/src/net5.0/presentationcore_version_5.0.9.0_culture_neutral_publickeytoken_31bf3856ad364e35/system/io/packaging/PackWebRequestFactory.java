@@ -96,7 +96,7 @@ public class PackWebRequestFactory extends NetObject implements system.net.IWebR
         }
     }
 
-    public PackWebRequestFactory(Object instance) throws Throwable {
+    public PackWebRequestFactory(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class PackWebRequestFactory extends NetObject implements system.net.IWebR
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

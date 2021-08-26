@@ -93,7 +93,7 @@ public class IMemoryCacheManagerImplementation extends NetObject implements IMem
         }
     }
 
-    public IMemoryCacheManagerImplementation(Object instance) throws Throwable {
+    public IMemoryCacheManagerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class IMemoryCacheManagerImplementation extends NetObject implements IMem
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

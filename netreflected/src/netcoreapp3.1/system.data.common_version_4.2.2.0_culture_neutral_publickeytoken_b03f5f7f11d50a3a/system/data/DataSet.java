@@ -128,7 +128,7 @@ public class DataSet extends MarshalByValueComponent  {
         }
     }
 
-    public DataSet(Object instance) throws Throwable {
+    public DataSet(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -148,7 +148,7 @@ public class DataSet extends MarshalByValueComponent  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -276,7 +276,7 @@ public class DataSet extends MarshalByValueComponent  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateDataReader = (JCObject)classInstance.Invoke("CreateDataReader", (Object)toObjectFromArray(dataTables));
+            JCObject objCreateDataReader = (JCObject)classInstance.Invoke("CreateDataReader", (java.lang.Object)toObjectFromArray(dataTables));
             return new DataTableReader(objCreateDataReader);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -576,7 +576,7 @@ public class DataSet extends MarshalByValueComponent  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Merge", (Object)toObjectFromArray(rows));
+            classInstance.Invoke("Merge", (java.lang.Object)toObjectFromArray(rows));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

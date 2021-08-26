@@ -108,7 +108,7 @@ public class HostNameComparisonMode extends NetObject  {
         }
     }
 
-    public HostNameComparisonMode(Object instance) {
+    public HostNameComparisonMode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class HostNameComparisonMode extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

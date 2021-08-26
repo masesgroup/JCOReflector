@@ -100,7 +100,7 @@ public class Vector3 extends ValueType  {
         }
     }
 
-    public Vector3(Object instance) throws Throwable {
+    public Vector3(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class Vector3 extends ValueType  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -492,7 +492,7 @@ public class Vector3 extends ValueType  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("CopyTo", (Object)toObjectFromArray(array));
+            classInstance.Invoke("CopyTo", (java.lang.Object)toObjectFromArray(array));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

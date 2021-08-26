@@ -104,7 +104,7 @@ public class PrintServer extends PrintSystemObject  {
         }
     }
 
-    public PrintServer(Object instance) throws Throwable {
+    public PrintServer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -124,7 +124,7 @@ public class PrintServer extends PrintSystemObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -389,7 +389,7 @@ public class PrintServer extends PrintSystemObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetPrintQueues = (JCObject)classInstance.Invoke("GetPrintQueues", (Object)toObjectFromArray(enumerationFlag));
+            JCObject objGetPrintQueues = (JCObject)classInstance.Invoke("GetPrintQueues", (java.lang.Object)toObjectFromArray(enumerationFlag));
             return new PrintQueueCollection(objGetPrintQueues);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -400,7 +400,7 @@ public class PrintServer extends PrintSystemObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetPrintQueues = (JCObject)classInstance.Invoke("GetPrintQueues", (Object)toObjectFromArray(propertiesFilter));
+            JCObject objGetPrintQueues = (JCObject)classInstance.Invoke("GetPrintQueues", (java.lang.Object)toObjectFromArray(propertiesFilter));
             return new PrintQueueCollection(objGetPrintQueues);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -422,7 +422,7 @@ public class PrintServer extends PrintSystemObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetPrintQueues = (JCObject)classInstance.Invoke("GetPrintQueues", (Object)propertiesFilter);
+            JCObject objGetPrintQueues = (JCObject)classInstance.Invoke("GetPrintQueues", (java.lang.Object)propertiesFilter);
             return new PrintQueueCollection(objGetPrintQueues);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -433,7 +433,7 @@ public class PrintServer extends PrintSystemObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetPrintQueues = (JCObject)classInstance.Invoke("GetPrintQueues", (Object)dupParam0.getJCRefOut());
+            JCObject objGetPrintQueues = (JCObject)classInstance.Invoke("GetPrintQueues", (java.lang.Object)dupParam0.getJCRefOut());
             return new PrintQueueCollection(objGetPrintQueues);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

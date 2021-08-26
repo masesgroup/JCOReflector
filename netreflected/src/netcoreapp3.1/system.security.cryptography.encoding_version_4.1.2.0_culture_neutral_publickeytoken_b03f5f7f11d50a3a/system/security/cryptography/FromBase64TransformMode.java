@@ -108,7 +108,7 @@ public class FromBase64TransformMode extends NetObject  {
         }
     }
 
-    public FromBase64TransformMode(Object instance) {
+    public FromBase64TransformMode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class FromBase64TransformMode extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

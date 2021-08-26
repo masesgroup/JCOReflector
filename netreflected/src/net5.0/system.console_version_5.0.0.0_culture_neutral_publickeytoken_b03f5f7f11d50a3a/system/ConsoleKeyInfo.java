@@ -96,7 +96,7 @@ public class ConsoleKeyInfo extends ValueType  {
         }
     }
 
-    public ConsoleKeyInfo(Object instance) throws Throwable {
+    public ConsoleKeyInfo(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class ConsoleKeyInfo extends ValueType  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

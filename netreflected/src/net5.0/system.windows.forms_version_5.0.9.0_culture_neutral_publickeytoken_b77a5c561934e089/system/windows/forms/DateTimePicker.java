@@ -104,7 +104,7 @@ public class DateTimePicker extends Control  {
         }
     }
 
-    public DateTimePicker(Object instance) throws Throwable {
+    public DateTimePicker(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -124,7 +124,7 @@ public class DateTimePicker extends Control  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

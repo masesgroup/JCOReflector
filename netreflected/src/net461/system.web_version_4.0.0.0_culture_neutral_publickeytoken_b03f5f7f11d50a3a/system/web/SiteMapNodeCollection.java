@@ -100,7 +100,7 @@ public class SiteMapNodeCollection extends NetObjectEnumerable  {
         }
     }
 
-    public SiteMapNodeCollection(Object instance) throws Throwable {
+    public SiteMapNodeCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class SiteMapNodeCollection extends NetObjectEnumerable  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -179,7 +179,7 @@ public class SiteMapNodeCollection extends NetObjectEnumerable  {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((Object)toObjectFromArray(value)));
+            setJCOInstance((JCObject)classType.NewObject((java.lang.Object)toObjectFromArray(value)));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -277,7 +277,7 @@ public class SiteMapNodeCollection extends NetObjectEnumerable  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddRange", (Object)toObjectFromArray(value));
+            classInstance.Invoke("AddRange", (java.lang.Object)toObjectFromArray(value));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -94,7 +94,7 @@ public class GroupBoxAutomationPeer extends FrameworkElementAutomationPeer  {
         }
     }
 
-    public GroupBoxAutomationPeer(Object instance) throws Throwable {
+    public GroupBoxAutomationPeer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -114,7 +114,7 @@ public class GroupBoxAutomationPeer extends FrameworkElementAutomationPeer  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

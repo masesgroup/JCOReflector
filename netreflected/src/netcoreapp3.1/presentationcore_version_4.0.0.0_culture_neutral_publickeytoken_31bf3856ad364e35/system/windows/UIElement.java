@@ -137,7 +137,7 @@ public class UIElement extends Visual  {
         }
     }
 
-    public UIElement(Object instance) throws Throwable {
+    public UIElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -157,7 +157,7 @@ public class UIElement extends Visual  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

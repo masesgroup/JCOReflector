@@ -100,7 +100,7 @@ public class GeneralTransform extends Animatable implements system.IFormattable 
         }
     }
 
-    public GeneralTransform(Object instance) throws Throwable {
+    public GeneralTransform(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -120,7 +120,7 @@ public class GeneralTransform extends Animatable implements system.IFormattable 
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -103,9 +103,9 @@ public interface IItemContainerGenerator extends IJCOBridgeReflected {
     /**
      * Returns the instantiated class
      * 
-     * @return An {@link Object} representing the instance of the instantiated Class
+     * @return An {@link java.lang.Object} representing the instance of the instantiated Class
      */
-    public Object getJCOInstance();
+    public java.lang.Object getJCOInstance();
 
     /**
      * Returns the instantiated class Type
@@ -128,7 +128,7 @@ public interface IItemContainerGenerator extends IJCOBridgeReflected {
 
     public DependencyObject GenerateNext() throws Throwable;
 
-    public DependencyObject GenerateNext(JCORefOut isNewlyRealized) throws Throwable;
+    public DependencyObject GenerateNext(JCORefOut<java.util.concurrent.atomic.AtomicBoolean> isNewlyRealized) throws Throwable;
 
     public void PrepareItemContainer(DependencyObject container) throws Throwable;
 

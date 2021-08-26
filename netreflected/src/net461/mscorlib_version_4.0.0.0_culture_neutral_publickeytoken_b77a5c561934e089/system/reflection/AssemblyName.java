@@ -105,7 +105,7 @@ public class AssemblyName extends NetObject  {
         }
     }
 
-    public AssemblyName(Object instance) throws Throwable {
+    public AssemblyName(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -125,7 +125,7 @@ public class AssemblyName extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -188,9 +188,9 @@ public class AssemblyName extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetPublicKey");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -207,9 +207,9 @@ public class AssemblyName extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetPublicKeyToken");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];
@@ -268,7 +268,7 @@ public class AssemblyName extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetPublicKey", (Object)publicKey);
+            classInstance.Invoke("SetPublicKey", (java.lang.Object)publicKey);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,7 +278,7 @@ public class AssemblyName extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetPublicKey", (Object)dupParam0.getJCRefOut());
+            classInstance.Invoke("SetPublicKey", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -288,7 +288,7 @@ public class AssemblyName extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetPublicKeyToken", (Object)publicKeyToken);
+            classInstance.Invoke("SetPublicKeyToken", (java.lang.Object)publicKeyToken);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,7 +298,7 @@ public class AssemblyName extends NetObject  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("SetPublicKeyToken", (Object)dupParam0.getJCRefOut());
+            classInstance.Invoke("SetPublicKeyToken", (java.lang.Object)dupParam0.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

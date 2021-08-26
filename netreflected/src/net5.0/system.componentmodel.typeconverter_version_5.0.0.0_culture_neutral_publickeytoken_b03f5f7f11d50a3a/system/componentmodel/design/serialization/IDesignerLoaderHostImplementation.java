@@ -110,7 +110,7 @@ public class IDesignerLoaderHostImplementation extends NetObject implements IDes
         }
     }
 
-    public IDesignerLoaderHostImplementation(Object instance) throws Throwable {
+    public IDesignerLoaderHostImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -130,7 +130,7 @@ public class IDesignerLoaderHostImplementation extends NetObject implements IDes
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

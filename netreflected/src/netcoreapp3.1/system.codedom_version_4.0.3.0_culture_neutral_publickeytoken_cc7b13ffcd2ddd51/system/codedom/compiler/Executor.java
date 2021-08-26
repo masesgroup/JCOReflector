@@ -93,7 +93,7 @@ public class Executor extends NetObject  {
         }
     }
 
-    public Executor(Object instance) throws Throwable {
+    public Executor(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class Executor extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -144,21 +144,21 @@ public class Executor extends NetObject  {
     
     // Methods section
     
-    public static int ExecWaitWithCapture(java.lang.String cmd, TempFileCollection tempFiles, java.lang.String outputName, java.lang.String errorName) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.io.IOException, system.ObjectDisposedException, system.AggregateException, system.componentmodel.Win32Exception, system.security.cryptography.CryptographicException, system.MulticastNotSupportedException, system.threading.tasks.TaskSchedulerException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.threading.tasks.TaskCanceledException, system.runtime.interopservices.ExternalException {
+    public static int ExecWaitWithCapture(java.lang.String cmd, TempFileCollection tempFiles, JCORefOut outputName, JCORefOut errorName) throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.io.IOException, system.ObjectDisposedException, system.AggregateException, system.componentmodel.Win32Exception, system.security.cryptography.CryptographicException, system.MulticastNotSupportedException, system.threading.tasks.TaskSchedulerException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException, system.threading.tasks.TaskCanceledException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classType.Invoke("ExecWaitWithCapture", cmd, tempFiles == null ? null : tempFiles.getJCOInstance(), outputName, errorName);
+            return (int)classType.Invoke("ExecWaitWithCapture", cmd, tempFiles == null ? null : tempFiles.getJCOInstance(), outputName.getJCRefOut(), errorName.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static int ExecWaitWithCapture(java.lang.String cmd, java.lang.String currentDir, TempFileCollection tempFiles, java.lang.String outputName, java.lang.String errorName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.io.IOException, system.AggregateException, system.componentmodel.Win32Exception, system.security.cryptography.CryptographicException, system.MulticastNotSupportedException, system.threading.tasks.TaskSchedulerException, system.threading.AbandonedMutexException, system.FormatException, system.threading.tasks.TaskCanceledException, system.runtime.interopservices.ExternalException {
+    public static int ExecWaitWithCapture(java.lang.String cmd, java.lang.String currentDir, TempFileCollection tempFiles, JCORefOut outputName, JCORefOut errorName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.io.IOException, system.AggregateException, system.componentmodel.Win32Exception, system.security.cryptography.CryptographicException, system.MulticastNotSupportedException, system.threading.tasks.TaskSchedulerException, system.threading.AbandonedMutexException, system.FormatException, system.threading.tasks.TaskCanceledException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classType.Invoke("ExecWaitWithCapture", cmd, currentDir, tempFiles == null ? null : tempFiles.getJCOInstance(), outputName, errorName);
+            return (int)classType.Invoke("ExecWaitWithCapture", cmd, currentDir, tempFiles == null ? null : tempFiles.getJCOInstance(), outputName.getJCRefOut(), errorName.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

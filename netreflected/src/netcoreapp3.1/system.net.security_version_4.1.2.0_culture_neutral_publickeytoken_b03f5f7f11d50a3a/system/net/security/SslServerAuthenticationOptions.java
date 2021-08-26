@@ -99,7 +99,7 @@ public class SslServerAuthenticationOptions extends NetObject  {
         }
     }
 
-    public SslServerAuthenticationOptions(Object instance) throws Throwable {
+    public SslServerAuthenticationOptions(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -119,7 +119,7 @@ public class SslServerAuthenticationOptions extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

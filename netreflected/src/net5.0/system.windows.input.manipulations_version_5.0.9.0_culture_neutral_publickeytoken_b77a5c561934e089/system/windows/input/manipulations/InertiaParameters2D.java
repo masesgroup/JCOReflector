@@ -92,7 +92,7 @@ public class InertiaParameters2D extends NetObject  {
         }
     }
 
-    public InertiaParameters2D(Object instance) throws Throwable {
+    public InertiaParameters2D(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -112,7 +112,7 @@ public class InertiaParameters2D extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

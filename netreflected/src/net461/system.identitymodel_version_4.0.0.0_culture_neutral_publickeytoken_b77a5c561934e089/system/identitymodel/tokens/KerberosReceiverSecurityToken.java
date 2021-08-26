@@ -97,7 +97,7 @@ public class KerberosReceiverSecurityToken extends WindowsSecurityToken  {
         }
     }
 
-    public KerberosReceiverSecurityToken(Object instance) throws Throwable {
+    public KerberosReceiverSecurityToken(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class KerberosReceiverSecurityToken extends WindowsSecurityToken  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -149,7 +149,7 @@ public class KerberosReceiverSecurityToken extends WindowsSecurityToken  {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((Object)request));
+            setJCOInstance((JCObject)classType.NewObject((java.lang.Object)request));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -194,9 +194,9 @@ public class KerberosReceiverSecurityToken extends WindowsSecurityToken  {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<Object> resultingArrayList = new ArrayList<Object>();
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetRequest");
-            for (Object resultingObject : resultingObjects) {
+            for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             byte[] resultingArray = new byte[resultingArrayList.size()];

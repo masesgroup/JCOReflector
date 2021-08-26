@@ -97,7 +97,7 @@ public class InvalidFilterCriteriaException extends ApplicationException {
         super();
     }
 
-    public InvalidFilterCriteriaException(Object instance) {
+    public InvalidFilterCriteriaException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class InvalidFilterCriteriaException extends ApplicationException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

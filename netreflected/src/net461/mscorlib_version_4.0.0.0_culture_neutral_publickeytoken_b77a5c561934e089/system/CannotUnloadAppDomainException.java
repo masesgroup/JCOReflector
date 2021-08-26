@@ -97,7 +97,7 @@ public class CannotUnloadAppDomainException extends SystemException {
         super();
     }
 
-    public CannotUnloadAppDomainException(Object instance) {
+    public CannotUnloadAppDomainException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -131,7 +131,7 @@ public class CannotUnloadAppDomainException extends SystemException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

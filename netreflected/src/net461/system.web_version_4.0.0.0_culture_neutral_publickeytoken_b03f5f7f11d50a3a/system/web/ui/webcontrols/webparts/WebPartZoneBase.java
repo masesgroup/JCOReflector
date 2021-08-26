@@ -109,7 +109,7 @@ public class WebPartZoneBase extends WebZone implements system.web.ui.IPostBackE
         }
     }
 
-    public WebPartZoneBase(Object instance) throws Throwable {
+    public WebPartZoneBase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -129,7 +129,7 @@ public class WebPartZoneBase extends WebZone implements system.web.ui.IPostBackE
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

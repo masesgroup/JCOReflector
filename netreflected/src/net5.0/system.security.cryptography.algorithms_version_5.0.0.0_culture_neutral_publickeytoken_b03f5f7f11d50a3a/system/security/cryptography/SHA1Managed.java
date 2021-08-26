@@ -93,7 +93,7 @@ public class SHA1Managed extends SHA1  {
         }
     }
 
-    public SHA1Managed(Object instance) throws Throwable {
+    public SHA1Managed(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class SHA1Managed extends SHA1  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

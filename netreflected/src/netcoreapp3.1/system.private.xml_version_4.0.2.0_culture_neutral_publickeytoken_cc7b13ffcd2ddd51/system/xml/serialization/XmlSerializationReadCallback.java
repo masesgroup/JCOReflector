@@ -95,7 +95,7 @@ public class XmlSerializationReadCallback extends JCDelegate implements IJCEvent
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return this;
     }
 
@@ -103,7 +103,7 @@ public class XmlSerializationReadCallback extends JCDelegate implements IJCEvent
         return classType;
     }
 
-    public final Object EventRaised(Object... argsFromJCOBridge) {
+    public final java.lang.Object EventRaised(java.lang.Object... argsFromJCOBridge) {
         try
         {
 
@@ -123,7 +123,7 @@ public class XmlSerializationReadCallback extends JCDelegate implements IJCEvent
         }
     }
 
-    public final Object DelegateInvoked(Object... argsFromJCOBridge) {
+    public final java.lang.Object DelegateInvoked(java.lang.Object... argsFromJCOBridge) {
         try
         {
 
@@ -152,7 +152,7 @@ public class XmlSerializationReadCallback extends JCDelegate implements IJCEvent
         callerInstance = instance;
     }
 
-    public XmlSerializationReadCallback(Object instance) throws Throwable {
+    public XmlSerializationReadCallback(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         if (instance == null) throw new IllegalArgumentException("Instance cannot be null");
         if (instance instanceof IXmlSerializationReadCallback) {
@@ -164,7 +164,7 @@ public class XmlSerializationReadCallback extends JCDelegate implements IJCEvent
                     String.format("Class %s is not supported.", instance.getClass().getTypeName()));
     }
 
-    protected final static <T extends IJCOBridgeReflected> Object toObjectFromArray(T[] input) {
+    protected final static <T extends IJCOBridgeReflected> java.lang.Object toObjectFromArray(T[] input) {
         return JCOBridgeInstance.toObjectFromArray(input);
     }
 

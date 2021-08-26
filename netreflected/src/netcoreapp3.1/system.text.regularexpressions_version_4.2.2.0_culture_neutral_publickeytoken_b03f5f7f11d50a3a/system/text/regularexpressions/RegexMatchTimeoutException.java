@@ -98,7 +98,7 @@ public class RegexMatchTimeoutException extends TimeoutException {
         super();
     }
 
-    public RegexMatchTimeoutException(Object instance) {
+    public RegexMatchTimeoutException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -132,7 +132,7 @@ public class RegexMatchTimeoutException extends TimeoutException {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

@@ -96,7 +96,7 @@ public class MessagePart extends NamedItem  {
         }
     }
 
-    public MessagePart(Object instance) throws Throwable {
+    public MessagePart(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -116,7 +116,7 @@ public class MessagePart extends NamedItem  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

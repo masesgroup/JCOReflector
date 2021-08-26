@@ -108,7 +108,7 @@ public class ScreenOrientation extends NetObject  {
         }
     }
 
-    public ScreenOrientation(Object instance) {
+    public ScreenOrientation(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class ScreenOrientation extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

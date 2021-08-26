@@ -97,7 +97,7 @@ public class ObjectAnimationUsingKeyFrames extends ObjectAnimationBase implement
         }
     }
 
-    public ObjectAnimationUsingKeyFrames(Object instance) throws Throwable {
+    public ObjectAnimationUsingKeyFrames(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class ObjectAnimationUsingKeyFrames extends ObjectAnimationBase implement
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

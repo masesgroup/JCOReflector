@@ -104,7 +104,7 @@ public class TreeNode extends MarshalByRefObject implements system.runtime.seria
         }
     }
 
-    public TreeNode(Object instance) throws Throwable {
+    public TreeNode(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -124,7 +124,7 @@ public class TreeNode extends MarshalByRefObject implements system.runtime.seria
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

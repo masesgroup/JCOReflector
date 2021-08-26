@@ -95,7 +95,7 @@ public class GridSplitterAutomationPeer extends ThumbAutomationPeer  {
         }
     }
 
-    public GridSplitterAutomationPeer(Object instance) throws Throwable {
+    public GridSplitterAutomationPeer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -115,7 +115,7 @@ public class GridSplitterAutomationPeer extends ThumbAutomationPeer  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

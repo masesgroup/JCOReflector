@@ -108,7 +108,7 @@ public class CipherAlgorithmType extends NetObject  {
         }
     }
 
-    public CipherAlgorithmType(Object instance) {
+    public CipherAlgorithmType(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -145,7 +145,7 @@ public class CipherAlgorithmType extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

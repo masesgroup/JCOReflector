@@ -108,7 +108,7 @@ public class Application extends NetObject  {
         }
     }
 
-    public Application(Object instance) throws Throwable {
+    public Application(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -128,7 +128,7 @@ public class Application extends NetObject  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 
@@ -161,11 +161,11 @@ public class Application extends NetObject  {
     
     // Methods section
     
-    public static boolean FilterMessage(Message message) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
+    public static boolean FilterMessage(JCORefOut<Message> message) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.InvalidOperationException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classType.Invoke("FilterMessage", message == null ? null : message.getJCOInstance());
+            return (boolean)classType.Invoke("FilterMessage", message.getJCRefOut());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

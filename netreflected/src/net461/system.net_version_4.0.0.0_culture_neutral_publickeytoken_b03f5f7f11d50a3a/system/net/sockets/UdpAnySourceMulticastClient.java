@@ -97,7 +97,7 @@ public class UdpAnySourceMulticastClient extends NetObject implements AutoClosea
         }
     }
 
-    public UdpAnySourceMulticastClient(Object instance) throws Throwable {
+    public UdpAnySourceMulticastClient(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -117,7 +117,7 @@ public class UdpAnySourceMulticastClient extends NetObject implements AutoClosea
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

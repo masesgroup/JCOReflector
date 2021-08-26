@@ -98,7 +98,7 @@ public class SocketException extends Win32Exception {
         super();
     }
 
-    public SocketException(Object instance) {
+    public SocketException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -132,7 +132,7 @@ public class SocketException extends Win32Exception {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

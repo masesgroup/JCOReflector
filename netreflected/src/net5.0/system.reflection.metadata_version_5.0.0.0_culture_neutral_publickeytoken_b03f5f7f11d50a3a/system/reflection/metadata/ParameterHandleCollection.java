@@ -93,7 +93,7 @@ public class ParameterHandleCollection extends ValueType  {
         }
     }
 
-    public ParameterHandleCollection(Object instance) throws Throwable {
+    public ParameterHandleCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -113,7 +113,7 @@ public class ParameterHandleCollection extends ValueType  {
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

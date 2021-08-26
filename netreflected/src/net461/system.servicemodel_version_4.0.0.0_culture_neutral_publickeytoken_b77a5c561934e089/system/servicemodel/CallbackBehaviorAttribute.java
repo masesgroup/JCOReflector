@@ -101,7 +101,7 @@ public class CallbackBehaviorAttribute extends Attribute implements system.servi
         }
     }
 
-    public CallbackBehaviorAttribute(Object instance) throws Throwable {
+    public CallbackBehaviorAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -121,7 +121,7 @@ public class CallbackBehaviorAttribute extends Attribute implements system.servi
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

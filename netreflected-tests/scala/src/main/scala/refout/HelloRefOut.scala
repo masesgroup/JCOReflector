@@ -53,7 +53,7 @@ object HelloRefOut {
         } catch {
             case tre: Throwable =>
                 tre.printStackTrace()
-                System.exit(1)
+                System.exit(-1)
         }
     }
 }

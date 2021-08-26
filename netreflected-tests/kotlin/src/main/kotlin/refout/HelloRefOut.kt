@@ -41,7 +41,7 @@ object HelloRefOut {
                 UInt32.TryParse(valueStr, JCORefOut.Create(i))
                 if (i.CompareTo(UInt32.Parse(valueStr)) !== 0) {
                     Console.WriteLine("Error in parsing")
-                    Environment.Exit(1)
+                    System.exit(-1)
                 }
                 value++
             }
@@ -49,7 +49,7 @@ object HelloRefOut {
             Environment.Exit(0)
         } catch (tre: Throwable) {
             tre.printStackTrace()
-            System.exit(1)
+            System.exit(-1)
         }
     }
 }

@@ -91,6 +91,7 @@ public class HelloHierarchy {
             fnfe.printStackTrace();
         } catch (Throwable tre) {
             tre.printStackTrace();
+            System.exit(-1);
         }
     }
 }

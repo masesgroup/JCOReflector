@@ -23,38 +23,31 @@
  */
 package mscorlib
 
+import org.mases.jcobridge.netreflection.JCORefOut
 import org.mases.jcobridge.netreflection.JCOReflector
-import system.Environment
-import system.threading.Thread
-import system.threading.ThreadStart
-import system.timers.Timer
+import system.threading.Monitor
+import java.util.concurrent.atomic.AtomicBoolean
 
-object HelloNETEvent {
+object HelloLock {
     @JvmStatic
     fun main(args: Array<String>) {
         JCOReflector.setCommandLineArgs(args)
         try {
-            Timer().use { timer ->
-                val elapsed = TimerElapsed()
-                timer.addElapsed(elapsed)
-                timer.interval = 1000.0
-                val thread = Thread(object : ThreadStart() {
-                    override fun Invoke() {
-                        try {
-                            println("Running thread.")
-                            timer.enabled = true
-                        } catch (e: Throwable) {
-                            e.printStackTrace()
-                            System.exit(-1)
-                        }
-                    }
-                })
-                thread.Start()
-                Thread.Sleep(10000)
-                timer.Stop()
-                timer.removeElapsed(elapsed)
-                Environment.Exit(0)
+            val obj = system.Object()
+            val lockTaken = AtomicBoolean(false)
+            try {
+                Monitor.Enter(obj, JCORefOut.Create(lockTaken))
+                if (lockTaken.get()) {
+                    println("Lock taken")
+                } else {
+                    println("Failed to acquire lock")
+                    System.exit(-1)
+                }
+            } finally {
+                Monitor.Exit(obj)
             }
+            println("Exiting with success")
+            System.exit(0)
         } catch (tre: Throwable) {
             tre.printStackTrace()
             System.exit(-1)

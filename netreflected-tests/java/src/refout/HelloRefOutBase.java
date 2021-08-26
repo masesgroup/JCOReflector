@@ -102,10 +102,10 @@ public class HelloRefOutBase {
                 isOK &= false;
             }
 
-            System.exit(isOK ? 0 : 1);
+            System.exit(isOK ? 0 : -1);
         } catch (Throwable tre) {
             tre.printStackTrace();
-            System.exit(1);
+            System.exit(-1);
         }
     }
 }

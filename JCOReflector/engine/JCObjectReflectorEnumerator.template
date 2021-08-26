@@ -106,7 +106,7 @@ public class PACKAGE_CLASS_NAME extends NetObject implements Iterator<PACKAGE_IN
         return className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
     }
 
-    public Object getJCOInstance() {
+    public java.lang.Object getJCOInstance() {
         return classInstance;
     }
 

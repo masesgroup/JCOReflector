@@ -32,6 +32,7 @@ public class TimerElapsed extends ElapsedEventHandler {
             System.out.println(String.format("Timer elapsed at %s", arg1.getSignalTime().toString()));
         } catch (Throwable e) {
             e.printStackTrace();
+            System.exit(-1);
         }
     }
 }

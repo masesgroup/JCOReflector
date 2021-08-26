@@ -38,6 +38,7 @@ object HelloIterator {
     } catch {
       case tre: Throwable =>
         tre.printStackTrace()
+        System.exit(-1)
     }
   }
 }

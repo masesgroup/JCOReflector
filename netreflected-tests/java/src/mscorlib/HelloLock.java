@@ -21,43 +21,37 @@
  *  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  *  SOFTWARE.
  */
-package mscorlib
 
-import org.mases.jcobridge.netreflection.JCOReflector
-import system.Environment
-import system.threading.Thread
-import system.threading.ThreadStart
-import system.timers.Timer
+package mscorlib;
 
-object HelloNETEvent {
-    @JvmStatic
-    fun main(args: Array<String>) {
-        JCOReflector.setCommandLineArgs(args)
+import org.mases.jcobridge.netreflection.JCORefOut;
+import org.mases.jcobridge.netreflection.JCOReflector;
+import system.threading.Monitor;
+import java.util.concurrent.atomic.AtomicBoolean;
+
+public class HelloLock {
+    public static void main(String[] args) {
+        JCOReflector.setCommandLineArgs(args);
         try {
-            Timer().use { timer ->
-                val elapsed = TimerElapsed()
-                timer.addElapsed(elapsed)
-                timer.interval = 1000.0
-                val thread = Thread(object : ThreadStart() {
-                    override fun Invoke() {
-                        try {
-                            println("Running thread.")
-                            timer.enabled = true
-                        } catch (e: Throwable) {
-                            e.printStackTrace()
-                            System.exit(-1)
-                        }
-                    }
-                })
-                thread.Start()
-                Thread.Sleep(10000)
-                timer.Stop()
-                timer.removeElapsed(elapsed)
-                Environment.Exit(0)
+            system.Object object = new system.Object();
+            AtomicBoolean lockTaken = new AtomicBoolean(false);
+            try {
+                Monitor.Enter(object, JCORefOut.Create(lockTaken));
+                if (lockTaken.get()) {
+                    System.out.println("Lock taken");
+                }
+                else {
+                    System.out.println("Failed to acquire lock");
+                    System.exit(-1);
+                }
+            } finally {
+                Monitor.Exit(object);
             }
-        } catch (tre: Throwable) {
-            tre.printStackTrace()
-            System.exit(-1)
+            System.out.println("Exiting with success");
+            System.exit(0);
+        } catch (Throwable tre) {
+            tre.printStackTrace();
+            System.exit(-1);
         }
     }
 }

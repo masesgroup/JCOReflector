@@ -120,22 +120,31 @@ object HelloNETSocketClient {
             }
         } catch (e: Exception) {
             e.printStackTrace()
+            System.exit(-1)
         } catch (e: ArgumentException) {
             e.printStackTrace()
+            System.exit(-1)
         } catch (e: InvalidOperationException) {
             e.printStackTrace()
+            System.exit(-1)
         } catch (e: IndexOutOfRangeException) {
             e.printStackTrace()
+            System.exit(-1)
         } catch (e: NotSupportedException) {
             e.printStackTrace()
+            System.exit(-1)
         } catch (e: MissingManifestResourceException) {
             e.printStackTrace()
+            System.exit(-1)
         } catch (e: FormatException) {
             e.printStackTrace()
+            System.exit(-1)
         } catch (e: EventSourceException) {
             e.printStackTrace()
+            System.exit(-1)
         } catch (e: Throwable) {
             e.printStackTrace()
+            System.exit(-1)
         }
         println("Client exited correctly")
     }

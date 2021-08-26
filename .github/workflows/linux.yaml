@@ -127,7 +127,7 @@ jobs:
             sudo apt-get install zip
             curl -s "https://get.sdkman.io" | bash
             source "$HOME/.sdkman/bin/sdkman-init.sh"
-            sdk install scala
+            sdk install scala 2.13.5
 
         - name: Build Scala test source file .NET Core 3.1
           run: |

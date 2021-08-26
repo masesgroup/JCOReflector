@@ -120,6 +120,7 @@ namespace MASES.C2JReflector
                 ExportingMethodsAvoidanceMap.Add("Microsoft.VisualBasic.FileSystem", new string[] { "FileGet", "Input" });
                 ExportingMethodsAvoidanceMap.Add("System.Threading.Thread", new string[] { "VolatileRead" });
                 ExportingMethodsAvoidanceMap.Add("System.Threading.Volatile", new string[] { "Read" });
+                ExportingMethodsAvoidanceMap.Add("System.Threading.Interlocked", new string[] { "Decrement", "Increment" });
 
                 DirectMappablePrimitives.Add("boolean", "java.util.concurrent.atomic.AtomicBoolean");
                 DirectMappablePrimitives.Add("byte", "java.util.concurrent.atomic.AtomicReference<java.lang.Byte>");

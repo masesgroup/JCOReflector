@@ -1239,14 +1239,15 @@ namespace MASES.C2JReflector
 
         static bool exportingMethodsAvoidance(Type type, MethodInfo method)
         {
-            if (!EnableRefOutParameters || method.Name != "TryParse") return false;
+            if (!EnableRefOutParameters) return false;
             var fullname = type.FullName;
-            if (fullname == "System.Net.Http.Headers.MediaTypeWithQualityHeaderValue" ||
-                fullname == "System.Net.Http.Headers.NameValueWithParametersHeaderValue" ||
-                fullname == "System.Net.Http.Headers.TransferCodingWithQualityHeaderValue")
+            var methodName = method.Name;
+            string[] methodNamesToCheck;
+            if (Const.SpecialNames.ExportingMethodsAvoidanceMap.TryGetValue(fullname, out methodNamesToCheck))
             {
-                return true;
+                return methodNamesToCheck.Contains(methodName);
             }
+
             return false;
         }
 
@@ -1433,16 +1434,21 @@ namespace MASES.C2JReflector
                         {
                             string paramType = convertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
                             hasNativeArrayInParameter |= isArray && isPrimitive;
+                            bool useRefOut = false;
                             if (!EnableRefOutParameters)
                             {
                                 isManaged &= !(parameter.IsOut || parameter.ParameterType.IsByRef); // out parameters not managed
+                            }
+                            else
+                            {
+                                useRefOut = parameter.IsOut || parameter.ParameterType.IsByRef;
                             }
                             if (!isManaged) break; // found not managed type, stop here
                             isPrimitive |= typeof(Delegate).IsAssignableFrom(parameter.ParameterType);
                             string formatter = string.Empty;
                             string objectCaster = string.Empty;
                             var paramName = checkForkeyword(parameter.Name);
-                            if (EnableRefOutParameters && (parameter.IsOut || parameter.ParameterType.IsByRef))
+                            if (useRefOut)
                             {
                                 string typeString = isPrimitive ? Const.Parameters.JCORefOutType : string.Format(Const.Parameters.JCORefOutTypeGenericFormatter, (isArray) ? paramType + Const.SpecialNames.ArrayTrailer : paramType);
                                 inputParams.Append(string.Format(Const.Parameters.INPUT_PARAMETER, typeString, paramName));
@@ -1748,16 +1754,21 @@ namespace MASES.C2JReflector
                             {
                                 string paramType = convertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
                                 hasNativeArrayInParameter |= isArray && isPrimitive;
+                                bool useRefOut = false;
                                 if (!EnableRefOutParameters)
                                 {
                                     isManaged &= !(parameter.IsOut || parameter.ParameterType.IsByRef); // out parameters not managed
+                                }
+                                else
+                                {
+                                    useRefOut = parameter.IsOut || parameter.ParameterType.IsByRef;
                                 }
                                 if (!isManaged) break; // found not managed type, stop here
                                 isPrimitive |= typeof(Delegate).IsAssignableFrom(parameter.ParameterType);
                                 string formatter = string.Empty;
                                 string objectCaster = string.Empty;
                                 var paramName = checkForkeyword(parameter.Name);
-                                if (EnableRefOutParameters && (parameter.IsOut || parameter.ParameterType.IsByRef))
+                                if (useRefOut)
                                 {
                                     string typeString = isPrimitive ? Const.Parameters.JCORefOutType : string.Format(Const.Parameters.JCORefOutTypeGenericFormatter, (isArray) ? paramType + Const.SpecialNames.ArrayTrailer : paramType);
                                     inputParams.Append(string.Format(Const.Parameters.INPUT_PARAMETER, typeString, paramName));
@@ -2701,7 +2712,7 @@ namespace MASES.C2JReflector
             if (!innerType.IsPublic // only public types are managed expect when used in out/ref
                 || !(innerType.IsAnsiClass || innerType.IsClass || innerType.IsEnum)
                  || (EnableAbstract ? false : (innerType.IsAbstract && !innerType.IsSealed)) // discard real abstract class for now, but abstract/sealed classes are what in .NET are "public static class"
-                                                                                   //  || type.IsInterface // discard interfaces for now
+                                                                                             //  || type.IsInterface // discard interfaces for now
                  || innerType.IsGenericType || innerType.IsGenericParameter)
             {
                 return false;

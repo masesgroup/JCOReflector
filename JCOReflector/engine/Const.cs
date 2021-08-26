@@ -108,6 +108,18 @@ namespace MASES.C2JReflector
             public const string METHOD_STREAMREADBLOCK_NAME = "ReadBlock";
 #endif
             public const string OBJECT_CASTER_NAME = "(java.lang.Object)";
+
+            public static Dictionary<string, string[]> ExportingMethodsAvoidanceMap = new Dictionary<string, string[]>();
+
+            static SpecialNames()
+            {
+                ExportingMethodsAvoidanceMap.Add("System.Net.Http.Headers.MediaTypeWithQualityHeaderValue", new string[] { "TryParse" });
+                ExportingMethodsAvoidanceMap.Add("System.Net.Http.Headers.NameValueWithParametersHeaderValue", new string[] { "TryParse" });
+                ExportingMethodsAvoidanceMap.Add("System.Net.Http.Headers.TransferCodingWithQualityHeaderValue", new string[] { "TryParse" });
+                ExportingMethodsAvoidanceMap.Add("Microsoft.VisualBasic.FileSystem", new string[] { "FileGet", "Input" });
+                ExportingMethodsAvoidanceMap.Add("System.Threading.Thread", new string[] { "VolatileRead" });
+                ExportingMethodsAvoidanceMap.Add("System.Threading.Volatile", new string[] { "Read" });
+        }
         }
 
         public class FileNameAndDirectory

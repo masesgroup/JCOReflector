@@ -1451,7 +1451,7 @@ namespace MASES.C2JReflector
                             if (useRefOut)
                             {
                                 string primitiveParam = Const.Parameters.JCORefOutType;
-                                if (isPrimitive && Const.SpecialNames.DirectMappablePrimitives.ContainsKey(paramType))
+                                if (isPrimitive && !isArray && Const.SpecialNames.DirectMappablePrimitives.ContainsKey(paramType))
                                 {
                                     primitiveParam = string.Format(Const.Parameters.JCORefOutTypeGenericFormatter, Const.SpecialNames.DirectMappablePrimitives[paramType]);
                                 }
@@ -1777,7 +1777,7 @@ namespace MASES.C2JReflector
                                 if (useRefOut)
                                 {
                                     string primitiveParam = Const.Parameters.JCORefOutType;
-                                    if (isPrimitive && Const.SpecialNames.DirectMappablePrimitives.ContainsKey(paramType))
+                                    if (isPrimitive && !isArray && Const.SpecialNames.DirectMappablePrimitives.ContainsKey(paramType))
                                     {
                                         primitiveParam = string.Format(Const.Parameters.JCORefOutTypeGenericFormatter, Const.SpecialNames.DirectMappablePrimitives[paramType]);
                                     }

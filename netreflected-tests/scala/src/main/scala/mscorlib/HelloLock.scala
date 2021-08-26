@@ -26,7 +26,7 @@ package mscorlib
 
 import org.mases.jcobridge.netreflection.JCORefOut
 import org.mases.jcobridge.netreflection.JCOReflector
-
+import system.threading.Monitor
 import java.util.concurrent.atomic.AtomicBoolean
 
 object HelloLock {

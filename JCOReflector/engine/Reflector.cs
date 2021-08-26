@@ -1450,7 +1450,13 @@ namespace MASES.C2JReflector
                             var paramName = checkForkeyword(parameter.Name);
                             if (useRefOut)
                             {
-                                string typeString = isPrimitive ? Const.Parameters.JCORefOutType : string.Format(Const.Parameters.JCORefOutTypeGenericFormatter, (isArray) ? paramType + Const.SpecialNames.ArrayTrailer : paramType);
+                                string primitiveParam = Const.Parameters.JCORefOutType;
+                                if (isPrimitive && Const.SpecialNames.DirectMappablePrimitives.ContainsKey(paramType))
+                                {
+                                    primitiveParam = string.Format(Const.Parameters.JCORefOutTypeGenericFormatter, Const.SpecialNames.DirectMappablePrimitives[paramType]);
+                                }
+
+                                string typeString = isPrimitive ? primitiveParam : string.Format(Const.Parameters.JCORefOutTypeGenericFormatter, (isArray) ? paramType + Const.SpecialNames.ArrayTrailer : paramType);
                                 inputParams.Append(string.Format(Const.Parameters.INPUT_PARAMETER, typeString, paramName));
                                 formatter = Const.Parameters.INVOKE_PARAMETER_JCOREFOUT;
                                 builtWithJCORefOut = true;
@@ -1770,7 +1776,13 @@ namespace MASES.C2JReflector
                                 var paramName = checkForkeyword(parameter.Name);
                                 if (useRefOut)
                                 {
-                                    string typeString = isPrimitive ? Const.Parameters.JCORefOutType : string.Format(Const.Parameters.JCORefOutTypeGenericFormatter, (isArray) ? paramType + Const.SpecialNames.ArrayTrailer : paramType);
+                                    string primitiveParam = Const.Parameters.JCORefOutType;
+                                    if (isPrimitive && Const.SpecialNames.DirectMappablePrimitives.ContainsKey(paramType))
+                                    {
+                                        primitiveParam = string.Format(Const.Parameters.JCORefOutTypeGenericFormatter, Const.SpecialNames.DirectMappablePrimitives[paramType]);
+                                    }
+
+                                    string typeString = isPrimitive ? primitiveParam : string.Format(Const.Parameters.JCORefOutTypeGenericFormatter, (isArray) ? paramType + Const.SpecialNames.ArrayTrailer : paramType);
                                     inputParams.Append(string.Format(Const.Parameters.INPUT_PARAMETER, typeString, paramName));
                                     formatter = Const.Parameters.INVOKE_PARAMETER_JCOREFOUT;
                                     builtWithJCORefOut = true;

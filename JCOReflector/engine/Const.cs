@@ -110,6 +110,7 @@ namespace MASES.C2JReflector
             public const string OBJECT_CASTER_NAME = "(java.lang.Object)";
 
             public static Dictionary<string, string[]> ExportingMethodsAvoidanceMap = new Dictionary<string, string[]>();
+            public static Dictionary<string, string> DirectMappablePrimitives = new Dictionary<string, string>();
 
             static SpecialNames()
             {
@@ -119,7 +120,15 @@ namespace MASES.C2JReflector
                 ExportingMethodsAvoidanceMap.Add("Microsoft.VisualBasic.FileSystem", new string[] { "FileGet", "Input" });
                 ExportingMethodsAvoidanceMap.Add("System.Threading.Thread", new string[] { "VolatileRead" });
                 ExportingMethodsAvoidanceMap.Add("System.Threading.Volatile", new string[] { "Read" });
-        }
+
+                DirectMappablePrimitives.Add("boolean", "java.util.concurrent.atomic.AtomicBoolean");
+                DirectMappablePrimitives.Add("byte", "java.util.concurrent.atomic.AtomicReference<java.lang.Byte>");
+                DirectMappablePrimitives.Add("short", "java.util.concurrent.atomic.AtomicReference<java.lang.Short>");
+                DirectMappablePrimitives.Add("float", "java.util.concurrent.atomic.AtomicReference<java.lang.Float>");
+                DirectMappablePrimitives.Add("double", "java.util.concurrent.atomic.AtomicReference<java.lang.Double>");
+                DirectMappablePrimitives.Add("int", "java.util.concurrent.atomic.AtomicInteger");
+                DirectMappablePrimitives.Add("long", "java.util.concurrent.atomic.AtomicLong");
+            }
         }
 
         public class FileNameAndDirectory

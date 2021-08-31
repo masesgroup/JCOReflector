@@ -107,7 +107,9 @@ public class PACKAGE_CLASS_NAME extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PACKAGE_CLASS_NAME(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

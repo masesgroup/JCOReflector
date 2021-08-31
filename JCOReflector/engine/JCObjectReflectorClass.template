@@ -91,7 +91,9 @@ public class PACKAGE_CLASS_NAME extends PACKAGE_CLASS_BASE_CLASS PACKAGE_CLASS_I
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PACKAGE_CLASS_NAME(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

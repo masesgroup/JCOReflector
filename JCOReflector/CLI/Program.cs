@@ -22,9 +22,10 @@
  *  SOFTWARE.
  */
 
+using MASES.JCOReflectorEngine;
 using System;
 
-namespace MASES.C2JReflector
+namespace MASES.JCOReflectorCLI
 {
     class Program
     {

@@ -29,7 +29,7 @@ using System.IO;
 using System.Text;
 using System.Threading;
 
-namespace MASES.C2JReflector
+namespace MASES.JCOReflectorEngine
 {
     static class JavaBuilder
     {

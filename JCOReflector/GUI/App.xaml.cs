@@ -24,7 +24,7 @@
 
 using System.Windows;
 
-namespace MASES.C2JReflector
+namespace MASES.JCOReflectorGUI
 {
     /// <summary>
     /// Interaction logic for App.xaml

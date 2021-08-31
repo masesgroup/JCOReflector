@@ -2,7 +2,7 @@
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <AssemblyName>JCOReflectorGUI</AssemblyName>
-    <RootNamespace>MASES.C2JReflector</RootNamespace>
+    <RootNamespace>MASES.JCOReflectorGUI</RootNamespace>
     <Title>JCOReflector - Java class generator based on JCOBridge</Title>
     <Description>JCOReflector - Java class generator based on JCOBridge</Description>
     <Copyright>Copyright ©  MASES s.r.l. 2021</Copyright>

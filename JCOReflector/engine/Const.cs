@@ -27,7 +27,7 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.IO;
 
-namespace MASES.C2JReflector
+namespace MASES.JCOReflectorEngine
 {
     static class Const
     {

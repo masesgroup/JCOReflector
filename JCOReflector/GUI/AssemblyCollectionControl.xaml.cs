@@ -22,10 +22,11 @@
  *  SOFTWARE.
  */
 
+using MASES.JCOReflectorEngine;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace MASES.C2JReflector
+namespace MASES.JCOReflectorGUI
 {
     /// <summary>
     /// Interaction logic for AssemblyCollectionControl.xaml

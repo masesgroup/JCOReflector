@@ -22,13 +22,13 @@
  SOFTWARE.
  -->
 
-<ContentControl x:Class="MASES.C2JReflector.AssemblyCollectionControl"
+<ContentControl x:Class="MASES.JCOReflectorGUI.AssemblyCollectionControl"
                 x:Name="assemblyCollectionControl"
                  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
                  xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-                 xmlns:local="clr-namespace:MASES.C2JReflector"
+                 xmlns:local="clr-namespace:MASES.JCOReflectorGUI"
                  mc:Ignorable="d">
     <DockPanel>
         <DockPanel DockPanel.Dock="Top" LastChildFill="False">

@@ -32,7 +32,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace MASES.C2JReflector
+namespace MASES.JCOReflectorEngine
 {
     static class Reflector
     {

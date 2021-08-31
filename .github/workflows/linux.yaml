@@ -82,13 +82,13 @@ jobs:
 
         - name: Build Java files
           run: |
-            dotnet bin/netcoreapp3.1/JCOReflectorCLI.dll build .github/workflows/build_linux.job
-            dotnet bin/net5.0/JCOReflectorCLI.dll build .github/workflows/build_linux.job
+            dotnet bin/netcoreapp3.1/JCOReflectorCLI.dll -JobType Build -JobFile .github/workflows/build_linux.job
+            dotnet bin/net5.0/JCOReflectorCLI.dll -JobType Build -JobFile .github/workflows/build_linux.job
 
         - name: Build JAR files
           run: |
-            dotnet bin/netcoreapp3.1/JCOReflectorCLI.dll createjars .github/workflows/createjars_core3.1_linux.job	
-            dotnet bin/net5.0/JCOReflectorCLI.dll createjars .github/workflows/createjars_core5.0_linux.job																  
+            dotnet bin/netcoreapp3.1/JCOReflectorCLI.dll -JobType CreateJars -JobFile .github/workflows/createjars_core3.1_linux.job	
+            dotnet bin/net5.0/JCOReflectorCLI.dll -JobType CreateJars -JobFile .github/workflows/createjars_core5.0_linux.job																  
 
         - name: Build Java test source file
           run: javac -cp ./bin/netcoreapp3.1/JCOReflector.jar ./netreflected-tests/java/src/hierarchy/*.java ./netreflected-tests/java/src/mscorlib/*.java ./netreflected-tests/java/src/nettest/*.java ./netreflected-tests/java/src/refout/*.java

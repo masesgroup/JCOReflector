@@ -43,10 +43,10 @@ jobs:
           Copy-Item .github\workflows\JCOReflectorCLI5.0.runtimeconfig.json -Destination bin\net5.0\JCOReflectorCLI.runtimeconfig.json -Force
 
       - name: Build net5.0 Maven POM files
-        run: dotnet bin\net5.0\JCOReflectorCLI.dll createreleasepoms .github\workflows\createjars_core5.0_win19.job
+        run: dotnet bin\net5.0\JCOReflectorCLI.dll -JobType CreateReleasePOM -JobFile .github\workflows\createjars_core5.0_win19.job
           
       - name: Build net461 Maven POM files
-        run: .\bin\net461\JCOReflectorCLI createreleasepoms .github\workflows\createjars_framework_win19.job
+        run: .\bin\net461\JCOReflectorCLI -JobType CreateReleasePOM -JobFile .github\workflows\createjars_framework_win19.job
 
       - name: Set up Apache Maven Central
         uses: actions/setup-java@v1
@@ -80,15 +80,15 @@ jobs:
 
       - name: Build Java files
         run: |
-          dotnet bin\netcoreapp3.1\JCOReflectorCLI.dll build .github\workflows\build_win19.job
-          dotnet bin\net5.0\JCOReflectorCLI.dll build .github\workflows\build_win19.job
-          .\bin\net461\JCOReflectorCLI build .github\workflows\build_win19.job
+          dotnet bin\netcoreapp3.1\JCOReflectorCLI.dll -JobType Build -JobFile .github\workflows\build_win19.job
+          dotnet bin\net5.0\JCOReflectorCLI.dll -JobType Build -JobFile .github\workflows\build_win19.job
+          .\bin\net461\JCOReflectorCLI -JobType Build -JobFile .github\workflows\build_win19.job
           
       - name: Build JAR files
         run: |
-          dotnet .\bin\netcoreapp3.1\JCOReflectorCLI.dll createjars .github\workflows\createjars_core3.1_win19.job
-          dotnet .\bin\net5.0\JCOReflectorCLI.dll createjars .github\workflows\createjars_core5.0_win19.job
-          .\bin\net461\JCOReflectorCLI createjars .github\workflows\createjars_framework_win19.job
+          dotnet .\bin\netcoreapp3.1\JCOReflectorCLI.dll -JobType CreateJars -JobFile .github\workflows\createjars_core3.1_win19.job
+          dotnet .\bin\net5.0\JCOReflectorCLI.dll -JobType CreateJars -JobFile .github\workflows\createjars_core5.0_win19.job
+          .\bin\net461\JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_framework_win19.job
 
       - name: Compress release files
         run: | 

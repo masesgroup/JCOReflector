@@ -37,18 +37,25 @@ namespace MASES.C2JReflector
     /// </summary>
     public partial class MainWindow : Window
     {
-        CancellationTokenSource cts = null;
-        string assemblyLoc = typeof(MainWindow).Assembly.Location;
-
-        public string RepositoryRoot
+        public string SourceDestinationFolder
         {
-            get { return (string)GetValue(RepositoryRootProperty); }
-            set { SetValue(RepositoryRootProperty, value); }
+            get { return (string)GetValue(SourceDestinationFolderProperty); }
+            set { SetValue(SourceDestinationFolderProperty, value); }
         }
 
         // Using a DependencyProperty as the backing store for RepositoryRoot.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty RepositoryRootProperty =
-            DependencyProperty.Register("RepositoryRoot", typeof(string), typeof(MainWindow), new PropertyMetadata(string.Empty));
+        public static readonly DependencyProperty SourceDestinationFolderProperty =
+            DependencyProperty.Register("SourceDestinationFolder", typeof(string), typeof(MainWindow), new PropertyMetadata(JobManager.SourceDestinationFolder));
+
+        public string JarDestinationFolder
+        {
+            get { return (string)GetValue(JarDestinationFolderProperty); }
+            set { SetValue(JarDestinationFolderProperty, value); }
+        }
+
+        // Using a DependencyProperty as the backing store for RepositoryRoot.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty JarDestinationFolderProperty =
+            DependencyProperty.Register("JarDestinationFolder", typeof(string), typeof(MainWindow), new PropertyMetadata(JobManager.JarDestinationFolder));
 
         public AssemblyDataCollection AssemblyDataCollection
         {
@@ -126,24 +133,15 @@ namespace MASES.C2JReflector
 
             Title += " Version " + typeof(MainWindow).Assembly.GetName().Version.ToString();
 
-            assemblyLoc = Path.GetDirectoryName(assemblyLoc);
-            RepositoryRoot = Path.GetFullPath(Path.Combine(assemblyLoc, @"..\..\"));
-
             cbTarget.ItemsSource = Enum.GetValues(typeof(JDKVersion));
             cbTarget.SelectedValue = JDKVersion.Version8;
 
             cbLogLevel.ItemsSource = Enum.GetValues(typeof(LogLevel));
             cbLogLevel.SelectedValue = LogLevel.Info;
-
-            tbDestinationFolder.Text = Const.FileNameAndDirectory.RootDirectory;
-            tbJarDestinationFolder.Text = Const.FileNameAndDirectory.GetRelativePath(assemblyLoc, RepositoryRoot);
 #if DEBUG
             tbJDKFolder.Text = "jdk-14.0.1";
 #endif
-            Reflector.AppendToConsoleHandler = appendToConsole;
-            Reflector.EndOperationHandler = endOperation;
-            JavaBuilder.AppendToConsoleHandler = appendToConsole;
-            JavaBuilder.EndOperationHandler = endOperation;
+            JobManager.SetHandler(appendToConsole, endOperation);
         }
 
         private void btnClear_Click(object sender, RoutedEventArgs e)
@@ -151,36 +149,29 @@ namespace MASES.C2JReflector
             tbConsole.Text = string.Empty;
         }
 
-        private void btnReset_Click(object sender, RoutedEventArgs e)
-        {
-            if (MessageBox.Show("Are you sure?", "Reset statistics", MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.No) == MessageBoxResult.Yes)
-            {
-                Task.Factory.StartNew(Reflector.ResetStatistics);
-            }
-        }
-
         private void btnExecute_Click(object sender, RoutedEventArgs e)
         {
             commandPanel.IsEnabled = false;
             btnStop.Visibility = Visibility.Visible;
 
-            ReflectorEventArgs args = new ReflectorEventArgs(RepositoryRoot, (LogLevel)cbLogLevel.SelectedValue);
-            cts = new CancellationTokenSource();
-            args.CancellationToken = cts.Token;
-            args.AssemblyNames = string.IsNullOrEmpty(tbAssemblyNames.Text) ? new List<string>().ToArray() : tbAssemblyNames.Text.Replace("\r", "").Split('\n');
-            args.SrcDestinationFolder = tbDestinationFolder.Text;
-            args.SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value;
-            args.ForceRebuild = cbForceRebuildIfFolderExist.IsChecked.Value;
-            args.UseParallelBuild = cbUseParallel.IsChecked.Value;
-            args.CreateExceptionThrownClause = cbExportExceptions.IsChecked.Value;
-            args.ExceptionThrownClauseDepth = MaxDepth;
-            args.EnableAbstract = cbExportAbstract.IsChecked.Value;
-            args.EnableArray = cbExportArray.IsChecked.Value;
-            args.EnableDuplicateMethodNativeArrayWithJCRefOut = cbDuplicateMethodNativeArray.IsChecked.Value;
-            args.EnableInheritance = cbEnableInheritance.IsChecked.Value;
-            args.EnableInterfaceInheritance = cbEnableInterfaceInheritance.IsChecked.Value;
-            args.EnableRefOutParameters = cbEnableRefOutParameters.IsChecked.Value;
-            args.DryRun = cbDryRun.IsChecked.Value;
+            ReflectorEventArgs args = new ReflectorEventArgs((LogLevel)cbLogLevel.SelectedValue)
+            {
+                JobType = JobTypes.Reflect,
+                AssemblyNames = string.IsNullOrEmpty(tbAssemblyNames.Text) ? new List<string>().ToArray() : tbAssemblyNames.Text.Replace("\r", "").Split('\n'),
+                SourceDestinationFolder = SourceDestinationFolder,
+                SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value,
+                ForceRebuild = cbForceRebuildIfFolderExist.IsChecked.Value,
+                UseParallelBuild = cbUseParallel.IsChecked.Value,
+                CreateExceptionThrownClause = cbExportExceptions.IsChecked.Value,
+                ExceptionThrownClauseDepth = MaxDepth,
+                EnableAbstract = cbExportAbstract.IsChecked.Value,
+                EnableArray = cbExportArray.IsChecked.Value,
+                EnableDuplicateMethodNativeArrayWithJCRefOut = cbDuplicateMethodNativeArray.IsChecked.Value,
+                EnableInheritance = cbEnableInheritance.IsChecked.Value,
+                EnableInterfaceInheritance = cbEnableInterfaceInheritance.IsChecked.Value,
+                EnableRefOutParameters = cbEnableRefOutParameters.IsChecked.Value,
+                DryRun = cbDryRun.IsChecked.Value
+            };
 
             if (cbExportToFile.IsChecked.Value)
             {
@@ -188,7 +179,7 @@ namespace MASES.C2JReflector
                 if (MessageBox.Show("Continue operation?", string.Empty, MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.Yes) == MessageBoxResult.No) return;
             }
 
-            Task.Factory.StartNew(Reflector.ExecuteAction, args);
+            JobManager.RunJob(args);
         }
 
         private void btnGetFolders_Click(object sender, RoutedEventArgs e)
@@ -196,8 +187,8 @@ namespace MASES.C2JReflector
             commandPanel.IsEnabled = false;
             btnStop.Visibility = Visibility.Visible;
 
-            FolderBuilderEventArgs args = new FolderBuilderEventArgs(RepositoryRoot, (LogLevel)cbLogLevel.SelectedValue);
-            args.SourceFolder = tbDestinationFolder.Text;
+            FolderBuilderEventArgs args = new FolderBuilderEventArgs((LogLevel)cbLogLevel.SelectedValue);
+            args.SourceFolder = SourceDestinationFolder;
             args.SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value;
 
             if (cbExportToFile.IsChecked.Value)
@@ -206,7 +197,7 @@ namespace MASES.C2JReflector
                 if (MessageBox.Show("Continue operation?", string.Empty, MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.Yes) == MessageBoxResult.No) return;
             }
 
-            var result = JavaBuilder.CreateFolderList(args);
+            var result = JobManager.CreateFolderList(args);
 
             AssemblyDataCollection = result;
         }
@@ -215,15 +206,16 @@ namespace MASES.C2JReflector
         {
             try
             {
-                JavaBuilderEventArgs args = new JavaBuilderEventArgs(RepositoryRoot, (LogLevel)cbLogLevel.SelectedValue);
-                cts = new CancellationTokenSource();
-                args.CancellationToken = cts.Token;
-                args.JDKFolder = tbJDKFolder.Text;
-                args.JDKTarget = (JDKVersion)cbTarget.SelectedValue;
-                args.JDKToolExtraOptions = tbJDKToolExtraOptions.Text;
-                args.SourceFolder = tbDestinationFolder.Text;
-                args.SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value;
-                args.AssembliesToUse = AssemblyDataCollection.CreateList(AssemblyDataCollection);
+                JavaBuilderEventArgs args = new JavaBuilderEventArgs((LogLevel)cbLogLevel.SelectedValue)
+                {
+                    JobType = JobTypes.Build,
+                    JDKFolder = tbJDKFolder.Text,
+                    JDKTarget = (JDKVersion)cbTarget.SelectedValue,
+                    JDKToolExtraOptions = tbJDKToolExtraOptions.Text,
+                    SourceFolder = SourceDestinationFolder,
+                    SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value,
+                    AssembliesToUse = AssemblyDataCollection.CreateList(AssemblyDataCollection)
+                };
 
                 if (cbExportToFile.IsChecked.Value)
                 {
@@ -233,7 +225,7 @@ namespace MASES.C2JReflector
 
                 commandPanel.IsEnabled = false;
                 btnStop.Visibility = Visibility.Visible;
-                Task.Factory.StartNew(JavaBuilder.CompileClasses, args);
+                JobManager.RunJob(args);
             }
             catch (Exception ex)
             {
@@ -245,16 +237,17 @@ namespace MASES.C2JReflector
         {
             try
             {
-                DocsBuilderEventArgs args = new DocsBuilderEventArgs(RepositoryRoot, (LogLevel)cbLogLevel.SelectedValue);
-                cts = new CancellationTokenSource();
-                args.CancellationToken = cts.Token;
-                args.JDKFolder = tbJDKFolder.Text;
-                args.JDKTarget = (JDKVersion)cbTarget.SelectedValue;
-                args.JDKToolExtraOptions = tbJDKToolExtraOptions.Text;
-                args.SourceFolder = tbDestinationFolder.Text;
-                args.SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value;
-                args.AssembliesToUse = AssemblyDataCollection.CreateList(AssemblyDataCollection);
-                args.CommitVersion = tbCommitVersion.Text;
+                DocsBuilderEventArgs args = new DocsBuilderEventArgs((LogLevel)cbLogLevel.SelectedValue)
+                {
+                    JobType = JobTypes.BuildDocs,
+                    JDKFolder = tbJDKFolder.Text,
+                    JDKTarget = (JDKVersion)cbTarget.SelectedValue,
+                    JDKToolExtraOptions = tbJDKToolExtraOptions.Text,
+                    SourceFolder = SourceDestinationFolder,
+                    SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value,
+                    AssembliesToUse = AssemblyDataCollection.CreateList(AssemblyDataCollection),
+                    CommitVersion = tbCommitVersion.Text
+                };
 
                 if (cbExportToFile.IsChecked.Value)
                 {
@@ -264,7 +257,7 @@ namespace MASES.C2JReflector
 
                 commandPanel.IsEnabled = false;
                 btnStop.Visibility = Visibility.Visible;
-                Task.Factory.StartNew(JavaBuilder.GenerateDocs, args);
+                JobManager.RunJob(args);
             }
             catch (Exception ex)
             {
@@ -276,18 +269,19 @@ namespace MASES.C2JReflector
         {
             try
             {
-                JARBuilderEventArgs args = new JARBuilderEventArgs(RepositoryRoot, (LogLevel)cbLogLevel.SelectedValue);
-                cts = new CancellationTokenSource();
-                args.CancellationToken = cts.Token;
-                args.JDKFolder = tbJDKFolder.Text;
-                args.JDKToolExtraOptions = tbJDKToolExtraOptions.Text;
-                args.SourceFolder = tbDestinationFolder.Text;
-                args.JarDestinationFolder = tbJarDestinationFolder.Text;
-                args.SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value;
-                args.WithJARSource = cbWithSource.IsChecked.Value;
-                args.EmbeddingJCOBridge = cbWithEmbedding.IsChecked.Value;
+                JARBuilderEventArgs args = new JARBuilderEventArgs((LogLevel)cbLogLevel.SelectedValue)
+                {
+                    JobType = JobTypes.CreateJars,
+                    JDKFolder = tbJDKFolder.Text,
+                    JDKToolExtraOptions = tbJDKToolExtraOptions.Text,
+                    SourceFolder = SourceDestinationFolder,
+                    JarDestinationFolder = JarDestinationFolder,
+                    SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value,
+                    WithJARSource = cbWithSource.IsChecked.Value,
+                    EmbeddingJCOBridge = cbWithEmbedding.IsChecked.Value,
 
-                args.AssembliesToUse = AssemblyDataCollection.CreateList(AssemblyDataCollection);
+                    AssembliesToUse = AssemblyDataCollection.CreateList(AssemblyDataCollection)
+                };
 
                 if (cbExportToFile.IsChecked.Value)
                 {
@@ -297,7 +291,7 @@ namespace MASES.C2JReflector
 
                 commandPanel.IsEnabled = false;
                 btnStop.Visibility = Visibility.Visible;
-                Task.Factory.StartNew(JavaBuilder.CreateJars, args);
+                JobManager.RunJob(args);
             }
             catch (Exception ex)
             {
@@ -307,18 +301,19 @@ namespace MASES.C2JReflector
 
         private void btnGenerateSnapshotPOM_Click(object sender, RoutedEventArgs e)
         {
-            JARBuilderEventArgs args = new JARBuilderEventArgs(RepositoryRoot, (LogLevel)cbLogLevel.SelectedValue);
-            cts = new CancellationTokenSource();
-            args.CancellationToken = cts.Token;
-            args.JDKFolder = tbJDKFolder.Text;
-            args.JDKToolExtraOptions = tbJDKToolExtraOptions.Text;
-            args.SourceFolder = tbDestinationFolder.Text;
-            args.JarDestinationFolder = tbJarDestinationFolder.Text;
-            args.SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value;
-            args.WithJARSource = cbWithSource.IsChecked.Value;
-            args.EmbeddingJCOBridge = cbWithEmbedding.IsChecked.Value;
-            args.GeneratePOM = JARBuilderEventArgs.POMType.Snapshot;
-            args.AssembliesToUse = AssemblyDataCollection.CreateList(AssemblyDataCollection);
+            JARBuilderEventArgs args = new JARBuilderEventArgs((LogLevel)cbLogLevel.SelectedValue)
+            {
+                JobType = JobTypes.CreateSnapshotPOM,
+                JDKFolder = tbJDKFolder.Text,
+                JDKToolExtraOptions = tbJDKToolExtraOptions.Text,
+                SourceFolder = SourceDestinationFolder,
+                JarDestinationFolder = JarDestinationFolder,
+                SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value,
+                WithJARSource = cbWithSource.IsChecked.Value,
+                EmbeddingJCOBridge = cbWithEmbedding.IsChecked.Value,
+                GeneratePOM = JARBuilderEventArgs.POMType.Snapshot,
+                AssembliesToUse = AssemblyDataCollection.CreateList(AssemblyDataCollection)
+            };
 
             if (cbExportToFile.IsChecked.Value)
             {
@@ -328,23 +323,24 @@ namespace MASES.C2JReflector
 
             commandPanel.IsEnabled = false;
             btnStop.Visibility = Visibility.Visible;
-            Task.Factory.StartNew(JavaBuilder.CreatePOM, args);
+            JobManager.RunJob(args);
         }
 
         private void btnGeneratePOM_Click(object sender, RoutedEventArgs e)
         {
-            JARBuilderEventArgs args = new JARBuilderEventArgs(RepositoryRoot, (LogLevel)cbLogLevel.SelectedValue);
-            cts = new CancellationTokenSource();
-            args.CancellationToken = cts.Token;
-            args.JDKFolder = tbJDKFolder.Text;
-            args.JDKToolExtraOptions = tbJDKToolExtraOptions.Text;
-            args.SourceFolder = tbDestinationFolder.Text;
-            args.JarDestinationFolder = tbJarDestinationFolder.Text;
-            args.SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value;
-            args.WithJARSource = cbWithSource.IsChecked.Value;
-            args.EmbeddingJCOBridge = cbWithEmbedding.IsChecked.Value;
-            args.GeneratePOM = JARBuilderEventArgs.POMType.Release;
-            args.AssembliesToUse = AssemblyDataCollection.CreateList(AssemblyDataCollection);
+            JARBuilderEventArgs args = new JARBuilderEventArgs((LogLevel)cbLogLevel.SelectedValue)
+            {
+                JobType = JobTypes.CreateReleasePOM,
+                JDKFolder = tbJDKFolder.Text,
+                JDKToolExtraOptions = tbJDKToolExtraOptions.Text,
+                SourceFolder = SourceDestinationFolder,
+                JarDestinationFolder = JarDestinationFolder,
+                SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value,
+                WithJARSource = cbWithSource.IsChecked.Value,
+                EmbeddingJCOBridge = cbWithEmbedding.IsChecked.Value,
+                GeneratePOM = JARBuilderEventArgs.POMType.Release,
+                AssembliesToUse = AssemblyDataCollection.CreateList(AssemblyDataCollection)
+            };
 
             if (cbExportToFile.IsChecked.Value)
             {
@@ -354,7 +350,7 @@ namespace MASES.C2JReflector
 
             commandPanel.IsEnabled = false;
             btnStop.Visibility = Visibility.Visible;
-            Task.Factory.StartNew(JavaBuilder.CreatePOM, args);
+            JobManager.RunJob(args);
         }
 
         public delegate void appendToConsoleDelegate(TextBox myControl, string format, object[] args);
@@ -377,12 +373,6 @@ namespace MASES.C2JReflector
 
         void endOperation(object sender, EndOperationEventArgs args)
         {
-            if (cts != null)
-            {
-                cts.Dispose();
-                cts = null;
-            }
-
             this.Dispatcher.Invoke(() =>
             {
                 commandPanel.IsEnabled = true;
@@ -410,32 +400,20 @@ namespace MASES.C2JReflector
 
         private void btnStop_Click(object sender, RoutedEventArgs e)
         {
-            if (cts != null)
-            {
-                cts.Cancel(true);
-            }
+            JobManager.CancelJob();
         }
 
         bool export<T>(T type) where T : class
         {
             Microsoft.Win32.SaveFileDialog sfd = new Microsoft.Win32.SaveFileDialog();
-            sfd.InitialDirectory = assemblyLoc;
+            sfd.InitialDirectory = JobManager.RootFolder;
             sfd.FileName = typeof(T).Name;
 
             bool result = sfd.ShowDialog().Value;
 
             if (result)
             {
-                System.Text.StringBuilder sb = new System.Text.StringBuilder();
-                System.Xml.Serialization.XmlSerializer serializer = new System.Xml.Serialization.XmlSerializer(typeof(T));
-                using (TextWriter writer = new StringWriter(sb))
-                {
-                    serializer.Serialize(writer, type);
-                    writer.Flush();
-                }
-
-                string str = sb.ToString();
-                File.WriteAllText(sfd.FileName, str);
+                JobManager.Export(type, sfd.FileName);
             }
 
             return result;

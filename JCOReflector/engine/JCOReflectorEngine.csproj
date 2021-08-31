@@ -5,6 +5,7 @@
     <Title>JCOReflector Engine - JCOBridge based Java class generator that mimic .NET classes</Title>
     <Description>JCOReflector Engine - JCOBridge based Java class generator that mimic .NET classes</Description>
     <Copyright>Copyright ©  MASES s.r.l. 2021</Copyright>
+    <Authors>MASES s.r.l.</Authors>
     <Company>MASES s.r.l.</Company>
     <Version>1.7.0.0</Version>
     <Product>JCOReflectorEngine</Product>
@@ -22,6 +23,7 @@
     <PackageId>MASES.JCOReflectorEngine</PackageId>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>..\Common\JCOReflector.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
@@ -91,6 +93,9 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="JCOBridge" Version="2.3.2" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MASES.CLIParser" Version="1.0.0" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All"/>

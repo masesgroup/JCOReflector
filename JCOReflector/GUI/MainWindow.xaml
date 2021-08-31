@@ -47,7 +47,8 @@
                     </DockPanel>
                     <DockPanel DockPanel.Dock="Top" MinHeight="30">
                         <Label Content="Source destination folder" VerticalAlignment="Stretch" MinWidth="120"/>
-                        <TextBox Name="tbDestinationFolder" VerticalContentAlignment="Center" VerticalAlignment="Stretch" IsReadOnly="True" />
+                        <TextBox VerticalContentAlignment="Center" VerticalAlignment="Stretch" IsReadOnly="True" 
+                                 Text="{Binding ElementName=mainWindow, Path=SourceDestinationFolder, Mode=TwoWay}"/>
                     </DockPanel>
                 </DockPanel>
             </GroupBox>
@@ -91,7 +92,6 @@
                             </GroupBox>
                             <DockPanel DockPanel.Dock="Top" MinHeight="30" LastChildFill="False">
                                 <Button Name="btnExecute" Content="Execute build..." MinWidth="100" Click="btnExecute_Click" VerticalAlignment="Stretch" VerticalContentAlignment="Center"/>
-                                <Button Name="btnReset" Content="Reset statistics..." MinWidth="100" Click="btnReset_Click" VerticalAlignment="Stretch" VerticalContentAlignment="Center" />
                             </DockPanel>
                         </DockPanel>
                     </DockPanel>
@@ -120,7 +120,8 @@
                         </DockPanel>
                         <DockPanel DockPanel.Dock="Top" MinHeight="30">
                             <Label Content="JAR destination folder" VerticalContentAlignment="Center" VerticalAlignment="Stretch"/>
-                            <TextBox Name="tbJarDestinationFolder" VerticalContentAlignment="Center" VerticalAlignment="Stretch" IsReadOnly="True" />
+                            <TextBox VerticalContentAlignment="Center" VerticalAlignment="Stretch" IsReadOnly="True" 
+                                     Text="{Binding ElementName=mainWindow, Path=JarDestinationFolder, Mode=TwoWay}"/>
                         </DockPanel>
                         <DockPanel DockPanel.Dock="Top" MinHeight="30">
                             <Label Content="JDK Tool Extra Options" VerticalContentAlignment="Center" VerticalAlignment="Stretch"/>

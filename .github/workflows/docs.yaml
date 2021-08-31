@@ -143,13 +143,13 @@ jobs:
         shell: bash
 
       - name: Build netcoreapp3.1 Java Help files
-        run: dotnet bin\netcoreapp3.1\JCOReflectorCLI.dll builddocs .github\workflows\builddocs_win19.job -commit=${{ env.GITHUB_COMMIT_MESSAGE }}
+        run: dotnet bin\netcoreapp3.1\JCOReflectorCLI.dll -JobType BuildDocs -JobFile .github\workflows\builddocs_win19.job -commit=${{ env.GITHUB_COMMIT_MESSAGE }}
 
       - name: Build net5.0 Java Help files
-        run: dotnet bin\net5.0\JCOReflectorCLI.dll builddocs .github\workflows\builddocs_win19.job -commit=${{ env.GITHUB_COMMIT_MESSAGE }}
+        run: dotnet bin\net5.0\JCOReflectorCLI.dll -JobType BuildDocs -JobFile .github\workflows\builddocs_win19.job -commit=${{ env.GITHUB_COMMIT_MESSAGE }}
           
       - name: Build net461 Java Help files
-        run: .\bin\net461\JCOReflectorCLI builddocs .github\workflows\builddocs_win19.job -commit=${{ env.GITHUB_COMMIT_MESSAGE }}
+        run: .\bin\net461\JCOReflectorCLI -JobType BuildDocs -JobFile .github\workflows\builddocs_win19.job -commit=${{ env.GITHUB_COMMIT_MESSAGE }}
 
       - name: Clean temporary files
         run: |

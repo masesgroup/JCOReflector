@@ -29,27 +29,7 @@ using System.IO;
 
 namespace MASES.C2JReflector
 {
-    public enum LogLevel
-    {
-        Error,
-        Warning,
-        Info,
-        Verbose
-    }
-
-    public enum JDKVersion
-    {
-        NotSet = 0,
-        Version8 = 8,
-        Version9,
-        Version10,
-        Version11,
-        Version12,
-        Version13,
-        Version14
-    }
-
-    public static class Const
+    static class Const
     {
         public static string ToFolderName(this System.Reflection.AssemblyName assName)
         {

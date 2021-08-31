@@ -161,6 +161,7 @@ namespace MASES.JCOReflectorEngine
         public const string PARAM_EnableInterfaceInheritance = "EnableInterfaceInheritance";
         public const string PARAM_EnableRefOutParameters = "EnableRefOutParameters";
         public const string PARAM_DryRun = "DryRun";
+        public const string PARAM_AvoidReportAndStatistics = "AvoidReportAndStatistics";
 
         // JavaBuilderEventArgs
         public const string PARAM_JDKFolder = "JDKFolder";
@@ -301,6 +302,12 @@ namespace MASES.JCOReflectorEngine
                     Default = false,
                     Help = "Do not write anything (used from JobType.Reflect).",
                 },
+                new ArgumentMetadata<bool>()
+                {
+                    Name = PARAM_AvoidReportAndStatistics,
+                    Default = false,
+                    Help = "Do not write report and statistics (used from JobType.Reflect).",
+                },
                 new ArgumentMetadata<string>()
                 {
                     Name = PARAM_JDKFolder,
@@ -377,8 +384,8 @@ namespace MASES.JCOReflectorEngine
             {
                 arg = ConvertFile(jobType, resultingArgs.Get<string>(PARAM_File));
             }
-            
-             if (arg != null)
+
+            if (arg != null)
             {
                 arg.JobType = jobType;
             }
@@ -459,7 +466,10 @@ namespace MASES.JCOReflectorEngine
                         {
                             newArg.DryRun = resultingArgs.Get<bool>(PARAM_DryRun);
                         }
-
+                        if (resultingArgs.Exist(PARAM_AvoidReportAndStatistics))
+                        {
+                            newArg.AvoidReportAndStatistics = resultingArgs.Get<bool>(PARAM_AvoidReportAndStatistics);
+                        }
                     }
                     break;
                 case JobTypes.Build:
@@ -1368,7 +1378,6 @@ namespace MASES.JCOReflectorEngine
 
         public string[] AssemblyNames { get; set; }
         public string SourceDestinationFolder { get; set; }
-        public bool SplitFolderByAssembly { get; set; }
         public bool ForceRebuild { get; set; }
         public bool UseParallelBuild { get; set; }
         public bool CreateExceptionThrownClause { get; set; }
@@ -1380,6 +1389,7 @@ namespace MASES.JCOReflectorEngine
         public bool EnableInterfaceInheritance { get; set; }
         public bool EnableRefOutParameters { get; set; }
         public bool DryRun { get; set; }
+        public bool AvoidReportAndStatistics { get; set; }
     }
     #endregion
 }

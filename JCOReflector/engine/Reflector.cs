@@ -147,6 +147,7 @@ namespace MASES.JCOReflectorEngine
             }
             return res;
         }
+
         static string GetStatisticsCsv(out string errorString)
         {
             // Modification in the order and quantity of data shall be done also in 
@@ -213,7 +214,6 @@ namespace MASES.JCOReflectorEngine
             }
             catch (Exception ex)
             {
-
                 errorString = string.Format("CSV FILES NOT CREATED!!! Error {0}", ex.Message);
                 JobManager.AppendToConsole(LogLevel.Error, errorString);
             }
@@ -385,38 +385,41 @@ namespace MASES.JCOReflectorEngine
                     await ExportAssemblyWithReferences(assemblyReferenced, assemblyParsed, new AssemblyName(assembly.FullName), SourceDestinationFolder, SplitByAssembly, ForceRebuild);
                 }
 
-                reportStr = GetReport(args.AssemblyNames);
-                var reportfile = Path.Combine(args.SourceDestinationFolder, Const.Report.REPORT_FILE_TO_WRITE);
-                if (File.Exists(reportfile))
+                if (!args.AvoidReportAndStatistics)
                 {
-                    var beginTag = string.Format(Const.Report.REPORT_BEGIN_PLACEHOLDER, Const.Framework.RuntimeFolder);
-                    var endTag = string.Format(Const.Report.REPORT_END_PLACEHOLDER, Const.Framework.RuntimeFolder);
-                    var readmeContent = File.ReadAllText(reportfile);
+                    reportStr = GetReport(args.AssemblyNames);
+                    var reportfile = Path.Combine(args.SourceDestinationFolder, Const.Report.REPORT_FILE_TO_WRITE);
+                    if (File.Exists(reportfile))
+                    {
+                        var beginTag = string.Format(Const.Report.REPORT_BEGIN_PLACEHOLDER, Const.Framework.RuntimeFolder);
+                        var endTag = string.Format(Const.Report.REPORT_END_PLACEHOLDER, Const.Framework.RuntimeFolder);
+                        var readmeContent = File.ReadAllText(reportfile);
 
-                    StringBuilder sb = new StringBuilder();
-                    var preText = readmeContent.Substring(0, readmeContent.IndexOf(beginTag));
-                    sb.Append(preText);
-                    sb.AppendLine(beginTag);
-                    sb.AppendLine(reportStr);
-                    var endText = readmeContent.Substring(readmeContent.IndexOf(endTag));
-                    sb.Append(endText);
-                    writeFile(reportfile, sb.ToString());
-                }
+                        StringBuilder sb = new StringBuilder();
+                        var preText = readmeContent.Substring(0, readmeContent.IndexOf(beginTag));
+                        sb.Append(preText);
+                        sb.AppendLine(beginTag);
+                        sb.AppendLine(reportStr);
+                        var endText = readmeContent.Substring(readmeContent.IndexOf(endTag));
+                        sb.Append(endText);
+                        writeFile(reportfile, sb.ToString());
+                    }
 
-                string statisticsError;
-                statisticsCsv = GetStatisticsCsv(out statisticsError);
+                    string statisticsError;
+                    statisticsCsv = GetStatisticsCsv(out statisticsError);
 
-                if (!String.IsNullOrEmpty(statisticsError))
-                {
-                    reportStr += statisticsError;
-                }
-                else if (!WriteStatisticsCsv(statisticsCsv))
-                {
-                    reportStr += "ERROR WRITING STATISTICS FILES" + Environment.NewLine;
-                }
-                else
-                {
-                    reportStr += "STATISTICS FILES CREATED OK" + Environment.NewLine;
+                    if (!String.IsNullOrEmpty(statisticsError))
+                    {
+                        reportStr += statisticsError;
+                    }
+                    else if (!WriteStatisticsCsv(statisticsCsv))
+                    {
+                        reportStr += "ERROR WRITING STATISTICS FILES" + Environment.NewLine;
+                    }
+                    else
+                    {
+                        reportStr += "STATISTICS FILES CREATED OK" + Environment.NewLine;
+                    }
                 }
             }
             catch (OperationCanceledException ex)

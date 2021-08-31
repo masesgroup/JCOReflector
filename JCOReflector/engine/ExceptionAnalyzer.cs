@@ -15,7 +15,7 @@ using System.Reflection.Emit;
 using System.Text;
 using ClrTest.Reflection;
 
-public static class ExceptionAnalyser
+static class ExceptionAnalyser
 {
     public static ReadOnlyCollection<Type> GetAllExceptions(this MethodBase method, int maxDepth = -1)
     {

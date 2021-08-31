@@ -29,9 +29,9 @@ using System.IO;
 using System.Text;
 using System.Threading;
 
-namespace MASES.C2JReflector
+namespace MASES.JCOReflectorEngine
 {
-    public static class JavaBuilder
+    static class JavaBuilder
     {
         enum JarType
         {
@@ -42,28 +42,11 @@ namespace MASES.C2JReflector
         static string JavaDoc = Path.Combine("bin", "javadoc");
         static string JarCompiler = Path.Combine("bin", "jar");
 
-        public static appendToConsoleHandler AppendToConsoleHandler;
-        public static EventHandler<EndOperationEventArgs> EndOperationHandler;
-
-        static CancellationToken CancellationToken;
-
-        static LogLevel logLevel;
-
-        static void AppendToConsole(LogLevel level, string format, params object[] args)
-        {
-            if (logLevel >= level && AppendToConsoleHandler != null)
-            {
-                AppendToConsoleHandler(format, args);
-            }
-        }
-
         public static void CompileClasses(object o)
         {
             bool failed = false;
             JavaBuilderEventArgs args = o as JavaBuilderEventArgs;
 
-            CancellationToken = args.CancellationToken;
-            logLevel = args.LogLevel;
             DateTime dtStart = DateTime.Now;
             string reportStr = string.Empty;
             try
@@ -79,23 +62,23 @@ namespace MASES.C2JReflector
                 }
 
                 var srcRootFolder = Path.Combine(args.SourceFolder, Const.FileNameAndDirectory.SourceDirectory);
-                var classes = CreateSourceListAndCompile(args.JDKFolder, args.JDKTarget, args.JDKToolExtraOptions, args.RootFolder, srcRootFolder, (args.AssembliesToUse == null) ? CreateFolderList(srcRootFolder) : args.AssembliesToUse, Timeout.Infinite);
+                var classes = CreateSourceListAndCompile(args.JDKFolder, args.JDKTarget, args.JDKToolExtraOptions, args.RootFolder, srcRootFolder, (args.AssembliesToUse == null) ? JobManager.CreateFolderList(srcRootFolder) : args.AssembliesToUse, Timeout.Infinite);
                 reportStr = string.Format("Compilation of {0} classes done in {1}.", classes, DateTime.Now - dtStart);
             }
             catch (OperationCanceledException ex)
             {
                 reportStr = string.Format("Error {0}", ex.Message);
-                AppendToConsole(LogLevel.Error, reportStr);
+                JobManager.AppendToConsole(LogLevel.Error, reportStr);
             }
             catch (Exception ex)
             {
                 reportStr = string.Format("Error {0}", ex.Message);
-                AppendToConsole(LogLevel.Error, reportStr);
+                JobManager.AppendToConsole(LogLevel.Error, reportStr);
                 failed = true;
             }
             finally
             {
-                EndOperationHandler?.Invoke(null, new EndOperationEventArgs(reportStr, failed));
+                JobManager.EndOperation(new EndOperationEventArgs(reportStr, failed));
             }
         }
 
@@ -103,8 +86,7 @@ namespace MASES.C2JReflector
         {
             bool failed = false;
             DocsBuilderEventArgs args = o as DocsBuilderEventArgs;
-            CancellationToken = args.CancellationToken;
-            logLevel = args.LogLevel;
+
             DateTime dtStart = DateTime.Now;
             string reportStr = string.Empty;
             try
@@ -126,110 +108,27 @@ namespace MASES.C2JReflector
 
                 var srcRootFolder = Path.Combine(args.SourceFolder, Const.FileNameAndDirectory.SourceDirectory);
                 string destinationFolder = Path.Combine(args.SourceFolder, Const.FileNameAndDirectory.DocsDirectory);
-                var classes = CreateSourceListAndGenerateDocs(args.JDKFolder, args.JDKTarget, args.JDKToolExtraOptions, args.RootFolder, srcRootFolder, destinationFolder, args.CommitVersion, (args.AssembliesToUse == null) ? CreateFolderList(srcRootFolder) : args.AssembliesToUse, Timeout.Infinite);
+                var classes = CreateSourceListAndGenerateDocs(args.JDKFolder, args.JDKTarget, args.JDKToolExtraOptions, args.RootFolder, srcRootFolder, destinationFolder, args.CommitVersion, (args.AssembliesToUse == null) ? JobManager.CreateFolderList(srcRootFolder) : args.AssembliesToUse, Timeout.Infinite);
                 reportStr = string.Format("Javadoc of {0} classes done in {1}.", classes, DateTime.Now - dtStart);
             }
             catch (OperationCanceledException ex)
             {
                 reportStr = string.Format("Error {0}", ex.Message);
-                AppendToConsole(LogLevel.Error, reportStr);
+                JobManager.AppendToConsole(LogLevel.Error, reportStr);
             }
             catch (Exception ex)
             {
                 reportStr = string.Format("Error {0}", ex.Message);
-                AppendToConsole(LogLevel.Error, reportStr);
+                JobManager.AppendToConsole(LogLevel.Error, reportStr);
                 failed = true;
             }
             finally
             {
-                EndOperationHandler?.Invoke(null, new EndOperationEventArgs(reportStr, failed));
+                JobManager.EndOperation(new EndOperationEventArgs(reportStr, failed));
             }
         }
 
-        public static AssemblyDataCollection CreateFolderList(object o)
-        {
-            bool failed = false;
-            FolderBuilderEventArgs args = o as FolderBuilderEventArgs;
-            CancellationToken = args.CancellationToken;
-            logLevel = args.LogLevel;
-
-            if (!Path.IsPathRooted(args.SourceFolder))
-            {
-                args.SourceFolder = Path.Combine(args.RootFolder, args.SourceFolder);
-            }
-
-            string originFolder = Path.Combine(args.SourceFolder, Const.FileNameAndDirectory.SourceDirectory);
-
-            try
-            {
-                var folders = CreateFolderList(originFolder);
-                AssemblyDataCollection coll = new AssemblyDataCollection();
-                AssemblyData data = new AssemblyData();
-                data.IsSelected = true;
-                data.Framework = Const.Framework.All;
-                data.AssemblyFullName = Const.FileNameAndDirectory.CommonDirectory;
-                data.FolderName = Const.FileNameAndDirectory.CommonDirectory;
-                coll.Add(data);
-                foreach (var folder in folders)
-                {
-                    data = new AssemblyData();
-                    if (folder.Equals(Const.FileNameAndDirectory.CommonDirectory)) continue;
-
-                    var relFolder = Const.Framework.RuntimeFolder;
-                    data.AssemblyFullName = folder;
-                    data.FolderName = Path.Combine(relFolder, folder);
-
-                    data.Framework = Const.Framework.Runtime;
-
-#if ENABLE_REFERENCE_BUILDER
-                    var refPath = Path.Combine(args.OriginFolder, relFolder, folder, Const.FileNameAndDirectory.ReferencesFile);
-                    var refData = File.ReadAllLines(refPath);
-                    data.ReferencedAssemblies = new List<string>(refData);
-#endif
-
-                    coll.Add(data);
-                }
-                return coll;
-            }
-            catch (OperationCanceledException ex)
-            {
-                AppendToConsole(LogLevel.Error, "Error {0}", ex.Message);
-                return new AssemblyDataCollection();
-            }
-            catch (Exception ex)
-            {
-                AppendToConsole(LogLevel.Error, "Error {0}", ex.Message);
-                failed = true;
-                return new AssemblyDataCollection();
-            }
-            finally
-            {
-                EndOperationHandler?.Invoke(null, new EndOperationEventArgs(string.Empty, failed));
-            }
-        }
-
-        static IEnumerable<string> CreateFolderList(string originFolder, bool withCommonDir = true)
-        {
-            originFolder = Path.GetFullPath(originFolder);
-            List<string> dirs = new List<string>();
-
-            if (withCommonDir)
-            {
-                dirs.Add(Const.FileNameAndDirectory.CommonDirectory);
-            }
-
-            originFolder = Path.Combine(originFolder, Const.Framework.RuntimeFolder);
-            foreach (var item in Directory.EnumerateDirectories(originFolder))
-            {
-                var path = Path.GetFullPath(item);
-                path = path.Replace(originFolder, string.Empty);
-                path = path.Replace("\\", string.Empty);
-                path = path.Replace("/", string.Empty);
-                dirs.Add(path);
-            }
-
-            return dirs;
-        }
+ 
 
         static int CreateSourceListAndCompile(string jdkFolder, JDKVersion jdkTarget, string toolExtraOptions, string rootFolder, string originFolder, IEnumerable<string> assemblies, int timeout)
         {
@@ -310,8 +209,7 @@ namespace MASES.C2JReflector
             try
             {
                 JARBuilderEventArgs args = o as JARBuilderEventArgs;
-                logLevel = args.LogLevel;
-
+ 
                 if (!Path.IsPathRooted(args.SourceFolder))
                 {
                     args.SourceFolder = Path.Combine(args.RootFolder, args.SourceFolder);
@@ -330,7 +228,7 @@ namespace MASES.C2JReflector
                 Const.FileNameAndDirectory.CreateJCOBridgeZip(args.RootFolder);
 
                 var srcRootFolder = Path.Combine(args.SourceFolder, Const.FileNameAndDirectory.SourceDirectory);
-                var assembliesToUse = (args.AssembliesToUse == null) ? CreateFolderList(srcRootFolder, false) : args.AssembliesToUse;
+                var assembliesToUse = (args.AssembliesToUse == null) ? JobManager.CreateFolderList(srcRootFolder, false) : args.AssembliesToUse;
                 StringBuilder sb = new StringBuilder();
                 foreach (var item in assembliesToUse)
                 {
@@ -353,17 +251,17 @@ namespace MASES.C2JReflector
             catch (OperationCanceledException ex)
             {
                 reportStr = string.Format("Error {0}", ex.Message);
-                AppendToConsole(LogLevel.Error, reportStr);
+                JobManager.AppendToConsole(LogLevel.Error, reportStr);
             }
             catch (Exception ex)
             {
                 reportStr = string.Format("Error {0}", ex.Message);
-                AppendToConsole(LogLevel.Error, reportStr);
+                JobManager.AppendToConsole(LogLevel.Error, reportStr);
                 failed = true;
             }
             finally
             {
-                EndOperationHandler?.Invoke(null, new EndOperationEventArgs(reportStr, failed));
+                JobManager.EndOperation(new EndOperationEventArgs(reportStr, failed));
             }
         }
 
@@ -375,7 +273,6 @@ namespace MASES.C2JReflector
             try
             {
                 JARBuilderEventArgs args = o as JARBuilderEventArgs;
-                logLevel = args.LogLevel;
 
                 if (!Path.IsPathRooted(args.SourceFolder))
                 {
@@ -393,23 +290,23 @@ namespace MASES.C2JReflector
                 }
 
                 var srcRootFolder = Path.Combine(args.SourceFolder, Const.FileNameAndDirectory.SourceDirectory);
-                var jars = CreateJars(args.JDKFolder, args.RootFolder, srcRootFolder, args.JarDestinationFolder, (args.AssembliesToUse == null) ? CreateFolderList(srcRootFolder) : args.AssembliesToUse, args.WithJARSource, args.EmbeddingJCOBridge);
+                var jars = CreateJars(args.JDKFolder, args.RootFolder, srcRootFolder, args.JarDestinationFolder, (args.AssembliesToUse == null) ? JobManager.CreateFolderList(srcRootFolder) : args.AssembliesToUse, args.WithJARSource, args.EmbeddingJCOBridge);
                 reportStr = string.Format("{0} Jars created in {1}.", jars, DateTime.Now - dtStart);
             }
             catch (OperationCanceledException ex)
             {
                 reportStr = string.Format("Error {0}", ex.Message);
-                AppendToConsole(LogLevel.Error, reportStr);
+                JobManager.AppendToConsole(LogLevel.Error, reportStr);
             }
             catch (Exception ex)
             {
                 reportStr = string.Format("Error {0}", ex.Message);
-                AppendToConsole(LogLevel.Error, reportStr);
+                JobManager.AppendToConsole(LogLevel.Error, reportStr);
                 failed = true;
             }
             finally
             {
-                EndOperationHandler?.Invoke(null, new EndOperationEventArgs(reportStr, failed));
+                JobManager.EndOperation(new EndOperationEventArgs(reportStr, failed));
             }
         }
 
@@ -516,7 +413,7 @@ namespace MASES.C2JReflector
 
             File.WriteAllText(Path.Combine(searchPath, fileWithNames), sb.ToString());
 
-            string jarParam = (logLevel > LogLevel.Info) ? "cvf" : "cf";
+            string jarParam = (JobManager.LogLevel > LogLevel.Info) ? "cvf" : "cf";
             if (string.IsNullOrEmpty(manifestFile))
             {
                 launchProcess(searchPath, Path.Combine(jdkFolder, JarCompiler), jarParam + " " + destinationJar + " @" + fileWithNames, timeout);
@@ -534,7 +431,7 @@ namespace MASES.C2JReflector
         static void launchProcess(string workingDir, string processToLaunch, string arguments, int timeout = Timeout.Infinite)
         {
             DateTime dtStart = DateTime.Now;
-            AppendToConsole(LogLevel.Info, "Starting operation {0} {1} with {2} seconds of timeout at {3}.", processToLaunch, arguments, timeout, dtStart);
+            JobManager.AppendToConsole(LogLevel.Info, "Starting operation {0} {1} with {2} seconds of timeout at {3}.", processToLaunch, arguments, timeout, dtStart);
 
             errorData = outputData = string.Empty;
             var tmpDirectory = Environment.CurrentDirectory;
@@ -546,7 +443,7 @@ namespace MASES.C2JReflector
                 startInfo.Arguments = arguments;
                 startInfo.CreateNoWindow = true;
                 startInfo.WorkingDirectory = workingDir;
-                if (logLevel == LogLevel.Verbose)
+                if (JobManager.LogLevel == LogLevel.Verbose)
                 {
                     startInfo.RedirectStandardOutput = true;
                 }
@@ -556,7 +453,7 @@ namespace MASES.C2JReflector
                 {
                     proc.ErrorDataReceived += Proc_ErrorDataReceived;
                     proc.BeginErrorReadLine();
-                    if (logLevel == LogLevel.Verbose)
+                    if (JobManager.LogLevel == LogLevel.Verbose)
                     {
                         proc.OutputDataReceived += Proc_OutputDataReceived;
                         proc.BeginOutputReadLine();
@@ -568,12 +465,12 @@ namespace MASES.C2JReflector
                         {
                             while (!proc.WaitForExit(1000))
                             {
-                                CancellationToken.ThrowIfCancellationRequested();
+                                JobManager.CancellationToken.ThrowIfCancellationRequested();
                             }
                         }
                         else if (!proc.WaitForExit(timeout * 1000))
                         {
-                            AppendToConsole(LogLevel.Warning, "Timeout on operation {0} {1}. Killing it.", processToLaunch, arguments);
+                            JobManager.AppendToConsole(LogLevel.Warning, "Timeout on operation {0} {1}. Killing it.", processToLaunch, arguments);
                             proc.Kill();
                         }
                     }
@@ -585,39 +482,39 @@ namespace MASES.C2JReflector
                         }
                         catch (Exception ex)
                         {
-                            AppendToConsole(LogLevel.Error, "Error killing job: {0}", ex.Message);
+                            JobManager.AppendToConsole(LogLevel.Error, "Error killing job: {0}", ex.Message);
                         }
 
-                        AppendToConsole(LogLevel.Error, "Error executing job: {0}", oce.Message);
+                        JobManager.AppendToConsole(LogLevel.Error, "Error executing job: {0}", oce.Message);
                     }
                     catch (Exception ex)
                     {
-                        AppendToConsole(LogLevel.Error, "Error executing job: {0}", ex.Message);
+                        JobManager.AppendToConsole(LogLevel.Error, "Error executing job: {0}", ex.Message);
                     }
                     finally
                     {
                         proc.ErrorDataReceived -= Proc_ErrorDataReceived;
-                        if (logLevel == LogLevel.Verbose)
+                        if (JobManager.LogLevel == LogLevel.Verbose)
                         {
                             proc.OutputDataReceived -= Proc_OutputDataReceived;
                         }
 
                         if (!string.IsNullOrEmpty(outputData))
                         {
-                            AppendToConsole(LogLevel.Error, outputData);
+                            JobManager.AppendToConsole(LogLevel.Error, outputData);
                         }
 
                         if (!string.IsNullOrEmpty(errorData) && errorData != Environment.NewLine)
                         {
                             errorData = errorData.Replace("{", "{{").Replace("}", "}}");
-                            AppendToConsole(LogLevel.Error, errorData);
+                            JobManager.AppendToConsole(LogLevel.Error, errorData);
                         }
                     }
                 }
             }
             finally
             {
-                AppendToConsole(LogLevel.Info, "End operation {0} {1} with {2} seconds of timeout, elapsed {3}.", processToLaunch, arguments, timeout, DateTime.Now - dtStart);
+                JobManager.AppendToConsole(LogLevel.Info, "End operation {0} {1} with {2} seconds of timeout, elapsed {3}.", processToLaunch, arguments, timeout, DateTime.Now - dtStart);
                 Environment.CurrentDirectory = tmpDirectory;
             }
         }

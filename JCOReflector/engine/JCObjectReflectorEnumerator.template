@@ -89,7 +89,9 @@ public class PACKAGE_CLASS_NAME extends NetObject implements Iterator<PACKAGE_IN
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PACKAGE_CLASS_NAME(JCObject instance) {
         classInstance = instance.iterator();
     }

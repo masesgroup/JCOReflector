@@ -32,16 +32,12 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace MASES.C2JReflector
+namespace MASES.JCOReflectorEngine
 {
-    public static class Reflector
+    static class Reflector
     {
         static List<string> assemblyReferenced = new List<string>();
         static List<string> assemblyParsed = new List<string>();
-        public static appendToConsoleHandler AppendToConsoleHandler;
-        public static EventHandler<EndOperationEventArgs> EndOperationHandler;
-
-        static CancellationToken CancellationToken;
 
         static bool EnableWrite = true;
 
@@ -52,8 +48,7 @@ namespace MASES.C2JReflector
         static bool EnableInterfaceInheritance = false;
         static bool EnableRefOutParameters = false;
 
-        static LogLevel LogLevel;
-        static string SrcDestinationFolder;
+        static string SourceDestinationFolder;
         static string CsvDestinationFolder;
         static bool SplitByAssembly;
         static bool ForceRebuild;
@@ -87,14 +82,6 @@ namespace MASES.C2JReflector
         static long implementedEvents = 0;
         static long analyzedEvents = 0;
 
-        static void AppendToConsole(LogLevel level, string format, params object[] args)
-        {
-            if (LogLevel >= level && AppendToConsoleHandler != null)
-            {
-                AppendToConsoleHandler(format, args);
-            }
-        }
-
         static string reflectorVersion = typeof(Reflector).Assembly.GetName().Version.ToString();
 
         static string checkForkeyword(string inputName)
@@ -107,7 +94,7 @@ namespace MASES.C2JReflector
             return inputName;
         }
 
-        public static void ResetStatistics()
+        static void ResetStatistics()
         {
             assemblyReferenced.Clear();
             assemblyParsed.Clear();
@@ -149,17 +136,18 @@ namespace MASES.C2JReflector
 
                     if (!Directory.Exists(CsvDestinationFolder)) Directory.CreateDirectory(CsvDestinationFolder);
                     csvFileName = Path.GetFullPath(Path.Combine(CsvDestinationFolder, Const.Framework.RuntimeFolder, Const.FileNameAndDirectory.StatisticsFilename));
-                    File.WriteAllText(csvFileName, csvString);
+                    writeFile(csvFileName, csvString);
                 }
             }
             catch (Exception ex)
             {
                 string errorString = string.Format("Error writing csv files {0}", ex.Message);
-                AppendToConsole(LogLevel.Error, errorString);
+                JobManager.AppendToConsole(LogLevel.Error, errorString);
                 res = false;
             }
             return res;
         }
+
         static string GetStatisticsCsv(out string errorString)
         {
             // Modification in the order and quantity of data shall be done also in 
@@ -226,9 +214,8 @@ namespace MASES.C2JReflector
             }
             catch (Exception ex)
             {
-
                 errorString = string.Format("CSV FILES NOT CREATED!!! Error {0}", ex.Message);
-                AppendToConsole(LogLevel.Error, errorString);
+                JobManager.AppendToConsole(LogLevel.Error, errorString);
             }
             return res;
         }
@@ -307,14 +294,14 @@ namespace MASES.C2JReflector
             catch (Exception ex)
             {
                 res = string.Format("Error {0}", ex.Message);
-                AppendToConsole(LogLevel.Error, res);
+                JobManager.AppendToConsole(LogLevel.Error, res);
             }
             return res;
         }
 
         static void writeExtraClasses(ReflectorEventArgs args)
         {
-            string destFolder = assemblyDestinationFolder(SrcDestinationFolder, new AssemblyName(Const.SpecialNames.JCOReflectorGeneratedFolder), SplitByAssembly);
+            string destFolder = assemblyDestinationFolder(SourceDestinationFolder, new AssemblyName(Const.SpecialNames.JCOReflectorGeneratedFolder), SplitByAssembly);
             var jcoBridgeOptionsFile = Path.Combine(destFolder, Const.FileNameAndDirectory.OrgSubDirectory,
                                                      Const.FileNameAndDirectory.MasesSubDirectory,
                                                      Const.FileNameAndDirectory.JCOBridgeSubDirectory,
@@ -345,6 +332,8 @@ namespace MASES.C2JReflector
 
         public static async Task ExecuteAction(object o)
         {
+            ResetStatistics();
+
             bool failed = false;
             List<Type> typesToExport = new List<Type>();
             ReflectorEventArgs args = o as ReflectorEventArgs;
@@ -353,15 +342,13 @@ namespace MASES.C2JReflector
             location = Path.GetDirectoryName(location);
             Environment.CurrentDirectory = location;
 
-            if (!Path.IsPathRooted(args.SrcDestinationFolder))
+            if (!Path.IsPathRooted(args.SourceDestinationFolder))
             {
-                args.SrcDestinationFolder = Path.Combine(args.RootFolder, args.SrcDestinationFolder);
+                args.SourceDestinationFolder = Path.Combine(args.RootFolder, args.SourceDestinationFolder);
             }
 
-            CancellationToken = args.CancellationToken;
-            LogLevel = args.LogLevel;
-            SrcDestinationFolder = Path.GetFullPath(Path.Combine(args.SrcDestinationFolder, Const.FileNameAndDirectory.SourceDirectory));
-            CsvDestinationFolder = Path.GetFullPath(Path.Combine(args.SrcDestinationFolder, Const.FileNameAndDirectory.StatsDirectory));
+            SourceDestinationFolder = Path.GetFullPath(Path.Combine(args.SourceDestinationFolder, Const.FileNameAndDirectory.SourceDirectory));
+            CsvDestinationFolder = Path.GetFullPath(Path.Combine(args.SourceDestinationFolder, Const.FileNameAndDirectory.StatsDirectory));
             SplitByAssembly = args.SplitFolderByAssembly;
             ForceRebuild = args.ForceRebuild;
             UseParallelBuild = args.UseParallelBuild;
@@ -386,64 +373,67 @@ namespace MASES.C2JReflector
                     Assembly assembly = null;
                     if (File.Exists(item))
                     {
-                        AppendToConsole(LogLevel.Info, "Loading assembly from path {0}", item);
+                        JobManager.AppendToConsole(LogLevel.Info, "Loading assembly from path {0}", item);
                         assembly = Assembly.LoadFrom(item);
                     }
                     else
                     {
-                        AppendToConsole(LogLevel.Info, "Loading assembly {0}", item);
+                        JobManager.AppendToConsole(LogLevel.Info, "Loading assembly {0}", item);
                         assembly = Assembly.Load(item);
                     }
 
-                    await ExportAssemblyWithReferences(assemblyReferenced, assemblyParsed, new AssemblyName(assembly.FullName), SrcDestinationFolder, SplitByAssembly, ForceRebuild);
+                    await ExportAssemblyWithReferences(assemblyReferenced, assemblyParsed, new AssemblyName(assembly.FullName), SourceDestinationFolder, SplitByAssembly, ForceRebuild);
                 }
 
-                reportStr = GetReport(args.AssemblyNames);
-                var reportfile = Path.Combine(args.SrcDestinationFolder, Const.Report.REPORT_FILE_TO_WRITE);
-                if (File.Exists(reportfile))
+                if (!args.AvoidReportAndStatistics)
                 {
-                    var beginTag = string.Format(Const.Report.REPORT_BEGIN_PLACEHOLDER, Const.Framework.RuntimeFolder);
-                    var endTag = string.Format(Const.Report.REPORT_END_PLACEHOLDER, Const.Framework.RuntimeFolder);
-                    var readmeContent = File.ReadAllText(reportfile);
+                    reportStr = GetReport(args.AssemblyNames);
+                    var reportfile = Path.Combine(args.SourceDestinationFolder, Const.Report.REPORT_FILE_TO_WRITE);
+                    if (File.Exists(reportfile))
+                    {
+                        var beginTag = string.Format(Const.Report.REPORT_BEGIN_PLACEHOLDER, Const.Framework.RuntimeFolder);
+                        var endTag = string.Format(Const.Report.REPORT_END_PLACEHOLDER, Const.Framework.RuntimeFolder);
+                        var readmeContent = File.ReadAllText(reportfile);
 
-                    StringBuilder sb = new StringBuilder();
-                    var preText = readmeContent.Substring(0, readmeContent.IndexOf(beginTag));
-                    sb.Append(preText);
-                    sb.AppendLine(beginTag);
-                    sb.AppendLine(reportStr);
-                    var endText = readmeContent.Substring(readmeContent.IndexOf(endTag));
-                    sb.Append(endText);
-                    File.WriteAllText(reportfile, sb.ToString());
-                }
+                        StringBuilder sb = new StringBuilder();
+                        var preText = readmeContent.Substring(0, readmeContent.IndexOf(beginTag));
+                        sb.Append(preText);
+                        sb.AppendLine(beginTag);
+                        sb.AppendLine(reportStr);
+                        var endText = readmeContent.Substring(readmeContent.IndexOf(endTag));
+                        sb.Append(endText);
+                        writeFile(reportfile, sb.ToString());
+                    }
 
-                string statisticsError;
-                statisticsCsv = GetStatisticsCsv(out statisticsError);
+                    string statisticsError;
+                    statisticsCsv = GetStatisticsCsv(out statisticsError);
 
-                if (!String.IsNullOrEmpty(statisticsError))
-                {
-                    reportStr += statisticsError;
-                }
-                else if (!WriteStatisticsCsv(statisticsCsv))
-                {
-                    reportStr += "ERROR WRITING STATISTICS FILES" + Environment.NewLine;
-                }
-                else
-                {
-                    reportStr += "STATISTICS FILES CREATED OK" + Environment.NewLine;
+                    if (!String.IsNullOrEmpty(statisticsError))
+                    {
+                        reportStr += statisticsError;
+                    }
+                    else if (!WriteStatisticsCsv(statisticsCsv))
+                    {
+                        reportStr += "ERROR WRITING STATISTICS FILES" + Environment.NewLine;
+                    }
+                    else
+                    {
+                        reportStr += "STATISTICS FILES CREATED OK" + Environment.NewLine;
+                    }
                 }
             }
             catch (OperationCanceledException ex)
             {
-                AppendToConsole(LogLevel.Error, "ExportAssembly error: {0}", ex.Message);
+                JobManager.AppendToConsole(LogLevel.Error, "ExportAssembly error: {0}", ex.Message);
             }
             catch (Exception ex)
             {
-                AppendToConsole(LogLevel.Error, "ExportAssembly error: {0}", ex.Message);
+                JobManager.AppendToConsole(LogLevel.Error, "ExportAssembly error: {0}", ex.Message);
                 failed = true;
             }
             finally
             {
-                EndOperationHandler?.Invoke(null, new EndOperationEventArgs(reportStr, failed));
+                JobManager.EndOperation(new EndOperationEventArgs(reportStr, failed));
             }
         }
 
@@ -484,31 +474,31 @@ namespace MASES.C2JReflector
             {
                 if (!forceRebuild)
                 {
-                    AppendToConsole(LogLevel.Info, "Skipping assembly {0}", assemblyName);
+                    JobManager.AppendToConsole(LogLevel.Info, "Skipping assembly {0}", assemblyName);
                     return null;
                 }
                 if (assemblyReferenced.Contains(assemblyName.FullName))
                 {
-                    AppendToConsole(LogLevel.Info, "Skipping assembly {0}", assemblyName);
+                    JobManager.AppendToConsole(LogLevel.Info, "Skipping assembly {0}", assemblyName);
                     return null;
                 }
             }
 
             if (assemblyReferenced.Contains(assemblyName.FullName))
             {
-                AppendToConsole(LogLevel.Info, "Duplicated assembly {0}", assemblyName);
+                JobManager.AppendToConsole(LogLevel.Info, "Duplicated assembly {0}", assemblyName);
             }
 
             Assembly assembly = null;
-            AppendToConsole(LogLevel.Info, "Loading assembly {0}", assemblyName);
+            JobManager.AppendToConsole(LogLevel.Info, "Loading assembly {0}", assemblyName);
             try
             {
                 assembly = Assembly.Load(assemblyName);
-                AppendToConsole(LogLevel.Info, "Loaded assembly {0}", assembly.FullName);
+                JobManager.AppendToConsole(LogLevel.Info, "Loaded assembly {0}", assembly.FullName);
             }
             catch (Exception ex)
             {
-                AppendToConsole(LogLevel.Error, "Skipping assembly {0}. Error is: {1}", assemblyName, ex.Message);
+                JobManager.AppendToConsole(LogLevel.Error, "Skipping assembly {0}. Error is: {1}", assemblyName, ex.Message);
                 return null;
             }
 
@@ -531,15 +521,15 @@ namespace MASES.C2JReflector
 
             if (assemblyParsed.Contains(assembly.FullName))
             {
-                AppendToConsole(LogLevel.Info, "Assembly previously parsed {0}", assembly.FullName);
+                JobManager.AppendToConsole(LogLevel.Info, "Assembly previously parsed {0}", assembly.FullName);
                 return assembly;
             }
 
             List<Type> typesToExport = new List<Type>();
 
-            AppendToConsole(LogLevel.Info, "Getting types from {0}", assembly.FullName);
+            JobManager.AppendToConsole(LogLevel.Info, "Getting types from {0}", assembly.FullName);
             var allType = assembly.GetTypes();
-            AppendToConsole(LogLevel.Verbose, "Searching only public types...");
+            JobManager.AppendToConsole(LogLevel.Verbose, "Searching only public types...");
             foreach (var item in allType)
             {
                 Interlocked.Increment(ref analyzedTypes);
@@ -548,12 +538,12 @@ namespace MASES.C2JReflector
 
                 if (typePrefilter(item))
                 {
-                    AppendToConsole(LogLevel.Verbose, "Store {0} within types to be exported", item.AssemblyQualifiedName);
+                    JobManager.AppendToConsole(LogLevel.Verbose, "Store {0} within types to be exported", item.AssemblyQualifiedName);
                     typesToExport.Add(item);
                 }
                 else
                 {
-                    AppendToConsole(LogLevel.Verbose, "Discarded {0} from types to be exported", item.AssemblyQualifiedName);
+                    JobManager.AppendToConsole(LogLevel.Verbose, "Discarded {0} from types to be exported", item.AssemblyQualifiedName);
                     Interlocked.Increment(ref discardedTypes);
                     if (!item.IsPublic) Interlocked.Increment(ref discardedNonPublicTypes);
                     else if (item.IsGenericType) Interlocked.Increment(ref discardedGenericTypes);
@@ -569,7 +559,7 @@ namespace MASES.C2JReflector
             }
             else
             {
-                AppendToConsole(LogLevel.Info, "No public types in {0}", assembly.FullName);
+                JobManager.AppendToConsole(LogLevel.Info, "No public types in {0}", assembly.FullName);
             }
 
             return assembly;
@@ -577,12 +567,12 @@ namespace MASES.C2JReflector
 
         static void exportingPublicTypes(List<Type> typesToExport, string destFolder, string assemblyname)
         {
-            AppendToConsole(LogLevel.Info, "Start exporting public types of {0}", assemblyname);
+            JobManager.AppendToConsole(LogLevel.Info, "Start exporting public types of {0}", assemblyname);
 
             if (UseParallelBuild)
             {
                 ParallelOptions po = new ParallelOptions();
-                po.CancellationToken = CancellationToken;
+                po.CancellationToken = JobManager.CancellationToken;
                 po.MaxDegreeOfParallelism = System.Environment.ProcessorCount;
                 Parallel.ForEach(typesToExport, po, exportingPublicTypeParallel);
             }
@@ -600,7 +590,7 @@ namespace MASES.C2JReflector
             try
             {
                 string assemblyname = typeToExport.Assembly.FullName;
-                string destFolder = assemblyDestinationFolder(SrcDestinationFolder, new AssemblyName(assemblyname), SplitByAssembly);
+                string destFolder = assemblyDestinationFolder(SourceDestinationFolder, new AssemblyName(assemblyname), SplitByAssembly);
                 exportingPublicType(typeToExport, destFolder, assemblyname);
             }
             catch (OperationCanceledException)
@@ -609,7 +599,7 @@ namespace MASES.C2JReflector
             }
             catch (Exception e)
             {
-                AppendToConsole(LogLevel.Error, "Error exporting {0}: {1}", typeToExport.Name, e.Message);
+                JobManager.AppendToConsole(LogLevel.Error, "Error exporting {0}: {1}", typeToExport.Name, e.Message);
                 throw;
             }
         }
@@ -621,7 +611,7 @@ namespace MASES.C2JReflector
                 FileInfo fi = new FileInfo(fileName);
                 if (!Directory.Exists(fi.Directory.FullName))
                     Directory.CreateDirectory(fi.Directory.FullName);
-                AppendToConsole(LogLevel.Verbose, "Saving file {0}", fileName);
+                JobManager.AppendToConsole(LogLevel.Verbose, "Saving file {0}", fileName);
                 File.WriteAllText(fileName, content);
             }
         }
@@ -641,7 +631,7 @@ namespace MASES.C2JReflector
         {
             var typeName = typeToExport.FullName;
 
-            AppendToConsole(LogLevel.Verbose, "Start exporting {0}", typeName);
+            JobManager.AppendToConsole(LogLevel.Verbose, "Start exporting {0}", typeName);
             bool isPrimitive = true;
             string defaultPrimitiveValue = string.Empty;
             bool isManaged = true;
@@ -651,7 +641,7 @@ namespace MASES.C2JReflector
 
             if (isPrimitive || isSpecial || !isManaged)
             {
-                AppendToConsole(LogLevel.Verbose, "Discarding {0}", typeName);
+                JobManager.AppendToConsole(LogLevel.Verbose, "Discarding {0}", typeName);
                 Interlocked.Increment(ref discardedTypes);
                 return;
             }
@@ -679,7 +669,7 @@ namespace MASES.C2JReflector
             }
             else throw new InvalidOperationException(string.Format("Unchecked and unexported type {0}", typeToExport.FullName));
 
-            CancellationToken.ThrowIfCancellationRequested();
+            JobManager.CancellationToken.ThrowIfCancellationRequested();
         }
 
         static void exportingEnum(Type item, string destFolder, string assemblyname)
@@ -692,7 +682,7 @@ namespace MASES.C2JReflector
                                                          .Replace(Const.Class.SHORT_ASSEMBLY_CLASS_NAME, item.Assembly.GetName().Name)
                                                          .Replace(Const.Class.FULLYQUALIFIED_CLASS_NAME, item.FullName);
 
-            AppendToConsole(LogLevel.Verbose, "Starting creating public values from {0}", item.Name);
+            JobManager.AppendToConsole(LogLevel.Verbose, "Starting creating public values from {0}", item.Name);
             var enumValues = Enum.GetNames(item);
             StringBuilder enums = new StringBuilder();
             foreach (var en in enumValues)
@@ -724,7 +714,7 @@ namespace MASES.C2JReflector
             pathToSaveTo = System.IO.Path.Combine(destFolder, pathToSaveTo);
             if (!Directory.Exists(pathToSaveTo))
             {
-                AppendToConsole(LogLevel.Verbose, "Creating folder {0}", pathToSaveTo);
+                JobManager.AppendToConsole(LogLevel.Verbose, "Creating folder {0}", pathToSaveTo);
                 Directory.CreateDirectory(pathToSaveTo);
             }
             var fileName = Path.Combine(pathToSaveTo, string.Format("{0}.java", item.Name));
@@ -786,12 +776,12 @@ namespace MASES.C2JReflector
 
             string returnEnumerableType = string.Empty;
             string returnInterfaceSection = string.Empty;
-            AppendToConsole(LogLevel.Verbose, "Starting creating public Methods from {0}", typeName);
+            JobManager.AppendToConsole(LogLevel.Verbose, "Starting creating public Methods from {0}", typeName);
             var methodsStr = exportingMethods(item, imports, implementableInterfaces, withInheritance, destFolder, assemblyname, out returnEnumerableType, out returnInterfaceSection);
             reflectorInterfaceClassTemplate = reflectorInterfaceClassTemplate.Replace(Const.Class.METHODS_SECTION, methodsStr);
             reflectorInterfaceTemplate = reflectorInterfaceTemplate.Replace(Const.Class.METHODS_SECTION, returnInterfaceSection);
 
-            AppendToConsole(LogLevel.Verbose, "Starting creating public Properties from {0}", typeName);
+            JobManager.AppendToConsole(LogLevel.Verbose, "Starting creating public Properties from {0}", typeName);
             var propInstanceStr = exportingProperties(item, imports, implementableInterfaces, withInheritance, isException, destFolder, assemblyname, out returnInterfaceSection);
             reflectorInterfaceClassTemplate = reflectorInterfaceClassTemplate.Replace(Const.Class.GETTER_SETTER_SECTION, propInstanceStr);
             reflectorInterfaceTemplate = reflectorInterfaceTemplate.Replace(Const.Class.GETTER_SETTER_SECTION, returnInterfaceSection);
@@ -811,7 +801,7 @@ namespace MASES.C2JReflector
             pathToSaveTo = System.IO.Path.Combine(destFolder, pathToSaveTo);
             if (!Directory.Exists(pathToSaveTo))
             {
-                AppendToConsole(LogLevel.Verbose, "Creating folder {0}", pathToSaveTo);
+                JobManager.AppendToConsole(LogLevel.Verbose, "Creating folder {0}", pathToSaveTo);
                 Directory.CreateDirectory(pathToSaveTo);
             }
             var fileName = Path.Combine(pathToSaveTo, string.Format("{0}.java", typeName));
@@ -890,7 +880,7 @@ namespace MASES.C2JReflector
 
             var typeName = item.Name;
 
-            AppendToConsole(LogLevel.Verbose, "Starting creating public Constructors from {0}", typeName);
+            JobManager.AppendToConsole(LogLevel.Verbose, "Starting creating public Constructors from {0}", typeName);
             string ctorStr = string.Empty;
             if (EnableAbstract && !item.IsAbstract)
             {
@@ -905,7 +895,7 @@ namespace MASES.C2JReflector
             bool isDisposable = allDirectInterfaces.Contains(typeof(IDisposable));
             string returnEnumerableType = string.Empty;
             string returnInterfaceSection = string.Empty;
-            AppendToConsole(LogLevel.Verbose, "Starting creating public Methods from {0}", typeName);
+            JobManager.AppendToConsole(LogLevel.Verbose, "Starting creating public Methods from {0}", typeName);
             var methodsStr = exportingMethods(item, imports, implementableInterfaces, withInheritance, destFolder, assemblyname, out returnEnumerableType, out returnInterfaceSection);
             if (isDisposable)
             {
@@ -913,7 +903,7 @@ namespace MASES.C2JReflector
             }
             reflectorClassTemplate = reflectorClassTemplate.Replace(Const.Class.METHODS_SECTION, methodsStr);
 
-            AppendToConsole(LogLevel.Verbose, "Starting creating public Properties from {0}", typeName);
+            JobManager.AppendToConsole(LogLevel.Verbose, "Starting creating public Properties from {0}", typeName);
             var propInstanceStr = exportingProperties(item, imports, implementableInterfaces, withInheritance, isException, destFolder, assemblyname, out returnInterfaceSection);
             reflectorClassTemplate = reflectorClassTemplate.Replace(Const.Class.GETTER_SETTER_SECTION, propInstanceStr);
 
@@ -967,7 +957,7 @@ namespace MASES.C2JReflector
             pathToSaveTo = System.IO.Path.Combine(destFolder, pathToSaveTo);
             if (!Directory.Exists(pathToSaveTo))
             {
-                AppendToConsole(LogLevel.Verbose, "Creating folder {0}", pathToSaveTo);
+                JobManager.AppendToConsole(LogLevel.Verbose, "Creating folder {0}", pathToSaveTo);
                 Directory.CreateDirectory(pathToSaveTo);
             }
             var fileName = Path.Combine(pathToSaveTo, string.Format("{0}.java", typeName));
@@ -1006,7 +996,7 @@ namespace MASES.C2JReflector
             }
             catch (Exception ex)
             {
-                AppendToConsole(LogLevel.Error, "exceptionStringBuilder on {0} with error {1}", method.Name, ex.Message);
+                JobManager.AppendToConsole(LogLevel.Error, "exceptionStringBuilder on {0} with error {1}", method.Name, ex.Message);
                 exceptionStr = string.Empty;
             }
 
@@ -1146,7 +1136,7 @@ namespace MASES.C2JReflector
 
         static bool exportingEnumerator(Type item, string destFolder, string assemblyname, out string returnEnumeratorType, bool avoidWrite = false)
         {
-            AppendToConsole(LogLevel.Verbose, "Starting creating public values from {0}", item.Name);
+            JobManager.AppendToConsole(LogLevel.Verbose, "Starting creating public values from {0}", item.Name);
 
             if (!checkForEnumerator(item)) { returnEnumeratorType = string.Empty; return false; }
 
@@ -1207,7 +1197,7 @@ namespace MASES.C2JReflector
             pathToSaveTo = System.IO.Path.Combine(destFolder, pathToSaveTo);
             if (!Directory.Exists(pathToSaveTo))
             {
-                AppendToConsole(LogLevel.Verbose, "Creating folder {0}", pathToSaveTo);
+                JobManager.AppendToConsole(LogLevel.Verbose, "Creating folder {0}", pathToSaveTo);
                 Directory.CreateDirectory(pathToSaveTo);
             }
             var fileName = Path.Combine(pathToSaveTo, string.Format("{0}.java", item.Name));
@@ -2467,7 +2457,7 @@ namespace MASES.C2JReflector
             pathToSaveTo = System.IO.Path.Combine(destFolder, pathToSaveTo);
             if (!Directory.Exists(pathToSaveTo))
             {
-                AppendToConsole(LogLevel.Verbose, "Creating folder {0}", pathToSaveTo);
+                JobManager.AppendToConsole(LogLevel.Verbose, "Creating folder {0}", pathToSaveTo);
                 Directory.CreateDirectory(pathToSaveTo);
             }
             var fileName = Path.Combine(pathToSaveTo, string.Format("I{0}.java", delegateName));
@@ -2506,7 +2496,7 @@ namespace MASES.C2JReflector
             pathToSaveTo = System.IO.Path.Combine(destFolder, pathToSaveTo);
             if (!Directory.Exists(pathToSaveTo))
             {
-                AppendToConsole(LogLevel.Verbose, "Creating folder {0}", pathToSaveTo);
+                JobManager.AppendToConsole(LogLevel.Verbose, "Creating folder {0}", pathToSaveTo);
                 Directory.CreateDirectory(pathToSaveTo);
             }
             fileName = Path.Combine(pathToSaveTo, string.Format("{0}.java", delegateName));

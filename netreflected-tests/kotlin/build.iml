@@ -15,14 +15,14 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="file://$MODULE_DIR$/../../bin/net5.0" />
+          <root url="file://$MODULE_DIR$/../../bin/net461" />
         </CLASSES>
         <JAVADOC />
         <NATIVE>
-          <root url="file://$MODULE_DIR$/../../bin/net5.0" />
+          <root url="file://$MODULE_DIR$/../../bin/net461" />
         </NATIVE>
         <SOURCES />
-        <jarDirectory url="file://$MODULE_DIR$/../../bin/net5.0" recursive="false" />
+        <jarDirectory url="file://$MODULE_DIR$/../../bin/net461" recursive="false" />
       </library>
     </orderEntry>
   </component>

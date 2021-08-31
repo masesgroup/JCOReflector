@@ -92,7 +92,9 @@ public class IDispatchOperationSelectorImplementation extends NetObject implemen
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IDispatchOperationSelectorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

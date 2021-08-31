@@ -108,7 +108,9 @@ public class ItemsControl extends Control implements system.windows.markup.IAddC
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ItemsControl(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

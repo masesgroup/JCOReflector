@@ -98,7 +98,9 @@ public class WebPartZoneDesigner extends WebPartZoneBaseDesigner  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WebPartZoneDesigner(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

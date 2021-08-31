@@ -91,7 +91,9 @@ public class IAppDomainFactoryImplementation extends NetObject implements IAppDo
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IAppDomainFactoryImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -103,7 +103,9 @@ public class ValueTuple extends ValueType implements system.collections.IStructu
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ValueTuple(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class IEntityChangeTrackerImplementation extends NetObject implements IEn
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IEntityChangeTrackerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

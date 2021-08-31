@@ -92,7 +92,9 @@ public class OnDeserializingAttribute extends Attribute  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public OnDeserializingAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

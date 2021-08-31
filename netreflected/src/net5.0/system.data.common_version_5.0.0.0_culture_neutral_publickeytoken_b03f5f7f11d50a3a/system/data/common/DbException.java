@@ -96,7 +96,9 @@ public class DbException extends ExternalException {
     public DbException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DbException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class FileLevelUserControlBuilder extends RootBuilder  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FileLevelUserControlBuilder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class SupportedOSPlatformAttribute extends OSPlatformAttribute  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SupportedOSPlatformAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

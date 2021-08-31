@@ -92,7 +92,9 @@ public class AspLog extends Log  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AspLog(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class IDeviceContextImplementation extends NetObject implements IDeviceCo
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IDeviceContextImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

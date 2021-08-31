@@ -107,7 +107,9 @@ public class ListSortDirection extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ListSortDirection(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

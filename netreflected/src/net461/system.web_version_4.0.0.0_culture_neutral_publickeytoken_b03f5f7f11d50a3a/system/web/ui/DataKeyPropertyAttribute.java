@@ -92,7 +92,9 @@ public class DataKeyPropertyAttribute extends Attribute  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataKeyPropertyAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

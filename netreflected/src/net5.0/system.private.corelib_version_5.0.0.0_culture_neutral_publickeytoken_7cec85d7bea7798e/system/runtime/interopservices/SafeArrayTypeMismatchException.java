@@ -96,7 +96,9 @@ public class SafeArrayTypeMismatchException extends SystemException {
     public SafeArrayTypeMismatchException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SafeArrayTypeMismatchException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

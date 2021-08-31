@@ -97,7 +97,9 @@ public class TransactionFlowBindingElement extends BindingElement implements sys
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TransactionFlowBindingElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

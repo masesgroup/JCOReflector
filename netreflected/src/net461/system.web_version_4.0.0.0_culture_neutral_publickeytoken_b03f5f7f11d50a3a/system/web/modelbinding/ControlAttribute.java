@@ -95,7 +95,9 @@ public class ControlAttribute extends ValueProviderSourceAttribute  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ControlAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

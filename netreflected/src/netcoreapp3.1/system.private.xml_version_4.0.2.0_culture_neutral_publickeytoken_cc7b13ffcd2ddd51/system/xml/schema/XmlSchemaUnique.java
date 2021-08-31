@@ -92,7 +92,9 @@ public class XmlSchemaUnique extends XmlSchemaIdentityConstraint  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlSchemaUnique(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -107,7 +107,9 @@ public class UriKind extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UriKind(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

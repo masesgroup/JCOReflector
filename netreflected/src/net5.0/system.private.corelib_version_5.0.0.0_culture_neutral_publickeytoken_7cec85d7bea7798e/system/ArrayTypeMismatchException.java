@@ -96,7 +96,9 @@ public class ArrayTypeMismatchException extends SystemException {
     public ArrayTypeMismatchException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ArrayTypeMismatchException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

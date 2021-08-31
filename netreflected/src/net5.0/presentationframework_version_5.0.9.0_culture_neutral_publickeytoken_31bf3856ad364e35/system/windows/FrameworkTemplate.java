@@ -100,7 +100,9 @@ public class FrameworkTemplate extends DispatcherObject implements system.window
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FrameworkTemplate(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

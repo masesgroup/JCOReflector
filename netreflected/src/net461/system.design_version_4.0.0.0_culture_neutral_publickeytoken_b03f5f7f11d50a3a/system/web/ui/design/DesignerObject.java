@@ -96,7 +96,9 @@ public class DesignerObject extends NetObject implements system.IServiceProvider
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DesignerObject(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

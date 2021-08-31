@@ -96,7 +96,9 @@ public class PersistenceException extends SystemException {
     public PersistenceException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PersistenceException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

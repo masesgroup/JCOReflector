@@ -92,7 +92,9 @@ public class LCIDConversionAttribute extends Attribute  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public LCIDConversionAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

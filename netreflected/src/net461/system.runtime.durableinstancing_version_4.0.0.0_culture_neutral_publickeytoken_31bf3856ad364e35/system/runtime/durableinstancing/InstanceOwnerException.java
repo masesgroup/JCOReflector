@@ -100,7 +100,9 @@ public class InstanceOwnerException extends InstancePersistenceException {
     public InstanceOwnerException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InstanceOwnerException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

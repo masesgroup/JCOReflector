@@ -98,7 +98,9 @@ public class HtmlInputImage extends HtmlInputControl implements system.web.ui.IP
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HtmlInputImage(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

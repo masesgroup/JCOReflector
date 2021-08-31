@@ -92,7 +92,9 @@ public class IInstanceTableImplementation extends NetObject implements IInstance
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IInstanceTableImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

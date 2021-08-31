@@ -93,7 +93,9 @@ public class DirectoryRequest extends DirectoryOperation  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DirectoryRequest(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

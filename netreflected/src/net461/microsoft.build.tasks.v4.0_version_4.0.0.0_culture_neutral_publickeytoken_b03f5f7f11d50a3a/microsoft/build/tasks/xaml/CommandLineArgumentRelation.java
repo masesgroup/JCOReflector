@@ -92,7 +92,9 @@ public class CommandLineArgumentRelation extends PropertyRelation  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CommandLineArgumentRelation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

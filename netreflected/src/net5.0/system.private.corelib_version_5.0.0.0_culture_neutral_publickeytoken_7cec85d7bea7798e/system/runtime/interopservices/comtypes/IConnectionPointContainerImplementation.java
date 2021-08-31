@@ -96,7 +96,9 @@ public class IConnectionPointContainerImplementation extends NetObject implement
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IConnectionPointContainerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

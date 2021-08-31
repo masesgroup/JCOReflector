@@ -94,7 +94,9 @@ public class Roles extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Roles(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

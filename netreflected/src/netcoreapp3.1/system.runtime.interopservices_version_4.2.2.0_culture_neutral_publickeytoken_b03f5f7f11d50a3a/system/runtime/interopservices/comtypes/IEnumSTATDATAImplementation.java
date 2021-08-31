@@ -94,7 +94,9 @@ public class IEnumSTATDATAImplementation extends NetObject implements IEnumSTATD
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IEnumSTATDATAImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

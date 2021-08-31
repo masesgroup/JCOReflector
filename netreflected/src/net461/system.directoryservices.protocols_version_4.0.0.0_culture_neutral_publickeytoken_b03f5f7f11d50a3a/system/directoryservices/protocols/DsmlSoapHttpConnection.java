@@ -104,7 +104,9 @@ public class DsmlSoapHttpConnection extends DsmlSoapConnection  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DsmlSoapHttpConnection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

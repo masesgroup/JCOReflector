@@ -96,7 +96,9 @@ public class MemberAccessException extends SystemException {
     public MemberAccessException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MemberAccessException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

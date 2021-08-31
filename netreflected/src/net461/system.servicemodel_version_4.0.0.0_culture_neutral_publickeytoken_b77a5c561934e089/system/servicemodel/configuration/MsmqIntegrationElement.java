@@ -95,7 +95,9 @@ public class MsmqIntegrationElement extends MsmqElementBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MsmqIntegrationElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

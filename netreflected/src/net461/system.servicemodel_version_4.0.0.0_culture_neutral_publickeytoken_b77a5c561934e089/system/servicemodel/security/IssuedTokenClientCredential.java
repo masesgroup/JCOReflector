@@ -94,7 +94,9 @@ public class IssuedTokenClientCredential extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IssuedTokenClientCredential(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

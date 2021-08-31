@@ -93,7 +93,9 @@ public class DbNewInstanceExpression extends DbExpression  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DbNewInstanceExpression(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

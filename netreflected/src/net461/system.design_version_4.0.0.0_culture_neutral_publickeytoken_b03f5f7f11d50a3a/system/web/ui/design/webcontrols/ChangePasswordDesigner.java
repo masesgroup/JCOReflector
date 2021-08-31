@@ -99,7 +99,9 @@ public class ChangePasswordDesigner extends ControlDesigner  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ChangePasswordDesigner(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

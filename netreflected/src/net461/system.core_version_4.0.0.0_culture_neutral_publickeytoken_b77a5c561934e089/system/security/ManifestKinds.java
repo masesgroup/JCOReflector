@@ -107,7 +107,9 @@ public class ManifestKinds extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ManifestKinds(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

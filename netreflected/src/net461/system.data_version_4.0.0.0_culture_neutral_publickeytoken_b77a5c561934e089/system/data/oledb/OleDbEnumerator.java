@@ -93,7 +93,9 @@ public class OleDbEnumerator extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public OleDbEnumerator(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

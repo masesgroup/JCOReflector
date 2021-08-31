@@ -100,7 +100,9 @@ public class NameValueCollection extends NameObjectCollectionBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public NameValueCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

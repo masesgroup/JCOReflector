@@ -95,7 +95,9 @@ public class SspiSecurityToken extends SecurityToken  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SspiSecurityToken(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

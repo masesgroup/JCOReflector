@@ -92,7 +92,9 @@ public class PeerEndPointCollection extends NetObjectEnumerable  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PeerEndPointCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

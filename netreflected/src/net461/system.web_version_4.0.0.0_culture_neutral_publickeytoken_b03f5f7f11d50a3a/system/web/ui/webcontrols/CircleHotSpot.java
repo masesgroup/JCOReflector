@@ -92,7 +92,9 @@ public class CircleHotSpot extends HotSpot  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CircleHotSpot(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -91,7 +91,9 @@ public class AlternateViewCollection extends NetObjectEnumerable implements Auto
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AlternateViewCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

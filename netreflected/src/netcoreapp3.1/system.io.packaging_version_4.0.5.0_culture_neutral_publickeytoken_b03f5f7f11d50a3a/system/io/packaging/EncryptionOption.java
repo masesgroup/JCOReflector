@@ -107,7 +107,9 @@ public class EncryptionOption extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EncryptionOption(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

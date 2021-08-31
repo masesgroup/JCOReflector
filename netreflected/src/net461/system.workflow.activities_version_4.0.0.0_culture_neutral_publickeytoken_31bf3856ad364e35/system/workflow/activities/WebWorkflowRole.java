@@ -92,7 +92,9 @@ public class WebWorkflowRole extends WorkflowRole  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WebWorkflowRole(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -91,7 +91,9 @@ public class IOutputCacheEntryImplementation extends NetObject implements IOutpu
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IOutputCacheEntryImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -98,7 +98,9 @@ public class ArgumentOutOfRangeException extends ArgumentException {
     public ArgumentOutOfRangeException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ArgumentOutOfRangeException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

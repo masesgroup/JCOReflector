@@ -98,7 +98,9 @@ public class ElementNotEnabledException extends InvalidOperationException {
     public ElementNotEnabledException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ElementNotEnabledException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

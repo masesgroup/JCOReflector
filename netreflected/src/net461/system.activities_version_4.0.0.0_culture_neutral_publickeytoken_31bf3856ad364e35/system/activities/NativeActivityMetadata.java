@@ -99,7 +99,9 @@ public class NativeActivityMetadata extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public NativeActivityMetadata(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

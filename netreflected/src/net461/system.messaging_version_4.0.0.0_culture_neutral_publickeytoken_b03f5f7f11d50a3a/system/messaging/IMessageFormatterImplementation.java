@@ -94,7 +94,9 @@ public class IMessageFormatterImplementation extends NetObject implements IMessa
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IMessageFormatterImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

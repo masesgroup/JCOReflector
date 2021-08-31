@@ -93,7 +93,9 @@ public class GeometryHitTestParameters extends HitTestParameters  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public GeometryHitTestParameters(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

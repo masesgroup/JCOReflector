@@ -97,7 +97,9 @@ public class SocketException extends Win32Exception {
     public SocketException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SocketException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

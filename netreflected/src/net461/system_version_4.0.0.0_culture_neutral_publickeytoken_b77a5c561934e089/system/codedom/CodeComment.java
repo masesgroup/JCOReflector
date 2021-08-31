@@ -92,7 +92,9 @@ public class CodeComment extends CodeObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CodeComment(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

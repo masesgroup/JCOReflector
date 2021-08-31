@@ -91,7 +91,9 @@ public class IDataSourceFieldSchemaImplementation extends NetObject implements I
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IDataSourceFieldSchemaImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

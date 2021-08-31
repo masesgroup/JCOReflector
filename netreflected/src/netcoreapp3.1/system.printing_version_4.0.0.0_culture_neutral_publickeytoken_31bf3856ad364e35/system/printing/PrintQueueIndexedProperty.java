@@ -107,7 +107,9 @@ public class PrintQueueIndexedProperty extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PrintQueueIndexedProperty(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -91,7 +91,9 @@ public class ClientOperationCompatBase extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ClientOperationCompatBase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

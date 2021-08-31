@@ -91,7 +91,9 @@ public class EndpointBehaviorElementCollection extends NetObjectEnumerable  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EndpointBehaviorElementCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

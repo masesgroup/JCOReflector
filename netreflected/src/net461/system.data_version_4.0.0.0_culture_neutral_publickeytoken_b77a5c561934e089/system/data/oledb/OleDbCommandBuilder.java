@@ -95,7 +95,9 @@ public class OleDbCommandBuilder extends DbCommandBuilder  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public OleDbCommandBuilder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class ActiveXHost extends HwndHost  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ActiveXHost(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

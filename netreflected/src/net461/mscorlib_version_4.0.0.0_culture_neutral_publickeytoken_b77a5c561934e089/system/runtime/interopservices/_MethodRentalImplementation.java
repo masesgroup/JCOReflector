@@ -93,7 +93,9 @@ public class _MethodRentalImplementation extends NetObject implements _MethodRen
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public _MethodRentalImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class IDataSourceDesignerImplementation extends NetObject implements IDat
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IDataSourceDesignerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

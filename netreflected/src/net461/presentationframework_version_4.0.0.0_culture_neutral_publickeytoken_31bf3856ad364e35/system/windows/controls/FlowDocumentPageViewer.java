@@ -94,7 +94,9 @@ public class FlowDocumentPageViewer extends DocumentViewerBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FlowDocumentPageViewer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

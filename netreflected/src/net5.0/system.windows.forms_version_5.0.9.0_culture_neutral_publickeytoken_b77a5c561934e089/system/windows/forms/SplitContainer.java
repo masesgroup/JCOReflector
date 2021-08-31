@@ -110,7 +110,9 @@ public class SplitContainer extends ContainerControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SplitContainer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

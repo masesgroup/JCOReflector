@@ -93,7 +93,9 @@ public class DataGridSortingEventArgs extends DataGridColumnEventArgs  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataGridSortingEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

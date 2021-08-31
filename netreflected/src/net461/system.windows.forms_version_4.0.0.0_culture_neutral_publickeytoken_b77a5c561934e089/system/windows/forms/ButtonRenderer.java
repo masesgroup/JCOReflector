@@ -98,7 +98,9 @@ public class ButtonRenderer extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ButtonRenderer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

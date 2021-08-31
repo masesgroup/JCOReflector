@@ -92,7 +92,9 @@ public class RsaSecurityTokenParameters extends SecurityTokenParameters  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RsaSecurityTokenParameters(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

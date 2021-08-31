@@ -99,7 +99,9 @@ public class TileBrush extends Brush  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TileBrush(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

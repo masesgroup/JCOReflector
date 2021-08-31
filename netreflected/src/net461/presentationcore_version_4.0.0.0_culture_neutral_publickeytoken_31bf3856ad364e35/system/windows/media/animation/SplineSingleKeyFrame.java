@@ -95,7 +95,9 @@ public class SplineSingleKeyFrame extends SingleKeyFrame  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SplineSingleKeyFrame(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

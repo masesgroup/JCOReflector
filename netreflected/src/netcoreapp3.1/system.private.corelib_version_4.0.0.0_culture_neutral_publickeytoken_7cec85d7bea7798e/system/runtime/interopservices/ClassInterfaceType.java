@@ -107,7 +107,9 @@ public class ClassInterfaceType extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ClassInterfaceType(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

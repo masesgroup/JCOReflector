@@ -92,7 +92,9 @@ public class SafeHandleZeroOrMinusOneIsInvalid extends SafeHandle  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SafeHandleZeroOrMinusOneIsInvalid(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

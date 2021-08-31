@@ -91,7 +91,9 @@ public class IContextManagerImplementation extends NetObject implements IContext
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IContextManagerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

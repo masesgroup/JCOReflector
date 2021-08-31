@@ -107,7 +107,9 @@ public class PaddingMode extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PaddingMode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

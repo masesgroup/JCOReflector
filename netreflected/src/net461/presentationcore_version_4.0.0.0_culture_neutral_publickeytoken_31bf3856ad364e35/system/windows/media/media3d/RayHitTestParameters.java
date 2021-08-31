@@ -94,7 +94,9 @@ public class RayHitTestParameters extends HitTestParameters3D  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RayHitTestParameters(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

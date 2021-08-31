@@ -98,7 +98,9 @@ public class CalendarAutomationPeer extends FrameworkElementAutomationPeer imple
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CalendarAutomationPeer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

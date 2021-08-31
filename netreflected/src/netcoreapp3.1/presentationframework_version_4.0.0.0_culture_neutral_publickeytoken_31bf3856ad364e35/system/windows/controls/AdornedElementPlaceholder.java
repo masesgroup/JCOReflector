@@ -95,7 +95,9 @@ public class AdornedElementPlaceholder extends FrameworkElement implements syste
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AdornedElementPlaceholder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

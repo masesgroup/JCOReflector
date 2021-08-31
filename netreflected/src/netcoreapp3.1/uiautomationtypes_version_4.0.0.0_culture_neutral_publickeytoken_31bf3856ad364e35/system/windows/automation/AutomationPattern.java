@@ -93,7 +93,9 @@ public class AutomationPattern extends AutomationIdentifier  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AutomationPattern(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

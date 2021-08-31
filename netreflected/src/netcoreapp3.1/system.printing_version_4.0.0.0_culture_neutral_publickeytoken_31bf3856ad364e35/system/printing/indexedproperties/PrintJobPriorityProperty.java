@@ -92,7 +92,9 @@ public class PrintJobPriorityProperty extends PrintProperty  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PrintJobPriorityProperty(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

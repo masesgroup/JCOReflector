@@ -95,7 +95,9 @@ public class EasingInt16KeyFrame extends Int16KeyFrame  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EasingInt16KeyFrame(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

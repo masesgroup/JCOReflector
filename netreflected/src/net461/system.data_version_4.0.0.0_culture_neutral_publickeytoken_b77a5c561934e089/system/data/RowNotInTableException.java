@@ -96,7 +96,9 @@ public class RowNotInTableException extends DataException {
     public RowNotInTableException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RowNotInTableException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

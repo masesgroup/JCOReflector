@@ -93,7 +93,9 @@ public class EntityReference extends RelatedEnd  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EntityReference(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

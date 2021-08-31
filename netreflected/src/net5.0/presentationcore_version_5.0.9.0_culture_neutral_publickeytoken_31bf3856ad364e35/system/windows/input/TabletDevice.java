@@ -98,7 +98,9 @@ public class TabletDevice extends InputDevice  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TabletDevice(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

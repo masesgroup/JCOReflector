@@ -91,7 +91,9 @@ public class IPostBackEventHandlerImplementation extends NetObject implements IP
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IPostBackEventHandlerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

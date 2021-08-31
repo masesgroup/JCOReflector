@@ -94,7 +94,9 @@ public class XNodeDocumentOrderComparer extends NetObject implements system.coll
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XNodeDocumentOrderComparer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

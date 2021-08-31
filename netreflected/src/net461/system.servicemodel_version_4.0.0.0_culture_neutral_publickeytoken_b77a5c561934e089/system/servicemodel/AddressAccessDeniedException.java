@@ -96,7 +96,9 @@ public class AddressAccessDeniedException extends CommunicationException {
     public AddressAccessDeniedException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AddressAccessDeniedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

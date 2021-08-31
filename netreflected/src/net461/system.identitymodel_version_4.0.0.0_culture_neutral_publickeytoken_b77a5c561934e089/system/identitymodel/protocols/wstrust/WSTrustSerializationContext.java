@@ -94,7 +94,9 @@ public class WSTrustSerializationContext extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WSTrustSerializationContext(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

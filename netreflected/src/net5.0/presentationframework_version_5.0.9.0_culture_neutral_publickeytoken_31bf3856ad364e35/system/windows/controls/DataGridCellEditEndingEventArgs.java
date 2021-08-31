@@ -96,7 +96,9 @@ public class DataGridCellEditEndingEventArgs extends EventArgs  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataGridCellEditEndingEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

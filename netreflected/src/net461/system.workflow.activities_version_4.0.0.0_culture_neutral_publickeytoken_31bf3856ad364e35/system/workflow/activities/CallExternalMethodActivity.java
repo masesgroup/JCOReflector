@@ -100,7 +100,9 @@ public class CallExternalMethodActivity extends Activity implements system.workf
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CallExternalMethodActivity(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

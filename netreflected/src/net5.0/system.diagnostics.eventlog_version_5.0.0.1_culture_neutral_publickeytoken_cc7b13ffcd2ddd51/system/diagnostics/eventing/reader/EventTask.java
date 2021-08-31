@@ -92,7 +92,9 @@ public class EventTask extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EventTask(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

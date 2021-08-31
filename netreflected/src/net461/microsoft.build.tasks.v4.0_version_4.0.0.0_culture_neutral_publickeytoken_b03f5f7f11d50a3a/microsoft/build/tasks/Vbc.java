@@ -94,7 +94,9 @@ public class Vbc extends ManagedCompiler  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Vbc(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

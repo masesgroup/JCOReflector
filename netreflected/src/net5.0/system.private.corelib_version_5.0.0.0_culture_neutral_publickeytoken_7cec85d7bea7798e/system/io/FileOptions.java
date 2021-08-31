@@ -107,7 +107,9 @@ public class FileOptions extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FileOptions(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

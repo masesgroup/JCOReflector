@@ -94,7 +94,9 @@ public class BinarySecretKeyIdentifierClause extends BinaryKeyIdentifierClause  
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BinarySecretKeyIdentifierClause(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

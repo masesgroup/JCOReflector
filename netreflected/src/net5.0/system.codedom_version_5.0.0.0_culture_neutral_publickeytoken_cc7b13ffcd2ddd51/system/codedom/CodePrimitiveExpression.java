@@ -92,7 +92,9 @@ public class CodePrimitiveExpression extends CodeExpression  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CodePrimitiveExpression(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

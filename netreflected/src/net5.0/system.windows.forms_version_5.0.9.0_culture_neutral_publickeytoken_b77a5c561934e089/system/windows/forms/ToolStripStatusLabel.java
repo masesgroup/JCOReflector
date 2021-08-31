@@ -99,7 +99,9 @@ public class ToolStripStatusLabel extends ToolStripLabel  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ToolStripStatusLabel(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

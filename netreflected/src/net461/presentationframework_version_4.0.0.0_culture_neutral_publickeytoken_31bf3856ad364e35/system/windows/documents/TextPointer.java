@@ -98,7 +98,9 @@ public class TextPointer extends ContentPosition  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TextPointer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

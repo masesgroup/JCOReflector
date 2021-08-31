@@ -92,7 +92,9 @@ public class StandardOleMarshalObject extends MarshalByRefObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public StandardOleMarshalObject(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

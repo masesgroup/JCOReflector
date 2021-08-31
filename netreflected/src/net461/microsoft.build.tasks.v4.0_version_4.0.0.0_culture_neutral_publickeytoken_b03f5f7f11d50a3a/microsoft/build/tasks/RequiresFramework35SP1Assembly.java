@@ -94,7 +94,9 @@ public class RequiresFramework35SP1Assembly extends TaskExtension  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RequiresFramework35SP1Assembly(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

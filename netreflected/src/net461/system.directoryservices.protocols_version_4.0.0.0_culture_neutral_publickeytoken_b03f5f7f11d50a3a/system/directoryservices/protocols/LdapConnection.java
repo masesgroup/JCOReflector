@@ -104,7 +104,9 @@ public class LdapConnection extends DirectoryConnection implements AutoCloseable
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public LdapConnection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

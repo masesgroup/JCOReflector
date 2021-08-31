@@ -100,7 +100,9 @@ public class WebException extends InvalidOperationException {
     public WebException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WebException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

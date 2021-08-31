@@ -96,7 +96,9 @@ public class TargetParameterCountException extends ApplicationException {
     public TargetParameterCountException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TargetParameterCountException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

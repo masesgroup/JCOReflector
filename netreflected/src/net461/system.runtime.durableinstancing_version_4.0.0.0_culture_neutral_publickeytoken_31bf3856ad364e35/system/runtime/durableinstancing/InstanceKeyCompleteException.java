@@ -101,7 +101,9 @@ public class InstanceKeyCompleteException extends InstancePersistenceCommandExce
     public InstanceKeyCompleteException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InstanceKeyCompleteException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

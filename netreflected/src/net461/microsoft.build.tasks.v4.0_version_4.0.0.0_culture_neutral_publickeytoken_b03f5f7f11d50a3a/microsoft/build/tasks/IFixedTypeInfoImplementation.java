@@ -98,7 +98,9 @@ public class IFixedTypeInfoImplementation extends NetObject implements IFixedTyp
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IFixedTypeInfoImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class SHA1CryptoServiceProvider extends SHA1  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SHA1CryptoServiceProvider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

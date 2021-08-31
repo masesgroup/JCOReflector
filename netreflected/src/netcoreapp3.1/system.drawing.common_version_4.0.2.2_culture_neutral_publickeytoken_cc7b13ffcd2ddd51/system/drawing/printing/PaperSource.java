@@ -92,7 +92,9 @@ public class PaperSource extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PaperSource(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

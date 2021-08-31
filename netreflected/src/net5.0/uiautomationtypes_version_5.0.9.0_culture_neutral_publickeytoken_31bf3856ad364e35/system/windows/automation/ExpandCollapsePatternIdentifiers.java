@@ -91,7 +91,9 @@ public class ExpandCollapsePatternIdentifiers extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ExpandCollapsePatternIdentifiers(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

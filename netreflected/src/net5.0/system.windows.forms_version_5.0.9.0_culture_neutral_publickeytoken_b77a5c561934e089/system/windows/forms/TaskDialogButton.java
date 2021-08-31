@@ -94,7 +94,9 @@ public class TaskDialogButton extends TaskDialogControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TaskDialogButton(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

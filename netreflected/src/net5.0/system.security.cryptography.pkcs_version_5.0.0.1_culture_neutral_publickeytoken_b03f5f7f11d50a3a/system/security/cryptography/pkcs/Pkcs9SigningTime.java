@@ -94,7 +94,9 @@ public class Pkcs9SigningTime extends Pkcs9AttributeObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Pkcs9SigningTime(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

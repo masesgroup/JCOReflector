@@ -107,7 +107,9 @@ public class TreeViewAction extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TreeViewAction(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

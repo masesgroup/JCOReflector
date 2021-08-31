@@ -92,7 +92,9 @@ public class XmlNamespaceDeclarationsAttribute extends Attribute  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlNamespaceDeclarationsAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

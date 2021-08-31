@@ -96,7 +96,9 @@ public class SecurityMessageSerializationException extends SystemException {
     public SecurityMessageSerializationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SecurityMessageSerializationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

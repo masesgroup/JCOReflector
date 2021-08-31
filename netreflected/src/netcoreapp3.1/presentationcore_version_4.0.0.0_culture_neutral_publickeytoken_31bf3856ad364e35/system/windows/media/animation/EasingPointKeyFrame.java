@@ -96,7 +96,9 @@ public class EasingPointKeyFrame extends PointKeyFrame  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EasingPointKeyFrame(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

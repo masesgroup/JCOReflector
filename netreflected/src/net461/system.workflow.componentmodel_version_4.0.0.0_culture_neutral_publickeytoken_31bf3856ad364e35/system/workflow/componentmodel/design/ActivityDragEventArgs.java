@@ -93,7 +93,9 @@ public class ActivityDragEventArgs extends DragEventArgs  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ActivityDragEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

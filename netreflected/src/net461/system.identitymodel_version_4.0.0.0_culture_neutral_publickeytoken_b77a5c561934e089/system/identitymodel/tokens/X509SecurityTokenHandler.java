@@ -99,7 +99,9 @@ public class X509SecurityTokenHandler extends SecurityTokenHandler  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public X509SecurityTokenHandler(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

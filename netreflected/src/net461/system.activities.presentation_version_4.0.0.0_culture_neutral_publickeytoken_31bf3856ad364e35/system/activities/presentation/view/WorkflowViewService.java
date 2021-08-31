@@ -96,7 +96,9 @@ public class WorkflowViewService extends ViewService  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WorkflowViewService(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -94,7 +94,9 @@ public class ConditionedActivityGroup extends CompositeActivity  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ConditionedActivityGroup(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

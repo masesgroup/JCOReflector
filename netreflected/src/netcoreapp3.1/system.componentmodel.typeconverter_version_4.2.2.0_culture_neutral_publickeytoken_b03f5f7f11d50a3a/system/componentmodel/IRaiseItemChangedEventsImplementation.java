@@ -91,7 +91,9 @@ public class IRaiseItemChangedEventsImplementation extends NetObject implements 
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IRaiseItemChangedEventsImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class SafeAccessTokenHandle extends SafeHandle  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SafeAccessTokenHandle(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

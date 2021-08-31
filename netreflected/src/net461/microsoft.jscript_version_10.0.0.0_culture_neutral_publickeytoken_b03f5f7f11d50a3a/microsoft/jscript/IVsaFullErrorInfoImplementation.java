@@ -95,7 +95,9 @@ public class IVsaFullErrorInfoImplementation extends NetObject implements IVsaFu
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IVsaFullErrorInfoImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -95,7 +95,9 @@ public class ResourceKey extends MarkupExtension  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ResourceKey(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

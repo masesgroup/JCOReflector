@@ -107,7 +107,9 @@ public class TextSyndicationContentKind extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TextSyndicationContentKind(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

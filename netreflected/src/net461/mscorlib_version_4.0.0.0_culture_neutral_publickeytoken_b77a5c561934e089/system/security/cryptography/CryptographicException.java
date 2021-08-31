@@ -96,7 +96,9 @@ public class CryptographicException extends SystemException {
     public CryptographicException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CryptographicException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

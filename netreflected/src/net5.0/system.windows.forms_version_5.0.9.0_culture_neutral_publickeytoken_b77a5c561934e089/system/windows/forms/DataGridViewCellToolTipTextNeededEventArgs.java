@@ -92,7 +92,9 @@ public class DataGridViewCellToolTipTextNeededEventArgs extends DataGridViewCell
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataGridViewCellToolTipTextNeededEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

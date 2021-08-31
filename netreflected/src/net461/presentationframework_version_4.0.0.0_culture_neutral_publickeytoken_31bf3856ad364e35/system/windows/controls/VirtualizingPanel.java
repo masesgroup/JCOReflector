@@ -101,7 +101,9 @@ public class VirtualizingPanel extends Panel  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public VirtualizingPanel(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class IAnchorInfoImplementation extends NetObject implements IAnchorInfo 
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IAnchorInfoImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -94,7 +94,9 @@ public class RemoveDir extends TaskExtension  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RemoveDir(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

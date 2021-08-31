@@ -94,7 +94,9 @@ public class IDictionaryImplementation extends IEnumerableImplementation impleme
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IDictionaryImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

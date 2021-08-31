@@ -94,7 +94,9 @@ public class ListViewInsertionMark extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ListViewInsertionMark(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

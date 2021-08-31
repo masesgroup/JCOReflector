@@ -101,7 +101,9 @@ public class IConvertibleImplementation extends NetObject implements IConvertibl
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IConvertibleImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

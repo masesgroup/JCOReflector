@@ -98,7 +98,9 @@ public class BadImageFormatException extends SystemException {
     public BadImageFormatException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BadImageFormatException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

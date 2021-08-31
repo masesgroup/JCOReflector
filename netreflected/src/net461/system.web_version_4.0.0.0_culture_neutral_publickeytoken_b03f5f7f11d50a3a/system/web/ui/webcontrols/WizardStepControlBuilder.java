@@ -92,7 +92,9 @@ public class WizardStepControlBuilder extends ControlBuilder  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WizardStepControlBuilder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

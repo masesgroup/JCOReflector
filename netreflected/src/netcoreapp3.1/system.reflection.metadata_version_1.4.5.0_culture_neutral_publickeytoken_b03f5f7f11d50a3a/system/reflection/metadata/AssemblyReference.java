@@ -98,7 +98,9 @@ public class AssemblyReference extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AssemblyReference(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

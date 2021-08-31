@@ -95,7 +95,9 @@ public class SystemException extends NetException {
     public SystemException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SystemException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

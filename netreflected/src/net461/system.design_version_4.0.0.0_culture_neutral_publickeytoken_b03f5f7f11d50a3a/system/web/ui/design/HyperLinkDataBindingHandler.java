@@ -95,7 +95,9 @@ public class HyperLinkDataBindingHandler extends DataBindingHandler  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HyperLinkDataBindingHandler(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

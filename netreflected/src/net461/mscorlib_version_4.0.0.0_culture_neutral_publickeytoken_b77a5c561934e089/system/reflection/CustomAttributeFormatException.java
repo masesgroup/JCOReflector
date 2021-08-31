@@ -96,7 +96,9 @@ public class CustomAttributeFormatException extends FormatException {
     public CustomAttributeFormatException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CustomAttributeFormatException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

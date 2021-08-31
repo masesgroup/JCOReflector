@@ -95,7 +95,9 @@ public class ContextMenuStrip extends ToolStripDropDownMenu  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ContextMenuStrip(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -94,7 +94,9 @@ public class RuleExecution extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RuleExecution(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

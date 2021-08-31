@@ -92,7 +92,9 @@ public class ManagementKeyAttribute extends ManagementMemberAttribute  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ManagementKeyAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

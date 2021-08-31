@@ -93,7 +93,9 @@ public class LinearDoubleKeyFrame extends DoubleKeyFrame  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public LinearDoubleKeyFrame(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

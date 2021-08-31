@@ -95,7 +95,9 @@ public class TransformerTypeCollection extends ReadOnlyCollectionBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TransformerTypeCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

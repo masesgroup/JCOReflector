@@ -95,7 +95,9 @@ public class NetMsmqSecurityElement extends ServiceModelConfigurationElement  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public NetMsmqSecurityElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

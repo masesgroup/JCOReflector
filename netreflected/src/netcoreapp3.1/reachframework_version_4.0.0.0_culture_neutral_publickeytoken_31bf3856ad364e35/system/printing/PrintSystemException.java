@@ -98,7 +98,9 @@ public class PrintSystemException extends SystemException {
     public PrintSystemException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PrintSystemException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

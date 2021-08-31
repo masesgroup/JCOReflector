@@ -96,7 +96,9 @@ public class OptimisticConcurrencyException extends UpdateException {
     public OptimisticConcurrencyException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public OptimisticConcurrencyException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

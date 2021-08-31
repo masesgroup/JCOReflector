@@ -94,7 +94,9 @@ public class PropertyMap extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PropertyMap(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

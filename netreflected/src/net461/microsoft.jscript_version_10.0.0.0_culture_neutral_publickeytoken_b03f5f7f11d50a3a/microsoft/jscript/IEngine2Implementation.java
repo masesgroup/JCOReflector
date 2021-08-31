@@ -100,7 +100,9 @@ public class IEngine2Implementation extends NetObject implements IEngine2 {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IEngine2Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -94,7 +94,9 @@ public class HyperLinkColumn extends DataGridColumn  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HyperLinkColumn(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -99,7 +99,9 @@ public class IEventBindingServiceImplementation extends NetObject implements IEv
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IEventBindingServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

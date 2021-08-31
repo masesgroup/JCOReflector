@@ -94,7 +94,9 @@ public class UTF8Encoding extends Encoding  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UTF8Encoding(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -107,7 +107,9 @@ public class AsyncPreloadModeFlags extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AsyncPreloadModeFlags(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

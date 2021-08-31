@@ -95,7 +95,9 @@ public class DeclarativeCatalogPartDesigner extends CatalogPartDesigner  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DeclarativeCatalogPartDesigner(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

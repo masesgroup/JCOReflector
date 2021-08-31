@@ -94,7 +94,9 @@ public class InvokeBinder extends DynamicMetaObjectBinder  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InvokeBinder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

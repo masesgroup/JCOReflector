@@ -93,7 +93,9 @@ public class ResXResourceSet extends ResourceSet  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ResXResourceSet(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

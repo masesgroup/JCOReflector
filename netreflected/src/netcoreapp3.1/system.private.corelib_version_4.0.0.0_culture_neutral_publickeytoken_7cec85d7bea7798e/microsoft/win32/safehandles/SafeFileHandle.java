@@ -92,7 +92,9 @@ public class SafeFileHandle extends SafeHandleZeroOrMinusOneIsInvalid  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SafeFileHandle(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

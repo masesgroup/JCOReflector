@@ -94,7 +94,9 @@ public class Size3DValueSerializer extends ValueSerializer  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Size3DValueSerializer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

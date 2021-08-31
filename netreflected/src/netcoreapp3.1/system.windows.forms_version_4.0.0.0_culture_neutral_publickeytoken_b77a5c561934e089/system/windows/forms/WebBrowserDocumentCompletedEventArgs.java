@@ -93,7 +93,9 @@ public class WebBrowserDocumentCompletedEventArgs extends EventArgs  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WebBrowserDocumentCompletedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

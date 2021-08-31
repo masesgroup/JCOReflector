@@ -91,7 +91,9 @@ public class InvokePatternIdentifiers extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InvokePatternIdentifiers(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

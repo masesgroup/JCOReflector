@@ -92,7 +92,9 @@ public class UriTemplateEquivalenceComparer extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UriTemplateEquivalenceComparer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -96,7 +96,9 @@ public class IOrderedQueryableImplementation extends IEnumerableImplementation i
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IOrderedQueryableImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

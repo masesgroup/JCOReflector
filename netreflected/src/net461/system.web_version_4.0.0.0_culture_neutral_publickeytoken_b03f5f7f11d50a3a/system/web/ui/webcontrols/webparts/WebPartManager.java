@@ -126,7 +126,9 @@ public class WebPartManager extends Control implements system.web.ui.INamingCont
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WebPartManager(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

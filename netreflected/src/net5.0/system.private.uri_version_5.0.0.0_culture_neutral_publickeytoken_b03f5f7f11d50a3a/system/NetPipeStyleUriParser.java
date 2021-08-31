@@ -92,7 +92,9 @@ public class NetPipeStyleUriParser extends UriParser  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public NetPipeStyleUriParser(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

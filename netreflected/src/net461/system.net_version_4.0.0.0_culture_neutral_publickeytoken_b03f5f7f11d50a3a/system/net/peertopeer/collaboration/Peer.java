@@ -105,7 +105,9 @@ public class Peer extends NetObject implements system.runtime.serialization.ISer
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Peer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -95,7 +95,9 @@ public class Saml2AuthenticationStatement extends Saml2Statement  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Saml2AuthenticationStatement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

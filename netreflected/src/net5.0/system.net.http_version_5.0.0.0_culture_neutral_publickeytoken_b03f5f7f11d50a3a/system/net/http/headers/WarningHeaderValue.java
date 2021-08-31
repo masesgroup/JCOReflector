@@ -95,7 +95,9 @@ public class WarningHeaderValue extends NetObject implements system.ICloneable {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WarningHeaderValue(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -127,7 +127,9 @@ public class SystemWebSectionGroup extends ConfigurationSectionGroup  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SystemWebSectionGroup(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -95,7 +95,9 @@ public class InstrumentationBaseException extends NetException {
     public InstrumentationBaseException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InstrumentationBaseException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

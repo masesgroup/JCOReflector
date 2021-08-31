@@ -95,7 +95,9 @@ public class Service extends NamedItem  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Service(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

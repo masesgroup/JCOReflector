@@ -96,7 +96,9 @@ public class PropertyChangedEventManager extends WeakEventManager  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PropertyChangedEventManager(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

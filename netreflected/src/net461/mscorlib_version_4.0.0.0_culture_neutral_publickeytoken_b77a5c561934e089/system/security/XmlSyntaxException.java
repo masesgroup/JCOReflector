@@ -96,7 +96,9 @@ public class XmlSyntaxException extends SystemException {
     public XmlSyntaxException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlSyntaxException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

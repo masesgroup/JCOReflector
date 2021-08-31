@@ -93,7 +93,9 @@ public class IHierarchicalEnumerableImplementation extends IEnumerableImplementa
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IHierarchicalEnumerableImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

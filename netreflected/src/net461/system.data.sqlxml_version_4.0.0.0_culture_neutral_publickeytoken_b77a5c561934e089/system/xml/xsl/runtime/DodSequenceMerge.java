@@ -93,7 +93,9 @@ public class DodSequenceMerge extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DodSequenceMerge(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -107,7 +107,9 @@ public class MediaState extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MediaState(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -96,7 +96,9 @@ public class ValueUnavailableException extends SystemException {
     public ValueUnavailableException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ValueUnavailableException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

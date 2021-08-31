@@ -102,7 +102,9 @@ public class ManagementBaseObject extends Component implements system.runtime.se
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ManagementBaseObject(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

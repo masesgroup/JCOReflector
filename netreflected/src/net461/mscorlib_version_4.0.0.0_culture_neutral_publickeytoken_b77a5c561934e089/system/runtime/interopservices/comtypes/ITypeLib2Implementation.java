@@ -99,7 +99,9 @@ public class ITypeLib2Implementation extends NetObject implements ITypeLib2 {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ITypeLib2Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

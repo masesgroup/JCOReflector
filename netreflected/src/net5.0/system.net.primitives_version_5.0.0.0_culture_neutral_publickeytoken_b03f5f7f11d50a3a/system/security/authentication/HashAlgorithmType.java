@@ -107,7 +107,9 @@ public class HashAlgorithmType extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HashAlgorithmType(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

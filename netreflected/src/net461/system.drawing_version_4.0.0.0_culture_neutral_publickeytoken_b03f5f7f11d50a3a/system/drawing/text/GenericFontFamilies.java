@@ -107,7 +107,9 @@ public class GenericFontFamilies extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public GenericFontFamilies(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

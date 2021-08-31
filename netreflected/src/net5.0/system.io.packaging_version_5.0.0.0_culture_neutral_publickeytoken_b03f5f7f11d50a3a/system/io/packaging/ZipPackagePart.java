@@ -92,7 +92,9 @@ public class ZipPackagePart extends PackagePart  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ZipPackagePart(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

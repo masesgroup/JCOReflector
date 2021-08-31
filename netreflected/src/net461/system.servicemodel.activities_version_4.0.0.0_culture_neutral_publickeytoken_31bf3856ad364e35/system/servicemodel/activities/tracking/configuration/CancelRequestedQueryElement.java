@@ -92,7 +92,9 @@ public class CancelRequestedQueryElement extends TrackingQueryElement  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CancelRequestedQueryElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

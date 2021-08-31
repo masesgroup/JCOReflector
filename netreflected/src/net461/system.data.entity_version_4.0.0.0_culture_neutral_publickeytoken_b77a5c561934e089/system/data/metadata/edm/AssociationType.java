@@ -93,7 +93,9 @@ public class AssociationType extends RelationshipType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AssociationType(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

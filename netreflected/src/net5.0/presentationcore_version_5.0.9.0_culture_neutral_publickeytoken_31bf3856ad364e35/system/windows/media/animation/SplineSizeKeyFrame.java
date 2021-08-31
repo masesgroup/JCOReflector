@@ -95,7 +95,9 @@ public class SplineSizeKeyFrame extends SizeKeyFrame  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SplineSizeKeyFrame(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

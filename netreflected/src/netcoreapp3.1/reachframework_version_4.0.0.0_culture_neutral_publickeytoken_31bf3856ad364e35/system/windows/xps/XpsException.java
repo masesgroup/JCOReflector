@@ -95,7 +95,9 @@ public class XpsException extends NetException {
     public XpsException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XpsException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -100,7 +100,9 @@ public class TemplateField extends DataControlField  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TemplateField(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

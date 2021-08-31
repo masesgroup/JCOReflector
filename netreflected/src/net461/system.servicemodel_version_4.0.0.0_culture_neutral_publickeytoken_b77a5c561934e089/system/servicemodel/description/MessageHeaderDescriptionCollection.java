@@ -91,7 +91,9 @@ public class MessageHeaderDescriptionCollection extends NetObjectEnumerable  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MessageHeaderDescriptionCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

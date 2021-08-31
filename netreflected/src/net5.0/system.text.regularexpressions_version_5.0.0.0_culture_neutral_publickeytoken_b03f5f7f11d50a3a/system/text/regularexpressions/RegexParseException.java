@@ -99,7 +99,9 @@ public class RegexParseException extends ArgumentException {
     public RegexParseException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RegexParseException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

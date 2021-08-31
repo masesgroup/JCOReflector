@@ -93,7 +93,9 @@ public class TripleDES extends SymmetricAlgorithm  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TripleDES(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

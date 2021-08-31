@@ -97,7 +97,9 @@ public class PeerToPeerException extends NetException {
     public PeerToPeerException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PeerToPeerException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

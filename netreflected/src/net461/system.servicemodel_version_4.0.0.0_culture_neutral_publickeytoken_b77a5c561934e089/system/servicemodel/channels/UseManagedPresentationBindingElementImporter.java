@@ -95,7 +95,9 @@ public class UseManagedPresentationBindingElementImporter extends NetObject impl
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UseManagedPresentationBindingElementImporter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class DefaultWorkflowCommitWorkBatchService extends WorkflowCommitWorkBat
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DefaultWorkflowCommitWorkBatchService(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

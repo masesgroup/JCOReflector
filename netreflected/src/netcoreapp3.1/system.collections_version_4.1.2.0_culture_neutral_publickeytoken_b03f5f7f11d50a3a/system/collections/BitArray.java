@@ -93,7 +93,9 @@ public class BitArray extends NetObjectEnumerable  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BitArray(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class TreeDeleteControl extends DirectoryControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TreeDeleteControl(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

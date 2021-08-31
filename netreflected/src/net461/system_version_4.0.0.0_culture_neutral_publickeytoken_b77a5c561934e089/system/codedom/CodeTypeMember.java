@@ -97,7 +97,9 @@ public class CodeTypeMember extends CodeObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CodeTypeMember(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

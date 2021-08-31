@@ -93,7 +93,9 @@ public class CheckBoxAutomationPeer extends ToggleButtonAutomationPeer  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CheckBoxAutomationPeer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

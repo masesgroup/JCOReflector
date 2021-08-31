@@ -93,7 +93,9 @@ public class ChannelProtectionRequirements extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ChannelProtectionRequirements(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

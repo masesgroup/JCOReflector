@@ -106,7 +106,9 @@ public class BlobReader extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BlobReader(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

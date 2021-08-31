@@ -91,7 +91,9 @@ public class BuffersExtensions extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BuffersExtensions(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

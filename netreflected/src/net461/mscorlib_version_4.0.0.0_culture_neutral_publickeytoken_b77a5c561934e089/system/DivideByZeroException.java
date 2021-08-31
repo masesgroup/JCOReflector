@@ -96,7 +96,9 @@ public class DivideByZeroException extends ArithmeticException {
     public DivideByZeroException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DivideByZeroException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

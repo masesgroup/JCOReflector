@@ -94,7 +94,9 @@ public class RegistrationHelperTx extends ServicedComponent  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RegistrationHelperTx(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

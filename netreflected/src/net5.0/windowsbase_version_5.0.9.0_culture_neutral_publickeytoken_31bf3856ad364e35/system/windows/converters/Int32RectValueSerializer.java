@@ -94,7 +94,9 @@ public class Int32RectValueSerializer extends ValueSerializer  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Int32RectValueSerializer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -96,7 +96,9 @@ public class OdbcPermission extends DBDataPermission  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public OdbcPermission(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

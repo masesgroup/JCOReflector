@@ -92,7 +92,9 @@ public class TransportConfigurationTypeElement extends ConfigurationElement  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TransportConfigurationTypeElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

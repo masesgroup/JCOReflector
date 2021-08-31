@@ -95,7 +95,9 @@ public class OrthographicCamera extends ProjectionCamera  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public OrthographicCamera(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

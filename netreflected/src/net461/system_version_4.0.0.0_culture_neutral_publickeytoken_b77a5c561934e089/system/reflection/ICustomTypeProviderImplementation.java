@@ -91,7 +91,9 @@ public class ICustomTypeProviderImplementation extends NetObject implements ICus
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ICustomTypeProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

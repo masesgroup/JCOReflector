@@ -99,7 +99,9 @@ public class X509ChainPolicy extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public X509ChainPolicy(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

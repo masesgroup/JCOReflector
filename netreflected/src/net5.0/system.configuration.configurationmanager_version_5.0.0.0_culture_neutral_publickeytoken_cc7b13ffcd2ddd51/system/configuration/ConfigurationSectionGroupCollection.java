@@ -93,7 +93,9 @@ public class ConfigurationSectionGroupCollection extends NameObjectCollectionBas
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ConfigurationSectionGroupCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

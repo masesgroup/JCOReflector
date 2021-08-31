@@ -95,7 +95,9 @@ public class IncompleteInitialization extends NetException {
     public IncompleteInitialization() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IncompleteInitialization(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

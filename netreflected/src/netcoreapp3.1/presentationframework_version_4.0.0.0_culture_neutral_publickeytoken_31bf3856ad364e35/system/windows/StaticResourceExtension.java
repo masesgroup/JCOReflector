@@ -94,7 +94,9 @@ public class StaticResourceExtension extends MarkupExtension  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public StaticResourceExtension(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

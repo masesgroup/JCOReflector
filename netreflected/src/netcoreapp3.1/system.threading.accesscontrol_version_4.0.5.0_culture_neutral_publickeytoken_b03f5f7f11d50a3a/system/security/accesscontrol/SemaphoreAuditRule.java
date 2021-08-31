@@ -95,7 +95,9 @@ public class SemaphoreAuditRule extends AuditRule  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SemaphoreAuditRule(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

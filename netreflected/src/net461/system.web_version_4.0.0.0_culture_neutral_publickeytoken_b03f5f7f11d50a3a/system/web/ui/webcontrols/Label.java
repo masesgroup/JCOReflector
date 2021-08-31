@@ -92,7 +92,9 @@ public class Label extends WebControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Label(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

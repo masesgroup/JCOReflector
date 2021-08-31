@@ -93,7 +93,9 @@ public class PasswordDeriveBytes extends DeriveBytes  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PasswordDeriveBytes(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

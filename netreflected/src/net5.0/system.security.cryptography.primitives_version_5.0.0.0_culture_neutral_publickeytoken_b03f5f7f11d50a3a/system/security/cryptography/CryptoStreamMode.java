@@ -107,7 +107,9 @@ public class CryptoStreamMode extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CryptoStreamMode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

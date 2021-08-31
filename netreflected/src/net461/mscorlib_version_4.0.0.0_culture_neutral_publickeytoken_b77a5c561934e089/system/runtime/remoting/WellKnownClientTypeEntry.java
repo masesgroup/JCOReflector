@@ -92,7 +92,9 @@ public class WellKnownClientTypeEntry extends TypeEntry  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WellKnownClientTypeEntry(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

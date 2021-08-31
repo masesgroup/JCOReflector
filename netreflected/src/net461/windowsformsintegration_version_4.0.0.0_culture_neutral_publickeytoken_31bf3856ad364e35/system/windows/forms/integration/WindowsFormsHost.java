@@ -100,7 +100,9 @@ public class WindowsFormsHost extends HwndHost  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WindowsFormsHost(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

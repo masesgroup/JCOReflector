@@ -100,7 +100,9 @@ public class BaseDataListDesigner extends TemplatedControlDesigner  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BaseDataListDesigner(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

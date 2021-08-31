@@ -93,7 +93,9 @@ public class IWebPartRowImplementation extends NetObject implements IWebPartRow 
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IWebPartRowImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

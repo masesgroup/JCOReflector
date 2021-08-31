@@ -93,7 +93,9 @@ public class CodeThrowExceptionStatement extends CodeStatement  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CodeThrowExceptionStatement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

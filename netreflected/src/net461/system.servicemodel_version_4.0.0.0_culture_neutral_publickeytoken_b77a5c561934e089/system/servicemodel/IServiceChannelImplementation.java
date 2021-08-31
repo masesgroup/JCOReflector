@@ -109,7 +109,9 @@ public class IServiceChannelImplementation extends NetObject implements IService
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IServiceChannelImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class IHtmlControlDesignerBehaviorImplementation extends NetObject implem
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IHtmlControlDesignerBehaviorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

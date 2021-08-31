@@ -98,7 +98,9 @@ public class ServiceBuildProvider extends BuildProvider  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ServiceBuildProvider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

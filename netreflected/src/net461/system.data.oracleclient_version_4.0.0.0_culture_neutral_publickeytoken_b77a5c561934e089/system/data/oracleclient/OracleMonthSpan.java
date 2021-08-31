@@ -94,7 +94,9 @@ public class OracleMonthSpan extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public OracleMonthSpan(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

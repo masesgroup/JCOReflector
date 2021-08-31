@@ -97,7 +97,9 @@ public class Int32Rect extends ValueType implements system.IFormattable {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Int32Rect(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

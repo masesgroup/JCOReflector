@@ -92,7 +92,9 @@ public class Base64 extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Base64(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

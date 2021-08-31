@@ -92,7 +92,9 @@ public class ManagementRemoveAttribute extends ManagementMemberAttribute  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ManagementRemoveAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

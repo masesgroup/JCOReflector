@@ -91,7 +91,9 @@ public class IResourceUrlGeneratorImplementation extends NetObject implements IR
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IResourceUrlGeneratorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

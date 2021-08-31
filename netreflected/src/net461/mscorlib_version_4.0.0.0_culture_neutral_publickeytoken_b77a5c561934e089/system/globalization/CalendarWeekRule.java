@@ -107,7 +107,9 @@ public class CalendarWeekRule extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CalendarWeekRule(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

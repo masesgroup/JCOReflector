@@ -107,7 +107,9 @@ public class SubjectIdentifierOrKeyType extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SubjectIdentifierOrKeyType(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

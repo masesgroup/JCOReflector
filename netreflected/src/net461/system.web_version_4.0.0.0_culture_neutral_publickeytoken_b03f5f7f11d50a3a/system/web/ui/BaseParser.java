@@ -91,7 +91,9 @@ public class BaseParser extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BaseParser(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

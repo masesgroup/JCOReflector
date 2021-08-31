@@ -92,7 +92,9 @@ public class DsmlDocument extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DsmlDocument(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

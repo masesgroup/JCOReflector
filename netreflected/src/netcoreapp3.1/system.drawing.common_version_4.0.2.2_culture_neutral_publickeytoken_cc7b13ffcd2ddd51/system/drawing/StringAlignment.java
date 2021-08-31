@@ -107,7 +107,9 @@ public class StringAlignment extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public StringAlignment(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

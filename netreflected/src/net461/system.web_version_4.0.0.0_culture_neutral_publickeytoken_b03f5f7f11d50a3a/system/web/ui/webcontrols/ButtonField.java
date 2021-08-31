@@ -96,7 +96,9 @@ public class ButtonField extends ButtonFieldBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ButtonField(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

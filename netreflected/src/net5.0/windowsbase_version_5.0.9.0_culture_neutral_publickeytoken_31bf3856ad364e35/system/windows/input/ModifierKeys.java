@@ -107,7 +107,9 @@ public class ModifierKeys extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ModifierKeys(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

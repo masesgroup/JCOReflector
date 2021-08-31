@@ -96,7 +96,9 @@ public class ChangeRejectedException extends CompositionException {
     public ChangeRejectedException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ChangeRejectedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

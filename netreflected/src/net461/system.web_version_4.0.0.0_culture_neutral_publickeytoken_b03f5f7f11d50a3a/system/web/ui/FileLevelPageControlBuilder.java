@@ -93,7 +93,9 @@ public class FileLevelPageControlBuilder extends RootBuilder  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FileLevelPageControlBuilder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -105,7 +105,9 @@ public class MethodBase extends MemberInfo  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MethodBase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

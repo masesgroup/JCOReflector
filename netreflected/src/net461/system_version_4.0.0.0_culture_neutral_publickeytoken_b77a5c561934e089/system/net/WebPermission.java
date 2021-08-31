@@ -98,7 +98,9 @@ public class WebPermission extends CodeAccessPermission  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WebPermission(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class ActivityAction extends ActivityDelegate  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ActivityAction(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

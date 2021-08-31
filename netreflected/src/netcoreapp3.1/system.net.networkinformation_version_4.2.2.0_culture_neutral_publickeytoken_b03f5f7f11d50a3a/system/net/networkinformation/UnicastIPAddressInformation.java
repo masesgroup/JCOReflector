@@ -96,7 +96,9 @@ public class UnicastIPAddressInformation extends IPAddressInformation  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UnicastIPAddressInformation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

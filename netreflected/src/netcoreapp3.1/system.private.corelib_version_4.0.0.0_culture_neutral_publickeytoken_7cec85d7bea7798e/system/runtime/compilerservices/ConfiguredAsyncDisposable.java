@@ -93,7 +93,9 @@ public class ConfiguredAsyncDisposable extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ConfiguredAsyncDisposable(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

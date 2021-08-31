@@ -95,7 +95,9 @@ public class SettingsPropertyNotFoundException extends NetException {
     public SettingsPropertyNotFoundException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SettingsPropertyNotFoundException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class HtmlSource extends HtmlControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HtmlSource(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

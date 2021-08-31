@@ -107,7 +107,9 @@ public class AutoToolTipPlacement extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AutoToolTipPlacement(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

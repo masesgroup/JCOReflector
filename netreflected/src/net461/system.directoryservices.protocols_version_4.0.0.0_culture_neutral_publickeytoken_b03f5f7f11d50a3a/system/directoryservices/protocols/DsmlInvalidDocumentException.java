@@ -96,7 +96,9 @@ public class DsmlInvalidDocumentException extends DirectoryException {
     public DsmlInvalidDocumentException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DsmlInvalidDocumentException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

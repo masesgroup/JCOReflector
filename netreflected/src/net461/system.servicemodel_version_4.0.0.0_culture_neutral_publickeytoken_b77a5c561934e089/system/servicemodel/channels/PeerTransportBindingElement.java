@@ -104,7 +104,9 @@ public class PeerTransportBindingElement extends TransportBindingElement impleme
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PeerTransportBindingElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

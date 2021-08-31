@@ -93,7 +93,9 @@ public class ClientTargetCollection extends ConfigurationElementCollection  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ClientTargetCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -98,7 +98,9 @@ public class MembershipCreateUserException extends NetException {
     public MembershipCreateUserException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MembershipCreateUserException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

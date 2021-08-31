@@ -150,7 +150,9 @@ public class FormClosedEventHandler extends JCVoidDelegate implements IJCVoidEve
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         callerInstance = instance;
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FormClosedEventHandler(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         if (instance == null) throw new IllegalArgumentException("Instance cannot be null");

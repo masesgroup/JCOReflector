@@ -95,7 +95,9 @@ public class OneWayBindingElementImporter extends NetObject implements system.se
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public OneWayBindingElementImporter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

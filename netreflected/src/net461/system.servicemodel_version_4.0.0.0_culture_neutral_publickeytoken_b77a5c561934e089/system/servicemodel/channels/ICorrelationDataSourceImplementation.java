@@ -91,7 +91,9 @@ public class ICorrelationDataSourceImplementation extends NetObject implements I
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ICorrelationDataSourceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

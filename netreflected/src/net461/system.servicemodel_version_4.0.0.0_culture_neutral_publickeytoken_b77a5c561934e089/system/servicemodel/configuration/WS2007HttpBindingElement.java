@@ -92,7 +92,9 @@ public class WS2007HttpBindingElement extends WSHttpBindingElement  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WS2007HttpBindingElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

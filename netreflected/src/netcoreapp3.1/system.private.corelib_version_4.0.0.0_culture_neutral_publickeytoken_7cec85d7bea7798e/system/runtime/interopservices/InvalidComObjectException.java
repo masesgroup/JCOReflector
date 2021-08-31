@@ -96,7 +96,9 @@ public class InvalidComObjectException extends SystemException {
     public InvalidComObjectException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InvalidComObjectException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

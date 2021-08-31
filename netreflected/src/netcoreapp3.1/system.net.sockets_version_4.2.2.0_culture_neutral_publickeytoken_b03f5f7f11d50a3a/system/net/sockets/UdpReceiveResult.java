@@ -94,7 +94,9 @@ public class UdpReceiveResult extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UdpReceiveResult(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

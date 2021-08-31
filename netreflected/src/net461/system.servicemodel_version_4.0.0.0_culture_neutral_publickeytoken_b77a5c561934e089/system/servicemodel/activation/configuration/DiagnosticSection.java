@@ -92,7 +92,9 @@ public class DiagnosticSection extends ConfigurationSection  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DiagnosticSection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

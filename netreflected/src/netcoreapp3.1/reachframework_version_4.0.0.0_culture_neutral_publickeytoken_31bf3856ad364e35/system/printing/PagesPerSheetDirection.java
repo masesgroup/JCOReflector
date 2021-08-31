@@ -107,7 +107,9 @@ public class PagesPerSheetDirection extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PagesPerSheetDirection(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

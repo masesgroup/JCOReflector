@@ -98,7 +98,9 @@ public class Panel extends FrameworkElement implements system.windows.markup.IAd
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Panel(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -91,7 +91,9 @@ public class DeploymentServiceCom extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DeploymentServiceCom(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

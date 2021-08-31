@@ -96,7 +96,9 @@ public class EventLogPermissionAttribute extends CodeAccessSecurityAttribute  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EventLogPermissionAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

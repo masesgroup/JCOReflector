@@ -107,7 +107,9 @@ public class ParsingCulture extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ParsingCulture(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

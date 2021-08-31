@@ -91,7 +91,9 @@ public class HttpHeaders extends NetObjectEnumerable  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HttpHeaders(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

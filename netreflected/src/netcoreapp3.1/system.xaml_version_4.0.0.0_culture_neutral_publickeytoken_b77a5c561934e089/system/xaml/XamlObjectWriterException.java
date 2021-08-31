@@ -96,7 +96,9 @@ public class XamlObjectWriterException extends XamlException {
     public XamlObjectWriterException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XamlObjectWriterException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

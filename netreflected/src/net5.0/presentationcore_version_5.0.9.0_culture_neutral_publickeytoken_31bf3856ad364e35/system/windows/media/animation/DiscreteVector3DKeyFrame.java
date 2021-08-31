@@ -94,7 +94,9 @@ public class DiscreteVector3DKeyFrame extends Vector3DKeyFrame  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DiscreteVector3DKeyFrame(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

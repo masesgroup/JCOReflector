@@ -92,7 +92,9 @@ public class InstallContext extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InstallContext(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

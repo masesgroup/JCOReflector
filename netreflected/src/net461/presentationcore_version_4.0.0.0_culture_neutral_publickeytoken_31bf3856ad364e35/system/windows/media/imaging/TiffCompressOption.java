@@ -107,7 +107,9 @@ public class TiffCompressOption extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TiffCompressOption(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

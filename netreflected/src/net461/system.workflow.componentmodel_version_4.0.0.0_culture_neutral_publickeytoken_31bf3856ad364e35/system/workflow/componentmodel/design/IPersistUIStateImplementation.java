@@ -93,7 +93,9 @@ public class IPersistUIStateImplementation extends NetObject implements IPersist
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IPersistUIStateImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

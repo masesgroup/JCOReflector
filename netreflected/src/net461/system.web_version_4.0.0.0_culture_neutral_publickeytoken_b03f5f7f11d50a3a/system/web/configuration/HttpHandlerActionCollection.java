@@ -94,7 +94,9 @@ public class HttpHandlerActionCollection extends ConfigurationElementCollection 
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HttpHandlerActionCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

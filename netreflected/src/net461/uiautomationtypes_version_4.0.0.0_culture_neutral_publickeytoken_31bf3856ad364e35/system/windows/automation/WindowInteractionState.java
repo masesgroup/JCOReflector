@@ -107,7 +107,9 @@ public class WindowInteractionState extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WindowInteractionState(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

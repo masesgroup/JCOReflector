@@ -100,7 +100,9 @@ public class ServiceCredentialsSecurityTokenManager extends SecurityTokenManager
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ServiceCredentialsSecurityTokenManager(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

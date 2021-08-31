@@ -100,7 +100,9 @@ public class SqlException extends DbException {
     public SqlException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SqlException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

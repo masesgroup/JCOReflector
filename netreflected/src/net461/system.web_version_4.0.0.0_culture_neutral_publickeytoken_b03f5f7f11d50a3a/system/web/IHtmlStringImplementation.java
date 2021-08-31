@@ -91,7 +91,9 @@ public class IHtmlStringImplementation extends NetObject implements IHtmlString 
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IHtmlStringImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

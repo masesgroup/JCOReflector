@@ -92,7 +92,9 @@ public class IMemoryCacheManagerImplementation extends NetObject implements IMem
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IMemoryCacheManagerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

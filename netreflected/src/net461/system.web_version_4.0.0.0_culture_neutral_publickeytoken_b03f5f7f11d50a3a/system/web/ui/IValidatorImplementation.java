@@ -91,7 +91,9 @@ public class IValidatorImplementation extends NetObject implements IValidator {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IValidatorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

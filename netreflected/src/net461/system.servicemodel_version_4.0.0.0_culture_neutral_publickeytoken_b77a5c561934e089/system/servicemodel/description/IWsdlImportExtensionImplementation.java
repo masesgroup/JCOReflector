@@ -96,7 +96,9 @@ public class IWsdlImportExtensionImplementation extends NetObject implements IWs
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IWsdlImportExtensionImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

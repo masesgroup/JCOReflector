@@ -98,7 +98,9 @@ public class FlowDocumentReader extends Control implements system.windows.markup
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FlowDocumentReader(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

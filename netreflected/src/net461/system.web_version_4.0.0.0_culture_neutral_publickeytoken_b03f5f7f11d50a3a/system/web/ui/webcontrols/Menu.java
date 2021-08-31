@@ -112,7 +112,9 @@ public class Menu extends HierarchicalDataBoundControl implements system.web.ui.
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Menu(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

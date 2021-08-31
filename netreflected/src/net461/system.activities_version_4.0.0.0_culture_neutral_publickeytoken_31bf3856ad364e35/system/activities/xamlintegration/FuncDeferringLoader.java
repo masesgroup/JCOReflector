@@ -92,7 +92,9 @@ public class FuncDeferringLoader extends XamlDeferringLoader  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FuncDeferringLoader(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

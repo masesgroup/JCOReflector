@@ -93,7 +93,9 @@ public class DocumentPageViewAutomationPeer extends FrameworkElementAutomationPe
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DocumentPageViewAutomationPeer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -101,7 +101,9 @@ public class WindowsFormsApplicationBase extends ConsoleApplicationBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WindowsFormsApplicationBase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

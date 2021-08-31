@@ -93,7 +93,9 @@ public class IVbHostImplementation extends NetObject implements IVbHost {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IVbHostImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

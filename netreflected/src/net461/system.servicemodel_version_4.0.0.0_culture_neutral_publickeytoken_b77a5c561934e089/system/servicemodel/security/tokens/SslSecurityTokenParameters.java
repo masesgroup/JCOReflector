@@ -92,7 +92,9 @@ public class SslSecurityTokenParameters extends SecurityTokenParameters  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SslSecurityTokenParameters(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

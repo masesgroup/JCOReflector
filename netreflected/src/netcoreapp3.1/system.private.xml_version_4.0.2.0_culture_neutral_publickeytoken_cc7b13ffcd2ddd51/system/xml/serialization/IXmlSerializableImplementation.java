@@ -94,7 +94,9 @@ public class IXmlSerializableImplementation extends NetObject implements IXmlSer
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IXmlSerializableImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

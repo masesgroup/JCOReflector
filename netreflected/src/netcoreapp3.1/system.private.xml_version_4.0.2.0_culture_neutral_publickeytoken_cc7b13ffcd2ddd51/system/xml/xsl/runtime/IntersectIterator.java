@@ -95,7 +95,9 @@ public class IntersectIterator extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IntersectIterator(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

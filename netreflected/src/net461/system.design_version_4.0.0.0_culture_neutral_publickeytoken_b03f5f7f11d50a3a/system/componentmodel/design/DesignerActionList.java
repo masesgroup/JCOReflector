@@ -94,7 +94,9 @@ public class DesignerActionList extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DesignerActionList(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

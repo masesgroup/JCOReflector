@@ -94,7 +94,9 @@ public class ParallelActivityDesigner extends StructuredCompositeActivityDesigne
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ParallelActivityDesigner(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

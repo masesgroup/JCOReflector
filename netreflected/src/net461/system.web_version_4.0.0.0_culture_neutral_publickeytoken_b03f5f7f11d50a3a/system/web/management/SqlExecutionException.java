@@ -99,7 +99,9 @@ public class SqlExecutionException extends SystemException {
     public SqlExecutionException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SqlExecutionException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

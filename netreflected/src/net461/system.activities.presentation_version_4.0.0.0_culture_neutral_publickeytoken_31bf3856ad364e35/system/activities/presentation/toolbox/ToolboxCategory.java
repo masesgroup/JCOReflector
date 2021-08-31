@@ -94,7 +94,9 @@ public class ToolboxCategory extends NetObjectEnumerable  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ToolboxCategory(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

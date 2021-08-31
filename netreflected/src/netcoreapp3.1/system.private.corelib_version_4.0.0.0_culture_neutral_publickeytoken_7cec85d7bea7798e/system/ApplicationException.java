@@ -95,7 +95,9 @@ public class ApplicationException extends NetException {
     public ApplicationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ApplicationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -98,7 +98,9 @@ public class Collection extends NetObjectEnumerable implements system.runtime.se
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Collection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

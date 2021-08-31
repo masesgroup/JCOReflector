@@ -96,7 +96,9 @@ public class GeneralTransform3DGroup extends GeneralTransform3D  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public GeneralTransform3DGroup(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

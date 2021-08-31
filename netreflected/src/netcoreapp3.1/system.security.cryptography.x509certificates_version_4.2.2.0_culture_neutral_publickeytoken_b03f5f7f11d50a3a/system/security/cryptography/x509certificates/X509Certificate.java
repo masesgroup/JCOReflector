@@ -102,7 +102,9 @@ public class X509Certificate extends NetObject implements system.runtime.seriali
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public X509Certificate(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

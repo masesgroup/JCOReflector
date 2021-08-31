@@ -107,7 +107,9 @@ public class NotifyFilters extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public NotifyFilters(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

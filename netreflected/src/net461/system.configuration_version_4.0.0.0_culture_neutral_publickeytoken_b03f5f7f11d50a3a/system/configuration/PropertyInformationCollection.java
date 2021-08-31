@@ -95,7 +95,9 @@ public class PropertyInformationCollection extends NameObjectCollectionBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PropertyInformationCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

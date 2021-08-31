@@ -96,7 +96,9 @@ public class SymmetricSecurityKey extends SecurityKey  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SymmetricSecurityKey(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

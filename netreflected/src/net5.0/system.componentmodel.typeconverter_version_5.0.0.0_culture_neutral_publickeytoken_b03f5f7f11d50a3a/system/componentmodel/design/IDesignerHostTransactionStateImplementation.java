@@ -91,7 +91,9 @@ public class IDesignerHostTransactionStateImplementation extends NetObject imple
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IDesignerHostTransactionStateImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

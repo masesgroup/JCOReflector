@@ -97,7 +97,9 @@ public class RegexTypeEditor extends UITypeEditor  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RegexTypeEditor(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

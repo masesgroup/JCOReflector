@@ -94,7 +94,9 @@ public class TaskCommandLineEventArgs extends BuildMessageEventArgs  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TaskCommandLineEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

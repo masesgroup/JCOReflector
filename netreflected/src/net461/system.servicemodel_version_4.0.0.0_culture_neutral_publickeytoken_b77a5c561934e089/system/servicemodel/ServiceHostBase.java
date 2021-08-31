@@ -102,7 +102,9 @@ public class ServiceHostBase extends CommunicationObject implements system.IDisp
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ServiceHostBase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

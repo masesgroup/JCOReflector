@@ -93,7 +93,9 @@ public class DataGridCheckBoxColumn extends DataGridBoundColumn  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataGridCheckBoxColumn(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

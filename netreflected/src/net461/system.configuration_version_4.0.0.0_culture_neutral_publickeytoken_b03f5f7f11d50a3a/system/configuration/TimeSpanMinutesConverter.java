@@ -95,7 +95,9 @@ public class TimeSpanMinutesConverter extends ConfigurationConverterBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TimeSpanMinutesConverter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

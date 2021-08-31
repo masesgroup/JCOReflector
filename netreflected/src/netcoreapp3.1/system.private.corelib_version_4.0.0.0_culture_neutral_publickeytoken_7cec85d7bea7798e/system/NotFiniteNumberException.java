@@ -98,7 +98,9 @@ public class NotFiniteNumberException extends ArithmeticException {
     public NotFiniteNumberException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public NotFiniteNumberException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -91,7 +91,9 @@ public class CompositionConstants extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CompositionConstants(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

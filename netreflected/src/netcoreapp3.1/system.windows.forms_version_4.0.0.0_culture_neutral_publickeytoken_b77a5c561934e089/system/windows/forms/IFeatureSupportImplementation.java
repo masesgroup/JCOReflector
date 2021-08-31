@@ -92,7 +92,9 @@ public class IFeatureSupportImplementation extends NetObject implements IFeature
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IFeatureSupportImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

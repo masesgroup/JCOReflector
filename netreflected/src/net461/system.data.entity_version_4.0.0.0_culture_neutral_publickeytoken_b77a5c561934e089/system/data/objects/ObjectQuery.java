@@ -98,7 +98,9 @@ public class ObjectQuery extends NetObjectEnumerable  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ObjectQuery(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

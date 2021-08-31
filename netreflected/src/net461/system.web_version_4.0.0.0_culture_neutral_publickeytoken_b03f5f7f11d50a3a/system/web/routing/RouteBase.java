@@ -96,7 +96,9 @@ public class RouteBase extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RouteBase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

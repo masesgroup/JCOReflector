@@ -96,7 +96,9 @@ public class MissingSatelliteAssemblyException extends SystemException {
     public MissingSatelliteAssemblyException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MissingSatelliteAssemblyException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -94,7 +94,9 @@ public class ParallelTimeline extends TimelineGroup  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ParallelTimeline(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

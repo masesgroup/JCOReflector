@@ -95,7 +95,9 @@ public class XmlCDataSection extends XmlCharacterData  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlCDataSection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

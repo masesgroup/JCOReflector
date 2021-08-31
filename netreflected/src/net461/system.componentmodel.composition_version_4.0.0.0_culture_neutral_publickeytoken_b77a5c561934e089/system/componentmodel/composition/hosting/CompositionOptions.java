@@ -107,7 +107,9 @@ public class CompositionOptions extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CompositionOptions(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

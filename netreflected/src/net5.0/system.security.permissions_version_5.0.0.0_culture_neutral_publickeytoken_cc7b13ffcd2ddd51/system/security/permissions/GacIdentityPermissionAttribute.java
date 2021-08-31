@@ -95,7 +95,9 @@ public class GacIdentityPermissionAttribute extends CodeAccessSecurityAttribute 
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public GacIdentityPermissionAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

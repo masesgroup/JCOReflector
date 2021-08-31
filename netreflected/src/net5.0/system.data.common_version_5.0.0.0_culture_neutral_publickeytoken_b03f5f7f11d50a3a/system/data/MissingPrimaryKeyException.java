@@ -96,7 +96,9 @@ public class MissingPrimaryKeyException extends DataException {
     public MissingPrimaryKeyException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MissingPrimaryKeyException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

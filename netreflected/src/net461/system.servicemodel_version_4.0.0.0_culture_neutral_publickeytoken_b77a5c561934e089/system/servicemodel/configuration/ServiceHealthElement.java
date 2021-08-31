@@ -94,7 +94,9 @@ public class ServiceHealthElement extends BehaviorExtensionElement  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ServiceHealthElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

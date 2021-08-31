@@ -97,7 +97,9 @@ public class TransportSecurityBindingElement extends SecurityBindingElement impl
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TransportSecurityBindingElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

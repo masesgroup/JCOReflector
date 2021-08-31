@@ -107,7 +107,9 @@ public class WebFormsRootDesigner extends NetObject implements system.IDisposabl
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WebFormsRootDesigner(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

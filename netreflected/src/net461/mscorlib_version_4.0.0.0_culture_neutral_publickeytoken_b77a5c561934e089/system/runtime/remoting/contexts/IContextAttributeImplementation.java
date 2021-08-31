@@ -94,7 +94,9 @@ public class IContextAttributeImplementation extends NetObject implements IConte
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IContextAttributeImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

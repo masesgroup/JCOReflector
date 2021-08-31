@@ -95,7 +95,9 @@ public class ResourceReferenceExpressionConverter extends ExpressionConverter  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ResourceReferenceExpressionConverter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

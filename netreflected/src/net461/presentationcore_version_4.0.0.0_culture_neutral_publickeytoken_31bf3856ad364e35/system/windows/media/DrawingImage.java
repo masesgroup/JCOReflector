@@ -95,7 +95,9 @@ public class DrawingImage extends ImageSource  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DrawingImage(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

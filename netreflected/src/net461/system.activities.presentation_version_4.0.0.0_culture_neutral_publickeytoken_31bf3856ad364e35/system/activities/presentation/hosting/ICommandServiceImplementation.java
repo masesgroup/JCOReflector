@@ -91,7 +91,9 @@ public class ICommandServiceImplementation extends NetObject implements ICommand
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ICommandServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -98,7 +98,9 @@ public class ManagementEventWatcher extends Component  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ManagementEventWatcher(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

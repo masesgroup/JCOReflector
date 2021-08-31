@@ -92,7 +92,9 @@ public class SoapBase64Binary extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SoapBase64Binary(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class X509BasicConstraintsExtension extends X509Extension  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public X509BasicConstraintsExtension(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

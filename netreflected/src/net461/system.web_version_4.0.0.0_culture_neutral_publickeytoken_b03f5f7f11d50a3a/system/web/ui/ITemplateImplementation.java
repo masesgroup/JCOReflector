@@ -92,7 +92,9 @@ public class ITemplateImplementation extends NetObject implements ITemplate {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ITemplateImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

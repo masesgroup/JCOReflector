@@ -107,7 +107,9 @@ public class CreateObjectFlags extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CreateObjectFlags(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

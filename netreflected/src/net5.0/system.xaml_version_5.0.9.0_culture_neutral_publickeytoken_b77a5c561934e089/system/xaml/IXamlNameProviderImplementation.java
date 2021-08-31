@@ -91,7 +91,9 @@ public class IXamlNameProviderImplementation extends NetObject implements IXamlN
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IXamlNameProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

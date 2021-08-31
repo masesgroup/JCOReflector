@@ -94,7 +94,9 @@ public class WebPartMovingEventArgs extends WebPartCancelEventArgs  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WebPartMovingEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

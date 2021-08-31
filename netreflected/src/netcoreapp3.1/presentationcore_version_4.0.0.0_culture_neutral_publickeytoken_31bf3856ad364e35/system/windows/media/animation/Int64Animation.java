@@ -97,7 +97,9 @@ public class Int64Animation extends Int64AnimationBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Int64Animation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class HMACSHA384 extends HMAC  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HMACSHA384(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

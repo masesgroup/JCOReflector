@@ -107,7 +107,9 @@ public class HttpStatusCode extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HttpStatusCode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

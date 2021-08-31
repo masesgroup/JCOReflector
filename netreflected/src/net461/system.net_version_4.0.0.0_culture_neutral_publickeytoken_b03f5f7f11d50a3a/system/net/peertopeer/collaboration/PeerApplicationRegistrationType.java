@@ -107,7 +107,9 @@ public class PeerApplicationRegistrationType extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PeerApplicationRegistrationType(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

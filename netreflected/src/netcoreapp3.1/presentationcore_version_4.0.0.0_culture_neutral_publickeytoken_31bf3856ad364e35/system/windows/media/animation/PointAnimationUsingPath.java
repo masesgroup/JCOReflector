@@ -94,7 +94,9 @@ public class PointAnimationUsingPath extends PointAnimationBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PointAnimationUsingPath(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

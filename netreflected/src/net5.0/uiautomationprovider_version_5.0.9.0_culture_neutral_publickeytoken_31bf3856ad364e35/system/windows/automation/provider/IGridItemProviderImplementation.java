@@ -93,7 +93,9 @@ public class IGridItemProviderImplementation extends NetObject implements IGridI
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IGridItemProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

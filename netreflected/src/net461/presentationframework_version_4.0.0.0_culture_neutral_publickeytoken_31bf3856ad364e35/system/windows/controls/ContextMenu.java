@@ -97,7 +97,9 @@ public class ContextMenu extends MenuBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ContextMenu(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

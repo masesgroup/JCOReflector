@@ -93,7 +93,9 @@ public class ExtendedDNControl extends DirectoryControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ExtendedDNControl(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

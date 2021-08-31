@@ -93,7 +93,9 @@ public class UserProfileValueProvider extends SimpleValueProvider  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UserProfileValueProvider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

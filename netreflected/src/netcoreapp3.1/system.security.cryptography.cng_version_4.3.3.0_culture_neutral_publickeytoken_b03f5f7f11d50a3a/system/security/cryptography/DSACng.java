@@ -95,7 +95,9 @@ public class DSACng extends DSA  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DSACng(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

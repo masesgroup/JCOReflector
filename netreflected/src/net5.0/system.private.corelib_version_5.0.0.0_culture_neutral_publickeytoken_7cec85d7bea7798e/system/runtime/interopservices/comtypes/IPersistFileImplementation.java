@@ -92,7 +92,9 @@ public class IPersistFileImplementation extends NetObject implements IPersistFil
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IPersistFileImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

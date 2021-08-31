@@ -99,7 +99,9 @@ public class OleDbDataReader extends DbDataReader  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public OleDbDataReader(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

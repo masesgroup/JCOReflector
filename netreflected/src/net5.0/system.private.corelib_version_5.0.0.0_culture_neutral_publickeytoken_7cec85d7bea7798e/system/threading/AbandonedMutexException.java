@@ -98,7 +98,9 @@ public class AbandonedMutexException extends SystemException {
     public AbandonedMutexException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AbandonedMutexException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

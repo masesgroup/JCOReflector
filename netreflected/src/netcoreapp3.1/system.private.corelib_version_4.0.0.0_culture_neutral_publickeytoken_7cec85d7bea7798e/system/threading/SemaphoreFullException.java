@@ -96,7 +96,9 @@ public class SemaphoreFullException extends SystemException {
     public SemaphoreFullException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SemaphoreFullException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

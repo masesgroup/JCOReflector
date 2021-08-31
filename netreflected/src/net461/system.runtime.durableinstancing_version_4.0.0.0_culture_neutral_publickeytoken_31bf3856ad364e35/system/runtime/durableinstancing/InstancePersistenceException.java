@@ -98,7 +98,9 @@ public class InstancePersistenceException extends NetException {
     public InstancePersistenceException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InstancePersistenceException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

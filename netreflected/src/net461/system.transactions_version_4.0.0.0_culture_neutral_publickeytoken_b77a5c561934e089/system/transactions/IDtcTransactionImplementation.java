@@ -91,7 +91,9 @@ public class IDtcTransactionImplementation extends NetObject implements IDtcTran
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IDtcTransactionImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

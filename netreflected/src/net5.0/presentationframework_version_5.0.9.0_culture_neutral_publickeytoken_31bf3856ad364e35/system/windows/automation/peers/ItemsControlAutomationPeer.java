@@ -97,7 +97,9 @@ public class ItemsControlAutomationPeer extends FrameworkElementAutomationPeer i
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ItemsControlAutomationPeer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

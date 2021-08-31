@@ -93,7 +93,9 @@ public class NamedPipeTransportSecurityElement extends ServiceModelConfiguration
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public NamedPipeTransportSecurityElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -107,7 +107,9 @@ public class MatrixOrder extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MatrixOrder(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

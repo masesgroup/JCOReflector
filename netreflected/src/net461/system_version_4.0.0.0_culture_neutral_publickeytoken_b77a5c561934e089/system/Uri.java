@@ -102,7 +102,9 @@ public class Uri extends NetObject implements system.runtime.serialization.ISeri
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Uri(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

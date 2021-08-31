@@ -95,7 +95,9 @@ public class TaskLoggingHelperExtension extends TaskLoggingHelper  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TaskLoggingHelperExtension(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

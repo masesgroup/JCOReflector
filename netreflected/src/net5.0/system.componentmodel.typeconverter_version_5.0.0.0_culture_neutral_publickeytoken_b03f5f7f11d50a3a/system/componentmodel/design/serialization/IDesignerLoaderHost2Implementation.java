@@ -111,7 +111,9 @@ public class IDesignerLoaderHost2Implementation extends NetObject implements IDe
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IDesignerLoaderHost2Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

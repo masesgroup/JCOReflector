@@ -94,7 +94,9 @@ public class BasicHttpContextBinding extends BasicHttpBinding  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BasicHttpContextBinding(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

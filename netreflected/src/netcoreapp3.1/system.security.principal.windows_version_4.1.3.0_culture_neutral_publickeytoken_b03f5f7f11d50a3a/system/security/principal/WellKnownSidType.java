@@ -107,7 +107,9 @@ public class WellKnownSidType extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WellKnownSidType(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

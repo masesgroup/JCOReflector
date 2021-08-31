@@ -107,7 +107,9 @@ public class CopyPixelOperation extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CopyPixelOperation(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

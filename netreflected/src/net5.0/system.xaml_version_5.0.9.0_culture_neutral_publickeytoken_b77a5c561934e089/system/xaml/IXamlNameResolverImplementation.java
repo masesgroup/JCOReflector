@@ -92,7 +92,9 @@ public class IXamlNameResolverImplementation extends NetObject implements IXamlN
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IXamlNameResolverImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

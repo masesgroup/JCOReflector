@@ -94,7 +94,9 @@ public class HtmlHeadBuilder extends ControlBuilder  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HtmlHeadBuilder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

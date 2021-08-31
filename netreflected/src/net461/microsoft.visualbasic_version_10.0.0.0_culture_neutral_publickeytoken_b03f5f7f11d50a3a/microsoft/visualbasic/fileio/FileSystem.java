@@ -102,7 +102,9 @@ public class FileSystem extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FileSystem(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

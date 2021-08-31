@@ -94,7 +94,9 @@ public class DiscreteMatrixKeyFrame extends MatrixKeyFrame  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DiscreteMatrixKeyFrame(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

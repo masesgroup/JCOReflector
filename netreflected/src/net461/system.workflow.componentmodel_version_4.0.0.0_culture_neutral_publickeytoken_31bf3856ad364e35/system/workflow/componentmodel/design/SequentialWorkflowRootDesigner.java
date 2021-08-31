@@ -95,7 +95,9 @@ public class SequentialWorkflowRootDesigner extends SequentialActivityDesigner  
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SequentialWorkflowRootDesigner(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -107,7 +107,9 @@ public class HandleInheritability extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HandleInheritability(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -95,7 +95,9 @@ public class RepeaterItem extends Control implements system.web.ui.INamingContai
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RepeaterItem(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

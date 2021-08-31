@@ -91,7 +91,9 @@ public class IRegiisUtilityImplementation extends NetObject implements IRegiisUt
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IRegiisUtilityImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

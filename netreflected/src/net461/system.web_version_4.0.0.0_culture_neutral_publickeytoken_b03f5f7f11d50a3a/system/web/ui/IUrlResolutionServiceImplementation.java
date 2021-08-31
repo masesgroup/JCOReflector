@@ -91,7 +91,9 @@ public class IUrlResolutionServiceImplementation extends NetObject implements IU
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IUrlResolutionServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

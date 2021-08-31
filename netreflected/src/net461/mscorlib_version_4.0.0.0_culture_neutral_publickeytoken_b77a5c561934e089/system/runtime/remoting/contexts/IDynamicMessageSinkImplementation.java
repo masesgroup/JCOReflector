@@ -93,7 +93,9 @@ public class IDynamicMessageSinkImplementation extends NetObject implements IDyn
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IDynamicMessageSinkImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

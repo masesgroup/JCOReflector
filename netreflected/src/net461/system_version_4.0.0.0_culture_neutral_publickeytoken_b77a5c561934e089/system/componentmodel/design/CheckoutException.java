@@ -96,7 +96,9 @@ public class CheckoutException extends ExternalException {
     public CheckoutException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CheckoutException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

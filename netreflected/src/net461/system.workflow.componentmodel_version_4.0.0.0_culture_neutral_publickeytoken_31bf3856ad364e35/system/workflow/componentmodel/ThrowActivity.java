@@ -97,7 +97,9 @@ public class ThrowActivity extends Activity implements system.workflow.component
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ThrowActivity(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

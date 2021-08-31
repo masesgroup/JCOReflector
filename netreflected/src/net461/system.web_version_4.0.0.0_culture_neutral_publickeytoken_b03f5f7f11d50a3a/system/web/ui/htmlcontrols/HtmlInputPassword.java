@@ -92,7 +92,9 @@ public class HtmlInputPassword extends HtmlInputText  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HtmlInputPassword(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

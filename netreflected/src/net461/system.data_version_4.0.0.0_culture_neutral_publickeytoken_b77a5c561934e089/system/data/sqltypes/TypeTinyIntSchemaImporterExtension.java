@@ -92,7 +92,9 @@ public class TypeTinyIntSchemaImporterExtension extends SqlTypesSchemaImporterEx
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TypeTinyIntSchemaImporterExtension(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class FileStyleUriParser extends UriParser  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FileStyleUriParser(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

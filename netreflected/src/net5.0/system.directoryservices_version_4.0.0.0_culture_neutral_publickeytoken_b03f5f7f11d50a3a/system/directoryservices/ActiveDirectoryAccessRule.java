@@ -97,7 +97,9 @@ public class ActiveDirectoryAccessRule extends ObjectAccessRule  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ActiveDirectoryAccessRule(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

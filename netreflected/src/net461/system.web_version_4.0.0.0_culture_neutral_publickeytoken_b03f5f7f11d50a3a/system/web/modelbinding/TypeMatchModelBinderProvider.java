@@ -96,7 +96,9 @@ public class TypeMatchModelBinderProvider extends ModelBinderProvider  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TypeMatchModelBinderProvider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

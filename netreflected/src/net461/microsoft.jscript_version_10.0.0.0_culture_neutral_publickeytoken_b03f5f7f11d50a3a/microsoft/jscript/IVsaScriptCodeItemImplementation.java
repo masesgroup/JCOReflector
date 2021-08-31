@@ -97,7 +97,9 @@ public class IVsaScriptCodeItemImplementation extends NetObject implements IVsaS
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IVsaScriptCodeItemImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -97,7 +97,9 @@ public class Guid extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Guid(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

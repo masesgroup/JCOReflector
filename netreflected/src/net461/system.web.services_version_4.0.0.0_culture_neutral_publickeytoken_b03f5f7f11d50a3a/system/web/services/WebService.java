@@ -99,7 +99,9 @@ public class WebService extends MarshalByValueComponent  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WebService(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

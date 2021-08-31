@@ -104,7 +104,9 @@ public class IXpsFixedPageWriterImplementation extends NetObject implements IXps
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IXpsFixedPageWriterImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -91,7 +91,9 @@ public class IDefineEventImplementation extends NetObject implements IDefineEven
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IDefineEventImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

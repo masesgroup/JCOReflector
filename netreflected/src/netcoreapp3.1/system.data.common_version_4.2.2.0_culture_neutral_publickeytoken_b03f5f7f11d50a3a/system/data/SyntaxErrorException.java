@@ -96,7 +96,9 @@ public class SyntaxErrorException extends InvalidExpressionException {
     public SyntaxErrorException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SyntaxErrorException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

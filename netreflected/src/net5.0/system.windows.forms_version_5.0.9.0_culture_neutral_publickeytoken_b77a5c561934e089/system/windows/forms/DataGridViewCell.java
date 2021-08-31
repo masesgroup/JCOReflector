@@ -108,7 +108,9 @@ public class DataGridViewCell extends DataGridViewElement implements AutoCloseab
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataGridViewCell(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

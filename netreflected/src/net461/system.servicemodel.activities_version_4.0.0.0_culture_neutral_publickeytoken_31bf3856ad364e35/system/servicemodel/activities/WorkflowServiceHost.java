@@ -99,7 +99,9 @@ public class WorkflowServiceHost extends ServiceHostBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WorkflowServiceHost(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

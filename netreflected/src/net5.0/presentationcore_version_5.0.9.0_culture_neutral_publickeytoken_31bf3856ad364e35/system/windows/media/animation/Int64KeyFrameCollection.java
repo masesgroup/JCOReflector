@@ -95,7 +95,9 @@ public class Int64KeyFrameCollection extends Freezable  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Int64KeyFrameCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

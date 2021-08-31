@@ -96,7 +96,9 @@ public class AccessViolationException extends SystemException {
     public AccessViolationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AccessViolationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

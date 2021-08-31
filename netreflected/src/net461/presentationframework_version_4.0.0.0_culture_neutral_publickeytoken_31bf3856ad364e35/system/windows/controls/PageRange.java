@@ -93,7 +93,9 @@ public class PageRange extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PageRange(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

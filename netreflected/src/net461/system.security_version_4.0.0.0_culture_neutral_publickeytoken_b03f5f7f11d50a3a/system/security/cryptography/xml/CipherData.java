@@ -93,7 +93,9 @@ public class CipherData extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CipherData(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

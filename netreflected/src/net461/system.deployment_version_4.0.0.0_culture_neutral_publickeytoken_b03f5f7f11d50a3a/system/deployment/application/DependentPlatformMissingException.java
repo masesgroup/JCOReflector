@@ -99,7 +99,9 @@ public class DependentPlatformMissingException extends DeploymentException {
     public DependentPlatformMissingException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DependentPlatformMissingException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

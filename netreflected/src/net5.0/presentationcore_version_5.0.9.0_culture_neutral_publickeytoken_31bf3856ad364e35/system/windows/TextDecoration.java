@@ -96,7 +96,9 @@ public class TextDecoration extends Animatable  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TextDecoration(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

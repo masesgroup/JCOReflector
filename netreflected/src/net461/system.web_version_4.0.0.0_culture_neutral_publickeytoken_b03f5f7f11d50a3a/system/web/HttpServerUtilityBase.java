@@ -95,7 +95,9 @@ public class HttpServerUtilityBase extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HttpServerUtilityBase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

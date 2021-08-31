@@ -93,7 +93,9 @@ public class DBDataPermissionAttribute extends CodeAccessSecurityAttribute  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DBDataPermissionAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

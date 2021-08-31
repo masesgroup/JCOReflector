@@ -94,7 +94,9 @@ public class OuterGlowBitmapEffect extends BitmapEffect  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public OuterGlowBitmapEffect(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

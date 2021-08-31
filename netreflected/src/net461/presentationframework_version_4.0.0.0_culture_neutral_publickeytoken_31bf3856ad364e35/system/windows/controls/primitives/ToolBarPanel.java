@@ -92,7 +92,9 @@ public class ToolBarPanel extends StackPanel  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ToolBarPanel(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

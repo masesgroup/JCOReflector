@@ -95,7 +95,9 @@ public class PnrpPermissionAttribute extends CodeAccessSecurityAttribute  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PnrpPermissionAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -98,7 +98,9 @@ public class DirectoryServicesCOMException extends COMException {
     public DirectoryServicesCOMException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DirectoryServicesCOMException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

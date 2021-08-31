@@ -96,7 +96,9 @@ public class ITableProviderImplementation extends NetObject implements ITablePro
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ITableProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

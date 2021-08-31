@@ -98,7 +98,9 @@ public class BufferedStream extends Stream  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BufferedStream(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

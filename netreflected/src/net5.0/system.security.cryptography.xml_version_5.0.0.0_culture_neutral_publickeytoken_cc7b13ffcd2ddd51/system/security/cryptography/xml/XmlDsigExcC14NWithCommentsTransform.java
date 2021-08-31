@@ -92,7 +92,9 @@ public class XmlDsigExcC14NWithCommentsTransform extends XmlDsigExcC14NTransform
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlDsigExcC14NWithCommentsTransform(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -107,7 +107,9 @@ public class IServerChannelSinkImplementation extends NetObject implements IServ
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IServerChannelSinkImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

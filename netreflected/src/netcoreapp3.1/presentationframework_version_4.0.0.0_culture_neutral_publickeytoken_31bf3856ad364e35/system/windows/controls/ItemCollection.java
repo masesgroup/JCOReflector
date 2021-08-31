@@ -99,7 +99,9 @@ public class ItemCollection extends CollectionView implements system.windows.IWe
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ItemCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -95,7 +95,9 @@ public class CodeCondition extends ActivityCondition  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CodeCondition(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

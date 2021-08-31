@@ -94,7 +94,9 @@ public class ActiveDirectorySubnetCollection extends CollectionBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ActiveDirectorySubnetCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

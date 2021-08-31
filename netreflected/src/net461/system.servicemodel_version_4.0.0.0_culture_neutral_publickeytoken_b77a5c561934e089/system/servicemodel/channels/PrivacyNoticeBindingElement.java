@@ -98,7 +98,9 @@ public class PrivacyNoticeBindingElement extends BindingElement implements syste
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PrivacyNoticeBindingElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class InOutArgument extends Argument  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InOutArgument(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -94,7 +94,9 @@ public class GetInstalledSDKLocations extends TaskExtension  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public GetInstalledSDKLocations(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

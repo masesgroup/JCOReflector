@@ -96,7 +96,9 @@ public class SqlDataAdapter extends DbDataAdapter  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SqlDataAdapter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

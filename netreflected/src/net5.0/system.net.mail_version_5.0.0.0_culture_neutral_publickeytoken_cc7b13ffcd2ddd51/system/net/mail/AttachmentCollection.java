@@ -91,7 +91,9 @@ public class AttachmentCollection extends NetObjectEnumerable implements AutoClo
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AttachmentCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -98,7 +98,9 @@ public class ArgumentException extends SystemException {
     public ArgumentException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ArgumentException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

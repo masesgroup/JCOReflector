@@ -98,7 +98,9 @@ public class StatusBarDrawItemEventArgs extends DrawItemEventArgs  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public StatusBarDrawItemEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

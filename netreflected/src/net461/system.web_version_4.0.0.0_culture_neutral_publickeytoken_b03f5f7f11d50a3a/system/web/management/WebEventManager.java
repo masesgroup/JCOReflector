@@ -91,7 +91,9 @@ public class WebEventManager extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WebEventManager(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

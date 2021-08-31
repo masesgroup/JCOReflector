@@ -92,7 +92,9 @@ public class DataListComponentEditor extends BaseDataListComponentEditor  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataListComponentEditor(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -96,7 +96,9 @@ public class XpsSerializationException extends XpsException {
     public XpsSerializationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XpsSerializationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

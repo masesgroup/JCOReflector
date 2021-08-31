@@ -91,7 +91,9 @@ public class IQueryAmbientImplementation extends NetObject implements IQueryAmbi
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IQueryAmbientImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

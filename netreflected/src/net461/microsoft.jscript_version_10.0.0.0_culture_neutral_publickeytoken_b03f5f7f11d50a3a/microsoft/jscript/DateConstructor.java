@@ -93,7 +93,9 @@ public class DateConstructor extends ScriptFunction  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DateConstructor(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

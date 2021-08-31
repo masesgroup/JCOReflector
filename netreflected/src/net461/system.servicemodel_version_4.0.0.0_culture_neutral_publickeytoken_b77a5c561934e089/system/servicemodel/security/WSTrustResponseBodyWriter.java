@@ -95,7 +95,9 @@ public class WSTrustResponseBodyWriter extends BodyWriter  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WSTrustResponseBodyWriter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

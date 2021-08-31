@@ -94,7 +94,9 @@ public class GenerateApplicationManifest extends GenerateManifestBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public GenerateApplicationManifest(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

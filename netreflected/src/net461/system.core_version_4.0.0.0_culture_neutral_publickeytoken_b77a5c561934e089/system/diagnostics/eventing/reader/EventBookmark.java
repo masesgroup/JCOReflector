@@ -95,7 +95,9 @@ public class EventBookmark extends NetObject implements system.runtime.serializa
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EventBookmark(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

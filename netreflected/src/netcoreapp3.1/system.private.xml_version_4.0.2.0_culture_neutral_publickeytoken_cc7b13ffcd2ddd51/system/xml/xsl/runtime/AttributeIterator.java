@@ -93,7 +93,9 @@ public class AttributeIterator extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AttributeIterator(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

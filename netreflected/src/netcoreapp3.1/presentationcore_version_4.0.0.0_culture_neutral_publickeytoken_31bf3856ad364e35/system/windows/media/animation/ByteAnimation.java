@@ -97,7 +97,9 @@ public class ByteAnimation extends ByteAnimationBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ByteAnimation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

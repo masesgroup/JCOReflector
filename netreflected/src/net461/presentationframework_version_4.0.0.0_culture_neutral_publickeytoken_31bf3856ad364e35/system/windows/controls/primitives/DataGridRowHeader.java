@@ -94,7 +94,9 @@ public class DataGridRowHeader extends ButtonBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataGridRowHeader(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

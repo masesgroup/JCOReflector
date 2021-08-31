@@ -100,7 +100,9 @@ public class XpsDocumentWriter extends SerializerWriter  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XpsDocumentWriter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -96,7 +96,9 @@ public class InternalBufferOverflowException extends SystemException {
     public InternalBufferOverflowException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InternalBufferOverflowException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

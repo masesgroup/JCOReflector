@@ -104,7 +104,9 @@ public class SqlGuid extends ValueType implements system.xml.serialization.IXmlS
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SqlGuid(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -95,7 +95,9 @@ public class TypedReference extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TypedReference(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

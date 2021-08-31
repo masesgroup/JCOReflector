@@ -94,7 +94,9 @@ public class CodeTypeParameter extends CodeObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CodeTypeParameter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -94,7 +94,9 @@ public class UnixDomainSocketEndPoint extends EndPoint  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UnixDomainSocketEndPoint(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

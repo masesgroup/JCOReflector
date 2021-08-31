@@ -93,7 +93,9 @@ public class XmlSchemaKeyref extends XmlSchemaIdentityConstraint  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlSchemaKeyref(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

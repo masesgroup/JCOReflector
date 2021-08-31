@@ -96,7 +96,9 @@ public class TableNotEnabledForNotificationException extends SystemException {
     public TableNotEnabledForNotificationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TableNotEnabledForNotificationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

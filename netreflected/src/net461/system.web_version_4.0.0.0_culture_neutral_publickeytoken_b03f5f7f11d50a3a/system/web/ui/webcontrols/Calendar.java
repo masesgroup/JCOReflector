@@ -106,7 +106,9 @@ public class Calendar extends WebControl implements system.web.ui.IPostBackEvent
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Calendar(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

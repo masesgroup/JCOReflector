@@ -93,7 +93,9 @@ public class DataGridViewCellFormattingEventArgs extends ConvertEventArgs  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataGridViewCellFormattingEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -107,7 +107,9 @@ public class SynchronizationOption extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SynchronizationOption(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -107,7 +107,9 @@ public class HitTestResultBehavior extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HitTestResultBehavior(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

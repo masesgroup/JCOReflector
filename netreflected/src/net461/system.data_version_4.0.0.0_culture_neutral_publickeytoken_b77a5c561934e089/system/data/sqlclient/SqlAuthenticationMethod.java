@@ -107,7 +107,9 @@ public class SqlAuthenticationMethod extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SqlAuthenticationMethod(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

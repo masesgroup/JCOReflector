@@ -92,7 +92,9 @@ public class SafeNCryptProviderHandle extends SafeNCryptHandle  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SafeNCryptProviderHandle(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

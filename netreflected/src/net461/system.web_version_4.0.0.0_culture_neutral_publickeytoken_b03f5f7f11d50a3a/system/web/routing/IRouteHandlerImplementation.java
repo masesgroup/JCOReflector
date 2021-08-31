@@ -94,7 +94,9 @@ public class IRouteHandlerImplementation extends NetObject implements IRouteHand
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IRouteHandlerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

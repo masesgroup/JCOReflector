@@ -95,7 +95,9 @@ public class InvalidTimeZoneException extends NetException {
     public InvalidTimeZoneException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InvalidTimeZoneException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

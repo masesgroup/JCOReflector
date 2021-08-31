@@ -101,7 +101,9 @@ public class TableLayoutSettings extends LayoutSettings implements system.runtim
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TableLayoutSettings(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

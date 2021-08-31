@@ -100,7 +100,9 @@ public class Style extends DispatcherObject implements system.windows.markup.IAd
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Style(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

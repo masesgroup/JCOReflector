@@ -115,7 +115,9 @@ public class SqlString extends ValueType implements system.xml.serialization.IXm
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SqlString(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

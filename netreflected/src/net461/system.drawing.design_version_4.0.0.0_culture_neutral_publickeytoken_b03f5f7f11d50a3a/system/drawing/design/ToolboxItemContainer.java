@@ -100,7 +100,9 @@ public class ToolboxItemContainer extends NetObject implements system.runtime.se
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ToolboxItemContainer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

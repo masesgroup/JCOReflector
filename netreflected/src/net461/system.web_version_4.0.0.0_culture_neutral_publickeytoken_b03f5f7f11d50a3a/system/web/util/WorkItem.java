@@ -92,7 +92,9 @@ public class WorkItem extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WorkItem(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

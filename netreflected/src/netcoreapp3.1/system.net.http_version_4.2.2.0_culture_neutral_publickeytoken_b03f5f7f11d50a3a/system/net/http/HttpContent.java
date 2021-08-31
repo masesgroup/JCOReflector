@@ -95,7 +95,9 @@ public class HttpContent extends NetObject implements AutoCloseable {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HttpContent(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

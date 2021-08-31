@@ -93,7 +93,9 @@ public class PEMemoryBlock extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PEMemoryBlock(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

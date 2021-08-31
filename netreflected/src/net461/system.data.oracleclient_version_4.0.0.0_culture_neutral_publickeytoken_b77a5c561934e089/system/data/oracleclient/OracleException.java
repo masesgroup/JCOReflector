@@ -98,7 +98,9 @@ public class OracleException extends DbException {
     public OracleException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public OracleException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

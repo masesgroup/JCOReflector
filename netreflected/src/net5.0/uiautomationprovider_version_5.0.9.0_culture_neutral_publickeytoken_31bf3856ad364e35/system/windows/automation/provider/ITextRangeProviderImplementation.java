@@ -97,7 +97,9 @@ public class ITextRangeProviderImplementation extends NetObject implements IText
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ITextRangeProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

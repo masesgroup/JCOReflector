@@ -107,7 +107,9 @@ public class EventLogPermissionAccess extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EventLogPermissionAccess(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

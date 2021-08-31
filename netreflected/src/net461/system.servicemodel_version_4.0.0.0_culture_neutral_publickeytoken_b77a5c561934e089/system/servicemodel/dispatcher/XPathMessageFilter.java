@@ -105,7 +105,9 @@ public class XPathMessageFilter extends MessageFilter implements system.xml.seri
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XPathMessageFilter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -107,7 +107,9 @@ public class ActivityExecutionStatus extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ActivityExecutionStatus(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

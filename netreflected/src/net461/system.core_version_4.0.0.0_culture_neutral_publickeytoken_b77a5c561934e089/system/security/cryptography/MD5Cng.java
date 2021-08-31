@@ -92,7 +92,9 @@ public class MD5Cng extends MD5  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MD5Cng(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

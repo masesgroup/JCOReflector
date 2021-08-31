@@ -94,7 +94,9 @@ public class XmlHierarchicalDataSourceView extends HierarchicalDataSourceView  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlHierarchicalDataSourceView(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

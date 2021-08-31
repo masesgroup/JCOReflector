@@ -91,7 +91,9 @@ public class Random extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Random(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

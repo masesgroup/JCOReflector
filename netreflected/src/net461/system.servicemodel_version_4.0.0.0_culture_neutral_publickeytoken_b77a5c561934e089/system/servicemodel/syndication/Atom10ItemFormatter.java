@@ -98,7 +98,9 @@ public class Atom10ItemFormatter extends SyndicationItemFormatter implements sys
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Atom10ItemFormatter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

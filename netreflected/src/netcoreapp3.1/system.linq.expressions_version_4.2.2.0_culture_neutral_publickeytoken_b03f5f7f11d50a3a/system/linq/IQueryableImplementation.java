@@ -94,7 +94,9 @@ public class IQueryableImplementation extends IEnumerableImplementation implemen
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IQueryableImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

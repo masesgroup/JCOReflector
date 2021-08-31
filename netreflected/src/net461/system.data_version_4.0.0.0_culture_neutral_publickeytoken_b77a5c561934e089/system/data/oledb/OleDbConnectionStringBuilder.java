@@ -94,7 +94,9 @@ public class OleDbConnectionStringBuilder extends DbConnectionStringBuilder  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public OleDbConnectionStringBuilder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

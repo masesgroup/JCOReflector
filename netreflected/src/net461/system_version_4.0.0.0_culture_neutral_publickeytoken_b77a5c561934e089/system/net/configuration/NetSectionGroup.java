@@ -101,7 +101,9 @@ public class NetSectionGroup extends ConfigurationSectionGroup  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public NetSectionGroup(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

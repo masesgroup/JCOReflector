@@ -110,7 +110,9 @@ public class IClientFormatterSinkImplementation extends NetObject implements ICl
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IClientFormatterSinkImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

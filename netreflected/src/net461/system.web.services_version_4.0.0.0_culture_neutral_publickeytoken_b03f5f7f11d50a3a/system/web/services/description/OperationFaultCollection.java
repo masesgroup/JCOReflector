@@ -93,7 +93,9 @@ public class OperationFaultCollection extends ServiceDescriptionBaseCollection  
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public OperationFaultCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

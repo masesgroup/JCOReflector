@@ -92,7 +92,9 @@ public class IXmlTextParserImplementation extends NetObject implements IXmlTextP
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IXmlTextParserImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

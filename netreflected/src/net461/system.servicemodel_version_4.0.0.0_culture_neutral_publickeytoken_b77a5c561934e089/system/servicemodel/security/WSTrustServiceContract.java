@@ -104,7 +104,9 @@ public class WSTrustServiceContract extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WSTrustServiceContract(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

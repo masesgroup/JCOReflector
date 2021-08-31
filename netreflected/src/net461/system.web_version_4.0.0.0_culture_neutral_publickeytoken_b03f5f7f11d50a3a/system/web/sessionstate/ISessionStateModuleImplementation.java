@@ -96,7 +96,9 @@ public class ISessionStateModuleImplementation extends NetObject implements ISes
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ISessionStateModuleImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

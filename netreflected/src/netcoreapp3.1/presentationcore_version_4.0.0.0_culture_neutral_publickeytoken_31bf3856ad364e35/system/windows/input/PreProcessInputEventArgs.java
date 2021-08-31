@@ -92,7 +92,9 @@ public class PreProcessInputEventArgs extends ProcessInputEventArgs  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PreProcessInputEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

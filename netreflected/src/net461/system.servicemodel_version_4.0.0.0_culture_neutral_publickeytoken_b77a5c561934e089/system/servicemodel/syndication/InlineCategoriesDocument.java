@@ -92,7 +92,9 @@ public class InlineCategoriesDocument extends CategoriesDocument  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InlineCategoriesDocument(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

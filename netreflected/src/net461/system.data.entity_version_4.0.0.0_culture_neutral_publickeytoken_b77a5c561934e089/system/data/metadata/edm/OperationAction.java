@@ -107,7 +107,9 @@ public class OperationAction extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public OperationAction(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

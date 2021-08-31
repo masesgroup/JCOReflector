@@ -107,7 +107,9 @@ public class TraceDisplayMode extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TraceDisplayMode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

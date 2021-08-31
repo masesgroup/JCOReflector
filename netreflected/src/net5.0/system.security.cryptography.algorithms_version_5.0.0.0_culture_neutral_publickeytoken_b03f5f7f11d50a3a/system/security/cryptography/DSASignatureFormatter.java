@@ -93,7 +93,9 @@ public class DSASignatureFormatter extends AsymmetricSignatureFormatter  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DSASignatureFormatter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

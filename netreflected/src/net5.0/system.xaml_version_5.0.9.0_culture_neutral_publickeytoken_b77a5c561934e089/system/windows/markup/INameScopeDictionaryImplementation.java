@@ -93,7 +93,9 @@ public class INameScopeDictionaryImplementation extends IEnumerableImplementatio
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public INameScopeDictionaryImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

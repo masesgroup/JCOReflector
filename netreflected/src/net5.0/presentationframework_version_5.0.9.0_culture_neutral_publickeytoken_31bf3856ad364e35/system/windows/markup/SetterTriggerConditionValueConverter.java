@@ -95,7 +95,9 @@ public class SetterTriggerConditionValueConverter extends TypeConverter  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SetterTriggerConditionValueConverter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class ComplexType extends StructuralType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ComplexType(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

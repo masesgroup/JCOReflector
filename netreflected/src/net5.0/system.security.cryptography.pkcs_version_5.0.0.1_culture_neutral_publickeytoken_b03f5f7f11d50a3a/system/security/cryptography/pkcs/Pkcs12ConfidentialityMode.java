@@ -107,7 +107,9 @@ public class Pkcs12ConfidentialityMode extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Pkcs12ConfidentialityMode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

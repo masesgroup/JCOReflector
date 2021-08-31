@@ -107,7 +107,9 @@ public class DueDate extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DueDate(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

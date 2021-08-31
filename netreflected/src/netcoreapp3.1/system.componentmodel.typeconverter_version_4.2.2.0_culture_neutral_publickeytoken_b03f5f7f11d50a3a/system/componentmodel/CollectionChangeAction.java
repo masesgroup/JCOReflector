@@ -107,7 +107,9 @@ public class CollectionChangeAction extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CollectionChangeAction(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

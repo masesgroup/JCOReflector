@@ -96,7 +96,9 @@ public class TreeViewDesigner extends HierarchicalDataBoundControlDesigner  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TreeViewDesigner(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -94,7 +94,9 @@ public class XmlSchemaSimpleTypeList extends XmlSchemaSimpleTypeContent  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlSchemaSimpleTypeList(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

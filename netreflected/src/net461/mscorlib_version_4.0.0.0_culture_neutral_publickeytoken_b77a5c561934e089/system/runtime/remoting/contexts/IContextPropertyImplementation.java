@@ -92,7 +92,9 @@ public class IContextPropertyImplementation extends NetObject implements IContex
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IContextPropertyImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

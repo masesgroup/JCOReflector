@@ -93,7 +93,9 @@ public class SliderAutomationPeer extends RangeBaseAutomationPeer  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SliderAutomationPeer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

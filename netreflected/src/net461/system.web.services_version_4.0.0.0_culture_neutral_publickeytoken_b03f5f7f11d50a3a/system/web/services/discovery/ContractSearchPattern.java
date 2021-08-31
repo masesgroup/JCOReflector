@@ -93,7 +93,9 @@ public class ContractSearchPattern extends DiscoverySearchPattern  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ContractSearchPattern(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

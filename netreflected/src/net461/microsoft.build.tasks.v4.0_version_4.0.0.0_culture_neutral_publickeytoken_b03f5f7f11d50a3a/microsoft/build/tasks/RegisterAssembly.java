@@ -96,7 +96,9 @@ public class RegisterAssembly extends AppDomainIsolatedTaskExtension  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RegisterAssembly(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

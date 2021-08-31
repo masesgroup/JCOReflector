@@ -96,7 +96,9 @@ public class TransactionInDoubtException extends TransactionException {
     public TransactionInDoubtException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TransactionInDoubtException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

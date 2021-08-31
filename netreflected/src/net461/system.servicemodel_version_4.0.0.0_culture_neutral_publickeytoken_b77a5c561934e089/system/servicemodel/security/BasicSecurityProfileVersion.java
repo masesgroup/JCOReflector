@@ -92,7 +92,9 @@ public class BasicSecurityProfileVersion extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BasicSecurityProfileVersion(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class LowPhysicalMemoryObserver extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public LowPhysicalMemoryObserver(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

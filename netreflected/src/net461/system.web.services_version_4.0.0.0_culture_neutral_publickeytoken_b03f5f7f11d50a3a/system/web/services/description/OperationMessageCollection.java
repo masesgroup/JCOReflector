@@ -96,7 +96,9 @@ public class OperationMessageCollection extends ServiceDescriptionBaseCollection
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public OperationMessageCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

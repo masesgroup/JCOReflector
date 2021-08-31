@@ -93,7 +93,9 @@ public class MediaClock extends Clock  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MediaClock(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

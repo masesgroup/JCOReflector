@@ -92,7 +92,9 @@ public class LenientEnumeratorPrototype extends EnumeratorPrototype  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public LenientEnumeratorPrototype(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

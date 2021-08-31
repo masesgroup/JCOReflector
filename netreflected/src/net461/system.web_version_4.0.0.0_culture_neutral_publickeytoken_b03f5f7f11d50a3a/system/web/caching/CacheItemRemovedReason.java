@@ -107,7 +107,9 @@ public class CacheItemRemovedReason extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CacheItemRemovedReason(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

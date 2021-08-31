@@ -94,7 +94,9 @@ public class OutputCacheProviderCollection extends ProviderCollection  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public OutputCacheProviderCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

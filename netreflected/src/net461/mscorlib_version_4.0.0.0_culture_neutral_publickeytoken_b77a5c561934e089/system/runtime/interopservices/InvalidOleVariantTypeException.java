@@ -96,7 +96,9 @@ public class InvalidOleVariantTypeException extends SystemException {
     public InvalidOleVariantTypeException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InvalidOleVariantTypeException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

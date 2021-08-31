@@ -92,7 +92,9 @@ public class CriticalHandleZeroOrMinusOneIsInvalid extends CriticalHandle  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CriticalHandleZeroOrMinusOneIsInvalid(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

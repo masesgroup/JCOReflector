@@ -163,7 +163,9 @@ public class BeginEventHandler extends JCDelegate implements IJCEventEmit, IJCOB
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         callerInstance = instance;
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BeginEventHandler(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         if (instance == null) throw new IllegalArgumentException("Instance cannot be null");

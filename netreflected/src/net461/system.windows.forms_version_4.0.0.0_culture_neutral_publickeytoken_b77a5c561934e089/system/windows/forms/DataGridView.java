@@ -172,7 +172,9 @@ public class DataGridView extends Control implements system.componentmodel.ISupp
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataGridView(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class AssociationEndMember extends RelationshipEndMember  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AssociationEndMember(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

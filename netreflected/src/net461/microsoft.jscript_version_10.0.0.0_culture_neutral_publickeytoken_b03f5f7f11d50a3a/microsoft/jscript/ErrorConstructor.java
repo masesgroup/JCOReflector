@@ -93,7 +93,9 @@ public class ErrorConstructor extends ScriptFunction  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ErrorConstructor(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

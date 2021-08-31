@@ -92,7 +92,9 @@ public class ISymbolVariableImplementation extends NetObject implements ISymbolV
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ISymbolVariableImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -100,7 +100,9 @@ public class AssemblyDefinition extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AssemblyDefinition(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

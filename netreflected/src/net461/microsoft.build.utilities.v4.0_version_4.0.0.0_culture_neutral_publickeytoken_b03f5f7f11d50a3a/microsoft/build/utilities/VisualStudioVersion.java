@@ -107,7 +107,9 @@ public class VisualStudioVersion extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public VisualStudioVersion(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

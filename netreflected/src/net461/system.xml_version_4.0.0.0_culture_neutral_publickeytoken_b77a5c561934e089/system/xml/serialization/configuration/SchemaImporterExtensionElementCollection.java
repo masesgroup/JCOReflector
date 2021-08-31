@@ -93,7 +93,9 @@ public class SchemaImporterExtensionElementCollection extends ConfigurationEleme
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SchemaImporterExtensionElementCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

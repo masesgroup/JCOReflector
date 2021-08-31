@@ -92,7 +92,9 @@ public class ServiceDescriptionBaseCollection extends CollectionBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ServiceDescriptionBaseCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

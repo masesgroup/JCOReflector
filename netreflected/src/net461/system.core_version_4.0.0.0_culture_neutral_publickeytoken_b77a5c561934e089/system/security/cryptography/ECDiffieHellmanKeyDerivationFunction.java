@@ -107,7 +107,9 @@ public class ECDiffieHellmanKeyDerivationFunction extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ECDiffieHellmanKeyDerivationFunction(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

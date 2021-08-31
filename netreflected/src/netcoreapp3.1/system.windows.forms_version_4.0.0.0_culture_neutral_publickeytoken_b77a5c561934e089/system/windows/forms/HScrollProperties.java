@@ -93,7 +93,9 @@ public class HScrollProperties extends ScrollProperties  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HScrollProperties(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

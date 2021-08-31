@@ -94,7 +94,9 @@ public class X509SigningCredentials extends SigningCredentials  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public X509SigningCredentials(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

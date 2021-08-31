@@ -92,7 +92,9 @@ public class ActivityStateQuery extends TrackingQuery  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ActivityStateQuery(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

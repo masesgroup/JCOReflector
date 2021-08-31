@@ -94,7 +94,9 @@ public class WebFormsDesignerActionService extends DesignerActionService  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WebFormsDesignerActionService(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

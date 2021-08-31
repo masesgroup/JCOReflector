@@ -94,7 +94,9 @@ public class ISAPIRuntime extends MarshalByRefObject implements system.web.hosti
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ISAPIRuntime(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

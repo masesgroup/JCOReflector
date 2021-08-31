@@ -107,7 +107,9 @@ public class AceFlags extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AceFlags(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

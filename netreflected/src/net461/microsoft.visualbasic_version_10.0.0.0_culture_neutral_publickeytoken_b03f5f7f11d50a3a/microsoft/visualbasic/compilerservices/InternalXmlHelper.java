@@ -95,7 +95,9 @@ public class InternalXmlHelper extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InternalXmlHelper(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

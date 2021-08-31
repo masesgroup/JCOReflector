@@ -107,7 +107,9 @@ public class TaskContinuationOptions extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TaskContinuationOptions(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

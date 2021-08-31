@@ -92,7 +92,9 @@ public class FUNCDESC extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FUNCDESC(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

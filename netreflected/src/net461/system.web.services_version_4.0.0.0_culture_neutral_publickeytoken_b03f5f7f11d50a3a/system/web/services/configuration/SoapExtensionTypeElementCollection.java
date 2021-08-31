@@ -93,7 +93,9 @@ public class SoapExtensionTypeElementCollection extends ConfigurationElementColl
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SoapExtensionTypeElementCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

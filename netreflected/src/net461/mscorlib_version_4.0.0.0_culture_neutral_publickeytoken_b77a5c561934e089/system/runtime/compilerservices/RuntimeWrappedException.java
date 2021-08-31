@@ -97,7 +97,9 @@ public class RuntimeWrappedException extends NetException {
     public RuntimeWrappedException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RuntimeWrappedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

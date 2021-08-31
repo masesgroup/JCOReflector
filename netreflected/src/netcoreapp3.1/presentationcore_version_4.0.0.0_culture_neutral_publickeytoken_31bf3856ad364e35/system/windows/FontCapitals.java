@@ -107,7 +107,9 @@ public class FontCapitals extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FontCapitals(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

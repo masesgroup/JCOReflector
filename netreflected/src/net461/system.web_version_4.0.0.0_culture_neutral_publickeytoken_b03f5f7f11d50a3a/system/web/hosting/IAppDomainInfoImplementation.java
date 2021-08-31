@@ -91,7 +91,9 @@ public class IAppDomainInfoImplementation extends NetObject implements IAppDomai
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IAppDomainInfoImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

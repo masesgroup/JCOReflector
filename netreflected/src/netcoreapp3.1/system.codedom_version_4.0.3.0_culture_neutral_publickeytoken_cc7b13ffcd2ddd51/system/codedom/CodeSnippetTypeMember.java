@@ -92,7 +92,9 @@ public class CodeSnippetTypeMember extends CodeTypeMember  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CodeSnippetTypeMember(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

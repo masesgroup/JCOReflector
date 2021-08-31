@@ -92,7 +92,9 @@ public class UCOMIPersistFileImplementation extends NetObject implements UCOMIPe
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UCOMIPersistFileImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

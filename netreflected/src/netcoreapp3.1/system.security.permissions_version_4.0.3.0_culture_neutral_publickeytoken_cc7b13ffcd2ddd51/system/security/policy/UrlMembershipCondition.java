@@ -96,7 +96,9 @@ public class UrlMembershipCondition extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UrlMembershipCondition(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

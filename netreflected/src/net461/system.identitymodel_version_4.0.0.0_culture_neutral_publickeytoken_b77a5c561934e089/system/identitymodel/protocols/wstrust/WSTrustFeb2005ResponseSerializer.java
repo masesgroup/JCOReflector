@@ -96,7 +96,9 @@ public class WSTrustFeb2005ResponseSerializer extends WSTrustResponseSerializer 
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WSTrustFeb2005ResponseSerializer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

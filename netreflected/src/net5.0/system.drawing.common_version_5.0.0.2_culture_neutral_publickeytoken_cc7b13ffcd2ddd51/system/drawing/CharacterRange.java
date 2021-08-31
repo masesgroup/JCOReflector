@@ -92,7 +92,9 @@ public class CharacterRange extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CharacterRange(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

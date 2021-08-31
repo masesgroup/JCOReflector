@@ -96,7 +96,9 @@ public class Int16AnimationUsingKeyFrames extends Int16AnimationBase implements 
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Int16AnimationUsingKeyFrames(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

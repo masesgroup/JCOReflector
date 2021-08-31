@@ -100,7 +100,9 @@ public class IXpsFixedDocumentReaderImplementation extends NetObject implements 
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IXpsFixedDocumentReaderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

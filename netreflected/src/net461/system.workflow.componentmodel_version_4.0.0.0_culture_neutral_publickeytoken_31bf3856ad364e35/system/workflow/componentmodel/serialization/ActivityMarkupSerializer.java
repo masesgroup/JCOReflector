@@ -92,7 +92,9 @@ public class ActivityMarkupSerializer extends WorkflowMarkupSerializer  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ActivityMarkupSerializer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

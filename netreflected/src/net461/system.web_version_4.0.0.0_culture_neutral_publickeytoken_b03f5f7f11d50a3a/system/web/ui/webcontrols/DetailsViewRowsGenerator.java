@@ -92,7 +92,9 @@ public class DetailsViewRowsGenerator extends AutoFieldsGenerator  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DetailsViewRowsGenerator(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

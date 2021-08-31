@@ -107,7 +107,9 @@ public class NetBiosNodeType extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public NetBiosNodeType(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

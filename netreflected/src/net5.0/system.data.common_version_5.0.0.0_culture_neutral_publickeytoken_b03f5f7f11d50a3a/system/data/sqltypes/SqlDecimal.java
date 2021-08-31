@@ -110,7 +110,9 @@ public class SqlDecimal extends ValueType implements system.xml.serialization.IX
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SqlDecimal(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

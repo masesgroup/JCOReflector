@@ -100,7 +100,9 @@ public class DocumentViewerBase extends Control implements system.windows.markup
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DocumentViewerBase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

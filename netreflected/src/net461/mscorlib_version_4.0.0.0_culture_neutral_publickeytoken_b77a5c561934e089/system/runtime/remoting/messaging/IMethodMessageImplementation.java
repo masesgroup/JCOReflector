@@ -97,7 +97,9 @@ public class IMethodMessageImplementation extends NetObject implements IMethodMe
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IMethodMessageImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

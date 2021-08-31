@@ -93,7 +93,9 @@ public class WSHttpBindingElement extends WSHttpBindingBaseElement  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WSHttpBindingElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

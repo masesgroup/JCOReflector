@@ -92,7 +92,9 @@ public class RootContext extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RootContext(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

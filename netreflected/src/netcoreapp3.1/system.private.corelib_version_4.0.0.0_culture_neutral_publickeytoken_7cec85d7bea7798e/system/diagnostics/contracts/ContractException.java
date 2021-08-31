@@ -98,7 +98,9 @@ public class ContractException extends NetException {
     public ContractException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ContractException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class LayoutExceptionEventArgs extends IntegrationExceptionEventArgs  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public LayoutExceptionEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

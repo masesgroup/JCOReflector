@@ -92,7 +92,9 @@ public class ActiveXObjectConstructor extends ScriptFunction  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ActiveXObjectConstructor(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

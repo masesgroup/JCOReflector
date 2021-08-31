@@ -91,7 +91,9 @@ public class IExtenderProviderImplementation extends NetObject implements IExten
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IExtenderProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

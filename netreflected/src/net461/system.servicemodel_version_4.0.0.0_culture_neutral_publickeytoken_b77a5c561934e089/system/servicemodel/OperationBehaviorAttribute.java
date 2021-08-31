@@ -100,7 +100,9 @@ public class OperationBehaviorAttribute extends Attribute implements system.serv
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public OperationBehaviorAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

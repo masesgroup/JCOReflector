@@ -90,7 +90,9 @@ public class MessageEnumerator extends NetObject implements Iterator<Message> {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MessageEnumerator(JCObject instance) {
         classInstance = instance.iterator();
     }

@@ -92,7 +92,9 @@ public class XslTransformFileEditor extends UrlEditor  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XslTransformFileEditor(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -94,7 +94,9 @@ public class IEventActivityImplementation extends NetObject implements IEventAct
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IEventActivityImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

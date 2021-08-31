@@ -102,7 +102,9 @@ public class ToolboxService extends NetObject implements system.componentmodel.d
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ToolboxService(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

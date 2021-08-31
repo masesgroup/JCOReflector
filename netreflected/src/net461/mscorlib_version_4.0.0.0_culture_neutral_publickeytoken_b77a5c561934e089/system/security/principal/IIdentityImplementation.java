@@ -91,7 +91,9 @@ public class IIdentityImplementation extends NetObject implements IIdentity {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IIdentityImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

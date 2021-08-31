@@ -92,7 +92,9 @@ public class PropertyMappingExceptionEventArgs extends IntegrationExceptionEvent
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PropertyMappingExceptionEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

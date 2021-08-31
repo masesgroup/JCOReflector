@@ -96,7 +96,9 @@ public class EncoderFallbackException extends ArgumentException {
     public EncoderFallbackException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EncoderFallbackException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

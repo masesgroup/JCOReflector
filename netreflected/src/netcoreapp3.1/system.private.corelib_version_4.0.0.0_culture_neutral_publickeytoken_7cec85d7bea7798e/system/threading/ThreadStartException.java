@@ -96,7 +96,9 @@ public class ThreadStartException extends SystemException {
     public ThreadStartException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ThreadStartException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

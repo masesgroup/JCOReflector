@@ -95,7 +95,9 @@ public class ObjectKeyFrameCollection extends Freezable  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ObjectKeyFrameCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

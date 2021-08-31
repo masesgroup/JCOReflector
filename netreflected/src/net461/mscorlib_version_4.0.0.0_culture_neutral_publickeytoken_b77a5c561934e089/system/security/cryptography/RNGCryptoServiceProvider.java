@@ -93,7 +93,9 @@ public class RNGCryptoServiceProvider extends RandomNumberGenerator  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RNGCryptoServiceProvider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

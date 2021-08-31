@@ -104,7 +104,9 @@ public class CodeGenerator extends NetObject implements system.codedom.compiler.
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CodeGenerator(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

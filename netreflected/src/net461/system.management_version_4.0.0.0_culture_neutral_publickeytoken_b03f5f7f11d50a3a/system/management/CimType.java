@@ -107,7 +107,9 @@ public class CimType extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CimType(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

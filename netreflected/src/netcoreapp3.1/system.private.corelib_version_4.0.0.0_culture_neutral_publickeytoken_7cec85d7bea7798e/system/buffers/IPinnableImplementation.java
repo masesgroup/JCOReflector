@@ -92,7 +92,9 @@ public class IPinnableImplementation extends NetObject implements IPinnable {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IPinnableImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

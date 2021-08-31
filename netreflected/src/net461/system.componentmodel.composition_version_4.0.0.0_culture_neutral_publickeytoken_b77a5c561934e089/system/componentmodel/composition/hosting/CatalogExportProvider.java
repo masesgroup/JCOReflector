@@ -94,7 +94,9 @@ public class CatalogExportProvider extends ExportProvider implements AutoCloseab
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CatalogExportProvider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

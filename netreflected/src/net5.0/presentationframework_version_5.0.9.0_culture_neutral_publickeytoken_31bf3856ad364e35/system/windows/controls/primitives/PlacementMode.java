@@ -107,7 +107,9 @@ public class PlacementMode extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PlacementMode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

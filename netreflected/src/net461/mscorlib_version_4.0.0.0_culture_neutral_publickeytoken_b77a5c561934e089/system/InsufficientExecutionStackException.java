@@ -96,7 +96,9 @@ public class InsufficientExecutionStackException extends SystemException {
     public InsufficientExecutionStackException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InsufficientExecutionStackException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

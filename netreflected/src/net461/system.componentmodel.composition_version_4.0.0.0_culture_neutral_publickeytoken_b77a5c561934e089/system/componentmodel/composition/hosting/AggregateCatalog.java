@@ -92,7 +92,9 @@ public class AggregateCatalog extends ComposablePartCatalog  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AggregateCatalog(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

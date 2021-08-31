@@ -96,7 +96,9 @@ public class MissingMethodException extends MissingMemberException {
     public MissingMethodException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MissingMethodException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

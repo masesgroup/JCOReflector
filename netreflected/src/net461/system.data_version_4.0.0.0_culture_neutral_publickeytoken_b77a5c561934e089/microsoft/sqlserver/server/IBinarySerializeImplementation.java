@@ -93,7 +93,9 @@ public class IBinarySerializeImplementation extends NetObject implements IBinary
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IBinarySerializeImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

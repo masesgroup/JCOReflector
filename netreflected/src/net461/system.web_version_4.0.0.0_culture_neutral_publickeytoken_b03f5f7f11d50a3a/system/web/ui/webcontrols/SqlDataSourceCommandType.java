@@ -107,7 +107,9 @@ public class SqlDataSourceCommandType extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SqlDataSourceCommandType(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

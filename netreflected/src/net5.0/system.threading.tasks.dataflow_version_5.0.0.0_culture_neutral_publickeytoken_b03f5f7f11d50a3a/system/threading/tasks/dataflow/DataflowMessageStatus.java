@@ -107,7 +107,9 @@ public class DataflowMessageStatus extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataflowMessageStatus(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

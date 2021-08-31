@@ -107,7 +107,9 @@ public class EventActivityOptions extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EventActivityOptions(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

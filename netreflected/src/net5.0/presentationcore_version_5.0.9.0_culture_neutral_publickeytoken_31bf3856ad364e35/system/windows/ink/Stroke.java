@@ -105,7 +105,9 @@ public class Stroke extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Stroke(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -96,7 +96,9 @@ public class FieldAccessException extends MemberAccessException {
     public FieldAccessException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FieldAccessException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

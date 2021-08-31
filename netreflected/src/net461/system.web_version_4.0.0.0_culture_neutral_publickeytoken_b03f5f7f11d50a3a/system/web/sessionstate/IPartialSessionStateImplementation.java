@@ -91,7 +91,9 @@ public class IPartialSessionStateImplementation extends NetObject implements IPa
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IPartialSessionStateImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

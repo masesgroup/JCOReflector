@@ -92,7 +92,9 @@ public class IDebugVsaScriptCodeItemImplementation extends NetObject implements 
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IDebugVsaScriptCodeItemImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

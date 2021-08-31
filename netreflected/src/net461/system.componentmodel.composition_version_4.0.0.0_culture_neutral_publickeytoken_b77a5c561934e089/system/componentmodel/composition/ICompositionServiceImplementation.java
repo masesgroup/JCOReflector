@@ -92,7 +92,9 @@ public class ICompositionServiceImplementation extends NetObject implements ICom
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ICompositionServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

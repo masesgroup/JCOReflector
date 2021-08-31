@@ -94,7 +94,9 @@ public class TextWriterTraceListener extends TraceListener  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TextWriterTraceListener(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

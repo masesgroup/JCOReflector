@@ -96,7 +96,9 @@ public class TimeoutException extends SystemException {
     public TimeoutException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TimeoutException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

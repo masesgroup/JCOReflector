@@ -105,7 +105,9 @@ public class ClientBuildManager extends MarshalByRefObject implements system.IDi
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ClientBuildManager(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

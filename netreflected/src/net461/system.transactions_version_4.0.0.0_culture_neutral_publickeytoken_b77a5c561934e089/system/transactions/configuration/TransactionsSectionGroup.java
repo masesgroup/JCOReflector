@@ -96,7 +96,9 @@ public class TransactionsSectionGroup extends ConfigurationSectionGroup  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TransactionsSectionGroup(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

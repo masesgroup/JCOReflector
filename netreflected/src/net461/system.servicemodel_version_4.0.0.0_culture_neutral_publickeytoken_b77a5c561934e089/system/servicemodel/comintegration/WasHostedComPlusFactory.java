@@ -94,7 +94,9 @@ public class WasHostedComPlusFactory extends ServiceHostFactoryBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WasHostedComPlusFactory(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

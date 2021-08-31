@@ -96,7 +96,9 @@ public class ScrollContentPresenter extends ContentPresenter  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ScrollContentPresenter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

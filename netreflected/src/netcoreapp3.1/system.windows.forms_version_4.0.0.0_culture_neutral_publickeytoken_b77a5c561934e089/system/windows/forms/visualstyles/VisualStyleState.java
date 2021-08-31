@@ -107,7 +107,9 @@ public class VisualStyleState extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public VisualStyleState(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

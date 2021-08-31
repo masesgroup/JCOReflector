@@ -107,7 +107,9 @@ public class X509VerificationFlags extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public X509VerificationFlags(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class XamlTypeMapper extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XamlTypeMapper(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class FrameworkElementAutomationPeer extends UIElementAutomationPeer  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FrameworkElementAutomationPeer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

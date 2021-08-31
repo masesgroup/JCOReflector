@@ -91,7 +91,9 @@ public class InputScopePhrase extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InputScopePhrase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

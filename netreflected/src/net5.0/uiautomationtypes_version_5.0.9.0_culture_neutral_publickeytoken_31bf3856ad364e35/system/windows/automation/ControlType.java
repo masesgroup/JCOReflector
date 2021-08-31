@@ -95,7 +95,9 @@ public class ControlType extends AutomationIdentifier  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ControlType(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

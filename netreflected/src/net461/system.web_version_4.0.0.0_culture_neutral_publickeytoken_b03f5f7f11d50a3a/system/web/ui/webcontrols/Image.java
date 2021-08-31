@@ -94,7 +94,9 @@ public class Image extends WebControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Image(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class IEnlistmentNotificationImplementation extends NetObject implements 
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IEnlistmentNotificationImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

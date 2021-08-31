@@ -107,7 +107,9 @@ public class CngKeyUsages extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CngKeyUsages(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

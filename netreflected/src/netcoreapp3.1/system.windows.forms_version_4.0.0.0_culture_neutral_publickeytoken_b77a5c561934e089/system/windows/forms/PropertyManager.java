@@ -92,7 +92,9 @@ public class PropertyManager extends BindingManagerBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PropertyManager(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

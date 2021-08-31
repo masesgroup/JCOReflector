@@ -92,7 +92,9 @@ public class XpsPartBase extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XpsPartBase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

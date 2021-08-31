@@ -94,7 +94,9 @@ public class XObject extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XObject(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

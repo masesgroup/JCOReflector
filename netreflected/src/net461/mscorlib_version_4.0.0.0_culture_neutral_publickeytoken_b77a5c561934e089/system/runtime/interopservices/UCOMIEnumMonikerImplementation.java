@@ -95,7 +95,9 @@ public class UCOMIEnumMonikerImplementation extends NetObject implements UCOMIEn
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UCOMIEnumMonikerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

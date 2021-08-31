@@ -98,7 +98,9 @@ public class FileLoadException extends IOException {
     public FileLoadException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FileLoadException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

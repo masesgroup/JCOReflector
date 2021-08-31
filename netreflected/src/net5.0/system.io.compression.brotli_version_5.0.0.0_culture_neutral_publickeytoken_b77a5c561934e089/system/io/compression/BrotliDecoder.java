@@ -93,7 +93,9 @@ public class BrotliDecoder extends ValueType implements AutoCloseable {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BrotliDecoder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

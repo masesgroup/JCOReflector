@@ -98,7 +98,9 @@ public class SmtpFailedRecipientsException extends SmtpFailedRecipientException 
     public SmtpFailedRecipientsException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SmtpFailedRecipientsException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

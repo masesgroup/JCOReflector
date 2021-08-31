@@ -101,7 +101,9 @@ public class IMonikerImplementation extends NetObject implements IMoniker {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IMonikerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

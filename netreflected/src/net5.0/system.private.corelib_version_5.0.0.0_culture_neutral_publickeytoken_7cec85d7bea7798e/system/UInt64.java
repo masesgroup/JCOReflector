@@ -103,7 +103,9 @@ public class UInt64 extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UInt64(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

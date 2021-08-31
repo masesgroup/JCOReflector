@@ -95,7 +95,9 @@ public class CommonAce extends QualifiedAce  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CommonAce(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

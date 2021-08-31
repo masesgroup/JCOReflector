@@ -97,7 +97,9 @@ public class SoapHeaderHandling extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SoapHeaderHandling(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

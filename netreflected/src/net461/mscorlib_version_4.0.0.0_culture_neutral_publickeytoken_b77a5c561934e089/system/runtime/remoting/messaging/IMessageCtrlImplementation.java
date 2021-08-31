@@ -91,7 +91,9 @@ public class IMessageCtrlImplementation extends NetObject implements IMessageCtr
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IMessageCtrlImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

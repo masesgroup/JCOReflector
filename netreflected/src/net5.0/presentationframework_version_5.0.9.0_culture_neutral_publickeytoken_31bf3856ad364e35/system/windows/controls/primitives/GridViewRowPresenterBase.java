@@ -96,7 +96,9 @@ public class GridViewRowPresenterBase extends FrameworkElement implements system
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public GridViewRowPresenterBase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

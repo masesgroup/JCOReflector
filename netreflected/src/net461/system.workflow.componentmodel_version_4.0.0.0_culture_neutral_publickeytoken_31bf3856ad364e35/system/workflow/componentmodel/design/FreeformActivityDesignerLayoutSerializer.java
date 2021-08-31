@@ -92,7 +92,9 @@ public class FreeformActivityDesignerLayoutSerializer extends CompositeActivityD
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FreeformActivityDesignerLayoutSerializer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

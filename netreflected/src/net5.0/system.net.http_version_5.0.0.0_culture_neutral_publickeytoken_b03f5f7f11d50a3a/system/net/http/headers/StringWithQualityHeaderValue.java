@@ -94,7 +94,9 @@ public class StringWithQualityHeaderValue extends NetObject implements system.IC
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public StringWithQualityHeaderValue(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

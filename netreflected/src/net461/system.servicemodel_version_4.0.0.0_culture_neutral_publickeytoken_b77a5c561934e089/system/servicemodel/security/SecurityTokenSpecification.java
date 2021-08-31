@@ -92,7 +92,9 @@ public class SecurityTokenSpecification extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SecurityTokenSpecification(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

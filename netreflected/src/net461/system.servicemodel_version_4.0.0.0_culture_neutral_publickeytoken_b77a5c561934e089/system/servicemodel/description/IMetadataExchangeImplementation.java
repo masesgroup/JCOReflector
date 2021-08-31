@@ -95,7 +95,9 @@ public class IMetadataExchangeImplementation extends NetObject implements IMetad
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IMetadataExchangeImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

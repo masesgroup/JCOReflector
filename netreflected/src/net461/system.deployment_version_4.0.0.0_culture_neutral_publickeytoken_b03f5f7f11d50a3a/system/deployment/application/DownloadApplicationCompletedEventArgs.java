@@ -92,7 +92,9 @@ public class DownloadApplicationCompletedEventArgs extends AsyncCompletedEventAr
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DownloadApplicationCompletedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

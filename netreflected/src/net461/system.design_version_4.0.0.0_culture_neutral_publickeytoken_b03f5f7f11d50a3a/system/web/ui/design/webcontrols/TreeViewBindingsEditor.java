@@ -97,7 +97,9 @@ public class TreeViewBindingsEditor extends UITypeEditor  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TreeViewBindingsEditor(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

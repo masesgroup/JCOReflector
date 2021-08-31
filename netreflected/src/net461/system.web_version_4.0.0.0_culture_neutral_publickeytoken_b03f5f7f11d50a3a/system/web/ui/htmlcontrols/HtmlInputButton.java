@@ -95,7 +95,9 @@ public class HtmlInputButton extends HtmlInputControl implements system.web.ui.I
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HtmlInputButton(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

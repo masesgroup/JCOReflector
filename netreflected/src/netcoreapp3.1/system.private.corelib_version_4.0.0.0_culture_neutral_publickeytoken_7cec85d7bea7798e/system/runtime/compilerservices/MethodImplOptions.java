@@ -107,7 +107,9 @@ public class MethodImplOptions extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MethodImplOptions(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

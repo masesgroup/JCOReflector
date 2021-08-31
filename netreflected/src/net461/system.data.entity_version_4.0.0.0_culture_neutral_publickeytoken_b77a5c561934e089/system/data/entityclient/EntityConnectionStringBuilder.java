@@ -94,7 +94,9 @@ public class EntityConnectionStringBuilder extends DbConnectionStringBuilder  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EntityConnectionStringBuilder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

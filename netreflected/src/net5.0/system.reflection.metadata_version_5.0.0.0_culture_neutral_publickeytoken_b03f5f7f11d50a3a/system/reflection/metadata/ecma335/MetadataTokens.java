@@ -132,7 +132,9 @@ public class MetadataTokens extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MetadataTokens(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

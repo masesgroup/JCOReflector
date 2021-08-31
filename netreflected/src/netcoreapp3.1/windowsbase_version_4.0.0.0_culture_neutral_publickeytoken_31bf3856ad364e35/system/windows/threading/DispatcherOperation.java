@@ -98,7 +98,9 @@ public class DispatcherOperation extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DispatcherOperation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -96,7 +96,9 @@ public class SerializationException extends SystemException {
     public SerializationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SerializationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -97,7 +97,9 @@ public class ICscHostObject2Implementation extends NetObject implements ICscHost
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ICscHostObject2Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

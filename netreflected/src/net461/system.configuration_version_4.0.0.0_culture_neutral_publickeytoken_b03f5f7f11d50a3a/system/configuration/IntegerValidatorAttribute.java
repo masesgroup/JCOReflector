@@ -93,7 +93,9 @@ public class IntegerValidatorAttribute extends ConfigurationValidatorAttribute  
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IntegerValidatorAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

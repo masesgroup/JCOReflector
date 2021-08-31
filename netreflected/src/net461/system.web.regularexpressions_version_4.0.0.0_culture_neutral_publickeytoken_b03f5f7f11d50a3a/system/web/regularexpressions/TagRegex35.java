@@ -93,7 +93,9 @@ public class TagRegex35 extends Regex  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TagRegex35(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

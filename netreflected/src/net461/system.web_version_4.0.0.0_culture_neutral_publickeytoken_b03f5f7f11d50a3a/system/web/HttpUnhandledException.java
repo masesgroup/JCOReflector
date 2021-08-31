@@ -96,7 +96,9 @@ public class HttpUnhandledException extends HttpException {
     public HttpUnhandledException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HttpUnhandledException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

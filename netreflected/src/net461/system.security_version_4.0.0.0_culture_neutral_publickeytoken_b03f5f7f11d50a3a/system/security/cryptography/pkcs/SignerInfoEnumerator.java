@@ -90,7 +90,9 @@ public class SignerInfoEnumerator extends NetObject implements Iterator<SignerIn
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SignerInfoEnumerator(JCObject instance) {
         classInstance = instance.iterator();
     }

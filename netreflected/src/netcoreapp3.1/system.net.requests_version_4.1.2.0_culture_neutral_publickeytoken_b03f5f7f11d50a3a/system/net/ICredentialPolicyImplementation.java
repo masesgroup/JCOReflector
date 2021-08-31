@@ -96,7 +96,9 @@ public class ICredentialPolicyImplementation extends NetObject implements ICrede
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ICredentialPolicyImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

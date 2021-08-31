@@ -100,7 +100,9 @@ public class InstanceLockedException extends InstancePersistenceCommandException
     public InstanceLockedException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InstanceLockedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

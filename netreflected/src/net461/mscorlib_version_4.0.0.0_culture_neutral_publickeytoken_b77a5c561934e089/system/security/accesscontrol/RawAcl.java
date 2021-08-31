@@ -93,7 +93,9 @@ public class RawAcl extends GenericAcl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RawAcl(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

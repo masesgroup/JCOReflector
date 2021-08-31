@@ -118,7 +118,9 @@ public class UIElement3D extends Visual3D  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UIElement3D(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

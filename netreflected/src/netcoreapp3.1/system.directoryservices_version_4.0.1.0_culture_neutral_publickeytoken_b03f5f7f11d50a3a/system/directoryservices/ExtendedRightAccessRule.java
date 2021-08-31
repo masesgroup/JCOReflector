@@ -96,7 +96,9 @@ public class ExtendedRightAccessRule extends ActiveDirectoryAccessRule  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ExtendedRightAccessRule(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

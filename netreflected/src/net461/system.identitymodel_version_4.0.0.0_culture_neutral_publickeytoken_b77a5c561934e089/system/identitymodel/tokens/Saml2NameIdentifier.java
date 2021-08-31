@@ -93,7 +93,9 @@ public class Saml2NameIdentifier extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Saml2NameIdentifier(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

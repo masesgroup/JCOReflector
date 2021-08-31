@@ -107,7 +107,9 @@ public class TargetDotNetFrameworkVersion extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TargetDotNetFrameworkVersion(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

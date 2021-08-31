@@ -95,7 +95,9 @@ public class SUDSGeneratorException extends NetException {
     public SUDSGeneratorException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SUDSGeneratorException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

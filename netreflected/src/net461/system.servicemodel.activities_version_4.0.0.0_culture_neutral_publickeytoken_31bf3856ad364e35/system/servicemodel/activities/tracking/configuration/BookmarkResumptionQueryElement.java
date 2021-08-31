@@ -92,7 +92,9 @@ public class BookmarkResumptionQueryElement extends TrackingQueryElement  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BookmarkResumptionQueryElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

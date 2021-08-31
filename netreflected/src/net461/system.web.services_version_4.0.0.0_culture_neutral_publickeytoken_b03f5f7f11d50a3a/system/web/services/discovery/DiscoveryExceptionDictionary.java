@@ -94,7 +94,9 @@ public class DiscoveryExceptionDictionary extends DictionaryBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DiscoveryExceptionDictionary(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

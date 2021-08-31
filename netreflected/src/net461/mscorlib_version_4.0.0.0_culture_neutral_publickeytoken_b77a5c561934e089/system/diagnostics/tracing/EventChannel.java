@@ -107,7 +107,9 @@ public class EventChannel extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EventChannel(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

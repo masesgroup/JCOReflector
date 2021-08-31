@@ -107,7 +107,9 @@ public class AuthenticationTypes extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AuthenticationTypes(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

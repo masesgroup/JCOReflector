@@ -96,7 +96,9 @@ public class Int32AnimationUsingKeyFrames extends Int32AnimationBase implements 
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Int32AnimationUsingKeyFrames(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -107,7 +107,9 @@ public class Viewport3DVisual extends Visual  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Viewport3DVisual(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

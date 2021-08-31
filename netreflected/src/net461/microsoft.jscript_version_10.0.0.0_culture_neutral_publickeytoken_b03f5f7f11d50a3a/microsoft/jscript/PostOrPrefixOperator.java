@@ -92,7 +92,9 @@ public class PostOrPrefixOperator extends UnaryOp  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PostOrPrefixOperator(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

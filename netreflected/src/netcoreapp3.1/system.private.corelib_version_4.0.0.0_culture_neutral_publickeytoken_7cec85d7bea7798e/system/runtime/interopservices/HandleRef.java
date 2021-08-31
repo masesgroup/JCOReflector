@@ -92,7 +92,9 @@ public class HandleRef extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HandleRef(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

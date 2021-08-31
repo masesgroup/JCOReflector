@@ -100,7 +100,9 @@ public class WorkflowInstance extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WorkflowInstance(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

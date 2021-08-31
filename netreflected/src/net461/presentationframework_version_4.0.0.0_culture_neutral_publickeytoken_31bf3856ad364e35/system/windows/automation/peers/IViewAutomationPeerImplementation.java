@@ -95,7 +95,9 @@ public class IViewAutomationPeerImplementation extends NetObject implements IVie
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IViewAutomationPeerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

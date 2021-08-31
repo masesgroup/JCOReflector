@@ -94,7 +94,9 @@ public class StatusBar extends ItemsControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public StatusBar(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

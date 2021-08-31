@@ -95,7 +95,9 @@ public class FileReference extends BaseReference  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FileReference(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

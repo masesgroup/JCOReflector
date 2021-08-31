@@ -92,7 +92,9 @@ public class DataGridRowsPresenter extends VirtualizingStackPanel  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataGridRowsPresenter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -96,7 +96,9 @@ public class JScriptCodeProvider extends CodeDomProvider  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public JScriptCodeProvider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

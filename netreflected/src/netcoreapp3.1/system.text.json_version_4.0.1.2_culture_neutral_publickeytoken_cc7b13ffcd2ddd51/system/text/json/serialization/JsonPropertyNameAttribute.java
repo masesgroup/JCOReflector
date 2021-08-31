@@ -92,7 +92,9 @@ public class JsonPropertyNameAttribute extends JsonAttribute  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public JsonPropertyNameAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

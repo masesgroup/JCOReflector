@@ -92,7 +92,9 @@ public class DataGridViewCellErrorTextNeededEventArgs extends DataGridViewCellEv
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataGridViewCellErrorTextNeededEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

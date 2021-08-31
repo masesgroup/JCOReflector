@@ -107,7 +107,9 @@ public class FileIOPermissionAccess extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FileIOPermissionAccess(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

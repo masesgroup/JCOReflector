@@ -95,7 +95,9 @@ public class KeyInfoX509Data extends KeyInfoClause  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public KeyInfoX509Data(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

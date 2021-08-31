@@ -93,7 +93,9 @@ public class StringContent extends ByteArrayContent  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public StringContent(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

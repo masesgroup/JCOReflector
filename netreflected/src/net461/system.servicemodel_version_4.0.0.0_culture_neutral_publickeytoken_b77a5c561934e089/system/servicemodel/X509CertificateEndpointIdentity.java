@@ -94,7 +94,9 @@ public class X509CertificateEndpointIdentity extends EndpointIdentity  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public X509CertificateEndpointIdentity(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

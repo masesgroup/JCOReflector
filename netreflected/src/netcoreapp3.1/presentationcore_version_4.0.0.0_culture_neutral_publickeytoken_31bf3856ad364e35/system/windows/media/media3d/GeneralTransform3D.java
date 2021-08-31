@@ -99,7 +99,9 @@ public class GeneralTransform3D extends Animatable implements system.IFormattabl
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public GeneralTransform3D(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

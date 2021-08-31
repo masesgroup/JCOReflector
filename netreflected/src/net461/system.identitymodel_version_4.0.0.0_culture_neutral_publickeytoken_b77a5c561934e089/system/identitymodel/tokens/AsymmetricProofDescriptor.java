@@ -95,7 +95,9 @@ public class AsymmetricProofDescriptor extends ProofDescriptor  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AsymmetricProofDescriptor(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

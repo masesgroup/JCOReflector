@@ -94,7 +94,9 @@ public class MessageSecurityOverMsmqElement extends ServiceModelConfigurationEle
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MessageSecurityOverMsmqElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

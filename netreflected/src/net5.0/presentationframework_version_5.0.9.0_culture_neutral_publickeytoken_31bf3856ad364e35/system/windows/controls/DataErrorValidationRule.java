@@ -94,7 +94,9 @@ public class DataErrorValidationRule extends ValidationRule  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataErrorValidationRule(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

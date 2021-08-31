@@ -96,7 +96,9 @@ public class InstallException extends SystemException {
     public InstallException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InstallException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class StringObject extends JSObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public StringObject(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

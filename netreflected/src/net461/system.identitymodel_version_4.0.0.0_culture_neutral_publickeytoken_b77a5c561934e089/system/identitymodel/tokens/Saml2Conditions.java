@@ -92,7 +92,9 @@ public class Saml2Conditions extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Saml2Conditions(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

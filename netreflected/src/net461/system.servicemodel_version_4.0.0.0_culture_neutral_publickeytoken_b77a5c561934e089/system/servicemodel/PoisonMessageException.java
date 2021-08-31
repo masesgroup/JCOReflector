@@ -96,7 +96,9 @@ public class PoisonMessageException extends CommunicationException {
     public PoisonMessageException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PoisonMessageException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class ExeConfigurationFileMap extends ConfigurationFileMap  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ExeConfigurationFileMap(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

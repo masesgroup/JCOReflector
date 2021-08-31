@@ -98,7 +98,9 @@ public class Figure extends AnchoredBlock  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Figure(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class WebPartDescription extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WebPartDescription(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

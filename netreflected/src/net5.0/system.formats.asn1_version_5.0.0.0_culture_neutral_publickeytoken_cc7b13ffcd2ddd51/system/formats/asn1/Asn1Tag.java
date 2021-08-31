@@ -95,7 +95,9 @@ public class Asn1Tag extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Asn1Tag(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

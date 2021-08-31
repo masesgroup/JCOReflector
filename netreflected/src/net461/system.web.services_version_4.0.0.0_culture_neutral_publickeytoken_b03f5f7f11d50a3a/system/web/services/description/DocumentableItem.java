@@ -95,7 +95,9 @@ public class DocumentableItem extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DocumentableItem(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

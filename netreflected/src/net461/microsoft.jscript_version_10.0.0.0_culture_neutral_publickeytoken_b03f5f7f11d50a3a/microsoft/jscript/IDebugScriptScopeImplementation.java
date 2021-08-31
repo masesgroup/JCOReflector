@@ -91,7 +91,9 @@ public class IDebugScriptScopeImplementation extends NetObject implements IDebug
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IDebugScriptScopeImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

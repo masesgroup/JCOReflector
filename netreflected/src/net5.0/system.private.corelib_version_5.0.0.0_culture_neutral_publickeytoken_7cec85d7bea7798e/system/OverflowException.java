@@ -96,7 +96,9 @@ public class OverflowException extends ArithmeticException {
     public OverflowException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public OverflowException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

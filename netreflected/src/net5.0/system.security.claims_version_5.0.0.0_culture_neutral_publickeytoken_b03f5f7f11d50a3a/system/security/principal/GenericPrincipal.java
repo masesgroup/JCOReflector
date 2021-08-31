@@ -94,7 +94,9 @@ public class GenericPrincipal extends ClaimsPrincipal  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public GenericPrincipal(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

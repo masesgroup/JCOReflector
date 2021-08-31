@@ -95,7 +95,9 @@ public class DataGridViewBand extends DataGridViewElement implements AutoCloseab
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataGridViewBand(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

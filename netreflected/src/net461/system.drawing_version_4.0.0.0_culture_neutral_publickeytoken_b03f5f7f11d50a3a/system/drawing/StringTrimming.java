@@ -107,7 +107,9 @@ public class StringTrimming extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public StringTrimming(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

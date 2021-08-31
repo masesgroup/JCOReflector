@@ -91,7 +91,9 @@ public class IAccessibleImplementation extends NetObject implements IAccessible 
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IAccessibleImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class IProcessHostImplementation extends NetObject implements IProcessHos
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IProcessHostImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

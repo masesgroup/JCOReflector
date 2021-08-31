@@ -97,7 +97,9 @@ public class AppDomainIsolatedTask extends MarshalByRefObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AppDomainIsolatedTask(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

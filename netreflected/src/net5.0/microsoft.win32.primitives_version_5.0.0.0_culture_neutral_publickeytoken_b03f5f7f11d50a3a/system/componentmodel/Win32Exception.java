@@ -98,7 +98,9 @@ public class Win32Exception extends ExternalException {
     public Win32Exception() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Win32Exception(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

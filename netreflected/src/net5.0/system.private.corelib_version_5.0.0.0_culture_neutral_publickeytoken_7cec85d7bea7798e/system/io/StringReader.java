@@ -92,7 +92,9 @@ public class StringReader extends TextReader  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public StringReader(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

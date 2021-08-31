@@ -91,7 +91,9 @@ public class ItemContainerPatternIdentifiers extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ItemContainerPatternIdentifiers(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

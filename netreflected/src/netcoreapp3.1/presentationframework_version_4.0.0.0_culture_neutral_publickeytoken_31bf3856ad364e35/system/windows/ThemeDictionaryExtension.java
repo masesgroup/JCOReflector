@@ -94,7 +94,9 @@ public class ThemeDictionaryExtension extends MarkupExtension  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ThemeDictionaryExtension(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -96,7 +96,9 @@ public class HttpListenerException extends Win32Exception {
     public HttpListenerException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HttpListenerException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

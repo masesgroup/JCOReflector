@@ -94,7 +94,9 @@ public class ISecuritySessionImplementation extends NetObject implements ISecuri
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ISecuritySessionImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

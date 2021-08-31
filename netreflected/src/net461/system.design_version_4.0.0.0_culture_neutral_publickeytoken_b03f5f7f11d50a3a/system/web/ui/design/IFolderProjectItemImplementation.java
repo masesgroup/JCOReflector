@@ -97,7 +97,9 @@ public class IFolderProjectItemImplementation extends NetObject implements IFold
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IFolderProjectItemImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

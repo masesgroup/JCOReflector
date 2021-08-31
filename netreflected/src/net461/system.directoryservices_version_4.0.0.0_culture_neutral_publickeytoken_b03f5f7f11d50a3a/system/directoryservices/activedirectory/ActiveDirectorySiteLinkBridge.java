@@ -96,7 +96,9 @@ public class ActiveDirectorySiteLinkBridge extends NetObject implements AutoClos
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ActiveDirectorySiteLinkBridge(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

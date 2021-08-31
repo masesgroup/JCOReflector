@@ -96,7 +96,9 @@ public class ChannelTerminatedException extends CommunicationException {
     public ChannelTerminatedException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ChannelTerminatedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

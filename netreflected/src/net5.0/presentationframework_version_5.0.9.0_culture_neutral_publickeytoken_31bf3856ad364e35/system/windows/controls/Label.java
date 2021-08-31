@@ -93,7 +93,9 @@ public class Label extends ContentControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Label(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

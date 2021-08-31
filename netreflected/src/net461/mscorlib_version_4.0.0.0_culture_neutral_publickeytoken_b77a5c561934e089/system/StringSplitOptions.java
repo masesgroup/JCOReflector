@@ -107,7 +107,9 @@ public class StringSplitOptions extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public StringSplitOptions(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

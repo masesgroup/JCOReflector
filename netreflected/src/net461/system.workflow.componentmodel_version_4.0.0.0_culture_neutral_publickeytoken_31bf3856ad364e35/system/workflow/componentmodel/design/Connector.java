@@ -99,7 +99,9 @@ public class Connector extends NetObject implements system.IDisposable, AutoClos
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Connector(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -98,7 +98,9 @@ public class CurrencyManager extends BindingManagerBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CurrencyManager(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

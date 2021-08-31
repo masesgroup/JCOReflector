@@ -93,7 +93,9 @@ public class TcpConnectionPoolSettingsElement extends ServiceModelConfigurationE
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TcpConnectionPoolSettingsElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class CutCopyPasteHelper extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CutCopyPasteHelper(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

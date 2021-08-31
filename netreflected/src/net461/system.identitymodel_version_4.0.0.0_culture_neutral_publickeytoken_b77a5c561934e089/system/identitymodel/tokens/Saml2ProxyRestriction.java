@@ -91,7 +91,9 @@ public class Saml2ProxyRestriction extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Saml2ProxyRestriction(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

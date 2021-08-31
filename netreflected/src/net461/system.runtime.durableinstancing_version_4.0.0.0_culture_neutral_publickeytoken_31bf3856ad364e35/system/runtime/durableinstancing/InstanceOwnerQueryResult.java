@@ -93,7 +93,9 @@ public class InstanceOwnerQueryResult extends InstanceStoreQueryResult  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InstanceOwnerQueryResult(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

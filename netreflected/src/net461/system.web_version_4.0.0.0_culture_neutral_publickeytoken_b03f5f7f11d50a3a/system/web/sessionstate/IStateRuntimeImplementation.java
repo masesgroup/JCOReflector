@@ -91,7 +91,9 @@ public class IStateRuntimeImplementation extends NetObject implements IStateRunt
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IStateRuntimeImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

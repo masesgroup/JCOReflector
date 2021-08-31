@@ -92,7 +92,9 @@ public class Brushes extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Brushes(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

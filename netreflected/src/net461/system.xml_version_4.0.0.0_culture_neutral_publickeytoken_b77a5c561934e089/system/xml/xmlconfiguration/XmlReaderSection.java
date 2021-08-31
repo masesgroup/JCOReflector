@@ -92,7 +92,9 @@ public class XmlReaderSection extends ConfigurationSection  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlReaderSection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

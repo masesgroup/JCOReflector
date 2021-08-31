@@ -93,7 +93,9 @@ public class IDesignerDebugViewImplementation extends NetObject implements IDesi
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IDesignerDebugViewImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

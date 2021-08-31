@@ -95,7 +95,9 @@ public class EmissiveMaterial extends Material  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EmissiveMaterial(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

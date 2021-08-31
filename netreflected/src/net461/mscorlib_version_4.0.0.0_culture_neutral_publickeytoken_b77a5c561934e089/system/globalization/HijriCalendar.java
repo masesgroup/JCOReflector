@@ -95,7 +95,9 @@ public class HijriCalendar extends Calendar  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HijriCalendar(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

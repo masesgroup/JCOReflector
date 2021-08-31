@@ -92,7 +92,9 @@ public class Financial extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Financial(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

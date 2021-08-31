@@ -99,7 +99,9 @@ public class RuleSetValidationException extends RuleException {
     public RuleSetValidationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RuleSetValidationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -94,7 +94,9 @@ public class InvokeMethodOptions extends ManagementOptions  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InvokeMethodOptions(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

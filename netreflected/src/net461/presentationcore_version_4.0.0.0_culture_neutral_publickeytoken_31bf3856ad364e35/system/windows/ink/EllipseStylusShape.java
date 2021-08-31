@@ -92,7 +92,9 @@ public class EllipseStylusShape extends StylusShape  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EllipseStylusShape(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

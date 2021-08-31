@@ -97,7 +97,9 @@ public class PackageDigitalSignature extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PackageDigitalSignature(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

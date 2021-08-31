@@ -92,7 +92,9 @@ public class UploadProgressChangedEventArgs extends ProgressChangedEventArgs  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UploadProgressChangedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

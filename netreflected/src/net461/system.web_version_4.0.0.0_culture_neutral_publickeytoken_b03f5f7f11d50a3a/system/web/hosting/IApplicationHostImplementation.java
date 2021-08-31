@@ -93,7 +93,9 @@ public class IApplicationHostImplementation extends NetObject implements IApplic
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IApplicationHostImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

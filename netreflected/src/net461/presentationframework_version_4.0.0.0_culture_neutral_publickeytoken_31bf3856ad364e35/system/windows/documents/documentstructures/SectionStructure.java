@@ -95,7 +95,9 @@ public class SectionStructure extends SemanticBasicElement implements system.win
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SectionStructure(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

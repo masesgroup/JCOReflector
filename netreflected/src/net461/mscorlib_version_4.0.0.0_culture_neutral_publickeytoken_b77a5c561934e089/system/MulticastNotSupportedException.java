@@ -96,7 +96,9 @@ public class MulticastNotSupportedException extends SystemException {
     public MulticastNotSupportedException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MulticastNotSupportedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

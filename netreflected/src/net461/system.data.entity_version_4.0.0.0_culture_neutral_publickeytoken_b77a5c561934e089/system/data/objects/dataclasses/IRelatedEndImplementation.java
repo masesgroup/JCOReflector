@@ -95,7 +95,9 @@ public class IRelatedEndImplementation extends NetObject implements IRelatedEnd 
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IRelatedEndImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

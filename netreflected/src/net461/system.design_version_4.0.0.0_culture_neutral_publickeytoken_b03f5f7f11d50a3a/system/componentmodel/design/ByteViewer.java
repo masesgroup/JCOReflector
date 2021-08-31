@@ -93,7 +93,9 @@ public class ByteViewer extends TableLayoutPanel  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ByteViewer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

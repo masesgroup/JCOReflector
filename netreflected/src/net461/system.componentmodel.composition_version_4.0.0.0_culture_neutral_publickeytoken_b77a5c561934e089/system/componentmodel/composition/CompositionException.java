@@ -95,7 +95,9 @@ public class CompositionException extends NetException {
     public CompositionException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CompositionException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -95,7 +95,9 @@ public class Validation extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Validation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

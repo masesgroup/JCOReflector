@@ -107,7 +107,9 @@ public class ImageSelectType extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ImageSelectType(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class IDictionaryEnumeratorImplementation extends IEnumeratorImplementati
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IDictionaryEnumeratorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

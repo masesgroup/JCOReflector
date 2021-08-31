@@ -95,7 +95,9 @@ public class DistributedTransactionPermissionAttribute extends CodeAccessSecurit
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DistributedTransactionPermissionAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

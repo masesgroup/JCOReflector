@@ -120,7 +120,9 @@ public class ContentElement extends DependencyObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ContentElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

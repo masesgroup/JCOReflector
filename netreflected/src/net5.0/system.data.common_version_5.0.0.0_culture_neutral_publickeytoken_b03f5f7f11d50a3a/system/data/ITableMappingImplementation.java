@@ -93,7 +93,9 @@ public class ITableMappingImplementation extends NetObject implements ITableMapp
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ITableMappingImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

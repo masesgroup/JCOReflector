@@ -107,7 +107,9 @@ public class UnhandledExceptionAction extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UnhandledExceptionAction(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

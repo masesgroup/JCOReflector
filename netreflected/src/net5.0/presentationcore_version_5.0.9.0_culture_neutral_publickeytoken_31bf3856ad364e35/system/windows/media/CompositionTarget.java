@@ -94,7 +94,9 @@ public class CompositionTarget extends DispatcherObject implements AutoCloseable
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CompositionTarget(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

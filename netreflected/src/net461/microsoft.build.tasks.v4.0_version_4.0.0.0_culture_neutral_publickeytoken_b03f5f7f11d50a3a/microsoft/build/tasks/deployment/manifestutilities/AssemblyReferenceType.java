@@ -107,7 +107,9 @@ public class AssemblyReferenceType extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AssemblyReferenceType(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -98,7 +98,9 @@ public class D3DImage extends ImageSource  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public D3DImage(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class IDispatchConstantAttribute extends CustomConstantAttribute  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IDispatchConstantAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

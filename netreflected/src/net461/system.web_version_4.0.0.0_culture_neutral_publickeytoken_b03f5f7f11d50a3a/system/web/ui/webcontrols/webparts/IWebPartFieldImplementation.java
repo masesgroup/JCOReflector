@@ -93,7 +93,9 @@ public class IWebPartFieldImplementation extends NetObject implements IWebPartFi
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IWebPartFieldImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

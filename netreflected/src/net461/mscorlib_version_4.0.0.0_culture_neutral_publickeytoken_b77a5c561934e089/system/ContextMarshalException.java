@@ -96,7 +96,9 @@ public class ContextMarshalException extends SystemException {
     public ContextMarshalException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ContextMarshalException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

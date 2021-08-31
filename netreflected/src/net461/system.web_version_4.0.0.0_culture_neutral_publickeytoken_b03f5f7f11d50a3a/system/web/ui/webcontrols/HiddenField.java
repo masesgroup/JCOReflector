@@ -96,7 +96,9 @@ public class HiddenField extends Control implements system.web.ui.IPostBackDataH
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HiddenField(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

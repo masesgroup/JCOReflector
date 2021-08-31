@@ -103,7 +103,9 @@ public class XmlSerializerOperationBehavior extends NetObject implements system.
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlSerializerOperationBehavior(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

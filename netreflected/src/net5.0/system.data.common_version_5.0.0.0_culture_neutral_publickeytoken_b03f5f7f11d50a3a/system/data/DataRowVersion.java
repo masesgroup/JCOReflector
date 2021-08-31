@@ -107,7 +107,9 @@ public class DataRowVersion extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataRowVersion(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

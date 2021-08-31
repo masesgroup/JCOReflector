@@ -93,7 +93,9 @@ public class DbCrossJoinExpression extends DbExpression  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DbCrossJoinExpression(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

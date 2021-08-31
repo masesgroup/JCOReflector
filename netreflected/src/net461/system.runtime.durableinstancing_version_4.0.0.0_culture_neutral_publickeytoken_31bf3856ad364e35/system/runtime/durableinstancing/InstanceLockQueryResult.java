@@ -93,7 +93,9 @@ public class InstanceLockQueryResult extends InstanceStoreQueryResult  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InstanceLockQueryResult(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

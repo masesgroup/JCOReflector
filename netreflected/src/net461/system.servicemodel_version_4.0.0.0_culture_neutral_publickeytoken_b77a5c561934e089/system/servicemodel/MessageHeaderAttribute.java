@@ -92,7 +92,9 @@ public class MessageHeaderAttribute extends MessageContractMemberAttribute  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MessageHeaderAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

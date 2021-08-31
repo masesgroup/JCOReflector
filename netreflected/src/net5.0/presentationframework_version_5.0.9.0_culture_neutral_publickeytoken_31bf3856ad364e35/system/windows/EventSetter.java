@@ -93,7 +93,9 @@ public class EventSetter extends SetterBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EventSetter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

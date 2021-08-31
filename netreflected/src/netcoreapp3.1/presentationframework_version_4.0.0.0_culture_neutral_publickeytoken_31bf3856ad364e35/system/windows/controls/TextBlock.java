@@ -119,7 +119,9 @@ public class TextBlock extends FrameworkElement implements system.windows.markup
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TextBlock(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

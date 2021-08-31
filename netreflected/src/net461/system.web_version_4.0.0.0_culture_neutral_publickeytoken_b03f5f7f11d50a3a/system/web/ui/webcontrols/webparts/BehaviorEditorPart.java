@@ -92,7 +92,9 @@ public class BehaviorEditorPart extends EditorPart  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BehaviorEditorPart(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

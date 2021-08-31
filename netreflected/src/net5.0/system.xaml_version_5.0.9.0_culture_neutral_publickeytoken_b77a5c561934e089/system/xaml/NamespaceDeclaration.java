@@ -91,7 +91,9 @@ public class NamespaceDeclaration extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public NamespaceDeclaration(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

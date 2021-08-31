@@ -95,7 +95,9 @@ public class ConnectorHitTestInfo extends HitTestInfo  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ConnectorHitTestInfo(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

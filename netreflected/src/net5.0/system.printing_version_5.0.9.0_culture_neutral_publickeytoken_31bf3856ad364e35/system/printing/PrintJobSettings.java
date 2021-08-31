@@ -92,7 +92,9 @@ public class PrintJobSettings extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PrintJobSettings(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

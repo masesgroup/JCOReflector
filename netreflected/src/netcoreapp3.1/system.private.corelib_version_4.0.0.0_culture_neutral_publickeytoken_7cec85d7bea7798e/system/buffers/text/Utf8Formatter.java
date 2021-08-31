@@ -101,7 +101,9 @@ public class Utf8Formatter extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Utf8Formatter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

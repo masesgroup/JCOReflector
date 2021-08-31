@@ -107,7 +107,9 @@ public class RegistryOptions extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RegistryOptions(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

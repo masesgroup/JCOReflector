@@ -95,7 +95,9 @@ public class IHierarchicalVirtualizationAndScrollInfoImplementation extends NetO
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IHierarchicalVirtualizationAndScrollInfoImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

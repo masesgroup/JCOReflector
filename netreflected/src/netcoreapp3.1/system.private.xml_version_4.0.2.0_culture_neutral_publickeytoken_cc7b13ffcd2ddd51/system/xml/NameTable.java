@@ -92,7 +92,9 @@ public class NameTable extends XmlNameTable  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public NameTable(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

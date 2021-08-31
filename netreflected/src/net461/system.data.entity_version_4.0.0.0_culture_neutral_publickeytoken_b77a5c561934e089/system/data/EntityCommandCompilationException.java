@@ -96,7 +96,9 @@ public class EntityCommandCompilationException extends EntityException {
     public EntityCommandCompilationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EntityCommandCompilationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

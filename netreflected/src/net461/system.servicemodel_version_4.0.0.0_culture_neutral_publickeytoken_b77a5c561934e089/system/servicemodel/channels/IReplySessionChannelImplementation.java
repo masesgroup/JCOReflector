@@ -105,7 +105,9 @@ public class IReplySessionChannelImplementation extends NetObject implements IRe
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IReplySessionChannelImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

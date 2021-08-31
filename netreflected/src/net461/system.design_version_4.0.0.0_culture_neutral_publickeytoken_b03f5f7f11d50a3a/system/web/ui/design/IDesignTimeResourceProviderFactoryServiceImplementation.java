@@ -92,7 +92,9 @@ public class IDesignTimeResourceProviderFactoryServiceImplementation extends Net
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IDesignTimeResourceProviderFactoryServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

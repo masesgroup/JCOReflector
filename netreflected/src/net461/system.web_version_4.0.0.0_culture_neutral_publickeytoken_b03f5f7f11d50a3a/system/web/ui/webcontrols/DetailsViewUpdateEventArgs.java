@@ -94,7 +94,9 @@ public class DetailsViewUpdateEventArgs extends CancelEventArgs  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DetailsViewUpdateEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

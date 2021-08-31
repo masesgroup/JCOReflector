@@ -124,7 +124,9 @@ public class FrameworkElement extends UIElement implements system.windows.markup
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FrameworkElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

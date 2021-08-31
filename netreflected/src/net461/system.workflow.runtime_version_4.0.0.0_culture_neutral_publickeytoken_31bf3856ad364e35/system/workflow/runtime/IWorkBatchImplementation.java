@@ -93,7 +93,9 @@ public class IWorkBatchImplementation extends NetObject implements IWorkBatch {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IWorkBatchImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

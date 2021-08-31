@@ -97,7 +97,9 @@ public class DataTrigger extends TriggerBase implements system.windows.markup.IA
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataTrigger(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

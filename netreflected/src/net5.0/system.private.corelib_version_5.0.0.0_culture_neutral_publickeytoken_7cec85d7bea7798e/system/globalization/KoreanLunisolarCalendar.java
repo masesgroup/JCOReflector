@@ -93,7 +93,9 @@ public class KoreanLunisolarCalendar extends EastAsianLunisolarCalendar  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public KoreanLunisolarCalendar(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

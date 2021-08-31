@@ -95,7 +95,9 @@ public class IAuthenticationModuleImplementation extends NetObject implements IA
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IAuthenticationModuleImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

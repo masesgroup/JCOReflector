@@ -107,7 +107,9 @@ public class DockPosition extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DockPosition(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

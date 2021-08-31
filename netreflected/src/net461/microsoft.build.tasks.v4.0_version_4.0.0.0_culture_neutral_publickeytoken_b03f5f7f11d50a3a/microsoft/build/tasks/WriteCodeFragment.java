@@ -94,7 +94,9 @@ public class WriteCodeFragment extends TaskExtension  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WriteCodeFragment(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class DbUpdateCommandTree extends DbModificationCommandTree  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DbUpdateCommandTree(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

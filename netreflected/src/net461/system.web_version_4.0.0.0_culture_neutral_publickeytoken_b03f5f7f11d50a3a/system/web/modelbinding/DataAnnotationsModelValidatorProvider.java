@@ -94,7 +94,9 @@ public class DataAnnotationsModelValidatorProvider extends AssociatedValidatorPr
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataAnnotationsModelValidatorProvider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

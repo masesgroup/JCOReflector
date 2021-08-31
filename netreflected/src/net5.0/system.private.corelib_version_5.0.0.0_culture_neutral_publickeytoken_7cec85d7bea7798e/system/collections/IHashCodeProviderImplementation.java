@@ -91,7 +91,9 @@ public class IHashCodeProviderImplementation extends NetObject implements IHashC
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IHashCodeProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -95,7 +95,9 @@ public class XmlSiteMapProvider extends StaticSiteMapProvider implements AutoClo
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlSiteMapProvider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -94,7 +94,9 @@ public class DirectoryEntryConfiguration extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DirectoryEntryConfiguration(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

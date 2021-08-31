@@ -93,7 +93,9 @@ public class CmsRecipient extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CmsRecipient(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

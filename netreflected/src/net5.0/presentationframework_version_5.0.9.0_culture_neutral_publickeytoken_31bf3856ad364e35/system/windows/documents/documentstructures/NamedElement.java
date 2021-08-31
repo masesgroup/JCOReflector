@@ -92,7 +92,9 @@ public class NamedElement extends BlockElement  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public NamedElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

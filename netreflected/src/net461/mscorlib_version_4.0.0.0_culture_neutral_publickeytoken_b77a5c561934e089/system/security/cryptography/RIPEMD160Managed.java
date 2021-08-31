@@ -92,7 +92,9 @@ public class RIPEMD160Managed extends RIPEMD160  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RIPEMD160Managed(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class TriggerBase extends DependencyObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TriggerBase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -98,7 +98,9 @@ public class TraceListener extends MarshalByRefObject implements AutoCloseable {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TraceListener(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

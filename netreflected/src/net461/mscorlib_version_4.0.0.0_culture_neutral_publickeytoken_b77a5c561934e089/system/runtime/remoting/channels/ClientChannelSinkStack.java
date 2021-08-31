@@ -100,7 +100,9 @@ public class ClientChannelSinkStack extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ClientChannelSinkStack(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

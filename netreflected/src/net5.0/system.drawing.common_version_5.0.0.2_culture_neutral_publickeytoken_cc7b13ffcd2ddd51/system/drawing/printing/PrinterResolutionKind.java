@@ -107,7 +107,9 @@ public class PrinterResolutionKind extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PrinterResolutionKind(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

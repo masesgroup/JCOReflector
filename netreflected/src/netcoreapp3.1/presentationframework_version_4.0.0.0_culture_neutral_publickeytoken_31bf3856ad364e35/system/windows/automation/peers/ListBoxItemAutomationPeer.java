@@ -96,7 +96,9 @@ public class ListBoxItemAutomationPeer extends SelectorItemAutomationPeer implem
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ListBoxItemAutomationPeer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

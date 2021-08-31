@@ -96,7 +96,9 @@ public class MarshalDirectiveException extends SystemException {
     public MarshalDirectiveException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MarshalDirectiveException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

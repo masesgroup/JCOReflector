@@ -92,7 +92,9 @@ public class KerberosSecurityTokenAuthenticator extends WindowsSecurityTokenAuth
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public KerberosSecurityTokenAuthenticator(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

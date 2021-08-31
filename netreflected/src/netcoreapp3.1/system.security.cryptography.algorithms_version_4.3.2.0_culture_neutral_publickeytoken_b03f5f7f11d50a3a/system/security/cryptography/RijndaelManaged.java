@@ -97,7 +97,9 @@ public class RijndaelManaged extends Rijndael  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RijndaelManaged(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

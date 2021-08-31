@@ -94,7 +94,9 @@ public class AxParameterData extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AxParameterData(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

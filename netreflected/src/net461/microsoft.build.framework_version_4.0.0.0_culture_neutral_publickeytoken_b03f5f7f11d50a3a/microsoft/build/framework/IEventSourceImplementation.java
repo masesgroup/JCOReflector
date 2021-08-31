@@ -105,7 +105,9 @@ public class IEventSourceImplementation extends NetObject implements IEventSourc
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IEventSourceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

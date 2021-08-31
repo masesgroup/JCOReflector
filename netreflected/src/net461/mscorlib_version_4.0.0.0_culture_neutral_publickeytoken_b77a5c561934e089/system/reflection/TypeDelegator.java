@@ -108,7 +108,9 @@ public class TypeDelegator extends TypeInfo  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TypeDelegator(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

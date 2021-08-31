@@ -95,7 +95,9 @@ public class TranslateTransform3D extends AffineTransform3D  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TranslateTransform3D(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

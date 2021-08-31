@@ -94,7 +94,9 @@ public class EntitySet extends EntitySetBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EntitySet(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

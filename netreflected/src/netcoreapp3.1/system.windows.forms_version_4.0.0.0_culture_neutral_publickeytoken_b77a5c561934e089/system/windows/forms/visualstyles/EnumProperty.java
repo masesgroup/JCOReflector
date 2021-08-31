@@ -107,7 +107,9 @@ public class EnumProperty extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EnumProperty(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

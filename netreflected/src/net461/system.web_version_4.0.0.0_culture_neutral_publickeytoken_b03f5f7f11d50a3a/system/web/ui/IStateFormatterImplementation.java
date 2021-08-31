@@ -91,7 +91,9 @@ public class IStateFormatterImplementation extends NetObject implements IStateFo
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IStateFormatterImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

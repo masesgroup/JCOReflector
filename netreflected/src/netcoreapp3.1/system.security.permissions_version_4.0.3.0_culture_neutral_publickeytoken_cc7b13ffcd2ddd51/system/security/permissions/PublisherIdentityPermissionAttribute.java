@@ -95,7 +95,9 @@ public class PublisherIdentityPermissionAttribute extends CodeAccessSecurityAttr
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PublisherIdentityPermissionAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

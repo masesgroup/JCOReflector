@@ -90,7 +90,9 @@ public class CmsRecipientEnumerator extends NetObject implements Iterator<CmsRec
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CmsRecipientEnumerator(JCObject instance) {
         classInstance = instance.iterator();
     }

@@ -97,7 +97,9 @@ public class ActiveDirectoryOperationException extends NetException {
     public ActiveDirectoryOperationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ActiveDirectoryOperationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

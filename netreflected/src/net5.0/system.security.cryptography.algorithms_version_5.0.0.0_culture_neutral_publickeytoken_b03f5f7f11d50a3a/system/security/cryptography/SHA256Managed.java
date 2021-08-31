@@ -92,7 +92,9 @@ public class SHA256Managed extends SHA256  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SHA256Managed(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

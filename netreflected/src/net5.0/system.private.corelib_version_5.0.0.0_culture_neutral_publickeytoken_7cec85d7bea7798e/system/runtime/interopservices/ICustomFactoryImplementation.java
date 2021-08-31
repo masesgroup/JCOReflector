@@ -92,7 +92,9 @@ public class ICustomFactoryImplementation extends NetObject implements ICustomFa
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ICustomFactoryImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

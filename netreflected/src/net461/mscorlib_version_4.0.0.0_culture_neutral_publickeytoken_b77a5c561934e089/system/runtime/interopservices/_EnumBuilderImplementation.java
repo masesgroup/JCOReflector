@@ -93,7 +93,9 @@ public class _EnumBuilderImplementation extends NetObject implements _EnumBuilde
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public _EnumBuilderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

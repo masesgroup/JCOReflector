@@ -98,7 +98,9 @@ public class CultureNotFoundException extends ArgumentException {
     public CultureNotFoundException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CultureNotFoundException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

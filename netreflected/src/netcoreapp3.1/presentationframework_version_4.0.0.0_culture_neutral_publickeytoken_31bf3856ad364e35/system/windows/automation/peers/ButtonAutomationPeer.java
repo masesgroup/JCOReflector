@@ -96,7 +96,9 @@ public class ButtonAutomationPeer extends ButtonBaseAutomationPeer implements sy
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ButtonAutomationPeer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

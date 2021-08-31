@@ -97,7 +97,9 @@ public class ControlPersister extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ControlPersister(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

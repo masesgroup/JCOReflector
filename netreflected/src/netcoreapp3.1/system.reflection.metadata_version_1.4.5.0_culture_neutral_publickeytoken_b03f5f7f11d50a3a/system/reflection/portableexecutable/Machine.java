@@ -107,7 +107,9 @@ public class Machine extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Machine(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -96,7 +96,9 @@ public class NetHttpBindingElement extends HttpBindingBaseElement  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public NetHttpBindingElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

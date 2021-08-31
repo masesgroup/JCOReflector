@@ -96,7 +96,9 @@ public class EncryptedTokenDecryptionFailedException extends SecurityTokenExcept
     public EncryptedTokenDecryptionFailedException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EncryptedTokenDecryptionFailedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

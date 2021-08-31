@@ -100,7 +100,9 @@ public class RadioButtonRenderer extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RadioButtonRenderer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

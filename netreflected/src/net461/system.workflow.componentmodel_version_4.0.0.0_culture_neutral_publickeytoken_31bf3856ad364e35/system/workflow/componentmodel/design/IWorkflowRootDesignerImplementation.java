@@ -102,7 +102,9 @@ public class IWorkflowRootDesignerImplementation extends NetObject implements IW
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IWorkflowRootDesignerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

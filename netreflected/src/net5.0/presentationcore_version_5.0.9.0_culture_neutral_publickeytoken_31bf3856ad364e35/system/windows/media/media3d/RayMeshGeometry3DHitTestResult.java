@@ -94,7 +94,9 @@ public class RayMeshGeometry3DHitTestResult extends RayHitTestResult  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RayMeshGeometry3DHitTestResult(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

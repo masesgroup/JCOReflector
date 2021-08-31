@@ -94,7 +94,9 @@ public class Underline extends Span  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Underline(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

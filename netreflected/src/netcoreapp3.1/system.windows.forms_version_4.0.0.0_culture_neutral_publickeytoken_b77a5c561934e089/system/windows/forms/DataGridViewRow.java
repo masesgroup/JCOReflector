@@ -102,7 +102,9 @@ public class DataGridViewRow extends DataGridViewBand  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataGridViewRow(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

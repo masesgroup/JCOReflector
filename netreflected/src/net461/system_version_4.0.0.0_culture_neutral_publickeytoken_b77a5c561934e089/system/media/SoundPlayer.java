@@ -99,7 +99,9 @@ public class SoundPlayer extends Component implements system.runtime.serializati
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SoundPlayer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

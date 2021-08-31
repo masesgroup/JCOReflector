@@ -101,7 +101,9 @@ public class DirectoryServer extends NetObject implements AutoCloseable {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DirectoryServer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

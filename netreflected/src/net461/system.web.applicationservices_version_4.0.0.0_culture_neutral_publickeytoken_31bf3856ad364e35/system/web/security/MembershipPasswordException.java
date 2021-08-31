@@ -95,7 +95,9 @@ public class MembershipPasswordException extends NetException {
     public MembershipPasswordException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MembershipPasswordException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

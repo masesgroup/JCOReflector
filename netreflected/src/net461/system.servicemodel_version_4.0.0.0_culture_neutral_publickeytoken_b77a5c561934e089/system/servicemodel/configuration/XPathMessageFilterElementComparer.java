@@ -93,7 +93,9 @@ public class XPathMessageFilterElementComparer extends NetObject implements syst
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XPathMessageFilterElementComparer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -107,7 +107,9 @@ public class LeaseState extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public LeaseState(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

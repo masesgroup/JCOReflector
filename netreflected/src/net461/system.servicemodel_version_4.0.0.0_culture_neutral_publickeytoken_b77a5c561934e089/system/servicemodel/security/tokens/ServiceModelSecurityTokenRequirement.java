@@ -96,7 +96,9 @@ public class ServiceModelSecurityTokenRequirement extends SecurityTokenRequireme
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ServiceModelSecurityTokenRequirement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

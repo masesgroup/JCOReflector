@@ -92,7 +92,9 @@ public class MemoryFailPoint extends CriticalFinalizerObject implements AutoClos
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MemoryFailPoint(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

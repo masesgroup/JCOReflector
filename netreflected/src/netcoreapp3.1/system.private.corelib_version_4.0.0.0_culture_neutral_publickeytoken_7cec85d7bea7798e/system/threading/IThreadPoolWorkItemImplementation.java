@@ -91,7 +91,9 @@ public class IThreadPoolWorkItemImplementation extends NetObject implements IThr
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IThreadPoolWorkItemImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

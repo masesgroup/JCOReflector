@@ -92,7 +92,9 @@ public class EncoderExceptionFallbackBuffer extends EncoderFallbackBuffer  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EncoderExceptionFallbackBuffer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

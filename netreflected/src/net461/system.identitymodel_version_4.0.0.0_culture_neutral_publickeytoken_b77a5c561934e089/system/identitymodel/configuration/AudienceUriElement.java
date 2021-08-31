@@ -92,7 +92,9 @@ public class AudienceUriElement extends ConfigurationElement  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AudienceUriElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

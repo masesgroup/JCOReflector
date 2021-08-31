@@ -92,7 +92,9 @@ public class ManualResetEvent extends EventWaitHandle  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ManualResetEvent(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

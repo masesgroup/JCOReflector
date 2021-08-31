@@ -93,7 +93,9 @@ public class SettingsAttributeDictionary extends Hashtable  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SettingsAttributeDictionary(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

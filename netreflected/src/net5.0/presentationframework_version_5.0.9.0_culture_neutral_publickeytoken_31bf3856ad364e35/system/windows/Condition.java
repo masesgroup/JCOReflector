@@ -97,7 +97,9 @@ public class Condition extends NetObject implements system.componentmodel.ISuppo
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Condition(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

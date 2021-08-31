@@ -95,7 +95,9 @@ public class PointLight extends PointLightBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PointLight(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

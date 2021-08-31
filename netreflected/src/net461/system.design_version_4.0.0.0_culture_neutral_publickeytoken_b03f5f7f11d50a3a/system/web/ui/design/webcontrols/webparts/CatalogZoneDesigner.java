@@ -98,7 +98,9 @@ public class CatalogZoneDesigner extends ToolZoneDesigner  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CatalogZoneDesigner(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

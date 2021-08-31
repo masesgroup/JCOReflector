@@ -107,7 +107,9 @@ public class XmlSpace extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlSpace(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

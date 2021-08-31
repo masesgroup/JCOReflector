@@ -114,7 +114,9 @@ public class WebRequest extends MarshalByRefObject implements system.runtime.ser
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WebRequest(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

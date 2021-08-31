@@ -95,7 +95,9 @@ public class ObjectDataSourceSelectingEventArgs extends ObjectDataSourceMethodEv
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ObjectDataSourceSelectingEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

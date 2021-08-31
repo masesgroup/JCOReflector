@@ -89,7 +89,9 @@ public class TextElementEnumerator extends NetObject implements Iterator<NetObje
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TextElementEnumerator(JCObject instance) {
         classInstance = instance.iterator();
     }

@@ -96,7 +96,9 @@ public class Rotation3DAnimationUsingKeyFrames extends Rotation3DAnimationBase i
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Rotation3DAnimationUsingKeyFrames(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

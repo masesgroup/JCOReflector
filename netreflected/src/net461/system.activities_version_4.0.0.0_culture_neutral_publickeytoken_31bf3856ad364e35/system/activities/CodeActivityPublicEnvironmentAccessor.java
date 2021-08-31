@@ -96,7 +96,9 @@ public class CodeActivityPublicEnvironmentAccessor extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CodeActivityPublicEnvironmentAccessor(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -95,7 +95,9 @@ public class GeometryModel3D extends Model3D  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public GeometryModel3D(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

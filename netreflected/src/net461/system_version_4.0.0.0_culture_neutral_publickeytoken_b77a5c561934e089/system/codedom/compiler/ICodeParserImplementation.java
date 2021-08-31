@@ -93,7 +93,9 @@ public class ICodeParserImplementation extends NetObject implements ICodeParser 
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ICodeParserImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

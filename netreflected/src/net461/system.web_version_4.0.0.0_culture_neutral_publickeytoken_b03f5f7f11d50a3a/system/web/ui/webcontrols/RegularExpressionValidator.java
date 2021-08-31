@@ -92,7 +92,9 @@ public class RegularExpressionValidator extends BaseValidator  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RegularExpressionValidator(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

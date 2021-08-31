@@ -96,7 +96,9 @@ public class PerformanceCounterPermissionAttribute extends CodeAccessSecurityAtt
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PerformanceCounterPermissionAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -94,7 +94,9 @@ public class CustomAttributeNamedArgumentsEncoder extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CustomAttributeNamedArgumentsEncoder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

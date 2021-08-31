@@ -93,7 +93,9 @@ public class VlvResponseControl extends DirectoryControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public VlvResponseControl(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

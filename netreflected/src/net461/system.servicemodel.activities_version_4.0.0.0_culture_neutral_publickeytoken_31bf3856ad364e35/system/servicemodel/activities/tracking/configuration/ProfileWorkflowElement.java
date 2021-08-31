@@ -100,7 +100,9 @@ public class ProfileWorkflowElement extends TrackingConfigurationElement  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ProfileWorkflowElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

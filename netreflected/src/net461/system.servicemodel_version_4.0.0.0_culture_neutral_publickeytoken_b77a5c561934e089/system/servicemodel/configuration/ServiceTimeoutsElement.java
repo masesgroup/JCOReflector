@@ -94,7 +94,9 @@ public class ServiceTimeoutsElement extends BehaviorExtensionElement  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ServiceTimeoutsElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

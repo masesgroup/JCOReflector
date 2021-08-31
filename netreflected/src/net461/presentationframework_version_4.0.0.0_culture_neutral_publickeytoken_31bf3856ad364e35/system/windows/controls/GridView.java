@@ -101,7 +101,9 @@ public class GridView extends ViewBase implements system.windows.markup.IAddChil
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public GridView(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

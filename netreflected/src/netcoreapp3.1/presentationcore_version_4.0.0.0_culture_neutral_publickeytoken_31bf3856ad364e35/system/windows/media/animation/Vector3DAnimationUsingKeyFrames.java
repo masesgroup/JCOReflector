@@ -96,7 +96,9 @@ public class Vector3DAnimationUsingKeyFrames extends Vector3DAnimationBase imple
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Vector3DAnimationUsingKeyFrames(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

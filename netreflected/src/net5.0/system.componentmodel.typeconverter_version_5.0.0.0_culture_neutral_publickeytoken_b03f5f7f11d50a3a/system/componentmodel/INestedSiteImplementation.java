@@ -99,7 +99,9 @@ public class INestedSiteImplementation extends NetObject implements INestedSite 
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public INestedSiteImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

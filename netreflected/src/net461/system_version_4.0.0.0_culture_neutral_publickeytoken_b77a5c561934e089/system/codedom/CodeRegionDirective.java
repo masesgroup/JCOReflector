@@ -93,7 +93,9 @@ public class CodeRegionDirective extends CodeDirective  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CodeRegionDirective(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

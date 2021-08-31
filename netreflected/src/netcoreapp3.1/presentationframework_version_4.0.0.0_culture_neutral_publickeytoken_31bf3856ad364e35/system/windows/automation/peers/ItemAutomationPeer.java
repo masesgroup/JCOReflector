@@ -96,7 +96,9 @@ public class ItemAutomationPeer extends AutomationPeer implements system.windows
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ItemAutomationPeer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

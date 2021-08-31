@@ -92,7 +92,9 @@ public class Int32Aggregator extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Int32Aggregator(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

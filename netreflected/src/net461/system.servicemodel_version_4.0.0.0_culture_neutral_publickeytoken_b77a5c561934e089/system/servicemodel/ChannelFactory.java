@@ -96,7 +96,9 @@ public class ChannelFactory extends CommunicationObject implements system.IDispo
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ChannelFactory(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -96,7 +96,9 @@ public class StandardEndpointsSection extends ConfigurationSection  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public StandardEndpointsSection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

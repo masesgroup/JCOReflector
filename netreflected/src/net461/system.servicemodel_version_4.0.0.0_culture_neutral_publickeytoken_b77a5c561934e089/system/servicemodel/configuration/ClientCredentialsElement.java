@@ -99,7 +99,9 @@ public class ClientCredentialsElement extends BehaviorExtensionElement  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ClientCredentialsElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -107,7 +107,9 @@ public class ListViewGroupCollapsedState extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ListViewGroupCollapsedState(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

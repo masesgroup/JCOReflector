@@ -107,7 +107,9 @@ public class ProcessModelComImpersonationLevel extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ProcessModelComImpersonationLevel(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -94,7 +94,9 @@ public class TypeReflector extends ScriptObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TypeReflector(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

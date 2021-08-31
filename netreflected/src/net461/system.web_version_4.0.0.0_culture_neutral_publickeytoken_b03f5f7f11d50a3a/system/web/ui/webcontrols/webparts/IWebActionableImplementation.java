@@ -92,7 +92,9 @@ public class IWebActionableImplementation extends NetObject implements IWebActio
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IWebActionableImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

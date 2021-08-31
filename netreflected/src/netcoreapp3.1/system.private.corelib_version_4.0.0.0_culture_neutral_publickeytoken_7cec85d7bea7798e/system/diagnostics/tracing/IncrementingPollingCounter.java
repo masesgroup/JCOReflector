@@ -94,7 +94,9 @@ public class IncrementingPollingCounter extends DiagnosticCounter  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IncrementingPollingCounter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

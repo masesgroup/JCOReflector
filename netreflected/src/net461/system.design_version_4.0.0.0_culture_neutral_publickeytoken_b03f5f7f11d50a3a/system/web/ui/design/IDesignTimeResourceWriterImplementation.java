@@ -95,7 +95,9 @@ public class IDesignTimeResourceWriterImplementation extends NetObject implement
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IDesignTimeResourceWriterImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

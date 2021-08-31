@@ -91,7 +91,9 @@ public class IcmpV6Statistics extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IcmpV6Statistics(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

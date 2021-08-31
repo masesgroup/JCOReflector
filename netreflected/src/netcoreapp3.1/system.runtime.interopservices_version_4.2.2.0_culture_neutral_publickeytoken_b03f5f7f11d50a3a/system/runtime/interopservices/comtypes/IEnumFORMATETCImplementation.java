@@ -94,7 +94,9 @@ public class IEnumFORMATETCImplementation extends NetObject implements IEnumFORM
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IEnumFORMATETCImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

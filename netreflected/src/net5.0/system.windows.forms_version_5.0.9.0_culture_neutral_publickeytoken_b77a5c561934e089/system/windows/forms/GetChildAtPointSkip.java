@@ -107,7 +107,9 @@ public class GetChildAtPointSkip extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public GetChildAtPointSkip(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

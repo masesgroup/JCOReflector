@@ -95,7 +95,9 @@ public class ParserException extends NetException {
     public ParserException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ParserException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

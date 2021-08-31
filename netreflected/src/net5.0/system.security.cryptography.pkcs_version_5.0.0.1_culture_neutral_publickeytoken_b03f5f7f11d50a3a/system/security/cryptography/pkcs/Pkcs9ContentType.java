@@ -94,7 +94,9 @@ public class Pkcs9ContentType extends Pkcs9AttributeObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Pkcs9ContentType(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

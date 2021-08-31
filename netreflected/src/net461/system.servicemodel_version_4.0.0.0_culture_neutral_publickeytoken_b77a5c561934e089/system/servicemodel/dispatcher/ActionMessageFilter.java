@@ -94,7 +94,9 @@ public class ActionMessageFilter extends MessageFilter  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ActionMessageFilter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class Pkcs9AttributeObject extends AsnEncodedData  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Pkcs9AttributeObject(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

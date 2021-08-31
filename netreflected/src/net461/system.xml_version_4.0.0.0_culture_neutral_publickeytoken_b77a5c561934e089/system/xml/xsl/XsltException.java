@@ -98,7 +98,9 @@ public class XsltException extends SystemException {
     public XsltException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XsltException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

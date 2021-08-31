@@ -91,7 +91,9 @@ public class INamingContainerImplementation extends NetObject implements INaming
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public INamingContainerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -90,7 +90,9 @@ public class AsnEncodedDataEnumerator extends NetObject implements Iterator<AsnE
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AsnEncodedDataEnumerator(JCObject instance) {
         classInstance = instance.iterator();
     }

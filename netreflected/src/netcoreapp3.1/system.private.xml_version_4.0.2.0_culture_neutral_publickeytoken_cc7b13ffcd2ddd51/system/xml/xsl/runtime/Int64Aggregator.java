@@ -92,7 +92,9 @@ public class Int64Aggregator extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Int64Aggregator(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

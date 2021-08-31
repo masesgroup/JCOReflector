@@ -95,7 +95,9 @@ public class ServiceNotStartedException extends NetException {
     public ServiceNotStartedException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ServiceNotStartedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

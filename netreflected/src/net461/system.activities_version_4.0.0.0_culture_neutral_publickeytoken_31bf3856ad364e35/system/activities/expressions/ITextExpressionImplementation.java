@@ -92,7 +92,9 @@ public class ITextExpressionImplementation extends NetObject implements ITextExp
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ITextExpressionImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

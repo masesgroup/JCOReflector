@@ -97,7 +97,9 @@ public class DynamicUpdateMapExtension extends MarkupExtension  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DynamicUpdateMapExtension(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

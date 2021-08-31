@@ -107,7 +107,9 @@ public class PeekAction extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PeekAction(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

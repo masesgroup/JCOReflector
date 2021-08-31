@@ -95,7 +95,9 @@ public class CredentialCache extends NetObjectEnumerable  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CredentialCache(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

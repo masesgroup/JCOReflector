@@ -95,7 +95,9 @@ public class HtmlAnchor extends HtmlContainerControl implements system.web.ui.IP
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HtmlAnchor(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

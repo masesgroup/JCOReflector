@@ -98,7 +98,9 @@ public class Computer extends ServerComputer  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Computer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class ReceiveMessageRecord extends CustomTrackingRecord  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ReceiveMessageRecord(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

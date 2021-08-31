@@ -92,7 +92,9 @@ public class ICheckBoxControlImplementation extends NetObject implements ICheckB
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ICheckBoxControlImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

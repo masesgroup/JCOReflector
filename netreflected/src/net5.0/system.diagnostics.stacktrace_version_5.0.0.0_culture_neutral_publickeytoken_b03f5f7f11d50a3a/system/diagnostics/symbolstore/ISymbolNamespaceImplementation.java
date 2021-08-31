@@ -95,7 +95,9 @@ public class ISymbolNamespaceImplementation extends NetObject implements ISymbol
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ISymbolNamespaceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

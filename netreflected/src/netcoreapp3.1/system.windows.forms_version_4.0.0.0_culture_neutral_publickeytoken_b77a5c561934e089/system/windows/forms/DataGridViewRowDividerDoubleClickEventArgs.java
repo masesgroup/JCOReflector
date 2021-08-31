@@ -92,7 +92,9 @@ public class DataGridViewRowDividerDoubleClickEventArgs extends HandledMouseEven
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataGridViewRowDividerDoubleClickEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

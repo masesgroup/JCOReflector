@@ -94,7 +94,9 @@ public class RuleHaltAction extends RuleAction  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RuleHaltAction(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

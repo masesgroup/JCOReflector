@@ -94,7 +94,9 @@ public class DirectoryAttributeModificationCollection extends CollectionBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DirectoryAttributeModificationCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

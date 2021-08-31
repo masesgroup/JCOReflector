@@ -98,7 +98,9 @@ public class Int32Collection extends Freezable implements system.IFormattable {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Int32Collection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -95,7 +95,9 @@ public class NopReturnReader extends MimeReturnReader  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public NopReturnReader(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -95,7 +95,9 @@ public class PageParser extends TemplateControlParser  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PageParser(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

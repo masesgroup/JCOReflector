@@ -93,7 +93,9 @@ public class X509Extension extends AsnEncodedData  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public X509Extension(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

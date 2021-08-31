@@ -107,7 +107,9 @@ public class MemoryMappedFileAccess extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MemoryMappedFileAccess(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

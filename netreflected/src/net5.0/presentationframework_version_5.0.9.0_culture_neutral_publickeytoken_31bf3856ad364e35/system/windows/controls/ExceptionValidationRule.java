@@ -94,7 +94,9 @@ public class ExceptionValidationRule extends ValidationRule  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ExceptionValidationRule(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

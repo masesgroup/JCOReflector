@@ -107,7 +107,9 @@ public class ActiveDirectorySecurityInheritance extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ActiveDirectorySecurityInheritance(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

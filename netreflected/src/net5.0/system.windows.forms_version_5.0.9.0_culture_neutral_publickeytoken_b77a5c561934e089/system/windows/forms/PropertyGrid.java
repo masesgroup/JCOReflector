@@ -112,7 +112,9 @@ public class PropertyGrid extends ContainerControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PropertyGrid(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

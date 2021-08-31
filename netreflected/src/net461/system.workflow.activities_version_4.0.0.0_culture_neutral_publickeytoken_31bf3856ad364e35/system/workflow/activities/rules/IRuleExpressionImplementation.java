@@ -99,7 +99,9 @@ public class IRuleExpressionImplementation extends NetObject implements IRuleExp
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IRuleExpressionImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

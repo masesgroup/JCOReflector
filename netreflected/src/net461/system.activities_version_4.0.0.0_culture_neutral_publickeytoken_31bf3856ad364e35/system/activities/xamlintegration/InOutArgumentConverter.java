@@ -92,7 +92,9 @@ public class InOutArgumentConverter extends TypeConverterBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InOutArgumentConverter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

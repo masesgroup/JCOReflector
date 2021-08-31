@@ -91,7 +91,9 @@ public class CharType extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CharType(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

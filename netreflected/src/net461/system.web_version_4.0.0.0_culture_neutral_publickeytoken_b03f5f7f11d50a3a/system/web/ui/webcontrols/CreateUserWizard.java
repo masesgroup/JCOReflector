@@ -104,7 +104,9 @@ public class CreateUserWizard extends Wizard  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CreateUserWizard(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

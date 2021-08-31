@@ -96,7 +96,9 @@ public class GridViewRow extends TableRow implements system.web.ui.INamingContai
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public GridViewRow(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

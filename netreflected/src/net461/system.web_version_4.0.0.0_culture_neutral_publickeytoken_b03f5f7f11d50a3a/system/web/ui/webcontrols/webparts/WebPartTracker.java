@@ -95,7 +95,9 @@ public class WebPartTracker extends NetObject implements system.IDisposable, Aut
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WebPartTracker(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

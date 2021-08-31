@@ -94,7 +94,9 @@ public class CodeAttributeDeclarationCollection extends CollectionBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CodeAttributeDeclarationCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

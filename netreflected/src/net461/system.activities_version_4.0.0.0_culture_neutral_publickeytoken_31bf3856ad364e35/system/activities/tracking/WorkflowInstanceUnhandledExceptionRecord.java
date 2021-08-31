@@ -95,7 +95,9 @@ public class WorkflowInstanceUnhandledExceptionRecord extends WorkflowInstanceRe
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WorkflowInstanceUnhandledExceptionRecord(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

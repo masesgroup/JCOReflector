@@ -96,7 +96,9 @@ public class TransactionAbortedException extends TransactionException {
     public TransactionAbortedException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TransactionAbortedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

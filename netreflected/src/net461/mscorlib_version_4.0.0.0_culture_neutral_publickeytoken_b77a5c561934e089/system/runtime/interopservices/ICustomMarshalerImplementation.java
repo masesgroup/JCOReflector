@@ -91,7 +91,9 @@ public class ICustomMarshalerImplementation extends NetObject implements ICustom
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ICustomMarshalerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

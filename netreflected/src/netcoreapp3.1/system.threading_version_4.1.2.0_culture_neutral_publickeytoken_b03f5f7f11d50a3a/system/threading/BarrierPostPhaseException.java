@@ -95,7 +95,9 @@ public class BarrierPostPhaseException extends NetException {
     public BarrierPostPhaseException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BarrierPostPhaseException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

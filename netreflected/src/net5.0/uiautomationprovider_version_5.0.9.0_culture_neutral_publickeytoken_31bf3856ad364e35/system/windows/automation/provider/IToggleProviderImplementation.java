@@ -92,7 +92,9 @@ public class IToggleProviderImplementation extends NetObject implements IToggleP
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IToggleProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

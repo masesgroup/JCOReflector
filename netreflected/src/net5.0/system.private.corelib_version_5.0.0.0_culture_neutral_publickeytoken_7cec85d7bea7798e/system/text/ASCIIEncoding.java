@@ -94,7 +94,9 @@ public class ASCIIEncoding extends Encoding  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ASCIIEncoding(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

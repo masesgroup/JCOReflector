@@ -93,7 +93,9 @@ public class DurableTimerExtension extends TimerExtension implements AutoCloseab
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DurableTimerExtension(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

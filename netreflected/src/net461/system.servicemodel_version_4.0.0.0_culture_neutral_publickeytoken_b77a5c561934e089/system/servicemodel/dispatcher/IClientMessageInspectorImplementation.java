@@ -94,7 +94,9 @@ public class IClientMessageInspectorImplementation extends NetObject implements 
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IClientMessageInspectorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

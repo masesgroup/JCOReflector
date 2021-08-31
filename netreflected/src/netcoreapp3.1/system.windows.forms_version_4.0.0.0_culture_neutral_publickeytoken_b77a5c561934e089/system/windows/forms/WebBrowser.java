@@ -106,7 +106,9 @@ public class WebBrowser extends WebBrowserBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WebBrowser(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

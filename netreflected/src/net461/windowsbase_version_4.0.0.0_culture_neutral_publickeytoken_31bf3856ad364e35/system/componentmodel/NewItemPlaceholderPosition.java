@@ -107,7 +107,9 @@ public class NewItemPlaceholderPosition extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public NewItemPlaceholderPosition(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -96,7 +96,9 @@ public class IComponentImplementation extends NetObject implements IComponent {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IComponentImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

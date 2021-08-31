@@ -97,7 +97,9 @@ public class ManagementObjectSearcher extends Component  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ManagementObjectSearcher(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

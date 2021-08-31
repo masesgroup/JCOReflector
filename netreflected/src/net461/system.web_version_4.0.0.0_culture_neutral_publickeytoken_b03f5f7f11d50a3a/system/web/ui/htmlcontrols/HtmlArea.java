@@ -92,7 +92,9 @@ public class HtmlArea extends HtmlControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HtmlArea(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -95,7 +95,9 @@ public class DoubleAnimationUsingPath extends DoubleAnimationBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DoubleAnimationUsingPath(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

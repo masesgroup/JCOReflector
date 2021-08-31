@@ -94,7 +94,9 @@ public class SocketsHttpPlaintextStreamFilterContext extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SocketsHttpPlaintextStreamFilterContext(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

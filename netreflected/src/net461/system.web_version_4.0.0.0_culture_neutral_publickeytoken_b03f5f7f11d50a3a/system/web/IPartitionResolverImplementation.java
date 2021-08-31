@@ -91,7 +91,9 @@ public class IPartitionResolverImplementation extends NetObject implements IPart
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IPartitionResolverImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class IChannelInitializerImplementation extends NetObject implements ICha
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IChannelInitializerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

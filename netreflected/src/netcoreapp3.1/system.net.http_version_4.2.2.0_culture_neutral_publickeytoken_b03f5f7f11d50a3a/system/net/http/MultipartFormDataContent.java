@@ -93,7 +93,9 @@ public class MultipartFormDataContent extends MultipartContent  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MultipartFormDataContent(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

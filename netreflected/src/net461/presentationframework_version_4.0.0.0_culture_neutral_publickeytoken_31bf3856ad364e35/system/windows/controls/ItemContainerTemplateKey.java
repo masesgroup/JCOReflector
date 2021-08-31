@@ -92,7 +92,9 @@ public class ItemContainerTemplateKey extends TemplateKey  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ItemContainerTemplateKey(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

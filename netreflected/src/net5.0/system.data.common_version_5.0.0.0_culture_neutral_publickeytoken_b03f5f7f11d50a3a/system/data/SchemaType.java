@@ -107,7 +107,9 @@ public class SchemaType extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SchemaType(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

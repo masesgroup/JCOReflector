@@ -100,7 +100,9 @@ public class IDataAdapterImplementation extends NetObject implements IDataAdapte
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IDataAdapterImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -97,7 +97,9 @@ public class PreviewPrintController extends PrintController  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PreviewPrintController(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -95,7 +95,9 @@ public class TextModifier extends TextRun  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TextModifier(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

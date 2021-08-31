@@ -92,7 +92,9 @@ public class PolygonHotSpot extends HotSpot  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PolygonHotSpot(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

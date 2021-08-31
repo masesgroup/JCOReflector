@@ -92,7 +92,9 @@ public class AttachedPropertyBrowsableForChildrenAttribute extends AttachedPrope
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AttachedPropertyBrowsableForChildrenAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

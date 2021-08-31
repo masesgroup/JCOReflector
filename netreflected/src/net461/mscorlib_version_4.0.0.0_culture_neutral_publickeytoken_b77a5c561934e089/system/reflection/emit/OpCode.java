@@ -97,7 +97,9 @@ public class OpCode extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public OpCode(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

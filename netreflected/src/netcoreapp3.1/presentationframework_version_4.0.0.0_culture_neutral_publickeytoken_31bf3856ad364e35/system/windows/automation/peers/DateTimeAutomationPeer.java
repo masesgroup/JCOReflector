@@ -99,7 +99,9 @@ public class DateTimeAutomationPeer extends AutomationPeer implements system.win
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DateTimeAutomationPeer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

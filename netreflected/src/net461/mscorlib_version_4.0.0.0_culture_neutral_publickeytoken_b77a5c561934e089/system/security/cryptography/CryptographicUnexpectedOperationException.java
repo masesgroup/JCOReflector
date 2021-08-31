@@ -96,7 +96,9 @@ public class CryptographicUnexpectedOperationException extends CryptographicExce
     public CryptographicUnexpectedOperationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CryptographicUnexpectedOperationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

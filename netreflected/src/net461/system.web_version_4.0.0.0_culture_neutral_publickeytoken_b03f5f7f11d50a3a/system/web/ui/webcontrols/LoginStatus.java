@@ -95,7 +95,9 @@ public class LoginStatus extends CompositeControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public LoginStatus(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

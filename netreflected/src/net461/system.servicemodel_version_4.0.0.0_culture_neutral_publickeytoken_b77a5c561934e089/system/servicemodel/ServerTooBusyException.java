@@ -96,7 +96,9 @@ public class ServerTooBusyException extends CommunicationException {
     public ServerTooBusyException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ServerTooBusyException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

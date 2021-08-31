@@ -92,7 +92,9 @@ public class AssociatedValidatorProvider extends ModelValidatorProvider  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AssociatedValidatorProvider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

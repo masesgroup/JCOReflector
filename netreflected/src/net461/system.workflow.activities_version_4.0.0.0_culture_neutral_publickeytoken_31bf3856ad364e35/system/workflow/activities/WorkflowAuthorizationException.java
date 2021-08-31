@@ -96,7 +96,9 @@ public class WorkflowAuthorizationException extends SystemException {
     public WorkflowAuthorizationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WorkflowAuthorizationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

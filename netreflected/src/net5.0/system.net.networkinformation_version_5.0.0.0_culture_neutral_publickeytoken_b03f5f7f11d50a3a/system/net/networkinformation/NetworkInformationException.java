@@ -96,7 +96,9 @@ public class NetworkInformationException extends Win32Exception {
     public NetworkInformationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public NetworkInformationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

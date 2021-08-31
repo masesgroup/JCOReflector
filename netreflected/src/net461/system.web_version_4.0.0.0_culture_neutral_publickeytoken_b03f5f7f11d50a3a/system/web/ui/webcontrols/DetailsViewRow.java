@@ -94,7 +94,9 @@ public class DetailsViewRow extends TableRow  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DetailsViewRow(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

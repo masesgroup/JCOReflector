@@ -93,7 +93,9 @@ public class GenericUriParser extends UriParser  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public GenericUriParser(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -100,7 +100,9 @@ public class DeliveryRequirementsAttribute extends Attribute implements system.s
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DeliveryRequirementsAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

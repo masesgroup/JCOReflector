@@ -94,7 +94,9 @@ public class AddedActivityAction extends ActivityChangeAction  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AddedActivityAction(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

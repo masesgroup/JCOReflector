@@ -98,7 +98,9 @@ public class MenuCommandService extends NetObject implements AutoCloseable {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MenuCommandService(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

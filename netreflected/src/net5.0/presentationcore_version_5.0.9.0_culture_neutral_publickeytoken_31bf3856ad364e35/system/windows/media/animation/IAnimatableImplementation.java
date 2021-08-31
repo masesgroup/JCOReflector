@@ -95,7 +95,9 @@ public class IAnimatableImplementation extends NetObject implements IAnimatable 
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IAnimatableImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -95,7 +95,9 @@ public class List extends Block  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public List(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

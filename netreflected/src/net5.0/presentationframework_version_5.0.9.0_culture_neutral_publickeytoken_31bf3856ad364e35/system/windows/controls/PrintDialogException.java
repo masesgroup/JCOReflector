@@ -95,7 +95,9 @@ public class PrintDialogException extends NetException {
     public PrintDialogException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PrintDialogException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

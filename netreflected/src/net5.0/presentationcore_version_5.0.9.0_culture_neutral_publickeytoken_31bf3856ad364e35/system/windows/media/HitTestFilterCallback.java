@@ -155,7 +155,9 @@ public class HitTestFilterCallback extends JCDelegate implements IJCEventEmit, I
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         callerInstance = instance;
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HitTestFilterCallback(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         if (instance == null) throw new IllegalArgumentException("Instance cannot be null");

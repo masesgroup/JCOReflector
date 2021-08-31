@@ -96,7 +96,9 @@ public class InvalidEnumArgumentException extends ArgumentException {
     public InvalidEnumArgumentException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InvalidEnumArgumentException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

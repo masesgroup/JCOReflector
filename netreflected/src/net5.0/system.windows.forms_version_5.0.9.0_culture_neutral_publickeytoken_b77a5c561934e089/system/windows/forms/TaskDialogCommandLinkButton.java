@@ -92,7 +92,9 @@ public class TaskDialogCommandLinkButton extends TaskDialogButton  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TaskDialogCommandLinkButton(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

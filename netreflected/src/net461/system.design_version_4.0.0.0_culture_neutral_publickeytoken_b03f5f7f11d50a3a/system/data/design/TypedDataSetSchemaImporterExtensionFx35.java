@@ -92,7 +92,9 @@ public class TypedDataSetSchemaImporterExtensionFx35 extends TypedDataSetSchemaI
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TypedDataSetSchemaImporterExtensionFx35(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

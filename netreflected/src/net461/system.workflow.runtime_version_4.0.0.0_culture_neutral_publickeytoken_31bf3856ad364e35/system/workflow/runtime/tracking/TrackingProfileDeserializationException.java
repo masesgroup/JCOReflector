@@ -98,7 +98,9 @@ public class TrackingProfileDeserializationException extends SystemException {
     public TrackingProfileDeserializationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TrackingProfileDeserializationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

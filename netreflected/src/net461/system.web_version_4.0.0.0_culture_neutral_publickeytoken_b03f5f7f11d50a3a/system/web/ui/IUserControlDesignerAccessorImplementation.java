@@ -91,7 +91,9 @@ public class IUserControlDesignerAccessorImplementation extends NetObject implem
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IUserControlDesignerAccessorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

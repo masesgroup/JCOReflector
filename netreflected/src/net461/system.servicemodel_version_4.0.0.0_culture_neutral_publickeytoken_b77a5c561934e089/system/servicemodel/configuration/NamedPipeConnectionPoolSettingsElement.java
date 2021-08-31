@@ -93,7 +93,9 @@ public class NamedPipeConnectionPoolSettingsElement extends ServiceModelConfigur
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public NamedPipeConnectionPoolSettingsElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

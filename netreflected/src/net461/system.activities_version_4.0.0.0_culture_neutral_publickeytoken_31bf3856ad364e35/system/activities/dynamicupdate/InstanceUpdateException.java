@@ -97,7 +97,9 @@ public class InstanceUpdateException extends NetException {
     public InstanceUpdateException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InstanceUpdateException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

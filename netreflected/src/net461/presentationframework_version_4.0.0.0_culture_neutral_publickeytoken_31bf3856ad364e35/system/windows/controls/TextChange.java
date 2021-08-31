@@ -91,7 +91,9 @@ public class TextChange extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TextChange(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

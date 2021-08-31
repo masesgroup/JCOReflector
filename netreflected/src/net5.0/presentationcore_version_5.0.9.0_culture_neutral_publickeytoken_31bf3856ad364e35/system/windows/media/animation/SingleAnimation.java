@@ -98,7 +98,9 @@ public class SingleAnimation extends SingleAnimationBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SingleAnimation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -107,7 +107,9 @@ public class PopupPrimaryAxis extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PopupPrimaryAxis(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

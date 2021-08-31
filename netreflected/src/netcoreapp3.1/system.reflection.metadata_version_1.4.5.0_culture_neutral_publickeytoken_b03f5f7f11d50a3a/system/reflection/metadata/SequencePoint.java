@@ -94,7 +94,9 @@ public class SequencePoint extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SequencePoint(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

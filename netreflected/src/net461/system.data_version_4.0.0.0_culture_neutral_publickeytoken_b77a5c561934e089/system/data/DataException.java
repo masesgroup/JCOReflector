@@ -96,7 +96,9 @@ public class DataException extends SystemException {
     public DataException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

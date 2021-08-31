@@ -96,7 +96,9 @@ public class DeploymentDownloadException extends DeploymentException {
     public DeploymentDownloadException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DeploymentDownloadException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

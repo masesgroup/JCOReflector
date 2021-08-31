@@ -99,7 +99,9 @@ public class OdbcException extends DbException {
     public OdbcException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public OdbcException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

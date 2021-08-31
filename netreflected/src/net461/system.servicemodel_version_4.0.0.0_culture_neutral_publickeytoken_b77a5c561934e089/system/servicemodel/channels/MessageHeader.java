@@ -97,7 +97,9 @@ public class MessageHeader extends MessageHeaderInfo  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MessageHeader(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

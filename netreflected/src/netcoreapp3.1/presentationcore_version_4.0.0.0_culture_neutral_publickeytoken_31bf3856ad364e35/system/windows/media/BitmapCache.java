@@ -93,7 +93,9 @@ public class BitmapCache extends CacheMode  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BitmapCache(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

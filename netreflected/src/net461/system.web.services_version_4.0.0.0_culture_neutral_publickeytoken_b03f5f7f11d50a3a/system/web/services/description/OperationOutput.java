@@ -93,7 +93,9 @@ public class OperationOutput extends OperationMessage  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public OperationOutput(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

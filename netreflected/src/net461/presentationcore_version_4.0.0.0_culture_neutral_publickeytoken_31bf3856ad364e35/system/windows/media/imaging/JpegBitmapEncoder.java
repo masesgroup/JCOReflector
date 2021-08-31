@@ -93,7 +93,9 @@ public class JpegBitmapEncoder extends BitmapEncoder  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public JpegBitmapEncoder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class IKeyFrameAnimationImplementation extends NetObject implements IKeyF
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IKeyFrameAnimationImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

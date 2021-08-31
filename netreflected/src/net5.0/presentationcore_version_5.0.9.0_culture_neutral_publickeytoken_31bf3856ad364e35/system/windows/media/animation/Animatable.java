@@ -98,7 +98,9 @@ public class Animatable extends Freezable  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Animatable(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

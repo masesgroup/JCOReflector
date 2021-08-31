@@ -91,7 +91,9 @@ public class X509CertificateTrustedIssuerElementCollection extends NetObjectEnum
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public X509CertificateTrustedIssuerElementCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

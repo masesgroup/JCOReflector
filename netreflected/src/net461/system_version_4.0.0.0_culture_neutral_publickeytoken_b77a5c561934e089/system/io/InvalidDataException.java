@@ -96,7 +96,9 @@ public class InvalidDataException extends SystemException {
     public InvalidDataException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InvalidDataException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

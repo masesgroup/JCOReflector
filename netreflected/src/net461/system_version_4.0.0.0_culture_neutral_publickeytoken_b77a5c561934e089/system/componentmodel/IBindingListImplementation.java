@@ -99,7 +99,9 @@ public class IBindingListImplementation extends IEnumerableImplementation implem
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IBindingListImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

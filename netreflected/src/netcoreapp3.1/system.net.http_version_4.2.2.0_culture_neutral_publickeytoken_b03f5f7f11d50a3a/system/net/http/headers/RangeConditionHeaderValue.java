@@ -96,7 +96,9 @@ public class RangeConditionHeaderValue extends NetObject implements system.IClon
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RangeConditionHeaderValue(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

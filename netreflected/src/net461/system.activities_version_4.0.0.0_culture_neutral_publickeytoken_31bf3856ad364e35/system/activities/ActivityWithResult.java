@@ -93,7 +93,9 @@ public class ActivityWithResult extends Activity  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ActivityWithResult(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

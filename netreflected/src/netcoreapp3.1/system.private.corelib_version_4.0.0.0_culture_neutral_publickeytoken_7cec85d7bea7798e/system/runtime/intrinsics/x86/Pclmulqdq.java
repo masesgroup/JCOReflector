@@ -92,7 +92,9 @@ public class Pclmulqdq extends Sse2  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Pclmulqdq(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

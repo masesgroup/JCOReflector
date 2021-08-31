@@ -97,7 +97,9 @@ public class ECDiffieHellman extends AsymmetricAlgorithm  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ECDiffieHellman(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class IssuerNameRegistryElement extends ConfigurationElementInterceptor  
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IssuerNameRegistryElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

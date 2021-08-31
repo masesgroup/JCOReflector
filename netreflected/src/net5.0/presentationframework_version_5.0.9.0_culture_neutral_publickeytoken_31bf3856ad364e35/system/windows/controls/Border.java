@@ -95,7 +95,9 @@ public class Border extends Decorator  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Border(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

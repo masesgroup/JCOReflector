@@ -94,7 +94,9 @@ public class RowToFieldTransformer extends WebPartTransformer  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RowToFieldTransformer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

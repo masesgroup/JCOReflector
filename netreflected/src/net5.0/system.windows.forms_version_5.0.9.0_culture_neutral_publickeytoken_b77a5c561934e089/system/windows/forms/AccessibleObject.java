@@ -108,7 +108,9 @@ public class AccessibleObject extends StandardOleMarshalObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AccessibleObject(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

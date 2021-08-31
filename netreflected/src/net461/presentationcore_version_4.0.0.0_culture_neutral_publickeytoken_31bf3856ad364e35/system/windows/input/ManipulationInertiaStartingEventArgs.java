@@ -100,7 +100,9 @@ public class ManipulationInertiaStartingEventArgs extends InputEventArgs  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ManipulationInertiaStartingEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

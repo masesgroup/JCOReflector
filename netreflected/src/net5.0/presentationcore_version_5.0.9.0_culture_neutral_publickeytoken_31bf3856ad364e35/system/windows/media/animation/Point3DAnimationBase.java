@@ -95,7 +95,9 @@ public class Point3DAnimationBase extends AnimationTimeline  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Point3DAnimationBase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

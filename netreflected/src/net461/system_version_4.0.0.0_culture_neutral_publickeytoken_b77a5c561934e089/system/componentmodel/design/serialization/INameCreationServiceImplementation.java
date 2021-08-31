@@ -93,7 +93,9 @@ public class INameCreationServiceImplementation extends NetObject implements INa
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public INameCreationServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

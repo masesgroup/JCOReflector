@@ -99,7 +99,9 @@ public class UCOMITypeInfoImplementation extends NetObject implements UCOMITypeI
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UCOMITypeInfoImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

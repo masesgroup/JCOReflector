@@ -93,7 +93,9 @@ public class MethodData extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MethodData(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -91,7 +91,9 @@ public class IConfigMapPathImplementation extends NetObject implements IConfigMa
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IConfigMapPathImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

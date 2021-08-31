@@ -96,7 +96,9 @@ public class XpsPackagingException extends XpsException {
     public XpsPackagingException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XpsPackagingException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -96,7 +96,9 @@ public class SqlWorkflowInstanceStore extends InstanceStore  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SqlWorkflowInstanceStore(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

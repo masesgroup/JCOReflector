@@ -107,7 +107,9 @@ public class DateFormat extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DateFormat(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

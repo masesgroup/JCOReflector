@@ -95,7 +95,9 @@ public class DropShadowEffect extends Effect  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DropShadowEffect(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

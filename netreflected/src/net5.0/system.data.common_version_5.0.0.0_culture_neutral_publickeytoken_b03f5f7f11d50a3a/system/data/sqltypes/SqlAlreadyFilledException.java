@@ -96,7 +96,9 @@ public class SqlAlreadyFilledException extends SqlTypeException {
     public SqlAlreadyFilledException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SqlAlreadyFilledException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

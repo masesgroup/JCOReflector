@@ -93,7 +93,9 @@ public class IProgressPageImplementation extends NetObject implements IProgressP
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IProgressPageImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -96,7 +96,9 @@ public class CacheItemPolicy extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CacheItemPolicy(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

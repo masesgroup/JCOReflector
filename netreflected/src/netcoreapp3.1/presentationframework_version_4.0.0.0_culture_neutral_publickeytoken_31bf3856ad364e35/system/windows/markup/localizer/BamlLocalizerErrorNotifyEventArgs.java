@@ -94,7 +94,9 @@ public class BamlLocalizerErrorNotifyEventArgs extends EventArgs  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BamlLocalizerErrorNotifyEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

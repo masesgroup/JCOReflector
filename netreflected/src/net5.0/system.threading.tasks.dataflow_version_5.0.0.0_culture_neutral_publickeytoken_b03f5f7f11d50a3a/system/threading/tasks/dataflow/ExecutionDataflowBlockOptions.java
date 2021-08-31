@@ -92,7 +92,9 @@ public class ExecutionDataflowBlockOptions extends DataflowBlockOptions  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ExecutionDataflowBlockOptions(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

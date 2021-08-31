@@ -104,7 +104,9 @@ public class RadioButtonList extends ListControl implements system.web.ui.INamin
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RadioButtonList(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

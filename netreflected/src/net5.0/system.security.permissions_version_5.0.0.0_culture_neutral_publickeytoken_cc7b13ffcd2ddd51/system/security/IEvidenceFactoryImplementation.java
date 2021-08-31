@@ -92,7 +92,9 @@ public class IEvidenceFactoryImplementation extends NetObject implements IEviden
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IEvidenceFactoryImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

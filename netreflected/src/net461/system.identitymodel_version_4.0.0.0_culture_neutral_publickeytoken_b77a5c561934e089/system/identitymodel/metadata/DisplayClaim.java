@@ -92,7 +92,9 @@ public class DisplayClaim extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DisplayClaim(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -95,7 +95,9 @@ public class PrefixEndpointAddressMessageFilter extends MessageFilter  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PrefixEndpointAddressMessageFilter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

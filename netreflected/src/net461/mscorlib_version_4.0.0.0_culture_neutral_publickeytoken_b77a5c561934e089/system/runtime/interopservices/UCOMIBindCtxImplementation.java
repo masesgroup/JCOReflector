@@ -96,7 +96,9 @@ public class UCOMIBindCtxImplementation extends NetObject implements UCOMIBindCt
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UCOMIBindCtxImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

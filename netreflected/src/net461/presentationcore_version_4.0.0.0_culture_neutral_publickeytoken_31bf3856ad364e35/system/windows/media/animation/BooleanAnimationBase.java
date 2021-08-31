@@ -94,7 +94,9 @@ public class BooleanAnimationBase extends AnimationTimeline  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BooleanAnimationBase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

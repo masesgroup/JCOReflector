@@ -96,7 +96,9 @@ public class MessageHeaderException extends ProtocolException {
     public MessageHeaderException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MessageHeaderException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

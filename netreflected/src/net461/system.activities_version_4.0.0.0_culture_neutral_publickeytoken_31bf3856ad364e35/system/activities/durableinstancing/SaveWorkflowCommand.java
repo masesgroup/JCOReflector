@@ -92,7 +92,9 @@ public class SaveWorkflowCommand extends InstancePersistenceCommand  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SaveWorkflowCommand(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

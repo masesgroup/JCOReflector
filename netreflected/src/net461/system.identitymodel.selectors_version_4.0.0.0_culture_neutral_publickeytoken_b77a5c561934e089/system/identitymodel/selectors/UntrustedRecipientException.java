@@ -95,7 +95,9 @@ public class UntrustedRecipientException extends NetException {
     public UntrustedRecipientException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UntrustedRecipientException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class BaseChannelSinkWithProperties extends BaseChannelObjectWithProperti
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BaseChannelSinkWithProperties(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

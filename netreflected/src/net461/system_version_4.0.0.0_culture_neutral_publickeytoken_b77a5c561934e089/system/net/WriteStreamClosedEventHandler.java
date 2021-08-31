@@ -150,7 +150,9 @@ public class WriteStreamClosedEventHandler extends JCVoidDelegate implements IJC
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         callerInstance = instance;
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WriteStreamClosedEventHandler(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         if (instance == null) throw new IllegalArgumentException("Instance cannot be null");

@@ -92,7 +92,9 @@ public class IArgumentProviderImplementation extends NetObject implements IArgum
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IArgumentProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class IStringLocalizerProviderImplementation extends NetObject implements
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IStringLocalizerProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

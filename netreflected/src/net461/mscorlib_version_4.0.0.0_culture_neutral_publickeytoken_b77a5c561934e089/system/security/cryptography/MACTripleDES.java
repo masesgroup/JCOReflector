@@ -93,7 +93,9 @@ public class MACTripleDES extends KeyedHashAlgorithm  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MACTripleDES(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

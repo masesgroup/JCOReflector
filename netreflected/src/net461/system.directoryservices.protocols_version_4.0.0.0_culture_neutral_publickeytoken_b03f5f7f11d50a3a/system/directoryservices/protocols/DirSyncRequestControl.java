@@ -93,7 +93,9 @@ public class DirSyncRequestControl extends DirectoryControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DirSyncRequestControl(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

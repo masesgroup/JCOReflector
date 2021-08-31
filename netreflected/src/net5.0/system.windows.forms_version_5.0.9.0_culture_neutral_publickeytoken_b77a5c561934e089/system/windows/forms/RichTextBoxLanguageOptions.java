@@ -107,7 +107,9 @@ public class RichTextBoxLanguageOptions extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RichTextBoxLanguageOptions(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

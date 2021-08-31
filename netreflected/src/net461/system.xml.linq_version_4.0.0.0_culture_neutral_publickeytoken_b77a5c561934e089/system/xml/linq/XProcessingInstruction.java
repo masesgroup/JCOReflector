@@ -95,7 +95,9 @@ public class XProcessingInstruction extends XNode  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XProcessingInstruction(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

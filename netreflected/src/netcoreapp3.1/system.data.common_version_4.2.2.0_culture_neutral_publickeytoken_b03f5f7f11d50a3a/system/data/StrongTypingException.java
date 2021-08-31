@@ -96,7 +96,9 @@ public class StrongTypingException extends DataException {
     public StrongTypingException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public StrongTypingException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

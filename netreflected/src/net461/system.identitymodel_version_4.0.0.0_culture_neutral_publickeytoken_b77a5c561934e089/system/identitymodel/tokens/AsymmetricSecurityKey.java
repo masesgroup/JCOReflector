@@ -96,7 +96,9 @@ public class AsymmetricSecurityKey extends SecurityKey  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AsymmetricSecurityKey(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class DirectorySecurity extends FileSystemSecurity  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DirectorySecurity(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

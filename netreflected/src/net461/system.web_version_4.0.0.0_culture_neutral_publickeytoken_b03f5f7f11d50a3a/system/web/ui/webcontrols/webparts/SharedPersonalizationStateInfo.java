@@ -93,7 +93,9 @@ public class SharedPersonalizationStateInfo extends PersonalizationStateInfo  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SharedPersonalizationStateInfo(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

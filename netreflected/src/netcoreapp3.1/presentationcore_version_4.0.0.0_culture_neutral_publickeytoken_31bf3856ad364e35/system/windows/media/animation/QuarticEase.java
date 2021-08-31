@@ -92,7 +92,9 @@ public class QuarticEase extends EasingFunctionBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public QuarticEase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

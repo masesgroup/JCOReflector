@@ -91,7 +91,9 @@ public class IProjectSchemaNodeImplementation extends NetObject implements IProj
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IProjectSchemaNodeImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

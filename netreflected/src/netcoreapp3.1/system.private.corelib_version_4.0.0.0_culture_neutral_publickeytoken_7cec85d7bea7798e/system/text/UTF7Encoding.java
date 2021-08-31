@@ -94,7 +94,9 @@ public class UTF7Encoding extends Encoding  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UTF7Encoding(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

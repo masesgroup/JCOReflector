@@ -92,7 +92,9 @@ public class DetailsViewCommandEventArgs extends CommandEventArgs  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DetailsViewCommandEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

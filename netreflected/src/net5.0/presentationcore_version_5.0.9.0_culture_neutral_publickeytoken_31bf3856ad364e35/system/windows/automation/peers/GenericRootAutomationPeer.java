@@ -93,7 +93,9 @@ public class GenericRootAutomationPeer extends UIElementAutomationPeer  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public GenericRootAutomationPeer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

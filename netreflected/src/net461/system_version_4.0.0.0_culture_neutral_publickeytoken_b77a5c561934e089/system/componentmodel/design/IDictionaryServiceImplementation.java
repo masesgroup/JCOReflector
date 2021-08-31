@@ -91,7 +91,9 @@ public class IDictionaryServiceImplementation extends NetObject implements IDict
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IDictionaryServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

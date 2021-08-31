@@ -93,7 +93,9 @@ public class IInstanceContextInitializerImplementation extends NetObject impleme
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IInstanceContextInitializerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

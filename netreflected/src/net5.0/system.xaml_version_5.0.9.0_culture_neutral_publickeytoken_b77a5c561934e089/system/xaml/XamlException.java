@@ -97,7 +97,9 @@ public class XamlException extends NetException {
     public XamlException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XamlException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

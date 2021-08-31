@@ -150,7 +150,9 @@ public class DataColumnChangeEventHandler extends JCVoidDelegate implements IJCV
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         callerInstance = instance;
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataColumnChangeEventHandler(java.lang.Object instance) throws Throwable {
         super(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         if (instance == null) throw new IllegalArgumentException("Instance cannot be null");

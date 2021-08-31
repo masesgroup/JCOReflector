@@ -91,7 +91,9 @@ public class ISerializationSurrogateProviderImplementation extends NetObject imp
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ISerializationSurrogateProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

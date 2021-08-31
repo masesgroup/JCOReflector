@@ -93,7 +93,9 @@ public class PassportPrincipal extends GenericPrincipal  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PassportPrincipal(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class DataSourceBooleanViewSchemaConverter extends DataSourceViewSchemaCo
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataSourceBooleanViewSchemaConverter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

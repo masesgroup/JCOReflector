@@ -107,7 +107,9 @@ public class FontEmbeddingRight extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FontEmbeddingRight(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

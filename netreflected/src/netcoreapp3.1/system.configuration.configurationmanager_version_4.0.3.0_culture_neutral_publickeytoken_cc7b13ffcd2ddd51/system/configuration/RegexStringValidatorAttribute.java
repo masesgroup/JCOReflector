@@ -93,7 +93,9 @@ public class RegexStringValidatorAttribute extends ConfigurationValidatorAttribu
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RegexStringValidatorAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class MachineSettingsSection extends ConfigurationSection  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MachineSettingsSection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

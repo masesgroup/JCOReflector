@@ -93,7 +93,9 @@ public class Manipulator2D extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Manipulator2D(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

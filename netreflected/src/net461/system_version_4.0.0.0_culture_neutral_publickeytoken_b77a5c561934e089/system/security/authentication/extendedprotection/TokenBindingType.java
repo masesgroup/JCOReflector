@@ -107,7 +107,9 @@ public class TokenBindingType extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TokenBindingType(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

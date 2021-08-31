@@ -99,7 +99,9 @@ public class Trigger extends TriggerBase implements system.windows.markup.IAddCh
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Trigger(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

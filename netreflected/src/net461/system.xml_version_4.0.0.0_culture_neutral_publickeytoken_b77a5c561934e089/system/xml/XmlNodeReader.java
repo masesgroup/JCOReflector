@@ -99,7 +99,9 @@ public class XmlNodeReader extends XmlReader  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlNodeReader(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -96,7 +96,9 @@ public class SignatureVerificationFailedException extends SecurityTokenException
     public SignatureVerificationFailedException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SignatureVerificationFailedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

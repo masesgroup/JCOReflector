@@ -96,7 +96,9 @@ public class LinkButton extends WebControl implements system.web.ui.IPostBackEve
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public LinkButton(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

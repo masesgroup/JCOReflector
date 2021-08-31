@@ -97,7 +97,9 @@ public class KeyAgreeRecipientInfo extends RecipientInfo  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public KeyAgreeRecipientInfo(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

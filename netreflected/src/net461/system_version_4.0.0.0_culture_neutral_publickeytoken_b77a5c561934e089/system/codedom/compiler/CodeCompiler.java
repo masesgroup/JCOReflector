@@ -97,7 +97,9 @@ public class CodeCompiler extends CodeGenerator implements system.codedom.compil
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CodeCompiler(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

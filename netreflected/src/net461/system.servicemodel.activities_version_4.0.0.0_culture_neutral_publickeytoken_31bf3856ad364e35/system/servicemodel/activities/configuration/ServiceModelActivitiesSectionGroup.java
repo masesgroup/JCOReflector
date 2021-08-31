@@ -95,7 +95,9 @@ public class ServiceModelActivitiesSectionGroup extends ConfigurationSectionGrou
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ServiceModelActivitiesSectionGroup(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

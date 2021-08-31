@@ -97,7 +97,9 @@ public class CombinedGeometry extends Geometry  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CombinedGeometry(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

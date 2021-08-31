@@ -94,7 +94,9 @@ public class IIdentityPermissionFactoryImplementation extends NetObject implemen
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IIdentityPermissionFactoryImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

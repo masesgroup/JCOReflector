@@ -94,7 +94,9 @@ public class SequentialWorkflowActivity extends SequenceActivity  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SequentialWorkflowActivity(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -95,7 +95,9 @@ public class IJSVsaCodeItemImplementation extends NetObject implements IJSVsaCod
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IJSVsaCodeItemImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -94,7 +94,9 @@ public class Saml2SubjectConfirmation extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Saml2SubjectConfirmation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

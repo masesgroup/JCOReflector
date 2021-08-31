@@ -96,7 +96,9 @@ public class ActionNotSupportedException extends CommunicationException {
     public ActionNotSupportedException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ActionNotSupportedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

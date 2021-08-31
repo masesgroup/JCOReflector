@@ -107,7 +107,9 @@ public class DtdProcessing extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DtdProcessing(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -94,7 +94,9 @@ public class HttpPostedFileWrapper extends HttpPostedFileBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HttpPostedFileWrapper(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

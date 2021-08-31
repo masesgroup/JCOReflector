@@ -93,7 +93,9 @@ public class OracleBoolean extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public OracleBoolean(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

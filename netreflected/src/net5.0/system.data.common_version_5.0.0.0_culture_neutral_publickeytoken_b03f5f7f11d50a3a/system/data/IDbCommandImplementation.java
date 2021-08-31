@@ -106,7 +106,9 @@ public class IDbCommandImplementation extends NetObject implements IDbCommand {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IDbCommandImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

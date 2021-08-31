@@ -92,7 +92,9 @@ public class PrintSystemObjectPropertyChangedEventArgs extends EventArgs impleme
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PrintSystemObjectPropertyChangedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

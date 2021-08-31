@@ -93,7 +93,9 @@ public class ShaderEffect extends Effect  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ShaderEffect(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

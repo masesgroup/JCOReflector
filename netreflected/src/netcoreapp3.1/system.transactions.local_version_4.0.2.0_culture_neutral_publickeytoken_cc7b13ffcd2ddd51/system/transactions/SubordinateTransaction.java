@@ -95,7 +95,9 @@ public class SubordinateTransaction extends Transaction  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SubordinateTransaction(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

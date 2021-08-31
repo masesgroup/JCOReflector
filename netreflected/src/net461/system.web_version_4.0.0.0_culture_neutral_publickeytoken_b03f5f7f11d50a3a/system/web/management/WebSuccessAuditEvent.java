@@ -92,7 +92,9 @@ public class WebSuccessAuditEvent extends WebAuditEvent  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WebSuccessAuditEvent(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

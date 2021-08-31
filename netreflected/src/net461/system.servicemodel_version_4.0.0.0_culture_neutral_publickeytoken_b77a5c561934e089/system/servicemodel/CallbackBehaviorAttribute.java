@@ -100,7 +100,9 @@ public class CallbackBehaviorAttribute extends Attribute implements system.servi
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CallbackBehaviorAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

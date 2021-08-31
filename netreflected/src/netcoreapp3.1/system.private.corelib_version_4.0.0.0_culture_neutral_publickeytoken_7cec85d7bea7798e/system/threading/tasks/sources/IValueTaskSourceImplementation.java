@@ -92,7 +92,9 @@ public class IValueTaskSourceImplementation extends NetObject implements IValueT
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IValueTaskSourceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

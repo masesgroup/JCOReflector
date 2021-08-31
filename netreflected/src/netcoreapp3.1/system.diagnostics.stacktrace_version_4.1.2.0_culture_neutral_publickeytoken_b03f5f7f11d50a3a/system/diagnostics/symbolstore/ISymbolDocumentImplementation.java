@@ -92,7 +92,9 @@ public class ISymbolDocumentImplementation extends NetObject implements ISymbolD
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ISymbolDocumentImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

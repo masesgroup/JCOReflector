@@ -97,7 +97,9 @@ public class CommonSecurityDescriptor extends GenericSecurityDescriptor  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CommonSecurityDescriptor(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

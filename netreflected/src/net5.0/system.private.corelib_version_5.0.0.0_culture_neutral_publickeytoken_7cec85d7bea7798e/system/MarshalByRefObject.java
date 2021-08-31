@@ -91,7 +91,9 @@ public class MarshalByRefObject extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MarshalByRefObject(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

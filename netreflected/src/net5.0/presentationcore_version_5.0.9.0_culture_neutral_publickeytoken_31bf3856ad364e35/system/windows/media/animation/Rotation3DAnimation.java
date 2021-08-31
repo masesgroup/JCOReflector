@@ -98,7 +98,9 @@ public class Rotation3DAnimation extends Rotation3DAnimationBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Rotation3DAnimation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -91,7 +91,9 @@ public class DecoderFallbackBuffer extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DecoderFallbackBuffer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

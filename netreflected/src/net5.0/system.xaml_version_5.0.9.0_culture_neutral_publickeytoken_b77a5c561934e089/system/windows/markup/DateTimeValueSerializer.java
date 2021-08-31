@@ -94,7 +94,9 @@ public class DateTimeValueSerializer extends ValueSerializer  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DateTimeValueSerializer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

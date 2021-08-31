@@ -97,7 +97,9 @@ public class NoClickablePointException extends NetException {
     public NoClickablePointException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public NoClickablePointException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

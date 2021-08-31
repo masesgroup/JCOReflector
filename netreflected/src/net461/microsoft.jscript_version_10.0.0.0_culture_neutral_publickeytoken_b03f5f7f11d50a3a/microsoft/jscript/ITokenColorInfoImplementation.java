@@ -92,7 +92,9 @@ public class ITokenColorInfoImplementation extends NetObject implements ITokenCo
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ITokenColorInfoImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

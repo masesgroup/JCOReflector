@@ -93,7 +93,9 @@ public class DnsEndpointIdentity extends EndpointIdentity  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DnsEndpointIdentity(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

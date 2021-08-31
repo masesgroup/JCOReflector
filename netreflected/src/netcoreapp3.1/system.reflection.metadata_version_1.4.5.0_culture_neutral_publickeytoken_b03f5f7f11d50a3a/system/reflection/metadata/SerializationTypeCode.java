@@ -107,7 +107,9 @@ public class SerializationTypeCode extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SerializationTypeCode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

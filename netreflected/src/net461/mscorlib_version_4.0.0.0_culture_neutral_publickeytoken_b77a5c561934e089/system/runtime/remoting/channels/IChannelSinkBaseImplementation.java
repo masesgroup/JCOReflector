@@ -93,7 +93,9 @@ public class IChannelSinkBaseImplementation extends NetObject implements IChanne
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IChannelSinkBaseImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

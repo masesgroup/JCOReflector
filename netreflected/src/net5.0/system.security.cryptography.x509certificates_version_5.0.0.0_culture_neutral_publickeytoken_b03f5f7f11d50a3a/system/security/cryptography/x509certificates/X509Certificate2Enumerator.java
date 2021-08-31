@@ -90,7 +90,9 @@ public class X509Certificate2Enumerator extends NetObject implements Iterator<X5
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public X509Certificate2Enumerator(JCObject instance) {
         classInstance = instance.iterator();
     }

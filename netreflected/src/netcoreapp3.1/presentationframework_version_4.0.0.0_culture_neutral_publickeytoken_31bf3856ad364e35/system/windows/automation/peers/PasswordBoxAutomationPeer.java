@@ -94,7 +94,9 @@ public class PasswordBoxAutomationPeer extends TextAutomationPeer  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PasswordBoxAutomationPeer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

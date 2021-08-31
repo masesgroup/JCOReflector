@@ -96,7 +96,9 @@ public class NullReferenceException extends SystemException {
     public NullReferenceException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public NullReferenceException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

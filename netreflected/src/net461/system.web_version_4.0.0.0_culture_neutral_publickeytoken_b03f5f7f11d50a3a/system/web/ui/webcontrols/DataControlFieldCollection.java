@@ -95,7 +95,9 @@ public class DataControlFieldCollection extends StateManagedCollection  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataControlFieldCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

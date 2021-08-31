@@ -96,7 +96,9 @@ public class InvalidBodyAccessException extends SystemException {
     public InvalidBodyAccessException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InvalidBodyAccessException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -95,7 +95,9 @@ public class FigureStructure extends SemanticBasicElement implements system.wind
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FigureStructure(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

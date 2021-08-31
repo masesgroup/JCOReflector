@@ -107,7 +107,9 @@ public class ReplicationSpan extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ReplicationSpan(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -101,7 +101,9 @@ public class Saml2SecurityTokenHandler extends SecurityTokenHandler  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Saml2SecurityTokenHandler(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

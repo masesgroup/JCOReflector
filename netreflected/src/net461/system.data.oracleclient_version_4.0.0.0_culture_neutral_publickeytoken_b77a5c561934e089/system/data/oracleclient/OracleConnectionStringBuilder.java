@@ -94,7 +94,9 @@ public class OracleConnectionStringBuilder extends DbConnectionStringBuilder  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public OracleConnectionStringBuilder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

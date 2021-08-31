@@ -107,7 +107,9 @@ public class ContentDesignerState extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ContentDesignerState(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

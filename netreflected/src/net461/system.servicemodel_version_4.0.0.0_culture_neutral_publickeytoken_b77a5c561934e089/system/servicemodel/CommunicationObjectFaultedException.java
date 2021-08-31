@@ -96,7 +96,9 @@ public class CommunicationObjectFaultedException extends CommunicationException 
     public CommunicationObjectFaultedException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CommunicationObjectFaultedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

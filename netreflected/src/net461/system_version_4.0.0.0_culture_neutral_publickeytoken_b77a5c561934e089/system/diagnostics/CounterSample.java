@@ -95,7 +95,9 @@ public class CounterSample extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CounterSample(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

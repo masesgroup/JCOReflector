@@ -91,7 +91,9 @@ public class ICollectDataImplementation extends NetObject implements ICollectDat
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ICollectDataImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

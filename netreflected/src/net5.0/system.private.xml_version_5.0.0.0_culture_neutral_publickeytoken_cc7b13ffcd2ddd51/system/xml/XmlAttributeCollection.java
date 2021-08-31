@@ -95,7 +95,9 @@ public class XmlAttributeCollection extends XmlNamedNodeMap  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlAttributeCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -95,7 +95,9 @@ public class X509CertificateClaimSet extends ClaimSet implements AutoCloseable {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public X509CertificateClaimSet(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

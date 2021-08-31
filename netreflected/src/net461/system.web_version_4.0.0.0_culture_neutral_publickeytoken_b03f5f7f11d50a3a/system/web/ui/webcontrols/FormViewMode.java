@@ -107,7 +107,9 @@ public class FormViewMode extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FormViewMode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class LenientRegExpPrototype extends RegExpPrototype  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public LenientRegExpPrototype(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

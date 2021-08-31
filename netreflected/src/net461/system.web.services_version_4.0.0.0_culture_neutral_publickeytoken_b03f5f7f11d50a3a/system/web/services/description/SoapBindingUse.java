@@ -107,7 +107,9 @@ public class SoapBindingUse extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SoapBindingUse(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

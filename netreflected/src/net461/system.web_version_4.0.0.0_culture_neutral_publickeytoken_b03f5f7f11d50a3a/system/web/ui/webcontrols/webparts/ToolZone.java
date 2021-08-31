@@ -97,7 +97,9 @@ public class ToolZone extends WebZone implements system.web.ui.IPostBackEventHan
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ToolZone(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

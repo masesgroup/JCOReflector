@@ -95,7 +95,9 @@ public class ManipulationProcessor2D extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ManipulationProcessor2D(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

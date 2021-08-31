@@ -91,7 +91,9 @@ public class WS2007FederationHttpBindingCollectionElement extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WS2007FederationHttpBindingCollectionElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

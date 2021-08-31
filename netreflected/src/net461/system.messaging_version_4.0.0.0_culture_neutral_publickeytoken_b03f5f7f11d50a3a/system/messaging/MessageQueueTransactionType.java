@@ -107,7 +107,9 @@ public class MessageQueueTransactionType extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MessageQueueTransactionType(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

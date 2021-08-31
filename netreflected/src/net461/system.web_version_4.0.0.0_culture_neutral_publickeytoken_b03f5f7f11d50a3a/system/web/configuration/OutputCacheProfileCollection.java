@@ -93,7 +93,9 @@ public class OutputCacheProfileCollection extends ConfigurationElementCollection
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public OutputCacheProfileCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

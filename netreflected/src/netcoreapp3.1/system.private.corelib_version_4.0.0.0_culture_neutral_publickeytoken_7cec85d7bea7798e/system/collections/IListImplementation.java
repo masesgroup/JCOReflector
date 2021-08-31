@@ -94,7 +94,9 @@ public class IListImplementation extends IEnumerableImplementation implements IL
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IListImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

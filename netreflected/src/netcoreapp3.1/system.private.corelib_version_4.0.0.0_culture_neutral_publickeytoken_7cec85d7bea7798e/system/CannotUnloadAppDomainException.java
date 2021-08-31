@@ -96,7 +96,9 @@ public class CannotUnloadAppDomainException extends SystemException {
     public CannotUnloadAppDomainException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CannotUnloadAppDomainException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

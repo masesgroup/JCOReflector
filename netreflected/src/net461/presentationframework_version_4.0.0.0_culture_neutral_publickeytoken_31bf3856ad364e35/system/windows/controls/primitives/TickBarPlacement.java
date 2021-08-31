@@ -107,7 +107,9 @@ public class TickBarPlacement extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TickBarPlacement(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -98,7 +98,9 @@ public class HttpListenerWebSocketContext extends WebSocketContext  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HttpListenerWebSocketContext(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

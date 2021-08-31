@@ -97,7 +97,9 @@ public class CompositeActivityValidator extends ActivityValidator  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CompositeActivityValidator(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -91,7 +91,9 @@ public class X86Base extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public X86Base(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

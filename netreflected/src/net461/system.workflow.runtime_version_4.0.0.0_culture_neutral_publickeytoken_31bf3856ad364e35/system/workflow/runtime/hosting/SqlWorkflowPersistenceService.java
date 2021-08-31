@@ -100,7 +100,9 @@ public class SqlWorkflowPersistenceService extends WorkflowPersistenceService im
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SqlWorkflowPersistenceService(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -98,7 +98,9 @@ public class PropertyGroupDescription extends GroupDescription  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PropertyGroupDescription(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

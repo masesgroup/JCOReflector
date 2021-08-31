@@ -93,7 +93,9 @@ public class NativeActivityTransactionContext extends NativeActivityContext  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public NativeActivityTransactionContext(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

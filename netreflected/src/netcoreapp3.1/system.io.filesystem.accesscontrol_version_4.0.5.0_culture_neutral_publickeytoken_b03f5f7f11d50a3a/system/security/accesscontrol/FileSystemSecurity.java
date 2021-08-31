@@ -101,7 +101,9 @@ public class FileSystemSecurity extends NativeObjectSecurity  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FileSystemSecurity(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

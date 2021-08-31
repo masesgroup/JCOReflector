@@ -92,7 +92,9 @@ public class MailDefinitionBodyFileNameEditor extends UrlEditor  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MailDefinitionBodyFileNameEditor(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

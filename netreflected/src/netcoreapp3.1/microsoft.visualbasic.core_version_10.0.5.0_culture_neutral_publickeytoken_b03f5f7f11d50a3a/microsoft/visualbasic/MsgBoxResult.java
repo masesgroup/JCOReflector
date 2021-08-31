@@ -107,7 +107,9 @@ public class MsgBoxResult extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MsgBoxResult(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

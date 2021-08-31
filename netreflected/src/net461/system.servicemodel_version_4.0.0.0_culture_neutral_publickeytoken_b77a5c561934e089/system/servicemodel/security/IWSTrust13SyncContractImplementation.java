@@ -92,7 +92,9 @@ public class IWSTrust13SyncContractImplementation extends NetObject implements I
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IWSTrust13SyncContractImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

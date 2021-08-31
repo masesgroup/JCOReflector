@@ -94,7 +94,9 @@ public class VisualsToXpsDocument extends SerializerWriterCollator  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public VisualsToXpsDocument(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

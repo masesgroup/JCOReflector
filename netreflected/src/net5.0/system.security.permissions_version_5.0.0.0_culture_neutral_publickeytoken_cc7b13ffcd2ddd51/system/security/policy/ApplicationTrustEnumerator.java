@@ -90,7 +90,9 @@ public class ApplicationTrustEnumerator extends NetObject implements Iterator<Ap
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ApplicationTrustEnumerator(JCObject instance) {
         classInstance = instance.iterator();
     }

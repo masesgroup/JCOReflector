@@ -96,7 +96,9 @@ public class EventLogNotFoundException extends EventLogException {
     public EventLogNotFoundException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EventLogNotFoundException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

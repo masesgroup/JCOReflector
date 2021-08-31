@@ -95,7 +95,9 @@ public class IEnumConnectionPointsImplementation extends NetObject implements IE
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IEnumConnectionPointsImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -107,7 +107,9 @@ public class MatchCasing extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MatchCasing(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -91,7 +91,9 @@ public class Com2Variant extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Com2Variant(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

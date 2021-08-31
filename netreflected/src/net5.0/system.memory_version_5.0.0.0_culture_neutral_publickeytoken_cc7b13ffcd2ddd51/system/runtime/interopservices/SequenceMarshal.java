@@ -91,7 +91,9 @@ public class SequenceMarshal extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SequenceMarshal(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

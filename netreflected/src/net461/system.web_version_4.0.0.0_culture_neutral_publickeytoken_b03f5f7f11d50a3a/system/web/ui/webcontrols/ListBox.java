@@ -99,7 +99,9 @@ public class ListBox extends ListControl implements system.web.ui.IPostBackDataH
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ListBox(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

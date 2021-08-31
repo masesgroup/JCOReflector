@@ -105,7 +105,9 @@ public class DynamicObject extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DynamicObject(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

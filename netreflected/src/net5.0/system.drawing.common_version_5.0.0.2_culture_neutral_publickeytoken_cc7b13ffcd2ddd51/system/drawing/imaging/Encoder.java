@@ -92,7 +92,9 @@ public class Encoder extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Encoder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

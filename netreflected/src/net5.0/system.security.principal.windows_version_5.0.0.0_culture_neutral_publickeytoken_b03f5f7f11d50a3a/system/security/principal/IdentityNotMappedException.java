@@ -99,7 +99,9 @@ public class IdentityNotMappedException extends SystemException {
     public IdentityNotMappedException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IdentityNotMappedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -104,7 +104,9 @@ public class IOutputChannelImplementation extends NetObject implements IOutputCh
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IOutputChannelImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

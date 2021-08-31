@@ -91,7 +91,9 @@ public class IModalServiceImplementation extends NetObject implements IModalServ
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IModalServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

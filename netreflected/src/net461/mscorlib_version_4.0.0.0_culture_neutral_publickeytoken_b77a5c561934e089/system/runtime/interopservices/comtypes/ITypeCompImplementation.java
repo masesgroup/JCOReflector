@@ -96,7 +96,9 @@ public class ITypeCompImplementation extends NetObject implements ITypeComp {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ITypeCompImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

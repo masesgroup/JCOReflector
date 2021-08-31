@@ -96,7 +96,9 @@ public class CurrentChangedEventManager extends WeakEventManager  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CurrentChangedEventManager(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

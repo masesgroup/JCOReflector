@@ -94,7 +94,9 @@ public class MakeDir extends TaskExtension  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MakeDir(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

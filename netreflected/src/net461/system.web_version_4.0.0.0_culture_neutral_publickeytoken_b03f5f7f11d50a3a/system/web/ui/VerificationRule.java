@@ -107,7 +107,9 @@ public class VerificationRule extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public VerificationRule(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

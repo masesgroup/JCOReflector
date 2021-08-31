@@ -92,7 +92,9 @@ public class DefinitionBase extends FrameworkContentElement  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DefinitionBase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

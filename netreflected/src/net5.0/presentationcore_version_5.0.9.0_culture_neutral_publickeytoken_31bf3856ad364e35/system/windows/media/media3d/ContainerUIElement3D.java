@@ -93,7 +93,9 @@ public class ContainerUIElement3D extends UIElement3D  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ContainerUIElement3D(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

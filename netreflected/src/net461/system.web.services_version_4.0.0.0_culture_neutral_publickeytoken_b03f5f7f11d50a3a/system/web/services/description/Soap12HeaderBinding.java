@@ -92,7 +92,9 @@ public class Soap12HeaderBinding extends SoapHeaderBinding  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Soap12HeaderBinding(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

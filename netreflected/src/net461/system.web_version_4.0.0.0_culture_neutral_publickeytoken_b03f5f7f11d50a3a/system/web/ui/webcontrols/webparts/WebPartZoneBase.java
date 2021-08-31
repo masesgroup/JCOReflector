@@ -108,7 +108,9 @@ public class WebPartZoneBase extends WebZone implements system.web.ui.IPostBackE
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WebPartZoneBase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

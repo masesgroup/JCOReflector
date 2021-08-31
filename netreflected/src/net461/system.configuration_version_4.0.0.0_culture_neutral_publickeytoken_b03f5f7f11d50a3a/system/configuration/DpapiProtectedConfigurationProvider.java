@@ -94,7 +94,9 @@ public class DpapiProtectedConfigurationProvider extends ProtectedConfigurationP
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DpapiProtectedConfigurationProvider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

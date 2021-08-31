@@ -107,7 +107,9 @@ public class EditingState extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EditingState(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

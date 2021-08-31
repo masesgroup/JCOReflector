@@ -92,7 +92,9 @@ public class HMACRIPEMD160 extends HMAC  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HMACRIPEMD160(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

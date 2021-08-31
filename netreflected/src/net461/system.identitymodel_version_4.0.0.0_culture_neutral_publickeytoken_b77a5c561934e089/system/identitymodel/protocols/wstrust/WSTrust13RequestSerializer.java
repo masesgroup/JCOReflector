@@ -96,7 +96,9 @@ public class WSTrust13RequestSerializer extends WSTrustRequestSerializer  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WSTrust13RequestSerializer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

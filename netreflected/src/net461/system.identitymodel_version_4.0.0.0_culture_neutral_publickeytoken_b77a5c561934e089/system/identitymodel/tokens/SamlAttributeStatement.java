@@ -98,7 +98,9 @@ public class SamlAttributeStatement extends SamlSubjectStatement  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SamlAttributeStatement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

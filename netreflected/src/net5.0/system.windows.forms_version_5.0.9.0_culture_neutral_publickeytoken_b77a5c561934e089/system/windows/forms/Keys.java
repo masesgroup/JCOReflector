@@ -107,7 +107,9 @@ public class Keys extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Keys(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

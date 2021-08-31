@@ -92,7 +92,9 @@ public class XmlSerializationWriter extends XmlSerializationGeneratedCode  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlSerializationWriter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

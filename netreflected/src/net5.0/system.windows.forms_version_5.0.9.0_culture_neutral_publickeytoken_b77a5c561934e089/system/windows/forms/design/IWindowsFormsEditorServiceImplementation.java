@@ -94,7 +94,9 @@ public class IWindowsFormsEditorServiceImplementation extends NetObject implemen
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IWindowsFormsEditorServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -94,7 +94,9 @@ public class LC extends ToolTaskExtension  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public LC(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

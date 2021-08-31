@@ -98,7 +98,9 @@ public class TypeInfo extends NetObject implements system.reflection.IReflectabl
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TypeInfo(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

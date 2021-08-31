@@ -91,7 +91,9 @@ public class IWebObjectFactoryImplementation extends NetObject implements IWebOb
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IWebObjectFactoryImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

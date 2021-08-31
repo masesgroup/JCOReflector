@@ -99,7 +99,9 @@ public class RegistrationException extends SystemException {
     public RegistrationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RegistrationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

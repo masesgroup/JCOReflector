@@ -99,7 +99,9 @@ public class NamedPipeClientStream extends PipeStream  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public NamedPipeClientStream(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

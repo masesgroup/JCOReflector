@@ -92,7 +92,9 @@ public class DateTimeConstantAttribute extends CustomConstantAttribute  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DateTimeConstantAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class TrackingService extends WorkflowRuntimeService  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TrackingService(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class WeakEventManager extends DispatcherObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WeakEventManager(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

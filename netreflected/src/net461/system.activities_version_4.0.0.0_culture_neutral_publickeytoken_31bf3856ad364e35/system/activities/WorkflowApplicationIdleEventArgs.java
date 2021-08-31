@@ -92,7 +92,9 @@ public class WorkflowApplicationIdleEventArgs extends WorkflowApplicationEventAr
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WorkflowApplicationIdleEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

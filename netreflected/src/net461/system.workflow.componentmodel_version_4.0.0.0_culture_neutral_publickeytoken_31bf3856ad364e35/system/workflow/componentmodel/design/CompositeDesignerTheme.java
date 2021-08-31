@@ -100,7 +100,9 @@ public class CompositeDesignerTheme extends ActivityDesignerTheme  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CompositeDesignerTheme(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

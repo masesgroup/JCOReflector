@@ -95,7 +95,9 @@ public class LambdaSerializationException extends NetException {
     public LambdaSerializationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public LambdaSerializationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

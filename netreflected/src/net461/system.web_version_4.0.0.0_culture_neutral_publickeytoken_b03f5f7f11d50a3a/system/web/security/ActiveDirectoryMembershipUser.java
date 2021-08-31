@@ -93,7 +93,9 @@ public class ActiveDirectoryMembershipUser extends MembershipUser  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ActiveDirectoryMembershipUser(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

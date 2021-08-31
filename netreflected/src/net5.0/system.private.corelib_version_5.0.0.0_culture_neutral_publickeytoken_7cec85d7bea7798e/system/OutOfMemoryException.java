@@ -96,7 +96,9 @@ public class OutOfMemoryException extends SystemException {
     public OutOfMemoryException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public OutOfMemoryException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

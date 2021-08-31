@@ -92,7 +92,9 @@ public class Basic192SecurityAlgorithmSuite extends SecurityAlgorithmSuite  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Basic192SecurityAlgorithmSuite(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

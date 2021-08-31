@@ -96,7 +96,9 @@ public class ReadOnlyException extends DataException {
     public ReadOnlyException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ReadOnlyException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

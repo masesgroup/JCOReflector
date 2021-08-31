@@ -96,7 +96,9 @@ public class MsmqIntegrationBinding extends MsmqBindingBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MsmqIntegrationBinding(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

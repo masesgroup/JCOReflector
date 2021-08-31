@@ -92,7 +92,9 @@ public class PreparingEnlistment extends Enlistment  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PreparingEnlistment(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

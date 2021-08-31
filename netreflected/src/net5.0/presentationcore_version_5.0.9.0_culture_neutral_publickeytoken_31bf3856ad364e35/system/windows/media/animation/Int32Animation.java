@@ -97,7 +97,9 @@ public class Int32Animation extends Int32AnimationBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Int32Animation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

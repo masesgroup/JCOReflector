@@ -93,7 +93,9 @@ public class DoWhile extends NativeActivity  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DoWhile(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

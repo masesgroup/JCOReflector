@@ -94,7 +94,9 @@ public class WizardStepEditableRegion extends EditableDesignerRegion  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WizardStepEditableRegion(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

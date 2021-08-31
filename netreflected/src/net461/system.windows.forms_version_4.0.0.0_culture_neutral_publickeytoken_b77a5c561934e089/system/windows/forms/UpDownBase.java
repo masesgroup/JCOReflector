@@ -103,7 +103,9 @@ public class UpDownBase extends ContainerControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UpDownBase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

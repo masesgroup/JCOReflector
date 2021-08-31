@@ -92,7 +92,9 @@ public class TypeDecimalSchemaImporterExtension extends SqlTypesSchemaImporterEx
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TypeDecimalSchemaImporterExtension(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

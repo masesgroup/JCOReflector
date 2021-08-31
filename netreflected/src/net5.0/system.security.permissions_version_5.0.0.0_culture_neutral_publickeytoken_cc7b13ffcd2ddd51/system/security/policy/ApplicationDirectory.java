@@ -92,7 +92,9 @@ public class ApplicationDirectory extends EvidenceBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ApplicationDirectory(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

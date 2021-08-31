@@ -93,7 +93,9 @@ public class AutomationPropertyChangedEventArgs extends AutomationEventArgs  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AutomationPropertyChangedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -95,7 +95,9 @@ public class Pointer extends NetObject implements system.runtime.serialization.I
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Pointer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

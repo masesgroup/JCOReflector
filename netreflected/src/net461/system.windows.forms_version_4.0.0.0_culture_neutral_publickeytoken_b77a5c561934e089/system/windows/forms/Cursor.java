@@ -101,7 +101,9 @@ public class Cursor extends NetObject implements system.runtime.serialization.IS
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Cursor(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

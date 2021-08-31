@@ -99,7 +99,9 @@ public class HttpParseException extends HttpException {
     public HttpParseException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HttpParseException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

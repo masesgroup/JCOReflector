@@ -98,7 +98,9 @@ public class ObjectSelectorEditor extends UITypeEditor  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ObjectSelectorEditor(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

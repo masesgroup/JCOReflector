@@ -91,7 +91,9 @@ public class IEasingFunctionImplementation extends NetObject implements IEasingF
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IEasingFunctionImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

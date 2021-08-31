@@ -107,7 +107,9 @@ public class SelectionTypes extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SelectionTypes(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

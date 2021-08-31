@@ -96,7 +96,9 @@ public class SqlNotFilledException extends SqlTypeException {
     public SqlNotFilledException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SqlNotFilledException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

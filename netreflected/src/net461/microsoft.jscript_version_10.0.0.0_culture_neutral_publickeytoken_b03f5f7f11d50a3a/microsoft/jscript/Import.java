@@ -93,7 +93,9 @@ public class Import extends AST  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Import(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

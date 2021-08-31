@@ -96,7 +96,9 @@ public class TargetInvocationException extends ApplicationException {
     public TargetInvocationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TargetInvocationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

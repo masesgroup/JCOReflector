@@ -92,7 +92,9 @@ public class UnaryOp extends AST  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UnaryOp(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

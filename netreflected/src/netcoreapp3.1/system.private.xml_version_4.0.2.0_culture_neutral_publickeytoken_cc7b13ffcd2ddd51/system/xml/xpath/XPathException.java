@@ -98,7 +98,9 @@ public class XPathException extends SystemException {
     public XPathException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XPathException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

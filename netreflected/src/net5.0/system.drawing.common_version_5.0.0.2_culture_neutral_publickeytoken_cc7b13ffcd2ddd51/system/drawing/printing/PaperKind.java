@@ -107,7 +107,9 @@ public class PaperKind extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PaperKind(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -101,7 +101,9 @@ public class DataTableMapping extends MarshalByRefObject implements system.IClon
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataTableMapping(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

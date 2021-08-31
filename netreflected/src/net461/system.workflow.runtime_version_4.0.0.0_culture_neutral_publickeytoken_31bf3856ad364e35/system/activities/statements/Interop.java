@@ -101,7 +101,9 @@ public class Interop extends NativeActivity implements system.componentmodel.ICu
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Interop(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

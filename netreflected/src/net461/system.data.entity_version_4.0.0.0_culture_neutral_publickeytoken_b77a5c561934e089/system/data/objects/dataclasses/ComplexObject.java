@@ -92,7 +92,9 @@ public class ComplexObject extends StructuralObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ComplexObject(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

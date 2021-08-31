@@ -95,7 +95,9 @@ public class XmlStreamStore extends AnnotationStore  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlStreamStore(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

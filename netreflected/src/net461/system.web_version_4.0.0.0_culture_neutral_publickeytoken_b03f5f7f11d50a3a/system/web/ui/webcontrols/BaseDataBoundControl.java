@@ -93,7 +93,9 @@ public class BaseDataBoundControl extends WebControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BaseDataBoundControl(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

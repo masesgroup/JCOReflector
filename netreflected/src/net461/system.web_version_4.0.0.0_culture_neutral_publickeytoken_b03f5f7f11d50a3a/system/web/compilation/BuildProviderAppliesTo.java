@@ -107,7 +107,9 @@ public class BuildProviderAppliesTo extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BuildProviderAppliesTo(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

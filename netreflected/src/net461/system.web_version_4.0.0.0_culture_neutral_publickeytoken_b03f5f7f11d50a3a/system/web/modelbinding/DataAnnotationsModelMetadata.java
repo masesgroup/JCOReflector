@@ -93,7 +93,9 @@ public class DataAnnotationsModelMetadata extends ModelMetadata  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataAnnotationsModelMetadata(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

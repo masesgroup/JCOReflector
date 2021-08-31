@@ -98,7 +98,9 @@ public class StrongNameKeyPair extends NetObject implements system.runtime.seria
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public StrongNameKeyPair(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

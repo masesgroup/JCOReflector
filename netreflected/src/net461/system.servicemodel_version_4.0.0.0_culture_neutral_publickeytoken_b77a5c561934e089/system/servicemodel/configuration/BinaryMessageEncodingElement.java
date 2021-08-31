@@ -96,7 +96,9 @@ public class BinaryMessageEncodingElement extends BindingElementExtensionElement
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BinaryMessageEncodingElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

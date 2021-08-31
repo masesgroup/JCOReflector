@@ -92,7 +92,9 @@ public class BIND_OPTS extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BIND_OPTS(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

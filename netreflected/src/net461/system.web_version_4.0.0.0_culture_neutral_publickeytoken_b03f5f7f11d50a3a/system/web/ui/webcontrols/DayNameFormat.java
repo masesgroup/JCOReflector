@@ -107,7 +107,9 @@ public class DayNameFormat extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DayNameFormat(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

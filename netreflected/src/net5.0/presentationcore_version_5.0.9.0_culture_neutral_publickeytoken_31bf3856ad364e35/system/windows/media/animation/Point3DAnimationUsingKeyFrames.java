@@ -96,7 +96,9 @@ public class Point3DAnimationUsingKeyFrames extends Point3DAnimationBase impleme
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Point3DAnimationUsingKeyFrames(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

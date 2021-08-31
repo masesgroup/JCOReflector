@@ -92,7 +92,9 @@ public class ReadOnlyState extends ContextItem  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ReadOnlyState(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

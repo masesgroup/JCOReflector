@@ -89,7 +89,9 @@ public class StringEnumerator extends NetObject implements Iterator<java.lang.St
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public StringEnumerator(JCObject instance) {
         classInstance = instance.iterator();
     }

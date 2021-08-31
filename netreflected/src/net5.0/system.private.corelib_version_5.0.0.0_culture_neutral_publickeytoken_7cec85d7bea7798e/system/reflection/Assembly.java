@@ -107,7 +107,9 @@ public class Assembly extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Assembly(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

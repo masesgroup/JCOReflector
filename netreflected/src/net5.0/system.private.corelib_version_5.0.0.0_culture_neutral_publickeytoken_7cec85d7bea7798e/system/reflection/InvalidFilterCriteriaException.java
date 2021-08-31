@@ -96,7 +96,9 @@ public class InvalidFilterCriteriaException extends ApplicationException {
     public InvalidFilterCriteriaException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InvalidFilterCriteriaException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

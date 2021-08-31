@@ -97,7 +97,9 @@ public class IMessageSinkImplementation extends NetObject implements IMessageSin
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IMessageSinkImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

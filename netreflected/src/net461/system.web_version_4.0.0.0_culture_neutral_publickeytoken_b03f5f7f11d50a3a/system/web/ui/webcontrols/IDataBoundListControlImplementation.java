@@ -97,7 +97,9 @@ public class IDataBoundListControlImplementation extends NetObject implements ID
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IDataBoundListControlImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

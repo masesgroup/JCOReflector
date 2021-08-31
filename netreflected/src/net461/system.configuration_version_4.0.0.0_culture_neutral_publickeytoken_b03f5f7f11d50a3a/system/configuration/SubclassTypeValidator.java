@@ -92,7 +92,9 @@ public class SubclassTypeValidator extends ConfigurationValidatorBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SubclassTypeValidator(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

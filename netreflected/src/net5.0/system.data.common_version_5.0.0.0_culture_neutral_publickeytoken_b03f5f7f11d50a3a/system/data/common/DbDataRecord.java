@@ -106,7 +106,9 @@ public class DbDataRecord extends NetObject implements system.componentmodel.ICu
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DbDataRecord(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

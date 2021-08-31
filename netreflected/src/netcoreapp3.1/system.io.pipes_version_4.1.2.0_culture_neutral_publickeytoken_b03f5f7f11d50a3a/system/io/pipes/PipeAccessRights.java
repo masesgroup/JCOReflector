@@ -107,7 +107,9 @@ public class PipeAccessRights extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PipeAccessRights(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

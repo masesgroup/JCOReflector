@@ -94,7 +94,9 @@ public class BezierSegment extends PathSegment  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BezierSegment(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

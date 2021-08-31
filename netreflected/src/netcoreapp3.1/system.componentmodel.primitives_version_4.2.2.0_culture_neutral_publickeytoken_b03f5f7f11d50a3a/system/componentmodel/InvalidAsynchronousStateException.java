@@ -96,7 +96,9 @@ public class InvalidAsynchronousStateException extends ArgumentException {
     public InvalidAsynchronousStateException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InvalidAsynchronousStateException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

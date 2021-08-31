@@ -93,7 +93,9 @@ public class KeyValueConfigurationCollection extends ConfigurationElementCollect
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public KeyValueConfigurationCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

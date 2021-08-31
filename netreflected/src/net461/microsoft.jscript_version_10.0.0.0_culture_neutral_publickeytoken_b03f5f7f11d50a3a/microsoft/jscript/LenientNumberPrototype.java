@@ -92,7 +92,9 @@ public class LenientNumberPrototype extends NumberPrototype  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public LenientNumberPrototype(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

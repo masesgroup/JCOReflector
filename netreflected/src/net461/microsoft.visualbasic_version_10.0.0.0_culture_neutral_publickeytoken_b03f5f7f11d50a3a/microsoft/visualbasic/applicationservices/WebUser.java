@@ -92,7 +92,9 @@ public class WebUser extends User  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WebUser(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

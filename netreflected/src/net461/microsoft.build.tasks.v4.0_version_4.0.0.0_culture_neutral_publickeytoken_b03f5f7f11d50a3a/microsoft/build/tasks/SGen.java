@@ -94,7 +94,9 @@ public class SGen extends ToolTaskExtension  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SGen(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

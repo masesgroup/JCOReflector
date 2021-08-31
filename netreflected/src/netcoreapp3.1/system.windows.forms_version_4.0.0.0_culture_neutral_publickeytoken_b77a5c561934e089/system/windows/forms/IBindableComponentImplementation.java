@@ -100,7 +100,9 @@ public class IBindableComponentImplementation extends NetObject implements IBind
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IBindableComponentImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

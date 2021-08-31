@@ -99,7 +99,9 @@ public class InvalidPrinterException extends SystemException {
     public InvalidPrinterException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InvalidPrinterException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

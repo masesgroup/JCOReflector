@@ -94,7 +94,9 @@ public class JournalEntryUnifiedViewConverter extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public JournalEntryUnifiedViewConverter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

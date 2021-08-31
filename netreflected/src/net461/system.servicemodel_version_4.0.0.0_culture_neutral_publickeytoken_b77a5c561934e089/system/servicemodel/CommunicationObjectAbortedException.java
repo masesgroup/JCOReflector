@@ -96,7 +96,9 @@ public class CommunicationObjectAbortedException extends CommunicationException 
     public CommunicationObjectAbortedException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CommunicationObjectAbortedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

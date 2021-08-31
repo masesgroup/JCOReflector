@@ -96,7 +96,9 @@ public class PerformanceCounter extends Component  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PerformanceCounter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

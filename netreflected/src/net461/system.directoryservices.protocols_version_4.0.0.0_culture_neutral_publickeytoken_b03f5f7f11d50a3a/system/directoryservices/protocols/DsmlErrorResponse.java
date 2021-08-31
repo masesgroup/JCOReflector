@@ -96,7 +96,9 @@ public class DsmlErrorResponse extends DirectoryResponse  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DsmlErrorResponse(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

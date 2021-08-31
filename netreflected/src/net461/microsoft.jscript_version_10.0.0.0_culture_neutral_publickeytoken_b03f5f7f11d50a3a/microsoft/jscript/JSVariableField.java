@@ -93,7 +93,9 @@ public class JSVariableField extends JSField  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public JSVariableField(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

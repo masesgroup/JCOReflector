@@ -91,7 +91,9 @@ public class HitTestParameters3D extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HitTestParameters3D(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

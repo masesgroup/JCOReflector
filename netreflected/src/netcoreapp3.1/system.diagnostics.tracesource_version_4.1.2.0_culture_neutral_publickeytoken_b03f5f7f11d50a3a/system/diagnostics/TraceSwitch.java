@@ -93,7 +93,9 @@ public class TraceSwitch extends Switch  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TraceSwitch(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

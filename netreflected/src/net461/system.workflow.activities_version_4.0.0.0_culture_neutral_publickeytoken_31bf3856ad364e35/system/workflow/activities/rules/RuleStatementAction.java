@@ -96,7 +96,9 @@ public class RuleStatementAction extends RuleAction  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RuleStatementAction(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

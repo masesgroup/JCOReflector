@@ -93,7 +93,9 @@ public class ComponentResourceKey extends ResourceKey  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ComponentResourceKey(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

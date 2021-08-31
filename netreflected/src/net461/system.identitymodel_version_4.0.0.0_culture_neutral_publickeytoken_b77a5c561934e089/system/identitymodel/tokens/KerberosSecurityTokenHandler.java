@@ -92,7 +92,9 @@ public class KerberosSecurityTokenHandler extends SecurityTokenHandler  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public KerberosSecurityTokenHandler(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

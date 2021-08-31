@@ -101,7 +101,9 @@ public class ActiveDirectorySchemaClass extends NetObject implements AutoCloseab
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ActiveDirectorySchemaClass(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

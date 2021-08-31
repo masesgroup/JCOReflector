@@ -93,7 +93,9 @@ public class _ModuleImplementation extends NetObject implements _Module {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public _ModuleImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

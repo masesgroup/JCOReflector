@@ -96,7 +96,9 @@ public class ReflectionModelServices extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ReflectionModelServices(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -107,7 +107,9 @@ public class RegistrationConnectionType extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RegistrationConnectionType(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

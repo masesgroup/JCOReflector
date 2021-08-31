@@ -107,7 +107,9 @@ public class ProcessWindowStyle extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ProcessWindowStyle(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

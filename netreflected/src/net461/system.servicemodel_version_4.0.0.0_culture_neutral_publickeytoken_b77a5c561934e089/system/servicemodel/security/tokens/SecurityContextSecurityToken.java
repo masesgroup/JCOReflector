@@ -97,7 +97,9 @@ public class SecurityContextSecurityToken extends SecurityToken implements AutoC
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SecurityContextSecurityToken(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

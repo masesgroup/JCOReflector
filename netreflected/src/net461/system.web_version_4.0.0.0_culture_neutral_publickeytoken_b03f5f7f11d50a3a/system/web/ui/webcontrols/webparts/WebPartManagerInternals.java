@@ -94,7 +94,9 @@ public class WebPartManagerInternals extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WebPartManagerInternals(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

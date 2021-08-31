@@ -98,7 +98,9 @@ public class DataBoundControlDesigner extends BaseDataBoundControlDesigner imple
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataBoundControlDesigner(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

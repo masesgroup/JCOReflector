@@ -96,7 +96,9 @@ public class RankException extends SystemException {
     public RankException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RankException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

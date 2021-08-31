@@ -92,7 +92,9 @@ public class SettingsContext extends Hashtable  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SettingsContext(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

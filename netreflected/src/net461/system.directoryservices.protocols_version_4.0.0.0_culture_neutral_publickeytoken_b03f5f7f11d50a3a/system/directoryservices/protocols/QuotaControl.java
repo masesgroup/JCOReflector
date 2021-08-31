@@ -93,7 +93,9 @@ public class QuotaControl extends DirectoryControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public QuotaControl(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

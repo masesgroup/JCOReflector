@@ -91,7 +91,9 @@ public class Location extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Location(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

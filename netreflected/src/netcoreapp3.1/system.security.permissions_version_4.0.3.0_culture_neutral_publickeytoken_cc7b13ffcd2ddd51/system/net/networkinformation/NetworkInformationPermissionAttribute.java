@@ -95,7 +95,9 @@ public class NetworkInformationPermissionAttribute extends CodeAccessSecurityAtt
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public NetworkInformationPermissionAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

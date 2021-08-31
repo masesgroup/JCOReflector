@@ -90,7 +90,9 @@ public class StringRuneEnumerator extends NetObject implements Iterator<Rune> {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public StringRuneEnumerator(JCObject instance) {
         classInstance = instance.iterator();
     }

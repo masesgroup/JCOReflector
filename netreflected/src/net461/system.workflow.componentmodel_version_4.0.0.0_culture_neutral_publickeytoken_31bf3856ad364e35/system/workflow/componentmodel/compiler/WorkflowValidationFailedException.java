@@ -98,7 +98,9 @@ public class WorkflowValidationFailedException extends NetException {
     public WorkflowValidationFailedException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WorkflowValidationFailedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

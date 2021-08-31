@@ -103,7 +103,9 @@ public class MaskedTextBox extends TextBoxBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MaskedTextBox(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

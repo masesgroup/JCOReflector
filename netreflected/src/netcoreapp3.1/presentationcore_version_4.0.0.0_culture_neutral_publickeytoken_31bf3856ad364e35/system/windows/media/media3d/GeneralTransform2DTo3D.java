@@ -94,7 +94,9 @@ public class GeneralTransform2DTo3D extends Freezable  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public GeneralTransform2DTo3D(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -91,7 +91,9 @@ public class IDebugTypeImplementation extends NetObject implements IDebugType {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IDebugTypeImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

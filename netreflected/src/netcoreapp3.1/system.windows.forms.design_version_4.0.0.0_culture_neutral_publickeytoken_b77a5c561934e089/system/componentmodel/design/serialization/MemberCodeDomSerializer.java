@@ -96,7 +96,9 @@ public class MemberCodeDomSerializer extends CodeDomSerializerBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MemberCodeDomSerializer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

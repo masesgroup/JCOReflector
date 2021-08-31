@@ -93,7 +93,9 @@ public class DataGridViewCellContextMenuStripNeededEventArgs extends DataGridVie
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataGridViewCellContextMenuStripNeededEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

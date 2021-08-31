@@ -91,7 +91,9 @@ public class IWebPropertyAccessorImplementation extends NetObject implements IWe
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IWebPropertyAccessorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

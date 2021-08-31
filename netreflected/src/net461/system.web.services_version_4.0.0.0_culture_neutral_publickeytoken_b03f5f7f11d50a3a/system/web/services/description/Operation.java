@@ -97,7 +97,9 @@ public class Operation extends NamedItem  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Operation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

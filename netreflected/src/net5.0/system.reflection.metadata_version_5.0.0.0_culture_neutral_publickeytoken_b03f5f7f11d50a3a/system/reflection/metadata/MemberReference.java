@@ -97,7 +97,9 @@ public class MemberReference extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MemberReference(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

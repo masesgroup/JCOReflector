@@ -107,7 +107,9 @@ public class PathAnimationSource extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PathAnimationSource(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

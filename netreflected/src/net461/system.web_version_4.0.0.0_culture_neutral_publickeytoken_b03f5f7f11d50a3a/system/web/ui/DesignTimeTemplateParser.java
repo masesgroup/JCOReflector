@@ -98,7 +98,9 @@ public class DesignTimeTemplateParser extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DesignTimeTemplateParser(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

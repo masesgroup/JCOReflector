@@ -93,7 +93,9 @@ public class SendMessageContent extends SendContent  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SendMessageContent(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

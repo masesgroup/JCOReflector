@@ -94,7 +94,9 @@ public class IScrollInfoImplementation extends NetObject implements IScrollInfo 
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IScrollInfoImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

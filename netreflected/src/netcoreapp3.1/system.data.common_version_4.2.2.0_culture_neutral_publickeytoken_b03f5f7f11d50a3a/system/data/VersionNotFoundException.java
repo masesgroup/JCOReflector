@@ -96,7 +96,9 @@ public class VersionNotFoundException extends DataException {
     public VersionNotFoundException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public VersionNotFoundException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

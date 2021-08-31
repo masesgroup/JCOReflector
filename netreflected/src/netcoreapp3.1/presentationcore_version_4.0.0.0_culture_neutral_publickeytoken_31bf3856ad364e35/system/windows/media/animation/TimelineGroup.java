@@ -97,7 +97,9 @@ public class TimelineGroup extends Timeline implements system.windows.markup.IAd
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TimelineGroup(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

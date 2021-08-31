@@ -96,7 +96,9 @@ public class IInheritanceServiceImplementation extends NetObject implements IInh
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IInheritanceServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

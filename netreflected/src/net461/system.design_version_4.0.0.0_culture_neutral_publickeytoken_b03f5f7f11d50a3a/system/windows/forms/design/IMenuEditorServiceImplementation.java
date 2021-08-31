@@ -94,7 +94,9 @@ public class IMenuEditorServiceImplementation extends NetObject implements IMenu
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IMenuEditorServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

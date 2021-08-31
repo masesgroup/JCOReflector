@@ -98,7 +98,9 @@ public class IControlDesignerViewImplementation extends NetObject implements ICo
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IControlDesignerViewImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

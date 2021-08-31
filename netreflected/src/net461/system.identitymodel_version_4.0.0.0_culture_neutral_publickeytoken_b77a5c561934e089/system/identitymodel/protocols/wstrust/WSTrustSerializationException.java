@@ -95,7 +95,9 @@ public class WSTrustSerializationException extends NetException {
     public WSTrustSerializationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WSTrustSerializationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

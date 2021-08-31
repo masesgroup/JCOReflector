@@ -92,7 +92,9 @@ public class XmlSchemaTotalDigitsFacet extends XmlSchemaNumericFacet  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlSchemaTotalDigitsFacet(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

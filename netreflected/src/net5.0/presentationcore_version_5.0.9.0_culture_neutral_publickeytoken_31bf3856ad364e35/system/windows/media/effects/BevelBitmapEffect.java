@@ -94,7 +94,9 @@ public class BevelBitmapEffect extends BitmapEffect  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BevelBitmapEffect(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

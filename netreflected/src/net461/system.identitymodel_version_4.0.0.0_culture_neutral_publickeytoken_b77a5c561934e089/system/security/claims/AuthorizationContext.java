@@ -92,7 +92,9 @@ public class AuthorizationContext extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AuthorizationContext(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

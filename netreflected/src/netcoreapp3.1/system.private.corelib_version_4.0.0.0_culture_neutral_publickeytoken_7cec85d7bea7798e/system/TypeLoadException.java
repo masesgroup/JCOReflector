@@ -98,7 +98,9 @@ public class TypeLoadException extends SystemException {
     public TypeLoadException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TypeLoadException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

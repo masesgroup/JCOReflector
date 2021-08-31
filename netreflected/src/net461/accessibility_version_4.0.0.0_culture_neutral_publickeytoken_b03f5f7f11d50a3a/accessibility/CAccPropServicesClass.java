@@ -98,7 +98,9 @@ public class CAccPropServicesClass extends __ComObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CAccPropServicesClass(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

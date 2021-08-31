@@ -96,7 +96,9 @@ public class X509SecurityTokenProvider extends SecurityTokenProvider implements 
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public X509SecurityTokenProvider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

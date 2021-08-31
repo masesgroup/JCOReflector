@@ -93,7 +93,9 @@ public class RSAPKCS1SignatureDeformatter extends AsymmetricSignatureDeformatter
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RSAPKCS1SignatureDeformatter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -107,7 +107,9 @@ public class EventAttributes extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EventAttributes(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

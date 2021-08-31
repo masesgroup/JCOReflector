@@ -92,7 +92,9 @@ public class SqlDataSourceConnectionStringEditor extends ConnectionStringEditor 
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SqlDataSourceConnectionStringEditor(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

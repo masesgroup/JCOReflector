@@ -100,7 +100,9 @@ public class ApplicationSettingsBase extends SettingsBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ApplicationSettingsBase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

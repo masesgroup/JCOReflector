@@ -95,7 +95,9 @@ public class TimeSpanSecondsOrInfiniteConverter extends TimeSpanSecondsConverter
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TimeSpanSecondsOrInfiniteConverter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

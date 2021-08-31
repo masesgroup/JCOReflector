@@ -106,7 +106,9 @@ public class NativeActivityContext extends ActivityContext  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public NativeActivityContext(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

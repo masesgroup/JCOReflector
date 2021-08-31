@@ -91,7 +91,9 @@ public class IDataErrorInfoImplementation extends NetObject implements IDataErro
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IDataErrorInfoImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

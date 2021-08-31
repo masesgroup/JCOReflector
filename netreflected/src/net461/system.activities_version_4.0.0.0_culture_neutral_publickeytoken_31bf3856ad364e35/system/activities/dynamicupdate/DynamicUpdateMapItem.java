@@ -91,7 +91,9 @@ public class DynamicUpdateMapItem extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DynamicUpdateMapItem(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

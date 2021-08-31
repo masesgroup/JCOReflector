@@ -94,7 +94,9 @@ public class IDataParameterImplementation extends NetObject implements IDataPara
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IDataParameterImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

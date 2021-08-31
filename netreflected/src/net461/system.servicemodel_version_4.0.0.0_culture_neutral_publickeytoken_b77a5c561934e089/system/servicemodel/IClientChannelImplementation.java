@@ -111,7 +111,9 @@ public class IClientChannelImplementation extends NetObject implements IClientCh
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IClientChannelImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -108,7 +108,9 @@ public class IDuplexChannelImplementation extends NetObject implements IDuplexCh
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IDuplexChannelImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

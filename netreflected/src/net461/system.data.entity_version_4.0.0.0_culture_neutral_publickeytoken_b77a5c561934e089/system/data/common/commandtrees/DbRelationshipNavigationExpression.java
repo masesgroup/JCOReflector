@@ -95,7 +95,9 @@ public class DbRelationshipNavigationExpression extends DbExpression  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DbRelationshipNavigationExpression(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class SqlColumnEncryptionCspProvider extends SqlColumnEncryptionKeyStoreP
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SqlColumnEncryptionCspProvider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

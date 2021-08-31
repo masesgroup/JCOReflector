@@ -91,7 +91,9 @@ public class IFormatProviderImplementation extends NetObject implements IFormatP
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IFormatProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

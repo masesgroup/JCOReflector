@@ -96,7 +96,9 @@ public class SecurityNegotiationException extends CommunicationException {
     public SecurityNegotiationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SecurityNegotiationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class WorkflowMenuCommands extends StandardCommands  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WorkflowMenuCommands(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

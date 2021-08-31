@@ -99,7 +99,9 @@ public class FontUnit extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FontUnit(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

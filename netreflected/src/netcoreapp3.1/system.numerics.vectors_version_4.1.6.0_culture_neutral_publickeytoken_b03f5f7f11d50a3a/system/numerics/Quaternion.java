@@ -96,7 +96,9 @@ public class Quaternion extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Quaternion(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

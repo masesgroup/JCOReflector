@@ -96,7 +96,9 @@ public class JpegBitmapDecoder extends BitmapDecoder  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public JpegBitmapDecoder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

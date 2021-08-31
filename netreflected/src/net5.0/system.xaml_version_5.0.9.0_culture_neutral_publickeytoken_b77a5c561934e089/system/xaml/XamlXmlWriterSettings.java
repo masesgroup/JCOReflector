@@ -93,7 +93,9 @@ public class XamlXmlWriterSettings extends XamlWriterSettings  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XamlXmlWriterSettings(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

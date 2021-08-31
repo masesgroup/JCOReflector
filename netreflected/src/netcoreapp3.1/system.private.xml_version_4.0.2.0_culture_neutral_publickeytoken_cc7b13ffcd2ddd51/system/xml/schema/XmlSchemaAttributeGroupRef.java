@@ -93,7 +93,9 @@ public class XmlSchemaAttributeGroupRef extends XmlSchemaAnnotated  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlSchemaAttributeGroupRef(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

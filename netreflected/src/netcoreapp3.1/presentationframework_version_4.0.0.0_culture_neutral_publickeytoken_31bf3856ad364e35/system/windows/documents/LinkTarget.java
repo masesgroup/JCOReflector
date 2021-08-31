@@ -91,7 +91,9 @@ public class LinkTarget extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public LinkTarget(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -96,7 +96,9 @@ public class COMException extends ExternalException {
     public COMException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public COMException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

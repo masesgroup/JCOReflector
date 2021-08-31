@@ -92,7 +92,9 @@ public class DeflateCookieTransform extends CookieTransform  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DeflateCookieTransform(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

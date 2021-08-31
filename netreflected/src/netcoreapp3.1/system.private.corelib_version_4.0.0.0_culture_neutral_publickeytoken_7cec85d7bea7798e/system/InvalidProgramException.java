@@ -96,7 +96,9 @@ public class InvalidProgramException extends SystemException {
     public InvalidProgramException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InvalidProgramException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

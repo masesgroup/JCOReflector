@@ -93,7 +93,9 @@ public class AddressHeaderCollectionElement extends ServiceModelConfigurationEle
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AddressHeaderCollectionElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

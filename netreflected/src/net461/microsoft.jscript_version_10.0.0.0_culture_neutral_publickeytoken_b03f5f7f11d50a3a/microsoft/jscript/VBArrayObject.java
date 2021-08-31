@@ -94,7 +94,9 @@ public class VBArrayObject extends JSObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public VBArrayObject(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -104,7 +104,9 @@ public class OracleConnection extends DbConnection implements system.ICloneable 
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public OracleConnection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

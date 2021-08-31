@@ -93,7 +93,9 @@ public class ReadOnlySiteLinkBridgeCollection extends ReadOnlyCollectionBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ReadOnlySiteLinkBridgeCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

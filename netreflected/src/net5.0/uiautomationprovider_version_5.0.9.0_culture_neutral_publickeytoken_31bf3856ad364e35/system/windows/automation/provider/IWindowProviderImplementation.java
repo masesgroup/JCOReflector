@@ -93,7 +93,9 @@ public class IWindowProviderImplementation extends NetObject implements IWindowP
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IWindowProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

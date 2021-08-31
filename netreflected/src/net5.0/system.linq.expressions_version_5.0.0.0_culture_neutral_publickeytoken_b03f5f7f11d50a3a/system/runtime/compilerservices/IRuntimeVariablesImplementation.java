@@ -91,7 +91,9 @@ public class IRuntimeVariablesImplementation extends NetObject implements IRunti
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IRuntimeVariablesImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

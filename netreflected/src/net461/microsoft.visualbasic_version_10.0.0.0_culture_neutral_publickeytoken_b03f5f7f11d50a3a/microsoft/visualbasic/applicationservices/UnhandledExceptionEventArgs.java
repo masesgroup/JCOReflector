@@ -92,7 +92,9 @@ public class UnhandledExceptionEventArgs extends ThreadExceptionEventArgs  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UnhandledExceptionEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

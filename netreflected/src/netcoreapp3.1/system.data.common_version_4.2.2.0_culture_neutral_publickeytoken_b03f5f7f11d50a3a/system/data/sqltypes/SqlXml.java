@@ -100,7 +100,9 @@ public class SqlXml extends NetObject implements system.xml.serialization.IXmlSe
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SqlXml(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

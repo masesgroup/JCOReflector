@@ -92,7 +92,9 @@ public class SafeRegistryHandle extends SafeHandleZeroOrMinusOneIsInvalid  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SafeRegistryHandle(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

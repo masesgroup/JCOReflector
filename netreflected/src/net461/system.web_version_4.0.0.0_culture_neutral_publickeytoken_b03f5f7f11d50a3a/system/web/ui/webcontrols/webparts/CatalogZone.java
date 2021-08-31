@@ -94,7 +94,9 @@ public class CatalogZone extends CatalogZoneBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CatalogZone(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

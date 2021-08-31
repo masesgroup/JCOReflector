@@ -93,7 +93,9 @@ public class IMultiTargetingSupportServiceImplementation extends NetObject imple
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IMultiTargetingSupportServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

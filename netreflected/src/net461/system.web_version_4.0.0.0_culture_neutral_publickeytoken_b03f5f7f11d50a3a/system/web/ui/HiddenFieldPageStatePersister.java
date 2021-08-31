@@ -93,7 +93,9 @@ public class HiddenFieldPageStatePersister extends PageStatePersister  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HiddenFieldPageStatePersister(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

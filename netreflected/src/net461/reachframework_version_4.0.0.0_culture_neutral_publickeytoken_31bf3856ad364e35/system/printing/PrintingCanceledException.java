@@ -96,7 +96,9 @@ public class PrintingCanceledException extends PrintJobException {
     public PrintingCanceledException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PrintingCanceledException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

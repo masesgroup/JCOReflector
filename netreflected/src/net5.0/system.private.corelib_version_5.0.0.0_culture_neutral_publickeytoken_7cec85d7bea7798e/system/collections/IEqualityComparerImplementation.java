@@ -91,7 +91,9 @@ public class IEqualityComparerImplementation extends NetObject implements IEqual
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IEqualityComparerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

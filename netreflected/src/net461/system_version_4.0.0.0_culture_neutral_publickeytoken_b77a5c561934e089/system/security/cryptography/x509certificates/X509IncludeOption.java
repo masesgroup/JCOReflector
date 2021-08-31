@@ -107,7 +107,9 @@ public class X509IncludeOption extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public X509IncludeOption(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

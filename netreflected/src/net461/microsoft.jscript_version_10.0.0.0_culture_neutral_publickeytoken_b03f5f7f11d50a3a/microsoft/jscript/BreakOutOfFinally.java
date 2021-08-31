@@ -98,7 +98,9 @@ public class BreakOutOfFinally extends ApplicationException {
     public BreakOutOfFinally() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BreakOutOfFinally(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -96,7 +96,9 @@ public class IBindableTemplateImplementation extends NetObject implements IBinda
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IBindableTemplateImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class HtmlForm extends HtmlContainerControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HtmlForm(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

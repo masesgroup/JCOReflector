@@ -99,7 +99,9 @@ public class Point3D extends ValueType implements system.IFormattable {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Point3D(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

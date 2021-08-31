@@ -93,7 +93,9 @@ public class XmlSchemaGroupBase extends XmlSchemaParticle  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlSchemaGroupBase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

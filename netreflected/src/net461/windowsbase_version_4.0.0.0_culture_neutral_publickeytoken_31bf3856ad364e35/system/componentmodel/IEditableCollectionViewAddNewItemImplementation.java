@@ -94,7 +94,9 @@ public class IEditableCollectionViewAddNewItemImplementation extends NetObject i
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IEditableCollectionViewAddNewItemImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

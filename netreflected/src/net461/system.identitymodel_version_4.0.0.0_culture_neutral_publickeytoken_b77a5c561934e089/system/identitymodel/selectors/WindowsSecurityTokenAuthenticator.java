@@ -92,7 +92,9 @@ public class WindowsSecurityTokenAuthenticator extends SecurityTokenAuthenticato
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WindowsSecurityTokenAuthenticator(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

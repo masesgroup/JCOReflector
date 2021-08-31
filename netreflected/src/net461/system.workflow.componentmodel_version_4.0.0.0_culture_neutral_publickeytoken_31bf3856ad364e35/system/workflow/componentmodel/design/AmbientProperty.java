@@ -107,7 +107,9 @@ public class AmbientProperty extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AmbientProperty(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

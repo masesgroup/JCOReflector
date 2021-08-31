@@ -92,7 +92,9 @@ public class ComplexPropertyEntry extends BuilderPropertyEntry  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ComplexPropertyEntry(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

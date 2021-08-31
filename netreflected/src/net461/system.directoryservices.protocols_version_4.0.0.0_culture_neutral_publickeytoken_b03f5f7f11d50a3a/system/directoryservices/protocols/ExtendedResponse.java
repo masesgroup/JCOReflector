@@ -92,7 +92,9 @@ public class ExtendedResponse extends DirectoryResponse  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ExtendedResponse(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

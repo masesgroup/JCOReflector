@@ -107,7 +107,9 @@ public class ImpersonationLevel extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ImpersonationLevel(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

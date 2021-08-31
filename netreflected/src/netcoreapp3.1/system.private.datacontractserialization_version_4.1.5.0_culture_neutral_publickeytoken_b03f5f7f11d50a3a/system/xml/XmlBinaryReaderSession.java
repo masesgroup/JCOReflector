@@ -92,7 +92,9 @@ public class XmlBinaryReaderSession extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlBinaryReaderSession(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

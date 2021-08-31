@@ -92,7 +92,9 @@ public class LenientFunctionPrototype extends FunctionPrototype  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public LenientFunctionPrototype(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

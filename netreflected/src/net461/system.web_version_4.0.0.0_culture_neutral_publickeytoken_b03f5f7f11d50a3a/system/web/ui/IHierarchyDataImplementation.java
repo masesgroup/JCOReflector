@@ -95,7 +95,9 @@ public class IHierarchyDataImplementation extends NetObject implements IHierarch
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IHierarchyDataImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

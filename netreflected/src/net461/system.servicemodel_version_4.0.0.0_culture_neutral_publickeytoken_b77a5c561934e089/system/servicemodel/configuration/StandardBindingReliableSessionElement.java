@@ -94,7 +94,9 @@ public class StandardBindingReliableSessionElement extends ServiceModelConfigura
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public StandardBindingReliableSessionElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

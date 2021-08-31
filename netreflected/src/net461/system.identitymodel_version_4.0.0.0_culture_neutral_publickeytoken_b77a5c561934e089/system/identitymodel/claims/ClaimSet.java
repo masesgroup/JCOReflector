@@ -93,7 +93,9 @@ public class ClaimSet extends NetObjectEnumerable  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ClaimSet(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

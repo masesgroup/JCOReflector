@@ -103,7 +103,9 @@ public class PrintServer extends PrintSystemObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PrintServer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

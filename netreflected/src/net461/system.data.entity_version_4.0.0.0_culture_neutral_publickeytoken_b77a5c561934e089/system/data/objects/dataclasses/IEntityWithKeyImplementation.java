@@ -92,7 +92,9 @@ public class IEntityWithKeyImplementation extends NetObject implements IEntityWi
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IEntityWithKeyImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

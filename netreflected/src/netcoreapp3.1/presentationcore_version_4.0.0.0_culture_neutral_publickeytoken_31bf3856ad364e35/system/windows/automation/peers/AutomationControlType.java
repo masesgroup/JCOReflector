@@ -107,7 +107,9 @@ public class AutomationControlType extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AutomationControlType(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

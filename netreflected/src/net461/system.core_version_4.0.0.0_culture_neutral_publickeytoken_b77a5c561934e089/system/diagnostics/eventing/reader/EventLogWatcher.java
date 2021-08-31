@@ -93,7 +93,9 @@ public class EventLogWatcher extends NetObject implements AutoCloseable {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EventLogWatcher(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

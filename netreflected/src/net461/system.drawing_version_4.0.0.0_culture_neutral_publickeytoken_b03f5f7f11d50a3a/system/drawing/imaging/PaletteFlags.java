@@ -107,7 +107,9 @@ public class PaletteFlags extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PaletteFlags(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

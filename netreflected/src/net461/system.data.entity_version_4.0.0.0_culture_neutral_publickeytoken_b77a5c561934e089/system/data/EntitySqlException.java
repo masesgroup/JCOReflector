@@ -98,7 +98,9 @@ public class EntitySqlException extends EntityException {
     public EntitySqlException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EntitySqlException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -95,7 +95,9 @@ public class HttpRequestException extends NetException {
     public HttpRequestException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HttpRequestException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

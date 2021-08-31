@@ -107,7 +107,9 @@ public class TickStyle extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TickStyle(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

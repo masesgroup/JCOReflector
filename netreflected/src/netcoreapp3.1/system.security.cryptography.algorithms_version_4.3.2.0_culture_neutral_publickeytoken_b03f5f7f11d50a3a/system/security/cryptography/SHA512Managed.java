@@ -92,7 +92,9 @@ public class SHA512Managed extends SHA512  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SHA512Managed(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

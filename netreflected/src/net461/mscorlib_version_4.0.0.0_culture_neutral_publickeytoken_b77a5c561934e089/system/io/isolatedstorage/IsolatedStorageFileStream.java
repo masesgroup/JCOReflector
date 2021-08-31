@@ -101,7 +101,9 @@ public class IsolatedStorageFileStream extends FileStream  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IsolatedStorageFileStream(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

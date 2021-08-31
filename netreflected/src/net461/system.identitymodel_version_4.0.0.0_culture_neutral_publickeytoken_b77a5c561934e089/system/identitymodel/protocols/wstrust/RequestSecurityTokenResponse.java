@@ -96,7 +96,9 @@ public class RequestSecurityTokenResponse extends WSTrustMessage  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RequestSecurityTokenResponse(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

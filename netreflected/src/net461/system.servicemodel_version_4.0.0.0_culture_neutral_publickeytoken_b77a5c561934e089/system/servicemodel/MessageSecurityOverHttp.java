@@ -93,7 +93,9 @@ public class MessageSecurityOverHttp extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MessageSecurityOverHttp(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

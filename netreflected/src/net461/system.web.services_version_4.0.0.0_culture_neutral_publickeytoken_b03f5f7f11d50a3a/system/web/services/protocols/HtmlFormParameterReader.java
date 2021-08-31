@@ -93,7 +93,9 @@ public class HtmlFormParameterReader extends ValueCollectionParameterReader  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HtmlFormParameterReader(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

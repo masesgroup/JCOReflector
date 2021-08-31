@@ -91,7 +91,9 @@ public class IChannelCredentialsImplementation extends NetObject implements ICha
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IChannelCredentialsImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

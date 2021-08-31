@@ -99,7 +99,9 @@ public class ForestTrustCollisionException extends ActiveDirectoryOperationExcep
     public ForestTrustCollisionException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ForestTrustCollisionException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

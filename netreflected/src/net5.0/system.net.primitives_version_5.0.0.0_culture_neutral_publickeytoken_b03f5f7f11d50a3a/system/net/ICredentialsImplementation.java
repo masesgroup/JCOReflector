@@ -93,7 +93,9 @@ public class ICredentialsImplementation extends NetObject implements ICredential
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ICredentialsImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

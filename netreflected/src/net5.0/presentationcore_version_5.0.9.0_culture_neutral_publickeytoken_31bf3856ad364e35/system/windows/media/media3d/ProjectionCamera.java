@@ -95,7 +95,9 @@ public class ProjectionCamera extends Camera  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ProjectionCamera(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

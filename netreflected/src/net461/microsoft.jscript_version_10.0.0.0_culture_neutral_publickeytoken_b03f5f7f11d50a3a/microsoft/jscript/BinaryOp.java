@@ -92,7 +92,9 @@ public class BinaryOp extends AST  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BinaryOp(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

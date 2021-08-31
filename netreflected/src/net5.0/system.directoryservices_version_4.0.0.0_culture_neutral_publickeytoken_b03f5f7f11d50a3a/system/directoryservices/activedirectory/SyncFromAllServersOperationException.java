@@ -99,7 +99,9 @@ public class SyncFromAllServersOperationException extends ActiveDirectoryOperati
     public SyncFromAllServersOperationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SyncFromAllServersOperationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -96,7 +96,9 @@ public class HtmlInputCheckBox extends HtmlInputControl implements system.web.ui
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HtmlInputCheckBox(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

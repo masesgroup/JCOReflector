@@ -92,7 +92,9 @@ public class HierarchicalDataBoundControlAdapter extends WebControlAdapter  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HierarchicalDataBoundControlAdapter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -91,7 +91,9 @@ public class IStrongBoxImplementation extends NetObject implements IStrongBox {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IStrongBoxImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

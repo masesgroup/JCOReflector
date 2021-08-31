@@ -102,7 +102,9 @@ public class FaultException extends CommunicationException {
     public FaultException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FaultException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

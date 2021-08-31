@@ -107,7 +107,9 @@ public class SupportedJoinOperators extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SupportedJoinOperators(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

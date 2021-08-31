@@ -93,7 +93,9 @@ public class TaskDialogVerificationCheckBox extends TaskDialogControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TaskDialogVerificationCheckBox(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

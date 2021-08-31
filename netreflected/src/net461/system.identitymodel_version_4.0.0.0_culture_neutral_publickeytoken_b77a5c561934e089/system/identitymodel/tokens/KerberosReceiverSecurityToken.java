@@ -96,7 +96,9 @@ public class KerberosReceiverSecurityToken extends WindowsSecurityToken  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public KerberosReceiverSecurityToken(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

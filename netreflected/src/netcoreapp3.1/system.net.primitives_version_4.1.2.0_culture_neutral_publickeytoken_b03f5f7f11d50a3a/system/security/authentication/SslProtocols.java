@@ -107,7 +107,9 @@ public class SslProtocols extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SslProtocols(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

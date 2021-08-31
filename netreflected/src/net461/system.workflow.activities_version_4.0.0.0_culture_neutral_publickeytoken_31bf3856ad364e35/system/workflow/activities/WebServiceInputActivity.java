@@ -101,7 +101,9 @@ public class WebServiceInputActivity extends Activity implements system.workflow
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WebServiceInputActivity(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

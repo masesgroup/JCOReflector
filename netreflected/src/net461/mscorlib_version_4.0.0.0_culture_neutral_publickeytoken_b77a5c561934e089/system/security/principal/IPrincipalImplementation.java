@@ -93,7 +93,9 @@ public class IPrincipalImplementation extends NetObject implements IPrincipal {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IPrincipalImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

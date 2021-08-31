@@ -93,7 +93,9 @@ public class PriorityBindingExpression extends BindingExpressionBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PriorityBindingExpression(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

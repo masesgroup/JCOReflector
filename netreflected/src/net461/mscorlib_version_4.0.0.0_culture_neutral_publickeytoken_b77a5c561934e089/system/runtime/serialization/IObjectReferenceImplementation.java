@@ -92,7 +92,9 @@ public class IObjectReferenceImplementation extends NetObject implements IObject
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IObjectReferenceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

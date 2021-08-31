@@ -93,7 +93,9 @@ public class UCOMIEnumStringImplementation extends NetObject implements UCOMIEnu
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UCOMIEnumStringImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

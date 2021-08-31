@@ -99,7 +99,9 @@ public class LoginView extends Control implements system.web.ui.INamingContainer
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public LoginView(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

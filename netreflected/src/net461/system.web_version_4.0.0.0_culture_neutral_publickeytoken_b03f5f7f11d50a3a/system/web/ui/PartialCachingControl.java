@@ -93,7 +93,9 @@ public class PartialCachingControl extends BasePartialCachingControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PartialCachingControl(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class XmlArrayItemAttributes extends CollectionBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlArrayItemAttributes(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

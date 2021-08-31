@@ -96,7 +96,9 @@ public class ActivityExecutionContext extends NetObject implements system.IDispo
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ActivityExecutionContext(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

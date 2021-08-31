@@ -92,7 +92,9 @@ public class UserNameSecurityTokenParameters extends SecurityTokenParameters  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UserNameSecurityTokenParameters(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

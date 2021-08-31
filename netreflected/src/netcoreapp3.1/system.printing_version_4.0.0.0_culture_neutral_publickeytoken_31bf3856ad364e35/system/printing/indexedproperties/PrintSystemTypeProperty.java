@@ -92,7 +92,9 @@ public class PrintSystemTypeProperty extends PrintProperty  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PrintSystemTypeProperty(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

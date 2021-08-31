@@ -92,7 +92,9 @@ public class IInputLanguageSourceImplementation extends NetObject implements IIn
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IInputLanguageSourceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

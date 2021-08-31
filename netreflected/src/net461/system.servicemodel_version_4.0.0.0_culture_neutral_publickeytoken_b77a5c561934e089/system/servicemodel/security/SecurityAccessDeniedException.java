@@ -96,7 +96,9 @@ public class SecurityAccessDeniedException extends CommunicationException {
     public SecurityAccessDeniedException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SecurityAccessDeniedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

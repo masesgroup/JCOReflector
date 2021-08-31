@@ -100,7 +100,9 @@ public class _FieldInfoImplementation extends NetObject implements _FieldInfo {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public _FieldInfoImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

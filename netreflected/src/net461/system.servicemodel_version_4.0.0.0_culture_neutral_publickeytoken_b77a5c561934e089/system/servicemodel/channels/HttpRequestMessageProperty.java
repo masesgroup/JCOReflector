@@ -96,7 +96,9 @@ public class HttpRequestMessageProperty extends NetObject implements system.serv
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HttpRequestMessageProperty(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

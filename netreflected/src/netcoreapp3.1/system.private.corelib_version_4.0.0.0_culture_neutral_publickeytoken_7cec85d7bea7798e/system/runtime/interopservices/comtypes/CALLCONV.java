@@ -107,7 +107,9 @@ public class CALLCONV extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CALLCONV(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

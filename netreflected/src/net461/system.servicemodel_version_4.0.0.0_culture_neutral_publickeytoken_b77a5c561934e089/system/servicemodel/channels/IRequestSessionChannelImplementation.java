@@ -106,7 +106,9 @@ public class IRequestSessionChannelImplementation extends NetObject implements I
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IRequestSessionChannelImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

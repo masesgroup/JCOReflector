@@ -96,7 +96,9 @@ public class IUnvalidatedValueProviderSourceImplementation extends NetObject imp
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IUnvalidatedValueProviderSourceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -96,7 +96,9 @@ public class AssemblyContextControlItem extends ContextItem  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AssemblyContextControlItem(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

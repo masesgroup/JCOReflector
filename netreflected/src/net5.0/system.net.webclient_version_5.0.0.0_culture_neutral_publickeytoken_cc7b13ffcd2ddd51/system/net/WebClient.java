@@ -115,7 +115,9 @@ public class WebClient extends Component  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WebClient(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

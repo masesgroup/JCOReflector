@@ -107,7 +107,9 @@ public class SizeToContent extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SizeToContent(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

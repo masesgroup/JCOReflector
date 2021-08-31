@@ -93,7 +93,9 @@ public class AnimationClock extends Clock  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AnimationClock(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

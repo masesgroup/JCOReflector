@@ -95,7 +95,9 @@ public class DataGridItem extends TableRow implements system.web.ui.INamingConta
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataGridItem(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

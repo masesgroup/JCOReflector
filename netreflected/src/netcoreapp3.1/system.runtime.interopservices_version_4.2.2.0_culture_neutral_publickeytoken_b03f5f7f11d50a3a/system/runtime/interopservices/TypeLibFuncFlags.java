@@ -107,7 +107,9 @@ public class TypeLibFuncFlags extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TypeLibFuncFlags(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

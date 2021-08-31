@@ -100,7 +100,9 @@ public class CodeDomDesignerLoader extends BasicDesignerLoader implements system
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CodeDomDesignerLoader(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

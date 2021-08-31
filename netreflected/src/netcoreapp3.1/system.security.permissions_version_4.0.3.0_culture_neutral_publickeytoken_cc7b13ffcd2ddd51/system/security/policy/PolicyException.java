@@ -96,7 +96,9 @@ public class PolicyException extends SystemException {
     public PolicyException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PolicyException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

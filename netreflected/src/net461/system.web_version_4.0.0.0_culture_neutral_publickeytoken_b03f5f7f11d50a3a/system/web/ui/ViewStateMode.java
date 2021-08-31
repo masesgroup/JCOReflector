@@ -107,7 +107,9 @@ public class ViewStateMode extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ViewStateMode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

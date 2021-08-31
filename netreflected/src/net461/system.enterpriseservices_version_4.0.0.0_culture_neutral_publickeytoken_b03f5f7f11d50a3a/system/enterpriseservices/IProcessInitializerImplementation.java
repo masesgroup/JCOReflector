@@ -91,7 +91,9 @@ public class IProcessInitializerImplementation extends NetObject implements IPro
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IProcessInitializerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

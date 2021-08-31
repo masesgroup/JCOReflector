@@ -103,7 +103,9 @@ public class ComponentDocumentDesigner extends ComponentDesigner implements syst
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ComponentDocumentDesigner(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

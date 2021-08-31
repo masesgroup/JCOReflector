@@ -97,7 +97,9 @@ public class MustUnderstandBehavior extends NetObject implements system.servicem
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MustUnderstandBehavior(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

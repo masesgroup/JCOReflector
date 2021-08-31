@@ -90,7 +90,9 @@ public class CryptographicAttributeObjectEnumerator extends NetObject implements
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CryptographicAttributeObjectEnumerator(JCObject instance) {
         classInstance = instance.iterator();
     }

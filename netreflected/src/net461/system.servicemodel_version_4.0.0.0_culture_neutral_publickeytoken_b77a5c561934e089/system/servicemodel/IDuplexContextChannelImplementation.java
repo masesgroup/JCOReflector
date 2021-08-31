@@ -109,7 +109,9 @@ public class IDuplexContextChannelImplementation extends NetObject implements ID
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IDuplexContextChannelImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

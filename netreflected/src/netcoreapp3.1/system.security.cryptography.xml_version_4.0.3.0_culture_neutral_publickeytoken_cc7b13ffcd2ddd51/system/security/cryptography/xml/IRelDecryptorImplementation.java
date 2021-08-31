@@ -94,7 +94,9 @@ public class IRelDecryptorImplementation extends NetObject implements IRelDecryp
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IRelDecryptorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

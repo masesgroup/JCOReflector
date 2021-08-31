@@ -92,7 +92,9 @@ public class IUnknownConstantAttribute extends CustomConstantAttribute  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IUnknownConstantAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

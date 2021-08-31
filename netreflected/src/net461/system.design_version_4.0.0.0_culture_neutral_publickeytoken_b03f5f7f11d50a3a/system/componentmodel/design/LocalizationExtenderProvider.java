@@ -96,7 +96,9 @@ public class LocalizationExtenderProvider extends NetObject implements AutoClose
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public LocalizationExtenderProvider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -96,7 +96,9 @@ public class InstanceNotFoundException extends InstrumentationException {
     public InstanceNotFoundException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InstanceNotFoundException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

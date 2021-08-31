@@ -98,7 +98,9 @@ public class SoapHeaderException extends SoapException {
     public SoapHeaderException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SoapHeaderException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class UploadValuesCompletedEventArgs extends AsyncCompletedEventArgs  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UploadValuesCompletedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

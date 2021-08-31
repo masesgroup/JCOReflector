@@ -96,7 +96,9 @@ public class IXmlSchemaInfoImplementation extends NetObject implements IXmlSchem
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IXmlSchemaInfoImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

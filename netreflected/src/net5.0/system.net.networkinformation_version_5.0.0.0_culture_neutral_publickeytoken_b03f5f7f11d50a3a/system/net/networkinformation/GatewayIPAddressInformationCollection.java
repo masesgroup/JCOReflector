@@ -92,7 +92,9 @@ public class GatewayIPAddressInformationCollection extends NetObjectEnumerable  
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public GatewayIPAddressInformationCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

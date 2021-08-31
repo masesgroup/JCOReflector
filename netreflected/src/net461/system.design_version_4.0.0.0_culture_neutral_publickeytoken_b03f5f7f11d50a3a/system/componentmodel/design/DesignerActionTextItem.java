@@ -92,7 +92,9 @@ public class DesignerActionTextItem extends DesignerActionItem  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DesignerActionTextItem(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

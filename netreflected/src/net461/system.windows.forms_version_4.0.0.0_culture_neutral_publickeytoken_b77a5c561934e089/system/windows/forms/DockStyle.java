@@ -107,7 +107,9 @@ public class DockStyle extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DockStyle(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

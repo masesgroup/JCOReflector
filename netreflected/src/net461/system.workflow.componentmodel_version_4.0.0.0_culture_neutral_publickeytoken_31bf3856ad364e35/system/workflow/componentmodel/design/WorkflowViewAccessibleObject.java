@@ -96,7 +96,9 @@ public class WorkflowViewAccessibleObject extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WorkflowViewAccessibleObject(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

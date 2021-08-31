@@ -102,7 +102,9 @@ public class IBuildEngine3Implementation extends NetObject implements IBuildEngi
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IBuildEngine3Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

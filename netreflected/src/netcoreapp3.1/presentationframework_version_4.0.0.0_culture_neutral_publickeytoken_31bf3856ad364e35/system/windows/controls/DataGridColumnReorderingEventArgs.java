@@ -94,7 +94,9 @@ public class DataGridColumnReorderingEventArgs extends DataGridColumnEventArgs  
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataGridColumnReorderingEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

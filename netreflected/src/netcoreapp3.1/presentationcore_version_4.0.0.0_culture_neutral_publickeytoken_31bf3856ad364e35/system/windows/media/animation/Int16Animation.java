@@ -97,7 +97,9 @@ public class Int16Animation extends Int16AnimationBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Int16Animation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

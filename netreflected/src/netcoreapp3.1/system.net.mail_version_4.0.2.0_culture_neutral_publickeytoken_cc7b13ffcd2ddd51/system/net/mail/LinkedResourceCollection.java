@@ -91,7 +91,9 @@ public class LinkedResourceCollection extends NetObjectEnumerable implements Aut
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public LinkedResourceCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

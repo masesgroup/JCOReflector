@@ -92,7 +92,9 @@ public class ReadOnlyMemoryContent extends HttpContent  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ReadOnlyMemoryContent(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

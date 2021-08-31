@@ -99,7 +99,9 @@ public class ErrorResponseException extends DirectoryException {
     public ErrorResponseException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ErrorResponseException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

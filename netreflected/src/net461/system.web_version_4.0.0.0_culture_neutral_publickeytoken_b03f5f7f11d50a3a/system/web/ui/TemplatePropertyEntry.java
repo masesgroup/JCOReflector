@@ -92,7 +92,9 @@ public class TemplatePropertyEntry extends BuilderPropertyEntry  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TemplatePropertyEntry(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

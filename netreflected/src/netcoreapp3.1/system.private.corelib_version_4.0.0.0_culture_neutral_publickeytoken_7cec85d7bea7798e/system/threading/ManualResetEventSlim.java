@@ -94,7 +94,9 @@ public class ManualResetEventSlim extends NetObject implements AutoCloseable {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ManualResetEventSlim(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -96,7 +96,9 @@ public class InvalidCastException extends SystemException {
     public InvalidCastException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InvalidCastException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

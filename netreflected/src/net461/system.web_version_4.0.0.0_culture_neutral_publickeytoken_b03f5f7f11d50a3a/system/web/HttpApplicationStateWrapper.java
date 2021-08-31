@@ -97,7 +97,9 @@ public class HttpApplicationStateWrapper extends HttpApplicationStateBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HttpApplicationStateWrapper(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

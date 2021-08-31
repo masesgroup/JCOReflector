@@ -92,7 +92,9 @@ public class HtmlMeta extends HtmlControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HtmlMeta(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

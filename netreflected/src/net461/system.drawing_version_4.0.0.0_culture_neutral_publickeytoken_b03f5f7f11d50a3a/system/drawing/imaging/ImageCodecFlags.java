@@ -107,7 +107,9 @@ public class ImageCodecFlags extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ImageCodecFlags(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

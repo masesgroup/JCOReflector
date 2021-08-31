@@ -92,7 +92,9 @@ public class SafeProcessHandle extends SafeHandleZeroOrMinusOneIsInvalid  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SafeProcessHandle(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

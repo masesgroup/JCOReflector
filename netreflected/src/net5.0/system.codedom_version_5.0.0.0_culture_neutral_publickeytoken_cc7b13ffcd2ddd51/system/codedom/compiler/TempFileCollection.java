@@ -94,7 +94,9 @@ public class TempFileCollection extends NetObjectEnumerable implements system.ID
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TempFileCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

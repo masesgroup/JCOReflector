@@ -98,7 +98,9 @@ public class XmlSchemaValidationException extends XmlSchemaException {
     public XmlSchemaValidationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlSchemaValidationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

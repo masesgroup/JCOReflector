@@ -96,7 +96,9 @@ public class HtmlInputFile extends HtmlInputControl implements system.web.ui.IPo
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HtmlInputFile(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

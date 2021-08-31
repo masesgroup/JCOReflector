@@ -96,7 +96,9 @@ public class AssemblyCatalog extends ComposablePartCatalog  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AssemblyCatalog(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

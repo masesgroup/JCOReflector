@@ -99,7 +99,9 @@ public class LinkLabel extends Label  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public LinkLabel(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -106,7 +106,9 @@ public class IClientChannelSinkImplementation extends NetObject implements IClie
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IClientChannelSinkImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -107,7 +107,9 @@ public class DataGridGridLinesVisibility extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataGridGridLinesVisibility(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

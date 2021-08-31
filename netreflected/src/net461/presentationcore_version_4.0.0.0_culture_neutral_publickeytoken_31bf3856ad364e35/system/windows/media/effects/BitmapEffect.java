@@ -95,7 +95,9 @@ public class BitmapEffect extends Animatable  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BitmapEffect(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

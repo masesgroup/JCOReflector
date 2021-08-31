@@ -96,7 +96,9 @@ public class DependencyObject extends DispatcherObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DependencyObject(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

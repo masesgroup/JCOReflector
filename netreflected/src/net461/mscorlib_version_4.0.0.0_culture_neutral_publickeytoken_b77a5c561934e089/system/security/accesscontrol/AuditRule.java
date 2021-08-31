@@ -93,7 +93,9 @@ public class AuditRule extends AuthorizationRule  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AuditRule(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

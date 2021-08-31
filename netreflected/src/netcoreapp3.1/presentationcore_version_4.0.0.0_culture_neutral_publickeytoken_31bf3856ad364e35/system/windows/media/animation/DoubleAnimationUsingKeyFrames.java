@@ -96,7 +96,9 @@ public class DoubleAnimationUsingKeyFrames extends DoubleAnimationBase implement
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DoubleAnimationUsingKeyFrames(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

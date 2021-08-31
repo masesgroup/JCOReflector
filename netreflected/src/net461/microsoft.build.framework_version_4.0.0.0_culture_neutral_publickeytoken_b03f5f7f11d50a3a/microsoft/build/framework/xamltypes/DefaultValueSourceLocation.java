@@ -107,7 +107,9 @@ public class DefaultValueSourceLocation extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DefaultValueSourceLocation(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

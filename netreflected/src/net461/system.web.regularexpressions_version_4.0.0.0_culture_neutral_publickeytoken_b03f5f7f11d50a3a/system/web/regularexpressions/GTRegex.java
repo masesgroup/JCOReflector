@@ -93,7 +93,9 @@ public class GTRegex extends Regex  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public GTRegex(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

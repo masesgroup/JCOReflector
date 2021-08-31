@@ -96,7 +96,9 @@ public class DeleteTreeAccessRule extends ActiveDirectoryAccessRule  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DeleteTreeAccessRule(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

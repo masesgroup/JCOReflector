@@ -99,7 +99,9 @@ public class FileFormatException extends FormatException {
     public FileFormatException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FileFormatException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

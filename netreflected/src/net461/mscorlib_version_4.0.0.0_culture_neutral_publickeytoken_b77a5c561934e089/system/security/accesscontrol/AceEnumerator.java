@@ -90,7 +90,9 @@ public class AceEnumerator extends NetObject implements Iterator<GenericAce> {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AceEnumerator(JCObject instance) {
         classInstance = instance.iterator();
     }

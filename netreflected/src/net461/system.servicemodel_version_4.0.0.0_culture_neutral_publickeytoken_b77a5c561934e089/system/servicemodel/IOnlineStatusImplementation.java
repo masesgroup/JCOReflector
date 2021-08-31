@@ -92,7 +92,9 @@ public class IOnlineStatusImplementation extends NetObject implements IOnlineSta
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IOnlineStatusImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -96,7 +96,9 @@ public class MasterPage extends UserControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MasterPage(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -100,7 +100,9 @@ public class ITypeInfoImplementation extends NetObject implements ITypeInfo {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ITypeInfoImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

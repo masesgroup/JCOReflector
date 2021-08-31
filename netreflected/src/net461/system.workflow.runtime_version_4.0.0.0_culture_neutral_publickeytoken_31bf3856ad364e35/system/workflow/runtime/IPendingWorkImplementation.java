@@ -94,7 +94,9 @@ public class IPendingWorkImplementation extends NetObject implements IPendingWor
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IPendingWorkImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -101,7 +101,9 @@ public class EntityCommand extends DbCommand  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EntityCommand(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

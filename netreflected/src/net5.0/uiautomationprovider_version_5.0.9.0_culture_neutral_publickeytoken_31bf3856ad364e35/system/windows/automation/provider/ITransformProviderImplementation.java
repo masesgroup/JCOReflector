@@ -91,7 +91,9 @@ public class ITransformProviderImplementation extends NetObject implements ITran
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ITransformProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

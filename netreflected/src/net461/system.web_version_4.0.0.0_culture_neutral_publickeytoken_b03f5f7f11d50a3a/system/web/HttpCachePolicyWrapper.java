@@ -101,7 +101,9 @@ public class HttpCachePolicyWrapper extends HttpCachePolicyBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HttpCachePolicyWrapper(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

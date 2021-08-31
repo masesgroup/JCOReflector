@@ -96,7 +96,9 @@ public class HttpCapabilitiesDefaultProvider extends HttpCapabilitiesProvider  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HttpCapabilitiesDefaultProvider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

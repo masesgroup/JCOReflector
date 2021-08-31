@@ -92,7 +92,9 @@ public class TypeBigIntSchemaImporterExtension extends SqlTypesSchemaImporterExt
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TypeBigIntSchemaImporterExtension(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

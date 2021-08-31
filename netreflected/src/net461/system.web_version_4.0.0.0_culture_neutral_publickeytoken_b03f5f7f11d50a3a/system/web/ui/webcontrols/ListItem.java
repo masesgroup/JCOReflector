@@ -97,7 +97,9 @@ public class ListItem extends NetObject implements system.web.ui.IParserAccessor
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ListItem(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

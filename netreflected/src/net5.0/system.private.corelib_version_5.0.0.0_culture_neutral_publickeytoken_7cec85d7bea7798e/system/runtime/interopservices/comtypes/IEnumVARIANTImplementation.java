@@ -93,7 +93,9 @@ public class IEnumVARIANTImplementation extends NetObject implements IEnumVARIAN
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IEnumVARIANTImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

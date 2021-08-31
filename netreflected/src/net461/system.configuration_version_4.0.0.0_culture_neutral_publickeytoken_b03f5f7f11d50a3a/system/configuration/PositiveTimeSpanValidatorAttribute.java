@@ -93,7 +93,9 @@ public class PositiveTimeSpanValidatorAttribute extends ConfigurationValidatorAt
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PositiveTimeSpanValidatorAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

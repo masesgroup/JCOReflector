@@ -97,7 +97,9 @@ public class ActiveDirectoryAuditRule extends ObjectAuditRule  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ActiveDirectoryAuditRule(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

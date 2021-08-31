@@ -94,7 +94,9 @@ public class RsaEncryptionCookieTransform extends CookieTransform  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RsaEncryptionCookieTransform(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

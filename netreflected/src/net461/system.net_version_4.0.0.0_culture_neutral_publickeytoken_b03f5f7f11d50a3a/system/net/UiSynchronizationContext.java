@@ -92,7 +92,9 @@ public class UiSynchronizationContext extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UiSynchronizationContext(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

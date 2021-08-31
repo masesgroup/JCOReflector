@@ -94,7 +94,9 @@ public class XmlSchemaRedefine extends XmlSchemaExternal  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlSchemaRedefine(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

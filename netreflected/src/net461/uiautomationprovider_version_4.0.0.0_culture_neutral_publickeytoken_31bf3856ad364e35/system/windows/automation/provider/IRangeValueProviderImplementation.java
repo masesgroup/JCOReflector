@@ -91,7 +91,9 @@ public class IRangeValueProviderImplementation extends NetObject implements IRan
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IRangeValueProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

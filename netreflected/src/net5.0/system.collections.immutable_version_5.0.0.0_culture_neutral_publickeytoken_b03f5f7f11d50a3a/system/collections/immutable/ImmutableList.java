@@ -91,7 +91,9 @@ public class ImmutableList extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ImmutableList(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

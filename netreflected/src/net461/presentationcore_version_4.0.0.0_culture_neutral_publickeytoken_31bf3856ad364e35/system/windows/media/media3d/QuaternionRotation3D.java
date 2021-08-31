@@ -94,7 +94,9 @@ public class QuaternionRotation3D extends Rotation3D  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public QuaternionRotation3D(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

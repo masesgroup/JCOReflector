@@ -93,7 +93,9 @@ public class IEnvoyInfoImplementation extends NetObject implements IEnvoyInfo {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IEnvoyInfoImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

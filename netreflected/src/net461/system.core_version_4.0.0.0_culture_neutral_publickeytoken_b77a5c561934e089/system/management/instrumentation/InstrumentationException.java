@@ -96,7 +96,9 @@ public class InstrumentationException extends InstrumentationBaseException {
     public InstrumentationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InstrumentationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

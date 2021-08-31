@@ -96,7 +96,9 @@ public class NavigatorInvalidBodyAccessException extends InvalidBodyAccessExcept
     public NavigatorInvalidBodyAccessException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public NavigatorInvalidBodyAccessException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

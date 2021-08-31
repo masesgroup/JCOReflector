@@ -93,7 +93,9 @@ public class CodeBinaryOperatorExpression extends CodeExpression  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CodeBinaryOperatorExpression(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

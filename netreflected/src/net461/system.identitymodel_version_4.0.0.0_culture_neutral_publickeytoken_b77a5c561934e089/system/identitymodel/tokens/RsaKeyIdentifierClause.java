@@ -95,7 +95,9 @@ public class RsaKeyIdentifierClause extends SecurityKeyIdentifierClause  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RsaKeyIdentifierClause(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

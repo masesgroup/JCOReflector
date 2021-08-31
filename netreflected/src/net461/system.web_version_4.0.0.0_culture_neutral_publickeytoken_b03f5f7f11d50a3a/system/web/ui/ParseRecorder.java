@@ -97,7 +97,9 @@ public class ParseRecorder extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ParseRecorder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -94,7 +94,9 @@ public class IColorizeTextImplementation extends NetObject implements IColorizeT
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IColorizeTextImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

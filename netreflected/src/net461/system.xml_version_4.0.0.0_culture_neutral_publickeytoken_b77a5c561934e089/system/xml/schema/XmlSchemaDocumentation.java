@@ -93,7 +93,9 @@ public class XmlSchemaDocumentation extends XmlSchemaObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlSchemaDocumentation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class _ParameterInfoImplementation extends NetObject implements _Paramete
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public _ParameterInfoImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

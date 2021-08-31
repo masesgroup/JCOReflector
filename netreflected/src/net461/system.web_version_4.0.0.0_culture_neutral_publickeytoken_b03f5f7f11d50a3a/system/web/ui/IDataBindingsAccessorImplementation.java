@@ -92,7 +92,9 @@ public class IDataBindingsAccessorImplementation extends NetObject implements ID
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IDataBindingsAccessorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

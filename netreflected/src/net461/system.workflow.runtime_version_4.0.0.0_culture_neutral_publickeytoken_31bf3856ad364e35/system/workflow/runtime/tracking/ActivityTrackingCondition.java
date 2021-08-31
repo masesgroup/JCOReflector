@@ -93,7 +93,9 @@ public class ActivityTrackingCondition extends TrackingCondition  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ActivityTrackingCondition(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

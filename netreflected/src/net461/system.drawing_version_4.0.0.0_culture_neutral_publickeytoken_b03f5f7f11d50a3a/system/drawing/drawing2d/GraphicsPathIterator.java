@@ -94,7 +94,9 @@ public class GraphicsPathIterator extends MarshalByRefObject implements AutoClos
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public GraphicsPathIterator(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

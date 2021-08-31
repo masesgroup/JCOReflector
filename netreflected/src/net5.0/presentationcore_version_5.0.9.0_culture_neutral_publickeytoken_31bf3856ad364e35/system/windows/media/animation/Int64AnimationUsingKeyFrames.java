@@ -96,7 +96,9 @@ public class Int64AnimationUsingKeyFrames extends Int64AnimationBase implements 
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Int64AnimationUsingKeyFrames(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

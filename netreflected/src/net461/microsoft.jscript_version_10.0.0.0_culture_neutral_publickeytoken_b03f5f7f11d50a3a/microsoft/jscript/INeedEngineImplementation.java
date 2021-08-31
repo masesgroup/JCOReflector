@@ -92,7 +92,9 @@ public class INeedEngineImplementation extends NetObject implements INeedEngine 
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public INeedEngineImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

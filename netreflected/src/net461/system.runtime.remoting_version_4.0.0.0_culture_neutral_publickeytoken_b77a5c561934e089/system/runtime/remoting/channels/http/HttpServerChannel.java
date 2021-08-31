@@ -100,7 +100,9 @@ public class HttpServerChannel extends BaseChannelWithProperties  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HttpServerChannel(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

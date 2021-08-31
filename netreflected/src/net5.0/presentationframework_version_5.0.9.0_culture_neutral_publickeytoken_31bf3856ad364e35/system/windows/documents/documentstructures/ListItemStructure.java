@@ -95,7 +95,9 @@ public class ListItemStructure extends SemanticBasicElement implements system.wi
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ListItemStructure(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

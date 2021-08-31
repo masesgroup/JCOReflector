@@ -96,7 +96,9 @@ public class TypeAccessException extends TypeLoadException {
     public TypeAccessException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TypeAccessException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -95,7 +95,9 @@ public class AsynchronousOperationException extends NetException {
     public AsynchronousOperationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AsynchronousOperationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

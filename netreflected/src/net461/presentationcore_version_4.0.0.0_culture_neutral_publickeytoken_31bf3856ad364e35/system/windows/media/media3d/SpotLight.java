@@ -96,7 +96,9 @@ public class SpotLight extends PointLightBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SpotLight(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

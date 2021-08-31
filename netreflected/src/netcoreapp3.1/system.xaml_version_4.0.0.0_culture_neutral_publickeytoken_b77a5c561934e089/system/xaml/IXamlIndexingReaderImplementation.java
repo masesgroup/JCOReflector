@@ -91,7 +91,9 @@ public class IXamlIndexingReaderImplementation extends NetObject implements IXam
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IXamlIndexingReaderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

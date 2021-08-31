@@ -96,7 +96,9 @@ public class ObjectAnimationUsingKeyFrames extends ObjectAnimationBase implement
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ObjectAnimationUsingKeyFrames(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

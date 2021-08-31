@@ -98,7 +98,9 @@ public class ClientViaBehavior extends NetObject implements system.servicemodel.
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ClientViaBehavior(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

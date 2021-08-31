@@ -98,7 +98,9 @@ public class WarningException extends SystemException {
     public WarningException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WarningException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

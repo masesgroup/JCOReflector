@@ -94,7 +94,9 @@ public class DSAKeyValue extends KeyInfoClause  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DSAKeyValue(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

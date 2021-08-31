@@ -107,7 +107,9 @@ public class AccessControlModification extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AccessControlModification(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

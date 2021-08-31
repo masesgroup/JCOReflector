@@ -93,7 +93,9 @@ public class WorkflowOutlineNode extends TreeNode  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WorkflowOutlineNode(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

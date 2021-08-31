@@ -96,7 +96,9 @@ public class ThicknessAnimationUsingKeyFrames extends ThicknessAnimationBase imp
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ThicknessAnimationUsingKeyFrames(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

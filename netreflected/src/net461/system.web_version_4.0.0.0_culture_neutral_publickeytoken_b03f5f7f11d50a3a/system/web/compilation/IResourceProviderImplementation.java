@@ -94,7 +94,9 @@ public class IResourceProviderImplementation extends NetObject implements IResou
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IResourceProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

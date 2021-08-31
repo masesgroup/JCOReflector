@@ -92,7 +92,9 @@ public class LenientBooleanPrototype extends BooleanPrototype  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public LenientBooleanPrototype(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

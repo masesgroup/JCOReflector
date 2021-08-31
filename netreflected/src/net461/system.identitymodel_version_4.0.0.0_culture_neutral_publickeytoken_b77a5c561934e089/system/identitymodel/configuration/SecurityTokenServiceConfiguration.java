@@ -99,7 +99,9 @@ public class SecurityTokenServiceConfiguration extends IdentityConfiguration  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SecurityTokenServiceConfiguration(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

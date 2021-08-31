@@ -94,7 +94,9 @@ public class Compensator extends ServicedComponent  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Compensator(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

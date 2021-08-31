@@ -97,7 +97,9 @@ public class FaultHandlerActivity extends CompositeActivity implements system.wo
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FaultHandlerActivity(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

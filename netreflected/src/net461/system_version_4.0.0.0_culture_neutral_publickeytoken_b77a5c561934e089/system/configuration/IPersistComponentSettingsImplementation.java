@@ -91,7 +91,9 @@ public class IPersistComponentSettingsImplementation extends NetObject implement
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IPersistComponentSettingsImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

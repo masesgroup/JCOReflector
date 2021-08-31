@@ -91,7 +91,9 @@ public class INotifyDataErrorInfoImplementation extends NetObject implements INo
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public INotifyDataErrorInfoImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

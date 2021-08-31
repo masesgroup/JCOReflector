@@ -92,7 +92,9 @@ public class ReceiveParametersContent extends ReceiveContent  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ReceiveParametersContent(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

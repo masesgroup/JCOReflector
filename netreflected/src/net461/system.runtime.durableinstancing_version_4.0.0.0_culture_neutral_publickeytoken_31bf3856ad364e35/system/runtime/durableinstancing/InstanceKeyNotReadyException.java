@@ -101,7 +101,9 @@ public class InstanceKeyNotReadyException extends InstancePersistenceCommandExce
     public InstanceKeyNotReadyException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InstanceKeyNotReadyException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

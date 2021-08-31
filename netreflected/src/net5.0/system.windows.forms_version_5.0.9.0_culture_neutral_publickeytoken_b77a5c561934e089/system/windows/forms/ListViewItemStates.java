@@ -107,7 +107,9 @@ public class ListViewItemStates extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ListViewItemStates(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

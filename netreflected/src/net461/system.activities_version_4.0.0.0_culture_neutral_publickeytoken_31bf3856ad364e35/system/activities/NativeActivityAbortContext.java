@@ -92,7 +92,9 @@ public class NativeActivityAbortContext extends ActivityContext  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public NativeActivityAbortContext(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

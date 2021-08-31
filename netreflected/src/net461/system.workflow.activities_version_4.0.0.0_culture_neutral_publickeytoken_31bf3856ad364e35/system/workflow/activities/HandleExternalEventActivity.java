@@ -101,7 +101,9 @@ public class HandleExternalEventActivity extends Activity implements system.work
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HandleExternalEventActivity(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

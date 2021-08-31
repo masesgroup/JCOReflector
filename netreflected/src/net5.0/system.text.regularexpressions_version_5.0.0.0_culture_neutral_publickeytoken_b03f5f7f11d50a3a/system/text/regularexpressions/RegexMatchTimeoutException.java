@@ -97,7 +97,9 @@ public class RegexMatchTimeoutException extends TimeoutException {
     public RegexMatchTimeoutException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RegexMatchTimeoutException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class CriticalHandle extends CriticalFinalizerObject implements AutoClose
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CriticalHandle(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

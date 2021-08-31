@@ -94,7 +94,9 @@ public class FindInList extends TaskExtension  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FindInList(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

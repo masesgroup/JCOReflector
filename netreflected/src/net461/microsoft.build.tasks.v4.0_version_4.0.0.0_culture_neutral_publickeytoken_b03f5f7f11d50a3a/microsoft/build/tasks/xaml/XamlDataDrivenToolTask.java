@@ -93,7 +93,9 @@ public class XamlDataDrivenToolTask extends ToolTask  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XamlDataDrivenToolTask(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

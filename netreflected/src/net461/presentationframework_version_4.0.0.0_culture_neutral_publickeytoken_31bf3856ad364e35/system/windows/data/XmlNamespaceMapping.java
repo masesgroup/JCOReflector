@@ -94,7 +94,9 @@ public class XmlNamespaceMapping extends NetObject implements system.componentmo
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlNamespaceMapping(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

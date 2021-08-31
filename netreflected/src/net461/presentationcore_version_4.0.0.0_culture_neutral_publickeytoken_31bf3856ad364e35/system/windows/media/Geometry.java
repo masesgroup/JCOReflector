@@ -105,7 +105,9 @@ public class Geometry extends Animatable implements system.IFormattable {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Geometry(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

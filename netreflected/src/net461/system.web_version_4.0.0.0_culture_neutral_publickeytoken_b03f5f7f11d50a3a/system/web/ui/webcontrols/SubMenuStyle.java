@@ -103,7 +103,9 @@ public class SubMenuStyle extends Style implements system.componentmodel.ICustom
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SubMenuStyle(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

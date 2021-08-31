@@ -92,7 +92,9 @@ public class FaultPropagationQueryElement extends TrackingQueryElement  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FaultPropagationQueryElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

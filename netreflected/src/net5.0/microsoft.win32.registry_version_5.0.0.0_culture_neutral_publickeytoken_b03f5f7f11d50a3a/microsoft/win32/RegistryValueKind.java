@@ -107,7 +107,9 @@ public class RegistryValueKind extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RegistryValueKind(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class _AssemblyBuilderImplementation extends NetObject implements _Assemb
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public _AssemblyBuilderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

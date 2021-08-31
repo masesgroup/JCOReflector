@@ -94,7 +94,9 @@ public class RouteUrlExpressionEditorSheet extends ExpressionEditorSheet  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RouteUrlExpressionEditorSheet(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

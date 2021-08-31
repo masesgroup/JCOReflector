@@ -93,7 +93,9 @@ public class ReplicationFailureCollection extends ReadOnlyCollectionBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ReplicationFailureCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

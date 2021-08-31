@@ -95,7 +95,9 @@ public class IssuedSecurityTokenParameters extends SecurityTokenParameters  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IssuedSecurityTokenParameters(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

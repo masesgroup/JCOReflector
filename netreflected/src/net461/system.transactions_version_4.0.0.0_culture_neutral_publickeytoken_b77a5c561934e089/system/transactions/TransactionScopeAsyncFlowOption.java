@@ -107,7 +107,9 @@ public class TransactionScopeAsyncFlowOption extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TransactionScopeAsyncFlowOption(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -107,7 +107,9 @@ public class X500DistinguishedNameFlags extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public X500DistinguishedNameFlags(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

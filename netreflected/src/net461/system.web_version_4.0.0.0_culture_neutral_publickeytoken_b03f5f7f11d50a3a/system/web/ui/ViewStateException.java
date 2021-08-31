@@ -97,7 +97,9 @@ public class ViewStateException extends NetException {
     public ViewStateException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ViewStateException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

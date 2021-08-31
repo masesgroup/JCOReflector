@@ -93,7 +93,9 @@ public class EventToken extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EventToken(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

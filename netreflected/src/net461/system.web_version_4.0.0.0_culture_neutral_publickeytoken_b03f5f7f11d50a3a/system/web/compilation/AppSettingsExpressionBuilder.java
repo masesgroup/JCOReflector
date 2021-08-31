@@ -95,7 +95,9 @@ public class AppSettingsExpressionBuilder extends ExpressionBuilder  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AppSettingsExpressionBuilder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

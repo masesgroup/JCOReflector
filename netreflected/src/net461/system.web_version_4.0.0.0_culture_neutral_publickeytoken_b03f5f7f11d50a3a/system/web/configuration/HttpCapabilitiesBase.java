@@ -101,7 +101,9 @@ public class HttpCapabilitiesBase extends NetObject implements system.web.ui.IFi
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HttpCapabilitiesBase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

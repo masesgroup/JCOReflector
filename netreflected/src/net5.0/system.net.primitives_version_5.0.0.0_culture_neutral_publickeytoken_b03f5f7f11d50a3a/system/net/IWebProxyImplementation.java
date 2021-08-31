@@ -94,7 +94,9 @@ public class IWebProxyImplementation extends NetObject implements IWebProxy {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IWebProxyImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -96,7 +96,9 @@ public class IndexOutOfRangeException extends SystemException {
     public IndexOutOfRangeException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IndexOutOfRangeException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

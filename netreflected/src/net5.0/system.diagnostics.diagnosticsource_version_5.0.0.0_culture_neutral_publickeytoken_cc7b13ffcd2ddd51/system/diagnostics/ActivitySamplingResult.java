@@ -107,7 +107,9 @@ public class ActivitySamplingResult extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ActivitySamplingResult(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

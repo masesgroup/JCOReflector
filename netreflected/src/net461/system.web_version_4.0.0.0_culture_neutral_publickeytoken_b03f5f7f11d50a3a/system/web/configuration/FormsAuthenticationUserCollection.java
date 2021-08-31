@@ -94,7 +94,9 @@ public class FormsAuthenticationUserCollection extends ConfigurationElementColle
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FormsAuthenticationUserCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

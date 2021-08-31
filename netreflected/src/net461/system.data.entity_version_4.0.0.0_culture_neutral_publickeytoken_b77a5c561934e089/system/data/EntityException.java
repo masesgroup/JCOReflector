@@ -96,7 +96,9 @@ public class EntityException extends DataException {
     public EntityException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EntityException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

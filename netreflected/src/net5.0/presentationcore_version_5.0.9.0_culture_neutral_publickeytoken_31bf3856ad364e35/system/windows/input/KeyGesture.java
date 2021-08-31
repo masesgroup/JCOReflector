@@ -96,7 +96,9 @@ public class KeyGesture extends InputGesture  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public KeyGesture(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

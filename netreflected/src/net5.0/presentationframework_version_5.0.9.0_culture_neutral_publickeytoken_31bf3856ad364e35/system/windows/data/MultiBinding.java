@@ -100,7 +100,9 @@ public class MultiBinding extends BindingBase implements system.windows.markup.I
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MultiBinding(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

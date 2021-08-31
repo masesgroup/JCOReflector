@@ -107,7 +107,9 @@ public class JournalOwnership extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public JournalOwnership(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

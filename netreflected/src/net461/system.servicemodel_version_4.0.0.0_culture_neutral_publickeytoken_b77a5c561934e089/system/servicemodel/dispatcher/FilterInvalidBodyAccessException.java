@@ -96,7 +96,9 @@ public class FilterInvalidBodyAccessException extends InvalidBodyAccessException
     public FilterInvalidBodyAccessException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FilterInvalidBodyAccessException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

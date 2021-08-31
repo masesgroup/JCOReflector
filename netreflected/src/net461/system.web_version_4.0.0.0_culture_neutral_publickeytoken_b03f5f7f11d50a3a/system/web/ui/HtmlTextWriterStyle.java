@@ -107,7 +107,9 @@ public class HtmlTextWriterStyle extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HtmlTextWriterStyle(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

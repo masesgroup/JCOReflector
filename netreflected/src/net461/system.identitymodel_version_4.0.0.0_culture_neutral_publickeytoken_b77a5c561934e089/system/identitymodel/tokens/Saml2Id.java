@@ -91,7 +91,9 @@ public class Saml2Id extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Saml2Id(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

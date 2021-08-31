@@ -94,7 +94,9 @@ public class Exec extends ToolTaskExtension  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Exec(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

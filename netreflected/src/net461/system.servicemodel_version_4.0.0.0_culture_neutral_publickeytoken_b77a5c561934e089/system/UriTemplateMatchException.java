@@ -96,7 +96,9 @@ public class UriTemplateMatchException extends SystemException {
     public UriTemplateMatchException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UriTemplateMatchException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

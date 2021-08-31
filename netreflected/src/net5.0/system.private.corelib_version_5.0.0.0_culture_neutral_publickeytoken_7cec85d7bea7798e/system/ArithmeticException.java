@@ -96,7 +96,9 @@ public class ArithmeticException extends SystemException {
     public ArithmeticException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ArithmeticException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

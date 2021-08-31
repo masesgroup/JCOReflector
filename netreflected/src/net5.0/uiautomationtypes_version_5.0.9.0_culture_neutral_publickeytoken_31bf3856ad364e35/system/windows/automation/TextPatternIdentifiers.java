@@ -91,7 +91,9 @@ public class TextPatternIdentifiers extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TextPatternIdentifiers(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

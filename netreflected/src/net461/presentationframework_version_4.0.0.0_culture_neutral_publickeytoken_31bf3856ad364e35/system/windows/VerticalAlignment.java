@@ -107,7 +107,9 @@ public class VerticalAlignment extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public VerticalAlignment(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

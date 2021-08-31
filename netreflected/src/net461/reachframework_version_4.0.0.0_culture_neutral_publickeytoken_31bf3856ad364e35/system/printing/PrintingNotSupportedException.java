@@ -98,7 +98,9 @@ public class PrintingNotSupportedException extends PrintSystemException {
     public PrintingNotSupportedException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PrintingNotSupportedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

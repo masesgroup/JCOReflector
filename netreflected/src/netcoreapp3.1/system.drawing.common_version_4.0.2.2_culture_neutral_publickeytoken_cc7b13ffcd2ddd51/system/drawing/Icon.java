@@ -100,7 +100,9 @@ public class Icon extends MarshalByRefObject implements system.runtime.serializa
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Icon(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

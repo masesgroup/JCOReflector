@@ -93,7 +93,9 @@ public class IndexedProtocolEndpoint extends ProtocolEndpoint  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IndexedProtocolEndpoint(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

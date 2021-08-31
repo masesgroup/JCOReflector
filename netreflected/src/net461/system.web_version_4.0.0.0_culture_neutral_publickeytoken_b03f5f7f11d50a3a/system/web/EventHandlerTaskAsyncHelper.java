@@ -94,7 +94,9 @@ public class EventHandlerTaskAsyncHelper extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EventHandlerTaskAsyncHelper(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

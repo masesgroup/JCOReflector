@@ -92,7 +92,9 @@ public class SerializationObjectManager extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SerializationObjectManager(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

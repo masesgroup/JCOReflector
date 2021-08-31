@@ -98,7 +98,9 @@ public class OleDbRowUpdatedEventArgs extends RowUpdatedEventArgs  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public OleDbRowUpdatedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

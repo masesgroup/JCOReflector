@@ -94,7 +94,9 @@ public class SecurityIdentifier extends IdentityReference  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SecurityIdentifier(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

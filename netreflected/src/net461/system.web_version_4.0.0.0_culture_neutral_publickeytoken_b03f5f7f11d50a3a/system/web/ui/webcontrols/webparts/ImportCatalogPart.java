@@ -95,7 +95,9 @@ public class ImportCatalogPart extends CatalogPart  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ImportCatalogPart(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

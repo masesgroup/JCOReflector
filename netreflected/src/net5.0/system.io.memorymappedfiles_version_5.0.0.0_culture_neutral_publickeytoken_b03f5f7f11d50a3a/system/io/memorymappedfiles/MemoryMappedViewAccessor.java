@@ -93,7 +93,9 @@ public class MemoryMappedViewAccessor extends UnmanagedMemoryAccessor  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MemoryMappedViewAccessor(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

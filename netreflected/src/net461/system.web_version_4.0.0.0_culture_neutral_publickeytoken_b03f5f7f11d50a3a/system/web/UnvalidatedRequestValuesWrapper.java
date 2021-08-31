@@ -97,7 +97,9 @@ public class UnvalidatedRequestValuesWrapper extends UnvalidatedRequestValuesBas
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UnvalidatedRequestValuesWrapper(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

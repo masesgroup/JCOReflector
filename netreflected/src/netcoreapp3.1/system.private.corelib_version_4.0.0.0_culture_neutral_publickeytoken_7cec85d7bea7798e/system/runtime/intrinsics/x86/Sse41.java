@@ -94,7 +94,9 @@ public class Sse41 extends Ssse3  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Sse41(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

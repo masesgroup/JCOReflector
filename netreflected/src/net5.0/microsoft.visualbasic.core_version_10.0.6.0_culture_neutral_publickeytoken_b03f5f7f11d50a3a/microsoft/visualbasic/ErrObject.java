@@ -91,7 +91,9 @@ public class ErrObject extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ErrObject(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

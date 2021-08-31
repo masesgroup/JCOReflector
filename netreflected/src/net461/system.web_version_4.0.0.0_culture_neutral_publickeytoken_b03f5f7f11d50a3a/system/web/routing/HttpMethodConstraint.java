@@ -97,7 +97,9 @@ public class HttpMethodConstraint extends NetObject implements system.web.routin
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HttpMethodConstraint(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

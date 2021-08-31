@@ -107,7 +107,9 @@ public class ColorMode extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ColorMode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

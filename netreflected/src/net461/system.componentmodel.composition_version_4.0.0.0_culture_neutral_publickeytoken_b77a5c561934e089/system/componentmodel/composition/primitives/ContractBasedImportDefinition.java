@@ -94,7 +94,9 @@ public class ContractBasedImportDefinition extends ImportDefinition  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ContractBasedImportDefinition(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

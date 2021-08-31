@@ -93,7 +93,9 @@ public class ImageMetadata extends Freezable  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ImageMetadata(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

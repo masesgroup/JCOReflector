@@ -97,7 +97,9 @@ public class ICancelableTaskImplementation extends NetObject implements ICancela
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ICancelableTaskImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

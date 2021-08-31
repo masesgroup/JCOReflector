@@ -97,7 +97,9 @@ public class Inline extends TextElement  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Inline(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

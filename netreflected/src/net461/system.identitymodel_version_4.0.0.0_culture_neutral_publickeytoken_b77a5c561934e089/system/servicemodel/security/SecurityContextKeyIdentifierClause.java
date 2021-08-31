@@ -93,7 +93,9 @@ public class SecurityContextKeyIdentifierClause extends SecurityKeyIdentifierCla
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SecurityContextKeyIdentifierClause(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

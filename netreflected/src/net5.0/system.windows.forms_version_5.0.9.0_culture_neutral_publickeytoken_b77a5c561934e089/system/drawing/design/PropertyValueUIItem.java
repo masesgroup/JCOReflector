@@ -93,7 +93,9 @@ public class PropertyValueUIItem extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PropertyValueUIItem(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

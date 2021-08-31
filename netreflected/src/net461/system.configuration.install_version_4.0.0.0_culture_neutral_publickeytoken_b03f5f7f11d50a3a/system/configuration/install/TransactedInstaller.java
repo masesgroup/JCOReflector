@@ -94,7 +94,9 @@ public class TransactedInstaller extends Installer  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TransactedInstaller(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

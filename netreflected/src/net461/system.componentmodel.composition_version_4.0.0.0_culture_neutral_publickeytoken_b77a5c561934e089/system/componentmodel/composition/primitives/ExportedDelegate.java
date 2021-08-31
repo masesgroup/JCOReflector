@@ -92,7 +92,9 @@ public class ExportedDelegate extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ExportedDelegate(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

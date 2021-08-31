@@ -115,7 +115,9 @@ public class FrameworkContentElement extends ContentElement implements system.wi
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FrameworkContentElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

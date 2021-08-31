@@ -97,7 +97,9 @@ public class DataProtectionPermission extends CodeAccessPermission  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataProtectionPermission(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

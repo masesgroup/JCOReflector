@@ -107,7 +107,9 @@ public class DuplicateAddressDetectionState extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DuplicateAddressDetectionState(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

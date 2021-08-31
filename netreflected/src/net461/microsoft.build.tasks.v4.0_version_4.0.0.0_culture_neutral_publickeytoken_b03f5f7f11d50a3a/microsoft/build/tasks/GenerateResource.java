@@ -94,7 +94,9 @@ public class GenerateResource extends TaskExtension  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public GenerateResource(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

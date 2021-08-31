@@ -92,7 +92,9 @@ public class CodeVariableReferenceExpression extends CodeExpression  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CodeVariableReferenceExpression(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

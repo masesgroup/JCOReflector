@@ -107,7 +107,9 @@ public class DataGridViewEditMode extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataGridViewEditMode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

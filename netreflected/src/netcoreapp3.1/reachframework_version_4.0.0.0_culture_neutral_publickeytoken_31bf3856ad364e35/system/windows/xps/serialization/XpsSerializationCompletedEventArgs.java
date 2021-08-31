@@ -92,7 +92,9 @@ public class XpsSerializationCompletedEventArgs extends AsyncCompletedEventArgs 
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XpsSerializationCompletedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

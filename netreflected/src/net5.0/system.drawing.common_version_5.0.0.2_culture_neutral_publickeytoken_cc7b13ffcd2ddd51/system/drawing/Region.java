@@ -102,7 +102,9 @@ public class Region extends MarshalByRefObject implements AutoCloseable {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Region(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

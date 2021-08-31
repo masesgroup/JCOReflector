@@ -94,7 +94,9 @@ public class IPromotableSinglePhaseNotificationImplementation extends NetObject 
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IPromotableSinglePhaseNotificationImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -111,7 +111,9 @@ public class XpsDocument extends XpsPartBase implements system.IDisposable, Auto
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XpsDocument(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

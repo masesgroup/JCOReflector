@@ -104,7 +104,9 @@ public class ErrorProvider extends Component implements system.componentmodel.IS
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ErrorProvider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

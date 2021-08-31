@@ -99,7 +99,9 @@ public class HostProtectionException extends SystemException {
     public HostProtectionException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HostProtectionException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

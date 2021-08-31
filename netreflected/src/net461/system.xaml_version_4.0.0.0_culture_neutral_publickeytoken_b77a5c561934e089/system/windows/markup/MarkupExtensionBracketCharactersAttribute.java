@@ -92,7 +92,9 @@ public class MarkupExtensionBracketCharactersAttribute extends Attribute  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MarkupExtensionBracketCharactersAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

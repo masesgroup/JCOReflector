@@ -95,7 +95,9 @@ public class AsnContentException extends NetException {
     public AsnContentException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AsnContentException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

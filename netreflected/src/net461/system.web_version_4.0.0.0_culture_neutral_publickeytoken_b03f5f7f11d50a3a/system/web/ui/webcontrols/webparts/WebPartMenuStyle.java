@@ -105,7 +105,9 @@ public class WebPartMenuStyle extends TableStyle implements system.componentmode
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WebPartMenuStyle(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

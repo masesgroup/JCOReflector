@@ -93,7 +93,9 @@ public class ServerTagsRegex extends Regex  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ServerTagsRegex(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

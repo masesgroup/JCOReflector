@@ -92,7 +92,9 @@ public class CompositionScopeDefinition extends ComposablePartCatalog  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CompositionScopeDefinition(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

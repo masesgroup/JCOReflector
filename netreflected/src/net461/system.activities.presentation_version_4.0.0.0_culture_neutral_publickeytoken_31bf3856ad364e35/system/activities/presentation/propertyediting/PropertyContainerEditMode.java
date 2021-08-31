@@ -107,7 +107,9 @@ public class PropertyContainerEditMode extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PropertyContainerEditMode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class EdmEnumTypeAttribute extends EdmTypeAttribute  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EdmEnumTypeAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

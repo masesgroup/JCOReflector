@@ -93,7 +93,9 @@ public class Documentation extends MetadataItem  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Documentation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

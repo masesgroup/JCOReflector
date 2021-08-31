@@ -99,7 +99,9 @@ public class CmdLineException extends NetException {
     public CmdLineException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CmdLineException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -98,7 +98,9 @@ public class ServiceMetadataContractBehavior extends NetObject implements system
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ServiceMetadataContractBehavior(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

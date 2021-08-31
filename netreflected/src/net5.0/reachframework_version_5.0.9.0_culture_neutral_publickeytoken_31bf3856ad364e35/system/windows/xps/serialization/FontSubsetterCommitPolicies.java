@@ -107,7 +107,9 @@ public class FontSubsetterCommitPolicies extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FontSubsetterCommitPolicies(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

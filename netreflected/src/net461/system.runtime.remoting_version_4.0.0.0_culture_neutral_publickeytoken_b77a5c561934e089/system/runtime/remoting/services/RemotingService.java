@@ -98,7 +98,9 @@ public class RemotingService extends Component  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RemotingService(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -97,7 +97,9 @@ public class CommittableTransaction extends Transaction  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CommittableTransaction(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

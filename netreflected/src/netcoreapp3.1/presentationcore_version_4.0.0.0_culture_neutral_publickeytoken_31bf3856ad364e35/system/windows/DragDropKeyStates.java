@@ -107,7 +107,9 @@ public class DragDropKeyStates extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DragDropKeyStates(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

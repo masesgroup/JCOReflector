@@ -95,7 +95,9 @@ public class IAuthorizationPolicyImplementation extends NetObject implements IAu
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IAuthorizationPolicyImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

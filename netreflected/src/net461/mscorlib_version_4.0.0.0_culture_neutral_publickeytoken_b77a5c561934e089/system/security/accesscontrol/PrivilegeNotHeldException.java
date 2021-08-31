@@ -98,7 +98,9 @@ public class PrivilegeNotHeldException extends UnauthorizedAccessException {
     public PrivilegeNotHeldException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PrivilegeNotHeldException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

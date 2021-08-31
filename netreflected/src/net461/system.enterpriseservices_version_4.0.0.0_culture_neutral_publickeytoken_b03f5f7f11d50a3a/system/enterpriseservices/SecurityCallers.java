@@ -92,7 +92,9 @@ public class SecurityCallers extends NetObjectEnumerable  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SecurityCallers(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

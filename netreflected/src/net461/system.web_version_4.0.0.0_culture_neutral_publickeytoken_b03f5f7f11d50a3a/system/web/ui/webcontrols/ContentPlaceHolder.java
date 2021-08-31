@@ -94,7 +94,9 @@ public class ContentPlaceHolder extends Control implements system.web.ui.INaming
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ContentPlaceHolder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

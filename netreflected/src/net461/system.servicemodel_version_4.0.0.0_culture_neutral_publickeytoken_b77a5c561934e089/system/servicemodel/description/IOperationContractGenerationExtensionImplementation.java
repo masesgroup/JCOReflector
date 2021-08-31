@@ -92,7 +92,9 @@ public class IOperationContractGenerationExtensionImplementation extends NetObje
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IOperationContractGenerationExtensionImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

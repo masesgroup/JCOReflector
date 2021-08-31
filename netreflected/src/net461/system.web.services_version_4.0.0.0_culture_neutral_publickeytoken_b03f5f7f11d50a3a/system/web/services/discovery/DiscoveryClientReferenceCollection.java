@@ -95,7 +95,9 @@ public class DiscoveryClientReferenceCollection extends DictionaryBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DiscoveryClientReferenceCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

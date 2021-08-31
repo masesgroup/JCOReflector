@@ -92,7 +92,9 @@ public class Dp extends AdvSimd  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Dp(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -109,7 +109,9 @@ public class HwndSource extends PresentationSource implements AutoCloseable {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HwndSource(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

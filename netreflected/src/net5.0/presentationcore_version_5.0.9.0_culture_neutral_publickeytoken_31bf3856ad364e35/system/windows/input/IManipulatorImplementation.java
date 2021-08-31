@@ -95,7 +95,9 @@ public class IManipulatorImplementation extends NetObject implements IManipulato
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IManipulatorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

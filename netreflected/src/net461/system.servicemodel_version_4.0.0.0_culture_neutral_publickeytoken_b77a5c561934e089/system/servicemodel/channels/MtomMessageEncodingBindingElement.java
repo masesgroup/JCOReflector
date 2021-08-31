@@ -106,7 +106,9 @@ public class MtomMessageEncodingBindingElement extends MessageEncodingBindingEle
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MtomMessageEncodingBindingElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

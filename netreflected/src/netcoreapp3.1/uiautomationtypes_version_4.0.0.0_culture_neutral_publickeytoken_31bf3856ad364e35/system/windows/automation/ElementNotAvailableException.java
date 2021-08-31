@@ -98,7 +98,9 @@ public class ElementNotAvailableException extends SystemException {
     public ElementNotAvailableException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ElementNotAvailableException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

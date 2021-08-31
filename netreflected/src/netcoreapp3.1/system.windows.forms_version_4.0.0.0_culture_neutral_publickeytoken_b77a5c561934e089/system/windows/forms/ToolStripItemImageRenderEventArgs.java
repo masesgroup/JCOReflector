@@ -96,7 +96,9 @@ public class ToolStripItemImageRenderEventArgs extends ToolStripItemRenderEventA
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ToolStripItemImageRenderEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

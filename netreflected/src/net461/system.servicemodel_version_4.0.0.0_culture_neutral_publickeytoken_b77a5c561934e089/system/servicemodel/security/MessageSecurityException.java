@@ -96,7 +96,9 @@ public class MessageSecurityException extends CommunicationException {
     public MessageSecurityException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MessageSecurityException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

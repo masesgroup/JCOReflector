@@ -92,7 +92,9 @@ public class IEventRedirectorImplementation extends NetObject implements IEventR
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IEventRedirectorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

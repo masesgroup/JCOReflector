@@ -94,7 +94,9 @@ public class CollectionType extends EdmType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CollectionType(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

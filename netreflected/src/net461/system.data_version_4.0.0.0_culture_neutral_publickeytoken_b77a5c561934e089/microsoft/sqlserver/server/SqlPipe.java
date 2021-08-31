@@ -94,7 +94,9 @@ public class SqlPipe extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SqlPipe(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

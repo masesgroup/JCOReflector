@@ -91,7 +91,9 @@ public class Pair extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Pair(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

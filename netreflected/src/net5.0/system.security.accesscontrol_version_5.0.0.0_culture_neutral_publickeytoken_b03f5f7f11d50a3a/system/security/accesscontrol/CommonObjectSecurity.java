@@ -93,7 +93,9 @@ public class CommonObjectSecurity extends ObjectSecurity  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CommonObjectSecurity(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

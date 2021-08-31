@@ -107,7 +107,9 @@ public class TableCaptionAlign extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TableCaptionAlign(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

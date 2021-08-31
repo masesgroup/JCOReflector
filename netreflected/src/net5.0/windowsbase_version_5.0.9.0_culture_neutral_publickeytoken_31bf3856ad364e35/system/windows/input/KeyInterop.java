@@ -92,7 +92,9 @@ public class KeyInterop extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public KeyInterop(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

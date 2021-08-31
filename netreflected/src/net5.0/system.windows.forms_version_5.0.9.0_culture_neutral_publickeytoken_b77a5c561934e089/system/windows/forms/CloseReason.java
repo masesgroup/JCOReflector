@@ -107,7 +107,9 @@ public class CloseReason extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CloseReason(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

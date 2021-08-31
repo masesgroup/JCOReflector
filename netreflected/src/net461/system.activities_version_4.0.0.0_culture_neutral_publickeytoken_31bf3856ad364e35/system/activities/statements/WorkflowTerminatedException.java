@@ -95,7 +95,9 @@ public class WorkflowTerminatedException extends NetException {
     public WorkflowTerminatedException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WorkflowTerminatedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -102,7 +102,9 @@ public class SemaphoreSecurity extends NativeObjectSecurity  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SemaphoreSecurity(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

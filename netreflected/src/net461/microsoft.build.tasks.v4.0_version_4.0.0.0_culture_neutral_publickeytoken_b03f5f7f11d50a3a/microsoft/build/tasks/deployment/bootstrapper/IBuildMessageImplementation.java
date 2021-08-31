@@ -92,7 +92,9 @@ public class IBuildMessageImplementation extends NetObject implements IBuildMess
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IBuildMessageImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

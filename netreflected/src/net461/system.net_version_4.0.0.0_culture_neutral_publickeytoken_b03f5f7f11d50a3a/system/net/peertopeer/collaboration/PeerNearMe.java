@@ -98,7 +98,9 @@ public class PeerNearMe extends Peer  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PeerNearMe(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

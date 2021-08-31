@@ -92,7 +92,9 @@ public class IProductBuilderImplementation extends NetObject implements IProduct
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IProductBuilderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

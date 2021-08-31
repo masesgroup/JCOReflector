@@ -97,7 +97,9 @@ public class ToolStripGripRenderEventArgs extends ToolStripRenderEventArgs  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ToolStripGripRenderEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

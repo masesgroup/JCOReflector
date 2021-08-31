@@ -97,7 +97,9 @@ public class ToolStripDropDownItem extends ToolStripItem  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ToolStripDropDownItem(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

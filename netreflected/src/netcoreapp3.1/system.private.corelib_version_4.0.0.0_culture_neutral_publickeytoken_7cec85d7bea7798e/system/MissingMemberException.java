@@ -98,7 +98,9 @@ public class MissingMemberException extends MemberAccessException {
     public MissingMemberException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MissingMemberException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

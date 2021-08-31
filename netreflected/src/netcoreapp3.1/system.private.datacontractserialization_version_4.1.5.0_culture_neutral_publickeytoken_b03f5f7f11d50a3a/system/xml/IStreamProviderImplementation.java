@@ -92,7 +92,9 @@ public class IStreamProviderImplementation extends NetObject implements IStreamP
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IStreamProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

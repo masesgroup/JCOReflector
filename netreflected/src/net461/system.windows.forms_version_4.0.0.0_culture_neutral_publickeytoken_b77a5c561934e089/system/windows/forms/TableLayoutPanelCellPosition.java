@@ -92,7 +92,9 @@ public class TableLayoutPanelCellPosition extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TableLayoutPanelCellPosition(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -107,7 +107,9 @@ public class DispatcherOperationStatus extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DispatcherOperationStatus(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

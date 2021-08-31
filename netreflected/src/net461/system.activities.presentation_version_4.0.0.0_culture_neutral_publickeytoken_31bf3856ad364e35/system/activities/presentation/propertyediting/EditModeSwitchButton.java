@@ -93,7 +93,9 @@ public class EditModeSwitchButton extends Button  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EditModeSwitchButton(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

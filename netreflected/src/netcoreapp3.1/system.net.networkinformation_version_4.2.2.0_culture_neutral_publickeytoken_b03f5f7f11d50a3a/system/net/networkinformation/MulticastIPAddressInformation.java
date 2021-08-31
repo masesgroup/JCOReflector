@@ -95,7 +95,9 @@ public class MulticastIPAddressInformation extends IPAddressInformation  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MulticastIPAddressInformation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

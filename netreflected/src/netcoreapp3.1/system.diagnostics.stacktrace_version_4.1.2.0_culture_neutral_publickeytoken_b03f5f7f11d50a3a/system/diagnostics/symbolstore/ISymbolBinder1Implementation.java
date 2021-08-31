@@ -93,7 +93,9 @@ public class ISymbolBinder1Implementation extends NetObject implements ISymbolBi
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ISymbolBinder1Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -101,7 +101,9 @@ public class OleDbCommand extends DbCommand  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public OleDbCommand(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

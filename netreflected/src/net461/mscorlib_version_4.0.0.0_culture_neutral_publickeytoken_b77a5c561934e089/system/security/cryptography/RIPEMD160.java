@@ -93,7 +93,9 @@ public class RIPEMD160 extends HashAlgorithm  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RIPEMD160(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

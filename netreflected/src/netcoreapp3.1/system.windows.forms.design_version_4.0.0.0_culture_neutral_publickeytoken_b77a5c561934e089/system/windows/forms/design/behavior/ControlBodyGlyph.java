@@ -99,7 +99,9 @@ public class ControlBodyGlyph extends ComponentGlyph  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ControlBodyGlyph(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

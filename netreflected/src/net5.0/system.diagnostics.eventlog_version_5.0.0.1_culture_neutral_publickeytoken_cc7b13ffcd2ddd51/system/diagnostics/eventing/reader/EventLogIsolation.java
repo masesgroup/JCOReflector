@@ -107,7 +107,9 @@ public class EventLogIsolation extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EventLogIsolation(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -96,7 +96,9 @@ public class EncryptedKey extends EncryptedType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EncryptedKey(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

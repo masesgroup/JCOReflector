@@ -91,7 +91,9 @@ public class IEditableObjectImplementation extends NetObject implements IEditabl
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IEditableObjectImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

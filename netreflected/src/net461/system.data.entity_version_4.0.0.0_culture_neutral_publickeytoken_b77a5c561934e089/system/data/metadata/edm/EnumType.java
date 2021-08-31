@@ -94,7 +94,9 @@ public class EnumType extends SimpleType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EnumType(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

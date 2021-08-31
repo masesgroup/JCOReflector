@@ -100,7 +100,9 @@ public class ManagementException extends SystemException {
     public ManagementException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ManagementException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

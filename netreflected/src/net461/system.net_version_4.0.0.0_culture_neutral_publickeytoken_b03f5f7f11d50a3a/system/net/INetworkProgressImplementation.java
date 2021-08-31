@@ -91,7 +91,9 @@ public class INetworkProgressImplementation extends NetObject implements INetwor
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public INetworkProgressImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

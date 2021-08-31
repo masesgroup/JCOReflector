@@ -92,7 +92,9 @@ public class IUriContextImplementation extends NetObject implements IUriContext 
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IUriContextImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

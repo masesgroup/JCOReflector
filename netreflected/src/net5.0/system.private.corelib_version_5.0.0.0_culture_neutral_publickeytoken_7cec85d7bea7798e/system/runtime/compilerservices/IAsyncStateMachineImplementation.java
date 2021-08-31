@@ -93,7 +93,9 @@ public class IAsyncStateMachineImplementation extends NetObject implements IAsyn
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IAsyncStateMachineImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -107,7 +107,9 @@ public class ColorDepth extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ColorDepth(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

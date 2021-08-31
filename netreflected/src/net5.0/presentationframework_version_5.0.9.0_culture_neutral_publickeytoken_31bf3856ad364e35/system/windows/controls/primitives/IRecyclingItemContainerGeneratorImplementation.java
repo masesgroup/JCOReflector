@@ -100,7 +100,9 @@ public class IRecyclingItemContainerGeneratorImplementation extends NetObject im
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IRecyclingItemContainerGeneratorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

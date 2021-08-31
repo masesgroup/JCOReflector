@@ -92,7 +92,9 @@ public class WindowsUserNameSecurityTokenHandler extends UserNameSecurityTokenHa
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WindowsUserNameSecurityTokenHandler(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

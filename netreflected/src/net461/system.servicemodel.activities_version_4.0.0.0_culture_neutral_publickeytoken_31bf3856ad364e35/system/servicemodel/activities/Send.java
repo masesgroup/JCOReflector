@@ -97,7 +97,9 @@ public class Send extends Activity  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Send(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -99,7 +99,9 @@ public class XmlSchemaException extends SystemException {
     public XmlSchemaException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlSchemaException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

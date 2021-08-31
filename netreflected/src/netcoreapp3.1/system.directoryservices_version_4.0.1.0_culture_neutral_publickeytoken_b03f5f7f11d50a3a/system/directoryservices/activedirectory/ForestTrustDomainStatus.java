@@ -107,7 +107,9 @@ public class ForestTrustDomainStatus extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ForestTrustDomainStatus(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

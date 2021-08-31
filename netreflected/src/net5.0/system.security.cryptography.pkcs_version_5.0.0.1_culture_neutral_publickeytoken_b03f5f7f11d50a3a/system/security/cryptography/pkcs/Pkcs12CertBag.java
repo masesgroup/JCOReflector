@@ -94,7 +94,9 @@ public class Pkcs12CertBag extends Pkcs12SafeBag  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Pkcs12CertBag(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

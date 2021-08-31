@@ -93,7 +93,9 @@ public class DataGridViewSelectedCellCollection extends BaseCollection  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataGridViewSelectedCellCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

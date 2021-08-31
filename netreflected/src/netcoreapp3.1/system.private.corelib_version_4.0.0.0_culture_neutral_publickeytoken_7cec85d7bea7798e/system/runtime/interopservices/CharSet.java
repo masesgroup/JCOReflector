@@ -107,7 +107,9 @@ public class CharSet extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CharSet(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

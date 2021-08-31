@@ -93,7 +93,9 @@ public class TaskDialogFootnote extends TaskDialogControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TaskDialogFootnote(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class EventAccessors extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EventAccessors(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

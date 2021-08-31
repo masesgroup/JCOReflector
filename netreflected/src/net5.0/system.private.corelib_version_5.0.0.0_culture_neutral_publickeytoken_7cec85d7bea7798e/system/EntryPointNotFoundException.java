@@ -96,7 +96,9 @@ public class EntryPointNotFoundException extends TypeLoadException {
     public EntryPointNotFoundException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EntryPointNotFoundException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

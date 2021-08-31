@@ -95,7 +95,9 @@ public class EditableDesignerRegion extends DesignerRegion  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EditableDesignerRegion(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

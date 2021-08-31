@@ -98,7 +98,9 @@ public class XmlSchemaInferenceException extends XmlSchemaException {
     public XmlSchemaInferenceException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlSchemaInferenceException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

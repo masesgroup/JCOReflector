@@ -94,7 +94,9 @@ public class XpsSerializationManagerAsync extends XpsSerializationManager  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XpsSerializationManagerAsync(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -96,7 +96,9 @@ public class ProtocolException extends CommunicationException {
     public ProtocolException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ProtocolException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

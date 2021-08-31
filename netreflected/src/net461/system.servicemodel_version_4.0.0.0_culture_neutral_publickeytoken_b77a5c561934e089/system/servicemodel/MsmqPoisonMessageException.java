@@ -98,7 +98,9 @@ public class MsmqPoisonMessageException extends PoisonMessageException {
     public MsmqPoisonMessageException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MsmqPoisonMessageException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

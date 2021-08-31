@@ -95,7 +95,9 @@ public class CompositeDesignerAccessibleObject extends ActivityDesignerAccessibl
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CompositeDesignerAccessibleObject(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

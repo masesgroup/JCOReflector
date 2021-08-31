@@ -97,7 +97,9 @@ public class Setter extends SetterBase implements system.componentmodel.ISupport
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Setter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

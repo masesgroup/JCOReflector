@@ -96,7 +96,9 @@ public class StreamUpgradeProvider extends CommunicationObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public StreamUpgradeProvider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

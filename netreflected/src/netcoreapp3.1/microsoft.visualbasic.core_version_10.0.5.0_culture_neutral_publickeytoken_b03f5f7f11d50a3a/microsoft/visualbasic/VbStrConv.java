@@ -107,7 +107,9 @@ public class VbStrConv extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public VbStrConv(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -96,7 +96,9 @@ public class TypeUnloadedException extends SystemException {
     public TypeUnloadedException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TypeUnloadedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

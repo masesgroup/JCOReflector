@@ -98,7 +98,9 @@ public class Point4D extends ValueType implements system.IFormattable {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Point4D(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -111,7 +111,9 @@ public class FlowDocument extends FrameworkContentElement implements system.ISer
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FlowDocument(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

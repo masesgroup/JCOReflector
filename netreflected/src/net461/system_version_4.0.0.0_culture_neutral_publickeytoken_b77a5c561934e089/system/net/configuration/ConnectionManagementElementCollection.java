@@ -93,7 +93,9 @@ public class ConnectionManagementElementCollection extends ConfigurationElementC
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ConnectionManagementElementCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

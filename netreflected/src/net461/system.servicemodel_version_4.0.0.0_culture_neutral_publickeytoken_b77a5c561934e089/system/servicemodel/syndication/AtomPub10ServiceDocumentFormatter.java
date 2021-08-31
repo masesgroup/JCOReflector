@@ -98,7 +98,9 @@ public class AtomPub10ServiceDocumentFormatter extends ServiceDocumentFormatter 
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AtomPub10ServiceDocumentFormatter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

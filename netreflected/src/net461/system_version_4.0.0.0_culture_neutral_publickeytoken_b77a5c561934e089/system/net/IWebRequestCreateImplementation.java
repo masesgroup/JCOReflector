@@ -93,7 +93,9 @@ public class IWebRequestCreateImplementation extends NetObject implements IWebRe
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IWebRequestCreateImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

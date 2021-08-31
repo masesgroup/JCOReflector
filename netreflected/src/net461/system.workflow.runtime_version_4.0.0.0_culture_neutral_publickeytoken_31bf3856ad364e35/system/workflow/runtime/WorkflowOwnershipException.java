@@ -98,7 +98,9 @@ public class WorkflowOwnershipException extends NetException {
     public WorkflowOwnershipException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WorkflowOwnershipException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -97,7 +97,9 @@ public class IAccPropServicesImplementation extends NetObject implements IAccPro
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IAccPropServicesImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

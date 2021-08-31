@@ -93,7 +93,9 @@ public class IFormattableImplementation extends NetObject implements IFormattabl
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IFormattableImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

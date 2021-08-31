@@ -93,7 +93,9 @@ public class Entropy extends ProtectedKey  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Entropy(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

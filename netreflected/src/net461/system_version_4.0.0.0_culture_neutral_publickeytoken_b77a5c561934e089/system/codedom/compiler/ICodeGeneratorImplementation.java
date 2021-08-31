@@ -100,7 +100,9 @@ public class ICodeGeneratorImplementation extends NetObject implements ICodeGene
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ICodeGeneratorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -103,7 +103,9 @@ public class IInputChannelImplementation extends NetObject implements IInputChan
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IInputChannelImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

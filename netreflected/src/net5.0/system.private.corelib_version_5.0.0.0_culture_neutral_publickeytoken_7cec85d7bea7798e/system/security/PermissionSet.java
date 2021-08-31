@@ -99,7 +99,9 @@ public class PermissionSet extends NetObjectEnumerable implements system.runtime
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PermissionSet(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class CircleEase extends EasingFunctionBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CircleEase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

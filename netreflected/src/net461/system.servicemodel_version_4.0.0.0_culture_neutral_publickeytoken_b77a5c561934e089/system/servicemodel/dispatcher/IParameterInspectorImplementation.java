@@ -91,7 +91,9 @@ public class IParameterInspectorImplementation extends NetObject implements IPar
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IParameterInspectorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

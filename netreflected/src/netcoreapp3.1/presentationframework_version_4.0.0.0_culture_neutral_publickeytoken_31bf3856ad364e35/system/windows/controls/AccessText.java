@@ -105,7 +105,9 @@ public class AccessText extends FrameworkElement implements system.windows.marku
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AccessText(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -103,7 +103,9 @@ public class RegistryKey extends MarshalByRefObject implements AutoCloseable {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RegistryKey(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

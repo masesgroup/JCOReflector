@@ -96,7 +96,9 @@ public class EndpointNotFoundException extends CommunicationException {
     public EndpointNotFoundException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EndpointNotFoundException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

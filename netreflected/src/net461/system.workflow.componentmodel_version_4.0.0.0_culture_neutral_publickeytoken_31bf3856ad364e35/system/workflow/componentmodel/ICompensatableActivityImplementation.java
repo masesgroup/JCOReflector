@@ -93,7 +93,9 @@ public class ICompensatableActivityImplementation extends NetObject implements I
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ICompensatableActivityImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

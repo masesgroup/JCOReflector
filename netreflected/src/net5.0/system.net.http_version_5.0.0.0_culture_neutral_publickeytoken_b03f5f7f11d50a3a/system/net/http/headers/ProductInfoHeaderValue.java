@@ -95,7 +95,9 @@ public class ProductInfoHeaderValue extends NetObject implements system.ICloneab
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ProductInfoHeaderValue(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

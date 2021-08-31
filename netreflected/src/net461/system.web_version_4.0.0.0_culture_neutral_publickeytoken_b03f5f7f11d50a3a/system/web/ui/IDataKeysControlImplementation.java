@@ -92,7 +92,9 @@ public class IDataKeysControlImplementation extends NetObject implements IDataKe
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IDataKeysControlImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

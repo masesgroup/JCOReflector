@@ -92,7 +92,9 @@ public class IssuerTokenResolver extends SecurityTokenResolver  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IssuerTokenResolver(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

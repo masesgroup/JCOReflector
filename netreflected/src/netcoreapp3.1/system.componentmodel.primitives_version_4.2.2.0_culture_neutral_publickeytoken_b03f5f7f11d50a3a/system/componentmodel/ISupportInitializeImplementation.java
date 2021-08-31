@@ -91,7 +91,9 @@ public class ISupportInitializeImplementation extends NetObject implements ISupp
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ISupportInitializeImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

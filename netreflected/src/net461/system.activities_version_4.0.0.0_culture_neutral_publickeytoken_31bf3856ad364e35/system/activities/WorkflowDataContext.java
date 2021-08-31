@@ -94,7 +94,9 @@ public class WorkflowDataContext extends CustomTypeDescriptor implements AutoClo
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WorkflowDataContext(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

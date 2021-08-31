@@ -93,7 +93,9 @@ public class CustomBindingCollectionElement extends BindingCollectionElement  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CustomBindingCollectionElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

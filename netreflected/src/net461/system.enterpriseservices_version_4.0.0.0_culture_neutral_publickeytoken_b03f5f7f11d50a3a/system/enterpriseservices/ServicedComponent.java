@@ -97,7 +97,9 @@ public class ServicedComponent extends ContextBoundObject implements system.ente
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ServicedComponent(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

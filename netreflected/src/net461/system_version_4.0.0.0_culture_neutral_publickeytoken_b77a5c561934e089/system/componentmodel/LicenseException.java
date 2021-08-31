@@ -98,7 +98,9 @@ public class LicenseException extends SystemException {
     public LicenseException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public LicenseException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

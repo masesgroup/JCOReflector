@@ -95,7 +95,9 @@ public class LockRecursionException extends NetException {
     public LockRecursionException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public LockRecursionException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

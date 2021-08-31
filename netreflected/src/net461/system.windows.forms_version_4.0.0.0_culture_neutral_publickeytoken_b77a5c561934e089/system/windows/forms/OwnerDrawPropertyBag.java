@@ -99,7 +99,9 @@ public class OwnerDrawPropertyBag extends MarshalByRefObject implements system.r
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public OwnerDrawPropertyBag(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -97,7 +97,9 @@ public class DataGridViewComboBoxCell extends DataGridViewCell  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataGridViewComboBoxCell(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

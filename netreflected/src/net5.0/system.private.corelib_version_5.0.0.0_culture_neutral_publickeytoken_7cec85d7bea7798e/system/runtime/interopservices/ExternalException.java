@@ -96,7 +96,9 @@ public class ExternalException extends SystemException {
     public ExternalException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ExternalException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

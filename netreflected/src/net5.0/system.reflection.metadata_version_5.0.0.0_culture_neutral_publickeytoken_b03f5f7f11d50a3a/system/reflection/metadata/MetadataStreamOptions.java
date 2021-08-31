@@ -107,7 +107,9 @@ public class MetadataStreamOptions extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MetadataStreamOptions(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

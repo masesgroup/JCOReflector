@@ -92,7 +92,9 @@ public class NTAccount extends IdentityReference  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public NTAccount(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

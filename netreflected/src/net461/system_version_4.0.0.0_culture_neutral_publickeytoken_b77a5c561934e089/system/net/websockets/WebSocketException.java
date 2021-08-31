@@ -99,7 +99,9 @@ public class WebSocketException extends Win32Exception {
     public WebSocketException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WebSocketException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

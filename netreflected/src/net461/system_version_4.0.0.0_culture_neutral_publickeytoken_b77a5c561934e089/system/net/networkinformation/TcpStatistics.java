@@ -91,7 +91,9 @@ public class TcpStatistics extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TcpStatistics(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -96,7 +96,9 @@ public class EndpointAddressElementBase extends ServiceModelConfigurationElement
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EndpointAddressElementBase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -99,7 +99,9 @@ public class BoundField extends DataControlField  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BoundField(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

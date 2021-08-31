@@ -93,7 +93,9 @@ public class IAmbientProviderImplementation extends NetObject implements IAmbien
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IAmbientProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

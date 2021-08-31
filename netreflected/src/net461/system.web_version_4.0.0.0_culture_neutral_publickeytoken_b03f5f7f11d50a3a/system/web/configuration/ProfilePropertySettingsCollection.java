@@ -93,7 +93,9 @@ public class ProfilePropertySettingsCollection extends ConfigurationElementColle
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ProfilePropertySettingsCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

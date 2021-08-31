@@ -97,7 +97,9 @@ public class WorkflowApplicationAbortedException extends WorkflowApplicationExce
     public WorkflowApplicationAbortedException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WorkflowApplicationAbortedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

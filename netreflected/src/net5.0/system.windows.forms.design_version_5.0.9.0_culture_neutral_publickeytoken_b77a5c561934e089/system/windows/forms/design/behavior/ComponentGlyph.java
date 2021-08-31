@@ -98,7 +98,9 @@ public class ComponentGlyph extends Glyph  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ComponentGlyph(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

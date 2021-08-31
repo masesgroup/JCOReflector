@@ -93,7 +93,9 @@ public class IStructuralEquatableImplementation extends NetObject implements ISt
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IStructuralEquatableImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

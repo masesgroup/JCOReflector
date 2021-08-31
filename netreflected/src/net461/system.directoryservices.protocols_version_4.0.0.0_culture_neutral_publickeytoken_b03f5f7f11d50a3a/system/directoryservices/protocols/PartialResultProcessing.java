@@ -107,7 +107,9 @@ public class PartialResultProcessing extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PartialResultProcessing(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

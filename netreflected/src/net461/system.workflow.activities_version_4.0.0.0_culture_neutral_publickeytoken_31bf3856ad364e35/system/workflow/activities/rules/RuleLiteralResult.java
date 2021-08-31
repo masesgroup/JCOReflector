@@ -92,7 +92,9 @@ public class RuleLiteralResult extends RuleExpressionResult  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RuleLiteralResult(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

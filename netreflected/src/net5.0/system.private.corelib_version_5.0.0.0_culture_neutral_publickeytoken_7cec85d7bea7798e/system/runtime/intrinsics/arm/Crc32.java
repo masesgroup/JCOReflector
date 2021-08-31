@@ -94,7 +94,9 @@ public class Crc32 extends ArmBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Crc32(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

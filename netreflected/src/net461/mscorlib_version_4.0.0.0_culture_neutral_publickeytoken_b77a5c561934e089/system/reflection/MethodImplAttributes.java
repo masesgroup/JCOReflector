@@ -107,7 +107,9 @@ public class MethodImplAttributes extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MethodImplAttributes(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

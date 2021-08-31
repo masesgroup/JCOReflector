@@ -93,7 +93,9 @@ public class CodeSnippetCompileUnit extends CodeCompileUnit  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CodeSnippetCompileUnit(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

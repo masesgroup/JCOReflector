@@ -107,7 +107,9 @@ public class ToolStripLayoutStyle extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ToolStripLayoutStyle(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

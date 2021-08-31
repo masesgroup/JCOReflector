@@ -96,7 +96,9 @@ public class JSLocalField extends JSVariableField  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public JSLocalField(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

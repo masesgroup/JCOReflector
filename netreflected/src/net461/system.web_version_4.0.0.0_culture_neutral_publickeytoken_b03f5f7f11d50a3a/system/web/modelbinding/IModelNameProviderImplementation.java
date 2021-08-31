@@ -91,7 +91,9 @@ public class IModelNameProviderImplementation extends NetObject implements IMode
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IModelNameProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

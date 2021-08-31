@@ -98,7 +98,9 @@ public class AtomPub10CategoriesDocumentFormatter extends CategoriesDocumentForm
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AtomPub10CategoriesDocumentFormatter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

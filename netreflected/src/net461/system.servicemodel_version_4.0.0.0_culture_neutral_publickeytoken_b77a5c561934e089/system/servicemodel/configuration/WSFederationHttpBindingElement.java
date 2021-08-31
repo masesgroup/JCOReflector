@@ -94,7 +94,9 @@ public class WSFederationHttpBindingElement extends WSHttpBindingBaseElement  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WSFederationHttpBindingElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

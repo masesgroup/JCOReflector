@@ -107,7 +107,9 @@ public class HelpContextType extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HelpContextType(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

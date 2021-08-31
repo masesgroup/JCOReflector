@@ -95,7 +95,9 @@ public class InstanceContext extends CommunicationObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InstanceContext(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

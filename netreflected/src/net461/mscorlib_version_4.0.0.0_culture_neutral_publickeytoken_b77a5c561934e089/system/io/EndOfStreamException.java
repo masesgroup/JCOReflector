@@ -96,7 +96,9 @@ public class EndOfStreamException extends IOException {
     public EndOfStreamException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EndOfStreamException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

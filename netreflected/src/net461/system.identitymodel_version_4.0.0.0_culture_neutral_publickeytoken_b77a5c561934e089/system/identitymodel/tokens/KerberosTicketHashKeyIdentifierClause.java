@@ -92,7 +92,9 @@ public class KerberosTicketHashKeyIdentifierClause extends BinaryKeyIdentifierCl
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public KerberosTicketHashKeyIdentifierClause(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

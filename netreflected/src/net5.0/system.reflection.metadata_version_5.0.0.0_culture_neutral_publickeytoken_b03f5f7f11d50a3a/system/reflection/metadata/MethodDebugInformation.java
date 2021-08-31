@@ -97,7 +97,9 @@ public class MethodDebugInformation extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MethodDebugInformation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

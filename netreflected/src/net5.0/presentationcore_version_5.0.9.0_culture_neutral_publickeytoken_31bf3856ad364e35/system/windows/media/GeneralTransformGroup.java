@@ -96,7 +96,9 @@ public class GeneralTransformGroup extends GeneralTransform  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public GeneralTransformGroup(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

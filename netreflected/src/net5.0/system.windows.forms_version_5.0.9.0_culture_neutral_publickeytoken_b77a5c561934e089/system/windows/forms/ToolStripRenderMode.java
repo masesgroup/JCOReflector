@@ -107,7 +107,9 @@ public class ToolStripRenderMode extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ToolStripRenderMode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

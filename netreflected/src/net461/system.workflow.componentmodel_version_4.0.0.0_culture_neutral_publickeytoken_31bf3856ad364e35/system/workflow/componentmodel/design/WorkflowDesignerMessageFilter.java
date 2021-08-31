@@ -91,7 +91,9 @@ public class WorkflowDesignerMessageFilter extends NetObject implements AutoClos
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WorkflowDesignerMessageFilter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

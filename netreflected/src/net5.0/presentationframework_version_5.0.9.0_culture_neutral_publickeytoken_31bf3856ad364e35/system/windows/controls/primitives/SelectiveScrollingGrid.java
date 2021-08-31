@@ -94,7 +94,9 @@ public class SelectiveScrollingGrid extends Grid  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SelectiveScrollingGrid(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

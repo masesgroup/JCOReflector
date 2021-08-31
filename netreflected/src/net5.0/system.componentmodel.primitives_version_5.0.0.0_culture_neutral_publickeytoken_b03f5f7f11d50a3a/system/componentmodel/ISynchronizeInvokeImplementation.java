@@ -93,7 +93,9 @@ public class ISynchronizeInvokeImplementation extends NetObject implements ISync
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ISynchronizeInvokeImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

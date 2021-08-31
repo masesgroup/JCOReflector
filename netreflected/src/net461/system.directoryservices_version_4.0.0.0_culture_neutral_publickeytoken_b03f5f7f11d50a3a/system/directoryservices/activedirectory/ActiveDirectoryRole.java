@@ -107,7 +107,9 @@ public class ActiveDirectoryRole extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ActiveDirectoryRole(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

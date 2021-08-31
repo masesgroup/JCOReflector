@@ -96,7 +96,9 @@ public class VerificationException extends SystemException {
     public VerificationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public VerificationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

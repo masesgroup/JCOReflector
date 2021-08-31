@@ -92,7 +92,9 @@ public class MessageBodyMemberAttribute extends MessageContractMemberAttribute  
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MessageBodyMemberAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

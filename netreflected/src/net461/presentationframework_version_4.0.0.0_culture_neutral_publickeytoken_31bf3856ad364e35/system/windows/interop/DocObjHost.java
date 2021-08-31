@@ -94,7 +94,9 @@ public class DocObjHost extends MarshalByRefObject implements system.IServicePro
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DocObjHost(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

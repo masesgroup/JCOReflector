@@ -107,7 +107,9 @@ public class RecognitionConfidence extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RecognitionConfidence(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

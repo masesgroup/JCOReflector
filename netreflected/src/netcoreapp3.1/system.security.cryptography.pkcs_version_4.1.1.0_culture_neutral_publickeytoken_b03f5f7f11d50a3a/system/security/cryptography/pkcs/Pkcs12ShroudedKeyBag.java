@@ -92,7 +92,9 @@ public class Pkcs12ShroudedKeyBag extends Pkcs12SafeBag  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Pkcs12ShroudedKeyBag(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

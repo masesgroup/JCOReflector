@@ -107,7 +107,9 @@ public class PenAlignment extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PenAlignment(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

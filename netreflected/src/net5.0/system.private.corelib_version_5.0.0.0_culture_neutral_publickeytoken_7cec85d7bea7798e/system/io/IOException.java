@@ -96,7 +96,9 @@ public class IOException extends SystemException {
     public IOException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IOException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

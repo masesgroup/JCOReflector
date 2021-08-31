@@ -96,7 +96,9 @@ public class StackOverflowException extends SystemException {
     public StackOverflowException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public StackOverflowException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

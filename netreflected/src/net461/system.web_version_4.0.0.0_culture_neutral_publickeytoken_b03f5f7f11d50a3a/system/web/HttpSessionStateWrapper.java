@@ -97,7 +97,9 @@ public class HttpSessionStateWrapper extends HttpSessionStateBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HttpSessionStateWrapper(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

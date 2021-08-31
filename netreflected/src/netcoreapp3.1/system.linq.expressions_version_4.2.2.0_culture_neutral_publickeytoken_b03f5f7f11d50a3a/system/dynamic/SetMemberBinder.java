@@ -93,7 +93,9 @@ public class SetMemberBinder extends DynamicMetaObjectBinder  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SetMemberBinder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

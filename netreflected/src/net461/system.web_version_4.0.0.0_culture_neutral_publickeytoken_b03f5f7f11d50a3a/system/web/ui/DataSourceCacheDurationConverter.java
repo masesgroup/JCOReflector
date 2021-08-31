@@ -95,7 +95,9 @@ public class DataSourceCacheDurationConverter extends Int32Converter  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataSourceCacheDurationConverter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

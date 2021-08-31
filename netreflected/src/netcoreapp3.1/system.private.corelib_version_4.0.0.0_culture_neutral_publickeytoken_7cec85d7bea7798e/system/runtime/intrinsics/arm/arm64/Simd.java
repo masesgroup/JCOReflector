@@ -91,7 +91,9 @@ public class Simd extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Simd(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

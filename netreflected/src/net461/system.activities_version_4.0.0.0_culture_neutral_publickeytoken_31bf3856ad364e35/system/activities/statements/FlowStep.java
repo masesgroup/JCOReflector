@@ -93,7 +93,9 @@ public class FlowStep extends FlowNode  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FlowStep(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

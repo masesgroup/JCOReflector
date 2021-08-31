@@ -94,7 +94,9 @@ public class X509CertificateStoreTokenResolver extends SecurityTokenResolver  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public X509CertificateStoreTokenResolver(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

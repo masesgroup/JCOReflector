@@ -98,7 +98,9 @@ public class ITaskFactory2Implementation extends NetObject implements ITaskFacto
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ITaskFactory2Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

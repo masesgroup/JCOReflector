@@ -95,7 +95,9 @@ public class IAdviseSinkImplementation extends NetObject implements IAdviseSink 
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IAdviseSinkImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

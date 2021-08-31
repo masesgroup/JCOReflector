@@ -97,7 +97,9 @@ public class ActiveDirectoryServerDownException extends NetException {
     public ActiveDirectoryServerDownException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ActiveDirectoryServerDownException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

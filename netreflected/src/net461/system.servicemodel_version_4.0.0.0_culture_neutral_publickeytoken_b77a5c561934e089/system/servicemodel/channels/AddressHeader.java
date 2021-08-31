@@ -97,7 +97,9 @@ public class AddressHeader extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AddressHeader(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

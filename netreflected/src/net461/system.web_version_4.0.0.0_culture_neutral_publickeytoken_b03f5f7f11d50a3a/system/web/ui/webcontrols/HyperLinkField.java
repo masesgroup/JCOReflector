@@ -96,7 +96,9 @@ public class HyperLinkField extends DataControlField  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HyperLinkField(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -96,7 +96,9 @@ public class CryptoSignedXmlRecursionException extends XmlException {
     public CryptoSignedXmlRecursionException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CryptoSignedXmlRecursionException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

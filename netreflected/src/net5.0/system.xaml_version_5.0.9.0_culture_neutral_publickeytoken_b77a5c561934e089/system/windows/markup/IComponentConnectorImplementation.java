@@ -91,7 +91,9 @@ public class IComponentConnectorImplementation extends NetObject implements ICom
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IComponentConnectorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

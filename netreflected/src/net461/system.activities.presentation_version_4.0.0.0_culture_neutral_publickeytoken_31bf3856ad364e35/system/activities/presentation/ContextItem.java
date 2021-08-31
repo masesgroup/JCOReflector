@@ -91,7 +91,9 @@ public class ContextItem extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ContextItem(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

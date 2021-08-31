@@ -93,7 +93,9 @@ public class KnownAce extends GenericAce  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public KnownAce(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

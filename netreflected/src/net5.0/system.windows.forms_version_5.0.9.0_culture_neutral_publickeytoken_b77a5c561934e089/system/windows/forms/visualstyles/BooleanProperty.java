@@ -107,7 +107,9 @@ public class BooleanProperty extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BooleanProperty(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

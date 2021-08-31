@@ -97,7 +97,9 @@ public class WorkflowApplicationTerminatedException extends WorkflowApplicationC
     public WorkflowApplicationTerminatedException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WorkflowApplicationTerminatedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

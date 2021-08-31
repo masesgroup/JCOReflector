@@ -107,7 +107,9 @@ public class MessageBoxButton extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MessageBoxButton(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

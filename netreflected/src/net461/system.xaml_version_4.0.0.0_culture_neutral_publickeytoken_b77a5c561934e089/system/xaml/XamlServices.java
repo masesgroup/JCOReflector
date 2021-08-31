@@ -97,7 +97,9 @@ public class XamlServices extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XamlServices(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

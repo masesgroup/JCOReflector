@@ -93,7 +93,9 @@ public class IPphManagerImplementation extends NetObject implements IPphManager 
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IPphManagerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

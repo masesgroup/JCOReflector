@@ -100,7 +100,9 @@ public class ComponentEditorPage extends Panel  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ComponentEditorPage(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

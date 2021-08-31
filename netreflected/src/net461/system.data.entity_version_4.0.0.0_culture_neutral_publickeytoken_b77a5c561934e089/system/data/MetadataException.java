@@ -96,7 +96,9 @@ public class MetadataException extends EntityException {
     public MetadataException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MetadataException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

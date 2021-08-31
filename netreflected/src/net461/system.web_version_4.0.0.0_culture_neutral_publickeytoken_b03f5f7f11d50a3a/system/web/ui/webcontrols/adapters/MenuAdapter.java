@@ -94,7 +94,9 @@ public class MenuAdapter extends WebControlAdapter implements system.web.ui.IPos
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MenuAdapter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

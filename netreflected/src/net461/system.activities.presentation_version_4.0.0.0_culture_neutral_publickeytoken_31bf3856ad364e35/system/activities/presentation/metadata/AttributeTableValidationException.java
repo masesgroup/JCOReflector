@@ -97,7 +97,9 @@ public class AttributeTableValidationException extends NetException {
     public AttributeTableValidationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AttributeTableValidationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class Semaphore extends WaitHandle  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Semaphore(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

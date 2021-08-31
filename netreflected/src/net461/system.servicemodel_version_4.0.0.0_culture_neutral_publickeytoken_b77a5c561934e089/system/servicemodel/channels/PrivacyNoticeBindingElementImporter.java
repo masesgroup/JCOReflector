@@ -95,7 +95,9 @@ public class PrivacyNoticeBindingElementImporter extends NetObject implements sy
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PrivacyNoticeBindingElementImporter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

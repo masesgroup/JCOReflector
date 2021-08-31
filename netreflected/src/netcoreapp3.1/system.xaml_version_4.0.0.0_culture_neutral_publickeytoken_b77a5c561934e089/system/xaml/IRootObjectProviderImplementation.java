@@ -91,7 +91,9 @@ public class IRootObjectProviderImplementation extends NetObject implements IRoo
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IRootObjectProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -98,7 +98,9 @@ public class InstanceCollisionException extends InstancePersistenceCommandExcept
     public InstanceCollisionException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InstanceCollisionException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

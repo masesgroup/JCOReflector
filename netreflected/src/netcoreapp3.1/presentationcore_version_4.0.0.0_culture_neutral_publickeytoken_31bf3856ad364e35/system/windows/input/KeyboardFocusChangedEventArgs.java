@@ -95,7 +95,9 @@ public class KeyboardFocusChangedEventArgs extends KeyboardEventArgs  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public KeyboardFocusChangedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

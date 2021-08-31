@@ -96,7 +96,9 @@ public class DecoderFallbackException extends ArgumentException {
     public DecoderFallbackException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DecoderFallbackException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

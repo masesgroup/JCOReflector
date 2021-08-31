@@ -92,7 +92,9 @@ public class RequestReplyCorrelationInitializer extends CorrelationInitializer  
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RequestReplyCorrelationInitializer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

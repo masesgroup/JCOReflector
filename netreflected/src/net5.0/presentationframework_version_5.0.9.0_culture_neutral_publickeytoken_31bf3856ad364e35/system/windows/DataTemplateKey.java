@@ -92,7 +92,9 @@ public class DataTemplateKey extends TemplateKey  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataTemplateKey(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

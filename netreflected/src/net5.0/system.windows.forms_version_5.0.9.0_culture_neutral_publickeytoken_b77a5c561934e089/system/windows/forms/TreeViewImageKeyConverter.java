@@ -95,7 +95,9 @@ public class TreeViewImageKeyConverter extends ImageKeyConverter  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TreeViewImageKeyConverter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

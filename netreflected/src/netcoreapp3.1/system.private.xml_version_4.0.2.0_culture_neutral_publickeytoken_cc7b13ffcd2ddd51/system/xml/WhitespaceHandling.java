@@ -107,7 +107,9 @@ public class WhitespaceHandling extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WhitespaceHandling(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

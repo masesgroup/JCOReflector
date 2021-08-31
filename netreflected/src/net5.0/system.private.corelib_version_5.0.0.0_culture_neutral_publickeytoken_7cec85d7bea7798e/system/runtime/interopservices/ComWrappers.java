@@ -92,7 +92,9 @@ public class ComWrappers extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ComWrappers(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

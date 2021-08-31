@@ -98,7 +98,9 @@ public class ITableMappingCollectionImplementation extends IEnumerableImplementa
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ITableMappingCollectionImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

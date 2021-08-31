@@ -92,7 +92,9 @@ public class HKDF extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HKDF(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

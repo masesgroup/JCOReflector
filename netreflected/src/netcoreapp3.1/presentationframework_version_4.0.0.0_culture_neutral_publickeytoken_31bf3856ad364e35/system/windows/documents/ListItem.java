@@ -103,7 +103,9 @@ public class ListItem extends TextElement  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ListItem(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

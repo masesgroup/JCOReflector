@@ -93,7 +93,9 @@ public class FrameworkRichTextComposition extends FrameworkTextComposition  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FrameworkRichTextComposition(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

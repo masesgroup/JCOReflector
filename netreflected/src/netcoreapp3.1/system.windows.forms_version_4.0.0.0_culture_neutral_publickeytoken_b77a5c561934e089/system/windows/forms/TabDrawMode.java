@@ -107,7 +107,9 @@ public class TabDrawMode extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TabDrawMode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

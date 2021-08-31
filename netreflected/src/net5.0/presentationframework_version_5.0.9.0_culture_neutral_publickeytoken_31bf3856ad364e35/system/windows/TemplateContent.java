@@ -91,7 +91,9 @@ public class TemplateContent extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TemplateContent(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

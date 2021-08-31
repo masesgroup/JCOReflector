@@ -94,7 +94,9 @@ public class SchemeSettingElementCollection extends ConfigurationElementCollecti
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SchemeSettingElementCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

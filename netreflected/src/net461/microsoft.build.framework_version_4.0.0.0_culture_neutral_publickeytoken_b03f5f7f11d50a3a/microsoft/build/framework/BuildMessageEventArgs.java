@@ -94,7 +94,9 @@ public class BuildMessageEventArgs extends LazyFormattedBuildEventArgs  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BuildMessageEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

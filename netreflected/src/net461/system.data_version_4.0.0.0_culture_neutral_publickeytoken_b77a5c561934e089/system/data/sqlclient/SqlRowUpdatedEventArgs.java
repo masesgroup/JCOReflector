@@ -98,7 +98,9 @@ public class SqlRowUpdatedEventArgs extends RowUpdatedEventArgs  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SqlRowUpdatedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

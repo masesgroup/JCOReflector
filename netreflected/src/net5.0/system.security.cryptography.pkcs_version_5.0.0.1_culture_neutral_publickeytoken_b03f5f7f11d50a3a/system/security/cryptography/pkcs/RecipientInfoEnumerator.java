@@ -90,7 +90,9 @@ public class RecipientInfoEnumerator extends NetObject implements Iterator<Recip
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RecipientInfoEnumerator(JCObject instance) {
         classInstance = instance.iterator();
     }

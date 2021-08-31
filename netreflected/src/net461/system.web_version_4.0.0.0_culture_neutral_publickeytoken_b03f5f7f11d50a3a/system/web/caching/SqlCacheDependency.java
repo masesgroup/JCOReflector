@@ -93,7 +93,9 @@ public class SqlCacheDependency extends CacheDependency  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SqlCacheDependency(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

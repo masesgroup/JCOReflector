@@ -97,7 +97,9 @@ public class XmlDesignerHierarchicalDataSourceView extends DesignerHierarchicalD
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlDesignerHierarchicalDataSourceView(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

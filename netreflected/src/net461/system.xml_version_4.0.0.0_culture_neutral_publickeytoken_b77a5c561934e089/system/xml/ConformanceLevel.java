@@ -107,7 +107,9 @@ public class ConformanceLevel extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ConformanceLevel(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

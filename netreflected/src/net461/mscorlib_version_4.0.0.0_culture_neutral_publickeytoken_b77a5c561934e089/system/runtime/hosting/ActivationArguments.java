@@ -94,7 +94,9 @@ public class ActivationArguments extends EvidenceBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ActivationArguments(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

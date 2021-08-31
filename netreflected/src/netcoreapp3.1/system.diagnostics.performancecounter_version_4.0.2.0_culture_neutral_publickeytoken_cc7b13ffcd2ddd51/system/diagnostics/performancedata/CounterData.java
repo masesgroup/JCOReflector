@@ -91,7 +91,9 @@ public class CounterData extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CounterData(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

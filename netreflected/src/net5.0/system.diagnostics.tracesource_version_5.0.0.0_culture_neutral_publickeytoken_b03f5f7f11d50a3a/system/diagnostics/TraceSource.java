@@ -97,7 +97,9 @@ public class TraceSource extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TraceSource(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -96,7 +96,9 @@ public class WorkflowTrackingRecord extends TrackingRecord  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WorkflowTrackingRecord(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -99,7 +99,9 @@ public class JSVsaException extends ExternalException {
     public JSVsaException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public JSVsaException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

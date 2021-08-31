@@ -94,7 +94,9 @@ public class RemoveDuplicates extends TaskExtension  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RemoveDuplicates(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

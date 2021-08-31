@@ -92,7 +92,9 @@ public class XmlSerializerSection extends ConfigurationSection  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlSerializerSection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

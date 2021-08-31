@@ -94,7 +94,9 @@ public class TemplateParser extends BaseParser  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TemplateParser(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

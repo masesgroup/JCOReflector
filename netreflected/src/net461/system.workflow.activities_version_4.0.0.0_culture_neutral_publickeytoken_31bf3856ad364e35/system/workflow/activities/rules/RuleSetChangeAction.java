@@ -92,7 +92,9 @@ public class RuleSetChangeAction extends WorkflowChangeAction  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RuleSetChangeAction(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

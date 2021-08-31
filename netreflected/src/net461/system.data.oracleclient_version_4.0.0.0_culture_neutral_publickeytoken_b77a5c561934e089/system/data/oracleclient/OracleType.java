@@ -107,7 +107,9 @@ public class OracleType extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public OracleType(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

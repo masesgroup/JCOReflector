@@ -93,7 +93,9 @@ public class CreateUserWizardStep extends TemplatedWizardStep  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CreateUserWizardStep(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

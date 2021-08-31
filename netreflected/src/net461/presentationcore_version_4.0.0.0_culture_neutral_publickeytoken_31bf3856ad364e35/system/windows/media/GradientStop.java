@@ -98,7 +98,9 @@ public class GradientStop extends Animatable implements system.IFormattable {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public GradientStop(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

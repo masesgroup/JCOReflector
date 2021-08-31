@@ -95,7 +95,9 @@ public class TcpTransportBindingElement extends ConnectionOrientedTransportBindi
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TcpTransportBindingElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

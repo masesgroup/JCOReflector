@@ -92,7 +92,9 @@ public class ApplicationSettingsGroup extends ConfigurationSectionGroup  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ApplicationSettingsGroup(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

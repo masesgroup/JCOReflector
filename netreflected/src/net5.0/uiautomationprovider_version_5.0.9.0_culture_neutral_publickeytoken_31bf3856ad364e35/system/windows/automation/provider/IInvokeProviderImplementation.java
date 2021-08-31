@@ -91,7 +91,9 @@ public class IInvokeProviderImplementation extends NetObject implements IInvokeP
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IInvokeProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

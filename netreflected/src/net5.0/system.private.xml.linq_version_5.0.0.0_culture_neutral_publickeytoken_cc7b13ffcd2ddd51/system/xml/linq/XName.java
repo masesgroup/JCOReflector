@@ -97,7 +97,9 @@ public class XName extends NetObject implements system.runtime.serialization.ISe
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XName(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

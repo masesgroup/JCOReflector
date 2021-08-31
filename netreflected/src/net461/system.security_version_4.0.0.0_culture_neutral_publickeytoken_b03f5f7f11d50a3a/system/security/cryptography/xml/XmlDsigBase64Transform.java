@@ -93,7 +93,9 @@ public class XmlDsigBase64Transform extends Transform  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlDsigBase64Transform(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

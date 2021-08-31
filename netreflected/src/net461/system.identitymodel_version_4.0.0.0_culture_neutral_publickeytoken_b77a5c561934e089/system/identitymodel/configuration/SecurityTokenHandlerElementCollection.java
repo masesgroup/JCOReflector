@@ -93,7 +93,9 @@ public class SecurityTokenHandlerElementCollection extends ConfigurationElementC
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SecurityTokenHandlerElementCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

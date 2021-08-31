@@ -98,7 +98,9 @@ public class FixedDocument extends FrameworkContentElement implements system.win
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FixedDocument(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

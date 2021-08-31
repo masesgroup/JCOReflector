@@ -91,7 +91,9 @@ public class INavigateUIDataImplementation extends NetObject implements INavigat
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public INavigateUIDataImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

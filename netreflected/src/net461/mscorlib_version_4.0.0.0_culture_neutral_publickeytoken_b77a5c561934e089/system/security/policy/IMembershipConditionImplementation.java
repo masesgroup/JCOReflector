@@ -100,7 +100,9 @@ public class IMembershipConditionImplementation extends NetObject implements IMe
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IMembershipConditionImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

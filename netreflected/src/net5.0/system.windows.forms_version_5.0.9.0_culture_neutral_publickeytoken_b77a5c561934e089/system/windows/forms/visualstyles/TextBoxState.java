@@ -107,7 +107,9 @@ public class TextBoxState extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TextBoxState(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

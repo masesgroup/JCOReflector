@@ -107,7 +107,9 @@ public class KeyType extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public KeyType(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

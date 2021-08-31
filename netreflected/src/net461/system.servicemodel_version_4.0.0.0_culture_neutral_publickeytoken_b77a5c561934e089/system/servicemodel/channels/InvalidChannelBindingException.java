@@ -95,7 +95,9 @@ public class InvalidChannelBindingException extends NetException {
     public InvalidChannelBindingException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InvalidChannelBindingException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

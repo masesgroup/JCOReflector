@@ -107,7 +107,9 @@ public class ToolBarState extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ToolBarState(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

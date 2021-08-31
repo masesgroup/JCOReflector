@@ -94,7 +94,9 @@ public class IRegistrationServicesImplementation extends NetObject implements IR
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IRegistrationServicesImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

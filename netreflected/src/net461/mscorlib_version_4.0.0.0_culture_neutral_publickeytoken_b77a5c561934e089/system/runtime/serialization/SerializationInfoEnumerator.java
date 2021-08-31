@@ -90,7 +90,9 @@ public class SerializationInfoEnumerator extends NetObject implements Iterator<S
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SerializationInfoEnumerator(JCObject instance) {
         classInstance = instance.iterator();
     }

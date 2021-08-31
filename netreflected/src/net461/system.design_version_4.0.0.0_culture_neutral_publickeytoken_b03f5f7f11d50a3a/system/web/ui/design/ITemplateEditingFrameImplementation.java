@@ -95,7 +95,9 @@ public class ITemplateEditingFrameImplementation extends NetObject implements IT
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ITemplateEditingFrameImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

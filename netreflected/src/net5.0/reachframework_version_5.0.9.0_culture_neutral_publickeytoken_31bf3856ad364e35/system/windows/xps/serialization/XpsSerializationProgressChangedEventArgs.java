@@ -93,7 +93,9 @@ public class XpsSerializationProgressChangedEventArgs extends ProgressChangedEve
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XpsSerializationProgressChangedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

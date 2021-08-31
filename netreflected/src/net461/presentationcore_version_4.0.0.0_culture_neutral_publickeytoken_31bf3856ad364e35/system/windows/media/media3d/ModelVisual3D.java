@@ -97,7 +97,9 @@ public class ModelVisual3D extends Visual3D implements system.windows.markup.IAd
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ModelVisual3D(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

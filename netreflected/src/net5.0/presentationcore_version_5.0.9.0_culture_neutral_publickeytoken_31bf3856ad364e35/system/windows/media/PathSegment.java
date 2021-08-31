@@ -93,7 +93,9 @@ public class PathSegment extends Animatable  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PathSegment(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

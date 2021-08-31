@@ -94,7 +94,9 @@ public class IStyleSheetImplementation extends NetObject implements IStyleSheet 
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IStyleSheetImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

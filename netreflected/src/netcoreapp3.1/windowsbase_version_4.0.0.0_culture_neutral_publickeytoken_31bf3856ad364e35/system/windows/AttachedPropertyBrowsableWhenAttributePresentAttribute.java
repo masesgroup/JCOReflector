@@ -92,7 +92,9 @@ public class AttachedPropertyBrowsableWhenAttributePresentAttribute extends Atta
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AttachedPropertyBrowsableWhenAttributePresentAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

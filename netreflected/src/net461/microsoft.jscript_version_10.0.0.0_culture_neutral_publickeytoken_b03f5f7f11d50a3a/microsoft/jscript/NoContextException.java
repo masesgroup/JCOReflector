@@ -96,7 +96,9 @@ public class NoContextException extends ApplicationException {
     public NoContextException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public NoContextException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

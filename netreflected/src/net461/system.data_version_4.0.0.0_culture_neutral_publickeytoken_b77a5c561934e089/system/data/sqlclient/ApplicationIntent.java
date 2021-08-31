@@ -107,7 +107,9 @@ public class ApplicationIntent extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ApplicationIntent(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -95,7 +95,9 @@ public class IEndpointBehaviorImplementation extends NetObject implements IEndpo
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IEndpointBehaviorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

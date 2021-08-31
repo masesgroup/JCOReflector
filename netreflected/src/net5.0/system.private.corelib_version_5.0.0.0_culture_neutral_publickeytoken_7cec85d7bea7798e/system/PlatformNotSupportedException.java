@@ -96,7 +96,9 @@ public class PlatformNotSupportedException extends NotSupportedException {
     public PlatformNotSupportedException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PlatformNotSupportedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

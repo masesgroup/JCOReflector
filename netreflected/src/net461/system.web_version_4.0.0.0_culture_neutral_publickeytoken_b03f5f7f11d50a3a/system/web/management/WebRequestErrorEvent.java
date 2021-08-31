@@ -94,7 +94,9 @@ public class WebRequestErrorEvent extends WebBaseErrorEvent  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WebRequestErrorEvent(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

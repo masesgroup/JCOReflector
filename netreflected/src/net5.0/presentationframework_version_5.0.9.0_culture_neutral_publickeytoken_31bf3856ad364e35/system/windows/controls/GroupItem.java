@@ -95,7 +95,9 @@ public class GroupItem extends ContentControl implements system.windows.controls
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public GroupItem(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

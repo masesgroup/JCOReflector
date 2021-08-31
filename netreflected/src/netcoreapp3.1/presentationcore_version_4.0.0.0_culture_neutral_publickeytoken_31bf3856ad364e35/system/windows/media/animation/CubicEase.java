@@ -92,7 +92,9 @@ public class CubicEase extends EasingFunctionBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CubicEase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -96,7 +96,9 @@ public class DeletedRowInaccessibleException extends DataException {
     public DeletedRowInaccessibleException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DeletedRowInaccessibleException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

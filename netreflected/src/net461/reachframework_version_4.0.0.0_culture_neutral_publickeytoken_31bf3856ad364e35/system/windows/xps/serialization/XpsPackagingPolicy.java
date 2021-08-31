@@ -99,7 +99,9 @@ public class XpsPackagingPolicy extends BasePackagingPolicy  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XpsPackagingPolicy(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

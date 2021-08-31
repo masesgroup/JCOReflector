@@ -94,7 +94,9 @@ public class CustomAce extends GenericAce  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CustomAce(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

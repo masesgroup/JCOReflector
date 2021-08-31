@@ -98,7 +98,9 @@ public class MethodCallMessageWrapper extends InternalMessageWrapper  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MethodCallMessageWrapper(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -98,7 +98,9 @@ public class AdornerLayer extends FrameworkElement  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AdornerLayer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -96,7 +96,9 @@ public class SafeArrayRankMismatchException extends SystemException {
     public SafeArrayRankMismatchException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SafeArrayRankMismatchException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

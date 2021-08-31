@@ -96,7 +96,9 @@ public class MissingManifestResourceException extends SystemException {
     public MissingManifestResourceException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MissingManifestResourceException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -96,7 +96,9 @@ public class Viewport3D extends FrameworkElement implements system.windows.marku
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Viewport3D(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

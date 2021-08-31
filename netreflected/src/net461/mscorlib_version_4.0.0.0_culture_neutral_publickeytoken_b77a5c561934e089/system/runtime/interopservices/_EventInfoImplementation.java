@@ -96,7 +96,9 @@ public class _EventInfoImplementation extends NetObject implements _EventInfo {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public _EventInfoImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

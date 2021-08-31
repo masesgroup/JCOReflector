@@ -106,7 +106,9 @@ public class Decimal extends ValueType implements system.runtime.serialization.I
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Decimal(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

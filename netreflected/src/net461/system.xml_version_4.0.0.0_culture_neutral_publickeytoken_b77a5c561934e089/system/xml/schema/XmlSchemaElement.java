@@ -97,7 +97,9 @@ public class XmlSchemaElement extends XmlSchemaParticle  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlSchemaElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

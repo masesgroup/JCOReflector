@@ -93,7 +93,9 @@ public class DbSetClause extends DbModificationClause  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DbSetClause(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

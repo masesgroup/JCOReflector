@@ -92,7 +92,9 @@ public class XmlDictionaryReaderQuotasElement extends ServiceModelConfigurationE
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlDictionaryReaderQuotasElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

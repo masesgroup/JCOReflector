@@ -107,7 +107,9 @@ public class VerifyResult extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public VerifyResult(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

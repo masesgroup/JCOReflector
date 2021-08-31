@@ -92,7 +92,9 @@ public class FileAuthorizationModule extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FileAuthorizationModule(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

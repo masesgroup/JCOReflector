@@ -96,7 +96,9 @@ public class AspNetHostingPermissionAttribute extends CodeAccessSecurityAttribut
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AspNetHostingPermissionAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

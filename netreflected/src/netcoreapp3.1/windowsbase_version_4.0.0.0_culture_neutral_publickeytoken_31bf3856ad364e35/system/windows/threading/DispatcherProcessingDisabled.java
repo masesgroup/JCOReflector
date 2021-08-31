@@ -92,7 +92,9 @@ public class DispatcherProcessingDisabled extends ValueType implements AutoClose
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DispatcherProcessingDisabled(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

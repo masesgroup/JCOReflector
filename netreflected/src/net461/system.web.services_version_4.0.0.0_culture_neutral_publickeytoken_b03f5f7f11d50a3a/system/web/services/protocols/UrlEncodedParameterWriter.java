@@ -94,7 +94,9 @@ public class UrlEncodedParameterWriter extends MimeParameterWriter  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UrlEncodedParameterWriter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

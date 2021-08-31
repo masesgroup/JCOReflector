@@ -91,7 +91,9 @@ public class RegionData extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RegionData(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

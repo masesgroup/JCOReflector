@@ -95,7 +95,9 @@ public class IdentityValidationException extends NetException {
     public IdentityValidationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IdentityValidationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

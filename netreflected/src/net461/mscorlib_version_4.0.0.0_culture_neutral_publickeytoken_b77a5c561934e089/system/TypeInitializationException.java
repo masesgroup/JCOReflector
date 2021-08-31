@@ -98,7 +98,9 @@ public class TypeInitializationException extends SystemException {
     public TypeInitializationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TypeInitializationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

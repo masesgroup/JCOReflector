@@ -96,7 +96,9 @@ public class SecurityTokenValidationException extends SecurityTokenException {
     public SecurityTokenValidationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SecurityTokenValidationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

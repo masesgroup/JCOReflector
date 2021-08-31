@@ -93,7 +93,9 @@ public class UnauthorizedWebPart extends ProxyWebPart  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UnauthorizedWebPart(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class TaskAwaiter extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TaskAwaiter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -98,7 +98,9 @@ public class MenuItem extends Menu  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MenuItem(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

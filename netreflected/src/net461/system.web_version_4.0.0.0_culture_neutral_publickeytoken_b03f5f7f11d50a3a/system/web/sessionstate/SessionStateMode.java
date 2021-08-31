@@ -107,7 +107,9 @@ public class SessionStateMode extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SessionStateMode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

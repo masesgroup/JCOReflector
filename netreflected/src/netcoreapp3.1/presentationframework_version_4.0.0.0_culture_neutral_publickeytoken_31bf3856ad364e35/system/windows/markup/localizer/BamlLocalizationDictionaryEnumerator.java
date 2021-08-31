@@ -90,7 +90,9 @@ public class BamlLocalizationDictionaryEnumerator extends NetObject implements I
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BamlLocalizationDictionaryEnumerator(JCObject instance) {
         classInstance = instance.iterator();
     }

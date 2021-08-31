@@ -92,7 +92,9 @@ public class IWindowTargetImplementation extends NetObject implements IWindowTar
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IWindowTargetImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

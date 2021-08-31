@@ -94,7 +94,9 @@ public class PrintJobInfoCollection extends PrintSystemObjects  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PrintJobInfoCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

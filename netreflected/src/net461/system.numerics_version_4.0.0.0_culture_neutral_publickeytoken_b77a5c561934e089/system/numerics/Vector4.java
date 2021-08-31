@@ -100,7 +100,9 @@ public class Vector4 extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Vector4(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

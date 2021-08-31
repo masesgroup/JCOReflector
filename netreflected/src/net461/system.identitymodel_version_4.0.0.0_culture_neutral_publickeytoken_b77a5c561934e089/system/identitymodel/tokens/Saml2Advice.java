@@ -91,7 +91,9 @@ public class Saml2Advice extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Saml2Advice(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

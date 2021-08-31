@@ -92,7 +92,9 @@ public class IssuedTokenParametersEndpointAddressElement extends EndpointAddress
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IssuedTokenParametersEndpointAddressElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

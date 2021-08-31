@@ -94,7 +94,9 @@ public class IQueryProviderImplementation extends NetObject implements IQueryPro
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IQueryProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

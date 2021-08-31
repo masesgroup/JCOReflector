@@ -92,7 +92,9 @@ public class ICredentialsByHostImplementation extends NetObject implements ICred
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ICredentialsByHostImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

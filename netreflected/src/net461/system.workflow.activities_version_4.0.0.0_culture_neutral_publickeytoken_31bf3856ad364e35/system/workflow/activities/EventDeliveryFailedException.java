@@ -96,7 +96,9 @@ public class EventDeliveryFailedException extends SystemException {
     public EventDeliveryFailedException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EventDeliveryFailedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

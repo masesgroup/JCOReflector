@@ -94,7 +94,9 @@ public class CodeSubDirectoriesCollection extends ConfigurationElementCollection
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CodeSubDirectoriesCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

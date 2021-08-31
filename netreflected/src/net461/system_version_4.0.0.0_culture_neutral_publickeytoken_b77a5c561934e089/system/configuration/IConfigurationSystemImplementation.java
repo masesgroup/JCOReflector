@@ -91,7 +91,9 @@ public class IConfigurationSystemImplementation extends NetObject implements ICo
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IConfigurationSystemImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

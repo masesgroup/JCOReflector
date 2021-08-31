@@ -112,7 +112,9 @@ public class _AppDomainImplementation extends NetObject implements _AppDomain {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public _AppDomainImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

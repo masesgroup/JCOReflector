@@ -95,7 +95,9 @@ public class AnonymousPipeClientStream extends PipeStream  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AnonymousPipeClientStream(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

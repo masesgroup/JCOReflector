@@ -91,7 +91,9 @@ public class IRemoteDispatchImplementation extends NetObject implements IRemoteD
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IRemoteDispatchImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class WorkflowHostingEndpoint extends ServiceEndpoint  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WorkflowHostingEndpoint(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

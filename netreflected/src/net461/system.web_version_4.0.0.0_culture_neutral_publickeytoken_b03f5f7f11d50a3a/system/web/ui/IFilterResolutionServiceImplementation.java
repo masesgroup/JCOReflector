@@ -91,7 +91,9 @@ public class IFilterResolutionServiceImplementation extends NetObject implements
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IFilterResolutionServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

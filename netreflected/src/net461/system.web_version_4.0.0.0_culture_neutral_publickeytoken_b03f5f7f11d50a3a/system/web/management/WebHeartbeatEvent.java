@@ -93,7 +93,9 @@ public class WebHeartbeatEvent extends WebManagementEvent  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WebHeartbeatEvent(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

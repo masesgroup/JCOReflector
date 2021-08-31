@@ -94,7 +94,9 @@ public class Overlapped extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Overlapped(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

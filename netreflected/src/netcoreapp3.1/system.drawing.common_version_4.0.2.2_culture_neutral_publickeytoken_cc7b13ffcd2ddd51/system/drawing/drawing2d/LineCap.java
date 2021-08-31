@@ -107,7 +107,9 @@ public class LineCap extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public LineCap(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

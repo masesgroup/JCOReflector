@@ -97,7 +97,9 @@ public class PeerName extends NetObject implements system.runtime.serialization.
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PeerName(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class QueryPageSettingsEventArgs extends PrintEventArgs  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public QueryPageSettingsEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

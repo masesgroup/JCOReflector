@@ -120,7 +120,9 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HttpContext(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

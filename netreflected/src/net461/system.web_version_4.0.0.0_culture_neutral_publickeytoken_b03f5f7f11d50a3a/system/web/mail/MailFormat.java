@@ -107,7 +107,9 @@ public class MailFormat extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MailFormat(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

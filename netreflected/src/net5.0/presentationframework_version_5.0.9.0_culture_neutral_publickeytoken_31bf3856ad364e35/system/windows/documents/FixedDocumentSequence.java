@@ -98,7 +98,9 @@ public class FixedDocumentSequence extends FrameworkContentElement implements sy
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FixedDocumentSequence(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

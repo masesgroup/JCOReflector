@@ -94,7 +94,9 @@ public class TextExpressionCompiler extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TextExpressionCompiler(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

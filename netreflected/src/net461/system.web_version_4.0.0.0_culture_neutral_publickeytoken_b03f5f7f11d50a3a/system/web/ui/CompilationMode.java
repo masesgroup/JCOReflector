@@ -107,7 +107,9 @@ public class CompilationMode extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CompilationMode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

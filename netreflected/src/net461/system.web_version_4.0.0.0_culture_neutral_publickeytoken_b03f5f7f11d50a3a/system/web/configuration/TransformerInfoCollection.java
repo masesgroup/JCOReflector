@@ -93,7 +93,9 @@ public class TransformerInfoCollection extends ConfigurationElementCollection  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TransformerInfoCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

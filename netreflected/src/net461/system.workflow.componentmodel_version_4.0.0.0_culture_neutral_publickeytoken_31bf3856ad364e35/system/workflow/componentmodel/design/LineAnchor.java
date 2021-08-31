@@ -107,7 +107,9 @@ public class LineAnchor extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public LineAnchor(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

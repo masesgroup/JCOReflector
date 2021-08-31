@@ -96,7 +96,9 @@ public class PingException extends InvalidOperationException {
     public PingException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PingException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

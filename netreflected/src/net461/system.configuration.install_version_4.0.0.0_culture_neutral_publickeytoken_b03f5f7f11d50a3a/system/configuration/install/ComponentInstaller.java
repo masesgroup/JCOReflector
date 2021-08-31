@@ -95,7 +95,9 @@ public class ComponentInstaller extends Installer  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ComponentInstaller(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

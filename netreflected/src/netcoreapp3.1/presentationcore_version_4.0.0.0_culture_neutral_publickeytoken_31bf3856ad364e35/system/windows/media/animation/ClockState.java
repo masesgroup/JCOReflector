@@ -107,7 +107,9 @@ public class ClockState extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ClockState(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class LoadWorkflowCommand extends InstancePersistenceCommand  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public LoadWorkflowCommand(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

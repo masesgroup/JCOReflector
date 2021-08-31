@@ -91,7 +91,9 @@ public class IDynamicPropertyImplementation extends NetObject implements IDynami
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IDynamicPropertyImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -97,7 +97,9 @@ public class FlowLayoutPanel extends Panel implements system.componentmodel.IExt
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FlowLayoutPanel(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

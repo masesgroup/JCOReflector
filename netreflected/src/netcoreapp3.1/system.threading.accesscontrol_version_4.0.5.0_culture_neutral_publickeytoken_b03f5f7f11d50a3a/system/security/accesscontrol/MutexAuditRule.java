@@ -95,7 +95,9 @@ public class MutexAuditRule extends AuditRule  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MutexAuditRule(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

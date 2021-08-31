@@ -107,7 +107,9 @@ public class TextDataFormat extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TextDataFormat(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

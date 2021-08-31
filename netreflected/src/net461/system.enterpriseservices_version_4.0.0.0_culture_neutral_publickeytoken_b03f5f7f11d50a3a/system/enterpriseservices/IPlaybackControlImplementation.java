@@ -91,7 +91,9 @@ public class IPlaybackControlImplementation extends NetObject implements IPlayba
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IPlaybackControlImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

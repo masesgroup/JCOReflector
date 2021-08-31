@@ -96,7 +96,9 @@ public class SEHException extends ExternalException {
     public SEHException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SEHException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

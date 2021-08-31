@@ -98,7 +98,9 @@ public class VersionMismatchException extends NetException {
     public VersionMismatchException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public VersionMismatchException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

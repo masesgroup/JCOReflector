@@ -95,7 +95,9 @@ public class NoStartupFormException extends NetException {
     public NoStartupFormException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public NoStartupFormException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

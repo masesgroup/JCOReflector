@@ -107,7 +107,9 @@ public class BaseValueSource extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BaseValueSource(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -95,7 +95,9 @@ public class MenuStrip extends ToolStrip  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MenuStrip(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

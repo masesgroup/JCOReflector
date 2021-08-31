@@ -94,7 +94,9 @@ public class DataGridViewLinkCell extends DataGridViewCell  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataGridViewLinkCell(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

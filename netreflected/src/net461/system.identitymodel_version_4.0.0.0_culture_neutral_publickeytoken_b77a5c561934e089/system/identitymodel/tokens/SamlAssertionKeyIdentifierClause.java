@@ -92,7 +92,9 @@ public class SamlAssertionKeyIdentifierClause extends SecurityKeyIdentifierClaus
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SamlAssertionKeyIdentifierClause(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

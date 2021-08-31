@@ -94,7 +94,9 @@ public class OutputCacheProviderAsync extends OutputCacheProvider  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public OutputCacheProviderAsync(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

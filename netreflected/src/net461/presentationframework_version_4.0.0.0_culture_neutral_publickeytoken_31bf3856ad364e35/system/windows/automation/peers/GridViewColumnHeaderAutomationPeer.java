@@ -96,7 +96,9 @@ public class GridViewColumnHeaderAutomationPeer extends FrameworkElementAutomati
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public GridViewColumnHeaderAutomationPeer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

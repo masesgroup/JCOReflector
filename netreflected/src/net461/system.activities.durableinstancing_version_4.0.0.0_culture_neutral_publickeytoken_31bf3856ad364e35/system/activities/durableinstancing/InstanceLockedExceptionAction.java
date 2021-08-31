@@ -107,7 +107,9 @@ public class InstanceLockedExceptionAction extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InstanceLockedExceptionAction(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

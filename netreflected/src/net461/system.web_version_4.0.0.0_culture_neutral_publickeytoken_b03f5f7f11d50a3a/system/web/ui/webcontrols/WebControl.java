@@ -104,7 +104,9 @@ public class WebControl extends Control implements system.web.ui.IAttributeAcces
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WebControl(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

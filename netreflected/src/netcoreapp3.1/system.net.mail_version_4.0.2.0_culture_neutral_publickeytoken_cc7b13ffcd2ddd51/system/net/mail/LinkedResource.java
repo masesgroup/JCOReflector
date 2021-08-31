@@ -97,7 +97,9 @@ public class LinkedResource extends AttachmentBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public LinkedResource(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

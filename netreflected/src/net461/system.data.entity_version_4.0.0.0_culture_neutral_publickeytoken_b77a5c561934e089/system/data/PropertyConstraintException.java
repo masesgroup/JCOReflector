@@ -98,7 +98,9 @@ public class PropertyConstraintException extends ConstraintException {
     public PropertyConstraintException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PropertyConstraintException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

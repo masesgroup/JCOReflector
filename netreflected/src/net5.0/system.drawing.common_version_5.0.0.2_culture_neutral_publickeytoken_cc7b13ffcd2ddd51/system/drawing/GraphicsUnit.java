@@ -107,7 +107,9 @@ public class GraphicsUnit extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public GraphicsUnit(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

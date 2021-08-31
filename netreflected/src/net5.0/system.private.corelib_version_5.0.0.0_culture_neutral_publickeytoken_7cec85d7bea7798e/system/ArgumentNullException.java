@@ -96,7 +96,9 @@ public class ArgumentNullException extends ArgumentException {
     public ArgumentNullException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ArgumentNullException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

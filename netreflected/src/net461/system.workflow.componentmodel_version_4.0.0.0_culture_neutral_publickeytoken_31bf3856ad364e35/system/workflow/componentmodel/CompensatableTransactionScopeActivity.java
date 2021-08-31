@@ -97,7 +97,9 @@ public class CompensatableTransactionScopeActivity extends CompositeActivity imp
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CompensatableTransactionScopeActivity(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

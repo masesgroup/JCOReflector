@@ -100,7 +100,9 @@ public class ContainerControl extends ScrollableControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ContainerControl(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

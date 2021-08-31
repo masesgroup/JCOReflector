@@ -99,7 +99,9 @@ public class XmlSchemaComplexType extends XmlSchemaType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlSchemaComplexType(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

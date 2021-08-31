@@ -96,7 +96,9 @@ public class UrlRoutingModule extends NetObject implements system.web.IHttpModul
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UrlRoutingModule(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

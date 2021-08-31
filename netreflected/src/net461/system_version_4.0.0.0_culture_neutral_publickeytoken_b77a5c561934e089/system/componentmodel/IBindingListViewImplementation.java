@@ -102,7 +102,9 @@ public class IBindingListViewImplementation extends IEnumerableImplementation im
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IBindingListViewImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

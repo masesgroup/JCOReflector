@@ -95,7 +95,9 @@ public class XmlEntityReference extends XmlLinkedNode  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlEntityReference(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

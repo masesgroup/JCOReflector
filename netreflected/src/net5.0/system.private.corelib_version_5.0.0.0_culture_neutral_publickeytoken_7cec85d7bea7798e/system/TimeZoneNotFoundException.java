@@ -95,7 +95,9 @@ public class TimeZoneNotFoundException extends NetException {
     public TimeZoneNotFoundException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TimeZoneNotFoundException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -96,7 +96,9 @@ public class OperationAbortedException extends SystemException {
     public OperationAbortedException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public OperationAbortedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

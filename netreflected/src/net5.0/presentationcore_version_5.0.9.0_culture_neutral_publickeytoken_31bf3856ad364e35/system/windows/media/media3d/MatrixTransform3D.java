@@ -94,7 +94,9 @@ public class MatrixTransform3D extends Transform3D  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MatrixTransform3D(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -96,7 +96,9 @@ public class LimitExceededException extends SystemException {
     public LimitExceededException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public LimitExceededException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

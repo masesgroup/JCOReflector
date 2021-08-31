@@ -96,7 +96,9 @@ public class DriveNotFoundException extends IOException {
     public DriveNotFoundException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DriveNotFoundException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

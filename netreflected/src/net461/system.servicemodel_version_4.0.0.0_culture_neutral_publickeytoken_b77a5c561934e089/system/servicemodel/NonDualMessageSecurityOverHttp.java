@@ -92,7 +92,9 @@ public class NonDualMessageSecurityOverHttp extends MessageSecurityOverHttp  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public NonDualMessageSecurityOverHttp(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

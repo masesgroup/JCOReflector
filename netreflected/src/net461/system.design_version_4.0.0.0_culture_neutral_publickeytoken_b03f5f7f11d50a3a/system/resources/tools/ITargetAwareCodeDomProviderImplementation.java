@@ -91,7 +91,9 @@ public class ITargetAwareCodeDomProviderImplementation extends NetObject impleme
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ITargetAwareCodeDomProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

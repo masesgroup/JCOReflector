@@ -91,7 +91,9 @@ public class SystemSound extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SystemSound(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

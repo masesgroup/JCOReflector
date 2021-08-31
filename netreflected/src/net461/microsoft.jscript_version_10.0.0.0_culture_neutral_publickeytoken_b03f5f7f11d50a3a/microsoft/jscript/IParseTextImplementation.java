@@ -93,7 +93,9 @@ public class IParseTextImplementation extends NetObject implements IParseText {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IParseTextImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

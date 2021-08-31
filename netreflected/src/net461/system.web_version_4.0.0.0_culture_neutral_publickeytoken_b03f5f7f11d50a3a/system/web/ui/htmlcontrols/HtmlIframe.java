@@ -92,7 +92,9 @@ public class HtmlIframe extends HtmlContainerControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HtmlIframe(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -101,7 +101,9 @@ public class InstanceKeyCollisionException extends InstancePersistenceCommandExc
     public InstanceKeyCollisionException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InstanceKeyCollisionException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

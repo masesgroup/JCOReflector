@@ -98,7 +98,9 @@ public class IKeyboardInputSinkImplementation extends NetObject implements IKeyb
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IKeyboardInputSinkImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

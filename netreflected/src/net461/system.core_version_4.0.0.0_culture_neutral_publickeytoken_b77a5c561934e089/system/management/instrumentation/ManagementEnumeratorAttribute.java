@@ -92,7 +92,9 @@ public class ManagementEnumeratorAttribute extends ManagementNewInstanceAttribut
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ManagementEnumeratorAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

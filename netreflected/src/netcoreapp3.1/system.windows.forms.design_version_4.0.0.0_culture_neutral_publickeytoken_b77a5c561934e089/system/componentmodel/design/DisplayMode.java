@@ -107,7 +107,9 @@ public class DisplayMode extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DisplayMode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

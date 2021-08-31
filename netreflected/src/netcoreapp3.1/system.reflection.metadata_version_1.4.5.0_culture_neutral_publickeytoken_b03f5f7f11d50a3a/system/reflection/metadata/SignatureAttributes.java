@@ -107,7 +107,9 @@ public class SignatureAttributes extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SignatureAttributes(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

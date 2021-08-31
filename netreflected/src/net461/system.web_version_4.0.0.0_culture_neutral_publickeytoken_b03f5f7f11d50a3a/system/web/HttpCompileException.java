@@ -99,7 +99,9 @@ public class HttpCompileException extends HttpException {
     public HttpCompileException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HttpCompileException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

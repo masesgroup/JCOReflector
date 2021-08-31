@@ -107,7 +107,9 @@ public class ValidationErrorEventAction extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ValidationErrorEventAction(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

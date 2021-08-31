@@ -96,7 +96,9 @@ public class WaitHandleCannotBeOpenedException extends ApplicationException {
     public WaitHandleCannotBeOpenedException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WaitHandleCannotBeOpenedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

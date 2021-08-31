@@ -94,7 +94,9 @@ public class IRawElementProviderSimpleImplementation extends NetObject implement
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IRawElementProviderSimpleImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

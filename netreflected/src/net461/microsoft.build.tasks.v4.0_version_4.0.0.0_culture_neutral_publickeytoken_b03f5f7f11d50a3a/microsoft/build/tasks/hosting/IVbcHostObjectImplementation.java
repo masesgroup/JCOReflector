@@ -95,7 +95,9 @@ public class IVbcHostObjectImplementation extends NetObject implements IVbcHostO
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IVbcHostObjectImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

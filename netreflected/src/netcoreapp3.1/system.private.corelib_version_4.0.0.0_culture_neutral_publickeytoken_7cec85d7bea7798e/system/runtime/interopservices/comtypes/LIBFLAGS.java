@@ -107,7 +107,9 @@ public class LIBFLAGS extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public LIBFLAGS(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

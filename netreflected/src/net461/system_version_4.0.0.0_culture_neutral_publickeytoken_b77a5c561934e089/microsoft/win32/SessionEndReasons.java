@@ -107,7 +107,9 @@ public class SessionEndReasons extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SessionEndReasons(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

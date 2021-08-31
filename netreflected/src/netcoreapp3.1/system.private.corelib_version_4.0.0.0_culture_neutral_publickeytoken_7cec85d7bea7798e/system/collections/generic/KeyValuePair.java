@@ -91,7 +91,9 @@ public class KeyValuePair extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public KeyValuePair(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

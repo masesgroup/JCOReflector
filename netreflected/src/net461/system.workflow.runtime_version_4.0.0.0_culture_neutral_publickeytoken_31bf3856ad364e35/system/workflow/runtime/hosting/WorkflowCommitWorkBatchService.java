@@ -92,7 +92,9 @@ public class WorkflowCommitWorkBatchService extends WorkflowRuntimeService  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WorkflowCommitWorkBatchService(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

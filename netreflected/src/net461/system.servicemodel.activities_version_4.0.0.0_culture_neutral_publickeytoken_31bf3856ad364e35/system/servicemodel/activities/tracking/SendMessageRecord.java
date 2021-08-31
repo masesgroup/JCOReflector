@@ -93,7 +93,9 @@ public class SendMessageRecord extends CustomTrackingRecord  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SendMessageRecord(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

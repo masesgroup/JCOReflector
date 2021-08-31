@@ -97,7 +97,9 @@ public class ActiveDirectoryObjectNotFoundException extends NetException {
     public ActiveDirectoryObjectNotFoundException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ActiveDirectoryObjectNotFoundException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

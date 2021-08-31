@@ -93,7 +93,9 @@ public class IncrementalStrokeHitTester extends IncrementalHitTester  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IncrementalStrokeHitTester(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

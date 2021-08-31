@@ -96,7 +96,9 @@ public class TiffBitmapDecoder extends BitmapDecoder  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TiffBitmapDecoder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

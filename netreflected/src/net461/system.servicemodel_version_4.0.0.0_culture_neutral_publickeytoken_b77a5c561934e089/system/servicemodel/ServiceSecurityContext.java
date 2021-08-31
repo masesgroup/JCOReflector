@@ -96,7 +96,9 @@ public class ServiceSecurityContext extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ServiceSecurityContext(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

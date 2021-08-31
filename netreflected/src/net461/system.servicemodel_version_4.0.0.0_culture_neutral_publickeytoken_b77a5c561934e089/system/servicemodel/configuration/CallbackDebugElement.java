@@ -93,7 +93,9 @@ public class CallbackDebugElement extends BehaviorExtensionElement  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CallbackDebugElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

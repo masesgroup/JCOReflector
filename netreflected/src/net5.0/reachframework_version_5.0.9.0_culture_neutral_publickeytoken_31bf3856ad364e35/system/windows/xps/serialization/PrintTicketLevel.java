@@ -107,7 +107,9 @@ public class PrintTicketLevel extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PrintTicketLevel(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

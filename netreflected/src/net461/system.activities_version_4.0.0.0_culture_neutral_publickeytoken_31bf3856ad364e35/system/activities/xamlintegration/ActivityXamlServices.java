@@ -97,7 +97,9 @@ public class ActivityXamlServices extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ActivityXamlServices(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

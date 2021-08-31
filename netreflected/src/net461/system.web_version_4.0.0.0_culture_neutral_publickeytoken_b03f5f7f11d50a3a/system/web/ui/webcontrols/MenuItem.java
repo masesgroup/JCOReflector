@@ -95,7 +95,9 @@ public class MenuItem extends NetObject implements system.ICloneable {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MenuItem(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

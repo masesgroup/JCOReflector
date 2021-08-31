@@ -91,7 +91,9 @@ public class Utf8Parser extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Utf8Parser(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

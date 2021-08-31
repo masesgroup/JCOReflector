@@ -95,7 +95,9 @@ public class WebClientProtocol extends Component  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WebClientProtocol(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

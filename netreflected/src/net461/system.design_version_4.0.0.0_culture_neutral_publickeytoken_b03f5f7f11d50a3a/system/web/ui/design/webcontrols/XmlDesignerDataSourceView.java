@@ -95,7 +95,9 @@ public class XmlDesignerDataSourceView extends DesignerDataSourceView  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlDesignerDataSourceView(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

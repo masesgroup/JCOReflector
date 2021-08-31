@@ -106,7 +106,9 @@ public class SqlBulkCopy extends NetObject implements system.IDisposable, AutoCl
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SqlBulkCopy(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

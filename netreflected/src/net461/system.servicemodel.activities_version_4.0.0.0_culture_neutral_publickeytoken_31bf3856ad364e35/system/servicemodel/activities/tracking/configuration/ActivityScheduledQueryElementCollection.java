@@ -91,7 +91,9 @@ public class ActivityScheduledQueryElementCollection extends NetObjectEnumerable
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ActivityScheduledQueryElementCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

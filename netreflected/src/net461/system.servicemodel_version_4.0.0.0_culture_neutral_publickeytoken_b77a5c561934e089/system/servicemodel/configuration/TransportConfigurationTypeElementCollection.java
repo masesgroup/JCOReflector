@@ -91,7 +91,9 @@ public class TransportConfigurationTypeElementCollection extends NetObjectEnumer
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TransportConfigurationTypeElementCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

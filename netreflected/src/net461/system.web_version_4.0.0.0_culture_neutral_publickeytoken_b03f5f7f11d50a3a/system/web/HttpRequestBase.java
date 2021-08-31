@@ -107,7 +107,9 @@ public class HttpRequestBase extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HttpRequestBase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class ServiceBehaviorElement extends NetObjectEnumerable  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ServiceBehaviorElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

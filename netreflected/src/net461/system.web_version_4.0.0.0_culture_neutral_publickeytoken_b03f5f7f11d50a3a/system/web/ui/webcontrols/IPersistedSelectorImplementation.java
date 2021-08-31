@@ -92,7 +92,9 @@ public class IPersistedSelectorImplementation extends NetObject implements IPers
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IPersistedSelectorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

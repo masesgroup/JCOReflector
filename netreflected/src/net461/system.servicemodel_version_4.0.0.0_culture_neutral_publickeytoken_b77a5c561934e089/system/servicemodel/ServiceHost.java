@@ -94,7 +94,9 @@ public class ServiceHost extends ServiceHostBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ServiceHost(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

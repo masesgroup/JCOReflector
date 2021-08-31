@@ -102,7 +102,9 @@ public class PagesSection extends ConfigurationSection  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PagesSection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

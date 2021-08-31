@@ -96,7 +96,9 @@ public class ProviderIncompatibleException extends EntityException {
     public ProviderIncompatibleException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ProviderIncompatibleException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

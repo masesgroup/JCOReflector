@@ -94,7 +94,9 @@ public class XNodeEqualityComparer extends NetObject implements system.collectio
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XNodeEqualityComparer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

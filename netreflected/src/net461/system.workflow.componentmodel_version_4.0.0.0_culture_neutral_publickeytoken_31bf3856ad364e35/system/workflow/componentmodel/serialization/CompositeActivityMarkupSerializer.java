@@ -92,7 +92,9 @@ public class CompositeActivityMarkupSerializer extends ActivityMarkupSerializer 
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CompositeActivityMarkupSerializer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

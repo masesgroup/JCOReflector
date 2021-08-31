@@ -101,7 +101,9 @@ public class BindingExpressionBase extends Expression implements system.windows.
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BindingExpressionBase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

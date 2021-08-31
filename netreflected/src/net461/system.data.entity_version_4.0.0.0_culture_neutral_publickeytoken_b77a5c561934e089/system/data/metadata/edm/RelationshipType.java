@@ -92,7 +92,9 @@ public class RelationshipType extends EntityTypeBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RelationshipType(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

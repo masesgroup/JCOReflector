@@ -96,7 +96,9 @@ public class IBindCtxImplementation extends NetObject implements IBindCtx {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IBindCtxImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

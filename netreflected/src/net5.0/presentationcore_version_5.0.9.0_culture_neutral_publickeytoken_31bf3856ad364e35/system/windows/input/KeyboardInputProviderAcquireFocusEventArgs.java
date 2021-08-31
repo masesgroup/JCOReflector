@@ -93,7 +93,9 @@ public class KeyboardInputProviderAcquireFocusEventArgs extends KeyboardEventArg
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public KeyboardInputProviderAcquireFocusEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

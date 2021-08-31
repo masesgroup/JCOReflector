@@ -97,7 +97,9 @@ public class X509ScopedServiceCertificateElement extends ConfigurationElement  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public X509ScopedServiceCertificateElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

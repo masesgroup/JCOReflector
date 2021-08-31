@@ -95,7 +95,9 @@ public class UserCancellationException extends NetException {
     public UserCancellationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UserCancellationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class DataGridViewImageCell extends DataGridViewCell  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataGridViewImageCell(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -101,7 +101,9 @@ public class ChannelDispatcher extends ChannelDispatcherBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ChannelDispatcher(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

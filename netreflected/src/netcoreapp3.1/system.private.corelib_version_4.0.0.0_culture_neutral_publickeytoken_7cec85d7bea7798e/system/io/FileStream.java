@@ -104,7 +104,9 @@ public class FileStream extends Stream  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FileStream(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

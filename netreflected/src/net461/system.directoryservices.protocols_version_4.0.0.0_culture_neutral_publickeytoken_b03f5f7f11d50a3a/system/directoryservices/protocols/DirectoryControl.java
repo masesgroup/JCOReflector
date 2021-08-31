@@ -91,7 +91,9 @@ public class DirectoryControl extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DirectoryControl(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -95,7 +95,9 @@ public class TaskSchedulerException extends NetException {
     public TaskSchedulerException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TaskSchedulerException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

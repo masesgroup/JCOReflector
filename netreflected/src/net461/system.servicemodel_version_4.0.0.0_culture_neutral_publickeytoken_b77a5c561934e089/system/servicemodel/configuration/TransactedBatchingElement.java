@@ -93,7 +93,9 @@ public class TransactedBatchingElement extends BehaviorExtensionElement  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TransactedBatchingElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

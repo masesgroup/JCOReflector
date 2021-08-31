@@ -95,7 +95,9 @@ public class WorkflowDesignerLoader extends BasicDesignerLoader  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WorkflowDesignerLoader(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -95,7 +95,9 @@ public class RouteData extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RouteData(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

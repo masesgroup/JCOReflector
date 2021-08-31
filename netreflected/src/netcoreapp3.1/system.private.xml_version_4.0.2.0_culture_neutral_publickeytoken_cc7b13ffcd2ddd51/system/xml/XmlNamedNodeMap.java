@@ -92,7 +92,9 @@ public class XmlNamedNodeMap extends NetObjectEnumerable  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlNamedNodeMap(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

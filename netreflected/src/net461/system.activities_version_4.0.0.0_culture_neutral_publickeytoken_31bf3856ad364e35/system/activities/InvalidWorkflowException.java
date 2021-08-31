@@ -95,7 +95,9 @@ public class InvalidWorkflowException extends NetException {
     public InvalidWorkflowException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InvalidWorkflowException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

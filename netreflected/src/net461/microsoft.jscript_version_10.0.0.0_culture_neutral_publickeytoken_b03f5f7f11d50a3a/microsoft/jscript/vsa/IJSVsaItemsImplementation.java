@@ -95,7 +95,9 @@ public class IJSVsaItemsImplementation extends IEnumerableImplementation impleme
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IJSVsaItemsImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

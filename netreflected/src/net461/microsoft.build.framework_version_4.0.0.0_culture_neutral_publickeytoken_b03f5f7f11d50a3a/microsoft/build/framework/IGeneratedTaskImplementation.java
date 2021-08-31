@@ -98,7 +98,9 @@ public class IGeneratedTaskImplementation extends NetObject implements IGenerate
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IGeneratedTaskImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

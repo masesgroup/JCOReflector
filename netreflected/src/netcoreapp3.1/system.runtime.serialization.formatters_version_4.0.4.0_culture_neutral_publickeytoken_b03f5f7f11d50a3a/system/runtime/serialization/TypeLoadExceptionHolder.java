@@ -91,7 +91,9 @@ public class TypeLoadExceptionHolder extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TypeLoadExceptionHolder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

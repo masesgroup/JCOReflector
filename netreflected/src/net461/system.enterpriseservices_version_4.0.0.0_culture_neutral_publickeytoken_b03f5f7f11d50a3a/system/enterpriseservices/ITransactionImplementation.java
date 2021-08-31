@@ -93,7 +93,9 @@ public class ITransactionImplementation extends NetObject implements ITransactio
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ITransactionImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

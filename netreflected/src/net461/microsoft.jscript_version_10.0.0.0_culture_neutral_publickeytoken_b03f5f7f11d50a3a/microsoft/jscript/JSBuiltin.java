@@ -107,7 +107,9 @@ public class JSBuiltin extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public JSBuiltin(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -98,7 +98,9 @@ public class DeploymentException extends SystemException {
     public DeploymentException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DeploymentException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

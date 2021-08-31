@@ -91,7 +91,9 @@ public class ResourceExpressionFields extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ResourceExpressionFields(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

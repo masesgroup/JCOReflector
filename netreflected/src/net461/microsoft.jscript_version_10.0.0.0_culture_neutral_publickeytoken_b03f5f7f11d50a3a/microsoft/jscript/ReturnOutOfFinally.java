@@ -96,7 +96,9 @@ public class ReturnOutOfFinally extends ApplicationException {
     public ReturnOutOfFinally() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ReturnOutOfFinally(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -95,7 +95,9 @@ public class DiffuseMaterial extends Material  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DiffuseMaterial(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

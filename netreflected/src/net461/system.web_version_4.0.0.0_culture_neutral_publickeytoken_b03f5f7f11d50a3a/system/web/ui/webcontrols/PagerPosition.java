@@ -107,7 +107,9 @@ public class PagerPosition extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PagerPosition(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

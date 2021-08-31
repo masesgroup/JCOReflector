@@ -107,7 +107,9 @@ public class MethodBodyAttributes extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MethodBodyAttributes(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

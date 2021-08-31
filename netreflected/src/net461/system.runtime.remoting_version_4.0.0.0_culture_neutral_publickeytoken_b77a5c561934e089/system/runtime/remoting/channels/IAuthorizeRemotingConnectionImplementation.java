@@ -94,7 +94,9 @@ public class IAuthorizeRemotingConnectionImplementation extends NetObject implem
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IAuthorizeRemotingConnectionImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

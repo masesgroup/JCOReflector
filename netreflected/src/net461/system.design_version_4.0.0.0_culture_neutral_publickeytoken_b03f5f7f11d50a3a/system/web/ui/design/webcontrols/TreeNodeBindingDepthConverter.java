@@ -95,7 +95,9 @@ public class TreeNodeBindingDepthConverter extends Int32Converter  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TreeNodeBindingDepthConverter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

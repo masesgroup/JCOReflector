@@ -95,7 +95,9 @@ public class IHttpSessionStateImplementation extends NetObject implements IHttpS
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IHttpSessionStateImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

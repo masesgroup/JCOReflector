@@ -96,7 +96,9 @@ public class AuthenticationException extends SystemException {
     public AuthenticationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AuthenticationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

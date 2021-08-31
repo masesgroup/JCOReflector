@@ -104,7 +104,9 @@ public class AmbientTheme extends DesignerTheme  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AmbientTheme(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

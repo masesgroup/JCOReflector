@@ -94,7 +94,9 @@ public class WorkflowWebHostingModule extends NetObject implements system.web.IH
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WorkflowWebHostingModule(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

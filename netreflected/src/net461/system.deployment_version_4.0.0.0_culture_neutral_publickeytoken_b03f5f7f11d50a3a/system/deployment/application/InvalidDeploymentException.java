@@ -96,7 +96,9 @@ public class InvalidDeploymentException extends DeploymentException {
     public InvalidDeploymentException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InvalidDeploymentException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

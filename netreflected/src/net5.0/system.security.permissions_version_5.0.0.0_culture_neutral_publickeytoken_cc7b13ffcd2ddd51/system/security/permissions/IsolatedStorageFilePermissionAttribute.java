@@ -95,7 +95,9 @@ public class IsolatedStorageFilePermissionAttribute extends IsolatedStoragePermi
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IsolatedStorageFilePermissionAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

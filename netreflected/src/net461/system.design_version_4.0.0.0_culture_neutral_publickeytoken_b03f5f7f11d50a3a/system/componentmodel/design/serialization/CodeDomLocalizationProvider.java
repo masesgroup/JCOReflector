@@ -99,7 +99,9 @@ public class CodeDomLocalizationProvider extends NetObject implements system.com
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CodeDomLocalizationProvider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

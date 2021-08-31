@@ -101,7 +101,9 @@ public class StylusDevice extends InputDevice  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public StylusDevice(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

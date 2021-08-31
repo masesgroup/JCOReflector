@@ -92,7 +92,9 @@ public class HtmlVideo extends HtmlContainerControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HtmlVideo(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -94,7 +94,9 @@ public class Polyline extends Shape  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Polyline(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -94,7 +94,9 @@ public class SafeBuffer extends SafeHandleZeroOrMinusOneIsInvalid  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SafeBuffer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

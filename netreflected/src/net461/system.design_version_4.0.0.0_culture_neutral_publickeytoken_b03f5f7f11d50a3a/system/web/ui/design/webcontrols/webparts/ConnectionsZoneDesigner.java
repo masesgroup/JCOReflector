@@ -95,7 +95,9 @@ public class ConnectionsZoneDesigner extends ToolZoneDesigner  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ConnectionsZoneDesigner(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

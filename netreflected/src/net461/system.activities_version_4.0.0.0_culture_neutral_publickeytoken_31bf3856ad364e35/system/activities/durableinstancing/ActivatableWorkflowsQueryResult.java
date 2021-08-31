@@ -92,7 +92,9 @@ public class ActivatableWorkflowsQueryResult extends InstanceStoreQueryResult  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ActivatableWorkflowsQueryResult(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -94,7 +94,9 @@ public class RelationshipSet extends EntitySetBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RelationshipSet(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

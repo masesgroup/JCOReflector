@@ -107,7 +107,9 @@ public class SdlChannelSink extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SdlChannelSink(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

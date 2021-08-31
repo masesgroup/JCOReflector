@@ -94,7 +94,9 @@ public class IServiceContainerImplementation extends NetObject implements IServi
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IServiceContainerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

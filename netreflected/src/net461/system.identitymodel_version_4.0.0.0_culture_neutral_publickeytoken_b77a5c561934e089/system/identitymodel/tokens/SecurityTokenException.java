@@ -96,7 +96,9 @@ public class SecurityTokenException extends SystemException {
     public SecurityTokenException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SecurityTokenException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

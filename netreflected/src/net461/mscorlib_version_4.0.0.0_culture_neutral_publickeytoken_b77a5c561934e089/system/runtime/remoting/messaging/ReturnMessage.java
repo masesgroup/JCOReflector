@@ -97,7 +97,9 @@ public class ReturnMessage extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ReturnMessage(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

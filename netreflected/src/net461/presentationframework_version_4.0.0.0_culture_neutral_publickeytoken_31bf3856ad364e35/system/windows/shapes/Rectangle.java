@@ -94,7 +94,9 @@ public class Rectangle extends Shape  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Rectangle(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

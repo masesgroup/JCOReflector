@@ -98,7 +98,9 @@ public class SqlFileStream extends Stream  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SqlFileStream(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

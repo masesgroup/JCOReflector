@@ -95,7 +95,9 @@ public class Metafile extends Image  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Metafile(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

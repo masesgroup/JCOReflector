@@ -96,7 +96,9 @@ public class LocalScope extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public LocalScope(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class CurrentValueRecord extends DbUpdatableDataRecord  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CurrentValueRecord(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

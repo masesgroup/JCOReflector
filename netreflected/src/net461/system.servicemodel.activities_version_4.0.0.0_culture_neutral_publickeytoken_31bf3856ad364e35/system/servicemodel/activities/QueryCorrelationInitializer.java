@@ -93,7 +93,9 @@ public class QueryCorrelationInitializer extends CorrelationInitializer  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public QueryCorrelationInitializer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

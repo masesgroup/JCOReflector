@@ -96,7 +96,9 @@ public class ThreadAbortException extends SystemException {
     public ThreadAbortException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ThreadAbortException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -107,7 +107,9 @@ public class VSAITEMTYPE2 extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public VSAITEMTYPE2(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

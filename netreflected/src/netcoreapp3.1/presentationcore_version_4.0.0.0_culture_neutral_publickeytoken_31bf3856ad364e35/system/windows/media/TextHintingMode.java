@@ -107,7 +107,9 @@ public class TextHintingMode extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TextHintingMode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

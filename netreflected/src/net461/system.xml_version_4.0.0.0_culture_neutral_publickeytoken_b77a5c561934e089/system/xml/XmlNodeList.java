@@ -94,7 +94,9 @@ public class XmlNodeList extends NetObjectEnumerable implements system.IDisposab
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlNodeList(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

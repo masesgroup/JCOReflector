@@ -92,7 +92,9 @@ public class TableCellsCollectionEditor extends CollectionEditor  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TableCellsCollectionEditor(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

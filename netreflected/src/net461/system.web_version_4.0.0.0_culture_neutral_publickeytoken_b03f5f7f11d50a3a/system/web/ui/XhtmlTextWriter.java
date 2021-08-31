@@ -94,7 +94,9 @@ public class XhtmlTextWriter extends HtmlTextWriter  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XhtmlTextWriter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

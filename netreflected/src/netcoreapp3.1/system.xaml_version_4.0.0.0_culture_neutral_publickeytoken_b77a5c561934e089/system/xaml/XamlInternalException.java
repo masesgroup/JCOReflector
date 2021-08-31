@@ -96,7 +96,9 @@ public class XamlInternalException extends XamlException {
     public XamlInternalException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XamlInternalException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

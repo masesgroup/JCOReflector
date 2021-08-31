@@ -95,7 +95,9 @@ public class SoapClientMessage extends SoapMessage  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SoapClientMessage(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

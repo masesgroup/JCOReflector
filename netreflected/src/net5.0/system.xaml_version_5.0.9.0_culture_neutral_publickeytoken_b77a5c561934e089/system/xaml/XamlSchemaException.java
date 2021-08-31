@@ -96,7 +96,9 @@ public class XamlSchemaException extends XamlException {
     public XamlSchemaException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XamlSchemaException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

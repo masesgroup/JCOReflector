@@ -99,7 +99,9 @@ public class EntityDataReader extends DbDataReader  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EntityDataReader(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

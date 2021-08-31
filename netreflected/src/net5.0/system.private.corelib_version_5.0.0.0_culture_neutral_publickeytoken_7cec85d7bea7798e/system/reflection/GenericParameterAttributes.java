@@ -107,7 +107,9 @@ public class GenericParameterAttributes extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public GenericParameterAttributes(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

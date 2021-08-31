@@ -92,7 +92,9 @@ public class DirectoryNotificationControl extends DirectoryControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DirectoryNotificationControl(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

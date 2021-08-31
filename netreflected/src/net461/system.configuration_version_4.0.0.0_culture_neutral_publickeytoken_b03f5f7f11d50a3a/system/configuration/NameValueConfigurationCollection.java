@@ -93,7 +93,9 @@ public class NameValueConfigurationCollection extends ConfigurationElementCollec
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public NameValueConfigurationCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

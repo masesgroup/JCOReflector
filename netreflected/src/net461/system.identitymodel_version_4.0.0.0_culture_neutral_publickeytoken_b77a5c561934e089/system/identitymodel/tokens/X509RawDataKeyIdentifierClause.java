@@ -94,7 +94,9 @@ public class X509RawDataKeyIdentifierClause extends BinaryKeyIdentifierClause  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public X509RawDataKeyIdentifierClause(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

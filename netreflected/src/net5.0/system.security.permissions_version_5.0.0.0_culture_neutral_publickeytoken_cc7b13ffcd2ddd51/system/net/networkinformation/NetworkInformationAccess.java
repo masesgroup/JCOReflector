@@ -107,7 +107,9 @@ public class NetworkInformationAccess extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public NetworkInformationAccess(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

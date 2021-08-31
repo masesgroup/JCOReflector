@@ -92,7 +92,9 @@ public class ServiceMetadataEndpointElement extends StandardEndpointElement  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ServiceMetadataEndpointElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

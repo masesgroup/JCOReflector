@@ -96,7 +96,9 @@ public class DirectoryNotFoundException extends IOException {
     public DirectoryNotFoundException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DirectoryNotFoundException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

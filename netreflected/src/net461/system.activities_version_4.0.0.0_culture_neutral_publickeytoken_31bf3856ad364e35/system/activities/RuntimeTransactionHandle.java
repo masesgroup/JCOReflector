@@ -102,7 +102,9 @@ public class RuntimeTransactionHandle extends Handle implements system.activitie
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RuntimeTransactionHandle(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

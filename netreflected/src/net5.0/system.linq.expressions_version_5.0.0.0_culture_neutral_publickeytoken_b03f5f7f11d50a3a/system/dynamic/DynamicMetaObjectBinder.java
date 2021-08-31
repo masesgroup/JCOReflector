@@ -94,7 +94,9 @@ public class DynamicMetaObjectBinder extends CallSiteBinder  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DynamicMetaObjectBinder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

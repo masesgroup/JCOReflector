@@ -96,7 +96,9 @@ public class BerConversionException extends DirectoryException {
     public BerConversionException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BerConversionException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

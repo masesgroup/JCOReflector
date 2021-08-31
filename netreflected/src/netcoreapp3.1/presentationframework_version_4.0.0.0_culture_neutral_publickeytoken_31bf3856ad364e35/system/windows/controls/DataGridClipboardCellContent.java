@@ -93,7 +93,9 @@ public class DataGridClipboardCellContent extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataGridClipboardCellContent(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

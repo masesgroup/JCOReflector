@@ -91,7 +91,9 @@ public class BYOT extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BYOT(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

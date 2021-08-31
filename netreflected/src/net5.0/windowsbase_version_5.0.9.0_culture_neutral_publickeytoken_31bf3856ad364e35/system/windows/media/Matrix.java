@@ -99,7 +99,9 @@ public class Matrix extends ValueType implements system.IFormattable {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Matrix(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

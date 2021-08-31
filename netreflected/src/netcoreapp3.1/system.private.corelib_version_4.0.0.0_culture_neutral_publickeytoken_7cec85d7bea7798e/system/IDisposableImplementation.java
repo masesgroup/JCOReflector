@@ -91,7 +91,9 @@ public class IDisposableImplementation extends NetObject implements IDisposable 
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IDisposableImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

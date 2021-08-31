@@ -107,7 +107,9 @@ public class FigureVerticalAnchor extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FigureVerticalAnchor(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

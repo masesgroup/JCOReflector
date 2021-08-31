@@ -104,7 +104,9 @@ public class TextBox extends TextBoxBase implements system.windows.markup.IAddCh
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TextBox(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

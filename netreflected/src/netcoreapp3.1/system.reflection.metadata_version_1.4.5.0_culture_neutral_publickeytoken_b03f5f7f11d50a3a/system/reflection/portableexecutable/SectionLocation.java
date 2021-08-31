@@ -92,7 +92,9 @@ public class SectionLocation extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SectionLocation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

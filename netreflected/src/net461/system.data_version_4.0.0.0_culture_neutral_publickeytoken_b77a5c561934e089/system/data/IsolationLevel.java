@@ -107,7 +107,9 @@ public class IsolationLevel extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IsolationLevel(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

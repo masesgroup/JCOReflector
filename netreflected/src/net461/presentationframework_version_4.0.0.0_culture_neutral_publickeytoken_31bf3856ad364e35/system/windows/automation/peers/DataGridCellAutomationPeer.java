@@ -93,7 +93,9 @@ public class DataGridCellAutomationPeer extends FrameworkElementAutomationPeer  
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataGridCellAutomationPeer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

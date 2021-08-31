@@ -91,7 +91,9 @@ public class IWorkflowDesignerStorageServiceImplementation extends NetObject imp
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IWorkflowDesignerStorageServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

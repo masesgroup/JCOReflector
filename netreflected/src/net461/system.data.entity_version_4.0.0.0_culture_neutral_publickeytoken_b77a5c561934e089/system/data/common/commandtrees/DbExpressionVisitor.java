@@ -134,7 +134,9 @@ public class DbExpressionVisitor extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DbExpressionVisitor(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

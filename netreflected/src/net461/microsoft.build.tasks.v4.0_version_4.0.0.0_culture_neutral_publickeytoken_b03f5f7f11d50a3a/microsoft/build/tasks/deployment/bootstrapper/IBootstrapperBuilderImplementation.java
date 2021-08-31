@@ -94,7 +94,9 @@ public class IBootstrapperBuilderImplementation extends NetObject implements IBo
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IBootstrapperBuilderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

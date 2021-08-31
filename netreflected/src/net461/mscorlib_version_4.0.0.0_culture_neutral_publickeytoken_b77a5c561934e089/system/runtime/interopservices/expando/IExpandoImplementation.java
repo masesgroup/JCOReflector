@@ -101,7 +101,9 @@ public class IExpandoImplementation extends NetObject implements IExpando {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IExpandoImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

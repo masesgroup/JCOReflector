@@ -93,7 +93,9 @@ public class PassportIdentity extends NetObject implements system.IDisposable, A
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PassportIdentity(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

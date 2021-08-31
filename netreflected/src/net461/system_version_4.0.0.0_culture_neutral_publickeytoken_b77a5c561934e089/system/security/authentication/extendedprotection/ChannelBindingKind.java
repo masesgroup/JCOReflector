@@ -107,7 +107,9 @@ public class ChannelBindingKind extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ChannelBindingKind(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

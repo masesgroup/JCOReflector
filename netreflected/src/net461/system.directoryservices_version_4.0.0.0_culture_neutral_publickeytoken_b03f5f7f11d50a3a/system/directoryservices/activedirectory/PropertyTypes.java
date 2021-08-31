@@ -107,7 +107,9 @@ public class PropertyTypes extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PropertyTypes(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

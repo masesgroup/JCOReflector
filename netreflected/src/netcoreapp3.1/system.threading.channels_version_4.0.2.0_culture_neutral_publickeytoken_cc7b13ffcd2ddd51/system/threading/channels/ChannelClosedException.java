@@ -96,7 +96,9 @@ public class ChannelClosedException extends InvalidOperationException {
     public ChannelClosedException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ChannelClosedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

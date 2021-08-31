@@ -94,7 +94,9 @@ public class WSFederationHttpSecurityElement extends ServiceModelConfigurationEl
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WSFederationHttpSecurityElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

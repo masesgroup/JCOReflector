@@ -107,7 +107,9 @@ public class InstanceCompletionAction extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InstanceCompletionAction(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

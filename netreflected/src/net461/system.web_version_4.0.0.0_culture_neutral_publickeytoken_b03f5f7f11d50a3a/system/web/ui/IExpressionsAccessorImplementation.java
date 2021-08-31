@@ -92,7 +92,9 @@ public class IExpressionsAccessorImplementation extends NetObject implements IEx
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IExpressionsAccessorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

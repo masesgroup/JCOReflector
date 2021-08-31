@@ -93,7 +93,9 @@ public class StreamSecurityUpgradeInitiator extends StreamUpgradeInitiator  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public StreamSecurityUpgradeInitiator(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

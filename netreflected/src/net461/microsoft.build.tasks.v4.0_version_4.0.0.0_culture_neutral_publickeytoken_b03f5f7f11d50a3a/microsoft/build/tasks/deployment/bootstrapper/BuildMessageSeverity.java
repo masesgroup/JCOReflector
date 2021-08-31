@@ -107,7 +107,9 @@ public class BuildMessageSeverity extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BuildMessageSeverity(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

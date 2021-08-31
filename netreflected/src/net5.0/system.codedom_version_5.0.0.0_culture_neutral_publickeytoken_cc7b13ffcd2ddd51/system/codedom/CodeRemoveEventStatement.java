@@ -94,7 +94,9 @@ public class CodeRemoveEventStatement extends CodeStatement  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CodeRemoveEventStatement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

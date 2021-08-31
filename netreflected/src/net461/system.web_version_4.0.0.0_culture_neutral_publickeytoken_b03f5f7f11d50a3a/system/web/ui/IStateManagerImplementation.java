@@ -91,7 +91,9 @@ public class IStateManagerImplementation extends NetObject implements IStateMana
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IStateManagerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

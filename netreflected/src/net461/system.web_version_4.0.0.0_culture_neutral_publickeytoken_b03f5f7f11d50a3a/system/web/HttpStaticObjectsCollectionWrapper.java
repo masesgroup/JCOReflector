@@ -95,7 +95,9 @@ public class HttpStaticObjectsCollectionWrapper extends HttpStaticObjectsCollect
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HttpStaticObjectsCollectionWrapper(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

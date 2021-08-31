@@ -97,7 +97,9 @@ public class ExportedType extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ExportedType(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

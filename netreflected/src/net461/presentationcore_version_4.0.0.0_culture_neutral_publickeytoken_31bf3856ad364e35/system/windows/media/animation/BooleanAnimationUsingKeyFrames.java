@@ -96,7 +96,9 @@ public class BooleanAnimationUsingKeyFrames extends BooleanAnimationBase impleme
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BooleanAnimationUsingKeyFrames(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

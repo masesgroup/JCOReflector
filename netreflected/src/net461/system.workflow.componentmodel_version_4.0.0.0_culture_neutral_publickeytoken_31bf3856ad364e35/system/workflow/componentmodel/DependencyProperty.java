@@ -97,7 +97,9 @@ public class DependencyProperty extends NetObject implements system.runtime.seri
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DependencyProperty(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

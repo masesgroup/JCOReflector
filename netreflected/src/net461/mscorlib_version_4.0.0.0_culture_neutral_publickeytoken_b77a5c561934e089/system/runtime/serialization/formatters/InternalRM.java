@@ -91,7 +91,9 @@ public class InternalRM extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InternalRM(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

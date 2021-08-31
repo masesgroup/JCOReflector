@@ -98,7 +98,9 @@ public class RightsManagementException extends NetException {
     public RightsManagementException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RightsManagementException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -94,7 +94,9 @@ public class ISerializerFactoryImplementation extends NetObject implements ISeri
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ISerializerFactoryImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

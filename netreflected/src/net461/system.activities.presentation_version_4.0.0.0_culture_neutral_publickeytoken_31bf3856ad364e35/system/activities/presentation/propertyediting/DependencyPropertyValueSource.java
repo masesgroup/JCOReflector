@@ -93,7 +93,9 @@ public class DependencyPropertyValueSource extends PropertyValueSource  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DependencyPropertyValueSource(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

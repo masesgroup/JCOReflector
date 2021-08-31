@@ -102,7 +102,9 @@ public class RedirectionException extends CommunicationException {
     public RedirectionException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RedirectionException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

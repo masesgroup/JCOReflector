@@ -92,7 +92,9 @@ public class CreateUserWizardStepCollectionEditor extends WizardStepCollectionEd
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CreateUserWizardStepCollectionEditor(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

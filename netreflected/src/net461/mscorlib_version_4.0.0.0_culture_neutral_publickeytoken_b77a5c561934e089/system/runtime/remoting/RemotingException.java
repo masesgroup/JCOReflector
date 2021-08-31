@@ -96,7 +96,9 @@ public class RemotingException extends SystemException {
     public RemotingException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RemotingException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

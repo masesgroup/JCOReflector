@@ -92,7 +92,9 @@ public class SocketAddress extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SocketAddress(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

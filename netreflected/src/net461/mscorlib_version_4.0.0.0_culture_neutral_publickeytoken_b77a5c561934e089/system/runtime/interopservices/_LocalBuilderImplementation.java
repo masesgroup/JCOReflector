@@ -93,7 +93,9 @@ public class _LocalBuilderImplementation extends NetObject implements _LocalBuil
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public _LocalBuilderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

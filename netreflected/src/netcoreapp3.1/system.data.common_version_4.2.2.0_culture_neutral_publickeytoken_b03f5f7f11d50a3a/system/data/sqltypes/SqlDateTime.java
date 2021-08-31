@@ -104,7 +104,9 @@ public class SqlDateTime extends ValueType implements system.xml.serialization.I
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SqlDateTime(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

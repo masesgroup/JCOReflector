@@ -92,7 +92,9 @@ public class VirtualDirectory extends VirtualFileBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public VirtualDirectory(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

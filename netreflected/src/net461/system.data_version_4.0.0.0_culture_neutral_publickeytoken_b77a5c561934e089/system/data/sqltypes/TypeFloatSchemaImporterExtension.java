@@ -92,7 +92,9 @@ public class TypeFloatSchemaImporterExtension extends SqlTypesSchemaImporterExte
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TypeFloatSchemaImporterExtension(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

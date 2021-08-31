@@ -111,7 +111,9 @@ public class DomainController extends DirectoryServer  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DomainController(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

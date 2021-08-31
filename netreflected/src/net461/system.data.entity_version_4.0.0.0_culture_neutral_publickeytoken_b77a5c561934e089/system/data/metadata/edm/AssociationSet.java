@@ -94,7 +94,9 @@ public class AssociationSet extends RelationshipSet  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AssociationSet(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

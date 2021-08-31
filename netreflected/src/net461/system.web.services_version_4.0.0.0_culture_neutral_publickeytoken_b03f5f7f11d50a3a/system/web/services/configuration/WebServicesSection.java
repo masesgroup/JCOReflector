@@ -103,7 +103,9 @@ public class WebServicesSection extends ConfigurationSection  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WebServicesSection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

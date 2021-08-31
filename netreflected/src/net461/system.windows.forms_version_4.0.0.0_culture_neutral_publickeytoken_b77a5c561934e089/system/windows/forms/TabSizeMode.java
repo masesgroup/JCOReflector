@@ -107,7 +107,9 @@ public class TabSizeMode extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TabSizeMode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

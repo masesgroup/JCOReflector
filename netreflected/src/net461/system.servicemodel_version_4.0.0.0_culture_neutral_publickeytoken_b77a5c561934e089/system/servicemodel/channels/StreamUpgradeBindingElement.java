@@ -94,7 +94,9 @@ public class StreamUpgradeBindingElement extends BindingElement  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public StreamUpgradeBindingElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

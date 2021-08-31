@@ -96,7 +96,9 @@ public class DllNotFoundException extends TypeLoadException {
     public DllNotFoundException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DllNotFoundException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

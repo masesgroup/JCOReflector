@@ -96,7 +96,9 @@ public class FormViewPagerRow extends FormViewRow implements system.web.ui.INami
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FormViewPagerRow(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

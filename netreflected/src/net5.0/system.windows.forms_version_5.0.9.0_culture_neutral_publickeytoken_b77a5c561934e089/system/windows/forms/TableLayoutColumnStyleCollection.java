@@ -93,7 +93,9 @@ public class TableLayoutColumnStyleCollection extends TableLayoutStyleCollection
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TableLayoutColumnStyleCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

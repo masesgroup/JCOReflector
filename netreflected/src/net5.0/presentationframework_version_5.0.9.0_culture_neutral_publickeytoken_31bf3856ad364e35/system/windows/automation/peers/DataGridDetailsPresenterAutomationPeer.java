@@ -93,7 +93,9 @@ public class DataGridDetailsPresenterAutomationPeer extends FrameworkElementAuto
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataGridDetailsPresenterAutomationPeer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

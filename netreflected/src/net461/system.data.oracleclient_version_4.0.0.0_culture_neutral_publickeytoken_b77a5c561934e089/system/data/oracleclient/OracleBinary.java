@@ -94,7 +94,9 @@ public class OracleBinary extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public OracleBinary(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

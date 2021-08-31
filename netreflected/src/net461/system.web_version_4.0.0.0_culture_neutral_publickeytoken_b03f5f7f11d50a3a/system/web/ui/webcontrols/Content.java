@@ -95,7 +95,9 @@ public class Content extends Control implements system.web.ui.INamingContainer {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Content(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

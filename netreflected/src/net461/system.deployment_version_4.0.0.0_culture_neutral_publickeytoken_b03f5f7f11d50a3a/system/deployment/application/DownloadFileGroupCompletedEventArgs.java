@@ -92,7 +92,9 @@ public class DownloadFileGroupCompletedEventArgs extends AsyncCompletedEventArgs
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DownloadFileGroupCompletedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

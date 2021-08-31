@@ -105,7 +105,9 @@ public class DataRowView extends NetObject implements system.componentmodel.ICus
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataRowView(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

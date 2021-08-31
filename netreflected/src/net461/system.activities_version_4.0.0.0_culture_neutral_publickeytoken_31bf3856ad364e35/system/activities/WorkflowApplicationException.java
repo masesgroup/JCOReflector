@@ -98,7 +98,9 @@ public class WorkflowApplicationException extends NetException {
     public WorkflowApplicationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WorkflowApplicationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

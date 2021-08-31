@@ -94,7 +94,9 @@ public class HttpsTransportElement extends HttpTransportElement  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HttpsTransportElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

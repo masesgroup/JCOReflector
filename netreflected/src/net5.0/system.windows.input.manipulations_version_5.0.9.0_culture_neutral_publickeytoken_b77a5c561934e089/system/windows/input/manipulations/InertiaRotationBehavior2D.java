@@ -93,7 +93,9 @@ public class InertiaRotationBehavior2D extends InertiaParameters2D  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InertiaRotationBehavior2D(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

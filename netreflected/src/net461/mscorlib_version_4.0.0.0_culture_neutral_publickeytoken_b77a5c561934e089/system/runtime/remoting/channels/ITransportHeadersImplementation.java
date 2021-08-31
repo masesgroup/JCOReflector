@@ -91,7 +91,9 @@ public class ITransportHeadersImplementation extends NetObject implements ITrans
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ITransportHeadersImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

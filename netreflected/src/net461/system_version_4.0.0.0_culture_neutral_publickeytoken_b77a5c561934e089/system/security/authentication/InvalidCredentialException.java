@@ -96,7 +96,9 @@ public class InvalidCredentialException extends AuthenticationException {
     public InvalidCredentialException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InvalidCredentialException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

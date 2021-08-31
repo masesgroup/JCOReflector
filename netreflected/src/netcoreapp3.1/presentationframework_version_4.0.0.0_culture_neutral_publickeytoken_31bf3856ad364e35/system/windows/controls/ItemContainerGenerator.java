@@ -106,7 +106,9 @@ public class ItemContainerGenerator extends NetObject implements system.windows.
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ItemContainerGenerator(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class ExeContext extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ExeContext(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

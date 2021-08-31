@@ -93,7 +93,9 @@ public class Bmi1 extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Bmi1(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

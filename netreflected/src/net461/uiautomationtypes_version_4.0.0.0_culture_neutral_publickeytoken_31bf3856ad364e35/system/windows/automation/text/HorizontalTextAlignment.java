@@ -107,7 +107,9 @@ public class HorizontalTextAlignment extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HorizontalTextAlignment(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

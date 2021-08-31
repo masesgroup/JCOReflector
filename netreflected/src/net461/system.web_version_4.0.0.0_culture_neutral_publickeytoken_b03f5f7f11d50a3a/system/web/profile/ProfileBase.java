@@ -95,7 +95,9 @@ public class ProfileBase extends SettingsBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ProfileBase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

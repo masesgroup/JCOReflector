@@ -96,7 +96,9 @@ public class TransactionException extends SystemException {
     public TransactionException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TransactionException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

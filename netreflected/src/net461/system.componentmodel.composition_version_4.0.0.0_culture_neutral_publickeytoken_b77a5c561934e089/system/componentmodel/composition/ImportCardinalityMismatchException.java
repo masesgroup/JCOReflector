@@ -95,7 +95,9 @@ public class ImportCardinalityMismatchException extends NetException {
     public ImportCardinalityMismatchException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ImportCardinalityMismatchException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class FrameworkTextComposition extends TextComposition  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FrameworkTextComposition(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

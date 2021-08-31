@@ -94,7 +94,9 @@ public class KeyInfoEncryptedKey extends KeyInfoClause  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public KeyInfoEncryptedKey(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

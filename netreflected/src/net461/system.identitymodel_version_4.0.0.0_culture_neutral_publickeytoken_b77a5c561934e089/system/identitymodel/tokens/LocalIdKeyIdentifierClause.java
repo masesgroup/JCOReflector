@@ -92,7 +92,9 @@ public class LocalIdKeyIdentifierClause extends SecurityKeyIdentifierClause  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public LocalIdKeyIdentifierClause(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

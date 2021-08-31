@@ -96,7 +96,9 @@ public class InvalidCommandTreeException extends DataException {
     public InvalidCommandTreeException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InvalidCommandTreeException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

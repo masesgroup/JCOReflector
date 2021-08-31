@@ -93,7 +93,9 @@ public class MemberInfoInitializerImplementation extends NetObject implements Me
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MemberInfoInitializerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

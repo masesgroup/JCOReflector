@@ -94,7 +94,9 @@ public class InArgument extends Argument  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InArgument(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

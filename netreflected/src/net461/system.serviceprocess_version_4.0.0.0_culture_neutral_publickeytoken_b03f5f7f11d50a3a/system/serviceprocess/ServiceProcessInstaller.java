@@ -97,7 +97,9 @@ public class ServiceProcessInstaller extends ComponentInstaller  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ServiceProcessInstaller(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

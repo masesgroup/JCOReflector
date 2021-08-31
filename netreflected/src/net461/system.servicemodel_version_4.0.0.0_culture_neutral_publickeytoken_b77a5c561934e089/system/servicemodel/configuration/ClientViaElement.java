@@ -94,7 +94,9 @@ public class ClientViaElement extends BehaviorExtensionElement  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ClientViaElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

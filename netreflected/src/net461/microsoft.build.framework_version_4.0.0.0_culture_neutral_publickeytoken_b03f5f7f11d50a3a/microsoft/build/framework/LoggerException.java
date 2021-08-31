@@ -97,7 +97,9 @@ public class LoggerException extends NetException {
     public LoggerException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public LoggerException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

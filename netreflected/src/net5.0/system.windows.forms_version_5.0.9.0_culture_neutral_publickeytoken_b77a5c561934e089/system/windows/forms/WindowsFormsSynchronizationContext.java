@@ -93,7 +93,9 @@ public class WindowsFormsSynchronizationContext extends SynchronizationContext i
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WindowsFormsSynchronizationContext(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

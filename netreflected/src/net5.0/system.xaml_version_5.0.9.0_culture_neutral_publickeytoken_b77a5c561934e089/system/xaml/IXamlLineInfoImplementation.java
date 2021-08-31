@@ -91,7 +91,9 @@ public class IXamlLineInfoImplementation extends NetObject implements IXamlLineI
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IXamlLineInfoImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

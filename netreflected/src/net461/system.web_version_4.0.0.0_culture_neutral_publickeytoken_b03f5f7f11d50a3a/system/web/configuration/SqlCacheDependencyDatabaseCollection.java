@@ -93,7 +93,9 @@ public class SqlCacheDependencyDatabaseCollection extends ConfigurationElementCo
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SqlCacheDependencyDatabaseCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

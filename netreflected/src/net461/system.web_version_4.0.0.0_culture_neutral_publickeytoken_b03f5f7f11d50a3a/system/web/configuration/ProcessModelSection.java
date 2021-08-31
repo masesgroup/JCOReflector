@@ -96,7 +96,9 @@ public class ProcessModelSection extends ConfigurationSection  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ProcessModelSection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

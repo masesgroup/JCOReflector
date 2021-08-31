@@ -92,7 +92,9 @@ public class WorkflowWebService extends WebService  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WorkflowWebService(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

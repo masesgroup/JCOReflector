@@ -89,7 +89,9 @@ public class DbEnumerator extends NetObject implements Iterator<NetObject> {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DbEnumerator(JCObject instance) {
         classInstance = instance.iterator();
     }

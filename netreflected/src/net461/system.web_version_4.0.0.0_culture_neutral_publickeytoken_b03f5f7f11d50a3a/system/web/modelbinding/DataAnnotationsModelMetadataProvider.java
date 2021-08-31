@@ -92,7 +92,9 @@ public class DataAnnotationsModelMetadataProvider extends AssociatedMetadataProv
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataAnnotationsModelMetadataProvider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

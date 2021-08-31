@@ -95,7 +95,9 @@ public class WindowsClaimSet extends ClaimSet implements AutoCloseable {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WindowsClaimSet(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

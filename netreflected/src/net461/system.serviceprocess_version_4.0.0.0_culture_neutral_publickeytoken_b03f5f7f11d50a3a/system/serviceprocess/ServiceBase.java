@@ -94,7 +94,9 @@ public class ServiceBase extends Component  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ServiceBase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

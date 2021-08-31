@@ -107,7 +107,9 @@ public class FtpStatusCode extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FtpStatusCode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -107,7 +107,9 @@ public class TreeViewHitTestLocations extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TreeViewHitTestLocations(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

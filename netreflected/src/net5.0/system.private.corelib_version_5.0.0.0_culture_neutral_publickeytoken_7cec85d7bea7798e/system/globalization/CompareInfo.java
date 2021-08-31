@@ -99,7 +99,9 @@ public class CompareInfo extends NetObject implements system.runtime.serializati
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CompareInfo(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -94,7 +94,9 @@ public class PolyLineSegment extends PathSegment  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PolyLineSegment(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

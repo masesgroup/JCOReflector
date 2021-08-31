@@ -95,7 +95,9 @@ public class ProviderException extends NetException {
     public ProviderException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ProviderException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -107,7 +107,9 @@ public class PropertyAccess extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PropertyAccess(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

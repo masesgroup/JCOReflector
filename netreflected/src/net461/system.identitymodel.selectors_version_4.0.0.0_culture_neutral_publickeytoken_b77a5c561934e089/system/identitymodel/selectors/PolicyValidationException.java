@@ -95,7 +95,9 @@ public class PolicyValidationException extends NetException {
     public PolicyValidationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PolicyValidationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

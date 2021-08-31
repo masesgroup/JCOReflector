@@ -92,7 +92,9 @@ public class AggregateExportProvider extends ExportProvider implements AutoClose
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AggregateExportProvider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

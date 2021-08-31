@@ -96,7 +96,9 @@ public class DialogPropertyValueEditor extends PropertyValueEditor  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DialogPropertyValueEditor(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

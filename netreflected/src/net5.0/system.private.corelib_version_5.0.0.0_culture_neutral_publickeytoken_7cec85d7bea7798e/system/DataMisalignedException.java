@@ -96,7 +96,9 @@ public class DataMisalignedException extends SystemException {
     public DataMisalignedException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataMisalignedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

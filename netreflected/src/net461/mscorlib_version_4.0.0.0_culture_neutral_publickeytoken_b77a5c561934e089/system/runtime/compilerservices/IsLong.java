@@ -91,7 +91,9 @@ public class IsLong extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IsLong(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

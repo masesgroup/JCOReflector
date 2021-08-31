@@ -92,7 +92,9 @@ public class ITrackingHandlerImplementation extends NetObject implements ITracki
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ITrackingHandlerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

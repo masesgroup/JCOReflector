@@ -95,7 +95,9 @@ public class MetadataSection extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MetadataSection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class RootProfilePropertySettingsCollection extends ProfilePropertySettin
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RootProfilePropertySettingsCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

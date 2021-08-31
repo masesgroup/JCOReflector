@@ -96,7 +96,9 @@ public class InertiaProcessor2D extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InertiaProcessor2D(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

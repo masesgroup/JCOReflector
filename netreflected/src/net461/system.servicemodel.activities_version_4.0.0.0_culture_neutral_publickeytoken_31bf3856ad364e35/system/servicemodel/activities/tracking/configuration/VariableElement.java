@@ -92,7 +92,9 @@ public class VariableElement extends TrackingConfigurationElement  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public VariableElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

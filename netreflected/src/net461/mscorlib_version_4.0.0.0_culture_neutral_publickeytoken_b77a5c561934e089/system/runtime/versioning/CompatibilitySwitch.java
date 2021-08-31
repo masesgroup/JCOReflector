@@ -91,7 +91,9 @@ public class CompatibilitySwitch extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CompatibilitySwitch(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

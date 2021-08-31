@@ -97,7 +97,9 @@ public class IHttpAsyncHandlerImplementation extends NetObject implements IHttpA
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IHttpAsyncHandlerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

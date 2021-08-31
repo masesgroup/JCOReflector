@@ -100,7 +100,9 @@ public class IRawElementProviderFragmentRootImplementation extends NetObject imp
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IRawElementProviderFragmentRootImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

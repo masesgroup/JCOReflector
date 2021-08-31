@@ -97,7 +97,9 @@ public class ClientRuntime extends ClientRuntimeCompatBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ClientRuntime(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

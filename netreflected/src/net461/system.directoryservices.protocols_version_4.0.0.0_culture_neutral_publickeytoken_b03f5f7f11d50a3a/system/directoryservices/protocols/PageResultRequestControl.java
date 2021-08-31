@@ -92,7 +92,9 @@ public class PageResultRequestControl extends DirectoryControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PageResultRequestControl(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

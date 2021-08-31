@@ -101,7 +101,9 @@ public class CodeDomSerializerException extends SystemException {
     public CodeDomSerializerException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CodeDomSerializerException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

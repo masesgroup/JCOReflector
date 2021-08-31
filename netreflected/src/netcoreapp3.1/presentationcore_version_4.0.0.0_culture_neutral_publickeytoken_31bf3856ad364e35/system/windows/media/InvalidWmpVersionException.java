@@ -96,7 +96,9 @@ public class InvalidWmpVersionException extends SystemException {
     public InvalidWmpVersionException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InvalidWmpVersionException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

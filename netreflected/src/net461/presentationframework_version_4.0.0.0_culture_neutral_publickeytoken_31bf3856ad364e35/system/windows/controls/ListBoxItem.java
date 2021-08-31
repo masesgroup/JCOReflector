@@ -93,7 +93,9 @@ public class ListBoxItem extends ContentControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ListBoxItem(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

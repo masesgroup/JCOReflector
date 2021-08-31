@@ -99,7 +99,9 @@ public class MessageQueueException extends ExternalException {
     public MessageQueueException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MessageQueueException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -98,7 +98,9 @@ public class GroupBoxRenderer extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public GroupBoxRenderer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

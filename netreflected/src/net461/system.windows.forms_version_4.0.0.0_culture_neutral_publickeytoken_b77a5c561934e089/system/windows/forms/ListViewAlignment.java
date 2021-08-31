@@ -107,7 +107,9 @@ public class ListViewAlignment extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ListViewAlignment(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

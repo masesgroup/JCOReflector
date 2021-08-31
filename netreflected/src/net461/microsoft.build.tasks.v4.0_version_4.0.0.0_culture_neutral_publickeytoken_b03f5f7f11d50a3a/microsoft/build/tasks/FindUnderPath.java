@@ -94,7 +94,9 @@ public class FindUnderPath extends TaskExtension  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FindUnderPath(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

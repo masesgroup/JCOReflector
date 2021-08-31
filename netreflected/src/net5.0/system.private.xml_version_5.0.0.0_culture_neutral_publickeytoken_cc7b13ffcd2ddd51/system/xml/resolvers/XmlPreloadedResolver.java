@@ -97,7 +97,9 @@ public class XmlPreloadedResolver extends XmlResolver  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlPreloadedResolver(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

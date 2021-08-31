@@ -93,7 +93,9 @@ public class CodeNamespaceImport extends CodeObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CodeNamespaceImport(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

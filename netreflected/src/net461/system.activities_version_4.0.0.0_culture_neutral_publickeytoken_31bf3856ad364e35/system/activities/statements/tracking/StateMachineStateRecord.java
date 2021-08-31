@@ -92,7 +92,9 @@ public class StateMachineStateRecord extends CustomTrackingRecord  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public StateMachineStateRecord(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -96,7 +96,9 @@ public class SqlTypeException extends SystemException {
     public SqlTypeException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SqlTypeException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

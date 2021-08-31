@@ -107,7 +107,9 @@ public class SizeGripStyle extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SizeGripStyle(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

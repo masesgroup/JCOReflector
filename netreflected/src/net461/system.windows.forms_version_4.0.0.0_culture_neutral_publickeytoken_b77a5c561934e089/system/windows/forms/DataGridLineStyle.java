@@ -107,7 +107,9 @@ public class DataGridLineStyle extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataGridLineStyle(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

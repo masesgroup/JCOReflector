@@ -92,7 +92,9 @@ public class WorkflowLoaderService extends WorkflowRuntimeService  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WorkflowLoaderService(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

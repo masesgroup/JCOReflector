@@ -93,7 +93,9 @@ public class HMAC extends KeyedHashAlgorithm  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HMAC(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

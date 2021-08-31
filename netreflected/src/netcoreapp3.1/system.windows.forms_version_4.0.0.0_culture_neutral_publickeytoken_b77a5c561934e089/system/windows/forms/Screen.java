@@ -95,7 +95,9 @@ public class Screen extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Screen(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

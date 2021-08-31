@@ -94,7 +94,9 @@ public class ProfileSection extends ConfigurationSection  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ProfileSection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

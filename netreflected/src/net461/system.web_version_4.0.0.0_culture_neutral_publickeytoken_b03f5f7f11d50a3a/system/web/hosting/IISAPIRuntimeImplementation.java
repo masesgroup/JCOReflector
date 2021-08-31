@@ -91,7 +91,9 @@ public class IISAPIRuntimeImplementation extends NetObject implements IISAPIRunt
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IISAPIRuntimeImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

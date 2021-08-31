@@ -92,7 +92,9 @@ public class XsltConfigSection extends ConfigurationSection  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XsltConfigSection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

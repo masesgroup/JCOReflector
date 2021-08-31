@@ -92,7 +92,9 @@ public class IWorkflowInstanceExtensionImplementation extends NetObject implemen
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IWorkflowInstanceExtensionImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

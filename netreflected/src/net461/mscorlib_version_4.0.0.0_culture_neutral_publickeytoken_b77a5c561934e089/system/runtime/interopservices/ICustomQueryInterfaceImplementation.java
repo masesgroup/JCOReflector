@@ -93,7 +93,9 @@ public class ICustomQueryInterfaceImplementation extends NetObject implements IC
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ICustomQueryInterfaceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

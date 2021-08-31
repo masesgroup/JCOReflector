@@ -107,7 +107,9 @@ public class ServerProcessing extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ServerProcessing(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

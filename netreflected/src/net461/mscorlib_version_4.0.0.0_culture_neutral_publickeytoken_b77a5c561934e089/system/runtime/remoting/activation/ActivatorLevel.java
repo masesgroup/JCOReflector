@@ -107,7 +107,9 @@ public class ActivatorLevel extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ActivatorLevel(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

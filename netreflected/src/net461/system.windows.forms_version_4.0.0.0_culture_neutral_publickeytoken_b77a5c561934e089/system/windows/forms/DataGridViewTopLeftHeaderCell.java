@@ -92,7 +92,9 @@ public class DataGridViewTopLeftHeaderCell extends DataGridViewColumnHeaderCell 
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataGridViewTopLeftHeaderCell(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -133,7 +133,9 @@ public class DataTable extends MarshalByValueComponent  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataTable(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

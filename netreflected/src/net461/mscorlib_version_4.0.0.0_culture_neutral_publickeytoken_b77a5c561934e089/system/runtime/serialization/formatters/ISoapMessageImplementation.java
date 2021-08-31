@@ -92,7 +92,9 @@ public class ISoapMessageImplementation extends NetObject implements ISoapMessag
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ISoapMessageImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

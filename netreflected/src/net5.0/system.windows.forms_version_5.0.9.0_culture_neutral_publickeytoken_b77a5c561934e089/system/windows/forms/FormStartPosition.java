@@ -107,7 +107,9 @@ public class FormStartPosition extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FormStartPosition(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

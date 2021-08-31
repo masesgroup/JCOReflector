@@ -92,7 +92,9 @@ public class GenerateDeploymentManifest extends GenerateManifestBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public GenerateDeploymentManifest(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

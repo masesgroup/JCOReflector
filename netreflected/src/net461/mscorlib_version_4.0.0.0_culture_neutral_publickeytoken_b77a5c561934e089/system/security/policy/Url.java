@@ -95,7 +95,9 @@ public class Url extends EvidenceBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Url(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

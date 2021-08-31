@@ -95,7 +95,9 @@ public class ILeaseImplementation extends NetObject implements ILease {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ILeaseImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

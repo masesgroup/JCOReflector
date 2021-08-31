@@ -91,7 +91,9 @@ public class IObjectCompletionInfoImplementation extends NetObject implements IO
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IObjectCompletionInfoImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

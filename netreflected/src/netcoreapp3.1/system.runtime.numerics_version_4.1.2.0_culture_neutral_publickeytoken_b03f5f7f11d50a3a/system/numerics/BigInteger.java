@@ -100,7 +100,9 @@ public class BigInteger extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BigInteger(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class FormUrlEncodedContent extends ByteArrayContent  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FormUrlEncodedContent(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

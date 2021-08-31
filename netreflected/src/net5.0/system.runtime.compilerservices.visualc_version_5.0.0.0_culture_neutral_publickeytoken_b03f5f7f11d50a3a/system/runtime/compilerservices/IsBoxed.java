@@ -91,7 +91,9 @@ public class IsBoxed extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IsBoxed(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

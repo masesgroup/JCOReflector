@@ -91,7 +91,9 @@ public class Soap12FaultCodes extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Soap12FaultCodes(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

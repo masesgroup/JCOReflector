@@ -94,7 +94,9 @@ public class AdornerDecorator extends Decorator  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AdornerDecorator(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

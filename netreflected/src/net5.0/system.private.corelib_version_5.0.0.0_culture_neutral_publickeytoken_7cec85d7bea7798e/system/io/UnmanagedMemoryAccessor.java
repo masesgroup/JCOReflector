@@ -99,7 +99,9 @@ public class UnmanagedMemoryAccessor extends NetObject implements AutoCloseable 
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UnmanagedMemoryAccessor(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

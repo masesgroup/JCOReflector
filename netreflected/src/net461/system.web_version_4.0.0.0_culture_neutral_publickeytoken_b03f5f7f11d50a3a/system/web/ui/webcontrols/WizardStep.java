@@ -92,7 +92,9 @@ public class WizardStep extends WizardStepBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WizardStep(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

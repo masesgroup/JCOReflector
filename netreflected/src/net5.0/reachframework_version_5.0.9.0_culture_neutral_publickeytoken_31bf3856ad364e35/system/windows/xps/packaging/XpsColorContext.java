@@ -92,7 +92,9 @@ public class XpsColorContext extends XpsResource  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XpsColorContext(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

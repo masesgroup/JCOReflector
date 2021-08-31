@@ -99,7 +99,9 @@ public class RolePrincipal extends ClaimsPrincipal implements system.runtime.ser
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RolePrincipal(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

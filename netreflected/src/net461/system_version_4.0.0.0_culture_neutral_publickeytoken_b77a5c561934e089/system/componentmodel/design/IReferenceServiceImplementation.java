@@ -93,7 +93,9 @@ public class IReferenceServiceImplementation extends NetObject implements IRefer
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IReferenceServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

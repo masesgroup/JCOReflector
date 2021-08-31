@@ -95,7 +95,9 @@ public class SettingsPropertyIsReadOnlyException extends NetException {
     public SettingsPropertyIsReadOnlyException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SettingsPropertyIsReadOnlyException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -95,7 +95,9 @@ public class AccessKeyManager extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AccessKeyManager(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

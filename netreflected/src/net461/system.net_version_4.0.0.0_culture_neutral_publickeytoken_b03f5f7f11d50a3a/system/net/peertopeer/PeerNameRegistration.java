@@ -98,7 +98,9 @@ public class PeerNameRegistration extends NetObject implements system.runtime.se
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PeerNameRegistration(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

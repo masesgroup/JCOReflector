@@ -96,7 +96,9 @@ public class HttpSessionStateBase extends NetObjectEnumerable  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HttpSessionStateBase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

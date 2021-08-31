@@ -92,7 +92,9 @@ public class TreeNodeStyleCollectionEditor extends StyleCollectionEditor  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TreeNodeStyleCollectionEditor(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

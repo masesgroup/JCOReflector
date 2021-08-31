@@ -97,7 +97,9 @@ public class ProxyAssemblyNotLoadedException extends NetException {
     public ProxyAssemblyNotLoadedException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ProxyAssemblyNotLoadedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class Delay extends NativeActivity  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Delay(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

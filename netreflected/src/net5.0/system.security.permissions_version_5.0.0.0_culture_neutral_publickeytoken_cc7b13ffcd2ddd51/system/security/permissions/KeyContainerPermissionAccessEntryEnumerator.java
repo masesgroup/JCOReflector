@@ -90,7 +90,9 @@ public class KeyContainerPermissionAccessEntryEnumerator extends NetObject imple
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public KeyContainerPermissionAccessEntryEnumerator(JCObject instance) {
         classInstance = instance.iterator();
     }

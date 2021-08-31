@@ -102,7 +102,9 @@ public class ComponentTray extends ScrollableControl implements system.component
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ComponentTray(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -94,7 +94,9 @@ public class IWorkflowDebuggerImplementation extends NetObject implements IWorkf
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IWorkflowDebuggerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -98,7 +98,9 @@ public class InstanceCompleteException extends InstancePersistenceCommandExcepti
     public InstanceCompleteException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InstanceCompleteException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

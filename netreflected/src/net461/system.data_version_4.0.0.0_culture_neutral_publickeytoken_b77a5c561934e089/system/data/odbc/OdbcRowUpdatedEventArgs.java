@@ -98,7 +98,9 @@ public class OdbcRowUpdatedEventArgs extends RowUpdatedEventArgs  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public OdbcRowUpdatedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

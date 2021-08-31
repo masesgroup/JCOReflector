@@ -100,7 +100,9 @@ public class SamlAuthorizationDecisionStatement extends SamlSubjectStatement  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SamlAuthorizationDecisionStatement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

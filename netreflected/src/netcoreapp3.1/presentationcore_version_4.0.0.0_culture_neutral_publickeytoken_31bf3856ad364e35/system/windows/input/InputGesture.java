@@ -92,7 +92,9 @@ public class InputGesture extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InputGesture(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

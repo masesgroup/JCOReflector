@@ -92,7 +92,9 @@ public class IVSSqmServiceImplementation extends NetObject implements IVSSqmServ
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IVSSqmServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -96,7 +96,9 @@ public class AppDomainUnloadedException extends SystemException {
     public AppDomainUnloadedException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AppDomainUnloadedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

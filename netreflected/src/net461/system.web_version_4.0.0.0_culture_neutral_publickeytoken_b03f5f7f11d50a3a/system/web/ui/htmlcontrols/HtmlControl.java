@@ -96,7 +96,9 @@ public class HtmlControl extends Control implements system.web.ui.IAttributeAcce
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HtmlControl(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class HtmlLink extends HtmlControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HtmlLink(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

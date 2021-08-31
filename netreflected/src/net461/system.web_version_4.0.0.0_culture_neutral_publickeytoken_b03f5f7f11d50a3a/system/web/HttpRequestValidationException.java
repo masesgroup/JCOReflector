@@ -96,7 +96,9 @@ public class HttpRequestValidationException extends HttpException {
     public HttpRequestValidationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HttpRequestValidationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -106,7 +106,9 @@ public class DesignerSerializationManager extends NetObject implements system.IS
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DesignerSerializationManager(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

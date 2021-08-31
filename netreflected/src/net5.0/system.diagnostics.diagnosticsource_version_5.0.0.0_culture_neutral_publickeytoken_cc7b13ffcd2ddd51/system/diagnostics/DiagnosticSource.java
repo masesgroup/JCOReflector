@@ -92,7 +92,9 @@ public class DiagnosticSource extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DiagnosticSource(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

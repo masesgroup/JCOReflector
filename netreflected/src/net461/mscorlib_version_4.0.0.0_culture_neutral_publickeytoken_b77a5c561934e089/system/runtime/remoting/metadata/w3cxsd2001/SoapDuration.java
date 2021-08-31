@@ -92,7 +92,9 @@ public class SoapDuration extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SoapDuration(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

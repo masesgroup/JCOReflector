@@ -94,7 +94,9 @@ public class DesignerVerb extends MenuCommand  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DesignerVerb(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

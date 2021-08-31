@@ -94,7 +94,9 @@ public class HttpFileCollectionBase extends NameObjectCollectionBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HttpFileCollectionBase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

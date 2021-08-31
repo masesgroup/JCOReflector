@@ -92,7 +92,9 @@ public class IMessageFilterImplementation extends NetObject implements IMessageF
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IMessageFilterImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

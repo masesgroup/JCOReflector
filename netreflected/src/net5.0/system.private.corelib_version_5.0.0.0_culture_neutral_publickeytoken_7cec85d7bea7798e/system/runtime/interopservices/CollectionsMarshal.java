@@ -91,7 +91,9 @@ public class CollectionsMarshal extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CollectionsMarshal(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

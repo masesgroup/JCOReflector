@@ -92,7 +92,9 @@ public class UInt32Converter extends BaseNumberConverter  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UInt32Converter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -96,7 +96,9 @@ public class TransactionManagerCommunicationException extends TransactionExcepti
     public TransactionManagerCommunicationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TransactionManagerCommunicationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class Sha256 extends ArmBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Sha256(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

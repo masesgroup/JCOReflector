@@ -91,7 +91,9 @@ public class IJSVsaPersistSiteImplementation extends NetObject implements IJSVsa
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IJSVsaPersistSiteImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

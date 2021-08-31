@@ -93,7 +93,9 @@ public class IFieldControlImplementation extends NetObject implements IFieldCont
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IFieldControlImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

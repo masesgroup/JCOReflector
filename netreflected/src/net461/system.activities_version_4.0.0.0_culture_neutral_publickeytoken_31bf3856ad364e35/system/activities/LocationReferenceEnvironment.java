@@ -94,7 +94,9 @@ public class LocationReferenceEnvironment extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public LocationReferenceEnvironment(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

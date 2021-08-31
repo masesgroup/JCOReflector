@@ -94,7 +94,9 @@ public class User extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public User(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

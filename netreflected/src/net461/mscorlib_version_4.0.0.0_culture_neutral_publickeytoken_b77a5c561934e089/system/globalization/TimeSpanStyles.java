@@ -107,7 +107,9 @@ public class TimeSpanStyles extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TimeSpanStyles(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class WorkflowApplicationCompletedEventArgs extends WorkflowApplicationEv
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WorkflowApplicationCompletedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

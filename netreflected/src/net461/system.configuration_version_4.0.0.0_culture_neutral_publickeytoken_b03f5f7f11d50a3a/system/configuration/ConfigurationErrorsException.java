@@ -102,7 +102,9 @@ public class ConfigurationErrorsException extends ConfigurationException {
     public ConfigurationErrorsException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ConfigurationErrorsException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

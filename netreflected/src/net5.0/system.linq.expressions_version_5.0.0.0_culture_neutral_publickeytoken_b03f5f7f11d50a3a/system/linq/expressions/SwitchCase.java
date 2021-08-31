@@ -93,7 +93,9 @@ public class SwitchCase extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SwitchCase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class ITypeDiscoveryServiceImplementation extends NetObject implements IT
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ITypeDiscoveryServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -91,7 +91,9 @@ public class ICustomAdapterImplementation extends NetObject implements ICustomAd
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ICustomAdapterImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

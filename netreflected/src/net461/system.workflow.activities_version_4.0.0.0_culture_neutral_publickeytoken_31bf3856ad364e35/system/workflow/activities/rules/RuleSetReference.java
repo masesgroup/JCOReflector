@@ -92,7 +92,9 @@ public class RuleSetReference extends DependencyObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RuleSetReference(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

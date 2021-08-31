@@ -92,7 +92,9 @@ public class NamedItem extends DocumentableItem  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public NamedItem(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

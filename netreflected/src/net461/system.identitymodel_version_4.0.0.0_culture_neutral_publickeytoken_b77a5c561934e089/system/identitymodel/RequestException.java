@@ -95,7 +95,9 @@ public class RequestException extends NetException {
     public RequestException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RequestException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

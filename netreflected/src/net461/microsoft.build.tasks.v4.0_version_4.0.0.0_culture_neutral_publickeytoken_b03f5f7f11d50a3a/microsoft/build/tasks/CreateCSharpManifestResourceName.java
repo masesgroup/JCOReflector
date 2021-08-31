@@ -92,7 +92,9 @@ public class CreateCSharpManifestResourceName extends CreateManifestResourceName
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CreateCSharpManifestResourceName(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

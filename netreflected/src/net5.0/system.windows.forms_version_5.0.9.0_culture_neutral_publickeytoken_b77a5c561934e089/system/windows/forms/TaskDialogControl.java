@@ -92,7 +92,9 @@ public class TaskDialogControl extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TaskDialogControl(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -96,7 +96,9 @@ public class ThreadStateException extends SystemException {
     public ThreadStateException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ThreadStateException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

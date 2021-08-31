@@ -95,7 +95,9 @@ public class MailWebEventProvider extends BufferedWebEventProvider  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MailWebEventProvider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

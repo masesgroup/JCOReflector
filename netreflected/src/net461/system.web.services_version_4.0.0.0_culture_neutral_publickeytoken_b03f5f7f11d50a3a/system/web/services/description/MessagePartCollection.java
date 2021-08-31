@@ -93,7 +93,9 @@ public class MessagePartCollection extends ServiceDescriptionBaseCollection  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MessagePartCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

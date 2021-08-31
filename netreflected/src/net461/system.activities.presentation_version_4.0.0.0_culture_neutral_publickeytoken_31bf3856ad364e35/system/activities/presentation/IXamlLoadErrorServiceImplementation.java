@@ -91,7 +91,9 @@ public class IXamlLoadErrorServiceImplementation extends NetObject implements IX
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IXamlLoadErrorServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

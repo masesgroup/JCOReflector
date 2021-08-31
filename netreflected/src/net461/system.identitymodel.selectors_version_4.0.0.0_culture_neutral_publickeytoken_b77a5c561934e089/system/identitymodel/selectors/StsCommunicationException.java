@@ -95,7 +95,9 @@ public class StsCommunicationException extends NetException {
     public StsCommunicationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public StsCommunicationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

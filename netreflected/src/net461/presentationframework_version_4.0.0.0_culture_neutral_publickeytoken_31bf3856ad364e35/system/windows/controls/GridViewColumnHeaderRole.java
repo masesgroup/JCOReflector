@@ -107,7 +107,9 @@ public class GridViewColumnHeaderRole extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public GridViewColumnHeaderRole(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

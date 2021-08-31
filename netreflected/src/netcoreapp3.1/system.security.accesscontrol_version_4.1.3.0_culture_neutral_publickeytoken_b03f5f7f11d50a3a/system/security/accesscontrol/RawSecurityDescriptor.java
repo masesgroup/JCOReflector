@@ -95,7 +95,9 @@ public class RawSecurityDescriptor extends GenericSecurityDescriptor  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RawSecurityDescriptor(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

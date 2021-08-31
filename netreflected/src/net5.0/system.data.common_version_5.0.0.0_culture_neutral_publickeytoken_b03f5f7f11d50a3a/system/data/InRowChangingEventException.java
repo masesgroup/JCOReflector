@@ -96,7 +96,9 @@ public class InRowChangingEventException extends DataException {
     public InRowChangingEventException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InRowChangingEventException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

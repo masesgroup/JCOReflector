@@ -92,7 +92,9 @@ public class PKCS1MaskGenerationMethod extends MaskGenerationMethod  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PKCS1MaskGenerationMethod(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class PowerEase extends EasingFunctionBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PowerEase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

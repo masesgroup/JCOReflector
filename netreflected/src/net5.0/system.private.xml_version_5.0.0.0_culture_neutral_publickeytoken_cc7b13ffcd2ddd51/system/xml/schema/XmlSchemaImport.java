@@ -93,7 +93,9 @@ public class XmlSchemaImport extends XmlSchemaExternal  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlSchemaImport(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

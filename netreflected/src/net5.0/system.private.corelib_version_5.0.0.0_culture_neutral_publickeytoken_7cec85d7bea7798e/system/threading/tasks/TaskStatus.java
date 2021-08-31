@@ -107,7 +107,9 @@ public class TaskStatus extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TaskStatus(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class Sse extends X86Base  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Sse(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

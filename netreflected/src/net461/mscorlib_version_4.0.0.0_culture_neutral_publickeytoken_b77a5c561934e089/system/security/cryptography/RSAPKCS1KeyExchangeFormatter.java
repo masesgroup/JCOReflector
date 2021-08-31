@@ -94,7 +94,9 @@ public class RSAPKCS1KeyExchangeFormatter extends AsymmetricKeyExchangeFormatter
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RSAPKCS1KeyExchangeFormatter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

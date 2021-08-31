@@ -92,7 +92,9 @@ public class TypeDateTimeSchemaImporterExtension extends SqlTypesSchemaImporterE
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TypeDateTimeSchemaImporterExtension(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

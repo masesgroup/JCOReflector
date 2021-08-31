@@ -96,7 +96,9 @@ public class NotSupportedException extends SystemException {
     public NotSupportedException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public NotSupportedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

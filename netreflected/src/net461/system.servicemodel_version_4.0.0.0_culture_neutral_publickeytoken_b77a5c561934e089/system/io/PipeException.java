@@ -96,7 +96,9 @@ public class PipeException extends IOException {
     public PipeException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PipeException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class AsyncIteratorStateMachineAttribute extends StateMachineAttribute  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AsyncIteratorStateMachineAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

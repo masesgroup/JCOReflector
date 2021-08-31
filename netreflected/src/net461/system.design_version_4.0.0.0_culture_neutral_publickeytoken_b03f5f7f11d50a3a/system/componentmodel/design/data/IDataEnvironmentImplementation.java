@@ -101,7 +101,9 @@ public class IDataEnvironmentImplementation extends NetObject implements IDataEn
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IDataEnvironmentImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

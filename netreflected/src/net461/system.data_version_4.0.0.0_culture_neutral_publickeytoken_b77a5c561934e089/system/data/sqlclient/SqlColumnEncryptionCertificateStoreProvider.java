@@ -92,7 +92,9 @@ public class SqlColumnEncryptionCertificateStoreProvider extends SqlColumnEncryp
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SqlColumnEncryptionCertificateStoreProvider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

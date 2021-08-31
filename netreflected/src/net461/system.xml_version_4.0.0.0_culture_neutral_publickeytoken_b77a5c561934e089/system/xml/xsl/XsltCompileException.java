@@ -98,7 +98,9 @@ public class XsltCompileException extends XsltException {
     public XsltCompileException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XsltCompileException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

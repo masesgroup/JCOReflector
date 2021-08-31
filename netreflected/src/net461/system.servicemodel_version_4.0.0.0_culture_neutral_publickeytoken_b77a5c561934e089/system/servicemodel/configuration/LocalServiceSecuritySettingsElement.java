@@ -93,7 +93,9 @@ public class LocalServiceSecuritySettingsElement extends ServiceModelConfigurati
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public LocalServiceSecuritySettingsElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

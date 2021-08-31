@@ -107,7 +107,9 @@ public class UniversalTagNumber extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UniversalTagNumber(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

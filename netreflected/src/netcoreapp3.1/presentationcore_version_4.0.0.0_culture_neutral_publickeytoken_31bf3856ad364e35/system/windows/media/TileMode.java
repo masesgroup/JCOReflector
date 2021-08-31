@@ -107,7 +107,9 @@ public class TileMode extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TileMode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

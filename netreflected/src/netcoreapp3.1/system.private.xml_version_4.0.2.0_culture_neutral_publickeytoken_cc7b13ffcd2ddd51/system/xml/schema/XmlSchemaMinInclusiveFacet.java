@@ -92,7 +92,9 @@ public class XmlSchemaMinInclusiveFacet extends XmlSchemaFacet  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlSchemaMinInclusiveFacet(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

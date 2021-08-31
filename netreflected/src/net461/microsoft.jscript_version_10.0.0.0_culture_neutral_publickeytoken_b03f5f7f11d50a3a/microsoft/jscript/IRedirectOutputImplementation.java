@@ -93,7 +93,9 @@ public class IRedirectOutputImplementation extends NetObject implements IRedirec
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IRedirectOutputImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -96,7 +96,9 @@ public class TransactionPromotionException extends TransactionException {
     public TransactionPromotionException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TransactionPromotionException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

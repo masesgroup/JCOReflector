@@ -95,7 +95,9 @@ public class X509SubjectKeyIdentifierExtension extends X509Extension  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public X509SubjectKeyIdentifierExtension(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class WaitForChangedResult extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WaitForChangedResult(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -96,7 +96,9 @@ public class AmbiguousMatchException extends SystemException {
     public AmbiguousMatchException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AmbiguousMatchException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

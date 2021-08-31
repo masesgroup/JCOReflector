@@ -92,7 +92,9 @@ public class DecoderExceptionFallbackBuffer extends DecoderFallbackBuffer  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DecoderExceptionFallbackBuffer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

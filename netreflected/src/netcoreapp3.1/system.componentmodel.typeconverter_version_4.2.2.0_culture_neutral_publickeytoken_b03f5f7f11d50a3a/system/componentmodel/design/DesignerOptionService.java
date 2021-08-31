@@ -93,7 +93,9 @@ public class DesignerOptionService extends NetObject implements system.component
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DesignerOptionService(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

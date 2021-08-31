@@ -98,7 +98,9 @@ public class InstanceNotReadyException extends InstancePersistenceCommandExcepti
     public InstanceNotReadyException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InstanceNotReadyException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

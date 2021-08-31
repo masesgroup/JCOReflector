@@ -95,7 +95,9 @@ public class EventSourceException extends NetException {
     public EventSourceException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EventSourceException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

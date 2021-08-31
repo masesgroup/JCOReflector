@@ -96,7 +96,9 @@ public class UriFormatException extends FormatException {
     public UriFormatException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UriFormatException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

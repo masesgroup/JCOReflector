@@ -107,7 +107,9 @@ public class TcpState extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TcpState(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

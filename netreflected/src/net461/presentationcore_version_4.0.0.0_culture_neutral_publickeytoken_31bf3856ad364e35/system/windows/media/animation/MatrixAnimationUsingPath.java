@@ -94,7 +94,9 @@ public class MatrixAnimationUsingPath extends MatrixAnimationBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MatrixAnimationUsingPath(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

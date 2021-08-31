@@ -96,7 +96,9 @@ public class DatabaseNotEnabledForNotificationException extends SystemException 
     public DatabaseNotEnabledForNotificationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DatabaseNotEnabledForNotificationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

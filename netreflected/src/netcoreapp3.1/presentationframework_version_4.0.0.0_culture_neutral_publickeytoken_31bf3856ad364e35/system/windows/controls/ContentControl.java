@@ -96,7 +96,9 @@ public class ContentControl extends Control implements system.windows.markup.IAd
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ContentControl(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

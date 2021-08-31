@@ -107,7 +107,9 @@ public class SupportedAddressingMode extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SupportedAddressingMode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

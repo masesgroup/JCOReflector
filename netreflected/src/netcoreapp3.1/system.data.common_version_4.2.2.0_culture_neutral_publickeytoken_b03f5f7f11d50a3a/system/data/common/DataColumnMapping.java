@@ -97,7 +97,9 @@ public class DataColumnMapping extends MarshalByRefObject implements system.IClo
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataColumnMapping(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

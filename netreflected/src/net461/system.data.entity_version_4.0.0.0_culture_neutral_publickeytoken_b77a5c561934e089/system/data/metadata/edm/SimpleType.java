@@ -92,7 +92,9 @@ public class SimpleType extends EdmType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SimpleType(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

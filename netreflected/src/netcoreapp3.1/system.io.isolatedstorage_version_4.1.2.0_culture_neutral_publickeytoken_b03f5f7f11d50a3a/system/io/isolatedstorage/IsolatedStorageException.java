@@ -95,7 +95,9 @@ public class IsolatedStorageException extends NetException {
     public IsolatedStorageException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IsolatedStorageException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -94,7 +94,9 @@ public class EdmMember extends MetadataItem  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EdmMember(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

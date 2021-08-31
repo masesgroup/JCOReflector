@@ -96,7 +96,9 @@ public class EventLogInvalidDataException extends EventLogException {
     public EventLogInvalidDataException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EventLogInvalidDataException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

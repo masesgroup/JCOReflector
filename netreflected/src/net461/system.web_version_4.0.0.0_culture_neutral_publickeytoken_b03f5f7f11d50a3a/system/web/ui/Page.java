@@ -128,7 +128,9 @@ public class Page extends TemplateControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Page(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

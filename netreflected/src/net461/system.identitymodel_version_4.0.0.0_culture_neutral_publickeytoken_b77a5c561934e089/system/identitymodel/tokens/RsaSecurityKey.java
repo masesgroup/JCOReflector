@@ -97,7 +97,9 @@ public class RsaSecurityKey extends AsymmetricSecurityKey  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RsaSecurityKey(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

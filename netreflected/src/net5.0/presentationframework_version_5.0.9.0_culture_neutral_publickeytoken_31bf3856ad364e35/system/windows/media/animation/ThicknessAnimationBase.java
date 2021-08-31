@@ -95,7 +95,9 @@ public class ThicknessAnimationBase extends AnimationTimeline  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ThicknessAnimationBase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

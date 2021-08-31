@@ -97,7 +97,9 @@ public class DefaultPropertiesToSend extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DefaultPropertiesToSend(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -90,7 +90,9 @@ public class BasicProfileViolationEnumerator extends NetObject implements Iterat
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BasicProfileViolationEnumerator(JCObject instance) {
         classInstance = instance.iterator();
     }

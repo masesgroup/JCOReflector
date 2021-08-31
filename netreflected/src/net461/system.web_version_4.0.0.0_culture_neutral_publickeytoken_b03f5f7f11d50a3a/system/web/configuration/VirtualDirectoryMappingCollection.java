@@ -95,7 +95,9 @@ public class VirtualDirectoryMappingCollection extends NameObjectCollectionBase 
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public VirtualDirectoryMappingCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

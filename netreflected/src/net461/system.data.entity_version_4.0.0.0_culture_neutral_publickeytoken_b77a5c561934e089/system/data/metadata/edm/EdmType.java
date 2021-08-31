@@ -94,7 +94,9 @@ public class EdmType extends GlobalItem  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EdmType(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

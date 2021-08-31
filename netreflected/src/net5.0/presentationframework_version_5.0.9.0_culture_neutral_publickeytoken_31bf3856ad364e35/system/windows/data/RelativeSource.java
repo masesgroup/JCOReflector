@@ -98,7 +98,9 @@ public class RelativeSource extends MarkupExtension implements system.componentm
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RelativeSource(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

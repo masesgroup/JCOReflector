@@ -104,7 +104,9 @@ public class CollectionViewSource extends DependencyObject implements system.com
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CollectionViewSource(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

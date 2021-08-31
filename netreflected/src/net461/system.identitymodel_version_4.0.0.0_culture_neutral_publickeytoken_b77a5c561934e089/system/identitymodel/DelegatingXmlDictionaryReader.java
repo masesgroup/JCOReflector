@@ -97,7 +97,9 @@ public class DelegatingXmlDictionaryReader extends XmlDictionaryReader  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DelegatingXmlDictionaryReader(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

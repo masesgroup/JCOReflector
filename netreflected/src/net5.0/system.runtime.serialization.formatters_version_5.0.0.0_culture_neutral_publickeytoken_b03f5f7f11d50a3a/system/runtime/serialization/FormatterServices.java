@@ -97,7 +97,9 @@ public class FormatterServices extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FormatterServices(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

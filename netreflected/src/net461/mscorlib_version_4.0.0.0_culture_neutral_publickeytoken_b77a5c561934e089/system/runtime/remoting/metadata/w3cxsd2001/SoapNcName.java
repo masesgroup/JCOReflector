@@ -92,7 +92,9 @@ public class SoapNcName extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SoapNcName(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class With extends AST  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public With(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

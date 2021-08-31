@@ -97,7 +97,9 @@ public class FileSystemAuditRule extends AuditRule  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FileSystemAuditRule(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

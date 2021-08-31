@@ -91,7 +91,9 @@ public class IDataSourceViewSchemaAccessorImplementation extends NetObject imple
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IDataSourceViewSchemaAccessorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

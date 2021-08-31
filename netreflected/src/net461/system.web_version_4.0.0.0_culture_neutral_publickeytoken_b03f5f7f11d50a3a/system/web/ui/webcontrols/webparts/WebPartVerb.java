@@ -92,7 +92,9 @@ public class WebPartVerb extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WebPartVerb(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

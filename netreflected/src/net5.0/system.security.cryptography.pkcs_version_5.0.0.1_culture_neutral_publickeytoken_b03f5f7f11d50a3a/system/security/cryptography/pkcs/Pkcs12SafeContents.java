@@ -103,7 +103,9 @@ public class Pkcs12SafeContents extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Pkcs12SafeContents(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

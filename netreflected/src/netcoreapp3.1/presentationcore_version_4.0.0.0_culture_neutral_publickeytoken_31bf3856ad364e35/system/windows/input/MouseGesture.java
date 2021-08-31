@@ -95,7 +95,9 @@ public class MouseGesture extends InputGesture  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MouseGesture(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

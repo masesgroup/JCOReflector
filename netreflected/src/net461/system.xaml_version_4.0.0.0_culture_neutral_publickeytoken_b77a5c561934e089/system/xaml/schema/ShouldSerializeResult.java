@@ -107,7 +107,9 @@ public class ShouldSerializeResult extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ShouldSerializeResult(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

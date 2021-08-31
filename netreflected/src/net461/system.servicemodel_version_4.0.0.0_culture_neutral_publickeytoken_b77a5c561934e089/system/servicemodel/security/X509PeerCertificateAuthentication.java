@@ -95,7 +95,9 @@ public class X509PeerCertificateAuthentication extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public X509PeerCertificateAuthentication(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -102,7 +102,9 @@ public class IDataReaderImplementation extends NetObject implements IDataReader 
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IDataReaderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

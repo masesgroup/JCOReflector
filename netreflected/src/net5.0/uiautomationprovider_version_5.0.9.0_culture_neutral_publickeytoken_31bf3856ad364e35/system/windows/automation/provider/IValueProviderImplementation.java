@@ -91,7 +91,9 @@ public class IValueProviderImplementation extends NetObject implements IValuePro
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IValueProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

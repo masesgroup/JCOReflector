@@ -100,7 +100,9 @@ public class EndpointAddress10 extends NetObject implements system.xml.serializa
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EndpointAddress10(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

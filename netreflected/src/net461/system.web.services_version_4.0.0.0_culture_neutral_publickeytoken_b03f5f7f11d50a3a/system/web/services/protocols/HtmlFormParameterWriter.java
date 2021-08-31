@@ -94,7 +94,9 @@ public class HtmlFormParameterWriter extends UrlEncodedParameterWriter  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HtmlFormParameterWriter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

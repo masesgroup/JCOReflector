@@ -92,7 +92,9 @@ public class StringConcat extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public StringConcat(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -94,7 +94,9 @@ public class ISessionStateItemCollectionImplementation extends IEnumerableImplem
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ISessionStateItemCollectionImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

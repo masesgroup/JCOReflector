@@ -94,7 +94,9 @@ public class NetworkCredential extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public NetworkCredential(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

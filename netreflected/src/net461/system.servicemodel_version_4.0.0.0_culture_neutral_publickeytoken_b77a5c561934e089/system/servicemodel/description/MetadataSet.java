@@ -97,7 +97,9 @@ public class MetadataSet extends NetObject implements system.xml.serialization.I
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MetadataSet(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

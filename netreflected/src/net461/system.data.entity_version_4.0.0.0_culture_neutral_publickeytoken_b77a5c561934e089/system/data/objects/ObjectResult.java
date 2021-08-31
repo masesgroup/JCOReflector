@@ -93,7 +93,9 @@ public class ObjectResult extends NetObjectEnumerable implements AutoCloseable {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ObjectResult(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

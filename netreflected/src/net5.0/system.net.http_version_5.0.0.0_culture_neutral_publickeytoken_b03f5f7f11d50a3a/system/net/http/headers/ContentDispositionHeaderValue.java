@@ -94,7 +94,9 @@ public class ContentDispositionHeaderValue extends NetObject implements system.I
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ContentDispositionHeaderValue(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

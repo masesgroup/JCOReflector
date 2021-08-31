@@ -96,7 +96,9 @@ public class UCOMIConnectionPointImplementation extends NetObject implements UCO
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UCOMIConnectionPointImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

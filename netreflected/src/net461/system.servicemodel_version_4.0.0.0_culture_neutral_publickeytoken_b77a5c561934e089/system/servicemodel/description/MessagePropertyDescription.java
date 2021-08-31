@@ -92,7 +92,9 @@ public class MessagePropertyDescription extends MessagePartDescription  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MessagePropertyDescription(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

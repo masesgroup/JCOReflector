@@ -100,7 +100,9 @@ public class Array extends NetObjectEnumerable implements system.collections.ISt
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Array(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

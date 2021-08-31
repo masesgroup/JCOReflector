@@ -107,7 +107,9 @@ public class CompareOptions extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CompareOptions(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

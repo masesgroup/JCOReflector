@@ -92,7 +92,9 @@ public class Plus extends BinaryOp  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Plus(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class IBuildResultsImplementation extends NetObject implements IBuildResu
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IBuildResultsImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

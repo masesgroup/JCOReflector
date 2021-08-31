@@ -98,7 +98,9 @@ public class ProtocolViolationException extends InvalidOperationException {
     public ProtocolViolationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ProtocolViolationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

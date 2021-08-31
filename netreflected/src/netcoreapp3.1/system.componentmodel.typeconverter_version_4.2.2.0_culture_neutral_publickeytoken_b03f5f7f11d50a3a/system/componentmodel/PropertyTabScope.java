@@ -107,7 +107,9 @@ public class PropertyTabScope extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PropertyTabScope(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

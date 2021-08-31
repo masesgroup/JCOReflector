@@ -95,7 +95,9 @@ public class ServiceBusyException extends NetException {
     public ServiceBusyException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ServiceBusyException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

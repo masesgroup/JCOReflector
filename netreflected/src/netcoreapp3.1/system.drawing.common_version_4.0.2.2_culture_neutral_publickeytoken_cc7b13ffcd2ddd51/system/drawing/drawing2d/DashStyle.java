@@ -107,7 +107,9 @@ public class DashStyle extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DashStyle(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

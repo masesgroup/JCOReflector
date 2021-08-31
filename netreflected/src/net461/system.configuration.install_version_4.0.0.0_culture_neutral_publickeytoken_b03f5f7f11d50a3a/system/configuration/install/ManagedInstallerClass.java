@@ -93,7 +93,9 @@ public class ManagedInstallerClass extends NetObject implements system.configura
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ManagedInstallerClass(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

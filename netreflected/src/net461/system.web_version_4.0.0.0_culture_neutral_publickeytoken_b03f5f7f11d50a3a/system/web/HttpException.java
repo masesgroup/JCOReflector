@@ -99,7 +99,9 @@ public class HttpException extends ExternalException {
     public HttpException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HttpException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

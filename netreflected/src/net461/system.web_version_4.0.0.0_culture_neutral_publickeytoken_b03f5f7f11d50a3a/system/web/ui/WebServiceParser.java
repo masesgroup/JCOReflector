@@ -93,7 +93,9 @@ public class WebServiceParser extends SimpleWebHandlerParser  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WebServiceParser(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

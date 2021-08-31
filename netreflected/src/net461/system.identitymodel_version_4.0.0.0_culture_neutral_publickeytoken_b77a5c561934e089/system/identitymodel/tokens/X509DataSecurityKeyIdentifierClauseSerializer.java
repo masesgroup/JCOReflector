@@ -95,7 +95,9 @@ public class X509DataSecurityKeyIdentifierClauseSerializer extends SecurityKeyId
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public X509DataSecurityKeyIdentifierClauseSerializer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

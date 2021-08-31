@@ -96,7 +96,9 @@ public class UnauthorizedAccessException extends SystemException {
     public UnauthorizedAccessException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UnauthorizedAccessException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

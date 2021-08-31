@@ -100,7 +100,9 @@ public class WebZone extends CompositeControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WebZone(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

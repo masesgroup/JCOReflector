@@ -94,7 +94,9 @@ public class XmlSchemaAnnotation extends XmlSchemaObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlSchemaAnnotation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class AppDomainIsolatedTaskExtension extends AppDomainIsolatedTask  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AppDomainIsolatedTaskExtension(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

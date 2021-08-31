@@ -94,7 +94,9 @@ public class ResolveSDKReference extends TaskExtension  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ResolveSDKReference(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

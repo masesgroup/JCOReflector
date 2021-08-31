@@ -96,7 +96,9 @@ public class SecurityTokenExpiredException extends SecurityTokenValidationExcept
     public SecurityTokenExpiredException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SecurityTokenExpiredException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

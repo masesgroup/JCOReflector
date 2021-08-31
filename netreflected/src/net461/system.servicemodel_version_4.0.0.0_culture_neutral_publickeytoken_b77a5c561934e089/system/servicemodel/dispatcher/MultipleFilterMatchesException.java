@@ -96,7 +96,9 @@ public class MultipleFilterMatchesException extends SystemException {
     public MultipleFilterMatchesException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MultipleFilterMatchesException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

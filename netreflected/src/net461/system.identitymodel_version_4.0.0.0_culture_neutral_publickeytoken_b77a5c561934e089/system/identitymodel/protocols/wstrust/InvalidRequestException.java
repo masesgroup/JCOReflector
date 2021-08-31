@@ -96,7 +96,9 @@ public class InvalidRequestException extends RequestException {
     public InvalidRequestException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InvalidRequestException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -98,7 +98,9 @@ public class ClientWebSocket extends WebSocket  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ClientWebSocket(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

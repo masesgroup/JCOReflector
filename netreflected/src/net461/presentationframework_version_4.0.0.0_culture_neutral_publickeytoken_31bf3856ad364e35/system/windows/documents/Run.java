@@ -94,7 +94,9 @@ public class Run extends Inline  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Run(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

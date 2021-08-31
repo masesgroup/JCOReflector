@@ -92,7 +92,9 @@ public class HierarchicalDataSourceConverter extends DataSourceConverter  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HierarchicalDataSourceConverter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

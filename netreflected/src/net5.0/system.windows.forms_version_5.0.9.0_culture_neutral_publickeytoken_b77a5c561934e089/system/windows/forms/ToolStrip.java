@@ -126,7 +126,9 @@ public class ToolStrip extends ScrollableControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ToolStrip(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class IAsyncDisposableImplementation extends NetObject implements IAsyncD
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IAsyncDisposableImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

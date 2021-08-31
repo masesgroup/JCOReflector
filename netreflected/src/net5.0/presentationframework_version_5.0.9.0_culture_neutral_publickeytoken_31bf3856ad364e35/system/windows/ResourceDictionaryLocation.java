@@ -107,7 +107,9 @@ public class ResourceDictionaryLocation extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ResourceDictionaryLocation(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class IErrorPageImplementation extends NetObject implements IErrorPage {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IErrorPageImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

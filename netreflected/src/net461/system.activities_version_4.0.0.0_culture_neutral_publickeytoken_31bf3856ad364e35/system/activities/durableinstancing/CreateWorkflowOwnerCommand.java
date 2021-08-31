@@ -92,7 +92,9 @@ public class CreateWorkflowOwnerCommand extends InstancePersistenceCommand  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CreateWorkflowOwnerCommand(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class BinaryExchange extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BinaryExchange(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

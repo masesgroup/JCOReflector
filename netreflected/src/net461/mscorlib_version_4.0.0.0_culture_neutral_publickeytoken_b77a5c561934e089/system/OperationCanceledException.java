@@ -97,7 +97,9 @@ public class OperationCanceledException extends SystemException {
     public OperationCanceledException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public OperationCanceledException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

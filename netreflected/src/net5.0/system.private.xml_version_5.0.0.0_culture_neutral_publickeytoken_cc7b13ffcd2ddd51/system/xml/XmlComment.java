@@ -95,7 +95,9 @@ public class XmlComment extends XmlCharacterData  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlComment(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

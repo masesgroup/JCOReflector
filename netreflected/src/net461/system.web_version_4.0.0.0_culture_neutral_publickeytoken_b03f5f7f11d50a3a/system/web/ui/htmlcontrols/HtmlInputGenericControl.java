@@ -96,7 +96,9 @@ public class HtmlInputGenericControl extends HtmlInputControl implements system.
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HtmlInputGenericControl(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

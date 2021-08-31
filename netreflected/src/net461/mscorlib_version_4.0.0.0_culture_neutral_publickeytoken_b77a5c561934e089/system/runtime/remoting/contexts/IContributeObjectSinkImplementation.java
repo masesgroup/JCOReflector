@@ -94,7 +94,9 @@ public class IContributeObjectSinkImplementation extends NetObject implements IC
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IContributeObjectSinkImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -109,7 +109,9 @@ public class SqlInt16 extends ValueType implements system.xml.serialization.IXml
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SqlInt16(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class EventRegistrationToken extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EventRegistrationToken(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

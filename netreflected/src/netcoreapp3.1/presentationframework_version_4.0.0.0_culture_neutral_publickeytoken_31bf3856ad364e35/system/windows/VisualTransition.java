@@ -96,7 +96,9 @@ public class VisualTransition extends DependencyObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public VisualTransition(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

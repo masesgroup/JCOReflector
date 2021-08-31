@@ -96,7 +96,9 @@ public class MessageFilterException extends CommunicationException {
     public MessageFilterException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MessageFilterException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

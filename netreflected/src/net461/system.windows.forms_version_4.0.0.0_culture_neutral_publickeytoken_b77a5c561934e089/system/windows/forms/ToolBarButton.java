@@ -96,7 +96,9 @@ public class ToolBarButton extends Component  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ToolBarButton(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

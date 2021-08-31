@@ -96,7 +96,9 @@ public class ToolStripOverflow extends ToolStripDropDown  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ToolStripOverflow(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

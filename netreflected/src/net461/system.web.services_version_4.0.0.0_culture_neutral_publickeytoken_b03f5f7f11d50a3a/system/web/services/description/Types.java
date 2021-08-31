@@ -94,7 +94,9 @@ public class Types extends DocumentableItem  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Types(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

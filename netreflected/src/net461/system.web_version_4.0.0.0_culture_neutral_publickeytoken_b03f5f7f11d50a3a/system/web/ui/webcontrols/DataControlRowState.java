@@ -107,7 +107,9 @@ public class DataControlRowState extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataControlRowState(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

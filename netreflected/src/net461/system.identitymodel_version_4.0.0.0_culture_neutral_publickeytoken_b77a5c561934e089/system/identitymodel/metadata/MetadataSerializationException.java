@@ -95,7 +95,9 @@ public class MetadataSerializationException extends NetException {
     public MetadataSerializationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MetadataSerializationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

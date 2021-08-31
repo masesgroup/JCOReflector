@@ -95,7 +95,9 @@ public class IXmlBinaryWriterInitializerImplementation extends NetObject impleme
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IXmlBinaryWriterInitializerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

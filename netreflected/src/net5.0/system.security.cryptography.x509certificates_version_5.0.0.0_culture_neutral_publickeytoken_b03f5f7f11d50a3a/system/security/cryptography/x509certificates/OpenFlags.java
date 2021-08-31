@@ -107,7 +107,9 @@ public class OpenFlags extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public OpenFlags(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

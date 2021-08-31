@@ -96,7 +96,9 @@ public class X509PeerCertificateAuthenticationElement extends ConfigurationEleme
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public X509PeerCertificateAuthenticationElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -96,7 +96,9 @@ public class StandardPrintController extends PrintController  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public StandardPrintController(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

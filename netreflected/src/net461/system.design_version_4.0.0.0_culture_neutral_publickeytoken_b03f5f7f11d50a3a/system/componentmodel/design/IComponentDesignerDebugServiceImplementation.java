@@ -92,7 +92,9 @@ public class IComponentDesignerDebugServiceImplementation extends NetObject impl
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IComponentDesignerDebugServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

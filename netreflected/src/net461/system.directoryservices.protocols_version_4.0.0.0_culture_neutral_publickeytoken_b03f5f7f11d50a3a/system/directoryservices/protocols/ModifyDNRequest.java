@@ -92,7 +92,9 @@ public class ModifyDNRequest extends DirectoryRequest  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ModifyDNRequest(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

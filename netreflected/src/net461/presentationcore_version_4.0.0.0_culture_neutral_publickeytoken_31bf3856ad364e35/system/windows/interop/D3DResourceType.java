@@ -107,7 +107,9 @@ public class D3DResourceType extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public D3DResourceType(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

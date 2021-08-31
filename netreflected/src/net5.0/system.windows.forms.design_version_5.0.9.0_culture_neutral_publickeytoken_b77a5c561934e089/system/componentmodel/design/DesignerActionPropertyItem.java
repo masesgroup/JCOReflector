@@ -94,7 +94,9 @@ public class DesignerActionPropertyItem extends DesignerActionItem  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DesignerActionPropertyItem(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

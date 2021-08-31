@@ -92,7 +92,9 @@ public class SafeNCryptKeyHandle extends SafeNCryptHandle  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SafeNCryptKeyHandle(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

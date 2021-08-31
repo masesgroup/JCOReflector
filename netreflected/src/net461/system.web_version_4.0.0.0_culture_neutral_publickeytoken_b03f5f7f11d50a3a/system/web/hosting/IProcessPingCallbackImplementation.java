@@ -91,7 +91,9 @@ public class IProcessPingCallbackImplementation extends NetObject implements IPr
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IProcessPingCallbackImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

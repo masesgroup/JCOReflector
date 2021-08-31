@@ -95,7 +95,9 @@ public class ContextBindingElementExtensionElement extends BindingElementExtensi
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ContextBindingElementExtensionElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

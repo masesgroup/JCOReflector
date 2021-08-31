@@ -96,7 +96,9 @@ public class ValidationException extends SystemException {
     public ValidationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ValidationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

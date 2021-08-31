@@ -97,7 +97,9 @@ public class Conversion extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Conversion(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

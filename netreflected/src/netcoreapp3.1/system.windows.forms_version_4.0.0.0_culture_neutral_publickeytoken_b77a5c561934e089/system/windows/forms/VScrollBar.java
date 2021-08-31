@@ -94,7 +94,9 @@ public class VScrollBar extends ScrollBar  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public VScrollBar(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

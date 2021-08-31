@@ -92,7 +92,9 @@ public class FontStyles extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FontStyles(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

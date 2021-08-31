@@ -93,7 +93,9 @@ public class SequencePosition extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SequencePosition(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

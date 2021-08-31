@@ -127,7 +127,9 @@ public class DetailsView extends CompositeDataBoundControl implements system.web
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DetailsView(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

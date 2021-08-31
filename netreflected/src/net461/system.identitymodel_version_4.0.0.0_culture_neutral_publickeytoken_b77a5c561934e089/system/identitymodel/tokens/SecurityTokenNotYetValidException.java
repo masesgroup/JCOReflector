@@ -96,7 +96,9 @@ public class SecurityTokenNotYetValidException extends SecurityTokenValidationEx
     public SecurityTokenNotYetValidException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SecurityTokenNotYetValidException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

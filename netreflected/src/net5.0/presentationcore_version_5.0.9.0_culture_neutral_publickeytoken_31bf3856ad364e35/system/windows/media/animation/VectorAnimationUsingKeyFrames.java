@@ -96,7 +96,9 @@ public class VectorAnimationUsingKeyFrames extends VectorAnimationBase implement
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public VectorAnimationUsingKeyFrames(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -107,7 +107,9 @@ public class FloatComparisonMode extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FloatComparisonMode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

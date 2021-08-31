@@ -98,7 +98,9 @@ public class DataGridViewRowPrePaintEventArgs extends HandledEventArgs  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataGridViewRowPrePaintEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

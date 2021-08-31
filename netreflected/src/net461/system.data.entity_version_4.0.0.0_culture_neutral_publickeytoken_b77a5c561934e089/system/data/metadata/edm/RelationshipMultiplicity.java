@@ -107,7 +107,9 @@ public class RelationshipMultiplicity extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RelationshipMultiplicity(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

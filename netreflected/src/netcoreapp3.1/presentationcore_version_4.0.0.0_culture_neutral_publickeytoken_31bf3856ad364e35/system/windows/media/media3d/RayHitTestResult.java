@@ -95,7 +95,9 @@ public class RayHitTestResult extends HitTestResult  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RayHitTestResult(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

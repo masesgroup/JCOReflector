@@ -92,7 +92,9 @@ public class Brush extends MarshalByRefObject implements AutoCloseable {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Brush(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

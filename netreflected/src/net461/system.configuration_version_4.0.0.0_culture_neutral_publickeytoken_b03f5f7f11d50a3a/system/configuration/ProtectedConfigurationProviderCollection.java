@@ -94,7 +94,9 @@ public class ProtectedConfigurationProviderCollection extends ProviderCollection
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ProtectedConfigurationProviderCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

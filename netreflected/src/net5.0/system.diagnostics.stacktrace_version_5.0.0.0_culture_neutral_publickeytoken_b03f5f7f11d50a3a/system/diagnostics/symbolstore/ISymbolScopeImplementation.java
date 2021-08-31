@@ -99,7 +99,9 @@ public class ISymbolScopeImplementation extends NetObject implements ISymbolScop
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ISymbolScopeImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

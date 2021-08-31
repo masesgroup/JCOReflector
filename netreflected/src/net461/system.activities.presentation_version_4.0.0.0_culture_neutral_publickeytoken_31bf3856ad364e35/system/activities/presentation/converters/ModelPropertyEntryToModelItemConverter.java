@@ -92,7 +92,9 @@ public class ModelPropertyEntryToModelItemConverter extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ModelPropertyEntryToModelItemConverter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

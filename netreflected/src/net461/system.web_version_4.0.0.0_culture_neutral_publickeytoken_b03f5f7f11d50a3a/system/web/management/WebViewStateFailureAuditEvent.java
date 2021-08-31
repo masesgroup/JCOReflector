@@ -93,7 +93,9 @@ public class WebViewStateFailureAuditEvent extends WebFailureAuditEvent  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WebViewStateFailureAuditEvent(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

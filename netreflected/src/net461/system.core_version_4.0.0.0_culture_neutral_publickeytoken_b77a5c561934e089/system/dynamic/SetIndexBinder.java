@@ -94,7 +94,9 @@ public class SetIndexBinder extends DynamicMetaObjectBinder  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SetIndexBinder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

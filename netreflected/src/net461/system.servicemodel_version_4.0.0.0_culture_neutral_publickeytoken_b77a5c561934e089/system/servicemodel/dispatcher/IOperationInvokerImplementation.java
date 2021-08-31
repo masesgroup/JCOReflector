@@ -94,7 +94,9 @@ public class IOperationInvokerImplementation extends NetObject implements IOpera
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IOperationInvokerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

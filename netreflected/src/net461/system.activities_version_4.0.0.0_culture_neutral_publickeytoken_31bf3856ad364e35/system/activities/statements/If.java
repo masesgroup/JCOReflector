@@ -93,7 +93,9 @@ public class If extends NativeActivity  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public If(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

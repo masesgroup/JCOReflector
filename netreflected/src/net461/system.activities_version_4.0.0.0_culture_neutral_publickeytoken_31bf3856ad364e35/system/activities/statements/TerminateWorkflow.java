@@ -92,7 +92,9 @@ public class TerminateWorkflow extends NativeActivity  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TerminateWorkflow(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

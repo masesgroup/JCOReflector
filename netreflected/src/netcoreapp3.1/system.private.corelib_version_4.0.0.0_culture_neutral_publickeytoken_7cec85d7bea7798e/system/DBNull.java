@@ -103,7 +103,9 @@ public class DBNull extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DBNull(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

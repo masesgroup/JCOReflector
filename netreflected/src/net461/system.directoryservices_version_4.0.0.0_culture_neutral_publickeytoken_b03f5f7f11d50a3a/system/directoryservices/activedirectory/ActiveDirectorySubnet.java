@@ -95,7 +95,9 @@ public class ActiveDirectorySubnet extends NetObject implements AutoCloseable {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ActiveDirectorySubnet(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

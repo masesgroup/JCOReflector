@@ -94,7 +94,9 @@ public class EntityType extends EntityTypeBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EntityType(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

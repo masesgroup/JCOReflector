@@ -96,7 +96,9 @@ public class DuplicateNameException extends DataException {
     public DuplicateNameException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DuplicateNameException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

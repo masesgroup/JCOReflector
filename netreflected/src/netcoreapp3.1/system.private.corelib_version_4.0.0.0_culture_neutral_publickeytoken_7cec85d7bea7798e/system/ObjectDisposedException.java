@@ -98,7 +98,9 @@ public class ObjectDisposedException extends InvalidOperationException {
     public ObjectDisposedException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ObjectDisposedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -99,7 +99,9 @@ public class ECDsaCng extends ECDsa  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ECDsaCng(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

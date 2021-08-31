@@ -98,7 +98,9 @@ public class ICustomTypeDescriptorImplementation extends NetObject implements IC
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ICustomTypeDescriptorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

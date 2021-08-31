@@ -95,7 +95,9 @@ public class X509CertificateRecipientServiceCredential extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public X509CertificateRecipientServiceCredential(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -94,7 +94,9 @@ public class StoryFragments extends NetObjectEnumerable implements system.window
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public StoryFragments(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

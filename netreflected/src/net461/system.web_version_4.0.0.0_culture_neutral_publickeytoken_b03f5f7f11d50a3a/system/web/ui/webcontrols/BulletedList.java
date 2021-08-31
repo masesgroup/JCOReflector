@@ -99,7 +99,9 @@ public class BulletedList extends ListControl implements system.web.ui.IPostBack
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BulletedList(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

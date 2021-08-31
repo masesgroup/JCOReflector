@@ -107,7 +107,9 @@ public class FirstWeekOfYear extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FirstWeekOfYear(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

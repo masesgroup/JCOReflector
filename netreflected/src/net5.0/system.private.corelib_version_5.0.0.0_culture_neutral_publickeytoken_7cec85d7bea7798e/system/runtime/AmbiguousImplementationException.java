@@ -95,7 +95,9 @@ public class AmbiguousImplementationException extends NetException {
     public AmbiguousImplementationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AmbiguousImplementationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

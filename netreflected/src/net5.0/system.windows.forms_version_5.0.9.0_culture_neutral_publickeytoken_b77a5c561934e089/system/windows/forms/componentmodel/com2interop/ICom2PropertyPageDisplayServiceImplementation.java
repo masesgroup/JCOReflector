@@ -92,7 +92,9 @@ public class ICom2PropertyPageDisplayServiceImplementation extends NetObject imp
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ICom2PropertyPageDisplayServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

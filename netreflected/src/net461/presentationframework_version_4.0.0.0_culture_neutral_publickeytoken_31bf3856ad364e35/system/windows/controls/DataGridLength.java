@@ -94,7 +94,9 @@ public class DataGridLength extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataGridLength(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

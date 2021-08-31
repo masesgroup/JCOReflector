@@ -98,7 +98,9 @@ public class Page extends FrameworkElement implements system.windows.markup.IAdd
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Page(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class WorkflowPersistenceService extends WorkflowRuntimeService  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WorkflowPersistenceService(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

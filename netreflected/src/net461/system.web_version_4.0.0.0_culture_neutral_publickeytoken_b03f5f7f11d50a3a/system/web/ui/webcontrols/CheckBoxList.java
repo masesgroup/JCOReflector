@@ -104,7 +104,9 @@ public class CheckBoxList extends ListControl implements system.web.ui.INamingCo
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CheckBoxList(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

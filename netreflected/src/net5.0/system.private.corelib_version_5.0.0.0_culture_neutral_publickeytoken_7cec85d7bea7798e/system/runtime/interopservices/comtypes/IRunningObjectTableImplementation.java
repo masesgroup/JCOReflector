@@ -96,7 +96,9 @@ public class IRunningObjectTableImplementation extends NetObject implements IRun
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IRunningObjectTableImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class Fma extends Avx  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Fma(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

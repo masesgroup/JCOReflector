@@ -102,7 +102,9 @@ public class WorkflowTheme extends NetObject implements system.IDisposable, Auto
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WorkflowTheme(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class WorkflowControlEndpointElement extends StandardEndpointElement  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WorkflowControlEndpointElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

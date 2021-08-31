@@ -94,7 +94,9 @@ public class _ExceptionImplementation extends NetObject implements _Exception {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public _ExceptionImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

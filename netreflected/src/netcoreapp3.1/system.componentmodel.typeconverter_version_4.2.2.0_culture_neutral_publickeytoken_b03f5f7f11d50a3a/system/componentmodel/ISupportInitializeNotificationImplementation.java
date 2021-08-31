@@ -94,7 +94,9 @@ public class ISupportInitializeNotificationImplementation extends NetObject impl
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ISupportInitializeNotificationImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class Flowchart extends NativeActivity  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Flowchart(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

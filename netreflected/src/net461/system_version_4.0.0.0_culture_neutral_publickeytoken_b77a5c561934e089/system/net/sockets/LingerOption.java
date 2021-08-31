@@ -91,7 +91,9 @@ public class LingerOption extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public LingerOption(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

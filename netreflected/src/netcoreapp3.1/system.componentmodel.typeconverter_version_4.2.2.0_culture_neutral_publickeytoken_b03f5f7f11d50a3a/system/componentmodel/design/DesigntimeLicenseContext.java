@@ -94,7 +94,9 @@ public class DesigntimeLicenseContext extends LicenseContext  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DesigntimeLicenseContext(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

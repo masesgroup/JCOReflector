@@ -91,7 +91,9 @@ public class IItemPropertiesImplementation extends NetObject implements IItemPro
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IItemPropertiesImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

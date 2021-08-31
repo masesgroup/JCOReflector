@@ -93,7 +93,9 @@ public class ClientScriptManager extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ClientScriptManager(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

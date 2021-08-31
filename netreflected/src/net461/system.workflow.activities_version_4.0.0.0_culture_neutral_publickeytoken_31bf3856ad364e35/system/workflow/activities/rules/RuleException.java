@@ -95,7 +95,9 @@ public class RuleException extends NetException {
     public RuleException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RuleException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

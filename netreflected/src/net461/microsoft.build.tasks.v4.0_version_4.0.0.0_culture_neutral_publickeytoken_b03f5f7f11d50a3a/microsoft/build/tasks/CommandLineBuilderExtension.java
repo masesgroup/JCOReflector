@@ -92,7 +92,9 @@ public class CommandLineBuilderExtension extends CommandLineBuilder  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CommandLineBuilderExtension(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

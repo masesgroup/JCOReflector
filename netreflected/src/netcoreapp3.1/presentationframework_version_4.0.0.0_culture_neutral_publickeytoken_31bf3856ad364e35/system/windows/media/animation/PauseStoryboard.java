@@ -92,7 +92,9 @@ public class PauseStoryboard extends ControllableStoryboardAction  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PauseStoryboard(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

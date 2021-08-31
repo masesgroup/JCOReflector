@@ -94,7 +94,9 @@ public class XmlNotation extends XmlNode  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlNotation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

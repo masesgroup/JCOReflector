@@ -93,7 +93,9 @@ public class ReferencedCategoriesDocument extends CategoriesDocument  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ReferencedCategoriesDocument(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

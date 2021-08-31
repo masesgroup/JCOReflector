@@ -94,7 +94,9 @@ public class ConfigurationBuildersSection extends ConfigurationSection  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ConfigurationBuildersSection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

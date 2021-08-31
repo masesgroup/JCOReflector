@@ -91,7 +91,9 @@ public class Argument extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Argument(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

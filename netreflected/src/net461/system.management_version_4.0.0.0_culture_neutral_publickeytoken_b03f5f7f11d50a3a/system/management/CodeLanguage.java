@@ -107,7 +107,9 @@ public class CodeLanguage extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CodeLanguage(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class ISecurityEncodableImplementation extends NetObject implements ISecu
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ISecurityEncodableImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

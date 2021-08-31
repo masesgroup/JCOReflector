@@ -96,7 +96,9 @@ public class RectAnimationUsingKeyFrames extends RectAnimationBase implements sy
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RectAnimationUsingKeyFrames(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

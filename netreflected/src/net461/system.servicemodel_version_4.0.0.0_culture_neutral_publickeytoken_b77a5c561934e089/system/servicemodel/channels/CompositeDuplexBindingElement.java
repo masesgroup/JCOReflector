@@ -97,7 +97,9 @@ public class CompositeDuplexBindingElement extends BindingElement implements sys
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CompositeDuplexBindingElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

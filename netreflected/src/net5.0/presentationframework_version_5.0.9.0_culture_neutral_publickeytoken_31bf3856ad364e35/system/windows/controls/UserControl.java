@@ -92,7 +92,9 @@ public class UserControl extends ContentControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UserControl(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

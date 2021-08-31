@@ -96,7 +96,9 @@ public class InvalidMessageContractException extends SystemException {
     public InvalidMessageContractException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InvalidMessageContractException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

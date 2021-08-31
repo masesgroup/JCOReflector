@@ -98,7 +98,9 @@ public class XmlException extends SystemException {
     public XmlException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

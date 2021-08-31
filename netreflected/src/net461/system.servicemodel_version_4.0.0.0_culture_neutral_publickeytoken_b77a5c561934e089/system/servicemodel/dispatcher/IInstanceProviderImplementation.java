@@ -93,7 +93,9 @@ public class IInstanceProviderImplementation extends NetObject implements IInsta
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IInstanceProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

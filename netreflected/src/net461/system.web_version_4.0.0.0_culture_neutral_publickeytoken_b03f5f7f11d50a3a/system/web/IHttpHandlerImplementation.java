@@ -92,7 +92,9 @@ public class IHttpHandlerImplementation extends NetObject implements IHttpHandle
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IHttpHandlerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

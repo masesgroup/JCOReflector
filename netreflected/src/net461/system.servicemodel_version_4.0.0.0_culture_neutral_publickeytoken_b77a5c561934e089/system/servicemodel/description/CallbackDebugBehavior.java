@@ -97,7 +97,9 @@ public class CallbackDebugBehavior extends NetObject implements system.servicemo
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CallbackDebugBehavior(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -96,7 +96,9 @@ public class StopRoutingHandler extends NetObject implements system.web.routing.
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public StopRoutingHandler(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

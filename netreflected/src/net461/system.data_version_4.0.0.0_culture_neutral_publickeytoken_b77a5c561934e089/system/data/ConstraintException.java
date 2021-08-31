@@ -96,7 +96,9 @@ public class ConstraintException extends DataException {
     public ConstraintException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ConstraintException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

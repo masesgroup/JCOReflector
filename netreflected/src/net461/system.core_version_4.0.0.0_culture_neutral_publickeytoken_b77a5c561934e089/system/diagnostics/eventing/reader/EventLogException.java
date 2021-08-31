@@ -97,7 +97,9 @@ public class EventLogException extends NetException {
     public EventLogException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EventLogException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

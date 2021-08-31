@@ -92,7 +92,9 @@ public class HttpSimpleClientProtocol extends HttpWebClientProtocol  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HttpSimpleClientProtocol(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

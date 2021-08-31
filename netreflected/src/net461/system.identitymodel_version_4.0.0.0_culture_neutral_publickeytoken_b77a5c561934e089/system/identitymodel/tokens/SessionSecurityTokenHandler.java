@@ -102,7 +102,9 @@ public class SessionSecurityTokenHandler extends SecurityTokenHandler  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SessionSecurityTokenHandler(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

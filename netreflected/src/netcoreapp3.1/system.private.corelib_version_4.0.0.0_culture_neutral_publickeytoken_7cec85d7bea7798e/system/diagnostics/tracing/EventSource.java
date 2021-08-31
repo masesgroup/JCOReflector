@@ -100,7 +100,9 @@ public class EventSource extends NetObject implements AutoCloseable {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EventSource(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

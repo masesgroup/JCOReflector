@@ -91,7 +91,9 @@ public class Renewing extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Renewing(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

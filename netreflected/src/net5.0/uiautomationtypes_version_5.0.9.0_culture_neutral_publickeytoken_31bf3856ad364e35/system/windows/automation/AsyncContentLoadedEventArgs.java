@@ -93,7 +93,9 @@ public class AsyncContentLoadedEventArgs extends AutomationEventArgs  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AsyncContentLoadedEventArgs(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

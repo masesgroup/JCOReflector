@@ -96,7 +96,9 @@ public class XamlObjectReaderException extends XamlException {
     public XamlObjectReaderException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XamlObjectReaderException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

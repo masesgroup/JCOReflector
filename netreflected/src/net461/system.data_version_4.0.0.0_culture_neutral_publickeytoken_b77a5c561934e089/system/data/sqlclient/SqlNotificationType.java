@@ -107,7 +107,9 @@ public class SqlNotificationType extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SqlNotificationType(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

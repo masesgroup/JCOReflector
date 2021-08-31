@@ -101,7 +101,9 @@ public class DocumentDesigner extends ScrollableControlDesigner implements syste
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DocumentDesigner(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

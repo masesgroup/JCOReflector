@@ -94,7 +94,9 @@ public class LockedActivityGlyph extends DesignerGlyph  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public LockedActivityGlyph(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

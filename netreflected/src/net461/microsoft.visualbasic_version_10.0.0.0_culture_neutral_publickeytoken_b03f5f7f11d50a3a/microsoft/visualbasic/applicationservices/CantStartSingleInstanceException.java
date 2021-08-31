@@ -95,7 +95,9 @@ public class CantStartSingleInstanceException extends NetException {
     public CantStartSingleInstanceException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CantStartSingleInstanceException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

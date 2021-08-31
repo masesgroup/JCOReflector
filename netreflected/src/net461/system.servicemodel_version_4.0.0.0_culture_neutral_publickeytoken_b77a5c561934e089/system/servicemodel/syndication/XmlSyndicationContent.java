@@ -97,7 +97,9 @@ public class XmlSyndicationContent extends SyndicationContent  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlSyndicationContent(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -94,7 +94,9 @@ public class KerberosSecurityTokenProvider extends SecurityTokenProvider  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public KerberosSecurityTokenProvider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

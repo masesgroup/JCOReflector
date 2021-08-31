@@ -95,7 +95,9 @@ public class EndpointAddressMessageFilter extends MessageFilter  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EndpointAddressMessageFilter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -96,7 +96,9 @@ public class RequestCachingSection extends ConfigurationSection  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RequestCachingSection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

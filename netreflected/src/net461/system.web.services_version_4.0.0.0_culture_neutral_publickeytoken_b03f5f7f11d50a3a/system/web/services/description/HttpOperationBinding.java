@@ -92,7 +92,9 @@ public class HttpOperationBinding extends ServiceDescriptionFormatExtension  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HttpOperationBinding(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

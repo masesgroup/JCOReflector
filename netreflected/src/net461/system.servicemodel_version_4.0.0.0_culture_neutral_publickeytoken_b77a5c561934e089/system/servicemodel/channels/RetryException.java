@@ -96,7 +96,9 @@ public class RetryException extends CommunicationException {
     public RetryException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RetryException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

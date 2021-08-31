@@ -96,7 +96,9 @@ public class ZLibException extends IOException {
     public ZLibException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ZLibException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

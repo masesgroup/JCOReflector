@@ -109,7 +109,9 @@ public class ElementHost extends Control  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ElementHost(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

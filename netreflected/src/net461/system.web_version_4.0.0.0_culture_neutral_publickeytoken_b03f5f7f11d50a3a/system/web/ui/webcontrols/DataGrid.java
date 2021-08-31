@@ -103,7 +103,9 @@ public class DataGrid extends BaseDataList implements system.web.ui.INamingConta
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataGrid(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -95,7 +95,9 @@ public class InfiniteIntConverter extends ConfigurationConverterBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InfiniteIntConverter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

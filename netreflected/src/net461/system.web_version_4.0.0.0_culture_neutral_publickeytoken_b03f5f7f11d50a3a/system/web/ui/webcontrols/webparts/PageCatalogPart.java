@@ -102,7 +102,9 @@ public class PageCatalogPart extends CatalogPart  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PageCatalogPart(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

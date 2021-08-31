@@ -92,7 +92,9 @@ public class TypeUniqueIdentifierSchemaImporterExtension extends SqlTypesSchemaI
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TypeUniqueIdentifierSchemaImporterExtension(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -103,7 +103,9 @@ public class SqlClientFactory extends DbProviderFactory implements system.IServi
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SqlClientFactory(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

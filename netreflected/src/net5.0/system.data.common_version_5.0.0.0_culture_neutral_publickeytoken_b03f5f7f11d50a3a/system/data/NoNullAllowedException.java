@@ -96,7 +96,9 @@ public class NoNullAllowedException extends DataException {
     public NoNullAllowedException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public NoNullAllowedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -96,7 +96,9 @@ public class BamlLocalizer extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BamlLocalizer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

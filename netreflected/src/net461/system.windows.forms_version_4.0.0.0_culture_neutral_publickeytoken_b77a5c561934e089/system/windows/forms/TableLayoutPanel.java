@@ -105,7 +105,9 @@ public class TableLayoutPanel extends Panel implements system.componentmodel.IEx
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TableLayoutPanel(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

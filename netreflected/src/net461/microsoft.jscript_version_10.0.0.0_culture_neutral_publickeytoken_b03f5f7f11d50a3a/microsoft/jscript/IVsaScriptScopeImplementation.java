@@ -96,7 +96,9 @@ public class IVsaScriptScopeImplementation extends NetObject implements IVsaScri
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IVsaScriptScopeImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

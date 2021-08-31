@@ -97,7 +97,9 @@ public class ScrollViewer extends ContentControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ScrollViewer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

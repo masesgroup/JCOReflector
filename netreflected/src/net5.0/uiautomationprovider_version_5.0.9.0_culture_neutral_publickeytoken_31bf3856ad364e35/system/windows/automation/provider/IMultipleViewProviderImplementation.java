@@ -91,7 +91,9 @@ public class IMultipleViewProviderImplementation extends NetObject implements IM
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IMultipleViewProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

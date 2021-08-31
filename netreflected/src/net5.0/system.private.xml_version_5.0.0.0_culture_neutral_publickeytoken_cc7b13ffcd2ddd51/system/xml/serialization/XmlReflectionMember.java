@@ -93,7 +93,9 @@ public class XmlReflectionMember extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlReflectionMember(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

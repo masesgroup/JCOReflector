@@ -100,7 +100,9 @@ public class AnimationException extends SystemException {
     public AnimationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AnimationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -100,7 +100,9 @@ public class ITreeDesignerImplementation extends NetObject implements ITreeDesig
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ITreeDesignerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

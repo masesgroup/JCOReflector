@@ -96,7 +96,9 @@ public class UpdateException extends DataException {
     public UpdateException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UpdateException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

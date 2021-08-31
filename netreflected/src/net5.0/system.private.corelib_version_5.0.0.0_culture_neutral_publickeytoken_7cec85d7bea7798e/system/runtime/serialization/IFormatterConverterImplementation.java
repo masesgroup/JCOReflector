@@ -99,7 +99,9 @@ public class IFormatterConverterImplementation extends NetObject implements IFor
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IFormatterConverterImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

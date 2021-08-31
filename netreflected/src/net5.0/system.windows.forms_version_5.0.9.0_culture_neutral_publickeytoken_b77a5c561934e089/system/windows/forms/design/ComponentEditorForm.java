@@ -97,7 +97,9 @@ public class ComponentEditorForm extends Form  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ComponentEditorForm(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

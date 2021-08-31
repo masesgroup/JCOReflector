@@ -97,7 +97,9 @@ public class MalformedLineException extends NetException {
     public MalformedLineException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MalformedLineException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

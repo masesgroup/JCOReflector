@@ -92,7 +92,9 @@ public class Int16Converter extends BaseNumberConverter  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Int16Converter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

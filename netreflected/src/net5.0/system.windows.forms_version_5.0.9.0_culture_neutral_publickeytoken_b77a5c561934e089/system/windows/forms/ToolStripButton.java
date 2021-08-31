@@ -96,7 +96,9 @@ public class ToolStripButton extends ToolStripItem  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ToolStripButton(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

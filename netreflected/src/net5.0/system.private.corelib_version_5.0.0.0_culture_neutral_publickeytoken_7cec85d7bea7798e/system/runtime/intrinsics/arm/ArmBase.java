@@ -92,7 +92,9 @@ public class ArmBase extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ArmBase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

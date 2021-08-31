@@ -94,7 +94,9 @@ public class DataControlFieldHeaderCell extends DataControlFieldCell  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataControlFieldHeaderCell(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

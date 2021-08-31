@@ -94,7 +94,9 @@ public class TaskDialogExpander extends TaskDialogControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TaskDialogExpander(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -100,7 +100,9 @@ public class SecurityException extends SystemException {
     public SecurityException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SecurityException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

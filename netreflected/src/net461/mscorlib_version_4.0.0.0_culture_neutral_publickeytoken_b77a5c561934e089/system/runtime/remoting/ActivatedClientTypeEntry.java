@@ -94,7 +94,9 @@ public class ActivatedClientTypeEntry extends TypeEntry  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ActivatedClientTypeEntry(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

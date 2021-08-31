@@ -92,7 +92,9 @@ public class ConsoleTraceListener extends TextWriterTraceListener  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ConsoleTraceListener(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

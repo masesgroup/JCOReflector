@@ -94,7 +94,9 @@ public class X500DistinguishedName extends AsnEncodedData  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public X500DistinguishedName(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

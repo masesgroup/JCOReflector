@@ -91,7 +91,9 @@ public class IAsyncErrorNotifyImplementation extends NetObject implements IAsync
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IAsyncErrorNotifyImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

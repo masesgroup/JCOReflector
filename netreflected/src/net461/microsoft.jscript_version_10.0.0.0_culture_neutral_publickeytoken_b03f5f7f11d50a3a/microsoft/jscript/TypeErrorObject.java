@@ -92,7 +92,9 @@ public class TypeErrorObject extends ErrorObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TypeErrorObject(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -94,7 +94,9 @@ public class AL extends ToolTaskExtension  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AL(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

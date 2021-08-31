@@ -90,7 +90,9 @@ public class X509ChainElementEnumerator extends NetObject implements Iterator<X5
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public X509ChainElementEnumerator(JCObject instance) {
         classInstance = instance.iterator();
     }

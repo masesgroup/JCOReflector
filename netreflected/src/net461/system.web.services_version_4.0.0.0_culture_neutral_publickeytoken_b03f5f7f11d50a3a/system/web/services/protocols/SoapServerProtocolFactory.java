@@ -92,7 +92,9 @@ public class SoapServerProtocolFactory extends ServerProtocolFactory  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SoapServerProtocolFactory(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

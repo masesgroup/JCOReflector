@@ -104,7 +104,9 @@ public class UserControl extends TemplateControl implements system.web.ui.IAttri
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UserControl(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

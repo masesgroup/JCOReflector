@@ -107,7 +107,9 @@ public class WebSocketTransportUsage extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WebSocketTransportUsage(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

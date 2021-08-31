@@ -107,7 +107,9 @@ public class CallType extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CallType(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

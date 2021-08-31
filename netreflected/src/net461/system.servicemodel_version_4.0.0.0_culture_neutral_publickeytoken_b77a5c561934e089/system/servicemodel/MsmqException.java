@@ -96,7 +96,9 @@ public class MsmqException extends ExternalException {
     public MsmqException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MsmqException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

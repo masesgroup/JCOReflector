@@ -98,7 +98,9 @@ public class MessageSecurityVersion extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MessageSecurityVersion(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

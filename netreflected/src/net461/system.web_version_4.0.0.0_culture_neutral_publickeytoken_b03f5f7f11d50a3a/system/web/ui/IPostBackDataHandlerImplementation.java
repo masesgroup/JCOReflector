@@ -92,7 +92,9 @@ public class IPostBackDataHandlerImplementation extends NetObject implements IPo
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IPostBackDataHandlerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class SHA1 extends HashAlgorithm  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SHA1(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

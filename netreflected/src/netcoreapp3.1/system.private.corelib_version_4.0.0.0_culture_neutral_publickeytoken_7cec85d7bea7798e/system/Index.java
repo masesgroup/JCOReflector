@@ -93,7 +93,9 @@ public class Index extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Index(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

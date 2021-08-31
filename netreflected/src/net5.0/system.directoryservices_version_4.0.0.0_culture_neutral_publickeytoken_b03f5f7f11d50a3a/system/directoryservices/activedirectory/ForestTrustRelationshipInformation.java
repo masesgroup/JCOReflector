@@ -95,7 +95,9 @@ public class ForestTrustRelationshipInformation extends TrustRelationshipInforma
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ForestTrustRelationshipInformation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

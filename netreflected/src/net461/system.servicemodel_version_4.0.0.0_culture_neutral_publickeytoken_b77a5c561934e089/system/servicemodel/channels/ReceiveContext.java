@@ -100,7 +100,9 @@ public class ReceiveContext extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ReceiveContext(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

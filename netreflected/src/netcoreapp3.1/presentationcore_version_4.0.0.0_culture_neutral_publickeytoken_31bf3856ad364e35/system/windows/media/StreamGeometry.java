@@ -96,7 +96,9 @@ public class StreamGeometry extends Geometry  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public StreamGeometry(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

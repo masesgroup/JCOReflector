@@ -95,7 +95,9 @@ public class SyndicationElementExtensionCollection extends NetObjectEnumerable  
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SyndicationElementExtensionCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

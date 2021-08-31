@@ -107,7 +107,9 @@ public class UriIdnScope extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UriIdnScope(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

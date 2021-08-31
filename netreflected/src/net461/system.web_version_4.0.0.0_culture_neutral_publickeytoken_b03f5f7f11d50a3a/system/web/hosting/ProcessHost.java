@@ -100,7 +100,9 @@ public class ProcessHost extends MarshalByRefObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ProcessHost(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

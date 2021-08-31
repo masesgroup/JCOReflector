@@ -93,7 +93,9 @@ public class ReceiveMessageContent extends ReceiveContent  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ReceiveMessageContent(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

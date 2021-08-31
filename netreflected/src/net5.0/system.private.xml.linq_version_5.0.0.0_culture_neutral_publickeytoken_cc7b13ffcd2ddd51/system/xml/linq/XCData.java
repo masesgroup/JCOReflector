@@ -97,7 +97,9 @@ public class XCData extends XText  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XCData(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

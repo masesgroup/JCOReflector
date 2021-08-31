@@ -96,7 +96,9 @@ public class NotImplementedException extends SystemException {
     public NotImplementedException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public NotImplementedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

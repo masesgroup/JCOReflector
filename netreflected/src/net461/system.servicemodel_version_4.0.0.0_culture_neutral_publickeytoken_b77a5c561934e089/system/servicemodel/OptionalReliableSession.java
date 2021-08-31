@@ -93,7 +93,9 @@ public class OptionalReliableSession extends ReliableSession  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public OptionalReliableSession(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

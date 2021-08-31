@@ -95,7 +95,9 @@ public class WSTrustServiceHost extends ServiceHost  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WSTrustServiceHost(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

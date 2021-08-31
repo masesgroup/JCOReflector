@@ -93,7 +93,9 @@ public class StateMachineWorkflowActivity extends StateActivity  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public StateMachineWorkflowActivity(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

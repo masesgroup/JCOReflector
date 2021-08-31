@@ -91,7 +91,9 @@ public class IWin32WindowImplementation extends NetObject implements IWin32Windo
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IWin32WindowImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

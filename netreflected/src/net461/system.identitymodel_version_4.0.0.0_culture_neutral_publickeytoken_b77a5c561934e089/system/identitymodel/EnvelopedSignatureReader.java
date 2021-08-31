@@ -96,7 +96,9 @@ public class EnvelopedSignatureReader extends DelegatingXmlDictionaryReader  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EnvelopedSignatureReader(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

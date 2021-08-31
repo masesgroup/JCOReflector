@@ -95,7 +95,9 @@ public class IdentityVerifier extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IdentityVerifier(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class IButtonControlImplementation extends NetObject implements IButtonCo
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IButtonControlImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

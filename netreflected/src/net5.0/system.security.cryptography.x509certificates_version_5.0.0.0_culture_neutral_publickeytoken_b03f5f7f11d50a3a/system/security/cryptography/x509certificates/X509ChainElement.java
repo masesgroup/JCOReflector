@@ -93,7 +93,9 @@ public class X509ChainElement extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public X509ChainElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class UCOMIEnumConnectionsImplementation extends NetObject implements UCO
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UCOMIEnumConnectionsImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

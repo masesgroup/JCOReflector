@@ -93,7 +93,9 @@ public class DiscoveryDocumentSearchPattern extends DiscoverySearchPattern  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DiscoveryDocumentSearchPattern(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

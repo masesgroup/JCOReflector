@@ -98,7 +98,9 @@ public class SupportedRuntimeMissingException extends DependentPlatformMissingEx
     public SupportedRuntimeMissingException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SupportedRuntimeMissingException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

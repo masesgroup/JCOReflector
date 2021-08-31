@@ -97,7 +97,9 @@ public class ImageMap extends Image implements system.web.ui.IPostBackEventHandl
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ImageMap(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

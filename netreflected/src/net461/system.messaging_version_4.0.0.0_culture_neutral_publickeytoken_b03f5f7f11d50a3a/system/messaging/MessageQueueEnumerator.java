@@ -90,7 +90,9 @@ public class MessageQueueEnumerator extends NetObject implements Iterator<Messag
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MessageQueueEnumerator(JCObject instance) {
         classInstance = instance.iterator();
     }

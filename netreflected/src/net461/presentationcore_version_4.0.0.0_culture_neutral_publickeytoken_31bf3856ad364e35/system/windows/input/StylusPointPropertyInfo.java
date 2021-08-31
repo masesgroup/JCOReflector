@@ -94,7 +94,9 @@ public class StylusPointPropertyInfo extends StylusPointProperty  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public StylusPointPropertyInfo(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

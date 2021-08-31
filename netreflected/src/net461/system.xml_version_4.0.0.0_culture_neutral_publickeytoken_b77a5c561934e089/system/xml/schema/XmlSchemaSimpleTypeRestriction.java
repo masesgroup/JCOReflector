@@ -95,7 +95,9 @@ public class XmlSchemaSimpleTypeRestriction extends XmlSchemaSimpleTypeContent  
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlSchemaSimpleTypeRestriction(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

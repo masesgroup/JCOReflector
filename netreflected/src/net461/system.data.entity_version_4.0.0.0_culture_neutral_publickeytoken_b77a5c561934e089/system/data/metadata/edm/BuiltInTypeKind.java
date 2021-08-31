@@ -107,7 +107,9 @@ public class BuiltInTypeKind extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BuiltInTypeKind(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class LocalizedName extends LocalizedEntry  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public LocalizedName(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

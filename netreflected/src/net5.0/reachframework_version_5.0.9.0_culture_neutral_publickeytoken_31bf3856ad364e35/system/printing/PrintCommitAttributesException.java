@@ -98,7 +98,9 @@ public class PrintCommitAttributesException extends PrintSystemException {
     public PrintCommitAttributesException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PrintCommitAttributesException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

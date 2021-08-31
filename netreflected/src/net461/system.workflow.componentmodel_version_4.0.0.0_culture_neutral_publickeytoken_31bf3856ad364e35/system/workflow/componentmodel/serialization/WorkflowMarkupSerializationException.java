@@ -97,7 +97,9 @@ public class WorkflowMarkupSerializationException extends NetException {
     public WorkflowMarkupSerializationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WorkflowMarkupSerializationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

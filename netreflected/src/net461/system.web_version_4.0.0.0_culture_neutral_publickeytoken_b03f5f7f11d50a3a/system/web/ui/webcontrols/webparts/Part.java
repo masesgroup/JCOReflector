@@ -99,7 +99,9 @@ public class Part extends Panel implements system.web.ui.INamingContainer, syste
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Part(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

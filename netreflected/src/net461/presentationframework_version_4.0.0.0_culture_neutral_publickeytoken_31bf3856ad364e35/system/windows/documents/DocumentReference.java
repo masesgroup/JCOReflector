@@ -94,7 +94,9 @@ public class DocumentReference extends FrameworkElement  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DocumentReference(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

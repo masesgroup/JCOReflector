@@ -107,7 +107,9 @@ public class MidCodeCharts extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MidCodeCharts(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

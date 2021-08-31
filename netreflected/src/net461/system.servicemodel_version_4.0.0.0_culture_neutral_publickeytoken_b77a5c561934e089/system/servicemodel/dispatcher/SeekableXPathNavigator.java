@@ -94,7 +94,9 @@ public class SeekableXPathNavigator extends XPathNavigator  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SeekableXPathNavigator(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

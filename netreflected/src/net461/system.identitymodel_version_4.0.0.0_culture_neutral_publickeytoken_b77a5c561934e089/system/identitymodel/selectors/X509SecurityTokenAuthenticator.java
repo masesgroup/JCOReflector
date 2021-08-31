@@ -93,7 +93,9 @@ public class X509SecurityTokenAuthenticator extends SecurityTokenAuthenticator  
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public X509SecurityTokenAuthenticator(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

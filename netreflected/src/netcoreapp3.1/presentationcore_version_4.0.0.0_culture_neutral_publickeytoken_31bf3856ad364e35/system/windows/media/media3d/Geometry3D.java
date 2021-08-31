@@ -94,7 +94,9 @@ public class Geometry3D extends Animatable  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Geometry3D(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

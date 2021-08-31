@@ -94,7 +94,9 @@ public class SectionHeader extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SectionHeader(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

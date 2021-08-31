@@ -97,7 +97,9 @@ public class ExceptionCollection extends NetException {
     public ExceptionCollection() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ExceptionCollection(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

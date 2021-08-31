@@ -107,7 +107,9 @@ public class SqlCommandColumnEncryptionSetting extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SqlCommandColumnEncryptionSetting(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class ActivityTrackingLocation extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ActivityTrackingLocation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

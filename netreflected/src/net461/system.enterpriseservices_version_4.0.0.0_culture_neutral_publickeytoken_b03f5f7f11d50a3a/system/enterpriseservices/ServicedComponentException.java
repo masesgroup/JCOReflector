@@ -96,7 +96,9 @@ public class ServicedComponentException extends SystemException {
     public ServicedComponentException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ServicedComponentException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

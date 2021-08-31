@@ -92,7 +92,9 @@ public class DateTimeSerializationSection extends ConfigurationSection  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DateTimeSerializationSection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -107,7 +107,9 @@ public class SocketError extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SocketError(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

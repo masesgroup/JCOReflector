@@ -92,7 +92,9 @@ public class IServiceContractGenerationExtensionImplementation extends NetObject
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IServiceContractGenerationExtensionImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

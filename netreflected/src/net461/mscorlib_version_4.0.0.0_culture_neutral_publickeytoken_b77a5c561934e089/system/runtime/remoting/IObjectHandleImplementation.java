@@ -91,7 +91,9 @@ public class IObjectHandleImplementation extends NetObject implements IObjectHan
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IObjectHandleImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

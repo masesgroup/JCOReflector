@@ -94,7 +94,9 @@ public class Polygon extends Shape  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Polygon(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class AttachablePropertyServices extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AttachablePropertyServices(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

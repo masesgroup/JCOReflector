@@ -107,7 +107,9 @@ public class SearchDirectionHint extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SearchDirectionHint(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

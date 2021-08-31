@@ -93,7 +93,9 @@ public class IModelBinderImplementation extends NetObject implements IModelBinde
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IModelBinderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

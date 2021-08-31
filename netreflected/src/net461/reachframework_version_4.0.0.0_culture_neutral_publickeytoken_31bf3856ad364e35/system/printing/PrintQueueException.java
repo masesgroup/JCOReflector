@@ -98,7 +98,9 @@ public class PrintQueueException extends PrintSystemException {
     public PrintQueueException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PrintQueueException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

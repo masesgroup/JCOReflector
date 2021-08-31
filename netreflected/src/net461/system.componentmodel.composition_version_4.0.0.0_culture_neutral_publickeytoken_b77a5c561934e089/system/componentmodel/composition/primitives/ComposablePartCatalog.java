@@ -91,7 +91,9 @@ public class ComposablePartCatalog extends NetObjectEnumerable implements AutoCl
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ComposablePartCatalog(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

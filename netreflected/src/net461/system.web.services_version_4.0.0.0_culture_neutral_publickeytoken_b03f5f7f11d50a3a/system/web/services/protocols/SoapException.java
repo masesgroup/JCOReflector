@@ -101,7 +101,9 @@ public class SoapException extends SystemException {
     public SoapException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SoapException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

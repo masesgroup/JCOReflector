@@ -99,7 +99,9 @@ public class ConfigurationException extends SystemException {
     public ConfigurationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ConfigurationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

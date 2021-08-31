@@ -93,7 +93,9 @@ public class UrlParameterReader extends ValueCollectionParameterReader  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UrlParameterReader(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

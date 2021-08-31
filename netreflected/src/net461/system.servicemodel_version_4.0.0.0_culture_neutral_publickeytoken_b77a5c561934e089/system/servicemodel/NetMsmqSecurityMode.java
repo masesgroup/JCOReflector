@@ -107,7 +107,9 @@ public class NetMsmqSecurityMode extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public NetMsmqSecurityMode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

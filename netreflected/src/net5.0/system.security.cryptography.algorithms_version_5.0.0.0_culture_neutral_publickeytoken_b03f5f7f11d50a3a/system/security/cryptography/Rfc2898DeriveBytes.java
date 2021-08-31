@@ -93,7 +93,9 @@ public class Rfc2898DeriveBytes extends DeriveBytes  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Rfc2898DeriveBytes(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

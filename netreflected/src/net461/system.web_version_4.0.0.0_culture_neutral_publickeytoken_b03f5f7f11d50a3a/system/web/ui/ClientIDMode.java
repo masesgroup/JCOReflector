@@ -107,7 +107,9 @@ public class ClientIDMode extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ClientIDMode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

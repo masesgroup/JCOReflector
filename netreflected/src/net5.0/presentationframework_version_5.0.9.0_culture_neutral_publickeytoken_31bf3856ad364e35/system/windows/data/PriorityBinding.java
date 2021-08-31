@@ -94,7 +94,9 @@ public class PriorityBinding extends BindingBase implements system.windows.marku
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PriorityBinding(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

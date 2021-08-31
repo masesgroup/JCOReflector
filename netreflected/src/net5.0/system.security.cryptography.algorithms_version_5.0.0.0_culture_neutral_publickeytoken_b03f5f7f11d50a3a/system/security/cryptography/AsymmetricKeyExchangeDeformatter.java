@@ -92,7 +92,9 @@ public class AsymmetricKeyExchangeDeformatter extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AsymmetricKeyExchangeDeformatter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

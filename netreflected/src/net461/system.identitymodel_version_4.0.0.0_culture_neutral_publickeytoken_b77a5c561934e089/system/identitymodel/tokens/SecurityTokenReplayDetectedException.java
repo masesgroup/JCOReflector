@@ -96,7 +96,9 @@ public class SecurityTokenReplayDetectedException extends SecurityTokenValidatio
     public SecurityTokenReplayDetectedException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SecurityTokenReplayDetectedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

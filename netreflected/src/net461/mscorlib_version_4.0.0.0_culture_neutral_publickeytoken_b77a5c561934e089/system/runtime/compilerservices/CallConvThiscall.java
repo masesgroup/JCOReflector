@@ -91,7 +91,9 @@ public class CallConvThiscall extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CallConvThiscall(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -99,7 +99,9 @@ public class TemplateControl extends Control implements system.web.ui.INamingCon
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TemplateControl(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

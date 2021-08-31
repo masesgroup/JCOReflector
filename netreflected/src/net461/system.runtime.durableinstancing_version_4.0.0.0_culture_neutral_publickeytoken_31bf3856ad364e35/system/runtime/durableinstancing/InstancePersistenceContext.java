@@ -104,7 +104,9 @@ public class InstancePersistenceContext extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InstancePersistenceContext(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

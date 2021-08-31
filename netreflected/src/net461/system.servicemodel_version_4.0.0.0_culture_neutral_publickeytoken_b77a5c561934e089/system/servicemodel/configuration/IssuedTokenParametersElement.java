@@ -98,7 +98,9 @@ public class IssuedTokenParametersElement extends ServiceModelConfigurationEleme
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IssuedTokenParametersElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

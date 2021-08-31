@@ -107,7 +107,9 @@ public class TraceLevel extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TraceLevel(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class DataReference extends EncryptedReference  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataReference(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

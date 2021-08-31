@@ -93,7 +93,9 @@ public class Avx2 extends Avx  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Avx2(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

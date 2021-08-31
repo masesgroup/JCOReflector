@@ -93,7 +93,9 @@ public class DES extends SymmetricAlgorithm  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DES(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

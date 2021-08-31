@@ -91,7 +91,9 @@ public class IWorkflowChangeDiffImplementation extends NetObject implements IWor
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IWorkflowChangeDiffImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

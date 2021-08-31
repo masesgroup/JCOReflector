@@ -98,7 +98,9 @@ public class InvalidUdtException extends SystemException {
     public InvalidUdtException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InvalidUdtException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

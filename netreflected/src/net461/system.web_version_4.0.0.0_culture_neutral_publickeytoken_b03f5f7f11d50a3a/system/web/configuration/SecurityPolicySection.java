@@ -93,7 +93,9 @@ public class SecurityPolicySection extends ConfigurationSection  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SecurityPolicySection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

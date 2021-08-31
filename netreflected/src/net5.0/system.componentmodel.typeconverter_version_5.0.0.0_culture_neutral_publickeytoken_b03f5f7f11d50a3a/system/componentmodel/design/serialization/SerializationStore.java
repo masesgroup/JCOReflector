@@ -96,7 +96,9 @@ public class SerializationStore extends NetObject implements system.IDisposable,
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SerializationStore(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

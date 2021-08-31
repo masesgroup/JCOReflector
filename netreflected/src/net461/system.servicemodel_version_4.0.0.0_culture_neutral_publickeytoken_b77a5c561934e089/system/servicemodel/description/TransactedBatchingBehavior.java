@@ -97,7 +97,9 @@ public class TransactedBatchingBehavior extends NetObject implements system.serv
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TransactedBatchingBehavior(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

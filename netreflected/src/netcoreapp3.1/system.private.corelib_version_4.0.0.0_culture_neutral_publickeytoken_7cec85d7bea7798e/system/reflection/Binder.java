@@ -97,7 +97,9 @@ public class Binder extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Binder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

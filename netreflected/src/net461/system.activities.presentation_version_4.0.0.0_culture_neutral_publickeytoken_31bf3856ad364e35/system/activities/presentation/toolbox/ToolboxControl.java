@@ -99,7 +99,9 @@ public class ToolboxControl extends Control  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ToolboxControl(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

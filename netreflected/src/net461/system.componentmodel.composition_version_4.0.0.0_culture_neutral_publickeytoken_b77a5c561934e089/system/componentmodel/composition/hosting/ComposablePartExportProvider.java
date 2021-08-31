@@ -94,7 +94,9 @@ public class ComposablePartExportProvider extends ExportProvider implements Auto
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ComposablePartExportProvider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

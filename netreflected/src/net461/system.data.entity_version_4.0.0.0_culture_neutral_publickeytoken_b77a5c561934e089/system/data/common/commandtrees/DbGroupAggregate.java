@@ -92,7 +92,9 @@ public class DbGroupAggregate extends DbAggregate  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DbGroupAggregate(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

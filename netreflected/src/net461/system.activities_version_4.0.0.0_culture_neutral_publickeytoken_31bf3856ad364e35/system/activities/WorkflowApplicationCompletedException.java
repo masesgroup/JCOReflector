@@ -97,7 +97,9 @@ public class WorkflowApplicationCompletedException extends WorkflowApplicationEx
     public WorkflowApplicationCompletedException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WorkflowApplicationCompletedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

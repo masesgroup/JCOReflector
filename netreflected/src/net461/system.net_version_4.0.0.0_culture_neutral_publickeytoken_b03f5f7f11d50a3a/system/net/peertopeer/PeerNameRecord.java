@@ -97,7 +97,9 @@ public class PeerNameRecord extends NetObject implements system.runtime.serializ
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PeerNameRecord(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class FlowDocumentPageViewerAutomationPeer extends DocumentViewerBaseAuto
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FlowDocumentPageViewerAutomationPeer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

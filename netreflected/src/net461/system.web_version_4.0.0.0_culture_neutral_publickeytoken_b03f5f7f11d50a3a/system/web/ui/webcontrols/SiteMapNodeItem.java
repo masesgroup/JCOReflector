@@ -96,7 +96,9 @@ public class SiteMapNodeItem extends WebControl implements system.web.ui.INaming
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SiteMapNodeItem(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -107,7 +107,9 @@ public class CodeBinaryOperatorType extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CodeBinaryOperatorType(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

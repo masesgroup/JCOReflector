@@ -90,7 +90,9 @@ public class LocalValueEnumerator extends NetObject implements Iterator<LocalVal
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public LocalValueEnumerator(JCObject instance) {
         classInstance = instance.iterator();
     }

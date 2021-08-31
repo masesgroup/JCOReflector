@@ -97,7 +97,9 @@ public class EncryptedSecurityTokenHandler extends SecurityTokenHandler  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EncryptedSecurityTokenHandler(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

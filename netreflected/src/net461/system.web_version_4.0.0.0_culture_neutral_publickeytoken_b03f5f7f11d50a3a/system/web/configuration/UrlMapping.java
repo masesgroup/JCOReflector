@@ -92,7 +92,9 @@ public class UrlMapping extends ConfigurationElement  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UrlMapping(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

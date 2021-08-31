@@ -96,7 +96,9 @@ public class TrustNotGrantedException extends DeploymentException {
     public TrustNotGrantedException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TrustNotGrantedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

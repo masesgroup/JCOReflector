@@ -106,7 +106,9 @@ public class OracleDataReader extends DbDataReader  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public OracleDataReader(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

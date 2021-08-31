@@ -100,7 +100,9 @@ public class NotifyIcon extends Component  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public NotifyIcon(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

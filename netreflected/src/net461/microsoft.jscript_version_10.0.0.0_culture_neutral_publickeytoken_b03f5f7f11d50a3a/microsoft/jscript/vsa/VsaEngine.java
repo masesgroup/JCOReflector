@@ -113,7 +113,9 @@ public class VsaEngine extends BaseVsaEngine  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public VsaEngine(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

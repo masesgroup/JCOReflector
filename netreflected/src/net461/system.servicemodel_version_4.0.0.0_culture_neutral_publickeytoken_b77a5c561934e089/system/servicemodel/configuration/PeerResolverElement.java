@@ -95,7 +95,9 @@ public class PeerResolverElement extends ServiceModelConfigurationElement  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PeerResolverElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

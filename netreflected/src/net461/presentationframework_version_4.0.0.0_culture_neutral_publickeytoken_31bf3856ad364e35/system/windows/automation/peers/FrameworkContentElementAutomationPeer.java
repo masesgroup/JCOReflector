@@ -93,7 +93,9 @@ public class FrameworkContentElementAutomationPeer extends ContentElementAutomat
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FrameworkContentElementAutomationPeer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

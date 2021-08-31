@@ -107,7 +107,9 @@ public class DirectoryAttributeOperation extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DirectoryAttributeOperation(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

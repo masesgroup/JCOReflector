@@ -107,7 +107,9 @@ public class DataGridViewRowHeadersWidthSizeMode extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataGridViewRowHeadersWidthSizeMode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

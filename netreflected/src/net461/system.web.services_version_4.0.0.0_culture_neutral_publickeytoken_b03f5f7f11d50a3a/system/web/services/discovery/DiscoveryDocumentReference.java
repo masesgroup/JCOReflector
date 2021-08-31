@@ -94,7 +94,9 @@ public class DiscoveryDocumentReference extends DiscoveryReference  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DiscoveryDocumentReference(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -98,7 +98,9 @@ public class InvokeWebServiceActivity extends Activity implements system.workflo
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InvokeWebServiceActivity(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

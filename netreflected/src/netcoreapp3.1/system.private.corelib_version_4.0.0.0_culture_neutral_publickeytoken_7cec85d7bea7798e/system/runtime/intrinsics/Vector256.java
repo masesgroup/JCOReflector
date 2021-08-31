@@ -91,7 +91,9 @@ public class Vector256 extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Vector256(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

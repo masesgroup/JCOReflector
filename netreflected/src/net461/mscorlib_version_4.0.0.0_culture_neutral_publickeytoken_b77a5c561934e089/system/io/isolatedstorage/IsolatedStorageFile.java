@@ -101,7 +101,9 @@ public class IsolatedStorageFile extends IsolatedStorage implements AutoCloseabl
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IsolatedStorageFile(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class GridViewColumnsGenerator extends AutoFieldsGenerator  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public GridViewColumnsGenerator(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -96,7 +96,9 @@ public class EvaluateException extends InvalidExpressionException {
     public EvaluateException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EvaluateException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

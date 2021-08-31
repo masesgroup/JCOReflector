@@ -97,7 +97,9 @@ public class TlsOperationException extends DirectoryOperationException {
     public TlsOperationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TlsOperationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

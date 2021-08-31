@@ -92,7 +92,9 @@ public class IWebEditableImplementation extends NetObject implements IWebEditabl
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IWebEditableImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

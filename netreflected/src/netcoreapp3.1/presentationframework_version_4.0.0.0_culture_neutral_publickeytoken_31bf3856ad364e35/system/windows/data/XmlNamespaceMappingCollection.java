@@ -95,7 +95,9 @@ public class XmlNamespaceMappingCollection extends XmlNamespaceManager implement
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlNamespaceMappingCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

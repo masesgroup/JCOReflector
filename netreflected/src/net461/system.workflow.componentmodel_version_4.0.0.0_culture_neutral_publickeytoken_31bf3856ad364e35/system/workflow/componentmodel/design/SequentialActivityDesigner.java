@@ -96,7 +96,9 @@ public class SequentialActivityDesigner extends StructuredCompositeActivityDesig
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SequentialActivityDesigner(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

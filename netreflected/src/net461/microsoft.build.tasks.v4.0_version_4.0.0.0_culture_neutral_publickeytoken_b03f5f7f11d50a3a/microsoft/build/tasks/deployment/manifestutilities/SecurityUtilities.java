@@ -96,7 +96,9 @@ public class SecurityUtilities extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SecurityUtilities(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -97,7 +97,9 @@ public class JsonException extends NetException {
     public JsonException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public JsonException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

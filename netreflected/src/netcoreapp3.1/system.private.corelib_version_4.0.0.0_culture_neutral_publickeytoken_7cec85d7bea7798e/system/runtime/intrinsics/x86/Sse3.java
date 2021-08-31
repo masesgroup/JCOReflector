@@ -92,7 +92,9 @@ public class Sse3 extends Sse2  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Sse3(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

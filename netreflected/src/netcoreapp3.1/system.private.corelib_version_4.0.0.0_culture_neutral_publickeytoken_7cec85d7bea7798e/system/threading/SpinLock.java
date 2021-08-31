@@ -93,7 +93,9 @@ public class SpinLock extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SpinLock(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

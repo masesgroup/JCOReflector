@@ -97,7 +97,9 @@ public class EncryptedType extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EncryptedType(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

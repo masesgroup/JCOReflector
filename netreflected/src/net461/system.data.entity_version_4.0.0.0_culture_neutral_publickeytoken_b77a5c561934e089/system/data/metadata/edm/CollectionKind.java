@@ -107,7 +107,9 @@ public class CollectionKind extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CollectionKind(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -97,7 +97,9 @@ public class HtmlSelect extends HtmlContainerControl implements system.web.ui.IP
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HtmlSelect(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class IExtendedUIService2Implementation extends NetObject implements IExt
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IExtendedUIService2Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

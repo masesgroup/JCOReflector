@@ -98,7 +98,9 @@ public class TaskItem extends MarshalByRefObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TaskItem(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

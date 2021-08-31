@@ -107,7 +107,9 @@ public class ControlUpdateMode extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ControlUpdateMode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

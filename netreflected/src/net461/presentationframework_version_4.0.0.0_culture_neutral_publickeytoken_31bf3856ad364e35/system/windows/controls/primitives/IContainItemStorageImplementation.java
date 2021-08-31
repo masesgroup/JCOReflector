@@ -92,7 +92,9 @@ public class IContainItemStorageImplementation extends NetObject implements ICon
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IContainItemStorageImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

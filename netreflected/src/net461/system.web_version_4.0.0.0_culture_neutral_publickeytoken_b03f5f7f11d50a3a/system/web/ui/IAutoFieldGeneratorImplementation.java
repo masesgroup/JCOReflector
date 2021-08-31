@@ -94,7 +94,9 @@ public class IAutoFieldGeneratorImplementation extends NetObject implements IAut
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IAutoFieldGeneratorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

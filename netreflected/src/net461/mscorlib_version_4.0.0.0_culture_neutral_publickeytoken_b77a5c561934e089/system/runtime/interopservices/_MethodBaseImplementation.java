@@ -102,7 +102,9 @@ public class _MethodBaseImplementation extends NetObject implements _MethodBase 
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public _MethodBaseImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -95,7 +95,9 @@ public class JsonStringEnumConverter extends JsonConverterFactory  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public JsonStringEnumConverter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

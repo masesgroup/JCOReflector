@@ -92,7 +92,9 @@ public class TrustSection extends ConfigurationSection  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TrustSection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

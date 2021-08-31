@@ -96,7 +96,9 @@ public class Paragraph extends Block  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Paragraph(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

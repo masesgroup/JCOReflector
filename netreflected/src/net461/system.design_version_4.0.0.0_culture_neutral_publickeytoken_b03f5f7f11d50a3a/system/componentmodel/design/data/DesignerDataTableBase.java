@@ -93,7 +93,9 @@ public class DesignerDataTableBase extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DesignerDataTableBase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

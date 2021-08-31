@@ -96,7 +96,9 @@ public class SqlTruncateException extends SqlTypeException {
     public SqlTruncateException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SqlTruncateException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

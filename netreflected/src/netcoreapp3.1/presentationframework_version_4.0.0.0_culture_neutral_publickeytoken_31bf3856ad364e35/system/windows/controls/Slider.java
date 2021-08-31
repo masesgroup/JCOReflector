@@ -97,7 +97,9 @@ public class Slider extends RangeBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Slider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

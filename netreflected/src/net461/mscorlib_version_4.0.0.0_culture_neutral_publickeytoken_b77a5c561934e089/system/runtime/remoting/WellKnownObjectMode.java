@@ -107,7 +107,9 @@ public class WellKnownObjectMode extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WellKnownObjectMode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

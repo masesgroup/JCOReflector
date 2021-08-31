@@ -95,7 +95,9 @@ public class AuthenticationSection extends ConfigurationSection  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AuthenticationSection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

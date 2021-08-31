@@ -97,7 +97,9 @@ public class ITaskItem2Implementation extends NetObject implements ITaskItem2 {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ITaskItem2Implementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

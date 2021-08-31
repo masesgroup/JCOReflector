@@ -96,7 +96,9 @@ public class XPathNavigatorException extends XPathException {
     public XPathNavigatorException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XPathNavigatorException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

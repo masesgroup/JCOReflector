@@ -96,7 +96,9 @@ public class RequestFailedException extends RequestException {
     public RequestFailedException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RequestFailedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

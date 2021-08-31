@@ -90,7 +90,9 @@ public class XmlSchemaEnumerator extends NetObject implements Iterator<XmlSchema
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlSchemaEnumerator(JCObject instance) {
         classInstance = instance.iterator();
     }

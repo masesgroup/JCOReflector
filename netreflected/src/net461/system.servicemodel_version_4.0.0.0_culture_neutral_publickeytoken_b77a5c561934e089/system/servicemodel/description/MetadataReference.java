@@ -98,7 +98,9 @@ public class MetadataReference extends NetObject implements system.xml.serializa
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MetadataReference(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

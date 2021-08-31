@@ -92,7 +92,9 @@ public class IWeakEventListenerImplementation extends NetObject implements IWeak
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IWeakEventListenerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

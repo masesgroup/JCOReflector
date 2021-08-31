@@ -98,7 +98,9 @@ public class CookieException extends FormatException {
     public CookieException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CookieException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

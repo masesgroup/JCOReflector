@@ -91,7 +91,9 @@ public class IExecutionPropertyImplementation extends NetObject implements IExec
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IExecutionPropertyImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class ShowDeletedControl extends DirectoryControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ShowDeletedControl(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

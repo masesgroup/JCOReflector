@@ -96,7 +96,9 @@ public class RuleEvaluationException extends RuleException {
     public RuleEvaluationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RuleEvaluationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

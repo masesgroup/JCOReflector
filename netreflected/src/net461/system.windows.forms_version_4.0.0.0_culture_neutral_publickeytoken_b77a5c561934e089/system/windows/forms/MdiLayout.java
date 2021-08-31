@@ -107,7 +107,9 @@ public class MdiLayout extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MdiLayout(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -103,7 +103,9 @@ public class ChangePassword extends CompositeControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ChangePassword(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

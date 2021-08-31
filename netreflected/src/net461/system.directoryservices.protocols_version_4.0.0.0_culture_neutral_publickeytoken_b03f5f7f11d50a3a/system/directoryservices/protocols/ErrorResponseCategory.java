@@ -107,7 +107,9 @@ public class ErrorResponseCategory extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ErrorResponseCategory(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

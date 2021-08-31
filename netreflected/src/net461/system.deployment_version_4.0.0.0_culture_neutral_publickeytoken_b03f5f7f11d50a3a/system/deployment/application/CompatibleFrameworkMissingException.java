@@ -99,7 +99,9 @@ public class CompatibleFrameworkMissingException extends DependentPlatformMissin
     public CompatibleFrameworkMissingException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CompatibleFrameworkMissingException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

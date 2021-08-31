@@ -96,7 +96,9 @@ public class BmpBitmapDecoder extends BitmapDecoder  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BmpBitmapDecoder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

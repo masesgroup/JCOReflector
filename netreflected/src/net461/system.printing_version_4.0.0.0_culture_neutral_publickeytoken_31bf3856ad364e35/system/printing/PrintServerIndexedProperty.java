@@ -107,7 +107,9 @@ public class PrintServerIndexedProperty extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PrintServerIndexedProperty(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

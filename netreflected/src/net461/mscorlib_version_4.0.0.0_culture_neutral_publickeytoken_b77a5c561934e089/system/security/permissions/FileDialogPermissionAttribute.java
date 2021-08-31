@@ -95,7 +95,9 @@ public class FileDialogPermissionAttribute extends CodeAccessSecurityAttribute  
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FileDialogPermissionAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

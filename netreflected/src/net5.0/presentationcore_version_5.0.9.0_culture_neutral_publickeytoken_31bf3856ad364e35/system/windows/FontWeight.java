@@ -97,7 +97,9 @@ public class FontWeight extends ValueType implements system.IFormattable {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FontWeight(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

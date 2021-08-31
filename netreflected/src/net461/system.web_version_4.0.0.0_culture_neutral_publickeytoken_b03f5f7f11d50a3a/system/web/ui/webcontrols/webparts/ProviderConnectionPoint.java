@@ -95,7 +95,9 @@ public class ProviderConnectionPoint extends ConnectionPoint  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ProviderConnectionPoint(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

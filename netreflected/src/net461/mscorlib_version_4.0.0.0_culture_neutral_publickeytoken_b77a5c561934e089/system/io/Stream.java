@@ -99,7 +99,9 @@ public class Stream extends MarshalByRefObject implements AutoCloseable {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Stream(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

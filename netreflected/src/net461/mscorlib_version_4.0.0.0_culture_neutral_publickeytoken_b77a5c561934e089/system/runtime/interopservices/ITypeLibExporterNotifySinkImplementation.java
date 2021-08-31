@@ -93,7 +93,9 @@ public class ITypeLibExporterNotifySinkImplementation extends NetObject implemen
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ITypeLibExporterNotifySinkImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

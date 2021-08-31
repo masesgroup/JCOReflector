@@ -92,7 +92,9 @@ public class ActiveDirectoryRoleFactoryConfiguration extends ConfigurationSectio
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ActiveDirectoryRoleFactoryConfiguration(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class IValueConverterImplementation extends NetObject implements IValueCo
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IValueConverterImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

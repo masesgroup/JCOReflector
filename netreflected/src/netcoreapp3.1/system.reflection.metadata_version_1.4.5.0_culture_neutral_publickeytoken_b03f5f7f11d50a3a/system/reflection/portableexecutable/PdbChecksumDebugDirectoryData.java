@@ -92,7 +92,9 @@ public class PdbChecksumDebugDirectoryData extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PdbChecksumDebugDirectoryData(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

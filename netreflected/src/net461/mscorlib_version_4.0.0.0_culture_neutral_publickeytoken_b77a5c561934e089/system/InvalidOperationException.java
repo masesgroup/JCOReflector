@@ -96,7 +96,9 @@ public class InvalidOperationException extends SystemException {
     public InvalidOperationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InvalidOperationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

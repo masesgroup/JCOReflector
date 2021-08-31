@@ -95,7 +95,9 @@ public class InternalErrorException extends NetException {
     public InternalErrorException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InternalErrorException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

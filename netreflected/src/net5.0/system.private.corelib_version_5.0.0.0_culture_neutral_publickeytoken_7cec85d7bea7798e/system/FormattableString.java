@@ -96,7 +96,9 @@ public class FormattableString extends NetObject implements system.IFormattable 
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FormattableString(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

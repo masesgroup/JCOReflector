@@ -92,7 +92,9 @@ public class SafeSocketHandle extends SafeHandleMinusOneIsInvalid  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SafeSocketHandle(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

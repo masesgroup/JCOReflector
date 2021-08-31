@@ -98,7 +98,9 @@ public class ContinueOutOfFinally extends ApplicationException {
     public ContinueOutOfFinally() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ContinueOutOfFinally(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -109,7 +109,9 @@ public class ContainerVisual extends Visual  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ContainerVisual(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

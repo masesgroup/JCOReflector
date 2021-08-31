@@ -96,7 +96,9 @@ public class ServiceControllerPermissionAttribute extends CodeAccessSecurityAttr
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ServiceControllerPermissionAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

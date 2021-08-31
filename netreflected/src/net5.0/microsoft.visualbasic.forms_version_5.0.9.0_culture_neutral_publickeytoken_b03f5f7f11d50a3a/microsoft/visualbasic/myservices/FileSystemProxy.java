@@ -103,7 +103,9 @@ public class FileSystemProxy extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FileSystemProxy(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -94,7 +94,9 @@ public class HeaderedItemsControl extends ItemsControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HeaderedItemsControl(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

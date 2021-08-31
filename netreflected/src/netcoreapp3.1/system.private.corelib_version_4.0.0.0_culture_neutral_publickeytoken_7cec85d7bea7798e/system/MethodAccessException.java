@@ -96,7 +96,9 @@ public class MethodAccessException extends MemberAccessException {
     public MethodAccessException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MethodAccessException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

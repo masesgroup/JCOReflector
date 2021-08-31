@@ -92,7 +92,9 @@ public class SHA1Cng extends SHA1  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SHA1Cng(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

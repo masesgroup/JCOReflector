@@ -93,7 +93,9 @@ public class Try extends AST  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Try(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

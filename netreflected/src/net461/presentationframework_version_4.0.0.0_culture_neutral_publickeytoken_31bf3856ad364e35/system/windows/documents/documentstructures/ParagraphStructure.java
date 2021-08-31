@@ -95,7 +95,9 @@ public class ParagraphStructure extends SemanticBasicElement implements system.w
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ParagraphStructure(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

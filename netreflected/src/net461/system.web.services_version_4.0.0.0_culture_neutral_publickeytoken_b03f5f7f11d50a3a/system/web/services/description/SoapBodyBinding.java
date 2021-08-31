@@ -93,7 +93,9 @@ public class SoapBodyBinding extends ServiceDescriptionFormatExtension  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SoapBodyBinding(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

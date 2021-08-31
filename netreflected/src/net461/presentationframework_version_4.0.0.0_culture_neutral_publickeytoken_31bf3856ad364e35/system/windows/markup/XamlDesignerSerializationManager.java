@@ -94,7 +94,9 @@ public class XamlDesignerSerializationManager extends ServiceProviders  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XamlDesignerSerializationManager(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

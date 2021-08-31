@@ -92,7 +92,9 @@ public class IFileReaderServiceImplementation extends NetObject implements IFile
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IFileReaderServiceImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

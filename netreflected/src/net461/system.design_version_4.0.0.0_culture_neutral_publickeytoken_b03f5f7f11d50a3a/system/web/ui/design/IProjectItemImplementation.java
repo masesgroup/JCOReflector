@@ -93,7 +93,9 @@ public class IProjectItemImplementation extends NetObject implements IProjectIte
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IProjectItemImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

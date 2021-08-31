@@ -107,7 +107,9 @@ public class TransferMode extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TransferMode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

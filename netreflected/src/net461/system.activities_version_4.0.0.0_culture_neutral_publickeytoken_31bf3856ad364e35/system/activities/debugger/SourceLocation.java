@@ -91,7 +91,9 @@ public class SourceLocation extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SourceLocation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

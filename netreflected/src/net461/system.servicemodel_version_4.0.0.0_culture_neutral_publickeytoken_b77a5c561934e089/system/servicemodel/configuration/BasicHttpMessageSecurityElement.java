@@ -94,7 +94,9 @@ public class BasicHttpMessageSecurityElement extends ServiceModelConfigurationEl
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BasicHttpMessageSecurityElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

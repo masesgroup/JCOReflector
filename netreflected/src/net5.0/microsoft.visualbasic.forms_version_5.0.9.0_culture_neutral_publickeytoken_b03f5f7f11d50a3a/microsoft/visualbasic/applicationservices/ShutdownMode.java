@@ -107,7 +107,9 @@ public class ShutdownMode extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ShutdownMode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

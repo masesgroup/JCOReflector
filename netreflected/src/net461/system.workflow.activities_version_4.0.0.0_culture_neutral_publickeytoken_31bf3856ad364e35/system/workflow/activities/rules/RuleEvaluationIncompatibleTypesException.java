@@ -99,7 +99,9 @@ public class RuleEvaluationIncompatibleTypesException extends RuleException {
     public RuleEvaluationIncompatibleTypesException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RuleEvaluationIncompatibleTypesException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

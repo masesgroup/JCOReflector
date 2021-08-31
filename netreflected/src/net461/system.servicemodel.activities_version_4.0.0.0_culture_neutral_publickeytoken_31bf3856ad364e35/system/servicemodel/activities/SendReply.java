@@ -96,7 +96,9 @@ public class SendReply extends Activity  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SendReply(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

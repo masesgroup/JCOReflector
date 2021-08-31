@@ -107,7 +107,9 @@ public class PrintQueueStringPropertyType extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PrintQueueStringPropertyType(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

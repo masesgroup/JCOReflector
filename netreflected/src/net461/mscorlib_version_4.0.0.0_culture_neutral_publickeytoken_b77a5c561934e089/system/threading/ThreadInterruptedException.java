@@ -96,7 +96,9 @@ public class ThreadInterruptedException extends SystemException {
     public ThreadInterruptedException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ThreadInterruptedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

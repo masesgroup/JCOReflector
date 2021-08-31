@@ -92,7 +92,9 @@ public class IXmlDictionaryImplementation extends NetObject implements IXmlDicti
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IXmlDictionaryImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

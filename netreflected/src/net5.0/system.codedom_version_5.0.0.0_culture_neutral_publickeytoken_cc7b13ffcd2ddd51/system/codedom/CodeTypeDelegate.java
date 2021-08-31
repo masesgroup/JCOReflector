@@ -94,7 +94,9 @@ public class CodeTypeDelegate extends CodeTypeDeclaration  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CodeTypeDelegate(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

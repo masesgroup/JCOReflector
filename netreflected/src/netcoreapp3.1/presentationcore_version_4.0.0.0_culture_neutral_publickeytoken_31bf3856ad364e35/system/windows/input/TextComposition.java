@@ -96,7 +96,9 @@ public class TextComposition extends DispatcherObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TextComposition(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

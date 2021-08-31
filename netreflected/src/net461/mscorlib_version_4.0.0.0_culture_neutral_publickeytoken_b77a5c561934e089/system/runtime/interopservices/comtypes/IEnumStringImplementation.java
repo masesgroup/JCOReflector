@@ -93,7 +93,9 @@ public class IEnumStringImplementation extends NetObject implements IEnumString 
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IEnumStringImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

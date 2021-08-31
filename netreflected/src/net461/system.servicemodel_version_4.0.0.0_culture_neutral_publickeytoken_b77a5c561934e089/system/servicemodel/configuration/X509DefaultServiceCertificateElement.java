@@ -96,7 +96,9 @@ public class X509DefaultServiceCertificateElement extends ConfigurationElement  
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public X509DefaultServiceCertificateElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

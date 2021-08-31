@@ -94,7 +94,9 @@ public class RsaProtectedConfigurationProvider extends ProtectedConfigurationPro
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RsaProtectedConfigurationProvider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

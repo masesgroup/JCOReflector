@@ -93,7 +93,9 @@ public class SoapHttpClientProtocol extends HttpWebClientProtocol  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SoapHttpClientProtocol(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

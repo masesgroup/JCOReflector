@@ -98,7 +98,9 @@ public class AggregateException extends NetException {
     public AggregateException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AggregateException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

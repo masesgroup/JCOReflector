@@ -96,7 +96,9 @@ public class InvalidConstraintException extends DataException {
     public InvalidConstraintException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InvalidConstraintException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -107,7 +107,9 @@ public class Border3DStyle extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Border3DStyle(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

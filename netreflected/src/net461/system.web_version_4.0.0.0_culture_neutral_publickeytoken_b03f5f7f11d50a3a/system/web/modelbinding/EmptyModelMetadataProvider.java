@@ -92,7 +92,9 @@ public class EmptyModelMetadataProvider extends AssociatedMetadataProvider  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EmptyModelMetadataProvider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

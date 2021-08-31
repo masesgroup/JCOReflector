@@ -94,7 +94,9 @@ public class AttachmentBase extends NetObject implements AutoCloseable {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AttachmentBase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

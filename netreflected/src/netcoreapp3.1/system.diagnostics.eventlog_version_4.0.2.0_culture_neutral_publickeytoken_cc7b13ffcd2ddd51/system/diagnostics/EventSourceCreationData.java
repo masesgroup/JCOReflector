@@ -91,7 +91,9 @@ public class EventSourceCreationData extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EventSourceCreationData(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

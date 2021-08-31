@@ -107,7 +107,9 @@ public class CounterSetInstanceType extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CounterSetInstanceType(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

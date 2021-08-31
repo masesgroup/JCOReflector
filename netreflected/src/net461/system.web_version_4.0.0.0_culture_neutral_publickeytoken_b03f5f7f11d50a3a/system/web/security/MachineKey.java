@@ -92,7 +92,9 @@ public class MachineKey extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MachineKey(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

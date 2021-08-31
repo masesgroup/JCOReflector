@@ -93,7 +93,9 @@ public class IComPropertyBrowserImplementation extends NetObject implements ICom
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IComPropertyBrowserImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

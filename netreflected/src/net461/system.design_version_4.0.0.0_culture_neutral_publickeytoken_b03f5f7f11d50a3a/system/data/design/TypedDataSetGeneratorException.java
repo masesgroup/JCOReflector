@@ -100,7 +100,9 @@ public class TypedDataSetGeneratorException extends DataException {
     public TypedDataSetGeneratorException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TypedDataSetGeneratorException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

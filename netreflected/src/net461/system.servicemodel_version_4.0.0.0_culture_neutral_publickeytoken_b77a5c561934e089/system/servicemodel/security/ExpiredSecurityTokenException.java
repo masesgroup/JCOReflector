@@ -96,7 +96,9 @@ public class ExpiredSecurityTokenException extends MessageSecurityException {
     public ExpiredSecurityTokenException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ExpiredSecurityTokenException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

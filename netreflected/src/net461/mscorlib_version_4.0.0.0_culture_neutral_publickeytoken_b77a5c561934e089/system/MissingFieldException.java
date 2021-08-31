@@ -96,7 +96,9 @@ public class MissingFieldException extends MissingMemberException {
     public MissingFieldException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MissingFieldException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

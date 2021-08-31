@@ -92,7 +92,9 @@ public class WebRequestModuleElement extends ConfigurationElement  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WebRequestModuleElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

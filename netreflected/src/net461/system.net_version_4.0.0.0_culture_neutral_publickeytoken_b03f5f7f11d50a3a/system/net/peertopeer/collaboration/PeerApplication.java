@@ -100,7 +100,9 @@ public class PeerApplication extends NetObject implements system.runtime.seriali
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PeerApplication(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

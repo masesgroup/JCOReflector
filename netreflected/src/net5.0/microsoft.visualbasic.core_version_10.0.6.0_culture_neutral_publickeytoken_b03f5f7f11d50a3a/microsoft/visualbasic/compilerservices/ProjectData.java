@@ -91,7 +91,9 @@ public class ProjectData extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ProjectData(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -94,7 +94,9 @@ public class ActivatedServiceTypeEntry extends TypeEntry  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ActivatedServiceTypeEntry(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class IDropTargetImplementation extends NetObject implements IDropTarget 
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IDropTargetImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

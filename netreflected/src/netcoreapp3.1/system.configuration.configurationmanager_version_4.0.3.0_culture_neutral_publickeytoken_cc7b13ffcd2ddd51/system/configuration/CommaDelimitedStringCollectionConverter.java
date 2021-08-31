@@ -95,7 +95,9 @@ public class CommaDelimitedStringCollectionConverter extends ConfigurationConver
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CommaDelimitedStringCollectionConverter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

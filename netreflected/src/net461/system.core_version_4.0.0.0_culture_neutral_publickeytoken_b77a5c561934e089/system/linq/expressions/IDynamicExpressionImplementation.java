@@ -94,7 +94,9 @@ public class IDynamicExpressionImplementation extends NetObject implements IDyna
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IDynamicExpressionImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

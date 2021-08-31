@@ -92,7 +92,9 @@ public class GeneratedInternalTypeHelper extends InternalTypeHelper  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public GeneratedInternalTypeHelper(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

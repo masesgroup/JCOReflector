@@ -102,7 +102,9 @@ public class SqlDataSource extends DataSourceControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SqlDataSource(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

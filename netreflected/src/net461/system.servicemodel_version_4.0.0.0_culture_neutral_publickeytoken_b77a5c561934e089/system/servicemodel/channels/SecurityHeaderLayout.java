@@ -107,7 +107,9 @@ public class SecurityHeaderLayout extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SecurityHeaderLayout(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

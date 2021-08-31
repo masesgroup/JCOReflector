@@ -93,7 +93,9 @@ public class CodeChecksumPragma extends CodeDirective  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CodeChecksumPragma(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

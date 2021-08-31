@@ -96,7 +96,9 @@ public class XmlText extends XmlCharacterData  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlText(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

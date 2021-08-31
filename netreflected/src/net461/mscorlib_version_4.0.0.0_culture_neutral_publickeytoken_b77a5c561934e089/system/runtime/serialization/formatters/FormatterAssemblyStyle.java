@@ -107,7 +107,9 @@ public class FormatterAssemblyStyle extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FormatterAssemblyStyle(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

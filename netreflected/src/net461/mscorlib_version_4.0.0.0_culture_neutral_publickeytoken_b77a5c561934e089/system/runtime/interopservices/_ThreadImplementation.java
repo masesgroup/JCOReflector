@@ -93,7 +93,9 @@ public class _ThreadImplementation extends NetObject implements _Thread {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public _ThreadImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

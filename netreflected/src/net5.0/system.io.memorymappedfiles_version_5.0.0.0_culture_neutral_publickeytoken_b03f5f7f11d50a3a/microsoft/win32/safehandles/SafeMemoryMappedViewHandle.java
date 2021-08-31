@@ -92,7 +92,9 @@ public class SafeMemoryMappedViewHandle extends SafeBuffer  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SafeMemoryMappedViewHandle(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

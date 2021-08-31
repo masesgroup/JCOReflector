@@ -97,7 +97,9 @@ public class VirtualizedContainerService extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public VirtualizedContainerService(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

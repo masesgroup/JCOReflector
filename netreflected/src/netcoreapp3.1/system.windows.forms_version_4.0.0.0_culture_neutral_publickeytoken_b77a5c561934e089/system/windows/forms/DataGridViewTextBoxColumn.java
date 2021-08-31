@@ -94,7 +94,9 @@ public class DataGridViewTextBoxColumn extends DataGridViewColumn  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataGridViewTextBoxColumn(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -98,7 +98,9 @@ public class UnsupportedTokenTypeBadRequestException extends BadRequestException
     public UnsupportedTokenTypeBadRequestException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UnsupportedTokenTypeBadRequestException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

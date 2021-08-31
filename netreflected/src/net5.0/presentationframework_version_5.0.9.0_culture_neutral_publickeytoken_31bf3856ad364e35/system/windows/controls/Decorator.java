@@ -95,7 +95,9 @@ public class Decorator extends FrameworkElement implements system.windows.markup
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Decorator(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

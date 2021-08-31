@@ -93,7 +93,9 @@ public class TableHeaderCell extends TableCell  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TableHeaderCell(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

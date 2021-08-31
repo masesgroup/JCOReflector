@@ -107,7 +107,9 @@ public class CompressionMode extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CompressionMode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -92,7 +92,9 @@ public class IDocumentProjectItemImplementation extends NetObject implements IDo
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IDocumentProjectItemImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

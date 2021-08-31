@@ -93,7 +93,9 @@ public class CultureSpecificCharacterBufferRange extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CultureSpecificCharacterBufferRange(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

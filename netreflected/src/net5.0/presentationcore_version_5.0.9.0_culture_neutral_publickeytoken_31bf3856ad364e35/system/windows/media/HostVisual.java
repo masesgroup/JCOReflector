@@ -92,7 +92,9 @@ public class HostVisual extends ContainerVisual  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HostVisual(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

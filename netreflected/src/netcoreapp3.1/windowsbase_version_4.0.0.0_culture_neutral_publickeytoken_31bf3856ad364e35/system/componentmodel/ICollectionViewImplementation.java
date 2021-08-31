@@ -100,7 +100,9 @@ public class ICollectionViewImplementation extends IEnumerableImplementation imp
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ICollectionViewImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

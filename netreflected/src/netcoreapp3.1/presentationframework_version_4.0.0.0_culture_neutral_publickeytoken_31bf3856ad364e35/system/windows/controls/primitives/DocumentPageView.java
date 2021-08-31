@@ -101,7 +101,9 @@ public class DocumentPageView extends FrameworkElement implements system.IServic
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DocumentPageView(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

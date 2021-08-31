@@ -99,7 +99,9 @@ public class FixedPage extends FrameworkElement implements system.windows.markup
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FixedPage(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

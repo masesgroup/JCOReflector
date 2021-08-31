@@ -93,7 +93,9 @@ public class _PropertyBuilderImplementation extends NetObject implements _Proper
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public _PropertyBuilderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

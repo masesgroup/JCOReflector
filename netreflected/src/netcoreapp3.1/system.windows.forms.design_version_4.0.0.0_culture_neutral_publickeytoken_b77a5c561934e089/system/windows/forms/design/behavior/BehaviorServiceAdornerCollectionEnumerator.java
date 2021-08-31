@@ -90,7 +90,9 @@ public class BehaviorServiceAdornerCollectionEnumerator extends NetObject implem
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BehaviorServiceAdornerCollectionEnumerator(JCObject instance) {
         classInstance = instance.iterator();
     }

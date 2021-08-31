@@ -98,7 +98,9 @@ public class InstanceLockLostException extends InstancePersistenceCommandExcepti
     public InstanceLockLostException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InstanceLockLostException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

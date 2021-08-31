@@ -95,7 +95,9 @@ public class Span extends Inline  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Span(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

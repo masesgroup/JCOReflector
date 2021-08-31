@@ -108,7 +108,9 @@ public class DateTimeOffset extends ValueType implements system.IComparable, sys
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DateTimeOffset(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

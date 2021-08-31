@@ -95,7 +95,9 @@ public class ExpandoObject extends NetObjectEnumerable implements system.dynamic
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ExpandoObject(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

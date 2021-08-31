@@ -100,7 +100,9 @@ public class ISymbolMethodImplementation extends NetObject implements ISymbolMet
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ISymbolMethodImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

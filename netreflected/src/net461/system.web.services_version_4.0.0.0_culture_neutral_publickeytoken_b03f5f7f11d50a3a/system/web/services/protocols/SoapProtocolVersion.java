@@ -107,7 +107,9 @@ public class SoapProtocolVersion extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SoapProtocolVersion(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

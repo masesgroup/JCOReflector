@@ -97,7 +97,9 @@ public class TaskCanceledException extends OperationCanceledException {
     public TaskCanceledException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TaskCanceledException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

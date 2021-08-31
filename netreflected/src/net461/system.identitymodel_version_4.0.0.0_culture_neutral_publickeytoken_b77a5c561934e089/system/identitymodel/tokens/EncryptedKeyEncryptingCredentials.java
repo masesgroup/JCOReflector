@@ -93,7 +93,9 @@ public class EncryptedKeyEncryptingCredentials extends EncryptingCredentials  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EncryptedKeyEncryptingCredentials(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

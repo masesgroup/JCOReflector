@@ -107,7 +107,9 @@ public class EdgeStyle extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EdgeStyle(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

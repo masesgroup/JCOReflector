@@ -94,7 +94,9 @@ public class X509NTAuthChainTrustValidator extends X509CertificateValidator  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public X509NTAuthChainTrustValidator(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

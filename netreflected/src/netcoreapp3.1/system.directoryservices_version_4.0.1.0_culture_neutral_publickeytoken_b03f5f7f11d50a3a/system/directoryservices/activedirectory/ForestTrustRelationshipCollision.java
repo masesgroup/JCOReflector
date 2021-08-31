@@ -94,7 +94,9 @@ public class ForestTrustRelationshipCollision extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ForestTrustRelationshipCollision(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

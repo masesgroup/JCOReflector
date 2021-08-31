@@ -107,7 +107,9 @@ public class CoordinateSpace extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CoordinateSpace(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

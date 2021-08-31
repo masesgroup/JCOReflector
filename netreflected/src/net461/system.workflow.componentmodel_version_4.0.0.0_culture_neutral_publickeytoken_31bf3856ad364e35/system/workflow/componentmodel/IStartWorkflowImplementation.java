@@ -92,7 +92,9 @@ public class IStartWorkflowImplementation extends NetObject implements IStartWor
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IStartWorkflowImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

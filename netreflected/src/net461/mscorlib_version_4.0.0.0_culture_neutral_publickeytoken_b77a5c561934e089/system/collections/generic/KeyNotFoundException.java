@@ -96,7 +96,9 @@ public class KeyNotFoundException extends SystemException {
     public KeyNotFoundException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public KeyNotFoundException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

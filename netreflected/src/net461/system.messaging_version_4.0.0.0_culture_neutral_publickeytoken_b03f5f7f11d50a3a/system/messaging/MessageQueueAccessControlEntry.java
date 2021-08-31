@@ -95,7 +95,9 @@ public class MessageQueueAccessControlEntry extends AccessControlEntry  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MessageQueueAccessControlEntry(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

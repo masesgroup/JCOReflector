@@ -96,7 +96,9 @@ public class CommunicationException extends SystemException {
     public CommunicationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CommunicationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

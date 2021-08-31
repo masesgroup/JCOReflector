@@ -94,7 +94,9 @@ public class IXsltContextFunctionImplementation extends NetObject implements IXs
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IXsltContextFunctionImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

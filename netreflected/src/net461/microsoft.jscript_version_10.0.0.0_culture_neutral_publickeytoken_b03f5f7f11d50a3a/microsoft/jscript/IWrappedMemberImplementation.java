@@ -91,7 +91,9 @@ public class IWrappedMemberImplementation extends NetObject implements IWrappedM
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IWrappedMemberImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

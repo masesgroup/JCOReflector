@@ -97,7 +97,9 @@ public class OneWayBindingElement extends BindingElement implements system.servi
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public OneWayBindingElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

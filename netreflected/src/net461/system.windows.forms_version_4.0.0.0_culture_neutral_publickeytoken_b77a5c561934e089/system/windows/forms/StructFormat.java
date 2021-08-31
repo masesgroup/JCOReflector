@@ -107,7 +107,9 @@ public class StructFormat extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public StructFormat(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

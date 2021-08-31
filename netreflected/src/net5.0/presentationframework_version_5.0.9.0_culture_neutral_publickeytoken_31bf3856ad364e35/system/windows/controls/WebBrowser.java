@@ -97,7 +97,9 @@ public class WebBrowser extends ActiveXHost  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WebBrowser(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

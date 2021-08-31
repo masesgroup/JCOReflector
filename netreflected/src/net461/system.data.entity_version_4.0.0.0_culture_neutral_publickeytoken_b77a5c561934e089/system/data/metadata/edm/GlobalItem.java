@@ -92,7 +92,9 @@ public class GlobalItem extends MetadataItem  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public GlobalItem(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

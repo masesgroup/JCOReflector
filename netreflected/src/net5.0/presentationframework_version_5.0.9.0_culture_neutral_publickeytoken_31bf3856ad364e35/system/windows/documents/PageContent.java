@@ -99,7 +99,9 @@ public class PageContent extends FrameworkElement implements system.windows.mark
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PageContent(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

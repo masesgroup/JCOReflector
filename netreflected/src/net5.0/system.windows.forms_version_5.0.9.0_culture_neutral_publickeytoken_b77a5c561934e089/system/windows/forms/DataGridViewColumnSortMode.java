@@ -107,7 +107,9 @@ public class DataGridViewColumnSortMode extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataGridViewColumnSortMode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

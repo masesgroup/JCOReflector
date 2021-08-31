@@ -96,7 +96,9 @@ public class BaseDataListComponentEditor extends WindowsFormsComponentEditor  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BaseDataListComponentEditor(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

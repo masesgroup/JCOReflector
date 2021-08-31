@@ -92,7 +92,9 @@ public class IToolboxItemProviderImplementation extends NetObject implements ITo
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IToolboxItemProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

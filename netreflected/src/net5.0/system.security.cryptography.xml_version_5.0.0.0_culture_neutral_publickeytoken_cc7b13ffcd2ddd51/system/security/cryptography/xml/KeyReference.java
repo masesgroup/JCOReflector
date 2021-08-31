@@ -93,7 +93,9 @@ public class KeyReference extends EncryptedReference  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public KeyReference(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

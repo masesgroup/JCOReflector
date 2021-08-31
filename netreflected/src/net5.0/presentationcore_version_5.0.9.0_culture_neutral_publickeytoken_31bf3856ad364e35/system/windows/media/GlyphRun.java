@@ -100,7 +100,9 @@ public class GlyphRun extends NetObject implements system.componentmodel.ISuppor
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public GlyphRun(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

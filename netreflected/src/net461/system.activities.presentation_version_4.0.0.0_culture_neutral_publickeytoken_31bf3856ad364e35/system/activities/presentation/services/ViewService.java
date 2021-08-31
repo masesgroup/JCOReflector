@@ -93,7 +93,9 @@ public class ViewService extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ViewService(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

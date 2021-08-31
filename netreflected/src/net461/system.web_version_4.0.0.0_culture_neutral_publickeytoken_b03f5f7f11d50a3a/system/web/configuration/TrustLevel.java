@@ -92,7 +92,9 @@ public class TrustLevel extends ConfigurationElement  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TrustLevel(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

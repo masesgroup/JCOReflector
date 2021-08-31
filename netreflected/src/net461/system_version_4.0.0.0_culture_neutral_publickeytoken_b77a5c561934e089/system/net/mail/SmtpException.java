@@ -98,7 +98,9 @@ public class SmtpException extends NetException {
     public SmtpException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SmtpException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

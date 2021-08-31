@@ -93,7 +93,9 @@ public class DsmlDirectoryIdentifier extends DirectoryIdentifier  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DsmlDirectoryIdentifier(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

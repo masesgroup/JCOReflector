@@ -100,7 +100,9 @@ public class IPeerResolverContractImplementation extends NetObject implements IP
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IPeerResolverContractImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

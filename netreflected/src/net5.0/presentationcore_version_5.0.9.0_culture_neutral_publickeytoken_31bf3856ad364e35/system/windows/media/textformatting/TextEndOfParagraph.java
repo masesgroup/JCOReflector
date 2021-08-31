@@ -93,7 +93,9 @@ public class TextEndOfParagraph extends TextEndOfLine  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TextEndOfParagraph(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

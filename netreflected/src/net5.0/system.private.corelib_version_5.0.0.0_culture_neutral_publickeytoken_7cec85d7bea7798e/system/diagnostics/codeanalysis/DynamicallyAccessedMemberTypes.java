@@ -107,7 +107,9 @@ public class DynamicallyAccessedMemberTypes extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DynamicallyAccessedMemberTypes(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

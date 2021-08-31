@@ -95,7 +95,9 @@ public class RuntimeBinderInternalCompilerException extends NetException {
     public RuntimeBinderInternalCompilerException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RuntimeBinderInternalCompilerException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

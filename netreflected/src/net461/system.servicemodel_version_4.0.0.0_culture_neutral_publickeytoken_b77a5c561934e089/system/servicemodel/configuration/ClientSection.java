@@ -94,7 +94,9 @@ public class ClientSection extends ConfigurationSection  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ClientSection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

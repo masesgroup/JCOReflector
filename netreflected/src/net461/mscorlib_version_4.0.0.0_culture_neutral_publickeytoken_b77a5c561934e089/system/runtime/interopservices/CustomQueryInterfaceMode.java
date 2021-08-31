@@ -107,7 +107,9 @@ public class CustomQueryInterfaceMode extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CustomQueryInterfaceMode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

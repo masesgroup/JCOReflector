@@ -93,7 +93,9 @@ public class IDesignerFilterImplementation extends NetObject implements IDesigne
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IDesignerFilterImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

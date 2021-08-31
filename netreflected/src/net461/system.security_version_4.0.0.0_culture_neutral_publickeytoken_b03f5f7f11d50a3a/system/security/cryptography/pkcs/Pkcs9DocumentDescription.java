@@ -93,7 +93,9 @@ public class Pkcs9DocumentDescription extends Pkcs9AttributeObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Pkcs9DocumentDescription(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

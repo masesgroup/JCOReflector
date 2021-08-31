@@ -98,7 +98,9 @@ public class DriveInfo extends NetObject implements system.runtime.serialization
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DriveInfo(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

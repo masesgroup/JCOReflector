@@ -92,7 +92,9 @@ public class ByteArrayContent extends HttpContent  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ByteArrayContent(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

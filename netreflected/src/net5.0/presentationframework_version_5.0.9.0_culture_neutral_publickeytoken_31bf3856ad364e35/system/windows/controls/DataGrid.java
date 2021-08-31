@@ -120,7 +120,9 @@ public class DataGrid extends MultiSelector  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataGrid(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

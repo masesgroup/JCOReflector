@@ -107,7 +107,9 @@ public class AssemblyHashAlgorithm extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AssemblyHashAlgorithm(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

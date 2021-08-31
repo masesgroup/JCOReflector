@@ -96,7 +96,9 @@ public class FormatException extends SystemException {
     public FormatException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FormatException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -107,7 +107,9 @@ public class PrimitiveSerializationTypeCode extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PrimitiveSerializationTypeCode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

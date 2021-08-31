@@ -104,7 +104,9 @@ public class ActivityDesignerTheme extends DesignerTheme  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ActivityDesignerTheme(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

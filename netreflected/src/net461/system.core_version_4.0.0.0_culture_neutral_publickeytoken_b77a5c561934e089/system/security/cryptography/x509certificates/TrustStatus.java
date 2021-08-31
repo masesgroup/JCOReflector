@@ -107,7 +107,9 @@ public class TrustStatus extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TrustStatus(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

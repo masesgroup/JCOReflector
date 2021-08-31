@@ -92,7 +92,9 @@ public class ControllableStoryboardAction extends TriggerAction  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ControllableStoryboardAction(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -95,7 +95,9 @@ public class RuleExpressionCondition extends RuleCondition  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RuleExpressionCondition(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

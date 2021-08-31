@@ -97,7 +97,9 @@ public class SamlAudienceRestrictionCondition extends SamlCondition  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SamlAudienceRestrictionCondition(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

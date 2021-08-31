@@ -92,7 +92,9 @@ public class HMACMD5 extends HMAC  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HMACMD5(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

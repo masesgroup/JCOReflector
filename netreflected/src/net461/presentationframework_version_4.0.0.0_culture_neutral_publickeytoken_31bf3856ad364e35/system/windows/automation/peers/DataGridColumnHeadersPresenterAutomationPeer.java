@@ -93,7 +93,9 @@ public class DataGridColumnHeadersPresenterAutomationPeer extends ItemsControlAu
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataGridColumnHeadersPresenterAutomationPeer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

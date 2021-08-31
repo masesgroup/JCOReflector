@@ -92,7 +92,9 @@ public class IAnimationImplementation extends NetObject implements IAnimation {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IAnimationImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

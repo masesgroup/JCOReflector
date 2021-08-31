@@ -93,7 +93,9 @@ public class DbDeleteCommandTree extends DbModificationCommandTree  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DbDeleteCommandTree(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

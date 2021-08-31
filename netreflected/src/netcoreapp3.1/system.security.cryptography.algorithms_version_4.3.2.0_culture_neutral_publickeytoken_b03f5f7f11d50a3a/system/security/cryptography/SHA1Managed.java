@@ -92,7 +92,9 @@ public class SHA1Managed extends SHA1  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SHA1Managed(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

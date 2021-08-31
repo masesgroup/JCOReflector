@@ -97,7 +97,9 @@ public class HttpRequestHeaders extends HttpHeaders  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HttpRequestHeaders(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

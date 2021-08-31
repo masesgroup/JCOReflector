@@ -95,7 +95,9 @@ public class AnyReturnReader extends MimeReturnReader  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AnyReturnReader(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

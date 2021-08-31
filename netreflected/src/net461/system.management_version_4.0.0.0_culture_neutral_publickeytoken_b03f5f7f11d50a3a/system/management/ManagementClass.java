@@ -103,7 +103,9 @@ public class ManagementClass extends ManagementObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ManagementClass(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

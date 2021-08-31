@@ -92,7 +92,9 @@ public class WorkflowViewState extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WorkflowViewState(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

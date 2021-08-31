@@ -93,7 +93,9 @@ public class IInputSessionShutdownImplementation extends NetObject implements II
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IInputSessionShutdownImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

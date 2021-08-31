@@ -92,7 +92,9 @@ public class HtmlAudio extends HtmlContainerControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HtmlAudio(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

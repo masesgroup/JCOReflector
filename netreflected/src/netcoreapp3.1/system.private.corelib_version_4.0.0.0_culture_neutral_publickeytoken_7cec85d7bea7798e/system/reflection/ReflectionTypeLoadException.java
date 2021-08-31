@@ -98,7 +98,9 @@ public class ReflectionTypeLoadException extends SystemException {
     public ReflectionTypeLoadException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ReflectionTypeLoadException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

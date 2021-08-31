@@ -93,7 +93,9 @@ public class TextSyndicationContent extends SyndicationContent  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TextSyndicationContent(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

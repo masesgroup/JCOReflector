@@ -96,7 +96,9 @@ public class DataSourceProvider extends NetObject implements system.componentmod
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataSourceProvider(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

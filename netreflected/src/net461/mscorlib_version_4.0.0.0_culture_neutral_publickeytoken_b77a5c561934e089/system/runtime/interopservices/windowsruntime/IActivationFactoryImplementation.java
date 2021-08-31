@@ -91,7 +91,9 @@ public class IActivationFactoryImplementation extends NetObject implements IActi
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IActivationFactoryImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

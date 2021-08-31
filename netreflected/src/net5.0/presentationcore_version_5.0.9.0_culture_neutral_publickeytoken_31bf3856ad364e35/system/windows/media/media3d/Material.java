@@ -97,7 +97,9 @@ public class Material extends Animatable implements system.IFormattable {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Material(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -94,7 +94,9 @@ public class Group extends Capture  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Group(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

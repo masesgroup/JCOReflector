@@ -91,7 +91,9 @@ public class Vector64 extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Vector64(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

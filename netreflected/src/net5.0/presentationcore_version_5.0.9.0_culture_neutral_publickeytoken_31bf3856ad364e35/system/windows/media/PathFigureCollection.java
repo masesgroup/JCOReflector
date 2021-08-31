@@ -99,7 +99,9 @@ public class PathFigureCollection extends Animatable implements system.IFormatta
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PathFigureCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -91,7 +91,9 @@ public class ModelValidationResult extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ModelValidationResult(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

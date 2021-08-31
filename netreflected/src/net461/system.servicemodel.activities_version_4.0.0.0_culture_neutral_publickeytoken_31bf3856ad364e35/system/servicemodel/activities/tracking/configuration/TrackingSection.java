@@ -93,7 +93,9 @@ public class TrackingSection extends ConfigurationSection  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TrackingSection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

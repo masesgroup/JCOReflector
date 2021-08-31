@@ -96,7 +96,9 @@ public class ExecutionEngineException extends SystemException {
     public ExecutionEngineException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ExecutionEngineException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

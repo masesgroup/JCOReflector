@@ -92,7 +92,9 @@ public class CreateVisualBasicManifestResourceName extends CreateManifestResourc
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CreateVisualBasicManifestResourceName(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -102,7 +102,9 @@ public class EntityProviderFactory extends DbProviderFactory implements system.I
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EntityProviderFactory(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

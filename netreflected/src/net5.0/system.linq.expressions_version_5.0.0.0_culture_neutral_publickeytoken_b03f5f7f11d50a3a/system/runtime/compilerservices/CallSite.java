@@ -93,7 +93,9 @@ public class CallSite extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CallSite(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

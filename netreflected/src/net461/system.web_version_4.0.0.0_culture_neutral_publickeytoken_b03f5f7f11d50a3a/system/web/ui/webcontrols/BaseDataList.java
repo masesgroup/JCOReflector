@@ -98,7 +98,9 @@ public class BaseDataList extends WebControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BaseDataList(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

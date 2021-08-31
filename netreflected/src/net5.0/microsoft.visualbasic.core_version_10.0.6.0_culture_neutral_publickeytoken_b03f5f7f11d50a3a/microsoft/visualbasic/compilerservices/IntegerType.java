@@ -91,7 +91,9 @@ public class IntegerType extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IntegerType(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

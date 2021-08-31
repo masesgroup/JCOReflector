@@ -95,7 +95,9 @@ public class XpsWriterException extends NetException {
     public XpsWriterException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XpsWriterException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

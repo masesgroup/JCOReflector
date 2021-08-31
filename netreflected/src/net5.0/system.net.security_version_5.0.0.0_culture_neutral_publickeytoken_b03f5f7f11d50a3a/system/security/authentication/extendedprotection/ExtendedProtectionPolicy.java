@@ -101,7 +101,9 @@ public class ExtendedProtectionPolicy extends NetObject implements system.runtim
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ExtendedProtectionPolicy(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

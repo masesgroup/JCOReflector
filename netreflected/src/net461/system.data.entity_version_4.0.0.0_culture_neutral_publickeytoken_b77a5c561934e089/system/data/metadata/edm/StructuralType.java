@@ -92,7 +92,9 @@ public class StructuralType extends EdmType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public StructuralType(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

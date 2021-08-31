@@ -96,7 +96,9 @@ public class EndOfFile extends ParserException {
     public EndOfFile() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EndOfFile(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

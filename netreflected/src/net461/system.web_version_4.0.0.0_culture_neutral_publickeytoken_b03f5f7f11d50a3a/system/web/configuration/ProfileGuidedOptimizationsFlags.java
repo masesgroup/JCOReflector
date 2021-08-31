@@ -107,7 +107,9 @@ public class ProfileGuidedOptimizationsFlags extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ProfileGuidedOptimizationsFlags(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class IAdphManagerImplementation extends NetObject implements IAdphManage
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IAdphManagerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class IServiceBehaviorImplementation extends NetObject implements IServic
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IServiceBehaviorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

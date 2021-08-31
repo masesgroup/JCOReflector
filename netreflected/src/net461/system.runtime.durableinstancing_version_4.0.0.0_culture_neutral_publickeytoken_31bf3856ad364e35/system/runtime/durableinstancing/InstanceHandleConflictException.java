@@ -98,7 +98,9 @@ public class InstanceHandleConflictException extends InstancePersistenceCommandE
     public InstanceHandleConflictException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InstanceHandleConflictException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

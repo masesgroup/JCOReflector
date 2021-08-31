@@ -94,7 +94,9 @@ public class ILoggerImplementation extends NetObject implements ILogger {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ILoggerImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

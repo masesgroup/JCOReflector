@@ -94,7 +94,9 @@ public class CallExternalMethodActivityValidator extends ActivityValidator  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CallExternalMethodActivityValidator(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

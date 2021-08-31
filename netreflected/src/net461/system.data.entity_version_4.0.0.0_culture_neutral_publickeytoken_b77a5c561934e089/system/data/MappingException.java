@@ -96,7 +96,9 @@ public class MappingException extends EntityException {
     public MappingException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MappingException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -94,7 +94,9 @@ public class WorkflowRuntimeSection extends ConfigurationSection  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WorkflowRuntimeSection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

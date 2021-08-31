@@ -94,7 +94,9 @@ public class Freezable extends DependencyObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Freezable(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

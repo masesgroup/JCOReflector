@@ -92,7 +92,9 @@ public class IdentityProviderSingleSignOnDescriptor extends SingleSignOnDescript
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IdentityProviderSingleSignOnDescriptor(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

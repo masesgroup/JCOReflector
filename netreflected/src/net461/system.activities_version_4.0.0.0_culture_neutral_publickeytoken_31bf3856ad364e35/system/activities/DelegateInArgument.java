@@ -92,7 +92,9 @@ public class DelegateInArgument extends DelegateArgument  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DelegateInArgument(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

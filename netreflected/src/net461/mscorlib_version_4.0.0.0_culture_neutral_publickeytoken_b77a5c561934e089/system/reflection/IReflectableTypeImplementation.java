@@ -92,7 +92,9 @@ public class IReflectableTypeImplementation extends NetObject implements IReflec
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IReflectableTypeImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

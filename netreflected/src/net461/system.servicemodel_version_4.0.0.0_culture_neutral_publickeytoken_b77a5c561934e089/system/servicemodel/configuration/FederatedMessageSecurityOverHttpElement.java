@@ -98,7 +98,9 @@ public class FederatedMessageSecurityOverHttpElement extends ServiceModelConfigu
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FederatedMessageSecurityOverHttpElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

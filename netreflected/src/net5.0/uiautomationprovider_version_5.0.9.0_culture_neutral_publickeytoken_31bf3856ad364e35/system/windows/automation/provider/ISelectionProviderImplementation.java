@@ -93,7 +93,9 @@ public class ISelectionProviderImplementation extends NetObject implements ISele
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ISelectionProviderImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

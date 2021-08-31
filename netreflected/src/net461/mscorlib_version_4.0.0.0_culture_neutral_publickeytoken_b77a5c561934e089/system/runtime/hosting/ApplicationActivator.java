@@ -93,7 +93,9 @@ public class ApplicationActivator extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ApplicationActivator(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

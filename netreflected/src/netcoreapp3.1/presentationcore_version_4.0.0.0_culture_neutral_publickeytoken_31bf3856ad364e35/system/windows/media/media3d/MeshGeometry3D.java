@@ -98,7 +98,9 @@ public class MeshGeometry3D extends Geometry3D  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MeshGeometry3D(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class ModelBindingExecutionContext extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ModelBindingExecutionContext(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

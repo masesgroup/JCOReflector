@@ -107,7 +107,9 @@ public class CompensatorOptions extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CompensatorOptions(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

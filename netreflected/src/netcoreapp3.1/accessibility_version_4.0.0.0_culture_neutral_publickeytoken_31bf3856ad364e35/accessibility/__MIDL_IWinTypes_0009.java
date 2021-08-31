@@ -92,7 +92,9 @@ public class __MIDL_IWinTypes_0009 extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public __MIDL_IWinTypes_0009(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

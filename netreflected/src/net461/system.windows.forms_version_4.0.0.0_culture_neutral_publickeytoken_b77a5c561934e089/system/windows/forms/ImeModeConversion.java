@@ -92,7 +92,9 @@ public class ImeModeConversion extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ImeModeConversion(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

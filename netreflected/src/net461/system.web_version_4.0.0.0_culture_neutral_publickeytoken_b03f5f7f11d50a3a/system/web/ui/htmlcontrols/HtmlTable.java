@@ -93,7 +93,9 @@ public class HtmlTable extends HtmlContainerControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HtmlTable(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

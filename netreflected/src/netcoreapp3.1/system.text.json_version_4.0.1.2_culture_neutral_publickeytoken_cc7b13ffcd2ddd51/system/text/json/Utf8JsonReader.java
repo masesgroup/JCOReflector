@@ -104,7 +104,9 @@ public class Utf8JsonReader extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Utf8JsonReader(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

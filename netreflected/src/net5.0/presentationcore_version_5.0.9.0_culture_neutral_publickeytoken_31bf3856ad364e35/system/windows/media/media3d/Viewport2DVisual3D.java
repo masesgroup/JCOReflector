@@ -96,7 +96,9 @@ public class Viewport2DVisual3D extends Visual3D  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Viewport2DVisual3D(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

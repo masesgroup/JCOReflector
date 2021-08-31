@@ -98,7 +98,9 @@ public class SwitchExpressionException extends InvalidOperationException {
     public SwitchExpressionException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SwitchExpressionException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

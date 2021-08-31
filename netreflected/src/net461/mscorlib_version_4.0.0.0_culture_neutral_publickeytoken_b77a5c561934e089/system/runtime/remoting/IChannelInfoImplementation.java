@@ -91,7 +91,9 @@ public class IChannelInfoImplementation extends NetObject implements IChannelInf
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IChannelInfoImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

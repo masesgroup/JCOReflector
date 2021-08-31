@@ -93,7 +93,9 @@ public class IOutputSessionImplementation extends NetObject implements IOutputSe
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IOutputSessionImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

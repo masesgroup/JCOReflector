@@ -94,7 +94,9 @@ public class BindingBase extends MarkupExtension  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BindingBase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

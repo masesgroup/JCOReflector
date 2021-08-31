@@ -98,7 +98,9 @@ public class ServiceController extends Component  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ServiceController(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

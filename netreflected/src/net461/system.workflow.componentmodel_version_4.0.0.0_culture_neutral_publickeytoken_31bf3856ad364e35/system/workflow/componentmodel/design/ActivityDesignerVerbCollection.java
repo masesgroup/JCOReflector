@@ -92,7 +92,9 @@ public class ActivityDesignerVerbCollection extends DesignerVerbCollection  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ActivityDesignerVerbCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

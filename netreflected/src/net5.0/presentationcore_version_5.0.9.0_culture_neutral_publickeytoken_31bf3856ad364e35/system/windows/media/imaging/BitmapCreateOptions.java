@@ -107,7 +107,9 @@ public class BitmapCreateOptions extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BitmapCreateOptions(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

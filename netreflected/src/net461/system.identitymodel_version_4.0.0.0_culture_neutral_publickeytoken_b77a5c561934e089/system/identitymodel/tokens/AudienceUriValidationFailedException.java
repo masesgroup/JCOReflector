@@ -96,7 +96,9 @@ public class AudienceUriValidationFailedException extends SecurityTokenValidatio
     public AudienceUriValidationFailedException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AudienceUriValidationFailedException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

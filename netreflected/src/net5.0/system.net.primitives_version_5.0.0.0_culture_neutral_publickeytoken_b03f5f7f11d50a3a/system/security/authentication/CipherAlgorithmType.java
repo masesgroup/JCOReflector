@@ -107,7 +107,9 @@ public class CipherAlgorithmType extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CipherAlgorithmType(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

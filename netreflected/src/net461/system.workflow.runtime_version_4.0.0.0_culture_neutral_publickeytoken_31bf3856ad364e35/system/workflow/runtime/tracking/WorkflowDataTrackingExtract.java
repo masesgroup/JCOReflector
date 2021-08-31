@@ -93,7 +93,9 @@ public class WorkflowDataTrackingExtract extends TrackingExtract  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WorkflowDataTrackingExtract(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

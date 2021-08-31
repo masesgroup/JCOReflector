@@ -91,7 +91,9 @@ public class DiscoveryClientResult extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DiscoveryClientResult(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

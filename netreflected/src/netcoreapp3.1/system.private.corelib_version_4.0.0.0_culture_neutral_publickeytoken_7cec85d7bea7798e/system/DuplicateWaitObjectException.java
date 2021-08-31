@@ -96,7 +96,9 @@ public class DuplicateWaitObjectException extends ArgumentException {
     public DuplicateWaitObjectException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DuplicateWaitObjectException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -107,7 +107,9 @@ public class AceQualifier extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AceQualifier(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

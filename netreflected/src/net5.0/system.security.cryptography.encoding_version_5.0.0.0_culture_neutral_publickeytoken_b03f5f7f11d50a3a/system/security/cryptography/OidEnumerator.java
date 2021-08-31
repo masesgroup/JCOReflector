@@ -90,7 +90,9 @@ public class OidEnumerator extends NetObject implements Iterator<Oid> {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public OidEnumerator(JCObject instance) {
         classInstance = instance.iterator();
     }

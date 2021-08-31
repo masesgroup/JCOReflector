@@ -97,7 +97,9 @@ public class WsdlExporter extends MetadataExporter  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WsdlExporter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

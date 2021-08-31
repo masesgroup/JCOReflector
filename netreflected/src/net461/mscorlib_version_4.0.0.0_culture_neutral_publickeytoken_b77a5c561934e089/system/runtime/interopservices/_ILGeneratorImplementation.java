@@ -93,7 +93,9 @@ public class _ILGeneratorImplementation extends NetObject implements _ILGenerato
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public _ILGeneratorImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

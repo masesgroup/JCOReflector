@@ -107,7 +107,9 @@ public class XpsWritingProgressChangeLevel extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XpsWritingProgressChangeLevel(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

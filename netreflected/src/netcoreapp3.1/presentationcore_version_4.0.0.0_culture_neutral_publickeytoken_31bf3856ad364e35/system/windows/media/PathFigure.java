@@ -100,7 +100,9 @@ public class PathFigure extends Animatable implements system.IFormattable {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PathFigure(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

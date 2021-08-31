@@ -106,7 +106,9 @@ public class Package extends NetObject implements system.IDisposable, AutoClosea
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Package(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

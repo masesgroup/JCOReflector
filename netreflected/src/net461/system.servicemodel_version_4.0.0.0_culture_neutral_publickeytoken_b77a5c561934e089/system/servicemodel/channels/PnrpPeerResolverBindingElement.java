@@ -95,7 +95,9 @@ public class PnrpPeerResolverBindingElement extends PeerResolverBindingElement  
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PnrpPeerResolverBindingElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

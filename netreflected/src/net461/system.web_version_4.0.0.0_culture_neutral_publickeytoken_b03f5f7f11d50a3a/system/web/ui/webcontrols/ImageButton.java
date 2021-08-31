@@ -99,7 +99,9 @@ public class ImageButton extends Image implements system.web.ui.IPostBackDataHan
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ImageButton(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

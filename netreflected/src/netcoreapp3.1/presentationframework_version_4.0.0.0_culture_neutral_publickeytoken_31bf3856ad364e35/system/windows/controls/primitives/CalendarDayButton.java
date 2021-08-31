@@ -92,7 +92,9 @@ public class CalendarDayButton extends Button  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CalendarDayButton(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

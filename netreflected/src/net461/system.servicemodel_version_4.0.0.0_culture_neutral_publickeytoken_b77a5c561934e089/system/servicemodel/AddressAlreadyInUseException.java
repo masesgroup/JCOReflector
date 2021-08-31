@@ -96,7 +96,9 @@ public class AddressAlreadyInUseException extends CommunicationException {
     public AddressAlreadyInUseException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AddressAlreadyInUseException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

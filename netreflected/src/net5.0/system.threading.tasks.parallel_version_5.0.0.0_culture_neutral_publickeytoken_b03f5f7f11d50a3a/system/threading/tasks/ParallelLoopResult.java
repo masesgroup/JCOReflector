@@ -92,7 +92,9 @@ public class ParallelLoopResult extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ParallelLoopResult(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

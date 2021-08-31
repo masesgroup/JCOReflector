@@ -96,7 +96,9 @@ public class InvalidExpressionException extends DataException {
     public InvalidExpressionException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InvalidExpressionException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

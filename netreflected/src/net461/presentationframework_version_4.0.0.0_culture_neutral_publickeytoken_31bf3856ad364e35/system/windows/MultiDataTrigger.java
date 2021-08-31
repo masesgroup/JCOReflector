@@ -96,7 +96,9 @@ public class MultiDataTrigger extends TriggerBase implements system.windows.mark
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MultiDataTrigger(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

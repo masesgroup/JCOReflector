@@ -92,7 +92,9 @@ public class PrintProcessor extends PrintFilter  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PrintProcessor(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

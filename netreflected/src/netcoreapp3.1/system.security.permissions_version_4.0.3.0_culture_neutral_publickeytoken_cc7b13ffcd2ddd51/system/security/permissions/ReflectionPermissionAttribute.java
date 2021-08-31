@@ -96,7 +96,9 @@ public class ReflectionPermissionAttribute extends CodeAccessSecurityAttribute  
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ReflectionPermissionAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

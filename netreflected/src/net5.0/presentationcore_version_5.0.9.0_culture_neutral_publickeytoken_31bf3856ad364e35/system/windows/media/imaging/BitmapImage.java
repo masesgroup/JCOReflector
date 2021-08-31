@@ -101,7 +101,9 @@ public class BitmapImage extends BitmapSource  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BitmapImage(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

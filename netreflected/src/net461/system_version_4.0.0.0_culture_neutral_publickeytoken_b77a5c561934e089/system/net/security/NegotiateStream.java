@@ -105,7 +105,9 @@ public class NegotiateStream extends AuthenticatedStream  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public NegotiateStream(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

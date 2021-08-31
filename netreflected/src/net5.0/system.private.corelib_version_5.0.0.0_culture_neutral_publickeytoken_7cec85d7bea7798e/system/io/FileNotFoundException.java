@@ -98,7 +98,9 @@ public class FileNotFoundException extends IOException {
     public FileNotFoundException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public FileNotFoundException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

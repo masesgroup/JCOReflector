@@ -98,7 +98,9 @@ public class ReliableSessionBindingElement extends BindingElement implements sys
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ReliableSessionBindingElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

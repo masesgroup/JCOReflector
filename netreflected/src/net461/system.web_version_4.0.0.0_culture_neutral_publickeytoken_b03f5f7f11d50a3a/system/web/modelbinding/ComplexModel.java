@@ -92,7 +92,9 @@ public class ComplexModel extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ComplexModel(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

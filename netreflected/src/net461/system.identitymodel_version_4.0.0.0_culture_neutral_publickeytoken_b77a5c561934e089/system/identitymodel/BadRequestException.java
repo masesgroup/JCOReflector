@@ -96,7 +96,9 @@ public class BadRequestException extends RequestException {
     public BadRequestException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BadRequestException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

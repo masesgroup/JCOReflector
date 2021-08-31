@@ -95,7 +95,9 @@ public class InvalidDataContractException extends NetException {
     public InvalidDataContractException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InvalidDataContractException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -94,7 +94,9 @@ public class HtmlHead extends HtmlGenericControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HtmlHead(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

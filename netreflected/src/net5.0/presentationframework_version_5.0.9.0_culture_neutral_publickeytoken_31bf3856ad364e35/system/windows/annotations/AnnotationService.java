@@ -97,7 +97,9 @@ public class AnnotationService extends DispatcherObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AnnotationService(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

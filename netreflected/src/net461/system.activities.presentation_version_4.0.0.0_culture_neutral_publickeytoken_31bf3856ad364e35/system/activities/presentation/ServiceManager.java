@@ -93,7 +93,9 @@ public class ServiceManager extends NetObjectEnumerable  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ServiceManager(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

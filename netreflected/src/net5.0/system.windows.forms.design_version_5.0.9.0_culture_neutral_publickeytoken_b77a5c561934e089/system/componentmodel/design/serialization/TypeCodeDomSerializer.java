@@ -97,7 +97,9 @@ public class TypeCodeDomSerializer extends CodeDomSerializerBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TypeCodeDomSerializer(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

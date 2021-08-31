@@ -101,7 +101,9 @@ public class IDuplexSessionImplementation extends NetObject implements IDuplexSe
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IDuplexSessionImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -94,7 +94,9 @@ public class IEditableTextControlImplementation extends NetObject implements IEd
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IEditableTextControlImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

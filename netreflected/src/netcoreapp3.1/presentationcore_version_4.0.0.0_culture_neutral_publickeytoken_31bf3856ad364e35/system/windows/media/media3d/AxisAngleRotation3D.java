@@ -94,7 +94,9 @@ public class AxisAngleRotation3D extends Rotation3D  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AxisAngleRotation3D(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

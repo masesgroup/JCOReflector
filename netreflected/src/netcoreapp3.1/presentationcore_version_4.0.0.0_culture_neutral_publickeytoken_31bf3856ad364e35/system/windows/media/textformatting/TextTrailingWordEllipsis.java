@@ -95,7 +95,9 @@ public class TextTrailingWordEllipsis extends TextCollapsingProperties  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TextTrailingWordEllipsis(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

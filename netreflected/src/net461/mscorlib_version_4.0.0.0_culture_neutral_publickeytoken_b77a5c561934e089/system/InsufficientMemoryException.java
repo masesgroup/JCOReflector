@@ -96,7 +96,9 @@ public class InsufficientMemoryException extends OutOfMemoryException {
     public InsufficientMemoryException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InsufficientMemoryException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

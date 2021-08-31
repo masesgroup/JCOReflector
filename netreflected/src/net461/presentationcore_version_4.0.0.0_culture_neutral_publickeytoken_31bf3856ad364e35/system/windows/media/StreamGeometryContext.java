@@ -97,7 +97,9 @@ public class StreamGeometryContext extends DispatcherObject implements system.ID
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public StreamGeometryContext(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

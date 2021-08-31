@@ -97,7 +97,9 @@ public class ParameterEditorUserControl extends UserControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ParameterEditorUserControl(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

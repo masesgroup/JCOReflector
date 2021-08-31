@@ -107,7 +107,9 @@ public class SiteMapNodeItemType extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SiteMapNodeItemType(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

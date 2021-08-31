@@ -93,7 +93,9 @@ public class KeyInfoRetrievalMethod extends KeyInfoClause  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public KeyInfoRetrievalMethod(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

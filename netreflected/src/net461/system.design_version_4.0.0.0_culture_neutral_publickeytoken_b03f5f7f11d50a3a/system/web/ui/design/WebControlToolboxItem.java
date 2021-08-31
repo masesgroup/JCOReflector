@@ -94,7 +94,9 @@ public class WebControlToolboxItem extends ToolboxItem  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WebControlToolboxItem(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

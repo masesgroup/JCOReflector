@@ -94,7 +94,9 @@ public class ReaderWriterLock extends CriticalFinalizerObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ReaderWriterLock(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

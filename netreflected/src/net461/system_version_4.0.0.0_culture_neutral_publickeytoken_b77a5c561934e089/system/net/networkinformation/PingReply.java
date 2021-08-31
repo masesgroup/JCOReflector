@@ -94,7 +94,9 @@ public class PingReply extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PingReply(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

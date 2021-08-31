@@ -96,7 +96,9 @@ public class Publisher extends EvidenceBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Publisher(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

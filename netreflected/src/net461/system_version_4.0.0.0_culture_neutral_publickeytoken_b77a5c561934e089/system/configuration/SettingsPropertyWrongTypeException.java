@@ -95,7 +95,9 @@ public class SettingsPropertyWrongTypeException extends NetException {
     public SettingsPropertyWrongTypeException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SettingsPropertyWrongTypeException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

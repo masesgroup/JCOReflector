@@ -107,7 +107,9 @@ public class DataGridViewAutoSizeColumnMode extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DataGridViewAutoSizeColumnMode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

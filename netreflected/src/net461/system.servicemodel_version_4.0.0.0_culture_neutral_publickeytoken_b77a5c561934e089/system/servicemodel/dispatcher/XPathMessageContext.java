@@ -99,7 +99,9 @@ public class XPathMessageContext extends XsltContext  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XPathMessageContext(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

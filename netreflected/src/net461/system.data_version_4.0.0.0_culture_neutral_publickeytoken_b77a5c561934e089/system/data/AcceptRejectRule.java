@@ -107,7 +107,9 @@ public class AcceptRejectRule extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public AcceptRejectRule(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

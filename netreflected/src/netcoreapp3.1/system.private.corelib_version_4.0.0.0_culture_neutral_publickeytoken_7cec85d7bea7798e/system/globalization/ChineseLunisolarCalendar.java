@@ -93,7 +93,9 @@ public class ChineseLunisolarCalendar extends EastAsianLunisolarCalendar  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ChineseLunisolarCalendar(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

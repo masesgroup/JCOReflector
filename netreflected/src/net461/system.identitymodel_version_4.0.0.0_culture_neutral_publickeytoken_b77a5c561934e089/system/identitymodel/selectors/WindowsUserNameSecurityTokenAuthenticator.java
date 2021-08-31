@@ -92,7 +92,9 @@ public class WindowsUserNameSecurityTokenAuthenticator extends UserNameSecurityT
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public WindowsUserNameSecurityTokenAuthenticator(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -107,7 +107,9 @@ public class XmlFieldOrderOption extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlFieldOrderOption(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

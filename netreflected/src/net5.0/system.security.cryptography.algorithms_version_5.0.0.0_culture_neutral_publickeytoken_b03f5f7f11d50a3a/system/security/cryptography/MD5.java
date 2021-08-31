@@ -93,7 +93,9 @@ public class MD5 extends HashAlgorithm  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public MD5(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

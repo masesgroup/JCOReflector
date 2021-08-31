@@ -97,7 +97,9 @@ public class DbTransaction extends MarshalByRefObject implements AutoCloseable {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DbTransaction(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

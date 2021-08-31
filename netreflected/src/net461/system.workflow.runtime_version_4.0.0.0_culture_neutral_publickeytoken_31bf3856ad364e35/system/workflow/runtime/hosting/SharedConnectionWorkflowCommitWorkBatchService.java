@@ -93,7 +93,9 @@ public class SharedConnectionWorkflowCommitWorkBatchService extends WorkflowComm
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SharedConnectionWorkflowCommitWorkBatchService(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

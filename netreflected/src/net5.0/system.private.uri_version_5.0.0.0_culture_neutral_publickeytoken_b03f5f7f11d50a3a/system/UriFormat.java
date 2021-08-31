@@ -107,7 +107,9 @@ public class UriFormat extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public UriFormat(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

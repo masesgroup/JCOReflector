@@ -107,7 +107,9 @@ public class CachingHint extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CachingHint(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

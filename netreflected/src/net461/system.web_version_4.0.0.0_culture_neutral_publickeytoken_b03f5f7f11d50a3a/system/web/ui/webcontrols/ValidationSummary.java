@@ -94,7 +94,9 @@ public class ValidationSummary extends WebControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ValidationSummary(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

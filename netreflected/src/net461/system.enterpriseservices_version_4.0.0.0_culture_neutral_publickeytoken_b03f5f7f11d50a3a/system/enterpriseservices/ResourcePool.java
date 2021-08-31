@@ -91,7 +91,9 @@ public class ResourcePool extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ResourcePool(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

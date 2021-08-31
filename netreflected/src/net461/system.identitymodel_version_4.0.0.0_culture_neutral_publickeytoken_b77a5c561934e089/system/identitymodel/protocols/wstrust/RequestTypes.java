@@ -91,7 +91,9 @@ public class RequestTypes extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public RequestTypes(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

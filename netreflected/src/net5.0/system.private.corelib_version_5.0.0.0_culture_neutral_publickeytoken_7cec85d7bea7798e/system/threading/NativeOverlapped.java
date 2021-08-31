@@ -92,7 +92,9 @@ public class NativeOverlapped extends ValueType  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public NativeOverlapped(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

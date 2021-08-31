@@ -91,7 +91,9 @@ public class ServiceType extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ServiceType(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

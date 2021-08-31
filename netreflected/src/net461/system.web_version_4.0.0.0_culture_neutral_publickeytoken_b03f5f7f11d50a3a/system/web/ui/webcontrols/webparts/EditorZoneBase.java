@@ -95,7 +95,9 @@ public class EditorZoneBase extends ToolZone  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EditorZoneBase(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

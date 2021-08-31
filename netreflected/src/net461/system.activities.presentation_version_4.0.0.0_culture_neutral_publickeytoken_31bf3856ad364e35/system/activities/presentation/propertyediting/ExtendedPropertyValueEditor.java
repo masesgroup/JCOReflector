@@ -93,7 +93,9 @@ public class ExtendedPropertyValueEditor extends PropertyValueEditor  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ExtendedPropertyValueEditor(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

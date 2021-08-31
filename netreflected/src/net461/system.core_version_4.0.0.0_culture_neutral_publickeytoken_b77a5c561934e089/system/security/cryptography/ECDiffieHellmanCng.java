@@ -101,7 +101,9 @@ public class ECDiffieHellmanCng extends ECDiffieHellman  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ECDiffieHellmanCng(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

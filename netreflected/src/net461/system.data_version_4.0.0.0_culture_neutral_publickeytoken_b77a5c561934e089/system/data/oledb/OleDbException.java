@@ -99,7 +99,9 @@ public class OleDbException extends DbException {
     public OleDbException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public OleDbException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

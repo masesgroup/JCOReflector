@@ -96,7 +96,9 @@ public class ServerException extends SystemException {
     public ServerException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ServerException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

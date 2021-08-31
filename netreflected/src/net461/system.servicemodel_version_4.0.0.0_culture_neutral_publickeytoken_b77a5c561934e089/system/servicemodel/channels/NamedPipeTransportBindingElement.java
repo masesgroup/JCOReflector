@@ -95,7 +95,9 @@ public class NamedPipeTransportBindingElement extends ConnectionOrientedTranspor
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public NamedPipeTransportBindingElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

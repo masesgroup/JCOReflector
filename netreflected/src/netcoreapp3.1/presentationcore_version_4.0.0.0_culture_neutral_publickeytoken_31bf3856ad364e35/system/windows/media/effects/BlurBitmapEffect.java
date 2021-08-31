@@ -94,7 +94,9 @@ public class BlurBitmapEffect extends BitmapEffect  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BlurBitmapEffect(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

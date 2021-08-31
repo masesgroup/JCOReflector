@@ -92,7 +92,9 @@ public class INotifyCompletionImplementation extends NetObject implements INotif
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public INotifyCompletionImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

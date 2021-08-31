@@ -92,7 +92,9 @@ public class TypeVarCharSchemaImporterExtension extends SqlTypesSchemaImporterEx
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TypeVarCharSchemaImporterExtension(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

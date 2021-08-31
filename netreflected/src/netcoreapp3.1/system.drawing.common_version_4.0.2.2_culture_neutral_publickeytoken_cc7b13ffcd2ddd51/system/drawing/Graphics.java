@@ -127,7 +127,9 @@ public class Graphics extends MarshalByRefObject implements AutoCloseable {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Graphics(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

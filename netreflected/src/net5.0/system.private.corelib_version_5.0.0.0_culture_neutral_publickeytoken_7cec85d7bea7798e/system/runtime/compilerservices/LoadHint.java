@@ -107,7 +107,9 @@ public class LoadHint extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public LoadHint(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

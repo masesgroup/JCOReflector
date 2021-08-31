@@ -93,7 +93,9 @@ public class ProtectedConfigurationSection extends ConfigurationSection  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ProtectedConfigurationSection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

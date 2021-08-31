@@ -96,7 +96,9 @@ public class DirectoryServicesPermissionAttribute extends CodeAccessSecurityAttr
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public DirectoryServicesPermissionAttribute(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

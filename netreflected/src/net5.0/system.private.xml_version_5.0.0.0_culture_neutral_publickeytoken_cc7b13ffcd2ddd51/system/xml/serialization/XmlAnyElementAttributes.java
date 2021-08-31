@@ -93,7 +93,9 @@ public class XmlAnyElementAttributes extends CollectionBase  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public XmlAnyElementAttributes(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

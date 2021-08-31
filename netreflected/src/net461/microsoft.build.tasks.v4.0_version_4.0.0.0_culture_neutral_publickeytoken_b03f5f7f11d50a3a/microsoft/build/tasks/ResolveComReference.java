@@ -94,7 +94,9 @@ public class ResolveComReference extends AppDomainIsolatedTaskExtension  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ResolveComReference(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

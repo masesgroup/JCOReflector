@@ -94,7 +94,9 @@ public class X509WindowsSecurityToken extends X509SecurityToken  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public X509WindowsSecurityToken(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

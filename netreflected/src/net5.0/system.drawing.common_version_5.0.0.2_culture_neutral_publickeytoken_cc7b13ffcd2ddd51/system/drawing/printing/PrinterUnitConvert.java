@@ -96,7 +96,9 @@ public class PrinterUnitConvert extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PrinterUnitConvert(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

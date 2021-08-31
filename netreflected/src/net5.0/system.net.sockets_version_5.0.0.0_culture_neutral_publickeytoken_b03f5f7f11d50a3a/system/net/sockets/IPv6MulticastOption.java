@@ -92,7 +92,9 @@ public class IPv6MulticastOption extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IPv6MulticastOption(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

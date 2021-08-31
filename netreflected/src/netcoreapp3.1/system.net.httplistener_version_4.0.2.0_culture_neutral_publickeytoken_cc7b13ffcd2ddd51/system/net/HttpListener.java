@@ -103,7 +103,9 @@ public class HttpListener extends NetObject implements system.IDisposable, AutoC
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public HttpListener(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

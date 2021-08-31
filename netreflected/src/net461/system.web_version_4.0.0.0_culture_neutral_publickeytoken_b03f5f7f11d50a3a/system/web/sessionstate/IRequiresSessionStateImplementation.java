@@ -91,7 +91,9 @@ public class IRequiresSessionStateImplementation extends NetObject implements IR
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IRequiresSessionStateImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

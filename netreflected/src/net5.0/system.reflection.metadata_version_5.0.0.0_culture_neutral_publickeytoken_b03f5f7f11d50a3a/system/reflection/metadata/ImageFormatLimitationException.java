@@ -95,7 +95,9 @@ public class ImageFormatLimitationException extends NetException {
     public ImageFormatLimitationException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ImageFormatLimitationException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -98,7 +98,9 @@ public class Rss20ItemFormatter extends SyndicationItemFormatter implements syst
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Rss20ItemFormatter(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

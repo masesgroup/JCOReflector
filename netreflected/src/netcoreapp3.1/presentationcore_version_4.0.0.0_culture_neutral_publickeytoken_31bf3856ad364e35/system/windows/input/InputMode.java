@@ -107,7 +107,9 @@ public class InputMode extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public InputMode(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -93,7 +93,9 @@ public class TrustRelationshipInformationCollection extends ReadOnlyCollectionBa
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TrustRelationshipInformationCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

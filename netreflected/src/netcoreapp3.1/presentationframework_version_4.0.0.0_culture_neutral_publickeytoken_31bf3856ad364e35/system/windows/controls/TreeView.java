@@ -92,7 +92,9 @@ public class TreeView extends ItemsControl  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TreeView(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

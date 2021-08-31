@@ -96,7 +96,9 @@ public class PathTooLongException extends IOException {
     public PathTooLongException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public PathTooLongException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

@@ -91,7 +91,9 @@ public class ProjectSchemaDefinitions extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ProjectSchemaDefinitions(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

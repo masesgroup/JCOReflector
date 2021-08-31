@@ -103,7 +103,9 @@ public class TrackBar extends Control  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public TrackBar(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

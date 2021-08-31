@@ -94,7 +94,9 @@ public class IJSVsaReferenceItemImplementation extends NetObject implements IJSV
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public IJSVsaReferenceItemImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

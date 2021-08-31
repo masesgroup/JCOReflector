@@ -94,7 +94,9 @@ public class BinaryOperationBinder extends DynamicMetaObjectBinder  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public BinaryOperationBinder(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

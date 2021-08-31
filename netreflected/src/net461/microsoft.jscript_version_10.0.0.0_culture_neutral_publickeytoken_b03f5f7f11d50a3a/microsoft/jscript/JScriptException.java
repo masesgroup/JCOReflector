@@ -101,7 +101,9 @@ public class JScriptException extends ApplicationException {
     public JScriptException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public JScriptException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

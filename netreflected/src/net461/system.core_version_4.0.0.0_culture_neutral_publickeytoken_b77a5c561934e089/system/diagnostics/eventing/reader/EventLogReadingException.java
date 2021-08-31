@@ -96,7 +96,9 @@ public class EventLogReadingException extends EventLogException {
     public EventLogReadingException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EventLogReadingException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

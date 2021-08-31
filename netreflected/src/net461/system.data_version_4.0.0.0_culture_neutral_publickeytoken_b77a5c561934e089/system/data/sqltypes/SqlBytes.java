@@ -106,7 +106,9 @@ public class SqlBytes extends NetObject implements system.xml.serialization.IXml
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SqlBytes(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

@@ -99,7 +99,9 @@ public class CAccPropServicesImplementation extends NetObject implements CAccPro
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public CAccPropServicesImplementation(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

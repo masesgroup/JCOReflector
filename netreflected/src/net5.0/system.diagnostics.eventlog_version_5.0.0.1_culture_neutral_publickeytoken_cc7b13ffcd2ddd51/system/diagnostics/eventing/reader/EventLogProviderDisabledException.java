@@ -96,7 +96,9 @@ public class EventLogProviderDisabledException extends EventLogException {
     public EventLogProviderDisabledException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public EventLogProviderDisabledException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

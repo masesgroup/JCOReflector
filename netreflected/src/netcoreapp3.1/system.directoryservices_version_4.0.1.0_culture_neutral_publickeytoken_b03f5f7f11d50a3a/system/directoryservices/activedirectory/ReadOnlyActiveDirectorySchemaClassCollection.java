@@ -93,7 +93,9 @@ public class ReadOnlyActiveDirectorySchemaClassCollection extends ReadOnlyCollec
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public ReadOnlyActiveDirectorySchemaClassCollection(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

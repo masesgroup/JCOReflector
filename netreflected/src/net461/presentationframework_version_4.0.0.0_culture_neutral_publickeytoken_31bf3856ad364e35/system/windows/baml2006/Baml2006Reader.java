@@ -98,7 +98,9 @@ public class Baml2006Reader extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Baml2006Reader(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

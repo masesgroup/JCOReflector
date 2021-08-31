@@ -96,7 +96,9 @@ public class SynchronizationLockException extends SystemException {
     public SynchronizationLockException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SynchronizationLockException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

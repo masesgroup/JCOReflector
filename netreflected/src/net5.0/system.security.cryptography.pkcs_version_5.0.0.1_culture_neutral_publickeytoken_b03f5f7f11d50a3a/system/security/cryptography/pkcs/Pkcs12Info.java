@@ -93,7 +93,9 @@ public class Pkcs12Info extends NetObject  {
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public Pkcs12Info(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

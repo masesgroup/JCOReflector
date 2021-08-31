@@ -93,7 +93,9 @@ public class NetHttpWebSocketTransportSettingsElement extends WebSocketTransport
             throw translateException(jcne);
         }
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public NetHttpWebSocketTransportSettingsElement(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {

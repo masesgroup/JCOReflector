@@ -95,7 +95,9 @@ public class SUDSParserException extends NetException {
     public SUDSParserException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public SUDSParserException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

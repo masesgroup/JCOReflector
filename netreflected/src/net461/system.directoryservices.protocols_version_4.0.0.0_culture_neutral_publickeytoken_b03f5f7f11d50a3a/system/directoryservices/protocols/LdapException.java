@@ -99,7 +99,9 @@ public class LdapException extends DirectoryException {
     public LdapException() {
         super();
     }
-
+    /**
+     * Internal constructor. Use with caution 
+     */
     public LdapException(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {

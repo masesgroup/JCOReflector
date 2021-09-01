@@ -53,6 +53,7 @@ namespace MASES.JCOReflectorEngine
         static bool SplitByAssembly;
         static bool ForceRebuild;
         static bool UseParallelBuild;
+        static bool AvoidHierarchyTraversing;
         static bool CreateExceptionThrownClause;
         static int ExceptionThrownClauseDepth;
 
@@ -352,6 +353,7 @@ namespace MASES.JCOReflectorEngine
             SplitByAssembly = args.SplitFolderByAssembly;
             ForceRebuild = args.ForceRebuild;
             UseParallelBuild = args.UseParallelBuild;
+            AvoidHierarchyTraversing = args.AvoidHierarchyTraversing;
             CreateExceptionThrownClause = args.CreateExceptionThrownClause;
             ExceptionThrownClauseDepth = args.ExceptionThrownClauseDepth;
             EnableAbstract = args.EnableAbstract;
@@ -443,6 +445,7 @@ namespace MASES.JCOReflectorEngine
             var assembly = ExportAssembly(assemblyReferenced, assemblyParsed, assemblyName, rootFolder, splitByAssembly, forceRebuild);
             assemblyReferenced.Add(assemblyName.FullName);
             if (assembly == null) return;
+            if (AvoidHierarchyTraversing) return;
             foreach (var item in assembly.GetReferencedAssemblies())
             {
                 await ExportAssemblyWithReferences(assemblyReferenced, assemblyParsed, item, rootFolder, splitByAssembly, forceRebuild);

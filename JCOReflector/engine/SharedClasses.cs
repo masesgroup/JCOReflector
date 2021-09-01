@@ -152,6 +152,7 @@ namespace MASES.JCOReflectorEngine
         public const string PARAM_SourceDestinationFolder = "SourceDestinationFolder";
         public const string PARAM_ForceRebuild = "ForceRebuild";
         public const string PARAM_UseParallelBuild = "UseParallelBuild";
+        public const string PARAM_AvoidHierarchyTraversing = "AvoidHierarchyTraversing";
         public const string PARAM_CreateExceptionThrownClause = "CreateExceptionThrownClause";
         public const string PARAM_ExceptionThrownClauseDepth = "ExceptionThrownClauseDepth";
         public const string PARAM_EnableAbstract = "EnableAbstract";
@@ -244,6 +245,12 @@ namespace MASES.JCOReflectorEngine
                     Name = PARAM_UseParallelBuild,
                     Default = true,
                     Help = "Optimize use of processors with a parallel execution (used from JobType.Reflect).",
+                },
+                new ArgumentMetadata<bool>()
+                {
+                    Name = PARAM_AvoidHierarchyTraversing,
+                    Default = true,
+                    Help = "Avoid the traversing of the assemblies dependency hierarchy (used from JobType.Reflect).",
                 },
                 new ArgumentMetadata<bool>()
                 {
@@ -429,6 +436,10 @@ namespace MASES.JCOReflectorEngine
                         if (resultingArgs.Exist(PARAM_UseParallelBuild))
                         {
                             newArg.UseParallelBuild = resultingArgs.Get<bool>(PARAM_UseParallelBuild);
+                        }
+                        if (resultingArgs.Exist(PARAM_AvoidHierarchyTraversing))
+                        {
+                            newArg.AvoidHierarchyTraversing = resultingArgs.Get<bool>(PARAM_AvoidHierarchyTraversing);
                         }
                         if (resultingArgs.Exist(PARAM_CreateExceptionThrownClause))
                         {
@@ -1380,6 +1391,7 @@ namespace MASES.JCOReflectorEngine
         public string SourceDestinationFolder { get; set; }
         public bool ForceRebuild { get; set; }
         public bool UseParallelBuild { get; set; }
+        public bool AvoidHierarchyTraversing { get; set; }
         public bool CreateExceptionThrownClause { get; set; }
         public int ExceptionThrownClauseDepth { get; set; }
         public bool EnableAbstract { get; set; }

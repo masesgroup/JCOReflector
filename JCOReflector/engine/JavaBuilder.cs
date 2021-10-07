@@ -128,8 +128,6 @@ namespace MASES.JCOReflectorEngine
             }
         }
 
- 
-
         static int CreateSourceListAndCompile(string jdkFolder, JDKVersion jdkTarget, string toolExtraOptions, string rootFolder, string originFolder, IEnumerable<string> assemblies, int timeout)
         {
             int counter = 0;
@@ -208,7 +206,7 @@ namespace MASES.JCOReflectorEngine
             string reportStr = string.Empty;
             try
             {
-                JARBuilderEventArgs args = o as JARBuilderEventArgs;
+                POMBuilderEventArgs args = o as POMBuilderEventArgs;
  
                 if (!Path.IsPathRooted(args.SourceFolder))
                 {
@@ -220,12 +218,10 @@ namespace MASES.JCOReflectorEngine
                     args.JDKFolder = Path.Combine(args.RootFolder, args.JDKFolder);
                 }
 
-                if (!Path.IsPathRooted(args.JarDestinationFolder))
+                if (args.POMType == POMType.Frameworks)
                 {
-                    args.JarDestinationFolder = Path.Combine(args.RootFolder, args.JarDestinationFolder);
+                    Const.FileNameAndDirectory.CreateJCOBridgeZip(args.RootFolder);
                 }
-
-                Const.FileNameAndDirectory.CreateJCOBridgeZip(args.RootFolder);
 
                 var srcRootFolder = Path.Combine(args.SourceFolder, Const.FileNameAndDirectory.SourceDirectory);
                 var assembliesToUse = (args.AssembliesToUse == null) ? JobManager.CreateFolderList(srcRootFolder, false) : args.AssembliesToUse;
@@ -238,15 +234,56 @@ namespace MASES.JCOReflectorEngine
                 var sourceFlders = sb.ToString();
                 //sourceFlders = sourceFlders.Remove(sourceFlders.LastIndexOf(','));
                 sourceFlders = sourceFlders.Replace('\\', '/');
+                string jcoPomTemplate = string.Empty;
+                if (args.POMType == POMType.Extension && !string.IsNullOrEmpty(args.POMFileName))
+                {
+                    jcoPomTemplate = File.ReadAllText(args.POMFileName);
+                }
+                else
+                {
+                    jcoPomTemplate = Const.Templates.GetTemplate((args.POMType == POMType.Frameworks) ? Const.Templates.POMJCOReflector : Const.Templates.POMExtension);
+                }
 
-                var jcoPomTemplate = Const.Templates.GetTemplate(Const.Templates.POMJCOReflector);
-                var jcoPom = jcoPomTemplate.Replace(Const.POM.POM_VERSION_PLACEHOLDER, Const.ReflectorVersion + ((args.GeneratePOM == JARBuilderEventArgs.POMType.Snapshot) ? Const.POM.POM_VERSION_SNAPSHOT : string.Empty))
+                var jcoPom = jcoPomTemplate.Replace(Const.POM.POM_VERSION_PLACEHOLDER, args.POMVersion + ((args.POMVersionType == POMVersionType.Snapshot) ? Const.POM.POM_VERSION_SNAPSHOT : string.Empty))
                                            .Replace(Const.POM.POM_RUNTIME_PLACEHOLDER, Const.Framework.RuntimeFolder)
-                                           .Replace(Const.POM.POM_SOURCEDIRECTORIES_PLACEHOLDER, sourceFlders);
+                                           .Replace(Const.POM.POM_SOURCEDIRECTORIES_PLACEHOLDER, sourceFlders)
+                                           .Replace(Const.POM.POM_ARTIFACTID_PLACEHOLDER, args.POMArtifactId)
+                                           .Replace(Const.POM.POM_NAME_PLACEHOLDER, args.POMName)
+                                           .Replace(Const.POM.POM_DESCRIPTION_PLACEHOLDER, args.POMDescription);
 
                 var fileName = Path.Combine(srcRootFolder, string.Format("{0}.xml", Const.Framework.RuntimeFolder));
                 File.WriteAllText(fileName, jcoPom);
                 reportStr = string.Format("{0} POM created in {1}.", fileName, DateTime.Now - dtStart);
+            }
+            catch (OperationCanceledException ex)
+            {
+                reportStr = string.Format("Error {0}", ex.Message);
+                JobManager.AppendToConsole(LogLevel.Error, reportStr);
+            }
+            catch (Exception ex)
+            {
+                reportStr = string.Format("Error {0}", ex.Message);
+                JobManager.AppendToConsole(LogLevel.Error, reportStr);
+                failed = true;
+            }
+            finally
+            {
+                JobManager.EndOperation(new EndOperationEventArgs(reportStr, failed));
+            }
+        }
+
+        public static void ExtractPOM(object o)
+        {
+            bool failed = false;
+            DateTime dtStart = DateTime.Now;
+            string reportStr = string.Empty;
+            try
+            {
+                POMBuilderEventArgs args = o as POMBuilderEventArgs;
+
+                var jcoPomTemplate = Const.Templates.GetTemplate(Const.Templates.POMExtension);
+                File.WriteAllText(args.POMFileName, jcoPomTemplate);
+                reportStr = string.Format("{0} POM created in {1}.", args.POMFileName, DateTime.Now - dtStart);
             }
             catch (OperationCanceledException ex)
             {

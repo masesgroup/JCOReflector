@@ -67,8 +67,25 @@ namespace MASES.JCOReflectorEngine
         Build,
         BuildDocs,
         CreateJars,
-        CreateSnapshotPOM,
-        CreateReleasePOM,
+        CreatePOM,
+        ExtractPOM,
+    }
+    #endregion
+
+    #region POMType enum
+    public enum POMType
+    {
+        Frameworks,
+        Extension
+    }
+    #endregion
+
+    #region POMVersionType enum
+    public enum POMVersionType
+    {
+        NoPOM,
+        Release,
+        Snapshot
     }
     #endregion
 
@@ -121,9 +138,8 @@ namespace MASES.JCOReflectorEngine
         {
             StartupLocation = Path.GetDirectoryName(typeof(JobManager).Assembly.Location);
             RootFolder = DefaultRootFolder = Path.Combine(StartupLocation, @".." + Path.DirectorySeparatorChar + @".." + Path.DirectorySeparatorChar);
-            Parser.DefaultType = ArgumentType.Double;
             arguments = prepareArguments();
-            arguments.Add();
+            parser.Add(arguments);
         }
         /// <summary>
         /// Sets the operations handler 
@@ -136,47 +152,64 @@ namespace MASES.JCOReflectorEngine
             EndOperationHandler = endOperationHandler;
         }
 
-        public const string PARAM_File = "JobFile";
+        public class CmdParam
+        {
+            public const string File = "JobFile";
 
-        // CommonArgs
-        public const string PARAM_JobType = "JobType";
-        public const string PARAM_LogLevel = "LogLevel";
-        public const string PARAM_RootFolder = "RootFolder";
-        public const string PARAM_SplitFolderByAssembly = "SplitFolderByAssembly";
+            // CommonArgs
+            public const string JobType = "JobType";
+            public const string LogLevel = "LogLevel";
+            public const string RootFolder = "RootFolder";
+            public const string SplitFolderByAssembly = "SplitFolderByAssembly";
 
-        // FolderBuilderEventArgs
-        public const string PARAM_SourceFolder = "SourceFolder";
+            // FolderBuilderEventArgs
+            public const string SourceFolder = "SourceFolder";
 
-        // ReflectorEventArgs
-        public const string PARAM_Assembly = "Assembly";
-        public const string PARAM_SourceDestinationFolder = "SourceDestinationFolder";
-        public const string PARAM_ForceRebuild = "ForceRebuild";
-        public const string PARAM_UseParallelBuild = "UseParallelBuild";
-        public const string PARAM_AvoidHierarchyTraversing = "AvoidHierarchyTraversing";
-        public const string PARAM_CreateExceptionThrownClause = "CreateExceptionThrownClause";
-        public const string PARAM_ExceptionThrownClauseDepth = "ExceptionThrownClauseDepth";
-        public const string PARAM_EnableAbstract = "EnableAbstract";
-        public const string PARAM_EnableArray = "EnableArray";
-        public const string PARAM_EnableDuplicateMethodNativeArrayWithJCRefOut = "EnableDuplicateMethodNativeArrayWithJCRefOut";
-        public const string PARAM_EnableInheritance = "EnableInheritance";
-        public const string PARAM_EnableInterfaceInheritance = "EnableInterfaceInheritance";
-        public const string PARAM_EnableRefOutParameters = "EnableRefOutParameters";
-        public const string PARAM_DryRun = "DryRun";
-        public const string PARAM_AvoidReportAndStatistics = "AvoidReportAndStatistics";
+            // ReflectorEventArgs
+            public const string Assembly = "Assembly";
+            public const string SourceDestinationFolder = "SourceDestinationFolder";
+            public const string ForceRebuild = "ForceRebuild";
+            public const string UseParallelBuild = "UseParallelBuild";
+            public const string AvoidHierarchyTraversing = "AvoidHierarchyTraversing";
+            public const string CreateExceptionThrownClause = "CreateExceptionThrownClause";
+            public const string ExceptionThrownClauseDepth = "ExceptionThrownClauseDepth";
+            public const string EnableAbstract = "EnableAbstract";
+            public const string EnableArray = "EnableArray";
+            public const string EnableDuplicateMethodNativeArrayWithJCRefOut = "EnableDuplicateMethodNativeArrayWithJCRefOut";
+            public const string EnableInheritance = "EnableInheritance";
+            public const string EnableInterfaceInheritance = "EnableInterfaceInheritance";
+            public const string EnableRefOutParameters = "EnableRefOutParameters";
+            public const string DryRun = "DryRun";
+            public const string AvoidReportAndStatistics = "AvoidReportAndStatistics";
 
-        // JavaBuilderEventArgs
-        public const string PARAM_JDKFolder = "JDKFolder";
-        public const string PARAM_JDKTarget = "JDKTarget";
-        public const string PARAM_AssembliesToUse = "AssembliesToUse";
-        public const string PARAM_JDKToolExtraOptions = "JDKToolExtraOptions";
+            // JavaBuilderEventArgs
+            public const string JDKFolder = "JDKFolder";
+            public const string JDKTarget = "JDKTarget";
+            public const string AssembliesToUse = "AssembliesToUse";
+            public const string JDKToolExtraOptions = "JDKToolExtraOptions";
 
-        // DocsBuilderEventArgs
-        public const string PARAM_CommitVersion = "CommitVersion";
+            // DocsBuilderEventArgs
+            public const string CommitVersion = "CommitVersion";
 
-        // JARBuilderEventArgs
-        public const string PARAM_JarDestinationFolder = "JarDestinationFolder";
-        public const string PARAM_WithJARSource = "WithJARSource";
-        public const string PARAM_EmbeddingJCOBridge = "EmbeddingJCOBridge";
+            // JARBuilderEventArgs
+            public const string JarDestinationFolder = "JarDestinationFolder";
+            public const string WithJARSource = "WithJARSource";
+            public const string EmbeddingJCOBridge = "EmbeddingJCOBridge";
+
+            // POMBuilderEventArgs
+            public const string POMArtifactId = "POMArtifactId";
+            public const string POMName = "POMName";
+            public const string POMFileName = "POMFileName";
+            public const string POMDescription = "POMDescription";
+            public const string POMVersion = "POMVersion";
+            public const string POMType = "POMType";
+            public const string POMVersionType = "POMVersionType";
+        }
+
+        static Parser parser = Parser.CreateInstance(new Settings()
+        {
+            DefaultType = ArgumentType.Double,
+        });
 
         static IArgumentMetadata[] arguments = null;
         static IArgumentMetadata[] prepareArguments()
@@ -185,82 +218,82 @@ namespace MASES.JCOReflectorEngine
             {
                 new ArgumentMetadata<string>()
                 {
-                    Name = PARAM_File,
+                    Name = CmdParam.File,
                     Default = null,
                     Help = "The file containing the serialized job to run.",
                 },
                 new ArgumentMetadata<JobTypes>()
                 {
-                    Name = PARAM_JobType,
+                    Name = CmdParam.JobType,
                     IsMandatory = true,
                     Help = "The job to execute.",
                 },
                 new ArgumentMetadata<LogLevel>()
                 {
-                    Name = PARAM_LogLevel,
+                    Name = CmdParam.LogLevel,
                     Default = LogLevel.Error,
                     Help = "The error level to report.",
                 },
                 new ArgumentMetadata<string>()
                 {
-                    Name = PARAM_RootFolder,
+                    Name = CmdParam.RootFolder,
                     Default = RootFolder,
                     Help = "The root folder.",
                 },
                 new ArgumentMetadata<bool>()
                 {
-                    Name = PARAM_SplitFolderByAssembly,
+                    Name = CmdParam.SplitFolderByAssembly,
                     Default = true,
                     Help = "True to split the reflected class into folder with the name equals to the name of assembly containing the class.",
                 },
                 new ArgumentMetadata<string>()
                 {
-                    Name = PARAM_SourceFolder,
+                    Name = CmdParam.SourceFolder,
                     Default = SourceDestinationFolder,
                     Help = "The foldercontaining the reflected classes (used from any JobType expect JobType.Reflect).",
                 },
                 // reflector arguments
                 new ArgumentMetadata<string>()
                 {
-                    Name = PARAM_Assembly,
+                    Name = CmdParam.Assembly,
                     IsMultiValue = true,
                     Default = ArgumentMetadata<string>.DefaultMultiValue,
                     Help = "The list of assembly name to parse (used from JobType.Reflect).",
                 },
                 new ArgumentMetadata<string>()
                 {
-                    Name = PARAM_SourceDestinationFolder,
+                    Name = CmdParam.SourceDestinationFolder,
                     Default = SourceDestinationFolder,
                     Help = "The destination folder where store the reflected classes (used from JobType.Reflect).",
                 },
 
                 new ArgumentMetadata<bool>()
                 {
-                    Name = PARAM_ForceRebuild,
+                    Name = CmdParam.ForceRebuild,
                     Default = true,
                     Help = "Force rebuild even if the assembly folder is in the SourceDestinationFolder (used from JobType.Reflect).",
                 },
                 new ArgumentMetadata<bool>()
                 {
-                    Name = PARAM_UseParallelBuild,
+                    Name = CmdParam.UseParallelBuild,
                     Default = true,
                     Help = "Optimize use of processors with a parallel execution (used from JobType.Reflect).",
                 },
                 new ArgumentMetadata<bool>()
                 {
-                    Name = PARAM_AvoidHierarchyTraversing,
+                    Name = CmdParam.AvoidHierarchyTraversing,
                     Default = true,
                     Help = "Avoid the traversing of the assemblies dependency hierarchy (used from JobType.Reflect).",
                 },
                 new ArgumentMetadata<bool>()
                 {
-                    Name = PARAM_CreateExceptionThrownClause,
+                    Name = CmdParam.CreateExceptionThrownClause,
                     Default = true,
                     Help = "Analyze and add exception in the methods declaration (used from JobType.Reflect).",
                 },
                 new ArgumentMetadata<int>()
                 {
-                    Name = PARAM_ExceptionThrownClauseDepth,
+                    Name = CmdParam.ExceptionThrownClauseDepth,
                     Default = 10,
                     ValueType = ArgumentValueType.Range,
                     MinValue = 0,
@@ -269,100 +302,138 @@ namespace MASES.JCOReflectorEngine
                 },
                 new ArgumentMetadata<bool>()
                 {
-                    Name = PARAM_EnableAbstract,
+                    Name = CmdParam.EnableAbstract,
                     Default = true,
                     Help = "Enable abstract classes (used from JobType.Reflect).",
                 },
                 new ArgumentMetadata<bool>()
                 {
-                    Name = PARAM_EnableArray,
+                    Name = CmdParam.EnableArray,
                     Default = true,
                     Help = "Enable array declaration (used from JobType.Reflect).",
                 },
                 new ArgumentMetadata<bool>()
                 {
-                    Name = PARAM_EnableDuplicateMethodNativeArrayWithJCRefOut,
+                    Name = CmdParam.EnableDuplicateMethodNativeArrayWithJCRefOut,
                     Default = true,
                     Help = "Duplicates methods which has array of native types to reproduce the same behavior of .NET (used from JobType.Reflect).",
                 },
                 new ArgumentMetadata<bool>()
                 {
-                    Name = PARAM_EnableInheritance,
+                    Name = CmdParam.EnableInheritance,
                     Default = true,
                     Help = "Enable class inheritance (used from JobType.Reflect).",
                 },
                 new ArgumentMetadata<bool>()
                 {
-                    Name = PARAM_EnableInterfaceInheritance,
+                    Name = CmdParam.EnableInterfaceInheritance,
                     Default = true,
                     Help = "Enable interface inheritance (used from JobType.Reflect).",
                 },
                 new ArgumentMetadata<bool>()
                 {
-                    Name = PARAM_EnableRefOutParameters,
+                    Name = CmdParam.EnableRefOutParameters,
                     Default = true,
                     Help = "Enable management of ref and out parameters (used from JobType.Reflect).",
                 },
                 new ArgumentMetadata<bool>()
                 {
-                    Name = PARAM_DryRun,
+                    Name = CmdParam.DryRun,
                     Default = false,
                     Help = "Do not write anything (used from JobType.Reflect).",
                 },
                 new ArgumentMetadata<bool>()
                 {
-                    Name = PARAM_AvoidReportAndStatistics,
+                    Name = CmdParam.AvoidReportAndStatistics,
                     Default = false,
                     Help = "Do not write report and statistics (used from JobType.Reflect).",
                 },
                 new ArgumentMetadata<string>()
                 {
-                    Name = PARAM_JDKFolder,
+                    Name = CmdParam.JDKFolder,
                     Default = null,
                     Help = "The folder containing the JDK, it is used to find JDK tools (used from any JobType expect JobType.Reflect).",
                 },
                 new ArgumentMetadata<JDKVersion>()
                 {
-                    Name = PARAM_JDKTarget,
+                    Name = CmdParam.JDKTarget,
                     Default = JDKVersion.Version8,
                     Help = "The java version used when class are generated (used from any JobType expect JobType.Reflect).",
                 },
                 new ArgumentMetadata<string>()
                 {
-                    Name = PARAM_AssembliesToUse,
+                    Name = CmdParam.AssembliesToUse,
                     Default = ArgumentMetadata<string>.DefaultMultiValue,
                     IsMultiValue = true,
                     Help = "The list of assemblies, the one previously reflected, to be used in the operation (used from any JobType expect JobType.Reflect).",
                 },
                 new ArgumentMetadata<string>()
                 {
-                    Name = PARAM_JDKToolExtraOptions,
+                    Name = CmdParam.JDKToolExtraOptions,
                     Default = string.Empty,
                     Help = "Extra options to be passed to the JDK tools (used from any JobType expect JobType.Reflect).",
                 },
                 new ArgumentMetadata<string>()
                 {
-                    Name = PARAM_CommitVersion,
+                    Name = CmdParam.CommitVersion,
                     Default = string.Empty,
                     Help = "The commit version (used from JobType.BuildDocs).",
                 },
                 new ArgumentMetadata<string>()
                 {
-                    Name = PARAM_JarDestinationFolder,
+                    Name = CmdParam.JarDestinationFolder,
                     Default = string.Empty,
                     Help = "Destination folder where store JarFile (used from JobType.CreateJars).",
                 },
                 new ArgumentMetadata<bool>()
                 {
-                    Name = PARAM_WithJARSource,
+                    Name = CmdParam.WithJARSource,
                     Default = false,
                     Help = "Create the source Jar (used from JobType.CreateJars).",
                 },
                 new ArgumentMetadata<bool>()
                 {
-                    Name = PARAM_EmbeddingJCOBridge,
+                    Name = CmdParam.EmbeddingJCOBridge,
                     Default = true,
                     Help = "Embed JCOBridge engine within JCOReflector.jar (used from JobType.CreateJars).",
+                },
+                new ArgumentMetadata<string>()
+                {
+                    Name = CmdParam.POMArtifactId,
+                    Help = "The artifact Id to use in the POM (used from JobType.CreatePOM).",
+                },
+                new ArgumentMetadata<string>()
+                {
+                    Name = CmdParam.POMName,
+                    Help = "The artifact name to use in the POM (used from JobType.CreatePOM).",
+                },
+                new ArgumentMetadata<string>()
+                {
+                    Name = CmdParam.POMFileName,
+                    Help = "The file name to use in the POM extraction or POM preparation (used from JobType.CreatePOM and JobType.ExtractPOM).",
+                },
+                new ArgumentMetadata<string>()
+                {
+                    Name = CmdParam.POMDescription,
+                    Help = "The description to use in the POM (used from JobType.CreatePOM).",
+                },
+                new ArgumentMetadata<string>()
+                {
+                    Name = CmdParam.POMVersion,
+                    Default = Const.ReflectorVersion,
+                    Help = "The version to use when the PM is created (used from JobType.CreatePOM).",
+                },
+                new ArgumentMetadata<POMType>()
+                {
+                    Name = CmdParam.POMType,
+                    Default = POMType.Frameworks,
+                    Help = "Select if the POM must be created for internal purpose (i.e. JCOReflector) or for external assemblies (used from JobType.CreatePOM).",
+                },
+                new ArgumentMetadata<POMVersionType>()
+                {
+                    Name = CmdParam.POMVersionType,
+                    Default = POMVersionType.Snapshot,
+                    Help = "Select if the POM must have a SNAPSHOT version or not (used from JobType.CreatePOM).",
                 },
             };
         }
@@ -372,9 +443,9 @@ namespace MASES.JCOReflectorEngine
         /// <returns></returns>
         public static string GetArgumentHelp()
         {
-            int newPadding = Parser.PaddingFromArguments();
-            Parser.DefaultDescriptionPadding = newPadding;
-            return Parser.HelpInfo();
+            int newPadding = parser.PaddingFromArguments();
+            parser.Settings.DefaultDescriptionPadding = newPadding;
+            return parser.HelpInfo();
         }
         /// <summary>
         /// Convert arguments into an instance of <see cref="CommonEventArgs"/>
@@ -383,13 +454,13 @@ namespace MASES.JCOReflectorEngine
         /// <returns>An instance of <see cref="CommonEventArgs"/></returns>
         public static CommonEventArgs FromArgs(this string[] args)
         {
-            var resultingArgs = args.Parse();
+            var resultingArgs = parser.Parse(args);
 
-            var jobType = resultingArgs.Get<JobTypes>(PARAM_JobType);
+            var jobType = parser.Get<JobTypes>(resultingArgs, CmdParam.JobType);
             CommonEventArgs arg = null;
-            if (resultingArgs.Exist(PARAM_File))
+            if (parser.Exist(resultingArgs, CmdParam.File))
             {
-                arg = ConvertFile(jobType, resultingArgs.Get<string>(PARAM_File));
+                arg = ConvertFile(jobType, parser.Get<string>(resultingArgs, CmdParam.File));
             }
 
             if (arg != null)
@@ -406,80 +477,80 @@ namespace MASES.JCOReflectorEngine
                         ReflectorEventArgs newArg;
                         if (arg == null) newArg = new ReflectorEventArgs();
                         else newArg = arg as ReflectorEventArgs;
-                        if (resultingArgs.Exist(PARAM_LogLevel))
+                        if (parser.Exist(resultingArgs, CmdParam.LogLevel))
                         {
-                            newArg.LogLevel = resultingArgs.Get<LogLevel>(PARAM_LogLevel);
+                            newArg.LogLevel = parser.Get<LogLevel>(resultingArgs, CmdParam.LogLevel);
                         }
-                        if (resultingArgs.Exist(PARAM_RootFolder))
+                        if (parser.Exist(resultingArgs, CmdParam.RootFolder))
                         {
-                            newArg.RootFolder = resultingArgs.Get<string>(PARAM_RootFolder);
+                            newArg.RootFolder = parser.Get<string>(resultingArgs, CmdParam.RootFolder);
                         }
-                        if (resultingArgs.Exist(PARAM_SplitFolderByAssembly))
+                        if (parser.Exist(resultingArgs, CmdParam.SplitFolderByAssembly))
                         {
-                            newArg.SplitFolderByAssembly = resultingArgs.Get<bool>(PARAM_SplitFolderByAssembly);
+                            newArg.SplitFolderByAssembly = parser.Get<bool>(resultingArgs, CmdParam.SplitFolderByAssembly);
                         }
                         List<string> assemblies = new List<string>();
                         if (newArg.AssemblyNames != null) assemblies.AddRange(newArg.AssemblyNames);
-                        if (resultingArgs.Exist(PARAM_Assembly))
+                        if (parser.Exist(resultingArgs, CmdParam.Assembly))
                         {
-                            assemblies.AddRange(resultingArgs.Get<IEnumerable<string>>(PARAM_Assembly));
+                            assemblies.AddRange(parser.Get<IEnumerable<string>>(resultingArgs, CmdParam.Assembly));
                         }
                         newArg.AssemblyNames = assemblies.ToArray();
-                        if (resultingArgs.Exist(PARAM_SourceDestinationFolder))
+                        if (parser.Exist(resultingArgs, CmdParam.SourceDestinationFolder))
                         {
-                            newArg.SourceDestinationFolder = resultingArgs.Get<string>(PARAM_SourceDestinationFolder);
+                            newArg.SourceDestinationFolder = parser.Get<string>(resultingArgs, CmdParam.SourceDestinationFolder);
                         }
-                        if (resultingArgs.Exist(PARAM_ForceRebuild))
+                        if (parser.Exist(resultingArgs, CmdParam.ForceRebuild))
                         {
-                            newArg.ForceRebuild = resultingArgs.Get<bool>(PARAM_ForceRebuild);
+                            newArg.ForceRebuild = parser.Get<bool>(resultingArgs, CmdParam.ForceRebuild);
                         }
-                        if (resultingArgs.Exist(PARAM_UseParallelBuild))
+                        if (parser.Exist(resultingArgs, CmdParam.UseParallelBuild))
                         {
-                            newArg.UseParallelBuild = resultingArgs.Get<bool>(PARAM_UseParallelBuild);
+                            newArg.UseParallelBuild = parser.Get<bool>(resultingArgs, CmdParam.UseParallelBuild);
                         }
-                        if (resultingArgs.Exist(PARAM_AvoidHierarchyTraversing))
+                        if (parser.Exist(resultingArgs, CmdParam.AvoidHierarchyTraversing))
                         {
-                            newArg.AvoidHierarchyTraversing = resultingArgs.Get<bool>(PARAM_AvoidHierarchyTraversing);
+                            newArg.AvoidHierarchyTraversing = parser.Get<bool>(resultingArgs, CmdParam.AvoidHierarchyTraversing);
                         }
-                        if (resultingArgs.Exist(PARAM_CreateExceptionThrownClause))
+                        if (parser.Exist(resultingArgs, CmdParam.CreateExceptionThrownClause))
                         {
-                            newArg.CreateExceptionThrownClause = resultingArgs.Get<bool>(PARAM_CreateExceptionThrownClause);
+                            newArg.CreateExceptionThrownClause = parser.Get<bool>(resultingArgs, CmdParam.CreateExceptionThrownClause);
                         }
-                        if (resultingArgs.Exist(PARAM_ExceptionThrownClauseDepth))
+                        if (parser.Exist(resultingArgs, CmdParam.ExceptionThrownClauseDepth))
                         {
-                            newArg.ExceptionThrownClauseDepth = resultingArgs.Get<int>(PARAM_ExceptionThrownClauseDepth);
+                            newArg.ExceptionThrownClauseDepth = parser.Get<int>(resultingArgs, CmdParam.ExceptionThrownClauseDepth);
                         }
-                        if (resultingArgs.Exist(PARAM_EnableAbstract))
+                        if (parser.Exist(resultingArgs, CmdParam.EnableAbstract))
                         {
-                            newArg.EnableAbstract = resultingArgs.Get<bool>(PARAM_EnableAbstract);
+                            newArg.EnableAbstract = parser.Get<bool>(resultingArgs, CmdParam.EnableAbstract);
                         }
-                        if (resultingArgs.Exist(PARAM_EnableArray))
+                        if (parser.Exist(resultingArgs, CmdParam.EnableArray))
                         {
-                            newArg.EnableArray = resultingArgs.Get<bool>(PARAM_EnableArray);
+                            newArg.EnableArray = parser.Get<bool>(resultingArgs, CmdParam.EnableArray);
                         }
-                        if (resultingArgs.Exist(PARAM_EnableDuplicateMethodNativeArrayWithJCRefOut))
+                        if (parser.Exist(resultingArgs, CmdParam.EnableDuplicateMethodNativeArrayWithJCRefOut))
                         {
-                            newArg.EnableDuplicateMethodNativeArrayWithJCRefOut = resultingArgs.Get<bool>(PARAM_EnableDuplicateMethodNativeArrayWithJCRefOut);
+                            newArg.EnableDuplicateMethodNativeArrayWithJCRefOut = parser.Get<bool>(resultingArgs, CmdParam.EnableDuplicateMethodNativeArrayWithJCRefOut);
                         }
-                        if (resultingArgs.Exist(PARAM_EnableInheritance))
+                        if (parser.Exist(resultingArgs, CmdParam.EnableInheritance))
                         {
-                            newArg.EnableInheritance = resultingArgs.Get<bool>(PARAM_EnableInheritance);
+                            newArg.EnableInheritance = parser.Get<bool>(resultingArgs, CmdParam.EnableInheritance);
                         }
-                        if (resultingArgs.Exist(PARAM_EnableInterfaceInheritance))
+                        if (parser.Exist(resultingArgs, CmdParam.EnableInterfaceInheritance))
                         {
-                            newArg.EnableInterfaceInheritance = resultingArgs.Get<bool>(PARAM_EnableInterfaceInheritance);
+                            newArg.EnableInterfaceInheritance = parser.Get<bool>(resultingArgs, CmdParam.EnableInterfaceInheritance);
                         }
-                        if (resultingArgs.Exist(PARAM_EnableRefOutParameters))
+                        if (parser.Exist(resultingArgs, CmdParam.EnableRefOutParameters))
                         {
-                            newArg.EnableRefOutParameters = resultingArgs.Get<bool>(PARAM_EnableRefOutParameters);
+                            newArg.EnableRefOutParameters = parser.Get<bool>(resultingArgs, CmdParam.EnableRefOutParameters);
                         }
-                        if (resultingArgs.Exist(PARAM_DryRun))
+                        if (parser.Exist(resultingArgs, CmdParam.DryRun))
                         {
-                            newArg.DryRun = resultingArgs.Get<bool>(PARAM_DryRun);
+                            newArg.DryRun = parser.Get<bool>(resultingArgs, CmdParam.DryRun);
                         }
-                        if (resultingArgs.Exist(PARAM_AvoidReportAndStatistics))
+                        if (parser.Exist(resultingArgs, CmdParam.AvoidReportAndStatistics))
                         {
-                            newArg.AvoidReportAndStatistics = resultingArgs.Get<bool>(PARAM_AvoidReportAndStatistics);
+                            newArg.AvoidReportAndStatistics = parser.Get<bool>(resultingArgs, CmdParam.AvoidReportAndStatistics);
                         }
                     }
                     break;
@@ -489,39 +560,39 @@ namespace MASES.JCOReflectorEngine
                         if (arg == null) newArg = new JavaBuilderEventArgs();
                         else newArg = arg as JavaBuilderEventArgs;
 
-                        if (resultingArgs.Exist(PARAM_LogLevel))
+                        if (parser.Exist(resultingArgs, CmdParam.LogLevel))
                         {
-                            newArg.LogLevel = resultingArgs.Get<LogLevel>(PARAM_LogLevel);
+                            newArg.LogLevel = parser.Get<LogLevel>(resultingArgs, CmdParam.LogLevel);
                         }
-                        if (resultingArgs.Exist(PARAM_RootFolder))
+                        if (parser.Exist(resultingArgs, CmdParam.RootFolder))
                         {
-                            newArg.RootFolder = resultingArgs.Get<string>(PARAM_RootFolder);
+                            newArg.RootFolder = parser.Get<string>(resultingArgs, CmdParam.RootFolder);
                         }
-                        if (resultingArgs.Exist(PARAM_SplitFolderByAssembly))
+                        if (parser.Exist(resultingArgs, CmdParam.SplitFolderByAssembly))
                         {
-                            newArg.SplitFolderByAssembly = resultingArgs.Get<bool>(PARAM_SplitFolderByAssembly);
-                        }
-
-                        if (resultingArgs.Exist(PARAM_SourceFolder))
-                        {
-                            newArg.SourceFolder = resultingArgs.Get<string>(PARAM_SourceFolder);
+                            newArg.SplitFolderByAssembly = parser.Get<bool>(resultingArgs, CmdParam.SplitFolderByAssembly);
                         }
 
-                        if (resultingArgs.Exist(PARAM_JDKFolder))
+                        if (parser.Exist(resultingArgs, CmdParam.SourceFolder))
                         {
-                            newArg.JDKFolder = resultingArgs.Get<string>(PARAM_JDKFolder);
+                            newArg.SourceFolder = parser.Get<string>(resultingArgs, CmdParam.SourceFolder);
                         }
-                        if (resultingArgs.Exist(PARAM_JDKTarget))
+
+                        if (parser.Exist(resultingArgs, CmdParam.JDKFolder))
                         {
-                            newArg.JDKTarget = resultingArgs.Get<JDKVersion>(PARAM_JDKTarget);
+                            newArg.JDKFolder = parser.Get<string>(resultingArgs, CmdParam.JDKFolder);
                         }
-                        if (resultingArgs.Exist(PARAM_AssembliesToUse))
+                        if (parser.Exist(resultingArgs, CmdParam.JDKTarget))
                         {
-                            newArg.AssembliesToUse = new List<string>(resultingArgs.Get<IEnumerable<string>>(PARAM_AssembliesToUse)).ToArray();
+                            newArg.JDKTarget = parser.Get<JDKVersion>(resultingArgs, CmdParam.JDKTarget);
                         }
-                        if (resultingArgs.Exist(PARAM_JDKToolExtraOptions))
+                        if (parser.Exist(resultingArgs, CmdParam.AssembliesToUse))
                         {
-                            newArg.JDKToolExtraOptions = resultingArgs.Get<string>(PARAM_JDKToolExtraOptions);
+                            newArg.AssembliesToUse = new List<string>(parser.Get<IEnumerable<string>>(resultingArgs, CmdParam.AssembliesToUse)).ToArray();
+                        }
+                        if (parser.Exist(resultingArgs, CmdParam.JDKToolExtraOptions))
+                        {
+                            newArg.JDKToolExtraOptions = parser.Get<string>(resultingArgs, CmdParam.JDKToolExtraOptions);
                         }
                     }
                     break;
@@ -531,45 +602,45 @@ namespace MASES.JCOReflectorEngine
                         if (arg == null) newArg = new DocsBuilderEventArgs();
                         else newArg = arg as DocsBuilderEventArgs;
 
-                        if (resultingArgs.Exist(PARAM_LogLevel))
+                        if (parser.Exist(resultingArgs, CmdParam.LogLevel))
                         {
-                            newArg.LogLevel = resultingArgs.Get<LogLevel>(PARAM_LogLevel);
+                            newArg.LogLevel = parser.Get<LogLevel>(resultingArgs, CmdParam.LogLevel);
                         }
-                        if (resultingArgs.Exist(PARAM_RootFolder))
+                        if (parser.Exist(resultingArgs, CmdParam.RootFolder))
                         {
-                            newArg.RootFolder = resultingArgs.Get<string>(PARAM_RootFolder);
+                            newArg.RootFolder = parser.Get<string>(resultingArgs, CmdParam.RootFolder);
                         }
-                        if (resultingArgs.Exist(PARAM_SplitFolderByAssembly))
+                        if (parser.Exist(resultingArgs, CmdParam.SplitFolderByAssembly))
                         {
-                            newArg.SplitFolderByAssembly = resultingArgs.Get<bool>(PARAM_SplitFolderByAssembly);
-                        }
-
-
-                        if (resultingArgs.Exist(PARAM_SourceFolder))
-                        {
-                            newArg.SourceFolder = resultingArgs.Get<string>(PARAM_SourceFolder);
+                            newArg.SplitFolderByAssembly = parser.Get<bool>(resultingArgs, CmdParam.SplitFolderByAssembly);
                         }
 
-                        if (resultingArgs.Exist(PARAM_JDKFolder))
+
+                        if (parser.Exist(resultingArgs, CmdParam.SourceFolder))
                         {
-                            newArg.JDKFolder = resultingArgs.Get<string>(PARAM_JDKFolder);
-                        }
-                        if (resultingArgs.Exist(PARAM_JDKTarget))
-                        {
-                            newArg.JDKTarget = resultingArgs.Get<JDKVersion>(PARAM_JDKTarget);
-                        }
-                        if (resultingArgs.Exist(PARAM_AssembliesToUse))
-                        {
-                            newArg.AssembliesToUse = new List<string>(resultingArgs.Get<IEnumerable<string>>(PARAM_AssembliesToUse)).ToArray();
-                        }
-                        if (resultingArgs.Exist(PARAM_JDKToolExtraOptions))
-                        {
-                            newArg.JDKToolExtraOptions = resultingArgs.Get<string>(PARAM_JDKToolExtraOptions);
+                            newArg.SourceFolder = parser.Get<string>(resultingArgs, CmdParam.SourceFolder);
                         }
 
-                        if (resultingArgs.Exist(PARAM_CommitVersion))
+                        if (parser.Exist(resultingArgs, CmdParam.JDKFolder))
                         {
-                            newArg.CommitVersion = resultingArgs.Get<string>(PARAM_CommitVersion);
+                            newArg.JDKFolder = parser.Get<string>(resultingArgs, CmdParam.JDKFolder);
+                        }
+                        if (parser.Exist(resultingArgs, CmdParam.JDKTarget))
+                        {
+                            newArg.JDKTarget = parser.Get<JDKVersion>(resultingArgs, CmdParam.JDKTarget);
+                        }
+                        if (parser.Exist(resultingArgs, CmdParam.AssembliesToUse))
+                        {
+                            newArg.AssembliesToUse = new List<string>(parser.Get<IEnumerable<string>>(resultingArgs, CmdParam.AssembliesToUse)).ToArray();
+                        }
+                        if (parser.Exist(resultingArgs, CmdParam.JDKToolExtraOptions))
+                        {
+                            newArg.JDKToolExtraOptions = parser.Get<string>(resultingArgs, CmdParam.JDKToolExtraOptions);
+                        }
+
+                        if (parser.Exist(resultingArgs, CmdParam.CommitVersion))
+                        {
+                            newArg.CommitVersion = parser.Get<string>(resultingArgs, CmdParam.CommitVersion);
                         }
                     }
                     break;
@@ -579,175 +650,145 @@ namespace MASES.JCOReflectorEngine
                         if (arg == null) newArg = new JARBuilderEventArgs();
                         else newArg = arg as JARBuilderEventArgs;
 
-                        if (resultingArgs.Exist(PARAM_LogLevel))
+                        if (parser.Exist(resultingArgs, CmdParam.LogLevel))
                         {
-                            newArg.LogLevel = resultingArgs.Get<LogLevel>(PARAM_LogLevel);
+                            newArg.LogLevel = parser.Get<LogLevel>(resultingArgs, CmdParam.LogLevel);
                         }
-                        if (resultingArgs.Exist(PARAM_RootFolder))
+                        if (parser.Exist(resultingArgs, CmdParam.RootFolder))
                         {
-                            newArg.RootFolder = resultingArgs.Get<string>(PARAM_RootFolder);
+                            newArg.RootFolder = parser.Get<string>(resultingArgs, CmdParam.RootFolder);
                         }
-                        if (resultingArgs.Exist(PARAM_SplitFolderByAssembly))
+                        if (parser.Exist(resultingArgs, CmdParam.SplitFolderByAssembly))
                         {
-                            newArg.SplitFolderByAssembly = resultingArgs.Get<bool>(PARAM_SplitFolderByAssembly);
-                        }
-
-                        if (resultingArgs.Exist(PARAM_SourceFolder))
-                        {
-                            newArg.SourceFolder = resultingArgs.Get<string>(PARAM_SourceFolder);
+                            newArg.SplitFolderByAssembly = parser.Get<bool>(resultingArgs, CmdParam.SplitFolderByAssembly);
                         }
 
-                        if (resultingArgs.Exist(PARAM_JDKFolder))
+                        if (parser.Exist(resultingArgs, CmdParam.SourceFolder))
                         {
-                            newArg.JDKFolder = resultingArgs.Get<string>(PARAM_JDKFolder);
-                        }
-                        if (resultingArgs.Exist(PARAM_JDKTarget))
-                        {
-                            newArg.JDKTarget = resultingArgs.Get<JDKVersion>(PARAM_JDKTarget);
-                        }
-                        if (resultingArgs.Exist(PARAM_AssembliesToUse))
-                        {
-                            newArg.AssembliesToUse = new List<string>(resultingArgs.Get<IEnumerable<string>>(PARAM_AssembliesToUse)).ToArray();
-                        }
-                        if (resultingArgs.Exist(PARAM_JDKToolExtraOptions))
-                        {
-                            newArg.JDKToolExtraOptions = resultingArgs.Get<string>(PARAM_JDKToolExtraOptions);
+                            newArg.SourceFolder = parser.Get<string>(resultingArgs, CmdParam.SourceFolder);
                         }
 
-                        if (resultingArgs.Exist(PARAM_JarDestinationFolder))
+                        if (parser.Exist(resultingArgs, CmdParam.JDKFolder))
                         {
-                            newArg.JarDestinationFolder = resultingArgs.Get<string>(PARAM_JarDestinationFolder);
+                            newArg.JDKFolder = parser.Get<string>(resultingArgs, CmdParam.JDKFolder);
+                        }
+                        if (parser.Exist(resultingArgs, CmdParam.JDKTarget))
+                        {
+                            newArg.JDKTarget = parser.Get<JDKVersion>(resultingArgs, CmdParam.JDKTarget);
+                        }
+                        if (parser.Exist(resultingArgs, CmdParam.AssembliesToUse))
+                        {
+                            newArg.AssembliesToUse = new List<string>(parser.Get<IEnumerable<string>>(resultingArgs, CmdParam.AssembliesToUse)).ToArray();
+                        }
+                        if (parser.Exist(resultingArgs, CmdParam.JDKToolExtraOptions))
+                        {
+                            newArg.JDKToolExtraOptions = parser.Get<string>(resultingArgs, CmdParam.JDKToolExtraOptions);
                         }
 
-                        if (resultingArgs.Exist(PARAM_WithJARSource))
+                        if (parser.Exist(resultingArgs, CmdParam.JarDestinationFolder))
                         {
-                            newArg.WithJARSource = resultingArgs.Get<bool>(PARAM_WithJARSource);
+                            newArg.JarDestinationFolder = parser.Get<string>(resultingArgs, CmdParam.JarDestinationFolder);
                         }
 
-                        if (resultingArgs.Exist(PARAM_EmbeddingJCOBridge))
+                        if (parser.Exist(resultingArgs, CmdParam.WithJARSource))
                         {
-                            newArg.EmbeddingJCOBridge = resultingArgs.Get<bool>(PARAM_EmbeddingJCOBridge);
+                            newArg.WithJARSource = parser.Get<bool>(resultingArgs, CmdParam.WithJARSource);
                         }
 
-                        newArg.GeneratePOM = JARBuilderEventArgs.POMType.NoPOM;
+                        if (parser.Exist(resultingArgs, CmdParam.EmbeddingJCOBridge))
+                        {
+                            newArg.EmbeddingJCOBridge = parser.Get<bool>(resultingArgs, CmdParam.EmbeddingJCOBridge);
+                        }
                     }
                     break;
-                case JobTypes.CreateSnapshotPOM:
+                case JobTypes.CreatePOM:
                     {
-                        JARBuilderEventArgs newArg;
-                        if (arg == null) newArg = new JARBuilderEventArgs();
-                        else newArg = arg as JARBuilderEventArgs;
+                        POMBuilderEventArgs newArg;
+                        if (arg == null) newArg = new POMBuilderEventArgs();
+                        else newArg = arg as POMBuilderEventArgs;
 
-                        if (resultingArgs.Exist(PARAM_LogLevel))
+                        if (parser.Exist(resultingArgs, CmdParam.LogLevel))
                         {
-                            newArg.LogLevel = resultingArgs.Get<LogLevel>(PARAM_LogLevel);
+                            newArg.LogLevel = parser.Get<LogLevel>(resultingArgs, CmdParam.LogLevel);
                         }
-                        if (resultingArgs.Exist(PARAM_RootFolder))
+                        if (parser.Exist(resultingArgs, CmdParam.RootFolder))
                         {
-                            newArg.RootFolder = resultingArgs.Get<string>(PARAM_RootFolder);
+                            newArg.RootFolder = parser.Get<string>(resultingArgs, CmdParam.RootFolder);
                         }
-                        if (resultingArgs.Exist(PARAM_SplitFolderByAssembly))
+                        if (parser.Exist(resultingArgs, CmdParam.SplitFolderByAssembly))
                         {
-                            newArg.SplitFolderByAssembly = resultingArgs.Get<bool>(PARAM_SplitFolderByAssembly);
-                        }
-
-                        if (resultingArgs.Exist(PARAM_SourceFolder))
-                        {
-                            newArg.SourceFolder = resultingArgs.Get<string>(PARAM_SourceFolder);
+                            newArg.SplitFolderByAssembly = parser.Get<bool>(resultingArgs, CmdParam.SplitFolderByAssembly);
                         }
 
-                        if (resultingArgs.Exist(PARAM_JDKFolder))
+                        if (parser.Exist(resultingArgs, CmdParam.SourceFolder))
                         {
-                            newArg.JDKFolder = resultingArgs.Get<string>(PARAM_JDKFolder);
-                        }
-                        if (resultingArgs.Exist(PARAM_JDKTarget))
-                        {
-                            newArg.JDKTarget = resultingArgs.Get<JDKVersion>(PARAM_JDKTarget);
-                        }
-                        if (resultingArgs.Exist(PARAM_AssembliesToUse))
-                        {
-                            newArg.AssembliesToUse = new List<string>(resultingArgs.Get<IEnumerable<string>>(PARAM_AssembliesToUse)).ToArray();
-                        }
-                        if (resultingArgs.Exist(PARAM_JDKToolExtraOptions))
-                        {
-                            newArg.JDKToolExtraOptions = resultingArgs.Get<string>(PARAM_JDKToolExtraOptions);
+                            newArg.SourceFolder = parser.Get<string>(resultingArgs, CmdParam.SourceFolder);
                         }
 
-                        if (resultingArgs.Exist(PARAM_JarDestinationFolder))
+                        if (parser.Exist(resultingArgs, CmdParam.JDKFolder))
                         {
-                            newArg.JarDestinationFolder = resultingArgs.Get<string>(PARAM_JarDestinationFolder);
+                            newArg.JDKFolder = parser.Get<string>(resultingArgs, CmdParam.JDKFolder);
+                        }
+                        if (parser.Exist(resultingArgs, CmdParam.JDKTarget))
+                        {
+                            newArg.JDKTarget = parser.Get<JDKVersion>(resultingArgs, CmdParam.JDKTarget);
+                        }
+                        if (parser.Exist(resultingArgs, CmdParam.AssembliesToUse))
+                        {
+                            newArg.AssembliesToUse = new List<string>(parser.Get<IEnumerable<string>>(resultingArgs, CmdParam.AssembliesToUse)).ToArray();
+                        }
+                        if (parser.Exist(resultingArgs, CmdParam.JDKToolExtraOptions))
+                        {
+                            newArg.JDKToolExtraOptions = parser.Get<string>(resultingArgs, CmdParam.JDKToolExtraOptions);
                         }
 
-                        if (resultingArgs.Exist(PARAM_WithJARSource))
+                        if (parser.Exist(resultingArgs, CmdParam.POMArtifactId))
                         {
-                            newArg.WithJARSource = resultingArgs.Get<bool>(PARAM_WithJARSource);
+                            newArg.POMArtifactId = parser.Get<string>(resultingArgs, CmdParam.POMArtifactId);
+                        }
+                        if (parser.Exist(resultingArgs, CmdParam.POMName))
+                        {
+                            newArg.POMName = parser.Get<string>(resultingArgs, CmdParam.POMName);
+                        }
+                        if (parser.Exist(resultingArgs, CmdParam.POMFileName))
+                        {
+                            newArg.POMFileName = parser.Get<string>(resultingArgs, CmdParam.POMFileName);
+                        }
+                        if (parser.Exist(resultingArgs, CmdParam.POMDescription))
+                        {
+                            newArg.POMDescription = parser.Get<string>(resultingArgs, CmdParam.POMDescription);
                         }
 
-                        if (resultingArgs.Exist(PARAM_EmbeddingJCOBridge))
+                        if (parser.Exist(resultingArgs, CmdParam.POMVersion))
                         {
-                            newArg.EmbeddingJCOBridge = resultingArgs.Get<bool>(PARAM_EmbeddingJCOBridge);
+                            newArg.POMVersion = parser.Get<string>(resultingArgs, CmdParam.POMVersion);
                         }
-
-                        newArg.GeneratePOM = JARBuilderEventArgs.POMType.Snapshot;
+                        else newArg.POMVersion = (string)parser.Get(resultingArgs, CmdParam.POMVersion).Default;
+                        if (parser.Exist(resultingArgs, CmdParam.POMType))
+                        {
+                            newArg.POMType = parser.Get<POMType>(resultingArgs, CmdParam.POMType);
+                        }
+                        else newArg.POMType = (POMType)parser.Get(resultingArgs, CmdParam.POMType).Default;
+                        if (parser.Exist(resultingArgs, CmdParam.POMVersionType))
+                        {
+                            newArg.POMVersionType = parser.Get<POMVersionType>(resultingArgs, CmdParam.POMVersionType);
+                        }
+                        else newArg.POMVersionType = (POMVersionType)parser.Get(resultingArgs, CmdParam.POMVersionType).Default;
                     }
                     break;
-                case JobTypes.CreateReleasePOM:
+                case JobTypes.ExtractPOM:
                     {
-                        JARBuilderEventArgs newArg;
-                        if (arg == null) newArg = new JARBuilderEventArgs();
-                        else newArg = arg as JARBuilderEventArgs;
+                        POMBuilderEventArgs newArg;
+                        if (arg == null) newArg = new POMBuilderEventArgs();
+                        else newArg = arg as POMBuilderEventArgs;
 
-                        if (resultingArgs.Exist(PARAM_LogLevel))
+                        if (parser.Exist(resultingArgs, CmdParam.LogLevel))
                         {
-                            newArg.LogLevel = resultingArgs.Get<LogLevel>(PARAM_LogLevel);
-                        }
-                        if (resultingArgs.Exist(PARAM_RootFolder))
-                        {
-                            newArg.RootFolder = resultingArgs.Get<string>(PARAM_RootFolder);
-                        }
-                        if (resultingArgs.Exist(PARAM_SplitFolderByAssembly))
-                        {
-                            newArg.SplitFolderByAssembly = resultingArgs.Get<bool>(PARAM_SplitFolderByAssembly);
+                            newArg.LogLevel = parser.Get<LogLevel>(resultingArgs, CmdParam.LogLevel);
                         }
 
-                        if (resultingArgs.Exist(PARAM_SourceFolder))
-                        {
-                            newArg.SourceFolder = resultingArgs.Get<string>(PARAM_SourceFolder);
-                        }
-
-                        if (resultingArgs.Exist(PARAM_JDKFolder))
-                        {
-                            newArg.JDKFolder = resultingArgs.Get<string>(PARAM_JDKFolder);
-                        }
-                        if (resultingArgs.Exist(PARAM_JDKTarget))
-                        {
-                            newArg.JDKTarget = resultingArgs.Get<JDKVersion>(PARAM_JDKTarget);
-                        }
-                        if (resultingArgs.Exist(PARAM_AssembliesToUse))
-                        {
-                            newArg.AssembliesToUse = new List<string>(resultingArgs.Get<IEnumerable<string>>(PARAM_AssembliesToUse)).ToArray();
-                        }
-                        if (resultingArgs.Exist(PARAM_JDKToolExtraOptions))
-                        {
-                            newArg.JDKToolExtraOptions = resultingArgs.Get<string>(PARAM_JDKToolExtraOptions);
-                        }
-
-                        if (resultingArgs.Exist(PARAM_JarDestinationFolder))
-                        {
-                            newArg.JarDestinationFolder = resultingArgs.Get<string>(PARAM_JarDestinationFolder);
-                        }
-
-                        if (resultingArgs.Exist(PARAM_WithJARSource))
-                        {
-                            newArg.WithJARSource = resultingArgs.Get<bool>(PARAM_WithJARSource);
-                        }
-
-                        if (resultingArgs.Exist(PARAM_EmbeddingJCOBridge))
-                        {
-                            newArg.EmbeddingJCOBridge = resultingArgs.Get<bool>(PARAM_EmbeddingJCOBridge);
-                        }
-
-                        newArg.GeneratePOM = JARBuilderEventArgs.POMType.Release;
+                        if (!parser.Exist(resultingArgs, CmdParam.POMFileName)) throw new ArgumentException(string.Format("ExtractPOM needs {0} argument", CmdParam.POMFileName));
+                        newArg.POMFileName = parser.Get<string>(resultingArgs, CmdParam.POMFileName);
                     }
                     break;
                 case JobTypes.NoType:
@@ -908,10 +949,10 @@ namespace MASES.JCOReflectorEngine
                     return Import<DocsBuilderEventArgs>(file);
                 case JobTypes.CreateJars:
                     return Import<JARBuilderEventArgs>(file);
-                case JobTypes.CreateSnapshotPOM:
-                    return Import<JARBuilderEventArgs>(file);
-                case JobTypes.CreateReleasePOM:
-                    return Import<JARBuilderEventArgs>(file);
+                case JobTypes.CreatePOM:
+                    return Import<POMBuilderEventArgs>(file);
+                case JobTypes.ExtractPOM:
+                    return Import<POMBuilderEventArgs>(file);
                 case JobTypes.NoType:
                 default:
                     throw new InvalidOperationException("No valid Job type.");
@@ -924,7 +965,7 @@ namespace MASES.JCOReflectorEngine
         /// <typeparam name="T">The argument type inherited from <see cref="CommonEventArgs"/></typeparam>
         /// <param name="arg">The argument to use</param>
         /// <param name="waitEnd">True to wait the end of operation</param>
-        public static void RunJob<T>(T arg, bool waitEnd = false)
+        public static async void RunJob<T>(T arg, bool waitEnd = false)
             where T : CommonEventArgs
         {
             Task task = null;
@@ -1030,11 +1071,10 @@ namespace MASES.JCOReflectorEngine
                         task = Task.Factory.StartNew(JavaBuilder.CreateJars, newArg);
                     }
                     break;
-                case JobTypes.CreateSnapshotPOM:
-                case JobTypes.CreateReleasePOM:
-                    if (arg is JARBuilderEventArgs)
+                case JobTypes.CreatePOM:
+                    if (arg is POMBuilderEventArgs)
                     {
-                        JARBuilderEventArgs newArg = arg as JARBuilderEventArgs;
+                        POMBuilderEventArgs newArg = arg as POMBuilderEventArgs;
 
                         if (string.IsNullOrEmpty(newArg.JDKFolder)) throw new ArgumentException("Missing JDKFolder");
 
@@ -1045,22 +1085,29 @@ namespace MASES.JCOReflectorEngine
                             newArg.JDKTarget = JDKVersion.Version8;
                         }
 
-                        if (string.IsNullOrEmpty(newArg.JarDestinationFolder))
-                        {
-                            newArg.JarDestinationFolder = JarDestinationFolder;
-                        }
-
                         if (newArg.AssembliesToUse == null || newArg.AssembliesToUse.Length == 0)
                         {
                             newArg.AssembliesToUse = newArg.CreateList();
                         }
 
-                        if (newArg.GeneratePOM == JARBuilderEventArgs.POMType.NoPOM)
-                        {
-                            newArg.GeneratePOM = (newArg.JobType == JobTypes.CreateSnapshotPOM) ? JARBuilderEventArgs.POMType.Snapshot : JARBuilderEventArgs.POMType.Release;
-                        }
+                        if (newArg.POMVersionType == POMVersionType.NoPOM) throw new InvalidOperationException("No POMVersion selected.");
 
                         task = Task.Factory.StartNew(JavaBuilder.CreatePOM, newArg);
+                    }
+                    break;
+                case JobTypes.ExtractPOM:
+                    if (arg is POMBuilderEventArgs)
+                    {
+                        POMBuilderEventArgs newArg = arg as POMBuilderEventArgs;
+                        if (string.IsNullOrEmpty(newArg.POMFileName))
+                        {
+                            throw new InvalidOperationException("POMFileName is not valid.");
+                        }
+                        if (string.IsNullOrEmpty(Path.GetFileName(newArg.POMFileName)))
+                        {
+                            throw new InvalidOperationException(string.Format("POMFileName {0} is not a valid file.", newArg.POMFileName));
+                        }
+                        task = Task.Factory.StartNew(JavaBuilder.ExtractPOM, newArg);
                     }
                     break;
                 case JobTypes.NoType:
@@ -1070,7 +1117,7 @@ namespace MASES.JCOReflectorEngine
 
             if (waitEnd)
             {
-                task.Wait();
+                await task;
             }
         }
         /// <summary>
@@ -1348,13 +1395,6 @@ namespace MASES.JCOReflectorEngine
     [Serializable]
     public class JARBuilderEventArgs : JavaBuilderEventArgs
     {
-        public enum POMType
-        {
-            NoPOM,
-            Release,
-            Snapshot
-        }
-
         public JARBuilderEventArgs()
         {
         }
@@ -1367,7 +1407,42 @@ namespace MASES.JCOReflectorEngine
         public string JarDestinationFolder { get; set; }
         public bool WithJARSource { get; set; }
         public bool EmbeddingJCOBridge { get; set; }
-        public POMType GeneratePOM { get; set; }
+    }
+
+    #endregion
+
+    #region POMBuilderEventArgs Class
+
+    [Serializable]
+    public class POMBuilderEventArgs : JavaBuilderEventArgs
+    {
+        public POMBuilderEventArgs()
+        {
+            POMVersion = Const.ReflectorVersion;
+            POMType = POMType.Frameworks;
+            POMVersionType = POMVersionType.Snapshot;
+        }
+
+        public POMBuilderEventArgs(LogLevel logLevel)
+            : base(logLevel)
+        {
+            POMType = POMType.Frameworks;
+            POMVersionType = POMVersionType.Snapshot;
+        }
+
+        public string POMArtifactId { get; set; }
+
+        public string POMName { get; set; }
+
+        public string POMFileName { get; set; }
+
+        public string POMDescription { get; set; }
+
+        public string POMVersion { get; set; }
+
+        public POMType POMType { get; set; }
+
+        public POMVersionType POMVersionType { get; set; }
     }
 
     #endregion

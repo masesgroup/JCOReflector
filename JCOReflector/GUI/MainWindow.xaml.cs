@@ -299,17 +299,13 @@ namespace MASES.JCOReflectorGUI
 
         private void btnGenerateSnapshotPOM_Click(object sender, RoutedEventArgs e)
         {
-            JARBuilderEventArgs args = new JARBuilderEventArgs((LogLevel)cbLogLevel.SelectedValue)
+            POMBuilderEventArgs args = new POMBuilderEventArgs((LogLevel)cbLogLevel.SelectedValue)
             {
-                JobType = JobTypes.CreateSnapshotPOM,
+                JobType = JobTypes.CreatePOM,
                 JDKFolder = tbJDKFolder.Text,
                 JDKToolExtraOptions = tbJDKToolExtraOptions.Text,
                 SourceFolder = SourceDestinationFolder,
-                JarDestinationFolder = JarDestinationFolder,
                 SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value,
-                WithJARSource = cbWithSource.IsChecked.Value,
-                EmbeddingJCOBridge = cbWithEmbedding.IsChecked.Value,
-                GeneratePOM = JARBuilderEventArgs.POMType.Snapshot,
                 AssembliesToUse = AssemblyDataCollection.CreateList(AssemblyDataCollection)
             };
 
@@ -326,17 +322,14 @@ namespace MASES.JCOReflectorGUI
 
         private void btnGeneratePOM_Click(object sender, RoutedEventArgs e)
         {
-            JARBuilderEventArgs args = new JARBuilderEventArgs((LogLevel)cbLogLevel.SelectedValue)
+            POMBuilderEventArgs args = new POMBuilderEventArgs((LogLevel)cbLogLevel.SelectedValue)
             {
-                JobType = JobTypes.CreateReleasePOM,
+                JobType = JobTypes.CreatePOM,
                 JDKFolder = tbJDKFolder.Text,
                 JDKToolExtraOptions = tbJDKToolExtraOptions.Text,
                 SourceFolder = SourceDestinationFolder,
-                JarDestinationFolder = JarDestinationFolder,
                 SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value,
-                WithJARSource = cbWithSource.IsChecked.Value,
-                EmbeddingJCOBridge = cbWithEmbedding.IsChecked.Value,
-                GeneratePOM = JARBuilderEventArgs.POMType.Release,
+                POMVersionType = POMVersionType.Release,
                 AssembliesToUse = AssemblyDataCollection.CreateList(AssemblyDataCollection)
             };
 

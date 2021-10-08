@@ -965,7 +965,7 @@ namespace MASES.JCOReflectorEngine
         /// <typeparam name="T">The argument type inherited from <see cref="CommonEventArgs"/></typeparam>
         /// <param name="arg">The argument to use</param>
         /// <param name="waitEnd">True to wait the end of operation</param>
-        public static async void RunJob<T>(T arg, bool waitEnd = false)
+        public static void RunJob<T>(T arg, bool waitEnd = false)
             where T : CommonEventArgs
         {
             Task task = null;
@@ -1117,7 +1117,7 @@ namespace MASES.JCOReflectorEngine
 
             if (waitEnd)
             {
-                await task;
+                task.Wait();
             }
         }
         /// <summary>

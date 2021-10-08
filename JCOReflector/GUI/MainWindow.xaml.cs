@@ -399,12 +399,22 @@ namespace MASES.JCOReflectorGUI
             Microsoft.Win32.SaveFileDialog sfd = new Microsoft.Win32.SaveFileDialog();
             sfd.InitialDirectory = JobManager.RootFolder;
             sfd.FileName = typeof(T).Name;
-
-            bool result = sfd.ShowDialog().Value;
-
-            if (result)
+            bool result = false;
+            try
             {
-                JobManager.Export(type, sfd.FileName);
+                var res = sfd.ShowDialog();
+
+                result = res.HasValue ? res.Value : false;
+
+                if (result)
+                {
+                    JobManager.Export(type, sfd.FileName);
+                }
+
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message, string.Empty, MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
             return result;

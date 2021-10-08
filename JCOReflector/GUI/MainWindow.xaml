@@ -113,6 +113,7 @@
                             </GroupBox>
                             <Button Name="btnGenerateSnapshotPOM" Content="Generate Snapshot POM..." MinWidth="100" Click="btnGenerateSnapshotPOM_Click" VerticalAlignment="Stretch" VerticalContentAlignment="Center" ToolTip="Generate snapshot POM for Maven"/>
                             <Button Name="btnGeneratePOM" Content="Generate POM..." MinWidth="100" Click="btnGeneratePOM_Click" VerticalAlignment="Stretch" VerticalContentAlignment="Center" ToolTip="Generate POM for Maven"/>
+                            <Button Name="btnExtractPOM" Content="Extract POM..." MinWidth="100" Click="btnExtractPOM_Click" VerticalAlignment="Stretch" VerticalContentAlignment="Center" ToolTip="Extract a POM for Maven"/>
                         </DockPanel>
                         <DockPanel DockPanel.Dock="Top" MinHeight="30">
                             <Label Content="Commit version for docs" VerticalContentAlignment="Center" VerticalAlignment="Stretch"/>
@@ -126,6 +127,10 @@
                         <DockPanel DockPanel.Dock="Top" MinHeight="30">
                             <Label Content="JDK Tool Extra Options" VerticalContentAlignment="Center" VerticalAlignment="Stretch"/>
                             <TextBox Name="tbJDKToolExtraOptions" VerticalContentAlignment="Center" VerticalAlignment="Stretch" />
+                        </DockPanel>
+                        <DockPanel DockPanel.Dock="Top" MinHeight="30">
+                            <Label Content="External POM Filename" VerticalContentAlignment="Center" VerticalAlignment="Stretch"/>
+                            <TextBox Name="tbPOMFileName" VerticalContentAlignment="Center" VerticalAlignment="Stretch" />
                         </DockPanel>
                         <local:AssemblyCollectionControl DockPanel.Dock="Bottom" AssemblyDataCollection="{Binding ElementName=mainWindow, Path=AssemblyDataCollection, Mode=TwoWay}"/>
                     </DockPanel>

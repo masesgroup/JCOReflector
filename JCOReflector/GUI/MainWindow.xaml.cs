@@ -344,6 +344,25 @@ namespace MASES.JCOReflectorGUI
             JobManager.RunJob(args);
         }
 
+        private void btnExtractPOM_Click(object sender, RoutedEventArgs e)
+        {
+            POMBuilderEventArgs args = new POMBuilderEventArgs((LogLevel)cbLogLevel.SelectedValue)
+            {
+                JobType = JobTypes.ExtractPOM,
+                POMFileName = tbPOMFileName.Text
+            };
+
+            if (cbExportToFile.IsChecked.Value)
+            {
+                export(args);
+                if (MessageBox.Show("Continue operation?", string.Empty, MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.Yes) == MessageBoxResult.No) return;
+            }
+
+            commandPanel.IsEnabled = false;
+            btnStop.Visibility = Visibility.Visible;
+            JobManager.RunJob(args);
+        }
+
         public delegate void appendToConsoleDelegate(TextBox myControl, string format, object[] args);
 
         void appendToConsole(string format, params object[] args)

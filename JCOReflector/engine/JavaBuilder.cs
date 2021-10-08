@@ -207,7 +207,7 @@ namespace MASES.JCOReflectorEngine
             try
             {
                 POMBuilderEventArgs args = o as POMBuilderEventArgs;
- 
+
                 if (!Path.IsPathRooted(args.SourceFolder))
                 {
                     args.SourceFolder = Path.Combine(args.RootFolder, args.SourceFolder);
@@ -239,13 +239,14 @@ namespace MASES.JCOReflectorEngine
                     jcoPomTemplate = Const.Templates.GetTemplate((args.POMType == POMType.Frameworks) ? Const.Templates.POMJCOReflector : Const.Templates.POMExtension);
                 }
 
-                var jcoPom = jcoPomTemplate.Replace(Const.POM.POM_VERSION_PLACEHOLDER, args.POMVersion + ((args.POMVersionType == POMVersionType.Snapshot) ? Const.POM.POM_VERSION_SNAPSHOT : string.Empty))
+                var jcoPom = jcoPomTemplate.Replace(Const.POM.POM_VERSION_PLACEHOLDER, args.POMVersion + ((args.POMStagingType == POMStagingType.Snapshot) ? Const.POM.POM_VERSION_SNAPSHOT : string.Empty))
                                            .Replace(Const.POM.POM_RUNTIME_PLACEHOLDER, Const.Framework.RuntimeFolder)
                                            .Replace(Const.POM.POM_JDK_TARGET, ((int)args.JDKTarget).ToString())
                                            .Replace(Const.POM.POM_SOURCEDIRECTORIES_PLACEHOLDER, sourceFlders)
                                            .Replace(Const.POM.POM_ARTIFACTID_PLACEHOLDER, args.POMArtifactId)
                                            .Replace(Const.POM.POM_NAME_PLACEHOLDER, args.POMName)
-                                           .Replace(Const.POM.POM_DESCRIPTION_PLACEHOLDER, args.POMDescription);
+                                           .Replace(Const.POM.POM_DESCRIPTION_PLACEHOLDER, args.POMDescription)
+                                           .Replace(Const.POM.POM_ADDITIONAL_DEPENDENCIES_PLACEHOLDER, args.POMAdditionalDependencies ?? string.Empty);
 
                 var fileName = Path.Combine(srcRootFolder, string.Format("{0}.xml", Const.Framework.RuntimeFolder));
                 File.WriteAllText(fileName, jcoPom);
@@ -423,7 +424,7 @@ namespace MASES.JCOReflectorEngine
                 var jcoBridgeEmbeddedFile = Path.Combine(searchPath, Const.FileNameAndDirectory.OrgSubDirectory,
                                                                      Const.FileNameAndDirectory.MasesSubDirectory,
                                                                      Const.FileNameAndDirectory.JCOBridgeSubDirectory,
-                                                                     Const.FileNameAndDirectory.NetreflectionSubDirectory, 
+                                                                     Const.FileNameAndDirectory.NetreflectionSubDirectory,
                                                                      Const.FileNameAndDirectory.JCOBridgeEmbeddedFile);
 
                 var localArchive = Const.FileNameAndDirectory.CreateJCOBridgeZip(rootFolder);

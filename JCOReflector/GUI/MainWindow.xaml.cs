@@ -43,7 +43,7 @@ namespace MASES.JCOReflectorGUI
 
         // Using a DependencyProperty as the backing store for RepositoryRoot.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty SourceDestinationFolderProperty =
-            DependencyProperty.Register("SourceDestinationFolder", typeof(string), typeof(MainWindow), new PropertyMetadata(JobManager.SourceDestinationFolder));
+            DependencyProperty.Register("SourceDestinationFolder", typeof(string), typeof(MainWindow), new PropertyMetadata(JobManager.SourceFolder));
 
         public string JarDestinationFolder
         {
@@ -156,7 +156,7 @@ namespace MASES.JCOReflectorGUI
             {
                 JobType = JobTypes.Reflect,
                 AssemblyNames = string.IsNullOrEmpty(tbAssemblyNames.Text) ? new List<string>().ToArray() : tbAssemblyNames.Text.Replace("\r", "").Split('\n'),
-                SourceDestinationFolder = SourceDestinationFolder,
+                SourceFolder = SourceDestinationFolder,
                 SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value,
                 ForceRebuild = cbForceRebuildIfFolderExist.IsChecked.Value,
                 UseParallelBuild = cbUseParallel.IsChecked.Value,
@@ -329,7 +329,7 @@ namespace MASES.JCOReflectorGUI
                 JDKToolExtraOptions = tbJDKToolExtraOptions.Text,
                 SourceFolder = SourceDestinationFolder,
                 SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value,
-                POMVersionType = POMVersionType.Release,
+                POMStagingType = POMStagingType.Release,
                 AssembliesToUse = AssemblyDataCollection.CreateList(AssemblyDataCollection)
             };
 

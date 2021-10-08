@@ -84,10 +84,10 @@ namespace MASES.JCOReflectorEngine
     }
     #endregion
 
-    #region POMVersionType enum
-    public enum POMVersionType
+    #region POMStagingType enum
+    public enum POMStagingType
     {
-        NoPOM,
+        NoType,
         Release,
         Snapshot
     }
@@ -126,13 +126,13 @@ namespace MASES.JCOReflectorEngine
             {
                 rootFolder = value;
                 JarDestinationFolder = Const.FileNameAndDirectory.GetRelativePath(StartupLocation, RootFolder);
-                SourceDestinationFolder = Path.Combine(rootFolder, Const.FileNameAndDirectory.RootDirectory);
+                SourceFolder = Path.Combine(rootFolder, Const.FileNameAndDirectory.RootDirectory);
             }
         }
         /// <summary>
         /// Destination of produced sources
         /// </summary>
-        public static string SourceDestinationFolder { get; set; }
+        public static string SourceFolder { get; set; }
         /// <summary>
         /// Destination of JARs relative to <see cref="RootFolder"/>
         /// </summary>
@@ -164,14 +164,15 @@ namespace MASES.JCOReflectorEngine
             public const string JobType = "JobType";
             public const string LogLevel = "LogLevel";
             public const string RootFolder = "RootFolder";
+            public const string SourceFolder = "SourceFolder";
             public const string SplitFolderByAssembly = "SplitFolderByAssembly";
+            public const string AvoidJCOReflectorFolder = "AvoidJCOReflectorFolder";
 
             // FolderBuilderEventArgs
-            public const string SourceFolder = "SourceFolder";
+
 
             // ReflectorEventArgs
             public const string Assembly = "Assembly";
-            public const string SourceDestinationFolder = "SourceDestinationFolder";
             public const string ForceRebuild = "ForceRebuild";
             public const string UseParallelBuild = "UseParallelBuild";
             public const string AvoidHierarchyTraversing = "AvoidHierarchyTraversing";
@@ -207,7 +208,7 @@ namespace MASES.JCOReflectorEngine
             public const string POMDescription = "POMDescription";
             public const string POMVersion = "POMVersion";
             public const string POMType = "POMType";
-            public const string POMVersionType = "POMVersionType";
+            public const string POMStagingType = "POMStagingType";
         }
 
         static Parser parser = Parser.CreateInstance(new Settings()
@@ -250,11 +251,17 @@ namespace MASES.JCOReflectorEngine
                     Default = true,
                     Help = "True to split the reflected class into folder with the name equals to the name of assembly containing the class.",
                 },
+                new ArgumentMetadata<bool>()
+                {
+                    Name = CmdParam.AvoidJCOReflectorFolder,
+                    Default = false,
+                    Help = "True to avoid insertion of JCOReflector folder in the auto-generated folder list (used from any JobType expect Reflect and ExtractPOM).",
+                },
                 new ArgumentMetadata<string>()
                 {
                     Name = CmdParam.SourceFolder,
-                    Default = SourceDestinationFolder,
-                    Help = "The foldercontaining the reflected classes (used from any JobType expect JobType.Reflect).",
+                    Default = SourceFolder,
+                    Help = "The foldercontaining the reflected classes (used from any JobType).",
                 },
                 // reflector arguments
                 new ArgumentMetadata<string>()
@@ -263,12 +270,6 @@ namespace MASES.JCOReflectorEngine
                     IsMultiValue = true,
                     Default = ArgumentMetadata<string>.DefaultMultiValue,
                     Help = "The list of assembly name to parse (used from JobType.Reflect).",
-                },
-                new ArgumentMetadata<string>()
-                {
-                    Name = CmdParam.SourceDestinationFolder,
-                    Default = SourceDestinationFolder,
-                    Help = "The destination folder where store the reflected classes (used from JobType.Reflect).",
                 },
 
                 new ArgumentMetadata<bool>()
@@ -433,10 +434,10 @@ namespace MASES.JCOReflectorEngine
                     Default = POMType.Frameworks,
                     Help = "Select if the POM must be created for internal purpose (i.e. JCOReflector) or for external assemblies (used from JobType.CreatePOM).",
                 },
-                new ArgumentMetadata<POMVersionType>()
+                new ArgumentMetadata<POMStagingType>()
                 {
-                    Name = CmdParam.POMVersionType,
-                    Default = POMVersionType.Snapshot,
+                    Name = CmdParam.POMStagingType,
+                    Default = POMStagingType.Snapshot,
                     Help = "Select if the POM must have a SNAPSHOT version or not (used from JobType.CreatePOM).",
                 },
             };
@@ -488,6 +489,11 @@ namespace MASES.JCOReflectorEngine
                         {
                             newArg.SplitFolderByAssembly = parser.Get<bool>(resultingArgs, CmdParam.SplitFolderByAssembly);
                         }
+                        if (resultingArgs.Exist(CmdParam.AvoidJCOReflectorFolder))
+                        {
+                            newArg.AvoidJCOReflectorFolder = resultingArgs.Get<bool>(CmdParam.AvoidJCOReflectorFolder);
+                        }
+
                         List<string> assemblies = new List<string>();
                         if (newArg.AssemblyNames != null) assemblies.AddRange(newArg.AssemblyNames);
                         if (parser.Exist(resultingArgs, CmdParam.Assembly))
@@ -495,9 +501,9 @@ namespace MASES.JCOReflectorEngine
                             assemblies.AddRange(parser.Get<IEnumerable<string>>(resultingArgs, CmdParam.Assembly));
                         }
                         newArg.AssemblyNames = assemblies.ToArray();
-                        if (parser.Exist(resultingArgs, CmdParam.SourceDestinationFolder))
+                        if (parser.Exist(resultingArgs, CmdParam.SourceFolder))
                         {
-                            newArg.SourceDestinationFolder = parser.Get<string>(resultingArgs, CmdParam.SourceDestinationFolder);
+                            newArg.SourceFolder = parser.Get<string>(resultingArgs, CmdParam.SourceFolder);
                         }
                         if (parser.Exist(resultingArgs, CmdParam.ForceRebuild))
                         {
@@ -571,6 +577,10 @@ namespace MASES.JCOReflectorEngine
                         {
                             newArg.SplitFolderByAssembly = parser.Get<bool>(resultingArgs, CmdParam.SplitFolderByAssembly);
                         }
+                        if (resultingArgs.Exist(CmdParam.AvoidJCOReflectorFolder))
+                        {
+                            newArg.AvoidJCOReflectorFolder = resultingArgs.Get<bool>(CmdParam.AvoidJCOReflectorFolder);
+                        }
 
                         if (parser.Exist(resultingArgs, CmdParam.SourceFolder))
                         {
@@ -613,7 +623,10 @@ namespace MASES.JCOReflectorEngine
                         {
                             newArg.SplitFolderByAssembly = parser.Get<bool>(resultingArgs, CmdParam.SplitFolderByAssembly);
                         }
-
+                        if (resultingArgs.Exist(CmdParam.AvoidJCOReflectorFolder))
+                        {
+                            newArg.AvoidJCOReflectorFolder = resultingArgs.Get<bool>(CmdParam.AvoidJCOReflectorFolder);
+                        }
 
                         if (parser.Exist(resultingArgs, CmdParam.SourceFolder))
                         {
@@ -660,6 +673,10 @@ namespace MASES.JCOReflectorEngine
                         if (parser.Exist(resultingArgs, CmdParam.SplitFolderByAssembly))
                         {
                             newArg.SplitFolderByAssembly = parser.Get<bool>(resultingArgs, CmdParam.SplitFolderByAssembly);
+                        }
+                        if (resultingArgs.Exist(CmdParam.AvoidJCOReflectorFolder))
+                        {
+                            newArg.AvoidJCOReflectorFolder = resultingArgs.Get<bool>(CmdParam.AvoidJCOReflectorFolder);
                         }
 
                         if (parser.Exist(resultingArgs, CmdParam.SourceFolder))
@@ -718,6 +735,10 @@ namespace MASES.JCOReflectorEngine
                         {
                             newArg.SplitFolderByAssembly = parser.Get<bool>(resultingArgs, CmdParam.SplitFolderByAssembly);
                         }
+                        if (resultingArgs.Exist(CmdParam.AvoidJCOReflectorFolder))
+                        {
+                            newArg.AvoidJCOReflectorFolder = resultingArgs.Get<bool>(CmdParam.AvoidJCOReflectorFolder);
+                        }
 
                         if (parser.Exist(resultingArgs, CmdParam.SourceFolder))
                         {
@@ -768,11 +789,11 @@ namespace MASES.JCOReflectorEngine
                             newArg.POMType = parser.Get<POMType>(resultingArgs, CmdParam.POMType);
                         }
                         else newArg.POMType = (POMType)parser.Get(resultingArgs, CmdParam.POMType).Default;
-                        if (parser.Exist(resultingArgs, CmdParam.POMVersionType))
+                        if (parser.Exist(resultingArgs, CmdParam.POMStagingType))
                         {
-                            newArg.POMVersionType = parser.Get<POMVersionType>(resultingArgs, CmdParam.POMVersionType);
+                            newArg.POMStagingType = parser.Get<POMStagingType>(resultingArgs, CmdParam.POMStagingType);
                         }
-                        else newArg.POMVersionType = (POMVersionType)parser.Get(resultingArgs, CmdParam.POMVersionType).Default;
+                        else newArg.POMStagingType = (POMStagingType)parser.Get(resultingArgs, CmdParam.POMStagingType).Default;
                     }
                     break;
                 case JobTypes.ExtractPOM:
@@ -784,6 +805,10 @@ namespace MASES.JCOReflectorEngine
                         if (parser.Exist(resultingArgs, CmdParam.LogLevel))
                         {
                             newArg.LogLevel = parser.Get<LogLevel>(resultingArgs, CmdParam.LogLevel);
+                        }
+                        if (resultingArgs.Exist(CmdParam.AvoidJCOReflectorFolder))
+                        {
+                            newArg.AvoidJCOReflectorFolder = resultingArgs.Get<bool>(CmdParam.AvoidJCOReflectorFolder);
                         }
 
                         if (!parser.Exist(resultingArgs, CmdParam.POMFileName)) throw new ArgumentException(string.Format("ExtractPOM needs {0} argument", CmdParam.POMFileName));
@@ -840,8 +865,9 @@ namespace MASES.JCOReflectorEngine
         /// Gets the list of generated folder from reflection
         /// </summary>
         /// <param name="args">A <see cref="FolderBuilderEventArgs"/> with instructions</param>
+        /// <param name="avoidJCOReflector">Avoid to add JCOReflector in the list of returned <see cref="AssemblyData"/></param>
         /// <returns>An <see cref="AssemblyDataCollection"/> with the data</returns>
-        public static AssemblyDataCollection CreateFolderList(FolderBuilderEventArgs args)
+        public static AssemblyDataCollection CreateFolderList(FolderBuilderEventArgs args, bool avoidJCOReflector = false)
         {
             bool failed = false;
 
@@ -856,15 +882,19 @@ namespace MASES.JCOReflectorEngine
             {
                 var folders = CreateFolderList(originFolder);
                 AssemblyDataCollection coll = new AssemblyDataCollection();
-                AssemblyData data = new AssemblyData();
-                data.IsSelected = true;
-                data.Framework = Const.Framework.All;
-                data.AssemblyFullName = Const.FileNameAndDirectory.CommonDirectory;
-                data.FolderName = Const.FileNameAndDirectory.CommonDirectory;
-                coll.Add(data);
+                if (!avoidJCOReflector)
+                {
+                    coll.Add(new AssemblyData
+                    {
+                        IsSelected = true,
+                        Framework = Const.Framework.All,
+                        AssemblyFullName = Const.FileNameAndDirectory.CommonDirectory,
+                        FolderName = Const.FileNameAndDirectory.CommonDirectory
+                    });
+                }
                 foreach (var folder in folders)
                 {
-                    data = new AssemblyData();
+                    AssemblyData data = new AssemblyData();
                     if (folder.Equals(Const.FileNameAndDirectory.CommonDirectory)) continue;
 
                     var relFolder = Const.Framework.RuntimeFolder;
@@ -923,9 +953,9 @@ namespace MASES.JCOReflectorEngine
             return dirs;
         }
 
-        public static string[] CreateList(this FolderBuilderEventArgs args)
+        public static string[] CreateList(this FolderBuilderEventArgs args, bool avoidJCOReflector)
         {
-            var result = CreateFolderList(args);
+            var result = CreateFolderList(args, avoidJCOReflector);
 
             foreach (var item in result)
             {
@@ -996,8 +1026,8 @@ namespace MASES.JCOReflectorEngine
                     if (arg is ReflectorEventArgs)
                     {
                         ReflectorEventArgs newArg = arg as ReflectorEventArgs;
-                        if (string.IsNullOrEmpty(newArg.SourceDestinationFolder)) newArg.SourceDestinationFolder = SourceDestinationFolder;
-                        newArg.SourceDestinationFolder = Path.GetFullPath(newArg.SourceDestinationFolder);
+                        if (string.IsNullOrEmpty(newArg.SourceFolder)) newArg.SourceFolder = SourceFolder;
+                        newArg.SourceFolder = Path.GetFullPath(newArg.SourceFolder);
                         task = Task.Factory.StartNew(Reflector.ExecuteAction, newArg);
                     }
                     break;
@@ -1008,7 +1038,7 @@ namespace MASES.JCOReflectorEngine
 
                         if (string.IsNullOrEmpty(newArg.JDKFolder)) throw new ArgumentException("Missing JDKFolder");
 
-                        if (string.IsNullOrEmpty(newArg.SourceFolder)) newArg.SourceFolder = SourceDestinationFolder;
+                        if (string.IsNullOrEmpty(newArg.SourceFolder)) newArg.SourceFolder = SourceFolder;
                         newArg.SourceFolder = Path.GetFullPath(newArg.SourceFolder);
                         if (newArg.JDKTarget == JDKVersion.NotSet)
                         {
@@ -1017,7 +1047,7 @@ namespace MASES.JCOReflectorEngine
 
                         if (newArg.AssembliesToUse == null || newArg.AssembliesToUse.Length == 0)
                         {
-                            newArg.AssembliesToUse = newArg.CreateList();
+                            newArg.AssembliesToUse = newArg.CreateList(newArg.AvoidJCOReflectorFolder);
                         }
                         task = Task.Factory.StartNew(JavaBuilder.CompileClasses, newArg);
                     }
@@ -1034,7 +1064,7 @@ namespace MASES.JCOReflectorEngine
                             throw new ArgumentException("Commit version must be set when docs are generated.");
                         }
 
-                        if (string.IsNullOrEmpty(newArg.SourceFolder)) newArg.SourceFolder = SourceDestinationFolder;
+                        if (string.IsNullOrEmpty(newArg.SourceFolder)) newArg.SourceFolder = SourceFolder;
                         newArg.SourceFolder = Path.GetFullPath(newArg.SourceFolder);
                         if (newArg.JDKTarget == JDKVersion.NotSet)
                         {
@@ -1043,7 +1073,7 @@ namespace MASES.JCOReflectorEngine
 
                         if (newArg.AssembliesToUse == null || newArg.AssembliesToUse.Length == 0)
                         {
-                            newArg.AssembliesToUse = newArg.CreateList();
+                            newArg.AssembliesToUse = newArg.CreateList(newArg.AvoidJCOReflectorFolder);
                         }
                         task = Task.Factory.StartNew(JavaBuilder.GenerateDocs, newArg);
                     }
@@ -1055,7 +1085,7 @@ namespace MASES.JCOReflectorEngine
 
                         if (string.IsNullOrEmpty(newArg.JDKFolder)) throw new ArgumentException("Missing JDKFolder");
 
-                        if (string.IsNullOrEmpty(newArg.SourceFolder)) newArg.SourceFolder = SourceDestinationFolder;
+                        if (string.IsNullOrEmpty(newArg.SourceFolder)) newArg.SourceFolder = SourceFolder;
                         newArg.SourceFolder = Path.GetFullPath(newArg.SourceFolder);
                         if (newArg.JDKTarget == JDKVersion.NotSet)
                         {
@@ -1069,7 +1099,7 @@ namespace MASES.JCOReflectorEngine
 
                         if (newArg.AssembliesToUse == null || newArg.AssembliesToUse.Length == 0)
                         {
-                            newArg.AssembliesToUse = newArg.CreateList();
+                            newArg.AssembliesToUse = newArg.CreateList(newArg.AvoidJCOReflectorFolder);
                         }
 
                         task = Task.Factory.StartNew(JavaBuilder.CreateJars, newArg);
@@ -1080,7 +1110,7 @@ namespace MASES.JCOReflectorEngine
                     {
                         POMBuilderEventArgs newArg = arg as POMBuilderEventArgs;
 
-                        if (string.IsNullOrEmpty(newArg.SourceFolder)) newArg.SourceFolder = SourceDestinationFolder;
+                        if (string.IsNullOrEmpty(newArg.SourceFolder)) newArg.SourceFolder = SourceFolder;
                         newArg.SourceFolder = Path.GetFullPath(newArg.SourceFolder);
                         if (newArg.JDKTarget == JDKVersion.NotSet)
                         {
@@ -1089,10 +1119,10 @@ namespace MASES.JCOReflectorEngine
 
                         if (newArg.AssembliesToUse == null || newArg.AssembliesToUse.Length == 0)
                         {
-                            newArg.AssembliesToUse = newArg.CreateList();
+                            newArg.AssembliesToUse = newArg.CreateList(newArg.AvoidJCOReflectorFolder);
                         }
 
-                        if (newArg.POMVersionType == POMVersionType.NoPOM) throw new InvalidOperationException("No POMVersion selected.");
+                        if (newArg.POMStagingType == POMStagingType.NoType) throw new InvalidOperationException("No POMStagingType selected.");
 
                         task = Task.Factory.StartNew(JavaBuilder.CreatePOM, newArg);
                     }
@@ -1331,7 +1361,9 @@ namespace MASES.JCOReflectorEngine
         public JobTypes JobType { get; set; }
         public LogLevel LogLevel { get; set; }
         public string RootFolder { get; set; }
+        public string SourceFolder { get; set; }
         public bool SplitFolderByAssembly { get; set; }
+        public bool AvoidJCOReflectorFolder { get; set; }
     }
 
     #endregion
@@ -1348,8 +1380,6 @@ namespace MASES.JCOReflectorEngine
             : base(logLevel)
         {
         }
-
-        public string SourceFolder { get; set; }
     }
     #endregion
 
@@ -1422,14 +1452,14 @@ namespace MASES.JCOReflectorEngine
         {
             POMVersion = Const.ReflectorVersion;
             POMType = POMType.Frameworks;
-            POMVersionType = POMVersionType.Snapshot;
+            POMStagingType = POMStagingType.Snapshot;
         }
 
         public POMBuilderEventArgs(LogLevel logLevel)
             : base(logLevel)
         {
             POMType = POMType.Frameworks;
-            POMVersionType = POMVersionType.Snapshot;
+            POMStagingType = POMStagingType.Snapshot;
         }
 
         public string POMArtifactId { get; set; }
@@ -1442,9 +1472,11 @@ namespace MASES.JCOReflectorEngine
 
         public string POMVersion { get; set; }
 
+        public string POMAdditionalDependencies { get; set; }
+
         public POMType POMType { get; set; }
 
-        public POMVersionType POMVersionType { get; set; }
+        public POMStagingType POMStagingType { get; set; }
     }
 
     #endregion
@@ -1465,7 +1497,6 @@ namespace MASES.JCOReflectorEngine
         }
 
         public string[] AssemblyNames { get; set; }
-        public string SourceDestinationFolder { get; set; }
         public bool ForceRebuild { get; set; }
         public bool UseParallelBuild { get; set; }
         public bool AvoidHierarchyTraversing { get; set; }

@@ -673,6 +673,7 @@ namespace MASES.JCOReflectorEngine
             public const string POM_ARTIFACTID_PLACEHOLDER = "POM_ARTIFACTID_PLACEHOLDER";
             public const string POM_NAME_PLACEHOLDER = "POM_NAME_PLACEHOLDER";
             public const string POM_DESCRIPTION_PLACEHOLDER = "POM_DESCRIPTION_PLACEHOLDER";
+            public const string POM_ADDITIONAL_DEPENDENCIES_PLACEHOLDER = "POM_ADDITIONAL_DEPENDENCIES_PLACEHOLDER";
             public const string POM_VERSION_PLACEHOLDER = "POM_VERSION_PLACEHOLDER";
             public const string POM_VERSION_SNAPSHOT = "-SNAPSHOT";
             public const string POM_RUNTIME_PLACEHOLDER = "POM_RUNTIME_PLACEHOLDER";

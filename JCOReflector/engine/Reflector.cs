@@ -343,13 +343,13 @@ namespace MASES.JCOReflectorEngine
             location = Path.GetDirectoryName(location);
             Environment.CurrentDirectory = location;
 
-            if (!Path.IsPathRooted(args.SourceDestinationFolder))
+            if (!Path.IsPathRooted(args.SourceFolder))
             {
-                args.SourceDestinationFolder = Path.Combine(args.RootFolder, args.SourceDestinationFolder);
+                args.SourceFolder = Path.Combine(args.RootFolder, args.SourceFolder);
             }
 
-            SourceDestinationFolder = Path.GetFullPath(Path.Combine(args.SourceDestinationFolder, Const.FileNameAndDirectory.SourceDirectory));
-            CsvDestinationFolder = Path.GetFullPath(Path.Combine(args.SourceDestinationFolder, Const.FileNameAndDirectory.StatsDirectory));
+            SourceDestinationFolder = Path.GetFullPath(Path.Combine(args.SourceFolder, Const.FileNameAndDirectory.SourceDirectory));
+            CsvDestinationFolder = Path.GetFullPath(Path.Combine(args.SourceFolder, Const.FileNameAndDirectory.StatsDirectory));
             SplitByAssembly = args.SplitFolderByAssembly;
             ForceRebuild = args.ForceRebuild;
             UseParallelBuild = args.UseParallelBuild;
@@ -390,7 +390,7 @@ namespace MASES.JCOReflectorEngine
                 if (!args.AvoidReportAndStatistics)
                 {
                     reportStr = GetReport(args.AssemblyNames);
-                    var reportfile = Path.Combine(args.SourceDestinationFolder, Const.Report.REPORT_FILE_TO_WRITE);
+                    var reportfile = Path.Combine(args.SourceFolder, Const.Report.REPORT_FILE_TO_WRITE);
                     if (File.Exists(reportfile))
                     {
                         var beginTag = string.Format(Const.Report.REPORT_BEGIN_PLACEHOLDER, Const.Framework.RuntimeFolder);

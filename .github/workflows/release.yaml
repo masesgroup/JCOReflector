@@ -43,10 +43,10 @@ jobs:
           Copy-Item .github\workflows\JCOReflectorCLI5.0.runtimeconfig.json -Destination bin\net5.0\JCOReflectorCLI.runtimeconfig.json -Force
 
       - name: Build net5.0 Maven POM files
-        run: dotnet bin\net5.0\JCOReflectorCLI.dll -JobType CreatePOM -POMVersionType Release -JobFile .github\workflows\createjars_core5.0_win19.job
+        run: dotnet bin\net5.0\JCOReflectorCLI.dll -JobType CreatePOM -POMStagingType Release -JobFile .github\workflows\createpom_core5.0_win19.job
           
       - name: Build net461 Maven POM files
-        run: .\bin\net461\JCOReflectorCLI -JobType CreatePOM -POMVersionType Release -JobFile .github\workflows\createjars_framework_win19.job
+        run: .\bin\net461\JCOReflectorCLI -JobType CreatePOM -POMStagingType Release -JobFile .github\workflows\createpom_framework_win19.job
 
       - name: Set up Apache Maven Central
         uses: actions/setup-java@v1

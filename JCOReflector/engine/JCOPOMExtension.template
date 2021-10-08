@@ -160,5 +160,6 @@ POM_SOURCEDIRECTORIES_PLACEHOLDER
       <groupId>com.masesgroup</groupId>
       <artifactId>jcoreflector_POM_RUNTIME_PLACEHOLDER</artifactId>
     </dependency>
+POM_ADDITIONAL_DEPENDENCIES_PLACEHOLDER
   </dependencies>
 </project>

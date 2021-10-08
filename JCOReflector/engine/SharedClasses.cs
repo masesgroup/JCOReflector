@@ -421,7 +421,7 @@ namespace MASES.JCOReflectorEngine
                 {
                     Name = CmdParam.POMVersion,
                     Default = Const.ReflectorVersion,
-                    Help = "The version to use when the PM is created (used from JobType.CreatePOM).",
+                    Help = "The version to use when the POM is created (used from JobType.CreatePOM).",
                 },
                 new ArgumentMetadata<POMType>()
                 {
@@ -463,11 +463,6 @@ namespace MASES.JCOReflectorEngine
                 arg = ConvertFile(jobType, parser.Get<string>(resultingArgs, CmdParam.File));
             }
 
-            if (arg != null)
-            {
-                arg.JobType = jobType;
-            }
-
             if (jobType == JobTypes.NoType) throw new InvalidOperationException("No JobType neighter in file nor in command line");
 
             switch (jobType)
@@ -475,7 +470,7 @@ namespace MASES.JCOReflectorEngine
                 case JobTypes.Reflect:
                     {
                         ReflectorEventArgs newArg;
-                        if (arg == null) newArg = new ReflectorEventArgs();
+                        if (arg == null) arg = newArg = new ReflectorEventArgs();
                         else newArg = arg as ReflectorEventArgs;
                         if (parser.Exist(resultingArgs, CmdParam.LogLevel))
                         {
@@ -557,7 +552,7 @@ namespace MASES.JCOReflectorEngine
                 case JobTypes.Build:
                     {
                         JavaBuilderEventArgs newArg;
-                        if (arg == null) newArg = new JavaBuilderEventArgs();
+                        if (arg == null) arg = newArg = new JavaBuilderEventArgs();
                         else newArg = arg as JavaBuilderEventArgs;
 
                         if (parser.Exist(resultingArgs, CmdParam.LogLevel))
@@ -599,7 +594,7 @@ namespace MASES.JCOReflectorEngine
                 case JobTypes.BuildDocs:
                     {
                         DocsBuilderEventArgs newArg;
-                        if (arg == null) newArg = new DocsBuilderEventArgs();
+                        if (arg == null) arg = newArg = new DocsBuilderEventArgs();
                         else newArg = arg as DocsBuilderEventArgs;
 
                         if (parser.Exist(resultingArgs, CmdParam.LogLevel))
@@ -647,7 +642,7 @@ namespace MASES.JCOReflectorEngine
                 case JobTypes.CreateJars:
                     {
                         JARBuilderEventArgs newArg;
-                        if (arg == null) newArg = new JARBuilderEventArgs();
+                        if (arg == null) arg = newArg = new JARBuilderEventArgs();
                         else newArg = arg as JARBuilderEventArgs;
 
                         if (parser.Exist(resultingArgs, CmdParam.LogLevel))
@@ -704,7 +699,7 @@ namespace MASES.JCOReflectorEngine
                 case JobTypes.CreatePOM:
                     {
                         POMBuilderEventArgs newArg;
-                        if (arg == null) newArg = new POMBuilderEventArgs();
+                        if (arg == null) arg = newArg = new POMBuilderEventArgs();
                         else newArg = arg as POMBuilderEventArgs;
 
                         if (parser.Exist(resultingArgs, CmdParam.LogLevel))
@@ -779,7 +774,7 @@ namespace MASES.JCOReflectorEngine
                 case JobTypes.ExtractPOM:
                     {
                         POMBuilderEventArgs newArg;
-                        if (arg == null) newArg = new POMBuilderEventArgs();
+                        if (arg == null) arg = newArg = new POMBuilderEventArgs();
                         else newArg = arg as POMBuilderEventArgs;
 
                         if (parser.Exist(resultingArgs, CmdParam.LogLevel))
@@ -793,6 +788,11 @@ namespace MASES.JCOReflectorEngine
                     break;
                 case JobTypes.NoType:
                 default: throw new InvalidOperationException("No valid Job type.");
+            }
+
+            if (arg != null)
+            {
+                arg.JobType = jobType;
             }
 
             return arg;

@@ -36,8 +36,8 @@
     </developer>
   </developers>
   <properties>
-    <maven.compiler.source>8</maven.compiler.source>
-    <maven.compiler.target>8</maven.compiler.target>
+    <maven.compiler.source>POM_JDK_TARGET</maven.compiler.source>
+    <maven.compiler.target>POM_JDK_TARGET</maven.compiler.target>
   </properties>
   <distributionManagement>
     <snapshotRepository>

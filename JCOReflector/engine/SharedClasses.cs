@@ -55,7 +55,11 @@ namespace MASES.JCOReflectorEngine
         Version11,
         Version12,
         Version13,
-        Version14
+        Version14,
+        Version15,
+        Version16,
+        Version17,
+        Version18,
     }
     #endregion
 
@@ -1075,8 +1079,6 @@ namespace MASES.JCOReflectorEngine
                     if (arg is POMBuilderEventArgs)
                     {
                         POMBuilderEventArgs newArg = arg as POMBuilderEventArgs;
-
-                        if (string.IsNullOrEmpty(newArg.JDKFolder)) throw new ArgumentException("Missing JDKFolder");
 
                         if (string.IsNullOrEmpty(newArg.SourceFolder)) newArg.SourceFolder = SourceDestinationFolder;
                         newArg.SourceFolder = Path.GetFullPath(newArg.SourceFolder);

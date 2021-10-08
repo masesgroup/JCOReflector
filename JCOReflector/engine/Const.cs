@@ -676,6 +676,7 @@ namespace MASES.JCOReflectorEngine
             public const string POM_VERSION_PLACEHOLDER = "POM_VERSION_PLACEHOLDER";
             public const string POM_VERSION_SNAPSHOT = "-SNAPSHOT";
             public const string POM_RUNTIME_PLACEHOLDER = "POM_RUNTIME_PLACEHOLDER";
+            public const string POM_JDK_TARGET = "POM_JDK_TARGET";
             public const string POM_JCOREFLECTOR_SOURCE_PLACEHOLDER = "                <source>./{0}</source>";
         }
 

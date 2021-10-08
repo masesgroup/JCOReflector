@@ -213,11 +213,6 @@ namespace MASES.JCOReflectorEngine
                     args.SourceFolder = Path.Combine(args.RootFolder, args.SourceFolder);
                 }
 
-                if (!Path.IsPathRooted(args.JDKFolder))
-                {
-                    args.JDKFolder = Path.Combine(args.RootFolder, args.JDKFolder);
-                }
-
                 if (args.POMType == POMType.Frameworks)
                 {
                     Const.FileNameAndDirectory.CreateJCOBridgeZip(args.RootFolder);
@@ -246,6 +241,7 @@ namespace MASES.JCOReflectorEngine
 
                 var jcoPom = jcoPomTemplate.Replace(Const.POM.POM_VERSION_PLACEHOLDER, args.POMVersion + ((args.POMVersionType == POMVersionType.Snapshot) ? Const.POM.POM_VERSION_SNAPSHOT : string.Empty))
                                            .Replace(Const.POM.POM_RUNTIME_PLACEHOLDER, Const.Framework.RuntimeFolder)
+                                           .Replace(Const.POM.POM_JDK_TARGET, ((int)args.JDKTarget).ToString())
                                            .Replace(Const.POM.POM_SOURCEDIRECTORIES_PLACEHOLDER, sourceFlders)
                                            .Replace(Const.POM.POM_ARTIFACTID_PLACEHOLDER, args.POMArtifactId)
                                            .Replace(Const.POM.POM_NAME_PLACEHOLDER, args.POMName)

@@ -96,7 +96,7 @@ Parsed assemblies are:
 > * Microsoft.Workflow.Compiler, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 > * System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 
-> * Analyzed Types = 43278
+> * Analyzed Types = 43240
 >   * Enumerators = 26
 >   * Delegates = 557
 >   * Classes
@@ -104,21 +104,21 @@ Parsed assemblies are:
 >     * Methods = 35787
 >     * Properties = 31911
 >     * Events = 2391
-> * Implemented Types = 12311
+> * Implemented Types = 12310
 >   * Enumerators = 25
 >   * Delegates = 557
 >   * Enums = 1660
 >     * Flags = 314
 >   * Interfaces = 847
->   * Classes = 9222
+>   * Classes = 9221
 >     * Exceptions = 396
 >     * Constructors = 10192
 >     * Methods = 30468
 >       * Duplicated Methods = 999
 >     * Properties = 29770
 >     * Events = 2185
-> * Discarded Types = 30966
->   * Non Public = 30512
+> * Discarded Types = 30929
+>   * Non Public = 30475
 >   * Generic = 354
 >   * Internals = 50
 
@@ -308,11 +308,11 @@ Parsed assemblies are:
 > * System.Threading.Thread, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Threading.Tasks, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+> * DirectWriteForwarder, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 > * mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 > * System.Security.Principal.Windows, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Security.AccessControl, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Threading.AccessControl, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
-> * DirectWriteForwarder, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 > * Microsoft.CSharp, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * Microsoft.VisualBasic.Core, Version=10.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
@@ -394,7 +394,7 @@ Parsed assemblies are:
 > * System.Security.Claims, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Net.Security, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 
-> * Analyzed Types = 24353
+> * Analyzed Types = 24360
 >   * Enumerators = 24
 >   * Delegates = 367
 >   * Classes
@@ -415,8 +415,8 @@ Parsed assemblies are:
 >       * Duplicated Methods = 726
 >     * Properties = 16607
 >     * Events = 1620
-> * Discarded Types = 17378
->   * Non Public = 17078
+> * Discarded Types = 17385
+>   * Non Public = 17085
 >   * Generic = 232
 >   * Internals = 33
 
@@ -432,11 +432,11 @@ Parsed assemblies are:
 * PresentationFramework, Version=5.0.0.0, PublicKeyToken=31bf3856ad364e35
 
 > Analyzed Assemblies:
-> * PresentationFramework, Version=5.0.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+> * PresentationFramework, Version=5.0.10.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 > * System.Runtime, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Private.CoreLib, Version=5.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
 > * System.Private.Uri, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
-> * System.Xaml, Version=5.0.9.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+> * System.Xaml, Version=5.0.10.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 > * System.Runtime.InteropServices, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Collections.Specialized, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.ComponentModel.Primitives, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
@@ -523,7 +523,7 @@ Parsed assemblies are:
 > * System.Data.Common, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Xml.XmlSerializer, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Transactions.Local, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
-> * WindowsBase, Version=5.0.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+> * WindowsBase, Version=5.0.10.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 > * Accessibility, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 > * System.Runtime, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Runtime.InteropServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
@@ -595,7 +595,7 @@ Parsed assemblies are:
 > * System.IO.FileSystem, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Threading.Thread, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Threading.Tasks, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
-> * PresentationCore, Version=5.0.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+> * PresentationCore, Version=5.0.10.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 > * mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 > * System.Private.CoreLib, Version=0.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
 > * Microsoft.Win32.Registry, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
@@ -627,15 +627,15 @@ Parsed assemblies are:
 > * System.Security.Cryptography.X509Certificates, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Threading, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Threading.Tasks.Parallel, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
-> * DirectWriteForwarder, Version=5.0.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+> * DirectWriteForwarder, Version=5.0.10.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 > * System.Runtime.Extensions, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * Microsoft.CSharp, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * Microsoft.VisualBasic.Core, Version=10.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * Microsoft.VisualBasic, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
-> * Microsoft.VisualBasic.Forms, Version=5.0.9.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
-> * System.Windows.Forms, Version=5.0.9.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+> * Microsoft.VisualBasic.Forms, Version=5.0.10.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+> * System.Windows.Forms, Version=5.0.10.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 > * System.Drawing.Common, Version=5.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
-> * System.Windows.Forms.Primitives, Version=5.0.9.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+> * System.Windows.Forms.Primitives, Version=5.0.10.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 > * System.Text.Encoding.CodePages, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * netstandard, Version=2.1.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
 > * System.AppContext, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
@@ -702,7 +702,7 @@ Parsed assemblies are:
 > * System.Net.WebSockets, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Text.RegularExpressions, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
-> * System.Windows.Forms.Design, Version=5.0.9.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+> * System.Windows.Forms.Design, Version=5.0.10.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 > * System.CodeDom, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
 > * System.Dynamic.Runtime, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Globalization.Calendars, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
@@ -763,12 +763,12 @@ Parsed assemblies are:
 > * System.Xml.XmlSerializer, Version=0.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Xml.XmlDocument, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
-> * UIAutomationTypes, Version=5.0.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
-> * UIAutomationProvider, Version=5.0.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
-> * System.Windows.Input.Manipulations, Version=5.0.9.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-> * ReachFramework, Version=5.0.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
-> * System.Printing, Version=5.0.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
-> * PresentationUI, Version=5.0.9.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+> * UIAutomationTypes, Version=5.0.10.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+> * UIAutomationProvider, Version=5.0.10.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+> * System.Windows.Input.Manipulations, Version=5.0.10.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+> * ReachFramework, Version=5.0.10.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+> * System.Printing, Version=5.0.10.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+> * PresentationUI, Version=5.0.10.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 > * System.DirectoryServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Net.Primitives, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Net.NameResolution, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
@@ -776,7 +776,7 @@ Parsed assemblies are:
 > * System.Security.Claims, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Net.Security, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 
-> * Analyzed Types = 25377
+> * Analyzed Types = 25384
 >   * Enumerators = 24
 >   * Delegates = 363
 >   * Classes
@@ -797,8 +797,8 @@ Parsed assemblies are:
 >       * Duplicated Methods = 758
 >     * Properties = 16860
 >     * Events = 1626
-> * Discarded Types = 18287
->   * Non Public = 17984
+> * Discarded Types = 18294
+>   * Non Public = 17991
 >   * Generic = 238
 >   * Internals = 29
 

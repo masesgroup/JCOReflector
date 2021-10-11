@@ -377,7 +377,7 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
     
     // Properties section
     
-    public boolean getAllowAsyncDuringSyncStages() throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
+    public boolean getAllowAsyncDuringSyncStages() throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -387,7 +387,7 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
         }
     }
 
-    public void setAllowAsyncDuringSyncStages(boolean AllowAsyncDuringSyncStages) throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException {
+    public void setAllowAsyncDuringSyncStages(boolean AllowAsyncDuringSyncStages) throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -558,7 +558,7 @@ public class HttpContext extends NetObject implements system.IServiceProvider {
         }
     }
 
-    public void setUser(IPrincipal User) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.configuration.ConfigurationException, system.InvalidOperationException, system.IndexOutOfRangeException {
+    public void setUser(IPrincipal User) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

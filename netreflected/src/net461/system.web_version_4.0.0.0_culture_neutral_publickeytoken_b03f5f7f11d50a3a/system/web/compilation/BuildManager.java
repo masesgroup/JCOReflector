@@ -169,7 +169,7 @@ public class BuildManager extends NetObject  {
         }
     }
 
-    public static ICollection GetVirtualPathDependencies(java.lang.String virtualPath) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.web.HttpException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.NotSupportedException, system.NullReferenceException, system.NotImplementedException, system.FormatException {
+    public static ICollection GetVirtualPathDependencies(java.lang.String virtualPath) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.web.HttpException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.configuration.ConfigurationException, system.configuration.provider.ProviderException, system.NotSupportedException, system.NullReferenceException, system.NotImplementedException, system.configuration.ConfigurationErrorsException, system.ObjectDisposedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -289,7 +289,7 @@ public class BuildManager extends NetObject  {
         }
     }
 
-    public static BuildDependencySet GetCachedBuildDependencySet(HttpContext context, java.lang.String virtualPath, boolean ensureIsUpToDate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.OutOfMemoryException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.web.HttpParseException, system.web.HttpCompileException {
+    public static BuildDependencySet GetCachedBuildDependencySet(HttpContext context, java.lang.String virtualPath, boolean ensureIsUpToDate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.OutOfMemoryException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.web.HttpParseException, system.web.HttpCompileException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -300,7 +300,7 @@ public class BuildManager extends NetObject  {
         }
     }
 
-    public static IWebObjectFactory GetObjectFactory(java.lang.String virtualPath, boolean throwIfNotFound) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.OutOfMemoryException, system.web.HttpCompileException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.web.HttpParseException {
+    public static IWebObjectFactory GetObjectFactory(java.lang.String virtualPath, boolean throwIfNotFound) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.web.HttpException, system.OutOfMemoryException, system.web.HttpCompileException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.web.HttpParseException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {

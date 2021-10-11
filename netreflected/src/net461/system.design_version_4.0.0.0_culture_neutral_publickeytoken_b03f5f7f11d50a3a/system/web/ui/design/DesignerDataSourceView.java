@@ -149,7 +149,7 @@ public class DesignerDataSourceView extends NetObject  {
     
     // Methods section
     
-    public IEnumerable GetDesignTimeData(int minimumRows, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> isSampleData) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NullReferenceException, system.data.DataException, system.collections.generic.KeyNotFoundException, system.InvalidTimeZoneException, system.OverflowException, system.MulticastNotSupportedException {
+    public IEnumerable GetDesignTimeData(int minimumRows, JCORefOut<java.util.concurrent.atomic.AtomicBoolean> isSampleData) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.data.DataException, system.collections.generic.KeyNotFoundException, system.InvalidTimeZoneException, system.OverflowException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

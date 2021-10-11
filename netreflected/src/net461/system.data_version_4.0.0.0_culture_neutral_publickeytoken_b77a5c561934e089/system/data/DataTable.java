@@ -333,7 +333,7 @@ public class DataTable extends MarshalByValueComponent  {
         }
     }
 
-    public DataTable Clone() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.data.DataException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public DataTable Clone() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.data.DataException, system.collections.generic.KeyNotFoundException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -388,7 +388,7 @@ public class DataTable extends MarshalByValueComponent  {
         }
     }
 
-    public XmlReadMode ReadXml(Stream stream) throws Throwable, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.data.sqltypes.SqlNullValueException, system.xml.XmlException, system.OverflowException, system.data.DataException, system.NullReferenceException, system.FormatException, system.xml.schema.XmlSchemaInferenceException, system.xml.schema.XmlSchemaException, system.RankException {
+    public XmlReadMode ReadXml(Stream stream) throws Throwable, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.data.sqltypes.SqlNullValueException, system.xml.XmlException, system.OverflowException, system.data.DataException, system.NullReferenceException, system.FormatException, system.xml.schema.XmlSchemaInferenceException, system.xml.schema.XmlSchemaException, system.RankException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -399,7 +399,7 @@ public class DataTable extends MarshalByValueComponent  {
         }
     }
 
-    public XmlReadMode ReadXml(TextReader reader) throws Throwable, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.data.sqltypes.SqlNullValueException, system.xml.XmlException, system.OverflowException, system.data.DataException, system.NullReferenceException, system.FormatException, system.xml.schema.XmlSchemaInferenceException, system.xml.schema.XmlSchemaException, system.RankException {
+    public XmlReadMode ReadXml(TextReader reader) throws Throwable, system.ArgumentException, system.NotImplementedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentNullException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.data.sqltypes.SqlNullValueException, system.xml.XmlException, system.OverflowException, system.data.DataException, system.NullReferenceException, system.FormatException, system.xml.schema.XmlSchemaInferenceException, system.xml.schema.XmlSchemaException, system.RankException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -421,7 +421,7 @@ public class DataTable extends MarshalByValueComponent  {
         }
     }
 
-    public XmlReadMode ReadXml(XmlReader reader) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.data.sqltypes.SqlNullValueException, system.NotImplementedException, system.InvalidOperationException, system.xml.XmlException, system.OverflowException, system.data.DataException, system.ObjectDisposedException, system.NullReferenceException, system.FormatException, system.IndexOutOfRangeException, system.xml.schema.XmlSchemaInferenceException, system.xml.schema.XmlSchemaException, system.RankException {
+    public XmlReadMode ReadXml(XmlReader reader) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentException, system.NotSupportedException, system.data.sqltypes.SqlNullValueException, system.NotImplementedException, system.InvalidOperationException, system.xml.XmlException, system.OverflowException, system.data.DataException, system.ObjectDisposedException, system.NullReferenceException, system.FormatException, system.IndexOutOfRangeException, system.xml.schema.XmlSchemaInferenceException, system.xml.schema.XmlSchemaException, system.RankException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

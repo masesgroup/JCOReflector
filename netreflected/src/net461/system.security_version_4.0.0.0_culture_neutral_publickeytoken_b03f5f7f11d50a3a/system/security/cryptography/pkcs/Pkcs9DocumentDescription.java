@@ -189,7 +189,7 @@ public class Pkcs9DocumentDescription extends Pkcs9AttributeObject  {
     
     // Properties section
     
-    public java.lang.String getDocumentDescription() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.security.cryptography.CryptographicException, system.ArgumentException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.AccessViolationException {
+    public java.lang.String getDocumentDescription() throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException, system.security.cryptography.CryptographicException, system.ArgumentException, system.security.SecurityException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

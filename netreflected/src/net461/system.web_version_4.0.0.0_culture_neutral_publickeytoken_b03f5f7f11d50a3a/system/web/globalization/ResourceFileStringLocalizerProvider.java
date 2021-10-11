@@ -154,7 +154,7 @@ public class ResourceFileStringLocalizerProvider extends NetObject  {
     
     // Methods section
     
-    public java.lang.String GetLocalizedString(CultureInfo culture, java.lang.String name, NetObject... arguments) throws Throwable, system.ArgumentNullException, system.web.HttpException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentException, system.globalization.CultureNotFoundException, system.FormatException {
+    public java.lang.String GetLocalizedString(CultureInfo culture, java.lang.String name, NetObject... arguments) throws Throwable, system.ArgumentNullException, system.web.HttpException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

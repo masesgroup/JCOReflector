@@ -430,7 +430,7 @@ public class DataGridViewCell extends DataGridViewElement implements AutoCloseab
         }
     }
 
-    public void setReadOnly(boolean ReadOnly) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.InvalidCastException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.componentmodel.Win32Exception {
+    public void setReadOnly(boolean ReadOnly) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.componentmodel.InvalidEnumArgumentException, system.collections.generic.KeyNotFoundException, system.OverflowException, system.InvalidCastException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

@@ -558,7 +558,7 @@ public class SystemParameters extends NetObject  {
         }
     }
 
-    public static double getCaretWidth() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception {
+    public static double getCaretWidth() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {

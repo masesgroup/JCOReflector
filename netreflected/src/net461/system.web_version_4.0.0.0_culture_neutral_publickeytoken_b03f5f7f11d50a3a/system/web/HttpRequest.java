@@ -840,7 +840,7 @@ public class HttpRequest extends NetObject  {
         }
     }
 
-    public HttpCookieCollection getCookies() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.web.HttpException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationException, system.web.HttpRequestValidationException {
+    public HttpCookieCollection getCookies() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.web.HttpException, system.web.HttpRequestValidationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -851,7 +851,7 @@ public class HttpRequest extends NetObject  {
         }
     }
 
-    public HttpFileCollection getFiles() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.IndexOutOfRangeException, system.security.SecurityException, system.FormatException, system.OverflowException, system.web.HttpRequestValidationException, system.NotSupportedException, system.NullReferenceException {
+    public HttpFileCollection getFiles() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.security.SecurityException, system.FormatException, system.OverflowException, system.web.HttpRequestValidationException, system.NullReferenceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

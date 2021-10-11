@@ -240,7 +240,7 @@ public class HtmlInputFile extends HtmlInputControl implements system.web.ui.IPo
         }
     }
 
-    public HttpPostedFile getPostedFile() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.NullReferenceException {
+    public HttpPostedFile getPostedFile() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.web.HttpException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.FormatException, system.OverflowException, system.NotSupportedException, system.NullReferenceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

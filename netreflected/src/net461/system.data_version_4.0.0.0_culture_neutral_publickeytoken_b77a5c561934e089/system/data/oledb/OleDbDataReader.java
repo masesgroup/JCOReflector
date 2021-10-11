@@ -326,7 +326,7 @@ public class OleDbDataReader extends DbDataReader  {
         }
     }
 
-    public DataTable GetSchemaTable() throws Throwable, system.ArgumentNullException, system.OutOfMemoryException, system.AccessViolationException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidCastException, system.FormatException, system.collections.generic.KeyNotFoundException, system.NullReferenceException, system.configuration.ConfigurationErrorsException, system.data.DataException, system.OverflowException {
+    public DataTable GetSchemaTable() throws Throwable, system.ArgumentNullException, system.OutOfMemoryException, system.AccessViolationException, system.IndexOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidCastException, system.FormatException, system.collections.generic.KeyNotFoundException, system.data.DataException, system.OverflowException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

@@ -146,7 +146,7 @@ public class HttpCookie extends NetObject  {
     public HttpCookie() throws Throwable {
     }
 
-    public HttpCookie(java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.IndexOutOfRangeException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.web.HttpRequestValidationException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.configuration.ConfigurationException {
+    public HttpCookie(java.lang.String name) throws Throwable, system.ArgumentException, system.web.HttpException, system.ArgumentNullException, system.web.HttpRequestValidationException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.configuration.ConfigurationException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -156,7 +156,7 @@ public class HttpCookie extends NetObject  {
         }
     }
 
-    public HttpCookie(java.lang.String name, java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.web.HttpException, system.IndexOutOfRangeException, system.configuration.provider.ProviderException, system.configuration.ConfigurationErrorsException, system.web.HttpRequestValidationException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.configuration.ConfigurationException {
+    public HttpCookie(java.lang.String name, java.lang.String value) throws Throwable, system.ArgumentException, system.web.HttpException, system.ArgumentNullException, system.web.HttpRequestValidationException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.configuration.ConfigurationException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -171,7 +171,7 @@ public class HttpCookie extends NetObject  {
     
     // Methods section
     
-    public static boolean TryParse(java.lang.String input, JCORefOut<HttpCookie> result) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.web.HttpException, system.ArgumentNullException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.configuration.ConfigurationException, system.threading.ThreadAbortException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OverflowException, system.InvalidCastException {
+    public static boolean TryParse(java.lang.String input, JCORefOut<HttpCookie> result) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.IndexOutOfRangeException, system.threading.ThreadAbortException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.OverflowException, system.InvalidCastException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -185,7 +185,7 @@ public class HttpCookie extends NetObject  {
     
     // Properties section
     
-    public boolean getHasKeys() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException, system.ArgumentNullException, system.InvalidOperationException, system.threading.ThreadAbortException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public boolean getHasKeys() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentNullException, system.IndexOutOfRangeException, system.InvalidOperationException, system.threading.ThreadAbortException, system.NotSupportedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -255,7 +255,7 @@ public class HttpCookie extends NetObject  {
         }
     }
 
-    public NameValueCollection getValues() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.configuration.ConfigurationException, system.InvalidOperationException, system.IndexOutOfRangeException, system.threading.ThreadAbortException {
+    public NameValueCollection getValues() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.InvalidOperationException, system.threading.ThreadAbortException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -347,7 +347,7 @@ public class HttpCookie extends NetObject  {
         }
     }
 
-    public java.lang.String getValue() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException {
+    public java.lang.String getValue() throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

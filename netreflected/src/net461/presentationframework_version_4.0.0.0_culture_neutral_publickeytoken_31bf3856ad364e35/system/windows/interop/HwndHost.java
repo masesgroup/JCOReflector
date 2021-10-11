@@ -154,7 +154,7 @@ public class HwndHost extends FrameworkElement implements AutoCloseable {
     
     // Methods section
     
-    public void Dispose() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.security.SecurityException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.TimeoutException, system.NotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException {
+    public void Dispose() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.collections.generic.KeyNotFoundException, system.OutOfMemoryException, system.security.SecurityException, system.configuration.ConfigurationErrorsException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.TimeoutException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

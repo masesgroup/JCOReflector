@@ -240,7 +240,7 @@ public class BinaryFormatter extends NetObject  {
         }
     }
 
-    public void Serialize(Stream serializationStream, NetObject graph, Header[] headers) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException, system.NotImplementedException, system.security.SecurityException, system.reflection.TargetException, system.NullReferenceException, system.IndexOutOfRangeException {
+    public void Serialize(Stream serializationStream, NetObject graph, Header[] headers) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException, system.NotSupportedException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NotImplementedException, system.MulticastNotSupportedException, system.security.SecurityException, system.reflection.TargetException, system.NullReferenceException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

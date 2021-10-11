@@ -467,6 +467,7 @@ namespace MASES.JCOReflectorEngine
             if (Parser.Exist(resultingArgs, CmdParam.File))
             {
                 arg = ConvertFile(jobType, Parser.Get<string>(resultingArgs, CmdParam.File));
+                arg.JobType = jobType;
             }
 
             return UpdateFromArgs(arg, resultingArgs);

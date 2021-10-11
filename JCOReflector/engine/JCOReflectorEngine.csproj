@@ -7,7 +7,7 @@
     <Copyright>Copyright ©  MASES s.r.l. 2021</Copyright>
     <Authors>MASES s.r.l.</Authors>
     <Company>MASES s.r.l.</Company>
-    <Version>1.7.0.0</Version>
+    <Version>1.7.1.0</Version>
     <Product>MASES.JCOReflectorEngine</Product>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
     <TargetFrameworks>net461;netcoreapp3.1;net5.0;net5.0-windows</TargetFrameworks>
@@ -37,7 +37,14 @@
   <ItemGroup Condition="'$(TargetFramework)' == 'net461'">
     <Reference Include="System.IO.Compression" />
   </ItemGroup>
-
+  <Target Name="CollectJCOBridge" BeforeTargets="_GetPackageFiles">
+    <ItemGroup>
+      <Content Include="$(OutputPath)\net461\JCOBridge.jar" Pack="true" PackagePath="build\">
+        <PackageCopyToOutput>true</PackageCopyToOutput>
+      </Content>
+      <Content Include="mases.jcoreflectorengine.targets" Pack="true" PackagePath="build\"/>
+    </ItemGroup>
+  </Target>
   <ItemGroup>
     <EmbeddedResource Include="JCObjectReflectorClassEnumerable.template" />
     <EmbeddedResource Include="JCObjectReflectorClassEvent.template" />
@@ -84,6 +91,7 @@
     <EmbeddedResource Include="JCObjectReflectorClassObjectGetPropertyArrayDeprecated.template" />
     <EmbeddedResource Include="JCObjectReflectorClassSetPropertyDeprecated.template" />
 
+    <EmbeddedResource Include="JCOPOMExtension.template" />
     <EmbeddedResource Include="JCOPOMJCOReflector.template" />
 
     <EmbeddedResource Include="JCOReflectorOptions.template" />
@@ -95,9 +103,9 @@
     <PackageReference Include="JCOBridge" Version="2.3.2" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="MASES.CLIParser" Version="1.1.0" />
+    <PackageReference Include="MASES.CLIParser" Version="2.1.2" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All"/>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
   </ItemGroup>
 </Project>

@@ -5,9 +5,9 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.masesgroup</groupId>
-  <artifactId>jcoreflector_POM_RUNTIME_PLACEHOLDER</artifactId>
-  <name>JCOReflector POM_RUNTIME_PLACEHOLDER</name>
-  <description>A set of Java classes to use .NET from any JVM enabled language (Java, Kotlin, Scala and others)</description>
+  <artifactId>POM_ARTIFACTID_PLACEHOLDER</artifactId>
+  <name>POM_NAME_PLACEHOLDER</name>
+  <description>POM_DESCRIPTION_PLACEHOLDER</description>
   <url>https://github.com/masesgroup/JCOReflector</url>
   <version>POM_VERSION_PLACEHOLDER</version>
 
@@ -38,6 +38,7 @@
   <properties>
     <maven.compiler.source>POM_JDK_TARGET</maven.compiler.source>
     <maven.compiler.target>POM_JDK_TARGET</maven.compiler.target>
+    <classpathfile>${basedir}/classpathfile.txt</classpathfile>
   </properties>
   <distributionManagement>
     <snapshotRepository>
@@ -51,19 +52,45 @@
     </repository>
   </distributionManagement>
   <build>
-    <sourceDirectory>./JCOReflector</sourceDirectory>
-    <resources>
-      <resource>
-        <directory>${basedir}/../../bin/POM_RUNTIME_PLACEHOLDER/</directory>
-        <filtering>false</filtering>
-        <includes>
-          <include>JCOBridge.zip</include>
-          <include>JCOBridge.jar</include>
-        </includes>
-        <targetPath>org/mases/jcobridge/netreflection</targetPath>
-      </resource>
-    </resources>
     <plugins>
+      <!-- from https://stackoverflow.com/questions/3410548/maven-add-a-folder-or-jar-file-into-current-classpath -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <version>2.9</version>
+        <executions>
+          <execution>
+            <id>build-classpath</id>
+            <phase>generate-sources</phase>
+            <goals>
+              <goal>build-classpath</goal>
+            </goals>
+            <configuration>
+              <outputFile>${classpathfile}</outputFile>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.gmaven</groupId>
+        <artifactId>gmaven-plugin</artifactId>
+        <version>1.4</version>
+        <executions>
+          <execution>
+            <phase>generate-resources</phase>
+            <goals>
+              <goal>execute</goal>
+            </goals>
+            <configuration>
+              <source>
+                def file = new File(project.properties.classpathfile)
+                project.properties.originalClassPath = file.getText()
+              </source>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <!-- end from stackoverflow -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -71,7 +98,7 @@
         <configuration>
           <compilerArgs>
             <arg>-cp</arg>
-            <arg>${basedir}/../../bin/POM_RUNTIME_PLACEHOLDER/JCOBridge.jar</arg>
+            <arg>${originalClassPath};${basedir}/../../../bin/net461/JCOBridge.jar</arg>
           </compilerArgs>
         </configuration>
       </plugin>
@@ -87,7 +114,7 @@
             </goals>
             <configuration>
               <sources>
-POM_SOURCEDIRECTORIES_PLACEHOLDER
+                POM_SOURCEDIRECTORIES_PLACEHOLDER
               </sources>
             </configuration>
           </execution>
@@ -173,4 +200,12 @@ POM_SOURCEDIRECTORIES_PLACEHOLDER
       </plugin>
     </plugins>
   </build>
+  <dependencies>
+    <dependency>
+      <groupId>com.masesgroup</groupId>
+      <artifactId>jcoreflector_POM_RUNTIME_PLACEHOLDER</artifactId>
+      <version>POM_JCOREFLECTOR_VERSION_PLACEHOLDER</version>
+    </dependency>
+    POM_ADDITIONAL_DEPENDENCIES_PLACEHOLDER
+  </dependencies>
 </project>

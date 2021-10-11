@@ -53,6 +53,7 @@ namespace MASES.JCOReflectorEngine
         static bool SplitByAssembly;
         static bool ForceRebuild;
         static bool UseParallelBuild;
+        static bool AvoidHierarchyTraversing;
         static bool CreateExceptionThrownClause;
         static int ExceptionThrownClauseDepth;
 
@@ -342,16 +343,17 @@ namespace MASES.JCOReflectorEngine
             location = Path.GetDirectoryName(location);
             Environment.CurrentDirectory = location;
 
-            if (!Path.IsPathRooted(args.SourceDestinationFolder))
+            if (!Path.IsPathRooted(args.SourceFolder))
             {
-                args.SourceDestinationFolder = Path.Combine(args.RootFolder, args.SourceDestinationFolder);
+                args.SourceFolder = Path.Combine(args.RootFolder, args.SourceFolder);
             }
 
-            SourceDestinationFolder = Path.GetFullPath(Path.Combine(args.SourceDestinationFolder, Const.FileNameAndDirectory.SourceDirectory));
-            CsvDestinationFolder = Path.GetFullPath(Path.Combine(args.SourceDestinationFolder, Const.FileNameAndDirectory.StatsDirectory));
+            SourceDestinationFolder = Path.GetFullPath(Path.Combine(args.SourceFolder, Const.FileNameAndDirectory.SourceDirectory));
+            CsvDestinationFolder = Path.GetFullPath(Path.Combine(args.SourceFolder, Const.FileNameAndDirectory.StatsDirectory));
             SplitByAssembly = args.SplitFolderByAssembly;
             ForceRebuild = args.ForceRebuild;
             UseParallelBuild = args.UseParallelBuild;
+            AvoidHierarchyTraversing = args.AvoidHierarchyTraversing;
             CreateExceptionThrownClause = args.CreateExceptionThrownClause;
             ExceptionThrownClauseDepth = args.ExceptionThrownClauseDepth;
             EnableAbstract = args.EnableAbstract;
@@ -382,13 +384,13 @@ namespace MASES.JCOReflectorEngine
                         assembly = Assembly.Load(item);
                     }
 
-                    await ExportAssemblyWithReferences(assemblyReferenced, assemblyParsed, new AssemblyName(assembly.FullName), SourceDestinationFolder, SplitByAssembly, ForceRebuild);
+                    await ExportAssemblyWithReferences(assemblyReferenced, assemblyParsed, assembly, new AssemblyName(assembly.FullName), SourceDestinationFolder, SplitByAssembly, ForceRebuild);
                 }
 
                 if (!args.AvoidReportAndStatistics)
                 {
                     reportStr = GetReport(args.AssemblyNames);
-                    var reportfile = Path.Combine(args.SourceDestinationFolder, Const.Report.REPORT_FILE_TO_WRITE);
+                    var reportfile = Path.Combine(args.SourceFolder, Const.Report.REPORT_FILE_TO_WRITE);
                     if (File.Exists(reportfile))
                     {
                         var beginTag = string.Format(Const.Report.REPORT_BEGIN_PLACEHOLDER, Const.Framework.RuntimeFolder);
@@ -437,15 +439,16 @@ namespace MASES.JCOReflectorEngine
             }
         }
 
-        public static async Task ExportAssemblyWithReferences(IList<string> assemblyReferenced, IList<string> assemblyParsed, AssemblyName assemblyName, string rootFolder, bool splitByAssembly, bool forceRebuild)
+        public static async Task ExportAssemblyWithReferences(IList<string> assemblyReferenced, IList<string> assemblyParsed, Assembly loadedAssembly, AssemblyName assemblyName, string rootFolder, bool splitByAssembly, bool forceRebuild)
         {
             if (assemblyReferenced.Contains(assemblyName.FullName)) return;
-            var assembly = ExportAssembly(assemblyReferenced, assemblyParsed, assemblyName, rootFolder, splitByAssembly, forceRebuild);
+            var assembly = ExportAssembly(assemblyReferenced, assemblyParsed, loadedAssembly, assemblyName, rootFolder, splitByAssembly, forceRebuild);
             assemblyReferenced.Add(assemblyName.FullName);
             if (assembly == null) return;
+            if (AvoidHierarchyTraversing) return;
             foreach (var item in assembly.GetReferencedAssemblies())
             {
-                await ExportAssemblyWithReferences(assemblyReferenced, assemblyParsed, item, rootFolder, splitByAssembly, forceRebuild);
+                await ExportAssemblyWithReferences(assemblyReferenced, assemblyParsed, null, item, rootFolder, splitByAssembly, forceRebuild);
             }
         }
 
@@ -466,7 +469,7 @@ namespace MASES.JCOReflectorEngine
             return false;
         }
 
-        public static Assembly ExportAssembly(IList<string> assemblyReferenced, IList<string> assemblyParsed, AssemblyName assemblyName, string rootFolder, bool splitByAssembly, bool forceRebuild)
+        public static Assembly ExportAssembly(IList<string> assemblyReferenced, IList<string> assemblyParsed, Assembly loadedAssembly, AssemblyName assemblyName, string rootFolder, bool splitByAssembly, bool forceRebuild)
         {
             string destFolder = assemblyDestinationFolder(rootFolder, assemblyName, splitByAssembly);
 
@@ -489,19 +492,21 @@ namespace MASES.JCOReflectorEngine
                 JobManager.AppendToConsole(LogLevel.Info, "Duplicated assembly {0}", assemblyName);
             }
 
-            Assembly assembly = null;
-            JobManager.AppendToConsole(LogLevel.Info, "Loading assembly {0}", assemblyName);
-            try
+            Assembly assembly = loadedAssembly;
+            if (assembly == null)
             {
-                assembly = Assembly.Load(assemblyName);
-                JobManager.AppendToConsole(LogLevel.Info, "Loaded assembly {0}", assembly.FullName);
+                JobManager.AppendToConsole(LogLevel.Info, "Loading assembly {0}", assemblyName);
+                try
+                {
+                    assembly = Assembly.Load(assemblyName);
+                    JobManager.AppendToConsole(LogLevel.Info, "Loaded assembly {0}", assembly.FullName);
+                }
+                catch (Exception ex)
+                {
+                    JobManager.AppendToConsole(LogLevel.Error, "Skipping assembly {0}. Error is: {1}", assemblyName, ex.Message);
+                    return null;
+                }
             }
-            catch (Exception ex)
-            {
-                JobManager.AppendToConsole(LogLevel.Error, "Skipping assembly {0}. Error is: {1}", assemblyName, ex.Message);
-                return null;
-            }
-
             Interlocked.Increment(ref loadedAssemblies);
 
 #if ENABLE_REFERENCE_BUILDER

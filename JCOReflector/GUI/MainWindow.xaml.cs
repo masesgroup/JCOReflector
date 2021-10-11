@@ -43,7 +43,7 @@ namespace MASES.JCOReflectorGUI
 
         // Using a DependencyProperty as the backing store for RepositoryRoot.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty SourceDestinationFolderProperty =
-            DependencyProperty.Register("SourceDestinationFolder", typeof(string), typeof(MainWindow), new PropertyMetadata(JobManager.SourceDestinationFolder));
+            DependencyProperty.Register("SourceDestinationFolder", typeof(string), typeof(MainWindow), new PropertyMetadata(JobManager.SourceFolder));
 
         public string JarDestinationFolder
         {
@@ -156,7 +156,7 @@ namespace MASES.JCOReflectorGUI
             {
                 JobType = JobTypes.Reflect,
                 AssemblyNames = string.IsNullOrEmpty(tbAssemblyNames.Text) ? new List<string>().ToArray() : tbAssemblyNames.Text.Replace("\r", "").Split('\n'),
-                SourceDestinationFolder = SourceDestinationFolder,
+                SourceFolder = SourceDestinationFolder,
                 SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value,
                 ForceRebuild = cbForceRebuildIfFolderExist.IsChecked.Value,
                 UseParallelBuild = cbUseParallel.IsChecked.Value,
@@ -299,17 +299,13 @@ namespace MASES.JCOReflectorGUI
 
         private void btnGenerateSnapshotPOM_Click(object sender, RoutedEventArgs e)
         {
-            JARBuilderEventArgs args = new JARBuilderEventArgs((LogLevel)cbLogLevel.SelectedValue)
+            POMBuilderEventArgs args = new POMBuilderEventArgs((LogLevel)cbLogLevel.SelectedValue)
             {
-                JobType = JobTypes.CreateSnapshotPOM,
+                JobType = JobTypes.CreatePOM,
                 JDKFolder = tbJDKFolder.Text,
                 JDKToolExtraOptions = tbJDKToolExtraOptions.Text,
                 SourceFolder = SourceDestinationFolder,
-                JarDestinationFolder = JarDestinationFolder,
                 SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value,
-                WithJARSource = cbWithSource.IsChecked.Value,
-                EmbeddingJCOBridge = cbWithEmbedding.IsChecked.Value,
-                GeneratePOM = JARBuilderEventArgs.POMType.Snapshot,
                 AssembliesToUse = AssemblyDataCollection.CreateList(AssemblyDataCollection)
             };
 
@@ -326,18 +322,34 @@ namespace MASES.JCOReflectorGUI
 
         private void btnGeneratePOM_Click(object sender, RoutedEventArgs e)
         {
-            JARBuilderEventArgs args = new JARBuilderEventArgs((LogLevel)cbLogLevel.SelectedValue)
+            POMBuilderEventArgs args = new POMBuilderEventArgs((LogLevel)cbLogLevel.SelectedValue)
             {
-                JobType = JobTypes.CreateReleasePOM,
+                JobType = JobTypes.CreatePOM,
                 JDKFolder = tbJDKFolder.Text,
                 JDKToolExtraOptions = tbJDKToolExtraOptions.Text,
                 SourceFolder = SourceDestinationFolder,
-                JarDestinationFolder = JarDestinationFolder,
                 SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value,
-                WithJARSource = cbWithSource.IsChecked.Value,
-                EmbeddingJCOBridge = cbWithEmbedding.IsChecked.Value,
-                GeneratePOM = JARBuilderEventArgs.POMType.Release,
+                POMStagingType = POMStagingType.Release,
                 AssembliesToUse = AssemblyDataCollection.CreateList(AssemblyDataCollection)
+            };
+
+            if (cbExportToFile.IsChecked.Value)
+            {
+                export(args);
+                if (MessageBox.Show("Continue operation?", string.Empty, MessageBoxButton.YesNo, MessageBoxImage.Question, MessageBoxResult.Yes) == MessageBoxResult.No) return;
+            }
+
+            commandPanel.IsEnabled = false;
+            btnStop.Visibility = Visibility.Visible;
+            JobManager.RunJob(args);
+        }
+
+        private void btnExtractPOM_Click(object sender, RoutedEventArgs e)
+        {
+            POMBuilderEventArgs args = new POMBuilderEventArgs((LogLevel)cbLogLevel.SelectedValue)
+            {
+                JobType = JobTypes.ExtractPOM,
+                POMFileName = tbPOMFileName.Text
             };
 
             if (cbExportToFile.IsChecked.Value)
@@ -406,12 +418,22 @@ namespace MASES.JCOReflectorGUI
             Microsoft.Win32.SaveFileDialog sfd = new Microsoft.Win32.SaveFileDialog();
             sfd.InitialDirectory = JobManager.RootFolder;
             sfd.FileName = typeof(T).Name;
-
-            bool result = sfd.ShowDialog().Value;
-
-            if (result)
+            bool result = false;
+            try
             {
-                JobManager.Export(type, sfd.FileName);
+                var res = sfd.ShowDialog();
+
+                result = res.HasValue ? res.Value : false;
+
+                if (result)
+                {
+                    JobManager.Export(type, sfd.FileName);
+                }
+
+            }
+            catch(Exception e)
+            {
+                MessageBox.Show(e.Message, string.Empty, MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
             return result;

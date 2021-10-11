@@ -87,7 +87,7 @@ namespace MASES.JCOReflectorEngine
             public const string METHOD_STREAMREAD_NAME = "Read";
             public const string METHOD_STREAMREADBLOCK_NAME = "ReadBlock";
 #endif
-  
+
             public const string JCOReflectorGeneratedFolder = "JCOReflectorGenerated";
 
             public const string OBJECT_CASTER_NAME = "(java.lang.Object)";
@@ -356,6 +356,7 @@ namespace MASES.JCOReflectorEngine
 
                 ManifestTemplate,
 
+                POMExtension,
                 POMJCOReflector,
 
                 JCOReflectorOptionsTemplate,
@@ -446,6 +447,7 @@ namespace MASES.JCOReflectorEngine
 
             public const string ManifestTemplate = "JCOManifest.template";
 
+            public const string POMExtension = "JCOPOMExtension.template";
             public const string POMJCOReflector = "JCOPOMJCOReflector.template";
 
             public const string JCOReflectorOptionsTemplate = "JCOReflectorOptions.template";
@@ -668,9 +670,15 @@ namespace MASES.JCOReflectorEngine
         public class POM
         {
             public const string POM_SOURCEDIRECTORIES_PLACEHOLDER = "POM_SOURCEDIRECTORIES_PLACEHOLDER";
+            public const string POM_ARTIFACTID_PLACEHOLDER = "POM_ARTIFACTID_PLACEHOLDER";
+            public const string POM_NAME_PLACEHOLDER = "POM_NAME_PLACEHOLDER";
+            public const string POM_DESCRIPTION_PLACEHOLDER = "POM_DESCRIPTION_PLACEHOLDER";
+            public const string POM_JCOREFLECTOR_VERSION_PLACEHOLDER = "POM_JCOREFLECTOR_VERSION_PLACEHOLDER";
+            public const string POM_ADDITIONAL_DEPENDENCIES_PLACEHOLDER = "POM_ADDITIONAL_DEPENDENCIES_PLACEHOLDER";
             public const string POM_VERSION_PLACEHOLDER = "POM_VERSION_PLACEHOLDER";
             public const string POM_VERSION_SNAPSHOT = "-SNAPSHOT";
             public const string POM_RUNTIME_PLACEHOLDER = "POM_RUNTIME_PLACEHOLDER";
+            public const string POM_JDK_TARGET = "POM_JDK_TARGET";
             public const string POM_JCOREFLECTOR_SOURCE_PLACEHOLDER = "                <source>./{0}</source>";
         }
 

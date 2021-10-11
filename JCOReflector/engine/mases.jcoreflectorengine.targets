@@ -1,0 +1,9 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <ItemGroup>
+        <JCOBridge Include="$(MSBuildThisFileDirectory)\..\build\*.jar" />
+    </ItemGroup>
+
+    <Target Name="CopyFilesJCOBridge" BeforeTargets="Build"> 
+        <Copy SourceFiles="@(JCOBridge)" DestinationFolder="$(TargetDir)" />
+    </Target>
+</Project>

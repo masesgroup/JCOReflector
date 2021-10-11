@@ -143,7 +143,7 @@ namespace MASES.JCOReflectorEngine
             StartupLocation = Path.GetDirectoryName(typeof(JobManager).Assembly.Location);
             RootFolder = DefaultRootFolder = Path.Combine(StartupLocation, @".." + Path.DirectorySeparatorChar + @".." + Path.DirectorySeparatorChar);
             arguments = prepareArguments();
-            parser.Add(arguments);
+            Parser.Add(arguments);
         }
         /// <summary>
         /// Sets the operations handler 
@@ -210,8 +210,10 @@ namespace MASES.JCOReflectorEngine
             public const string POMType = "POMType";
             public const string POMStagingType = "POMStagingType";
         }
-
-        static Parser parser = Parser.CreateInstance(new Settings()
+        /// <summary>
+        /// <see cref="Parser"/> associated to <see cref="JobManager"/>
+        /// </summary>
+        public static readonly Parser Parser = Parser.CreateInstance(new Settings()
         {
             DefaultType = ArgumentType.Double,
         });
@@ -448,9 +450,9 @@ namespace MASES.JCOReflectorEngine
         /// <returns></returns>
         public static string GetArgumentHelp()
         {
-            int newPadding = parser.PaddingFromArguments();
-            parser.Settings.DefaultDescriptionPadding = newPadding;
-            return parser.HelpInfo();
+            int newPadding = Parser.PaddingFromArguments();
+            Parser.Settings.DefaultDescriptionPadding = newPadding;
+            return Parser.HelpInfo();
         }
         /// <summary>
         /// Convert arguments into an instance of <see cref="CommonEventArgs"/>
@@ -459,14 +461,69 @@ namespace MASES.JCOReflectorEngine
         /// <returns>An instance of <see cref="CommonEventArgs"/></returns>
         public static CommonEventArgs FromArgs(this string[] args)
         {
-            var resultingArgs = parser.Parse(args);
-
-            var jobType = parser.Get<JobTypes>(resultingArgs, CmdParam.JobType);
+            var resultingArgs = Parser.Parse(args);
+            var jobType = resultingArgs.Get<JobTypes>(CmdParam.JobType);
             CommonEventArgs arg = null;
-            if (parser.Exist(resultingArgs, CmdParam.File))
+            if (Parser.Exist(resultingArgs, CmdParam.File))
             {
-                arg = ConvertFile(jobType, parser.Get<string>(resultingArgs, CmdParam.File));
+                arg = ConvertFile(jobType, Parser.Get<string>(resultingArgs, CmdParam.File));
             }
+
+            return UpdateFromArgs(arg, resultingArgs);
+        }
+
+        /// <summary>
+        /// Convert arguments into an instance of <see cref="CommonEventArgs"/>
+        /// </summary>
+        /// <typeparam name="T">A concrete instance of <see cref="CommonEventArgs"/></typeparam>
+        /// <param name="arg">The instance to be updated</param>
+        /// <param name="args">Arguments from command line</param>
+        /// <returns>An instance of <see cref="CommonEventArgs"/></returns>
+        public static T UpdateFromArgs<T>(this T arg, string[] args)
+            where T : CommonEventArgs
+        {
+            return UpdateFromArgs((CommonEventArgs)arg, args) as T;
+        }
+
+        /// <summary>
+        /// Convert arguments into an instance of <see cref="CommonEventArgs"/>
+        /// </summary>
+        /// <param name="arg">The <see cref="CommonEventArgs"/> to be updated</param>
+        /// <param name="args">Arguments from command line</param>
+        /// <returns>An instance of <see cref="CommonEventArgs"/></returns>
+        public static CommonEventArgs UpdateFromArgs(this CommonEventArgs arg, string[] args)
+        {
+            var resultingArgs = Parser.Parse(args);
+            return UpdateFromArgs(arg, resultingArgs);
+        }
+
+        /// <summary>
+        /// Convert arguments into an instance of <see cref="T"/>
+        /// </summary>
+        /// <typeparam name="T">A concrete instance of <see cref="CommonEventArgs"/></typeparam>
+        /// <param name="arg">The instance to be updated</param>
+        /// <param name="args">Arguments parsed from command line</param>
+        /// <returns>An instance of <see cref="CommonEventArgs"/></returns>
+        public static T UpdateFromArgs<T>(this T arg, IEnumerable<IArgumentMetadataParsed> args)
+             where T : CommonEventArgs
+        {
+            return UpdateFromArgs((CommonEventArgs)arg, args) as T;
+        }
+
+        /// <summary>
+        /// Convert arguments into an instance of <see cref="CommonEventArgs"/>
+        /// </summary>
+        /// <param name="arg">The <see cref="CommonEventArgs"/> to be updated</param>
+        /// <param name="args">Arguments parsed from command line</param>
+        /// <returns>An instance of <see cref="CommonEventArgs"/></returns>
+        public static CommonEventArgs UpdateFromArgs(this CommonEventArgs arg, IEnumerable<IArgumentMetadataParsed> args)
+        {
+            JobTypes jobType = JobTypes.NoType;
+            if (arg == null)
+            {
+                jobType = args.Get<JobTypes>(CmdParam.JobType);
+            }
+            else jobType = arg.JobType;
 
             if (jobType == JobTypes.NoType) throw new InvalidOperationException("No JobType neighter in file nor in command line");
 
@@ -477,85 +534,85 @@ namespace MASES.JCOReflectorEngine
                         ReflectorEventArgs newArg;
                         if (arg == null) arg = newArg = new ReflectorEventArgs();
                         else newArg = arg as ReflectorEventArgs;
-                        if (parser.Exist(resultingArgs, CmdParam.LogLevel))
+                        if (Parser.Exist(args, CmdParam.LogLevel))
                         {
-                            newArg.LogLevel = parser.Get<LogLevel>(resultingArgs, CmdParam.LogLevel);
+                            newArg.LogLevel = Parser.Get<LogLevel>(args, CmdParam.LogLevel);
                         }
-                        if (parser.Exist(resultingArgs, CmdParam.RootFolder))
+                        if (Parser.Exist(args, CmdParam.RootFolder))
                         {
-                            newArg.RootFolder = parser.Get<string>(resultingArgs, CmdParam.RootFolder);
+                            newArg.RootFolder = Parser.Get<string>(args, CmdParam.RootFolder);
                         }
-                        if (parser.Exist(resultingArgs, CmdParam.SplitFolderByAssembly))
+                        if (Parser.Exist(args, CmdParam.SplitFolderByAssembly))
                         {
-                            newArg.SplitFolderByAssembly = parser.Get<bool>(resultingArgs, CmdParam.SplitFolderByAssembly);
+                            newArg.SplitFolderByAssembly = Parser.Get<bool>(args, CmdParam.SplitFolderByAssembly);
                         }
-                        if (resultingArgs.Exist(CmdParam.AvoidJCOReflectorFolder))
+                        if (args.Exist(CmdParam.AvoidJCOReflectorFolder))
                         {
-                            newArg.AvoidJCOReflectorFolder = resultingArgs.Get<bool>(CmdParam.AvoidJCOReflectorFolder);
+                            newArg.AvoidJCOReflectorFolder = args.Get<bool>(CmdParam.AvoidJCOReflectorFolder);
                         }
 
                         List<string> assemblies = new List<string>();
                         if (newArg.AssemblyNames != null) assemblies.AddRange(newArg.AssemblyNames);
-                        if (parser.Exist(resultingArgs, CmdParam.Assembly))
+                        if (Parser.Exist(args, CmdParam.Assembly))
                         {
-                            assemblies.AddRange(parser.Get<IEnumerable<string>>(resultingArgs, CmdParam.Assembly));
+                            assemblies.AddRange(Parser.Get<IEnumerable<string>>(args, CmdParam.Assembly));
                         }
                         newArg.AssemblyNames = assemblies.ToArray();
-                        if (parser.Exist(resultingArgs, CmdParam.SourceFolder))
+                        if (Parser.Exist(args, CmdParam.SourceFolder))
                         {
-                            newArg.SourceFolder = parser.Get<string>(resultingArgs, CmdParam.SourceFolder);
+                            newArg.SourceFolder = Parser.Get<string>(args, CmdParam.SourceFolder);
                         }
-                        if (parser.Exist(resultingArgs, CmdParam.ForceRebuild))
+                        if (Parser.Exist(args, CmdParam.ForceRebuild))
                         {
-                            newArg.ForceRebuild = parser.Get<bool>(resultingArgs, CmdParam.ForceRebuild);
+                            newArg.ForceRebuild = Parser.Get<bool>(args, CmdParam.ForceRebuild);
                         }
-                        if (parser.Exist(resultingArgs, CmdParam.UseParallelBuild))
+                        if (Parser.Exist(args, CmdParam.UseParallelBuild))
                         {
-                            newArg.UseParallelBuild = parser.Get<bool>(resultingArgs, CmdParam.UseParallelBuild);
+                            newArg.UseParallelBuild = Parser.Get<bool>(args, CmdParam.UseParallelBuild);
                         }
-                        if (parser.Exist(resultingArgs, CmdParam.AvoidHierarchyTraversing))
+                        if (Parser.Exist(args, CmdParam.AvoidHierarchyTraversing))
                         {
-                            newArg.AvoidHierarchyTraversing = parser.Get<bool>(resultingArgs, CmdParam.AvoidHierarchyTraversing);
+                            newArg.AvoidHierarchyTraversing = Parser.Get<bool>(args, CmdParam.AvoidHierarchyTraversing);
                         }
-                        if (parser.Exist(resultingArgs, CmdParam.CreateExceptionThrownClause))
+                        if (Parser.Exist(args, CmdParam.CreateExceptionThrownClause))
                         {
-                            newArg.CreateExceptionThrownClause = parser.Get<bool>(resultingArgs, CmdParam.CreateExceptionThrownClause);
+                            newArg.CreateExceptionThrownClause = Parser.Get<bool>(args, CmdParam.CreateExceptionThrownClause);
                         }
-                        if (parser.Exist(resultingArgs, CmdParam.ExceptionThrownClauseDepth))
+                        if (Parser.Exist(args, CmdParam.ExceptionThrownClauseDepth))
                         {
-                            newArg.ExceptionThrownClauseDepth = parser.Get<int>(resultingArgs, CmdParam.ExceptionThrownClauseDepth);
+                            newArg.ExceptionThrownClauseDepth = Parser.Get<int>(args, CmdParam.ExceptionThrownClauseDepth);
                         }
-                        if (parser.Exist(resultingArgs, CmdParam.EnableAbstract))
+                        if (Parser.Exist(args, CmdParam.EnableAbstract))
                         {
-                            newArg.EnableAbstract = parser.Get<bool>(resultingArgs, CmdParam.EnableAbstract);
+                            newArg.EnableAbstract = Parser.Get<bool>(args, CmdParam.EnableAbstract);
                         }
-                        if (parser.Exist(resultingArgs, CmdParam.EnableArray))
+                        if (Parser.Exist(args, CmdParam.EnableArray))
                         {
-                            newArg.EnableArray = parser.Get<bool>(resultingArgs, CmdParam.EnableArray);
+                            newArg.EnableArray = Parser.Get<bool>(args, CmdParam.EnableArray);
                         }
-                        if (parser.Exist(resultingArgs, CmdParam.EnableDuplicateMethodNativeArrayWithJCRefOut))
+                        if (Parser.Exist(args, CmdParam.EnableDuplicateMethodNativeArrayWithJCRefOut))
                         {
-                            newArg.EnableDuplicateMethodNativeArrayWithJCRefOut = parser.Get<bool>(resultingArgs, CmdParam.EnableDuplicateMethodNativeArrayWithJCRefOut);
+                            newArg.EnableDuplicateMethodNativeArrayWithJCRefOut = Parser.Get<bool>(args, CmdParam.EnableDuplicateMethodNativeArrayWithJCRefOut);
                         }
-                        if (parser.Exist(resultingArgs, CmdParam.EnableInheritance))
+                        if (Parser.Exist(args, CmdParam.EnableInheritance))
                         {
-                            newArg.EnableInheritance = parser.Get<bool>(resultingArgs, CmdParam.EnableInheritance);
+                            newArg.EnableInheritance = Parser.Get<bool>(args, CmdParam.EnableInheritance);
                         }
-                        if (parser.Exist(resultingArgs, CmdParam.EnableInterfaceInheritance))
+                        if (Parser.Exist(args, CmdParam.EnableInterfaceInheritance))
                         {
-                            newArg.EnableInterfaceInheritance = parser.Get<bool>(resultingArgs, CmdParam.EnableInterfaceInheritance);
+                            newArg.EnableInterfaceInheritance = Parser.Get<bool>(args, CmdParam.EnableInterfaceInheritance);
                         }
-                        if (parser.Exist(resultingArgs, CmdParam.EnableRefOutParameters))
+                        if (Parser.Exist(args, CmdParam.EnableRefOutParameters))
                         {
-                            newArg.EnableRefOutParameters = parser.Get<bool>(resultingArgs, CmdParam.EnableRefOutParameters);
+                            newArg.EnableRefOutParameters = Parser.Get<bool>(args, CmdParam.EnableRefOutParameters);
                         }
-                        if (parser.Exist(resultingArgs, CmdParam.DryRun))
+                        if (Parser.Exist(args, CmdParam.DryRun))
                         {
-                            newArg.DryRun = parser.Get<bool>(resultingArgs, CmdParam.DryRun);
+                            newArg.DryRun = Parser.Get<bool>(args, CmdParam.DryRun);
                         }
-                        if (parser.Exist(resultingArgs, CmdParam.AvoidReportAndStatistics))
+                        if (Parser.Exist(args, CmdParam.AvoidReportAndStatistics))
                         {
-                            newArg.AvoidReportAndStatistics = parser.Get<bool>(resultingArgs, CmdParam.AvoidReportAndStatistics);
+                            newArg.AvoidReportAndStatistics = Parser.Get<bool>(args, CmdParam.AvoidReportAndStatistics);
                         }
                     }
                     break;
@@ -565,43 +622,43 @@ namespace MASES.JCOReflectorEngine
                         if (arg == null) arg = newArg = new JavaBuilderEventArgs();
                         else newArg = arg as JavaBuilderEventArgs;
 
-                        if (parser.Exist(resultingArgs, CmdParam.LogLevel))
+                        if (Parser.Exist(args, CmdParam.LogLevel))
                         {
-                            newArg.LogLevel = parser.Get<LogLevel>(resultingArgs, CmdParam.LogLevel);
+                            newArg.LogLevel = Parser.Get<LogLevel>(args, CmdParam.LogLevel);
                         }
-                        if (parser.Exist(resultingArgs, CmdParam.RootFolder))
+                        if (Parser.Exist(args, CmdParam.RootFolder))
                         {
-                            newArg.RootFolder = parser.Get<string>(resultingArgs, CmdParam.RootFolder);
+                            newArg.RootFolder = Parser.Get<string>(args, CmdParam.RootFolder);
                         }
-                        if (parser.Exist(resultingArgs, CmdParam.SplitFolderByAssembly))
+                        if (Parser.Exist(args, CmdParam.SplitFolderByAssembly))
                         {
-                            newArg.SplitFolderByAssembly = parser.Get<bool>(resultingArgs, CmdParam.SplitFolderByAssembly);
+                            newArg.SplitFolderByAssembly = Parser.Get<bool>(args, CmdParam.SplitFolderByAssembly);
                         }
-                        if (resultingArgs.Exist(CmdParam.AvoidJCOReflectorFolder))
+                        if (args.Exist(CmdParam.AvoidJCOReflectorFolder))
                         {
-                            newArg.AvoidJCOReflectorFolder = resultingArgs.Get<bool>(CmdParam.AvoidJCOReflectorFolder);
-                        }
-
-                        if (parser.Exist(resultingArgs, CmdParam.SourceFolder))
-                        {
-                            newArg.SourceFolder = parser.Get<string>(resultingArgs, CmdParam.SourceFolder);
+                            newArg.AvoidJCOReflectorFolder = args.Get<bool>(CmdParam.AvoidJCOReflectorFolder);
                         }
 
-                        if (parser.Exist(resultingArgs, CmdParam.JDKFolder))
+                        if (Parser.Exist(args, CmdParam.SourceFolder))
                         {
-                            newArg.JDKFolder = parser.Get<string>(resultingArgs, CmdParam.JDKFolder);
+                            newArg.SourceFolder = Parser.Get<string>(args, CmdParam.SourceFolder);
                         }
-                        if (parser.Exist(resultingArgs, CmdParam.JDKTarget))
+
+                        if (Parser.Exist(args, CmdParam.JDKFolder))
                         {
-                            newArg.JDKTarget = parser.Get<JDKVersion>(resultingArgs, CmdParam.JDKTarget);
+                            newArg.JDKFolder = Parser.Get<string>(args, CmdParam.JDKFolder);
                         }
-                        if (parser.Exist(resultingArgs, CmdParam.AssembliesToUse))
+                        if (Parser.Exist(args, CmdParam.JDKTarget))
                         {
-                            newArg.AssembliesToUse = new List<string>(parser.Get<IEnumerable<string>>(resultingArgs, CmdParam.AssembliesToUse)).ToArray();
+                            newArg.JDKTarget = Parser.Get<JDKVersion>(args, CmdParam.JDKTarget);
                         }
-                        if (parser.Exist(resultingArgs, CmdParam.JDKToolExtraOptions))
+                        if (Parser.Exist(args, CmdParam.AssembliesToUse))
                         {
-                            newArg.JDKToolExtraOptions = parser.Get<string>(resultingArgs, CmdParam.JDKToolExtraOptions);
+                            newArg.AssembliesToUse = new List<string>(Parser.Get<IEnumerable<string>>(args, CmdParam.AssembliesToUse)).ToArray();
+                        }
+                        if (Parser.Exist(args, CmdParam.JDKToolExtraOptions))
+                        {
+                            newArg.JDKToolExtraOptions = Parser.Get<string>(args, CmdParam.JDKToolExtraOptions);
                         }
                     }
                     break;
@@ -611,48 +668,48 @@ namespace MASES.JCOReflectorEngine
                         if (arg == null) arg = newArg = new DocsBuilderEventArgs();
                         else newArg = arg as DocsBuilderEventArgs;
 
-                        if (parser.Exist(resultingArgs, CmdParam.LogLevel))
+                        if (Parser.Exist(args, CmdParam.LogLevel))
                         {
-                            newArg.LogLevel = parser.Get<LogLevel>(resultingArgs, CmdParam.LogLevel);
+                            newArg.LogLevel = Parser.Get<LogLevel>(args, CmdParam.LogLevel);
                         }
-                        if (parser.Exist(resultingArgs, CmdParam.RootFolder))
+                        if (Parser.Exist(args, CmdParam.RootFolder))
                         {
-                            newArg.RootFolder = parser.Get<string>(resultingArgs, CmdParam.RootFolder);
+                            newArg.RootFolder = Parser.Get<string>(args, CmdParam.RootFolder);
                         }
-                        if (parser.Exist(resultingArgs, CmdParam.SplitFolderByAssembly))
+                        if (Parser.Exist(args, CmdParam.SplitFolderByAssembly))
                         {
-                            newArg.SplitFolderByAssembly = parser.Get<bool>(resultingArgs, CmdParam.SplitFolderByAssembly);
+                            newArg.SplitFolderByAssembly = Parser.Get<bool>(args, CmdParam.SplitFolderByAssembly);
                         }
-                        if (resultingArgs.Exist(CmdParam.AvoidJCOReflectorFolder))
+                        if (args.Exist(CmdParam.AvoidJCOReflectorFolder))
                         {
-                            newArg.AvoidJCOReflectorFolder = resultingArgs.Get<bool>(CmdParam.AvoidJCOReflectorFolder);
-                        }
-
-                        if (parser.Exist(resultingArgs, CmdParam.SourceFolder))
-                        {
-                            newArg.SourceFolder = parser.Get<string>(resultingArgs, CmdParam.SourceFolder);
+                            newArg.AvoidJCOReflectorFolder = args.Get<bool>(CmdParam.AvoidJCOReflectorFolder);
                         }
 
-                        if (parser.Exist(resultingArgs, CmdParam.JDKFolder))
+                        if (Parser.Exist(args, CmdParam.SourceFolder))
                         {
-                            newArg.JDKFolder = parser.Get<string>(resultingArgs, CmdParam.JDKFolder);
-                        }
-                        if (parser.Exist(resultingArgs, CmdParam.JDKTarget))
-                        {
-                            newArg.JDKTarget = parser.Get<JDKVersion>(resultingArgs, CmdParam.JDKTarget);
-                        }
-                        if (parser.Exist(resultingArgs, CmdParam.AssembliesToUse))
-                        {
-                            newArg.AssembliesToUse = new List<string>(parser.Get<IEnumerable<string>>(resultingArgs, CmdParam.AssembliesToUse)).ToArray();
-                        }
-                        if (parser.Exist(resultingArgs, CmdParam.JDKToolExtraOptions))
-                        {
-                            newArg.JDKToolExtraOptions = parser.Get<string>(resultingArgs, CmdParam.JDKToolExtraOptions);
+                            newArg.SourceFolder = Parser.Get<string>(args, CmdParam.SourceFolder);
                         }
 
-                        if (parser.Exist(resultingArgs, CmdParam.CommitVersion))
+                        if (Parser.Exist(args, CmdParam.JDKFolder))
                         {
-                            newArg.CommitVersion = parser.Get<string>(resultingArgs, CmdParam.CommitVersion);
+                            newArg.JDKFolder = Parser.Get<string>(args, CmdParam.JDKFolder);
+                        }
+                        if (Parser.Exist(args, CmdParam.JDKTarget))
+                        {
+                            newArg.JDKTarget = Parser.Get<JDKVersion>(args, CmdParam.JDKTarget);
+                        }
+                        if (Parser.Exist(args, CmdParam.AssembliesToUse))
+                        {
+                            newArg.AssembliesToUse = new List<string>(Parser.Get<IEnumerable<string>>(args, CmdParam.AssembliesToUse)).ToArray();
+                        }
+                        if (Parser.Exist(args, CmdParam.JDKToolExtraOptions))
+                        {
+                            newArg.JDKToolExtraOptions = Parser.Get<string>(args, CmdParam.JDKToolExtraOptions);
+                        }
+
+                        if (Parser.Exist(args, CmdParam.CommitVersion))
+                        {
+                            newArg.CommitVersion = Parser.Get<string>(args, CmdParam.CommitVersion);
                         }
                     }
                     break;
@@ -662,58 +719,58 @@ namespace MASES.JCOReflectorEngine
                         if (arg == null) arg = newArg = new JARBuilderEventArgs();
                         else newArg = arg as JARBuilderEventArgs;
 
-                        if (parser.Exist(resultingArgs, CmdParam.LogLevel))
+                        if (Parser.Exist(args, CmdParam.LogLevel))
                         {
-                            newArg.LogLevel = parser.Get<LogLevel>(resultingArgs, CmdParam.LogLevel);
+                            newArg.LogLevel = Parser.Get<LogLevel>(args, CmdParam.LogLevel);
                         }
-                        if (parser.Exist(resultingArgs, CmdParam.RootFolder))
+                        if (Parser.Exist(args, CmdParam.RootFolder))
                         {
-                            newArg.RootFolder = parser.Get<string>(resultingArgs, CmdParam.RootFolder);
+                            newArg.RootFolder = Parser.Get<string>(args, CmdParam.RootFolder);
                         }
-                        if (parser.Exist(resultingArgs, CmdParam.SplitFolderByAssembly))
+                        if (Parser.Exist(args, CmdParam.SplitFolderByAssembly))
                         {
-                            newArg.SplitFolderByAssembly = parser.Get<bool>(resultingArgs, CmdParam.SplitFolderByAssembly);
+                            newArg.SplitFolderByAssembly = Parser.Get<bool>(args, CmdParam.SplitFolderByAssembly);
                         }
-                        if (resultingArgs.Exist(CmdParam.AvoidJCOReflectorFolder))
+                        if (args.Exist(CmdParam.AvoidJCOReflectorFolder))
                         {
-                            newArg.AvoidJCOReflectorFolder = resultingArgs.Get<bool>(CmdParam.AvoidJCOReflectorFolder);
-                        }
-
-                        if (parser.Exist(resultingArgs, CmdParam.SourceFolder))
-                        {
-                            newArg.SourceFolder = parser.Get<string>(resultingArgs, CmdParam.SourceFolder);
+                            newArg.AvoidJCOReflectorFolder = args.Get<bool>(CmdParam.AvoidJCOReflectorFolder);
                         }
 
-                        if (parser.Exist(resultingArgs, CmdParam.JDKFolder))
+                        if (Parser.Exist(args, CmdParam.SourceFolder))
                         {
-                            newArg.JDKFolder = parser.Get<string>(resultingArgs, CmdParam.JDKFolder);
-                        }
-                        if (parser.Exist(resultingArgs, CmdParam.JDKTarget))
-                        {
-                            newArg.JDKTarget = parser.Get<JDKVersion>(resultingArgs, CmdParam.JDKTarget);
-                        }
-                        if (parser.Exist(resultingArgs, CmdParam.AssembliesToUse))
-                        {
-                            newArg.AssembliesToUse = new List<string>(parser.Get<IEnumerable<string>>(resultingArgs, CmdParam.AssembliesToUse)).ToArray();
-                        }
-                        if (parser.Exist(resultingArgs, CmdParam.JDKToolExtraOptions))
-                        {
-                            newArg.JDKToolExtraOptions = parser.Get<string>(resultingArgs, CmdParam.JDKToolExtraOptions);
+                            newArg.SourceFolder = Parser.Get<string>(args, CmdParam.SourceFolder);
                         }
 
-                        if (parser.Exist(resultingArgs, CmdParam.JarDestinationFolder))
+                        if (Parser.Exist(args, CmdParam.JDKFolder))
                         {
-                            newArg.JarDestinationFolder = parser.Get<string>(resultingArgs, CmdParam.JarDestinationFolder);
+                            newArg.JDKFolder = Parser.Get<string>(args, CmdParam.JDKFolder);
+                        }
+                        if (Parser.Exist(args, CmdParam.JDKTarget))
+                        {
+                            newArg.JDKTarget = Parser.Get<JDKVersion>(args, CmdParam.JDKTarget);
+                        }
+                        if (Parser.Exist(args, CmdParam.AssembliesToUse))
+                        {
+                            newArg.AssembliesToUse = new List<string>(Parser.Get<IEnumerable<string>>(args, CmdParam.AssembliesToUse)).ToArray();
+                        }
+                        if (Parser.Exist(args, CmdParam.JDKToolExtraOptions))
+                        {
+                            newArg.JDKToolExtraOptions = Parser.Get<string>(args, CmdParam.JDKToolExtraOptions);
                         }
 
-                        if (parser.Exist(resultingArgs, CmdParam.WithJARSource))
+                        if (Parser.Exist(args, CmdParam.JarDestinationFolder))
                         {
-                            newArg.WithJARSource = parser.Get<bool>(resultingArgs, CmdParam.WithJARSource);
+                            newArg.JarDestinationFolder = Parser.Get<string>(args, CmdParam.JarDestinationFolder);
                         }
 
-                        if (parser.Exist(resultingArgs, CmdParam.EmbeddingJCOBridge))
+                        if (Parser.Exist(args, CmdParam.WithJARSource))
                         {
-                            newArg.EmbeddingJCOBridge = parser.Get<bool>(resultingArgs, CmdParam.EmbeddingJCOBridge);
+                            newArg.WithJARSource = Parser.Get<bool>(args, CmdParam.WithJARSource);
+                        }
+
+                        if (Parser.Exist(args, CmdParam.EmbeddingJCOBridge))
+                        {
+                            newArg.EmbeddingJCOBridge = Parser.Get<bool>(args, CmdParam.EmbeddingJCOBridge);
                         }
                     }
                     break;
@@ -723,77 +780,77 @@ namespace MASES.JCOReflectorEngine
                         if (arg == null) arg = newArg = new POMBuilderEventArgs();
                         else newArg = arg as POMBuilderEventArgs;
 
-                        if (parser.Exist(resultingArgs, CmdParam.LogLevel))
+                        if (Parser.Exist(args, CmdParam.LogLevel))
                         {
-                            newArg.LogLevel = parser.Get<LogLevel>(resultingArgs, CmdParam.LogLevel);
+                            newArg.LogLevel = Parser.Get<LogLevel>(args, CmdParam.LogLevel);
                         }
-                        if (parser.Exist(resultingArgs, CmdParam.RootFolder))
+                        if (Parser.Exist(args, CmdParam.RootFolder))
                         {
-                            newArg.RootFolder = parser.Get<string>(resultingArgs, CmdParam.RootFolder);
+                            newArg.RootFolder = Parser.Get<string>(args, CmdParam.RootFolder);
                         }
-                        if (parser.Exist(resultingArgs, CmdParam.SplitFolderByAssembly))
+                        if (Parser.Exist(args, CmdParam.SplitFolderByAssembly))
                         {
-                            newArg.SplitFolderByAssembly = parser.Get<bool>(resultingArgs, CmdParam.SplitFolderByAssembly);
+                            newArg.SplitFolderByAssembly = Parser.Get<bool>(args, CmdParam.SplitFolderByAssembly);
                         }
-                        if (resultingArgs.Exist(CmdParam.AvoidJCOReflectorFolder))
+                        if (args.Exist(CmdParam.AvoidJCOReflectorFolder))
                         {
-                            newArg.AvoidJCOReflectorFolder = resultingArgs.Get<bool>(CmdParam.AvoidJCOReflectorFolder);
-                        }
-
-                        if (parser.Exist(resultingArgs, CmdParam.SourceFolder))
-                        {
-                            newArg.SourceFolder = parser.Get<string>(resultingArgs, CmdParam.SourceFolder);
+                            newArg.AvoidJCOReflectorFolder = args.Get<bool>(CmdParam.AvoidJCOReflectorFolder);
                         }
 
-                        if (parser.Exist(resultingArgs, CmdParam.JDKFolder))
+                        if (Parser.Exist(args, CmdParam.SourceFolder))
                         {
-                            newArg.JDKFolder = parser.Get<string>(resultingArgs, CmdParam.JDKFolder);
-                        }
-                        if (parser.Exist(resultingArgs, CmdParam.JDKTarget))
-                        {
-                            newArg.JDKTarget = parser.Get<JDKVersion>(resultingArgs, CmdParam.JDKTarget);
-                        }
-                        if (parser.Exist(resultingArgs, CmdParam.AssembliesToUse))
-                        {
-                            newArg.AssembliesToUse = new List<string>(parser.Get<IEnumerable<string>>(resultingArgs, CmdParam.AssembliesToUse)).ToArray();
-                        }
-                        if (parser.Exist(resultingArgs, CmdParam.JDKToolExtraOptions))
-                        {
-                            newArg.JDKToolExtraOptions = parser.Get<string>(resultingArgs, CmdParam.JDKToolExtraOptions);
+                            newArg.SourceFolder = Parser.Get<string>(args, CmdParam.SourceFolder);
                         }
 
-                        if (parser.Exist(resultingArgs, CmdParam.POMArtifactId))
+                        if (Parser.Exist(args, CmdParam.JDKFolder))
                         {
-                            newArg.POMArtifactId = parser.Get<string>(resultingArgs, CmdParam.POMArtifactId);
+                            newArg.JDKFolder = Parser.Get<string>(args, CmdParam.JDKFolder);
                         }
-                        if (parser.Exist(resultingArgs, CmdParam.POMName))
+                        if (Parser.Exist(args, CmdParam.JDKTarget))
                         {
-                            newArg.POMName = parser.Get<string>(resultingArgs, CmdParam.POMName);
+                            newArg.JDKTarget = Parser.Get<JDKVersion>(args, CmdParam.JDKTarget);
                         }
-                        if (parser.Exist(resultingArgs, CmdParam.POMFileName))
+                        if (Parser.Exist(args, CmdParam.AssembliesToUse))
                         {
-                            newArg.POMFileName = parser.Get<string>(resultingArgs, CmdParam.POMFileName);
+                            newArg.AssembliesToUse = new List<string>(Parser.Get<IEnumerable<string>>(args, CmdParam.AssembliesToUse)).ToArray();
                         }
-                        if (parser.Exist(resultingArgs, CmdParam.POMDescription))
+                        if (Parser.Exist(args, CmdParam.JDKToolExtraOptions))
                         {
-                            newArg.POMDescription = parser.Get<string>(resultingArgs, CmdParam.POMDescription);
+                            newArg.JDKToolExtraOptions = Parser.Get<string>(args, CmdParam.JDKToolExtraOptions);
                         }
 
-                        if (parser.Exist(resultingArgs, CmdParam.POMVersion))
+                        if (Parser.Exist(args, CmdParam.POMArtifactId))
                         {
-                            newArg.POMVersion = parser.Get<string>(resultingArgs, CmdParam.POMVersion);
+                            newArg.POMArtifactId = Parser.Get<string>(args, CmdParam.POMArtifactId);
                         }
-                        else newArg.POMVersion = (string)parser.Get(resultingArgs, CmdParam.POMVersion).Default;
-                        if (parser.Exist(resultingArgs, CmdParam.POMType))
+                        if (Parser.Exist(args, CmdParam.POMName))
                         {
-                            newArg.POMType = parser.Get<POMType>(resultingArgs, CmdParam.POMType);
+                            newArg.POMName = Parser.Get<string>(args, CmdParam.POMName);
                         }
-                        else newArg.POMType = (POMType)parser.Get(resultingArgs, CmdParam.POMType).Default;
-                        if (parser.Exist(resultingArgs, CmdParam.POMStagingType))
+                        if (Parser.Exist(args, CmdParam.POMFileName))
                         {
-                            newArg.POMStagingType = parser.Get<POMStagingType>(resultingArgs, CmdParam.POMStagingType);
+                            newArg.POMFileName = Parser.Get<string>(args, CmdParam.POMFileName);
                         }
-                        else newArg.POMStagingType = (POMStagingType)parser.Get(resultingArgs, CmdParam.POMStagingType).Default;
+                        if (Parser.Exist(args, CmdParam.POMDescription))
+                        {
+                            newArg.POMDescription = Parser.Get<string>(args, CmdParam.POMDescription);
+                        }
+
+                        if (Parser.Exist(args, CmdParam.POMVersion))
+                        {
+                            newArg.POMVersion = Parser.Get<string>(args, CmdParam.POMVersion);
+                        }
+                        else newArg.POMVersion = (string)Parser.Get(args, CmdParam.POMVersion).Default;
+                        if (Parser.Exist(args, CmdParam.POMType))
+                        {
+                            newArg.POMType = Parser.Get<POMType>(args, CmdParam.POMType);
+                        }
+                        else newArg.POMType = (POMType)Parser.Get(args, CmdParam.POMType).Default;
+                        if (Parser.Exist(args, CmdParam.POMStagingType))
+                        {
+                            newArg.POMStagingType = Parser.Get<POMStagingType>(args, CmdParam.POMStagingType);
+                        }
+                        else newArg.POMStagingType = (POMStagingType)Parser.Get(args, CmdParam.POMStagingType).Default;
                     }
                     break;
                 case JobTypes.ExtractPOM:
@@ -802,17 +859,17 @@ namespace MASES.JCOReflectorEngine
                         if (arg == null) arg = newArg = new POMBuilderEventArgs();
                         else newArg = arg as POMBuilderEventArgs;
 
-                        if (parser.Exist(resultingArgs, CmdParam.LogLevel))
+                        if (Parser.Exist(args, CmdParam.LogLevel))
                         {
-                            newArg.LogLevel = parser.Get<LogLevel>(resultingArgs, CmdParam.LogLevel);
+                            newArg.LogLevel = Parser.Get<LogLevel>(args, CmdParam.LogLevel);
                         }
-                        if (resultingArgs.Exist(CmdParam.AvoidJCOReflectorFolder))
+                        if (args.Exist(CmdParam.AvoidJCOReflectorFolder))
                         {
-                            newArg.AvoidJCOReflectorFolder = resultingArgs.Get<bool>(CmdParam.AvoidJCOReflectorFolder);
+                            newArg.AvoidJCOReflectorFolder = args.Get<bool>(CmdParam.AvoidJCOReflectorFolder);
                         }
 
-                        if (!parser.Exist(resultingArgs, CmdParam.POMFileName)) throw new ArgumentException(string.Format("ExtractPOM needs {0} argument", CmdParam.POMFileName));
-                        newArg.POMFileName = parser.Get<string>(resultingArgs, CmdParam.POMFileName);
+                        if (!Parser.Exist(args, CmdParam.POMFileName)) throw new ArgumentException(string.Format("ExtractPOM needs {0} argument", CmdParam.POMFileName));
+                        newArg.POMFileName = Parser.Get<string>(args, CmdParam.POMFileName);
                     }
                     break;
                 case JobTypes.NoType:
@@ -1347,7 +1404,7 @@ namespace MASES.JCOReflectorEngine
     #region CommonEventArgs Class
 
     [Serializable]
-    public class CommonEventArgs : EventArgs
+    public abstract class CommonEventArgs : EventArgs
     {
         public CommonEventArgs()
         {

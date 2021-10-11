@@ -246,6 +246,7 @@ namespace MASES.JCOReflectorEngine
                                            .Replace(Const.POM.POM_ARTIFACTID_PLACEHOLDER, args.POMArtifactId)
                                            .Replace(Const.POM.POM_NAME_PLACEHOLDER, args.POMName)
                                            .Replace(Const.POM.POM_DESCRIPTION_PLACEHOLDER, args.POMDescription)
+                                           .Replace(Const.POM.POM_JCOREFLECTOR_VERSION_PLACEHOLDER, Const.ReflectorVersion)
                                            .Replace(Const.POM.POM_ADDITIONAL_DEPENDENCIES_PLACEHOLDER, args.POMAdditionalDependencies ?? string.Empty);
 
                 var fileName = Path.Combine(srcRootFolder, string.Format("{0}.xml", Const.Framework.RuntimeFolder));

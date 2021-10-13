@@ -89,7 +89,7 @@ public final class JCOBridgeInstance implements IJCEventLog {
         searchPaths.add(path);
     }
 
-    static JCOBridge createInstance() {
+    static JCOBridge createInstance() throws JCNativeException {
         JCOBridge theBridgeInstance = null;
         theBridgeInstance = JCOBridge.CreateNew();
         try {
@@ -101,6 +101,8 @@ public final class JCOBridgeInstance implements IJCEventLog {
         for (String path : searchPaths) {
             theBridgeInstance.AddPath(path);
         }
+
+        return theBridgeInstance;
     }
 
     /**

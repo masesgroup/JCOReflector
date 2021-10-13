@@ -74,9 +74,9 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Build JCOReflectorCLI
         run: |
-          dotnet build --no-incremental --framework netcoreapp3.1 --configuration Release JCOReflector\JCOReflectorCLI.sln
-          dotnet build --no-incremental --framework net5.0 --configuration Release JCOReflector\JCOReflectorCLI.sln  
-          dotnet build --no-incremental --framework net461 --configuration Release JCOReflector\JCOReflectorCLI.sln  
+          dotnet build --no-incremental --framework netcoreapp3.1 --configuration Release src\JCOReflectorCLI.sln
+          dotnet build --no-incremental --framework net5.0 --configuration Release src\JCOReflectorCLI.sln  
+          dotnet build --no-incremental --framework net461 --configuration Release src\JCOReflectorCLI.sln  
 
       # Runs a set of commands using the runners shell
       - name: Copy configuration file
@@ -262,7 +262,7 @@ jobs:
           Compress-Archive -Path .\bin\net461\* -DestinationPath .\bin\net461.zip
 
       - name: Build NuGet Packages
-        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" JCOReflector\JCOReflectorCLI.sln
+        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\JCOReflectorCLI.sln
 
       - name: Extract commit SHA
         run: |

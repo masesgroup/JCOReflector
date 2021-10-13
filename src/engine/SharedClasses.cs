@@ -93,6 +93,25 @@ namespace MASES.JCOReflectorEngine
     }
     #endregion
 
+    #region ErrorBehavior
+    [Flags]
+    public enum ErrorReportingType
+    {
+        /// <summary>
+        /// The <see cref="JobManager.EndOperationHandler"/> will be called in case of error
+        /// </summary>
+        Callback = 0x1,
+        /// <summary>
+        /// The <see cref="Exception"/> will be propagated
+        /// </summary>
+        Exception = 0x2,
+        /// <summary>
+        /// The <see cref="Callback"/> is executed and the <see cref="Exception"/> is executed
+        /// </summary>
+        Both = Callback | Exception,
+    }
+    #endregion
+
     #region JobManager Class
     /// <summary>
     /// The main entry point
@@ -138,8 +157,14 @@ namespace MASES.JCOReflectorEngine
         /// </summary>
         public static string JarDestinationFolder { get; set; }
 
+        /// <summary>
+        /// The <see cref="ErrorReportingType"/> to be used during execution. Default is <see cref="ErrorReportingType.Callback"/> for backward compatibility.
+        /// </summary>
+        public static ErrorReportingType ErrorReporting { get; set; }
+
         static JobManager()
         {
+            ErrorReporting = ErrorReportingType.Callback;
             StartupLocation = Path.GetDirectoryName(typeof(JobManager).Assembly.Location);
             RootFolder = DefaultRootFolder = Path.Combine(StartupLocation, @".." + Path.DirectorySeparatorChar + @".." + Path.DirectorySeparatorChar);
             arguments = prepareArguments();

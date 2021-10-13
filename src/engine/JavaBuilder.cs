@@ -44,6 +44,7 @@ namespace MASES.JCOReflectorEngine
 
         public static void CompileClasses(object o)
         {
+            Exception storedException = null;
             bool failed = false;
             JavaBuilderEventArgs args = o as JavaBuilderEventArgs;
 
@@ -69,21 +70,31 @@ namespace MASES.JCOReflectorEngine
             {
                 reportStr = string.Format("Error {0}", ex.Message);
                 JobManager.AppendToConsole(LogLevel.Error, reportStr);
+                storedException = ex;
             }
             catch (Exception ex)
             {
                 reportStr = string.Format("Error {0}", ex.Message);
                 JobManager.AppendToConsole(LogLevel.Error, reportStr);
                 failed = true;
+                storedException = ex;
             }
             finally
             {
-                JobManager.EndOperation(new EndOperationEventArgs(reportStr, failed));
+                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Callback))
+                {
+                    JobManager.EndOperation(new EndOperationEventArgs(reportStr, failed));
+                }
+                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Exception))
+                {
+                    throw storedException;
+                }
             }
         }
 
         public static void GenerateDocs(object o)
         {
+            Exception storedException = null;
             bool failed = false;
             DocsBuilderEventArgs args = o as DocsBuilderEventArgs;
 
@@ -115,16 +126,25 @@ namespace MASES.JCOReflectorEngine
             {
                 reportStr = string.Format("Error {0}", ex.Message);
                 JobManager.AppendToConsole(LogLevel.Error, reportStr);
+                storedException = ex;
             }
             catch (Exception ex)
             {
                 reportStr = string.Format("Error {0}", ex.Message);
                 JobManager.AppendToConsole(LogLevel.Error, reportStr);
                 failed = true;
+                storedException = ex;
             }
             finally
             {
-                JobManager.EndOperation(new EndOperationEventArgs(reportStr, failed));
+                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Callback))
+                {
+                    JobManager.EndOperation(new EndOperationEventArgs(reportStr, failed));
+                }
+                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Exception))
+                {
+                    throw storedException;
+                }
             }
         }
 
@@ -201,6 +221,7 @@ namespace MASES.JCOReflectorEngine
 
         public static void CreatePOM(object o)
         {
+            Exception storedException = null;
             bool failed = false;
             DateTime dtStart = DateTime.Now;
             string reportStr = string.Empty;
@@ -257,21 +278,31 @@ namespace MASES.JCOReflectorEngine
             {
                 reportStr = string.Format("Error {0}", ex.Message);
                 JobManager.AppendToConsole(LogLevel.Error, reportStr);
+                storedException = ex;
             }
             catch (Exception ex)
             {
                 reportStr = string.Format("Error {0}", ex.Message);
                 JobManager.AppendToConsole(LogLevel.Error, reportStr);
                 failed = true;
+                storedException = ex;
             }
             finally
             {
-                JobManager.EndOperation(new EndOperationEventArgs(reportStr, failed));
+                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Callback))
+                {
+                    JobManager.EndOperation(new EndOperationEventArgs(reportStr, failed));
+                }
+                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Exception))
+                {
+                    throw storedException;
+                }
             }
         }
 
         public static void ExtractPOM(object o)
         {
+            Exception storedException = null;
             bool failed = false;
             DateTime dtStart = DateTime.Now;
             string reportStr = string.Empty;
@@ -287,21 +318,31 @@ namespace MASES.JCOReflectorEngine
             {
                 reportStr = string.Format("Error {0}", ex.Message);
                 JobManager.AppendToConsole(LogLevel.Error, reportStr);
+                storedException = ex;
             }
             catch (Exception ex)
             {
                 reportStr = string.Format("Error {0}", ex.Message);
                 JobManager.AppendToConsole(LogLevel.Error, reportStr);
                 failed = true;
+                storedException = ex;
             }
             finally
             {
-                JobManager.EndOperation(new EndOperationEventArgs(reportStr, failed));
+                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Callback))
+                {
+                    JobManager.EndOperation(new EndOperationEventArgs(reportStr, failed));
+                }
+                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Exception))
+                {
+                    throw storedException;
+                }
             }
         }
 
         public static void CreateJars(object o)
         {
+            Exception storedException = null;
             bool failed = false;
             DateTime dtStart = DateTime.Now;
             string reportStr = string.Empty;
@@ -332,16 +373,25 @@ namespace MASES.JCOReflectorEngine
             {
                 reportStr = string.Format("Error {0}", ex.Message);
                 JobManager.AppendToConsole(LogLevel.Error, reportStr);
+                storedException = ex;
             }
             catch (Exception ex)
             {
                 reportStr = string.Format("Error {0}", ex.Message);
                 JobManager.AppendToConsole(LogLevel.Error, reportStr);
                 failed = true;
+                storedException = ex;
             }
             finally
             {
-                JobManager.EndOperation(new EndOperationEventArgs(reportStr, failed));
+                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Callback))
+                {
+                    JobManager.EndOperation(new EndOperationEventArgs(reportStr, failed));
+                }
+                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Exception))
+                {
+                    throw storedException;
+                }
             }
         }
 

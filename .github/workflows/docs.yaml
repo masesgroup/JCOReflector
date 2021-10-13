@@ -154,8 +154,8 @@ jobs:
       - name: Clean temporary files
         run: |
           Remove-Item .\bin\* -Recurse -Force
-          Remove-Item .\JCOReflector\CLI\obj\* -Recurse -Force
-          Remove-Item .\JCOReflector\engine\obj\* -Recurse -Force
+          Remove-Item .\src\CLI\obj\* -Recurse -Force
+          Remove-Item .\src\engine\obj\* -Recurse -Force
           Remove-Item .\_data\LICENSE -Force
           Remove-Item .\_data\README.md -Force
         

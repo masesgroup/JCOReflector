@@ -42,8 +42,8 @@ jobs:
                 echo "::set-output name=run_job::true"
                 break
               fi
-              if [[ $added_modified_file == "JCOReflector/"* ]]; then
-                echo "$added_modified_file is under the directory 'JCOReflector/'."
+              if [[ $added_modified_file == "src/"* ]]; then
+                echo "$added_modified_file is under the directory 'src/'."
                 echo "::set-output name=run_job::true"
                 break
               fi

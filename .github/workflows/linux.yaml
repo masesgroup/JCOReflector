@@ -72,7 +72,7 @@ jobs:
         # Link the folder
         - name: Make link
           run: |
-            sudo ln -sv  /usr/lib/jvm/adoptopenjdk-8-hotspot-amd64/ /home/runner/work/JCOReflector/JCOReflector/jdk
+            sudo ln -sv  /usr/lib/jvm/adoptopenjdk-8-hotspot-amd64/ /home/runner/work/JCOReflector/src/jdk
 
         # Runs a set of commands using the runners shell
         - name: Build JCOReflectorCLI

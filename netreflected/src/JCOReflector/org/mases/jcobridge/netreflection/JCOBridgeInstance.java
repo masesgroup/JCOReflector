@@ -38,6 +38,7 @@ public final class JCOBridgeInstance implements IJCEventLog {
     static IJCEventLog _logger = null;
     static Object synchObj = new Object();
     static HashMap<String, JCOBridge> bridgeInstances = new HashMap<String, JCOBridge>();
+    static ArrayList<String> searchPaths = new ArrayList<String>();
     static JCOBridge bridgeInstance = null;
 
     BufferedWriter bw = null;
@@ -77,7 +78,31 @@ public final class JCOBridgeInstance implements IJCEventLog {
 
         JCOReflector.writeLog(bw, msg);
     }
-    
+
+    /**
+     * Register search path within the engine
+     * <p>
+     * 
+     * @param path the path to register
+     */
+    public static void registerPath(String path) {
+        searchPaths.add(path);
+    }
+
+    static JCOBridge createInstance() {
+        JCOBridge theBridgeInstance = null;
+        theBridgeInstance = JCOBridge.CreateNew();
+        try {
+            _logger = new JCOBridgeInstance(JCOReflector.getLogFilename());
+            theBridgeInstance.RegisterEventLog(_logger);
+        } catch (Throwable t) {
+            JCOReflector.writeLog(t);
+        }
+        for (String path : searchPaths) {
+            theBridgeInstance.AddPath(path);
+        }
+    }
+
     /**
      * Returns the {@link JCOBridge} instance associated to the assmebly.
      * <p>
@@ -113,13 +138,7 @@ public final class JCOBridgeInstance implements IJCEventLog {
                     theBridgeInstance = bridgeInstances.get(assemblyName);
                 } else {
                     try {
-                        theBridgeInstance = JCOBridge.CreateNew();
-                        try {
-                            _logger = new JCOBridgeInstance(JCOReflector.getLogFilename());
-                            theBridgeInstance.RegisterEventLog(_logger);
-                        } catch (Throwable t) {
-                            JCOReflector.writeLog(t);
-                        }
+                        theBridgeInstance = createInstance();
                         bridgeInstances.put(assemblyName, theBridgeInstance);
                     } catch (JCException e) {
                         JCOReflector.writeLog(e);
@@ -128,13 +147,7 @@ public final class JCOBridgeInstance implements IJCEventLog {
             } else {
                 if (bridgeInstance == null) {
                     try {
-                        bridgeInstance = JCOBridge.CreateNew();
-                        try {
-                            _logger = new JCOBridgeInstance(JCOReflector.getLogFilename());
-                            bridgeInstance.RegisterEventLog(_logger);
-                        } catch (Throwable t) {
-                            JCOReflector.writeLog(t);
-                        }
+                        bridgeInstance = createInstance();
                     } catch (JCException e) {
                         JCOReflector.writeLog(e);
                     }

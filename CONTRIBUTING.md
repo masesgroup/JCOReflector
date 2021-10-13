@@ -16,10 +16,7 @@ The project is organized in this folder structure:
     * net461 (folder for .NET Framework output)
     * netcoreapp3.1 (folder for .NET Core 3.1 output)
     * net5.0 (folder for .NET 5 output)
-* **JCOReflector** (The folder containing the source of the reflection engine)
-    * **CLI** (command line interface)
-    * **GUI** (graphical interface)
-    * **engine** (common reflection engine)
+	
 * **netreflected** (container of Java classes)
     * **src** (a standard folder used in any Java IDE)
         * **JCOReflector** (contains the base classes used from JCOReflector to build reflected classes)
@@ -42,6 +39,11 @@ The project is organized in this folder structure:
 			* **nettest** (contains an example class which use network API)
 			* **hierarchy** (contains an example class which use hierarchy)
 
+* **src** (The folder containing the source of the reflection engine)
+    * **CLI** (command line interface)
+    * **GUI** (graphical interface)
+    * **engine** (common reflection engine)
+	
 # How Can I Contribute?
 
 ## Work on the project
@@ -54,10 +56,11 @@ If you are a developer and want to contribute you are welcome, we reccomend to t
 
 The basic and simple rules for the project are:
 * **Reflection engine** only commit with modifications in the following folders are accepted:
-    * *JCOReflector*
+    * *src*
     * *netreflected/src/JCOReflector*
 * **Unit test**: contibution can be made in the testing code section under *netreflected-tests* folder
 * **Reflected classes**: the following folders and subsolders are generated code from JCOReflector, to change them a developer shall modify the templates; the code will be updated from mantairners after the validation of JCOReflector engine:
+    * *netreflected/src/net5.0*
     * *netreflected/src/netcoreapp3.1*
     * *netreflected/src/net461*
 

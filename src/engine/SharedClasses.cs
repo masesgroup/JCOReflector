@@ -167,6 +167,10 @@ namespace MASES.JCOReflectorEngine
         /// </summary>
         public static readonly Version EngineVersion = new Version(Const.ReflectorVersion);
         /// <summary>
+        /// The folder name used to write the reflected classes
+        /// </summary>
+        public const string SourceFolderName = Const.FileNameAndDirectory.SourceDirectory;
+        /// <summary>
         /// The official runtime name
         /// </summary>
         public const string RuntimeName = Const.Framework.RuntimeName;

@@ -62,7 +62,7 @@ namespace MASES.JCOReflectorEngine
                     args.JDKFolder = Path.Combine(args.RootFolder, args.JDKFolder);
                 }
 
-                var srcRootFolder = Path.Combine(args.SourceFolder, Const.FileNameAndDirectory.SourceDirectory);
+                var srcRootFolder = args.SplitFolderByAssembly ? Path.Combine(args.SourceFolder, Const.FileNameAndDirectory.SourceDirectory) : args.SourceFolder;
                 var classes = CreateSourceListAndCompile(args.JDKFolder, args.JDKTarget, args.JDKToolExtraOptions, args.RootFolder, srcRootFolder, (args.AssembliesToUse == null) ? JobManager.CreateFolderList(srcRootFolder) : args.AssembliesToUse, Timeout.Infinite);
                 reportStr = string.Format("Compilation of {0} classes done in {1}.", classes, DateTime.Now - dtStart);
             }
@@ -117,7 +117,7 @@ namespace MASES.JCOReflectorEngine
                     args.JDKFolder = Path.Combine(args.RootFolder, args.JDKFolder);
                 }
 
-                var srcRootFolder = Path.Combine(args.SourceFolder, Const.FileNameAndDirectory.SourceDirectory);
+                var srcRootFolder = args.SplitFolderByAssembly ? Path.Combine(args.SourceFolder, Const.FileNameAndDirectory.SourceDirectory) : args.SourceFolder;
                 string destinationFolder = Path.Combine(args.SourceFolder, Const.FileNameAndDirectory.DocsDirectory);
                 var classes = CreateSourceListAndGenerateDocs(args.JDKFolder, args.JDKTarget, args.JDKToolExtraOptions, args.RootFolder, srcRootFolder, destinationFolder, args.CommitVersion, (args.AssembliesToUse == null) ? JobManager.CreateFolderList(srcRootFolder) : args.AssembliesToUse, Timeout.Infinite);
                 reportStr = string.Format("Javadoc of {0} classes done in {1}.", classes, DateTime.Now - dtStart);
@@ -239,7 +239,7 @@ namespace MASES.JCOReflectorEngine
                     Const.FileNameAndDirectory.CreateJCOBridgeZip(args.RootFolder);
                 }
 
-                var srcRootFolder = Path.Combine(args.SourceFolder, Const.FileNameAndDirectory.SourceDirectory);
+                var srcRootFolder = args.SplitFolderByAssembly ? Path.Combine(args.SourceFolder, Const.FileNameAndDirectory.SourceDirectory) : args.SourceFolder;
                 var assembliesToUse = (args.AssembliesToUse == null) ? JobManager.CreateFolderList(srcRootFolder, false) : args.AssembliesToUse;
                 StringBuilder sb = new StringBuilder();
                 foreach (var item in assembliesToUse)
@@ -365,7 +365,7 @@ namespace MASES.JCOReflectorEngine
                     args.JarDestinationFolder = Path.Combine(args.RootFolder, args.JarDestinationFolder);
                 }
 
-                var srcRootFolder = Path.Combine(args.SourceFolder, Const.FileNameAndDirectory.SourceDirectory);
+                var srcRootFolder = args.SplitFolderByAssembly ? Path.Combine(args.SourceFolder, Const.FileNameAndDirectory.SourceDirectory) : args.SourceFolder;
                 var jars = CreateJars(args.JDKFolder, args.RootFolder, srcRootFolder, args.JarDestinationFolder, (args.AssembliesToUse == null) ? JobManager.CreateFolderList(srcRootFolder) : args.AssembliesToUse, args.WithJARSource, args.EmbeddingJCOBridge);
                 reportStr = string.Format("{0} Jars created in {1}.", jars, DateTime.Now - dtStart);
             }

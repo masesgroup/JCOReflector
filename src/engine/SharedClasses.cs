@@ -162,6 +162,19 @@ namespace MASES.JCOReflectorEngine
         /// </summary>
         public static ErrorReportingType ErrorReporting { get; set; }
 
+        /// <summary>
+        /// The <see cref="Version"/> of the engine
+        /// </summary>
+        public static readonly Version EngineVersion = new Version(Const.ReflectorVersion);
+        /// <summary>
+        /// The official runtime name
+        /// </summary>
+        public const string RuntimeName = Const.Framework.RuntimeName;
+        /// <summary>
+        /// The runtime folder name used from the engine
+        /// </summary>
+        public const string RuntimeFolder = Const.Framework.RuntimeFolder;
+
         static JobManager()
         {
             ErrorReporting = ErrorReportingType.Callback;
@@ -1434,11 +1447,13 @@ namespace MASES.JCOReflectorEngine
     {
         public CommonEventArgs()
         {
+            SplitFolderByAssembly = true;
         }
 
         public CommonEventArgs(LogLevel logLevel)
         {
             LogLevel = logLevel;
+            SplitFolderByAssembly = true;
         }
 
         public JobTypes JobType { get; set; }

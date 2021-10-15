@@ -147,7 +147,7 @@ jobs:
 
       - name: Build net5.0 Java Help files
         run: dotnet bin\net5.0\JCOReflectorCLI.dll -JobType BuildDocs -JobFile .github\workflows\builddocs_win19.job -CommitVersion ${{ env.GITHUB_COMMIT_MESSAGE }}
-          
+         
       - name: Build net461 Java Help files
         run: .\bin\net461\JCOReflectorCLI -JobType BuildDocs -JobFile .github\workflows\builddocs_win19.job -CommitVersion ${{ env.GITHUB_COMMIT_MESSAGE }}
 

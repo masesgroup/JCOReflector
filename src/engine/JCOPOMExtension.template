@@ -38,7 +38,7 @@
   <properties>
     <maven.compiler.source>POM_JDK_TARGET</maven.compiler.source>
     <maven.compiler.target>POM_JDK_TARGET</maven.compiler.target>
-    <classpathfile>${basedir}/classpathfile.txt</classpathfile>
+    <classpathfile>${basedir}/classpathfile.classpath</classpathfile>
   </properties>
   <distributionManagement>
     <snapshotRepository>
@@ -98,7 +98,7 @@
         <configuration>
           <compilerArgs>
             <arg>-cp</arg>
-            <arg>${originalClassPath};${basedir}/../../../bin/net461/JCOBridge.jar</arg>
+            <arg>${originalClassPath};${basedir}/../../bin/POM_RUNTIME_PLACEHOLDER/JCOBridge.jar</arg>
           </compilerArgs>
         </configuration>
       </plugin>
@@ -150,13 +150,13 @@
           </links>
           <quiet>true</quiet>
           <source>8</source>
-          <additionalDependencies>
+          <!--<additionalDependencies>
             <additionalDependency>
               <groupId>JCOBridge</groupId>
               <artifactId>JCOBridge</artifactId>
               <version>2.3.2</version>
             </additionalDependency>
-          </additionalDependencies>
+          </additionalDependencies>-->
         </configuration>
         <executions>
           <execution>

@@ -149,14 +149,7 @@
             <link>https://www.jcobridge.com/api-java</link>
           </links>
           <quiet>true</quiet>
-          <source>8</source>
-          <!--<additionalDependencies>
-            <additionalDependency>
-              <groupId>JCOBridge</groupId>
-              <artifactId>JCOBridge</artifactId>
-              <version>2.3.2</version>
-            </additionalDependency>
-          </additionalDependencies>-->
+          <source>POM_JDK_TARGET</source>
         </configuration>
         <executions>
           <execution>

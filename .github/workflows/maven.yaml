@@ -38,7 +38,12 @@ jobs:
         do
           echo $file
           if [[ $file == ".github/workflows/maven.yaml"* ]]; then
-            echo "Recreate docs was requested"
+            echo "A change in workflow was made, a run is requested"
+            echo "::set-output name=run_job::true"
+            break
+          fi
+          if [[ $file == "src/engine/JCOPOMJCOReflector.template"* ]]; then
+            echo "A change in template was made, a run is requested"
             echo "::set-output name=run_job::true"
             break
           fi

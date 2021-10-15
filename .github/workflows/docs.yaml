@@ -158,7 +158,7 @@ jobs:
           Remove-Item .\src\engine\obj\* -Recurse -Force
           Remove-Item .\_data\LICENSE -Force
           Remove-Item .\_data\README.md -Force
-        
+       
       - name: Commit changes to netcoreapp3.1 help file
         run: |
           cd .\netreflected\docs\netcoreapp3.1

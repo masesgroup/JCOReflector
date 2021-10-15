@@ -93,6 +93,25 @@ namespace MASES.JCOReflectorEngine
     }
     #endregion
 
+    #region ErrorBehavior
+    [Flags]
+    public enum ErrorReportingType
+    {
+        /// <summary>
+        /// The <see cref="JobManager.EndOperationHandler"/> will be called in case of error
+        /// </summary>
+        Callback = 0x1,
+        /// <summary>
+        /// The <see cref="Exception"/> will be propagated
+        /// </summary>
+        Exception = 0x2,
+        /// <summary>
+        /// The <see cref="Callback"/> is executed and the <see cref="Exception"/> is executed
+        /// </summary>
+        Both = Callback | Exception,
+    }
+    #endregion
+
     #region JobManager Class
     /// <summary>
     /// The main entry point
@@ -138,8 +157,31 @@ namespace MASES.JCOReflectorEngine
         /// </summary>
         public static string JarDestinationFolder { get; set; }
 
+        /// <summary>
+        /// The <see cref="ErrorReportingType"/> to be used during execution. Default is <see cref="ErrorReportingType.Callback"/> for backward compatibility.
+        /// </summary>
+        public static ErrorReportingType ErrorReporting { get; set; }
+
+        /// <summary>
+        /// The <see cref="Version"/> of the engine
+        /// </summary>
+        public static readonly Version EngineVersion = new Version(Const.ReflectorVersion);
+        /// <summary>
+        /// The folder name used to write the reflected classes
+        /// </summary>
+        public const string SourceFolderName = Const.FileNameAndDirectory.SourceDirectory;
+        /// <summary>
+        /// The official runtime name
+        /// </summary>
+        public const string RuntimeName = Const.Framework.RuntimeName;
+        /// <summary>
+        /// The runtime folder name used from the engine
+        /// </summary>
+        public const string RuntimeFolder = Const.Framework.RuntimeFolder;
+
         static JobManager()
         {
+            ErrorReporting = ErrorReportingType.Callback;
             StartupLocation = Path.GetDirectoryName(typeof(JobManager).Assembly.Location);
             RootFolder = DefaultRootFolder = Path.Combine(StartupLocation, @".." + Path.DirectorySeparatorChar + @".." + Path.DirectorySeparatorChar);
             arguments = prepareArguments();
@@ -1409,11 +1451,13 @@ namespace MASES.JCOReflectorEngine
     {
         public CommonEventArgs()
         {
+            SplitFolderByAssembly = true;
         }
 
         public CommonEventArgs(LogLevel logLevel)
         {
             LogLevel = logLevel;
+            SplitFolderByAssembly = true;
         }
 
         public JobTypes JobType { get; set; }

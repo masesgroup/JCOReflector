@@ -60,9 +60,10 @@ public class JCOReflector {
         }
         return null;
     }
-    
+
     /**
      * Return if {@link JCOReflector} is initialized
+     * 
      * @return true if {@link JCOReflector} is initialized
      */
     public static synchronized boolean getInitialized() {
@@ -222,6 +223,19 @@ public class JCOReflector {
         if (getInitialized())
             return;
         _commandLineArgs = args;
+    }
+
+    /**
+     * Register search path within the engine
+     * <p>
+     * It can be applied only before any operation
+     * 
+     * @param path the path to register
+     */
+    public static void registerPath(String path) {
+        if (getInitialized())
+            return;
+        JCOBridgeInstance.registerPath(path);
     }
 
     /**
@@ -408,10 +422,12 @@ public class JCOReflector {
                 setInstanceByAssembly(true);
             } else if (string.toLowerCase() == "-logfilename") {
                 setLogFilename(args[index++]);
-            } else if (string.toLowerCase() == "-initRT") {
+            } else if (string.toLowerCase() == "-initrt") {
                 initRT(args[index++]);
-            } else if (string.toLowerCase() == "-initTempRT") {
+            } else if (string.toLowerCase() == "-inittemprt") {
                 initTempRT();
+            } else if (string.toLowerCase() == "-path") {
+                registerPath(args[index++]);
             }
         }
     }

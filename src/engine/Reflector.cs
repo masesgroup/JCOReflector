@@ -335,6 +335,8 @@ namespace MASES.JCOReflectorEngine
         {
             ResetStatistics();
 
+            Exception storedException = null;
+
             bool failed = false;
             List<Type> typesToExport = new List<Type>();
             ReflectorEventArgs args = o as ReflectorEventArgs;
@@ -427,15 +429,24 @@ namespace MASES.JCOReflectorEngine
             catch (OperationCanceledException ex)
             {
                 JobManager.AppendToConsole(LogLevel.Error, "ExportAssembly error: {0}", ex.Message);
+                storedException = ex;
             }
             catch (Exception ex)
             {
                 JobManager.AppendToConsole(LogLevel.Error, "ExportAssembly error: {0}", ex.Message);
                 failed = true;
+                storedException = ex;
             }
             finally
             {
-                JobManager.EndOperation(new EndOperationEventArgs(reportStr, failed));
+                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Callback))
+                {
+                    JobManager.EndOperation(new EndOperationEventArgs(reportStr, failed));
+                }
+                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Exception))
+                {
+                    throw storedException;
+                }
             }
         }
 

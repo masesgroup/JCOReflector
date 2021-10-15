@@ -41,7 +41,7 @@ namespace MASES.JCOReflectorEngine
             return name;
         }
 
-        public static string ReflectorVersion = typeof(JavaBuilder).Assembly.GetName().Version.ToString();
+        public static readonly string ReflectorVersion = typeof(JavaBuilder).Assembly.GetName().Version.ToString();
 
         public static string[] KeyWords = new string[]
         {
@@ -285,13 +285,16 @@ namespace MASES.JCOReflectorEngine
 #if NET_CORE
 #if NET5_0
             public const string Runtime = ".NET 5";
+            public const string RuntimeName = ".NETCoreApp";
             public const string RuntimeFolder = "net5.0";
 #else
             public const string Runtime = ".NET Core";
+            public const string RuntimeName = ".NETCoreApp";
             public const string RuntimeFolder = "netcoreapp3.1";
 #endif
 #else
             public const string Runtime = ".NET Framework";
+            public const string RuntimeName = ".NETFramework";
             public const string RuntimeFolder = "net461";
 #endif
         }

@@ -64,6 +64,7 @@
         <targetPath>org/mases/jcobridge/netreflection</targetPath>
       </resource>
     </resources>
+    <plugins>
       <!-- from https://stackoverflow.com/questions/3410548/maven-add-a-folder-or-jar-file-into-current-classpath -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>

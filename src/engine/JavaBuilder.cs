@@ -85,7 +85,7 @@ namespace MASES.JCOReflectorEngine
                 {
                     JobManager.EndOperation(new EndOperationEventArgs(reportStr, failed));
                 }
-                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Exception))
+                if (storedException != null && JobManager.ErrorReporting.HasFlag(ErrorReportingType.Exception))
                 {
                     throw storedException;
                 }
@@ -141,7 +141,7 @@ namespace MASES.JCOReflectorEngine
                 {
                     JobManager.EndOperation(new EndOperationEventArgs(reportStr, failed));
                 }
-                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Exception))
+                if (storedException != null && JobManager.ErrorReporting.HasFlag(ErrorReportingType.Exception))
                 {
                     throw storedException;
                 }
@@ -293,7 +293,7 @@ namespace MASES.JCOReflectorEngine
                 {
                     JobManager.EndOperation(new EndOperationEventArgs(reportStr, failed));
                 }
-                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Exception))
+                if (storedException != null && JobManager.ErrorReporting.HasFlag(ErrorReportingType.Exception))
                 {
                     throw storedException;
                 }
@@ -333,7 +333,7 @@ namespace MASES.JCOReflectorEngine
                 {
                     JobManager.EndOperation(new EndOperationEventArgs(reportStr, failed));
                 }
-                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Exception))
+                if (storedException != null && JobManager.ErrorReporting.HasFlag(ErrorReportingType.Exception))
                 {
                     throw storedException;
                 }
@@ -388,7 +388,7 @@ namespace MASES.JCOReflectorEngine
                 {
                     JobManager.EndOperation(new EndOperationEventArgs(reportStr, failed));
                 }
-                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Exception))
+                if (storedException != null && JobManager.ErrorReporting.HasFlag(ErrorReportingType.Exception))
                 {
                     throw storedException;
                 }

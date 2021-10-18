@@ -8,7 +8,7 @@
     <Copyright>Copyright ©  MASES s.r.l. 2021</Copyright>
     <Authors>MASES s.r.l.</Authors>
     <Company>MASES s.r.l.</Company>
-    <Version>1.7.2.0</Version>
+    <Version>1.7.3.0</Version>
     <Product>MASES.JCOReflectorCLI</Product>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
     <TargetFrameworks>net461;netcoreapp3.1;net5.0</TargetFrameworks>
@@ -28,6 +28,14 @@
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>..\Common\JCOReflector.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
+  <!-- Fix start https://github.com/dotnet/sourcelink/issues/572 -->
+  <PropertyGroup>
+    <TargetFrameworkMonikerAssemblyAttributesPath>$([System.IO.Path]::Combine('$(IntermediateOutputPath)','$(TargetFrameworkMoniker).AssemblyAttributes$(DefaultLanguageSourceExtension)'))</TargetFrameworkMonikerAssemblyAttributesPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedFiles Include="$(GeneratedAssemblyInfoFile)"/>
+  </ItemGroup>
+  <!-- Fix end -->
   <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
     <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
   </PropertyGroup>

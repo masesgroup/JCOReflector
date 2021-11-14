@@ -1,0 +1,17 @@
+###############
+#    files    #
+###############
+
+*.AssemblyAttributes
+
+###############
+#    folder   #
+###############
+/**/.vs/
+/**/target/
+/**/DROP/
+/**/TEMP/
+/**/packages/
+/**/bin/
+/**/obj/
+_site

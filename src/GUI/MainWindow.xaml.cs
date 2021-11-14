@@ -436,7 +436,7 @@ namespace MASES.JCOReflectorGUI
                 }
 
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 MessageBox.Show(e.Message, string.Empty, MessageBoxButton.OK, MessageBoxImage.Error);
             }

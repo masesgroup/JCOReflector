@@ -32,7 +32,6 @@ namespace MASES.JCOReflectorCLI
         static void showHelp(string errorString = null)
         {
             var assembly = typeof(Program).Assembly;
-
 #if NETCOREAPP3_1
             var title = "JCOReflector CLI - CLI interface for JCOReflector Engine (.NET Core)";
 #elif NET5_0

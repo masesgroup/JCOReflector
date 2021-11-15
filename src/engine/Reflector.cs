@@ -136,7 +136,9 @@ namespace MASES.JCOReflectorEngine
                     string csvFileName = string.Empty;
 
                     if (!Directory.Exists(CsvDestinationFolder)) Directory.CreateDirectory(CsvDestinationFolder);
-                    csvFileName = Path.GetFullPath(Path.Combine(CsvDestinationFolder, Const.Framework.RuntimeFolder, Const.FileNameAndDirectory.StatisticsFilename));
+                    var relativePath = Path.GetFullPath(Path.Combine(CsvDestinationFolder, Const.Framework.RuntimeFolder));
+                    if (!Directory.Exists(relativePath)) Directory.CreateDirectory(relativePath);
+                    csvFileName = Path.Combine(relativePath, Const.FileNameAndDirectory.StatisticsFilename);
                     writeFile(csvFileName, csvString);
                 }
             }

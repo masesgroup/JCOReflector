@@ -803,3 +803,8 @@ Parsed assemblies are:
 >   * Internals = 29
 
 [//]: # "EndReport net5.0"
+
+[//]: # "BeginReport net6.0"
+
+
+[//]: # "EndReport net6.0"

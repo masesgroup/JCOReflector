@@ -108,7 +108,20 @@ namespace MASES.JCOReflectorGUI
         public MainWindow()
         {
             InitializeComponent();
-#if !NET_CORE
+
+#if NETCOREAPP3_1
+            Title = "JCOReflector Builder - CLR to JVM reflection class generator (.NET Core)";
+
+            tbAssemblyNames.Text += "PresentationFramework";
+#elif NET5_0
+            Title = "JCOReflector Builder - CLR to JVM reflection class generator (.NET 5)";
+
+            tbAssemblyNames.Text += "PresentationFramework";
+#elif NET6_0
+            Title = "JCOReflector Builder - CLR to JVM reflection class generator (.NET 6)";
+
+            tbAssemblyNames.Text += "PresentationFramework";
+#elif NETFRAMEWORK
             Title = "JCOReflector Builder - CLR to JVM reflection class generator (.NET Framework)";
 
             tbAssemblyNames.Text += "PresentationFramework,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35" + Environment.NewLine +
@@ -118,15 +131,7 @@ namespace MASES.JCOReflectorGUI
                                     "System.Net, Version = 4.0.0.0, Culture = neutral, PublicKeyToken = b03f5f7f11d50a3a" + Environment.NewLine +
                                     "System.Workflow.Runtime, Version = 4.0.0.0, Culture = neutral, PublicKeyToken = 31bf3856ad364e35";
 #else
-#if NET5_0
-            Title = "JCOReflector Builder - CLR to JVM reflection class generator (.NET 5)";
-
-            tbAssemblyNames.Text += "PresentationFramework";
-#else
-            Title = "JCOReflector Builder - CLR to JVM reflection class generator (.NET Core)";
-
-            tbAssemblyNames.Text += "PresentationFramework";
-#endif
+#error Unable to identify .NET engine
 #endif
 
             Title += " Version " + typeof(MainWindow).Assembly.GetName().Version.ToString();
@@ -431,7 +436,7 @@ namespace MASES.JCOReflectorGUI
                 }
 
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 MessageBox.Show(e.Message, string.Empty, MessageBoxButton.OK, MessageBoxImage.Error);
             }

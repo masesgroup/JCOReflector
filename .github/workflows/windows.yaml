@@ -53,7 +53,7 @@ jobs:
     needs: check
     if: needs.check.outputs.run_job == 'true'
     # The type of runner that the job will run on
-    runs-on: windows-2019
+    runs-on: windows-2022
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -76,6 +76,7 @@ jobs:
         run: |
           dotnet build --no-incremental --framework netcoreapp3.1 --configuration Release src\JCOReflectorCLI.sln
           dotnet build --no-incremental --framework net5.0 --configuration Release src\JCOReflectorCLI.sln  
+          dotnet build --no-incremental --framework net6.0 --configuration Release src\JCOReflectorCLI.sln  
           dotnet build --no-incremental --framework net461 --configuration Release src\JCOReflectorCLI.sln  
 
       # Runs a set of commands using the runners shell
@@ -83,11 +84,13 @@ jobs:
         run: |
           Copy-Item .github\workflows\JCOReflectorCLI.runtimeconfig.json -Destination bin\netcoreapp3.1\JCOReflectorCLI.runtimeconfig.json -Force
           Copy-Item .github\workflows\JCOReflectorCLI5.0.runtimeconfig.json -Destination bin\net5.0\JCOReflectorCLI.runtimeconfig.json -Force
+          Copy-Item .github\workflows\JCOReflectorCLI6.0.runtimeconfig.json -Destination bin\net6.0\JCOReflectorCLI.runtimeconfig.json -Force
 
       - name: Remove Java files
         run: |
           Remove-Item .\netreflected\src\netcoreapp3.1 -Recurse -Force 
           Remove-Item .\netreflected\src\net5.0 -Recurse -Force
+          Remove-Item .\netreflected\src\net6.0 -Recurse -Force
           Remove-Item .\netreflected\src\net461 -Recurse -Force
 
       - name: Reflect .NET Core 3.1 Java files
@@ -95,28 +98,45 @@ jobs:
 
       - name: Reflect .NET 5.0 Java files
         run: .\bin\net5.0\JCOReflectorCLI -JobType Reflect -JobFile .github\workflows\reflect_net5.0.job
+        
+      - name: Reflect .NET 6.0 Java files
+        run: .\bin\net6.0\JCOReflectorCLI -JobType Reflect -JobFile .github\workflows\reflect_net6.0.job
           
       - name: Reflect .NET Framework Java files
         run: .\bin\net461\JCOReflectorCLI -JobType Reflect -JobFile .github\workflows\reflect_net461.job
 
       - name: Build Java files .NET Core 3.1
-        run: dotnet bin\netcoreapp3.1\JCOReflectorCLI.dll -JobType Build -JobFile .github\workflows\build_win19.job
-          
+        run: dotnet bin\netcoreapp3.1\JCOReflectorCLI.dll -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
+        shell: cmd
+        
       - name: Build Java files .NET Core 5.0
-        run: dotnet bin\net5.0\JCOReflectorCLI.dll -JobType Build -JobFile .github\workflows\build_win19.job
-          
+        run: dotnet bin\net5.0\JCOReflectorCLI.dll -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
+        shell: cmd
+        
+      - name: Build Java files .NET Core 6.0
+        run: dotnet bin\net6.0\JCOReflectorCLI.dll -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
+        shell: cmd
+        
       - name: Build Java files .NET Framework
-        run: .\bin\net461\JCOReflectorCLI -JobType Build -JobFile .github\workflows\build_win19.job
-
+        run: .\bin\net461\JCOReflectorCLI -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
+        shell: cmd
+        
       - name: Build JAR files .NET Core 3.1
-        run: dotnet bin\netcoreapp3.1\JCOReflectorCLI.dll -JobType CreateJars -JobFile .github\workflows\createjars_core3.1_win19.job
-          
+        run: dotnet bin\netcoreapp3.1\JCOReflectorCLI.dll -JobType CreateJars -JobFile .github\workflows\createjars_core3.1_win19.job -JDKFolder %JAVA_HOME_11_X64%
+        shell: cmd
+        
       - name: Build JAR files .NET Core 5.0
-        run: dotnet bin\net5.0\JCOReflectorCLI.dll -JobType CreateJars -JobFile .github\workflows\createjars_core5.0_win19.job
-          
+        run: dotnet bin\net5.0\JCOReflectorCLI.dll -JobType CreateJars -JobFile .github\workflows\createjars_core5.0_win19.job -JDKFolder %JAVA_HOME_11_X64%
+        shell: cmd
+        
+      - name: Build JAR files .NET Core 6.0
+        run: dotnet bin\net6.0\JCOReflectorCLI.dll -JobType CreateJars -JobFile .github\workflows\createjars_core6.0_win19.job -JDKFolder %JAVA_HOME_11_X64%
+        shell: cmd
+        
       - name: Build JAR files .NET Framework
-        run: .\bin\net461\JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_framework_win19.job
-          
+        run: .\bin\net461\JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_framework_win19.job -JDKFolder %JAVA_HOME_11_X64%
+        shell: cmd
+        
       - name: Build Java test source file .NET Core 3.1
         run: javac -cp ./bin/netcoreapp3.1/JCOReflector.jar ./netreflected-tests/java/src/hierarchy/*.java ./netreflected-tests/java/src/mscorlib/*.java ./netreflected-tests/java/src/nettest/*.java ./netreflected-tests/java/src/refout/*.java
 
@@ -134,17 +154,31 @@ jobs:
       - name: Build Java test source file .NET Core 5.0
         run: javac -cp ./bin/net5.0/JCOReflector.jar ./netreflected-tests/java/src/hierarchy/*.java ./netreflected-tests/java/src/mscorlib/*.java ./netreflected-tests/java/src/nettest/*.java ./netreflected-tests/java/src/refout/*.java
 
-      - run: java -cp "./bin/net5.0/JCOReflector.jar;./netreflected-tests/java/src/" mscorlib.HelloLock      
-      - run: java -cp "./bin/net5.0/JCOReflector.jar;./netreflected-tests/java/src/" mscorlib.HelloNET
-      - run: java -cp "./bin/net5.0/JCOReflector.jar;./netreflected-tests/java/src/" mscorlib.HelloNETEvent
-      - run: java -cp "./bin/net5.0/JCOReflector.jar;./netreflected-tests/java/src/" mscorlib.HelloIterator
-      - run: java -cp "./bin/net5.0/JCOReflector.jar;./netreflected-tests/java/src/" hierarchy.HelloHierarchy
-      - run: java -cp "./bin/net5.0/JCOReflector.jar;./netreflected-tests/java/src/" hierarchy.HelloInterfaces
-      - run: java -cp "./bin/net5.0/JCOReflector.jar;./netreflected-tests/java/src/" nettest.HelloNETSocket
-      - run: java -cp "./bin/net5.0/JCOReflector.jar;./netreflected-tests/java/src/" nettest.HelloNETSocket -async
-      - run: java -cp "./bin/net5.0/JCOReflector.jar;./netreflected-tests/java/src/" refout.HelloRefOutBase
-      - run: java -cp "./bin/net5.0/JCOReflector.jar;./netreflected-tests/java/src/" refout.HelloRefOut
-          
+      - run: java -cp "./bin/net5.0/JCOReflector.jar;./netreflected-tests/java/src/" mscorlib.HelloLock --CoreCLRApp:Microsoft.NET5.App
+      - run: java -cp "./bin/net5.0/JCOReflector.jar;./netreflected-tests/java/src/" mscorlib.HelloNET --CoreCLRApp:Microsoft.NET5.App
+      - run: java -cp "./bin/net5.0/JCOReflector.jar;./netreflected-tests/java/src/" mscorlib.HelloNETEvent --CoreCLRApp:Microsoft.NET5.App
+      - run: java -cp "./bin/net5.0/JCOReflector.jar;./netreflected-tests/java/src/" mscorlib.HelloIterator --CoreCLRApp:Microsoft.NET5.App
+      - run: java -cp "./bin/net5.0/JCOReflector.jar;./netreflected-tests/java/src/" hierarchy.HelloHierarchy --CoreCLRApp:Microsoft.NET5.App
+      - run: java -cp "./bin/net5.0/JCOReflector.jar;./netreflected-tests/java/src/" hierarchy.HelloInterfaces --CoreCLRApp:Microsoft.NET5.App
+      - run: java -cp "./bin/net5.0/JCOReflector.jar;./netreflected-tests/java/src/" nettest.HelloNETSocket --CoreCLRApp:Microsoft.NET5.App
+      - run: java -cp "./bin/net5.0/JCOReflector.jar;./netreflected-tests/java/src/" nettest.HelloNETSocket -async --CoreCLRApp:Microsoft.NET5.App
+      - run: java -cp "./bin/net5.0/JCOReflector.jar;./netreflected-tests/java/src/" refout.HelloRefOutBase --CoreCLRApp:Microsoft.NET5.App
+      - run: java -cp "./bin/net5.0/JCOReflector.jar;./netreflected-tests/java/src/" refout.HelloRefOut --CoreCLRApp:Microsoft.NET5.App
+
+      - name: Build Java test source file .NET Core 6.0
+        run: javac -cp ./bin/net6.0/JCOReflector.jar ./netreflected-tests/java/src/hierarchy/*.java ./netreflected-tests/java/src/mscorlib/*.java ./netreflected-tests/java/src/nettest/*.java ./netreflected-tests/java/src/refout/*.java
+
+      - run: java -cp "./bin/net6.0/JCOReflector.jar;./netreflected-tests/java/src/" mscorlib.HelloLock      
+      - run: java -cp "./bin/net6.0/JCOReflector.jar;./netreflected-tests/java/src/" mscorlib.HelloNET
+      - run: java -cp "./bin/net6.0/JCOReflector.jar;./netreflected-tests/java/src/" mscorlib.HelloNETEvent
+      - run: java -cp "./bin/net6.0/JCOReflector.jar;./netreflected-tests/java/src/" mscorlib.HelloIterator
+      - run: java -cp "./bin/net6.0/JCOReflector.jar;./netreflected-tests/java/src/" hierarchy.HelloHierarchy
+      - run: java -cp "./bin/net6.0/JCOReflector.jar;./netreflected-tests/java/src/" hierarchy.HelloInterfaces
+      - run: java -cp "./bin/net6.0/JCOReflector.jar;./netreflected-tests/java/src/" nettest.HelloNETSocket
+      - run: java -cp "./bin/net6.0/JCOReflector.jar;./netreflected-tests/java/src/" nettest.HelloNETSocket -async
+      - run: java -cp "./bin/net6.0/JCOReflector.jar;./netreflected-tests/java/src/" refout.HelloRefOutBase
+      - run: java -cp "./bin/net6.0/JCOReflector.jar;./netreflected-tests/java/src/" refout.HelloRefOut
+
       - name: Build Java test source file .NET Framework
         run: javac -cp ./bin/net461/JCOReflector.jar ./netreflected-tests/java/src/hierarchy/*.java ./netreflected-tests/java/src/mscorlib/*.java ./netreflected-tests/java/src/nettest/*.java ./netreflected-tests/java/src/refout/*.java
 
@@ -156,7 +190,7 @@ jobs:
       - run: java -cp "./bin/net461/JCOReflector.jar;./netreflected-tests/java/src/" hierarchy.HelloInterfaces
       - run: java -cp "./bin/net461/JCOReflector.jar;./netreflected-tests/java/src/" nettest.HelloNETSocket
       - run: java -cp "./bin/net461/JCOReflector.jar;./netreflected-tests/java/src/" nettest.HelloNETSocket -async
-      - run: java -cp "./bin/net5.0/JCOReflector.jar;./netreflected-tests/java/src/" refout.HelloRefOutBase
+      - run: java -cp "./bin/net461/JCOReflector.jar;./netreflected-tests/java/src/" refout.HelloRefOutBase
       - run: java -cp "./bin/net461/JCOReflector.jar;./netreflected-tests/java/src/" refout.HelloRefOut
 
       - name: Download Scala package
@@ -202,29 +236,59 @@ jobs:
           mkdir output
           ..\..\scala-2.13.5\bin\scalac -toolcp "../../bin/net5.0/*" -d ./output ./src/main/scala/hierarchy/* ./src/main/scala/mscorlib/* ./src/main/scala/nettest/* ./src/main/scala/refout/*
               
-      - run: cd ./netreflected-tests/scala && ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/net5.0/*;./output" mscorlib.HelloLock
+      - run: cd ./netreflected-tests/scala && ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/net5.0/*;./output" mscorlib.HelloLock --CoreCLRApp:Microsoft.NET5.App
         shell: cmd      
-      - run: cd ./netreflected-tests/scala && ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/net5.0/*;./output" mscorlib.HelloNet
+      - run: cd ./netreflected-tests/scala && ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/net5.0/*;./output" mscorlib.HelloNet --CoreCLRApp:Microsoft.NET5.App
         shell: cmd      
-      - run: cd ./netreflected-tests/scala && ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/net5.0/*;./output" mscorlib.HelloNETEvent
+      - run: cd ./netreflected-tests/scala && ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/net5.0/*;./output" mscorlib.HelloNETEvent --CoreCLRApp:Microsoft.NET5.App
         shell: cmd      
-      - run: cd ./netreflected-tests/scala && ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/net5.0/*;./output" mscorlib.HelloIterator
+      - run: cd ./netreflected-tests/scala && ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/net5.0/*;./output" mscorlib.HelloIterator --CoreCLRApp:Microsoft.NET5.App
         shell: cmd      
-      - run: cd ./netreflected-tests/scala && ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/net5.0/*;./output" hierarchy.HelloHierarchy
+      - run: cd ./netreflected-tests/scala && ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/net5.0/*;./output" hierarchy.HelloHierarchy --CoreCLRApp:Microsoft.NET5.App
         shell: cmd      
-      - run: cd ./netreflected-tests/scala && ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/net5.0/*;./output" hierarchy.HelloInterfaces
+      - run: cd ./netreflected-tests/scala && ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/net5.0/*;./output" hierarchy.HelloInterfaces --CoreCLRApp:Microsoft.NET5.App
         shell: cmd      
-      - run: cd ./netreflected-tests/scala && ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/net5.0/*;./output" nettest.HelloNETSocket
+      - run: cd ./netreflected-tests/scala && ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/net5.0/*;./output" nettest.HelloNETSocket --CoreCLRApp:Microsoft.NET5.App
         shell: cmd      
-      - run: cd ./netreflected-tests/scala && ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/net5.0/*;./output" nettest.HelloNETSocket -async
+      - run: cd ./netreflected-tests/scala && ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/net5.0/*;./output" nettest.HelloNETSocket -async --CoreCLRApp:Microsoft.NET5.App
         shell: cmd      
-      - run: cd ./netreflected-tests/scala && ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/net5.0/*;./output" refout.HelloRefOutBase
+      - run: cd ./netreflected-tests/scala && ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/net5.0/*;./output" refout.HelloRefOutBase --CoreCLRApp:Microsoft.NET5.App
         shell: cmd      
-      - run: cd ./netreflected-tests/scala && ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/net5.0/*;./output" refout.HelloRefOut
+      - run: cd ./netreflected-tests/scala && ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/net5.0/*;./output" refout.HelloRefOut --CoreCLRApp:Microsoft.NET5.App
         shell: cmd      
       - run: cd ./netreflected-tests/scala && rmdir output /s /q
         shell: cmd 
-        
+
+      - name: Build Scala test source file .NET Core 6.0
+        shell: cmd
+        run: |
+          cd ./netreflected-tests/scala
+          mkdir output
+          ..\..\scala-2.13.5\bin\scalac -toolcp "../../bin/net6.0/*" -d ./output ./src/main/scala/hierarchy/* ./src/main/scala/mscorlib/* ./src/main/scala/nettest/* ./src/main/scala/refout/*
+              
+      - run: cd ./netreflected-tests/scala && ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/net6.0/*;./output" mscorlib.HelloLock
+        shell: cmd      
+      - run: cd ./netreflected-tests/scala && ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/net6.0/*;./output" mscorlib.HelloNet
+        shell: cmd      
+      - run: cd ./netreflected-tests/scala && ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/net6.0/*;./output" mscorlib.HelloNETEvent
+        shell: cmd      
+      - run: cd ./netreflected-tests/scala && ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/net6.0/*;./output" mscorlib.HelloIterator
+        shell: cmd      
+      - run: cd ./netreflected-tests/scala && ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/net6.0/*;./output" hierarchy.HelloHierarchy
+        shell: cmd      
+      - run: cd ./netreflected-tests/scala && ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/net6.0/*;./output" hierarchy.HelloInterfaces
+        shell: cmd      
+      - run: cd ./netreflected-tests/scala && ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/net6.0/*;./output" nettest.HelloNETSocket
+        shell: cmd      
+      - run: cd ./netreflected-tests/scala && ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/net6.0/*;./output" nettest.HelloNETSocket -async
+        shell: cmd      
+      - run: cd ./netreflected-tests/scala && ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/net6.0/*;./output" refout.HelloRefOutBase
+        shell: cmd      
+      - run: cd ./netreflected-tests/scala && ..\..\scala-2.13.5\bin\scala -toolcp "../../bin/net6.0/*;./output" refout.HelloRefOut
+        shell: cmd      
+      - run: cd ./netreflected-tests/scala && rmdir output /s /q
+        shell: cmd 
+   
       - name: Build Scala test source file .NET Framework
         shell: cmd
         run: |
@@ -259,6 +323,7 @@ jobs:
         run: | 
           Compress-Archive -Path .\bin\netcoreapp3.1\* -DestinationPath .\bin\netcoreapp3.1.zip
           Compress-Archive -Path .\bin\net5.0\* -DestinationPath .\bin\net5.0.zip
+          Compress-Archive -Path .\bin\net6.0\* -DestinationPath .\bin\net6.0.zip
           Compress-Archive -Path .\bin\net461\* -DestinationPath .\bin\net461.zip
 
       - name: Build NuGet Packages
@@ -313,7 +378,12 @@ jobs:
         with:
           name: net5.0
           path: .\bin\net5.0.zip
-          
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: net6.0
+          path: .\bin\net6.0.zip
+         
       - uses: actions/upload-artifact@v2
         with:
           name: net461

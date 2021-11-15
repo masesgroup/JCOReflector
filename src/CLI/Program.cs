@@ -32,15 +32,16 @@ namespace MASES.JCOReflectorCLI
         static void showHelp(string errorString = null)
         {
             var assembly = typeof(Program).Assembly;
-
-#if !NET_CORE
+#if NETCOREAPP3_1
+            var title = "JCOReflector CLI - CLI interface for JCOReflector Engine (.NET Core)";
+#elif NET5_0
+            var title = "JCOReflector CLI - CLI interface for JCOReflector Engine (.NET 5)";
+#elif NET6_0
+            var title = "JCOReflector CLI - CLI interface for JCOReflector Engine (.NET 6)";
+#elif NETFRAMEWORK
             var title = "JCOReflector CLI - CLI interface for JCOReflector Engine (.NET Framework)";
 #else
-#if NET5_0
-            var title = "JCOReflector CLI - CLI interface for JCOReflector Engine (.NET 5)";
-#else
-            var title = "JCOReflector CLI - CLI interface for JCOReflector Engine (.NET Core)";
-#endif
+#error Unable to identify .NET engine
 #endif
 
             Console.WriteLine(title + " - Version " + assembly.GetName().Version.ToString());

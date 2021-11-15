@@ -144,11 +144,11 @@ public class EventLogWatcher extends NetObject implements AutoCloseable {
     public EventLogWatcher() throws Throwable {
     }
 
-    public EventLogWatcher(EventLogQuery eventQuery) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
+    public EventLogWatcher(EventLogQuery eventQuery, EventBookmark bookmark, boolean readExistingEvents) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(eventQuery == null ? null : eventQuery.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(eventQuery == null ? null : eventQuery.getJCOInstance(), bookmark == null ? null : bookmark.getJCOInstance(), readExistingEvents));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,11 +164,11 @@ public class EventLogWatcher extends NetObject implements AutoCloseable {
         }
     }
 
-    public EventLogWatcher(EventLogQuery eventQuery, EventBookmark bookmark, boolean readExistingEvents) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
+    public EventLogWatcher(EventLogQuery eventQuery) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(eventQuery == null ? null : eventQuery.getJCOInstance(), bookmark == null ? null : bookmark.getJCOInstance(), readExistingEvents));
+            setJCOInstance((JCObject)classType.NewObject(eventQuery == null ? null : eventQuery.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -160,22 +160,22 @@ public class DirectoryEntries extends NetObjectEnumerable  {
         }
     }
 
-    public DirectoryEntry Find(java.lang.String name) throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.threading.SynchronizationLockException {
+    public DirectoryEntry Find(java.lang.String name, java.lang.String schemaClassName) throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objFind = (JCObject)classInstance.Invoke("Find", name);
+            JCObject objFind = (JCObject)classInstance.Invoke("Find", name, schemaClassName);
             return new DirectoryEntry(objFind);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DirectoryEntry Find(java.lang.String name, java.lang.String schemaClassName) throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.threading.SynchronizationLockException {
+    public DirectoryEntry Find(java.lang.String name) throws Throwable, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.OverflowException, system.FormatException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objFind = (JCObject)classInstance.Invoke("Find", name, schemaClassName);
+            JCObject objFind = (JCObject)classInstance.Invoke("Find", name);
             return new DirectoryEntry(objFind);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

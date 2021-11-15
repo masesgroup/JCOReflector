@@ -143,21 +143,21 @@ public class DesignerTransactionCloseEventArgs extends EventArgs  {
     public DesignerTransactionCloseEventArgs() throws Throwable {
     }
 
-    public DesignerTransactionCloseEventArgs(boolean commit) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(commit));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DesignerTransactionCloseEventArgs(boolean commit, boolean lastTransaction) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(commit, lastTransaction));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DesignerTransactionCloseEventArgs(boolean commit) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(commit));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -150,21 +150,21 @@ public class XmlSerializerAssemblyAttribute extends Attribute  {
         }
     }
 
-    public XmlSerializerAssemblyAttribute(java.lang.String assemblyName) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(assemblyName));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public XmlSerializerAssemblyAttribute(java.lang.String assemblyName, java.lang.String codeBase) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(assemblyName, codeBase));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlSerializerAssemblyAttribute(java.lang.String assemblyName) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(assemblyName));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

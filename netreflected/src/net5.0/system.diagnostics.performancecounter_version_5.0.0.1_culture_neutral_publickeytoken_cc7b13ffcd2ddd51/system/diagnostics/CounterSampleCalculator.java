@@ -147,22 +147,22 @@ public class CounterSampleCalculator extends NetObject  {
     
     // Methods section
     
-    public static Single ComputeCounterValue(CounterSample newSample) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.componentmodel.Win32Exception {
+    public static Single ComputeCounterValue(CounterSample oldSample, CounterSample newSample) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objComputeCounterValue = (JCObject)classType.Invoke("ComputeCounterValue", newSample == null ? null : newSample.getJCOInstance());
+            JCObject objComputeCounterValue = (JCObject)classType.Invoke("ComputeCounterValue", oldSample == null ? null : oldSample.getJCOInstance(), newSample == null ? null : newSample.getJCOInstance());
             return new Single(objComputeCounterValue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Single ComputeCounterValue(CounterSample oldSample, CounterSample newSample) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.componentmodel.Win32Exception {
+    public static Single ComputeCounterValue(CounterSample newSample) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objComputeCounterValue = (JCObject)classType.Invoke("ComputeCounterValue", oldSample == null ? null : oldSample.getJCOInstance(), newSample == null ? null : newSample.getJCOInstance());
+            JCObject objComputeCounterValue = (JCObject)classType.Invoke("ComputeCounterValue", newSample == null ? null : newSample.getJCOInstance());
             return new Single(objComputeCounterValue);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

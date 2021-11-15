@@ -201,12 +201,12 @@ public class FormatterServices extends NetObject  {
         }
     }
 
-    public static MemberInfo[] GetSerializableMembers(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException, system.runtime.serialization.SerializationException {
+    public static MemberInfo[] GetSerializableMembers(NetType type, StreamingContext context) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.runtime.serialization.SerializationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             ArrayList<MemberInfo> resultingArrayList = new ArrayList<MemberInfo>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetSerializableMembers", type == null ? null : type.getJCOInstance());
+            JCObject resultingObjects = (JCObject)classType.Invoke("GetSerializableMembers", type == null ? null : type.getJCOInstance(), context == null ? null : context.getJCOInstance());
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MemberInfo(resultingObject));
             }
@@ -218,12 +218,12 @@ public class FormatterServices extends NetObject  {
         }
     }
 
-    public static MemberInfo[] GetSerializableMembers(NetType type, StreamingContext context) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.runtime.serialization.SerializationException {
+    public static MemberInfo[] GetSerializableMembers(NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException, system.runtime.serialization.SerializationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             ArrayList<MemberInfo> resultingArrayList = new ArrayList<MemberInfo>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetSerializableMembers", type == null ? null : type.getJCOInstance(), context == null ? null : context.getJCOInstance());
+            JCObject resultingObjects = (JCObject)classType.Invoke("GetSerializableMembers", type == null ? null : type.getJCOInstance());
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new MemberInfo(resultingObject));
             }

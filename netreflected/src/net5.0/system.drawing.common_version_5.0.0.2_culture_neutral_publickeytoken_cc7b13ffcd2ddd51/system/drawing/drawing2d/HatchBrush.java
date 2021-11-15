@@ -145,21 +145,21 @@ public class HatchBrush extends Brush  {
     public HatchBrush() throws Throwable {
     }
 
-    public HatchBrush(HatchStyle hatchstyle, Color foreColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.IndexOutOfRangeException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(hatchstyle == null ? null : hatchstyle.getJCOInstance(), foreColor == null ? null : foreColor.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public HatchBrush(HatchStyle hatchstyle, Color foreColor, Color backColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(hatchstyle == null ? null : hatchstyle.getJCOInstance(), foreColor == null ? null : foreColor.getJCOInstance(), backColor == null ? null : backColor.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public HatchBrush(HatchStyle hatchstyle, Color foreColor) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.IndexOutOfRangeException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(hatchstyle == null ? null : hatchstyle.getJCOInstance(), foreColor == null ? null : foreColor.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

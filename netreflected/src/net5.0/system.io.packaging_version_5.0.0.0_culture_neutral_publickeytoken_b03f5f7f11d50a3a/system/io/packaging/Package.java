@@ -180,11 +180,11 @@ public class Package extends NetObject implements system.IDisposable, AutoClosea
         }
     }
 
-    public static Package Open(Stream stream) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.io.FileFormatException, system.io.IOException, system.io.InvalidDataException, system.globalization.CultureNotFoundException, system.xml.XmlException {
+    public static Package Open(Stream stream, FileMode packageMode, FileAccess packageAccess) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.io.FileFormatException, system.io.IOException, system.io.InvalidDataException, system.FormatException, system.xml.XmlException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objOpen = (JCObject)classType.Invoke("Open", stream == null ? null : stream.getJCOInstance());
+            JCObject objOpen = (JCObject)classType.Invoke("Open", stream == null ? null : stream.getJCOInstance(), packageMode == null ? null : packageMode.getJCOInstance(), packageAccess == null ? null : packageAccess.getJCOInstance());
             return new Package(objOpen);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -202,44 +202,11 @@ public class Package extends NetObject implements system.IDisposable, AutoClosea
         }
     }
 
-    public static Package Open(Stream stream, FileMode packageMode, FileAccess packageAccess) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.io.FileFormatException, system.io.IOException, system.io.InvalidDataException, system.FormatException, system.xml.XmlException {
+    public static Package Open(Stream stream) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.io.FileFormatException, system.io.IOException, system.io.InvalidDataException, system.globalization.CultureNotFoundException, system.xml.XmlException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objOpen = (JCObject)classType.Invoke("Open", stream == null ? null : stream.getJCOInstance(), packageMode == null ? null : packageMode.getJCOInstance(), packageAccess == null ? null : packageAccess.getJCOInstance());
-            return new Package(objOpen);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Package Open(java.lang.String path) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.FormatException, system.runtime.serialization.SerializationException, system.io.IOException, system.io.InvalidDataException, system.xml.XmlException, system.io.FileFormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objOpen = (JCObject)classType.Invoke("Open", path);
-            return new Package(objOpen);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Package Open(java.lang.String path, FileMode packageMode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.FormatException, system.runtime.serialization.SerializationException, system.io.IOException, system.io.InvalidDataException, system.xml.XmlException, system.io.FileFormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objOpen = (JCObject)classType.Invoke("Open", path, packageMode == null ? null : packageMode.getJCOInstance());
-            return new Package(objOpen);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Package Open(java.lang.String path, FileMode packageMode, FileAccess packageAccess) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.FormatException, system.runtime.serialization.SerializationException, system.io.IOException, system.io.InvalidDataException, system.xml.XmlException, system.io.FileFormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objOpen = (JCObject)classType.Invoke("Open", path, packageMode == null ? null : packageMode.getJCOInstance(), packageAccess == null ? null : packageAccess.getJCOInstance());
+            JCObject objOpen = (JCObject)classType.Invoke("Open", stream == null ? null : stream.getJCOInstance());
             return new Package(objOpen);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -257,12 +224,34 @@ public class Package extends NetObject implements system.IDisposable, AutoClosea
         }
     }
 
-    public PackagePart CreatePart(Uri partUri, java.lang.String contentType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.io.IOException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.RankException, system.ArrayTypeMismatchException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static Package Open(java.lang.String path, FileMode packageMode, FileAccess packageAccess) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.FormatException, system.runtime.serialization.SerializationException, system.io.IOException, system.io.InvalidDataException, system.xml.XmlException, system.io.FileFormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreatePart = (JCObject)classInstance.Invoke("CreatePart", partUri == null ? null : partUri.getJCOInstance(), contentType);
-            return new PackagePart(objCreatePart);
+            JCObject objOpen = (JCObject)classType.Invoke("Open", path, packageMode == null ? null : packageMode.getJCOInstance(), packageAccess == null ? null : packageAccess.getJCOInstance());
+            return new Package(objOpen);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Package Open(java.lang.String path, FileMode packageMode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.FormatException, system.runtime.serialization.SerializationException, system.io.IOException, system.io.InvalidDataException, system.xml.XmlException, system.io.FileFormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objOpen = (JCObject)classType.Invoke("Open", path, packageMode == null ? null : packageMode.getJCOInstance());
+            return new Package(objOpen);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Package Open(java.lang.String path) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.FormatException, system.runtime.serialization.SerializationException, system.io.IOException, system.io.InvalidDataException, system.xml.XmlException, system.io.FileFormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objOpen = (JCObject)classType.Invoke("Open", path);
+            return new Package(objOpen);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -273,6 +262,17 @@ public class Package extends NetObject implements system.IDisposable, AutoClosea
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objCreatePart = (JCObject)classInstance.Invoke("CreatePart", partUri == null ? null : partUri.getJCOInstance(), contentType, compressionOption == null ? null : compressionOption.getJCOInstance());
+            return new PackagePart(objCreatePart);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PackagePart CreatePart(Uri partUri, java.lang.String contentType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.io.IOException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.UriFormatException, system.NotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.RankException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreatePart = (JCObject)classInstance.Invoke("CreatePart", partUri == null ? null : partUri.getJCOInstance(), contentType);
             return new PackagePart(objCreatePart);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -301,22 +301,22 @@ public class Package extends NetObject implements system.IDisposable, AutoClosea
         }
     }
 
-    public PackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, java.lang.String relationshipType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.io.IOException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.io.FileFormatException, system.xml.XmlException, system.NotSupportedException {
+    public PackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, java.lang.String relationshipType, java.lang.String id) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.io.IOException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.io.FileFormatException, system.xml.XmlException, system.NotSupportedException, system.InvalidCastException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateRelationship = (JCObject)classInstance.Invoke("CreateRelationship", targetUri == null ? null : targetUri.getJCOInstance(), targetMode == null ? null : targetMode.getJCOInstance(), relationshipType);
+            JCObject objCreateRelationship = (JCObject)classInstance.Invoke("CreateRelationship", targetUri == null ? null : targetUri.getJCOInstance(), targetMode == null ? null : targetMode.getJCOInstance(), relationshipType, id);
             return new PackageRelationship(objCreateRelationship);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public PackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, java.lang.String relationshipType, java.lang.String id) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.io.IOException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.io.FileFormatException, system.xml.XmlException, system.NotSupportedException, system.InvalidCastException {
+    public PackageRelationship CreateRelationship(Uri targetUri, TargetMode targetMode, java.lang.String relationshipType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.io.IOException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.io.FileFormatException, system.xml.XmlException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateRelationship = (JCObject)classInstance.Invoke("CreateRelationship", targetUri == null ? null : targetUri.getJCOInstance(), targetMode == null ? null : targetMode.getJCOInstance(), relationshipType, id);
+            JCObject objCreateRelationship = (JCObject)classInstance.Invoke("CreateRelationship", targetUri == null ? null : targetUri.getJCOInstance(), targetMode == null ? null : targetMode.getJCOInstance(), relationshipType);
             return new PackageRelationship(objCreateRelationship);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

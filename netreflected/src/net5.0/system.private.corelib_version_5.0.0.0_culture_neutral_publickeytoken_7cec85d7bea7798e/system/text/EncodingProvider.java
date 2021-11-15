@@ -148,17 +148,6 @@ public class EncodingProvider extends NetObject  {
     
     // Methods section
     
-    public Encoding GetEncoding(int codepage) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetEncoding = (JCObject)classInstance.Invoke("GetEncoding", codepage);
-            return new Encoding(objGetEncoding);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public Encoding GetEncoding(int codepage, EncoderFallback encoderFallback, DecoderFallback decoderFallback) throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -170,11 +159,11 @@ public class EncodingProvider extends NetObject  {
         }
     }
 
-    public Encoding GetEncoding(java.lang.String name) throws Throwable {
+    public Encoding GetEncoding(int codepage) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetEncoding = (JCObject)classInstance.Invoke("GetEncoding", name);
+            JCObject objGetEncoding = (JCObject)classInstance.Invoke("GetEncoding", codepage);
             return new Encoding(objGetEncoding);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -186,6 +175,17 @@ public class EncodingProvider extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetEncoding = (JCObject)classInstance.Invoke("GetEncoding", name, encoderFallback == null ? null : encoderFallback.getJCOInstance(), decoderFallback == null ? null : decoderFallback.getJCOInstance());
+            return new Encoding(objGetEncoding);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Encoding GetEncoding(java.lang.String name) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetEncoding = (JCObject)classInstance.Invoke("GetEncoding", name);
             return new Encoding(objGetEncoding);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

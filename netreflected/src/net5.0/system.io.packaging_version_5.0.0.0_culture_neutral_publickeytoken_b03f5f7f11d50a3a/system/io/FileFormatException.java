@@ -161,21 +161,21 @@ public class FileFormatException extends FormatException {
 
     // Constructors section
     
-    public FileFormatException(Uri sourceUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(sourceUri == null ? null : sourceUri.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public FileFormatException(Uri sourceUri, NetException innerException) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(sourceUri == null ? null : sourceUri.getJCOInstance(), innerException == null ? null : innerException.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public FileFormatException(Uri sourceUri, java.lang.String message, NetException innerException) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(sourceUri == null ? null : sourceUri.getJCOInstance(), message, innerException == null ? null : innerException.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,11 +191,11 @@ public class FileFormatException extends FormatException {
         }
     }
 
-    public FileFormatException(Uri sourceUri, java.lang.String message, NetException innerException) throws Throwable {
+    public FileFormatException(Uri sourceUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(sourceUri == null ? null : sourceUri.getJCOInstance(), message, innerException == null ? null : innerException.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(sourceUri == null ? null : sourceUri.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -150,11 +150,11 @@ public class PEReaderExtensions extends NetObject  {
     
     // Methods section
     
-    public static MetadataReader GetMetadataReader(PEReader peReader) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.BadImageFormatException {
+    public static MetadataReader GetMetadataReader(PEReader peReader, MetadataReaderOptions options, MetadataStringDecoder utf8Decoder) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.BadImageFormatException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetMetadataReader = (JCObject)classType.Invoke("GetMetadataReader", peReader == null ? null : peReader.getJCOInstance());
+            JCObject objGetMetadataReader = (JCObject)classType.Invoke("GetMetadataReader", peReader == null ? null : peReader.getJCOInstance(), options == null ? null : options.getJCOInstance(), utf8Decoder == null ? null : utf8Decoder.getJCOInstance());
             return new MetadataReader(objGetMetadataReader);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -172,11 +172,11 @@ public class PEReaderExtensions extends NetObject  {
         }
     }
 
-    public static MetadataReader GetMetadataReader(PEReader peReader, MetadataReaderOptions options, MetadataStringDecoder utf8Decoder) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.BadImageFormatException, system.FormatException {
+    public static MetadataReader GetMetadataReader(PEReader peReader) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.BadImageFormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetMetadataReader = (JCObject)classType.Invoke("GetMetadataReader", peReader == null ? null : peReader.getJCOInstance(), options == null ? null : options.getJCOInstance(), utf8Decoder == null ? null : utf8Decoder.getJCOInstance());
+            JCObject objGetMetadataReader = (JCObject)classType.Invoke("GetMetadataReader", peReader == null ? null : peReader.getJCOInstance());
             return new MetadataReader(objGetMetadataReader);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

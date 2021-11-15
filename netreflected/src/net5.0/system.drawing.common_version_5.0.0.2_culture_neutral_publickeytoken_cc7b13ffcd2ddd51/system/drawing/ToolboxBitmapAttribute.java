@@ -154,16 +154,6 @@ public class ToolboxBitmapAttribute extends Attribute  {
         }
     }
 
-    public ToolboxBitmapAttribute(NetType t) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.OverflowException, system.componentmodel.Win32Exception {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(t == null ? null : t.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ToolboxBitmapAttribute(NetType t, java.lang.String name) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.OverflowException, system.componentmodel.Win32Exception {
         try {
             // add reference to assemblyName.dll file
@@ -174,22 +164,21 @@ public class ToolboxBitmapAttribute extends Attribute  {
         }
     }
 
-
-
-    
-    // Methods section
-    
-    public Image GetImage(NetObject component) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public ToolboxBitmapAttribute(NetType t) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.componentmodel.InvalidEnumArgumentException, system.OverflowException, system.componentmodel.Win32Exception {
         try {
-            JCObject objGetImage = (JCObject)classInstance.Invoke("GetImage", component == null ? null : component.getJCOInstance());
-            return new Image(objGetImage);
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(t == null ? null : t.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
+
+
+    
+    // Methods section
+    
     public Image GetImage(NetObject component, boolean large) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -201,11 +190,11 @@ public class ToolboxBitmapAttribute extends Attribute  {
         }
     }
 
-    public Image GetImage(NetType type) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception {
+    public Image GetImage(NetObject component) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetImage = (JCObject)classInstance.Invoke("GetImage", type == null ? null : type.getJCOInstance());
+            JCObject objGetImage = (JCObject)classInstance.Invoke("GetImage", component == null ? null : component.getJCOInstance());
             return new Image(objGetImage);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -228,6 +217,17 @@ public class ToolboxBitmapAttribute extends Attribute  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetImage = (JCObject)classInstance.Invoke("GetImage", type == null ? null : type.getJCOInstance(), imgName, large);
+            return new Image(objGetImage);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Image GetImage(NetType type) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetImage = (JCObject)classInstance.Invoke("GetImage", type == null ? null : type.getJCOInstance());
             return new Image(objGetImage);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

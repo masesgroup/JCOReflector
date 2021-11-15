@@ -159,22 +159,22 @@ public class BinaryOperationBinder extends DynamicMetaObjectBinder  {
         }
     }
 
-    public DynamicMetaObject FallbackBinaryOperation(DynamicMetaObject target, DynamicMetaObject arg) throws Throwable {
+    public DynamicMetaObject FallbackBinaryOperation(DynamicMetaObject target, DynamicMetaObject arg, DynamicMetaObject errorSuggestion) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objFallbackBinaryOperation = (JCObject)classInstance.Invoke("FallbackBinaryOperation", target == null ? null : target.getJCOInstance(), arg == null ? null : arg.getJCOInstance());
+            JCObject objFallbackBinaryOperation = (JCObject)classInstance.Invoke("FallbackBinaryOperation", target == null ? null : target.getJCOInstance(), arg == null ? null : arg.getJCOInstance(), errorSuggestion == null ? null : errorSuggestion.getJCOInstance());
             return new DynamicMetaObject(objFallbackBinaryOperation);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DynamicMetaObject FallbackBinaryOperation(DynamicMetaObject target, DynamicMetaObject arg, DynamicMetaObject errorSuggestion) throws Throwable {
+    public DynamicMetaObject FallbackBinaryOperation(DynamicMetaObject target, DynamicMetaObject arg) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objFallbackBinaryOperation = (JCObject)classInstance.Invoke("FallbackBinaryOperation", target == null ? null : target.getJCOInstance(), arg == null ? null : arg.getJCOInstance(), errorSuggestion == null ? null : errorSuggestion.getJCOInstance());
+            JCObject objFallbackBinaryOperation = (JCObject)classInstance.Invoke("FallbackBinaryOperation", target == null ? null : target.getJCOInstance(), arg == null ? null : arg.getJCOInstance());
             return new DynamicMetaObject(objFallbackBinaryOperation);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

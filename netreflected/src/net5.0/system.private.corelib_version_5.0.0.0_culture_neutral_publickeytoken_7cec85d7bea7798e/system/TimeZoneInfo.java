@@ -227,17 +227,6 @@ public class TimeZoneInfo extends NetObject implements system.runtime.serializat
         }
     }
 
-    public static DateTime ConvertTime(DateTime dateTime, TimeZoneInfo destinationTimeZone) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objConvertTime = (JCObject)classType.Invoke("ConvertTime", dateTime == null ? null : dateTime.getJCOInstance(), destinationTimeZone == null ? null : destinationTimeZone.getJCOInstance());
-            return new DateTime(objConvertTime);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static DateTime ConvertTime(DateTime dateTime, TimeZoneInfo sourceTimeZone, TimeZoneInfo destinationTimeZone) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -249,12 +238,12 @@ public class TimeZoneInfo extends NetObject implements system.runtime.serializat
         }
     }
 
-    public static DateTime ConvertTimeBySystemTimeZoneId(DateTime dateTime, java.lang.String destinationTimeZoneId) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.TimeZoneNotFoundException, system.InvalidTimeZoneException, system.OverflowException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.FormatException, system.UnauthorizedAccessException {
+    public static DateTime ConvertTime(DateTime dateTime, TimeZoneInfo destinationTimeZone) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.InvalidTimeZoneException, system.security.SecurityException, system.io.IOException, system.UnauthorizedAccessException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objConvertTimeBySystemTimeZoneId = (JCObject)classType.Invoke("ConvertTimeBySystemTimeZoneId", dateTime == null ? null : dateTime.getJCOInstance(), destinationTimeZoneId);
-            return new DateTime(objConvertTimeBySystemTimeZoneId);
+            JCObject objConvertTime = (JCObject)classType.Invoke("ConvertTime", dateTime == null ? null : dateTime.getJCOInstance(), destinationTimeZone == null ? null : destinationTimeZone.getJCOInstance());
+            return new DateTime(objConvertTime);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -265,6 +254,17 @@ public class TimeZoneInfo extends NetObject implements system.runtime.serializat
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objConvertTimeBySystemTimeZoneId = (JCObject)classType.Invoke("ConvertTimeBySystemTimeZoneId", dateTime == null ? null : dateTime.getJCOInstance(), sourceTimeZoneId, destinationTimeZoneId);
+            return new DateTime(objConvertTimeBySystemTimeZoneId);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DateTime ConvertTimeBySystemTimeZoneId(DateTime dateTime, java.lang.String destinationTimeZoneId) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.IndexOutOfRangeException, system.TimeZoneNotFoundException, system.InvalidTimeZoneException, system.OverflowException, system.security.SecurityException, system.io.IOException, system.InvalidOperationException, system.FormatException, system.UnauthorizedAccessException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objConvertTimeBySystemTimeZoneId = (JCObject)classType.Invoke("ConvertTimeBySystemTimeZoneId", dateTime == null ? null : dateTime.getJCOInstance(), destinationTimeZoneId);
             return new DateTime(objConvertTimeBySystemTimeZoneId);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -282,22 +282,22 @@ public class TimeZoneInfo extends NetObject implements system.runtime.serializat
         }
     }
 
-    public static DateTime ConvertTimeToUtc(DateTime dateTime) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.PlatformNotSupportedException, system.InvalidOperationException, system.security.SecurityException, system.io.IOException, system.globalization.CultureNotFoundException, system.UnauthorizedAccessException, system.OverflowException {
+    public static DateTime ConvertTimeToUtc(DateTime dateTime, TimeZoneInfo sourceTimeZone) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objConvertTimeToUtc = (JCObject)classType.Invoke("ConvertTimeToUtc", dateTime == null ? null : dateTime.getJCOInstance());
+            JCObject objConvertTimeToUtc = (JCObject)classType.Invoke("ConvertTimeToUtc", dateTime == null ? null : dateTime.getJCOInstance(), sourceTimeZone == null ? null : sourceTimeZone.getJCOInstance());
             return new DateTime(objConvertTimeToUtc);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static DateTime ConvertTimeToUtc(DateTime dateTime, TimeZoneInfo sourceTimeZone) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.OverflowException {
+    public static DateTime ConvertTimeToUtc(DateTime dateTime) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidTimeZoneException, system.PlatformNotSupportedException, system.InvalidOperationException, system.security.SecurityException, system.io.IOException, system.globalization.CultureNotFoundException, system.UnauthorizedAccessException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objConvertTimeToUtc = (JCObject)classType.Invoke("ConvertTimeToUtc", dateTime == null ? null : dateTime.getJCOInstance(), sourceTimeZone == null ? null : sourceTimeZone.getJCOInstance());
+            JCObject objConvertTimeToUtc = (JCObject)classType.Invoke("ConvertTimeToUtc", dateTime == null ? null : dateTime.getJCOInstance());
             return new DateTime(objConvertTimeToUtc);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

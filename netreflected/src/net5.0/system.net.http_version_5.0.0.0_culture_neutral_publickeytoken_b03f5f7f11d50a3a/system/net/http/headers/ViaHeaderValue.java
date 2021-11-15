@@ -145,11 +145,11 @@ public class ViaHeaderValue extends NetObject implements system.ICloneable {
     public ViaHeaderValue() throws Throwable {
     }
 
-    public ViaHeaderValue(java.lang.String protocolVersion, java.lang.String receivedBy) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException {
+    public ViaHeaderValue(java.lang.String protocolVersion, java.lang.String receivedBy, java.lang.String protocolName, java.lang.String comment) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.FormatException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(protocolVersion, receivedBy));
+            setJCOInstance((JCObject)classType.NewObject(protocolVersion, receivedBy, protocolName, comment));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,11 +165,11 @@ public class ViaHeaderValue extends NetObject implements system.ICloneable {
         }
     }
 
-    public ViaHeaderValue(java.lang.String protocolVersion, java.lang.String receivedBy, java.lang.String protocolName, java.lang.String comment) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.FormatException, system.IndexOutOfRangeException {
+    public ViaHeaderValue(java.lang.String protocolVersion, java.lang.String receivedBy) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(protocolVersion, receivedBy, protocolName, comment));
+            setJCOInstance((JCObject)classType.NewObject(protocolVersion, receivedBy));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

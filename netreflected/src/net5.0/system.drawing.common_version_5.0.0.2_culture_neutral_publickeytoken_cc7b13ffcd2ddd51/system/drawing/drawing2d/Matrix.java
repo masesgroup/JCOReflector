@@ -222,21 +222,21 @@ public class Matrix extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public void Multiply(Matrix matrix) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Multiply", matrix == null ? null : matrix.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Multiply(Matrix matrix, MatrixOrder order) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Multiply", matrix == null ? null : matrix.getJCOInstance(), order == null ? null : order.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Multiply(Matrix matrix) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Multiply", matrix == null ? null : matrix.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -252,16 +252,6 @@ public class Matrix extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public void Rotate(Single angle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Rotate", angle == null ? null : angle.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Rotate(Single angle, MatrixOrder order) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -272,11 +262,11 @@ public class Matrix extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public void RotateAt(Single angle, PointF point) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
+    public void Rotate(Single angle) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("RotateAt", angle == null ? null : angle.getJCOInstance(), point == null ? null : point.getJCOInstance());
+            classInstance.Invoke("Rotate", angle == null ? null : angle.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -292,11 +282,11 @@ public class Matrix extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public void Scale(Single scaleX, Single scaleY) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
+    public void RotateAt(Single angle, PointF point) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Scale", scaleX == null ? null : scaleX.getJCOInstance(), scaleY == null ? null : scaleY.getJCOInstance());
+            classInstance.Invoke("RotateAt", angle == null ? null : angle.getJCOInstance(), point == null ? null : point.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -312,11 +302,11 @@ public class Matrix extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public void Shear(Single shearX, Single shearY) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
+    public void Scale(Single scaleX, Single scaleY) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Shear", shearX == null ? null : shearX.getJCOInstance(), shearY == null ? null : shearY.getJCOInstance());
+            classInstance.Invoke("Scale", scaleX == null ? null : scaleX.getJCOInstance(), scaleY == null ? null : scaleY.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -327,6 +317,16 @@ public class Matrix extends MarshalByRefObject implements AutoCloseable {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Shear", shearX == null ? null : shearX.getJCOInstance(), shearY == null ? null : shearY.getJCOInstance(), order == null ? null : order.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Shear(Single shearX, Single shearY) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Shear", shearX == null ? null : shearX.getJCOInstance(), shearY == null ? null : shearY.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -372,21 +372,21 @@ public class Matrix extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public void Translate(Single offsetX, Single offsetY) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Translate", offsetX == null ? null : offsetX.getJCOInstance(), offsetY == null ? null : offsetY.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Translate(Single offsetX, Single offsetY, MatrixOrder order) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Translate", offsetX == null ? null : offsetX.getJCOInstance(), offsetY == null ? null : offsetY.getJCOInstance(), order == null ? null : order.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Translate(Single offsetX, Single offsetY) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Translate", offsetX == null ? null : offsetX.getJCOInstance(), offsetY == null ? null : offsetY.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

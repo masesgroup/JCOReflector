@@ -152,16 +152,6 @@ public class NetworkCredential extends NetObject  {
         }
     }
 
-    public NetworkCredential(java.lang.String userName, SecureString password) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(userName, password == null ? null : password.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NetworkCredential(java.lang.String userName, SecureString password, java.lang.String domain) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
@@ -172,11 +162,11 @@ public class NetworkCredential extends NetObject  {
         }
     }
 
-    public NetworkCredential(java.lang.String userName, java.lang.String password) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException {
+    public NetworkCredential(java.lang.String userName, SecureString password) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.OutOfMemoryException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(userName, password));
+            setJCOInstance((JCObject)classType.NewObject(userName, password == null ? null : password.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,6 +177,16 @@ public class NetworkCredential extends NetObject  {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(userName, password, domain));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetworkCredential(java.lang.String userName, java.lang.String password) throws Throwable, system.ArgumentException, system.ObjectDisposedException, system.ArgumentNullException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(userName, password));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

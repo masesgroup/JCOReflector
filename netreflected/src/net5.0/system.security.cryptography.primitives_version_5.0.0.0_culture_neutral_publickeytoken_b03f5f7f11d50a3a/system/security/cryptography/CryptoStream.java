@@ -153,21 +153,21 @@ public class CryptoStream extends Stream  {
     public CryptoStream() throws Throwable {
     }
 
-    public CryptoStream(Stream stream, ICryptoTransform transform, CryptoStreamMode mode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(stream == null ? null : stream.getJCOInstance(), transform == null ? null : transform.getJCOInstance(), mode == null ? null : mode.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public CryptoStream(Stream stream, ICryptoTransform transform, CryptoStreamMode mode, boolean leaveOpen) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(stream == null ? null : stream.getJCOInstance(), transform == null ? null : transform.getJCOInstance(), mode == null ? null : mode.getJCOInstance(), leaveOpen));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CryptoStream(Stream stream, ICryptoTransform transform, CryptoStreamMode mode) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(stream == null ? null : stream.getJCOInstance(), transform == null ? null : transform.getJCOInstance(), mode == null ? null : mode.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

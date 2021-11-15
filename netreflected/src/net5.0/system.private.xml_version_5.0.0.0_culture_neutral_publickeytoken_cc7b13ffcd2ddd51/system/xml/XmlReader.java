@@ -193,16 +193,6 @@ public class XmlReader extends NetObject implements AutoCloseable {
         }
     }
 
-    public boolean IsStartElement(java.lang.String name) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsStartElement", name);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean IsStartElement(java.lang.String localname, java.lang.String ns) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -213,11 +203,11 @@ public class XmlReader extends NetObject implements AutoCloseable {
         }
     }
 
-    public boolean MoveToAttribute(java.lang.String name) throws Throwable {
+    public boolean IsStartElement(java.lang.String name) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("MoveToAttribute", name);
+            return (boolean)classInstance.Invoke("IsStartElement", name);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -228,6 +218,16 @@ public class XmlReader extends NetObject implements AutoCloseable {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("MoveToAttribute", name, ns);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean MoveToAttribute(java.lang.String name) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("MoveToAttribute", name);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -313,16 +313,6 @@ public class XmlReader extends NetObject implements AutoCloseable {
         }
     }
 
-    public boolean ReadToDescendant(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.IndexOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("ReadToDescendant", name);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean ReadToDescendant(java.lang.String localName, java.lang.String namespaceURI) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -333,11 +323,11 @@ public class XmlReader extends NetObject implements AutoCloseable {
         }
     }
 
-    public boolean ReadToFollowing(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.IndexOutOfRangeException {
+    public boolean ReadToDescendant(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("ReadToFollowing", name);
+            return (boolean)classInstance.Invoke("ReadToDescendant", name);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -353,11 +343,11 @@ public class XmlReader extends NetObject implements AutoCloseable {
         }
     }
 
-    public boolean ReadToNextSibling(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.IndexOutOfRangeException {
+    public boolean ReadToFollowing(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("ReadToNextSibling", name);
+            return (boolean)classInstance.Invoke("ReadToFollowing", name);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -368,6 +358,16 @@ public class XmlReader extends NetObject implements AutoCloseable {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("ReadToNextSibling", localName, namespaceURI);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean ReadToNextSibling(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("ReadToNextSibling", name);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -695,22 +695,22 @@ public class XmlReader extends NetObject implements AutoCloseable {
         }
     }
 
-    public NetObject ReadElementContentAs(NetType returnType, IXmlNamespaceResolver namespaceResolver) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.xml.XmlException, system.OutOfMemoryException, system.NotSupportedException, system.OverflowException, system.ArrayTypeMismatchException, system.InvalidCastException {
+    public NetObject ReadElementContentAs(NetType returnType, IXmlNamespaceResolver namespaceResolver, java.lang.String localName, java.lang.String namespaceURI) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.xml.XmlException, system.OutOfMemoryException, system.OverflowException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidCastException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objReadElementContentAs = (JCObject)classInstance.Invoke("ReadElementContentAs", returnType == null ? null : returnType.getJCOInstance(), namespaceResolver == null ? null : namespaceResolver.getJCOInstance());
+            JCObject objReadElementContentAs = (JCObject)classInstance.Invoke("ReadElementContentAs", returnType == null ? null : returnType.getJCOInstance(), namespaceResolver == null ? null : namespaceResolver.getJCOInstance(), localName, namespaceURI);
             return new NetObject(objReadElementContentAs);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public NetObject ReadElementContentAs(NetType returnType, IXmlNamespaceResolver namespaceResolver, java.lang.String localName, java.lang.String namespaceURI) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.xml.XmlException, system.OutOfMemoryException, system.OverflowException, system.ArrayTypeMismatchException, system.NotSupportedException, system.InvalidCastException {
+    public NetObject ReadElementContentAs(NetType returnType, IXmlNamespaceResolver namespaceResolver) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.xml.XmlException, system.OutOfMemoryException, system.NotSupportedException, system.OverflowException, system.ArrayTypeMismatchException, system.InvalidCastException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objReadElementContentAs = (JCObject)classInstance.Invoke("ReadElementContentAs", returnType == null ? null : returnType.getJCOInstance(), namespaceResolver == null ? null : namespaceResolver.getJCOInstance(), localName, namespaceURI);
+            JCObject objReadElementContentAs = (JCObject)classInstance.Invoke("ReadElementContentAs", returnType == null ? null : returnType.getJCOInstance(), namespaceResolver == null ? null : namespaceResolver.getJCOInstance());
             return new NetObject(objReadElementContentAs);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -749,21 +749,21 @@ public class XmlReader extends NetObject implements AutoCloseable {
         }
     }
 
-    public java.lang.String GetAttribute(java.lang.String name) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetAttribute", name);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String GetAttribute(java.lang.String name, java.lang.String namespaceURI) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Invoke("GetAttribute", name, namespaceURI);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String GetAttribute(java.lang.String name) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("GetAttribute", name);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -819,21 +819,21 @@ public class XmlReader extends NetObject implements AutoCloseable {
         }
     }
 
-    public java.lang.String ReadElementString(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException, system.IndexOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.xml.XmlException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("ReadElementString", name);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String ReadElementString(java.lang.String localname, java.lang.String ns) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException, system.IndexOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.xml.XmlException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Invoke("ReadElementString", localname, ns);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String ReadElementString(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException, system.IndexOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.xml.XmlException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("ReadElementString", name);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -891,28 +891,6 @@ public class XmlReader extends NetObject implements AutoCloseable {
         }
     }
 
-    public static XmlReader Create(Stream input) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.xml.XmlException, system.OutOfMemoryException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", input == null ? null : input.getJCOInstance());
-            return new XmlReader(objCreate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static XmlReader Create(Stream input, XmlReaderSettings settings) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.xml.XmlException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", input == null ? null : input.getJCOInstance(), settings == null ? null : settings.getJCOInstance());
-            return new XmlReader(objCreate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static XmlReader Create(Stream input, XmlReaderSettings settings, java.lang.String baseUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.xml.XmlException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -935,22 +913,22 @@ public class XmlReader extends NetObject implements AutoCloseable {
         }
     }
 
-    public static XmlReader Create(TextReader input) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.xml.XmlException {
+    public static XmlReader Create(Stream input, XmlReaderSettings settings) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.xml.XmlException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", input == null ? null : input.getJCOInstance());
+            JCObject objCreate = (JCObject)classType.Invoke("Create", input == null ? null : input.getJCOInstance(), settings == null ? null : settings.getJCOInstance());
             return new XmlReader(objCreate);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static XmlReader Create(TextReader input, XmlReaderSettings settings) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.xml.XmlException, system.FormatException {
+    public static XmlReader Create(Stream input) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.xml.XmlException, system.OutOfMemoryException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", input == null ? null : input.getJCOInstance(), settings == null ? null : settings.getJCOInstance());
+            JCObject objCreate = (JCObject)classType.Invoke("Create", input == null ? null : input.getJCOInstance());
             return new XmlReader(objCreate);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -979,11 +957,33 @@ public class XmlReader extends NetObject implements AutoCloseable {
         }
     }
 
-    public static XmlReader Create(java.lang.String inputUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.xml.XmlException, system.OutOfMemoryException, system.NotImplementedException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException {
+    public static XmlReader Create(TextReader input, XmlReaderSettings settings) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.xml.XmlException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", inputUri);
+            JCObject objCreate = (JCObject)classType.Invoke("Create", input == null ? null : input.getJCOInstance(), settings == null ? null : settings.getJCOInstance());
+            return new XmlReader(objCreate);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static XmlReader Create(TextReader input) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.xml.XmlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreate = (JCObject)classType.Invoke("Create", input == null ? null : input.getJCOInstance());
+            return new XmlReader(objCreate);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static XmlReader Create(java.lang.String inputUri, XmlReaderSettings settings, XmlParserContext inputContext) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.xml.XmlException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.NotImplementedException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreate = (JCObject)classType.Invoke("Create", inputUri, settings == null ? null : settings.getJCOInstance(), inputContext == null ? null : inputContext.getJCOInstance());
             return new XmlReader(objCreate);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1001,11 +1001,11 @@ public class XmlReader extends NetObject implements AutoCloseable {
         }
     }
 
-    public static XmlReader Create(java.lang.String inputUri, XmlReaderSettings settings, XmlParserContext inputContext) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.xml.XmlException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.NotImplementedException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException {
+    public static XmlReader Create(java.lang.String inputUri) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.xml.XmlException, system.OutOfMemoryException, system.NotImplementedException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", inputUri, settings == null ? null : settings.getJCOInstance(), inputContext == null ? null : inputContext.getJCOInstance());
+            JCObject objCreate = (JCObject)classType.Invoke("Create", inputUri);
             return new XmlReader(objCreate);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -1084,21 +1084,21 @@ public class XmlReader extends NetObject implements AutoCloseable {
         }
     }
 
-    public void ReadStartElement(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException, system.IndexOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.xml.XmlException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("ReadStartElement", name);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void ReadStartElement(java.lang.String localname, java.lang.String ns) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException, system.IndexOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.xml.XmlException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("ReadStartElement", localname, ns);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void ReadStartElement(java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException, system.IndexOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.xml.XmlException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("ReadStartElement", name);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

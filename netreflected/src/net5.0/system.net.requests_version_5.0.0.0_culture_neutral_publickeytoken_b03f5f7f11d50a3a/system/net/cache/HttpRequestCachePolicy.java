@@ -164,11 +164,11 @@ public class HttpRequestCachePolicy extends RequestCachePolicy  {
         }
     }
 
-    public HttpRequestCachePolicy(HttpCacheAgeControl cacheAgeControl, TimeSpan ageOrFreshOrStale) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.FormatException {
+    public HttpRequestCachePolicy(HttpCacheAgeControl cacheAgeControl, TimeSpan maxAge, TimeSpan freshOrStale, DateTime cacheSyncDate) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidTimeZoneException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OverflowException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(cacheAgeControl == null ? null : cacheAgeControl.getJCOInstance(), ageOrFreshOrStale == null ? null : ageOrFreshOrStale.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(cacheAgeControl == null ? null : cacheAgeControl.getJCOInstance(), maxAge == null ? null : maxAge.getJCOInstance(), freshOrStale == null ? null : freshOrStale.getJCOInstance(), cacheSyncDate == null ? null : cacheSyncDate.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,11 +184,11 @@ public class HttpRequestCachePolicy extends RequestCachePolicy  {
         }
     }
 
-    public HttpRequestCachePolicy(HttpCacheAgeControl cacheAgeControl, TimeSpan maxAge, TimeSpan freshOrStale, DateTime cacheSyncDate) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidTimeZoneException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OverflowException {
+    public HttpRequestCachePolicy(HttpCacheAgeControl cacheAgeControl, TimeSpan ageOrFreshOrStale) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(cacheAgeControl == null ? null : cacheAgeControl.getJCOInstance(), maxAge == null ? null : maxAge.getJCOInstance(), freshOrStale == null ? null : freshOrStale.getJCOInstance(), cacheSyncDate == null ? null : cacheSyncDate.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(cacheAgeControl == null ? null : cacheAgeControl.getJCOInstance(), ageOrFreshOrStale == null ? null : ageOrFreshOrStale.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

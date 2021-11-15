@@ -159,16 +159,6 @@ public class SmtpClient extends NetObject implements AutoCloseable {
         }
     }
 
-    public SmtpClient(java.lang.String host) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(host));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public SmtpClient(java.lang.String host, int port) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
@@ -179,21 +169,20 @@ public class SmtpClient extends NetObject implements AutoCloseable {
         }
     }
 
-
-    
-    // Methods section
-    
-    public Task SendMailAsync(MailMessage message) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.threading.LockRecursionException, system.InvalidOperationException, system.threading.SynchronizationLockException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.net.mail.SmtpException, system.FormatException, system.globalization.CultureNotFoundException, system.runtime.serialization.SerializationException, system.io.IOException, system.OverflowException, system.NotImplementedException, system.RankException, system.ArrayTypeMismatchException, system.net.sockets.SocketException, system.security.SecurityException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public SmtpClient(java.lang.String host) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.RankException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException {
         try {
-            JCObject objSendMailAsync = (JCObject)classInstance.Invoke("SendMailAsync", message == null ? null : message.getJCOInstance());
-            return new Task(objSendMailAsync);
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(host));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
+
+    
+    // Methods section
+    
     public Task SendMailAsync(MailMessage message, CancellationToken cancellationToken) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.net.mail.SmtpException, system.FormatException, system.globalization.CultureNotFoundException, system.runtime.serialization.SerializationException, system.io.IOException, system.OverflowException, system.NotImplementedException, system.threading.AbandonedMutexException, system.net.sockets.SocketException, system.security.SecurityException, system.threading.tasks.TaskSchedulerException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -205,11 +194,11 @@ public class SmtpClient extends NetObject implements AutoCloseable {
         }
     }
 
-    public Task SendMailAsync(java.lang.String from, java.lang.String recipients, java.lang.String subject, java.lang.String body) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.net.mail.SmtpException, system.globalization.CultureNotFoundException, system.runtime.serialization.SerializationException, system.io.IOException, system.OverflowException, system.NotImplementedException, system.net.sockets.SocketException, system.security.SecurityException {
+    public Task SendMailAsync(MailMessage message) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.PlatformNotSupportedException, system.threading.LockRecursionException, system.InvalidOperationException, system.threading.SynchronizationLockException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.net.mail.SmtpException, system.FormatException, system.globalization.CultureNotFoundException, system.runtime.serialization.SerializationException, system.io.IOException, system.OverflowException, system.NotImplementedException, system.RankException, system.ArrayTypeMismatchException, system.net.sockets.SocketException, system.security.SecurityException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objSendMailAsync = (JCObject)classInstance.Invoke("SendMailAsync", from, recipients, subject, body);
+            JCObject objSendMailAsync = (JCObject)classInstance.Invoke("SendMailAsync", message == null ? null : message.getJCOInstance());
             return new Task(objSendMailAsync);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -221,6 +210,17 @@ public class SmtpClient extends NetObject implements AutoCloseable {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objSendMailAsync = (JCObject)classInstance.Invoke("SendMailAsync", from, recipients, subject, body, cancellationToken == null ? null : cancellationToken.getJCOInstance());
+            return new Task(objSendMailAsync);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Task SendMailAsync(java.lang.String from, java.lang.String recipients, java.lang.String subject, java.lang.String body) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.MulticastNotSupportedException, system.ObjectDisposedException, system.net.mail.SmtpException, system.globalization.CultureNotFoundException, system.runtime.serialization.SerializationException, system.io.IOException, system.OverflowException, system.NotImplementedException, system.net.sockets.SocketException, system.security.SecurityException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objSendMailAsync = (JCObject)classInstance.Invoke("SendMailAsync", from, recipients, subject, body);
             return new Task(objSendMailAsync);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

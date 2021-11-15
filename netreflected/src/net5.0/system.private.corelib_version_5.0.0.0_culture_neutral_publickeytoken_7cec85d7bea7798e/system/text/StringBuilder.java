@@ -162,16 +162,6 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
         }
     }
 
-    public StringBuilder(int capacity) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(capacity));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public StringBuilder(int capacity, int maxCapacity) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
@@ -182,11 +172,21 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
         }
     }
 
-    public StringBuilder(java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
+    public StringBuilder(int capacity) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(value));
+            setJCOInstance((JCObject)classType.NewObject(capacity));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public StringBuilder(java.lang.String value, int startIndex, int length, int capacity) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(value, startIndex, length, capacity));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -202,11 +202,11 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
         }
     }
 
-    public StringBuilder(java.lang.String value, int startIndex, int length, int capacity) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public StringBuilder(java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(value, startIndex, length, capacity));
+            setJCOInstance((JCObject)classType.NewObject(value));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -268,17 +268,6 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
         }
     }
 
-    public StringBuilder Append(char value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAppend = (JCObject)classInstance.Invoke("Append", value);
-            return new StringBuilder(objAppend);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public StringBuilder Append(char value, int repeatCount) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -290,22 +279,11 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
         }
     }
 
-    public StringBuilder Append(char[] value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+    public StringBuilder Append(char value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objAppend = (JCObject)classInstance.Invoke("Append", (java.lang.Object)value);
-            return new StringBuilder(objAppend);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public StringBuilder Append(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAppend = (JCObject)classInstance.Invoke("Append", (java.lang.Object)dupParam0.getJCRefOut());
+            JCObject objAppend = (JCObject)classInstance.Invoke("Append", value);
             return new StringBuilder(objAppend);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -328,6 +306,28 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objAppend = (JCObject)classInstance.Invoke("Append", dupParam0.getJCRefOut(), dupParam1, dupParam2);
+            return new StringBuilder(objAppend);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public StringBuilder Append(char[] value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAppend = (JCObject)classInstance.Invoke("Append", (java.lang.Object)value);
+            return new StringBuilder(objAppend);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public StringBuilder Append(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAppend = (JCObject)classInstance.Invoke("Append", (java.lang.Object)dupParam0.getJCRefOut());
             return new StringBuilder(objAppend);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -422,17 +422,6 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
         }
     }
 
-    public StringBuilder Append(java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAppend = (JCObject)classInstance.Invoke("Append", value);
-            return new StringBuilder(objAppend);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public StringBuilder Append(java.lang.String value, int startIndex, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -444,11 +433,11 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
         }
     }
 
-    public StringBuilder Append(StringBuilder value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.OutOfMemoryException {
+    public StringBuilder Append(java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objAppend = (JCObject)classInstance.Invoke("Append", value == null ? null : value.getJCOInstance());
+            JCObject objAppend = (JCObject)classInstance.Invoke("Append", value);
             return new StringBuilder(objAppend);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -460,6 +449,17 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objAppend = (JCObject)classInstance.Invoke("Append", value == null ? null : value.getJCOInstance(), startIndex, count);
+            return new StringBuilder(objAppend);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public StringBuilder Append(StringBuilder value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAppend = (JCObject)classInstance.Invoke("Append", value == null ? null : value.getJCOInstance());
             return new StringBuilder(objAppend);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -499,11 +499,11 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
         }
     }
 
-    public StringBuilder AppendFormat(IFormatProvider provider, java.lang.String format, NetObject arg0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException {
+    public StringBuilder AppendFormat(IFormatProvider provider, java.lang.String format, NetObject arg0, NetObject arg1, NetObject arg2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objAppendFormat = (JCObject)classInstance.Invoke("AppendFormat", provider == null ? null : provider.getJCOInstance(), format, arg0 == null ? null : arg0.getJCOInstance());
+            JCObject objAppendFormat = (JCObject)classInstance.Invoke("AppendFormat", provider == null ? null : provider.getJCOInstance(), format, arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance());
             return new StringBuilder(objAppendFormat);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -521,11 +521,11 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
         }
     }
 
-    public StringBuilder AppendFormat(IFormatProvider provider, java.lang.String format, NetObject arg0, NetObject arg1, NetObject arg2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException {
+    public StringBuilder AppendFormat(IFormatProvider provider, java.lang.String format, NetObject arg0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objAppendFormat = (JCObject)classInstance.Invoke("AppendFormat", provider == null ? null : provider.getJCOInstance(), format, arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance());
+            JCObject objAppendFormat = (JCObject)classInstance.Invoke("AppendFormat", provider == null ? null : provider.getJCOInstance(), format, arg0 == null ? null : arg0.getJCOInstance());
             return new StringBuilder(objAppendFormat);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -543,11 +543,11 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
         }
     }
 
-    public StringBuilder AppendFormat(java.lang.String format, NetObject arg0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException {
+    public StringBuilder AppendFormat(java.lang.String format, NetObject arg0, NetObject arg1, NetObject arg2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objAppendFormat = (JCObject)classInstance.Invoke("AppendFormat", format, arg0 == null ? null : arg0.getJCOInstance());
+            JCObject objAppendFormat = (JCObject)classInstance.Invoke("AppendFormat", format, arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance());
             return new StringBuilder(objAppendFormat);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -565,11 +565,11 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
         }
     }
 
-    public StringBuilder AppendFormat(java.lang.String format, NetObject arg0, NetObject arg1, NetObject arg2) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException {
+    public StringBuilder AppendFormat(java.lang.String format, NetObject arg0) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objAppendFormat = (JCObject)classInstance.Invoke("AppendFormat", format, arg0 == null ? null : arg0.getJCOInstance(), arg1 == null ? null : arg1.getJCOInstance(), arg2 == null ? null : arg2.getJCOInstance());
+            JCObject objAppendFormat = (JCObject)classInstance.Invoke("AppendFormat", format, arg0 == null ? null : arg0.getJCOInstance());
             return new StringBuilder(objAppendFormat);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -719,28 +719,6 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
         }
     }
 
-    public StringBuilder Insert(int index, char[] value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objInsert = (JCObject)classInstance.Invoke("Insert", index, value);
-            return new StringBuilder(objInsert);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public StringBuilder Insert(int dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objInsert = (JCObject)classInstance.Invoke("Insert", dupParam0, dupParam1.getJCRefOut());
-            return new StringBuilder(objInsert);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public StringBuilder Insert(int index, char[] value, int startIndex, int charCount) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -757,6 +735,28 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objInsert = (JCObject)classInstance.Invoke("Insert", dupParam0, dupParam1.getJCRefOut(), dupParam2, dupParam3);
+            return new StringBuilder(objInsert);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public StringBuilder Insert(int index, char[] value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objInsert = (JCObject)classInstance.Invoke("Insert", index, value);
+            return new StringBuilder(objInsert);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public StringBuilder Insert(int dupParam0, JCORefOut dupParam1) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objInsert = (JCObject)classInstance.Invoke("Insert", dupParam0, dupParam1.getJCRefOut());
             return new StringBuilder(objInsert);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -851,22 +851,22 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
         }
     }
 
-    public StringBuilder Insert(int index, java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public StringBuilder Insert(int index, java.lang.String value, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objInsert = (JCObject)classInstance.Invoke("Insert", index, value);
+            JCObject objInsert = (JCObject)classInstance.Invoke("Insert", index, value, count);
             return new StringBuilder(objInsert);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public StringBuilder Insert(int index, java.lang.String value, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException {
+    public StringBuilder Insert(int index, java.lang.String value) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objInsert = (JCObject)classInstance.Invoke("Insert", index, value, count);
+            JCObject objInsert = (JCObject)classInstance.Invoke("Insert", index, value);
             return new StringBuilder(objInsert);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -917,17 +917,6 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
         }
     }
 
-    public StringBuilder Replace(char oldChar, char newChar) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objReplace = (JCObject)classInstance.Invoke("Replace", oldChar, newChar);
-            return new StringBuilder(objReplace);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public StringBuilder Replace(char oldChar, char newChar, int startIndex, int count) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -939,11 +928,11 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
         }
     }
 
-    public StringBuilder Replace(java.lang.String oldValue, java.lang.String newValue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+    public StringBuilder Replace(char oldChar, char newChar) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objReplace = (JCObject)classInstance.Invoke("Replace", oldValue, newValue);
+            JCObject objReplace = (JCObject)classInstance.Invoke("Replace", oldChar, newChar);
             return new StringBuilder(objReplace);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -955,6 +944,17 @@ public class StringBuilder extends NetObject implements system.runtime.serializa
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objReplace = (JCObject)classInstance.Invoke("Replace", oldValue, newValue, startIndex, count);
+            return new StringBuilder(objReplace);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public StringBuilder Replace(java.lang.String oldValue, java.lang.String newValue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objReplace = (JCObject)classInstance.Invoke("Replace", oldValue, newValue);
             return new StringBuilder(objReplace);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

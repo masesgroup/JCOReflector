@@ -151,21 +151,21 @@ public class XmlAttributeAttribute extends Attribute  {
         }
     }
 
-    public XmlAttributeAttribute(java.lang.String attributeName) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(attributeName));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public XmlAttributeAttribute(java.lang.String attributeName, NetType type) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(attributeName, type == null ? null : type.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlAttributeAttribute(java.lang.String attributeName) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(attributeName));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

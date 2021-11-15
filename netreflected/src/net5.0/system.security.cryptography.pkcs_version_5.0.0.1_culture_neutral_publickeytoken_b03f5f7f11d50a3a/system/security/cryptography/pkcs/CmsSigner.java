@@ -167,11 +167,11 @@ public class CmsSigner extends NetObject  {
         }
     }
 
-    public CmsSigner(SubjectIdentifierType signerIdentifierType) throws Throwable, system.ArgumentNullException {
+    public CmsSigner(SubjectIdentifierType signerIdentifierType, X509Certificate2 certificate, AsymmetricAlgorithm privateKey) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(signerIdentifierType == null ? null : signerIdentifierType.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(signerIdentifierType == null ? null : signerIdentifierType.getJCOInstance(), certificate == null ? null : certificate.getJCOInstance(), privateKey == null ? null : privateKey.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,11 +187,11 @@ public class CmsSigner extends NetObject  {
         }
     }
 
-    public CmsSigner(SubjectIdentifierType signerIdentifierType, X509Certificate2 certificate, AsymmetricAlgorithm privateKey) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public CmsSigner(SubjectIdentifierType signerIdentifierType) throws Throwable, system.ArgumentNullException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(signerIdentifierType == null ? null : signerIdentifierType.getJCOInstance(), certificate == null ? null : certificate.getJCOInstance(), privateKey == null ? null : privateKey.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(signerIdentifierType == null ? null : signerIdentifierType.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

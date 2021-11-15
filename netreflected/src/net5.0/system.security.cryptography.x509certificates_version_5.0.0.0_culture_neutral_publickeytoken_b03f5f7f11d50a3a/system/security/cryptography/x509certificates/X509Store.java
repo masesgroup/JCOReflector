@@ -164,11 +164,11 @@ public class X509Store extends NetObject implements AutoCloseable {
         }
     }
 
-    public X509Store(StoreName storeName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException {
+    public X509Store(StoreName storeName, StoreLocation storeLocation, OpenFlags flags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.cryptography.CryptographicException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(storeName == null ? null : storeName.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(storeName == null ? null : storeName.getJCOInstance(), storeLocation == null ? null : storeLocation.getJCOInstance(), flags == null ? null : flags.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -184,21 +184,21 @@ public class X509Store extends NetObject implements AutoCloseable {
         }
     }
 
-    public X509Store(StoreName storeName, StoreLocation storeLocation, OpenFlags flags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.cryptography.CryptographicException {
+    public X509Store(StoreName storeName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(storeName == null ? null : storeName.getJCOInstance(), storeLocation == null ? null : storeLocation.getJCOInstance(), flags == null ? null : flags.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(storeName == null ? null : storeName.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public X509Store(java.lang.String storeName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException {
+    public X509Store(java.lang.String storeName, StoreLocation storeLocation, OpenFlags flags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.cryptography.CryptographicException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(storeName));
+            setJCOInstance((JCObject)classType.NewObject(storeName, storeLocation == null ? null : storeLocation.getJCOInstance(), flags == null ? null : flags.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -214,11 +214,11 @@ public class X509Store extends NetObject implements AutoCloseable {
         }
     }
 
-    public X509Store(java.lang.String storeName, StoreLocation storeLocation, OpenFlags flags) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.cryptography.CryptographicException {
+    public X509Store(java.lang.String storeName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(storeName, storeLocation == null ? null : storeLocation.getJCOInstance(), flags == null ? null : flags.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(storeName));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

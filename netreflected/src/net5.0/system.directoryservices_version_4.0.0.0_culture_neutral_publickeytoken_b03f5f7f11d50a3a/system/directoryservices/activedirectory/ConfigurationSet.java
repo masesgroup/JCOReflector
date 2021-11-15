@@ -167,22 +167,22 @@ public class ConfigurationSet extends NetObject  {
         }
     }
 
-    public AdamInstance FindAdamInstance(java.lang.String partitionName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.componentmodel.InvalidEnumArgumentException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.security.SecurityException {
+    public AdamInstance FindAdamInstance(java.lang.String partitionName, java.lang.String siteName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.componentmodel.InvalidEnumArgumentException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objFindAdamInstance = (JCObject)classInstance.Invoke("FindAdamInstance", partitionName);
+            JCObject objFindAdamInstance = (JCObject)classInstance.Invoke("FindAdamInstance", partitionName, siteName);
             return new AdamInstance(objFindAdamInstance);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public AdamInstance FindAdamInstance(java.lang.String partitionName, java.lang.String siteName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.componentmodel.InvalidEnumArgumentException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.security.SecurityException {
+    public AdamInstance FindAdamInstance(java.lang.String partitionName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.componentmodel.InvalidEnumArgumentException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objFindAdamInstance = (JCObject)classInstance.Invoke("FindAdamInstance", partitionName, siteName);
+            JCObject objFindAdamInstance = (JCObject)classInstance.Invoke("FindAdamInstance", partitionName);
             return new AdamInstance(objFindAdamInstance);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -200,22 +200,22 @@ public class ConfigurationSet extends NetObject  {
         }
     }
 
-    public AdamInstanceCollection FindAllAdamInstances(java.lang.String partitionName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.componentmodel.InvalidEnumArgumentException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.security.SecurityException {
+    public AdamInstanceCollection FindAllAdamInstances(java.lang.String partitionName, java.lang.String siteName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.componentmodel.InvalidEnumArgumentException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objFindAllAdamInstances = (JCObject)classInstance.Invoke("FindAllAdamInstances", partitionName);
+            JCObject objFindAllAdamInstances = (JCObject)classInstance.Invoke("FindAllAdamInstances", partitionName, siteName);
             return new AdamInstanceCollection(objFindAllAdamInstances);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public AdamInstanceCollection FindAllAdamInstances(java.lang.String partitionName, java.lang.String siteName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.componentmodel.InvalidEnumArgumentException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.security.SecurityException {
+    public AdamInstanceCollection FindAllAdamInstances(java.lang.String partitionName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException, system.directoryservices.activedirectory.ActiveDirectoryOperationException, system.componentmodel.InvalidEnumArgumentException, system.directoryservices.activedirectory.ActiveDirectoryObjectNotFoundException, system.OutOfMemoryException, system.security.SecurityException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objFindAllAdamInstances = (JCObject)classInstance.Invoke("FindAllAdamInstances", partitionName, siteName);
+            JCObject objFindAllAdamInstances = (JCObject)classInstance.Invoke("FindAllAdamInstances", partitionName);
             return new AdamInstanceCollection(objFindAllAdamInstances);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

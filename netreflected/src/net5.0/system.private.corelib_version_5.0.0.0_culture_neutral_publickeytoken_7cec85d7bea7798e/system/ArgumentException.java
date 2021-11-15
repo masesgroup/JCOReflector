@@ -160,21 +160,21 @@ public class ArgumentException extends SystemException {
 
     // Constructors section
     
-    public ArgumentException(java.lang.String message, java.lang.String paramName) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(message, paramName));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ArgumentException(java.lang.String message, java.lang.String paramName, NetException innerException) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(message, paramName, innerException == null ? null : innerException.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ArgumentException(java.lang.String message, java.lang.String paramName) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(message, paramName));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -448,55 +448,11 @@ public class ModuleBuilder extends Module  {
         }
     }
 
-    public TypeBuilder DefineType(java.lang.String name) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objDefineType = (JCObject)classInstance.Invoke("DefineType", name);
-            return new TypeBuilder(objDefineType);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TypeBuilder DefineType(java.lang.String name, TypeAttributes attr) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objDefineType = (JCObject)classInstance.Invoke("DefineType", name, attr == null ? null : attr.getJCOInstance());
-            return new TypeBuilder(objDefineType);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TypeBuilder DefineType(java.lang.String name, TypeAttributes attr, NetType parent) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objDefineType = (JCObject)classInstance.Invoke("DefineType", name, attr == null ? null : attr.getJCOInstance(), parent == null ? null : parent.getJCOInstance());
-            return new TypeBuilder(objDefineType);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public TypeBuilder DefineType(java.lang.String name, TypeAttributes attr, NetType parent, int typesize) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objDefineType = (JCObject)classInstance.Invoke("DefineType", name, attr == null ? null : attr.getJCOInstance(), parent == null ? null : parent.getJCOInstance(), typesize);
-            return new TypeBuilder(objDefineType);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TypeBuilder DefineType(java.lang.String name, TypeAttributes attr, NetType parent, PackingSize packsize) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objDefineType = (JCObject)classInstance.Invoke("DefineType", name, attr == null ? null : attr.getJCOInstance(), parent == null ? null : parent.getJCOInstance(), packsize == null ? null : packsize.getJCOInstance());
             return new TypeBuilder(objDefineType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -514,11 +470,55 @@ public class ModuleBuilder extends Module  {
         }
     }
 
+    public TypeBuilder DefineType(java.lang.String name, TypeAttributes attr, NetType parent, PackingSize packsize) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objDefineType = (JCObject)classInstance.Invoke("DefineType", name, attr == null ? null : attr.getJCOInstance(), parent == null ? null : parent.getJCOInstance(), packsize == null ? null : packsize.getJCOInstance());
+            return new TypeBuilder(objDefineType);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public TypeBuilder DefineType(java.lang.String name, TypeAttributes attr, NetType parent, NetType[] interfaces) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objDefineType = (JCObject)classInstance.Invoke("DefineType", name, attr == null ? null : attr.getJCOInstance(), parent == null ? null : parent.getJCOInstance(), toObjectFromArray(interfaces));
+            return new TypeBuilder(objDefineType);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TypeBuilder DefineType(java.lang.String name, TypeAttributes attr, NetType parent) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objDefineType = (JCObject)classInstance.Invoke("DefineType", name, attr == null ? null : attr.getJCOInstance(), parent == null ? null : parent.getJCOInstance());
+            return new TypeBuilder(objDefineType);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TypeBuilder DefineType(java.lang.String name, TypeAttributes attr) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objDefineType = (JCObject)classInstance.Invoke("DefineType", name, attr == null ? null : attr.getJCOInstance());
+            return new TypeBuilder(objDefineType);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TypeBuilder DefineType(java.lang.String name) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objDefineType = (JCObject)classInstance.Invoke("DefineType", name);
             return new TypeBuilder(objDefineType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -646,11 +646,11 @@ public class ModuleBuilder extends Module  {
         }
     }
 
-    public NetType GetType(java.lang.String className) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public NetType GetType(java.lang.String className, boolean throwOnError, boolean ignoreCase) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetType = (JCObject)classInstance.Invoke("GetType", className);
+            JCObject objGetType = (JCObject)classInstance.Invoke("GetType", className, throwOnError, ignoreCase);
             return new NetType(objGetType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -668,11 +668,11 @@ public class ModuleBuilder extends Module  {
         }
     }
 
-    public NetType GetType(java.lang.String className, boolean throwOnError, boolean ignoreCase) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.runtime.interopservices.ExternalException, system.collections.generic.KeyNotFoundException {
+    public NetType GetType(java.lang.String className) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetType = (JCObject)classInstance.Invoke("GetType", className, throwOnError, ignoreCase);
+            JCObject objGetType = (JCObject)classInstance.Invoke("GetType", className);
             return new NetType(objGetType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -150,11 +150,11 @@ public class DirectoryVirtualListView extends NetObject  {
         }
     }
 
-    public DirectoryVirtualListView(int afterCount) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException {
+    public DirectoryVirtualListView(int beforeCount, int afterCount, int offset, DirectoryVirtualListViewContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(afterCount));
+            setJCOInstance((JCObject)classType.NewObject(beforeCount, afterCount, offset, context == null ? null : context.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,11 +170,11 @@ public class DirectoryVirtualListView extends NetObject  {
         }
     }
 
-    public DirectoryVirtualListView(int beforeCount, int afterCount, int offset, DirectoryVirtualListViewContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException {
+    public DirectoryVirtualListView(int beforeCount, int afterCount, java.lang.String target, DirectoryVirtualListViewContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(beforeCount, afterCount, offset, context == null ? null : context.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(beforeCount, afterCount, target, context == null ? null : context.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -190,11 +190,11 @@ public class DirectoryVirtualListView extends NetObject  {
         }
     }
 
-    public DirectoryVirtualListView(int beforeCount, int afterCount, java.lang.String target, DirectoryVirtualListViewContext context) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException {
+    public DirectoryVirtualListView(int afterCount) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(beforeCount, afterCount, target, context == null ? null : context.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(afterCount));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -143,31 +143,11 @@ public class CngUIPolicy extends NetObject  {
     public CngUIPolicy() throws Throwable {
     }
 
-    public CngUIPolicy(CngUIProtectionLevels protectionLevel) throws Throwable {
+    public CngUIPolicy(CngUIProtectionLevels protectionLevel, java.lang.String friendlyName, java.lang.String description, java.lang.String useContext, java.lang.String creationTitle) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(protectionLevel == null ? null : protectionLevel.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CngUIPolicy(CngUIProtectionLevels protectionLevel, java.lang.String friendlyName) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(protectionLevel == null ? null : protectionLevel.getJCOInstance(), friendlyName));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public CngUIPolicy(CngUIProtectionLevels protectionLevel, java.lang.String friendlyName, java.lang.String description) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(protectionLevel == null ? null : protectionLevel.getJCOInstance(), friendlyName, description));
+            setJCOInstance((JCObject)classType.NewObject(protectionLevel == null ? null : protectionLevel.getJCOInstance(), friendlyName, description, useContext, creationTitle));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -183,11 +163,31 @@ public class CngUIPolicy extends NetObject  {
         }
     }
 
-    public CngUIPolicy(CngUIProtectionLevels protectionLevel, java.lang.String friendlyName, java.lang.String description, java.lang.String useContext, java.lang.String creationTitle) throws Throwable {
+    public CngUIPolicy(CngUIProtectionLevels protectionLevel, java.lang.String friendlyName, java.lang.String description) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(protectionLevel == null ? null : protectionLevel.getJCOInstance(), friendlyName, description, useContext, creationTitle));
+            setJCOInstance((JCObject)classType.NewObject(protectionLevel == null ? null : protectionLevel.getJCOInstance(), friendlyName, description));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CngUIPolicy(CngUIProtectionLevels protectionLevel, java.lang.String friendlyName) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(protectionLevel == null ? null : protectionLevel.getJCOInstance(), friendlyName));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CngUIPolicy(CngUIProtectionLevels protectionLevel) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(protectionLevel == null ? null : protectionLevel.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

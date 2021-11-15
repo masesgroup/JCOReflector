@@ -211,17 +211,6 @@ public class DataRelationCollection extends InternalDataCollectionBase  {
         }
     }
 
-    public DataRelation Add(java.lang.String name, DataColumn parentColumn, DataColumn childColumn) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.data.InvalidConstraintException, system.globalization.CultureNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAdd = (JCObject)classInstance.Invoke("Add", name, parentColumn == null ? null : parentColumn.getJCOInstance(), childColumn == null ? null : childColumn.getJCOInstance());
-            return new DataRelation(objAdd);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DataRelation Add(java.lang.String name, DataColumn parentColumn, DataColumn childColumn, boolean createConstraints) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.FormatException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.data.InvalidConstraintException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -233,11 +222,11 @@ public class DataRelationCollection extends InternalDataCollectionBase  {
         }
     }
 
-    public DataRelation Add(java.lang.String name, DataColumn[] parentColumns, DataColumn[] childColumns) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.data.InvalidConstraintException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
+    public DataRelation Add(java.lang.String name, DataColumn parentColumn, DataColumn childColumn) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.data.InvalidConstraintException, system.globalization.CultureNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objAdd = (JCObject)classInstance.Invoke("Add", name, toObjectFromArray(parentColumns), toObjectFromArray(childColumns));
+            JCObject objAdd = (JCObject)classInstance.Invoke("Add", name, parentColumn == null ? null : parentColumn.getJCOInstance(), childColumn == null ? null : childColumn.getJCOInstance());
             return new DataRelation(objAdd);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -249,6 +238,17 @@ public class DataRelationCollection extends InternalDataCollectionBase  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objAdd = (JCObject)classInstance.Invoke("Add", name, toObjectFromArray(parentColumns), toObjectFromArray(childColumns), createConstraints);
+            return new DataRelation(objAdd);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DataRelation Add(java.lang.String name, DataColumn[] parentColumns, DataColumn[] childColumns) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.data.InvalidConstraintException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAdd = (JCObject)classInstance.Invoke("Add", name, toObjectFromArray(parentColumns), toObjectFromArray(childColumns));
             return new DataRelation(objAdd);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

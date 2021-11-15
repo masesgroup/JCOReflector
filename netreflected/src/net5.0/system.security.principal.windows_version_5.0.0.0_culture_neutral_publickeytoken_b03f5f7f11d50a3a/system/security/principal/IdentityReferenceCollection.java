@@ -185,22 +185,22 @@ public class IdentityReferenceCollection extends NetObjectEnumerable  {
         }
     }
 
-    public IdentityReferenceCollection Translate(NetType targetType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.MissingMethodException, system.reflection.TargetInvocationException, system.AccessViolationException, system.security.principal.IdentityNotMappedException {
+    public IdentityReferenceCollection Translate(NetType targetType, boolean forceSuccess) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.MissingMethodException, system.reflection.TargetInvocationException, system.AccessViolationException, system.security.principal.IdentityNotMappedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objTranslate = (JCObject)classInstance.Invoke("Translate", targetType == null ? null : targetType.getJCOInstance());
+            JCObject objTranslate = (JCObject)classInstance.Invoke("Translate", targetType == null ? null : targetType.getJCOInstance(), forceSuccess);
             return new IdentityReferenceCollection(objTranslate);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public IdentityReferenceCollection Translate(NetType targetType, boolean forceSuccess) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.MissingMethodException, system.reflection.TargetInvocationException, system.AccessViolationException, system.security.principal.IdentityNotMappedException {
+    public IdentityReferenceCollection Translate(NetType targetType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.UnauthorizedAccessException, system.OutOfMemoryException, system.componentmodel.Win32Exception, system.MissingMethodException, system.reflection.TargetInvocationException, system.AccessViolationException, system.security.principal.IdentityNotMappedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objTranslate = (JCObject)classInstance.Invoke("Translate", targetType == null ? null : targetType.getJCOInstance(), forceSuccess);
+            JCObject objTranslate = (JCObject)classInstance.Invoke("Translate", targetType == null ? null : targetType.getJCOInstance());
             return new IdentityReferenceCollection(objTranslate);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -324,21 +324,21 @@ public class BigInteger extends ValueType  {
         }
     }
 
-    public static double Log(BigInteger value) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (double)classType.Invoke("Log", value == null ? null : value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static double Log(BigInteger value, double baseValue) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (double)classType.Invoke("Log", value == null ? null : value.getJCOInstance(), baseValue);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static double Log(BigInteger value) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (double)classType.Invoke("Log", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -534,11 +534,11 @@ public class BigInteger extends ValueType  {
         }
     }
 
-    public static BigInteger Parse(java.lang.String value) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.TypeInitializationException, system.FormatException, system.IndexOutOfRangeException {
+    public static BigInteger Parse(java.lang.String value, NumberStyles style, IFormatProvider provider) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", value);
+            JCObject objParse = (JCObject)classType.Invoke("Parse", value, style == null ? null : style.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
             return new BigInteger(objParse);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -556,22 +556,22 @@ public class BigInteger extends ValueType  {
         }
     }
 
-    public static BigInteger Parse(java.lang.String value, NumberStyles style, IFormatProvider provider) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException {
+    public static BigInteger Parse(java.lang.String value, IFormatProvider provider) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", value, style == null ? null : style.getJCOInstance(), provider == null ? null : provider.getJCOInstance());
+            JCObject objParse = (JCObject)classType.Invoke("Parse", value, provider == null ? null : provider.getJCOInstance());
             return new BigInteger(objParse);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static BigInteger Parse(java.lang.String value, IFormatProvider provider) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException {
+    public static BigInteger Parse(java.lang.String value) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.TypeInitializationException, system.FormatException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", value, provider == null ? null : provider.getJCOInstance());
+            JCObject objParse = (JCObject)classType.Invoke("Parse", value);
             return new BigInteger(objParse);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -621,21 +621,21 @@ public class BigInteger extends ValueType  {
         }
     }
 
-    public java.lang.String ToString(java.lang.String format) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.TypeInitializationException, system.OverflowException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("ToString", format);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String ToString(java.lang.String format, IFormatProvider provider) throws Throwable, system.PlatformNotSupportedException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.ArgumentException, system.OverflowException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Invoke("ToString", format, provider == null ? null : provider.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String ToString(java.lang.String format) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.TypeInitializationException, system.OverflowException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("ToString", format);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

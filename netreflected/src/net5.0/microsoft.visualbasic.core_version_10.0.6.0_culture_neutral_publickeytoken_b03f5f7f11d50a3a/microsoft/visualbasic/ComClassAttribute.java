@@ -150,11 +150,11 @@ public class ComClassAttribute extends Attribute  {
         }
     }
 
-    public ComClassAttribute(java.lang.String _ClassID) throws Throwable {
+    public ComClassAttribute(java.lang.String _ClassID, java.lang.String _InterfaceID, java.lang.String _EventId) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(_ClassID));
+            setJCOInstance((JCObject)classType.NewObject(_ClassID, _InterfaceID, _EventId));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,11 +170,11 @@ public class ComClassAttribute extends Attribute  {
         }
     }
 
-    public ComClassAttribute(java.lang.String _ClassID, java.lang.String _InterfaceID, java.lang.String _EventId) throws Throwable {
+    public ComClassAttribute(java.lang.String _ClassID) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(_ClassID, _InterfaceID, _EventId));
+            setJCOInstance((JCObject)classType.NewObject(_ClassID));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

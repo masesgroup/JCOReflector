@@ -160,16 +160,6 @@ public class CustomAttributeExtensions extends NetObject  {
         }
     }
 
-    public static boolean IsDefined(MemberInfo element, NetType attributeType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("IsDefined", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static boolean IsDefined(MemberInfo element, NetType attributeType, boolean inherit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -180,7 +170,7 @@ public class CustomAttributeExtensions extends NetObject  {
         }
     }
 
-    public static boolean IsDefined(Module element, NetType attributeType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static boolean IsDefined(MemberInfo element, NetType attributeType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -190,7 +180,7 @@ public class CustomAttributeExtensions extends NetObject  {
         }
     }
 
-    public static boolean IsDefined(ParameterInfo element, NetType attributeType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
+    public static boolean IsDefined(Module element, NetType attributeType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -210,18 +200,17 @@ public class CustomAttributeExtensions extends NetObject  {
         }
     }
 
-    public static Attribute GetCustomAttribute(Assembly element, NetType attributeType) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.reflection.AmbiguousMatchException {
+    public static boolean IsDefined(ParameterInfo element, NetType attributeType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetCustomAttribute = (JCObject)classType.Invoke("GetCustomAttribute", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance());
-            return new Attribute(objGetCustomAttribute);
+            return (boolean)classType.Invoke("IsDefined", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Attribute GetCustomAttribute(MemberInfo element, NetType attributeType) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.reflection.AmbiguousMatchException {
+    public static Attribute GetCustomAttribute(Assembly element, NetType attributeType) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -243,7 +232,7 @@ public class CustomAttributeExtensions extends NetObject  {
         }
     }
 
-    public static Attribute GetCustomAttribute(Module element, NetType attributeType) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.reflection.AmbiguousMatchException {
+    public static Attribute GetCustomAttribute(MemberInfo element, NetType attributeType) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -254,7 +243,7 @@ public class CustomAttributeExtensions extends NetObject  {
         }
     }
 
-    public static Attribute GetCustomAttribute(ParameterInfo element, NetType attributeType) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.reflection.AmbiguousMatchException {
+    public static Attribute GetCustomAttribute(Module element, NetType attributeType) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -270,6 +259,17 @@ public class CustomAttributeExtensions extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objGetCustomAttribute = (JCObject)classType.Invoke("GetCustomAttribute", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance(), inherit);
+            return new Attribute(objGetCustomAttribute);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Attribute GetCustomAttribute(ParameterInfo element, NetType attributeType) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.reflection.AmbiguousMatchException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetCustomAttribute = (JCObject)classType.Invoke("GetCustomAttribute", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance());
             return new Attribute(objGetCustomAttribute);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

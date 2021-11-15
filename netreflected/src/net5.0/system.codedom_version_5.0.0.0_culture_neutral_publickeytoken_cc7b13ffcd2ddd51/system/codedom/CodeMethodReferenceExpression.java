@@ -152,21 +152,21 @@ public class CodeMethodReferenceExpression extends CodeExpression  {
         }
     }
 
-    public CodeMethodReferenceExpression(CodeExpression targetObject, java.lang.String methodName) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(targetObject == null ? null : targetObject.getJCOInstance(), methodName));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public CodeMethodReferenceExpression(CodeExpression targetObject, java.lang.String methodName, CodeTypeReference... typeParameters) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(targetObject == null ? null : targetObject.getJCOInstance(), methodName, toObjectFromArray(typeParameters)));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CodeMethodReferenceExpression(CodeExpression targetObject, java.lang.String methodName) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(targetObject == null ? null : targetObject.getJCOInstance(), methodName));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

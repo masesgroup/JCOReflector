@@ -146,21 +146,11 @@ public class NotifyCollectionChangedEventArgs extends EventArgs  {
     public NotifyCollectionChangedEventArgs() throws Throwable {
     }
 
-    public NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction action) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
+    public NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction action, IList changedItems, int index, int oldIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(action == null ? null : action.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction action, IList changedItems) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(action == null ? null : action.getJCOInstance(), changedItems == null ? null : changedItems.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(action == null ? null : action.getJCOInstance(), changedItems == null ? null : changedItems.getJCOInstance(), index, oldIndex));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,11 +166,11 @@ public class NotifyCollectionChangedEventArgs extends EventArgs  {
         }
     }
 
-    public NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction action, IList changedItems, int index, int oldIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
+    public NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction action, IList newItems, IList oldItems, int startingIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(action == null ? null : action.getJCOInstance(), changedItems == null ? null : changedItems.getJCOInstance(), index, oldIndex));
+            setJCOInstance((JCObject)classType.NewObject(action == null ? null : action.getJCOInstance(), newItems == null ? null : newItems.getJCOInstance(), oldItems == null ? null : oldItems.getJCOInstance(), startingIndex));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,31 +186,11 @@ public class NotifyCollectionChangedEventArgs extends EventArgs  {
         }
     }
 
-    public NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction action, IList newItems, IList oldItems, int startingIndex) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
+    public NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction action, IList changedItems) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(action == null ? null : action.getJCOInstance(), newItems == null ? null : newItems.getJCOInstance(), oldItems == null ? null : oldItems.getJCOInstance(), startingIndex));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction action, NetObject changedItem) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(action == null ? null : action.getJCOInstance(), changedItem == null ? null : changedItem.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction action, NetObject changedItem, int index) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(action == null ? null : action.getJCOInstance(), changedItem == null ? null : changedItem.getJCOInstance(), index));
+            setJCOInstance((JCObject)classType.NewObject(action == null ? null : action.getJCOInstance(), changedItems == null ? null : changedItems.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -236,11 +206,11 @@ public class NotifyCollectionChangedEventArgs extends EventArgs  {
         }
     }
 
-    public NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction action, NetObject newItem, NetObject oldItem) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
+    public NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction action, NetObject changedItem, int index) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(action == null ? null : action.getJCOInstance(), newItem == null ? null : newItem.getJCOInstance(), oldItem == null ? null : oldItem.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(action == null ? null : action.getJCOInstance(), changedItem == null ? null : changedItem.getJCOInstance(), index));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,6 +221,36 @@ public class NotifyCollectionChangedEventArgs extends EventArgs  {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(action == null ? null : action.getJCOInstance(), newItem == null ? null : newItem.getJCOInstance(), oldItem == null ? null : oldItem.getJCOInstance(), index));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction action, NetObject newItem, NetObject oldItem) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(action == null ? null : action.getJCOInstance(), newItem == null ? null : newItem.getJCOInstance(), oldItem == null ? null : oldItem.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction action, NetObject changedItem) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(action == null ? null : action.getJCOInstance(), changedItem == null ? null : changedItem.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NotifyCollectionChangedEventArgs(NotifyCollectionChangedAction action) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(action == null ? null : action.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -148,11 +148,11 @@ public class ActiveDirectoryAccessRule extends ObjectAccessRule  {
     public ActiveDirectoryAccessRule() throws Throwable {
     }
 
-    public ActiveDirectoryAccessRule(IdentityReference identity, ActiveDirectoryRights adRights, AccessControlType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
+    public ActiveDirectoryAccessRule(IdentityReference identity, ActiveDirectoryRights adRights, AccessControlType type, ActiveDirectorySecurityInheritance inheritanceType, Guid inheritedObjectType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(identity == null ? null : identity.getJCOInstance(), adRights == null ? null : adRights.getJCOInstance(), type == null ? null : type.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(identity == null ? null : identity.getJCOInstance(), adRights == null ? null : adRights.getJCOInstance(), type == null ? null : type.getJCOInstance(), inheritanceType == null ? null : inheritanceType.getJCOInstance(), inheritedObjectType == null ? null : inheritedObjectType.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,21 +168,11 @@ public class ActiveDirectoryAccessRule extends ObjectAccessRule  {
         }
     }
 
-    public ActiveDirectoryAccessRule(IdentityReference identity, ActiveDirectoryRights adRights, AccessControlType type, ActiveDirectorySecurityInheritance inheritanceType, Guid inheritedObjectType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException {
+    public ActiveDirectoryAccessRule(IdentityReference identity, ActiveDirectoryRights adRights, AccessControlType type, Guid objectType, ActiveDirectorySecurityInheritance inheritanceType, Guid inheritedObjectType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(identity == null ? null : identity.getJCOInstance(), adRights == null ? null : adRights.getJCOInstance(), type == null ? null : type.getJCOInstance(), inheritanceType == null ? null : inheritanceType.getJCOInstance(), inheritedObjectType == null ? null : inheritedObjectType.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ActiveDirectoryAccessRule(IdentityReference identity, ActiveDirectoryRights adRights, AccessControlType type, Guid objectType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(identity == null ? null : identity.getJCOInstance(), adRights == null ? null : adRights.getJCOInstance(), type == null ? null : type.getJCOInstance(), objectType == null ? null : objectType.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(identity == null ? null : identity.getJCOInstance(), adRights == null ? null : adRights.getJCOInstance(), type == null ? null : type.getJCOInstance(), objectType == null ? null : objectType.getJCOInstance(), inheritanceType == null ? null : inheritanceType.getJCOInstance(), inheritedObjectType == null ? null : inheritedObjectType.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,11 +188,21 @@ public class ActiveDirectoryAccessRule extends ObjectAccessRule  {
         }
     }
 
-    public ActiveDirectoryAccessRule(IdentityReference identity, ActiveDirectoryRights adRights, AccessControlType type, Guid objectType, ActiveDirectorySecurityInheritance inheritanceType, Guid inheritedObjectType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException {
+    public ActiveDirectoryAccessRule(IdentityReference identity, ActiveDirectoryRights adRights, AccessControlType type, Guid objectType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(identity == null ? null : identity.getJCOInstance(), adRights == null ? null : adRights.getJCOInstance(), type == null ? null : type.getJCOInstance(), objectType == null ? null : objectType.getJCOInstance(), inheritanceType == null ? null : inheritanceType.getJCOInstance(), inheritedObjectType == null ? null : inheritedObjectType.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(identity == null ? null : identity.getJCOInstance(), adRights == null ? null : adRights.getJCOInstance(), type == null ? null : type.getJCOInstance(), objectType == null ? null : objectType.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ActiveDirectoryAccessRule(IdentityReference identity, ActiveDirectoryRights adRights, AccessControlType type) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(identity == null ? null : identity.getJCOInstance(), adRights == null ? null : adRights.getJCOInstance(), type == null ? null : type.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

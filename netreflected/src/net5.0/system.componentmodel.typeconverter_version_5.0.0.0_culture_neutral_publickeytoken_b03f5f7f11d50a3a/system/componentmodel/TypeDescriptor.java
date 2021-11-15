@@ -168,22 +168,22 @@ public class TypeDescriptor extends NetObject  {
     
     // Methods section
     
-    public static AttributeCollection GetAttributes(NetObject component) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
+    public static AttributeCollection GetAttributes(NetObject component, boolean noCustomTypeDesc) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetAttributes = (JCObject)classType.Invoke("GetAttributes", component == null ? null : component.getJCOInstance());
+            JCObject objGetAttributes = (JCObject)classType.Invoke("GetAttributes", component == null ? null : component.getJCOInstance(), noCustomTypeDesc);
             return new AttributeCollection(objGetAttributes);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static AttributeCollection GetAttributes(NetObject component, boolean noCustomTypeDesc) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
+    public static AttributeCollection GetAttributes(NetObject component) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetAttributes = (JCObject)classType.Invoke("GetAttributes", component == null ? null : component.getJCOInstance(), noCustomTypeDesc);
+            JCObject objGetAttributes = (JCObject)classType.Invoke("GetAttributes", component == null ? null : component.getJCOInstance());
             return new AttributeCollection(objGetAttributes);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -234,22 +234,22 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static EventDescriptor GetDefaultEvent(NetObject component) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
+    public static EventDescriptor GetDefaultEvent(NetObject component, boolean noCustomTypeDesc) throws Throwable, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetDefaultEvent = (JCObject)classType.Invoke("GetDefaultEvent", component == null ? null : component.getJCOInstance());
+            JCObject objGetDefaultEvent = (JCObject)classType.Invoke("GetDefaultEvent", component == null ? null : component.getJCOInstance(), noCustomTypeDesc);
             return new EventDescriptor(objGetDefaultEvent);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static EventDescriptor GetDefaultEvent(NetObject component, boolean noCustomTypeDesc) throws Throwable, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException {
+    public static EventDescriptor GetDefaultEvent(NetObject component) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetDefaultEvent = (JCObject)classType.Invoke("GetDefaultEvent", component == null ? null : component.getJCOInstance(), noCustomTypeDesc);
+            JCObject objGetDefaultEvent = (JCObject)classType.Invoke("GetDefaultEvent", component == null ? null : component.getJCOInstance());
             return new EventDescriptor(objGetDefaultEvent);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -267,33 +267,11 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static EventDescriptorCollection GetEvents(NetObject component) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetEvents = (JCObject)classType.Invoke("GetEvents", component == null ? null : component.getJCOInstance());
-            return new EventDescriptorCollection(objGetEvents);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static EventDescriptorCollection GetEvents(NetObject component, boolean noCustomTypeDesc) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objGetEvents = (JCObject)classType.Invoke("GetEvents", component == null ? null : component.getJCOInstance(), noCustomTypeDesc);
-            return new EventDescriptorCollection(objGetEvents);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static EventDescriptorCollection GetEvents(NetObject component, Attribute[] attributes) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetEvents = (JCObject)classType.Invoke("GetEvents", component == null ? null : component.getJCOInstance(), toObjectFromArray(attributes));
             return new EventDescriptorCollection(objGetEvents);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -311,11 +289,22 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static EventDescriptorCollection GetEvents(NetType componentType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static EventDescriptorCollection GetEvents(NetObject component, Attribute[] attributes) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetEvents = (JCObject)classType.Invoke("GetEvents", componentType == null ? null : componentType.getJCOInstance());
+            JCObject objGetEvents = (JCObject)classType.Invoke("GetEvents", component == null ? null : component.getJCOInstance(), toObjectFromArray(attributes));
+            return new EventDescriptorCollection(objGetEvents);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static EventDescriptorCollection GetEvents(NetObject component) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetEvents = (JCObject)classType.Invoke("GetEvents", component == null ? null : component.getJCOInstance());
             return new EventDescriptorCollection(objGetEvents);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -327,6 +316,17 @@ public class TypeDescriptor extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objGetEvents = (JCObject)classType.Invoke("GetEvents", componentType == null ? null : componentType.getJCOInstance(), toObjectFromArray(attributes));
+            return new EventDescriptorCollection(objGetEvents);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static EventDescriptorCollection GetEvents(NetType componentType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetEvents = (JCObject)classType.Invoke("GetEvents", componentType == null ? null : componentType.getJCOInstance());
             return new EventDescriptorCollection(objGetEvents);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -355,22 +355,22 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static PropertyDescriptor GetDefaultProperty(NetObject component) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
+    public static PropertyDescriptor GetDefaultProperty(NetObject component, boolean noCustomTypeDesc) throws Throwable, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetDefaultProperty = (JCObject)classType.Invoke("GetDefaultProperty", component == null ? null : component.getJCOInstance());
+            JCObject objGetDefaultProperty = (JCObject)classType.Invoke("GetDefaultProperty", component == null ? null : component.getJCOInstance(), noCustomTypeDesc);
             return new PropertyDescriptor(objGetDefaultProperty);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static PropertyDescriptor GetDefaultProperty(NetObject component, boolean noCustomTypeDesc) throws Throwable, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException {
+    public static PropertyDescriptor GetDefaultProperty(NetObject component) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetDefaultProperty = (JCObject)classType.Invoke("GetDefaultProperty", component == null ? null : component.getJCOInstance(), noCustomTypeDesc);
+            JCObject objGetDefaultProperty = (JCObject)classType.Invoke("GetDefaultProperty", component == null ? null : component.getJCOInstance());
             return new PropertyDescriptor(objGetDefaultProperty);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -388,33 +388,11 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static PropertyDescriptorCollection GetProperties(NetObject component) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetProperties = (JCObject)classType.Invoke("GetProperties", component == null ? null : component.getJCOInstance());
-            return new PropertyDescriptorCollection(objGetProperties);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static PropertyDescriptorCollection GetProperties(NetObject component, boolean noCustomTypeDesc) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objGetProperties = (JCObject)classType.Invoke("GetProperties", component == null ? null : component.getJCOInstance(), noCustomTypeDesc);
-            return new PropertyDescriptorCollection(objGetProperties);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static PropertyDescriptorCollection GetProperties(NetObject component, Attribute[] attributes) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetProperties = (JCObject)classType.Invoke("GetProperties", component == null ? null : component.getJCOInstance(), toObjectFromArray(attributes));
             return new PropertyDescriptorCollection(objGetProperties);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -432,11 +410,22 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static PropertyDescriptorCollection GetProperties(NetType componentType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static PropertyDescriptorCollection GetProperties(NetObject component, Attribute[] attributes) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetProperties = (JCObject)classType.Invoke("GetProperties", componentType == null ? null : componentType.getJCOInstance());
+            JCObject objGetProperties = (JCObject)classType.Invoke("GetProperties", component == null ? null : component.getJCOInstance(), toObjectFromArray(attributes));
+            return new PropertyDescriptorCollection(objGetProperties);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static PropertyDescriptorCollection GetProperties(NetObject component) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetProperties = (JCObject)classType.Invoke("GetProperties", component == null ? null : component.getJCOInstance());
             return new PropertyDescriptorCollection(objGetProperties);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -454,12 +443,12 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static TypeConverter GetConverter(NetObject component) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
+    public static PropertyDescriptorCollection GetProperties(NetType componentType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetConverter = (JCObject)classType.Invoke("GetConverter", component == null ? null : component.getJCOInstance());
-            return new TypeConverter(objGetConverter);
+            JCObject objGetProperties = (JCObject)classType.Invoke("GetProperties", componentType == null ? null : componentType.getJCOInstance());
+            return new PropertyDescriptorCollection(objGetProperties);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -470,6 +459,17 @@ public class TypeDescriptor extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objGetConverter = (JCObject)classType.Invoke("GetConverter", component == null ? null : component.getJCOInstance(), noCustomTypeDesc);
+            return new TypeConverter(objGetConverter);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static TypeConverter GetConverter(NetObject component) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetConverter = (JCObject)classType.Invoke("GetConverter", component == null ? null : component.getJCOInstance());
             return new TypeConverter(objGetConverter);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -553,22 +553,22 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static NetObject GetEditor(NetObject component, NetType editorBaseType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
+    public static NetObject GetEditor(NetObject component, NetType editorBaseType, boolean noCustomTypeDesc) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetEditor = (JCObject)classType.Invoke("GetEditor", component == null ? null : component.getJCOInstance(), editorBaseType == null ? null : editorBaseType.getJCOInstance());
+            JCObject objGetEditor = (JCObject)classType.Invoke("GetEditor", component == null ? null : component.getJCOInstance(), editorBaseType == null ? null : editorBaseType.getJCOInstance(), noCustomTypeDesc);
             return new NetObject(objGetEditor);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static NetObject GetEditor(NetObject component, NetType editorBaseType, boolean noCustomTypeDesc) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
+    public static NetObject GetEditor(NetObject component, NetType editorBaseType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetEditor = (JCObject)classType.Invoke("GetEditor", component == null ? null : component.getJCOInstance(), editorBaseType == null ? null : editorBaseType.getJCOInstance(), noCustomTypeDesc);
+            JCObject objGetEditor = (JCObject)classType.Invoke("GetEditor", component == null ? null : component.getJCOInstance(), editorBaseType == null ? null : editorBaseType.getJCOInstance());
             return new NetObject(objGetEditor);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -586,21 +586,21 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static java.lang.String GetClassName(NetObject component) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("GetClassName", component == null ? null : component.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static java.lang.String GetClassName(NetObject component, boolean noCustomTypeDesc) throws Throwable, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (java.lang.String)classType.Invoke("GetClassName", component == null ? null : component.getJCOInstance(), noCustomTypeDesc);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String GetClassName(NetObject component) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("GetClassName", component == null ? null : component.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -616,21 +616,21 @@ public class TypeDescriptor extends NetObject  {
         }
     }
 
-    public static java.lang.String GetComponentName(NetObject component) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (java.lang.String)classType.Invoke("GetComponentName", component == null ? null : component.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static java.lang.String GetComponentName(NetObject component, boolean noCustomTypeDesc) throws Throwable, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (java.lang.String)classType.Invoke("GetComponentName", component == null ? null : component.getJCOInstance(), noCustomTypeDesc);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String GetComponentName(NetObject component) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (java.lang.String)classType.Invoke("GetComponentName", component == null ? null : component.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

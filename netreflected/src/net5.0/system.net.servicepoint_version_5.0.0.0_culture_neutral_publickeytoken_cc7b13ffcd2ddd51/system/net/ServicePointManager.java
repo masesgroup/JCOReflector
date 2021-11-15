@@ -165,22 +165,22 @@ public class ServicePointManager extends NetObject  {
         }
     }
 
-    public static ServicePoint FindServicePoint(Uri address) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.UriFormatException, system.OutOfMemoryException, system.InvalidTimeZoneException, system.OverflowException, system.security.SecurityException {
+    public static ServicePoint FindServicePoint(Uri address, IWebProxy proxy) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.UriFormatException, system.OutOfMemoryException, system.InvalidTimeZoneException, system.UnauthorizedAccessException, system.io.IOException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objFindServicePoint = (JCObject)classType.Invoke("FindServicePoint", address == null ? null : address.getJCOInstance());
+            JCObject objFindServicePoint = (JCObject)classType.Invoke("FindServicePoint", address == null ? null : address.getJCOInstance(), proxy == null ? null : proxy.getJCOInstance());
             return new ServicePoint(objFindServicePoint);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static ServicePoint FindServicePoint(Uri address, IWebProxy proxy) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.UriFormatException, system.OutOfMemoryException, system.InvalidTimeZoneException, system.UnauthorizedAccessException, system.io.IOException, system.OverflowException {
+    public static ServicePoint FindServicePoint(Uri address) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.UriFormatException, system.OutOfMemoryException, system.InvalidTimeZoneException, system.OverflowException, system.security.SecurityException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objFindServicePoint = (JCObject)classType.Invoke("FindServicePoint", address == null ? null : address.getJCOInstance(), proxy == null ? null : proxy.getJCOInstance());
+            JCObject objFindServicePoint = (JCObject)classType.Invoke("FindServicePoint", address == null ? null : address.getJCOInstance());
             return new ServicePoint(objFindServicePoint);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -201,17 +201,6 @@ public class XmlSchemaCollection extends NetObjectEnumerable  {
         }
     }
 
-    public XmlSchema Add(java.lang.String ns, XmlReader reader) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.FormatException, system.xml.schema.XmlSchemaException, system.xml.XmlException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objAdd = (JCObject)classInstance.Invoke("Add", ns, reader == null ? null : reader.getJCOInstance());
-            return new XmlSchema(objAdd);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public XmlSchema Add(java.lang.String ns, XmlReader reader, XmlResolver resolver) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.xml.schema.XmlSchemaException, system.xml.XmlException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -223,11 +212,11 @@ public class XmlSchemaCollection extends NetObjectEnumerable  {
         }
     }
 
-    public XmlSchema Add(XmlSchema schema) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException, system.xml.schema.XmlSchemaException, system.xml.XmlException {
+    public XmlSchema Add(java.lang.String ns, XmlReader reader) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.FormatException, system.xml.schema.XmlSchemaException, system.xml.XmlException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objAdd = (JCObject)classInstance.Invoke("Add", schema == null ? null : schema.getJCOInstance());
+            JCObject objAdd = (JCObject)classInstance.Invoke("Add", ns, reader == null ? null : reader.getJCOInstance());
             return new XmlSchema(objAdd);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -239,6 +228,17 @@ public class XmlSchemaCollection extends NetObjectEnumerable  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objAdd = (JCObject)classInstance.Invoke("Add", schema == null ? null : schema.getJCOInstance(), resolver == null ? null : resolver.getJCOInstance());
+            return new XmlSchema(objAdd);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlSchema Add(XmlSchema schema) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException, system.xml.schema.XmlSchemaException, system.xml.XmlException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objAdd = (JCObject)classInstance.Invoke("Add", schema == null ? null : schema.getJCOInstance());
             return new XmlSchema(objAdd);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

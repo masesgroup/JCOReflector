@@ -163,22 +163,22 @@ public class IComNativeDescriptorHandlerImplementation extends NetObject impleme
         }
     }
 
-    public EventDescriptorCollection GetEvents(NetObject component) throws Throwable {
+    public EventDescriptorCollection GetEvents(NetObject component, Attribute[] attributes) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetEvents = (JCObject)classInstance.Invoke("GetEvents", component == null ? null : component.getJCOInstance());
+            JCObject objGetEvents = (JCObject)classInstance.Invoke("GetEvents", component == null ? null : component.getJCOInstance(), toObjectFromArray(attributes));
             return new EventDescriptorCollection(objGetEvents);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public EventDescriptorCollection GetEvents(NetObject component, Attribute[] attributes) throws Throwable {
+    public EventDescriptorCollection GetEvents(NetObject component) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetEvents = (JCObject)classInstance.Invoke("GetEvents", component == null ? null : component.getJCOInstance(), toObjectFromArray(attributes));
+            JCObject objGetEvents = (JCObject)classInstance.Invoke("GetEvents", component == null ? null : component.getJCOInstance());
             return new EventDescriptorCollection(objGetEvents);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

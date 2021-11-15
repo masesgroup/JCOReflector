@@ -160,16 +160,6 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public static boolean IsDefined(Assembly element, NetType attributeType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("IsDefined", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static boolean IsDefined(Assembly element, NetType attributeType, boolean inherit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -180,7 +170,7 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public static boolean IsDefined(MemberInfo element, NetType attributeType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
+    public static boolean IsDefined(Assembly element, NetType attributeType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -200,7 +190,7 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public static boolean IsDefined(Module element, NetType attributeType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
+    public static boolean IsDefined(MemberInfo element, NetType attributeType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -220,7 +210,7 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public static boolean IsDefined(ParameterInfo element, NetType attributeType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
+    public static boolean IsDefined(Module element, NetType attributeType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -240,22 +230,21 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public boolean Match(NetObject obj) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean IsDefined(ParameterInfo element, NetType attributeType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
+            return (boolean)classType.Invoke("IsDefined", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Attribute GetCustomAttribute(Assembly element, NetType attributeType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.reflection.AmbiguousMatchException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean Match(NetObject obj) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetCustomAttribute = (JCObject)classType.Invoke("GetCustomAttribute", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance());
-            return new Attribute(objGetCustomAttribute);
+            return (boolean)classInstance.Invoke("Match", obj == null ? null : obj.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,7 +261,7 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public static Attribute GetCustomAttribute(MemberInfo element, NetType attributeType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.reflection.AmbiguousMatchException {
+    public static Attribute GetCustomAttribute(Assembly element, NetType attributeType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -294,7 +283,7 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public static Attribute GetCustomAttribute(Module element, NetType attributeType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.reflection.AmbiguousMatchException {
+    public static Attribute GetCustomAttribute(MemberInfo element, NetType attributeType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -316,7 +305,7 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public static Attribute GetCustomAttribute(ParameterInfo element, NetType attributeType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.reflection.AmbiguousMatchException {
+    public static Attribute GetCustomAttribute(Module element, NetType attributeType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -338,18 +327,12 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public static Attribute[] GetCustomAttributes(Assembly element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
+    public static Attribute GetCustomAttribute(ParameterInfo element, NetType attributeType) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.reflection.AmbiguousMatchException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            ArrayList<Attribute> resultingArrayList = new ArrayList<Attribute>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance());
-            for (java.lang.Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new Attribute(resultingObject));
-            }
-            Attribute[] resultingArray = new Attribute[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
+            JCObject objGetCustomAttribute = (JCObject)classType.Invoke("GetCustomAttribute", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance());
+            return new Attribute(objGetCustomAttribute);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -361,23 +344,6 @@ public class Attribute extends NetObject  {
         try {
             ArrayList<Attribute> resultingArrayList = new ArrayList<Attribute>();
             JCObject resultingObjects = (JCObject)classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance(), inherit);
-            for (java.lang.Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new Attribute(resultingObject));
-            }
-            Attribute[] resultingArray = new Attribute[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static Attribute[] GetCustomAttributes(Assembly element, NetType attributeType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            ArrayList<Attribute> resultingArrayList = new ArrayList<Attribute>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance());
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Attribute(resultingObject));
             }
@@ -406,7 +372,24 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public static Attribute[] GetCustomAttributes(MemberInfo element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
+    public static Attribute[] GetCustomAttributes(Assembly element, NetType attributeType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            ArrayList<Attribute> resultingArrayList = new ArrayList<Attribute>();
+            JCObject resultingObjects = (JCObject)classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance());
+            for (java.lang.Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new Attribute(resultingObject));
+            }
+            Attribute[] resultingArray = new Attribute[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Attribute[] GetCustomAttributes(Assembly element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -440,23 +423,6 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public static Attribute[] GetCustomAttributes(MemberInfo element, NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            ArrayList<Attribute> resultingArrayList = new ArrayList<Attribute>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance(), type == null ? null : type.getJCOInstance());
-            for (java.lang.Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new Attribute(resultingObject));
-            }
-            Attribute[] resultingArray = new Attribute[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static Attribute[] GetCustomAttributes(MemberInfo element, NetType type, boolean inherit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.NotImplementedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -474,7 +440,24 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public static Attribute[] GetCustomAttributes(Module element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
+    public static Attribute[] GetCustomAttributes(MemberInfo element, NetType type) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            ArrayList<Attribute> resultingArrayList = new ArrayList<Attribute>();
+            JCObject resultingObjects = (JCObject)classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance(), type == null ? null : type.getJCOInstance());
+            for (java.lang.Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new Attribute(resultingObject));
+            }
+            Attribute[] resultingArray = new Attribute[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Attribute[] GetCustomAttributes(MemberInfo element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -508,23 +491,6 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public static Attribute[] GetCustomAttributes(Module element, NetType attributeType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            ArrayList<Attribute> resultingArrayList = new ArrayList<Attribute>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance());
-            for (java.lang.Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new Attribute(resultingObject));
-            }
-            Attribute[] resultingArray = new Attribute[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static Attribute[] GetCustomAttributes(Module element, NetType attributeType, boolean inherit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -542,7 +508,24 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public static Attribute[] GetCustomAttributes(ParameterInfo element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
+    public static Attribute[] GetCustomAttributes(Module element, NetType attributeType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            ArrayList<Attribute> resultingArrayList = new ArrayList<Attribute>();
+            JCObject resultingObjects = (JCObject)classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance());
+            for (java.lang.Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new Attribute(resultingObject));
+            }
+            Attribute[] resultingArray = new Attribute[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Attribute[] GetCustomAttributes(Module element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -576,6 +559,23 @@ public class Attribute extends NetObject  {
         }
     }
 
+    public static Attribute[] GetCustomAttributes(ParameterInfo element, NetType attributeType, boolean inherit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.NotImplementedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            ArrayList<Attribute> resultingArrayList = new ArrayList<Attribute>();
+            JCObject resultingObjects = (JCObject)classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance(), inherit);
+            for (java.lang.Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new Attribute(resultingObject));
+            }
+            Attribute[] resultingArray = new Attribute[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static Attribute[] GetCustomAttributes(ParameterInfo element, NetType attributeType) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -593,12 +593,12 @@ public class Attribute extends NetObject  {
         }
     }
 
-    public static Attribute[] GetCustomAttributes(ParameterInfo element, NetType attributeType, boolean inherit) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.NotImplementedException {
+    public static Attribute[] GetCustomAttributes(ParameterInfo element) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             ArrayList<Attribute> resultingArrayList = new ArrayList<Attribute>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance(), attributeType == null ? null : attributeType.getJCOInstance(), inherit);
+            JCObject resultingObjects = (JCObject)classType.Invoke("GetCustomAttributes", element == null ? null : element.getJCOInstance());
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new Attribute(resultingObject));
             }

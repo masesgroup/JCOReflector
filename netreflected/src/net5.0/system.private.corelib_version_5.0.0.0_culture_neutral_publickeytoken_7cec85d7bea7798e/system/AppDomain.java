@@ -186,11 +186,21 @@ public class AppDomain extends MarshalByRefObject  {
         }
     }
 
-    public int ExecuteAssembly(java.lang.String assemblyFile) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.MissingMethodException {
+    public int ExecuteAssembly(java.lang.String assemblyFile, java.lang.String[] args, byte[] hashValue, AssemblyHashAlgorithm hashAlgorithm) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("ExecuteAssembly", assemblyFile);
+            return (int)classInstance.Invoke("ExecuteAssembly", assemblyFile, args, hashValue, hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int ExecuteAssembly(java.lang.String dupParam0, JCORefOut dupParam1, JCORefOut dupParam2, AssemblyHashAlgorithm dupParam3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("ExecuteAssembly", dupParam0, dupParam1.getJCRefOut(), dupParam2.getJCRefOut(), dupParam3 == null ? null : dupParam3.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,21 +226,11 @@ public class AppDomain extends MarshalByRefObject  {
         }
     }
 
-    public int ExecuteAssembly(java.lang.String assemblyFile, java.lang.String[] args, byte[] hashValue, AssemblyHashAlgorithm hashAlgorithm) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public int ExecuteAssembly(java.lang.String assemblyFile) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.MissingMethodException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classInstance.Invoke("ExecuteAssembly", assemblyFile, args, hashValue, hashAlgorithm == null ? null : hashAlgorithm.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public int ExecuteAssembly(java.lang.String dupParam0, JCORefOut dupParam1, JCORefOut dupParam2, AssemblyHashAlgorithm dupParam3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("ExecuteAssembly", dupParam0, dupParam1.getJCRefOut(), dupParam2.getJCRefOut(), dupParam3 == null ? null : dupParam3.getJCOInstance());
+            return (int)classInstance.Invoke("ExecuteAssembly", assemblyFile);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -256,16 +256,6 @@ public class AppDomain extends MarshalByRefObject  {
         }
     }
 
-    public int ExecuteAssemblyByName(java.lang.String assemblyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.MissingMethodException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("ExecuteAssemblyByName", assemblyName);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int ExecuteAssemblyByName(java.lang.String assemblyName, java.lang.String... args) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.MissingMethodException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -281,6 +271,16 @@ public class AppDomain extends MarshalByRefObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Invoke("ExecuteAssemblyByName", dupParam0, dupParam1.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int ExecuteAssemblyByName(java.lang.String assemblyName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.PlatformNotSupportedException, system.MissingMethodException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("ExecuteAssemblyByName", assemblyName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -302,17 +302,6 @@ public class AppDomain extends MarshalByRefObject  {
         try {
             JCObject objCreateDomain = (JCObject)classType.Invoke("CreateDomain", friendlyName);
             return new AppDomain(objCreateDomain);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetObject CreateInstanceAndUnwrap(java.lang.String assemblyName, java.lang.String typeName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateInstanceAndUnwrap = (JCObject)classInstance.Invoke("CreateInstanceAndUnwrap", assemblyName, typeName);
-            return new NetObject(objCreateInstanceAndUnwrap);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -340,12 +329,12 @@ public class AppDomain extends MarshalByRefObject  {
         }
     }
 
-    public NetObject CreateInstanceFromAndUnwrap(java.lang.String assemblyFile, java.lang.String typeName) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public NetObject CreateInstanceAndUnwrap(java.lang.String assemblyName, java.lang.String typeName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateInstanceFromAndUnwrap = (JCObject)classInstance.Invoke("CreateInstanceFromAndUnwrap", assemblyFile, typeName);
-            return new NetObject(objCreateInstanceFromAndUnwrap);
+            JCObject objCreateInstanceAndUnwrap = (JCObject)classInstance.Invoke("CreateInstanceAndUnwrap", assemblyName, typeName);
+            return new NetObject(objCreateInstanceAndUnwrap);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -373,34 +362,23 @@ public class AppDomain extends MarshalByRefObject  {
         }
     }
 
+    public NetObject CreateInstanceFromAndUnwrap(java.lang.String assemblyFile, java.lang.String typeName) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateInstanceFromAndUnwrap = (JCObject)classInstance.Invoke("CreateInstanceFromAndUnwrap", assemblyFile, typeName);
+            return new NetObject(objCreateInstanceFromAndUnwrap);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public NetObject GetData(java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetData = (JCObject)classInstance.Invoke("GetData", name);
             return new NetObject(objGetData);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Assembly Load(byte[] rawAssembly) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.BadImageFormatException, system.runtime.serialization.SerializationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objLoad = (JCObject)classInstance.Invoke("Load", (java.lang.Object)rawAssembly);
-            return new Assembly(objLoad);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public Assembly Load(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.BadImageFormatException, system.runtime.serialization.SerializationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objLoad = (JCObject)classInstance.Invoke("Load", (java.lang.Object)dupParam0.getJCRefOut());
-            return new Assembly(objLoad);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -422,6 +400,28 @@ public class AppDomain extends MarshalByRefObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objLoad = (JCObject)classInstance.Invoke("Load", dupParam0.getJCRefOut(), dupParam1.getJCRefOut());
+            return new Assembly(objLoad);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Assembly Load(byte[] rawAssembly) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.BadImageFormatException, system.runtime.serialization.SerializationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objLoad = (JCObject)classInstance.Invoke("Load", (java.lang.Object)rawAssembly);
+            return new Assembly(objLoad);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public Assembly Load(JCORefOut dupParam0) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.BadImageFormatException, system.runtime.serialization.SerializationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objLoad = (JCObject)classInstance.Invoke("Load", (java.lang.Object)dupParam0.getJCRefOut());
             return new Assembly(objLoad);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -484,17 +484,6 @@ public class AppDomain extends MarshalByRefObject  {
         }
     }
 
-    public ObjectHandle CreateInstance(java.lang.String assemblyName, java.lang.String typeName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateInstance = (JCObject)classInstance.Invoke("CreateInstance", assemblyName, typeName);
-            return new ObjectHandle(objCreateInstance);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ObjectHandle CreateInstance(java.lang.String assemblyName, java.lang.String typeName, boolean ignoreCase, BindingFlags bindingAttr, Binder binder, NetObject[] args, CultureInfo culture, NetObject[] activationAttributes) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -517,12 +506,12 @@ public class AppDomain extends MarshalByRefObject  {
         }
     }
 
-    public ObjectHandle CreateInstanceFrom(java.lang.String assemblyFile, java.lang.String typeName) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public ObjectHandle CreateInstance(java.lang.String assemblyName, java.lang.String typeName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateInstanceFrom = (JCObject)classInstance.Invoke("CreateInstanceFrom", assemblyFile, typeName);
-            return new ObjectHandle(objCreateInstanceFrom);
+            JCObject objCreateInstance = (JCObject)classInstance.Invoke("CreateInstance", assemblyName, typeName);
+            return new ObjectHandle(objCreateInstance);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -544,6 +533,17 @@ public class AppDomain extends MarshalByRefObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objCreateInstanceFrom = (JCObject)classInstance.Invoke("CreateInstanceFrom", assemblyFile, typeName, toObjectFromArray(activationAttributes));
+            return new ObjectHandle(objCreateInstanceFrom);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ObjectHandle CreateInstanceFrom(java.lang.String assemblyFile, java.lang.String typeName) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateInstanceFrom = (JCObject)classInstance.Invoke("CreateInstanceFrom", assemblyFile, typeName);
             return new ObjectHandle(objCreateInstanceFrom);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

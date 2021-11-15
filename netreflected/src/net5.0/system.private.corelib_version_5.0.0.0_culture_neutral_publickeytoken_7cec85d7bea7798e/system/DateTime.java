@@ -162,41 +162,21 @@ public class DateTime extends ValueType implements system.runtime.serialization.
     public DateTime() throws Throwable {
     }
 
-    public DateTime(int year, int month, int day) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(year, month, day));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DateTime(int year, int month, int day, int hour, int minute, int second) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(year, month, day, hour, minute, second));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DateTime(int year, int month, int day, int hour, int minute, int second, int millisecond) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(year, month, day, hour, minute, second, millisecond));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DateTime(int year, int month, int day, int hour, int minute, int second, int millisecond, DateTimeKind kind) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(year, month, day, hour, minute, second, millisecond, kind == null ? null : kind.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DateTime(int year, int month, int day, int hour, int minute, int second, int millisecond, Calendar calendar, DateTimeKind kind) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(year, month, day, hour, minute, second, millisecond, calendar == null ? null : calendar.getJCOInstance(), kind == null ? null : kind.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -212,11 +192,11 @@ public class DateTime extends ValueType implements system.runtime.serialization.
         }
     }
 
-    public DateTime(int year, int month, int day, int hour, int minute, int second, int millisecond, Calendar calendar, DateTimeKind kind) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
+    public DateTime(int year, int month, int day, int hour, int minute, int second, int millisecond) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(year, month, day, hour, minute, second, millisecond, calendar == null ? null : calendar.getJCOInstance(), kind == null ? null : kind.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(year, month, day, hour, minute, second, millisecond));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -242,6 +222,16 @@ public class DateTime extends ValueType implements system.runtime.serialization.
         }
     }
 
+    public DateTime(int year, int month, int day, int hour, int minute, int second) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(year, month, day, hour, minute, second));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public DateTime(int year, int month, int day, Calendar calendar) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
@@ -252,11 +242,11 @@ public class DateTime extends ValueType implements system.runtime.serialization.
         }
     }
 
-    public DateTime(long ticks) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public DateTime(int year, int month, int day) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(ticks));
+            setJCOInstance((JCObject)classType.NewObject(year, month, day));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,26 +262,36 @@ public class DateTime extends ValueType implements system.runtime.serialization.
         }
     }
 
-
-
-    
-    // Methods section
-    
-    public boolean Equals(DateTime value) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public DateTime(long ticks) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         try {
-            return (boolean)classInstance.Invoke("Equals", value == null ? null : value.getJCOInstance());
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(ticks));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
+
+
+    
+    // Methods section
+    
     public static boolean Equals(DateTime t1, DateTime t2) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (boolean)classType.Invoke("Equals", t1 == null ? null : t1.getJCOInstance(), t2 == null ? null : t2.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean Equals(DateTime value) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("Equals", value == null ? null : value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -580,11 +580,11 @@ public class DateTime extends ValueType implements system.runtime.serialization.
         }
     }
 
-    public static DateTime Parse(java.lang.String s) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.OverflowException {
+    public static DateTime Parse(java.lang.String s, IFormatProvider provider, DateTimeStyles styles) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", s);
+            JCObject objParse = (JCObject)classType.Invoke("Parse", s, provider == null ? null : provider.getJCOInstance(), styles == null ? null : styles.getJCOInstance());
             return new DateTime(objParse);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -602,23 +602,12 @@ public class DateTime extends ValueType implements system.runtime.serialization.
         }
     }
 
-    public static DateTime Parse(java.lang.String s, IFormatProvider provider, DateTimeStyles styles) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.OverflowException {
+    public static DateTime Parse(java.lang.String s) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", s, provider == null ? null : provider.getJCOInstance(), styles == null ? null : styles.getJCOInstance());
+            JCObject objParse = (JCObject)classType.Invoke("Parse", s);
             return new DateTime(objParse);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static DateTime ParseExact(java.lang.String s, java.lang.String format, IFormatProvider provider) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.OverflowException, system.FormatException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objParseExact = (JCObject)classType.Invoke("ParseExact", s, format, provider == null ? null : provider.getJCOInstance());
-            return new DateTime(objParseExact);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -629,6 +618,17 @@ public class DateTime extends ValueType implements system.runtime.serialization.
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objParseExact = (JCObject)classType.Invoke("ParseExact", s, format, provider == null ? null : provider.getJCOInstance(), style == null ? null : style.getJCOInstance());
+            return new DateTime(objParseExact);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static DateTime ParseExact(java.lang.String s, java.lang.String format, IFormatProvider provider) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.TypeInitializationException, system.OverflowException, system.FormatException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objParseExact = (JCObject)classType.Invoke("ParseExact", s, format, provider == null ? null : provider.getJCOInstance());
             return new DateTime(objParseExact);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -751,21 +751,21 @@ public class DateTime extends ValueType implements system.runtime.serialization.
         }
     }
 
-    public java.lang.String ToString(java.lang.String format) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.PlatformNotSupportedException, system.security.SecurityException, system.OverflowException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("ToString", format);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String ToString(java.lang.String format, IFormatProvider provider) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.PlatformNotSupportedException, system.security.SecurityException, system.OverflowException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Invoke("ToString", format, provider == null ? null : provider.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String ToString(java.lang.String format) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.PlatformNotSupportedException, system.security.SecurityException, system.OverflowException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("ToString", format);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -790,12 +790,12 @@ public class DateTime extends ValueType implements system.runtime.serialization.
         }
     }
 
-    public java.lang.String[] GetDateTimeFormats(char format) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.OverflowException {
+    public java.lang.String[] GetDateTimeFormats(char format, IFormatProvider provider) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.TypeInitializationException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetDateTimeFormats", format);
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetDateTimeFormats", format, provider == null ? null : provider.getJCOInstance());
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
@@ -809,12 +809,12 @@ public class DateTime extends ValueType implements system.runtime.serialization.
         }
     }
 
-    public java.lang.String[] GetDateTimeFormats(char format, IFormatProvider provider) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.RankException, system.ArgumentException, system.ArrayTypeMismatchException, system.TypeInitializationException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.OverflowException {
+    public java.lang.String[] GetDateTimeFormats(char format) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.InvalidOperationException, system.OverflowException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetDateTimeFormats", format, provider == null ? null : provider.getJCOInstance());
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetDateTimeFormats", format);
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }

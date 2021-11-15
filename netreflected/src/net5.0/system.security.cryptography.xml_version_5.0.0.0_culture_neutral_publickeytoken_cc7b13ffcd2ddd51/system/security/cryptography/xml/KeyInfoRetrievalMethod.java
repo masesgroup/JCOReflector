@@ -151,21 +151,21 @@ public class KeyInfoRetrievalMethod extends KeyInfoClause  {
         }
     }
 
-    public KeyInfoRetrievalMethod(java.lang.String strUri) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(strUri));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public KeyInfoRetrievalMethod(java.lang.String strUri, java.lang.String typeName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(strUri, typeName));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public KeyInfoRetrievalMethod(java.lang.String strUri) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(strUri));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

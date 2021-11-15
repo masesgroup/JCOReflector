@@ -193,11 +193,11 @@ public class XmlDocument extends XmlNode  {
     
     // Methods section
     
-    public XmlAttribute CreateAttribute(java.lang.String name) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.FormatException, system.xml.XmlException {
+    public XmlAttribute CreateAttribute(java.lang.String prefix, java.lang.String localName, java.lang.String namespaceURI) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException, system.xml.XmlException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateAttribute = (JCObject)classInstance.Invoke("CreateAttribute", name);
+            JCObject objCreateAttribute = (JCObject)classInstance.Invoke("CreateAttribute", prefix, localName, namespaceURI);
             return new XmlAttribute(objCreateAttribute);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -215,11 +215,11 @@ public class XmlDocument extends XmlNode  {
         }
     }
 
-    public XmlAttribute CreateAttribute(java.lang.String prefix, java.lang.String localName, java.lang.String namespaceURI) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.ObjectDisposedException, system.FormatException, system.xml.XmlException {
+    public XmlAttribute CreateAttribute(java.lang.String name) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.FormatException, system.xml.XmlException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateAttribute = (JCObject)classInstance.Invoke("CreateAttribute", prefix, localName, namespaceURI);
+            JCObject objCreateAttribute = (JCObject)classInstance.Invoke("CreateAttribute", name);
             return new XmlAttribute(objCreateAttribute);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -281,11 +281,11 @@ public class XmlDocument extends XmlNode  {
         }
     }
 
-    public XmlElement CreateElement(java.lang.String name) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.xml.XmlException {
+    public XmlElement CreateElement(java.lang.String prefix, java.lang.String localName, java.lang.String namespaceURI) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.xml.XmlException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateElement = (JCObject)classInstance.Invoke("CreateElement", name);
+            JCObject objCreateElement = (JCObject)classInstance.Invoke("CreateElement", prefix, localName, namespaceURI);
             return new XmlElement(objCreateElement);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -303,11 +303,11 @@ public class XmlDocument extends XmlNode  {
         }
     }
 
-    public XmlElement CreateElement(java.lang.String prefix, java.lang.String localName, java.lang.String namespaceURI) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.FormatException, system.xml.XmlException, system.RankException, system.ArrayTypeMismatchException {
+    public XmlElement CreateElement(java.lang.String name) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.xml.XmlException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateElement = (JCObject)classInstance.Invoke("CreateElement", prefix, localName, namespaceURI);
+            JCObject objCreateElement = (JCObject)classInstance.Invoke("CreateElement", name);
             return new XmlElement(objCreateElement);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -358,22 +358,22 @@ public class XmlDocument extends XmlNode  {
         }
     }
 
-    public XmlNode CreateNode(XmlNodeType type, java.lang.String name, java.lang.String namespaceURI) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.xml.XmlException {
+    public XmlNode CreateNode(XmlNodeType type, java.lang.String prefix, java.lang.String name, java.lang.String namespaceURI) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.xml.XmlException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateNode = (JCObject)classInstance.Invoke("CreateNode", type == null ? null : type.getJCOInstance(), name, namespaceURI);
+            JCObject objCreateNode = (JCObject)classInstance.Invoke("CreateNode", type == null ? null : type.getJCOInstance(), prefix, name, namespaceURI);
             return new XmlNode(objCreateNode);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public XmlNode CreateNode(XmlNodeType type, java.lang.String prefix, java.lang.String name, java.lang.String namespaceURI) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.xml.XmlException {
+    public XmlNode CreateNode(XmlNodeType type, java.lang.String name, java.lang.String namespaceURI) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.xml.XmlException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateNode = (JCObject)classInstance.Invoke("CreateNode", type == null ? null : type.getJCOInstance(), prefix, name, namespaceURI);
+            JCObject objCreateNode = (JCObject)classInstance.Invoke("CreateNode", type == null ? null : type.getJCOInstance(), name, namespaceURI);
             return new XmlNode(objCreateNode);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -402,22 +402,22 @@ public class XmlDocument extends XmlNode  {
         }
     }
 
-    public XmlNodeList GetElementsByTagName(java.lang.String name) throws Throwable, system.ArgumentException, system.MulticastNotSupportedException {
+    public XmlNodeList GetElementsByTagName(java.lang.String localName, java.lang.String namespaceURI) throws Throwable, system.ArgumentException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetElementsByTagName = (JCObject)classInstance.Invoke("GetElementsByTagName", name);
+            JCObject objGetElementsByTagName = (JCObject)classInstance.Invoke("GetElementsByTagName", localName, namespaceURI);
             return new XmlNodeList(objGetElementsByTagName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public XmlNodeList GetElementsByTagName(java.lang.String localName, java.lang.String namespaceURI) throws Throwable, system.ArgumentException, system.MulticastNotSupportedException {
+    public XmlNodeList GetElementsByTagName(java.lang.String name) throws Throwable, system.ArgumentException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetElementsByTagName = (JCObject)classInstance.Invoke("GetElementsByTagName", localName, namespaceURI);
+            JCObject objGetElementsByTagName = (JCObject)classInstance.Invoke("GetElementsByTagName", name);
             return new XmlNodeList(objGetElementsByTagName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -569,21 +569,21 @@ public class XmlDocument extends XmlNode  {
         }
     }
 
-    public void Validate(ValidationEventHandler validationEventHandler) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.NotSupportedException, system.MulticastNotSupportedException, system.FormatException, system.xml.schema.XmlSchemaValidationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Validate", validationEventHandler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Validate(ValidationEventHandler validationEventHandler, XmlNode nodeToValidate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.NotSupportedException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.FormatException, system.xml.schema.XmlSchemaValidationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Validate", validationEventHandler, nodeToValidate == null ? null : nodeToValidate.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Validate(ValidationEventHandler validationEventHandler) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.NotSupportedException, system.MulticastNotSupportedException, system.FormatException, system.xml.schema.XmlSchemaValidationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Validate", validationEventHandler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

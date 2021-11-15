@@ -175,16 +175,6 @@ public class Extensions extends NetObject  {
         }
     }
 
-    public static void Validate(XAttribute source, XmlSchemaObject partialValidationType, XmlSchemaSet schemas, ValidationEventHandler validationEventHandler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.OverflowException, system.globalization.CultureNotFoundException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.MulticastNotSupportedException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("Validate", source == null ? null : source.getJCOInstance(), partialValidationType == null ? null : partialValidationType.getJCOInstance(), schemas == null ? null : schemas.getJCOInstance(), validationEventHandler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static void Validate(XAttribute source, XmlSchemaObject partialValidationType, XmlSchemaSet schemas, ValidationEventHandler validationEventHandler, boolean addSchemaInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.OverflowException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.MulticastNotSupportedException, system.FormatException, system.OutOfMemoryException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -195,11 +185,11 @@ public class Extensions extends NetObject  {
         }
     }
 
-    public static void Validate(XDocument source, XmlSchemaSet schemas, ValidationEventHandler validationEventHandler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.OverflowException, system.globalization.CultureNotFoundException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.MulticastNotSupportedException, system.FormatException {
+    public static void Validate(XAttribute source, XmlSchemaObject partialValidationType, XmlSchemaSet schemas, ValidationEventHandler validationEventHandler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.OverflowException, system.globalization.CultureNotFoundException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.MulticastNotSupportedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("Validate", source == null ? null : source.getJCOInstance(), schemas == null ? null : schemas.getJCOInstance(), validationEventHandler);
+            classType.Invoke("Validate", source == null ? null : source.getJCOInstance(), partialValidationType == null ? null : partialValidationType.getJCOInstance(), schemas == null ? null : schemas.getJCOInstance(), validationEventHandler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,11 +205,11 @@ public class Extensions extends NetObject  {
         }
     }
 
-    public static void Validate(XElement source, XmlSchemaObject partialValidationType, XmlSchemaSet schemas, ValidationEventHandler validationEventHandler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.OverflowException, system.globalization.CultureNotFoundException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.MulticastNotSupportedException, system.FormatException {
+    public static void Validate(XDocument source, XmlSchemaSet schemas, ValidationEventHandler validationEventHandler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.OverflowException, system.globalization.CultureNotFoundException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.MulticastNotSupportedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("Validate", source == null ? null : source.getJCOInstance(), partialValidationType == null ? null : partialValidationType.getJCOInstance(), schemas == null ? null : schemas.getJCOInstance(), validationEventHandler);
+            classType.Invoke("Validate", source == null ? null : source.getJCOInstance(), schemas == null ? null : schemas.getJCOInstance(), validationEventHandler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -230,6 +220,16 @@ public class Extensions extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Validate", source == null ? null : source.getJCOInstance(), partialValidationType == null ? null : partialValidationType.getJCOInstance(), schemas == null ? null : schemas.getJCOInstance(), validationEventHandler, addSchemaInfo);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void Validate(XElement source, XmlSchemaObject partialValidationType, XmlSchemaSet schemas, ValidationEventHandler validationEventHandler) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.OverflowException, system.globalization.CultureNotFoundException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.MulticastNotSupportedException, system.FormatException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Validate", source == null ? null : source.getJCOInstance(), partialValidationType == null ? null : partialValidationType.getJCOInstance(), schemas == null ? null : schemas.getJCOInstance(), validationEventHandler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

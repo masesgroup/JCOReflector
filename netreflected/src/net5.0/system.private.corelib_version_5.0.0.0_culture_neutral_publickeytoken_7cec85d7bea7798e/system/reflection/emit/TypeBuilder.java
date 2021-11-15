@@ -451,11 +451,11 @@ public class TypeBuilder extends TypeInfo  {
         }
     }
 
-    public MethodBuilder DefineMethod(java.lang.String name, MethodAttributes attributes) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException {
+    public MethodBuilder DefineMethod(java.lang.String name, MethodAttributes attributes, CallingConventions callingConvention, NetType returnType, NetType[] parameterTypes) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objDefineMethod = (JCObject)classInstance.Invoke("DefineMethod", name, attributes == null ? null : attributes.getJCOInstance());
+            JCObject objDefineMethod = (JCObject)classInstance.Invoke("DefineMethod", name, attributes == null ? null : attributes.getJCOInstance(), callingConvention == null ? null : callingConvention.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(parameterTypes));
             return new MethodBuilder(objDefineMethod);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -473,22 +473,22 @@ public class TypeBuilder extends TypeInfo  {
         }
     }
 
-    public MethodBuilder DefineMethod(java.lang.String name, MethodAttributes attributes, CallingConventions callingConvention, NetType returnType, NetType[] parameterTypes) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException {
+    public MethodBuilder DefineMethod(java.lang.String name, MethodAttributes attributes, NetType returnType, NetType[] parameterTypes) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objDefineMethod = (JCObject)classInstance.Invoke("DefineMethod", name, attributes == null ? null : attributes.getJCOInstance(), callingConvention == null ? null : callingConvention.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(parameterTypes));
+            JCObject objDefineMethod = (JCObject)classInstance.Invoke("DefineMethod", name, attributes == null ? null : attributes.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(parameterTypes));
             return new MethodBuilder(objDefineMethod);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public MethodBuilder DefineMethod(java.lang.String name, MethodAttributes attributes, NetType returnType, NetType[] parameterTypes) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException {
+    public MethodBuilder DefineMethod(java.lang.String name, MethodAttributes attributes) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objDefineMethod = (JCObject)classInstance.Invoke("DefineMethod", name, attributes == null ? null : attributes.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(parameterTypes));
+            JCObject objDefineMethod = (JCObject)classInstance.Invoke("DefineMethod", name, attributes == null ? null : attributes.getJCOInstance());
             return new MethodBuilder(objDefineMethod);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -539,55 +539,11 @@ public class TypeBuilder extends TypeInfo  {
         }
     }
 
-    public TypeBuilder DefineNestedType(java.lang.String name) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objDefineNestedType = (JCObject)classInstance.Invoke("DefineNestedType", name);
-            return new TypeBuilder(objDefineNestedType);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TypeBuilder DefineNestedType(java.lang.String name, TypeAttributes attr) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objDefineNestedType = (JCObject)classInstance.Invoke("DefineNestedType", name, attr == null ? null : attr.getJCOInstance());
-            return new TypeBuilder(objDefineNestedType);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TypeBuilder DefineNestedType(java.lang.String name, TypeAttributes attr, NetType parent) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objDefineNestedType = (JCObject)classInstance.Invoke("DefineNestedType", name, attr == null ? null : attr.getJCOInstance(), parent == null ? null : parent.getJCOInstance());
-            return new TypeBuilder(objDefineNestedType);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public TypeBuilder DefineNestedType(java.lang.String name, TypeAttributes attr, NetType parent, int typeSize) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objDefineNestedType = (JCObject)classInstance.Invoke("DefineNestedType", name, attr == null ? null : attr.getJCOInstance(), parent == null ? null : parent.getJCOInstance(), typeSize);
-            return new TypeBuilder(objDefineNestedType);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TypeBuilder DefineNestedType(java.lang.String name, TypeAttributes attr, NetType parent, PackingSize packSize) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objDefineNestedType = (JCObject)classInstance.Invoke("DefineNestedType", name, attr == null ? null : attr.getJCOInstance(), parent == null ? null : parent.getJCOInstance(), packSize == null ? null : packSize.getJCOInstance());
             return new TypeBuilder(objDefineNestedType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -605,11 +561,55 @@ public class TypeBuilder extends TypeInfo  {
         }
     }
 
+    public TypeBuilder DefineNestedType(java.lang.String name, TypeAttributes attr, NetType parent, PackingSize packSize) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objDefineNestedType = (JCObject)classInstance.Invoke("DefineNestedType", name, attr == null ? null : attr.getJCOInstance(), parent == null ? null : parent.getJCOInstance(), packSize == null ? null : packSize.getJCOInstance());
+            return new TypeBuilder(objDefineNestedType);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public TypeBuilder DefineNestedType(java.lang.String name, TypeAttributes attr, NetType parent, NetType[] interfaces) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objDefineNestedType = (JCObject)classInstance.Invoke("DefineNestedType", name, attr == null ? null : attr.getJCOInstance(), parent == null ? null : parent.getJCOInstance(), toObjectFromArray(interfaces));
+            return new TypeBuilder(objDefineNestedType);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TypeBuilder DefineNestedType(java.lang.String name, TypeAttributes attr, NetType parent) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objDefineNestedType = (JCObject)classInstance.Invoke("DefineNestedType", name, attr == null ? null : attr.getJCOInstance(), parent == null ? null : parent.getJCOInstance());
+            return new TypeBuilder(objDefineNestedType);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TypeBuilder DefineNestedType(java.lang.String name, TypeAttributes attr) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objDefineNestedType = (JCObject)classInstance.Invoke("DefineNestedType", name, attr == null ? null : attr.getJCOInstance());
+            return new TypeBuilder(objDefineNestedType);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TypeBuilder DefineNestedType(java.lang.String name) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objDefineNestedType = (JCObject)classInstance.Invoke("DefineNestedType", name);
             return new TypeBuilder(objDefineNestedType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

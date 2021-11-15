@@ -145,16 +145,6 @@ public class BindableAttribute extends Attribute  {
     public BindableAttribute() throws Throwable {
     }
 
-    public BindableAttribute(boolean bindable) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(bindable));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public BindableAttribute(boolean bindable, BindingDirection direction) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -165,11 +155,11 @@ public class BindableAttribute extends Attribute  {
         }
     }
 
-    public BindableAttribute(BindableSupport flags) throws Throwable {
+    public BindableAttribute(boolean bindable) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(flags == null ? null : flags.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(bindable));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,6 +170,16 @@ public class BindableAttribute extends Attribute  {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(flags == null ? null : flags.getJCOInstance(), direction == null ? null : direction.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public BindableAttribute(BindableSupport flags) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(flags == null ? null : flags.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

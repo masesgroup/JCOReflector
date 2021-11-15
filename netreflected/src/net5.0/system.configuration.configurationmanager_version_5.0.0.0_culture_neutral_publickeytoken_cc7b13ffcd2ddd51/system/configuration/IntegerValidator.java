@@ -143,11 +143,11 @@ public class IntegerValidator extends ConfigurationValidatorBase  {
     public IntegerValidator() throws Throwable {
     }
 
-    public IntegerValidator(int minValue, int maxValue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
+    public IntegerValidator(int minValue, int maxValue, boolean rangeIsExclusive, int resolution) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(minValue, maxValue));
+            setJCOInstance((JCObject)classType.NewObject(minValue, maxValue, rangeIsExclusive, resolution));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,11 +163,11 @@ public class IntegerValidator extends ConfigurationValidatorBase  {
         }
     }
 
-    public IntegerValidator(int minValue, int maxValue, boolean rangeIsExclusive, int resolution) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
+    public IntegerValidator(int minValue, int maxValue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(minValue, maxValue, rangeIsExclusive, resolution));
+            setJCOInstance((JCObject)classType.NewObject(minValue, maxValue));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

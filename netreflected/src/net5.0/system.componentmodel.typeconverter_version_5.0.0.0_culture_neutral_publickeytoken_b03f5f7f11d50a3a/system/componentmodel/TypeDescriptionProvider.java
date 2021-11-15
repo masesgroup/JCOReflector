@@ -194,22 +194,22 @@ public class TypeDescriptionProvider extends NetObject  {
         }
     }
 
-    public ICustomTypeDescriptor GetTypeDescriptor(NetType objectType) throws Throwable {
+    public ICustomTypeDescriptor GetTypeDescriptor(NetType objectType, NetObject instance) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetTypeDescriptor = (JCObject)classInstance.Invoke("GetTypeDescriptor", objectType == null ? null : objectType.getJCOInstance());
+            JCObject objGetTypeDescriptor = (JCObject)classInstance.Invoke("GetTypeDescriptor", objectType == null ? null : objectType.getJCOInstance(), instance == null ? null : instance.getJCOInstance());
             return new ICustomTypeDescriptorImplementation(objGetTypeDescriptor);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ICustomTypeDescriptor GetTypeDescriptor(NetType objectType, NetObject instance) throws Throwable {
+    public ICustomTypeDescriptor GetTypeDescriptor(NetType objectType) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetTypeDescriptor = (JCObject)classInstance.Invoke("GetTypeDescriptor", objectType == null ? null : objectType.getJCOInstance(), instance == null ? null : instance.getJCOInstance());
+            JCObject objGetTypeDescriptor = (JCObject)classInstance.Invoke("GetTypeDescriptor", objectType == null ? null : objectType.getJCOInstance());
             return new ICustomTypeDescriptorImplementation(objGetTypeDescriptor);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -248,22 +248,22 @@ public class TypeDescriptionProvider extends NetObject  {
         }
     }
 
-    public NetType GetReflectionType(NetType objectType) throws Throwable {
+    public NetType GetReflectionType(NetType objectType, NetObject instance) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetReflectionType = (JCObject)classInstance.Invoke("GetReflectionType", objectType == null ? null : objectType.getJCOInstance());
+            JCObject objGetReflectionType = (JCObject)classInstance.Invoke("GetReflectionType", objectType == null ? null : objectType.getJCOInstance(), instance == null ? null : instance.getJCOInstance());
             return new NetType(objGetReflectionType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public NetType GetReflectionType(NetType objectType, NetObject instance) throws Throwable {
+    public NetType GetReflectionType(NetType objectType) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetReflectionType = (JCObject)classInstance.Invoke("GetReflectionType", objectType == null ? null : objectType.getJCOInstance(), instance == null ? null : instance.getJCOInstance());
+            JCObject objGetReflectionType = (JCObject)classInstance.Invoke("GetReflectionType", objectType == null ? null : objectType.getJCOInstance());
             return new NetType(objGetReflectionType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

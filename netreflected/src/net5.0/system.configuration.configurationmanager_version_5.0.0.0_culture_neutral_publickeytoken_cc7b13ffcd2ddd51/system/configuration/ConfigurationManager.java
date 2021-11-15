@@ -184,22 +184,22 @@ public class ConfigurationManager extends NetObject  {
         }
     }
 
-    public static Configuration OpenMappedExeConfiguration(ExeConfigurationFileMap fileMap, ConfigurationUserLevel userLevel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.OverflowException, system.threading.AbandonedMutexException, system.ApplicationException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.collections.generic.KeyNotFoundException {
+    public static Configuration OpenMappedExeConfiguration(ExeConfigurationFileMap fileMap, ConfigurationUserLevel userLevel, boolean preLoad) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.OverflowException, system.threading.AbandonedMutexException, system.ApplicationException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objOpenMappedExeConfiguration = (JCObject)classType.Invoke("OpenMappedExeConfiguration", fileMap == null ? null : fileMap.getJCOInstance(), userLevel == null ? null : userLevel.getJCOInstance());
+            JCObject objOpenMappedExeConfiguration = (JCObject)classType.Invoke("OpenMappedExeConfiguration", fileMap == null ? null : fileMap.getJCOInstance(), userLevel == null ? null : userLevel.getJCOInstance(), preLoad);
             return new Configuration(objOpenMappedExeConfiguration);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Configuration OpenMappedExeConfiguration(ExeConfigurationFileMap fileMap, ConfigurationUserLevel userLevel, boolean preLoad) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.OverflowException, system.threading.AbandonedMutexException, system.ApplicationException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.collections.generic.KeyNotFoundException {
+    public static Configuration OpenMappedExeConfiguration(ExeConfigurationFileMap fileMap, ConfigurationUserLevel userLevel) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.OverflowException, system.threading.AbandonedMutexException, system.ApplicationException, system.IndexOutOfRangeException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException, system.collections.generic.KeyNotFoundException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objOpenMappedExeConfiguration = (JCObject)classType.Invoke("OpenMappedExeConfiguration", fileMap == null ? null : fileMap.getJCOInstance(), userLevel == null ? null : userLevel.getJCOInstance(), preLoad);
+            JCObject objOpenMappedExeConfiguration = (JCObject)classType.Invoke("OpenMappedExeConfiguration", fileMap == null ? null : fileMap.getJCOInstance(), userLevel == null ? null : userLevel.getJCOInstance());
             return new Configuration(objOpenMappedExeConfiguration);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

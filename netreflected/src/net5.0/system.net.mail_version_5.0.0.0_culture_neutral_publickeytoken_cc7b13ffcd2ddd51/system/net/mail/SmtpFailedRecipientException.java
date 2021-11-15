@@ -161,21 +161,21 @@ public class SmtpFailedRecipientException extends SmtpException {
 
     // Constructors section
     
-    public SmtpFailedRecipientException(SmtpStatusCode statusCode, java.lang.String failedRecipient) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(statusCode == null ? null : statusCode.getJCOInstance(), failedRecipient));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public SmtpFailedRecipientException(SmtpStatusCode statusCode, java.lang.String failedRecipient, java.lang.String serverResponse) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(statusCode == null ? null : statusCode.getJCOInstance(), failedRecipient, serverResponse));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public SmtpFailedRecipientException(SmtpStatusCode statusCode, java.lang.String failedRecipient) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(statusCode == null ? null : statusCode.getJCOInstance(), failedRecipient));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

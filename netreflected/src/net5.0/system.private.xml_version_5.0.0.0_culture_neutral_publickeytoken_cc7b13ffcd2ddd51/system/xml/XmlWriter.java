@@ -544,17 +544,6 @@ public class XmlWriter extends NetObject implements AutoCloseable {
         }
     }
 
-    public static XmlWriter Create(Stream output) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", output == null ? null : output.getJCOInstance());
-            return new XmlWriter(objCreate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static XmlWriter Create(Stream output, XmlWriterSettings settings) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -566,7 +555,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
         }
     }
 
-    public static XmlWriter Create(TextWriter output) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException {
+    public static XmlWriter Create(Stream output) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -588,11 +577,11 @@ public class XmlWriter extends NetObject implements AutoCloseable {
         }
     }
 
-    public static XmlWriter Create(java.lang.String outputFileName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.runtime.serialization.SerializationException, system.io.IOException, system.FormatException, system.xml.XmlException {
+    public static XmlWriter Create(TextWriter output) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", outputFileName);
+            JCObject objCreate = (JCObject)classType.Invoke("Create", output == null ? null : output.getJCOInstance());
             return new XmlWriter(objCreate);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -610,11 +599,11 @@ public class XmlWriter extends NetObject implements AutoCloseable {
         }
     }
 
-    public static XmlWriter Create(StringBuilder output) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException {
+    public static XmlWriter Create(java.lang.String outputFileName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.runtime.serialization.SerializationException, system.io.IOException, system.FormatException, system.xml.XmlException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", output == null ? null : output.getJCOInstance());
+            JCObject objCreate = (JCObject)classType.Invoke("Create", outputFileName);
             return new XmlWriter(objCreate);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -632,7 +621,7 @@ public class XmlWriter extends NetObject implements AutoCloseable {
         }
     }
 
-    public static XmlWriter Create(XmlWriter output) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static XmlWriter Create(StringBuilder output) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -648,6 +637,17 @@ public class XmlWriter extends NetObject implements AutoCloseable {
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objCreate = (JCObject)classType.Invoke("Create", output == null ? null : output.getJCOInstance(), settings == null ? null : settings.getJCOInstance());
+            return new XmlWriter(objCreate);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static XmlWriter Create(XmlWriter output) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreate = (JCObject)classType.Invoke("Create", output == null ? null : output.getJCOInstance());
             return new XmlWriter(objCreate);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -694,11 +694,11 @@ public class XmlWriter extends NetObject implements AutoCloseable {
         }
     }
 
-    public void WriteAttributeString(java.lang.String localName, java.lang.String value) throws Throwable {
+    public void WriteAttributeString(java.lang.String prefix, java.lang.String localName, java.lang.String ns, java.lang.String value) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("WriteAttributeString", localName, value);
+            classInstance.Invoke("WriteAttributeString", prefix, localName, ns, value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -714,11 +714,11 @@ public class XmlWriter extends NetObject implements AutoCloseable {
         }
     }
 
-    public void WriteAttributeString(java.lang.String prefix, java.lang.String localName, java.lang.String ns, java.lang.String value) throws Throwable {
+    public void WriteAttributeString(java.lang.String localName, java.lang.String value) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("WriteAttributeString", prefix, localName, ns, value);
+            classInstance.Invoke("WriteAttributeString", localName, value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -824,11 +824,11 @@ public class XmlWriter extends NetObject implements AutoCloseable {
         }
     }
 
-    public void WriteElementString(java.lang.String localName, java.lang.String value) throws Throwable {
+    public void WriteElementString(java.lang.String prefix, java.lang.String localName, java.lang.String ns, java.lang.String value) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("WriteElementString", localName, value);
+            classInstance.Invoke("WriteElementString", prefix, localName, ns, value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -844,11 +844,11 @@ public class XmlWriter extends NetObject implements AutoCloseable {
         }
     }
 
-    public void WriteElementString(java.lang.String prefix, java.lang.String localName, java.lang.String ns, java.lang.String value) throws Throwable {
+    public void WriteElementString(java.lang.String localName, java.lang.String value) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("WriteElementString", prefix, localName, ns, value);
+            classInstance.Invoke("WriteElementString", localName, value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -994,11 +994,11 @@ public class XmlWriter extends NetObject implements AutoCloseable {
         }
     }
 
-    public void WriteStartAttribute(java.lang.String localName) throws Throwable {
+    public void WriteStartAttribute(java.lang.String prefix, java.lang.String localName, java.lang.String ns) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("WriteStartAttribute", localName);
+            classInstance.Invoke("WriteStartAttribute", prefix, localName, ns);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1014,11 +1014,11 @@ public class XmlWriter extends NetObject implements AutoCloseable {
         }
     }
 
-    public void WriteStartAttribute(java.lang.String prefix, java.lang.String localName, java.lang.String ns) throws Throwable {
+    public void WriteStartAttribute(java.lang.String localName) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("WriteStartAttribute", prefix, localName, ns);
+            classInstance.Invoke("WriteStartAttribute", localName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1044,11 +1044,11 @@ public class XmlWriter extends NetObject implements AutoCloseable {
         }
     }
 
-    public void WriteStartElement(java.lang.String localName) throws Throwable {
+    public void WriteStartElement(java.lang.String prefix, java.lang.String localName, java.lang.String ns) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("WriteStartElement", localName);
+            classInstance.Invoke("WriteStartElement", prefix, localName, ns);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1064,11 +1064,11 @@ public class XmlWriter extends NetObject implements AutoCloseable {
         }
     }
 
-    public void WriteStartElement(java.lang.String prefix, java.lang.String localName, java.lang.String ns) throws Throwable {
+    public void WriteStartElement(java.lang.String localName) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("WriteStartElement", prefix, localName, ns);
+            classInstance.Invoke("WriteStartElement", localName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -150,21 +150,21 @@ public class GC extends NetObject  {
     
     // Methods section
     
-    public static boolean TryStartNoGCRegion(long totalSize) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("TryStartNoGCRegion", totalSize);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static boolean TryStartNoGCRegion(long totalSize, boolean disallowFullBlockingGC) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (boolean)classType.Invoke("TryStartNoGCRegion", totalSize, disallowFullBlockingGC);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean TryStartNoGCRegion(long totalSize, long lohSize, boolean disallowFullBlockingGC) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("TryStartNoGCRegion", totalSize, lohSize, disallowFullBlockingGC);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -180,11 +180,11 @@ public class GC extends NetObject  {
         }
     }
 
-    public static boolean TryStartNoGCRegion(long totalSize, long lohSize, boolean disallowFullBlockingGC) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException {
+    public static boolean TryStartNoGCRegion(long totalSize) throws Throwable, system.ArgumentOutOfRangeException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classType.Invoke("TryStartNoGCRegion", totalSize, lohSize, disallowFullBlockingGC);
+            return (boolean)classType.Invoke("TryStartNoGCRegion", totalSize);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -346,21 +346,11 @@ public class GC extends NetObject  {
         }
     }
 
-    public static void Collect(int generation) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public static void Collect(int generation, GCCollectionMode mode, boolean blocking, boolean compacting) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("Collect", generation);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static void Collect(int generation, GCCollectionMode mode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("Collect", generation, mode == null ? null : mode.getJCOInstance());
+            classType.Invoke("Collect", generation, mode == null ? null : mode.getJCOInstance(), blocking, compacting);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -376,11 +366,21 @@ public class GC extends NetObject  {
         }
     }
 
-    public static void Collect(int generation, GCCollectionMode mode, boolean blocking, boolean compacting) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public static void Collect(int generation, GCCollectionMode mode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            classType.Invoke("Collect", generation, mode == null ? null : mode.getJCOInstance(), blocking, compacting);
+            classType.Invoke("Collect", generation, mode == null ? null : mode.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void Collect(int generation) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Collect", generation);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

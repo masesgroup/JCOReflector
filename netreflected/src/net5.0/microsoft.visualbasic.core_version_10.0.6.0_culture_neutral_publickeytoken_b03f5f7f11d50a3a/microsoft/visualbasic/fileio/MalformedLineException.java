@@ -159,21 +159,21 @@ public class MalformedLineException extends NetException {
 
     // Constructors section
     
-    public MalformedLineException(java.lang.String message, long lineNumber) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(message, lineNumber));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public MalformedLineException(java.lang.String message, long lineNumber, NetException innerException) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(message, lineNumber, innerException == null ? null : innerException.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MalformedLineException(java.lang.String message, long lineNumber) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(message, lineNumber));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

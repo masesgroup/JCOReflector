@@ -161,17 +161,6 @@ public class DataRowView extends NetObject implements system.componentmodel.ICus
     
     // Methods section
     
-    public DataView CreateChildView(DataRelation relation) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.threading.SynchronizationLockException, system.MulticastNotSupportedException, system.OutOfMemoryException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreateChildView = (JCObject)classInstance.Invoke("CreateChildView", relation == null ? null : relation.getJCOInstance());
-            return new DataView(objCreateChildView);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DataView CreateChildView(DataRelation relation, boolean followParent) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.RankException, system.ArrayTypeMismatchException, system.threading.SynchronizationLockException, system.MulticastNotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -183,11 +172,11 @@ public class DataRowView extends NetObject implements system.componentmodel.ICus
         }
     }
 
-    public DataView CreateChildView(java.lang.String relationName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.MulticastNotSupportedException, system.FormatException, system.threading.SynchronizationLockException, system.IndexOutOfRangeException {
+    public DataView CreateChildView(DataRelation relation) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.RankException, system.IndexOutOfRangeException, system.ArrayTypeMismatchException, system.threading.SynchronizationLockException, system.MulticastNotSupportedException, system.OutOfMemoryException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateChildView = (JCObject)classInstance.Invoke("CreateChildView", relationName);
+            JCObject objCreateChildView = (JCObject)classInstance.Invoke("CreateChildView", relation == null ? null : relation.getJCOInstance());
             return new DataView(objCreateChildView);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -199,6 +188,17 @@ public class DataRowView extends NetObject implements system.componentmodel.ICus
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objCreateChildView = (JCObject)classInstance.Invoke("CreateChildView", relationName, followParent);
+            return new DataView(objCreateChildView);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DataView CreateChildView(java.lang.String relationName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.MulticastNotSupportedException, system.FormatException, system.threading.SynchronizationLockException, system.IndexOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objCreateChildView = (JCObject)classInstance.Invoke("CreateChildView", relationName);
             return new DataView(objCreateChildView);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

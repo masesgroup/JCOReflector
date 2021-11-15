@@ -148,11 +148,11 @@ public class PropertyAccessRule extends ActiveDirectoryAccessRule  {
     public PropertyAccessRule() throws Throwable {
     }
 
-    public PropertyAccessRule(IdentityReference identity, AccessControlType type, PropertyAccess access) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException {
+    public PropertyAccessRule(IdentityReference identity, AccessControlType type, PropertyAccess access, ActiveDirectorySecurityInheritance inheritanceType, Guid inheritedObjectType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(identity == null ? null : identity.getJCOInstance(), type == null ? null : type.getJCOInstance(), access == null ? null : access.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(identity == null ? null : identity.getJCOInstance(), type == null ? null : type.getJCOInstance(), access == null ? null : access.getJCOInstance(), inheritanceType == null ? null : inheritanceType.getJCOInstance(), inheritedObjectType == null ? null : inheritedObjectType.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -168,21 +168,11 @@ public class PropertyAccessRule extends ActiveDirectoryAccessRule  {
         }
     }
 
-    public PropertyAccessRule(IdentityReference identity, AccessControlType type, PropertyAccess access, ActiveDirectorySecurityInheritance inheritanceType, Guid inheritedObjectType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException {
+    public PropertyAccessRule(IdentityReference identity, AccessControlType type, PropertyAccess access, Guid propertyType, ActiveDirectorySecurityInheritance inheritanceType, Guid inheritedObjectType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(identity == null ? null : identity.getJCOInstance(), type == null ? null : type.getJCOInstance(), access == null ? null : access.getJCOInstance(), inheritanceType == null ? null : inheritanceType.getJCOInstance(), inheritedObjectType == null ? null : inheritedObjectType.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PropertyAccessRule(IdentityReference identity, AccessControlType type, PropertyAccess access, Guid propertyType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(identity == null ? null : identity.getJCOInstance(), type == null ? null : type.getJCOInstance(), access == null ? null : access.getJCOInstance(), propertyType == null ? null : propertyType.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(identity == null ? null : identity.getJCOInstance(), type == null ? null : type.getJCOInstance(), access == null ? null : access.getJCOInstance(), propertyType == null ? null : propertyType.getJCOInstance(), inheritanceType == null ? null : inheritanceType.getJCOInstance(), inheritedObjectType == null ? null : inheritedObjectType.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,11 +188,21 @@ public class PropertyAccessRule extends ActiveDirectoryAccessRule  {
         }
     }
 
-    public PropertyAccessRule(IdentityReference identity, AccessControlType type, PropertyAccess access, Guid propertyType, ActiveDirectorySecurityInheritance inheritanceType, Guid inheritedObjectType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException {
+    public PropertyAccessRule(IdentityReference identity, AccessControlType type, PropertyAccess access, Guid propertyType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(identity == null ? null : identity.getJCOInstance(), type == null ? null : type.getJCOInstance(), access == null ? null : access.getJCOInstance(), propertyType == null ? null : propertyType.getJCOInstance(), inheritanceType == null ? null : inheritanceType.getJCOInstance(), inheritedObjectType == null ? null : inheritedObjectType.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(identity == null ? null : identity.getJCOInstance(), type == null ? null : type.getJCOInstance(), access == null ? null : access.getJCOInstance(), propertyType == null ? null : propertyType.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PropertyAccessRule(IdentityReference identity, AccessControlType type, PropertyAccess access) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.IndexOutOfRangeException, system.componentmodel.InvalidEnumArgumentException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(identity == null ? null : identity.getJCOInstance(), type == null ? null : type.getJCOInstance(), access == null ? null : access.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

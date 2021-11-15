@@ -149,21 +149,21 @@ public class XmlSchemaImporter extends SchemaImporter  {
     public XmlSchemaImporter() throws Throwable {
     }
 
-    public XmlSchemaImporter(XmlSchemas schemas) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.MulticastNotSupportedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.NotSupportedException, system.FormatException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(schemas == null ? null : schemas.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public XmlSchemaImporter(XmlSchemas schemas, CodeIdentifiers typeIdentifiers) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.MulticastNotSupportedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.NotSupportedException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(schemas == null ? null : schemas.getJCOInstance(), typeIdentifiers == null ? null : typeIdentifiers.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlSchemaImporter(XmlSchemas schemas) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.MulticastNotSupportedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.RankException, system.NotSupportedException, system.FormatException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(schemas == null ? null : schemas.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,17 +207,6 @@ public class XmlSchemaImporter extends SchemaImporter  {
         }
     }
 
-    public XmlMembersMapping ImportMembersMapping(XmlQualifiedName[] names) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.xml.schema.XmlSchemaException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.xml.XmlException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objImportMembersMapping = (JCObject)classInstance.Invoke("ImportMembersMapping", (java.lang.Object)toObjectFromArray(names));
-            return new XmlMembersMapping(objImportMembersMapping);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public XmlMembersMapping ImportMembersMapping(XmlQualifiedName[] names, NetType baseType, boolean baseTypeCanBeIndirect) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArgumentException, system.PlatformNotSupportedException, system.FormatException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.text.regularexpressions.RegexParseException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -229,12 +218,12 @@ public class XmlSchemaImporter extends SchemaImporter  {
         }
     }
 
-    public XmlTypeMapping ImportDerivedTypeMapping(XmlQualifiedName name, NetType baseType) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.xml.schema.XmlSchemaException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.xml.XmlException {
+    public XmlMembersMapping ImportMembersMapping(XmlQualifiedName[] names) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.xml.schema.XmlSchemaException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objImportDerivedTypeMapping = (JCObject)classInstance.Invoke("ImportDerivedTypeMapping", name == null ? null : name.getJCOInstance(), baseType == null ? null : baseType.getJCOInstance());
-            return new XmlTypeMapping(objImportDerivedTypeMapping);
+            JCObject objImportMembersMapping = (JCObject)classInstance.Invoke("ImportMembersMapping", (java.lang.Object)toObjectFromArray(names));
+            return new XmlMembersMapping(objImportMembersMapping);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -251,11 +240,22 @@ public class XmlSchemaImporter extends SchemaImporter  {
         }
     }
 
-    public XmlTypeMapping ImportSchemaType(XmlQualifiedName typeName) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.xml.schema.XmlSchemaException, system.MulticastNotSupportedException, system.RankException {
+    public XmlTypeMapping ImportDerivedTypeMapping(XmlQualifiedName name, NetType baseType) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.xml.schema.XmlSchemaException, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.OutOfMemoryException, system.xml.XmlException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objImportSchemaType = (JCObject)classInstance.Invoke("ImportSchemaType", typeName == null ? null : typeName.getJCOInstance());
+            JCObject objImportDerivedTypeMapping = (JCObject)classInstance.Invoke("ImportDerivedTypeMapping", name == null ? null : name.getJCOInstance(), baseType == null ? null : baseType.getJCOInstance());
+            return new XmlTypeMapping(objImportDerivedTypeMapping);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlTypeMapping ImportSchemaType(XmlQualifiedName typeName, NetType baseType, boolean baseTypeCanBeIndirect) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.FormatException, system.MulticastNotSupportedException, system.RankException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objImportSchemaType = (JCObject)classInstance.Invoke("ImportSchemaType", typeName == null ? null : typeName.getJCOInstance(), baseType == null ? null : baseType.getJCOInstance(), baseTypeCanBeIndirect);
             return new XmlTypeMapping(objImportSchemaType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -273,11 +273,11 @@ public class XmlSchemaImporter extends SchemaImporter  {
         }
     }
 
-    public XmlTypeMapping ImportSchemaType(XmlQualifiedName typeName, NetType baseType, boolean baseTypeCanBeIndirect) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.xml.XmlException, system.xml.schema.XmlSchemaException, system.FormatException, system.MulticastNotSupportedException, system.RankException, system.ArrayTypeMismatchException {
+    public XmlTypeMapping ImportSchemaType(XmlQualifiedName typeName) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentNullException, system.xml.schema.XmlSchemaException, system.MulticastNotSupportedException, system.RankException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objImportSchemaType = (JCObject)classInstance.Invoke("ImportSchemaType", typeName == null ? null : typeName.getJCOInstance(), baseType == null ? null : baseType.getJCOInstance(), baseTypeCanBeIndirect);
+            JCObject objImportSchemaType = (JCObject)classInstance.Invoke("ImportSchemaType", typeName == null ? null : typeName.getJCOInstance());
             return new XmlTypeMapping(objImportSchemaType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

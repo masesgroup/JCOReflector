@@ -144,11 +144,11 @@ public class TimeSpanValidator extends ConfigurationValidatorBase  {
     public TimeSpanValidator() throws Throwable {
     }
 
-    public TimeSpanValidator(TimeSpan minValue, TimeSpan maxValue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
+    public TimeSpanValidator(TimeSpan minValue, TimeSpan maxValue, boolean rangeIsExclusive, long resolutionInSeconds) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(minValue == null ? null : minValue.getJCOInstance(), maxValue == null ? null : maxValue.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(minValue == null ? null : minValue.getJCOInstance(), maxValue == null ? null : maxValue.getJCOInstance(), rangeIsExclusive, resolutionInSeconds));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,11 +164,11 @@ public class TimeSpanValidator extends ConfigurationValidatorBase  {
         }
     }
 
-    public TimeSpanValidator(TimeSpan minValue, TimeSpan maxValue, boolean rangeIsExclusive, long resolutionInSeconds) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
+    public TimeSpanValidator(TimeSpan minValue, TimeSpan maxValue) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(minValue == null ? null : minValue.getJCOInstance(), maxValue == null ? null : maxValue.getJCOInstance(), rangeIsExclusive, resolutionInSeconds));
+            setJCOInstance((JCObject)classType.NewObject(minValue == null ? null : minValue.getJCOInstance(), maxValue == null ? null : maxValue.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

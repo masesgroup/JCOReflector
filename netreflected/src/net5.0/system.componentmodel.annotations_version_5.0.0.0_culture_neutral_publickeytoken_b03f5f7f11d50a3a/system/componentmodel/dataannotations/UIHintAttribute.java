@@ -143,11 +143,11 @@ public class UIHintAttribute extends Attribute  {
     public UIHintAttribute() throws Throwable {
     }
 
-    public UIHintAttribute(java.lang.String uiHint) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException {
+    public UIHintAttribute(java.lang.String uiHint, java.lang.String presentationLayer, NetObject... controlParameters) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(uiHint));
+            setJCOInstance((JCObject)classType.NewObject(uiHint, presentationLayer, toObjectFromArray(controlParameters)));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -163,11 +163,11 @@ public class UIHintAttribute extends Attribute  {
         }
     }
 
-    public UIHintAttribute(java.lang.String uiHint, java.lang.String presentationLayer, NetObject... controlParameters) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException {
+    public UIHintAttribute(java.lang.String uiHint) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.RankException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(uiHint, presentationLayer, toObjectFromArray(controlParameters)));
+            setJCOInstance((JCObject)classType.NewObject(uiHint));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

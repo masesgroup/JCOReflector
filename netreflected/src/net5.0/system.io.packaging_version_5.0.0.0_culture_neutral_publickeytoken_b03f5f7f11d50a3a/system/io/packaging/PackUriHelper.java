@@ -176,11 +176,11 @@ public class PackUriHelper extends NetObject  {
         }
     }
 
-    public static Uri Create(Uri packageUri) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.UriFormatException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException {
+    public static Uri Create(Uri packageUri, Uri partUri, java.lang.String fragment) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.UriFormatException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", packageUri == null ? null : packageUri.getJCOInstance());
+            JCObject objCreate = (JCObject)classType.Invoke("Create", packageUri == null ? null : packageUri.getJCOInstance(), partUri == null ? null : partUri.getJCOInstance(), fragment);
             return new Uri(objCreate);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -198,11 +198,11 @@ public class PackUriHelper extends NetObject  {
         }
     }
 
-    public static Uri Create(Uri packageUri, Uri partUri, java.lang.String fragment) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.UriFormatException, system.OutOfMemoryException, system.globalization.CultureNotFoundException, system.runtime.interopservices.ExternalException {
+    public static Uri Create(Uri packageUri) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.UriFormatException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", packageUri == null ? null : packageUri.getJCOInstance(), partUri == null ? null : partUri.getJCOInstance(), fragment);
+            JCObject objCreate = (JCObject)classType.Invoke("Create", packageUri == null ? null : packageUri.getJCOInstance());
             return new Uri(objCreate);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -285,17 +285,6 @@ public class DataSet extends MarshalByValueComponent  {
         }
     }
 
-    public XmlReadMode ReadXml(Stream stream) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.xml.XmlException, system.threading.SynchronizationLockException, system.data.sqltypes.SqlNullValueException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OverflowException, system.globalization.CultureNotFoundException, system.data.sqltypes.SqlTruncateException, system.data.sqltypes.SqlTypeException, system.xml.schema.XmlSchemaInferenceException, system.xml.schema.XmlSchemaException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objReadXml = (JCObject)classInstance.Invoke("ReadXml", stream == null ? null : stream.getJCOInstance());
-            return new XmlReadMode(objReadXml);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public XmlReadMode ReadXml(Stream stream, XmlReadMode mode) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.xml.XmlException, system.data.sqltypes.SqlNullValueException, system.MissingMethodException, system.reflection.TargetInvocationException, system.InvalidCastException, system.xml.schema.XmlSchemaException, system.xml.schema.XmlSchemaInferenceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -307,11 +296,11 @@ public class DataSet extends MarshalByValueComponent  {
         }
     }
 
-    public XmlReadMode ReadXml(TextReader reader) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.xml.XmlException, system.threading.SynchronizationLockException, system.data.sqltypes.SqlNullValueException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OverflowException, system.globalization.CultureNotFoundException, system.data.sqltypes.SqlTruncateException, system.data.sqltypes.SqlTypeException, system.xml.schema.XmlSchemaInferenceException, system.xml.schema.XmlSchemaException {
+    public XmlReadMode ReadXml(Stream stream) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.xml.XmlException, system.threading.SynchronizationLockException, system.data.sqltypes.SqlNullValueException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OverflowException, system.globalization.CultureNotFoundException, system.data.sqltypes.SqlTruncateException, system.data.sqltypes.SqlTypeException, system.xml.schema.XmlSchemaInferenceException, system.xml.schema.XmlSchemaException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objReadXml = (JCObject)classInstance.Invoke("ReadXml", reader == null ? null : reader.getJCOInstance());
+            JCObject objReadXml = (JCObject)classInstance.Invoke("ReadXml", stream == null ? null : stream.getJCOInstance());
             return new XmlReadMode(objReadXml);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -329,11 +318,11 @@ public class DataSet extends MarshalByValueComponent  {
         }
     }
 
-    public XmlReadMode ReadXml(java.lang.String fileName) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.FormatException, system.xml.XmlException, system.threading.SynchronizationLockException, system.data.sqltypes.SqlNullValueException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OverflowException, system.data.sqltypes.SqlTruncateException, system.data.sqltypes.SqlTypeException, system.xml.schema.XmlSchemaInferenceException, system.xml.schema.XmlSchemaException {
+    public XmlReadMode ReadXml(TextReader reader) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.xml.XmlException, system.threading.SynchronizationLockException, system.data.sqltypes.SqlNullValueException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OverflowException, system.globalization.CultureNotFoundException, system.data.sqltypes.SqlTruncateException, system.data.sqltypes.SqlTypeException, system.xml.schema.XmlSchemaInferenceException, system.xml.schema.XmlSchemaException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objReadXml = (JCObject)classInstance.Invoke("ReadXml", fileName);
+            JCObject objReadXml = (JCObject)classInstance.Invoke("ReadXml", reader == null ? null : reader.getJCOInstance());
             return new XmlReadMode(objReadXml);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -351,11 +340,11 @@ public class DataSet extends MarshalByValueComponent  {
         }
     }
 
-    public XmlReadMode ReadXml(XmlReader reader) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.FormatException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.xml.XmlException, system.threading.SynchronizationLockException, system.data.sqltypes.SqlNullValueException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.OverflowException, system.globalization.CultureNotFoundException, system.data.sqltypes.SqlTruncateException, system.data.sqltypes.SqlTypeException, system.xml.schema.XmlSchemaInferenceException, system.xml.schema.XmlSchemaException {
+    public XmlReadMode ReadXml(java.lang.String fileName) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException, system.FormatException, system.xml.XmlException, system.threading.SynchronizationLockException, system.data.sqltypes.SqlNullValueException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OverflowException, system.data.sqltypes.SqlTruncateException, system.data.sqltypes.SqlTypeException, system.xml.schema.XmlSchemaInferenceException, system.xml.schema.XmlSchemaException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objReadXml = (JCObject)classInstance.Invoke("ReadXml", reader == null ? null : reader.getJCOInstance());
+            JCObject objReadXml = (JCObject)classInstance.Invoke("ReadXml", fileName);
             return new XmlReadMode(objReadXml);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -367,6 +356,17 @@ public class DataSet extends MarshalByValueComponent  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objReadXml = (JCObject)classInstance.Invoke("ReadXml", reader == null ? null : reader.getJCOInstance(), mode == null ? null : mode.getJCOInstance());
+            return new XmlReadMode(objReadXml);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlReadMode ReadXml(XmlReader reader) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.FormatException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.xml.XmlException, system.threading.SynchronizationLockException, system.data.sqltypes.SqlNullValueException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.OverflowException, system.globalization.CultureNotFoundException, system.data.sqltypes.SqlTruncateException, system.data.sqltypes.SqlTypeException, system.xml.schema.XmlSchemaInferenceException, system.xml.schema.XmlSchemaException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objReadXml = (JCObject)classInstance.Invoke("ReadXml", reader == null ? null : reader.getJCOInstance());
             return new XmlReadMode(objReadXml);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -574,16 +574,6 @@ public class DataSet extends MarshalByValueComponent  {
         }
     }
 
-    public void Merge(DataRow[] rows) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.SynchronizationLockException, system.data.sqltypes.SqlNullValueException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OverflowException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Merge", (java.lang.Object)toObjectFromArray(rows));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Merge(DataRow[] rows, boolean preserveChanges, MissingSchemaAction missingSchemaAction) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.SynchronizationLockException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.data.sqltypes.SqlNullValueException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OverflowException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -594,21 +584,11 @@ public class DataSet extends MarshalByValueComponent  {
         }
     }
 
-    public void Merge(DataSet dataSet) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.SynchronizationLockException, system.data.sqltypes.SqlNullValueException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public void Merge(DataRow[] rows) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.SynchronizationLockException, system.data.sqltypes.SqlNullValueException, system.MissingMethodException, system.reflection.TargetInvocationException, system.OverflowException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Merge", dataSet == null ? null : dataSet.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Merge(DataSet dataSet, boolean preserveChanges) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.SynchronizationLockException, system.data.sqltypes.SqlNullValueException, system.MissingMethodException, system.reflection.TargetInvocationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Merge", dataSet == null ? null : dataSet.getJCOInstance(), preserveChanges);
+            classInstance.Invoke("Merge", (java.lang.Object)toObjectFromArray(rows));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -624,11 +604,21 @@ public class DataSet extends MarshalByValueComponent  {
         }
     }
 
-    public void Merge(DataTable table) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.SynchronizationLockException, system.data.sqltypes.SqlNullValueException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public void Merge(DataSet dataSet, boolean preserveChanges) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.SynchronizationLockException, system.data.sqltypes.SqlNullValueException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Merge", table == null ? null : table.getJCOInstance());
+            classInstance.Invoke("Merge", dataSet == null ? null : dataSet.getJCOInstance(), preserveChanges);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Merge(DataSet dataSet) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.SynchronizationLockException, system.data.sqltypes.SqlNullValueException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Merge", dataSet == null ? null : dataSet.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -639,6 +629,16 @@ public class DataSet extends MarshalByValueComponent  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Merge", table == null ? null : table.getJCOInstance(), preserveChanges, missingSchemaAction == null ? null : missingSchemaAction.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Merge(DataTable table) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.threading.SynchronizationLockException, system.data.sqltypes.SqlNullValueException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Merge", table == null ? null : table.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -704,16 +704,6 @@ public class DataSet extends MarshalByValueComponent  {
         }
     }
 
-    public void WriteXml(Stream stream) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("WriteXml", stream == null ? null : stream.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void WriteXml(Stream stream, XmlWriteMode mode) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.RankException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -724,11 +714,11 @@ public class DataSet extends MarshalByValueComponent  {
         }
     }
 
-    public void WriteXml(TextWriter writer) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException {
+    public void WriteXml(Stream stream) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("WriteXml", writer == null ? null : writer.getJCOInstance());
+            classInstance.Invoke("WriteXml", stream == null ? null : stream.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -744,11 +734,11 @@ public class DataSet extends MarshalByValueComponent  {
         }
     }
 
-    public void WriteXml(java.lang.String fileName) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.FormatException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.NotSupportedException, system.io.IOException, system.RankException {
+    public void WriteXml(TextWriter writer) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("WriteXml", fileName);
+            classInstance.Invoke("WriteXml", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -764,11 +754,11 @@ public class DataSet extends MarshalByValueComponent  {
         }
     }
 
-    public void WriteXml(XmlWriter writer) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.FormatException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.RankException {
+    public void WriteXml(java.lang.String fileName) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.FormatException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.NotSupportedException, system.io.IOException, system.RankException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("WriteXml", writer == null ? null : writer.getJCOInstance());
+            classInstance.Invoke("WriteXml", fileName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -779,6 +769,16 @@ public class DataSet extends MarshalByValueComponent  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("WriteXml", writer == null ? null : writer.getJCOInstance(), mode == null ? null : mode.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void WriteXml(XmlWriter writer) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.FormatException, system.IndexOutOfRangeException, system.diagnostics.tracing.EventSourceException, system.OutOfMemoryException, system.RankException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("WriteXml", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

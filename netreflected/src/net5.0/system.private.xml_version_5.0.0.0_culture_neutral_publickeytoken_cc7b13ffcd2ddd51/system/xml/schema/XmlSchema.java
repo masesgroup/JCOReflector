@@ -201,16 +201,6 @@ public class XmlSchema extends XmlSchemaObject  {
         }
     }
 
-    public void Compile(ValidationEventHandler validationEventHandler) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.xml.schema.XmlSchemaException, system.NotSupportedException, system.xml.XmlException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Compile", validationEventHandler);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Compile(ValidationEventHandler validationEventHandler, XmlResolver resolver) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.xml.schema.XmlSchemaException, system.NotSupportedException, system.xml.XmlException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -221,11 +211,11 @@ public class XmlSchema extends XmlSchemaObject  {
         }
     }
 
-    public void Write(Stream stream) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.FileLoadException, system.NotImplementedException, system.collections.generic.KeyNotFoundException {
+    public void Compile(ValidationEventHandler validationEventHandler) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.FormatException, system.xml.schema.XmlSchemaException, system.NotSupportedException, system.xml.XmlException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Write", stream == null ? null : stream.getJCOInstance());
+            classInstance.Invoke("Compile", validationEventHandler);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -241,11 +231,11 @@ public class XmlSchema extends XmlSchemaObject  {
         }
     }
 
-    public void Write(TextWriter writer) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.FileLoadException, system.NotImplementedException, system.collections.generic.KeyNotFoundException {
+    public void Write(Stream stream) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.FormatException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.FileLoadException, system.NotImplementedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Write", writer == null ? null : writer.getJCOInstance());
+            classInstance.Invoke("Write", stream == null ? null : stream.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -261,7 +251,7 @@ public class XmlSchema extends XmlSchemaObject  {
         }
     }
 
-    public void Write(XmlWriter writer) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.diagnostics.tracing.EventSourceException, system.FormatException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.FileLoadException, system.NotImplementedException {
+    public void Write(TextWriter writer) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.OutOfMemoryException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.FileLoadException, system.NotImplementedException, system.collections.generic.KeyNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -276,6 +266,16 @@ public class XmlSchema extends XmlSchemaObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Write", writer == null ? null : writer.getJCOInstance(), namespaceManager == null ? null : namespaceManager.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Write(XmlWriter writer) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.OutOfMemoryException, system.PlatformNotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.diagnostics.tracing.EventSourceException, system.FormatException, system.MulticastNotSupportedException, system.io.FileNotFoundException, system.MissingMethodException, system.reflection.TargetInvocationException, system.io.FileLoadException, system.NotImplementedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Write", writer == null ? null : writer.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

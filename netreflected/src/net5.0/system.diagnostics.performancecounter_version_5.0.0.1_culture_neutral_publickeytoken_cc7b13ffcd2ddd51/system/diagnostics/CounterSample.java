@@ -146,21 +146,21 @@ public class CounterSample extends ValueType  {
     public CounterSample() throws Throwable {
     }
 
-    public CounterSample(long rawValue, long baseValue, long counterFrequency, long systemFrequency, long timeStamp, long timeStamp100nSec, PerformanceCounterType counterType) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(rawValue, baseValue, counterFrequency, systemFrequency, timeStamp, timeStamp100nSec, counterType == null ? null : counterType.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public CounterSample(long rawValue, long baseValue, long counterFrequency, long systemFrequency, long timeStamp, long timeStamp100nSec, PerformanceCounterType counterType, long counterTimeStamp) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(rawValue, baseValue, counterFrequency, systemFrequency, timeStamp, timeStamp100nSec, counterType == null ? null : counterType.getJCOInstance(), counterTimeStamp));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CounterSample(long rawValue, long baseValue, long counterFrequency, long systemFrequency, long timeStamp, long timeStamp100nSec, PerformanceCounterType counterType) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(rawValue, baseValue, counterFrequency, systemFrequency, timeStamp, timeStamp100nSec, counterType == null ? null : counterType.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -181,22 +181,22 @@ public class CounterSample extends ValueType  {
         }
     }
 
-    public static Single Calculate(CounterSample counterSample) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.componentmodel.Win32Exception {
+    public static Single Calculate(CounterSample counterSample, CounterSample nextCounterSample) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCalculate = (JCObject)classType.Invoke("Calculate", counterSample == null ? null : counterSample.getJCOInstance());
+            JCObject objCalculate = (JCObject)classType.Invoke("Calculate", counterSample == null ? null : counterSample.getJCOInstance(), nextCounterSample == null ? null : nextCounterSample.getJCOInstance());
             return new Single(objCalculate);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Single Calculate(CounterSample counterSample, CounterSample nextCounterSample) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.componentmodel.Win32Exception {
+    public static Single Calculate(CounterSample counterSample) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCalculate = (JCObject)classType.Invoke("Calculate", counterSample == null ? null : counterSample.getJCOInstance(), nextCounterSample == null ? null : nextCounterSample.getJCOInstance());
+            JCObject objCalculate = (JCObject)classType.Invoke("Calculate", counterSample == null ? null : counterSample.getJCOInstance());
             return new Single(objCalculate);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

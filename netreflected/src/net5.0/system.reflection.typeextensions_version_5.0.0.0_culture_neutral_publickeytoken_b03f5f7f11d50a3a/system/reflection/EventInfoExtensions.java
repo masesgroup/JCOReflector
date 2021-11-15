@@ -147,17 +147,6 @@ public class EventInfoExtensions extends NetObject  {
     
     // Methods section
     
-    public static MethodInfo GetAddMethod(EventInfo eventInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetAddMethod = (JCObject)classType.Invoke("GetAddMethod", eventInfo == null ? null : eventInfo.getJCOInstance());
-            return new MethodInfo(objGetAddMethod);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static MethodInfo GetAddMethod(EventInfo eventInfo, boolean nonPublic) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -169,12 +158,12 @@ public class EventInfoExtensions extends NetObject  {
         }
     }
 
-    public static MethodInfo GetRaiseMethod(EventInfo eventInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
+    public static MethodInfo GetAddMethod(EventInfo eventInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetRaiseMethod = (JCObject)classType.Invoke("GetRaiseMethod", eventInfo == null ? null : eventInfo.getJCOInstance());
-            return new MethodInfo(objGetRaiseMethod);
+            JCObject objGetAddMethod = (JCObject)classType.Invoke("GetAddMethod", eventInfo == null ? null : eventInfo.getJCOInstance());
+            return new MethodInfo(objGetAddMethod);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,12 +180,12 @@ public class EventInfoExtensions extends NetObject  {
         }
     }
 
-    public static MethodInfo GetRemoveMethod(EventInfo eventInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
+    public static MethodInfo GetRaiseMethod(EventInfo eventInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetRemoveMethod = (JCObject)classType.Invoke("GetRemoveMethod", eventInfo == null ? null : eventInfo.getJCOInstance());
-            return new MethodInfo(objGetRemoveMethod);
+            JCObject objGetRaiseMethod = (JCObject)classType.Invoke("GetRaiseMethod", eventInfo == null ? null : eventInfo.getJCOInstance());
+            return new MethodInfo(objGetRaiseMethod);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,6 +196,17 @@ public class EventInfoExtensions extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objGetRemoveMethod = (JCObject)classType.Invoke("GetRemoveMethod", eventInfo == null ? null : eventInfo.getJCOInstance(), nonPublic);
+            return new MethodInfo(objGetRemoveMethod);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static MethodInfo GetRemoveMethod(EventInfo eventInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetRemoveMethod = (JCObject)classType.Invoke("GetRemoveMethod", eventInfo == null ? null : eventInfo.getJCOInstance());
             return new MethodInfo(objGetRemoveMethod);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

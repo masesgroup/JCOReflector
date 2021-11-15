@@ -222,7 +222,7 @@ public class TextRange extends NetObject  {
         }
     }
 
-    public void Load(Stream stream, java.lang.String dataFormat) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException, system.xaml.XamlException, system.NotImplementedException, system.windows.markup.XamlParseException, system.OverflowException, system.NotSupportedException, system.io.FileFormatException, system.xml.XmlException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException, system.UriFormatException, system.NullReferenceException {
+    public void Load(Stream stream, java.lang.String dataFormat) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.componentmodel.InvalidEnumArgumentException, system.OutOfMemoryException, system.NotSupportedException, system.io.FileFormatException, system.xml.XmlException, system.ObjectDisposedException, system.collections.generic.KeyNotFoundException, system.windows.markup.XamlParseException, system.UriFormatException, system.NullReferenceException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

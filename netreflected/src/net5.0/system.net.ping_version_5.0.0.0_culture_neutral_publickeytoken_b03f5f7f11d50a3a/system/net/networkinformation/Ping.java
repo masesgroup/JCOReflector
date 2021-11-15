@@ -158,22 +158,22 @@ public class Ping extends Component  {
     
     // Methods section
     
-    public PingReply Send(IPAddress address) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.net.sockets.SocketException, system.NotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.net.networkinformation.PingException {
+    public PingReply Send(IPAddress address, int timeout, byte[] buffer, PingOptions options) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.net.sockets.SocketException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.net.networkinformation.PingException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objSend = (JCObject)classInstance.Invoke("Send", address == null ? null : address.getJCOInstance());
+            JCObject objSend = (JCObject)classInstance.Invoke("Send", address == null ? null : address.getJCOInstance(), timeout, buffer, options == null ? null : options.getJCOInstance());
             return new PingReply(objSend);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public PingReply Send(IPAddress address, int timeout) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.net.sockets.SocketException, system.NotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.net.networkinformation.PingException {
+    public PingReply Send(IPAddress dupParam0, int dupParam1, JCORefOut dupParam2, PingOptions dupParam3) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.net.sockets.SocketException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.net.networkinformation.PingException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objSend = (JCObject)classInstance.Invoke("Send", address == null ? null : address.getJCOInstance(), timeout);
+            JCObject objSend = (JCObject)classInstance.Invoke("Send", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2.getJCRefOut(), dupParam3 == null ? null : dupParam3.getJCOInstance());
             return new PingReply(objSend);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -202,44 +202,44 @@ public class Ping extends Component  {
         }
     }
 
-    public PingReply Send(IPAddress address, int timeout, byte[] buffer, PingOptions options) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.net.sockets.SocketException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.net.networkinformation.PingException {
+    public PingReply Send(IPAddress address, int timeout) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.net.sockets.SocketException, system.NotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.net.networkinformation.PingException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objSend = (JCObject)classInstance.Invoke("Send", address == null ? null : address.getJCOInstance(), timeout, buffer, options == null ? null : options.getJCOInstance());
+            JCObject objSend = (JCObject)classInstance.Invoke("Send", address == null ? null : address.getJCOInstance(), timeout);
             return new PingReply(objSend);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public PingReply Send(IPAddress dupParam0, int dupParam1, JCORefOut dupParam2, PingOptions dupParam3) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.net.sockets.SocketException, system.InvalidOperationException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.net.networkinformation.PingException {
+    public PingReply Send(IPAddress address) throws Throwable, system.ObjectDisposedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.net.sockets.SocketException, system.NotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.net.networkinformation.PingException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objSend = (JCObject)classInstance.Invoke("Send", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2.getJCRefOut(), dupParam3 == null ? null : dupParam3.getJCOInstance());
+            JCObject objSend = (JCObject)classInstance.Invoke("Send", address == null ? null : address.getJCOInstance());
             return new PingReply(objSend);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public PingReply Send(java.lang.String hostNameOrAddress) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.ObjectDisposedException, system.net.sockets.SocketException, system.ArrayTypeMismatchException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.net.networkinformation.PingException {
+    public PingReply Send(java.lang.String hostNameOrAddress, int timeout, byte[] buffer, PingOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.net.sockets.SocketException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.net.networkinformation.PingException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objSend = (JCObject)classInstance.Invoke("Send", hostNameOrAddress);
+            JCObject objSend = (JCObject)classInstance.Invoke("Send", hostNameOrAddress, timeout, buffer, options == null ? null : options.getJCOInstance());
             return new PingReply(objSend);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public PingReply Send(java.lang.String hostNameOrAddress, int timeout) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.ObjectDisposedException, system.net.sockets.SocketException, system.ArrayTypeMismatchException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.net.networkinformation.PingException {
+    public PingReply Send(java.lang.String dupParam0, int dupParam1, JCORefOut dupParam2, PingOptions dupParam3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.net.sockets.SocketException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.net.networkinformation.PingException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objSend = (JCObject)classInstance.Invoke("Send", hostNameOrAddress, timeout);
+            JCObject objSend = (JCObject)classInstance.Invoke("Send", dupParam0, dupParam1, dupParam2.getJCRefOut(), dupParam3 == null ? null : dupParam3.getJCOInstance());
             return new PingReply(objSend);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -268,22 +268,22 @@ public class Ping extends Component  {
         }
     }
 
-    public PingReply Send(java.lang.String hostNameOrAddress, int timeout, byte[] buffer, PingOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.net.sockets.SocketException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.net.networkinformation.PingException {
+    public PingReply Send(java.lang.String hostNameOrAddress, int timeout) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.ObjectDisposedException, system.net.sockets.SocketException, system.ArrayTypeMismatchException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.net.networkinformation.PingException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objSend = (JCObject)classInstance.Invoke("Send", hostNameOrAddress, timeout, buffer, options == null ? null : options.getJCOInstance());
+            JCObject objSend = (JCObject)classInstance.Invoke("Send", hostNameOrAddress, timeout);
             return new PingReply(objSend);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public PingReply Send(java.lang.String dupParam0, int dupParam1, JCORefOut dupParam2, PingOptions dupParam3) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.net.sockets.SocketException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.threading.tasks.TaskSchedulerException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.net.networkinformation.PingException {
+    public PingReply Send(java.lang.String hostNameOrAddress) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.ObjectDisposedException, system.net.sockets.SocketException, system.ArrayTypeMismatchException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.threading.tasks.TaskCanceledException, system.AggregateException, system.net.networkinformation.PingException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objSend = (JCObject)classInstance.Invoke("Send", dupParam0, dupParam1, dupParam2.getJCRefOut(), dupParam3 == null ? null : dupParam3.getJCOInstance());
+            JCObject objSend = (JCObject)classInstance.Invoke("Send", hostNameOrAddress);
             return new PingReply(objSend);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -365,22 +365,22 @@ public class Complex extends ValueType  {
         }
     }
 
-    public static Complex Log(Complex value) throws Throwable {
+    public static Complex Log(Complex value, double baseValue) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objLog = (JCObject)classType.Invoke("Log", value == null ? null : value.getJCOInstance());
+            JCObject objLog = (JCObject)classType.Invoke("Log", value == null ? null : value.getJCOInstance(), baseValue);
             return new Complex(objLog);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static Complex Log(Complex value, double baseValue) throws Throwable {
+    public static Complex Log(Complex value) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objLog = (JCObject)classType.Invoke("Log", value == null ? null : value.getJCOInstance(), baseValue);
+            JCObject objLog = (JCObject)classType.Invoke("Log", value == null ? null : value.getJCOInstance());
             return new Complex(objLog);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -573,21 +573,21 @@ public class Complex extends ValueType  {
         }
     }
 
-    public java.lang.String ToString(java.lang.String format) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("ToString", format);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String ToString(java.lang.String format, IFormatProvider provider) throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentNullException, system.FormatException, system.ArgumentException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Invoke("ToString", format, provider == null ? null : provider.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String ToString(java.lang.String format) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.ArgumentException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("ToString", format);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -150,11 +150,11 @@ public class PEReader extends NetObject implements AutoCloseable {
     public PEReader() throws Throwable {
     }
 
-    public PEReader(Stream peStream) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.io.IOException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.BadImageFormatException {
+    public PEReader(Stream peStream, PEStreamOptions options, int size) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.io.IOException, system.BadImageFormatException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(peStream == null ? null : peStream.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(peStream == null ? null : peStream.getJCOInstance(), options == null ? null : options.getJCOInstance(), size));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -170,11 +170,11 @@ public class PEReader extends NetObject implements AutoCloseable {
         }
     }
 
-    public PEReader(Stream peStream, PEStreamOptions options, int size) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.io.IOException, system.BadImageFormatException {
+    public PEReader(Stream peStream) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.io.IOException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.BadImageFormatException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(peStream == null ? null : peStream.getJCOInstance(), options == null ? null : options.getJCOInstance(), size));
+            setJCOInstance((JCObject)classType.NewObject(peStream == null ? null : peStream.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

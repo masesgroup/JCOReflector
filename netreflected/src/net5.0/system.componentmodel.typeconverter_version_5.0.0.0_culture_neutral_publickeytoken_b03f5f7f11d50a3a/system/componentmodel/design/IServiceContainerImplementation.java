@@ -148,16 +148,6 @@ public class IServiceContainerImplementation extends NetObject implements IServi
         }
     }
 
-    public void AddService(NetType serviceType, ServiceCreatorCallback callback) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AddService", serviceType == null ? null : serviceType.getJCOInstance(), callback);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void AddService(NetType serviceType, ServiceCreatorCallback callback, boolean promote) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -168,11 +158,11 @@ public class IServiceContainerImplementation extends NetObject implements IServi
         }
     }
 
-    public void AddService(NetType serviceType, NetObject serviceInstance) throws Throwable {
+    public void AddService(NetType serviceType, ServiceCreatorCallback callback) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddService", serviceType == null ? null : serviceType.getJCOInstance(), serviceInstance == null ? null : serviceInstance.getJCOInstance());
+            classInstance.Invoke("AddService", serviceType == null ? null : serviceType.getJCOInstance(), callback);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,11 +178,11 @@ public class IServiceContainerImplementation extends NetObject implements IServi
         }
     }
 
-    public void RemoveService(NetType serviceType) throws Throwable {
+    public void AddService(NetType serviceType, NetObject serviceInstance) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("RemoveService", serviceType == null ? null : serviceType.getJCOInstance());
+            classInstance.Invoke("AddService", serviceType == null ? null : serviceType.getJCOInstance(), serviceInstance == null ? null : serviceInstance.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,6 +193,16 @@ public class IServiceContainerImplementation extends NetObject implements IServi
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveService", serviceType == null ? null : serviceType.getJCOInstance(), promote);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void RemoveService(NetType serviceType) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RemoveService", serviceType == null ? null : serviceType.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

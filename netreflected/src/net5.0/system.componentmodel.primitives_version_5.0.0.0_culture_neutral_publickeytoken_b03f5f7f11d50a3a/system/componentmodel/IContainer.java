@@ -114,9 +114,9 @@ public interface IContainer extends IJCOBridgeReflected, IDisposable {
 
     // Methods section
     
-    public void Add(IComponent component) throws Throwable;
-
     public void Add(IComponent component, java.lang.String name) throws Throwable;
+
+    public void Add(IComponent component) throws Throwable;
 
 
     public void Remove(IComponent component) throws Throwable;

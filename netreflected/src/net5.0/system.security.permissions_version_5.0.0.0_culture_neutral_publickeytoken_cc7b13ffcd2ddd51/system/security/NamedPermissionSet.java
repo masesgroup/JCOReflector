@@ -156,16 +156,6 @@ public class NamedPermissionSet extends PermissionSet  {
         }
     }
 
-    public NamedPermissionSet(java.lang.String name) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(name));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NamedPermissionSet(java.lang.String name, PermissionState state) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -181,6 +171,16 @@ public class NamedPermissionSet extends PermissionSet  {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(name, permSet == null ? null : permSet.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NamedPermissionSet(java.lang.String name) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(name));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

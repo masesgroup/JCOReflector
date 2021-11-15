@@ -160,21 +160,21 @@ public class BadImageFormatException extends SystemException {
 
     // Constructors section
     
-    public BadImageFormatException(java.lang.String message, java.lang.String fileName) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(message, fileName));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public BadImageFormatException(java.lang.String message, java.lang.String fileName, NetException inner) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(message, fileName, inner == null ? null : inner.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public BadImageFormatException(java.lang.String message, java.lang.String fileName) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(message, fileName));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -144,21 +144,21 @@ public class ResourceConsumptionAttribute extends Attribute  {
     public ResourceConsumptionAttribute() throws Throwable {
     }
 
-    public ResourceConsumptionAttribute(ResourceScope resourceScope) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(resourceScope == null ? null : resourceScope.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ResourceConsumptionAttribute(ResourceScope resourceScope, ResourceScope consumptionScope) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(resourceScope == null ? null : resourceScope.getJCOInstance(), consumptionScope == null ? null : consumptionScope.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ResourceConsumptionAttribute(ResourceScope resourceScope) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(resourceScope == null ? null : resourceScope.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

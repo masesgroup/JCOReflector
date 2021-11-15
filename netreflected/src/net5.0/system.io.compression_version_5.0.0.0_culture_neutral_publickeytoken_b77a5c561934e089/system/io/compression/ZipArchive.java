@@ -147,21 +147,11 @@ public class ZipArchive extends NetObject implements AutoCloseable {
     public ZipArchive() throws Throwable {
     }
 
-    public ZipArchive(Stream stream) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.io.IOException, system.io.InvalidDataException {
+    public ZipArchive(Stream stream, ZipArchiveMode mode, boolean leaveOpen, Encoding entryNameEncoding) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.io.IOException, system.io.InvalidDataException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(stream == null ? null : stream.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public ZipArchive(Stream stream, ZipArchiveMode mode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.io.IOException, system.io.InvalidDataException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(stream == null ? null : stream.getJCOInstance(), mode == null ? null : mode.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(stream == null ? null : stream.getJCOInstance(), mode == null ? null : mode.getJCOInstance(), leaveOpen, entryNameEncoding == null ? null : entryNameEncoding.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -177,11 +167,21 @@ public class ZipArchive extends NetObject implements AutoCloseable {
         }
     }
 
-    public ZipArchive(Stream stream, ZipArchiveMode mode, boolean leaveOpen, Encoding entryNameEncoding) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.io.IOException, system.io.InvalidDataException, system.FormatException {
+    public ZipArchive(Stream stream, ZipArchiveMode mode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.io.IOException, system.io.InvalidDataException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(stream == null ? null : stream.getJCOInstance(), mode == null ? null : mode.getJCOInstance(), leaveOpen, entryNameEncoding == null ? null : entryNameEncoding.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(stream == null ? null : stream.getJCOInstance(), mode == null ? null : mode.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ZipArchive(Stream stream) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.io.IOException, system.io.InvalidDataException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(stream == null ? null : stream.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,22 +192,22 @@ public class ZipArchive extends NetObject implements AutoCloseable {
     
     // Methods section
     
-    public ZipArchiveEntry CreateEntry(java.lang.String entryName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.io.IOException {
+    public ZipArchiveEntry CreateEntry(java.lang.String entryName, CompressionLevel compressionLevel) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.io.IOException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateEntry = (JCObject)classInstance.Invoke("CreateEntry", entryName);
+            JCObject objCreateEntry = (JCObject)classInstance.Invoke("CreateEntry", entryName, compressionLevel == null ? null : compressionLevel.getJCOInstance());
             return new ZipArchiveEntry(objCreateEntry);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ZipArchiveEntry CreateEntry(java.lang.String entryName, CompressionLevel compressionLevel) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.io.IOException {
+    public ZipArchiveEntry CreateEntry(java.lang.String entryName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.io.IOException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateEntry = (JCObject)classInstance.Invoke("CreateEntry", entryName, compressionLevel == null ? null : compressionLevel.getJCOInstance());
+            JCObject objCreateEntry = (JCObject)classInstance.Invoke("CreateEntry", entryName);
             return new ZipArchiveEntry(objCreateEntry);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

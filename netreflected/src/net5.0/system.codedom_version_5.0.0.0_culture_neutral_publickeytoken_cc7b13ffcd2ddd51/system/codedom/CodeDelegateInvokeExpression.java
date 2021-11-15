@@ -151,21 +151,21 @@ public class CodeDelegateInvokeExpression extends CodeExpression  {
         }
     }
 
-    public CodeDelegateInvokeExpression(CodeExpression targetObject) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(targetObject == null ? null : targetObject.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public CodeDelegateInvokeExpression(CodeExpression targetObject, CodeExpression... parameters) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(targetObject == null ? null : targetObject.getJCOInstance(), toObjectFromArray(parameters)));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CodeDelegateInvokeExpression(CodeExpression targetObject) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(targetObject == null ? null : targetObject.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

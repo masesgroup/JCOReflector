@@ -144,11 +144,11 @@ public class MailAddress extends NetObject  {
     public MailAddress() throws Throwable {
     }
 
-    public MailAddress(java.lang.String address) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
+    public MailAddress(java.lang.String address, java.lang.String displayName, Encoding displayNameEncoding) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(address));
+            setJCOInstance((JCObject)classType.NewObject(address, displayName, displayNameEncoding == null ? null : displayNameEncoding.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,11 +164,11 @@ public class MailAddress extends NetObject  {
         }
     }
 
-    public MailAddress(java.lang.String address, java.lang.String displayName, Encoding displayNameEncoding) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
+    public MailAddress(java.lang.String address) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.OverflowException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(address, displayName, displayNameEncoding == null ? null : displayNameEncoding.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(address));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

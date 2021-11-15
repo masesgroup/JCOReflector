@@ -197,22 +197,11 @@ public class XmlDictionaryWriter extends XmlWriter  {
         }
     }
 
-    public static XmlDictionaryWriter CreateBinaryWriter(Stream stream) throws Throwable {
+    public static XmlDictionaryWriter CreateBinaryWriter(Stream stream, IXmlDictionary dictionary, XmlBinaryWriterSession session, boolean ownsStream) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateBinaryWriter = (JCObject)classType.Invoke("CreateBinaryWriter", stream == null ? null : stream.getJCOInstance());
-            return new XmlDictionaryWriter(objCreateBinaryWriter);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static XmlDictionaryWriter CreateBinaryWriter(Stream stream, IXmlDictionary dictionary) throws Throwable, system.NotSupportedException, system.ArgumentNullException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateBinaryWriter = (JCObject)classType.Invoke("CreateBinaryWriter", stream == null ? null : stream.getJCOInstance(), dictionary == null ? null : dictionary.getJCOInstance());
+            JCObject objCreateBinaryWriter = (JCObject)classType.Invoke("CreateBinaryWriter", stream == null ? null : stream.getJCOInstance(), dictionary == null ? null : dictionary.getJCOInstance(), session == null ? null : session.getJCOInstance(), ownsStream);
             return new XmlDictionaryWriter(objCreateBinaryWriter);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -230,11 +219,22 @@ public class XmlDictionaryWriter extends XmlWriter  {
         }
     }
 
-    public static XmlDictionaryWriter CreateBinaryWriter(Stream stream, IXmlDictionary dictionary, XmlBinaryWriterSession session, boolean ownsStream) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
+    public static XmlDictionaryWriter CreateBinaryWriter(Stream stream, IXmlDictionary dictionary) throws Throwable, system.NotSupportedException, system.ArgumentNullException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateBinaryWriter = (JCObject)classType.Invoke("CreateBinaryWriter", stream == null ? null : stream.getJCOInstance(), dictionary == null ? null : dictionary.getJCOInstance(), session == null ? null : session.getJCOInstance(), ownsStream);
+            JCObject objCreateBinaryWriter = (JCObject)classType.Invoke("CreateBinaryWriter", stream == null ? null : stream.getJCOInstance(), dictionary == null ? null : dictionary.getJCOInstance());
+            return new XmlDictionaryWriter(objCreateBinaryWriter);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static XmlDictionaryWriter CreateBinaryWriter(Stream stream) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateBinaryWriter = (JCObject)classType.Invoke("CreateBinaryWriter", stream == null ? null : stream.getJCOInstance());
             return new XmlDictionaryWriter(objCreateBinaryWriter);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -252,17 +252,6 @@ public class XmlDictionaryWriter extends XmlWriter  {
         }
     }
 
-    public static XmlDictionaryWriter CreateMtomWriter(Stream stream, Encoding encoding, int maxSizeInBytes, java.lang.String startInfo) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objCreateMtomWriter = (JCObject)classType.Invoke("CreateMtomWriter", stream == null ? null : stream.getJCOInstance(), encoding == null ? null : encoding.getJCOInstance(), maxSizeInBytes, startInfo);
-            return new XmlDictionaryWriter(objCreateMtomWriter);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static XmlDictionaryWriter CreateMtomWriter(Stream stream, Encoding encoding, int maxSizeInBytes, java.lang.String startInfo, java.lang.String boundary, java.lang.String startUri, boolean writeMessageHeaders, boolean ownsStream) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -274,11 +263,22 @@ public class XmlDictionaryWriter extends XmlWriter  {
         }
     }
 
-    public static XmlDictionaryWriter CreateTextWriter(Stream stream) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.xml.XmlException, system.ArrayTypeMismatchException {
+    public static XmlDictionaryWriter CreateMtomWriter(Stream stream, Encoding encoding, int maxSizeInBytes, java.lang.String startInfo) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateTextWriter = (JCObject)classType.Invoke("CreateTextWriter", stream == null ? null : stream.getJCOInstance());
+            JCObject objCreateMtomWriter = (JCObject)classType.Invoke("CreateMtomWriter", stream == null ? null : stream.getJCOInstance(), encoding == null ? null : encoding.getJCOInstance(), maxSizeInBytes, startInfo);
+            return new XmlDictionaryWriter(objCreateMtomWriter);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static XmlDictionaryWriter CreateTextWriter(Stream stream, Encoding encoding, boolean ownsStream) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.xml.XmlException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objCreateTextWriter = (JCObject)classType.Invoke("CreateTextWriter", stream == null ? null : stream.getJCOInstance(), encoding == null ? null : encoding.getJCOInstance(), ownsStream);
             return new XmlDictionaryWriter(objCreateTextWriter);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -296,11 +296,11 @@ public class XmlDictionaryWriter extends XmlWriter  {
         }
     }
 
-    public static XmlDictionaryWriter CreateTextWriter(Stream stream, Encoding encoding, boolean ownsStream) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.xml.XmlException {
+    public static XmlDictionaryWriter CreateTextWriter(Stream stream) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.xml.XmlException, system.ArrayTypeMismatchException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateTextWriter = (JCObject)classType.Invoke("CreateTextWriter", stream == null ? null : stream.getJCOInstance(), encoding == null ? null : encoding.getJCOInstance(), ownsStream);
+            JCObject objCreateTextWriter = (JCObject)classType.Invoke("CreateTextWriter", stream == null ? null : stream.getJCOInstance());
             return new XmlDictionaryWriter(objCreateTextWriter);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

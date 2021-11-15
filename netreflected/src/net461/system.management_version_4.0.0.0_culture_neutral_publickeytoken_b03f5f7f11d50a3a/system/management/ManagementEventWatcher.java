@@ -146,7 +146,7 @@ public class ManagementEventWatcher extends Component  {
 
     // Constructors section
     
-    public ManagementEventWatcher() throws Throwable, system.ArgumentException, system.NotSupportedException, system.reflection.TargetParameterCountException, system.ArgumentNullException, system.management.ManagementException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.InvalidOperationException, system.security.cryptography.CryptographicException {
+    public ManagementEventWatcher() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.management.ManagementException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.InvalidOperationException, system.security.cryptography.CryptographicException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -156,7 +156,7 @@ public class ManagementEventWatcher extends Component  {
         }
     }
 
-    public ManagementEventWatcher(EventQuery query) throws Throwable, system.ArgumentException, system.NotSupportedException, system.reflection.TargetParameterCountException, system.ArgumentNullException, system.management.ManagementException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.InvalidOperationException, system.security.cryptography.CryptographicException {
+    public ManagementEventWatcher(EventQuery query) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.management.ManagementException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.InvalidOperationException, system.security.cryptography.CryptographicException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -166,7 +166,7 @@ public class ManagementEventWatcher extends Component  {
         }
     }
 
-    public ManagementEventWatcher(ManagementScope scope, EventQuery query) throws Throwable, system.ArgumentException, system.NotSupportedException, system.reflection.TargetParameterCountException, system.ArgumentNullException, system.management.ManagementException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.InvalidOperationException, system.security.cryptography.CryptographicException {
+    public ManagementEventWatcher(ManagementScope scope, EventQuery query) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.management.ManagementException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.InvalidOperationException, system.security.cryptography.CryptographicException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -176,7 +176,7 @@ public class ManagementEventWatcher extends Component  {
         }
     }
 
-    public ManagementEventWatcher(ManagementScope scope, EventQuery query, EventWatcherOptions options) throws Throwable, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.globalization.CultureNotFoundException, system.management.ManagementException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
+    public ManagementEventWatcher(ManagementScope scope, EventQuery query, EventWatcherOptions options) throws Throwable, system.ArgumentException, system.NotSupportedException, system.reflection.TargetParameterCountException, system.ArgumentNullException, system.management.ManagementException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.InvalidOperationException, system.security.cryptography.CryptographicException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -186,7 +186,7 @@ public class ManagementEventWatcher extends Component  {
         }
     }
 
-    public ManagementEventWatcher(java.lang.String query) throws Throwable, system.ArgumentException, system.NotSupportedException, system.reflection.TargetParameterCountException, system.ArgumentNullException, system.management.ManagementException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.InvalidOperationException, system.security.cryptography.CryptographicException {
+    public ManagementEventWatcher(java.lang.String query) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.management.ManagementException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.InvalidOperationException, system.security.cryptography.CryptographicException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -196,7 +196,7 @@ public class ManagementEventWatcher extends Component  {
         }
     }
 
-    public ManagementEventWatcher(java.lang.String scope, java.lang.String query) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.management.ManagementException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.reflection.TargetParameterCountException {
+    public ManagementEventWatcher(java.lang.String scope, java.lang.String query) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.management.ManagementException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -206,7 +206,7 @@ public class ManagementEventWatcher extends Component  {
         }
     }
 
-    public ManagementEventWatcher(java.lang.String scope, java.lang.String query, EventWatcherOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.management.ManagementException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.reflection.TargetParameterCountException {
+    public ManagementEventWatcher(java.lang.String scope, java.lang.String query, EventWatcherOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.threading.WaitHandleCannotBeOpenedException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.management.ManagementException, system.globalization.CultureNotFoundException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -220,7 +220,7 @@ public class ManagementEventWatcher extends Component  {
     
     // Methods section
     
-    public ManagementBaseObject WaitForNextEvent() throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.management.ManagementException, system.MissingMethodException, system.reflection.TargetInvocationException, system.threading.WaitHandleCannotBeOpenedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
+    public ManagementBaseObject WaitForNextEvent() throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.management.ManagementException, system.MissingMethodException, system.reflection.TargetInvocationException, system.threading.WaitHandleCannotBeOpenedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -231,7 +231,7 @@ public class ManagementEventWatcher extends Component  {
         }
     }
 
-    public void Start() throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.management.ManagementException, system.MissingMethodException, system.reflection.TargetInvocationException, system.threading.WaitHandleCannotBeOpenedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
+    public void Start() throws Throwable, system.InvalidOperationException, system.NotSupportedException, system.ArgumentException, system.MulticastNotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.management.ManagementException, system.MissingMethodException, system.reflection.TargetInvocationException, system.threading.WaitHandleCannotBeOpenedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -241,7 +241,7 @@ public class ManagementEventWatcher extends Component  {
         }
     }
 
-    public void Stop() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OverflowException, system.management.ManagementException {
+    public void Stop() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.FormatException, system.InvalidOperationException, system.NotImplementedException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.management.ManagementException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -266,7 +266,7 @@ public class ManagementEventWatcher extends Component  {
         }
     }
 
-    public void setQuery(EventQuery Query) throws Throwable, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.globalization.CultureNotFoundException, system.management.ManagementException, system.MulticastNotSupportedException {
+    public void setQuery(EventQuery Query) throws Throwable, system.ArgumentException, system.NotSupportedException, system.reflection.TargetParameterCountException, system.ArgumentNullException, system.management.ManagementException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -287,7 +287,7 @@ public class ManagementEventWatcher extends Component  {
         }
     }
 
-    public void setOptions(EventWatcherOptions Options) throws Throwable, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException, system.globalization.CultureNotFoundException, system.management.ManagementException, system.MulticastNotSupportedException {
+    public void setOptions(EventWatcherOptions Options) throws Throwable, system.ArgumentException, system.NotSupportedException, system.reflection.TargetParameterCountException, system.ArgumentNullException, system.management.ManagementException, system.MulticastNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -308,7 +308,7 @@ public class ManagementEventWatcher extends Component  {
         }
     }
 
-    public void setScope(ManagementScope Scope) throws Throwable, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.InvalidOperationException, system.MemberAccessException, system.reflection.TargetException, system.reflection.TargetParameterCountException {
+    public void setScope(ManagementScope Scope) throws Throwable, system.ArgumentException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.reflection.TargetParameterCountException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

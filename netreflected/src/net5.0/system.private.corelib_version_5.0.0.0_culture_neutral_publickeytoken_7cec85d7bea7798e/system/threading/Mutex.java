@@ -151,11 +151,11 @@ public class Mutex extends WaitHandle  {
         }
     }
 
-    public Mutex(boolean initiallyOwned) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException {
+    public Mutex(boolean initiallyOwned, java.lang.String name, boolean createdNew) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(initiallyOwned));
+            setJCOInstance((JCObject)classType.NewObject(initiallyOwned, name, createdNew));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,11 +171,11 @@ public class Mutex extends WaitHandle  {
         }
     }
 
-    public Mutex(boolean initiallyOwned, java.lang.String name, boolean createdNew) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException {
+    public Mutex(boolean initiallyOwned) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.threading.WaitHandleCannotBeOpenedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(initiallyOwned, name, createdNew));
+            setJCOInstance((JCObject)classType.NewObject(initiallyOwned));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

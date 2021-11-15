@@ -242,17 +242,6 @@ public class XDocument extends XContainer  {
         }
     }
 
-    public static XDocument Load(Stream stream) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objLoad = (JCObject)classType.Invoke("Load", stream == null ? null : stream.getJCOInstance());
-            return new XDocument(objLoad);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static XDocument Load(Stream stream, LoadOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -264,11 +253,11 @@ public class XDocument extends XContainer  {
         }
     }
 
-    public static XDocument Load(TextReader textReader) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OverflowException {
+    public static XDocument Load(Stream stream) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objLoad = (JCObject)classType.Invoke("Load", textReader == null ? null : textReader.getJCOInstance());
+            JCObject objLoad = (JCObject)classType.Invoke("Load", stream == null ? null : stream.getJCOInstance());
             return new XDocument(objLoad);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -286,11 +275,11 @@ public class XDocument extends XContainer  {
         }
     }
 
-    public static XDocument Load(java.lang.String uri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NotImplementedException, system.OverflowException {
+    public static XDocument Load(TextReader textReader) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objLoad = (JCObject)classType.Invoke("Load", uri);
+            JCObject objLoad = (JCObject)classType.Invoke("Load", textReader == null ? null : textReader.getJCOInstance());
             return new XDocument(objLoad);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -308,11 +297,11 @@ public class XDocument extends XContainer  {
         }
     }
 
-    public static XDocument Load(XmlReader reader) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.OverflowException, system.globalization.CultureNotFoundException {
+    public static XDocument Load(java.lang.String uri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NotImplementedException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objLoad = (JCObject)classType.Invoke("Load", reader == null ? null : reader.getJCOInstance());
+            JCObject objLoad = (JCObject)classType.Invoke("Load", uri);
             return new XDocument(objLoad);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -330,12 +319,12 @@ public class XDocument extends XContainer  {
         }
     }
 
-    public static XDocument Parse(java.lang.String text) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.xml.XmlException, system.OverflowException {
+    public static XDocument Load(XmlReader reader) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.OverflowException, system.globalization.CultureNotFoundException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", text);
-            return new XDocument(objParse);
+            JCObject objLoad = (JCObject)classType.Invoke("Load", reader == null ? null : reader.getJCOInstance());
+            return new XDocument(objLoad);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -352,11 +341,12 @@ public class XDocument extends XContainer  {
         }
     }
 
-    public void Save(Stream stream) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static XDocument Parse(java.lang.String text) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.xml.XmlException, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Invoke("Save", stream == null ? null : stream.getJCOInstance());
+            JCObject objParse = (JCObject)classType.Invoke("Parse", text);
+            return new XDocument(objParse);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -372,11 +362,11 @@ public class XDocument extends XContainer  {
         }
     }
 
-    public void Save(TextWriter textWriter) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public void Save(Stream stream) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Save", textWriter == null ? null : textWriter.getJCOInstance());
+            classInstance.Invoke("Save", stream == null ? null : stream.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -392,11 +382,11 @@ public class XDocument extends XContainer  {
         }
     }
 
-    public void Save(java.lang.String fileName) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.io.IOException, system.ArrayTypeMismatchException {
+    public void Save(TextWriter textWriter) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Save", fileName);
+            classInstance.Invoke("Save", textWriter == null ? null : textWriter.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -407,6 +397,16 @@ public class XDocument extends XContainer  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Save", fileName, options == null ? null : options.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Save(java.lang.String fileName) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.io.IOException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Save", fileName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

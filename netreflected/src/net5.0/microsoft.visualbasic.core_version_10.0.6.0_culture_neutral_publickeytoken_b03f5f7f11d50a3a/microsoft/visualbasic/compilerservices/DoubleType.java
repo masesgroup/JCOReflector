@@ -148,16 +148,6 @@ public class DoubleType extends NetObject  {
     
     // Methods section
     
-    public static double FromObject(NetObject Value) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidCastException, system.OutOfMemoryException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (double)classType.Invoke("FromObject", Value == null ? null : Value.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static double FromObject(NetObject Value, NumberFormatInfo NumberFormat) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.InvalidCastException, system.OutOfMemoryException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -168,11 +158,11 @@ public class DoubleType extends NetObject  {
         }
     }
 
-    public static double FromString(java.lang.String Value) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.InvalidCastException {
+    public static double FromObject(NetObject Value) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidCastException, system.OutOfMemoryException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (double)classType.Invoke("FromString", Value);
+            return (double)classType.Invoke("FromObject", Value == null ? null : Value.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -188,11 +178,11 @@ public class DoubleType extends NetObject  {
         }
     }
 
-    public static double Parse(java.lang.String Value) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
+    public static double FromString(java.lang.String Value) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.InvalidCastException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (double)classType.Invoke("Parse", Value);
+            return (double)classType.Invoke("FromString", Value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -203,6 +193,16 @@ public class DoubleType extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (double)classType.Invoke("Parse", Value, NumberFormat == null ? null : NumberFormat.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static double Parse(java.lang.String Value) throws Throwable, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (double)classType.Invoke("Parse", Value);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

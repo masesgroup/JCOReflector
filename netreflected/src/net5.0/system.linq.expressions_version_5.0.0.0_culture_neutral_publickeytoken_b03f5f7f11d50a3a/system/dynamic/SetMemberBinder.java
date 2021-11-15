@@ -158,22 +158,22 @@ public class SetMemberBinder extends DynamicMetaObjectBinder  {
         }
     }
 
-    public DynamicMetaObject FallbackSetMember(DynamicMetaObject target, DynamicMetaObject value) throws Throwable {
+    public DynamicMetaObject FallbackSetMember(DynamicMetaObject target, DynamicMetaObject value, DynamicMetaObject errorSuggestion) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objFallbackSetMember = (JCObject)classInstance.Invoke("FallbackSetMember", target == null ? null : target.getJCOInstance(), value == null ? null : value.getJCOInstance());
+            JCObject objFallbackSetMember = (JCObject)classInstance.Invoke("FallbackSetMember", target == null ? null : target.getJCOInstance(), value == null ? null : value.getJCOInstance(), errorSuggestion == null ? null : errorSuggestion.getJCOInstance());
             return new DynamicMetaObject(objFallbackSetMember);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DynamicMetaObject FallbackSetMember(DynamicMetaObject target, DynamicMetaObject value, DynamicMetaObject errorSuggestion) throws Throwable {
+    public DynamicMetaObject FallbackSetMember(DynamicMetaObject target, DynamicMetaObject value) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objFallbackSetMember = (JCObject)classInstance.Invoke("FallbackSetMember", target == null ? null : target.getJCOInstance(), value == null ? null : value.getJCOInstance(), errorSuggestion == null ? null : errorSuggestion.getJCOInstance());
+            JCObject objFallbackSetMember = (JCObject)classInstance.Invoke("FallbackSetMember", target == null ? null : target.getJCOInstance(), value == null ? null : value.getJCOInstance());
             return new DynamicMetaObject(objFallbackSetMember);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

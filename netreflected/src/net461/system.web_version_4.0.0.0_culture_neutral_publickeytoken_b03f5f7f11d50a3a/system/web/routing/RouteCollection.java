@@ -195,7 +195,7 @@ public class RouteCollection extends NetObjectEnumerable  {
         }
     }
 
-    public Route MapPageRoute(java.lang.String routeName, java.lang.String routeUrl, java.lang.String physicalFile) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.security.SecurityException, system.io.IOException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
+    public Route MapPageRoute(java.lang.String routeName, java.lang.String routeUrl, java.lang.String physicalFile) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -206,7 +206,7 @@ public class RouteCollection extends NetObjectEnumerable  {
         }
     }
 
-    public Route MapPageRoute(java.lang.String routeName, java.lang.String routeUrl, java.lang.String physicalFile, boolean checkPhysicalUrlAccess) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.security.SecurityException, system.io.IOException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
+    public Route MapPageRoute(java.lang.String routeName, java.lang.String routeUrl, java.lang.String physicalFile, boolean checkPhysicalUrlAccess) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -217,7 +217,7 @@ public class RouteCollection extends NetObjectEnumerable  {
         }
     }
 
-    public Route MapPageRoute(java.lang.String routeName, java.lang.String routeUrl, java.lang.String physicalFile, boolean checkPhysicalUrlAccess, RouteValueDictionary defaults) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.security.SecurityException, system.io.IOException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
+    public Route MapPageRoute(java.lang.String routeName, java.lang.String routeUrl, java.lang.String physicalFile, boolean checkPhysicalUrlAccess, RouteValueDictionary defaults) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -228,7 +228,7 @@ public class RouteCollection extends NetObjectEnumerable  {
         }
     }
 
-    public Route MapPageRoute(java.lang.String routeName, java.lang.String routeUrl, java.lang.String physicalFile, boolean checkPhysicalUrlAccess, RouteValueDictionary defaults, RouteValueDictionary constraints) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.security.SecurityException, system.io.IOException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
+    public Route MapPageRoute(java.lang.String routeName, java.lang.String routeUrl, java.lang.String physicalFile, boolean checkPhysicalUrlAccess, RouteValueDictionary defaults, RouteValueDictionary constraints) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.PlatformNotSupportedException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -239,7 +239,7 @@ public class RouteCollection extends NetObjectEnumerable  {
         }
     }
 
-    public Route MapPageRoute(java.lang.String routeName, java.lang.String routeUrl, java.lang.String physicalFile, boolean checkPhysicalUrlAccess, RouteValueDictionary defaults, RouteValueDictionary constraints, RouteValueDictionary dataTokens) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.FormatException, system.NotSupportedException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
+    public Route MapPageRoute(java.lang.String routeName, java.lang.String routeUrl, java.lang.String physicalFile, boolean checkPhysicalUrlAccess, RouteValueDictionary defaults, RouteValueDictionary constraints, RouteValueDictionary dataTokens) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.FormatException, system.NotSupportedException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -283,7 +283,7 @@ public class RouteCollection extends NetObjectEnumerable  {
         }
     }
 
-    public void Add(java.lang.String name, RouteBase item) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
+    public void Add(java.lang.String name, RouteBase item) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.NotImplementedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.PlatformNotSupportedException, system.security.cryptography.CryptographicException, system.OutOfMemoryException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

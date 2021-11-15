@@ -141,21 +141,21 @@ public class INestedContainerImplementation extends NetObject implements INested
 
     // Methods section
     
-    public void Add(IComponent component) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Add", component == null ? null : component.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Add(IComponent component, java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Add", component == null ? null : component.getJCOInstance(), name);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Add(IComponent component) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Add", component == null ? null : component.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

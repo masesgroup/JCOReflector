@@ -162,11 +162,11 @@ public class CngKey extends NetObject implements AutoCloseable {
     
     // Methods section
     
-    public static boolean Exists(java.lang.String keyName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.security.cryptography.CryptographicException, system.ObjectDisposedException {
+    public static boolean Exists(java.lang.String keyName, CngProvider provider, CngKeyOpenOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classType.Invoke("Exists", keyName);
+            return (boolean)classType.Invoke("Exists", keyName, provider == null ? null : provider.getJCOInstance(), options == null ? null : options.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -182,11 +182,11 @@ public class CngKey extends NetObject implements AutoCloseable {
         }
     }
 
-    public static boolean Exists(java.lang.String keyName, CngProvider provider, CngKeyOpenOptions options) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.security.cryptography.CryptographicException {
+    public static boolean Exists(java.lang.String keyName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.security.cryptography.CryptographicException, system.ObjectDisposedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classType.Invoke("Exists", keyName, provider == null ? null : provider.getJCOInstance(), options == null ? null : options.getJCOInstance());
+            return (boolean)classType.Invoke("Exists", keyName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -221,11 +221,11 @@ public class CngKey extends NetObject implements AutoCloseable {
         }
     }
 
-    public static CngKey Create(CngAlgorithm algorithm) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.security.cryptography.CryptographicException, system.InvalidOperationException {
+    public static CngKey Create(CngAlgorithm algorithm, java.lang.String keyName, CngKeyCreationParameters creationParameters) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", algorithm == null ? null : algorithm.getJCOInstance());
+            JCObject objCreate = (JCObject)classType.Invoke("Create", algorithm == null ? null : algorithm.getJCOInstance(), keyName, creationParameters == null ? null : creationParameters.getJCOInstance());
             return new CngKey(objCreate);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -243,34 +243,12 @@ public class CngKey extends NetObject implements AutoCloseable {
         }
     }
 
-    public static CngKey Create(CngAlgorithm algorithm, java.lang.String keyName, CngKeyCreationParameters creationParameters) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.security.cryptography.CryptographicException {
+    public static CngKey Create(CngAlgorithm algorithm) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.security.cryptography.CryptographicException, system.InvalidOperationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreate = (JCObject)classType.Invoke("Create", algorithm == null ? null : algorithm.getJCOInstance(), keyName, creationParameters == null ? null : creationParameters.getJCOInstance());
+            JCObject objCreate = (JCObject)classType.Invoke("Create", algorithm == null ? null : algorithm.getJCOInstance());
             return new CngKey(objCreate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static CngKey Import(byte[] keyBlob, CngKeyBlobFormat format) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objImport = (JCObject)classType.Invoke("Import", keyBlob, format == null ? null : format.getJCOInstance());
-            return new CngKey(objImport);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static CngKey Import(JCORefOut dupParam0, CngKeyBlobFormat dupParam1) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objImport = (JCObject)classType.Invoke("Import", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
-            return new CngKey(objImport);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,6 +276,28 @@ public class CngKey extends NetObject implements AutoCloseable {
         }
     }
 
+    public static CngKey Import(byte[] keyBlob, CngKeyBlobFormat format) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objImport = (JCObject)classType.Invoke("Import", keyBlob, format == null ? null : format.getJCOInstance());
+            return new CngKey(objImport);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static CngKey Import(JCORefOut dupParam0, CngKeyBlobFormat dupParam1) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.security.cryptography.CryptographicException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objImport = (JCObject)classType.Invoke("Import", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
+            return new CngKey(objImport);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static CngKey Open(SafeNCryptKeyHandle keyHandle, CngKeyHandleOpenOptions keyHandleOpenOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.FormatException, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -309,11 +309,11 @@ public class CngKey extends NetObject implements AutoCloseable {
         }
     }
 
-    public static CngKey Open(java.lang.String keyName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.security.cryptography.CryptographicException {
+    public static CngKey Open(java.lang.String keyName, CngProvider provider, CngKeyOpenOptions openOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objOpen = (JCObject)classType.Invoke("Open", keyName);
+            JCObject objOpen = (JCObject)classType.Invoke("Open", keyName, provider == null ? null : provider.getJCOInstance(), openOptions == null ? null : openOptions.getJCOInstance());
             return new CngKey(objOpen);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -331,11 +331,11 @@ public class CngKey extends NetObject implements AutoCloseable {
         }
     }
 
-    public static CngKey Open(java.lang.String keyName, CngProvider provider, CngKeyOpenOptions openOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.security.cryptography.CryptographicException {
+    public static CngKey Open(java.lang.String keyName) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.security.cryptography.CryptographicException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objOpen = (JCObject)classType.Invoke("Open", keyName, provider == null ? null : provider.getJCOInstance(), openOptions == null ? null : openOptions.getJCOInstance());
+            JCObject objOpen = (JCObject)classType.Invoke("Open", keyName);
             return new CngKey(objOpen);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

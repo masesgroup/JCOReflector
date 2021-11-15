@@ -187,22 +187,22 @@ public class IDesignerLoaderHost2Implementation extends NetObject implements IDe
         }
     }
 
-    public IComponent CreateComponent(NetType componentClass) throws Throwable {
+    public IComponent CreateComponent(NetType componentClass, java.lang.String name) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateComponent = (JCObject)classInstance.Invoke("CreateComponent", componentClass == null ? null : componentClass.getJCOInstance());
+            JCObject objCreateComponent = (JCObject)classInstance.Invoke("CreateComponent", componentClass == null ? null : componentClass.getJCOInstance(), name);
             return new IComponentImplementation(objCreateComponent);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public IComponent CreateComponent(NetType componentClass, java.lang.String name) throws Throwable {
+    public IComponent CreateComponent(NetType componentClass) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateComponent = (JCObject)classInstance.Invoke("CreateComponent", componentClass == null ? null : componentClass.getJCOInstance(), name);
+            JCObject objCreateComponent = (JCObject)classInstance.Invoke("CreateComponent", componentClass == null ? null : componentClass.getJCOInstance());
             return new IComponentImplementation(objCreateComponent);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -241,16 +241,6 @@ public class IDesignerLoaderHost2Implementation extends NetObject implements IDe
         }
     }
 
-    public void AddService(NetType serviceType, ServiceCreatorCallback callback) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AddService", serviceType == null ? null : serviceType.getJCOInstance(), callback);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void AddService(NetType serviceType, ServiceCreatorCallback callback, boolean promote) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -261,11 +251,11 @@ public class IDesignerLoaderHost2Implementation extends NetObject implements IDe
         }
     }
 
-    public void AddService(NetType serviceType, NetObject serviceInstance) throws Throwable {
+    public void AddService(NetType serviceType, ServiceCreatorCallback callback) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddService", serviceType == null ? null : serviceType.getJCOInstance(), serviceInstance == null ? null : serviceInstance.getJCOInstance());
+            classInstance.Invoke("AddService", serviceType == null ? null : serviceType.getJCOInstance(), callback);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -276,6 +266,16 @@ public class IDesignerLoaderHost2Implementation extends NetObject implements IDe
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddService", serviceType == null ? null : serviceType.getJCOInstance(), serviceInstance == null ? null : serviceInstance.getJCOInstance(), promote);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddService(NetType serviceType, NetObject serviceInstance) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddService", serviceType == null ? null : serviceType.getJCOInstance(), serviceInstance == null ? null : serviceInstance.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -311,21 +311,21 @@ public class IDesignerLoaderHost2Implementation extends NetObject implements IDe
         }
     }
 
-    public void RemoveService(NetType serviceType) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RemoveService", serviceType == null ? null : serviceType.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void RemoveService(NetType serviceType, boolean promote) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RemoveService", serviceType == null ? null : serviceType.getJCOInstance(), promote);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void RemoveService(NetType serviceType) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RemoveService", serviceType == null ? null : serviceType.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

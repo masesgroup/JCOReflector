@@ -204,22 +204,22 @@ public class SecurityManager extends NetObject  {
         }
     }
 
-    public static PermissionSet ResolvePolicy(Evidence evidence) throws Throwable {
+    public static PermissionSet ResolvePolicy(Evidence evidence, PermissionSet reqdPset, PermissionSet optPset, PermissionSet denyPset, JCORefOut<PermissionSet> denied) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objResolvePolicy = (JCObject)classType.Invoke("ResolvePolicy", evidence == null ? null : evidence.getJCOInstance());
+            JCObject objResolvePolicy = (JCObject)classType.Invoke("ResolvePolicy", evidence == null ? null : evidence.getJCOInstance(), reqdPset == null ? null : reqdPset.getJCOInstance(), optPset == null ? null : optPset.getJCOInstance(), denyPset == null ? null : denyPset.getJCOInstance(), denied.getJCRefOut());
             return new PermissionSet(objResolvePolicy);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static PermissionSet ResolvePolicy(Evidence evidence, PermissionSet reqdPset, PermissionSet optPset, PermissionSet denyPset, JCORefOut<PermissionSet> denied) throws Throwable {
+    public static PermissionSet ResolvePolicy(Evidence evidence) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objResolvePolicy = (JCObject)classType.Invoke("ResolvePolicy", evidence == null ? null : evidence.getJCOInstance(), reqdPset == null ? null : reqdPset.getJCOInstance(), optPset == null ? null : optPset.getJCOInstance(), denyPset == null ? null : denyPset.getJCOInstance(), denied.getJCRefOut());
+            JCObject objResolvePolicy = (JCObject)classType.Invoke("ResolvePolicy", evidence == null ? null : evidence.getJCOInstance());
             return new PermissionSet(objResolvePolicy);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

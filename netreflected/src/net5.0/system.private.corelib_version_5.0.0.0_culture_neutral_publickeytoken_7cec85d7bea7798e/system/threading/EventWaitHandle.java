@@ -145,11 +145,11 @@ public class EventWaitHandle extends WaitHandle  {
     public EventWaitHandle() throws Throwable {
     }
 
-    public EventWaitHandle(boolean initialState, EventResetMode mode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.threading.WaitHandleCannotBeOpenedException, system.FormatException {
+    public EventWaitHandle(boolean initialState, EventResetMode mode, java.lang.String name, boolean createdNew) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.threading.WaitHandleCannotBeOpenedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(initialState, mode == null ? null : mode.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(initialState, mode == null ? null : mode.getJCOInstance(), name, createdNew));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,11 +165,11 @@ public class EventWaitHandle extends WaitHandle  {
         }
     }
 
-    public EventWaitHandle(boolean initialState, EventResetMode mode, java.lang.String name, boolean createdNew) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.threading.WaitHandleCannotBeOpenedException {
+    public EventWaitHandle(boolean initialState, EventResetMode mode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.threading.WaitHandleCannotBeOpenedException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(initialState, mode == null ? null : mode.getJCOInstance(), name, createdNew));
+            setJCOInstance((JCObject)classType.NewObject(initialState, mode == null ? null : mode.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

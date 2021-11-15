@@ -147,21 +147,21 @@ public class PolicyStatement extends NetObject  {
     public PolicyStatement() throws Throwable {
     }
 
-    public PolicyStatement(PermissionSet permSet) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(permSet == null ? null : permSet.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public PolicyStatement(PermissionSet permSet, PolicyStatementAttribute attributes) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(permSet == null ? null : permSet.getJCOInstance(), attributes == null ? null : attributes.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PolicyStatement(PermissionSet permSet) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(permSet == null ? null : permSet.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -205,21 +205,21 @@ public class PolicyStatement extends NetObject  {
         }
     }
 
-    public void FromXml(SecurityElement et) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("FromXml", et == null ? null : et.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void FromXml(SecurityElement et, PolicyLevel level) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("FromXml", et == null ? null : et.getJCOInstance(), level == null ? null : level.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void FromXml(SecurityElement et) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("FromXml", et == null ? null : et.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

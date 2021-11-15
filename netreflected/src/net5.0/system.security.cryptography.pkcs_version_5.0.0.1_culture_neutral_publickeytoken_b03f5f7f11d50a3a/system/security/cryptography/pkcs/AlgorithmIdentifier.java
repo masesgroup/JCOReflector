@@ -150,21 +150,21 @@ public class AlgorithmIdentifier extends NetObject  {
         }
     }
 
-    public AlgorithmIdentifier(Oid oid) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(oid == null ? null : oid.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public AlgorithmIdentifier(Oid oid, int keyLength) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(oid == null ? null : oid.getJCOInstance(), keyLength));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public AlgorithmIdentifier(Oid oid) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(oid == null ? null : oid.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

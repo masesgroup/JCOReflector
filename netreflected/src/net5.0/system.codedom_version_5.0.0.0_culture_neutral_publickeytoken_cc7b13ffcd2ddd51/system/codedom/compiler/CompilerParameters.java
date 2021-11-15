@@ -151,11 +151,11 @@ public class CompilerParameters extends NetObject  {
         }
     }
 
-    public CompilerParameters(java.lang.String[] assemblyNames) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public CompilerParameters(java.lang.String[] assemblyNames, java.lang.String outputName, boolean includeDebugInformation) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((java.lang.Object)assemblyNames));
+            setJCOInstance((JCObject)classType.NewObject(assemblyNames, outputName, includeDebugInformation));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,11 +171,11 @@ public class CompilerParameters extends NetObject  {
         }
     }
 
-    public CompilerParameters(java.lang.String[] assemblyNames, java.lang.String outputName, boolean includeDebugInformation) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
+    public CompilerParameters(java.lang.String[] assemblyNames) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(assemblyNames, outputName, includeDebugInformation));
+            setJCOInstance((JCObject)classType.NewObject((java.lang.Object)assemblyNames));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

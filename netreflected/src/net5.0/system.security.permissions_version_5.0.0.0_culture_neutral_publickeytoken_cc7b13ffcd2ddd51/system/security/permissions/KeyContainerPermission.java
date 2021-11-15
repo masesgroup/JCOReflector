@@ -150,21 +150,21 @@ public class KeyContainerPermission extends CodeAccessPermission  {
     public KeyContainerPermission() throws Throwable {
     }
 
-    public KeyContainerPermission(KeyContainerPermissionFlags flags) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(flags == null ? null : flags.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public KeyContainerPermission(KeyContainerPermissionFlags flags, KeyContainerPermissionAccessEntry[] accessList) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(flags == null ? null : flags.getJCOInstance(), toObjectFromArray(accessList)));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public KeyContainerPermission(KeyContainerPermissionFlags flags) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(flags == null ? null : flags.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

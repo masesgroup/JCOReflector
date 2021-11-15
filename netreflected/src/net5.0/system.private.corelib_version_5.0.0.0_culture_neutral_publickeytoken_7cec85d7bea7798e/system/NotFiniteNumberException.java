@@ -170,21 +170,21 @@ public class NotFiniteNumberException extends ArithmeticException {
         }
     }
 
-    public NotFiniteNumberException(java.lang.String message, double offendingNumber) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(message, offendingNumber));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public NotFiniteNumberException(java.lang.String message, double offendingNumber, NetException innerException) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(message, offendingNumber, innerException == null ? null : innerException.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NotFiniteNumberException(java.lang.String message, double offendingNumber) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(message, offendingNumber));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

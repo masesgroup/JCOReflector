@@ -242,21 +242,21 @@ public class RuntimeHelpers extends NetObject  {
         }
     }
 
-    public static void PrepareMethod(RuntimeMethodHandle method) throws Throwable {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("PrepareMethod", method == null ? null : method.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static void PrepareMethod(RuntimeMethodHandle method, RuntimeTypeHandle[] instantiation) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("PrepareMethod", method == null ? null : method.getJCOInstance(), toObjectFromArray(instantiation));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void PrepareMethod(RuntimeMethodHandle method) throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("PrepareMethod", method == null ? null : method.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

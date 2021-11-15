@@ -174,7 +174,7 @@ public class PropertyGrid extends ContainerControl  {
     
     // Methods section
     
-    public void CollapseAllGridItems() throws Throwable, system.NullReferenceException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException {
+    public void CollapseAllGridItems() throws Throwable, system.NullReferenceException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -184,7 +184,7 @@ public class PropertyGrid extends ContainerControl  {
         }
     }
 
-    public void ExpandAllGridItems() throws Throwable, system.NullReferenceException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException {
+    public void ExpandAllGridItems() throws Throwable, system.NullReferenceException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -812,7 +812,7 @@ public class PropertyGrid extends ContainerControl  {
         }
     }
 
-    public Point getContextMenuDefaultLocation() throws Throwable, system.NullReferenceException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.threading.ThreadStateException, system.OutOfMemoryException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.componentmodel.Win32Exception {
+    public Point getContextMenuDefaultLocation() throws Throwable, system.NullReferenceException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.threading.ThreadStateException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -893,7 +893,7 @@ public class PropertyGrid extends ContainerControl  {
         }
     }
 
-    public void setSelectedGridItem(GridItem SelectedGridItem) throws Throwable, system.NullReferenceException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.collections.generic.KeyNotFoundException {
+    public void setSelectedGridItem(GridItem SelectedGridItem) throws Throwable, system.NullReferenceException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.collections.generic.KeyNotFoundException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

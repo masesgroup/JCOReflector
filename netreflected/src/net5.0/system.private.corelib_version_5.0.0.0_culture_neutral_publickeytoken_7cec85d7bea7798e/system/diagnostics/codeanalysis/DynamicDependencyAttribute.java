@@ -164,16 +164,6 @@ public class DynamicDependencyAttribute extends Attribute  {
         }
     }
 
-    public DynamicDependencyAttribute(java.lang.String memberSignature) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(memberSignature));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DynamicDependencyAttribute(java.lang.String memberSignature, java.lang.String typeName, java.lang.String assemblyName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -189,6 +179,16 @@ public class DynamicDependencyAttribute extends Attribute  {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(memberSignature, type == null ? null : type.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DynamicDependencyAttribute(java.lang.String memberSignature) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(memberSignature));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

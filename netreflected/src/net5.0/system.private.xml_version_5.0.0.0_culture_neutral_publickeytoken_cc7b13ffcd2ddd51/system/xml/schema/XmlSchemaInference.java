@@ -155,22 +155,22 @@ public class XmlSchemaInference extends NetObject  {
     
     // Methods section
     
-    public XmlSchemaSet InferSchema(XmlReader instanceDocument) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.FormatException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.xml.schema.XmlSchemaInferenceException {
+    public XmlSchemaSet InferSchema(XmlReader instanceDocument, XmlSchemaSet schemas) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.FormatException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.xml.schema.XmlSchemaInferenceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objInferSchema = (JCObject)classInstance.Invoke("InferSchema", instanceDocument == null ? null : instanceDocument.getJCOInstance());
+            JCObject objInferSchema = (JCObject)classInstance.Invoke("InferSchema", instanceDocument == null ? null : instanceDocument.getJCOInstance(), schemas == null ? null : schemas.getJCOInstance());
             return new XmlSchemaSet(objInferSchema);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public XmlSchemaSet InferSchema(XmlReader instanceDocument, XmlSchemaSet schemas) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.FormatException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.xml.schema.XmlSchemaInferenceException {
+    public XmlSchemaSet InferSchema(XmlReader instanceDocument) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.FormatException, system.xml.schema.XmlSchemaException, system.xml.XmlException, system.xml.schema.XmlSchemaInferenceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objInferSchema = (JCObject)classInstance.Invoke("InferSchema", instanceDocument == null ? null : instanceDocument.getJCOInstance(), schemas == null ? null : schemas.getJCOInstance());
+            JCObject objInferSchema = (JCObject)classInstance.Invoke("InferSchema", instanceDocument == null ? null : instanceDocument.getJCOInstance());
             return new XmlSchemaSet(objInferSchema);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

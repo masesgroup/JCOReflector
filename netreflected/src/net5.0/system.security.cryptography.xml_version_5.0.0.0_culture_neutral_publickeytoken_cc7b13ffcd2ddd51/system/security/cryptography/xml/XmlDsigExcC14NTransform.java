@@ -152,21 +152,21 @@ public class XmlDsigExcC14NTransform extends Transform  {
         }
     }
 
-    public XmlDsigExcC14NTransform(boolean includeComments) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(includeComments));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public XmlDsigExcC14NTransform(boolean includeComments, java.lang.String inclusiveNamespacesPrefixList) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(includeComments, inclusiveNamespacesPrefixList));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XmlDsigExcC14NTransform(boolean includeComments) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(includeComments));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

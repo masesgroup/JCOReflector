@@ -144,21 +144,21 @@ public class ToolboxItemFilterAttribute extends Attribute  {
     public ToolboxItemFilterAttribute() throws Throwable {
     }
 
-    public ToolboxItemFilterAttribute(java.lang.String filterString) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(filterString));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ToolboxItemFilterAttribute(java.lang.String filterString, ToolboxItemFilterType filterType) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(filterString, filterType == null ? null : filterType.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ToolboxItemFilterAttribute(java.lang.String filterString) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(filterString));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

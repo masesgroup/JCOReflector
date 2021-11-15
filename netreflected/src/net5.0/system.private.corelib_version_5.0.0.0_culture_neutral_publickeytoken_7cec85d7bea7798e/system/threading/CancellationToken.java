@@ -172,22 +172,22 @@ public class CancellationToken extends ValueType  {
         }
     }
 
-    public CancellationTokenRegistration Register(Action callback) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
+    public CancellationTokenRegistration Register(Action callback, boolean useSynchronizationContext) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objRegister = (JCObject)classInstance.Invoke("Register", callback);
+            JCObject objRegister = (JCObject)classInstance.Invoke("Register", callback, useSynchronizationContext);
             return new CancellationTokenRegistration(objRegister);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public CancellationTokenRegistration Register(Action callback, boolean useSynchronizationContext) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
+    public CancellationTokenRegistration Register(Action callback) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objRegister = (JCObject)classInstance.Invoke("Register", callback, useSynchronizationContext);
+            JCObject objRegister = (JCObject)classInstance.Invoke("Register", callback);
             return new CancellationTokenRegistration(objRegister);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

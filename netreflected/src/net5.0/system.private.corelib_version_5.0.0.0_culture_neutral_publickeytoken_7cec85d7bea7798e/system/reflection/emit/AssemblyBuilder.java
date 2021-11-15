@@ -255,22 +255,22 @@ public class AssemblyBuilder extends Assembly  {
         }
     }
 
-    public Assembly GetSatelliteAssembly(CultureInfo culture) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public Assembly GetSatelliteAssembly(CultureInfo culture, Version version) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetSatelliteAssembly = (JCObject)classInstance.Invoke("GetSatelliteAssembly", culture == null ? null : culture.getJCOInstance());
+            JCObject objGetSatelliteAssembly = (JCObject)classInstance.Invoke("GetSatelliteAssembly", culture == null ? null : culture.getJCOInstance(), version == null ? null : version.getJCOInstance());
             return new Assembly(objGetSatelliteAssembly);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public Assembly GetSatelliteAssembly(CultureInfo culture, Version version) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public Assembly GetSatelliteAssembly(CultureInfo culture) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetSatelliteAssembly = (JCObject)classInstance.Invoke("GetSatelliteAssembly", culture == null ? null : culture.getJCOInstance(), version == null ? null : version.getJCOInstance());
+            JCObject objGetSatelliteAssembly = (JCObject)classInstance.Invoke("GetSatelliteAssembly", culture == null ? null : culture.getJCOInstance());
             return new Assembly(objGetSatelliteAssembly);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -316,22 +316,22 @@ public class AssemblyBuilder extends Assembly  {
         }
     }
 
-    public ModuleBuilder DefineDynamicModule(java.lang.String name) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
+    public ModuleBuilder DefineDynamicModule(java.lang.String name, boolean emitSymbolInfo) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objDefineDynamicModule = (JCObject)classInstance.Invoke("DefineDynamicModule", name);
+            JCObject objDefineDynamicModule = (JCObject)classInstance.Invoke("DefineDynamicModule", name, emitSymbolInfo);
             return new ModuleBuilder(objDefineDynamicModule);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public ModuleBuilder DefineDynamicModule(java.lang.String name, boolean emitSymbolInfo) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
+    public ModuleBuilder DefineDynamicModule(java.lang.String name) throws Throwable, system.PlatformNotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objDefineDynamicModule = (JCObject)classInstance.Invoke("DefineDynamicModule", name, emitSymbolInfo);
+            JCObject objDefineDynamicModule = (JCObject)classInstance.Invoke("DefineDynamicModule", name);
             return new ModuleBuilder(objDefineDynamicModule);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

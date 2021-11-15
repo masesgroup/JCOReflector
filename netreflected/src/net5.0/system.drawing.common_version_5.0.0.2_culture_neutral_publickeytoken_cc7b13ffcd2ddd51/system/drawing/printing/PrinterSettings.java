@@ -201,22 +201,22 @@ public class PrinterSettings extends NetObject  {
         }
     }
 
-    public Graphics CreateMeasurementGraphics(PageSettings pageSettings) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.AccessViolationException, system.drawing.printing.InvalidPrinterException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.InvalidCastException, system.MulticastNotSupportedException, system.FormatException {
+    public Graphics CreateMeasurementGraphics(PageSettings pageSettings, boolean honorOriginAtMargins) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.componentmodel.Win32Exception, system.AccessViolationException, system.drawing.printing.InvalidPrinterException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.InvalidCastException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateMeasurementGraphics = (JCObject)classInstance.Invoke("CreateMeasurementGraphics", pageSettings == null ? null : pageSettings.getJCOInstance());
+            JCObject objCreateMeasurementGraphics = (JCObject)classInstance.Invoke("CreateMeasurementGraphics", pageSettings == null ? null : pageSettings.getJCOInstance(), honorOriginAtMargins);
             return new Graphics(objCreateMeasurementGraphics);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public Graphics CreateMeasurementGraphics(PageSettings pageSettings, boolean honorOriginAtMargins) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.componentmodel.Win32Exception, system.AccessViolationException, system.drawing.printing.InvalidPrinterException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.InvalidCastException {
+    public Graphics CreateMeasurementGraphics(PageSettings pageSettings) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.AccessViolationException, system.drawing.printing.InvalidPrinterException, system.ArgumentOutOfRangeException, system.ArrayTypeMismatchException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.InvalidCastException, system.MulticastNotSupportedException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objCreateMeasurementGraphics = (JCObject)classInstance.Invoke("CreateMeasurementGraphics", pageSettings == null ? null : pageSettings.getJCOInstance(), honorOriginAtMargins);
+            JCObject objCreateMeasurementGraphics = (JCObject)classInstance.Invoke("CreateMeasurementGraphics", pageSettings == null ? null : pageSettings.getJCOInstance());
             return new Graphics(objCreateMeasurementGraphics);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

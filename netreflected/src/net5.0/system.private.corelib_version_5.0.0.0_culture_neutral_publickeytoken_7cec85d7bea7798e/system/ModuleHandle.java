@@ -173,22 +173,22 @@ public class ModuleHandle extends ValueType  {
         }
     }
 
-    public RuntimeFieldHandle ResolveFieldHandle(int fieldToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
+    public RuntimeFieldHandle ResolveFieldHandle(int fieldToken, RuntimeTypeHandle[] typeInstantiationContext, RuntimeTypeHandle[] methodInstantiationContext) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objResolveFieldHandle = (JCObject)classInstance.Invoke("ResolveFieldHandle", fieldToken);
+            JCObject objResolveFieldHandle = (JCObject)classInstance.Invoke("ResolveFieldHandle", fieldToken, toObjectFromArray(typeInstantiationContext), toObjectFromArray(methodInstantiationContext));
             return new RuntimeFieldHandle(objResolveFieldHandle);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public RuntimeFieldHandle ResolveFieldHandle(int fieldToken, RuntimeTypeHandle[] typeInstantiationContext, RuntimeTypeHandle[] methodInstantiationContext) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
+    public RuntimeFieldHandle ResolveFieldHandle(int fieldToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objResolveFieldHandle = (JCObject)classInstance.Invoke("ResolveFieldHandle", fieldToken, toObjectFromArray(typeInstantiationContext), toObjectFromArray(methodInstantiationContext));
+            JCObject objResolveFieldHandle = (JCObject)classInstance.Invoke("ResolveFieldHandle", fieldToken);
             return new RuntimeFieldHandle(objResolveFieldHandle);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -206,22 +206,22 @@ public class ModuleHandle extends ValueType  {
         }
     }
 
-    public RuntimeMethodHandle ResolveMethodHandle(int methodToken) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
+    public RuntimeMethodHandle ResolveMethodHandle(int methodToken, RuntimeTypeHandle[] typeInstantiationContext, RuntimeTypeHandle[] methodInstantiationContext) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objResolveMethodHandle = (JCObject)classInstance.Invoke("ResolveMethodHandle", methodToken);
+            JCObject objResolveMethodHandle = (JCObject)classInstance.Invoke("ResolveMethodHandle", methodToken, toObjectFromArray(typeInstantiationContext), toObjectFromArray(methodInstantiationContext));
             return new RuntimeMethodHandle(objResolveMethodHandle);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public RuntimeMethodHandle ResolveMethodHandle(int methodToken, RuntimeTypeHandle[] typeInstantiationContext, RuntimeTypeHandle[] methodInstantiationContext) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
+    public RuntimeMethodHandle ResolveMethodHandle(int methodToken) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objResolveMethodHandle = (JCObject)classInstance.Invoke("ResolveMethodHandle", methodToken, toObjectFromArray(typeInstantiationContext), toObjectFromArray(methodInstantiationContext));
+            JCObject objResolveMethodHandle = (JCObject)classInstance.Invoke("ResolveMethodHandle", methodToken);
             return new RuntimeMethodHandle(objResolveMethodHandle);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -239,22 +239,22 @@ public class ModuleHandle extends ValueType  {
         }
     }
 
-    public RuntimeTypeHandle ResolveTypeHandle(int typeToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
+    public RuntimeTypeHandle ResolveTypeHandle(int typeToken, RuntimeTypeHandle[] typeInstantiationContext, RuntimeTypeHandle[] methodInstantiationContext) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objResolveTypeHandle = (JCObject)classInstance.Invoke("ResolveTypeHandle", typeToken);
+            JCObject objResolveTypeHandle = (JCObject)classInstance.Invoke("ResolveTypeHandle", typeToken, toObjectFromArray(typeInstantiationContext), toObjectFromArray(methodInstantiationContext));
             return new RuntimeTypeHandle(objResolveTypeHandle);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public RuntimeTypeHandle ResolveTypeHandle(int typeToken, RuntimeTypeHandle[] typeInstantiationContext, RuntimeTypeHandle[] methodInstantiationContext) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
+    public RuntimeTypeHandle ResolveTypeHandle(int typeToken) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objResolveTypeHandle = (JCObject)classInstance.Invoke("ResolveTypeHandle", typeToken, toObjectFromArray(typeInstantiationContext), toObjectFromArray(methodInstantiationContext));
+            JCObject objResolveTypeHandle = (JCObject)classInstance.Invoke("ResolveTypeHandle", typeToken);
             return new RuntimeTypeHandle(objResolveTypeHandle);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

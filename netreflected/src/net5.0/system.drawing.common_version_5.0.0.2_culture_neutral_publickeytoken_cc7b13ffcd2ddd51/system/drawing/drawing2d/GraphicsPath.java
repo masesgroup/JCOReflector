@@ -174,16 +174,6 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public GraphicsPath(Point[] pts, byte[] types) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(toObjectFromArray(pts), types));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public GraphicsPath(Point[] pts, byte[] types, FillMode fillMode) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
@@ -194,7 +184,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public GraphicsPath(PointF[] pts, byte[] types) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
+    public GraphicsPath(Point[] pts, byte[] types) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -214,20 +204,20 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-
-    
-    // Methods section
-    
-    public boolean IsOutlineVisible(int x, int y, Pen pen) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public GraphicsPath(PointF[] pts, byte[] types) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
         try {
-            return (boolean)classInstance.Invoke("IsOutlineVisible", x, y, pen == null ? null : pen.getJCOInstance());
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(toObjectFromArray(pts), types));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
+
+    
+    // Methods section
+    
     public boolean IsOutlineVisible(int x, int y, Pen pen, Graphics graphics) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -238,11 +228,11 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public boolean IsOutlineVisible(Single x, Single y, Pen pen) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
+    public boolean IsOutlineVisible(int x, int y, Pen pen) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsOutlineVisible", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance(), pen == null ? null : pen.getJCOInstance());
+            return (boolean)classInstance.Invoke("IsOutlineVisible", x, y, pen == null ? null : pen.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -258,11 +248,11 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public boolean IsOutlineVisible(Point point, Pen pen) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
+    public boolean IsOutlineVisible(Single x, Single y, Pen pen) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsOutlineVisible", point == null ? null : point.getJCOInstance(), pen == null ? null : pen.getJCOInstance());
+            return (boolean)classInstance.Invoke("IsOutlineVisible", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance(), pen == null ? null : pen.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -278,7 +268,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public boolean IsOutlineVisible(PointF point, Pen pen) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
+    public boolean IsOutlineVisible(Point point, Pen pen) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -298,11 +288,11 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public boolean IsVisible(int x, int y) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
+    public boolean IsOutlineVisible(PointF point, Pen pen) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsVisible", x, y);
+            return (boolean)classInstance.Invoke("IsOutlineVisible", point == null ? null : point.getJCOInstance(), pen == null ? null : pen.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -318,11 +308,11 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public boolean IsVisible(Single x, Single y) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
+    public boolean IsVisible(int x, int y) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsVisible", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
+            return (boolean)classInstance.Invoke("IsVisible", x, y);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -338,11 +328,11 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public boolean IsVisible(Point point) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
+    public boolean IsVisible(Single x, Single y) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("IsVisible", point == null ? null : point.getJCOInstance());
+            return (boolean)classInstance.Invoke("IsVisible", x == null ? null : x.getJCOInstance(), y == null ? null : y.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -358,7 +348,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public boolean IsVisible(PointF point) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
+    public boolean IsVisible(Point point) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -373,6 +363,16 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("IsVisible", pt == null ? null : pt.getJCOInstance(), graphics == null ? null : graphics.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean IsVisible(PointF point) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("IsVisible", point == null ? null : point.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -400,22 +400,22 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public RectangleF GetBounds(Matrix matrix) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
+    public RectangleF GetBounds(Matrix matrix, Pen pen) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetBounds = (JCObject)classInstance.Invoke("GetBounds", matrix == null ? null : matrix.getJCOInstance());
+            JCObject objGetBounds = (JCObject)classInstance.Invoke("GetBounds", matrix == null ? null : matrix.getJCOInstance(), pen == null ? null : pen.getJCOInstance());
             return new RectangleF(objGetBounds);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public RectangleF GetBounds(Matrix matrix, Pen pen) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
+    public RectangleF GetBounds(Matrix matrix) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetBounds = (JCObject)classInstance.Invoke("GetBounds", matrix == null ? null : matrix.getJCOInstance(), pen == null ? null : pen.getJCOInstance());
+            JCObject objGetBounds = (JCObject)classInstance.Invoke("GetBounds", matrix == null ? null : matrix.getJCOInstance());
             return new RectangleF(objGetBounds);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -533,16 +533,6 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public void AddClosedCurve(Point[] points) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("AddClosedCurve", (java.lang.Object)toObjectFromArray(points));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void AddClosedCurve(Point[] points, Single tension) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -553,7 +543,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public void AddClosedCurve(PointF[] points) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException {
+    public void AddClosedCurve(Point[] points) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -573,11 +563,11 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public void AddCurve(Point[] points) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException {
+    public void AddClosedCurve(PointF[] points) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("AddCurve", (java.lang.Object)toObjectFromArray(points));
+            classInstance.Invoke("AddClosedCurve", (java.lang.Object)toObjectFromArray(points));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -603,7 +593,7 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public void AddCurve(PointF[] points) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException {
+    public void AddCurve(Point[] points) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -628,6 +618,16 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("AddCurve", toObjectFromArray(points), tension == null ? null : tension.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void AddCurve(PointF[] points) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("AddCurve", (java.lang.Object)toObjectFromArray(points));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -923,21 +923,21 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public void Flatten(Matrix matrix) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Flatten", matrix == null ? null : matrix.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Flatten(Matrix matrix, Single flatness) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Flatten", matrix == null ? null : matrix.getJCOInstance(), flatness == null ? null : flatness.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Flatten(Matrix matrix) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Flatten", matrix == null ? null : matrix.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -993,21 +993,11 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public void Warp(PointF[] destPoints, RectangleF srcRect) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.FormatException {
+    public void Warp(PointF[] destPoints, RectangleF srcRect, Matrix matrix, WarpMode warpMode, Single flatness) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Warp", toObjectFromArray(destPoints), srcRect == null ? null : srcRect.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void Warp(PointF[] destPoints, RectangleF srcRect, Matrix matrix) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Warp", toObjectFromArray(destPoints), srcRect == null ? null : srcRect.getJCOInstance(), matrix == null ? null : matrix.getJCOInstance());
+            classInstance.Invoke("Warp", toObjectFromArray(destPoints), srcRect == null ? null : srcRect.getJCOInstance(), matrix == null ? null : matrix.getJCOInstance(), warpMode == null ? null : warpMode.getJCOInstance(), flatness == null ? null : flatness.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1023,21 +1013,31 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public void Warp(PointF[] destPoints, RectangleF srcRect, Matrix matrix, WarpMode warpMode, Single flatness) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException {
+    public void Warp(PointF[] destPoints, RectangleF srcRect, Matrix matrix) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Warp", toObjectFromArray(destPoints), srcRect == null ? null : srcRect.getJCOInstance(), matrix == null ? null : matrix.getJCOInstance(), warpMode == null ? null : warpMode.getJCOInstance(), flatness == null ? null : flatness.getJCOInstance());
+            classInstance.Invoke("Warp", toObjectFromArray(destPoints), srcRect == null ? null : srcRect.getJCOInstance(), matrix == null ? null : matrix.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void Widen(Pen pen) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
+    public void Warp(PointF[] destPoints, RectangleF srcRect) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Widen", pen == null ? null : pen.getJCOInstance());
+            classInstance.Invoke("Warp", toObjectFromArray(destPoints), srcRect == null ? null : srcRect.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Widen(Pen pen, Matrix matrix, Single flatness) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Widen", pen == null ? null : pen.getJCOInstance(), matrix == null ? null : matrix.getJCOInstance(), flatness == null ? null : flatness.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -1053,11 +1053,11 @@ public class GraphicsPath extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public void Widen(Pen pen, Matrix matrix, Single flatness) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException {
+    public void Widen(Pen pen) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Widen", pen == null ? null : pen.getJCOInstance(), matrix == null ? null : matrix.getJCOInstance(), flatness == null ? null : flatness.getJCOInstance());
+            classInstance.Invoke("Widen", pen == null ? null : pen.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

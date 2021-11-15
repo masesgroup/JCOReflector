@@ -152,16 +152,6 @@ public class CodeVariableDeclarationStatement extends CodeStatement  {
         }
     }
 
-    public CodeVariableDeclarationStatement(CodeTypeReference type, java.lang.String name) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), name));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public CodeVariableDeclarationStatement(CodeTypeReference type, java.lang.String name, CodeExpression initExpression) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -172,11 +162,11 @@ public class CodeVariableDeclarationStatement extends CodeStatement  {
         }
     }
 
-    public CodeVariableDeclarationStatement(java.lang.String type, java.lang.String name) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException {
+    public CodeVariableDeclarationStatement(CodeTypeReference type, java.lang.String name) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(type, name));
+            setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), name));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -192,11 +182,11 @@ public class CodeVariableDeclarationStatement extends CodeStatement  {
         }
     }
 
-    public CodeVariableDeclarationStatement(NetType type, java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
+    public CodeVariableDeclarationStatement(java.lang.String type, java.lang.String name) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.RankException, system.ArrayTypeMismatchException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), name));
+            setJCOInstance((JCObject)classType.NewObject(type, name));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -207,6 +197,16 @@ public class CodeVariableDeclarationStatement extends CodeStatement  {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), name, initExpression == null ? null : initExpression.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public CodeVariableDeclarationStatement(NetType type, java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(type == null ? null : type.getJCOInstance(), name));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

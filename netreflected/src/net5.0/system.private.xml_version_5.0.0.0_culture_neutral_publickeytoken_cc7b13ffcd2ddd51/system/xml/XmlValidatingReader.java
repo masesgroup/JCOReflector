@@ -200,21 +200,21 @@ public class XmlValidatingReader extends XmlReader  {
         }
     }
 
-    public boolean MoveToAttribute(java.lang.String name) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("MoveToAttribute", name);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean MoveToAttribute(java.lang.String localName, java.lang.String namespaceURI) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("MoveToAttribute", localName, namespaceURI);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean MoveToAttribute(java.lang.String name) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("MoveToAttribute", name);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -371,21 +371,21 @@ public class XmlValidatingReader extends XmlReader  {
         }
     }
 
-    public java.lang.String GetAttribute(java.lang.String name) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (java.lang.String)classInstance.Invoke("GetAttribute", name);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public java.lang.String GetAttribute(java.lang.String localName, java.lang.String namespaceURI) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (java.lang.String)classInstance.Invoke("GetAttribute", localName, namespaceURI);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public java.lang.String GetAttribute(java.lang.String name) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (java.lang.String)classInstance.Invoke("GetAttribute", name);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

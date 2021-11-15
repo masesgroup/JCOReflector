@@ -171,16 +171,6 @@ public class XElement extends XContainer implements system.xml.serialization.IXm
         }
     }
 
-    public XElement(XName name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(name == null ? null : name.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public XElement(XName name, NetObject content) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException, system.OverflowException {
         try {
             // add reference to assemblyName.dll file
@@ -196,6 +186,16 @@ public class XElement extends XContainer implements system.xml.serialization.IXm
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(name == null ? null : name.getJCOInstance(), toObjectFromArray(content)));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public XElement(XName name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(name == null ? null : name.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -281,17 +281,6 @@ public class XElement extends XContainer implements system.xml.serialization.IXm
         }
     }
 
-    public static XElement Load(Stream stream) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objLoad = (JCObject)classType.Invoke("Load", stream == null ? null : stream.getJCOInstance());
-            return new XElement(objLoad);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static XElement Load(Stream stream, LoadOptions options) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -303,11 +292,11 @@ public class XElement extends XContainer implements system.xml.serialization.IXm
         }
     }
 
-    public static XElement Load(TextReader textReader) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OverflowException {
+    public static XElement Load(Stream stream) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objLoad = (JCObject)classType.Invoke("Load", textReader == null ? null : textReader.getJCOInstance());
+            JCObject objLoad = (JCObject)classType.Invoke("Load", stream == null ? null : stream.getJCOInstance());
             return new XElement(objLoad);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -325,11 +314,11 @@ public class XElement extends XContainer implements system.xml.serialization.IXm
         }
     }
 
-    public static XElement Load(java.lang.String uri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NotImplementedException, system.OverflowException {
+    public static XElement Load(TextReader textReader) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objLoad = (JCObject)classType.Invoke("Load", uri);
+            JCObject objLoad = (JCObject)classType.Invoke("Load", textReader == null ? null : textReader.getJCOInstance());
             return new XElement(objLoad);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -347,11 +336,11 @@ public class XElement extends XContainer implements system.xml.serialization.IXm
         }
     }
 
-    public static XElement Load(XmlReader reader) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException, system.OverflowException {
+    public static XElement Load(java.lang.String uri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.NotImplementedException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objLoad = (JCObject)classType.Invoke("Load", reader == null ? null : reader.getJCOInstance());
+            JCObject objLoad = (JCObject)classType.Invoke("Load", uri);
             return new XElement(objLoad);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -369,12 +358,12 @@ public class XElement extends XContainer implements system.xml.serialization.IXm
         }
     }
 
-    public static XElement Parse(java.lang.String text) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.xml.XmlException, system.OverflowException {
+    public static XElement Load(XmlReader reader) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objParse = (JCObject)classType.Invoke("Parse", text);
-            return new XElement(objParse);
+            JCObject objLoad = (JCObject)classType.Invoke("Load", reader == null ? null : reader.getJCOInstance());
+            return new XElement(objLoad);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -385,6 +374,17 @@ public class XElement extends XContainer implements system.xml.serialization.IXm
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objParse = (JCObject)classType.Invoke("Parse", text, options == null ? null : options.getJCOInstance());
+            return new XElement(objParse);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static XElement Parse(java.lang.String text) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.xml.XmlException, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objParse = (JCObject)classType.Invoke("Parse", text);
             return new XElement(objParse);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -473,16 +473,6 @@ public class XElement extends XContainer implements system.xml.serialization.IXm
         }
     }
 
-    public void Save(Stream stream) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Save", stream == null ? null : stream.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Save(Stream stream, SaveOptions options) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.FormatException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException, system.RankException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -493,11 +483,11 @@ public class XElement extends XContainer implements system.xml.serialization.IXm
         }
     }
 
-    public void Save(TextWriter textWriter) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException {
+    public void Save(Stream stream) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Save", textWriter == null ? null : textWriter.getJCOInstance());
+            classInstance.Invoke("Save", stream == null ? null : stream.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -513,11 +503,11 @@ public class XElement extends XContainer implements system.xml.serialization.IXm
         }
     }
 
-    public void Save(java.lang.String fileName) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.NotSupportedException, system.io.IOException, system.ArrayTypeMismatchException {
+    public void Save(TextWriter textWriter) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.NotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Invoke("Save", fileName);
+            classInstance.Invoke("Save", textWriter == null ? null : textWriter.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -528,6 +518,16 @@ public class XElement extends XContainer implements system.xml.serialization.IXm
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Save", fileName, options == null ? null : options.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Save(java.lang.String fileName) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.NotSupportedException, system.io.IOException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Save", fileName);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

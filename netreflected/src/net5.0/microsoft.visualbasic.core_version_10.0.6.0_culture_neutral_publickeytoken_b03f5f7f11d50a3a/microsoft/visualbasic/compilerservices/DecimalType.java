@@ -160,17 +160,6 @@ public class DecimalType extends NetObject  {
         }
     }
 
-    public static Decimal FromObject(NetObject Value) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.ArgumentNullException, system.InvalidCastException, system.OutOfMemoryException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objFromObject = (JCObject)classType.Invoke("FromObject", Value == null ? null : Value.getJCOInstance());
-            return new Decimal(objFromObject);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static Decimal FromObject(NetObject Value, NumberFormatInfo NumberFormat) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.InvalidCastException, system.OutOfMemoryException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -182,12 +171,12 @@ public class DecimalType extends NetObject  {
         }
     }
 
-    public static Decimal FromString(java.lang.String Value) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.NotSupportedException, system.InvalidCastException {
+    public static Decimal FromObject(NetObject Value) throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.ArgumentNullException, system.InvalidCastException, system.OutOfMemoryException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objFromString = (JCObject)classType.Invoke("FromString", Value);
-            return new Decimal(objFromString);
+            JCObject objFromObject = (JCObject)classType.Invoke("FromObject", Value == null ? null : Value.getJCOInstance());
+            return new Decimal(objFromObject);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,6 +187,17 @@ public class DecimalType extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objFromString = (JCObject)classType.Invoke("FromString", Value, NumberFormat == null ? null : NumberFormat.getJCOInstance());
+            return new Decimal(objFromString);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Decimal FromString(java.lang.String Value) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.NotSupportedException, system.InvalidCastException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objFromString = (JCObject)classType.Invoke("FromString", Value);
             return new Decimal(objFromString);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

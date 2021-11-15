@@ -267,44 +267,6 @@ public class Directory extends NetObject  {
         }
     }
 
-    public static java.lang.String[] GetDirectories(java.lang.String path) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetDirectories", path);
-            for (java.lang.Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];
-            for(int indexGetDirectories = 0; indexGetDirectories < resultingArrayList.size(); indexGetDirectories++ ) {
-				resultingArray[indexGetDirectories] = (java.lang.String)resultingArrayList.get(indexGetDirectories);
-            }
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static java.lang.String[] GetDirectories(java.lang.String path, java.lang.String searchPattern) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetDirectories", path, searchPattern);
-            for (java.lang.Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(resultingObject);
-            }
-            java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];
-            for(int indexGetDirectories = 0; indexGetDirectories < resultingArrayList.size(); indexGetDirectories++ ) {
-				resultingArray[indexGetDirectories] = (java.lang.String)resultingArrayList.get(indexGetDirectories);
-            }
-            return resultingArray;
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static java.lang.String[] GetDirectories(java.lang.String path, java.lang.String searchPattern, EnumerationOptions enumerationOptions) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.OutOfMemoryException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -343,18 +305,18 @@ public class Directory extends NetObject  {
         }
     }
 
-    public static java.lang.String[] GetFiles(java.lang.String path) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+    public static java.lang.String[] GetDirectories(java.lang.String path, java.lang.String searchPattern) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetFiles", path);
+            JCObject resultingObjects = (JCObject)classType.Invoke("GetDirectories", path, searchPattern);
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];
-            for(int indexGetFiles = 0; indexGetFiles < resultingArrayList.size(); indexGetFiles++ ) {
-				resultingArray[indexGetFiles] = (java.lang.String)resultingArrayList.get(indexGetFiles);
+            for(int indexGetDirectories = 0; indexGetDirectories < resultingArrayList.size(); indexGetDirectories++ ) {
+				resultingArray[indexGetDirectories] = (java.lang.String)resultingArrayList.get(indexGetDirectories);
             }
             return resultingArray;
         } catch (JCNativeException jcne) {
@@ -362,18 +324,18 @@ public class Directory extends NetObject  {
         }
     }
 
-    public static java.lang.String[] GetFiles(java.lang.String path, java.lang.String searchPattern) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+    public static java.lang.String[] GetDirectories(java.lang.String path) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetFiles", path, searchPattern);
+            JCObject resultingObjects = (JCObject)classType.Invoke("GetDirectories", path);
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];
-            for(int indexGetFiles = 0; indexGetFiles < resultingArrayList.size(); indexGetFiles++ ) {
-				resultingArray[indexGetFiles] = (java.lang.String)resultingArrayList.get(indexGetFiles);
+            for(int indexGetDirectories = 0; indexGetDirectories < resultingArrayList.size(); indexGetDirectories++ ) {
+				resultingArray[indexGetDirectories] = (java.lang.String)resultingArrayList.get(indexGetDirectories);
             }
             return resultingArray;
         } catch (JCNativeException jcne) {
@@ -419,18 +381,18 @@ public class Directory extends NetObject  {
         }
     }
 
-    public static java.lang.String[] GetFileSystemEntries(java.lang.String path) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+    public static java.lang.String[] GetFiles(java.lang.String path, java.lang.String searchPattern) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetFileSystemEntries", path);
+            JCObject resultingObjects = (JCObject)classType.Invoke("GetFiles", path, searchPattern);
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];
-            for(int indexGetFileSystemEntries = 0; indexGetFileSystemEntries < resultingArrayList.size(); indexGetFileSystemEntries++ ) {
-				resultingArray[indexGetFileSystemEntries] = (java.lang.String)resultingArrayList.get(indexGetFileSystemEntries);
+            for(int indexGetFiles = 0; indexGetFiles < resultingArrayList.size(); indexGetFiles++ ) {
+				resultingArray[indexGetFiles] = (java.lang.String)resultingArrayList.get(indexGetFiles);
             }
             return resultingArray;
         } catch (JCNativeException jcne) {
@@ -438,18 +400,18 @@ public class Directory extends NetObject  {
         }
     }
 
-    public static java.lang.String[] GetFileSystemEntries(java.lang.String path, java.lang.String searchPattern) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+    public static java.lang.String[] GetFiles(java.lang.String path) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
-            JCObject resultingObjects = (JCObject)classType.Invoke("GetFileSystemEntries", path, searchPattern);
+            JCObject resultingObjects = (JCObject)classType.Invoke("GetFiles", path);
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(resultingObject);
             }
             java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];
-            for(int indexGetFileSystemEntries = 0; indexGetFileSystemEntries < resultingArrayList.size(); indexGetFileSystemEntries++ ) {
-				resultingArray[indexGetFileSystemEntries] = (java.lang.String)resultingArrayList.get(indexGetFileSystemEntries);
+            for(int indexGetFiles = 0; indexGetFiles < resultingArrayList.size(); indexGetFiles++ ) {
+				resultingArray[indexGetFiles] = (java.lang.String)resultingArrayList.get(indexGetFiles);
             }
             return resultingArray;
         } catch (JCNativeException jcne) {
@@ -495,6 +457,44 @@ public class Directory extends NetObject  {
         }
     }
 
+    public static java.lang.String[] GetFileSystemEntries(java.lang.String path, java.lang.String searchPattern) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
+            JCObject resultingObjects = (JCObject)classType.Invoke("GetFileSystemEntries", path, searchPattern);
+            for (java.lang.Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];
+            for(int indexGetFileSystemEntries = 0; indexGetFileSystemEntries < resultingArrayList.size(); indexGetFileSystemEntries++ ) {
+				resultingArray[indexGetFileSystemEntries] = (java.lang.String)resultingArrayList.get(indexGetFileSystemEntries);
+            }
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static java.lang.String[] GetFileSystemEntries(java.lang.String path) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            ArrayList<java.lang.Object> resultingArrayList = new ArrayList<java.lang.Object>();
+            JCObject resultingObjects = (JCObject)classType.Invoke("GetFileSystemEntries", path);
+            for (java.lang.Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(resultingObject);
+            }
+            java.lang.String[] resultingArray = new java.lang.String[resultingArrayList.size()];
+            for(int indexGetFileSystemEntries = 0; indexGetFileSystemEntries < resultingArrayList.size(); indexGetFileSystemEntries++ ) {
+				resultingArray[indexGetFileSystemEntries] = (java.lang.String)resultingArrayList.get(indexGetFileSystemEntries);
+            }
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public static java.lang.String[] GetLogicalDrives() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -514,21 +514,21 @@ public class Directory extends NetObject  {
         }
     }
 
-    public static void Delete(java.lang.String path) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.io.IOException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            classType.Invoke("Delete", path);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static void Delete(java.lang.String path, boolean recursive) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.io.IOException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             classType.Invoke("Delete", path, recursive);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static void Delete(java.lang.String path) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.io.IOException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            classType.Invoke("Delete", path);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

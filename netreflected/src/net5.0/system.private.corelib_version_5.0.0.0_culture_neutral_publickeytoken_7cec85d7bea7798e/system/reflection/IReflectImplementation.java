@@ -226,22 +226,22 @@ public class IReflectImplementation extends NetObject implements IReflect {
         }
     }
 
-    public MethodInfo GetMethod(java.lang.String name, BindingFlags bindingAttr) throws Throwable {
+    public MethodInfo GetMethod(java.lang.String name, BindingFlags bindingAttr, Binder binder, NetType[] types, ParameterModifier[] modifiers) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetMethod = (JCObject)classInstance.Invoke("GetMethod", name, bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            JCObject objGetMethod = (JCObject)classInstance.Invoke("GetMethod", name, bindingAttr == null ? null : bindingAttr.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), toObjectFromArray(types), toObjectFromArray(modifiers));
             return new MethodInfo(objGetMethod);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public MethodInfo GetMethod(java.lang.String name, BindingFlags bindingAttr, Binder binder, NetType[] types, ParameterModifier[] modifiers) throws Throwable {
+    public MethodInfo GetMethod(java.lang.String name, BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetMethod = (JCObject)classInstance.Invoke("GetMethod", name, bindingAttr == null ? null : bindingAttr.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), toObjectFromArray(types), toObjectFromArray(modifiers));
+            JCObject objGetMethod = (JCObject)classInstance.Invoke("GetMethod", name, bindingAttr == null ? null : bindingAttr.getJCOInstance());
             return new MethodInfo(objGetMethod);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -265,22 +265,22 @@ public class IReflectImplementation extends NetObject implements IReflect {
         }
     }
 
-    public PropertyInfo GetProperty(java.lang.String name, BindingFlags bindingAttr) throws Throwable {
+    public PropertyInfo GetProperty(java.lang.String name, BindingFlags bindingAttr, Binder binder, NetType returnType, NetType[] types, ParameterModifier[] modifiers) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetProperty = (JCObject)classInstance.Invoke("GetProperty", name, bindingAttr == null ? null : bindingAttr.getJCOInstance());
+            JCObject objGetProperty = (JCObject)classInstance.Invoke("GetProperty", name, bindingAttr == null ? null : bindingAttr.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(types), toObjectFromArray(modifiers));
             return new PropertyInfo(objGetProperty);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public PropertyInfo GetProperty(java.lang.String name, BindingFlags bindingAttr, Binder binder, NetType returnType, NetType[] types, ParameterModifier[] modifiers) throws Throwable {
+    public PropertyInfo GetProperty(java.lang.String name, BindingFlags bindingAttr) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetProperty = (JCObject)classInstance.Invoke("GetProperty", name, bindingAttr == null ? null : bindingAttr.getJCOInstance(), binder == null ? null : binder.getJCOInstance(), returnType == null ? null : returnType.getJCOInstance(), toObjectFromArray(types), toObjectFromArray(modifiers));
+            JCObject objGetProperty = (JCObject)classInstance.Invoke("GetProperty", name, bindingAttr == null ? null : bindingAttr.getJCOInstance());
             return new PropertyInfo(objGetProperty);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

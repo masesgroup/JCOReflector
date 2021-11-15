@@ -129,9 +129,9 @@ public interface IDesignerHost extends IJCOBridgeReflected, IServiceContainer, I
 
     public IDesigner GetDesigner(IComponent component) throws Throwable;
 
-    public IComponent CreateComponent(NetType componentClass) throws Throwable;
-
     public IComponent CreateComponent(NetType componentClass, java.lang.String name) throws Throwable;
+
+    public IComponent CreateComponent(NetType componentClass) throws Throwable;
 
 
     public NetType GetType(java.lang.String typeName) throws Throwable;

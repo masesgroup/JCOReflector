@@ -149,16 +149,6 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
     
     // Methods section
     
-    public static boolean SignalAndWait(WaitHandle toSignal, WaitHandle toWaitOn) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.threading.AbandonedMutexException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("SignalAndWait", toSignal == null ? null : toSignal.getJCOInstance(), toWaitOn == null ? null : toWaitOn.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static boolean SignalAndWait(WaitHandle toSignal, WaitHandle toWaitOn, int millisecondsTimeout, boolean exitContext) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -179,21 +169,11 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public static boolean WaitAll(WaitHandle[] waitHandles) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.threading.AbandonedMutexException {
+    public static boolean SignalAndWait(WaitHandle toSignal, WaitHandle toWaitOn) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classType.Invoke("WaitAll", (java.lang.Object)toObjectFromArray(waitHandles));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static boolean WaitAll(WaitHandle[] waitHandles, int millisecondsTimeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.threading.AbandonedMutexException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("WaitAll", toObjectFromArray(waitHandles), millisecondsTimeout);
+            return (boolean)classType.Invoke("SignalAndWait", toSignal == null ? null : toSignal.getJCOInstance(), toWaitOn == null ? null : toWaitOn.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -209,11 +189,11 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public static boolean WaitAll(WaitHandle[] waitHandles, TimeSpan timeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.threading.AbandonedMutexException {
+    public static boolean WaitAll(WaitHandle[] waitHandles, int millisecondsTimeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classType.Invoke("WaitAll", toObjectFromArray(waitHandles), timeout == null ? null : timeout.getJCOInstance());
+            return (boolean)classType.Invoke("WaitAll", toObjectFromArray(waitHandles), millisecondsTimeout);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -229,21 +209,31 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public boolean WaitOne() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.threading.AbandonedMutexException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static boolean WaitAll(WaitHandle[] waitHandles, TimeSpan timeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.threading.AbandonedMutexException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            return (boolean)classInstance.Invoke("WaitOne");
+            return (boolean)classType.Invoke("WaitAll", toObjectFromArray(waitHandles), timeout == null ? null : timeout.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public boolean WaitOne(int millisecondsTimeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.threading.AbandonedMutexException {
+    public static boolean WaitAll(WaitHandle[] waitHandles) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.threading.AbandonedMutexException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("WaitAll", (java.lang.Object)toObjectFromArray(waitHandles));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean WaitOne() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("WaitOne", millisecondsTimeout);
+            return (boolean)classInstance.Invoke("WaitOne");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -259,11 +249,11 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public boolean WaitOne(TimeSpan timeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.threading.AbandonedMutexException {
+    public boolean WaitOne(int millisecondsTimeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (boolean)classInstance.Invoke("WaitOne", timeout == null ? null : timeout.getJCOInstance());
+            return (boolean)classInstance.Invoke("WaitOne", millisecondsTimeout);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -279,21 +269,11 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public static int WaitAny(WaitHandle[] waitHandles) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.threading.AbandonedMutexException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
+    public boolean WaitOne(TimeSpan timeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.threading.AbandonedMutexException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
         try {
-            return (int)classType.Invoke("WaitAny", (java.lang.Object)toObjectFromArray(waitHandles));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public static int WaitAny(WaitHandle[] waitHandles, int millisecondsTimeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.threading.AbandonedMutexException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (int)classType.Invoke("WaitAny", toObjectFromArray(waitHandles), millisecondsTimeout);
+            return (boolean)classInstance.Invoke("WaitOne", timeout == null ? null : timeout.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -309,11 +289,11 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
         }
     }
 
-    public static int WaitAny(WaitHandle[] waitHandles, TimeSpan timeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.threading.AbandonedMutexException {
+    public static int WaitAny(WaitHandle[] waitHandles, int millisecondsTimeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.threading.AbandonedMutexException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            return (int)classType.Invoke("WaitAny", toObjectFromArray(waitHandles), timeout == null ? null : timeout.getJCOInstance());
+            return (int)classType.Invoke("WaitAny", toObjectFromArray(waitHandles), millisecondsTimeout);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -324,6 +304,26 @@ public class WaitHandle extends MarshalByRefObject implements AutoCloseable {
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (int)classType.Invoke("WaitAny", toObjectFromArray(waitHandles), timeout == null ? null : timeout.getJCOInstance(), exitContext);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static int WaitAny(WaitHandle[] waitHandles, TimeSpan timeout) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.threading.AbandonedMutexException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (int)classType.Invoke("WaitAny", toObjectFromArray(waitHandles), timeout == null ? null : timeout.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static int WaitAny(WaitHandle[] waitHandles) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.threading.AbandonedMutexException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (int)classType.Invoke("WaitAny", (java.lang.Object)toObjectFromArray(waitHandles));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

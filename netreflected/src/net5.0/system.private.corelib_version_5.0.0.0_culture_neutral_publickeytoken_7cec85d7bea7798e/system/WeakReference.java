@@ -144,21 +144,21 @@ public class WeakReference extends NetObject  {
     public WeakReference() throws Throwable {
     }
 
-    public WeakReference(NetObject target) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(target == null ? null : target.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public WeakReference(NetObject target, boolean trackResurrection) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(target == null ? null : target.getJCOInstance(), trackResurrection));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public WeakReference(NetObject target) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(target == null ? null : target.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

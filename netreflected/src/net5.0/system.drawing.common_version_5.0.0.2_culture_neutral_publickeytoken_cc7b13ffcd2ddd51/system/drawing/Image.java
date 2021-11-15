@@ -227,17 +227,6 @@ public class Image extends MarshalByRefObject implements system.runtime.serializ
         }
     }
 
-    public static Image FromFile(java.lang.String filename) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.FormatException, system.runtime.serialization.SerializationException, system.io.IOException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objFromFile = (JCObject)classType.Invoke("FromFile", filename);
-            return new Image(objFromFile);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static Image FromFile(java.lang.String filename, boolean useEmbeddedColorManagement) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.io.IOException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -249,11 +238,22 @@ public class Image extends MarshalByRefObject implements system.runtime.serializ
         }
     }
 
-    public static Image FromStream(Stream stream) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.FormatException, system.ArrayTypeMismatchException, system.runtime.serialization.SerializationException, system.io.IOException {
+    public static Image FromFile(java.lang.String filename) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.io.FileNotFoundException, system.FormatException, system.runtime.serialization.SerializationException, system.io.IOException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objFromStream = (JCObject)classType.Invoke("FromStream", stream == null ? null : stream.getJCOInstance());
+            JCObject objFromFile = (JCObject)classType.Invoke("FromFile", filename);
+            return new Image(objFromFile);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Image FromStream(Stream stream, boolean useEmbeddedColorManagement, boolean validateImageData) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.runtime.serialization.SerializationException, system.io.IOException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objFromStream = (JCObject)classType.Invoke("FromStream", stream == null ? null : stream.getJCOInstance(), useEmbeddedColorManagement, validateImageData);
             return new Image(objFromStream);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -271,11 +271,11 @@ public class Image extends MarshalByRefObject implements system.runtime.serializ
         }
     }
 
-    public static Image FromStream(Stream stream, boolean useEmbeddedColorManagement, boolean validateImageData) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.runtime.serialization.SerializationException, system.io.IOException {
+    public static Image FromStream(Stream stream) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.FormatException, system.ArrayTypeMismatchException, system.runtime.serialization.SerializationException, system.io.IOException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objFromStream = (JCObject)classType.Invoke("FromStream", stream == null ? null : stream.getJCOInstance(), useEmbeddedColorManagement, validateImageData);
+            JCObject objFromStream = (JCObject)classType.Invoke("FromStream", stream == null ? null : stream.getJCOInstance());
             return new Image(objFromStream);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -376,16 +376,6 @@ public class Image extends MarshalByRefObject implements system.runtime.serializ
         }
     }
 
-    public void Save(java.lang.String filename) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.NotSupportedException, system.io.DirectoryNotFoundException, system.AccessViolationException, system.runtime.serialization.SerializationException, system.io.IOException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("Save", filename);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void Save(java.lang.String filename, ImageCodecInfo encoder, EncoderParameters encoderParams) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.io.DirectoryNotFoundException, system.OutOfMemoryException, system.AccessViolationException, system.runtime.serialization.SerializationException, system.io.IOException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -401,6 +391,16 @@ public class Image extends MarshalByRefObject implements system.runtime.serializ
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("Save", filename, format == null ? null : format.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void Save(java.lang.String filename) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.NotSupportedException, system.io.DirectoryNotFoundException, system.AccessViolationException, system.runtime.serialization.SerializationException, system.io.IOException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("Save", filename);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

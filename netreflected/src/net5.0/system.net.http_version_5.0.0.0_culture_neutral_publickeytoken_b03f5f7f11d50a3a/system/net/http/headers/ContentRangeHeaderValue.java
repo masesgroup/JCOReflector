@@ -145,11 +145,11 @@ public class ContentRangeHeaderValue extends NetObject implements system.IClonea
     public ContentRangeHeaderValue() throws Throwable {
     }
 
-    public ContentRangeHeaderValue(long length) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
+    public ContentRangeHeaderValue(long from, long to, long length) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(length));
+            setJCOInstance((JCObject)classType.NewObject(from, to, length));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -165,11 +165,11 @@ public class ContentRangeHeaderValue extends NetObject implements system.IClonea
         }
     }
 
-    public ContentRangeHeaderValue(long from, long to, long length) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
+    public ContentRangeHeaderValue(long length) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(from, to, length));
+            setJCOInstance((JCObject)classType.NewObject(length));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

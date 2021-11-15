@@ -159,22 +159,22 @@ public class InvokeBinder extends DynamicMetaObjectBinder  {
         }
     }
 
-    public DynamicMetaObject FallbackInvoke(DynamicMetaObject target, DynamicMetaObject[] args) throws Throwable {
+    public DynamicMetaObject FallbackInvoke(DynamicMetaObject target, DynamicMetaObject[] args, DynamicMetaObject errorSuggestion) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objFallbackInvoke = (JCObject)classInstance.Invoke("FallbackInvoke", target == null ? null : target.getJCOInstance(), toObjectFromArray(args));
+            JCObject objFallbackInvoke = (JCObject)classInstance.Invoke("FallbackInvoke", target == null ? null : target.getJCOInstance(), toObjectFromArray(args), errorSuggestion == null ? null : errorSuggestion.getJCOInstance());
             return new DynamicMetaObject(objFallbackInvoke);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DynamicMetaObject FallbackInvoke(DynamicMetaObject target, DynamicMetaObject[] args, DynamicMetaObject errorSuggestion) throws Throwable {
+    public DynamicMetaObject FallbackInvoke(DynamicMetaObject target, DynamicMetaObject[] args) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objFallbackInvoke = (JCObject)classInstance.Invoke("FallbackInvoke", target == null ? null : target.getJCOInstance(), toObjectFromArray(args), errorSuggestion == null ? null : errorSuggestion.getJCOInstance());
+            JCObject objFallbackInvoke = (JCObject)classInstance.Invoke("FallbackInvoke", target == null ? null : target.getJCOInstance(), toObjectFromArray(args));
             return new DynamicMetaObject(objFallbackInvoke);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

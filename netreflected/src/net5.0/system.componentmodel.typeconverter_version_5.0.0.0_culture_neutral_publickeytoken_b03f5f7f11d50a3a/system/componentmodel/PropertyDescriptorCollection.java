@@ -147,21 +147,21 @@ public class PropertyDescriptorCollection extends NetObjectEnumerable  {
     public PropertyDescriptorCollection() throws Throwable {
     }
 
-    public PropertyDescriptorCollection(PropertyDescriptor[] properties) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((java.lang.Object)toObjectFromArray(properties)));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public PropertyDescriptorCollection(PropertyDescriptor[] properties, boolean readOnly) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(toObjectFromArray(properties), readOnly));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PropertyDescriptorCollection(PropertyDescriptor[] properties) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject((java.lang.Object)toObjectFromArray(properties)));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -235,28 +235,6 @@ public class PropertyDescriptorCollection extends NetObjectEnumerable  {
         }
     }
 
-    public PropertyDescriptorCollection Sort(java.lang.String[] names) throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objSort = (JCObject)classInstance.Invoke("Sort", (java.lang.Object)names);
-            return new PropertyDescriptorCollection(objSort);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public PropertyDescriptorCollection Sort(JCORefOut dupParam0) throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objSort = (JCObject)classInstance.Invoke("Sort", (java.lang.Object)dupParam0.getJCRefOut());
-            return new PropertyDescriptorCollection(objSort);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public PropertyDescriptorCollection Sort(java.lang.String[] names, IComparer comparer) throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -273,6 +251,28 @@ public class PropertyDescriptorCollection extends NetObjectEnumerable  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objSort = (JCObject)classInstance.Invoke("Sort", dupParam0.getJCRefOut(), dupParam1 == null ? null : dupParam1.getJCOInstance());
+            return new PropertyDescriptorCollection(objSort);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PropertyDescriptorCollection Sort(java.lang.String[] names) throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objSort = (JCObject)classInstance.Invoke("Sort", (java.lang.Object)names);
+            return new PropertyDescriptorCollection(objSort);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public PropertyDescriptorCollection Sort(JCORefOut dupParam0) throws Throwable, system.PlatformNotSupportedException, system.InvalidOperationException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objSort = (JCObject)classInstance.Invoke("Sort", (java.lang.Object)dupParam0.getJCRefOut());
             return new PropertyDescriptorCollection(objSort);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

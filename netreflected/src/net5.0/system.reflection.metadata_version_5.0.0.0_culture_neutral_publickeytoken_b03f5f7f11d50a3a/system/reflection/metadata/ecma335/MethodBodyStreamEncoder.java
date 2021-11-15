@@ -162,21 +162,21 @@ public class MethodBodyStreamEncoder extends ValueType  {
     
     // Methods section
     
-    public int AddMethodBody(InstructionEncoder instructionEncoder, int maxStack, StandaloneSignatureHandle localVariablesSignature, MethodBodyAttributes attributes) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("AddMethodBody", instructionEncoder == null ? null : instructionEncoder.getJCOInstance(), maxStack, localVariablesSignature == null ? null : localVariablesSignature.getJCOInstance(), attributes == null ? null : attributes.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int AddMethodBody(InstructionEncoder instructionEncoder, int maxStack, StandaloneSignatureHandle localVariablesSignature, MethodBodyAttributes attributes, boolean hasDynamicStackAllocation) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Invoke("AddMethodBody", instructionEncoder == null ? null : instructionEncoder.getJCOInstance(), maxStack, localVariablesSignature == null ? null : localVariablesSignature.getJCOInstance(), attributes == null ? null : attributes.getJCOInstance(), hasDynamicStackAllocation);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int AddMethodBody(InstructionEncoder instructionEncoder, int maxStack, StandaloneSignatureHandle localVariablesSignature, MethodBodyAttributes attributes) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("AddMethodBody", instructionEncoder == null ? null : instructionEncoder.getJCOInstance(), maxStack, localVariablesSignature == null ? null : localVariablesSignature.getJCOInstance(), attributes == null ? null : attributes.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

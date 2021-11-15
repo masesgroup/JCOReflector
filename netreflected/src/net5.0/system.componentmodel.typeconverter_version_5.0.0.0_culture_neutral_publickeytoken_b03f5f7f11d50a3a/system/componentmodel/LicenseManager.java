@@ -160,21 +160,21 @@ public class LicenseManager extends NetObject  {
         }
     }
 
-    public static boolean IsValid(NetType type) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.reflection.AmbiguousMatchException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            return (boolean)classType.Invoke("IsValid", type == null ? null : type.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static boolean IsValid(NetType type, NetObject instance, JCORefOut<License> license) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.reflection.AmbiguousMatchException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
             return (boolean)classType.Invoke("IsValid", type == null ? null : type.getJCOInstance(), instance == null ? null : instance.getJCOInstance(), license.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static boolean IsValid(NetType type) throws Throwable, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.reflection.AmbiguousMatchException, system.TypeLoadException, system.MissingMethodException, system.reflection.TargetInvocationException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            return (boolean)classType.Invoke("IsValid", type == null ? null : type.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -191,22 +191,22 @@ public class LicenseManager extends NetObject  {
         }
     }
 
-    public static NetObject CreateWithContext(NetType type, LicenseContext creationContext) throws Throwable, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static NetObject CreateWithContext(NetType type, LicenseContext creationContext, NetObject[] args) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateWithContext = (JCObject)classType.Invoke("CreateWithContext", type == null ? null : type.getJCOInstance(), creationContext == null ? null : creationContext.getJCOInstance());
+            JCObject objCreateWithContext = (JCObject)classType.Invoke("CreateWithContext", type == null ? null : type.getJCOInstance(), creationContext == null ? null : creationContext.getJCOInstance(), toObjectFromArray(args));
             return new NetObject(objCreateWithContext);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static NetObject CreateWithContext(NetType type, LicenseContext creationContext, NetObject[] args) throws Throwable, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public static NetObject CreateWithContext(NetType type, LicenseContext creationContext) throws Throwable, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateWithContext = (JCObject)classType.Invoke("CreateWithContext", type == null ? null : type.getJCOInstance(), creationContext == null ? null : creationContext.getJCOInstance(), toObjectFromArray(args));
+            JCObject objCreateWithContext = (JCObject)classType.Invoke("CreateWithContext", type == null ? null : type.getJCOInstance(), creationContext == null ? null : creationContext.getJCOInstance());
             return new NetObject(objCreateWithContext);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

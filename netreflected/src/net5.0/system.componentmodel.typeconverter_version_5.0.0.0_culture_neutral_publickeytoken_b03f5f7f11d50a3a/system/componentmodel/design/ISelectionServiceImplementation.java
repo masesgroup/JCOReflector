@@ -159,21 +159,21 @@ public class ISelectionServiceImplementation extends NetObject implements ISelec
         }
     }
 
-    public void SetSelectedComponents(ICollection components) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetSelectedComponents", components == null ? null : components.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void SetSelectedComponents(ICollection components, SelectionTypes selectionType) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetSelectedComponents", components == null ? null : components.getJCOInstance(), selectionType == null ? null : selectionType.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetSelectedComponents(ICollection components) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetSelectedComponents", components == null ? null : components.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

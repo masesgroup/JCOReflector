@@ -146,21 +146,11 @@ public class TextFieldParser extends NetObject implements AutoCloseable {
     public TextFieldParser() throws Throwable {
     }
 
-    public TextFieldParser(Stream stream) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.text.regularexpressions.RegexParseException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.NotSupportedException {
+    public TextFieldParser(Stream stream, Encoding defaultEncoding, boolean detectEncoding, boolean leaveOpen) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.text.regularexpressions.RegexParseException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(stream == null ? null : stream.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TextFieldParser(Stream stream, Encoding defaultEncoding) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.text.regularexpressions.RegexParseException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.NotSupportedException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(stream == null ? null : stream.getJCOInstance(), defaultEncoding == null ? null : defaultEncoding.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(stream == null ? null : stream.getJCOInstance(), defaultEncoding == null ? null : defaultEncoding.getJCOInstance(), detectEncoding, leaveOpen));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -176,11 +166,21 @@ public class TextFieldParser extends NetObject implements AutoCloseable {
         }
     }
 
-    public TextFieldParser(Stream stream, Encoding defaultEncoding, boolean detectEncoding, boolean leaveOpen) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.text.regularexpressions.RegexParseException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.NotSupportedException {
+    public TextFieldParser(Stream stream, Encoding defaultEncoding) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.text.regularexpressions.RegexParseException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(stream == null ? null : stream.getJCOInstance(), defaultEncoding == null ? null : defaultEncoding.getJCOInstance(), detectEncoding, leaveOpen));
+            setJCOInstance((JCObject)classType.NewObject(stream == null ? null : stream.getJCOInstance(), defaultEncoding == null ? null : defaultEncoding.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TextFieldParser(Stream stream) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.text.regularexpressions.RegexParseException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.NotSupportedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(stream == null ? null : stream.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -196,11 +196,11 @@ public class TextFieldParser extends NetObject implements AutoCloseable {
         }
     }
 
-    public TextFieldParser(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.text.regularexpressions.RegexParseException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.io.IOException {
+    public TextFieldParser(java.lang.String path, Encoding defaultEncoding, boolean detectEncoding) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.text.regularexpressions.RegexParseException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.io.IOException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(path));
+            setJCOInstance((JCObject)classType.NewObject(path, defaultEncoding == null ? null : defaultEncoding.getJCOInstance(), detectEncoding));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -216,11 +216,11 @@ public class TextFieldParser extends NetObject implements AutoCloseable {
         }
     }
 
-    public TextFieldParser(java.lang.String path, Encoding defaultEncoding, boolean detectEncoding) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.text.regularexpressions.RegexParseException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.io.IOException {
+    public TextFieldParser(java.lang.String path) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.text.regularexpressions.RegexParseException, system.collections.generic.KeyNotFoundException, system.IndexOutOfRangeException, system.NotSupportedException, system.io.FileNotFoundException, system.runtime.serialization.SerializationException, system.ObjectDisposedException, system.io.IOException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(path, defaultEncoding == null ? null : defaultEncoding.getJCOInstance(), detectEncoding));
+            setJCOInstance((JCObject)classType.NewObject(path));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

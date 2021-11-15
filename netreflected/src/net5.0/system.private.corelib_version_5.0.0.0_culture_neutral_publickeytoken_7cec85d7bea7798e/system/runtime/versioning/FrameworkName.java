@@ -144,11 +144,11 @@ public class FrameworkName extends NetObject  {
     public FrameworkName() throws Throwable {
     }
 
-    public FrameworkName(java.lang.String frameworkName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
+    public FrameworkName(java.lang.String identifier, Version version, java.lang.String profile) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(frameworkName));
+            setJCOInstance((JCObject)classType.NewObject(identifier, version == null ? null : version.getJCOInstance(), profile));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -164,11 +164,11 @@ public class FrameworkName extends NetObject  {
         }
     }
 
-    public FrameworkName(java.lang.String identifier, Version version, java.lang.String profile) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
+    public FrameworkName(java.lang.String frameworkName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(identifier, version == null ? null : version.getJCOInstance(), profile));
+            setJCOInstance((JCObject)classType.NewObject(frameworkName));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

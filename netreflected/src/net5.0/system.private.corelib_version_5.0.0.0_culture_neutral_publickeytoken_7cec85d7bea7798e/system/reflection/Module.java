@@ -234,17 +234,6 @@ public class Module extends NetObject  {
         }
     }
 
-    public FieldInfo GetField(java.lang.String name) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetField = (JCObject)classInstance.Invoke("GetField", name);
-            return new FieldInfo(objGetField);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public FieldInfo GetField(java.lang.String name, BindingFlags bindingAttr) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -256,12 +245,12 @@ public class Module extends NetObject  {
         }
     }
 
-    public FieldInfo ResolveField(int metadataToken) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public FieldInfo GetField(java.lang.String name) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objResolveField = (JCObject)classInstance.Invoke("ResolveField", metadataToken);
-            return new FieldInfo(objResolveField);
+            JCObject objGetField = (JCObject)classInstance.Invoke("GetField", name);
+            return new FieldInfo(objGetField);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -272,6 +261,17 @@ public class Module extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objResolveField = (JCObject)classInstance.Invoke("ResolveField", metadataToken, toObjectFromArray(genericTypeArguments), toObjectFromArray(genericMethodArguments));
+            return new FieldInfo(objResolveField);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public FieldInfo ResolveField(int metadataToken) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objResolveField = (JCObject)classInstance.Invoke("ResolveField", metadataToken);
             return new FieldInfo(objResolveField);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -312,17 +312,6 @@ public class Module extends NetObject  {
         }
     }
 
-    public MemberInfo ResolveMember(int metadataToken) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objResolveMember = (JCObject)classInstance.Invoke("ResolveMember", metadataToken);
-            return new MemberInfo(objResolveMember);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public MemberInfo ResolveMember(int metadataToken, NetType[] genericTypeArguments, NetType[] genericMethodArguments) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -334,12 +323,12 @@ public class Module extends NetObject  {
         }
     }
 
-    public MethodBase ResolveMethod(int metadataToken) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public MemberInfo ResolveMember(int metadataToken) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objResolveMethod = (JCObject)classInstance.Invoke("ResolveMethod", metadataToken);
-            return new MethodBase(objResolveMethod);
+            JCObject objResolveMember = (JCObject)classInstance.Invoke("ResolveMember", metadataToken);
+            return new MemberInfo(objResolveMember);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -356,12 +345,12 @@ public class Module extends NetObject  {
         }
     }
 
-    public MethodInfo GetMethod(java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
+    public MethodBase ResolveMethod(int metadataToken) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetMethod = (JCObject)classInstance.Invoke("GetMethod", name);
-            return new MethodInfo(objGetMethod);
+            JCObject objResolveMethod = (JCObject)classInstance.Invoke("ResolveMethod", metadataToken);
+            return new MethodBase(objResolveMethod);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -383,6 +372,17 @@ public class Module extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objGetMethod = (JCObject)classInstance.Invoke("GetMethod", name, toObjectFromArray(types));
+            return new MethodInfo(objGetMethod);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MethodInfo GetMethod(java.lang.String name) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetMethod = (JCObject)classInstance.Invoke("GetMethod", name);
             return new MethodInfo(objGetMethod);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -433,11 +433,11 @@ public class Module extends NetObject  {
         }
     }
 
-    public NetType GetType(java.lang.String className) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+    public NetType GetType(java.lang.String className, boolean throwOnError, boolean ignoreCase) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetType = (JCObject)classInstance.Invoke("GetType", className);
+            JCObject objGetType = (JCObject)classInstance.Invoke("GetType", className, throwOnError, ignoreCase);
             return new NetType(objGetType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -455,23 +455,12 @@ public class Module extends NetObject  {
         }
     }
 
-    public NetType GetType(java.lang.String className, boolean throwOnError, boolean ignoreCase) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException {
+    public NetType GetType(java.lang.String className) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetType = (JCObject)classInstance.Invoke("GetType", className, throwOnError, ignoreCase);
+            JCObject objGetType = (JCObject)classInstance.Invoke("GetType", className);
             return new NetType(objGetType);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public NetType ResolveType(int metadataToken) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objResolveType = (JCObject)classInstance.Invoke("ResolveType", metadataToken);
-            return new NetType(objResolveType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -482,6 +471,17 @@ public class Module extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             JCObject objResolveType = (JCObject)classInstance.Invoke("ResolveType", metadataToken, toObjectFromArray(genericTypeArguments), toObjectFromArray(genericMethodArguments));
+            return new NetType(objResolveType);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public NetType ResolveType(int metadataToken) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objResolveType = (JCObject)classInstance.Invoke("ResolveType", metadataToken);
             return new NetType(objResolveType);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

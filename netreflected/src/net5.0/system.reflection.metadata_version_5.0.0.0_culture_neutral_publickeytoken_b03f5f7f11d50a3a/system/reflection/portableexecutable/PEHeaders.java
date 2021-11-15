@@ -147,11 +147,11 @@ public class PEHeaders extends NetObject  {
     public PEHeaders() throws Throwable {
     }
 
-    public PEHeaders(Stream peStream) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.BadImageFormatException, system.globalization.CultureNotFoundException {
+    public PEHeaders(Stream peStream, int size, boolean isLoadedImage) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.BadImageFormatException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(peStream == null ? null : peStream.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(peStream == null ? null : peStream.getJCOInstance(), size, isLoadedImage));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -167,11 +167,11 @@ public class PEHeaders extends NetObject  {
         }
     }
 
-    public PEHeaders(Stream peStream, int size, boolean isLoadedImage) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.BadImageFormatException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException {
+    public PEHeaders(Stream peStream) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.BadImageFormatException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(peStream == null ? null : peStream.getJCOInstance(), size, isLoadedImage));
+            setJCOInstance((JCObject)classType.NewObject(peStream == null ? null : peStream.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -157,21 +157,21 @@ public class MediaPermission extends CodeAccessPermission  {
         }
     }
 
-    public MediaPermission(MediaPermissionAudio permissionAudio) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(permissionAudio == null ? null : permissionAudio.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public MediaPermission(MediaPermissionAudio permissionAudio, MediaPermissionVideo permissionVideo, MediaPermissionImage permissionImage) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(permissionAudio == null ? null : permissionAudio.getJCOInstance(), permissionVideo == null ? null : permissionVideo.getJCOInstance(), permissionImage == null ? null : permissionImage.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public MediaPermission(MediaPermissionAudio permissionAudio) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(permissionAudio == null ? null : permissionAudio.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

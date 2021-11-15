@@ -149,17 +149,6 @@ public class SingleType extends NetObject  {
     
     // Methods section
     
-    public static Single FromObject(NetObject Value) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidCastException, system.OutOfMemoryException, system.NotSupportedException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objFromObject = (JCObject)classType.Invoke("FromObject", Value == null ? null : Value.getJCOInstance());
-            return new Single(objFromObject);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static Single FromObject(NetObject Value, NumberFormatInfo NumberFormat) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.InvalidCastException, system.OutOfMemoryException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -171,12 +160,12 @@ public class SingleType extends NetObject  {
         }
     }
 
-    public static Single FromString(java.lang.String Value) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.InvalidCastException {
+    public static Single FromObject(NetObject Value) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidCastException, system.OutOfMemoryException, system.NotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objFromString = (JCObject)classType.Invoke("FromString", Value);
-            return new Single(objFromString);
+            JCObject objFromObject = (JCObject)classType.Invoke("FromObject", Value == null ? null : Value.getJCOInstance());
+            return new Single(objFromObject);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -187,6 +176,17 @@ public class SingleType extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objFromString = (JCObject)classType.Invoke("FromString", Value, NumberFormat == null ? null : NumberFormat.getJCOInstance());
+            return new Single(objFromString);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static Single FromString(java.lang.String Value) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentException, system.IndexOutOfRangeException, system.FormatException, system.OverflowException, system.ObjectDisposedException, system.InvalidCastException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objFromString = (JCObject)classType.Invoke("FromString", Value);
             return new Single(objFromString);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

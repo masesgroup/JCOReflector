@@ -152,16 +152,6 @@ public class ExtendedProtectionPolicy extends NetObject implements system.runtim
     public ExtendedProtectionPolicy() throws Throwable {
     }
 
-    public ExtendedProtectionPolicy(PolicyEnforcement policyEnforcement) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(policyEnforcement == null ? null : policyEnforcement.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public ExtendedProtectionPolicy(PolicyEnforcement policyEnforcement, ChannelBinding customChannelBinding) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
@@ -187,6 +177,16 @@ public class ExtendedProtectionPolicy extends NetObject implements system.runtim
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(policyEnforcement == null ? null : policyEnforcement.getJCOInstance(), protectionScenario == null ? null : protectionScenario.getJCOInstance(), customServiceNames == null ? null : customServiceNames.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public ExtendedProtectionPolicy(PolicyEnforcement policyEnforcement) throws Throwable {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(policyEnforcement == null ? null : policyEnforcement.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

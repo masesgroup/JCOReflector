@@ -143,16 +143,6 @@ public class DebuggerVisualizerAttribute extends Attribute  {
     public DebuggerVisualizerAttribute() throws Throwable {
     }
 
-    public DebuggerVisualizerAttribute(java.lang.String visualizerTypeName) throws Throwable {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(visualizerTypeName));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DebuggerVisualizerAttribute(java.lang.String visualizerTypeName, java.lang.String visualizerObjectSourceTypeName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
@@ -173,11 +163,11 @@ public class DebuggerVisualizerAttribute extends Attribute  {
         }
     }
 
-    public DebuggerVisualizerAttribute(NetType visualizer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
+    public DebuggerVisualizerAttribute(java.lang.String visualizerTypeName) throws Throwable {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(visualizer == null ? null : visualizer.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(visualizerTypeName));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -198,6 +188,16 @@ public class DebuggerVisualizerAttribute extends Attribute  {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(visualizer == null ? null : visualizer.getJCOInstance(), visualizerObjectSource == null ? null : visualizerObjectSource.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DebuggerVisualizerAttribute(NetType visualizer) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(visualizer == null ? null : visualizer.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

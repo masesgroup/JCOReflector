@@ -177,17 +177,6 @@ public class FileSystemAclExtensions extends NetObject  {
         }
     }
 
-    public static DirectorySecurity GetAccessControl(DirectoryInfo directoryInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException, system.OverflowException {
-        if (classType == null)
-            throw new UnsupportedOperationException("classType is null.");
-        try {
-            JCObject objGetAccessControl = (JCObject)classType.Invoke("GetAccessControl", directoryInfo == null ? null : directoryInfo.getJCOInstance());
-            return new DirectorySecurity(objGetAccessControl);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public static DirectorySecurity GetAccessControl(DirectoryInfo directoryInfo, AccessControlSections includeSections) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
@@ -199,12 +188,12 @@ public class FileSystemAclExtensions extends NetObject  {
         }
     }
 
-    public static FileSecurity GetAccessControl(FileInfo fileInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException, system.OverflowException {
+    public static DirectorySecurity GetAccessControl(DirectoryInfo directoryInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.collections.generic.KeyNotFoundException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException, system.OverflowException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objGetAccessControl = (JCObject)classType.Invoke("GetAccessControl", fileInfo == null ? null : fileInfo.getJCOInstance());
-            return new FileSecurity(objGetAccessControl);
+            JCObject objGetAccessControl = (JCObject)classType.Invoke("GetAccessControl", directoryInfo == null ? null : directoryInfo.getJCOInstance());
+            return new DirectorySecurity(objGetAccessControl);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,6 +204,17 @@ public class FileSystemAclExtensions extends NetObject  {
             throw new UnsupportedOperationException("classType is null.");
         try {
             JCObject objGetAccessControl = (JCObject)classType.Invoke("GetAccessControl", fileInfo == null ? null : fileInfo.getJCOInstance(), includeSections == null ? null : includeSections.getJCOInstance());
+            return new FileSecurity(objGetAccessControl);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public static FileSecurity GetAccessControl(FileInfo fileInfo) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.threading.SynchronizationLockException, system.OutOfMemoryException, system.UnauthorizedAccessException, system.security.accesscontrol.PrivilegeNotHeldException, system.OverflowException {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
+        try {
+            JCObject objGetAccessControl = (JCObject)classType.Invoke("GetAccessControl", fileInfo == null ? null : fileInfo.getJCOInstance());
             return new FileSecurity(objGetAccessControl);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

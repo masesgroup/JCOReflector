@@ -170,22 +170,22 @@ public class InvokeMemberBinder extends DynamicMetaObjectBinder  {
         }
     }
 
-    public DynamicMetaObject FallbackInvokeMember(DynamicMetaObject target, DynamicMetaObject[] args) throws Throwable {
+    public DynamicMetaObject FallbackInvokeMember(DynamicMetaObject target, DynamicMetaObject[] args, DynamicMetaObject errorSuggestion) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objFallbackInvokeMember = (JCObject)classInstance.Invoke("FallbackInvokeMember", target == null ? null : target.getJCOInstance(), toObjectFromArray(args));
+            JCObject objFallbackInvokeMember = (JCObject)classInstance.Invoke("FallbackInvokeMember", target == null ? null : target.getJCOInstance(), toObjectFromArray(args), errorSuggestion == null ? null : errorSuggestion.getJCOInstance());
             return new DynamicMetaObject(objFallbackInvokeMember);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public DynamicMetaObject FallbackInvokeMember(DynamicMetaObject target, DynamicMetaObject[] args, DynamicMetaObject errorSuggestion) throws Throwable {
+    public DynamicMetaObject FallbackInvokeMember(DynamicMetaObject target, DynamicMetaObject[] args) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objFallbackInvokeMember = (JCObject)classInstance.Invoke("FallbackInvokeMember", target == null ? null : target.getJCOInstance(), toObjectFromArray(args), errorSuggestion == null ? null : errorSuggestion.getJCOInstance());
+            JCObject objFallbackInvokeMember = (JCObject)classInstance.Invoke("FallbackInvokeMember", target == null ? null : target.getJCOInstance(), toObjectFromArray(args));
             return new DynamicMetaObject(objFallbackInvokeMember);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

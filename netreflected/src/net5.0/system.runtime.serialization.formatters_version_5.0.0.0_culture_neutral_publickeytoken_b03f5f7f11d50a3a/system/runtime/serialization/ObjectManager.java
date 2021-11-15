@@ -253,36 +253,6 @@ public class ObjectManager extends NetObject  {
         }
     }
 
-    public void RegisterObject(NetObject obj, long objectID) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.runtime.serialization.SerializationException, system.MulticastNotSupportedException, system.FormatException, system.MissingMemberException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RegisterObject", obj == null ? null : obj.getJCOInstance(), objectID);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void RegisterObject(NetObject obj, long objectID, SerializationInfo info) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.runtime.serialization.SerializationException, system.MulticastNotSupportedException, system.FormatException, system.MissingMemberException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RegisterObject", obj == null ? null : obj.getJCOInstance(), objectID, info == null ? null : info.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void RegisterObject(NetObject obj, long objectID, SerializationInfo info, long idOfContainingObj, MemberInfo member) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.runtime.serialization.SerializationException, system.MulticastNotSupportedException, system.MissingMemberException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("RegisterObject", obj == null ? null : obj.getJCOInstance(), objectID, info == null ? null : info.getJCOInstance(), idOfContainingObj, member == null ? null : member.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void RegisterObject(NetObject obj, long objectID, SerializationInfo info, long idOfContainingObj, MemberInfo member, int[] arrayIndex) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.ArrayTypeMismatchException, system.runtime.serialization.SerializationException, system.MulticastNotSupportedException, system.FormatException, system.MissingMemberException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -298,6 +268,36 @@ public class ObjectManager extends NetObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RegisterObject", dupParam0 == null ? null : dupParam0.getJCOInstance(), dupParam1, dupParam2 == null ? null : dupParam2.getJCOInstance(), dupParam3, dupParam4 == null ? null : dupParam4.getJCOInstance(), dupParam5.getJCRefOut());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void RegisterObject(NetObject obj, long objectID, SerializationInfo info, long idOfContainingObj, MemberInfo member) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.PlatformNotSupportedException, system.runtime.serialization.SerializationException, system.MulticastNotSupportedException, system.MissingMemberException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RegisterObject", obj == null ? null : obj.getJCOInstance(), objectID, info == null ? null : info.getJCOInstance(), idOfContainingObj, member == null ? null : member.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void RegisterObject(NetObject obj, long objectID, SerializationInfo info) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.runtime.serialization.SerializationException, system.MulticastNotSupportedException, system.FormatException, system.MissingMemberException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RegisterObject", obj == null ? null : obj.getJCOInstance(), objectID, info == null ? null : info.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void RegisterObject(NetObject obj, long objectID) throws Throwable, system.ArgumentException, system.IndexOutOfRangeException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.runtime.serialization.SerializationException, system.MulticastNotSupportedException, system.FormatException, system.MissingMemberException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RegisterObject", obj == null ? null : obj.getJCOInstance(), objectID);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

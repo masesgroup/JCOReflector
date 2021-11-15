@@ -191,21 +191,21 @@ public class XmlSchemas extends CollectionBase  {
         }
     }
 
-    public int Add(XmlSchema schema) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (int)classInstance.Invoke("Add", schema == null ? null : schema.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public int Add(XmlSchema schema, Uri baseUri) throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (int)classInstance.Invoke("Add", schema == null ? null : schema.getJCOInstance(), baseUri == null ? null : baseUri.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public int Add(XmlSchema schema) throws Throwable {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (int)classInstance.Invoke("Add", schema == null ? null : schema.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

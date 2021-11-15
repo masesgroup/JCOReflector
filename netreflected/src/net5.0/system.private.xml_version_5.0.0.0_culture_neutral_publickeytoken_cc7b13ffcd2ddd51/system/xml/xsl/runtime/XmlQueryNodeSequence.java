@@ -185,22 +185,22 @@ public class XmlQueryNodeSequence extends NetObjectEnumerable  {
     
     // Methods section
     
-    public static XmlQueryNodeSequence CreateOrReuse(XmlQueryNodeSequence seq) throws Throwable {
+    public static XmlQueryNodeSequence CreateOrReuse(XmlQueryNodeSequence seq, XPathNavigator navigator) throws Throwable, system.ArgumentOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateOrReuse = (JCObject)classType.Invoke("CreateOrReuse", seq == null ? null : seq.getJCOInstance());
+            JCObject objCreateOrReuse = (JCObject)classType.Invoke("CreateOrReuse", seq == null ? null : seq.getJCOInstance(), navigator == null ? null : navigator.getJCOInstance());
             return new XmlQueryNodeSequence(objCreateOrReuse);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public static XmlQueryNodeSequence CreateOrReuse(XmlQueryNodeSequence seq, XPathNavigator navigator) throws Throwable, system.ArgumentOutOfRangeException {
+    public static XmlQueryNodeSequence CreateOrReuse(XmlQueryNodeSequence seq) throws Throwable {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject objCreateOrReuse = (JCObject)classType.Invoke("CreateOrReuse", seq == null ? null : seq.getJCOInstance(), navigator == null ? null : navigator.getJCOInstance());
+            JCObject objCreateOrReuse = (JCObject)classType.Invoke("CreateOrReuse", seq == null ? null : seq.getJCOInstance());
             return new XmlQueryNodeSequence(objCreateOrReuse);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);

@@ -151,11 +151,11 @@ public class CspParameters extends NetObject  {
         }
     }
 
-    public CspParameters(int dwTypeIn) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
+    public CspParameters(int dwTypeIn, java.lang.String strProviderNameIn, java.lang.String strContainerNameIn) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(dwTypeIn));
+            setJCOInstance((JCObject)classType.NewObject(dwTypeIn, strProviderNameIn, strContainerNameIn));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -171,11 +171,11 @@ public class CspParameters extends NetObject  {
         }
     }
 
-    public CspParameters(int dwTypeIn, java.lang.String strProviderNameIn, java.lang.String strContainerNameIn) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException {
+    public CspParameters(int dwTypeIn) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(dwTypeIn, strProviderNameIn, strContainerNameIn));
+            setJCOInstance((JCObject)classType.NewObject(dwTypeIn));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

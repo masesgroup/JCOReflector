@@ -155,26 +155,6 @@ public class TransactionScope extends NetObject implements AutoCloseable {
         }
     }
 
-    public TransactionScope(Transaction transactionToUse) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OverflowException, system.FormatException, system.ArgumentException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.transactions.TransactionException, system.ObjectDisposedException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(transactionToUse == null ? null : transactionToUse.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TransactionScope(Transaction transactionToUse, TimeSpan scopeTimeout) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OverflowException, system.FormatException, system.ArgumentException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.transactions.TransactionException, system.ObjectDisposedException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(transactionToUse == null ? null : transactionToUse.getJCOInstance(), scopeTimeout == null ? null : scopeTimeout.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public TransactionScope(Transaction transactionToUse, TimeSpan scopeTimeout, EnterpriseServicesInteropOption interopOption) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OverflowException, system.FormatException, system.ArgumentException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.OutOfMemoryException, system.ObjectDisposedException, system.transactions.TransactionException {
         try {
             // add reference to assemblyName.dll file
@@ -195,11 +175,31 @@ public class TransactionScope extends NetObject implements AutoCloseable {
         }
     }
 
+    public TransactionScope(Transaction transactionToUse, TimeSpan scopeTimeout) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OverflowException, system.FormatException, system.ArgumentException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.transactions.TransactionException, system.ObjectDisposedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(transactionToUse == null ? null : transactionToUse.getJCOInstance(), scopeTimeout == null ? null : scopeTimeout.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public TransactionScope(Transaction transactionToUse, TransactionScopeAsyncFlowOption asyncFlowOption) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OverflowException, system.FormatException, system.ArgumentException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.OutOfMemoryException, system.ObjectDisposedException, system.transactions.TransactionException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(transactionToUse == null ? null : transactionToUse.getJCOInstance(), asyncFlowOption == null ? null : asyncFlowOption.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TransactionScope(Transaction transactionToUse) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OverflowException, system.FormatException, system.ArgumentException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.transactions.TransactionException, system.ObjectDisposedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(transactionToUse == null ? null : transactionToUse.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -215,26 +215,6 @@ public class TransactionScope extends NetObject implements AutoCloseable {
         }
     }
 
-    public TransactionScope(TransactionScopeOption scopeOption) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OverflowException, system.FormatException, system.ArgumentException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.transactions.TransactionException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(scopeOption == null ? null : scopeOption.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public TransactionScope(TransactionScopeOption scopeOption, TimeSpan scopeTimeout) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OverflowException, system.FormatException, system.ArgumentException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.transactions.TransactionException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(scopeOption == null ? null : scopeOption.getJCOInstance(), scopeTimeout == null ? null : scopeTimeout.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public TransactionScope(TransactionScopeOption scopeOption, TimeSpan scopeTimeout, TransactionScopeAsyncFlowOption asyncFlowOption) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OverflowException, system.FormatException, system.ArgumentException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.transactions.TransactionException {
         try {
             // add reference to assemblyName.dll file
@@ -245,11 +225,11 @@ public class TransactionScope extends NetObject implements AutoCloseable {
         }
     }
 
-    public TransactionScope(TransactionScopeOption scopeOption, TransactionOptions transactionOptions) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OverflowException, system.FormatException, system.ArgumentException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.transactions.TransactionException {
+    public TransactionScope(TransactionScopeOption scopeOption, TimeSpan scopeTimeout) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OverflowException, system.FormatException, system.ArgumentException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.transactions.TransactionException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(scopeOption == null ? null : scopeOption.getJCOInstance(), transactionOptions == null ? null : transactionOptions.getJCOInstance()));
+            setJCOInstance((JCObject)classType.NewObject(scopeOption == null ? null : scopeOption.getJCOInstance(), scopeTimeout == null ? null : scopeTimeout.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -275,11 +255,31 @@ public class TransactionScope extends NetObject implements AutoCloseable {
         }
     }
 
+    public TransactionScope(TransactionScopeOption scopeOption, TransactionOptions transactionOptions) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OverflowException, system.FormatException, system.ArgumentException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.transactions.TransactionException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(scopeOption == null ? null : scopeOption.getJCOInstance(), transactionOptions == null ? null : transactionOptions.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public TransactionScope(TransactionScopeOption scopeOption, TransactionScopeAsyncFlowOption asyncFlowOption) throws Throwable, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OverflowException, system.FormatException, system.ArgumentException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.OutOfMemoryException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.transactions.TransactionException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
             setJCOInstance((JCObject)classType.NewObject(scopeOption == null ? null : scopeOption.getJCOInstance(), asyncFlowOption == null ? null : asyncFlowOption.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public TransactionScope(TransactionScopeOption scopeOption) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.OverflowException, system.FormatException, system.ArgumentException, system.diagnostics.tracing.EventSourceException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.transactions.TransactionException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(scopeOption == null ? null : scopeOption.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

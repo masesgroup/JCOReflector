@@ -143,21 +143,11 @@ public class DirectoryContext extends NetObject  {
     public DirectoryContext() throws Throwable {
     }
 
-    public DirectoryContext(DirectoryContextType contextType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+    public DirectoryContext(DirectoryContextType contextType, java.lang.String name, java.lang.String username, java.lang.String password) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(contextType == null ? null : contextType.getJCOInstance()));
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public DirectoryContext(DirectoryContextType contextType, java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException {
-        try {
-            // add reference to assemblyName.dll file
-            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(contextType == null ? null : contextType.getJCOInstance(), name));
+            setJCOInstance((JCObject)classType.NewObject(contextType == null ? null : contextType.getJCOInstance(), name, username, password));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -173,11 +163,21 @@ public class DirectoryContext extends NetObject  {
         }
     }
 
-    public DirectoryContext(DirectoryContextType contextType, java.lang.String name, java.lang.String username, java.lang.String password) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException {
+    public DirectoryContext(DirectoryContextType contextType, java.lang.String name) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ObjectDisposedException, system.componentmodel.InvalidEnumArgumentException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject(contextType == null ? null : contextType.getJCOInstance(), name, username, password));
+            setJCOInstance((JCObject)classType.NewObject(contextType == null ? null : contextType.getJCOInstance(), name));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DirectoryContext(DirectoryContextType contextType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.ObjectDisposedException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(contextType == null ? null : contextType.getJCOInstance()));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

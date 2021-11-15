@@ -173,21 +173,21 @@ public class DataRow extends NetObject  {
         }
     }
 
-    public boolean IsNull(DataColumn column) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            return (boolean)classInstance.Invoke("IsNull", column == null ? null : column.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public boolean IsNull(DataColumn column, DataRowVersion version) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("IsNull", column == null ? null : column.getJCOInstance(), version == null ? null : version.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean IsNull(DataColumn column) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("IsNull", column == null ? null : column.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -220,17 +220,6 @@ public class DataRow extends NetObject  {
         }
     }
 
-    public DataRow GetParentRow(DataRelation relation) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.ObjectDisposedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objGetParentRow = (JCObject)classInstance.Invoke("GetParentRow", relation == null ? null : relation.getJCOInstance());
-            return new DataRow(objGetParentRow);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public DataRow GetParentRow(DataRelation relation, DataRowVersion version) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.ObjectDisposedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -242,11 +231,11 @@ public class DataRow extends NetObject  {
         }
     }
 
-    public DataRow GetParentRow(java.lang.String relationName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.FormatException {
+    public DataRow GetParentRow(DataRelation relation) throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.FormatException, system.ObjectDisposedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            JCObject objGetParentRow = (JCObject)classInstance.Invoke("GetParentRow", relationName);
+            JCObject objGetParentRow = (JCObject)classInstance.Invoke("GetParentRow", relation == null ? null : relation.getJCOInstance());
             return new DataRow(objGetParentRow);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
@@ -264,18 +253,12 @@ public class DataRow extends NetObject  {
         }
     }
 
-    public DataRow[] GetChildRows(DataRelation relation) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.ObjectDisposedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
+    public DataRow GetParentRow(java.lang.String relationName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.threading.LockRecursionException, system.threading.SynchronizationLockException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            ArrayList<DataRow> resultingArrayList = new ArrayList<DataRow>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetChildRows", relation == null ? null : relation.getJCOInstance());
-            for (java.lang.Object resultingObject : resultingObjects) {
-			    resultingArrayList.add(new DataRow(resultingObject));
-            }
-            DataRow[] resultingArray = new DataRow[resultingArrayList.size()];
-            resultingArray = resultingArrayList.toArray(resultingArray);
-            return resultingArray;
+            JCObject objGetParentRow = (JCObject)classInstance.Invoke("GetParentRow", relationName);
+            return new DataRow(objGetParentRow);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -298,12 +281,12 @@ public class DataRow extends NetObject  {
         }
     }
 
-    public DataRow[] GetChildRows(java.lang.String relationName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
+    public DataRow[] GetChildRows(DataRelation relation) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.ObjectDisposedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<DataRow> resultingArrayList = new ArrayList<DataRow>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetChildRows", relationName);
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetChildRows", relation == null ? null : relation.getJCOInstance());
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataRow(resultingObject));
             }
@@ -332,12 +315,12 @@ public class DataRow extends NetObject  {
         }
     }
 
-    public DataRow[] GetParentRows(DataRelation relation) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.ObjectDisposedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
+    public DataRow[] GetChildRows(java.lang.String relationName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<DataRow> resultingArrayList = new ArrayList<DataRow>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetParentRows", relation == null ? null : relation.getJCOInstance());
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetChildRows", relationName);
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataRow(resultingObject));
             }
@@ -366,12 +349,12 @@ public class DataRow extends NetObject  {
         }
     }
 
-    public DataRow[] GetParentRows(java.lang.String relationName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
+    public DataRow[] GetParentRows(DataRelation relation) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.FormatException, system.ObjectDisposedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             ArrayList<DataRow> resultingArrayList = new ArrayList<DataRow>();
-            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetParentRows", relationName);
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetParentRows", relation == null ? null : relation.getJCOInstance());
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataRow(resultingObject));
             }
@@ -389,6 +372,23 @@ public class DataRow extends NetObject  {
         try {
             ArrayList<DataRow> resultingArrayList = new ArrayList<DataRow>();
             JCObject resultingObjects = (JCObject)classInstance.Invoke("GetParentRows", relationName, version == null ? null : version.getJCOInstance());
+            for (java.lang.Object resultingObject : resultingObjects) {
+			    resultingArrayList.add(new DataRow(resultingObject));
+            }
+            DataRow[] resultingArray = new DataRow[resultingArrayList.size()];
+            resultingArray = resultingArrayList.toArray(resultingArray);
+            return resultingArray;
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public DataRow[] GetParentRows(java.lang.String relationName) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.threading.LockRecursionException, system.threading.SynchronizationLockException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            ArrayList<DataRow> resultingArrayList = new ArrayList<DataRow>();
+            JCObject resultingObjects = (JCObject)classInstance.Invoke("GetParentRows", relationName);
             for (java.lang.Object resultingObject : resultingObjects) {
 			    resultingArrayList.add(new DataRow(resultingObject));
             }
@@ -550,21 +550,21 @@ public class DataRow extends NetObject  {
         }
     }
 
-    public void SetParentRow(DataRow parentRow) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.threading.SynchronizationLockException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Invoke("SetParentRow", parentRow == null ? null : parentRow.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
     public void SetParentRow(DataRow parentRow, DataRelation relation) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.threading.SynchronizationLockException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("SetParentRow", parentRow == null ? null : parentRow.getJCOInstance(), relation == null ? null : relation.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void SetParentRow(DataRow parentRow) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.FormatException, system.ArgumentOutOfRangeException, system.threading.SynchronizationLockException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("SetParentRow", parentRow == null ? null : parentRow.getJCOInstance());
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

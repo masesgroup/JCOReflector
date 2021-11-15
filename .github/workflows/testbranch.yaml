@@ -73,6 +73,10 @@ jobs:
         with: 
           fetch-depth: '1'
 
+      - name: Export environment variables
+        run: set
+        shell: cmd
+
       # Runs a set of commands using the runners shell
       - name: Build JCOReflectorCLI
         run: |

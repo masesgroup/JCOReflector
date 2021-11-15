@@ -31,6 +31,8 @@ sidebar_elements:
         url: /netreflected/docs/netcoreapp3.1/
       - title: ".NET 5 documentation"
         url: /netreflected/docs/net5.0/
+      - title: ".NET 6 documentation"
+        url: /netreflected/docs/net6.0/
   - title: External links
     children:
       - title: "Sinapse Platform Official site"

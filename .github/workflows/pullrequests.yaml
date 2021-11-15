@@ -106,29 +106,37 @@ jobs:
         run: .\bin\net461\JCOReflectorCLI -JobType Reflect -JobFile .github\workflows\reflect_net461.job
 
       - name: Build Java files .NET Core 3.1
-        run: dotnet bin\netcoreapp3.1\JCOReflectorCLI.dll -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder ${{ env.JAVA_HOME_11_X64 }}
-          
+        run: dotnet bin\netcoreapp3.1\JCOReflectorCLI.dll -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
+        shell: cmd
+        
       - name: Build Java files .NET Core 5.0
-        run: dotnet bin\net5.0\JCOReflectorCLI.dll -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder ${{ env.JAVA_HOME_11_X64 }}
+        run: dotnet bin\net5.0\JCOReflectorCLI.dll -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
+        shell: cmd
         
       - name: Build Java files .NET Core 6.0
-        run: dotnet bin\net6.0\JCOReflectorCLI.dll -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder ${{ env.JAVA_HOME_11_X64 }}
-          
+        run: dotnet bin\net6.0\JCOReflectorCLI.dll -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
+        shell: cmd
+        
       - name: Build Java files .NET Framework
-        run: .\bin\net461\JCOReflectorCLI -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder ${{ env.JAVA_HOME_11_X64 }}
-
+        run: .\bin\net461\JCOReflectorCLI -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
+        shell: cmd
+        
       - name: Build JAR files .NET Core 3.1
-        run: dotnet bin\netcoreapp3.1\JCOReflectorCLI.dll -JobType CreateJars -JobFile .github\workflows\createjars_core3.1_win19.job -JDKFolder ${{ env.JAVA_HOME_11_X64 }}
-          
+        run: dotnet bin\netcoreapp3.1\JCOReflectorCLI.dll -JobType CreateJars -JobFile .github\workflows\createjars_core3.1_win19.job -JDKFolder %JAVA_HOME_11_X64%
+        shell: cmd
+        
       - name: Build JAR files .NET Core 5.0
-        run: dotnet bin\net5.0\JCOReflectorCLI.dll -JobType CreateJars -JobFile .github\workflows\createjars_core5.0_win19.job -JDKFolder ${{ env.JAVA_HOME_11_X64 }}
-    
+        run: dotnet bin\net5.0\JCOReflectorCLI.dll -JobType CreateJars -JobFile .github\workflows\createjars_core5.0_win19.job -JDKFolder %JAVA_HOME_11_X64%
+        shell: cmd
+        
       - name: Build JAR files .NET Core 6.0
-        run: dotnet bin\net6.0\JCOReflectorCLI.dll -JobType CreateJars -JobFile .github\workflows\createjars_core6.0_win19.job -JDKFolder ${{ env.JAVA_HOME_11_X64 }}
-    
+        run: dotnet bin\net6.0\JCOReflectorCLI.dll -JobType CreateJars -JobFile .github\workflows\createjars_core6.0_win19.job -JDKFolder %JAVA_HOME_11_X64%
+        shell: cmd
+        
       - name: Build JAR files .NET Framework
-        run: .\bin\net461\JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_framework_win19.job -JDKFolder ${{ env.JAVA_HOME_11_X64 }}
-          
+        run: .\bin\net461\JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_framework_win19.job -JDKFolder %JAVA_HOME_11_X64%
+        shell: cmd
+        
       - name: Build Java test source file .NET Core 3.1
         run: javac -cp ./bin/netcoreapp3.1/JCOReflector.jar ./netreflected-tests/java/src/hierarchy/*.java ./netreflected-tests/java/src/mscorlib/*.java ./netreflected-tests/java/src/nettest/*.java ./netreflected-tests/java/src/refout/*.java
 

@@ -161,17 +161,21 @@ jobs:
         shell: bash
 
       - name: Build netcoreapp3.1 Java Help files
-        run: dotnet bin\netcoreapp3.1\JCOReflectorCLI.dll -JobType BuildDocs -JobFile .github\workflows\builddocs_win19.job -CommitVersion ${{ env.GITHUB_COMMIT_MESSAGE }} -JDKFolder ${{ env.JAVA_HOME_11_X64 }}
-
+        run: dotnet bin\netcoreapp3.1\JCOReflectorCLI.dll -JobType BuildDocs -JobFile .github\workflows\builddocs_win19.job -CommitVersion ${{ env.GITHUB_COMMIT_MESSAGE }} -JDKFolder %JAVA_HOME_11_X64%
+        shell: cmd
+        
       - name: Build net5.0 Java Help files
-        run: dotnet bin\net5.0\JCOReflectorCLI.dll -JobType BuildDocs -JobFile .github\workflows\builddocs_win19.job -CommitVersion ${{ env.GITHUB_COMMIT_MESSAGE }} -JDKFolder ${{ env.JAVA_HOME_11_X64 }}
-  
+        run: dotnet bin\net5.0\JCOReflectorCLI.dll -JobType BuildDocs -JobFile .github\workflows\builddocs_win19.job -CommitVersion ${{ env.GITHUB_COMMIT_MESSAGE }} -JDKFolder %JAVA_HOME_11_X64%
+        shell: cmd
+        
       - name: Build net6.0 Java Help files
-        run: dotnet bin\net6.0\JCOReflectorCLI.dll -JobType BuildDocs -JobFile .github\workflows\builddocs_win19.job -CommitVersion ${{ env.GITHUB_COMMIT_MESSAGE }} -JDKFolder ${{ env.JAVA_HOME_11_X64 }}
-  
+        run: dotnet bin\net6.0\JCOReflectorCLI.dll -JobType BuildDocs -JobFile .github\workflows\builddocs_win19.job -CommitVersion ${{ env.GITHUB_COMMIT_MESSAGE }} -JDKFolder %JAVA_HOME_11_X64%
+        shell: cmd
+        
       - name: Build net461 Java Help files
-        run: .\bin\net461\JCOReflectorCLI -JobType BuildDocs -JobFile .github\workflows\builddocs_win19.job -CommitVersion ${{ env.GITHUB_COMMIT_MESSAGE }} -JDKFolder ${{ env.JAVA_HOME_11_X64 }}
-
+        run: .\bin\net461\JCOReflectorCLI -JobType BuildDocs -JobFile .github\workflows\builddocs_win19.job -CommitVersion ${{ env.GITHUB_COMMIT_MESSAGE }} -JDKFolder %JAVA_HOME_11_X64%
+        shell: cmd
+        
       - name: Clean temporary files
         run: |
           Remove-Item .\bin\* -Recurse -Force

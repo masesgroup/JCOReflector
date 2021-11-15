@@ -193,7 +193,7 @@ jobs:
       - run: java -cp "./bin/net461/JCOReflector.jar;./netreflected-tests/java/src/" hierarchy.HelloInterfaces
       - run: java -cp "./bin/net461/JCOReflector.jar;./netreflected-tests/java/src/" nettest.HelloNETSocket
       - run: java -cp "./bin/net461/JCOReflector.jar;./netreflected-tests/java/src/" nettest.HelloNETSocket -async
-      - run: java -cp "./bin/net5.0/JCOReflector.jar;./netreflected-tests/java/src/" refout.HelloRefOutBase
+      - run: java -cp "./bin/net461/JCOReflector.jar;./netreflected-tests/java/src/" refout.HelloRefOutBase
       - run: java -cp "./bin/net461/JCOReflector.jar;./netreflected-tests/java/src/" refout.HelloRefOut
 
       - name: Download Scala package
@@ -321,3 +321,4 @@ jobs:
         shell: cmd      
       - run: cd ./netreflected-tests/scala && rmdir output /s /q
         shell: cmd  
+        

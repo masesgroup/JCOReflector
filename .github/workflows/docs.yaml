@@ -260,7 +260,7 @@ jobs:
         env:
           GITHUB_WORKSPACE: $GITHUB_WORKSPACE
           SUPER_SECRET: ${{ secrets.DOCS_API_TOKEN_GITHUB }}
-          REPO: masesgroup/NET5Docs
+          REPO: masesgroup/NET6Docs
 
       - name: Push changes to net461 help file
         run: |

@@ -547,7 +547,7 @@ public class UIElement3D extends Visual3D  {
         }
     }
 
-    public boolean getIsStylusDirectlyOver() throws Throwable, system.io.IOException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.ArgumentException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.security.SecurityException {
+    public boolean getIsStylusDirectlyOver() throws Throwable, system.io.IOException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.componentmodel.Win32Exception, system.security.SecurityException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

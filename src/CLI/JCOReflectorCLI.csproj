@@ -5,10 +5,10 @@
     <RootNamespace>MASES.JCOReflectorCLI</RootNamespace>
     <Title>JCOReflector CLI - CLI interface for JCOReflector Engine</Title>
     <Description>JCOReflector CLI - CLI interface for JCOReflector Engine</Description>
-    <Copyright>Copyright ©  MASES s.r.l. 2021</Copyright>
+    <Copyright>Copyright ©  MASES s.r.l. 2022</Copyright>
     <Authors>MASES s.r.l.</Authors>
     <Company>MASES s.r.l.</Company>
-    <Version>1.8.2.0</Version>
+    <Version>1.8.3.0</Version>
     <Product>MASES.JCOReflectorCLI</Product>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
     <TargetFrameworks>net461;netcoreapp3.1;net5.0;net6.0</TargetFrameworks>

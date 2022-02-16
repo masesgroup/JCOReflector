@@ -7,7 +7,7 @@
     <Copyright>Copyright ©  MASES s.r.l. 2022</Copyright>
     <Authors>MASES s.r.l.</Authors>
     <Company>MASES s.r.l.</Company>
-    <Version>1.8.3.0</Version>
+    <Version>1.8.4.0</Version>
     <Product>MASES.JCOReflectorEngine</Product>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
     <TargetFrameworks>net461;netcoreapp3.1;net5.0;net5.0-windows;net6.0;net6.0-windows</TargetFrameworks>
@@ -41,14 +41,14 @@
   <ItemGroup Condition="'$(TargetFramework)' == 'net461'">
     <Reference Include="System.IO.Compression" />
   </ItemGroup>
-  <Target Name="CollectJCOBridge" BeforeTargets="_GetPackageFiles">
+  <!--Target Name="CollectJCOBridge" BeforeTargets="_GetPackageFiles">
     <ItemGroup>
       <Content Include="$(OutputPath)\net461\JCOBridge.jar" Pack="true" PackagePath="build\">
         <PackageCopyToOutput>true</PackageCopyToOutput>
       </Content>
       <Content Include="mases.jcoreflectorengine.targets" Pack="true" PackagePath="build\" />
     </ItemGroup>
-  </Target>
+  </Target-->
   <ItemGroup>
     <EmbeddedResource Include="JCObjectReflectorClassEnumerable.template" />
     <EmbeddedResource Include="JCObjectReflectorClassEvent.template" />
@@ -107,7 +107,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MASES.CLIParser" Version="2.2.1" />
-    <PackageReference Include="MASES.JCOBridge" Version="2.4.6" />
+    <PackageReference Include="MASES.JCOBridge" Version="2.4.6">
+        <IncludeAssets>All</IncludeAssets>
+        <PrivateAssets>None</PrivateAssets>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />

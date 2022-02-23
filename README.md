@@ -21,6 +21,23 @@ It was created internally from us to support our customers, now we made it avail
 
 This project adheres to the Contributor [Covenant code of conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to coc_reporting@masesgroup.com.
 
+## Runtime engine
+
+JCOReflector uses [JCOBridge](https://www.jcobridge.com), and its [features](https://www.jcobridge.com/features/), to obtain many benefits:
+* **Cyber-security**: 
+  * [JVM](https://en.wikipedia.org/wiki/Java_virtual_machine) and [CLR, or CoreCLR,](https://en.wikipedia.org/wiki/Common_Language_Runtime) runs in the same process, but are insulated from each other;
+  * JCOBridge does not make any code injection into CLR or JVM;
+  * JCOBridge does not use any other communication mechanism than JNI;
+  * JVM inherently inherits the cyber-security levels of running .NET (CLR); 
+* **Direct access the CLR from any JVM application**: 
+  * No need to learn new APIs: we try to expose the same .NET APIs in Java style;
+  * No extra validation cycle: bug fix, improvements, new features are immediately available;
+  * Documentation is shared;
+
+Have a look at [![latest version](https://img.shields.io/nuget/v/MASES.JCOBridge)](https://www.nuget.org/packages/MASES.JCOBridge); plus look at the following resources:
+- [Release notes](https://www.jcobridge.com/release-notes/)
+- [Commercial info](https://www.jcobridge.com/pricing/)
+
 ## History of the project
 
 This project started in 2019 with the aims to create a set of Java (JVM) classes which mimic .NET (Framework/Core) conterparts, in May 2020 the first commit in GitHub.

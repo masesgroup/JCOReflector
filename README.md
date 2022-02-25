@@ -12,7 +12,7 @@
 
 ## The project
 
-JCOReflector produce a set of **.NET wrapper for Java** as JARs that are available for download. It's simple to use: you only need to reference JCOReflector.jar in the class-path and use the .NET API within your Java projects like exposed in the example section. 
+JCOReflectorEngine produces a set of **.NET wrapper for Java** as JARs that are available for download. It's simple to use: you only need to reference JCOReflector.jar in the class-path and use the .NET API within your Java projects like exposed in the example section. 
 
 The core of the project is the innovative JCOReflector, a reflection engine which automatically writes Java classes using .NET class reflection.
 JCOReflector can be used to reflects any .NET assembly (even assembly outside the Microsoft ones) into JARs.
@@ -34,9 +34,10 @@ JCOReflector uses [JCOBridge](https://www.jcobridge.com), and its [features](htt
   * No extra validation cycle: bug fix, improvements, new features are immediately available;
   * Documentation is shared;
 
-Have a look at [![latest version](https://img.shields.io/nuget/v/MASES.JCOBridge)](https://www.nuget.org/packages/MASES.JCOBridge); plus look at the following resources:
+Have a look at the following resources:
 - [Release notes](https://www.jcobridge.com/release-notes/)
 - [Commercial info](https://www.jcobridge.com/pricing/)
+- [![JCOBridge nuget](https://img.shields.io/nuget/v/MASES.JCOBridge)](https://www.nuget.org/packages/MASES.JCOBridge)
 
 ## History of the project
 

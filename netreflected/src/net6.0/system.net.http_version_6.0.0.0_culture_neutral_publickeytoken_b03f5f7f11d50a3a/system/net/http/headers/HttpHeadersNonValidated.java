@@ -149,7 +149,7 @@ public class HttpHeadersNonValidated extends ValueType  {
     
     // Methods section
     
-    public boolean Contains(java.lang.String headerName) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException {
+    public boolean Contains(java.lang.String headerName) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -159,7 +159,7 @@ public class HttpHeadersNonValidated extends ValueType  {
         }
     }
 
-    public boolean TryGetValues(java.lang.String headerName, JCORefOut<HeaderStringValues> values) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArrayTypeMismatchException {
+    public boolean TryGetValues(java.lang.String headerName, JCORefOut<HeaderStringValues> values) throws Throwable, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArrayTypeMismatchException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

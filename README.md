@@ -2,11 +2,17 @@
 
 ![CI_WINDOWS](https://github.com/masesgroup/JCOReflector/workflows/CI_WINDOWS/badge.svg)  ![CI_LINUX](https://github.com/masesgroup/JCOReflector/workflows/CI_LINUX/badge.svg)  [![CI_DOCS](https://github.com/masesgroup/JCOReflector/actions/workflows/docs.yaml/badge.svg)](https://github.com/masesgroup/JCOReflector/actions/workflows/docs.yaml)  [![CI_MAVEN](https://github.com/masesgroup/JCOReflector/actions/workflows/maven.yaml/badge.svg)](https://github.com/masesgroup/JCOReflector/actions/workflows/maven.yaml)  ![CI_RELEASE](https://github.com/masesgroup/JCOReflector/workflows/CI_RELEASE/badge.svg)
 
-[![JCOReflector .NET Framework Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net461.svg?label=JCOReflector%20.NET%20Framework%20Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net461%22)  [![JCOReflector .NET 5 Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net5.0.svg?label=JCOReflector%20.NET%205%20Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net5.0%22)  [![JCOReflector .NET 6 Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net6.0.svg?label=JCOReflector%20.NET%206%20Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net6.0%22)
+|.NET Framework | .NET 5 | .NET 6 |
+|---	|---	|---	|
+|[![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net461.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net461%22) | [![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net5.0.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net5.0%22) | [![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net6.0.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net6.0%22)|
+
+|JCOReflectorEngine | JCOReflectorCLI |
+|---	|---	|
+|[![latest version](https://img.shields.io/nuget/v/MASES.JCOReflectorEngine)](https://www.nuget.org/packages/MASES.JCOReflectorEngine) [![downloads](https://img.shields.io/nuget/dt/MASES.JCOReflectorEngine)](https://www.nuget.org/packages/MASES.JCOReflectorEngine)|[![latest version](https://img.shields.io/nuget/v/MASES.JCOReflectorCLI)](https://www.nuget.org/packages/MASES.JCOReflectorCLI) [![downloads](https://img.shields.io/nuget/dt/MASES.JCOReflectorCLI)](https://www.nuget.org/packages/MASES.JCOReflectorCLI)|
 
 ## The project
 
-JCOReflector produce a set of **.NET wrapper for Java** as JARs that are available for download. It's simple to use: you only need to reference JCOReflector.jar in the class-path and use the .NET API within your Java projects like exposed in the example section. 
+JCOReflectorEngine produces a set of **.NET wrapper for Java** as JARs that are available for download. It's simple to use: you only need to reference JCOReflector.jar in the class-path and use the .NET API within your Java projects like exposed in the example section. 
 
 The core of the project is the innovative JCOReflector, a reflection engine which automatically writes Java classes using .NET class reflection.
 JCOReflector can be used to reflects any .NET assembly (even assembly outside the Microsoft ones) into JARs.
@@ -14,6 +20,24 @@ The generated wrapper classes are based on the powerful [JCOBridge](https://www.
 It was created internally from us to support our customers, now we made it available for everyone.
 
 This project adheres to the Contributor [Covenant code of conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to coc_reporting@masesgroup.com.
+
+## Runtime engine
+
+JCOReflector uses [JCOBridge](https://www.jcobridge.com), and its [features](https://www.jcobridge.com/features/), to obtain many benefits:
+* **Cyber-security**: 
+  * [JVM](https://en.wikipedia.org/wiki/Java_virtual_machine) and [CLR, or CoreCLR,](https://en.wikipedia.org/wiki/Common_Language_Runtime) runs in the same process, but are insulated from each other;
+  * JCOBridge does not make any code injection into CLR or JVM;
+  * JCOBridge does not use any other communication mechanism than JNI;
+  * JVM inherently inherits the cyber-security levels of running .NET (CLR); 
+* **Direct access the CLR from any JVM application**: 
+  * No need to learn new APIs: we try to expose the same .NET APIs in Java style;
+  * No extra validation cycle: bug fix, improvements, new features are immediately available;
+  * Documentation is shared;
+
+Have a look at the following resources:
+- [Release notes](https://www.jcobridge.com/release-notes/)
+- [Commercial info](https://www.jcobridge.com/pricing/)
+- [![JCOBridge nuget](https://img.shields.io/nuget/v/MASES.JCOBridge)](https://www.nuget.org/packages/MASES.JCOBridge)
 
 ## History of the project
 

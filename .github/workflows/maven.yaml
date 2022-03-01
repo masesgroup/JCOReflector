@@ -96,17 +96,17 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Copy configuration file
         run: |
-          Copy-Item .github\workflows\JCOReflectorCLI5.0.runtimeconfig.json -Destination bin\net5.0\JCOReflectorCLI.runtimeconfig.json -Force
-          Copy-Item .github\workflows\JCOReflectorCLI6.0.runtimeconfig.json -Destination bin\net6.0\JCOReflectorCLI.runtimeconfig.json -Force
+          Copy-Item .github\workflows\JCOReflectorCLI5.0.runtimeconfig.json -Destination bin\net5.0\MASES.JCOReflectorCLI.runtimeconfig.json -Force
+          Copy-Item .github\workflows\JCOReflectorCLI6.0.runtimeconfig.json -Destination bin\net6.0\MASES.JCOReflectorCLI.runtimeconfig.json -Force
 
       - name: Build net5.0 Maven POM files
-        run: dotnet bin\net5.0\JCOReflectorCLI.dll -JobType CreatePOM -JobFile .github\workflows\createpom_win19.job
+        run: dotnet bin\net5.0\MASES.JCOReflectorCLI.dll -JobType CreatePOM -JobFile .github\workflows\createpom_win19.job
         
       - name: Build net6.0 Maven POM files
-        run: dotnet bin\net6.0\JCOReflectorCLI.dll -JobType CreatePOM -JobFile .github\workflows\createpom_win19.job
+        run: dotnet bin\net6.0\MASES.JCOReflectorCLI.dll -JobType CreatePOM -JobFile .github\workflows\createpom_win19.job
          
       - name: Build net461 Maven POM files
-        run: .\bin\net461\JCOReflectorCLI -JobType CreatePOM -JobFile .github\workflows\createpom_win19.job
+        run: .\bin\net461\MASES.JCOReflectorCLI -JobType CreatePOM -JobFile .github\workflows\createpom_win19.job
 
       - name: Set up Apache Maven Central
         uses: actions/setup-java@v1

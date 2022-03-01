@@ -79,7 +79,7 @@ jobs:
         with:
           nuget-version: '5.x'
           
-      - run: nuget pack src\JCOReflectorCLI\JCOReflectorCLI.nuspec -OutputDirectory .\bin
+      - run: nuget pack src\CLI\JCOReflectorCLI.nuspec -OutputDirectory .\bin
 
       # Runs a set of commands using the runners shell
       - name: Copy configuration file

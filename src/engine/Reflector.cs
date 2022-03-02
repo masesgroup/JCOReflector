@@ -85,7 +85,7 @@ namespace MASES.JCOReflectorEngine
 
         static string reflectorVersion = typeof(Reflector).Assembly.GetName().Version.ToString();
 
-        static string checkForkeyword(string inputName)
+        static string replaceSinglekeyword(string inputName)
         {
             foreach (var item in Const.KeyWords)
             {
@@ -474,7 +474,7 @@ namespace MASES.JCOReflectorEngine
         {
             if (type.IsPublic
                 && !type.IsGenericType
-                && !type.Namespace.ToLowerInvariant().Contains(Const.SpecialNames.Internal) // avoid types with internal namespace name which are public
+                && !type.ToPackageName().Contains(Const.SpecialNames.Internal) // avoid types with internal namespace name which are public
                )
             {
                 return true;
@@ -565,7 +565,7 @@ namespace MASES.JCOReflectorEngine
                     Interlocked.Increment(ref discardedTypes);
                     if (!item.IsPublic) Interlocked.Increment(ref discardedNonPublicTypes);
                     else if (item.IsGenericType) Interlocked.Increment(ref discardedGenericTypes);
-                    else if (item.Namespace.ToLowerInvariant().Contains(Const.SpecialNames.Internal)) Interlocked.Increment(ref discardedInternalTypes);
+                    else if (item.ToPackageName().Contains(Const.SpecialNames.Internal)) Interlocked.Increment(ref discardedInternalTypes);
                 }
             }
 
@@ -603,7 +603,7 @@ namespace MASES.JCOReflectorEngine
             }
         }
 
-        static void exportingPublicTypeParallel(Type typeToExport)
+        static void exportingPublicTypeParallel(this Type typeToExport)
         {
             try
             {
@@ -634,7 +634,30 @@ namespace MASES.JCOReflectorEngine
             }
         }
 
-        static bool checkForEnumerator(Type type)
+        static string ToPackageName(this Type type)
+        {
+            var basepackage = type.Namespace.ToLowerInvariant();
+
+            foreach (var item in Const.KeyWords)
+            {
+                var beginning = item + ".";
+                var middle = "." + item + ".";
+                var end = "." + item;
+
+                if (!basepackage.Contains(".") && basepackage == item) // package with a single element
+                {
+                    basepackage.Replace(item, item + "_package");
+                }
+                else if (basepackage.StartsWith(beginning) || basepackage.Contains(middle) || basepackage.EndsWith(end))
+                {
+                    basepackage.Replace(item, item + "_package");
+                }
+            }
+
+            return basepackage;
+        }
+
+        static bool HasEnumerator(this Type type)
         {
             if (!type.IsInterface
                 && (typeof(IEnumerator).IsAssignableFrom(type) || type.FullName == Const.SpecialNames.StringEnumerator)
@@ -645,7 +668,7 @@ namespace MASES.JCOReflectorEngine
             return false;
         }
 
-        static void exportingPublicType(Type typeToExport, string destFolder, string assemblyname)
+        static void exportingPublicType(this Type typeToExport, string destFolder, string assemblyname)
         {
             var typeName = typeToExport.FullName;
 
@@ -666,34 +689,34 @@ namespace MASES.JCOReflectorEngine
 
             if (typeof(Delegate).IsAssignableFrom(typeToExport))
             {
-                exportingDelegate(typeToExport, destFolder, assemblyname);
+                typeToExport.ExportingDelegate(destFolder, assemblyname);
             }
-            else if (checkForEnumerator(typeToExport))
+            else if (typeToExport.HasEnumerator())
             {
                 string returnEnumerableType = string.Empty;
-                exportingEnumerator(typeToExport, destFolder, assemblyname, out returnEnumerableType);
+                typeToExport.ExportingEnumerator(destFolder, assemblyname, out returnEnumerableType);
             }
             else if (typeToExport.IsInterface)
             {
-                exportingInterface(typeToExport, destFolder, assemblyname);
+                typeToExport.ExportInterface(destFolder, assemblyname);
             }
             else if (typeToExport.IsEnum)
             {
-                exportingEnum(typeToExport, destFolder, assemblyname);
+                typeToExport.ExportEnum(destFolder, assemblyname);
             }
             else if (typeToExport.IsClass || typeToExport.IsAnsiClass)
             {
-                exportingClass(typeToExport, destFolder, assemblyname);
+                typeToExport.ExportClass(destFolder, assemblyname);
             }
             else throw new InvalidOperationException(string.Format("Unchecked and unexported type {0}", typeToExport.FullName));
 
             JobManager.CancellationToken.ThrowIfCancellationRequested();
         }
 
-        static void exportingEnum(Type item, string destFolder, string assemblyname)
+        static void ExportEnum(this Type item, string destFolder, string assemblyname)
         {
             var reflectorEnumTemplate = Const.Templates.GetTemplate(Const.Templates.ReflectorEnumTemplate);
-            var packageName = item.Namespace.ToLowerInvariant();
+            var packageName = item.ToPackageName();
             reflectorEnumTemplate = reflectorEnumTemplate.Replace(Const.Class.PACKAGE_NAME, packageName)
                                                          .Replace(Const.Class.PACKAGE_CLASS_NAME, item.Name)
                                                          .Replace(Const.Class.FULL_ASSEMBLY_CLASS_NAME, assemblyname)
@@ -741,7 +764,7 @@ namespace MASES.JCOReflectorEngine
             Interlocked.Increment(ref implementedEnums);
         }
 
-        static void exportingInterface(Type item, string destFolder, string assemblyname)
+        static void ExportInterface(this Type item, string destFolder, string assemblyname)
         {
             bool isException = false;
             string reflectorInterfaceClassTemplate = Const.Templates.GetTemplate(Const.Templates.ReflectorInterfaceClassTemplate);
@@ -756,7 +779,7 @@ namespace MASES.JCOReflectorEngine
             List<Type> implementableInterfaces = new List<Type>();
             foreach (var interfaceType in allDirectInterfaces)
             {
-                if (isManagedType(interfaceType, 0, 1))
+                if (interfaceType.IsManagedType(0, 1))
                 {
                     implementableInterfaces.Add(interfaceType);
                 }
@@ -775,7 +798,7 @@ namespace MASES.JCOReflectorEngine
             }
 
             string implementsStr = string.Empty;
-            var packageName = item.Namespace.ToLowerInvariant();
+            var packageName = item.ToPackageName();
             reflectorInterfaceClassTemplate = reflectorInterfaceClassTemplate.Replace(Const.Class.PACKAGE_NAME, packageName)
                                                                              .Replace(Const.Class.PACKAGE_CLASS_BASE_CLASS, packageBaseClass)
                                                                              .Replace(Const.Class.PACKAGE_CLASS_NAME, item.Name)
@@ -795,20 +818,20 @@ namespace MASES.JCOReflectorEngine
             string returnEnumerableType = string.Empty;
             string returnInterfaceSection = string.Empty;
             JobManager.AppendToConsole(LogLevel.Verbose, "Starting creating public Methods from {0}", typeName);
-            var methodsStr = exportingMethods(item, imports, implementableInterfaces, withInheritance, destFolder, assemblyname, out returnEnumerableType, out returnInterfaceSection);
+            var methodsStr = item.ExportMethods(imports, implementableInterfaces, withInheritance, destFolder, assemblyname, out returnEnumerableType, out returnInterfaceSection);
             reflectorInterfaceClassTemplate = reflectorInterfaceClassTemplate.Replace(Const.Class.METHODS_SECTION, methodsStr);
             reflectorInterfaceTemplate = reflectorInterfaceTemplate.Replace(Const.Class.METHODS_SECTION, returnInterfaceSection);
 
             JobManager.AppendToConsole(LogLevel.Verbose, "Starting creating public Properties from {0}", typeName);
-            var propInstanceStr = exportingProperties(item, imports, implementableInterfaces, withInheritance, isException, destFolder, assemblyname, out returnInterfaceSection);
+            var propInstanceStr = item.ExportProperties(imports, implementableInterfaces, withInheritance, isException, destFolder, assemblyname, out returnInterfaceSection);
             reflectorInterfaceClassTemplate = reflectorInterfaceClassTemplate.Replace(Const.Class.GETTER_SETTER_SECTION, propInstanceStr);
             reflectorInterfaceTemplate = reflectorInterfaceTemplate.Replace(Const.Class.GETTER_SETTER_SECTION, returnInterfaceSection);
 
-            var eventsInstanceStr = exportingEvents(item, imports, implementableInterfaces, withInheritance, false, isException, destFolder, assemblyname, out returnInterfaceSection);
+            var eventsInstanceStr = item.ExportEvents(imports, implementableInterfaces, withInheritance, false, isException, destFolder, assemblyname, out returnInterfaceSection);
             reflectorInterfaceClassTemplate = reflectorInterfaceClassTemplate.Replace(Const.Class.INSTANCE_EVENTS_SECTION, eventsInstanceStr);
             reflectorInterfaceTemplate = reflectorInterfaceTemplate.Replace(Const.Class.INSTANCE_EVENTS_SECTION, returnInterfaceSection);
 
-            var importStr = exportingImports(imports);
+            var importStr = ExportImports(imports);
             reflectorInterfaceClassTemplate = reflectorInterfaceClassTemplate.Replace(Const.Class.PACKAGE_IMPORT_SECTION, importStr);
             reflectorInterfaceTemplate = reflectorInterfaceTemplate.Replace(Const.Class.PACKAGE_IMPORT_SECTION, importStr);
 
@@ -843,7 +866,7 @@ namespace MASES.JCOReflectorEngine
         }
         /*************/
 
-        static void exportingClass(Type item, string destFolder, string assemblyname)
+        static void ExportClass(this Type item, string destFolder, string assemblyname)
         {
             bool isException = false;
             string reflectorClassTemplate = string.Empty;
@@ -869,7 +892,7 @@ namespace MASES.JCOReflectorEngine
             List<Type> implementableInterfaces = new List<Type>();
             foreach (var interfaceType in allDirectInterfaces)
             {
-                if (isManagedType(interfaceType, 0, 1) && typeof(IEnumerable) != interfaceType)
+                if (interfaceType.IsManagedType(0, 1) && typeof(IEnumerable) != interfaceType)
                 {
                     implementableInterfaces.Add(interfaceType);
                 }
@@ -881,14 +904,14 @@ namespace MASES.JCOReflectorEngine
             if (EnableInheritance)
             {
                 withInheritance = true;
-                if (isManagedType(item.BaseType, 0, 1) && item.BaseType != typeof(object) && item.BaseType != typeof(Exception) && item.BaseType != typeof(Type))
+                if (item.BaseType.IsManagedType(0, 1) && item.BaseType != typeof(object) && item.BaseType != typeof(Exception) && item.BaseType != typeof(Type))
                 {
                     packageBaseClass = item.BaseType.Name;
                     imports.Add(item.BaseType);
                 }
             }
 
-            var packageName = item.Namespace.ToLowerInvariant();
+            var packageName = item.ToPackageName();
             reflectorClassTemplate = reflectorClassTemplate.Replace(Const.Class.PACKAGE_NAME, packageName)
                                                            .Replace(Const.Class.PACKAGE_CLASS_BASE_CLASS, packageBaseClass)
                                                            .Replace(Const.Class.PACKAGE_CLASS_NAME, item.Name)
@@ -902,7 +925,7 @@ namespace MASES.JCOReflectorEngine
             string ctorStr = string.Empty;
             if (EnableAbstract && !item.IsAbstract)
             {
-                ctorStr = exportingConstructors(item, imports, withInheritance, isException, destFolder, assemblyname);
+                ctorStr = item.ExportConstructors(imports, withInheritance, isException, destFolder, assemblyname);
             }
             else if (!isException)
             {
@@ -914,7 +937,7 @@ namespace MASES.JCOReflectorEngine
             string returnEnumerableType = string.Empty;
             string returnInterfaceSection = string.Empty;
             JobManager.AppendToConsole(LogLevel.Verbose, "Starting creating public Methods from {0}", typeName);
-            var methodsStr = exportingMethods(item, imports, implementableInterfaces, withInheritance, destFolder, assemblyname, out returnEnumerableType, out returnInterfaceSection);
+            var methodsStr = item.ExportMethods(imports, implementableInterfaces, withInheritance, destFolder, assemblyname, out returnEnumerableType, out returnInterfaceSection);
             if (isDisposable)
             {
                 methodsStr += Const.Methods.AUTOCLOSEABLE_CLOSE_METHOD;
@@ -922,17 +945,17 @@ namespace MASES.JCOReflectorEngine
             reflectorClassTemplate = reflectorClassTemplate.Replace(Const.Class.METHODS_SECTION, methodsStr);
 
             JobManager.AppendToConsole(LogLevel.Verbose, "Starting creating public Properties from {0}", typeName);
-            var propInstanceStr = exportingProperties(item, imports, implementableInterfaces, withInheritance, isException, destFolder, assemblyname, out returnInterfaceSection);
+            var propInstanceStr = item.ExportProperties(imports, implementableInterfaces, withInheritance, isException, destFolder, assemblyname, out returnInterfaceSection);
             reflectorClassTemplate = reflectorClassTemplate.Replace(Const.Class.GETTER_SETTER_SECTION, propInstanceStr);
 
-            var eventsInstanceStr = exportingEvents(item, imports, implementableInterfaces, withInheritance, false, isException, destFolder, assemblyname, out returnInterfaceSection);
+            var eventsInstanceStr = item.ExportEvents(imports, implementableInterfaces, withInheritance, false, isException, destFolder, assemblyname, out returnInterfaceSection);
             reflectorClassTemplate = reflectorClassTemplate.Replace(Const.Class.INSTANCE_EVENTS_SECTION, eventsInstanceStr);
 
             if (EnableInheritance && EnableInterfaceInheritance)
             {
                 foreach (var interfaceType in implementableInterfaces)
                 {
-                    var nameToAdd = interfaceType.Namespace.ToLowerInvariant() + "." + interfaceType.Name;
+                    var nameToAdd = interfaceType.ToPackageName() + "." + interfaceType.Name;
 
                     if (string.IsNullOrEmpty(implementsStr))
                     {
@@ -947,7 +970,7 @@ namespace MASES.JCOReflectorEngine
                 }
             }
 
-            var importStr = exportingImports(imports);
+            var importStr = ExportImports(imports);
             reflectorClassTemplate = reflectorClassTemplate.Replace(Const.Class.PACKAGE_IMPORT_SECTION, importStr);
 
             if (!string.IsNullOrEmpty(returnEnumerableType) && typeof(IEnumerable).IsAssignableFrom(item))
@@ -984,7 +1007,7 @@ namespace MASES.JCOReflectorEngine
             Interlocked.Increment(ref implementedClasses);
         }
 
-        static string exceptionStringBuilder(MethodBase method, IList<Type> imports)
+        static string ExceptionStringBuilder(this MethodBase method, IList<Type> imports)
         {
             if (!CreateExceptionThrownClause) return string.Empty;
 
@@ -1006,7 +1029,7 @@ namespace MASES.JCOReflectorEngine
                         convertType(imports, expType, out isPrimitive, out defaultPrimitiveValue, out isConcrete, out isSpecial, out isArray, false);
                         if (!isSpecial && isConcrete)
                         {
-                            expBuilder.AppendFormat(Const.Exceptions.SINGLE_EXCEPTION_PROTO, expType.Namespace.ToLowerInvariant(), expType.Name);
+                            expBuilder.AppendFormat(Const.Exceptions.SINGLE_EXCEPTION_PROTO, expType.ToPackageName(), expType.Name);
                         }
                     }
                     exceptionStr = expBuilder.ToString();
@@ -1021,7 +1044,7 @@ namespace MASES.JCOReflectorEngine
             return exceptionStr;
         }
 
-        static string exportingConstructors(Type type, IList<Type> imports, bool withInheritance, bool isException, string destFolder, string assemblyname)
+        static string ExportConstructors(this Type type, IList<Type> imports, bool withInheritance, bool isException, string destFolder, string assemblyname)
         {
             var ctorTypes = type.GetConstructors();
             if (!withInheritance && ctorTypes.Length == 0) return string.Empty;
@@ -1082,7 +1105,7 @@ namespace MASES.JCOReflectorEngine
                     string paramType = convertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
                     if (!isManaged) break; // found not managed type, stop here
 
-                    var paramName = checkForkeyword(parameter.Name);
+                    var paramName = replaceSinglekeyword(parameter.Name);
                     isPrimitive |= typeof(Delegate).IsAssignableFrom(parameter.ParameterType);
                     ctorParams.Append(string.Format(Const.Parameters.INPUT_PARAMETER, (isArray) ? paramType + (IsParams(parameter) ? Const.SpecialNames.VarArgsTrailer : Const.SpecialNames.ArrayTrailer) : paramType, paramName));
 
@@ -1109,7 +1132,7 @@ namespace MASES.JCOReflectorEngine
                     newObjParamStr = newObjParamStr.Substring(2);
                 }
 
-                var exceptionStr = exceptionStringBuilder(item, imports);
+                var exceptionStr = item.ExceptionStringBuilder(imports);
 
                 var otherCtor = ctorClassTemplate.Replace(Const.CTor.CTOR_PARAMETERS, ctorParamStr)
                                                  .Replace(Const.CTor.CTOR_NEWOBJECT_PARAMETERS, newObjParamStr)
@@ -1152,11 +1175,11 @@ namespace MASES.JCOReflectorEngine
             return false;
         }
 
-        static bool exportingEnumerator(Type item, string destFolder, string assemblyname, out string returnEnumeratorType, bool avoidWrite = false)
+        static bool ExportingEnumerator(this Type item, string destFolder, string assemblyname, out string returnEnumeratorType, bool avoidWrite = false)
         {
             JobManager.AppendToConsole(LogLevel.Verbose, "Starting creating public values from {0}", item.Name);
 
-            if (!checkForEnumerator(item)) { returnEnumeratorType = string.Empty; return false; }
+            if (!item.HasEnumerator()) { returnEnumeratorType = string.Empty; return false; }
 
             returnEnumeratorType = string.Empty;
 
@@ -1197,9 +1220,9 @@ namespace MASES.JCOReflectorEngine
 
             var reflectorEnumeratorTemplate = Const.Templates.GetTemplate(Const.Templates.ReflectorEnumeratorTemplate);
 
-            var importsStr = exportingImports(imports);
+            var importsStr = ExportImports(imports);
 
-            var packageName = item.Namespace.ToLowerInvariant();
+            var packageName = item.ToPackageName();
             var enumeratorStr = reflectorEnumeratorTemplate.Replace(Const.Enumerator.PACKAGE_NAME, packageName)
                                                            .Replace(Const.Enumerator.PACKAGE_IMPORT_SECTION, importsStr)
                                                            .Replace(Const.Enumerator.PACKAGE_INNER_CLASS_NAME, returnEnumeratorType)
@@ -1226,7 +1249,7 @@ namespace MASES.JCOReflectorEngine
             return true;
         }
 
-        static bool IsParams(ParameterInfo param)
+        static bool IsParams(this ParameterInfo param)
         {
             return param.IsDefined(typeof(ParamArrayAttribute), false);
         }
@@ -1243,18 +1266,18 @@ namespace MASES.JCOReflectorEngine
             {
                 foreach (var item in t.ImplementedInterfaces)
                 {
-                    if (!isManagedType(item, 0, 1)) continue;
+                    if (!item.IsManagedType(0, 1)) continue;
                     searchMethods(item, allMethods, traverseHierarchy);
                 }
             }
             else if (type.BaseType != null)
             {
-                if (!isManagedType(type.BaseType, 0, 1) || type.BaseType == typeof(object) || type.BaseType == typeof(Exception) || type.BaseType == typeof(Type)) return;
+                if (!type.BaseType.IsManagedType(0, 1) || type.BaseType == typeof(object) || type.BaseType == typeof(Exception) || type.BaseType == typeof(Type)) return;
                 searchMethods(type.BaseType, allMethods, traverseHierarchy);
             }
         }
 
-        static string signatureWithoutRetVal(MethodInfo method)
+        static string SignatureWithoutRetVal(this MethodInfo method)
         {
             if (method == null) return string.Empty;
             var sign = method.ToString();
@@ -1262,16 +1285,16 @@ namespace MASES.JCOReflectorEngine
             return sign;
         }
 
-        static bool isNewMethod(Type type, MethodInfo method, IList<MethodInfo> allMethods)
+        static bool IsNewMethod(this Type type, MethodInfo method, IList<MethodInfo> allMethods)
         {
-            string refSign = signatureWithoutRetVal(method);
+            string refSign = method.SignatureWithoutRetVal();
             if (method.GetBaseDefinition().DeclaringType == type)
             {
                 foreach (var item in allMethods)
                 {
                     if (item.Name == method.Name
                         && item.DeclaringType != type
-                        && signatureWithoutRetVal(item) == refSign)
+                        && item.SignatureWithoutRetVal() == refSign)
                     {
                         return true;
                     }
@@ -1281,7 +1304,7 @@ namespace MASES.JCOReflectorEngine
             return false;
         }
 
-        static bool exportingMethodsAvoidance(Type type, MethodInfo method)
+        static bool AvoidExportMethods(this Type type, MethodInfo method)
         {
             if (!EnableRefOutParameters) return false;
             var fullname = type.FullName;
@@ -1295,7 +1318,7 @@ namespace MASES.JCOReflectorEngine
             return false;
         }
 
-        static string exportingMethods(Type type, IList<Type> imports, IList<Type> implementableInterfaces, bool withInheritance, string destFolder, string assemblyname, out string returnEnumeratorType, out string returnInterfaceSection)
+        static string ExportMethods(this Type type, IList<Type> imports, IList<Type> implementableInterfaces, bool withInheritance, string destFolder, string assemblyname, out string returnEnumeratorType, out string returnInterfaceSection)
         {
             bool isInterface = false;
             returnInterfaceSection = string.Empty;
@@ -1350,7 +1373,7 @@ namespace MASES.JCOReflectorEngine
                 {
                     var methodName = item.Name;
 
-                    if (exportingMethodsAvoidance(type, item)) continue;
+                    if (type.AvoidExportMethods(item)) continue;
 
                     isPrimitive = true;
                     defaultPrimitiveValue = string.Empty;
@@ -1415,7 +1438,7 @@ namespace MASES.JCOReflectorEngine
                         }
                         else
                         {
-                            if (!exportingEnumerator(item.ReturnType, null, null, out returnEnumeratorType, true))
+                            if (!item.ReturnType.ExportingEnumerator(null, null, out returnEnumeratorType, true))
                             {
                                 returnEnumeratorType = string.Empty;
                                 continue;
@@ -1491,7 +1514,7 @@ namespace MASES.JCOReflectorEngine
                             isPrimitive |= typeof(Delegate).IsAssignableFrom(parameter.ParameterType);
                             string formatter = string.Empty;
                             string objectCaster = string.Empty;
-                            var paramName = checkForkeyword(parameter.Name);
+                            var paramName = replaceSinglekeyword(parameter.Name);
                             if (useRefOut)
                             {
                                 string primitiveParam = Const.Parameters.JCORefOutType;
@@ -1527,9 +1550,9 @@ namespace MASES.JCOReflectorEngine
 
                         string execParamStr = execParams.ToString();
 
-                        var exceptionStr = exceptionStringBuilder(item, imports);
+                        var exceptionStr = item.ExceptionStringBuilder(imports);
 
-                        bool isNewMethodVal = (withInheritance && !isInterface) ? isNewMethod(type, item, allMethods) : false;
+                        bool isNewMethodVal = (withInheritance && !isInterface) ? type.IsNewMethod(item, allMethods) : false;
                         string newMethodName = string.Empty;
                         if (isNewMethodVal)
                         {
@@ -1693,7 +1716,7 @@ namespace MASES.JCOReflectorEngine
                     {
                         var methodName = interfaceMethod.Name;
 
-                        if (exportingMethodsAvoidance(implementableInterface, interfaceMethod)) continue;
+                        if (implementableInterface.AvoidExportMethods(interfaceMethod)) continue;
 
                         isPrimitive = true;
                         defaultPrimitiveValue = string.Empty;
@@ -1743,7 +1766,7 @@ namespace MASES.JCOReflectorEngine
                             }
                             else
                             {
-                                if (!exportingEnumerator(interfaceMethod.ReturnType, null, null, out returnEnumeratorType, true))
+                                if (!interfaceMethod.ReturnType.ExportingEnumerator(null, null, out returnEnumeratorType, true))
                                 {
                                     //returnEnumeratorType = string.Empty;
                                     continue;
@@ -1817,7 +1840,7 @@ namespace MASES.JCOReflectorEngine
                                 isPrimitive |= typeof(Delegate).IsAssignableFrom(parameter.ParameterType);
                                 string formatter = string.Empty;
                                 string objectCaster = string.Empty;
-                                var paramName = checkForkeyword(parameter.Name);
+                                var paramName = replaceSinglekeyword(parameter.Name);
                                 if (useRefOut)
                                 {
                                     string primitiveParam = Const.Parameters.JCORefOutType;
@@ -1853,9 +1876,9 @@ namespace MASES.JCOReflectorEngine
 
                             string execParamStr = execParams.ToString();
 
-                            var exceptionStr = exceptionStringBuilder(interfaceMethod, imports);
+                            var exceptionStr = interfaceMethod.ExceptionStringBuilder(imports);
 
-                            bool isNewMethodVal = (withInheritance) ? isNewMethod(type, interfaceMethod, allMethods) : false;
+                            bool isNewMethodVal = (withInheritance) ? type.IsNewMethod(interfaceMethod, allMethods) : false;
                             string newMethodName = string.Empty;
                             if (isNewMethodVal)
                             {
@@ -1963,7 +1986,7 @@ namespace MASES.JCOReflectorEngine
             StringBuilder inputParams = new StringBuilder();
             StringBuilder execParams = new StringBuilder();
 
-            propertyJavaName = checkForkeyword(propertyJavaName);
+            propertyJavaName = replaceSinglekeyword(propertyJavaName);
 
             string inputParamStr = inputParams.ToString();
             if (!string.IsNullOrEmpty(inputParamStr))
@@ -1992,17 +2015,17 @@ namespace MASES.JCOReflectorEngine
             return propertyStr;
         }
 
-        static bool isNewProperty(Type type, PropertyInfo property, IList<Tuple<bool, PropertyInfo>> allProperties, bool isGet)
+        static bool IsNewProperty(this Type type, PropertyInfo property, IList<Tuple<bool, PropertyInfo>> allProperties, bool isGet)
         {
             MethodInfo method = isGet ? property.GetMethod : property.SetMethod;
-            string refSign = signatureWithoutRetVal(method);
+            string refSign = method.SignatureWithoutRetVal();
             if (method.GetBaseDefinition().DeclaringType == type)
             {
                 foreach (var item in allProperties)
                 {
                     if (item.Item2.Name == property.Name
                         && item.Item2.DeclaringType != type
-                        && signatureWithoutRetVal(isGet ? item.Item2.GetMethod : item.Item2.SetMethod) == refSign)
+                        && SignatureWithoutRetVal(isGet ? item.Item2.GetMethod : item.Item2.SetMethod) == refSign)
                     {
                         return true;
                     }
@@ -2026,18 +2049,18 @@ namespace MASES.JCOReflectorEngine
             {
                 foreach (var item in type.GetInterfaces())
                 {
-                    if (!isManagedType(item, 0, 1)) continue;
+                    if (!item.IsManagedType(0, 1)) continue;
                     searchProperties(item, allProperties, staticSearch, traverseHierarchy);
                 }
             }
             else if (type.BaseType != null)
             {
-                if (!isManagedType(type.BaseType, 0, 1) || type.BaseType == typeof(object) || type.BaseType == typeof(Exception) || type.BaseType == typeof(Type)) return;
+                if (!type.BaseType.IsManagedType(0, 1) || type.BaseType == typeof(object) || type.BaseType == typeof(Exception) || type.BaseType == typeof(Type)) return;
                 searchProperties(type.BaseType, allProperties, staticSearch, traverseHierarchy);
             }
         }
 
-        static string exportingProperties(Type type, IList<Type> imports, IList<Type> implementableInterfaces, bool withInheritance, bool isException, string destFolder, string assemblyname, out string returnInterfaceSection)
+        static string ExportProperties(this Type type, IList<Type> imports, IList<Type> implementableInterfaces, bool withInheritance, bool isException, string destFolder, string assemblyname, out string returnInterfaceSection)
         {
             bool isInterface = false;
             returnInterfaceSection = string.Empty;
@@ -2128,9 +2151,9 @@ namespace MASES.JCOReflectorEngine
                         if (item.GetMethod.GetParameters().Length != 0) continue; // only get without parameters are managed
                         isPrimitive |= typeof(Delegate).IsAssignableFrom(item.PropertyType);
 
-                        var exceptionStr = exceptionStringBuilder(item.GetMethod, imports);
+                        var exceptionStr = item.GetMethod.ExceptionStringBuilder(imports);
 
-                        bool isNewPropertyVal = (withInheritance && !isInterface) ? isNewProperty(type, item, properties, true) : false;
+                        bool isNewPropertyVal = (withInheritance && !isInterface) ? type.IsNewProperty(item, properties, true) : false;
                         string newPropertyName = string.Empty;
                         if (isNewPropertyVal)
                         {
@@ -2162,9 +2185,9 @@ namespace MASES.JCOReflectorEngine
                     }
                     if (item.CanWrite) // set
                     {
-                        var exceptionStr = exceptionStringBuilder(item.SetMethod, imports);
+                        var exceptionStr = item.SetMethod.ExceptionStringBuilder(imports);
 
-                        bool isNewPropertyVal = (withInheritance && !isInterface) ? isNewProperty(type, item, properties, false) : false;
+                        bool isNewPropertyVal = (withInheritance && !isInterface) ? type.IsNewProperty(item, properties, false) : false;
                         string newPropertyName = string.Empty;
                         if (isNewPropertyVal)
                         {
@@ -2275,9 +2298,9 @@ namespace MASES.JCOReflectorEngine
                             if (item.GetMethod.GetParameters().Length != 0) continue; // only get without parameters are managed
                             isPrimitive |= typeof(Delegate).IsAssignableFrom(item.PropertyType);
 
-                            var exceptionStr = exceptionStringBuilder(item.GetMethod, imports);
+                            var exceptionStr = item.GetMethod.ExceptionStringBuilder(imports);
 
-                            bool isNewPropertyVal = (withInheritance) ? isNewProperty(implementableInterface, item, properties, true) : false;
+                            bool isNewPropertyVal = (withInheritance) ? implementableInterface.IsNewProperty(item, properties, true) : false;
                             string newPropertyName = string.Empty;
                             if (isNewPropertyVal)
                             {
@@ -2301,9 +2324,9 @@ namespace MASES.JCOReflectorEngine
                         }
                         if (item.CanWrite) // set
                         {
-                            var exceptionStr = exceptionStringBuilder(item.SetMethod, imports);
+                            var exceptionStr = item.SetMethod.ExceptionStringBuilder(imports);
 
-                            bool isNewPropertyVal = (withInheritance) ? isNewProperty(type, item, properties, false) : false;
+                            bool isNewPropertyVal = withInheritance ? type.IsNewProperty(item, properties, false) : false;
                             string newPropertyName = string.Empty;
                             if (isNewPropertyVal)
                             {
@@ -2333,7 +2356,7 @@ namespace MASES.JCOReflectorEngine
             return propertyBuilder.ToString();
         }
 
-        static bool exportingDelegate(Type item, string destFolder, string assemblyname, bool avoidWrite = false)
+        static bool ExportingDelegate(this Type item, string destFolder, string assemblyname, bool avoidWrite = false)
         {
             if (!avoidWrite) Interlocked.Increment(ref analyzedDelegates);
 
@@ -2346,7 +2369,7 @@ namespace MASES.JCOReflectorEngine
 
             if (invokeMethod == null) return false;
 
-            var packageName = item.Namespace.ToLowerInvariant();
+            var packageName = item.ToPackageName();
             var delegateName = item.Name;
 
             var parameters = invokeMethod.GetParameters();
@@ -2401,7 +2424,7 @@ namespace MASES.JCOReflectorEngine
                 }
                 if (!isManaged) break; // found not managed type, stop here
 
-                var paramName = checkForkeyword(parameter.Name);
+                var paramName = replaceSinglekeyword(parameter.Name);
 
                 if (isArray)
                 {
@@ -2453,9 +2476,9 @@ namespace MASES.JCOReflectorEngine
                 execParamStr = execParamStr.Substring(0, execParamStr.Length - 2);
             }
 
-            var exceptionStr = exceptionStringBuilder(invokeMethod, imports);
+            var exceptionStr = invokeMethod.ExceptionStringBuilder(imports);
 
-            var importsStr = exportingImports(imports);
+            var importsStr = ExportImports(imports);
 
             var strReturnStatement = Const.Delegates.DELEGATE_RETURN_STATEMENT_OBJECT;
             if (isRetValArray)
@@ -2525,17 +2548,17 @@ namespace MASES.JCOReflectorEngine
             return true;
         }
 
-        static bool isNewEvent(Type type, EventInfo eventInfo, IList<EventInfo> allEvents)
+        static bool IsNewEvent(this Type type, EventInfo eventInfo, IList<EventInfo> allEvents)
         {
             MethodInfo method = eventInfo.AddMethod;
-            string refSign = signatureWithoutRetVal(eventInfo.AddMethod);
+            string refSign = eventInfo.AddMethod.SignatureWithoutRetVal();
             if (method.GetBaseDefinition().DeclaringType == type)
             {
                 foreach (var item in allEvents)
                 {
                     if (item.Name == eventInfo.Name
                         && item.DeclaringType != type
-                        && signatureWithoutRetVal(item.AddMethod) == refSign)
+                        && item.AddMethod.SignatureWithoutRetVal() == refSign)
                     {
                         return true;
                     }
@@ -2556,18 +2579,18 @@ namespace MASES.JCOReflectorEngine
             {
                 foreach (var item in type.GetInterfaces())
                 {
-                    if (!isManagedType(item, 0, 1)) continue;
+                    if (!item.IsManagedType(0, 1)) continue;
                     searchEvents(item, flags, allEvents, traverseHierarchy);
                 }
             }
             else if (type.BaseType != null)
             {
-                if (!isManagedType(type.BaseType, 0, 1) || type.BaseType == typeof(object) || type.BaseType == typeof(Exception) || type.BaseType == typeof(Type)) return;
+                if (!type.BaseType.IsManagedType(0, 1) || type.BaseType == typeof(object) || type.BaseType == typeof(Exception) || type.BaseType == typeof(Type)) return;
                 searchEvents(type.BaseType, flags, allEvents, traverseHierarchy);
             }
         }
 
-        static string exportingEvents(Type type, IList<Type> imports, IList<Type> implementableInterfaces, bool withInheritance, bool statics, bool isException, string destFolder, string assemblyname, out string returnInterfaceSection)
+        static string ExportEvents(this Type type, IList<Type> imports, IList<Type> implementableInterfaces, bool withInheritance, bool statics, bool isException, string destFolder, string assemblyname, out string returnInterfaceSection)
         {
             bool isInterface = false;
             returnInterfaceSection = string.Empty;
@@ -2656,12 +2679,12 @@ namespace MASES.JCOReflectorEngine
                 StringBuilder inputParams = new StringBuilder();
                 StringBuilder execParams = new StringBuilder();
 
-                if (!exportingDelegate(item.EventHandlerType, destFolder, assemblyname, true)) continue;
+                if (!item.EventHandlerType.ExportingDelegate(destFolder, assemblyname, true)) continue;
 
                 eventType = convertType(imports, item.EventHandlerType, out isPrimitive, out defaultPrimitiveValue, out isConcrete, out isSpecial, out isArray);
                 if (!isConcrete) continue; // found not managed type, jump to next 
 
-                bool isNewEventVal = (withInheritance && !isInterface) ? isNewEvent(type, item, eventLst) : false;
+                bool isNewEventVal = (withInheritance && !isInterface) ? type.IsNewEvent(item, eventLst) : false;
                 string newEventName = string.Empty;
                 if (isNewEventVal)
                 {
@@ -2709,7 +2732,7 @@ namespace MASES.JCOReflectorEngine
             return eventBuilder.ToString();
         }
 
-        static string exportingImports(IList<Type> imports)
+        static string ExportImports(IList<Type> imports)
         {
             StringBuilder importsToExport = new StringBuilder();
             foreach (var item in imports)
@@ -2722,22 +2745,22 @@ namespace MASES.JCOReflectorEngine
                 var name = subItem.Name;
                 if (subItem.IsInterface)
                 {
-                    if (isManagedType(subItem, 0, 1) && subItem != typeof(IEnumerator) && subItem != typeof(IEnumerable))
+                    if (subItem.IsManagedType(0, 1) && subItem != typeof(IEnumerator) && subItem != typeof(IEnumerable))
                     {
-                        importsToExport.AppendLine(string.Format(Const.Imports.IMPORT, subItem.Namespace.ToLowerInvariant(), name));
-                        importsToExport.AppendLine(string.Format(Const.Imports.IMPORT, subItem.Namespace.ToLowerInvariant(), name + Const.SpecialNames.ImplementationTrailer));
+                        importsToExport.AppendLine(string.Format(Const.Imports.IMPORT, subItem.ToPackageName(), name));
+                        importsToExport.AppendLine(string.Format(Const.Imports.IMPORT, subItem.ToPackageName(), name + Const.SpecialNames.ImplementationTrailer));
                     }
                 }
-                else if (isManagedType(subItem, 0, 1))
+                else if (subItem.IsManagedType(0, 1))
                 {
-                    importsToExport.AppendLine(string.Format(Const.Imports.IMPORT, subItem.Namespace.ToLowerInvariant(), name));
+                    importsToExport.AppendLine(string.Format(Const.Imports.IMPORT, subItem.ToPackageName(), name));
                 }
             }
 
             return importsToExport.ToString();
         }
 
-        static bool isManagedType(Type type, int recursion, int limit)
+        static bool IsManagedType(this Type type, int recursion, int limit)
         {
             var innerType = type;
             if (recursion == limit) return false; // we don't manage array of arrays
@@ -2757,7 +2780,7 @@ namespace MASES.JCOReflectorEngine
                 {
                     var tmp = innerType.Name.Substring(0, innerType.Name.LastIndexOf(Const.SpecialNames.ArrayTrailer));
                     if (tmp.Contains(Const.SpecialNames.ArrayTrailer)) return false; // it is [][]
-                    return isManagedType(innerType.GetElementType(), recursion + 1, limit);
+                    return innerType.GetElementType().IsManagedType(recursion + 1, limit);
                 }
                 else return false;
             }
@@ -2775,7 +2798,7 @@ namespace MASES.JCOReflectorEngine
             }
             if (typeof(Delegate).IsAssignableFrom(innerType)) // delegate types are managed only with events
             {
-                return exportingDelegate(innerType, null, null, true);
+                return innerType.ExportingDelegate(null, null, true);
             }
             if (innerType.Name.Contains("IntPtr") || innerType.Name.Contains("*"))
                 return false;
@@ -2788,13 +2811,13 @@ namespace MASES.JCOReflectorEngine
         static string checkForSpecialNames(string name, Type type, out bool needImport)
         {
             needImport = true;
-            if (name == "ArrayList") { needImport = false; return type.Namespace.ToLowerInvariant() + "." + name; }
-            if (name == "Binding") { needImport = false; return type.Namespace.ToLowerInvariant() + "." + name; }
-            if (name == "XamlReader") { needImport = false; return type.Namespace.ToLowerInvariant() + "." + name; }
+            if (name == "ArrayList") { needImport = false; return type.ToPackageName() + "." + name; }
+            if (name == "Binding") { needImport = false; return type.ToPackageName() + "." + name; }
+            if (name == "XamlReader") { needImport = false; return type.ToPackageName() + "." + name; }
             return name;
         }
 
-        static string checkForPrimitive(Type type, bool isArray, out bool isPrimitive, out string defaultPrimitiveValue, out bool needImport)
+        static string CheckForPrimitive(this Type type, bool isArray, out bool isPrimitive, out string defaultPrimitiveValue, out bool needImport)
         {
             needImport = false;
             isPrimitive = true;
@@ -2830,7 +2853,7 @@ namespace MASES.JCOReflectorEngine
             return retType;
         }
 
-        static string checkIsSpecial(Type type, out bool isSpecial)
+        static string checkIsSpecial(this Type type, out bool isSpecial)
         {
             isSpecial = false;
             if (type == typeof(object)) { isSpecial = true; return Const.SpecialNames.NetObject; }
@@ -2860,7 +2883,7 @@ namespace MASES.JCOReflectorEngine
                 innerType = type.GetElementType();
             }
             isArray = innerType.IsArray || innerType.Name.Contains("[]");
-            isManaged = isManagedType(type, 0, 2);
+            isManaged = type.IsManagedType(0, 2);
             bool needImport = true;
             try
             {
@@ -2868,13 +2891,13 @@ namespace MASES.JCOReflectorEngine
                 var special = checkIsSpecial((isArray) ? innerType.GetElementType() : innerType, out isSpecial);
                 if (isSpecial) { needImport = false; isPrimitive = false; return special; }
 
-                return checkForPrimitive(innerType, isArray, out isPrimitive, out defaultPrimitiveValue, out needImport);
+                return innerType.CheckForPrimitive(isArray, out isPrimitive, out defaultPrimitiveValue, out needImport);
             }
             finally
             {
                 if (imports != null && storeInImports && needImport && isManaged)
                 {
-                    if (isArray && isManagedType(innerType.GetElementType(), 0, 1))
+                    if (isArray && innerType.GetElementType().IsManagedType(0, 1))
                     {
                         innerType = innerType.GetElementType();
 
@@ -2885,8 +2908,8 @@ namespace MASES.JCOReflectorEngine
                             bool isPrimitiveHere;
                             bool needImportHere;
                             string defaultPrimitiveValueHere;
-                            checkIsSpecial(innerType, out isSpecialHere);
-                            checkForPrimitive(innerType, isArrayHere, out isPrimitiveHere, out defaultPrimitiveValueHere, out needImportHere);
+                            innerType.checkIsSpecial(out isSpecialHere);
+                            innerType.CheckForPrimitive(isArrayHere, out isPrimitiveHere, out defaultPrimitiveValueHere, out needImportHere);
                             if (needImportHere && !isPrimitiveHere && !isSpecialHere && !imports.Contains(innerType))
                             {
                                 imports.Add(innerType);

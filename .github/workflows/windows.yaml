@@ -73,18 +73,20 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Build JCOReflectorCLI
-        run: |
-          dotnet build --no-incremental --framework netcoreapp3.1 --configuration Release src\JCOReflectorCLI.sln
-          dotnet build --no-incremental --framework net5.0 --configuration Release src\JCOReflectorCLI.sln  
-          dotnet build --no-incremental --framework net6.0 --configuration Release src\JCOReflectorCLI.sln  
-          dotnet build --no-incremental --framework net461 --configuration Release src\JCOReflectorCLI.sln  
+        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\JCOReflectorCLI.sln
+
+      - uses: nuget/setup-nuget@v1
+        with:
+          nuget-version: '5.x'
+          
+      - run: nuget pack src\CLI\JCOReflectorCLI.nuspec -OutputDirectory .\bin
 
       # Runs a set of commands using the runners shell
       - name: Copy configuration file
         run: |
-          Copy-Item .github\workflows\JCOReflectorCLI.runtimeconfig.json -Destination bin\netcoreapp3.1\JCOReflectorCLI.runtimeconfig.json -Force
-          Copy-Item .github\workflows\JCOReflectorCLI5.0.runtimeconfig.json -Destination bin\net5.0\JCOReflectorCLI.runtimeconfig.json -Force
-          Copy-Item .github\workflows\JCOReflectorCLI6.0.runtimeconfig.json -Destination bin\net6.0\JCOReflectorCLI.runtimeconfig.json -Force
+          Copy-Item .github\workflows\JCOReflectorCLI.runtimeconfig.json -Destination bin\netcoreapp3.1\MASES.JCOReflectorCLI.runtimeconfig.json -Force
+          Copy-Item .github\workflows\JCOReflectorCLI5.0.runtimeconfig.json -Destination bin\net5.0\MASES.JCOReflectorCLI.runtimeconfig.json -Force
+          Copy-Item .github\workflows\JCOReflectorCLI6.0.runtimeconfig.json -Destination bin\net6.0\MASES.JCOReflectorCLI.runtimeconfig.json -Force
 
       - name: Remove Java files
         run: |
@@ -94,47 +96,47 @@ jobs:
           Remove-Item .\netreflected\src\net461 -Recurse -Force
 
       - name: Reflect .NET Core 3.1 Java files
-        run: dotnet bin\netcoreapp3.1\JCOReflectorCLI.dll -JobType Reflect -JobFile .github\workflows\reflect_netcoreapp3.1.job
+        run: dotnet bin\netcoreapp3.1\MASES.JCOReflectorCLI.dll -JobType Reflect -JobFile .github\workflows\reflect_netcoreapp3.1.job
 
       - name: Reflect .NET 5.0 Java files
-        run: .\bin\net5.0\JCOReflectorCLI -JobType Reflect -JobFile .github\workflows\reflect_net5.0.job
+        run: .\bin\net5.0\MASES.JCOReflectorCLI -JobType Reflect -JobFile .github\workflows\reflect_net5.0.job
         
       - name: Reflect .NET 6.0 Java files
-        run: .\bin\net6.0\JCOReflectorCLI -JobType Reflect -JobFile .github\workflows\reflect_net6.0.job
+        run: .\bin\net6.0\MASES.JCOReflectorCLI -JobType Reflect -JobFile .github\workflows\reflect_net6.0.job
           
       - name: Reflect .NET Framework Java files
-        run: .\bin\net461\JCOReflectorCLI -JobType Reflect -JobFile .github\workflows\reflect_net461.job
+        run: .\bin\net461\MASES.JCOReflectorCLI -JobType Reflect -JobFile .github\workflows\reflect_net461.job
 
       - name: Build Java files .NET Core 3.1
-        run: dotnet bin\netcoreapp3.1\JCOReflectorCLI.dll -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
+        run: dotnet bin\netcoreapp3.1\MASES.JCOReflectorCLI.dll -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
         shell: cmd
         
       - name: Build Java files .NET Core 5.0
-        run: dotnet bin\net5.0\JCOReflectorCLI.dll -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
+        run: dotnet bin\net5.0\MASES.JCOReflectorCLI.dll -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
         shell: cmd
         
       - name: Build Java files .NET Core 6.0
-        run: dotnet bin\net6.0\JCOReflectorCLI.dll -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
+        run: dotnet bin\net6.0\MASES.JCOReflectorCLI.dll -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
         shell: cmd
         
       - name: Build Java files .NET Framework
-        run: .\bin\net461\JCOReflectorCLI -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
+        run: .\bin\net461\MASES.JCOReflectorCLI -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
         shell: cmd
         
       - name: Build JAR files .NET Core 3.1
-        run: dotnet bin\netcoreapp3.1\JCOReflectorCLI.dll -JobType CreateJars -JobFile .github\workflows\createjars_core3.1_win19.job -JDKFolder %JAVA_HOME_11_X64%
+        run: dotnet bin\netcoreapp3.1\MASES.JCOReflectorCLI.dll -JobType CreateJars -JobFile .github\workflows\createjars_core3.1_win19.job -JDKFolder %JAVA_HOME_11_X64%
         shell: cmd
         
       - name: Build JAR files .NET Core 5.0
-        run: dotnet bin\net5.0\JCOReflectorCLI.dll -JobType CreateJars -JobFile .github\workflows\createjars_core5.0_win19.job -JDKFolder %JAVA_HOME_11_X64%
+        run: dotnet bin\net5.0\MASES.JCOReflectorCLI.dll -JobType CreateJars -JobFile .github\workflows\createjars_core5.0_win19.job -JDKFolder %JAVA_HOME_11_X64%
         shell: cmd
         
       - name: Build JAR files .NET Core 6.0
-        run: dotnet bin\net6.0\JCOReflectorCLI.dll -JobType CreateJars -JobFile .github\workflows\createjars_core6.0_win19.job -JDKFolder %JAVA_HOME_11_X64%
+        run: dotnet bin\net6.0\MASES.JCOReflectorCLI.dll -JobType CreateJars -JobFile .github\workflows\createjars_core6.0_win19.job -JDKFolder %JAVA_HOME_11_X64%
         shell: cmd
         
       - name: Build JAR files .NET Framework
-        run: .\bin\net461\JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_framework_win19.job -JDKFolder %JAVA_HOME_11_X64%
+        run: .\bin\net461\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_framework_win19.job -JDKFolder %JAVA_HOME_11_X64%
         shell: cmd
         
       - name: Build Java test source file .NET Core 3.1
@@ -325,9 +327,6 @@ jobs:
           Compress-Archive -Path .\bin\net5.0\* -DestinationPath .\bin\net5.0.zip
           Compress-Archive -Path .\bin\net6.0\* -DestinationPath .\bin\net6.0.zip
           Compress-Archive -Path .\bin\net461\* -DestinationPath .\bin\net461.zip
-
-      - name: Build NuGet Packages
-        run: dotnet build --no-incremental --configuration Release /p:Platform="Any CPU" src\JCOReflectorCLI.sln
 
       - name: Extract commit SHA
         run: |

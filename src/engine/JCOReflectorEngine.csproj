@@ -7,10 +7,10 @@
     <Copyright>Copyright ©  MASES s.r.l. 2022</Copyright>
     <Authors>MASES s.r.l.</Authors>
     <Company>MASES s.r.l.</Company>
-    <Version>1.8.4.0</Version>
+    <Version>1.8.5.0</Version>
     <Product>MASES.JCOReflectorEngine</Product>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
-    <TargetFrameworks>net461;netcoreapp3.1;net5.0;net5.0-windows;net6.0;net6.0-windows</TargetFrameworks>
+    <TargetFrameworks>net461;netcoreapp3.1;net5.0;net6.0</TargetFrameworks>
     <OutputPath>..\..\bin\</OutputPath>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
@@ -19,13 +19,14 @@
     <PackageReleaseNotes>https://github.com/masesgroup/JCOReflector/releases</PackageReleaseNotes>
     <PackageLicense>LICENSE</PackageLicense>
     <PackageIcon>JCOB128x128.png</PackageIcon>
-    <PackageTags>jvm-enabled-language kotlin java scala reflection dotnet clr netcore bridge jcobridge class framework csharp</PackageTags>
+    <PackageTags>jcoreflector jvm-enabled-language kotlin java scala reflection dotnet clr netcore bridge jcobridge class framework csharp</PackageTags>
     <PackageId>MASES.JCOReflectorEngine</PackageId>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>..\Common\JCOReflector.snk</AssemblyOriginatorKeyFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
   <!-- Fix start https://github.com/dotnet/sourcelink/issues/572 -->
   <PropertyGroup>
@@ -104,12 +105,13 @@
     <None Include="..\..\LICENSE" Pack="true" PackagePath="" />
     <None Include="..\Common\JCOB128x128.png" Pack="true" PackagePath="" />
     <None Include="..\Common\JCOReflector.snk" Link="JCOReflector.snk" />
+    <None Include="..\..\README.md" Pack="true" PackagePath="\"/>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MASES.CLIParser" Version="2.2.1" />
     <PackageReference Include="MASES.JCOBridge" Version="2.4.6">
-        <IncludeAssets>All</IncludeAssets>
-        <PrivateAssets>None</PrivateAssets>
+      <IncludeAssets>All</IncludeAssets>
+      <PrivateAssets>None</PrivateAssets>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

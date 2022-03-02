@@ -1,32 +1,34 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
+    <PackageType>DotnetTool</PackageType>
     <OutputType>Exe</OutputType>
-    <AssemblyName>JCOReflectorCLI</AssemblyName>
+    <AssemblyName>MASES.JCOReflectorCLI</AssemblyName>
     <RootNamespace>MASES.JCOReflectorCLI</RootNamespace>
     <Title>JCOReflector CLI - CLI interface for JCOReflector Engine</Title>
     <Description>JCOReflector CLI - CLI interface for JCOReflector Engine</Description>
     <Copyright>Copyright ©  MASES s.r.l. 2022</Copyright>
     <Authors>MASES s.r.l.</Authors>
     <Company>MASES s.r.l.</Company>
-    <Version>1.8.4.0</Version>
+    <Version>1.8.5.0</Version>
     <Product>MASES.JCOReflectorCLI</Product>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
     <TargetFrameworks>net461;netcoreapp3.1;net5.0;net6.0</TargetFrameworks>
     <OutputPath>..\..\bin\</OutputPath>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <!--<GeneratePackageOnBuild>true</GeneratePackageOnBuild>-->
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageProjectUrl>https://github.com/masesgroup/JCOReflector/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/masesgroup/JCOReflector</RepositoryUrl>
     <PackageReleaseNotes>https://github.com/masesgroup/JCOReflector/releases</PackageReleaseNotes>
     <PackageLicense>LICENSE</PackageLicense>
     <PackageIcon>JCOB128x128.png</PackageIcon>
-    <PackageTags>jvm-enabled-language kotlin java scala reflection dotnet clr netcore bridge jcobridge class framework csharp</PackageTags>
+    <PackageTags>jcoreflector cli jvm-enabled-language kotlin java scala reflection dotnet clr netcore bridge jcobridge class framework csharp</PackageTags>
     <PackageId>MASES.JCOReflectorCLI</PackageId>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>..\Common\JCOReflector.snk</AssemblyOriginatorKeyFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
   <!-- Fix start https://github.com/dotnet/sourcelink/issues/572 -->
   <PropertyGroup>
@@ -43,11 +45,20 @@
     <None Include="..\..\LICENSE" Pack="true" PackagePath="" />
     <None Include="..\Common\JCOB128x128.png" Pack="true" PackagePath="" />
     <None Include="..\Common\JCOReflector.snk" Link="JCOReflector.snk" />
+    <None Include="..\..\README.md" Pack="true" PackagePath="\"/>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\engine\JCOReflectorEngine.csproj" />
+  <ProjectReference Include="..\engine\JCOReflectorEngine.csproj">
+    <IncludeAssets>All</IncludeAssets>
+    <PrivateAssets>None</PrivateAssets>
+  </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1" PrivateAssets="All" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="DotnetToolSettings.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 </Project>

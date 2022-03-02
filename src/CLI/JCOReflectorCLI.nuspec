@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>MASES.JCOReflectorCLI</id>
+    <version>1.8.5</version>
+    <title>JCOReflector CLI - CLI interface for JCOReflector Engine</title>
+    <authors>MASES s.r.l.</authors>
+    <owners>MASES s.r.l.</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>https://github.com/masesgroup/JCOReflector/</projectUrl>
+    <repository type="git" url="https://github.com/masesgroup/JCOReflector/" />
+    <description>JCOReflector CLI - CLI interface for JCOReflector Engine</description>
+    <releaseNotes>https://github.com/masesgroup/JCOReflector/releases</releaseNotes>
+    <copyright>Copyright ©  MASES s.r.l. 2022</copyright>
+    <license type="file">LICENSE</license>
+    <icon>JCOB128x128.png</icon>
+    <tags>jcoreflector cli jvm-enabled-language kotlin java scala reflection dotnet clr netcore bridge jcobridge class framework csharp</tags>
+    <packageTypes>
+      <packageType name="DotnetTool" />
+    </packageTypes>
+    <readme>README.md</readme>
+  </metadata>
+    <files>
+        <file src="..\..\LICENSE" target="LICENSE" />
+        <file src="..\Common\JCOB128x128.png" target="" />
+        <file src="..\..\README.md" target="" />
+        <file src="..\..\bin\netcoreapp3.1\" target="tools\netcoreapp3.1\any" />
+        <file src="..\..\bin\net5.0\" target="tools\net5.0\any" />
+        <file src="..\..\bin\net6.0\" target="tools\net6.0\any" />
+    </files>
+</package>

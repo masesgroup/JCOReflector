@@ -646,11 +646,11 @@ namespace MASES.JCOReflectorEngine
 
                 if (!basepackage.Contains(".") && basepackage == item) // package with a single element
                 {
-                    basepackage.Replace(item, item + "_package");
+                    basepackage = basepackage.Replace(item, item + "_package");
                 }
                 else if (basepackage.StartsWith(beginning) || basepackage.Contains(middle) || basepackage.EndsWith(end))
                 {
-                    basepackage.Replace(item, item + "_package");
+                    basepackage = basepackage.Replace(item, item + "_package");
                 }
             }
 

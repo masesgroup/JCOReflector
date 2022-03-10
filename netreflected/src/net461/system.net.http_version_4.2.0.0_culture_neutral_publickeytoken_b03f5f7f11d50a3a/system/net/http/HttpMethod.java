@@ -31,37 +31,35 @@
  * </auto-generated>
  *************************************************************************************/
 
-package system;
+package system.net.http;
 
 import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.collections.specialized.NameValueCollection;
-import system.Uri;
-import system.UriTemplate;
+import system.net.http.HttpMethod;
 
 
 /**
- * The base .NET class managing System.UriTemplateMatch, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
+ * The base .NET class managing System.Net.Http.HttpMethod, System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.UriTemplateMatch" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.UriTemplateMatch</a>
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Http.HttpMethod" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Http.HttpMethod</a>
  */
-public class UriTemplateMatch extends NetObject  {
+public class HttpMethod extends NetObject  {
     /**
-     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     * Fully assembly qualified name: System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
-    public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    public static final String assemblyFullName = "System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
     /**
-     * Assembly name: System.ServiceModel
+     * Assembly name: System.Net.Http
      */
-    public static final String assemblyShortName = "System.ServiceModel";
+    public static final String assemblyShortName = "System.Net.Http";
     /**
-     * Qualified class name: System.UriTemplateMatch
+     * Qualified class name: System.Net.Http.HttpMethod
      */
-    public static final String className = "System.UriTemplateMatch";
+    public static final String className = "System.Net.Http.HttpMethod";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
     /**
      * The type managed from JCOBridge. See {@link JCType}
@@ -97,7 +95,7 @@ public class UriTemplateMatch extends NetObject  {
     /**
      * Internal constructor. Use with caution 
      */
-    public UriTemplateMatch(java.lang.Object instance) throws Throwable {
+    public HttpMethod(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -130,137 +128,132 @@ public class UriTemplateMatch extends NetObject  {
         return classType;
     }
     /**
-     * Try to cast the {@link IJCOBridgeReflected} instance into {@link UriTemplateMatch}, a cast assert is made to check if types are compatible.
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link HttpMethod}, a cast assert is made to check if types are compatible.
      * @param from {@link IJCOBridgeReflected} instance to be casted
-     * @return {@link UriTemplateMatch} instance
+     * @return {@link HttpMethod} instance
      * @throws java.lang.Throwable in case of error during cast operation
      */
-    public static UriTemplateMatch cast(IJCOBridgeReflected from) throws Throwable {
+    public static HttpMethod cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
-        return new UriTemplateMatch(from.getJCOInstance());
+        return new HttpMethod(from.getJCOInstance());
     }
 
     // Constructors section
     
-    public UriTemplateMatch() throws Throwable {
+    public HttpMethod() throws Throwable {
+    }
+
+    public HttpMethod(java.lang.String method) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject());
+            setJCOInstance((JCObject)classType.NewObject(method));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
+
 
 
     
     // Methods section
     
+    public boolean Equals(HttpMethod other) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.TypeLoadException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("Equals", other == null ? null : other.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
 
     
     // Properties section
     
-    public NameValueCollection getBoundVariables() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static HttpMethod getDelete() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("BoundVariables");
-            return new NameValueCollection(val);
+            JCObject val = (JCObject)classType.Get("Delete");
+            return new HttpMethod(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public NameValueCollection getQueryParameters() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.UriFormatException, system.OutOfMemoryException, system.MulticastNotSupportedException, system.NotSupportedException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static HttpMethod getGet() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("QueryParameters");
-            return new NameValueCollection(val);
+            JCObject val = (JCObject)classType.Get("Get");
+            return new HttpMethod(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public NetObject getData() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static HttpMethod getHead() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("Data");
-            return new NetObject(val);
+            JCObject val = (JCObject)classType.Get("Head");
+            return new HttpMethod(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setData(NetObject Data) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static HttpMethod getOptions() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("Data", Data == null ? null : Data.getJCOInstance());
+            JCObject val = (JCObject)classType.Get("Options");
+            return new HttpMethod(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public Uri getBaseUri() throws Throwable, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.ArgumentException, system.NotSupportedException, system.OutOfMemoryException, system.UriFormatException, system.globalization.CultureNotFoundException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static HttpMethod getPost() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("BaseUri");
-            return new Uri(val);
+            JCObject val = (JCObject)classType.Get("Post");
+            return new HttpMethod(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setBaseUri(Uri BaseUri) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static HttpMethod getPut() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            classInstance.Set("BaseUri", BaseUri == null ? null : BaseUri.getJCOInstance());
+            JCObject val = (JCObject)classType.Get("Put");
+            return new HttpMethod(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public Uri getRequestUri() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
+    public static HttpMethod getTrace() throws Throwable {
+        if (classType == null)
+            throw new UnsupportedOperationException("classType is null.");
         try {
-            JCObject val = (JCObject)classInstance.Get("RequestUri");
-            return new Uri(val);
+            JCObject val = (JCObject)classType.Get("Trace");
+            return new HttpMethod(val);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
     }
 
-    public void setRequestUri(Uri RequestUri) throws Throwable {
+    public java.lang.String getMethod() throws Throwable {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
-            classInstance.Set("RequestUri", RequestUri == null ? null : RequestUri.getJCOInstance());
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public UriTemplate getTemplate() throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject val = (JCObject)classInstance.Get("Template");
-            return new UriTemplate(val);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
-    public void setTemplate(UriTemplate Template) throws Throwable {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            classInstance.Set("Template", Template == null ? null : Template.getJCOInstance());
+            return (java.lang.String)classInstance.Get("Method");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

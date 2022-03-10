@@ -31,35 +31,36 @@
  * </auto-generated>
  *************************************************************************************/
 
-package system.servicemodel.channels;
+package system.net.http;
 
 import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 import java.util.ArrayList;
 
 // Import section
-import system.net.http.HttpMessageHandler;
+import system.net.http.HttpContent;
+import system.io.Stream;
 
 
 /**
- * The base .NET class managing System.ServiceModel.Channels.HttpMessageHandlerFactory, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089.
+ * The base .NET class managing System.Net.Http.StreamContent, System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.HttpMessageHandlerFactory" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.ServiceModel.Channels.HttpMessageHandlerFactory</a>
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Net.Http.StreamContent" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Net.Http.StreamContent</a>
  */
-public class HttpMessageHandlerFactory extends NetObject  {
+public class StreamContent extends HttpContent  {
     /**
-     * Fully assembly qualified name: System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+     * Fully assembly qualified name: System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
      */
-    public static final String assemblyFullName = "System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
+    public static final String assemblyFullName = "System.Net.Http, Version=4.2.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a";
     /**
-     * Assembly name: System.ServiceModel
+     * Assembly name: System.Net.Http
      */
-    public static final String assemblyShortName = "System.ServiceModel";
+    public static final String assemblyShortName = "System.Net.Http";
     /**
-     * Qualified class name: System.ServiceModel.Channels.HttpMessageHandlerFactory
+     * Qualified class name: System.Net.Http.StreamContent
      */
-    public static final String className = "System.ServiceModel.Channels.HttpMessageHandlerFactory";
+    public static final String className = "System.Net.Http.StreamContent";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
     /**
      * The type managed from JCOBridge. See {@link JCType}
@@ -95,7 +96,7 @@ public class HttpMessageHandlerFactory extends NetObject  {
     /**
      * Internal constructor. Use with caution 
      */
-    public HttpMessageHandlerFactory(java.lang.Object instance) throws Throwable {
+    public StreamContent(java.lang.Object instance) throws Throwable {
         super(instance);
         if (instance instanceof JCObject) {
             classInstance = (JCObject) instance;
@@ -128,26 +129,36 @@ public class HttpMessageHandlerFactory extends NetObject  {
         return classType;
     }
     /**
-     * Try to cast the {@link IJCOBridgeReflected} instance into {@link HttpMessageHandlerFactory}, a cast assert is made to check if types are compatible.
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link StreamContent}, a cast assert is made to check if types are compatible.
      * @param from {@link IJCOBridgeReflected} instance to be casted
-     * @return {@link HttpMessageHandlerFactory} instance
+     * @return {@link StreamContent} instance
      * @throws java.lang.Throwable in case of error during cast operation
      */
-    public static HttpMessageHandlerFactory cast(IJCOBridgeReflected from) throws Throwable {
+    public static StreamContent cast(IJCOBridgeReflected from) throws Throwable {
         NetType.AssertCast(classType, from);
-        return new HttpMessageHandlerFactory(from.getJCOInstance());
+        return new StreamContent(from.getJCOInstance());
     }
 
     // Constructors section
     
-    public HttpMessageHandlerFactory() throws Throwable {
+    public StreamContent() throws Throwable {
     }
 
-    public HttpMessageHandlerFactory(NetType... handlers) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException {
+    public StreamContent(Stream content) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.ArgumentOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
-            setJCOInstance((JCObject)classType.NewObject((java.lang.Object)toObjectFromArray(handlers)));
+            setJCOInstance((JCObject)classType.NewObject(content == null ? null : content.getJCOInstance()));
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public StreamContent(Stream content, int bufferSize) throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException {
+        try {
+            // add reference to assemblyName.dll file
+            addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
+            setJCOInstance((JCObject)classType.NewObject(content == null ? null : content.getJCOInstance(), bufferSize));
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -158,17 +169,6 @@ public class HttpMessageHandlerFactory extends NetObject  {
     
     // Methods section
     
-    public HttpMessageHandler Create(HttpMessageHandler innerChannel) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.NotImplementedException, system.diagnostics.tracing.EventSourceException {
-        if (classInstance == null)
-            throw new UnsupportedOperationException("classInstance is null.");
-        try {
-            JCObject objCreate = (JCObject)classInstance.Invoke("Create", innerChannel == null ? null : innerChannel.getJCOInstance());
-            return new HttpMessageHandler(objCreate);
-        } catch (JCNativeException jcne) {
-            throw translateException(jcne);
-        }
-    }
-
 
     
     // Properties section

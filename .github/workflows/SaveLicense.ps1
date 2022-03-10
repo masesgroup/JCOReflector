@@ -1,0 +1,6 @@
+[Console]::WriteLine("Reading {0}, writing {1}", $args[0], $args[1])
+$bytes = [IO.File]::ReadAllBytes($args[0])
+[Console]::WriteLine("Read {0} bytes from {1}", $bytes.Length, $args[0])
+$b64 = [Convert]::ToBase64String($bytes)
+[Console]::WriteLine("Writing {0} with length {1} on {2}", $b64, $b64.Length, $args[1])
+[IO.File]::WriteAllText($args[1], [Convert]::ToBase64String($bytes))

@@ -43,15 +43,15 @@ namespace MASES.JCOReflectorGUI
         public static readonly DependencyProperty TotalFoldersProperty =
             DependencyProperty.Register("TotalFolders", typeof(int), typeof(AssemblyCollectionControl), new PropertyMetadata(0));
 
-        public AssemblyDataCollection AssemblyDataCollection
+        public AssemblyDataCollection AssemblyCollection
         {
-            get { return (AssemblyDataCollection)GetValue(AssemblyDataCollectionProperty); }
-            set { SetValue(AssemblyDataCollectionProperty, value); }
+            get { return (AssemblyDataCollection)GetValue(AssemblyCollectionProperty); }
+            set { SetValue(AssemblyCollectionProperty, value); }
         }
 
         // Using a DependencyProperty as the backing store for UserNodeIds.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty AssemblyDataCollectionProperty =
-            DependencyProperty.Register("AssemblyDataCollection", typeof(AssemblyDataCollection), typeof(AssemblyCollectionControl), new PropertyMetadata(PropertyChangedCallback));
+        public static readonly DependencyProperty AssemblyCollectionProperty =
+            DependencyProperty.Register("AssemblyCollection", typeof(AssemblyDataCollection), typeof(AssemblyCollectionControl), new PropertyMetadata(PropertyChangedCallback));
 
         static void PropertyChangedCallback(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
@@ -66,9 +66,9 @@ namespace MASES.JCOReflectorGUI
 
         private void btnSelectAll_Click(object sender, RoutedEventArgs e)
         {
-            if (AssemblyDataCollection != null)
+            if (AssemblyCollection != null)
             {
-                foreach (var item in AssemblyDataCollection)
+                foreach (AssemblyData item in AssemblyCollection)
                 {
                     item.IsSelected = true;
                 }
@@ -77,9 +77,9 @@ namespace MASES.JCOReflectorGUI
 
         private void btnUnselectAll_Click(object sender, RoutedEventArgs e)
         {
-            if (AssemblyDataCollection != null)
+            if (AssemblyCollection != null)
             {
-                foreach (var item in AssemblyDataCollection)
+                foreach (AssemblyData item in AssemblyCollection)
                 {
                     item.IsSelected = false;
                 }

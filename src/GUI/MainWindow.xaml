@@ -88,6 +88,11 @@
                                             <CheckBox Name="cbEnableRefOutParameters" Content="Ref Out Parameters" IsChecked="False" VerticalContentAlignment="Center" ToolTip="Enable RefOut Parameters"/>
                                         </DockPanel>
                                     </GroupBox>
+                                    <GroupBox DockPanel.Dock="Top" Header="Namespace">
+                                        <DockPanel  Height="30">
+                                            <CheckBox Name="cbAvoidDisableInternalNamespace" Content="Reflect namepsace with Internal" IsChecked="False" VerticalContentAlignment="Center" ToolTip="Set to true to disable avoidance of reflection of namespaces ending with Internal"/>
+                                        </DockPanel>
+                                    </GroupBox>
                                 </DockPanel>
                             </GroupBox>
                             <DockPanel DockPanel.Dock="Top" MinHeight="30" LastChildFill="False">
@@ -132,7 +137,7 @@
                             <Label Content="External POM Filename" VerticalContentAlignment="Center" VerticalAlignment="Stretch"/>
                             <TextBox Name="tbPOMFileName" VerticalContentAlignment="Center" VerticalAlignment="Stretch" />
                         </DockPanel>
-                        <local:AssemblyCollectionControl DockPanel.Dock="Bottom" AssemblyDataCollection="{Binding ElementName=mainWindow, Path=AssemblyDataCollection, Mode=TwoWay}"/>
+                        <local:AssemblyCollectionControl DockPanel.Dock="Bottom" AssemblyCollection="{Binding ElementName=mainWindow, Path=AssemblyCollection, Mode=TwoWay}"/>
                     </DockPanel>
                 </TabItem>
             </TabControl>

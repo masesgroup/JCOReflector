@@ -228,6 +228,7 @@ namespace MASES.JCOReflectorEngine
             public const string EnableRefOutParameters = "EnableRefOutParameters";
             public const string DryRun = "DryRun";
             public const string AvoidReportAndStatistics = "AvoidReportAndStatistics";
+            public const string AvoidDisableInternalNamespace = "AvoidDisableInternalNamespace";
 
             // JavaBuilderEventArgs
             public const string JDKFolder = "JDKFolder";
@@ -396,6 +397,12 @@ namespace MASES.JCOReflectorEngine
                     Name = CmdParam.AvoidReportAndStatistics,
                     Default = false,
                     Help = "Do not write report and statistics (used from JobType.Reflect).",
+                },
+                new ArgumentMetadata<bool>()
+                {
+                    Name = CmdParam.AvoidDisableInternalNamespace,
+                    Default = false,
+                    Help = "Do not bypass namespace ending with Internal.",
                 },
                 new ArgumentMetadata<string>()
                 {
@@ -656,6 +663,10 @@ namespace MASES.JCOReflectorEngine
                         if (Parser.Exist(args, CmdParam.AvoidReportAndStatistics))
                         {
                             newArg.AvoidReportAndStatistics = Parser.Get<bool>(args, CmdParam.AvoidReportAndStatistics);
+                        }
+                        if (Parser.Exist(args, CmdParam.AvoidDisableInternalNamespace))
+                        {
+                            newArg.AvoidDisableInternalNamespace = Parser.Get<bool>(args, CmdParam.AvoidDisableInternalNamespace);
                         }
                     }
                     break;
@@ -1612,6 +1623,7 @@ namespace MASES.JCOReflectorEngine
         public bool EnableRefOutParameters { get; set; }
         public bool DryRun { get; set; }
         public bool AvoidReportAndStatistics { get; set; }
+        public bool AvoidDisableInternalNamespace { get; set; }
     }
     #endregion
 }

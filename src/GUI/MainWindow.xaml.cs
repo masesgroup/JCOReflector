@@ -55,15 +55,15 @@ namespace MASES.JCOReflectorGUI
         public static readonly DependencyProperty JarDestinationFolderProperty =
             DependencyProperty.Register("JarDestinationFolder", typeof(string), typeof(MainWindow), new PropertyMetadata(JobManager.JarDestinationFolder));
 
-        public AssemblyDataCollection AssemblyDataCollection
+        public AssemblyDataCollection AssemblyCollection
         {
-            get { return (AssemblyDataCollection)GetValue(AssemblyDataCollectionProperty); }
-            set { SetValue(AssemblyDataCollectionProperty, value); }
+            get { return (AssemblyDataCollection)GetValue(AssemblyCollectionProperty); }
+            set { SetValue(AssemblyCollectionProperty, value); }
         }
 
         // Using a DependencyProperty as the backing store for UserNodeIds.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty AssemblyDataCollectionProperty =
-            DependencyProperty.Register("AssemblyDataCollection", typeof(AssemblyDataCollection), typeof(MainWindow));
+        public static readonly DependencyProperty AssemblyCollectionProperty =
+            DependencyProperty.Register("AssemblyCollection", typeof(AssemblyDataCollection), typeof(MainWindow));
 
         public int MaxDepth
         {
@@ -173,6 +173,7 @@ namespace MASES.JCOReflectorGUI
                 EnableInheritance = cbEnableInheritance.IsChecked.Value,
                 EnableInterfaceInheritance = cbEnableInterfaceInheritance.IsChecked.Value,
                 EnableRefOutParameters = cbEnableRefOutParameters.IsChecked.Value,
+                AvoidDisableInternalNamespace = cbAvoidDisableInternalNamespace.IsChecked.Value,
                 DryRun = cbDryRun.IsChecked.Value
             };
 
@@ -202,7 +203,7 @@ namespace MASES.JCOReflectorGUI
 
             var result = JobManager.CreateFolderList(args);
 
-            AssemblyDataCollection = result;
+            AssemblyCollection = result;
         }
 
         private void btnBuild_Click(object sender, RoutedEventArgs e)
@@ -217,7 +218,7 @@ namespace MASES.JCOReflectorGUI
                     JDKToolExtraOptions = tbJDKToolExtraOptions.Text,
                     SourceFolder = SourceDestinationFolder,
                     SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value,
-                    AssembliesToUse = AssemblyDataCollection.CreateList(AssemblyDataCollection)
+                    AssembliesToUse = AssemblyDataCollection.CreateList(AssemblyCollection)
                 };
 
                 if (cbExportToFile.IsChecked.Value)
@@ -248,7 +249,7 @@ namespace MASES.JCOReflectorGUI
                     JDKToolExtraOptions = tbJDKToolExtraOptions.Text,
                     SourceFolder = SourceDestinationFolder,
                     SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value,
-                    AssembliesToUse = AssemblyDataCollection.CreateList(AssemblyDataCollection),
+                    AssembliesToUse = AssemblyDataCollection.CreateList(AssemblyCollection),
                     CommitVersion = tbCommitVersion.Text
                 };
 
@@ -283,7 +284,7 @@ namespace MASES.JCOReflectorGUI
                     WithJARSource = cbWithSource.IsChecked.Value,
                     EmbeddingJCOBridge = cbWithEmbedding.IsChecked.Value,
 
-                    AssembliesToUse = AssemblyDataCollection.CreateList(AssemblyDataCollection)
+                    AssembliesToUse = AssemblyDataCollection.CreateList(AssemblyCollection)
                 };
 
                 if (cbExportToFile.IsChecked.Value)
@@ -311,7 +312,7 @@ namespace MASES.JCOReflectorGUI
                 JDKToolExtraOptions = tbJDKToolExtraOptions.Text,
                 SourceFolder = SourceDestinationFolder,
                 SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value,
-                AssembliesToUse = AssemblyDataCollection.CreateList(AssemblyDataCollection)
+                AssembliesToUse = AssemblyDataCollection.CreateList(AssemblyCollection)
             };
 
             if (cbExportToFile.IsChecked.Value)
@@ -335,7 +336,7 @@ namespace MASES.JCOReflectorGUI
                 SourceFolder = SourceDestinationFolder,
                 SplitFolderByAssembly = cbEnableSplitFolder.IsChecked.Value,
                 POMStagingType = POMStagingType.Release,
-                AssembliesToUse = AssemblyDataCollection.CreateList(AssemblyDataCollection)
+                AssembliesToUse = AssemblyDataCollection.CreateList(AssemblyCollection)
             };
 
             if (cbExportToFile.IsChecked.Value)

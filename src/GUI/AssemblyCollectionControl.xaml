@@ -37,7 +37,7 @@
             <Label Content="Total folders" />
             <TextBox Text="{Binding ElementName=assemblyCollectionControl, Path=TotalFolders, Mode=OneWay}" VerticalContentAlignment="Center" IsReadOnly="True"/>
         </DockPanel>
-    <ListView Name="propertyMapping" ItemsSource="{Binding ElementName=assemblyCollectionControl, Path=AssemblyDataCollection, Mode=TwoWay}" 
+        <ListView Name="propertyMapping" ItemsSource="{Binding ElementName=assemblyCollectionControl, Path=AssemblyCollection, Mode=TwoWay}" 
               ScrollViewer.VerticalScrollBarVisibility="Auto" DockPanel.Dock="Bottom">
         <ListView.View>
             <GridView>

@@ -56,6 +56,7 @@ namespace MASES.JCOReflectorEngine
         static bool AvoidHierarchyTraversing;
         static bool CreateExceptionThrownClause;
         static int ExceptionThrownClauseDepth;
+        static bool AvoidDisableInternalNamespace;
 
         static long loadedAssemblies = 0;
         static long parsedAssemblies = 0;
@@ -85,7 +86,7 @@ namespace MASES.JCOReflectorEngine
 
         static string reflectorVersion = typeof(Reflector).Assembly.GetName().Version.ToString();
 
-        static string replaceSinglekeyword(string inputName)
+        static string ReplaceSinglekeyword(string inputName)
         {
             foreach (var item in Const.KeyWords)
             {
@@ -302,7 +303,7 @@ namespace MASES.JCOReflectorEngine
             return res;
         }
 
-        static void writeExtraClasses(ReflectorEventArgs args)
+        static void WriteExtraClasses(ReflectorEventArgs args)
         {
             string destFolder = assemblyDestinationFolder(SourceDestinationFolder, new AssemblyName(Const.SpecialNames.JCOReflectorGeneratedFolder), SplitByAssembly);
             var jcoBridgeOptionsFile = Path.Combine(destFolder, Const.FileNameAndDirectory.OrgSubDirectory,
@@ -367,11 +368,11 @@ namespace MASES.JCOReflectorEngine
             EnableInterfaceInheritance = args.EnableInterfaceInheritance;
             EnableRefOutParameters = args.EnableRefOutParameters;
             EnableWrite = !args.DryRun;
+            AvoidDisableInternalNamespace = args.AvoidDisableInternalNamespace;
 
-            writeExtraClasses(args);
+            WriteExtraClasses(args);
 
             string reportStr = string.Empty;
-            string statisticsCsv = string.Empty;
             try
             {
                 foreach (var item in args.AssemblyNames)
@@ -412,7 +413,7 @@ namespace MASES.JCOReflectorEngine
                     }
 
                     string statisticsError;
-                    statisticsCsv = GetStatisticsCsv(out statisticsError);
+                    string statisticsCsv = GetStatisticsCsv(out statisticsError);
 
                     if (!String.IsNullOrEmpty(statisticsError))
                     {
@@ -470,11 +471,11 @@ namespace MASES.JCOReflectorEngine
             return Path.Combine(rootFolder, Const.Framework.RuntimeFolder, splitByAssembly ? assemblyName.ToFolderName() : string.Empty);
         }
 
-        static bool typePrefilter(Type type)
+        static bool TypePrefilter(this Type type)
         {
             if (type.IsPublic
                 && !type.IsGenericType
-                && !type.ToPackageName().Contains(Const.SpecialNames.Internal) // avoid types with internal namespace name which are public
+                && (AvoidDisableInternalNamespace || !type.ToPackageName().Contains(Const.SpecialNames.Internal)) // avoid types with internal namespace name which are public
                )
             {
                 return true;
@@ -554,7 +555,7 @@ namespace MASES.JCOReflectorEngine
 
                 var typeName = item.FullName;
 
-                if (typePrefilter(item))
+                if (item.TypePrefilter())
                 {
                     JobManager.AppendToConsole(LogLevel.Verbose, "Store {0} within types to be exported", item.AssemblyQualifiedName);
                     typesToExport.Add(item);
@@ -565,7 +566,7 @@ namespace MASES.JCOReflectorEngine
                     Interlocked.Increment(ref discardedTypes);
                     if (!item.IsPublic) Interlocked.Increment(ref discardedNonPublicTypes);
                     else if (item.IsGenericType) Interlocked.Increment(ref discardedGenericTypes);
-                    else if (item.ToPackageName().Contains(Const.SpecialNames.Internal)) Interlocked.Increment(ref discardedInternalTypes);
+                    else if (AvoidDisableInternalNamespace || item.ToPackageName().Contains(Const.SpecialNames.Internal)) Interlocked.Increment(ref discardedInternalTypes);
                 }
             }
 
@@ -1105,7 +1106,7 @@ namespace MASES.JCOReflectorEngine
                     string paramType = convertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
                     if (!isManaged) break; // found not managed type, stop here
 
-                    var paramName = replaceSinglekeyword(parameter.Name);
+                    var paramName = ReplaceSinglekeyword(parameter.Name);
                     isPrimitive |= typeof(Delegate).IsAssignableFrom(parameter.ParameterType);
                     ctorParams.Append(string.Format(Const.Parameters.INPUT_PARAMETER, (isArray) ? paramType + (IsParams(parameter) ? Const.SpecialNames.VarArgsTrailer : Const.SpecialNames.ArrayTrailer) : paramType, paramName));
 
@@ -1514,7 +1515,7 @@ namespace MASES.JCOReflectorEngine
                             isPrimitive |= typeof(Delegate).IsAssignableFrom(parameter.ParameterType);
                             string formatter = string.Empty;
                             string objectCaster = string.Empty;
-                            var paramName = replaceSinglekeyword(parameter.Name);
+                            var paramName = ReplaceSinglekeyword(parameter.Name);
                             if (useRefOut)
                             {
                                 string primitiveParam = Const.Parameters.JCORefOutType;
@@ -1840,7 +1841,7 @@ namespace MASES.JCOReflectorEngine
                                 isPrimitive |= typeof(Delegate).IsAssignableFrom(parameter.ParameterType);
                                 string formatter = string.Empty;
                                 string objectCaster = string.Empty;
-                                var paramName = replaceSinglekeyword(parameter.Name);
+                                var paramName = ReplaceSinglekeyword(parameter.Name);
                                 if (useRefOut)
                                 {
                                     string primitiveParam = Const.Parameters.JCORefOutType;
@@ -1986,7 +1987,7 @@ namespace MASES.JCOReflectorEngine
             StringBuilder inputParams = new StringBuilder();
             StringBuilder execParams = new StringBuilder();
 
-            propertyJavaName = replaceSinglekeyword(propertyJavaName);
+            propertyJavaName = ReplaceSinglekeyword(propertyJavaName);
 
             string inputParamStr = inputParams.ToString();
             if (!string.IsNullOrEmpty(inputParamStr))
@@ -2424,7 +2425,7 @@ namespace MASES.JCOReflectorEngine
                 }
                 if (!isManaged) break; // found not managed type, stop here
 
-                var paramName = replaceSinglekeyword(parameter.Name);
+                var paramName = ReplaceSinglekeyword(parameter.Name);
 
                 if (isArray)
                 {

@@ -338,8 +338,6 @@ namespace MASES.JCOReflectorEngine
         {
             ResetStatistics();
 
-            Exception storedException = null;
-
             bool failed = false;
             List<Type> typesToExport = new List<Type>();
             ReflectorEventArgs args = o as ReflectorEventArgs;
@@ -415,7 +413,7 @@ namespace MASES.JCOReflectorEngine
                     string statisticsError;
                     string statisticsCsv = GetStatisticsCsv(out statisticsError);
 
-                    if (!String.IsNullOrEmpty(statisticsError))
+                    if (!string.IsNullOrEmpty(statisticsError))
                     {
                         reportStr += statisticsError;
                     }
@@ -432,23 +430,25 @@ namespace MASES.JCOReflectorEngine
             catch (OperationCanceledException ex)
             {
                 JobManager.AppendToConsole(LogLevel.Error, "ExportAssembly error: {0}", ex.Message);
-                storedException = ex;
+                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Exception))
+                {
+                    throw;
+                }
             }
             catch (Exception ex)
             {
                 JobManager.AppendToConsole(LogLevel.Error, "ExportAssembly error: {0}", ex.Message);
                 failed = true;
-                storedException = ex;
+                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Exception))
+                {
+                    throw;
+                }
             }
             finally
             {
                 if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Callback))
                 {
                     JobManager.EndOperation(new EndOperationEventArgs(reportStr, failed));
-                }
-                if (storedException != null && JobManager.ErrorReporting.HasFlag(ErrorReportingType.Exception))
-                {
-                    throw storedException;
                 }
             }
         }

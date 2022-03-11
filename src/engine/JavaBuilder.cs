@@ -28,6 +28,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Text;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace MASES.JCOReflectorEngine
 {
@@ -38,13 +39,12 @@ namespace MASES.JCOReflectorEngine
             Source, Compiled
         }
 
-        static string JavaCompiler = Path.Combine("bin", "javac");
-        static string JavaDoc = Path.Combine("bin", "javadoc");
-        static string JarCompiler = Path.Combine("bin", "jar");
+        static readonly string JavaCompiler = Path.Combine("bin", "javac");
+        static readonly string JavaDoc = Path.Combine("bin", "javadoc");
+        static readonly string JarCompiler = Path.Combine("bin", "jar");
 
-        public static void CompileClasses(object o)
+        public async static Task CompileClasses(object o)
         {
-            Exception storedException = null;
             bool failed = false;
             JavaBuilderEventArgs args = o as JavaBuilderEventArgs;
 
@@ -63,21 +63,27 @@ namespace MASES.JCOReflectorEngine
                 }
 
                 var srcRootFolder = args.SplitFolderByAssembly ? Path.Combine(args.SourceFolder, Const.FileNameAndDirectory.SourceDirectory) : args.SourceFolder;
-                var classes = CreateSourceListAndCompile(args.JDKFolder, args.JDKTarget, args.JDKToolExtraOptions, args.RootFolder, srcRootFolder, (args.AssembliesToUse == null) ? JobManager.CreateFolderList(srcRootFolder) : args.AssembliesToUse, Timeout.Infinite);
+                var classes = await CreateSourceListAndCompile(args.JDKFolder, args.JDKTarget, args.JDKToolExtraOptions, args.RootFolder, srcRootFolder, (args.AssembliesToUse == null) ? JobManager.CreateFolderList(srcRootFolder) : args.AssembliesToUse, Timeout.Infinite);
                 reportStr = string.Format("Compilation of {0} classes done in {1}.", classes, DateTime.Now - dtStart);
             }
             catch (OperationCanceledException ex)
             {
                 reportStr = string.Format("Error {0}", ex.Message);
                 JobManager.AppendToConsole(LogLevel.Error, reportStr);
-                storedException = ex;
+                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Exception))
+                {
+                    throw;
+                }
             }
             catch (Exception ex)
             {
                 reportStr = string.Format("Error {0}", ex.Message);
                 JobManager.AppendToConsole(LogLevel.Error, reportStr);
                 failed = true;
-                storedException = ex;
+                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Exception))
+                {
+                    throw;
+                }
             }
             finally
             {
@@ -85,16 +91,11 @@ namespace MASES.JCOReflectorEngine
                 {
                     JobManager.EndOperation(new EndOperationEventArgs(reportStr, failed));
                 }
-                if (storedException != null && JobManager.ErrorReporting.HasFlag(ErrorReportingType.Exception))
-                {
-                    throw storedException;
-                }
             }
         }
 
-        public static void GenerateDocs(object o)
+        public static async Task GenerateDocs(object o)
         {
-            Exception storedException = null;
             bool failed = false;
             DocsBuilderEventArgs args = o as DocsBuilderEventArgs;
 
@@ -126,14 +127,20 @@ namespace MASES.JCOReflectorEngine
             {
                 reportStr = string.Format("Error {0}", ex.Message);
                 JobManager.AppendToConsole(LogLevel.Error, reportStr);
-                storedException = ex;
+                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Exception))
+                {
+                    throw;
+                }
             }
             catch (Exception ex)
             {
                 reportStr = string.Format("Error {0}", ex.Message);
                 JobManager.AppendToConsole(LogLevel.Error, reportStr);
                 failed = true;
-                storedException = ex;
+                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Exception))
+                {
+                    throw;
+                }
             }
             finally
             {
@@ -141,14 +148,10 @@ namespace MASES.JCOReflectorEngine
                 {
                     JobManager.EndOperation(new EndOperationEventArgs(reportStr, failed));
                 }
-                if (storedException != null && JobManager.ErrorReporting.HasFlag(ErrorReportingType.Exception))
-                {
-                    throw storedException;
-                }
             }
         }
 
-        static int CreateSourceListAndCompile(string jdkFolder, JDKVersion jdkTarget, string toolExtraOptions, string rootFolder, string originFolder, IEnumerable<string> assemblies, int timeout)
+        async static Task<int> CreateSourceListAndCompile(string jdkFolder, JDKVersion jdkTarget, string toolExtraOptions, string rootFolder, string originFolder, IEnumerable<string> assemblies, int timeout)
         {
             int counter = 0;
             var tmpFile = Path.Combine(originFolder, Const.FileNameAndDirectory.SourceFile);
@@ -175,17 +178,17 @@ namespace MASES.JCOReflectorEngine
             var extraOptions = string.IsNullOrEmpty(toolExtraOptions) ? string.Empty : string.Format(" {0} ", toolExtraOptions);
             if (jdkTarget == JDKVersion.NotSet)
             {
-                launchProcess(originFolder, Path.Combine(jdkFolder, JavaCompiler), "-cp " + jcoBridgeCp + extraOptions + " @" + Const.FileNameAndDirectory.SourceFile, timeout);
+                await LaunchProcess(originFolder, Path.Combine(jdkFolder, JavaCompiler), "-cp " + jcoBridgeCp + extraOptions + " @" + Const.FileNameAndDirectory.SourceFile, timeout);
             }
             else
             {
                 string compatibility = string.Format(" -source {0} -target {0}", (int)jdkTarget); // -bootclasspath rt{0}.jar
-                launchProcess(originFolder, Path.Combine(jdkFolder, JavaCompiler), "-cp " + jcoBridgeCp + compatibility + extraOptions + " @" + Const.FileNameAndDirectory.SourceFile, timeout);
+                await LaunchProcess(originFolder, Path.Combine(jdkFolder, JavaCompiler), "-cp " + jcoBridgeCp + compatibility + extraOptions + " @" + Const.FileNameAndDirectory.SourceFile, timeout);
             }
             return counter;
         }
 
-        static int CreateSourceListAndGenerateDocs(string jdkFolder, JDKVersion jdkTarget, string toolExtraOptions, string rootFolder, string originFolder, string destinationFolder, string commitVersion, IEnumerable<string> assemblies, int timeout)
+        static async Task<int> CreateSourceListAndGenerateDocs(string jdkFolder, JDKVersion jdkTarget, string toolExtraOptions, string rootFolder, string originFolder, string destinationFolder, string commitVersion, IEnumerable<string> assemblies, int timeout)
         {
             int counter = 0;
             var tmpFile = Path.Combine(originFolder, Const.FileNameAndDirectory.SourceFile);
@@ -214,14 +217,13 @@ namespace MASES.JCOReflectorEngine
             destinationFolder = destinationFolder.Replace('\\', '/');
             var extraOptions = string.IsNullOrEmpty(toolExtraOptions) ? string.Empty : string.Format(" {0} ", toolExtraOptions);
             var header = Const.Documentation.DOCS_HEADER.Replace(Const.Documentation.DOCS_VERSION_JCOREFLECTOR_PLACEHOLDER, string.Format("v{0}-{1}", Const.ReflectorVersion, commitVersion));
-            launchProcess(originFolder, Path.Combine(jdkFolder, JavaDoc), "-header \"" + header + "\" -quiet -author -noindex -nodeprecated -nodeprecatedlist -notimestamp -nohelp -notree -public -cp " + jcoBridgeCp + " -d " + destinationFolder + extraOptions + " -link https://www.jcobridge.com/api-java @" + Const.FileNameAndDirectory.SourceFile, timeout);
+            await LaunchProcess(originFolder, Path.Combine(jdkFolder, JavaDoc), "-header \"" + header + "\" -quiet -author -noindex -nodeprecated -nodeprecatedlist -notimestamp -nohelp -notree -public -cp " + jcoBridgeCp + " -d " + destinationFolder + extraOptions + " -link https://www.jcobridge.com/api-java @" + Const.FileNameAndDirectory.SourceFile, timeout);
 
             return counter;
         }
 
-        public static void CreatePOM(object o)
+        public static async Task CreatePOM(object o)
         {
-            Exception storedException = null;
             bool failed = false;
             DateTime dtStart = DateTime.Now;
             string reportStr = string.Empty;
@@ -278,14 +280,20 @@ namespace MASES.JCOReflectorEngine
             {
                 reportStr = string.Format("Error {0}", ex.Message);
                 JobManager.AppendToConsole(LogLevel.Error, reportStr);
-                storedException = ex;
+                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Exception))
+                {
+                    throw;
+                }
             }
             catch (Exception ex)
             {
                 reportStr = string.Format("Error {0}", ex.Message);
                 JobManager.AppendToConsole(LogLevel.Error, reportStr);
                 failed = true;
-                storedException = ex;
+                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Exception))
+                {
+                    throw;
+                }
             }
             finally
             {
@@ -293,16 +301,11 @@ namespace MASES.JCOReflectorEngine
                 {
                     JobManager.EndOperation(new EndOperationEventArgs(reportStr, failed));
                 }
-                if (storedException != null && JobManager.ErrorReporting.HasFlag(ErrorReportingType.Exception))
-                {
-                    throw storedException;
-                }
             }
         }
 
-        public static void ExtractPOM(object o)
+        public static async Task ExtractPOM(object o)
         {
-            Exception storedException = null;
             bool failed = false;
             DateTime dtStart = DateTime.Now;
             string reportStr = string.Empty;
@@ -318,14 +321,20 @@ namespace MASES.JCOReflectorEngine
             {
                 reportStr = string.Format("Error {0}", ex.Message);
                 JobManager.AppendToConsole(LogLevel.Error, reportStr);
-                storedException = ex;
+                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Exception))
+                {
+                    throw;
+                }
             }
             catch (Exception ex)
             {
                 reportStr = string.Format("Error {0}", ex.Message);
                 JobManager.AppendToConsole(LogLevel.Error, reportStr);
                 failed = true;
-                storedException = ex;
+                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Exception))
+                {
+                    throw;
+                }
             }
             finally
             {
@@ -333,16 +342,11 @@ namespace MASES.JCOReflectorEngine
                 {
                     JobManager.EndOperation(new EndOperationEventArgs(reportStr, failed));
                 }
-                if (storedException != null && JobManager.ErrorReporting.HasFlag(ErrorReportingType.Exception))
-                {
-                    throw storedException;
-                }
             }
         }
 
-        public static void CreateJars(object o)
+        public static async Task CreateJars(object o)
         {
-            Exception storedException = null;
             bool failed = false;
             DateTime dtStart = DateTime.Now;
             string reportStr = string.Empty;
@@ -366,21 +370,27 @@ namespace MASES.JCOReflectorEngine
                 }
 
                 var srcRootFolder = args.SplitFolderByAssembly ? Path.Combine(args.SourceFolder, Const.FileNameAndDirectory.SourceDirectory) : args.SourceFolder;
-                var jars = CreateJars(args.JDKFolder, args.RootFolder, srcRootFolder, args.JarDestinationFolder, (args.AssembliesToUse == null) ? JobManager.CreateFolderList(srcRootFolder) : args.AssembliesToUse, args.WithJARSource, args.EmbeddingJCOBridge);
+                var jars = await CreateJars(args.JDKFolder, args.RootFolder, srcRootFolder, args.JarDestinationFolder, (args.AssembliesToUse == null) ? JobManager.CreateFolderList(srcRootFolder) : args.AssembliesToUse, args.WithJARSource, args.EmbeddingJCOBridge);
                 reportStr = string.Format("{0} Jars created in {1}.", jars, DateTime.Now - dtStart);
             }
             catch (OperationCanceledException ex)
             {
                 reportStr = string.Format("Error {0}", ex.Message);
                 JobManager.AppendToConsole(LogLevel.Error, reportStr);
-                storedException = ex;
+                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Exception))
+                {
+                    throw;
+                }
             }
             catch (Exception ex)
             {
                 reportStr = string.Format("Error {0}", ex.Message);
                 JobManager.AppendToConsole(LogLevel.Error, reportStr);
                 failed = true;
-                storedException = ex;
+                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Exception))
+                {
+                    throw;
+                }
             }
             finally
             {
@@ -388,14 +398,10 @@ namespace MASES.JCOReflectorEngine
                 {
                     JobManager.EndOperation(new EndOperationEventArgs(reportStr, failed));
                 }
-                if (storedException != null && JobManager.ErrorReporting.HasFlag(ErrorReportingType.Exception))
-                {
-                    throw storedException;
-                }
             }
         }
 
-        public static int CreateJars(string jdkFolder, string rootFolder, string originFolder, string destFolder, IEnumerable<string> assemblies, bool withSource, bool withEmbedding, int timeout = Timeout.Infinite)
+        public static async Task<int> CreateJars(string jdkFolder, string rootFolder, string originFolder, string destFolder, IEnumerable<string> assemblies, bool withSource, bool withEmbedding, int timeout = Timeout.Infinite)
         {
             var counter = 0;
             var manifestTemplate = Const.Templates.GetTemplate(Const.Templates.ManifestTemplate);
@@ -404,7 +410,7 @@ namespace MASES.JCOReflectorEngine
             {
                 if (item.Contains(Const.FileNameAndDirectory.CommonDirectory)) continue; // bypass for class-path build
 
-                var resName = CreateSingleJar(jdkFolder, rootFolder, originFolder, item, JarType.Compiled, destFolder, timeout, withEmbedding);
+                var resName = await CreateSingleJar(jdkFolder, rootFolder, originFolder, item, JarType.Compiled, destFolder, timeout, withEmbedding);
                 if (!string.IsNullOrEmpty(resName))
                 {
                     var str = string.Format(" {0} ", string.Format(Const.FileNameAndDirectory.CompiledPattern, resName));
@@ -413,7 +419,7 @@ namespace MASES.JCOReflectorEngine
                 }
                 if (withSource)
                 {
-                    CreateSingleJar(jdkFolder, rootFolder, originFolder, item, JarType.Source, destFolder, timeout, false);
+                    await CreateSingleJar(jdkFolder, rootFolder, originFolder, item, JarType.Source, destFolder, timeout, false);
                     counter++;
                 }
             }
@@ -425,21 +431,21 @@ namespace MASES.JCOReflectorEngine
 
             var reflectorPath = Path.Combine(rootFolder, Const.FileNameAndDirectory.RootDirectory, Const.FileNameAndDirectory.SourceDirectory);
 
-            CreateSingleJar(jdkFolder, rootFolder, reflectorPath, Const.FileNameAndDirectory.CommonDirectory, JarType.Compiled, destFolder, timeout, withEmbedding, manifestFileName);
+            await CreateSingleJar(jdkFolder, rootFolder, reflectorPath, Const.FileNameAndDirectory.CommonDirectory, JarType.Compiled, destFolder, timeout, withEmbedding, manifestFileName);
             counter++;
             if (withSource)
             {
-                CreateSingleJar(jdkFolder, rootFolder, reflectorPath, Const.FileNameAndDirectory.CommonDirectory, JarType.Source, destFolder, timeout, withEmbedding);
+                await CreateSingleJar(jdkFolder, rootFolder, reflectorPath, Const.FileNameAndDirectory.CommonDirectory, JarType.Source, destFolder, timeout, withEmbedding);
                 counter++;
             }
             return counter;
         }
 
-        static string CreateSingleJar(string jdkFolder, string rootFolder, string originFolder, string pathName, JarType type, string destinationFolder, int timeout, bool withEmbedding, string manifestFile = null)
+        async static Task<string> CreateSingleJar(string jdkFolder, string rootFolder, string originFolder, string pathName, JarType type, string destinationFolder, int timeout, bool withEmbedding, string manifestFile = null)
         {
-            string filter = string.Empty;
-            string patternName = string.Empty;
-            string fileWithNames = string.Empty;
+            string patternName;
+            string filter;
+            string fileWithNames;
             switch (type)
             {
                 case JarType.Compiled:
@@ -501,11 +507,11 @@ namespace MASES.JCOReflectorEngine
             string jarParam = (JobManager.LogLevel > LogLevel.Info) ? "cvf" : "cf";
             if (string.IsNullOrEmpty(manifestFile))
             {
-                launchProcess(searchPath, Path.Combine(jdkFolder, JarCompiler), jarParam + " " + destinationJar + " @" + fileWithNames, timeout);
+                await LaunchProcess(searchPath, Path.Combine(jdkFolder, JarCompiler), jarParam + " " + destinationJar + " @" + fileWithNames, timeout);
             }
             else
             {
-                launchProcess(searchPath, Path.Combine(jdkFolder, JarCompiler), jarParam + "m " + destinationJar + " " + manifestFile + " @" + fileWithNames, timeout);
+                await LaunchProcess(searchPath, Path.Combine(jdkFolder, JarCompiler), jarParam + "m " + destinationJar + " " + manifestFile + " @" + fileWithNames, timeout);
             }
             return assemblyName;
         }
@@ -513,7 +519,7 @@ namespace MASES.JCOReflectorEngine
         static string errorData = string.Empty;
         static string outputData = string.Empty;
 
-        static void launchProcess(string workingDir, string processToLaunch, string arguments, int timeout = Timeout.Infinite)
+        async static Task LaunchProcess(string workingDir, string processToLaunch, string arguments, int timeout = Timeout.Infinite)
         {
             DateTime dtStart = DateTime.Now;
             JobManager.AppendToConsole(LogLevel.Info, "Starting operation {0} {1} with {2} seconds of timeout at {3}.", processToLaunch, arguments, timeout, dtStart);

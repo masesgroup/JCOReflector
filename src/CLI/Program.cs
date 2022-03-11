@@ -64,7 +64,7 @@ namespace MASES.JCOReflectorCLI
                 return;
             }
 
-            JobManager.SetHandler(appendToConsole, endOperation);
+            JobManager.SetHandler(AppendToConsole, EndOperation);
             CommonEventArgs job = null;
             try
             {
@@ -88,12 +88,12 @@ namespace MASES.JCOReflectorCLI
                 return;
             }
         }
-        static void appendToConsole(string format, params object[] args)
+        static void AppendToConsole(string format, params object[] args)
         {
             Console.WriteLine(format, args);
         }
 
-        static void endOperation(object sender, EndOperationEventArgs args)
+        static void EndOperation(object sender, EndOperationEventArgs args)
         {
             Console.WriteLine(args.Report);
             if (args.Failed) Environment.ExitCode = -1;

@@ -23,6 +23,17 @@ jobs:
       run_job: ${{ steps.check_files.outputs.run_job }}
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
+        with: 
+          fetch-depth: '1'
+
+      - name: Extract file
+        run: .github/workflows/GetLicense.ps1 ${{ secrets.JCOBRIDGE_247 }} ./JCOBridge.lic
+        shell: pwsh
+
+      - name: Test cat
+        run: cat ./JCOBridge.lic
+
       - id: get_changed_files
         uses: jitterbit/get-changed-files@v1
         with:

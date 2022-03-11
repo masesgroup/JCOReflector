@@ -74,7 +74,8 @@ jobs:
           shell: pwsh
 
         - run: cat ./JCOBridge.lic
-
+        - run: pwd
+        
         # Install .NET SDKs
         - name: Setup .NET Core 3.1
           uses: actions/setup-dotnet@v1
@@ -111,14 +112,14 @@ jobs:
         - name: Build Java test source file .NET Core 3.1
           run: javac -cp ./bin/netcoreapp3.1/JCOReflector.jar ./netreflected-tests/java/src/hierarchy/*.java ./netreflected-tests/java/src/mscorlib/*.java ./netreflected-tests/java/src/nettest/*.java ./netreflected-tests/java/src/refout/*.java
 
-        - run: java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloLock --CoreCLRApp:Microsoft.NETCore.App
-        - run: java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloNET --CoreCLRApp:Microsoft.NETCore.App
-        - run: java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloNETEvent --CoreCLRApp:Microsoft.NETCore.App
-        - run: java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloIterator --CoreCLRApp:Microsoft.NETCore.App
-        - run: java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/java/src/" hierarchy.HelloHierarchy --CoreCLRApp:Microsoft.NETCore.App
-        - run: java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/java/src/" hierarchy.HelloInterfaces --CoreCLRApp:Microsoft.NETCore.App
-        - run: java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/java/src/" nettest.HelloNETSocket -server 127.0.0.1 --CoreCLRApp:Microsoft.NETCore.App
-        - run: java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/java/src/" nettest.HelloNETSocket -async -server 127.0.0.1 --CoreCLRApp:Microsoft.NETCore.App
+        - run: java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloLock --CoreCLRApp:Microsoft.NETCore.App --LicensePath $(pwd)
+        - run: java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloNET --CoreCLRApp:Microsoft.NETCore.App --LicensePath $(pwd)
+        - run: java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloNETEvent --CoreCLRApp:Microsoft.NETCore.App --LicensePath $(pwd)
+        - run: java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloIterator --CoreCLRApp:Microsoft.NETCore.App --LicensePath $(pwd)
+        - run: java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/java/src/" hierarchy.HelloHierarchy --CoreCLRApp:Microsoft.NETCore.App --LicensePath $(pwd)
+        - run: java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/java/src/" hierarchy.HelloInterfaces --CoreCLRApp:Microsoft.NETCore.App --LicensePath $(pwd)
+        - run: java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/java/src/" nettest.HelloNETSocket -server 127.0.0.1 --CoreCLRApp:Microsoft.NETCore.App --LicensePath $(pwd)
+        - run: java -cp "./bin/netcoreapp3.1/JCOReflector.jar:./netreflected-tests/java/src/" nettest.HelloNETSocket -async -server 127.0.0.1 --CoreCLRApp:Microsoft.NETCore.App --LicensePath $(pwd)
             
             #java -cp "./bin/netcoreapp3.1/JCOReflector.jar;./netreflected-tests/java/src/" refout.HelloRefOutBase --CoreCLRApp:Microsoft.NETCore.App
             #java -cp "./bin/netcoreapp3.1/JCOReflector.jar;./netreflected-tests/java/src/" refout.HelloRefOut --CoreCLRApp:Microsoft.NETCore.App
@@ -126,26 +127,26 @@ jobs:
         - name: Build Java test source file .NET 5.0
           run: javac -cp ./bin/net5.0/JCOReflector.jar ./netreflected-tests/java/src/hierarchy/*.java ./netreflected-tests/java/src/mscorlib/*.java ./netreflected-tests/java/src/nettest/*.java ./netreflected-tests/java/src/refout/*.java
 
-        - run: java -cp "./bin/net5.0/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloLock --CoreCLRApp:Microsoft.NET5.App
-        - run: java -cp "./bin/net5.0/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloNET --CoreCLRApp:Microsoft.NET5.App
-        - run: java -cp "./bin/net5.0/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloNETEvent --CoreCLRApp:Microsoft.NET5.App
-        - run: java -cp "./bin/net5.0/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloIterator --CoreCLRApp:Microsoft.NET5.App
-        - run: java -cp "./bin/net5.0/JCOReflector.jar:./netreflected-tests/java/src/" hierarchy.HelloHierarchy --CoreCLRApp:Microsoft.NET5.App
-        - run: java -cp "./bin/net5.0/JCOReflector.jar:./netreflected-tests/java/src/" hierarchy.HelloInterfaces --CoreCLRApp:Microsoft.NET5.App
-        - run: java -cp "./bin/net5.0/JCOReflector.jar:./netreflected-tests/java/src/" nettest.HelloNETSocket -server 127.0.0.1 --CoreCLRApp:Microsoft.NET5.App
-        - run: java -cp "./bin/net5.0/JCOReflector.jar:./netreflected-tests/java/src/" nettest.HelloNETSocket -async -server 127.0.0.1 --CoreCLRApp:Microsoft.NET5.App
+        - run: java -cp "./bin/net5.0/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloLock --CoreCLRApp:Microsoft.NET5.App --LicensePath $(pwd)
+        - run: java -cp "./bin/net5.0/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloNET --CoreCLRApp:Microsoft.NET5.App --LicensePath $(pwd)
+        - run: java -cp "./bin/net5.0/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloNETEvent --CoreCLRApp:Microsoft.NET5.App --LicensePath $(pwd)
+        - run: java -cp "./bin/net5.0/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloIterator --CoreCLRApp:Microsoft.NET5.App --LicensePath $(pwd)
+        - run: java -cp "./bin/net5.0/JCOReflector.jar:./netreflected-tests/java/src/" hierarchy.HelloHierarchy --CoreCLRApp:Microsoft.NET5.App --LicensePath $(pwd)
+        - run: java -cp "./bin/net5.0/JCOReflector.jar:./netreflected-tests/java/src/" hierarchy.HelloInterfaces --CoreCLRApp:Microsoft.NET5.App --LicensePath $(pwd)
+        - run: java -cp "./bin/net5.0/JCOReflector.jar:./netreflected-tests/java/src/" nettest.HelloNETSocket -server 127.0.0.1 --CoreCLRApp:Microsoft.NET5.App --LicensePath $(pwd)
+        - run: java -cp "./bin/net5.0/JCOReflector.jar:./netreflected-tests/java/src/" nettest.HelloNETSocket -async -server 127.0.0.1 --CoreCLRApp:Microsoft.NET5.App --LicensePath $(pwd)
  
         - name: Build Java test source file .NET 6.0
           run: javac -cp ./bin/net6.0/JCOReflector.jar ./netreflected-tests/java/src/hierarchy/*.java ./netreflected-tests/java/src/mscorlib/*.java ./netreflected-tests/java/src/nettest/*.java ./netreflected-tests/java/src/refout/*.java
 
-        - run: java -cp "./bin/net6.0/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloLock
-        - run: java -cp "./bin/net6.0/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloNET 
-        - run: java -cp "./bin/net6.0/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloNETEvent 
-        - run: java -cp "./bin/net6.0/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloIterator
-        - run: java -cp "./bin/net6.0/JCOReflector.jar:./netreflected-tests/java/src/" hierarchy.HelloHierarchy 
-        - run: java -cp "./bin/net6.0/JCOReflector.jar:./netreflected-tests/java/src/" hierarchy.HelloInterfaces 
-        - run: java -cp "./bin/net6.0/JCOReflector.jar:./netreflected-tests/java/src/" nettest.HelloNETSocket -server 127.0.0.1 
-        - run: java -cp "./bin/net6.0/JCOReflector.jar:./netreflected-tests/java/src/" nettest.HelloNETSocket -async -server 127.0.0.1
+        - run: java -cp "./bin/net6.0/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloLock --LicensePath $(pwd)
+        - run: java -cp "./bin/net6.0/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloNET --LicensePath $(pwd)
+        - run: java -cp "./bin/net6.0/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloNETEvent --LicensePath $(pwd)
+        - run: java -cp "./bin/net6.0/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloIterator --LicensePath $(pwd)
+        - run: java -cp "./bin/net6.0/JCOReflector.jar:./netreflected-tests/java/src/" hierarchy.HelloHierarchy --LicensePath $(pwd)
+        - run: java -cp "./bin/net6.0/JCOReflector.jar:./netreflected-tests/java/src/" hierarchy.HelloInterfaces --LicensePath $(pwd)
+        - run: java -cp "./bin/net6.0/JCOReflector.jar:./netreflected-tests/java/src/" nettest.HelloNETSocket -server 127.0.0.1 --LicensePath $(pwd)
+        - run: java -cp "./bin/net6.0/JCOReflector.jar:./netreflected-tests/java/src/" nettest.HelloNETSocket -async -server 127.0.0.1 --LicensePath $(pwd)
  
             #java -cp "./bin/net6.0/JCOReflector.jar;./netreflected-tests/java/src/" refout.HelloRefOutBase
             #java -cp "./bin/net6.0/JCOReflector.jar;./netreflected-tests/java/src/" refout.HelloRefOut

@@ -70,8 +70,10 @@ jobs:
             fetch-depth: '1'
 
         - name: Extract file
-          run: .github/workflows/GetLicense.ps1 ${{ secrets.JCOBRIDGE_247 }} ${{ env.workspace }}/JCOBridge.lic
+          run: .github/workflows/GetLicense.ps1 ${{ secrets.JCOBRIDGE_247 }} ./JCOBridge.lic
           shell: pwsh
+          
+        - run: cat ${{ env.workspace }}/JCOBridge.lic
 
         # Install .NET SDKs
         - name: Setup .NET Core 3.1

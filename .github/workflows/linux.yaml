@@ -72,8 +72,6 @@ jobs:
         - name: Extract file
           run: .github/workflows/GetLicense.ps1 ${{ secrets.JCOBRIDGE_247 }} $env:GITHUB_WORKSPACE/JCOBridge.lic
           shell: pwsh
-          
-        - run: cat $GITHUB_WORKSPACE/JCOBridge.lic
 
         # Install .NET SDKs
         - name: Setup .NET Core 3.1

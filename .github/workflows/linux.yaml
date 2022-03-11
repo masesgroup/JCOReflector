@@ -73,6 +73,8 @@ jobs:
           run: .github/workflows/GetLicense.ps1 ${{ secrets.JCOBRIDGE_247 }} ./JCOBridge.lic
           shell: pwsh
 
+        - run: cat ./JCOBridge.lic
+
         # Install .NET SDKs
         - name: Setup .NET Core 3.1
           uses: actions/setup-dotnet@v1

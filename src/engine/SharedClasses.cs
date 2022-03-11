@@ -1113,7 +1113,7 @@ namespace MASES.JCOReflectorEngine
         public static void RunJob<T>(T arg, bool waitEnd = false)
             where T : CommonEventArgs
         {
-            Task task = null;
+            Task<Task> task = null;
             lock (ctsLock)
             {
                 if (cts != null)
@@ -1261,6 +1261,10 @@ namespace MASES.JCOReflectorEngine
             if (waitEnd)
             {
                 task.Wait();
+                if (task.Result.Status == TaskStatus.Faulted && task.Result.Exception != null)
+                {
+                    throw task.Result.Exception.Flatten().InnerException;
+                }
             }
         }
         /// <summary>

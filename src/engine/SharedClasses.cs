@@ -1280,8 +1280,10 @@ namespace MASES.JCOReflectorEngine
                 cts.Cancel(true);
             }
         }
-
-        internal static void EndOperation(EndOperationEventArgs arg)
+        /// <summary>
+        /// Reset <see cref="JobManager"/> state
+        /// </summary>
+        public static void Reset()
         {
             lock (ctsLock)
             {
@@ -1291,6 +1293,11 @@ namespace MASES.JCOReflectorEngine
                     cts = null;
                 }
             }
+        }
+
+        internal static void EndOperation(EndOperationEventArgs arg)
+        {
+            Reset();
             EndOperationHandler?.Invoke(null, arg);
         }
 

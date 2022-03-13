@@ -156,12 +156,10 @@ namespace MASES.JCOReflectorEngine
         /// Destination of JARs relative to <see cref="RootFolder"/>
         /// </summary>
         public static string JarDestinationFolder { get; set; }
-
         /// <summary>
-        /// The <see cref="ErrorReportingType"/> to be used during execution. Default is <see cref="ErrorReportingType.Callback"/> for backward compatibility.
+        /// Set to <see langword="true"/> to report the internal exception outside execution of <see cref="RunJob{T}(T, bool)"/>. Default is <see langword="false"/> for backward compatibility.
         /// </summary>
-        public static ErrorReportingType ErrorReporting { get; set; }
-
+        public static bool ReportException { get; set; }
         /// <summary>
         /// The <see cref="Version"/> of the engine
         /// </summary>
@@ -181,7 +179,7 @@ namespace MASES.JCOReflectorEngine
 
         static JobManager()
         {
-            ErrorReporting = ErrorReportingType.Callback;
+            ReportException = false;
             StartupLocation = Path.GetDirectoryName(typeof(JobManager).Assembly.Location);
             RootFolder = DefaultRootFolder = Path.Combine(StartupLocation, @".." + Path.DirectorySeparatorChar + @".." + Path.DirectorySeparatorChar);
             arguments = prepareArguments();

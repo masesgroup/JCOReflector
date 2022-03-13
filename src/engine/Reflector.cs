@@ -430,7 +430,7 @@ namespace MASES.JCOReflectorEngine
             catch (OperationCanceledException ex)
             {
                 JobManager.AppendToConsole(LogLevel.Error, "ExportAssembly error: {0}", ex.Message);
-                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Exception))
+                if (JobManager.ReportException)
                 {
                     throw;
                 }
@@ -439,17 +439,14 @@ namespace MASES.JCOReflectorEngine
             {
                 JobManager.AppendToConsole(LogLevel.Error, "ExportAssembly error: {0}", ex.Message);
                 failed = true;
-                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Exception))
+                if (JobManager.ReportException)
                 {
                     throw;
                 }
             }
             finally
             {
-                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Callback))
-                {
-                    JobManager.EndOperation(new EndOperationEventArgs(reportStr, failed));
-                }
+                JobManager.EndOperation(new EndOperationEventArgs(reportStr, failed));
             }
         }
 

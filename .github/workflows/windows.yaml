@@ -361,7 +361,7 @@ jobs:
         with:
           author_name: github-actions
           author_email: 41898282+github-actions[bot]@users.noreply.github.com
-          add: '.\netreflected\src\*.java'
+          add: '.\netreflected\src\*.*'
           message: Update sources after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

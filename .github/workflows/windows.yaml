@@ -337,6 +337,7 @@ jobs:
         shell: bash
     
       - name: Commit statistics changes
+        if: ${{ github.repository_owner == 'masesgroup'}} #do not push any changes outside main repo
         uses: EndBug/add-and-commit@v5
         with:
           author_name: github-actions
@@ -347,6 +348,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           
       - name: Commit report changes
+        if: ${{ github.repository_owner == 'masesgroup'}} #do not push any changes outside main repo
         uses: EndBug/add-and-commit@v5
         with:
           author_name: github-actions
@@ -355,13 +357,25 @@ jobs:
           message: Update README.md after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
+
       - name: Commit source changes
+        if: ${{ github.repository_owner == 'masesgroup'}} #do not push any changes outside main repo
         uses: EndBug/add-and-commit@v5
         with:
           author_name: github-actions
           author_email: 41898282+github-actions[bot]@users.noreply.github.com
-          add: '.\netreflected\src\*.*'
+          add: '.\netreflected\src\*.list'
+          message: Update assembly list after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit source changes
+        if: ${{ github.repository_owner == 'masesgroup'}} #do not push any changes outside main repo
+        uses: EndBug/add-and-commit@v5
+        with:
+          author_name: github-actions
+          author_email: 41898282+github-actions[bot]@users.noreply.github.com
+          add: '.\netreflected\src\*.java'
           message: Update sources after commit ${{ env.GITHUB_COMMIT_MESSAGE }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

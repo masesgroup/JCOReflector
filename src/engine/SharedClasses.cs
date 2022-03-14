@@ -1295,6 +1295,46 @@ namespace MASES.JCOReflectorEngine
             }
         }
 
+        /// <summary>
+        /// Check if <paramref name="assemblyName"/> was available in the refelected assemblies of JCOReflector
+        /// </summary>
+        /// <param name="assemblyName">The <see cref="System.Reflection.AssemblyName"/> to be checked</param>
+        /// <returns><see langword="true"/> if it is available</returns>
+        public static bool IsReflected(System.Reflection.AssemblyName assemblyName)
+        {
+            return IsReflected(assemblyName.Name);
+        }
+
+        /// <summary>
+        /// Check if <paramref name="assemblyName"/> was available in the refelected assemblies of JCOReflector
+        /// </summary>
+        /// <param name="assemblyName">The assembly name to be checked</param>
+        /// <returns><see langword="true"/> if it is available</returns>
+        public static bool IsReflected(string assemblyName)
+        {
+            string webUrl = "https://github.com/masesgroup/JCOReflector/tree/master/netreflected/src/" + Const.Framework.RuntimeFolder + "/" + Const.Report.ASSEMBLIES_FILE_TO_WRITE;
+            string assemblies;
+            using (var webClient = new System.Net.WebClient())
+            {
+                var data = webClient.DownloadData(new Uri(webUrl));
+                assemblies = System.Text.Encoding.UTF8.GetString(data);
+            }
+
+            using (StringReader sr = new StringReader(assemblies))
+            {
+                string line;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    var assemblyNamePortion = line.Split(',');
+                    if (assemblyName == assemblyNamePortion[0] || assemblyName.Contains(assemblyNamePortion[0]) || assemblyNamePortion[0].Contains(assemblyName))
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
         internal static void EndOperation(EndOperationEventArgs arg)
         {
             Reset();

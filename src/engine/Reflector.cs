@@ -430,7 +430,7 @@ namespace MASES.JCOReflectorEngine
                         writeFile(reportfile, sb.ToString());
                     }
 
-                    var assemblies = args.AssemblyNames.GetAssemblies();
+                    var assemblies = assemblyReferenced.GetAssemblies();
                     var assembliesFile = Path.Combine(args.SourceFolder, Const.FileNameAndDirectory.SourceDirectory, Const.Framework.RuntimeFolder, Const.Report.ASSEMBLIES_FILE_TO_WRITE);
                     writeFile(assembliesFile, assemblies);
 

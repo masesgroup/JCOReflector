@@ -70,7 +70,7 @@ namespace MASES.JCOReflectorEngine
             {
                 reportStr = string.Format("Error {0}", ex.Message);
                 JobManager.AppendToConsole(LogLevel.Error, reportStr);
-                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Exception))
+                if (JobManager.ReportException)
                 {
                     throw;
                 }
@@ -80,17 +80,14 @@ namespace MASES.JCOReflectorEngine
                 reportStr = string.Format("Error {0}", ex.Message);
                 JobManager.AppendToConsole(LogLevel.Error, reportStr);
                 failed = true;
-                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Exception))
+                if (JobManager.ReportException)
                 {
                     throw;
                 }
             }
             finally
             {
-                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Callback))
-                {
-                    JobManager.EndOperation(new EndOperationEventArgs(reportStr, failed));
-                }
+                JobManager.EndOperation(new EndOperationEventArgs(reportStr, failed));
             }
         }
 
@@ -120,14 +117,14 @@ namespace MASES.JCOReflectorEngine
 
                 var srcRootFolder = args.SplitFolderByAssembly ? Path.Combine(args.SourceFolder, Const.FileNameAndDirectory.SourceDirectory) : args.SourceFolder;
                 string destinationFolder = Path.Combine(args.SourceFolder, Const.FileNameAndDirectory.DocsDirectory);
-                var classes = CreateSourceListAndGenerateDocs(args.JDKFolder, args.JDKTarget, args.JDKToolExtraOptions, args.RootFolder, srcRootFolder, destinationFolder, args.CommitVersion, (args.AssembliesToUse == null) ? JobManager.CreateFolderList(srcRootFolder) : args.AssembliesToUse, Timeout.Infinite);
+                var classes = await CreateSourceListAndGenerateDocs(args.JDKFolder, args.JDKTarget, args.JDKToolExtraOptions, args.RootFolder, srcRootFolder, destinationFolder, args.CommitVersion, (args.AssembliesToUse == null) ? JobManager.CreateFolderList(srcRootFolder) : args.AssembliesToUse, Timeout.Infinite);
                 reportStr = string.Format("Javadoc of {0} classes done in {1}.", classes, DateTime.Now - dtStart);
             }
             catch (OperationCanceledException ex)
             {
                 reportStr = string.Format("Error {0}", ex.Message);
                 JobManager.AppendToConsole(LogLevel.Error, reportStr);
-                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Exception))
+                if (JobManager.ReportException)
                 {
                     throw;
                 }
@@ -137,17 +134,14 @@ namespace MASES.JCOReflectorEngine
                 reportStr = string.Format("Error {0}", ex.Message);
                 JobManager.AppendToConsole(LogLevel.Error, reportStr);
                 failed = true;
-                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Exception))
+                if (JobManager.ReportException)
                 {
                     throw;
                 }
             }
             finally
             {
-                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Callback))
-                {
-                    JobManager.EndOperation(new EndOperationEventArgs(reportStr, failed));
-                }
+                JobManager.EndOperation(new EndOperationEventArgs(reportStr, failed));
             }
         }
 
@@ -231,56 +225,59 @@ namespace MASES.JCOReflectorEngine
             {
                 POMBuilderEventArgs args = o as POMBuilderEventArgs;
 
-                if (!Path.IsPathRooted(args.SourceFolder))
+                await Task.Run(() =>
                 {
-                    args.SourceFolder = Path.Combine(args.RootFolder, args.SourceFolder);
-                }
+                    if (!Path.IsPathRooted(args.SourceFolder))
+                    {
+                        args.SourceFolder = Path.Combine(args.RootFolder, args.SourceFolder);
+                    }
 
-                if (args.POMType == POMType.Frameworks)
-                {
-                    Const.FileNameAndDirectory.CreateJCOBridgeZip(args.RootFolder);
-                }
+                    if (args.POMType == POMType.Frameworks)
+                    {
+                        Const.FileNameAndDirectory.CreateJCOBridgeZip(args.RootFolder);
+                    }
 
-                var srcRootFolder = args.SplitFolderByAssembly ? Path.Combine(args.SourceFolder, Const.FileNameAndDirectory.SourceDirectory) : args.SourceFolder;
-                var assembliesToUse = (args.AssembliesToUse == null) ? JobManager.CreateFolderList(srcRootFolder, false) : args.AssembliesToUse;
-                StringBuilder sb = new StringBuilder();
-                foreach (var item in assembliesToUse)
-                {
-                    sb.AppendFormat(Const.POM.POM_JCOREFLECTOR_SOURCE_PLACEHOLDER, item);
-                    sb.AppendLine();
-                }
-                var sourceFlders = sb.ToString();
-                //sourceFlders = sourceFlders.Remove(sourceFlders.LastIndexOf(','));
-                sourceFlders = sourceFlders.Replace('\\', '/');
-                string jcoPomTemplate = string.Empty;
-                if (args.POMType == POMType.Extension && !string.IsNullOrEmpty(args.POMFileName))
-                {
-                    jcoPomTemplate = File.ReadAllText(args.POMFileName);
-                }
-                else
-                {
-                    jcoPomTemplate = Const.Templates.GetTemplate((args.POMType == POMType.Frameworks) ? Const.Templates.POMJCOReflector : Const.Templates.POMExtension);
-                }
+                    var srcRootFolder = args.SplitFolderByAssembly ? Path.Combine(args.SourceFolder, Const.FileNameAndDirectory.SourceDirectory) : args.SourceFolder;
+                    var assembliesToUse = (args.AssembliesToUse == null) ? JobManager.CreateFolderList(srcRootFolder, false) : args.AssembliesToUse;
+                    StringBuilder sb = new StringBuilder();
+                    foreach (var item in assembliesToUse)
+                    {
+                        sb.AppendFormat(Const.POM.POM_JCOREFLECTOR_SOURCE_PLACEHOLDER, item);
+                        sb.AppendLine();
+                    }
+                    var sourceFlders = sb.ToString();
+                    //sourceFlders = sourceFlders.Remove(sourceFlders.LastIndexOf(','));
+                    sourceFlders = sourceFlders.Replace('\\', '/');
+                    string jcoPomTemplate = string.Empty;
+                    if (args.POMType == POMType.Extension && !string.IsNullOrEmpty(args.POMFileName))
+                    {
+                        jcoPomTemplate = File.ReadAllText(args.POMFileName);
+                    }
+                    else
+                    {
+                        jcoPomTemplate = Const.Templates.GetTemplate((args.POMType == POMType.Frameworks) ? Const.Templates.POMJCOReflector : Const.Templates.POMExtension);
+                    }
 
-                var jcoPom = jcoPomTemplate.Replace(Const.POM.POM_VERSION_PLACEHOLDER, args.POMVersion + ((args.POMStagingType == POMStagingType.Snapshot) ? Const.POM.POM_VERSION_SNAPSHOT : string.Empty))
-                                           .Replace(Const.POM.POM_RUNTIME_PLACEHOLDER, Const.Framework.RuntimeFolder)
-                                           .Replace(Const.POM.POM_JDK_TARGET, ((int)args.JDKTarget).ToString())
-                                           .Replace(Const.POM.POM_SOURCEDIRECTORIES_PLACEHOLDER, sourceFlders)
-                                           .Replace(Const.POM.POM_ARTIFACTID_PLACEHOLDER, args.POMArtifactId)
-                                           .Replace(Const.POM.POM_NAME_PLACEHOLDER, args.POMName)
-                                           .Replace(Const.POM.POM_DESCRIPTION_PLACEHOLDER, args.POMDescription)
-                                           .Replace(Const.POM.POM_JCOREFLECTOR_VERSION_PLACEHOLDER, Const.ReflectorVersion)
-                                           .Replace(Const.POM.POM_ADDITIONAL_DEPENDENCIES_PLACEHOLDER, args.POMAdditionalDependencies ?? string.Empty);
+                    var jcoPom = jcoPomTemplate.Replace(Const.POM.POM_VERSION_PLACEHOLDER, args.POMVersion + ((args.POMStagingType == POMStagingType.Snapshot) ? Const.POM.POM_VERSION_SNAPSHOT : string.Empty))
+                                               .Replace(Const.POM.POM_RUNTIME_PLACEHOLDER, Const.Framework.RuntimeFolder)
+                                               .Replace(Const.POM.POM_JDK_TARGET, ((int)args.JDKTarget).ToString())
+                                               .Replace(Const.POM.POM_SOURCEDIRECTORIES_PLACEHOLDER, sourceFlders)
+                                               .Replace(Const.POM.POM_ARTIFACTID_PLACEHOLDER, args.POMArtifactId)
+                                               .Replace(Const.POM.POM_NAME_PLACEHOLDER, args.POMName)
+                                               .Replace(Const.POM.POM_DESCRIPTION_PLACEHOLDER, args.POMDescription)
+                                               .Replace(Const.POM.POM_JCOREFLECTOR_VERSION_PLACEHOLDER, Const.ReflectorVersion)
+                                               .Replace(Const.POM.POM_ADDITIONAL_DEPENDENCIES_PLACEHOLDER, args.POMAdditionalDependencies ?? string.Empty);
 
-                var fileName = Path.Combine(srcRootFolder, string.Format("{0}.xml", Const.Framework.RuntimeFolder));
-                File.WriteAllText(fileName, jcoPom);
-                reportStr = string.Format("{0} POM created in {1}.", fileName, DateTime.Now - dtStart);
+                    var fileName = Path.Combine(srcRootFolder, string.Format("{0}.xml", Const.Framework.RuntimeFolder));
+                    File.WriteAllText(fileName, jcoPom);
+                    reportStr = string.Format("{0} POM created in {1}.", fileName, DateTime.Now - dtStart);
+                });
             }
             catch (OperationCanceledException ex)
             {
                 reportStr = string.Format("Error {0}", ex.Message);
                 JobManager.AppendToConsole(LogLevel.Error, reportStr);
-                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Exception))
+                if (JobManager.ReportException)
                 {
                     throw;
                 }
@@ -290,17 +287,14 @@ namespace MASES.JCOReflectorEngine
                 reportStr = string.Format("Error {0}", ex.Message);
                 JobManager.AppendToConsole(LogLevel.Error, reportStr);
                 failed = true;
-                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Exception))
+                if (JobManager.ReportException)
                 {
                     throw;
                 }
             }
             finally
             {
-                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Callback))
-                {
-                    JobManager.EndOperation(new EndOperationEventArgs(reportStr, failed));
-                }
+                JobManager.EndOperation(new EndOperationEventArgs(reportStr, failed));
             }
         }
 
@@ -313,15 +307,18 @@ namespace MASES.JCOReflectorEngine
             {
                 POMBuilderEventArgs args = o as POMBuilderEventArgs;
 
-                var jcoPomTemplate = Const.Templates.GetTemplate(Const.Templates.POMExtension);
-                File.WriteAllText(args.POMFileName, jcoPomTemplate);
-                reportStr = string.Format("{0} POM created in {1}.", args.POMFileName, DateTime.Now - dtStart);
+                await Task.Run(() =>
+                {
+                    var jcoPomTemplate = Const.Templates.GetTemplate(Const.Templates.POMExtension);
+                    File.WriteAllText(args.POMFileName, jcoPomTemplate);
+                    reportStr = string.Format("{0} POM created in {1}.", args.POMFileName, DateTime.Now - dtStart);
+                });
             }
             catch (OperationCanceledException ex)
             {
                 reportStr = string.Format("Error {0}", ex.Message);
                 JobManager.AppendToConsole(LogLevel.Error, reportStr);
-                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Exception))
+                if (JobManager.ReportException)
                 {
                     throw;
                 }
@@ -331,17 +328,14 @@ namespace MASES.JCOReflectorEngine
                 reportStr = string.Format("Error {0}", ex.Message);
                 JobManager.AppendToConsole(LogLevel.Error, reportStr);
                 failed = true;
-                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Exception))
+                if (JobManager.ReportException)
                 {
                     throw;
                 }
             }
             finally
             {
-                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Callback))
-                {
-                    JobManager.EndOperation(new EndOperationEventArgs(reportStr, failed));
-                }
+                JobManager.EndOperation(new EndOperationEventArgs(reportStr, failed));
             }
         }
 
@@ -377,7 +371,7 @@ namespace MASES.JCOReflectorEngine
             {
                 reportStr = string.Format("Error {0}", ex.Message);
                 JobManager.AppendToConsole(LogLevel.Error, reportStr);
-                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Exception))
+                if (JobManager.ReportException)
                 {
                     throw;
                 }
@@ -387,17 +381,14 @@ namespace MASES.JCOReflectorEngine
                 reportStr = string.Format("Error {0}", ex.Message);
                 JobManager.AppendToConsole(LogLevel.Error, reportStr);
                 failed = true;
-                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Exception))
+                if (JobManager.ReportException)
                 {
                     throw;
                 }
             }
             finally
             {
-                if (JobManager.ErrorReporting.HasFlag(ErrorReportingType.Callback))
-                {
-                    JobManager.EndOperation(new EndOperationEventArgs(reportStr, failed));
-                }
+                JobManager.EndOperation(new EndOperationEventArgs(reportStr, failed));
             }
         }
 

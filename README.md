@@ -32,7 +32,7 @@ JCOReflector uses [JCOBridge](https://www.jcobridge.com), and its [features](htt
 * **Direct access the CLR from any JVM application**: 
   * No need to learn new APIs: we try to expose the same .NET APIs in Java style;
   * No extra validation cycle: bug fix, improvements, new features are immediately available;
-  * Documentation is shared;
+  * Documentation is shared.
 
 Have a look at the following resources:
 - [Release notes](https://www.jcobridge.com/release-notes/)

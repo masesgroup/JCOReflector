@@ -731,6 +731,7 @@ namespace MASES.JCOReflectorEngine
 
         public class Report
         {
+            public const string ASSEMBLIES_FILE_TO_WRITE = "assemblies.list";
             public const string REPORT_FILE_TO_WRITE = "README.md";
             public const string REPORT_BEGIN_PLACEHOLDER = "[//]: # \"BeginReport {0}\"";
             public const string REPORT_END_PLACEHOLDER = "[//]: # \"EndReport {0}\"";

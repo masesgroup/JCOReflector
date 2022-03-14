@@ -5,8 +5,9 @@ There are two main folders:
 * **_net461_** contains the reflected classes generated from .NET Framework, divided by the containing assembly
 * **_netcoreapp3.1_** contains the reflected classes generated from .NET Core 3.1, divided by the containing assembly
 * **_net5.0_** contains the reflected classes generated from .NET 5, divided by the containing assembly
+* **_net6.0_** contains the reflected classes generated from .NET 6, divided by the containing assembly
 
-**JCOReflector** is the folder of common classes for both **.NET** **Framework**, **Core** and **5**
+**JCOReflector** is the folder of common classes for both **.NET** **Framework**, **Core**, **5** and **6**
 
 ## .NET Framework
 ![FrameworkStatistic](https://docs.google.com/spreadsheets/d/e/2PACX-1vRKe-7bBH40JmQmq4I194xz9g2YsoU7L9fHwzY0fqZyWepyjqnOC0B7lgO9CjAuTrBkOA8qbTiScLpS/pubchart?oid=1238429091&format=image)
@@ -803,6 +804,7 @@ Parsed assemblies are:
 >   * Internals = 29
 
 [//]: # "EndReport net5.0"
+## .NET Core (reference is .NET v6.0.100)
 
 [//]: # "BeginReport net6.0"
 Parsed assemblies are:

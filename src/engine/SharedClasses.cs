@@ -1312,26 +1312,26 @@ namespace MASES.JCOReflectorEngine
         /// <returns><see langword="true"/> if it is available</returns>
         public static bool IsReflected(string assemblyName)
         {
-            string webUrl = "https://github.com/masesgroup/JCOReflector/tree/master/netreflected/src/" + Const.Framework.RuntimeFolder + "/" + Const.Report.ASSEMBLIES_FILE_TO_WRITE;
-            string assemblies;
-            using (var webClient = new System.Net.WebClient())
+            assemblyName = assemblyName.ToLowerInvariant();
+            using (var stream = typeof(JobManager).Assembly.GetManifestResourceStream(typeof(JobManager).Namespace + "." + Const.Report.ASSEMBLIES_FILE_TO_WRITE))
             {
-                var data = webClient.DownloadData(new Uri(webUrl));
-                assemblies = System.Text.Encoding.UTF8.GetString(data);
-            }
-
-            using (StringReader sr = new StringReader(assemblies))
-            {
-                string line;
-                while ((line = sr.ReadLine()) != null)
+                using (var reader = new StreamReader(stream))
                 {
-                    var assemblyNamePortion = line.Split(',');
-                    if (assemblyName == assemblyNamePortion[0] || assemblyName.Contains(assemblyNamePortion[0]) || assemblyNamePortion[0].Contains(assemblyName))
+                    using (StringReader sr = new StringReader(reader.ReadToEnd()))
                     {
-                        return true;
+                        string line;
+                        while ((line = sr.ReadLine()) != null)
+                        {
+                            var assemblyNamePortion = line.Split(',')[0].ToLowerInvariant();
+                            if (assemblyName == assemblyNamePortion)
+                            {
+                                return true;
+                            }
+                        }
                     }
                 }
             }
+
             return false;
         }
 

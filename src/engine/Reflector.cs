@@ -224,7 +224,7 @@ namespace MASES.JCOReflectorEngine
             return res;
         }
 
-        static string GetReport(string[] assemblyNames)
+        static string GetReport(this IEnumerable<string> assemblyNames)
         {
             string res = string.Empty;
             try
@@ -293,6 +293,26 @@ namespace MASES.JCOReflectorEngine
                 sb.AppendFormat(">   * Internals = {0}", discardedInternalTypes);
                 sb.AppendLine();
 
+                res = sb.ToString();
+            }
+            catch (Exception ex)
+            {
+                res = string.Format("Error {0}", ex.Message);
+                JobManager.AppendToConsole(LogLevel.Error, res);
+            }
+            return res;
+        }
+
+        static string GetAssemblies(this IEnumerable<string> assemblyNames)
+        {
+            string res;
+            try
+            {
+                StringBuilder sb = new StringBuilder();
+                foreach (var item in assemblyNames)
+                {
+                    sb.AppendLine(item);
+                }
                 res = sb.ToString();
             }
             catch (Exception ex)
@@ -392,7 +412,7 @@ namespace MASES.JCOReflectorEngine
 
                 if (!args.AvoidReportAndStatistics)
                 {
-                    reportStr = GetReport(args.AssemblyNames);
+                    reportStr = args.AssemblyNames.GetReport();
                     var reportfile = Path.Combine(args.SourceFolder, Const.Report.REPORT_FILE_TO_WRITE);
                     if (File.Exists(reportfile))
                     {
@@ -409,6 +429,10 @@ namespace MASES.JCOReflectorEngine
                         sb.Append(endText);
                         writeFile(reportfile, sb.ToString());
                     }
+
+                    var assemblies = args.AssemblyNames.GetAssemblies();
+                    var assembliesFile = Path.Combine(args.SourceFolder, Const.FileNameAndDirectory.SourceDirectory, Const.Framework.RuntimeFolder, Const.Report.ASSEMBLIES_FILE_TO_WRITE);
+                    writeFile(assembliesFile, assemblies);
 
                     string statisticsError;
                     string statisticsCsv = GetStatisticsCsv(out statisticsError);

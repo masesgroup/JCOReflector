@@ -658,6 +658,8 @@ namespace MASES.JCOReflectorEngine
 
         static string ToPackageName(this Type type)
         {
+            if (string.IsNullOrEmpty(type.Namespace)) return string.Empty;
+
             var basepackage = type.Namespace.ToLowerInvariant();
 
             foreach (var item in Const.KeyWords)

@@ -7,13 +7,13 @@
     <Copyright>Copyright ©  MASES s.r.l. 2022</Copyright>
     <Authors>MASES s.r.l.</Authors>
     <Company>MASES s.r.l.</Company>
-    <Version>1.9.3.0</Version>
+    <Version>1.9.4.0</Version>
     <Product>MASES.JCOReflectorEngine</Product>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
     <TargetFrameworks>net461;netcoreapp3.1;net5.0;net6.0</TargetFrameworks>
     <OutputPath>..\..\bin\</OutputPath>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageProjectUrl>https://github.com/masesgroup/JCOReflector/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/masesgroup/JCOReflector</RepositoryUrl>
     <PackageReleaseNotes>https://github.com/masesgroup/JCOReflector/releases</PackageReleaseNotes>

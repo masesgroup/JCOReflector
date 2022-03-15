@@ -2,11 +2,11 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>MASES.JCOReflectorCLI</id>
-    <version>1.9.3</version>
+    <version>1.9.4</version>
     <title>JCOReflector CLI - CLI interface for JCOReflector Engine</title>
     <authors>MASES s.r.l.</authors>
     <owners>MASES s.r.l.</owners>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectUrl>https://github.com/masesgroup/JCOReflector/</projectUrl>
     <repository type="git" url="https://github.com/masesgroup/JCOReflector/" />
     <description>JCOReflector CLI - CLI interface for JCOReflector Engine</description>

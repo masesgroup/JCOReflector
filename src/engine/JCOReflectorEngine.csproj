@@ -102,10 +102,10 @@
     <EmbeddedResource Include="JCOReflectorOptions.template" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Condition="$(TargetFramework) == 'net461'" Include="..\..\netreflected\src\net461\assemblies.list"/>
-    <EmbeddedResource Condition="$(TargetFramework) == 'netcoreapp3.1'" Include="..\..\netreflected\src\netcoreapp3.1\assemblies.list"/>
-    <EmbeddedResource Condition="$(TargetFramework) == 'net5.0'" Include="..\..\netreflected\src\net5.0\assemblies.list"/>
-    <EmbeddedResource Condition="$(TargetFramework) == 'net6.0'" Include="..\..\netreflected\src\net6.0\assemblies.list"/>
+    <EmbeddedResource Condition="$(TargetFramework) == 'net461'" Include="..\..\netreflected\src\net461\assemblies.list" />
+    <EmbeddedResource Condition="$(TargetFramework) == 'netcoreapp3.1'" Include="..\..\netreflected\src\netcoreapp3.1\assemblies.list" />
+    <EmbeddedResource Condition="$(TargetFramework) == 'net5.0'" Include="..\..\netreflected\src\net5.0\assemblies.list" />
+    <EmbeddedResource Condition="$(TargetFramework) == 'net6.0'" Include="..\..\netreflected\src\net6.0\assemblies.list" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\LICENSE" Pack="true" PackagePath="" />
@@ -115,7 +115,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MASES.CLIParser" Version="3.0.0" />
-    <PackageReference Include="MASES.JCOBridge" Version="2.4.7">
+    <PackageReference Include="MASES.JCOBridge" Version="2.4.9">
       <IncludeAssets>All</IncludeAssets>
       <PrivateAssets>None</PrivateAssets>
     </PackageReference>

@@ -70,7 +70,7 @@ jobs:
             fetch-depth: '1'
 
         - name: Extract file
-          run: .github/workflows/GetLicense.ps1 ${{ secrets.JCOBRIDGE_247 }} $env:GITHUB_WORKSPACE/JCOBridge.lic
+          run: .github/workflows/GetLicense.ps1 ${{ secrets.JCOBRIDGE_249 }} $env:GITHUB_WORKSPACE/JCOBridge.lic
           shell: pwsh
 
         # Install .NET SDKs

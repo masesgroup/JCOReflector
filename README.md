@@ -4,7 +4,7 @@
 
 |.NET Framework | .NET 5 | .NET 6 |
 |---	|---	|---	|
-|[![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net461.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net461%22) | [![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net5.0.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net5.0%22) | [![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net6.0.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net6.0%22)|
+|[![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net462.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net462%22) | [![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net5.0.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net5.0%22) | [![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net6.0.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net6.0%22)|
 
 |JCOReflectorEngine | JCOReflectorCLI |
 |---	|---	|
@@ -191,7 +191,7 @@ or
 
 Within the folder bin you will find three subfolders:
 
-- **net461** (available only on Windows platform)
+- **net462** (available only on Windows platform)
 - **netcoreapp3.1** (available on .NET Core supported platforms)
 - **net5.0** (available on .NET 5 supported platforms)
 - **net6.0** (available on .NET 6 supported platforms)
@@ -206,7 +206,7 @@ in each subfolder will be available two executables:
 
 ## Reflected Assemblies
 
-The folder [netreflected](/netreflected/src) contains all reflected classes generated for **.NET** **Framework** (_net461_), **Core** (_netcoreapp3.1_), **5** (_net5.0_) and **6** (_net6.0_). Below the coverage statistics and the list of analyzed and reflected assemblies:
+The folder [netreflected](/netreflected/src) contains all reflected classes generated for **.NET** **Framework** (_net462_), **Core** (_netcoreapp3.1_), **5** (_net5.0_) and **6** (_net6.0_). Below the coverage statistics and the list of analyzed and reflected assemblies:
 
 ### Statistics
 

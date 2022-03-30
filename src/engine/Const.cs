@@ -337,7 +337,7 @@ namespace MASES.JCOReflectorEngine
 #elif NETFRAMEWORK
             public const string Runtime = ".NET Framework";
             public const string RuntimeName = ".NETFramework";
-            public const string RuntimeFolder = "net461";
+            public const string RuntimeFolder = "net462";
 #else
 #error Unable to identify .NET engine
 #endif

@@ -26,7 +26,7 @@ sidebar_elements:
   - title: Documentation
     children:
       - title: ".NET Framework documentation"
-        url: /netreflected/docs/net461/
+        url: /netreflected/docs/net462/
       - title: ".NET Core documentation"
         url: /netreflected/docs/netcoreapp3.1/
       - title: ".NET 5 documentation"

@@ -8,10 +8,10 @@
     <Copyright>Copyright ©  MASES s.r.l. 2022</Copyright>
     <Authors>MASES s.r.l.</Authors>
     <Company>MASES s.r.l.</Company>
-    <Version>1.9.3.0</Version>
+    <Version>1.10.0</Version>
     <Product>JCOReflectorGUI</Product>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
-    <TargetFrameworks>net461;netcoreapp3.1;net5.0-windows;net6.0-windows</TargetFrameworks>
+    <TargetFrameworks>net462;netcoreapp3.1;net5.0-windows;net6.0-windows</TargetFrameworks>
     <UseWPF>true</UseWPF>
     <OutputPath>..\..\bin\</OutputPath>
     <SignAssembly>true</SignAssembly>

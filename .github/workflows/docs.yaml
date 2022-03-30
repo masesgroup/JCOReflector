@@ -104,9 +104,9 @@ jobs:
           git checkout master
           cd ..\..\..
 
-      - name: Switch to master net461 help file
+      - name: Switch to master net462 help file
         run: |
-          cd .\netreflected\docs\net461
+          cd .\netreflected\docs\net462
           git checkout master
           cd ..\..\..
 
@@ -141,15 +141,15 @@ jobs:
           Copy-Item .\_data\LICENSE -Destination .\netreflected\docs\net6.0\LICENSE -Force
           Copy-Item .\_data\README.md -Destination .\netreflected\docs\net6.0\README.md -Force
           
-      - name: Clean net461 help file folders
+      - name: Clean net462 help file folders
         run: |
-          Copy-Item .\netreflected\docs\net461\.git -Destination .\_data\.git -Force
-          Copy-Item .\netreflected\docs\net461\LICENSE -Destination .\_data\LICENSE -Force
-          Copy-Item .\netreflected\docs\net461\README.md -Destination .\_data\README.md -Force
-          Remove-Item .\netreflected\docs\net461\* -Recurse -Force
-          Copy-Item .\_data\.git -Destination .\netreflected\docs\net461\.git -Force
-          Copy-Item .\_data\LICENSE -Destination .\netreflected\docs\net461\LICENSE -Force
-          Copy-Item .\_data\README.md -Destination .\netreflected\docs\net461\README.md -Force
+          Copy-Item .\netreflected\docs\net462\.git -Destination .\_data\.git -Force
+          Copy-Item .\netreflected\docs\net462\LICENSE -Destination .\_data\LICENSE -Force
+          Copy-Item .\netreflected\docs\net462\README.md -Destination .\_data\README.md -Force
+          Remove-Item .\netreflected\docs\net462\* -Recurse -Force
+          Copy-Item .\_data\.git -Destination .\netreflected\docs\net462\.git -Force
+          Copy-Item .\_data\LICENSE -Destination .\netreflected\docs\net462\LICENSE -Force
+          Copy-Item .\_data\README.md -Destination .\netreflected\docs\net462\README.md -Force
 
       - name: Extract commit SHA
         run: |
@@ -168,8 +168,8 @@ jobs:
         run: dotnet bin\net6.0\MASES.JCOReflectorCLI.dll -JobType BuildDocs -JobFile .github\workflows\builddocs_win19.job -CommitVersion ${{ env.GITHUB_COMMIT_MESSAGE }} -JDKFolder %JAVA_HOME_11_X64%
         shell: cmd
         
-      - name: Build net461 Java Help files
-        run: .\bin\net461\MASES.JCOReflectorCLI -JobType BuildDocs -JobFile .github\workflows\builddocs_win19.job -CommitVersion ${{ env.GITHUB_COMMIT_MESSAGE }} -JDKFolder %JAVA_HOME_11_X64%
+      - name: Build net462 Java Help files
+        run: .\bin\net462\MASES.JCOReflectorCLI -JobType BuildDocs -JobFile .github\workflows\builddocs_win19.job -CommitVersion ${{ env.GITHUB_COMMIT_MESSAGE }} -JDKFolder %JAVA_HOME_11_X64%
         shell: cmd
         
       - name: Clean temporary files
@@ -207,9 +207,9 @@ jobs:
         env:
           GITHUB_WORKSPACE: $GITHUB_WORKSPACE
          
-      - name: Commit changes to net461 help file
+      - name: Commit changes to net462 help file
         run: |
-          cd .\netreflected\docs\net461
+          cd .\netreflected\docs\net462
           %GITHUB_WORKSPACE%\.github\workflows\commit.cmd github-actions 41898282+github-actions[bot]@users.noreply.github.com "Update help file to commit masesgroup/JCOReflector@${{ env.GITHUB_COMMIT_MESSAGE }}"
           cd ..\..\..
         shell: cmd
@@ -258,9 +258,9 @@ jobs:
           SUPER_SECRET: ${{ secrets.DOCS_API_TOKEN_GITHUB }}
           REPO: masesgroup/NET6Docs
 
-      - name: Push changes to net461 help file
+      - name: Push changes to net462 help file
         run: |
-          cd .\netreflected\docs\net461
+          cd .\netreflected\docs\net462
           %GITHUB_WORKSPACE%\.github\workflows\push.cmd %REPO%
           cd ..\..\..
         shell: cmd

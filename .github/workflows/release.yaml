@@ -51,8 +51,8 @@ jobs:
       - name: Build net6.0 Maven POM files
         run: dotnet bin\net6.0\MASES.JCOReflectorCLI.dll -JobType CreatePOM -POMStagingType Release -JobFile .github\workflows\createpom_win19.job
           
-      - name: Build net461 Maven POM files
-        run: .\bin\net461\MASES.JCOReflectorCLI -JobType CreatePOM -POMStagingType Release -JobFile .github\workflows\createpom_win19.job
+      - name: Build net462 Maven POM files
+        run: .\bin\net462\MASES.JCOReflectorCLI -JobType CreatePOM -POMStagingType Release -JobFile .github\workflows\createpom_win19.job
 
       - name: Set up Apache Maven Central
         uses: actions/setup-java@v1
@@ -66,7 +66,7 @@ jobs:
 
       - name: Install local file to be used within Javadoc section of generated POM 
         shell: bash
-        run: mvn install:install-file -Dfile=./bin/net5.0/JCOBridge.jar -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.4.7 -Dpackaging=jar -DgeneratePom=true
+        run: mvn install:install-file -Dfile=./bin/net5.0/JCOBridge.jar -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.4.9 -Dpackaging=jar -DgeneratePom=true
 
       - name: Publish net5.0 to Apache Maven Central
         shell: bash
@@ -84,9 +84,9 @@ jobs:
           MAVEN_CENTRAL_TOKEN: ${{ secrets.MAVEN_CENTRAL_TOKEN }}
           MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
 
-      - name: Publish net461 to Apache Maven Central
+      - name: Publish net462 to Apache Maven Central
         shell: bash
-        run: mvn --file ./netreflected/src/net461.xml --no-transfer-progress --batch-mode -Dgpg.passphrase=${{ secrets.MAVEN_GPG_PASSPHRASE }} deploy
+        run: mvn --file ./netreflected/src/net462.xml --no-transfer-progress --batch-mode -Dgpg.passphrase=${{ secrets.MAVEN_GPG_PASSPHRASE }} deploy
         env:
           MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
           MAVEN_CENTRAL_TOKEN: ${{ secrets.MAVEN_CENTRAL_TOKEN }}
@@ -98,7 +98,7 @@ jobs:
           dotnet bin\netcoreapp3.1\MASES.JCOReflectorCLI.dll -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
           dotnet bin\net5.0\MASES.JCOReflectorCLI.dll -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
           dotnet bin\net6.0\MASES.JCOReflectorCLI.dll -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
-          .\bin\net461\MASES.JCOReflectorCLI -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
+          .\bin\net462\MASES.JCOReflectorCLI -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
         shell: cmd
           
       - name: Build JAR files
@@ -106,7 +106,7 @@ jobs:
           dotnet .\bin\netcoreapp3.1\MASES.JCOReflectorCLI.dll -JobType CreateJars -JobFile .github\workflows\createjars_core3.1_win19.job -JDKFolder %JAVA_HOME_11_X64%
           dotnet .\bin\net5.0\MASES.JCOReflectorCLI.dll -JobType CreateJars -JobFile .github\workflows\createjars_core5.0_win19.job -JDKFolder %JAVA_HOME_11_X64%
           dotnet .\bin\net6.0\MASES.JCOReflectorCLI.dll -JobType CreateJars -JobFile .github\workflows\createjars_core6.0_win19.job -JDKFolder %JAVA_HOME_11_X64%
-          .\bin\net461\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_framework_win19.job -JDKFolder %JAVA_HOME_11_X64%
+          .\bin\net462\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_framework_win19.job -JDKFolder %JAVA_HOME_11_X64%
         shell: cmd
 
       - name: Compress release files
@@ -114,14 +114,14 @@ jobs:
           Compress-Archive -Path .\bin\netcoreapp3.1\* -DestinationPath .\bin\netcoreapp3.1.zip
           Compress-Archive -Path .\bin\net5.0\* -DestinationPath .\bin\net5.0.zip
           Compress-Archive -Path .\bin\net6.0\* -DestinationPath .\bin\net6.0.zip
-          Compress-Archive -Path .\bin\net461\* -DestinationPath .\bin\net461.zip
+          Compress-Archive -Path .\bin\net462\* -DestinationPath .\bin\net462.zip
           
       - name: Compress documentation files
         run: | 
           Compress-Archive -Path .\netreflected\docs\netcoreapp3.1\* -DestinationPath .\netcoreapp3.1.docs.zip
           Compress-Archive -Path .\netreflected\docs\net5.0\* -DestinationPath .\net5.0.docs.zip
           Compress-Archive -Path .\netreflected\docs\net6.0\* -DestinationPath .\net6.0.docs.zip
-          Compress-Archive -Path .\netreflected\docs\net461\* -DestinationPath .\net461.docs.zip
+          Compress-Archive -Path .\netreflected\docs\net462\* -DestinationPath .\net462.docs.zip
 
       - name: Upload netcoreapp3.1 binaries to release
         uses: svenstaro/upload-release-action@v2
@@ -150,12 +150,12 @@ jobs:
           tag: ${{ github.ref }}
           overwrite: true
 
-      - name: Upload net461 binaries to release
+      - name: Upload net462 binaries to release
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: .\bin\net461.zip
-          asset_name: net461.zip
+          file: .\bin\net462.zip
+          asset_name: net462.zip
           tag: ${{ github.ref }}
           overwrite: true
 
@@ -186,12 +186,12 @@ jobs:
           tag: ${{ github.ref }}
           overwrite: true
 
-      - name: Upload net461 binaries to release
+      - name: Upload net462 binaries to release
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: .\net461.docs.zip
-          asset_name: net461.docs.zip
+          file: .\net462.docs.zip
+          asset_name: net462.docs.zip
           tag: ${{ github.ref }}
           overwrite: true
 

@@ -2,7 +2,7 @@
 
 The available reflected classes are generated starting from root assemblies, generation is done using up to 10 recursions to explore for exportable Exceptions.
 There are two main folders:
-* **_net461_** contains the reflected classes generated from .NET Framework, divided by the containing assembly
+* **_net462_** contains the reflected classes generated from .NET Framework, divided by the containing assembly
 * **_netcoreapp3.1_** contains the reflected classes generated from .NET Core 3.1, divided by the containing assembly
 * **_net5.0_** contains the reflected classes generated from .NET 5, divided by the containing assembly
 * **_net6.0_** contains the reflected classes generated from .NET 6, divided by the containing assembly
@@ -14,7 +14,7 @@ There are two main folders:
 
 ![FrameworkStatisticPercent](https://docs.google.com/spreadsheets/d/e/2PACX-1vRKe-7bBH40JmQmq4I194xz9g2YsoU7L9fHwzY0fqZyWepyjqnOC0B7lgO9CjAuTrBkOA8qbTiScLpS/pubchart?oid=485555819&format=image)
 
-[//]: # "BeginReport net461"
+[//]: # "BeginReport net462"
 Parsed assemblies are:
 * PresentationFramework,Version=4.0.0.0,Culture=neutral,PublicKeyToken=31bf3856ad364e35
 * System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
@@ -123,7 +123,7 @@ Parsed assemblies are:
 >   * Generic = 354
 >   * Internals = 50
 
-[//]: # "EndReport net461"
+[//]: # "EndReport net462"
 ## .NET Core (reference is .NET Core 3.1)
 
 ![NetcoreStatistic](https://docs.google.com/spreadsheets/d/e/2PACX-1vRKe-7bBH40JmQmq4I194xz9g2YsoU7L9fHwzY0fqZyWepyjqnOC0B7lgO9CjAuTrBkOA8qbTiScLpS/pubchart?oid=964222969&format=image)

@@ -91,7 +91,7 @@ jobs:
         run: |
           dotnet build --no-incremental --framework net5.0 src\JCOReflectorCLI.sln  
           dotnet build --no-incremental --framework net6.0 src\JCOReflectorCLI.sln 
-          dotnet build --no-incremental --framework net461 src\JCOReflectorCLI.sln  
+          dotnet build --no-incremental --framework net462 src\JCOReflectorCLI.sln  
 
       # Runs a set of commands using the runners shell
       - name: Copy configuration file
@@ -105,8 +105,8 @@ jobs:
       - name: Build net6.0 Maven POM files
         run: dotnet bin\net6.0\MASES.JCOReflectorCLI.dll -JobType CreatePOM -JobFile .github\workflows\createpom_win19.job
          
-      - name: Build net461 Maven POM files
-        run: .\bin\net461\MASES.JCOReflectorCLI -JobType CreatePOM -JobFile .github\workflows\createpom_win19.job
+      - name: Build net462 Maven POM files
+        run: .\bin\net462\MASES.JCOReflectorCLI -JobType CreatePOM -JobFile .github\workflows\createpom_win19.job
 
       - name: Set up Apache Maven Central
         uses: actions/setup-java@v1
@@ -120,7 +120,7 @@ jobs:
 
       - name: Install local file to be used within Javadoc section of generated POM 
         shell: bash
-        run: mvn install:install-file -Dfile=./bin/net5.0/JCOBridge.jar -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.4.7 -Dpackaging=jar -DgeneratePom=true
+        run: mvn install:install-file -Dfile=./bin/net5.0/JCOBridge.jar -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.4.9 -Dpackaging=jar -DgeneratePom=true
 
       - name: Publish net5.0 to Apache Maven Central
         shell: bash
@@ -138,9 +138,9 @@ jobs:
           MAVEN_CENTRAL_TOKEN: ${{ secrets.MAVEN_CENTRAL_TOKEN }}
           MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
 
-      - name: Publish net461 to Apache Maven Central
+      - name: Publish net462 to Apache Maven Central
         shell: bash
-        run: mvn --file ./netreflected/src/net461.xml --no-transfer-progress --batch-mode -Dgpg.passphrase=${{ secrets.MAVEN_GPG_PASSPHRASE }} deploy
+        run: mvn --file ./netreflected/src/net462.xml --no-transfer-progress --batch-mode -Dgpg.passphrase=${{ secrets.MAVEN_GPG_PASSPHRASE }} deploy
         env:
           MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
           MAVEN_CENTRAL_TOKEN: ${{ secrets.MAVEN_CENTRAL_TOKEN }}

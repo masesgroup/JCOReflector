@@ -766,7 +766,7 @@ public class UIElement extends Visual  {
         }
     }
 
-    public boolean getIsStylusDirectlyOver() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.ArgumentNullException, system.ObjectDisposedException, system.componentmodel.Win32Exception {
+    public boolean getIsStylusDirectlyOver() throws Throwable, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.componentmodel.InvalidEnumArgumentException, system.ObjectDisposedException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

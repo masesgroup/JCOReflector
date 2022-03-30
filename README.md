@@ -160,6 +160,7 @@ The reflector executables, available for both Framework and CoreCLR, is limited 
 - Events
 - Arrays: partial support
 - Inheritance
+- Out/Ref parameters
 - Native types managed from JCOBridge are directly mapped to native Java type
 - Base types (System.Object, System.Type, System.Enum, System.Exception, System.Collections.ArrayList) are mapped to specific type into a support library (**JCOReflector.jar**)
 - Management of thrown declaration as expected in Java: a generic Throwable is used with all exceptions found in code (used the algorithm in https://stackoverflow.com/questions/986180/how-can-i-determine-which-exceptions-can-be-thrown-by-a-given-method and code from https://docs.microsoft.com/en-us/archive/blogs/haibo_luo/)
@@ -167,7 +168,6 @@ The reflector executables, available for both Framework and CoreCLR, is limited 
 
 ### Not implemented in reflector:
 
-- Out/Ref parameters: you need to write code using JCOBridge API
 - Generic types
 - Method decoration (Attributes)
 - Unsafe methods

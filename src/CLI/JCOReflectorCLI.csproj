@@ -9,7 +9,7 @@
     <Copyright>Copyright ©  MASES s.r.l. 2022</Copyright>
     <Authors>MASES s.r.l.</Authors>
     <Company>MASES s.r.l.</Company>
-    <Version>1.10.0</Version>
+    <Version>1.10.1</Version>
     <Product>MASES.JCOReflectorCLI</Product>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
     <TargetFrameworks>net462;netcoreapp3.1;net5.0;net6.0</TargetFrameworks>
@@ -33,6 +33,7 @@
   <!-- Fix start https://github.com/dotnet/sourcelink/issues/572 -->
   <PropertyGroup>
     <TargetFrameworkMonikerAssemblyAttributesPath>$([System.IO.Path]::Combine('$(IntermediateOutputPath)','$(TargetFrameworkMoniker).AssemblyAttributes$(DefaultLanguageSourceExtension)'))</TargetFrameworkMonikerAssemblyAttributesPath>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
     <EmbeddedFiles Include="$(GeneratedAssemblyInfoFile)" />
@@ -45,7 +46,7 @@
     <None Include="..\..\LICENSE" Pack="true" PackagePath="" />
     <None Include="..\Common\JCOB128x128.png" Pack="true" PackagePath="" />
     <None Include="..\Common\JCOReflector.snk" Link="JCOReflector.snk" />
-    <None Include="..\..\README.md" Pack="true" PackagePath="\"/>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
   <ItemGroup>
   <ProjectReference Include="..\engine\JCOReflectorEngine.csproj">

@@ -41,6 +41,7 @@
   <!-- Fix end -->
   <PropertyGroup Condition="'$(GITHUB_ACTIONS)' == 'true'">
     <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+	<DefineConstants>$(DefineConstants);GITHUB_ACTIONS</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
     <None Include="..\..\LICENSE" Pack="true" PackagePath="" />

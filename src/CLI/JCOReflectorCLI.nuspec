@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>MASES.JCOReflectorCLI</id>
-    <version>1.10.1</version>
+    <version>1.10.2</version>
     <title>JCOReflector CLI - CLI interface for JCOReflector Engine</title>
     <authors>MASES s.r.l.</authors>
     <owners>MASES s.r.l.</owners>

@@ -70,7 +70,7 @@ jobs:
             fetch-depth: '1'
 
         - name: Extract file
-          run: .github/workflows/GetLicense.ps1 ${{ secrets.JCOBRIDGE_249 }} $env:GITHUB_WORKSPACE/JCOBridge.lic
+          run: .github/workflows/GetLicense.ps1 ${{ secrets.JCOBRIDGE_2_4_12 }} $env:GITHUB_WORKSPACE/JCOBridge.lic
           shell: pwsh
 
         # Install .NET SDKs
@@ -78,10 +78,7 @@ jobs:
           uses: actions/setup-dotnet@v1
           with:
             dotnet-version: 3.1.x
-        - name: Setup .NET 5.0
-          uses: actions/setup-dotnet@v1
-          with:
-            dotnet-version: 5.0.x
+
         - name: Setup .NET 6.0
           uses: actions/setup-dotnet@v1
           with:
@@ -91,19 +88,16 @@ jobs:
         - name: Build JCOReflectorCLI
           run: |
             dotnet build --no-incremental --framework netcoreapp3.1 --configuration Release src/JCOReflectorCLI.sln		
-            dotnet build --no-incremental --framework net5.0 --configuration Release src/JCOReflectorCLI.sln
             dotnet build --no-incremental --framework net6.0 --configuration Release src/JCOReflectorCLI.sln            
 
         - name: Build Java files
           run: |
             dotnet bin/netcoreapp3.1/MASES.JCOReflectorCLI.dll -JobType Build -JDKFolder /usr/lib/jvm/adoptopenjdk-8-hotspot-amd64/ -JobFile .github/workflows/build_linux.job
-            dotnet bin/net5.0/MASES.JCOReflectorCLI.dll -JobType Build -JDKFolder /usr/lib/jvm/adoptopenjdk-8-hotspot-amd64/ -JobFile .github/workflows/build_linux.job
             dotnet bin/net6.0/MASES.JCOReflectorCLI.dll -JobType Build -JDKFolder /usr/lib/jvm/adoptopenjdk-8-hotspot-amd64/ -JobFile .github/workflows/build_linux.job
 
         - name: Build JAR files
           run: |
             dotnet bin/netcoreapp3.1/MASES.JCOReflectorCLI.dll -JobType CreateJars -JDKFolder /usr/lib/jvm/adoptopenjdk-8-hotspot-amd64/ -JobFile .github/workflows/createjars_core3.1_linux.job
-            dotnet bin/net5.0/MASES.JCOReflectorCLI.dll -JobType CreateJars -JDKFolder /usr/lib/jvm/adoptopenjdk-8-hotspot-amd64/ -JobFile .github/workflows/createjars_core5.0_linux.job
             dotnet bin/net6.0/MASES.JCOReflectorCLI.dll -JobType CreateJars -JDKFolder /usr/lib/jvm/adoptopenjdk-8-hotspot-amd64/ -JobFile .github/workflows/createjars_core6.0_linux.job
 
         - name: Build Java test source file .NET Core 3.1
@@ -121,18 +115,6 @@ jobs:
             #java -cp "./bin/netcoreapp3.1/JCOReflector.jar;./netreflected-tests/java/src/" refout.HelloRefOutBase --CoreCLRApp:Microsoft.NETCore.App
             #java -cp "./bin/netcoreapp3.1/JCOReflector.jar;./netreflected-tests/java/src/" refout.HelloRefOut --CoreCLRApp:Microsoft.NETCore.App
 
-        - name: Build Java test source file .NET 5.0
-          run: javac -cp ./bin/net5.0/JCOReflector.jar ./netreflected-tests/java/src/hierarchy/*.java ./netreflected-tests/java/src/mscorlib/*.java ./netreflected-tests/java/src/nettest/*.java ./netreflected-tests/java/src/refout/*.java
-
-        - run: java -cp "./bin/net5.0/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloLock --CoreCLRApp:Microsoft.NET5.App --LicensePath:$GITHUB_WORKSPACE
-        - run: java -cp "./bin/net5.0/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloNET --CoreCLRApp:Microsoft.NET5.App --LicensePath:$GITHUB_WORKSPACE
-        - run: java -cp "./bin/net5.0/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloNETEvent --CoreCLRApp:Microsoft.NET5.App --LicensePath:$GITHUB_WORKSPACE
-        - run: java -cp "./bin/net5.0/JCOReflector.jar:./netreflected-tests/java/src/" mscorlib.HelloIterator --CoreCLRApp:Microsoft.NET5.App --LicensePath:$GITHUB_WORKSPACE
-        - run: java -cp "./bin/net5.0/JCOReflector.jar:./netreflected-tests/java/src/" hierarchy.HelloHierarchy --CoreCLRApp:Microsoft.NET5.App --LicensePath:$GITHUB_WORKSPACE
-        - run: java -cp "./bin/net5.0/JCOReflector.jar:./netreflected-tests/java/src/" hierarchy.HelloInterfaces --CoreCLRApp:Microsoft.NET5.App --LicensePath:$GITHUB_WORKSPACE
-        - run: java -cp "./bin/net5.0/JCOReflector.jar:./netreflected-tests/java/src/" nettest.HelloNETSocket -server 127.0.0.1 --CoreCLRApp:Microsoft.NET5.App --LicensePath:$GITHUB_WORKSPACE
-        - run: java -cp "./bin/net5.0/JCOReflector.jar:./netreflected-tests/java/src/" nettest.HelloNETSocket -async -server 127.0.0.1 --CoreCLRApp:Microsoft.NET5.App --LicensePath:$GITHUB_WORKSPACE
- 
         - name: Build Java test source file .NET 6.0
           run: javac -cp ./bin/net6.0/JCOReflector.jar ./netreflected-tests/java/src/hierarchy/*.java ./netreflected-tests/java/src/mscorlib/*.java ./netreflected-tests/java/src/nettest/*.java ./netreflected-tests/java/src/refout/*.java
 
@@ -173,24 +155,6 @@ jobs:
         - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/netcoreapp3.1/*:./netreflected-tests/scala/output" nettest.HelloNETSocket -async --CoreCLRApp:Microsoft.NETCore.App --LicensePath:$GITHUB_WORKSPACE
         - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/netcoreapp3.1/*:./netreflected-tests/scala/output" refout.HelloRefOutBase --CoreCLRApp:Microsoft.NETCore.App --LicensePath:$GITHUB_WORKSPACE
         - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/netcoreapp3.1/*:./netreflected-tests/scala/output" refout.HelloRefOut --CoreCLRApp:Microsoft.NETCore.App --LicensePath:$GITHUB_WORKSPACE
-        - run: rm -rf ./netreflected-tests/scala/output
-
-        - name: Build Scala test source file .NET 5.0
-          run: |
-            source "$HOME/.sdkman/bin/sdkman-init.sh"
-            mkdir ./netreflected-tests/scala/output
-            scalac -cp "./bin/net5.0/*" -d ./netreflected-tests/scala/output ./netreflected-tests/scala/src/main/scala/hierarchy/* ./netreflected-tests/scala/src/main/scala/mscorlib/* ./netreflected-tests/scala/src/main/scala/nettest/* ./netreflected-tests/scala/src/main/scala/refout/*
-
-        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net5.0/*:./netreflected-tests/scala/output" mscorlib.HelloLock --CoreCLRApp:Microsoft.NET5.App --LicensePath:$GITHUB_WORKSPACE
-        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net5.0/*:./netreflected-tests/scala/output" mscorlib.HelloNet --CoreCLRApp:Microsoft.NET5.App --LicensePath:$GITHUB_WORKSPACE
-        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net5.0/*:./netreflected-tests/scala/output" mscorlib.HelloNETEvent --CoreCLRApp:Microsoft.NET5.App --LicensePath:$GITHUB_WORKSPACE
-        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net5.0/*:./netreflected-tests/scala/output" mscorlib.HelloIterator --CoreCLRApp:Microsoft.NET5.App --LicensePath:$GITHUB_WORKSPACE
-        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net5.0/*:./netreflected-tests/scala/output" hierarchy.HelloHierarchy --CoreCLRApp:Microsoft.NET5.App --LicensePath:$GITHUB_WORKSPACE
-        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net5.0/*:./netreflected-tests/scala/output" hierarchy.HelloInterfaces --CoreCLRApp:Microsoft.NET5.App --LicensePath:$GITHUB_WORKSPACE
-        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net5.0/*:./netreflected-tests/scala/output" nettest.HelloNETSocket --CoreCLRApp:Microsoft.NET5.App --LicensePath:$GITHUB_WORKSPACE
-        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net5.0/*:./netreflected-tests/scala/output" nettest.HelloNETSocket -async --CoreCLRApp:Microsoft.NET5.App --LicensePath:$GITHUB_WORKSPACE
-        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net5.0/*:./netreflected-tests/scala/output" refout.HelloRefOutBase --CoreCLRApp:Microsoft.NET5.App --LicensePath:$GITHUB_WORKSPACE
-        - run: source "$HOME/.sdkman/bin/sdkman-init.sh" && scala -nobootcp -toolcp "./bin/net5.0/*:./netreflected-tests/scala/output" refout.HelloRefOut --CoreCLRApp:Microsoft.NET5.App --LicensePath:$GITHUB_WORKSPACE
         - run: rm -rf ./netreflected-tests/scala/output
 
         - name: Build Scala test source file .NET 6.0

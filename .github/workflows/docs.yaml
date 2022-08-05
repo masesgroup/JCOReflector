@@ -92,12 +92,6 @@ jobs:
           git checkout master
           cd ..\..\..
 
-      - name: Switch to master net5.0 help file
-        run: |
-          cd .\netreflected\docs\net5.0
-          git checkout master
-          cd ..\..\..
-
       - name: Switch to master net6.0 help file
         run: |
           cd .\netreflected\docs\net6.0
@@ -120,16 +114,6 @@ jobs:
           Copy-Item .\_data\.git -Destination .\netreflected\docs\netcoreapp3.1\.git -Force
           Copy-Item .\_data\LICENSE -Destination .\netreflected\docs\netcoreapp3.1\LICENSE -Force
           Copy-Item .\_data\README.md -Destination .\netreflected\docs\netcoreapp3.1\README.md -Force
-
-      - name: Clean net5.0 help file folders
-        run: |
-          Copy-Item .\netreflected\docs\net5.0\.git -Destination .\_data\.git -Force
-          Copy-Item .\netreflected\docs\net5.0\LICENSE -Destination .\_data\LICENSE -Force
-          Copy-Item .\netreflected\docs\net5.0\README.md -Destination .\_data\README.md -Force
-          Remove-Item .\netreflected\docs\net5.0\* -Recurse -Force
-          Copy-Item .\_data\.git -Destination .\netreflected\docs\net5.0\.git -Force
-          Copy-Item .\_data\LICENSE -Destination .\netreflected\docs\net5.0\LICENSE -Force
-          Copy-Item .\_data\README.md -Destination .\netreflected\docs\net5.0\README.md -Force
 
       - name: Clean net6.0 help file folders
         run: |
@@ -160,10 +144,6 @@ jobs:
         run: dotnet bin\netcoreapp3.1\MASES.JCOReflectorCLI.dll -JobType BuildDocs -JobFile .github\workflows\builddocs_win19.job -CommitVersion ${{ env.GITHUB_COMMIT_MESSAGE }} -JDKFolder %JAVA_HOME_11_X64%
         shell: cmd
         
-      - name: Build net5.0 Java Help files
-        run: dotnet bin\net5.0\MASES.JCOReflectorCLI.dll -JobType BuildDocs -JobFile .github\workflows\builddocs_win19.job -CommitVersion ${{ env.GITHUB_COMMIT_MESSAGE }} -JDKFolder %JAVA_HOME_11_X64%
-        shell: cmd
-        
       - name: Build net6.0 Java Help files
         run: dotnet bin\net6.0\MASES.JCOReflectorCLI.dll -JobType BuildDocs -JobFile .github\workflows\builddocs_win19.job -CommitVersion ${{ env.GITHUB_COMMIT_MESSAGE }} -JDKFolder %JAVA_HOME_11_X64%
         shell: cmd
@@ -183,15 +163,6 @@ jobs:
       - name: Commit changes to netcoreapp3.1 help file
         run: |
           cd .\netreflected\docs\netcoreapp3.1
-          %GITHUB_WORKSPACE%\.github\workflows\commit.cmd github-actions 41898282+github-actions[bot]@users.noreply.github.com "Update help file to commit masesgroup/JCOReflector@${{ env.GITHUB_COMMIT_MESSAGE }}"
-          cd ..\..\..
-        shell: cmd
-        env:
-          GITHUB_WORKSPACE: $GITHUB_WORKSPACE
-
-      - name: Commit changes to net5.0 help file
-        run: |
-          cd .\netreflected\docs\net5.0
           %GITHUB_WORKSPACE%\.github\workflows\commit.cmd github-actions 41898282+github-actions[bot]@users.noreply.github.com "Update help file to commit masesgroup/JCOReflector@${{ env.GITHUB_COMMIT_MESSAGE }}"
           cd ..\..\..
         shell: cmd
@@ -235,17 +206,6 @@ jobs:
           GITHUB_WORKSPACE: $GITHUB_WORKSPACE
           SUPER_SECRET: ${{ secrets.DOCS_API_TOKEN_GITHUB }}
           REPO: masesgroup/CoreDocs
-
-      - name: Push changes to net5.0 help file
-        run: |
-          cd .\netreflected\docs\net5.0
-          %GITHUB_WORKSPACE%\.github\workflows\push.cmd %REPO%
-          cd ..\..\..
-        shell: cmd
-        env:
-          GITHUB_WORKSPACE: $GITHUB_WORKSPACE
-          SUPER_SECRET: ${{ secrets.DOCS_API_TOKEN_GITHUB }}
-          REPO: masesgroup/NET5Docs
 
       - name: Push changes to net6.0 help file
         run: |

@@ -9,10 +9,10 @@
     <Copyright>Copyright ©  MASES s.r.l. 2022</Copyright>
     <Authors>MASES s.r.l.</Authors>
     <Company>MASES s.r.l.</Company>
-    <Version>1.10.2</Version>
+    <Version>1.11.0</Version>
     <Product>MASES.JCOReflectorCLI</Product>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
-    <TargetFrameworks>net462;netcoreapp3.1;net5.0;net6.0</TargetFrameworks>
+    <TargetFrameworks>net462;netcoreapp3.1;net6.0</TargetFrameworks>
     <OutputPath>..\..\bin\</OutputPath>
     <!--<GeneratePackageOnBuild>true</GeneratePackageOnBuild>-->
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>

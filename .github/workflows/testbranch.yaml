@@ -135,10 +135,41 @@ jobs:
         run: .\bin\net462\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_framework_win19.job -JDKFolder %JAVA_HOME_11_X64%
         shell: cmd
 
+      - name: Compress release files
+        run: | 
+          Compress-Archive -Path .\bin\netcoreapp3.1\* -DestinationPath .\bin\netcoreapp3.1.zip
+          Compress-Archive -Path .\bin\net6.0\* -DestinationPath .\bin\net6.0.zip
+          Compress-Archive -Path .\bin\net462\* -DestinationPath .\bin\net462.zip
+          Compress-Archive -Path .\netreflected\src\* -DestinationPath .\netreflected\source.zip
+          
       - uses: actions/upload-artifact@v3
         with:
-          name: LatestGeneration
-          path: ${{ github.workspace }}
+          name: NuGet
+          path: .\bin\*nupkg
+          retention-days: 1
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: netcoreapp3.1
+          path: .\bin\netcoreapp3.1.zip
+          retention-days: 1
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: net6.0
+          path: .\bin\net6.0.zip
+          retention-days: 1
+         
+      - uses: actions/upload-artifact@v3
+        with:
+          name: net462
+          path: .\bin\net462.zip
+          retention-days: 1
+          
+      - uses: actions/upload-artifact@v3
+        with:
+          name: LatestSource
+          path: .\netreflected\source.zip
           retention-days: 1
       
       - name: Build Java test source file .NET Core 3.1
@@ -278,3 +309,4 @@ jobs:
         shell: cmd      
       - run: cd ./netreflected-tests/scala && rmdir output /s /q
         shell: cmd  
+

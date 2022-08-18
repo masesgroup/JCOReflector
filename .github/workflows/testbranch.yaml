@@ -204,7 +204,7 @@ jobs:
         run: javac -cp ./bin/net462/JCOReflector.jar ./netreflected-tests/java/src/hierarchy/*.java ./netreflected-tests/java/src/mscorlib/*.java ./netreflected-tests/java/src/nettest/*.java ./netreflected-tests/java/src/refout/*.java
 
       - run: java -cp "./bin/net462/JCOReflector.jar;./netreflected-tests/java/src/" mscorlib.HelloLock
-      - run: java -cp "./bin/net462/JCOReflector.jar;./netreflected-tests/java/src/" mscorlib.HelloNET
+      # - run: java -cp "./bin/net462/JCOReflector.jar;./netreflected-tests/java/src/" mscorlib.HelloNET
       - run: java -cp "./bin/net462/JCOReflector.jar;./netreflected-tests/java/src/" mscorlib.HelloNETEvent
       - run: java -cp "./bin/net462/JCOReflector.jar;./netreflected-tests/java/src/" mscorlib.HelloIterator
       - run: java -cp "./bin/net462/JCOReflector.jar;./netreflected-tests/java/src/" hierarchy.HelloHierarchy

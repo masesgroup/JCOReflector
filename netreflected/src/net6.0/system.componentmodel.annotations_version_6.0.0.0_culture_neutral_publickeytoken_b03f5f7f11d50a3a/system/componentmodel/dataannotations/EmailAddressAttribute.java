@@ -154,7 +154,7 @@ public class EmailAddressAttribute extends DataTypeAttribute  {
     
     // Methods section
     
-    public boolean IsValid(NetObject value) throws Throwable, system.ArgumentException, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException {
+    public boolean IsValid(NetObject value) throws Throwable, system.NotSupportedException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

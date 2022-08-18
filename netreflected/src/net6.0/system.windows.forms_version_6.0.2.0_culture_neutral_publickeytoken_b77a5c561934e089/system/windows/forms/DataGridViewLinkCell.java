@@ -231,7 +231,7 @@ public class DataGridViewLinkCell extends DataGridViewCell  {
         }
     }
 
-    public Color getActiveLinkColor() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.threading.WaitHandleCannotBeOpenedException, system.ArgumentNullException, system.runtime.interopservices.ExternalException, system.InvalidOperationException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
+    public Color getActiveLinkColor() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.threading.WaitHandleCannotBeOpenedException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.runtime.interopservices.ExternalException, system.InvalidOperationException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -252,7 +252,7 @@ public class DataGridViewLinkCell extends DataGridViewCell  {
         }
     }
 
-    public Color getLinkColor() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.threading.WaitHandleCannotBeOpenedException, system.ArgumentNullException, system.runtime.interopservices.ExternalException, system.InvalidOperationException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
+    public Color getLinkColor() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.threading.WaitHandleCannotBeOpenedException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.runtime.interopservices.ExternalException, system.InvalidOperationException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -273,7 +273,7 @@ public class DataGridViewLinkCell extends DataGridViewCell  {
         }
     }
 
-    public Color getVisitedLinkColor() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.threading.WaitHandleCannotBeOpenedException, system.ArgumentNullException, system.runtime.interopservices.ExternalException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
+    public Color getVisitedLinkColor() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.threading.WaitHandleCannotBeOpenedException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.runtime.interopservices.ExternalException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

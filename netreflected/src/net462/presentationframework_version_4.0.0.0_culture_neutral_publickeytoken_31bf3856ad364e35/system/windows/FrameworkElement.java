@@ -444,7 +444,7 @@ public class FrameworkElement extends UIElement implements system.windows.markup
         }
     }
 
-    public void UpdateDefaultStyle() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception, system.NotImplementedException, system.InvalidCastException {
+    public void UpdateDefaultStyle() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception, system.InvalidCastException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

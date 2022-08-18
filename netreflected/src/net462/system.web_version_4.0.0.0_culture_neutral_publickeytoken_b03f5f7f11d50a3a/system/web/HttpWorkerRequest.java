@@ -425,7 +425,7 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
-    public int ReadEntityBody(byte[] buffer, int offset, int size) throws Throwable {
+    public int ReadEntityBody(byte[] buffer, int offset, int size) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -435,7 +435,7 @@ public class HttpWorkerRequest extends NetObject  {
         }
     }
 
-    public int ReadEntityBody(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable {
+    public int ReadEntityBody(JCORefOut dupParam0, int dupParam1, int dupParam2) throws Throwable, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

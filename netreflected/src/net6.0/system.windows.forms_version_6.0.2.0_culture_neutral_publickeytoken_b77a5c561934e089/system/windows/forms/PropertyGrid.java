@@ -160,7 +160,7 @@ public class PropertyGrid extends ContainerControl  {
 
     // Constructors section
     
-    public PropertyGrid() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.threading.WaitHandleCannotBeOpenedException, system.ArgumentNullException, system.runtime.interopservices.ExternalException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.ObjectDisposedException, system.OutOfMemoryException, system.NotSupportedException, system.TypeLoadException, system.OverflowException, system.globalization.CultureNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.InvalidCastException, system.NullReferenceException {
+    public PropertyGrid() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.threading.WaitHandleCannotBeOpenedException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.runtime.interopservices.ExternalException, system.InvalidOperationException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.OutOfMemoryException, system.NotSupportedException, system.TypeLoadException, system.OverflowException, system.globalization.CultureNotFoundException, system.componentmodel.InvalidEnumArgumentException, system.InvalidCastException, system.NullReferenceException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

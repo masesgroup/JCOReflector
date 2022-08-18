@@ -184,7 +184,7 @@ public class Dns extends NetObject  {
         }
     }
 
-    public static IAsyncResult BeginGetHostEntry(java.lang.String hostNameOrAddress, AsyncCallback requestCallback, NetObject stateObject) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.net.sockets.SocketException, system.OutOfMemoryException, system.threading.tasks.TaskSchedulerException {
+    public static IAsyncResult BeginGetHostEntry(java.lang.String hostNameOrAddress, AsyncCallback requestCallback, NetObject stateObject) throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException, system.net.sockets.SocketException, system.ObjectDisposedException, system.threading.tasks.TaskSchedulerException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {

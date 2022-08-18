@@ -192,7 +192,7 @@ public class ColorEditor extends UITypeEditor  {
         }
     }
 
-    public void PaintValue(PaintValueEventArgs e) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.RankException, system.threading.WaitHandleCannotBeOpenedException, system.runtime.interopservices.ExternalException {
+    public void PaintValue(PaintValueEventArgs e) throws Throwable, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.PlatformNotSupportedException, system.IndexOutOfRangeException, system.ArgumentNullException, system.ObjectDisposedException, system.ArrayTypeMismatchException, system.RankException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.runtime.interopservices.ExternalException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

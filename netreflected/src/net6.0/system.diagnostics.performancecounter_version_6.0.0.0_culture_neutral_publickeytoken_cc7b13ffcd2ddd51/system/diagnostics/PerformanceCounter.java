@@ -194,7 +194,7 @@ public class PerformanceCounter extends Component  {
         }
     }
 
-    public PerformanceCounter(java.lang.String categoryName, java.lang.String counterName) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.security.SecurityException, system.componentmodel.Win32Exception, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.globalization.CultureNotFoundException, system.RankException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.io.IOException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException {
+    public PerformanceCounter(java.lang.String categoryName, java.lang.String counterName) throws Throwable, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.PlatformNotSupportedException, system.security.SecurityException, system.componentmodel.Win32Exception, system.ArgumentException, system.NotSupportedException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.runtime.interopservices.ExternalException, system.RankException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.io.IOException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -238,7 +238,7 @@ public class PerformanceCounter extends Component  {
         }
     }
 
-    public Single NextValue() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.security.SecurityException, system.configuration.ConfigurationException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException {
+    public Single NextValue() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.FormatException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.security.SecurityException, system.configuration.ConfigurationException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -249,7 +249,7 @@ public class PerformanceCounter extends Component  {
         }
     }
 
-    public CounterSample NextSample() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.security.SecurityException, system.configuration.ConfigurationException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException, system.OverflowException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public CounterSample NextSample() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException, system.componentmodel.Win32Exception, system.security.SecurityException, system.configuration.ConfigurationException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException, system.OverflowException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -290,7 +290,7 @@ public class PerformanceCounter extends Component  {
         }
     }
 
-    public void EndInit() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.security.SecurityException, system.configuration.ConfigurationException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException, system.OverflowException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public void EndInit() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException, system.componentmodel.Win32Exception, system.security.SecurityException, system.configuration.ConfigurationException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException, system.OverflowException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -334,7 +334,7 @@ public class PerformanceCounter extends Component  {
         }
     }
 
-    public long getRawValue() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException, system.PlatformNotSupportedException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.security.SecurityException, system.configuration.ConfigurationException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException {
+    public long getRawValue() throws Throwable, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.globalization.CultureNotFoundException, system.FormatException, system.ArgumentOutOfRangeException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.ObjectDisposedException, system.security.SecurityException, system.configuration.ConfigurationException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -375,7 +375,7 @@ public class PerformanceCounter extends Component  {
         }
     }
 
-    public PerformanceCounterType getCounterType() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.security.SecurityException, system.configuration.ConfigurationException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException, system.OverflowException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public PerformanceCounterType getCounterType() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException, system.componentmodel.Win32Exception, system.security.SecurityException, system.configuration.ConfigurationException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException, system.OverflowException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -406,7 +406,7 @@ public class PerformanceCounter extends Component  {
         }
     }
 
-    public java.lang.String getCounterHelp() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.FormatException, system.componentmodel.Win32Exception, system.security.SecurityException, system.configuration.ConfigurationException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException, system.OverflowException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+    public java.lang.String getCounterHelp() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.FormatException, system.componentmodel.Win32Exception, system.security.SecurityException, system.configuration.ConfigurationException, system.threading.WaitHandleCannotBeOpenedException, system.ApplicationException, system.OverflowException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

@@ -195,7 +195,7 @@ public class SignerInfo extends NetObject  {
         }
     }
 
-    public void CheckSignature(boolean verifySignatureOnly) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.security.cryptography.CryptographicException, system.formats.asn1.AsnContentException, system.OverflowException, system.MissingMethodException, system.reflection.TargetInvocationException {
+    public void CheckSignature(boolean verifySignatureOnly) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.NotSupportedException, system.ObjectDisposedException, system.RankException, system.OutOfMemoryException, system.security.cryptography.CryptographicException, system.io.IOException, system.formats.asn1.AsnContentException, system.OverflowException, system.MissingMethodException, system.reflection.TargetInvocationException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

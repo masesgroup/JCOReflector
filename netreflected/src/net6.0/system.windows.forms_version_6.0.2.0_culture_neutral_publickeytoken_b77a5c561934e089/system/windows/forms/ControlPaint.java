@@ -612,7 +612,7 @@ public class ControlPaint extends NetObject  {
         }
     }
 
-    public static void DrawStringDisabled(Graphics graphics, java.lang.String s, Font font, Color color, RectangleF layoutRectangle, StringFormat format) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.threading.WaitHandleCannotBeOpenedException, system.runtime.interopservices.ExternalException {
+    public static void DrawStringDisabled(Graphics graphics, java.lang.String s, Font font, Color color, RectangleF layoutRectangle, StringFormat format) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.PlatformNotSupportedException, system.ArrayTypeMismatchException, system.IndexOutOfRangeException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ObjectDisposedException, system.threading.WaitHandleCannotBeOpenedException, system.threading.AbandonedMutexException, system.runtime.interopservices.ExternalException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -656,7 +656,7 @@ public class ControlPaint extends NetObject  {
     
     // Properties section
     
-    public static Color getContrastControlDark() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.threading.WaitHandleCannotBeOpenedException, system.ArgumentNullException, system.runtime.interopservices.ExternalException, system.InvalidOperationException, system.PlatformNotSupportedException {
+    public static Color getContrastControlDark() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.threading.WaitHandleCannotBeOpenedException, system.ArgumentNullException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.runtime.interopservices.ExternalException, system.InvalidOperationException, system.PlatformNotSupportedException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {

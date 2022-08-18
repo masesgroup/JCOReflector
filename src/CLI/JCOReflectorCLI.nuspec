@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>MASES.JCOReflectorCLI</id>
-    <version>1.10.1</version>
+    <version>1.11.0</version>
     <title>JCOReflector CLI - CLI interface for JCOReflector Engine</title>
     <authors>MASES s.r.l.</authors>
     <owners>MASES s.r.l.</owners>
@@ -25,7 +25,6 @@
         <file src="..\Common\JCOB128x128.png" target="" />
         <file src="..\..\README.md" target="" />
         <file src="..\..\bin\netcoreapp3.1\" target="tools\netcoreapp3.1\any" />
-        <file src="..\..\bin\net5.0\" target="tools\net5.0\any" />
         <file src="..\..\bin\net6.0\" target="tools\net6.0\any" />
     </files>
 </package>

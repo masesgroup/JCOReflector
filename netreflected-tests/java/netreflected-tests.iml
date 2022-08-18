@@ -16,14 +16,10 @@
     <orderEntry type="module-library" exported="">
       <library name="JCOReflector.jar">
         <CLASSES>
-          <root url="file://$MODULE_DIR$/../../bin/net461" />
+          <root url="jar://$MODULE_DIR$/../../bin/net462/JCOReflector.jar!/" />
         </CLASSES>
         <JAVADOC />
-        <NATIVE>
-          <root url="file://$MODULE_DIR$/../../bin/net461" />
-        </NATIVE>
         <SOURCES />
-        <jarDirectory url="file://$MODULE_DIR$/../../bin/net461" recursive="false" />
       </library>
     </orderEntry>
   </component>

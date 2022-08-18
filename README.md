@@ -36,7 +36,8 @@ JCOReflector uses [JCOBridge](https://www.jcobridge.com), and its [features](htt
 
 Have a look at the following resources:
 - [Release notes](https://www.jcobridge.com/release-notes/)
-- [Commercial info](https://www.jcobridge.com/pricing/)
+- [Non Profit or University](https://www.jcobridge.com/pricing/)
+- [Commercial info: Professional or Enterprise](https://www.jcobridge.com/pricing/)
 - [![JCOBridge nuget](https://img.shields.io/nuget/v/MASES.JCOBridge)](https://www.nuget.org/packages/MASES.JCOBridge)
 
 ## History of the project
@@ -141,8 +142,9 @@ object HelloIterator {
 
 ### Whats in .NET for Java?
 
-From the point of view of .NET it is very simple to use Java classes and it is not necessary to have some kind of reflection classes.
-[JCOBridge](https://www.jcobridge.com) is able to access and execute directly within a JVM using C# code, from C# it is possible to execute directly Java code with a similar syntax: look at the examples in [JCOBridge-Examples](https://github.com/masesgroup/JCOBridge-Examples)
+From the point of view of .NET it is very simple to use Java classes and it is not necessary to have some kind of reflection classes:
+  1. [JCOBridge](https://www.jcobridge.com) is able to access and execute directly within a JVM using C# code, from C# it is possible to execute directly Java code with a similar syntax: look at the examples in [JCOBridge-Examples](https://github.com/masesgroup/JCOBridge-Examples).
+  2. The project [JNet](https://github.com/masesgroup/JNet) uses [JCOBridge](https://www.jcobridge.com): a developer has some ready made Java classes to be used from .NET.
 
 ## Actual state
 

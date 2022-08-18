@@ -140,9 +140,9 @@ Parsed assemblies are:
 > * System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e
 > * System.Private.Uri, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Xaml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+> * System.Resources.ResourceManager, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Runtime.InteropServices, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Runtime.Extensions, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
-> * System.Resources.ResourceManager, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Collections.Specialized, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Collections, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.ComponentModel.TypeConverter, Version=4.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
@@ -362,6 +362,7 @@ Parsed assemblies are:
 > * System.Runtime.Serialization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
 > * System.Security, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Security.Cryptography.Pkcs, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+> * System.Security.Cryptography.Xml, Version=4.0.3.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
 > * System.Security.SecureString, Version=4.1.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.ServiceModel.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 > * System.ServiceModel.Syndication, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51
@@ -395,7 +396,7 @@ Parsed assemblies are:
 > * System.Security.Claims, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 > * System.Net.Security, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 
-> * Analyzed Types = 24360
+> * Analyzed Types = 24361
 >   * Enumerators = 24
 >   * Delegates = 367
 >   * Classes
@@ -416,8 +417,8 @@ Parsed assemblies are:
 >       * Duplicated Methods = 726
 >     * Properties = 16607
 >     * Events = 1620
-> * Discarded Types = 17385
->   * Non Public = 17085
+> * Discarded Types = 17386
+>   * Non Public = 17086
 >   * Generic = 232
 >   * Internals = 33
 
@@ -1103,7 +1104,7 @@ Parsed assemblies are:
 > * PresentationUI, Version=6.0.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 > * System.DirectoryServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
 
-> * Analyzed Types = 25848
+> * Analyzed Types = 25850
 >   * Enumerators = 24
 >   * Delegates = 364
 >   * Classes
@@ -1124,8 +1125,8 @@ Parsed assemblies are:
 >       * Duplicated Methods = 800
 >     * Properties = 17040
 >     * Events = 1627
-> * Discarded Types = 18667
->   * Non Public = 18327
+> * Discarded Types = 18669
+>   * Non Public = 18329
 >   * Generic = 277
 >   * Internals = 27
 

@@ -15,7 +15,6 @@ The project is organized in this folder structure:
 * **bin** (The output folder, automatically generated and not in git)
     * net462 (folder for .NET Framework output)
     * netcoreapp3.1 (folder for .NET Core 3.1 output)
-    * net5.0 (folder for .NET 5 output)
     * net6.0 (folder for .NET 6 output)
 	
 * **netreflected** (container of Java classes)
@@ -23,17 +22,14 @@ The project is organized in this folder structure:
         * **JCOReflector** (contains the base classes used from JCOReflector to build reflected classes)
         * **netcoreapp3.1** (contains, sepearated in folders, the sets of reflected classes of .NET Core generated from JCOReflector: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
         * **net462** (contains, sepearated in folders, the sets of reflected classes of .NET Framework generated from JCOReflector: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
-		* **net5.0** (contains, sepearated in folders, the sets of reflected classes of .NET 5 generated from JCOReflector: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
 		* **net6.0** (contains, sepearated in folders, the sets of reflected classes of .NET 6 generated from JCOReflector: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
     * **docs**
         * **netcoreapp3.1** (contains the generated documentation related to .NET Core: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
         * **net462** (contains the generated documentation related to .NET Framework: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
-		* **net5.0** (contains the generated documentation related to .NET 5: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
 		* **net6.0** (contains the generated documentation related to .NET 6: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
     * **statistics**
         * **netcoreapp3.1** (contains the generated statistics related to .NET Core: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
         * **net462** (contains the generated statistics related to .NET Framework: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
-		* **net5.0** (contains the generated statistics related to .NET 5: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
 		* **net6.0** (contains the generated statistics related to .NET 6: **no manual action shall be made on this folder and subfolders, an issue or enhancement shall be made in the JCOReflector engine (code or templates)**)
 
 * **netreflected-tests** (container test classes)
@@ -82,7 +78,6 @@ The basic and simple rules for the project are:
     * *netreflected/src/JCOReflector*
 * **Unit test**: contibution can be made in the testing code section under *netreflected-tests* folder
 * **Reflected classes**: the following folders and subsolders are generated code from JCOReflector, to change them a developer shall modify the templates; the code will be updated from mantairners after the validation of JCOReflector engine:
-    * *netreflected/src/net5.0*
     * *netreflected/src/net6.0*
     * *netreflected/src/netcoreapp3.1*
     * *netreflected/src/net462*

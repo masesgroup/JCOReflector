@@ -2,9 +2,9 @@
 
 ![CI_WINDOWS](https://github.com/masesgroup/JCOReflector/workflows/CI_WINDOWS/badge.svg)  ![CI_LINUX](https://github.com/masesgroup/JCOReflector/workflows/CI_LINUX/badge.svg)  [![CI_DOCS](https://github.com/masesgroup/JCOReflector/actions/workflows/docs.yaml/badge.svg)](https://github.com/masesgroup/JCOReflector/actions/workflows/docs.yaml)  [![CI_MAVEN](https://github.com/masesgroup/JCOReflector/actions/workflows/maven.yaml/badge.svg)](https://github.com/masesgroup/JCOReflector/actions/workflows/maven.yaml)  ![CI_RELEASE](https://github.com/masesgroup/JCOReflector/workflows/CI_RELEASE/badge.svg)
 
-|.NET Framework | .NET 5 | .NET 6 |
-|---	|---	|---	|
-|[![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net462.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net462%22) | [![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net5.0.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net5.0%22) | [![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net6.0.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net6.0%22)|
+|.NET Framework | .NET 6 |
+|---	|---	|
+|[![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net462.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net462%22) | [![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net6.0.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net6.0%22)|
 
 |JCOReflectorEngine | JCOReflectorCLI |
 |---	|---	|
@@ -195,7 +195,6 @@ Within the folder bin you will find three subfolders:
 
 - **net462** (available only on Windows platform)
 - **netcoreapp3.1** (available on .NET Core supported platforms)
-- **net5.0** (available on .NET 5 supported platforms)
 - **net6.0** (available on .NET 6 supported platforms)
 
 in each subfolder will be available two executables:
@@ -208,7 +207,7 @@ in each subfolder will be available two executables:
 
 ## Reflected Assemblies
 
-The folder [netreflected](/netreflected/src) contains all reflected classes generated for **.NET** **Framework** (_net462_), **Core** (_netcoreapp3.1_), **5** (_net5.0_) and **6** (_net6.0_). Below the coverage statistics and the list of analyzed and reflected assemblies:
+The folder [netreflected](/netreflected/src) contains all reflected classes generated for **.NET** **Framework** (_net462_), **Core** (_netcoreapp3.1_) and **6** (_net6.0_). Below the coverage statistics and the list of analyzed and reflected assemblies:
 
 ### Statistics
 
@@ -219,10 +218,6 @@ The folder [netreflected](/netreflected/src) contains all reflected classes gene
 ![NetcoreStatistic](https://docs.google.com/spreadsheets/d/e/2PACX-1vRKe-7bBH40JmQmq4I194xz9g2YsoU7L9fHwzY0fqZyWepyjqnOC0B7lgO9CjAuTrBkOA8qbTiScLpS/pubchart?oid=964222969&format=image)
 
 ![NetcoreStatisticPercent](https://docs.google.com/spreadsheets/d/e/2PACX-1vRKe-7bBH40JmQmq4I194xz9g2YsoU7L9fHwzY0fqZyWepyjqnOC0B7lgO9CjAuTrBkOA8qbTiScLpS/pubchart?oid=857533338&format=image)
-
-![Net5Statistic](https://docs.google.com/spreadsheets/d/e/2PACX-1vRKe-7bBH40JmQmq4I194xz9g2YsoU7L9fHwzY0fqZyWepyjqnOC0B7lgO9CjAuTrBkOA8qbTiScLpS/pubchart?oid=212559398&format=image)
-
-![Net5StatisticPercent](https://docs.google.com/spreadsheets/d/e/2PACX-1vRKe-7bBH40JmQmq4I194xz9g2YsoU7L9fHwzY0fqZyWepyjqnOC0B7lgO9CjAuTrBkOA8qbTiScLpS/pubchart?oid=1162005117&format=image)
 
 ![Net6Statistic](https://docs.google.com/spreadsheets/d/e/2PACX-1vRKe-7bBH40JmQmq4I194xz9g2YsoU7L9fHwzY0fqZyWepyjqnOC0B7lgO9CjAuTrBkOA8qbTiScLpS/pubchart?oid=212559398&format=image)
 

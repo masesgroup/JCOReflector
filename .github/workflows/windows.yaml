@@ -128,7 +128,13 @@ jobs:
       - name: Build JAR files .NET Framework
         run: .\bin\net462\MASES.JCOReflectorCLI -JobType CreateJars -JobFile .github\workflows\createjars_framework_win19.job -JDKFolder %JAVA_HOME_11_X64%
         shell: cmd
-      
+
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+          cache: 'maven'
+    
       - name: Build Java test source file .NET Core 3.1
         run: javac -cp ./bin/netcoreapp3.1/JCOReflector.jar ./netreflected-tests/java/src/hierarchy/*.java ./netreflected-tests/java/src/mscorlib/*.java ./netreflected-tests/java/src/nettest/*.java ./netreflected-tests/java/src/refout/*.java
 

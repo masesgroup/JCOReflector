@@ -72,14 +72,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      - name: Cache local Maven repository
-        uses: actions/cache@v3
-        with:
-          path: ~/.m2/repository
-          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-          restore-keys: |
-            ${{ runner.os }}-maven-
-
       - name: Install gpg secret key
         run: |
           cat <(echo -e "${{ secrets.MAVEN_GPG_PRIVATE_KEY }}") | gpg --batch --import
@@ -108,6 +100,7 @@ jobs:
         with: # running setup-java again overwrites the settings.xml
           distribution: temurin
           java-version: 11
+          cache: 'maven'
           server-id: ossrh # Value of the distributionManagement/repository/id field of the pom.xml
           server-username: MAVEN_USERNAME # env variable for username in deploy
           server-password: MAVEN_CENTRAL_TOKEN # env variable for token in deploy

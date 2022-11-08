@@ -75,12 +75,12 @@ jobs:
 
         # Install .NET SDKs
         - name: Setup .NET Core 3.1
-          uses: actions/setup-dotnet@v1
+          uses: actions/setup-dotnet@v3
           with:
             dotnet-version: 3.1.x
 
         - name: Setup .NET 6.0
-          uses: actions/setup-dotnet@v1
+          uses: actions/setup-dotnet@v3
           with:
             dotnet-version: 6.0.x
 
@@ -99,6 +99,12 @@ jobs:
           run: |
             dotnet bin/netcoreapp3.1/MASES.JCOReflectorCLI.dll -JobType CreateJars -JDKFolder /usr/lib/jvm/adoptopenjdk-8-hotspot-amd64/ -JobFile .github/workflows/createjars_core3.1_linux.job
             dotnet bin/net6.0/MASES.JCOReflectorCLI.dll -JobType CreateJars -JDKFolder /usr/lib/jvm/adoptopenjdk-8-hotspot-amd64/ -JobFile .github/workflows/createjars_core6.0_linux.job
+
+        - uses: actions/setup-java@v3
+          with:
+            distribution: 'temurin'
+            java-version: '17'
+            cache: 'maven'
 
         - name: Build Java test source file .NET Core 3.1
           run: javac -cp ./bin/netcoreapp3.1/JCOReflector.jar ./netreflected-tests/java/src/hierarchy/*.java ./netreflected-tests/java/src/mscorlib/*.java ./netreflected-tests/java/src/nettest/*.java ./netreflected-tests/java/src/refout/*.java

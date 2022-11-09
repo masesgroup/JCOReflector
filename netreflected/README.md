@@ -96,29 +96,29 @@ Parsed assemblies are:
 > * Microsoft.Workflow.Compiler, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 > * System.Workflow.Activities, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
 
-> * Analyzed Types = 43282
+> * Analyzed Types = 43307
 >   * Enumerators = 26
 >   * Delegates = 557
 >   * Classes
->     * Constructors = 11699
->     * Methods = 35787
->     * Properties = 31911
+>     * Constructors = 11701
+>     * Methods = 35798
+>     * Properties = 31917
 >     * Events = 2391
-> * Implemented Types = 12311
+> * Implemented Types = 12316
 >   * Enumerators = 25
 >   * Delegates = 557
->   * Enums = 1660
+>   * Enums = 1663
 >     * Flags = 314
 >   * Interfaces = 847
->   * Classes = 9222
+>   * Classes = 9224
 >     * Exceptions = 396
->     * Constructors = 10192
->     * Methods = 30468
+>     * Constructors = 10194
+>     * Methods = 30477
 >       * Duplicated Methods = 999
->     * Properties = 29770
+>     * Properties = 29775
 >     * Events = 2185
-> * Discarded Types = 30970
->   * Non Public = 30516
+> * Discarded Types = 30990
+>   * Non Public = 30536
 >   * Generic = 354
 >   * Internals = 50
 

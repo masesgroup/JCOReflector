@@ -249,7 +249,7 @@ public class BitmapDecoder extends DispatcherObject  {
         }
     }
 
-    public BitmapSource getPreview() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.UriFormatException, system.OutOfMemoryException, system.net.WebException, system.net.CookieException, system.io.IOException, system.UnauthorizedAccessException, system.io.FileNotFoundException {
+    public BitmapSource getPreview() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.UriFormatException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.net.WebException, system.net.CookieException, system.io.IOException, system.UnauthorizedAccessException, system.io.FileNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -260,7 +260,7 @@ public class BitmapDecoder extends DispatcherObject  {
         }
     }
 
-    public BitmapSource getThumbnail() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.UriFormatException, system.OutOfMemoryException, system.net.WebException, system.net.CookieException, system.io.IOException, system.UnauthorizedAccessException, system.io.FileNotFoundException {
+    public BitmapSource getThumbnail() throws Throwable, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ArgumentException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotSupportedException, system.UriFormatException, system.globalization.CultureNotFoundException, system.OutOfMemoryException, system.net.WebException, system.net.CookieException, system.io.IOException, system.UnauthorizedAccessException, system.io.FileNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

@@ -145,7 +145,7 @@ public class X509SigningCredentials extends SigningCredentials  {
     public X509SigningCredentials() throws Throwable {
     }
 
-    public X509SigningCredentials(X509Certificate2 certificate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.AccessViolationException, system.FormatException, system.security.cryptography.CryptographicException {
+    public X509SigningCredentials(X509Certificate2 certificate) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.AccessViolationException, system.FormatException, system.security.cryptography.CryptographicException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -175,7 +175,7 @@ public class X509SigningCredentials extends SigningCredentials  {
         }
     }
 
-    public X509SigningCredentials(X509Certificate2 certificate, java.lang.String signatureAlgorithm, java.lang.String digestAlgorithm) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.AccessViolationException, system.FormatException, system.security.cryptography.CryptographicException {
+    public X509SigningCredentials(X509Certificate2 certificate, java.lang.String signatureAlgorithm, java.lang.String digestAlgorithm) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.AccessViolationException, system.FormatException, system.security.cryptography.CryptographicException, system.NotSupportedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

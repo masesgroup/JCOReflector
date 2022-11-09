@@ -253,7 +253,7 @@ public class DataGrid extends MultiSelector  {
         }
     }
 
-    public Visibility GetDetailsVisibilityForItem(NetObject item) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException {
+    public Visibility GetDetailsVisibilityForItem(NetObject item) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -264,7 +264,7 @@ public class DataGrid extends MultiSelector  {
         }
     }
 
-    public void ClearDetailsVisibilityForItem(NetObject item) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException {
+    public void ClearDetailsVisibilityForItem(NetObject item) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -284,7 +284,7 @@ public class DataGrid extends MultiSelector  {
         }
     }
 
-    public void ScrollIntoView(NetObject item) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+    public void ScrollIntoView(NetObject item) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -294,7 +294,7 @@ public class DataGrid extends MultiSelector  {
         }
     }
 
-    public void ScrollIntoView(NetObject item, DataGridColumn column) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
+    public void ScrollIntoView(NetObject item, DataGridColumn column) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException, system.MulticastNotSupportedException, system.componentmodel.Win32Exception {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -314,7 +314,7 @@ public class DataGrid extends MultiSelector  {
         }
     }
 
-    public void SetDetailsVisibilityForItem(NetObject item, Visibility detailsVisibility) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.IndexOutOfRangeException {
+    public void SetDetailsVisibilityForItem(NetObject item, Visibility detailsVisibility) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.OutOfMemoryException, system.NotSupportedException, system.InvalidOperationException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

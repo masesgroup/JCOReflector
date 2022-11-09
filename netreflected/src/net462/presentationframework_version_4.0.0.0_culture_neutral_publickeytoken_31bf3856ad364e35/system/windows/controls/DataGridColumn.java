@@ -165,7 +165,7 @@ public class DataGridColumn extends DependencyObject  {
         }
     }
 
-    public FrameworkElement GetCellContent(NetObject dataItem) throws Throwable, system.ArgumentNullException, system.OutOfMemoryException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.IndexOutOfRangeException {
+    public FrameworkElement GetCellContent(NetObject dataItem) throws Throwable, system.ArgumentNullException, system.OutOfMemoryException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -176,7 +176,7 @@ public class DataGridColumn extends DependencyObject  {
         }
     }
 
-    public FrameworkElement GetCellContent(DataGridRow dataGridRow) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException {
+    public FrameworkElement GetCellContent(DataGridRow dataGridRow) throws Throwable, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ArgumentException, system.ArgumentOutOfRangeException, system.FormatException, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

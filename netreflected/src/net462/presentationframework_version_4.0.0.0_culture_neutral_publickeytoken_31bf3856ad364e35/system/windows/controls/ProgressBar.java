@@ -141,7 +141,7 @@ public class ProgressBar extends RangeBase  {
 
     // Constructors section
     
-    public ProgressBar() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.ArgumentNullException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.OverflowException, system.NotSupportedException, system.windows.media.animation.AnimationException {
+    public ProgressBar() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.NotImplementedException, system.ArgumentNullException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.OverflowException, system.windows.media.animation.AnimationException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

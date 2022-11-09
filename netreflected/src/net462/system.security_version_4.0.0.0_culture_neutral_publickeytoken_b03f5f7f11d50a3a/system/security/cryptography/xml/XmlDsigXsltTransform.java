@@ -165,7 +165,7 @@ public class XmlDsigXsltTransform extends Transform  {
     
     // Methods section
     
-    public NetObject GetOutput() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException, system.xml.XmlException, system.NotImplementedException, system.NotSupportedException, system.configuration.ConfigurationException, system.FormatException, system.xml.schema.XmlSchemaException, system.xml.xsl.XsltException, system.TypeLoadException, system.OutOfMemoryException, system.io.FileNotFoundException {
+    public NetObject GetOutput() throws Throwable, system.InvalidOperationException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ObjectDisposedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException, system.resources.MissingManifestResourceException, system.xml.XmlException, system.NotImplementedException, system.NotSupportedException, system.configuration.ConfigurationException, system.FormatException, system.xml.schema.XmlSchemaException, system.xml.xsl.XsltException, system.TypeLoadException, system.io.FileNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

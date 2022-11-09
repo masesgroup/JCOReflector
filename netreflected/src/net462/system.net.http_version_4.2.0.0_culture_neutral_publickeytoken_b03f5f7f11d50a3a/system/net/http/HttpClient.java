@@ -144,7 +144,7 @@ public class HttpClient extends HttpMessageInvoker  {
 
     // Constructors section
     
-    public HttpClient() throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.net.http.HttpRequestException, system.OutOfMemoryException, system.threading.WaitHandleCannotBeOpenedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
+    public HttpClient() throws Throwable, system.IndexOutOfRangeException, system.ArgumentNullException, system.FormatException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException, system.ArgumentException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.security.SecurityException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.net.http.HttpRequestException, system.threading.WaitHandleCannotBeOpenedException, system.configuration.ConfigurationErrorsException, system.configuration.ConfigurationException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

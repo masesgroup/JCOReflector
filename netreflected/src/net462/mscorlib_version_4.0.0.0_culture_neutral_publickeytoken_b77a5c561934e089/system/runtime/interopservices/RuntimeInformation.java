@@ -183,7 +183,7 @@ public class RuntimeInformation extends NetObject  {
         }
     }
 
-    public static java.lang.String getFrameworkDescription() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.reflection.AmbiguousMatchException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.FormatException {
+    public static java.lang.String getFrameworkDescription() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.reflection.AmbiguousMatchException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {

@@ -156,7 +156,7 @@ public class DataErrorValidationRule extends ValidationRule  {
     
     // Methods section
     
-    public ValidationResult Validate(NetObject value, CultureInfo cultureInfo) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.FormatException {
+    public ValidationResult Validate(NetObject value, CultureInfo cultureInfo) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.OverflowException, system.componentmodel.InvalidEnumArgumentException, system.configuration.ConfigurationException, system.configuration.ConfigurationErrorsException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

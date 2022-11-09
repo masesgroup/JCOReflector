@@ -176,7 +176,7 @@ public class CutCopyPasteHelper extends NetObject  {
         }
     }
 
-    public static void DoCopy(EditingContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.threading.ThreadAbortException, system.collections.generic.KeyNotFoundException, system.xaml.XamlObjectReaderException, system.NotImplementedException, system.xaml.XamlException, system.xml.XmlException, system.threading.ThreadStateException, system.SystemException, system.security.SecurityException, system.componentmodel.Win32Exception {
+    public static void DoCopy(EditingContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.threading.ThreadAbortException, system.collections.generic.KeyNotFoundException, system.xaml.XamlObjectReaderException, system.xaml.XamlException, system.NotImplementedException, system.xml.XmlException, system.threading.ThreadStateException, system.SystemException, system.security.SecurityException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -186,7 +186,7 @@ public class CutCopyPasteHelper extends NetObject  {
         }
     }
 
-    public static void DoCut(EditingContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.threading.ThreadAbortException, system.collections.generic.KeyNotFoundException, system.xaml.XamlObjectReaderException, system.NotImplementedException, system.xaml.XamlException, system.xml.XmlException, system.threading.ThreadStateException, system.SystemException, system.security.SecurityException, system.componentmodel.Win32Exception {
+    public static void DoCut(EditingContext context) throws Throwable, system.IndexOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.NotSupportedException, system.threading.ThreadAbortException, system.collections.generic.KeyNotFoundException, system.xaml.XamlObjectReaderException, system.xaml.XamlException, system.NotImplementedException, system.xml.XmlException, system.threading.ThreadStateException, system.SystemException, system.security.SecurityException, system.componentmodel.Win32Exception {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {

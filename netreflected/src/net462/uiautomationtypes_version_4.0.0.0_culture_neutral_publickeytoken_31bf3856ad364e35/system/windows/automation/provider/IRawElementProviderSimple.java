@@ -37,44 +37,41 @@ import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
 
 // Import section
-import system.windows.automation.provider.ITextRangeProvider;
-import system.windows.automation.provider.ITextRangeProviderImplementation;
-import system.windows.automation.text.TextPatternRangeEndpoint;
-import system.windows.automation.text.TextUnit;
 import system.windows.automation.provider.IRawElementProviderSimple;
 import system.windows.automation.provider.IRawElementProviderSimpleImplementation;
+import system.windows.automation.provider.ProviderOptions;
 
 
 /**
- * The base .NET class managing System.Windows.Automation.Provider.ITextRangeProvider, UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
+ * The base .NET class managing System.Windows.Automation.Provider.IRawElementProviderSimple, UIAutomationTypes, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Provider.ITextRangeProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Provider.ITextRangeProvider</a>
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Provider.IRawElementProviderSimple" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Provider.IRawElementProviderSimple</a>
  */
-public interface ITextRangeProvider extends IJCOBridgeReflected {
+public interface IRawElementProviderSimple extends IJCOBridgeReflected {
     /**
-     * Fully assembly qualified name: UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     * Fully assembly qualified name: UIAutomationTypes, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
-    public static final String assemblyFullName = "UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    public static final String assemblyFullName = "UIAutomationTypes, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
     /**
-     * Assembly name: UIAutomationProvider
+     * Assembly name: UIAutomationTypes
      */
-    public static final String assemblyShortName = "UIAutomationProvider";
+    public static final String assemblyShortName = "UIAutomationTypes";
     /**
-     * Qualified class name: System.Windows.Automation.Provider.ITextRangeProvider
+     * Qualified class name: System.Windows.Automation.Provider.IRawElementProviderSimple
      */
-    public static final String className = "System.Windows.Automation.Provider.ITextRangeProvider";
+    public static final String className = "System.Windows.Automation.Provider.IRawElementProviderSimple";
     /**
-     * Try to cast the {@link IJCOBridgeReflected} instance into {@link ITextRangeProvider}, a cast assert is made to check if types are compatible.
+     * Try to cast the {@link IJCOBridgeReflected} instance into {@link IRawElementProviderSimple}, a cast assert is made to check if types are compatible.
      * @param from {@link IJCOBridgeReflected} instance to be casted
-     * @return {@link ITextRangeProvider} instance
+     * @return {@link IRawElementProviderSimple} instance
      * @throws java.lang.Throwable in case of error during cast operation
      */
-    public static ITextRangeProvider ToITextRangeProvider(IJCOBridgeReflected from) throws Throwable {
-        JCOBridge bridge = JCOBridgeInstance.getInstance("UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");
+    public static IRawElementProviderSimple ToIRawElementProviderSimple(IJCOBridgeReflected from) throws Throwable {
+        JCOBridge bridge = JCOBridgeInstance.getInstance("UIAutomationTypes, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35");
         JCType classType = bridge.GetType(className + ", " + (JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName));
         NetType.AssertCast(classType, from);
-        return new ITextRangeProviderImplementation(from.getJCOInstance());
+        return new IRawElementProviderSimpleImplementation(from.getJCOInstance());
     }
 
     /**
@@ -115,46 +112,18 @@ public interface ITextRangeProvider extends IJCOBridgeReflected {
 
     // Methods section
     
-    public boolean Compare(ITextRangeProvider range) throws Throwable;
+    public NetObject GetPatternProvider(int patternId) throws Throwable;
 
-    public double[] GetBoundingRectangles() throws Throwable;
-
-    public int CompareEndpoints(TextPatternRangeEndpoint endpoint, ITextRangeProvider targetRange, TextPatternRangeEndpoint targetEndpoint) throws Throwable;
-
-    public int Move(TextUnit unit, int count) throws Throwable;
-
-    public int MoveEndpointByUnit(TextPatternRangeEndpoint endpoint, TextUnit unit, int count) throws Throwable;
-
-    public NetObject GetAttributeValue(int attribute) throws Throwable;
-
-    public java.lang.String GetText(int maxLength) throws Throwable;
-
-    public IRawElementProviderSimple GetEnclosingElement() throws Throwable;
-
-    public IRawElementProviderSimple[] GetChildren() throws Throwable;
-
-    public ITextRangeProvider Clone() throws Throwable;
-
-    public ITextRangeProvider FindAttribute(int attribute, NetObject value, boolean backward) throws Throwable;
-
-    public ITextRangeProvider FindText(java.lang.String text, boolean backward, boolean ignoreCase) throws Throwable;
-
-    public void AddToSelection() throws Throwable;
-
-    public void ExpandToEnclosingUnit(TextUnit unit) throws Throwable;
-
-    public void MoveEndpointByRange(TextPatternRangeEndpoint endpoint, ITextRangeProvider targetRange, TextPatternRangeEndpoint targetEndpoint) throws Throwable;
-
-    public void RemoveFromSelection() throws Throwable;
-
-    public void ScrollIntoView(boolean alignToTop) throws Throwable;
-
-    public void Select() throws Throwable;
+    public NetObject GetPropertyValue(int propertyId) throws Throwable;
 
 
     
     // Properties section
     
+    public IRawElementProviderSimple getHostRawElementProvider() throws Throwable;
+
+    public ProviderOptions getProviderOptions() throws Throwable;
+
 
 
     // Instance Events section

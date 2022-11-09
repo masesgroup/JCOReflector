@@ -297,7 +297,7 @@ public class DebuggerService extends NetObject  {
         }
     }
 
-    public void setCurrentLocation(SourceLocation CurrentLocation) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ArgumentException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException, system.TimeoutException, system.security.SecurityException, system.globalization.CultureNotFoundException, system.PlatformNotSupportedException {
+    public void setCurrentLocation(SourceLocation CurrentLocation) throws Throwable, system.ArgumentNullException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.ArgumentException, system.NullReferenceException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.InvalidCastException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.IndexOutOfRangeException, system.OutOfMemoryException, system.OverflowException, system.TimeoutException, system.security.SecurityException, system.PlatformNotSupportedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

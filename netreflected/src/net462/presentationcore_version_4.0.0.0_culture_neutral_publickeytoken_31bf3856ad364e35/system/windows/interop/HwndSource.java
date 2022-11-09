@@ -160,7 +160,7 @@ public class HwndSource extends PresentationSource implements AutoCloseable {
     public HwndSource() throws Throwable {
     }
 
-    public HwndSource(HwndSourceParameters parameters) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.NotImplementedException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.OverflowException, system.AccessViolationException, system.collections.generic.KeyNotFoundException, system.threading.ThreadStateException, system.io.IOException {
+    public HwndSource(HwndSourceParameters parameters) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.FormatException, system.NotImplementedException, system.ObjectDisposedException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.OverflowException, system.AccessViolationException, system.collections.generic.KeyNotFoundException, system.threading.ThreadStateException, system.io.IOException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

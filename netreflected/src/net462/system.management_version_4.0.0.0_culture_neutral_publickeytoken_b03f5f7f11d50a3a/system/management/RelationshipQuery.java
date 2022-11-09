@@ -150,7 +150,7 @@ public class RelationshipQuery extends WqlObjectQuery  {
         }
     }
 
-    public RelationshipQuery(boolean isSchemaQuery, java.lang.String sourceObject, java.lang.String relationshipClass, java.lang.String relationshipQualifier, java.lang.String thisRole) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException, system.ObjectDisposedException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+    public RelationshipQuery(boolean isSchemaQuery, java.lang.String sourceObject, java.lang.String relationshipClass, java.lang.String relationshipQualifier, java.lang.String thisRole) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.diagnostics.tracing.EventSourceException, system.ArgumentOutOfRangeException, system.ObjectDisposedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

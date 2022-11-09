@@ -144,7 +144,7 @@ public class BlockScope extends ActivationObject  {
     public BlockScope() throws Throwable {
     }
 
-    public BlockScope(ScriptObject parent, java.lang.String name, int scopeId) throws Throwable, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException {
+    public BlockScope(ScriptObject parent, java.lang.String name, int scopeId) throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

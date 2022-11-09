@@ -44,20 +44,20 @@ import system.windows.automation.provider.ProviderOptions;
 
 
 /**
- * The base .NET class managing System.Windows.Automation.Provider.IRawElementProviderSimple, UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
+ * The base .NET class managing System.Windows.Automation.Provider.IRawElementProviderSimple, UIAutomationTypes, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Provider.IRawElementProviderSimple" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Provider.IRawElementProviderSimple</a>
  */
 public class IRawElementProviderSimpleImplementation extends NetObject implements IRawElementProviderSimple {
     /**
-     * Fully assembly qualified name: UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     * Fully assembly qualified name: UIAutomationTypes, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
-    public static final String assemblyFullName = "UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    public static final String assemblyFullName = "UIAutomationTypes, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
     /**
-     * Assembly name: UIAutomationProvider
+     * Assembly name: UIAutomationTypes
      */
-    public static final String assemblyShortName = "UIAutomationProvider";
+    public static final String assemblyShortName = "UIAutomationTypes";
     /**
      * Qualified class name: System.Windows.Automation.Provider.IRawElementProviderSimple
      */

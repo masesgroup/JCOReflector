@@ -180,7 +180,7 @@ public class HttpRuntime extends NetObject  {
         }
     }
 
-    public static void ProcessRequest(HttpWorkerRequest wr) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.PlatformNotSupportedException, system.web.HttpException, system.NullReferenceException, system.ApplicationException, system.io.IOException, system.OutOfMemoryException, system.configuration.ConfigurationErrorsException, system.threading.ThreadAbortException, system.MemberAccessException {
+    public static void ProcessRequest(HttpWorkerRequest wr) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotImplementedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.FormatException, system.PlatformNotSupportedException, system.web.HttpException, system.NullReferenceException, system.ApplicationException, system.io.IOException, system.configuration.ConfigurationErrorsException, system.threading.ThreadAbortException, system.MemberAccessException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {

@@ -726,7 +726,7 @@ public class Encoding extends NetObject  {
         }
     }
 
-    public static EncodingInfo[] GetEncodings() throws Throwable, system.ArgumentException, system.IndexOutOfRangeException {
+    public static EncodingInfo[] GetEncodings() throws Throwable, system.ArgumentException, system.ArgumentNullException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -847,7 +847,7 @@ public class Encoding extends NetObject  {
         }
     }
 
-    public java.lang.String getEncodingName() throws Throwable, system.IndexOutOfRangeException {
+    public java.lang.String getEncodingName() throws Throwable, system.ArgumentNullException, system.TypeLoadException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

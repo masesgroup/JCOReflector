@@ -156,7 +156,7 @@ public class PropertyGroupDescription extends GroupDescription  {
         }
     }
 
-    public PropertyGroupDescription(java.lang.String propertyName) throws Throwable, system.MulticastNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.IndexOutOfRangeException {
+    public PropertyGroupDescription(java.lang.String propertyName) throws Throwable, system.MulticastNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.FormatException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -166,7 +166,7 @@ public class PropertyGroupDescription extends GroupDescription  {
         }
     }
 
-    public PropertyGroupDescription(java.lang.String propertyName, IValueConverter converter) throws Throwable, system.MulticastNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.IndexOutOfRangeException {
+    public PropertyGroupDescription(java.lang.String propertyName, IValueConverter converter) throws Throwable, system.MulticastNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.FormatException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -176,7 +176,7 @@ public class PropertyGroupDescription extends GroupDescription  {
         }
     }
 
-    public PropertyGroupDescription(java.lang.String propertyName, IValueConverter converter, StringComparison stringComparison) throws Throwable, system.MulticastNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.IndexOutOfRangeException {
+    public PropertyGroupDescription(java.lang.String propertyName, IValueConverter converter, StringComparison stringComparison) throws Throwable, system.MulticastNotSupportedException, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.FormatException, system.IndexOutOfRangeException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -247,7 +247,7 @@ public class PropertyGroupDescription extends GroupDescription  {
         }
     }
 
-    public void setPropertyName(java.lang.String PropertyName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.IndexOutOfRangeException {
+    public void setPropertyName(java.lang.String PropertyName) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.FormatException, system.IndexOutOfRangeException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

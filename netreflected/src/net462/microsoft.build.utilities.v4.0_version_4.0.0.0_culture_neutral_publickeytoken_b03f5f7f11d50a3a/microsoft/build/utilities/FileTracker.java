@@ -179,7 +179,7 @@ public class FileTracker extends NetObject  {
         }
     }
 
-    public static boolean ForceOutOfProcTracking(ExecutableType toolType, java.lang.String dllName, java.lang.String cancelEventName) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.io.IOException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.io.PathTooLongException {
+    public static boolean ForceOutOfProcTracking(ExecutableType toolType, java.lang.String dllName, java.lang.String cancelEventName) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.InvalidOperationException, system.io.IOException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.NotImplementedException, system.io.PathTooLongException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {

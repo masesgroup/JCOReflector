@@ -145,7 +145,7 @@ public class PrintJobInfoCollection extends PrintSystemObjects  {
     public PrintJobInfoCollection() throws Throwable {
     }
 
-    public PrintJobInfoCollection(PrintQueue printQueue, java.lang.String[] propertyFilter) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NullReferenceException, system.NotImplementedException, system.OutOfMemoryException {
+    public PrintJobInfoCollection(PrintQueue printQueue, java.lang.String[] propertyFilter) throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.componentmodel.InvalidEnumArgumentException, system.InvalidOperationException, system.componentmodel.Win32Exception, system.security.SecurityException, system.FormatException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.NullReferenceException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

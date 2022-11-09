@@ -184,6 +184,8 @@ public class AutomationEvents extends NetObject  {
     public static AutomationEvents InputReachedOtherElement = getFrom(enumReflected, "InputReachedOtherElement");
     public static AutomationEvents InputDiscarded = getFrom(enumReflected, "InputDiscarded");
     public static AutomationEvents LiveRegionChanged = getFrom(enumReflected, "LiveRegionChanged");
+    public static AutomationEvents Notification = getFrom(enumReflected, "Notification");
+    public static AutomationEvents ActiveTextPositionChanged = getFrom(enumReflected, "ActiveTextPositionChanged");
 
 
     // Flags management section

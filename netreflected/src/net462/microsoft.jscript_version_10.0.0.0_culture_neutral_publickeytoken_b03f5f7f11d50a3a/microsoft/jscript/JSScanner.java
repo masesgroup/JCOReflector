@@ -255,7 +255,7 @@ public class JSScanner extends NetObject  {
         }
     }
 
-    public void GetNextToken() throws Throwable, system.ArgumentOutOfRangeException, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, microsoft.jscript.EndOfFile, system.InvalidOperationException, system.OutOfMemoryException, microsoft.jscript.vsa.JSVsaException, system.NotSupportedException, system.IndexOutOfRangeException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException, microsoft.jscript.JScriptException, system.MissingMethodException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.globalization.CultureNotFoundException {
+    public void GetNextToken() throws Throwable, system.ArgumentOutOfRangeException, system.NotImplementedException, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, microsoft.jscript.EndOfFile, system.InvalidOperationException, system.OutOfMemoryException, microsoft.jscript.vsa.JSVsaException, system.NotSupportedException, system.IndexOutOfRangeException, system.globalization.CultureNotFoundException, system.NullReferenceException, system.FormatException, system.OverflowException, system.ArithmeticException, microsoft.jscript.JScriptException, system.MissingMethodException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

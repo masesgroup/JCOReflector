@@ -179,7 +179,7 @@ public class ActivityBind extends MarkupExtension  {
     
     // Methods section
     
-    public NetObject GetRuntimeValue(Activity activity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.InvalidCastException, system.NotImplementedException {
+    public NetObject GetRuntimeValue(Activity activity) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.InvalidCastException, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -190,7 +190,7 @@ public class ActivityBind extends MarkupExtension  {
         }
     }
 
-    public NetObject GetRuntimeValue(Activity activity, NetType targetType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.OutOfMemoryException, system.InvalidCastException, system.NotImplementedException {
+    public NetObject GetRuntimeValue(Activity activity, NetType targetType) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.threading.AbandonedMutexException, system.IndexOutOfRangeException, system.MulticastNotSupportedException, system.InvalidCastException, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

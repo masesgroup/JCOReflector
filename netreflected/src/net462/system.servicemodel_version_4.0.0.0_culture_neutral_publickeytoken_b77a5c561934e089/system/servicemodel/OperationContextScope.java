@@ -145,7 +145,7 @@ public class OperationContextScope extends NetObject implements AutoCloseable {
     public OperationContextScope() throws Throwable {
     }
 
-    public OperationContextScope(IContextChannel channel) throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.MulticastNotSupportedException, system.FormatException, system.InvalidOperationException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException, system.IndexOutOfRangeException {
+    public OperationContextScope(IContextChannel channel) throws Throwable, system.ArgumentException, system.configuration.ConfigurationErrorsException, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.MulticastNotSupportedException, system.FormatException, system.InvalidOperationException, system.OverflowException, system.security.SecurityException, system.OutOfMemoryException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

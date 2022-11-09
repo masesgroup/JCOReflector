@@ -47,20 +47,20 @@ import system.windows.automation.provider.IRawElementProviderSimpleImplementatio
 
 
 /**
- * The base .NET class managing System.Windows.Automation.Provider.ITextRangeProvider, UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
+ * The base .NET class managing System.Windows.Automation.Provider.ITextRangeProvider, UIAutomationTypes, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
  * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Provider.ITextRangeProvider" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Provider.ITextRangeProvider</a>
  */
 public class ITextRangeProviderImplementation extends NetObject implements ITextRangeProvider {
     /**
-     * Fully assembly qualified name: UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     * Fully assembly qualified name: UIAutomationTypes, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
-    public static final String assemblyFullName = "UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    public static final String assemblyFullName = "UIAutomationTypes, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
     /**
-     * Assembly name: UIAutomationProvider
+     * Assembly name: UIAutomationTypes
      */
-    public static final String assemblyShortName = "UIAutomationProvider";
+    public static final String assemblyShortName = "UIAutomationTypes";
     /**
      * Qualified class name: System.Windows.Automation.Provider.ITextRangeProvider
      */

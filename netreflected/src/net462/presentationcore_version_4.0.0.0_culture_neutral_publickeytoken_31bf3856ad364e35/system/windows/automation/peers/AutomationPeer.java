@@ -41,6 +41,7 @@ import java.util.ArrayList;
 import system.windows.threading.DispatcherObject;
 import system.windows.automation.peers.AutomationEvents;
 import system.windows.automation.peers.PatternInterface;
+import system.windows.automation.AutomationHeadingLevel;
 import system.windows.automation.AutomationLiveSetting;
 import system.windows.automation.peers.AutomationControlType;
 import system.windows.automation.peers.AutomationOrientation;
@@ -48,6 +49,8 @@ import system.windows.automation.peers.AutomationPeer;
 import system.windows.Point;
 import system.windows.Rect;
 import system.windows.automation.AsyncContentLoadedEventArgs;
+import system.windows.automation.AutomationNotificationKind;
+import system.windows.automation.AutomationNotificationProcessing;
 import system.windows.automation.AutomationProperty;
 
 
@@ -181,6 +184,16 @@ public class AutomationPeer extends DispatcherObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             return (boolean)classInstance.Invoke("IsControlElement");
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public boolean IsDialog() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            return (boolean)classInstance.Invoke("IsDialog");
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }
@@ -367,6 +380,17 @@ public class AutomationPeer extends DispatcherObject  {
         }
     }
 
+    public AutomationHeadingLevel GetHeadingLevel() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            JCObject objGetHeadingLevel = (JCObject)classInstance.Invoke("GetHeadingLevel");
+            return new AutomationHeadingLevel(objGetHeadingLevel);
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
     public AutomationLiveSetting GetLiveSetting() throws Throwable, system.ArgumentNullException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.threading.AbandonedMutexException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
@@ -480,6 +504,16 @@ public class AutomationPeer extends DispatcherObject  {
             throw new UnsupportedOperationException("classInstance is null.");
         try {
             classInstance.Invoke("RaiseAutomationEvent", eventId == null ? null : eventId.getJCOInstance());
+        } catch (JCNativeException jcne) {
+            throw translateException(jcne);
+        }
+    }
+
+    public void RaiseNotificationEvent(AutomationNotificationKind notificationKind, AutomationNotificationProcessing notificationProcessing, java.lang.String displayString, java.lang.String activityId) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.FormatException, system.resources.MissingManifestResourceException, system.NotImplementedException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.componentmodel.InvalidEnumArgumentException, system.componentmodel.Win32Exception, system.MulticastNotSupportedException, system.IndexOutOfRangeException, system.security.SecurityException, system.UnauthorizedAccessException, system.io.IOException {
+        if (classInstance == null)
+            throw new UnsupportedOperationException("classInstance is null.");
+        try {
+            classInstance.Invoke("RaiseNotificationEvent", notificationKind == null ? null : notificationKind.getJCOInstance(), notificationProcessing == null ? null : notificationProcessing.getJCOInstance(), displayString, activityId);
         } catch (JCNativeException jcne) {
             throw translateException(jcne);
         }

@@ -154,7 +154,7 @@ public class EncryptedKeyEncryptingCredentials extends EncryptingCredentials  {
         }
     }
 
-    public EncryptedKeyEncryptingCredentials(X509Certificate2 certificate) throws Throwable, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotImplementedException, system.security.cryptography.CryptographicException {
+    public EncryptedKeyEncryptingCredentials(X509Certificate2 certificate) throws Throwable, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.OutOfMemoryException, system.NotImplementedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -164,7 +164,7 @@ public class EncryptedKeyEncryptingCredentials extends EncryptingCredentials  {
         }
     }
 
-    public EncryptedKeyEncryptingCredentials(X509Certificate2 certificate, java.lang.String keyWrappingAlgorithm, int keySizeInBits, java.lang.String encryptionAlgorithm) throws Throwable, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.NotImplementedException, system.security.cryptography.CryptographicException {
+    public EncryptedKeyEncryptingCredentials(X509Certificate2 certificate, java.lang.String keyWrappingAlgorithm, int keySizeInBits, java.lang.String encryptionAlgorithm) throws Throwable, system.IndexOutOfRangeException, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.security.cryptography.CryptographicException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.NotSupportedException, system.OutOfMemoryException, system.NotImplementedException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

@@ -251,7 +251,7 @@ public class WebProxy extends NetObject implements system.runtime.serialization.
     
     // Methods section
     
-    public boolean IsBypassed(Uri host) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.net.sockets.SocketException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.net.networkinformation.NetworkInformationException, system.text.regularexpressions.RegexMatchTimeoutException {
+    public boolean IsBypassed(Uri host) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.net.sockets.SocketException, system.resources.MissingManifestResourceException, system.InvalidOperationException, system.ObjectDisposedException, system.ArgumentOutOfRangeException, system.security.SecurityException, system.UriFormatException, system.OutOfMemoryException, system.IndexOutOfRangeException, system.FormatException, system.MissingMethodException, system.reflection.TargetInvocationException, system.NotSupportedException, system.net.networkinformation.NetworkInformationException, system.globalization.CultureNotFoundException, system.text.regularexpressions.RegexMatchTimeoutException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

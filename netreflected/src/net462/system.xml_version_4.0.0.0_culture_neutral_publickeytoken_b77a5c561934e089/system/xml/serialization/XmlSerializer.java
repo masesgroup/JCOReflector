@@ -354,7 +354,7 @@ public class XmlSerializer extends NetObject  {
         }
     }
 
-    public static java.lang.String GetXmlSerializerAssemblyName(NetType type) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.IndexOutOfRangeException {
+    public static java.lang.String GetXmlSerializerAssemblyName(NetType type) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -364,7 +364,7 @@ public class XmlSerializer extends NetObject  {
         }
     }
 
-    public static java.lang.String GetXmlSerializerAssemblyName(NetType type, java.lang.String defaultNamespace) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.IndexOutOfRangeException {
+    public static java.lang.String GetXmlSerializerAssemblyName(NetType type, java.lang.String defaultNamespace) throws Throwable, system.ArgumentNullException, system.NotImplementedException, system.ArgumentException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {
@@ -391,7 +391,7 @@ public class XmlSerializer extends NetObject  {
         }
     }
 
-    public static XmlSerializer[] FromMappings(XmlMapping[] mappings, Evidence evidence) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.NullReferenceException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.RankException, system.OutOfMemoryException {
+    public static XmlSerializer[] FromMappings(XmlMapping[] mappings, Evidence evidence) throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.ArgumentException, system.FormatException, system.NotImplementedException, system.globalization.CultureNotFoundException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.configuration.ConfigurationErrorsException, system.NotSupportedException, system.configuration.ConfigurationException, system.io.FileNotFoundException, system.io.DirectoryNotFoundException, system.UnauthorizedAccessException, system.io.IOException, system.io.PathTooLongException, system.io.DriveNotFoundException, system.OperationCanceledException, system.security.SecurityException, system.NullReferenceException, system.TypeLoadException, system.collections.generic.KeyNotFoundException, system.RankException {
         if (classType == null)
             throw new UnsupportedOperationException("classType is null.");
         try {

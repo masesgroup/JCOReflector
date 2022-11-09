@@ -158,7 +158,7 @@ public class XamlObjectReader extends NetObject  {
         }
     }
 
-    public XamlObjectReader(NetObject instance, XamlObjectReaderSettings settings) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.MulticastNotSupportedException, system.threading.ThreadAbortException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.xaml.XamlObjectReaderException, system.xaml.XamlSchemaException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.xml.XmlException, system.globalization.CultureNotFoundException {
+    public XamlObjectReader(NetObject instance, XamlObjectReaderSettings settings) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.NotImplementedException, system.MulticastNotSupportedException, system.threading.ThreadAbortException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.xaml.XamlObjectReaderException, system.xaml.XamlSchemaException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.xaml.XamlException, system.xml.XmlException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -168,7 +168,7 @@ public class XamlObjectReader extends NetObject  {
         }
     }
 
-    public XamlObjectReader(NetObject instance, XamlSchemaContext schemaContext) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.xaml.XamlObjectReaderException, system.xaml.XamlSchemaException, system.NotImplementedException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.xml.XmlException, system.globalization.CultureNotFoundException {
+    public XamlObjectReader(NetObject instance, XamlSchemaContext schemaContext) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.IndexOutOfRangeException, system.resources.MissingManifestResourceException, system.xaml.XamlObjectReaderException, system.xaml.XamlSchemaException, system.NotImplementedException, system.NotSupportedException, system.collections.generic.KeyNotFoundException, system.xaml.XamlException, system.xml.XmlException, system.globalization.CultureNotFoundException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);
@@ -178,7 +178,7 @@ public class XamlObjectReader extends NetObject  {
         }
     }
 
-    public XamlObjectReader(NetObject instance, XamlSchemaContext schemaContext, XamlObjectReaderSettings settings) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.resources.MissingManifestResourceException, system.xaml.XamlObjectReaderException, system.xaml.XamlSchemaException, system.NotImplementedException, system.NotSupportedException, system.OutOfMemoryException, system.xml.XmlException {
+    public XamlObjectReader(NetObject instance, XamlSchemaContext schemaContext, XamlObjectReaderSettings settings) throws Throwable, system.ArgumentNullException, system.ArgumentOutOfRangeException, system.ArgumentException, system.threading.ThreadAbortException, system.InvalidOperationException, system.MissingMethodException, system.reflection.TargetInvocationException, system.IndexOutOfRangeException, system.collections.generic.KeyNotFoundException, system.resources.MissingManifestResourceException, system.xaml.XamlObjectReaderException, system.xaml.XamlSchemaException, system.NotImplementedException, system.NotSupportedException, system.OutOfMemoryException, system.xaml.XamlException, system.xml.XmlException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

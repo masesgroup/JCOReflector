@@ -148,7 +148,7 @@ public class MultiSelector extends Selector  {
     
     // Methods section
     
-    public void SelectAll() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.FormatException, system.NotImplementedException, system.resources.MissingManifestResourceException {
+    public void SelectAll() throws Throwable, system.ArgumentOutOfRangeException, system.ArgumentException, system.ArgumentNullException, system.NotSupportedException, system.InvalidOperationException, system.resources.MissingManifestResourceException, system.FormatException, system.NotImplementedException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

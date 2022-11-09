@@ -167,7 +167,7 @@ public class SqlDataRecord extends NetObject  {
     public SqlDataRecord() throws Throwable {
     }
 
-    public SqlDataRecord(SqlMetaData... metaData) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.FormatException, microsoft.sqlserver.server.InvalidUdtException, system.data.sqlclient.SqlException {
+    public SqlDataRecord(SqlMetaData... metaData) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.NotImplementedException, system.resources.MissingManifestResourceException, system.ObjectDisposedException, system.InvalidOperationException, system.globalization.CultureNotFoundException, system.ArgumentOutOfRangeException, system.TypeInitializationException, system.OutOfMemoryException, microsoft.sqlserver.server.InvalidUdtException, system.data.sqlclient.SqlException {
         try {
             // add reference to assemblyName.dll file
             addReference(JCOReflector.getUseFullAssemblyName() ? assemblyFullName : assemblyShortName);

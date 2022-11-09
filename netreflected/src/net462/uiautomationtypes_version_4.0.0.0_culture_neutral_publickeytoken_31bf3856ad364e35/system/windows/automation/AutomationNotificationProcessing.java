@@ -31,7 +31,7 @@
  * </auto-generated>
  *************************************************************************************/
 
-package system.windows.automation.provider;
+package system.windows.automation;
 
 import org.mases.jcobridge.*;
 import org.mases.jcobridge.netreflection.*;
@@ -40,24 +40,24 @@ import org.mases.jcobridge.netreflection.*;
 // PACKAGE_IMPORT_SECTION
 
 /**
- * The base .NET class managing System.Windows.Automation.Provider.ProviderOptions, UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
+ * The base .NET class managing System.Windows.Automation.AutomationNotificationProcessing, UIAutomationTypes, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35.
  * <p>
  * 
- * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Provider.ProviderOptions" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.Provider.ProviderOptions</a>
+ * See: <a href="https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.AutomationNotificationProcessing" target="_top">https://docs.microsoft.com/en-us/dotnet/api/System.Windows.Automation.AutomationNotificationProcessing</a>
  */
-public class ProviderOptions extends NetObject  {
+public class AutomationNotificationProcessing extends NetObject  {
     /**
-     * Fully assembly qualified name: UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
+     * Fully assembly qualified name: UIAutomationTypes, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
      */
-    public static final String assemblyFullName = "UIAutomationProvider, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
+    public static final String assemblyFullName = "UIAutomationTypes, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35";
     /**
-     * Assembly name: UIAutomationProvider
+     * Assembly name: UIAutomationTypes
      */
-    public static final String assemblyShortName = "UIAutomationProvider";
+    public static final String assemblyShortName = "UIAutomationTypes";
     /**
-     * Qualified class name: System.Windows.Automation.Provider.ProviderOptions
+     * Qualified class name: System.Windows.Automation.AutomationNotificationProcessing
      */
-    public static final String className = "System.Windows.Automation.Provider.ProviderOptions";
+    public static final String className = "System.Windows.Automation.AutomationNotificationProcessing";
     static JCOBridge bridge = JCOBridgeInstance.getInstance(assemblyFullName);
     /**
      * The type managed from JCOBridge. See {@link JCType}
@@ -110,7 +110,7 @@ public class ProviderOptions extends NetObject  {
     /**
      * Internal constructor. Use with caution 
      */
-    public ProviderOptions(java.lang.Object instance) {
+    public AutomationNotificationProcessing(java.lang.Object instance) {
         super(instance);
         if (instance instanceof JCObject) {
             try {
@@ -125,7 +125,7 @@ public class ProviderOptions extends NetObject  {
         }
     }
 
-    public ProviderOptions() {
+    public AutomationNotificationProcessing() {
         super();
         // add reference to assemblyName.dll file
         try {
@@ -155,39 +155,24 @@ public class ProviderOptions extends NetObject  {
         return classType;
     }
 
-    final static ProviderOptions getFrom(JCEnum object, String value) {
+    final static AutomationNotificationProcessing getFrom(JCEnum object, String value) {
         try {
-            return new ProviderOptions(object.fromValue(value));
+            return new AutomationNotificationProcessing(object.fromValue(value));
         } catch (JCException e) {
-            return new ProviderOptions(object);
+            return new AutomationNotificationProcessing(object);
         }
     }
 
     // Enum fields section
     
-    public static ProviderOptions ClientSideProvider = getFrom(enumReflected, "ClientSideProvider");
-    public static ProviderOptions ServerSideProvider = getFrom(enumReflected, "ServerSideProvider");
-    public static ProviderOptions NonClientAreaProvider = getFrom(enumReflected, "NonClientAreaProvider");
-    public static ProviderOptions OverrideProvider = getFrom(enumReflected, "OverrideProvider");
-    public static ProviderOptions ProviderOwnsSetFocus = getFrom(enumReflected, "ProviderOwnsSetFocus");
-    public static ProviderOptions UseComThreading = getFrom(enumReflected, "UseComThreading");
+    public static AutomationNotificationProcessing ImportantAll = getFrom(enumReflected, "ImportantAll");
+    public static AutomationNotificationProcessing ImportantMostRecent = getFrom(enumReflected, "ImportantMostRecent");
+    public static AutomationNotificationProcessing All = getFrom(enumReflected, "All");
+    public static AutomationNotificationProcessing MostRecent = getFrom(enumReflected, "MostRecent");
+    public static AutomationNotificationProcessing CurrentThenMostRecent = getFrom(enumReflected, "CurrentThenMostRecent");
 
 
     // Flags management section
 
-    public final ProviderOptions add(ProviderOptions val) throws Throwable {
-        return new ProviderOptions(NetEnum.add(classInstance, val.classInstance));
-    }
 
-    public final ProviderOptions remove(ProviderOptions val) throws Throwable {
-        return new ProviderOptions(NetEnum.remove(classInstance, val.classInstance));
-    }
-
-    public final boolean is(ProviderOptions val) throws Throwable {
-        return NetEnum.is(classInstance, val.classInstance);
-    }
-
-    public final boolean has(ProviderOptions val) throws Throwable {
-        return NetEnum.has(classInstance, val.classInstance);
-    }
 }

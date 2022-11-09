@@ -208,7 +208,7 @@ public class XslCompiledTransform extends NetObject  {
         }
     }
 
-    public void Load(java.lang.String stylesheetUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.IndexOutOfRangeException, system.FormatException, system.xml.XmlException, system.security.SecurityException, system.NotImplementedException, system.xml.xsl.XsltException, system.NullReferenceException, system.TypeLoadException, system.OutOfMemoryException, system.io.FileNotFoundException {
+    public void Load(java.lang.String stylesheetUri) throws Throwable, system.ArgumentNullException, system.ArgumentException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.IndexOutOfRangeException, system.FormatException, system.xml.XmlException, system.security.SecurityException, system.NotImplementedException, system.xml.xsl.XsltException, system.NullReferenceException, system.TypeLoadException, system.io.FileNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -218,7 +218,7 @@ public class XslCompiledTransform extends NetObject  {
         }
     }
 
-    public void Load(java.lang.String stylesheetUri, XsltSettings settings, XmlResolver stylesheetResolver) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.ArgumentException, system.security.SecurityException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.xml.xsl.XsltException, system.NullReferenceException, system.TypeLoadException, system.OutOfMemoryException, system.io.FileNotFoundException {
+    public void Load(java.lang.String stylesheetUri, XsltSettings settings, XmlResolver stylesheetResolver) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.ArgumentException, system.security.SecurityException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.xml.xsl.XsltException, system.NullReferenceException, system.TypeLoadException, system.io.FileNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -238,7 +238,7 @@ public class XslCompiledTransform extends NetObject  {
         }
     }
 
-    public void Load(XmlReader stylesheet) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.IndexOutOfRangeException, system.FormatException, system.xml.XmlException, system.security.SecurityException, system.NotImplementedException, system.xml.xsl.XsltException, system.NullReferenceException, system.TypeLoadException, system.OutOfMemoryException, system.io.FileNotFoundException {
+    public void Load(XmlReader stylesheet) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.IndexOutOfRangeException, system.FormatException, system.xml.XmlException, system.security.SecurityException, system.NotImplementedException, system.xml.xsl.XsltException, system.NullReferenceException, system.TypeLoadException, system.io.FileNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -248,7 +248,7 @@ public class XslCompiledTransform extends NetObject  {
         }
     }
 
-    public void Load(XmlReader stylesheet, XsltSettings settings, XmlResolver stylesheetResolver) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.ArgumentException, system.security.SecurityException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.xml.xsl.XsltException, system.NullReferenceException, system.TypeLoadException, system.OutOfMemoryException, system.io.FileNotFoundException {
+    public void Load(XmlReader stylesheet, XsltSettings settings, XmlResolver stylesheetResolver) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.ArgumentException, system.security.SecurityException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.xml.xsl.XsltException, system.NullReferenceException, system.TypeLoadException, system.io.FileNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -258,7 +258,7 @@ public class XslCompiledTransform extends NetObject  {
         }
     }
 
-    public void Load(IXPathNavigable stylesheet) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.IndexOutOfRangeException, system.FormatException, system.xml.XmlException, system.security.SecurityException, system.NotImplementedException, system.xml.xsl.XsltException, system.NullReferenceException, system.TypeLoadException, system.OutOfMemoryException, system.io.FileNotFoundException {
+    public void Load(IXPathNavigable stylesheet) throws Throwable, system.ArgumentException, system.ArgumentNullException, system.resources.MissingManifestResourceException, system.configuration.ConfigurationErrorsException, system.InvalidOperationException, system.ArgumentOutOfRangeException, system.NotSupportedException, system.configuration.ConfigurationException, system.IndexOutOfRangeException, system.FormatException, system.xml.XmlException, system.security.SecurityException, system.NotImplementedException, system.xml.xsl.XsltException, system.NullReferenceException, system.TypeLoadException, system.io.FileNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -268,7 +268,7 @@ public class XslCompiledTransform extends NetObject  {
         }
     }
 
-    public void Load(IXPathNavigable stylesheet, XsltSettings settings, XmlResolver stylesheetResolver) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.ArgumentException, system.security.SecurityException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.xml.xsl.XsltException, system.NullReferenceException, system.TypeLoadException, system.OutOfMemoryException, system.io.FileNotFoundException {
+    public void Load(IXPathNavigable stylesheet, XsltSettings settings, XmlResolver stylesheetResolver) throws Throwable, system.ArgumentNullException, system.IndexOutOfRangeException, system.xml.XmlException, system.ArgumentOutOfRangeException, system.ArgumentException, system.security.SecurityException, system.InvalidOperationException, system.NotSupportedException, system.configuration.ConfigurationErrorsException, system.NotImplementedException, system.xml.xsl.XsltException, system.NullReferenceException, system.TypeLoadException, system.io.FileNotFoundException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

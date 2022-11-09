@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       with:
         fetch-depth: 2
 
@@ -31,7 +31,7 @@ jobs:
         echo "=============== list changed files ==============="
         git diff --name-only HEAD^ HEAD
         
-        echo "::set-output name=run_job::false"
+        echo "run_job=false" >> $GITHUB_OUTPUT
         echo "========== check paths of changed files =========="
         git diff --name-only HEAD^ HEAD > files.txt
         while IFS= read -r file
@@ -39,17 +39,17 @@ jobs:
           echo $file
           if [[ $file == ".github/workflows/linux.yaml"* ]]; then
             echo "This file is under the directory '.github/workflows/linux.yaml'."
-            echo "::set-output name=run_job::true"
+            echo "run_job=true" >> $GITHUB_OUTPUT
             break
           fi
           if [[ $file == "netreflected/src/"* ]]; then
             echo "This file is under the directory 'netreflected/src'."
-            echo "::set-output name=run_job::true"
+            echo "run_job=true" >> $GITHUB_OUTPUT
             break
           fi
           if [[ $file == "netreflected-tests/"* ]]; then
             echo "This file is under the directory 'netreflected-tests/'."
-            echo "::set-output name=run_job::true"
+            echo "run_job=true" >> $GITHUB_OUTPUT
             break
           fi
         echo "This files are not in a source directory no action required"
@@ -65,7 +65,7 @@ jobs:
       # Steps represent a sequence of tasks that will be executed as part of the job
       steps:
         # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-        - uses: actions/checkout@v2
+        - uses: actions/checkout@v3
           with: 
             fetch-depth: '1'
 
@@ -75,12 +75,12 @@ jobs:
 
         # Install .NET SDKs
         - name: Setup .NET Core 3.1
-          uses: actions/setup-dotnet@v1
+          uses: actions/setup-dotnet@v3
           with:
             dotnet-version: 3.1.x
 
         - name: Setup .NET 6.0
-          uses: actions/setup-dotnet@v1
+          uses: actions/setup-dotnet@v3
           with:
             dotnet-version: 6.0.x
 
@@ -99,6 +99,12 @@ jobs:
           run: |
             dotnet bin/netcoreapp3.1/MASES.JCOReflectorCLI.dll -JobType CreateJars -JDKFolder /usr/lib/jvm/adoptopenjdk-8-hotspot-amd64/ -JobFile .github/workflows/createjars_core3.1_linux.job
             dotnet bin/net6.0/MASES.JCOReflectorCLI.dll -JobType CreateJars -JDKFolder /usr/lib/jvm/adoptopenjdk-8-hotspot-amd64/ -JobFile .github/workflows/createjars_core6.0_linux.job
+
+        - uses: actions/setup-java@v3
+          with:
+            distribution: 'temurin'
+            java-version: '17'
+            cache: 'maven'
 
         - name: Build Java test source file .NET Core 3.1
           run: javac -cp ./bin/netcoreapp3.1/JCOReflector.jar ./netreflected-tests/java/src/hierarchy/*.java ./netreflected-tests/java/src/mscorlib/*.java ./netreflected-tests/java/src/nettest/*.java ./netreflected-tests/java/src/refout/*.java

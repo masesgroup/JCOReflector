@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       with:
         fetch-depth: 2
 
@@ -31,7 +31,7 @@ jobs:
         echo "=============== list changed files ==============="
         git diff --name-only HEAD^ HEAD
         
-        echo "::set-output name=run_job::false"
+        echo "run_job=false" >> $GITHUB_OUTPUT
         echo "========== check paths of changed files =========="
         git diff --name-only HEAD^ HEAD > files.txt
         while IFS= read -r file
@@ -39,17 +39,17 @@ jobs:
           echo $file
           if [[ $file == "netreflected/docs/README.md"* ]]; then
             echo "Recreate docs was requested"
-            echo "::set-output name=run_job::true"
+            echo "run_job=true" >> $GITHUB_OUTPUT
             break
           fi
           if [[ $file == ".github/workflows/docs.yaml"* ]]; then
             echo "Recreate docs was requested"
-            echo "::set-output name=run_job::true"
+            echo "run_job=true" >> $GITHUB_OUTPUT
             break
           fi
           if [[ $file == "netreflected/src/"* ]]; then
             echo "This file is under the directory 'netreflected/src/'."
-            echo "::set-output name=run_job::true"
+            echo "run_job=true" >> $GITHUB_OUTPUT
             break
           fi
         echo "This files are not in a source directory no action required"
@@ -70,7 +70,7 @@ jobs:
         run: git config --system core.longpaths true
     
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with: 
           persist-credentials: false
           submodules: 'true'

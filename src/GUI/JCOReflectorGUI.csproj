@@ -5,13 +5,13 @@
     <RootNamespace>MASES.JCOReflectorGUI</RootNamespace>
     <Title>JCOReflector - Java class generator based on JCOBridge</Title>
     <Description>JCOReflector - Java class generator based on JCOBridge</Description>
-    <Copyright>Copyright ©  MASES s.r.l. 2022</Copyright>
+    <Copyright>Copyright ©  MASES s.r.l. 2023</Copyright>
     <Authors>MASES s.r.l.</Authors>
     <Company>MASES s.r.l.</Company>
-    <Version>1.11.0</Version>
+    <Version>1.12.0</Version>
     <Product>JCOReflectorGUI</Product>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
-    <TargetFrameworks>net462;netcoreapp3.1;net6.0-windows</TargetFrameworks>
+    <TargetFrameworks>net462;net6.0-windows;net7.0-windows</TargetFrameworks>
     <UseWPF>true</UseWPF>
     <OutputPath>..\..\bin\</OutputPath>
     <SignAssembly>true</SignAssembly>

@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
     <id>MASES.JCOReflectorCLI</id>
-    <version>1.11.0</version>
+    <version>1.12.0</version>
     <title>JCOReflector CLI - CLI interface for JCOReflector Engine</title>
     <authors>MASES s.r.l.</authors>
     <owners>MASES s.r.l.</owners>
@@ -11,7 +11,7 @@
     <repository type="git" url="https://github.com/masesgroup/JCOReflector/" />
     <description>JCOReflector CLI - CLI interface for JCOReflector Engine</description>
     <releaseNotes>https://github.com/masesgroup/JCOReflector/releases</releaseNotes>
-    <copyright>Copyright ©  MASES s.r.l. 2022</copyright>
+    <copyright>Copyright ©  MASES s.r.l. 2023</copyright>
     <license type="file">LICENSE</license>
     <icon>JCOB128x128.png</icon>
     <tags>jcoreflector cli jvm-enabled-language kotlin java scala reflection dotnet clr netcore bridge jcobridge class framework csharp</tags>

@@ -2,9 +2,9 @@
 
 ![CI_WINDOWS](https://github.com/masesgroup/JCOReflector/workflows/CI_WINDOWS/badge.svg)  ![CI_LINUX](https://github.com/masesgroup/JCOReflector/workflows/CI_LINUX/badge.svg)  [![CI_DOCS](https://github.com/masesgroup/JCOReflector/actions/workflows/docs.yaml/badge.svg)](https://github.com/masesgroup/JCOReflector/actions/workflows/docs.yaml)  [![CI_MAVEN](https://github.com/masesgroup/JCOReflector/actions/workflows/maven.yaml/badge.svg)](https://github.com/masesgroup/JCOReflector/actions/workflows/maven.yaml)  ![CI_RELEASE](https://github.com/masesgroup/JCOReflector/workflows/CI_RELEASE/badge.svg)
 
-|.NET Framework | .NET 6 |
+|.NET Framework | .NET 6 | .NET 7 |
 |---	|---	|
-|[![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net462.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net462%22) | [![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net6.0.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net6.0%22)|
+|[![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net462.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net462%22) | [![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net6.0.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net6.0%22)| [![Maven Central](https://img.shields.io/maven-central/v/com.masesgroup/jcoreflector_net7.0.svg?label=Maven%20Central)](https://search.maven.org/search?q=g:%22com.masesgroup%22%20AND%20a:%22jcoreflector_net7.0%22)|
 
 |JCOReflectorEngine | JCOReflectorCLI |
 |---	|---	|
@@ -36,13 +36,15 @@ JCOReflector uses [JCOBridge](https://www.jcobridge.com), and its [features](htt
 
 Have a look at the following resources:
 - [Release notes](https://www.jcobridge.com/release-notes/)
-- [Non Profit or University](https://www.jcobridge.com/pricing/)
-- [Commercial info: Professional or Enterprise](https://www.jcobridge.com/pricing/)
+- ~~[Non Profit or University](https://www.jcobridge.com/pricing/)~~
+- ~~[Commercial info: Professional or Enterprise](https://www.jcobridge.com/pricing/)~~
+- [Community Edition](https://www.jcobridge.com/pricing-25/)
+- [Commercial Edition](https://www.jcobridge.com/pricing-25/)
 - [![JCOBridge nuget](https://img.shields.io/nuget/v/MASES.JCOBridge)](https://www.nuget.org/packages/MASES.JCOBridge)
 
 ## History of the project
 
-This project started in 2019 with the aims to create a set of Java (JVM) classes which mimic .NET (Framework/Core) conterparts, in May 2020 the first commit in GitHub.
+This project started in 2019 with the aims to create a set of Java (JVM) classes which mimic .NET (Framework/6/7) conterparts, in May 2020 the first commit in GitHub.
 Using this project it is possible to use .NET API in Java and all JVM enabled languages (Scala, Kotlin, and so on).
 The final output of JCOReflector are JARs.
 At its first stages no JARs was available: only the JCOBridge engine, the graphical UI that helps to manages reflection and the operations needed to finally build JARs was relased.
@@ -194,8 +196,8 @@ or
 Within the folder bin you will find three subfolders:
 
 - **net462** (available only on Windows platform)
-- **netcoreapp3.1** (available on .NET Core supported platforms)
 - **net6.0** (available on .NET 6 supported platforms)
+- **net7.0** (available on .NET 7 supported platforms)
 
 in each subfolder will be available two executables:
 
@@ -207,7 +209,7 @@ in each subfolder will be available two executables:
 
 ## Reflected Assemblies
 
-The folder [netreflected](/netreflected/src) contains all reflected classes generated for **.NET** **Framework** (_net462_), **Core** (_netcoreapp3.1_) and **6** (_net6.0_). Below the coverage statistics and the list of analyzed and reflected assemblies:
+The folder [netreflected](/netreflected/src) contains all reflected classes generated for **.NET** **Framework** (_net462_), **6** (_net6.0_) and **7** (_net7.0_). Below the coverage statistics and the list of analyzed and reflected assemblies:
 
 ### Statistics
 
@@ -215,10 +217,10 @@ The folder [netreflected](/netreflected/src) contains all reflected classes gene
 
 ![FrameworkStatisticPercent](https://docs.google.com/spreadsheets/d/e/2PACX-1vRKe-7bBH40JmQmq4I194xz9g2YsoU7L9fHwzY0fqZyWepyjqnOC0B7lgO9CjAuTrBkOA8qbTiScLpS/pubchart?oid=485555819&format=image)
 
-![NetcoreStatistic](https://docs.google.com/spreadsheets/d/e/2PACX-1vRKe-7bBH40JmQmq4I194xz9g2YsoU7L9fHwzY0fqZyWepyjqnOC0B7lgO9CjAuTrBkOA8qbTiScLpS/pubchart?oid=964222969&format=image)
-
-![NetcoreStatisticPercent](https://docs.google.com/spreadsheets/d/e/2PACX-1vRKe-7bBH40JmQmq4I194xz9g2YsoU7L9fHwzY0fqZyWepyjqnOC0B7lgO9CjAuTrBkOA8qbTiScLpS/pubchart?oid=857533338&format=image)
-
 ![Net6Statistic](https://docs.google.com/spreadsheets/d/e/2PACX-1vRKe-7bBH40JmQmq4I194xz9g2YsoU7L9fHwzY0fqZyWepyjqnOC0B7lgO9CjAuTrBkOA8qbTiScLpS/pubchart?oid=212559398&format=image)
 
 ![Net6StatisticPercent](https://docs.google.com/spreadsheets/d/e/2PACX-1vRKe-7bBH40JmQmq4I194xz9g2YsoU7L9fHwzY0fqZyWepyjqnOC0B7lgO9CjAuTrBkOA8qbTiScLpS/pubchart?oid=1162005117&format=image)
+
+![Net7Statistic](https://docs.google.com/spreadsheets/d/e/2PACX-1vRKe-7bBH40JmQmq4I194xz9g2YsoU7L9fHwzY0fqZyWepyjqnOC0B7lgO9CjAuTrBkOA8qbTiScLpS/pubchart?oid=212559398&format=image)
+
+![Net7StatisticPercent](https://docs.google.com/spreadsheets/d/e/2PACX-1vRKe-7bBH40JmQmq4I194xz9g2YsoU7L9fHwzY0fqZyWepyjqnOC0B7lgO9CjAuTrBkOA8qbTiScLpS/pubchart?oid=1162005117&format=image)

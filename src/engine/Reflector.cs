@@ -597,7 +597,7 @@ namespace MASES.JCOReflectorEngine
 
             if (typesToExport.Count != 0)
             {
-                exportingPublicTypes(typesToExport, destFolder, assembly.FullName);
+                ExportingPublicTypes(typesToExport, destFolder, assembly.FullName);
                 Interlocked.Increment(ref parsedAssemblies);
                 assemblyParsed.Add(assembly.FullName);
             }
@@ -609,7 +609,7 @@ namespace MASES.JCOReflectorEngine
             return assembly;
         }
 
-        static void exportingPublicTypes(List<Type> typesToExport, string destFolder, string assemblyname)
+        static void ExportingPublicTypes(List<Type> typesToExport, string destFolder, string assemblyname)
         {
             JobManager.AppendToConsole(LogLevel.Info, "Start exporting public types of {0}", assemblyname);
 
@@ -618,24 +618,24 @@ namespace MASES.JCOReflectorEngine
                 ParallelOptions po = new ParallelOptions();
                 po.CancellationToken = JobManager.CancellationToken;
                 po.MaxDegreeOfParallelism = System.Environment.ProcessorCount;
-                Parallel.ForEach(typesToExport, po, exportingPublicTypeParallel);
+                Parallel.ForEach(typesToExport, po, ExportingPublicTypeParallel);
             }
             else
             {
                 foreach (var item in typesToExport)
                 {
-                    exportingPublicType(item, destFolder, assemblyname);
+                    ExportingPublicType(item, destFolder, assemblyname);
                 }
             }
         }
 
-        static void exportingPublicTypeParallel(this Type typeToExport)
+        static void ExportingPublicTypeParallel(this Type typeToExport)
         {
             try
             {
                 string assemblyname = typeToExport.Assembly.FullName;
                 string destFolder = assemblyDestinationFolder(SourceDestinationFolder, new AssemblyName(assemblyname), SplitByAssembly);
-                exportingPublicType(typeToExport, destFolder, assemblyname);
+                ExportingPublicType(typeToExport, destFolder, assemblyname);
             }
             catch (OperationCanceledException)
             {
@@ -696,7 +696,7 @@ namespace MASES.JCOReflectorEngine
             return false;
         }
 
-        static void exportingPublicType(this Type typeToExport, string destFolder, string assemblyname)
+        static void ExportingPublicType(this Type typeToExport, string destFolder, string assemblyname)
         {
             var typeName = typeToExport.FullName;
 
@@ -706,7 +706,7 @@ namespace MASES.JCOReflectorEngine
             bool isManaged = true;
             bool isSpecial = false;
             bool isArray = false;
-            convertType(null, typeToExport, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
+            ConvertType(null, typeToExport, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
 
             if (isPrimitive || isSpecial || !isManaged)
             {
@@ -859,7 +859,7 @@ namespace MASES.JCOReflectorEngine
             reflectorInterfaceClassTemplate = reflectorInterfaceClassTemplate.Replace(Const.Class.INSTANCE_EVENTS_SECTION, eventsInstanceStr);
             reflectorInterfaceTemplate = reflectorInterfaceTemplate.Replace(Const.Class.INSTANCE_EVENTS_SECTION, returnInterfaceSection);
 
-            var importStr = ExportImports(imports);
+            var importStr = imports.ExportImports();
             reflectorInterfaceClassTemplate = reflectorInterfaceClassTemplate.Replace(Const.Class.PACKAGE_IMPORT_SECTION, importStr);
             reflectorInterfaceTemplate = reflectorInterfaceTemplate.Replace(Const.Class.PACKAGE_IMPORT_SECTION, importStr);
 
@@ -998,7 +998,7 @@ namespace MASES.JCOReflectorEngine
                 }
             }
 
-            var importStr = ExportImports(imports);
+            var importStr = imports.ExportImports();
             reflectorClassTemplate = reflectorClassTemplate.Replace(Const.Class.PACKAGE_IMPORT_SECTION, importStr);
 
             if (!string.IsNullOrEmpty(returnEnumerableType) && typeof(IEnumerable).IsAssignableFrom(item))
@@ -1054,7 +1054,7 @@ namespace MASES.JCOReflectorEngine
                     foreach (var expType in expTypes)
                     {
                         if (!expType.IsSubclassOf(typeof(Exception))) continue;
-                        convertType(imports, expType, out isPrimitive, out defaultPrimitiveValue, out isConcrete, out isSpecial, out isArray, false);
+                        ConvertType(imports, expType, out isPrimitive, out defaultPrimitiveValue, out isConcrete, out isSpecial, out isArray, false);
                         if (!isSpecial && isConcrete)
                         {
                             expBuilder.AppendFormat(Const.Exceptions.SINGLE_EXCEPTION_PROTO, expType.ToPackageName(), expType.Name);
@@ -1130,7 +1130,7 @@ namespace MASES.JCOReflectorEngine
                 bool isManaged = true;
                 foreach (var parameter in parameters)
                 {
-                    string paramType = convertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
+                    string paramType = ConvertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
                     if (!isManaged) break; // found not managed type, stop here
 
                     var paramName = ReplaceSinglekeyword(parameter.Name);
@@ -1184,7 +1184,7 @@ namespace MASES.JCOReflectorEngine
             return ctorsStr;
         }
 
-        static bool isDifferentOnlyForRetVal(IList<string> signatures, string signToCheck, string methodName)
+        static bool IsDifferentOnlyForRetVal(this IList<string> signatures, string signToCheck, string methodName)
         {
             var endOfSignToCheck = signToCheck.Remove(0, signToCheck.LastIndexOf(methodName));
             var startOfSignToCheck = signToCheck.Substring(0, signToCheck.LastIndexOf(methodName));
@@ -1230,7 +1230,7 @@ namespace MASES.JCOReflectorEngine
             bool isSpecial = false;
             bool isArray = false;
 
-            returnEnumeratorType = convertType(imports, propertyMethod.PropertyType, out isPrimitive, out defaultPrimitiveReturnValue, out isManaged, out isSpecial, out isArray);
+            returnEnumeratorType = ConvertType(imports, propertyMethod.PropertyType, out isPrimitive, out defaultPrimitiveReturnValue, out isManaged, out isSpecial, out isArray);
 
             if (!isManaged || isArray
                 || (isPrimitive && !returnEnumeratorType.Contains("String"))) // only String type from native are accepted, other are not valid for Iterable<E> Java interface
@@ -1248,7 +1248,7 @@ namespace MASES.JCOReflectorEngine
 
             var reflectorEnumeratorTemplate = Const.Templates.GetTemplate(Const.Templates.ReflectorEnumeratorTemplate);
 
-            var importsStr = ExportImports(imports);
+            var importsStr = imports.ExportImports();
 
             var packageName = item.ToPackageName();
             var enumeratorStr = reflectorEnumeratorTemplate.Replace(Const.Enumerator.PACKAGE_NAME, packageName)
@@ -1282,7 +1282,7 @@ namespace MASES.JCOReflectorEngine
             return param.IsDefined(typeof(ParamArrayAttribute), false);
         }
 
-        static void searchMethods(Type type, IList<MethodInfo> allMethods, bool traverseHierarchy)
+        static void SearchMethods(this Type type, IList<MethodInfo> allMethods, bool traverseHierarchy)
         {
             TypeInfo t = type.GetTypeInfo();
             foreach (var item in t.GetRuntimeMethods())
@@ -1295,13 +1295,13 @@ namespace MASES.JCOReflectorEngine
                 foreach (var item in t.ImplementedInterfaces)
                 {
                     if (!item.IsManagedType(0, 1)) continue;
-                    searchMethods(item, allMethods, traverseHierarchy);
+                    item.SearchMethods(allMethods, traverseHierarchy);
                 }
             }
             else if (type.BaseType != null)
             {
                 if (!type.BaseType.IsManagedType(0, 1) || type.BaseType == typeof(object) || type.BaseType == typeof(Exception) || type.BaseType == typeof(Type)) return;
-                searchMethods(type.BaseType, allMethods, traverseHierarchy);
+                type.BaseType.SearchMethods(allMethods, traverseHierarchy);
             }
         }
 
@@ -1359,7 +1359,7 @@ namespace MASES.JCOReflectorEngine
                 isInterface = true;
             }
             List<MethodInfo> allMethods = new List<MethodInfo>();
-            searchMethods(type, allMethods, isInterface);
+            type.SearchMethods(allMethods, isInterface);
             methods = allMethods.ToArray();
 
             var methodLst = new List<MethodInfo>();
@@ -1430,7 +1430,7 @@ namespace MASES.JCOReflectorEngine
                     if (item.IsGenericMethod // don't manage generic methods
                         || item.ContainsGenericParameters
                         || ((withInheritance && !isInterface) ? item.DeclaringType != type : false)
-                        || (!methodsNameCreated.Contains(methodName) ? false : isDifferentOnlyForRetVal(methodsSignatureCreated, item.ToString(), methodName))
+                        || (!methodsNameCreated.Contains(methodName) ? false : methodsSignatureCreated.IsDifferentOnlyForRetVal(item.ToString(), methodName))
                        ) continue;
 
                     var parameters = item.GetParameters();
@@ -1472,7 +1472,7 @@ namespace MASES.JCOReflectorEngine
                                 continue;
                             }
 
-                            returnType = convertType(imports, item.ReturnType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
+                            returnType = ConvertType(imports, item.ReturnType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
                             if (!isManaged)
                             {
                                 returnEnumeratorType = string.Empty;
@@ -1506,7 +1506,7 @@ namespace MASES.JCOReflectorEngine
                         }
                         else
                         {
-                            returnType = convertType(imports, item.ReturnType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isRetValArray);
+                            returnType = ConvertType(imports, item.ReturnType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isRetValArray);
                             if (!isManaged) continue;
                             isPrimitive |= typeof(Delegate).IsAssignableFrom(item.ReturnType);
 
@@ -1527,7 +1527,7 @@ namespace MASES.JCOReflectorEngine
                         bool builtWithJCORefOut = false;
                         foreach (var parameter in parameters)
                         {
-                            string paramType = convertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
+                            string paramType = ConvertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
                             hasNativeArrayInParameter |= isArray && isPrimitive;
                             bool useRefOut = false;
                             if (!EnableRefOutParameters)
@@ -1615,7 +1615,7 @@ namespace MASES.JCOReflectorEngine
 
                             foreach (var parameter in parameters)
                             {
-                                string paramType = convertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
+                                string paramType = ConvertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
                                 bool isNativeArrayInParameter = isArray && isPrimitive;
                                 isPrimitive |= typeof(Delegate).IsAssignableFrom(parameter.ParameterType);
                                 var paramName = string.Format(Const.Methods.DUPLICATED_PARAMETER_PROTO, parameter.Position); // change name to avoid confusion made by parameter name when a duplicated method is searched
@@ -1719,7 +1719,7 @@ namespace MASES.JCOReflectorEngine
                 foreach (var implementableInterface in implementableInterfaces.ToArray())
                 {
                     allMethods = new List<MethodInfo>();
-                    searchMethods(implementableInterface, allMethods, true);
+                    implementableInterface.SearchMethods(allMethods, true);
                     methods = allMethods.ToArray();
 
                     if (methods.Length == 0) continue;
@@ -1761,7 +1761,7 @@ namespace MASES.JCOReflectorEngine
                         if (interfaceMethod.IsGenericMethod // don't manage generic methods
                             || interfaceMethod.ContainsGenericParameters
                             || ((withInheritance) ? interfaceMethod.DeclaringType != implementableInterface : false)
-                            || (!methodsNameCreated.Contains(methodName) ? false : isDifferentOnlyForRetVal(methodsSignatureCreated, interfaceMethod.ToString(), methodName))
+                            || (!methodsNameCreated.Contains(methodName) ? false : methodsSignatureCreated.IsDifferentOnlyForRetVal(interfaceMethod.ToString(), methodName))
                            ) continue;
 
                         var parameters = interfaceMethod.GetParameters();
@@ -1800,7 +1800,7 @@ namespace MASES.JCOReflectorEngine
                                     continue;
                                 }
 
-                                returnType = convertType(imports, interfaceMethod.ReturnType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
+                                returnType = ConvertType(imports, interfaceMethod.ReturnType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
                                 if (!isManaged)
                                 {
                                     //returnEnumeratorType = string.Empty;
@@ -1832,7 +1832,7 @@ namespace MASES.JCOReflectorEngine
                             }
                             else
                             {
-                                returnType = convertType(imports, interfaceMethod.ReturnType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isRetValArray);
+                                returnType = ConvertType(imports, interfaceMethod.ReturnType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isRetValArray);
                                 if (!isManaged) continue;
                                 isPrimitive |= typeof(Delegate).IsAssignableFrom(interfaceMethod.ReturnType);
 
@@ -1853,7 +1853,7 @@ namespace MASES.JCOReflectorEngine
                             bool builtWithJCORefOut = false;
                             foreach (var parameter in parameters)
                             {
-                                string paramType = convertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
+                                string paramType = ConvertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
                                 hasNativeArrayInParameter |= isArray && isPrimitive;
                                 bool useRefOut = false;
                                 if (!EnableRefOutParameters)
@@ -1932,7 +1932,7 @@ namespace MASES.JCOReflectorEngine
 
                                 foreach (var parameter in parameters)
                                 {
-                                    string paramType = convertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
+                                    string paramType = ConvertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
                                     bool isNativeArrayInParameter = isArray && isPrimitive;
                                     isPrimitive |= typeof(Delegate).IsAssignableFrom(parameter.ParameterType);
                                     var paramName = string.Format(Const.Methods.DUPLICATED_PARAMETER_PROTO, parameter.Position); // change name to avoid confusion made by parameter name when a duplicated method is searched
@@ -2009,7 +2009,7 @@ namespace MASES.JCOReflectorEngine
             return methodBuilder.ToString();
         }
 
-        static string buildPropertySignature(string templateToUse, string propertyJavaName, string propertyName, string propertyType, string exceptionStr, bool isPrimitive, bool isArray, bool needInterfaceImplementation, bool statics, string propertyInterfaceName)
+        static string BuildPropertySignature(string templateToUse, string propertyJavaName, string propertyName, string propertyType, string exceptionStr, bool isPrimitive, bool isArray, bool needInterfaceImplementation, bool statics, string propertyInterfaceName)
         {
             StringBuilder inputParams = new StringBuilder();
             StringBuilder execParams = new StringBuilder();
@@ -2063,7 +2063,7 @@ namespace MASES.JCOReflectorEngine
             return false;
         }
 
-        static void searchProperties(Type type, IList<Tuple<bool, PropertyInfo>> allProperties, bool staticSearch, bool traverseHierarchy)
+        static void SearchProperties(this Type type, IList<Tuple<bool, PropertyInfo>> allProperties, bool staticSearch, bool traverseHierarchy)
         {
             BindingFlags flags = BindingFlags.Public;
             flags |= staticSearch ? BindingFlags.Static : BindingFlags.Instance;
@@ -2078,13 +2078,13 @@ namespace MASES.JCOReflectorEngine
                 foreach (var item in type.GetInterfaces())
                 {
                     if (!item.IsManagedType(0, 1)) continue;
-                    searchProperties(item, allProperties, staticSearch, traverseHierarchy);
+                    item.SearchProperties(allProperties, staticSearch, traverseHierarchy);
                 }
             }
             else if (type.BaseType != null)
             {
                 if (!type.BaseType.IsManagedType(0, 1) || type.BaseType == typeof(object) || type.BaseType == typeof(Exception) || type.BaseType == typeof(Type)) return;
-                searchProperties(type.BaseType, allProperties, staticSearch, traverseHierarchy);
+                type.BaseType.SearchProperties(allProperties, staticSearch, traverseHierarchy);
             }
         }
 
@@ -2099,8 +2099,8 @@ namespace MASES.JCOReflectorEngine
                 isInterface = true;
             }
 
-            searchProperties(type, properties, false, isInterface);
-            searchProperties(type, properties, true, isInterface);
+            type.SearchProperties(properties, false, isInterface);
+            type.SearchProperties(properties, true, isInterface);
 
             List<string> propertiesSignaturesCreated = new List<string>();
             List<string> propertiesNameCreated = new List<string>();
@@ -2164,12 +2164,12 @@ namespace MASES.JCOReflectorEngine
                     if (propertiesSignaturesCreated.Contains(item.ToString())
                         || item.IsSpecialName
                         || ((withInheritance && !isInterface) ? item.DeclaringType != type : false)
-                        || (!propertiesNameCreated.Contains(propertyName) ? false : isDifferentOnlyForRetVal(propertiesSignaturesCreated, item.ToString(), propertyName))
+                        || (!propertiesNameCreated.Contains(propertyName) ? false : propertiesSignaturesCreated.IsDifferentOnlyForRetVal(item.ToString(), propertyName))
                        ) continue;
 
                     string propertyType = "void";
 
-                    propertyType = convertType(imports, item.PropertyType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
+                    propertyType = ConvertType(imports, item.PropertyType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
                     if (!isManaged) continue; // found not managed type, jump to next 
 
                     bool isPropertyTypeInterface = isArray ? item.PropertyType.GetElementType().IsInterface : item.PropertyType.IsInterface;
@@ -2192,7 +2192,7 @@ namespace MASES.JCOReflectorEngine
                         {
                             string propertyInterfaceTemplate = Const.Templates.GetTemplate(isArray ? Const.Templates.ReflectorInterfaceGetArrayTemplate : Const.Templates.ReflectorInterfaceGetTemplate);
 
-                            var propertyInterfaceStr = buildPropertySignature(propertyInterfaceTemplate, isNewPropertyVal ? newPropertyName : propertyName, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics, string.Empty);
+                            var propertyInterfaceStr = BuildPropertySignature(propertyInterfaceTemplate, isNewPropertyVal ? newPropertyName : propertyName, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics, string.Empty);
                             propertyInterfaceBuilder.AppendLine(propertyInterfaceStr);
                         }
 
@@ -2207,7 +2207,7 @@ namespace MASES.JCOReflectorEngine
                                 templateToUse = Const.Templates.GetTemplate(isPrimitive ? Const.Templates.ReflectorClassNativeGetTemplate : Const.Templates.ReflectorClassObjectGetTemplate);
                             }
 
-                            var propertyStr = buildPropertySignature(templateToUse, isNewPropertyVal ? newPropertyName : propertyName, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics, string.Empty);
+                            var propertyStr = BuildPropertySignature(templateToUse, isNewPropertyVal ? newPropertyName : propertyName, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics, string.Empty);
                             propertyBuilder.AppendLine(propertyStr);
                         }
                     }
@@ -2226,14 +2226,14 @@ namespace MASES.JCOReflectorEngine
                         {
                             string propertyInterfaceTemplate = Const.Templates.GetTemplate(Const.Templates.ReflectorInterfaceSetTemplate);
 
-                            var propertyInterfaceStr = buildPropertySignature(propertyInterfaceTemplate, isNewPropertyVal ? newPropertyName : propertyName, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics, string.Empty);
+                            var propertyInterfaceStr = BuildPropertySignature(propertyInterfaceTemplate, isNewPropertyVal ? newPropertyName : propertyName, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics, string.Empty);
                             propertyInterfaceBuilder.AppendLine(propertyInterfaceStr);
                         }
 
                         if (withInheritance ? (isInterface || (item.SetMethod.GetBaseDefinition().DeclaringType == type)) : true)
                         {
                             templateToUse = Const.Templates.GetTemplate(Const.Templates.ReflectorClassSetTemplate);
-                            var propertyStr = buildPropertySignature(templateToUse, isNewPropertyVal ? newPropertyName : propertyName, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics, string.Empty);
+                            var propertyStr = BuildPropertySignature(templateToUse, isNewPropertyVal ? newPropertyName : propertyName, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics, string.Empty);
                             propertyBuilder.AppendLine(propertyStr);
                         }
                     }
@@ -2261,8 +2261,8 @@ namespace MASES.JCOReflectorEngine
                 foreach (var implementableInterface in implementableInterfaces.ToArray())
                 {
                     properties = new List<Tuple<bool, PropertyInfo>>();
-                    searchProperties(implementableInterface, properties, false, true);
-                    searchProperties(implementableInterface, properties, true, true);
+                    implementableInterface.SearchProperties(properties, false, true);
+                    implementableInterface.SearchProperties(properties, true, true);
 
                     if (properties.Count == 0) continue;
 
@@ -2311,12 +2311,12 @@ namespace MASES.JCOReflectorEngine
                         if (propertiesSignaturesCreated.Contains(item.ToString())
                             || item.IsSpecialName
                             || ((withInheritance) ? item.DeclaringType != implementableInterface : false)
-                            || (!propertiesNameCreated.Contains(propertyName) ? false : isDifferentOnlyForRetVal(propertiesSignaturesCreated, item.ToString(), propertyName))
+                            || (!propertiesNameCreated.Contains(propertyName) ? false : propertiesSignaturesCreated.IsDifferentOnlyForRetVal(item.ToString(), propertyName))
                            ) continue;
 
                         string propertyType = "void";
 
-                        propertyType = convertType(imports, item.PropertyType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
+                        propertyType = ConvertType(imports, item.PropertyType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
                         if (!isManaged) continue; // found not managed type, jump to next 
 
                         bool isPropertyTypeInterface = isArray ? item.PropertyType.GetElementType().IsInterface : item.PropertyType.IsInterface;
@@ -2346,7 +2346,7 @@ namespace MASES.JCOReflectorEngine
                                     templateToUse = Const.Templates.GetTemplate(isPrimitive ? Const.Templates.ReflectorClassNativeGetDeprecatedTemplate : Const.Templates.ReflectorClassObjectGetDeprecatedTemplate);
                                 }
 
-                                var propertyStr = buildPropertySignature(templateToUse, isNewPropertyVal ? newPropertyName : propertyName, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics, implementableInterface.Name);
+                                var propertyStr = BuildPropertySignature(templateToUse, isNewPropertyVal ? newPropertyName : propertyName, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics, implementableInterface.Name);
                                 propertyBuilder.AppendLine(propertyStr);
                             }
                         }
@@ -2364,7 +2364,7 @@ namespace MASES.JCOReflectorEngine
                             if (withInheritance ? (isInterface || (item.SetMethod.GetBaseDefinition().DeclaringType == type)) : true)
                             {
                                 templateToUse = Const.Templates.GetTemplate(Const.Templates.ReflectorClassSetDeprecatedTemplate);
-                                var propertyStr = buildPropertySignature(templateToUse, isNewPropertyVal ? newPropertyName : propertyName, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics, implementableInterface.Name);
+                                var propertyStr = BuildPropertySignature(templateToUse, isNewPropertyVal ? newPropertyName : propertyName, propertyName, propertyType, exceptionStr, isPrimitive, isArray, isPropertyTypeInterface, statics, implementableInterface.Name);
                                 propertyBuilder.AppendLine(propertyStr);
                             }
                         }
@@ -2421,7 +2421,7 @@ namespace MASES.JCOReflectorEngine
             }
             else
             {
-                returnType = convertType(imports, invokeMethod.ReturnType, out isRetValPrimitive, out defaultPrimitiveReturnValue, out isManaged, out isSpecial, out isRetValArray);
+                returnType = ConvertType(imports, invokeMethod.ReturnType, out isRetValPrimitive, out defaultPrimitiveReturnValue, out isManaged, out isSpecial, out isRetValArray);
                 if (!isManaged) return false;
                 classTemplateToUse = Const.Templates.GetTemplate(isRetValPrimitive ? Const.Templates.NativeDelegateClassTemplate : Const.Templates.ObjectDelegateClassTemplate);
                 interfaceTemplateToUse = Const.Templates.GetTemplate(Const.Templates.NonVoidDelegateInterfaceTemplate);
@@ -2445,7 +2445,7 @@ namespace MASES.JCOReflectorEngine
             string defaultPrimitiveValue = string.Empty;
             foreach (var parameter in parameters)
             {
-                string paramType = convertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
+                string paramType = ConvertType(imports, parameter.ParameterType, out isPrimitive, out defaultPrimitiveValue, out isManaged, out isSpecial, out isArray);
                 if (!EnableRefOutParameters)
                 {
                     isManaged &= !(parameter.IsOut || parameter.ParameterType.IsByRef); // out parameters not managed
@@ -2506,7 +2506,7 @@ namespace MASES.JCOReflectorEngine
 
             var exceptionStr = invokeMethod.ExceptionStringBuilder(imports);
 
-            var importsStr = ExportImports(imports);
+            var importsStr = imports.ExportImports();
 
             var strReturnStatement = Const.Delegates.DELEGATE_RETURN_STATEMENT_OBJECT;
             if (isRetValArray)
@@ -2596,7 +2596,7 @@ namespace MASES.JCOReflectorEngine
             return false;
         }
 
-        static void searchEvents(Type type, BindingFlags flags, IList<EventInfo> allEvents, bool traverseHierarchy)
+        static void SearchEvents(this Type type, BindingFlags flags, IList<EventInfo> allEvents, bool traverseHierarchy)
         {
             foreach (var item in type.GetEvents(flags))
             {
@@ -2608,13 +2608,13 @@ namespace MASES.JCOReflectorEngine
                 foreach (var item in type.GetInterfaces())
                 {
                     if (!item.IsManagedType(0, 1)) continue;
-                    searchEvents(item, flags, allEvents, traverseHierarchy);
+                    item.SearchEvents(flags, allEvents, traverseHierarchy);
                 }
             }
             else if (type.BaseType != null)
             {
                 if (!type.BaseType.IsManagedType(0, 1) || type.BaseType == typeof(object) || type.BaseType == typeof(Exception) || type.BaseType == typeof(Type)) return;
-                searchEvents(type.BaseType, flags, allEvents, traverseHierarchy);
+                type.BaseType.SearchEvents(flags, allEvents, traverseHierarchy);
             }
         }
 
@@ -2634,7 +2634,7 @@ namespace MASES.JCOReflectorEngine
             {
                 isInterface = true;
             }
-            searchEvents(type, flags, allEvents, isInterface);
+            type.SearchEvents(flags, allEvents, isInterface);
             events = allEvents.ToArray();
 
             if (events.Length == 0) return string.Empty;
@@ -2700,7 +2700,7 @@ namespace MASES.JCOReflectorEngine
                 if (eventsSignaturesCreated.Contains(item.ToString())
                     || item.IsSpecialName
                     || ((withInheritance && !isInterface) ? item.DeclaringType != type : false)
-                    || (!eventsNameCreated.Contains(eventName) ? false : isDifferentOnlyForRetVal(eventsSignaturesCreated, item.ToString(), eventName))
+                    || (!eventsNameCreated.Contains(eventName) ? false : eventsSignaturesCreated.IsDifferentOnlyForRetVal(item.ToString(), eventName))
                    ) continue;
 
                 string eventType = "void";
@@ -2709,7 +2709,7 @@ namespace MASES.JCOReflectorEngine
 
                 if (!item.EventHandlerType.ExportingDelegate(destFolder, assemblyname, true)) continue;
 
-                eventType = convertType(imports, item.EventHandlerType, out isPrimitive, out defaultPrimitiveValue, out isConcrete, out isSpecial, out isArray);
+                eventType = ConvertType(imports, item.EventHandlerType, out isPrimitive, out defaultPrimitiveValue, out isConcrete, out isSpecial, out isArray);
                 if (!isConcrete) continue; // found not managed type, jump to next 
 
                 bool isNewEventVal = (withInheritance && !isInterface) ? type.IsNewEvent(item, eventLst) : false;
@@ -2760,7 +2760,7 @@ namespace MASES.JCOReflectorEngine
             return eventBuilder.ToString();
         }
 
-        static string ExportImports(IList<Type> imports)
+        static string ExportImports(this IList<Type> imports)
         {
             StringBuilder importsToExport = new StringBuilder();
             foreach (var item in imports)
@@ -2836,7 +2836,7 @@ namespace MASES.JCOReflectorEngine
             return true;
         }
 
-        static string checkForSpecialNames(string name, Type type, out bool needImport)
+        static string CheckForSpecialNames(string name, Type type, out bool needImport)
         {
             needImport = true;
             if (name == "ArrayList") { needImport = false; return type.ToPackageName() + "." + name; }
@@ -2874,14 +2874,14 @@ namespace MASES.JCOReflectorEngine
                 default:
                     {
                         isPrimitive = false;
-                        retType = checkForSpecialNames(name, innerType, out needImport);
+                        retType = CheckForSpecialNames(name, innerType, out needImport);
                     }
                     break;
             }
             return retType;
         }
 
-        static string checkIsSpecial(this Type type, out bool isSpecial)
+        static string CheckIsSpecial(this Type type, out bool isSpecial)
         {
             isSpecial = false;
             if (type == typeof(object)) { isSpecial = true; return Const.SpecialNames.NetObject; }
@@ -2900,7 +2900,7 @@ namespace MASES.JCOReflectorEngine
             return typeName;
         }
 
-        static string convertType(IList<Type> imports, Type type, out bool isPrimitive, out string defaultPrimitiveValue, out bool isManaged, out bool isSpecial, out bool isArray, bool storeInImports = true)
+        static string ConvertType(IList<Type> imports, Type type, out bool isPrimitive, out string defaultPrimitiveValue, out bool isManaged, out bool isSpecial, out bool isArray, bool storeInImports = true)
         {
             isPrimitive = true;
             defaultPrimitiveValue = string.Empty;
@@ -2916,7 +2916,7 @@ namespace MASES.JCOReflectorEngine
             try
             {
                 if (!isManaged) { return string.Empty; }
-                var special = checkIsSpecial((isArray) ? innerType.GetElementType() : innerType, out isSpecial);
+                var special = CheckIsSpecial((isArray) ? innerType.GetElementType() : innerType, out isSpecial);
                 if (isSpecial) { needImport = false; isPrimitive = false; return special; }
 
                 return innerType.CheckForPrimitive(isArray, out isPrimitive, out defaultPrimitiveValue, out needImport);
@@ -2936,7 +2936,7 @@ namespace MASES.JCOReflectorEngine
                             bool isPrimitiveHere;
                             bool needImportHere;
                             string defaultPrimitiveValueHere;
-                            innerType.checkIsSpecial(out isSpecialHere);
+                            innerType.CheckIsSpecial(out isSpecialHere);
                             innerType.CheckForPrimitive(isArrayHere, out isPrimitiveHere, out defaultPrimitiveValueHere, out needImportHere);
                             if (needImportHere && !isPrimitiveHere && !isSpecialHere && !imports.Contains(innerType))
                             {

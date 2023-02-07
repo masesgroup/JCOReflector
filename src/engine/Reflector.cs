@@ -419,13 +419,17 @@ namespace MASES.JCOReflectorEngine
                         var beginTag = string.Format(Const.Report.REPORT_BEGIN_PLACEHOLDER, Const.Framework.RuntimeFolder);
                         var endTag = string.Format(Const.Report.REPORT_END_PLACEHOLDER, Const.Framework.RuntimeFolder);
                         var readmeContent = File.ReadAllText(reportfile);
+                        int beginTagIndex = readmeContent.IndexOf(beginTag);
+                        int endTagIndex = readmeContent.IndexOf(endTag);
+                        if (beginTagIndex < 0) throw new InvalidOperationException(string.Format("File {0} does not contain the {1} tag", reportfile, beginTag));
+                        if (endTagIndex < 0) throw new InvalidOperationException(string.Format("File {0} does not contain the {1} tag", reportfile, endTag));
 
                         StringBuilder sb = new StringBuilder();
-                        var preText = readmeContent.Substring(0, readmeContent.IndexOf(beginTag));
+                        var preText = readmeContent.Substring(0, beginTagIndex);
                         sb.Append(preText);
                         sb.AppendLine(beginTag);
                         sb.AppendLine(reportStr);
-                        var endText = readmeContent.Substring(readmeContent.IndexOf(endTag));
+                        var endText = readmeContent.Substring(endTagIndex);
                         sb.Append(endText);
                         writeFile(reportfile, sb.ToString());
                     }

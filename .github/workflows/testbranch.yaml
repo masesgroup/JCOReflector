@@ -111,6 +111,15 @@ jobs:
       - name: Reflect .NET Framework Java files
         run: .\bin\net462\MASES.JCOReflectorCLI -JobType Reflect -JobFile .github\workflows\reflect_net462.job
 
+      - name: Compress source files
+        run: Compress-Archive -Path .\netreflected\src\* -DestinationPath .\source.zip
+
+      - uses: actions/upload-artifact@v3
+        with:
+          name: LatestSource
+          path: .\source.zip
+          retention-days: 1
+
       - name: Build Java files .NET Core 6.0
         run: dotnet bin\net6.0\MASES.JCOReflectorCLI.dll -JobType Build -JobFile .github\workflows\build_win19.job -JDKFolder %JAVA_HOME_11_X64%
         shell: cmd
@@ -140,7 +149,6 @@ jobs:
           Compress-Archive -Path .\bin\net6.0\* -DestinationPath .\bin\net6.0.zip
           Compress-Archive -Path .\bin\net7.0\* -DestinationPath .\bin\net7.0.zip
           Compress-Archive -Path .\bin\net462\* -DestinationPath .\bin\net462.zip
-          Compress-Archive -Path .\netreflected\src\* -DestinationPath .\netreflected\source.zip
           
       - uses: actions/upload-artifact@v3
         with:
@@ -164,12 +172,6 @@ jobs:
         with:
           name: net462
           path: .\bin\net462.zip
-          retention-days: 1
-          
-      - uses: actions/upload-artifact@v3
-        with:
-          name: LatestSource
-          path: .\netreflected\source.zip
           retention-days: 1
  
       - uses: actions/setup-java@v3

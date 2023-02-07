@@ -110,7 +110,9 @@ namespace MASES.JCOReflectorEngine
                                                                                                 , "Read"
 #endif
                 });
-
+#if NET7_0
+                ExportingMethodsAvoidanceMap.Add("System.Runtime.Interopservices.JavaScript", new string[] { "ToManaged" });
+#endif
                 DirectMappablePrimitives.Add("boolean", "java.util.concurrent.atomic.AtomicBoolean");
                 DirectMappablePrimitives.Add("byte", "java.util.concurrent.atomic.AtomicReference<java.lang.Byte>");
                 DirectMappablePrimitives.Add("short", "java.util.concurrent.atomic.AtomicReference<java.lang.Short>");

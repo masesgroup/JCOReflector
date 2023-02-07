@@ -56,7 +56,8 @@ namespace MASES.JCOReflectorEngine
             "Class",
             "classType",
             "classInstance",
-            "native"
+            "native",
+            "switch"
         };
 
         public class SpecialNames

@@ -207,25 +207,25 @@ jobs:
       - name: Build Java test source file .NET Core 7.0
         run: javac -cp ./bin/net7.0/JCOReflector.jar ./netreflected-tests/java/src/hierarchy/*.java ./netreflected-tests/java/src/mscorlib/*.java ./netreflected-tests/java/src/nettest/*.java ./netreflected-tests/java/src/refout/*.java
 
-      - run: java -cp "./bin/net7.0/JCOReflector.jar;./netreflected-tests/java/src/" mscorlib.HelloLock
+      - run: java -cp "./bin/net7.0/JCOReflector.jar;./netreflected-tests/java/src/" mscorlib.HelloLock --CoreCLRApp:Microsoft.NET7.App
         continue-on-error: true      
-      - run: java -cp "./bin/net7.0/JCOReflector.jar;./netreflected-tests/java/src/" mscorlib.HelloNET
+      - run: java -cp "./bin/net7.0/JCOReflector.jar;./netreflected-tests/java/src/" mscorlib.HelloNET --CoreCLRApp:Microsoft.NET7.App
         continue-on-error: true
-      - run: java -cp "./bin/net7.0/JCOReflector.jar;./netreflected-tests/java/src/" mscorlib.HelloNETEvent
+      - run: java -cp "./bin/net7.0/JCOReflector.jar;./netreflected-tests/java/src/" mscorlib.HelloNETEvent --CoreCLRApp:Microsoft.NET7.App
         continue-on-error: true
-      - run: java -cp "./bin/net7.0/JCOReflector.jar;./netreflected-tests/java/src/" mscorlib.HelloIterator
+      - run: java -cp "./bin/net7.0/JCOReflector.jar;./netreflected-tests/java/src/" mscorlib.HelloIterator --CoreCLRApp:Microsoft.NET7.App
         continue-on-error: true
-      - run: java -cp "./bin/net7.0/JCOReflector.jar;./netreflected-tests/java/src/" hierarchy.HelloHierarchy
+      - run: java -cp "./bin/net7.0/JCOReflector.jar;./netreflected-tests/java/src/" hierarchy.HelloHierarchy --CoreCLRApp:Microsoft.NET7.App
         continue-on-error: true
-      - run: java -cp "./bin/net7.0/JCOReflector.jar;./netreflected-tests/java/src/" hierarchy.HelloInterfaces
+      - run: java -cp "./bin/net7.0/JCOReflector.jar;./netreflected-tests/java/src/" hierarchy.HelloInterfaces --CoreCLRApp:Microsoft.NET7.App
         continue-on-error: true
-      - run: java -cp "./bin/net7.0/JCOReflector.jar;./netreflected-tests/java/src/" nettest.HelloNETSocket
+      - run: java -cp "./bin/net7.0/JCOReflector.jar;./netreflected-tests/java/src/" nettest.HelloNETSocket --CoreCLRApp:Microsoft.NET7.App
         continue-on-error: true
-      - run: java -cp "./bin/net7.0/JCOReflector.jar;./netreflected-tests/java/src/" nettest.HelloNETSocket -async
+      - run: java -cp "./bin/net7.0/JCOReflector.jar;./netreflected-tests/java/src/" nettest.HelloNETSocket -async --CoreCLRApp:Microsoft.NET7.App
         continue-on-error: true
-      - run: java -cp "./bin/net7.0/JCOReflector.jar;./netreflected-tests/java/src/" refout.HelloRefOutBase
+      - run: java -cp "./bin/net7.0/JCOReflector.jar;./netreflected-tests/java/src/" refout.HelloRefOutBase --CoreCLRApp:Microsoft.NET7.App
         continue-on-error: true
-      - run: java -cp "./bin/net7.0/JCOReflector.jar;./netreflected-tests/java/src/" refout.HelloRefOut
+      - run: java -cp "./bin/net7.0/JCOReflector.jar;./netreflected-tests/java/src/" refout.HelloRefOut --CoreCLRApp:Microsoft.NET7.App
         continue-on-error: true
  
       - name: Build Java test source file .NET Framework
@@ -306,34 +306,34 @@ jobs:
           mkdir output
           ..\..\scala-2.13.5\bin\scalac -toolcp "../../bin/net7.0/*" -d ./output ./src/main/scala/hierarchy/* ./src/main/scala/mscorlib/* ./src/main/scala/nettest/* ./src/main/scala/refout/*
               
-      - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net7.0/*;./netreflected-tests/scala/output" mscorlib.HelloLock
+      - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net7.0/*;./netreflected-tests/scala/output" mscorlib.HelloLock --CoreCLRApp:Microsoft.NET7.App
         shell: cmd
         continue-on-error: true
-      - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net7.0/*;./netreflected-tests/scala/output" mscorlib.HelloNet
+      - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net7.0/*;./netreflected-tests/scala/output" mscorlib.HelloNet --CoreCLRApp:Microsoft.NET7.App
         shell: cmd
         continue-on-error: true
-      - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net7.0/*;./netreflected-tests/scala/output" mscorlib.HelloNETEvent
+      - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net7.0/*;./netreflected-tests/scala/output" mscorlib.HelloNETEvent --CoreCLRApp:Microsoft.NET7.App
         shell: cmd
         continue-on-error: true
-      - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net7.0/*;./netreflected-tests/scala/output" mscorlib.HelloIterator
+      - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net7.0/*;./netreflected-tests/scala/output" mscorlib.HelloIterator --CoreCLRApp:Microsoft.NET7.App
         shell: cmd
         continue-on-error: true
-      - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net7.0/*;./netreflected-tests/scala/output" hierarchy.HelloHierarchy
+      - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net7.0/*;./netreflected-tests/scala/output" hierarchy.HelloHierarchy --CoreCLRApp:Microsoft.NET7.App
         shell: cmd
         continue-on-error: true
-      - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net7.0/*;./netreflected-tests/scala/output" hierarchy.HelloInterfaces
+      - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net7.0/*;./netreflected-tests/scala/output" hierarchy.HelloInterfaces --CoreCLRApp:Microsoft.NET7.App
         shell: cmd
         continue-on-error: true
-      - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net7.0/*;./netreflected-tests/scala/output" nettest.HelloNETSocket
+      - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net7.0/*;./netreflected-tests/scala/output" nettest.HelloNETSocket --CoreCLRApp:Microsoft.NET7.App
         shell: cmd
         continue-on-error: true
-      - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net7.0/*;./netreflected-tests/scala/output" nettest.HelloNETSocket -async
+      - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net7.0/*;./netreflected-tests/scala/output" nettest.HelloNETSocket -async --CoreCLRApp:Microsoft.NET7.App
         shell: cmd
         continue-on-error: true
-      - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net7.0/*;./netreflected-tests/scala/output" refout.HelloRefOutBase
+      - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net7.0/*;./netreflected-tests/scala/output" refout.HelloRefOutBase --CoreCLRApp:Microsoft.NET7.App
         shell: cmd
         continue-on-error: true
-      - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net7.0/*;./netreflected-tests/scala/output" refout.HelloRefOut
+      - run: .\scala-2.13.5\bin\scala -toolcp "./bin/net7.0/*;./netreflected-tests/scala/output" refout.HelloRefOut --CoreCLRApp:Microsoft.NET7.App
         shell: cmd
         continue-on-error: true
       - run: cd ./netreflected-tests/scala && rmdir output /s /q

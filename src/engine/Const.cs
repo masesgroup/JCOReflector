@@ -238,8 +238,8 @@ namespace MASES.JCOReflectorEngine
                 "LicenseViewer.runtimeconfig.json",
                 "MachineIdGenerator.dll",
                 "MachineIdGenerator.runtimeconfig.json",
-                "Microsoft.NET6.App.runtimeconfig.json",
-                "Microsoft.WindowsDesktop6.App.runtimeconfig.json",
+                "Microsoft.NET7.App.runtimeconfig.json",
+                "Microsoft.WindowsDesktop7.App.runtimeconfig.json",
             };
 #elif NETFRAMEWORK
             public static string[] JCOBridgeFiles = new string[]

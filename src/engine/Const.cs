@@ -1,7 +1,7 @@
 ﻿/*
  *  MIT License
  *
- *  Copyright (c) 2022 MASES s.r.l.
+ *  Copyright (c) 2023 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -56,7 +56,8 @@ namespace MASES.JCOReflectorEngine
             "Class",
             "classType",
             "classInstance",
-            "native"
+            "native",
+            "switch"
         };
 
         public class SpecialNames
@@ -105,11 +106,13 @@ namespace MASES.JCOReflectorEngine
                 ExportingMethodsAvoidanceMap.Add("System.Threading.Thread", new string[] { "VolatileRead" });
                 ExportingMethodsAvoidanceMap.Add("System.Threading.Volatile", new string[] { "Read" });
                 ExportingMethodsAvoidanceMap.Add("System.Threading.Interlocked", new string[] { "Decrement", "Increment"
-#if NET5_0 || NET6_0
+#if NET6_0 || NET7_0
                                                                                                 , "Read"
 #endif
                 });
-
+#if NET7_0
+                ExportingMethodsAvoidanceMap.Add("System.Runtime.InteropServices.JavaScript.JSMarshalerArgument", new string[] { "ToManaged" });
+#endif
                 DirectMappablePrimitives.Add("boolean", "java.util.concurrent.atomic.AtomicBoolean");
                 DirectMappablePrimitives.Add("byte", "java.util.concurrent.atomic.AtomicReference<java.lang.Byte>");
                 DirectMappablePrimitives.Add("short", "java.util.concurrent.atomic.AtomicReference<java.lang.Short>");
@@ -159,85 +162,8 @@ namespace MASES.JCOReflectorEngine
             public const string JCOBridgeEmbeddedFile = "JCOBridge.zip";
             public const string JCOReflectorOptionsFile = "JCOReflectorOptions.java";
 
-#if NETCOREAPP3_1
-            public static string[] JCOBridgeFiles = new string[]
-            {
-                Path.Combine("linux-arm", "J2CBridgeHostActivator.so"),
-                Path.Combine("linux-arm", "libnethost.so"),
-                Path.Combine("linux-arm64", "J2CBridgeHostActivator.so"),
-                Path.Combine("linux-arm64", "libnethost.so"),
-                Path.Combine("linux-x64", "J2CBridgeHostActivator.so"),
-                Path.Combine("linux-x64", "libnethost.so"),
-                Path.Combine("win-arm", "J2CBridgeHostActivator.dll"),
-                Path.Combine("win-arm", "nethost.dll"),
-                Path.Combine("win-arm64", "J2CBridgeHostActivator.dll"),
-                Path.Combine("win-arm64", "nethost.dll"),
-                Path.Combine("win-x64", "J2CBridgeHostActivator.dll"),
-                Path.Combine("win-x64", "nethost.dll"),
-                Path.Combine("win-x86", "J2CBridgeHostActivator.dll"),
-                Path.Combine("win-x86", "nethost.dll"),
-                "C2JBridge.dll",
-                "C2JBridgeDesktop.dll",
-                "IpAddressIdGenerator.dll",
-                "IpAddressIdGenerator.runtimeconfig.json",
-                "J2CBridge_Arm.dll",
-                "J2CBridge_Arm.so",
-                "J2CBridge_Arm64.dll",
-                "J2CBridge_Arm64.so",
-                "J2CBridge_x64.dll",
-                "J2CBridge_x64.so",
-                "J2CBridge_x86.dll",
-                "JCOBridge.docs.jar",
-                "JCOBridge.jar",
-                "LicenseManagerUI.dll",
-                "LicenseManagerUI.runtimeconfig.json",
-                "LicenseViewer.dll",
-                "LicenseViewer.runtimeconfig.json",
-                "MachineIdGenerator.dll",
-                "MachineIdGenerator.runtimeconfig.json",
-                "Microsoft.NETCore.App.runtimeconfig.json",
-                "Microsoft.WindowsDesktop.App.runtimeconfig.json",
-            };
-#elif NET5_0
-            public static string[] JCOBridgeFiles = new string[]
-            {
-                Path.Combine("linux-arm", "J2CBridgeHostActivator.so"),
-                Path.Combine("linux-arm", "libnethost.so"),
-                Path.Combine("linux-arm64", "J2CBridgeHostActivator.so"),
-                Path.Combine("linux-arm64", "libnethost.so"),
-                Path.Combine("linux-x64", "J2CBridgeHostActivator.so"),
-                Path.Combine("linux-x64", "libnethost.so"),
-                Path.Combine("win-arm", "J2CBridgeHostActivator.dll"),
-                Path.Combine("win-arm", "nethost.dll"),
-                Path.Combine("win-arm64", "J2CBridgeHostActivator.dll"),
-                Path.Combine("win-arm64", "nethost.dll"),
-                Path.Combine("win-x64", "J2CBridgeHostActivator.dll"),
-                Path.Combine("win-x64", "nethost.dll"),
-                Path.Combine("win-x86", "J2CBridgeHostActivator.dll"),
-                Path.Combine("win-x86", "nethost.dll"),
-                "C2JBridge.dll",
-                "C2JBridgeDesktop.dll",
-                "IpAddressIdGenerator.dll",
-                "IpAddressIdGenerator.runtimeconfig.json",
-                "J2CBridge_Arm.dll",
-                "J2CBridge_Arm.so",
-                "J2CBridge_Arm64.dll",
-                "J2CBridge_Arm64.so",
-                "J2CBridge_x64.dll",
-                "J2CBridge_x64.so",
-                "J2CBridge_x86.dll",
-                "JCOBridge.docs.jar",
-                "JCOBridge.jar",
-                "LicenseManagerUI.dll",
-                "LicenseManagerUI.runtimeconfig.json",
-                "LicenseViewer.dll",
-                "LicenseViewer.runtimeconfig.json",
-                "MachineIdGenerator.dll",
-                "MachineIdGenerator.runtimeconfig.json",
-                "Microsoft.NET5.App.runtimeconfig.json",
-                "Microsoft.WindowsDesktop5.App.runtimeconfig.json",
-            };
-#elif NET6_0
+
+#if NET6_0
             public static string[] JCOBridgeFiles = new string[]
             {
                 Path.Combine("linux-arm", "J2CBridgeHostActivator.so"),
@@ -275,6 +201,45 @@ namespace MASES.JCOReflectorEngine
                 "MachineIdGenerator.runtimeconfig.json",
                 "Microsoft.NET6.App.runtimeconfig.json",
                 "Microsoft.WindowsDesktop6.App.runtimeconfig.json",
+            };
+#elif NET7_0
+            public static string[] JCOBridgeFiles = new string[]
+            {
+                Path.Combine("linux-arm", "J2CBridgeHostActivator.so"),
+                Path.Combine("linux-arm", "libnethost.so"),
+                Path.Combine("linux-arm64", "J2CBridgeHostActivator.so"),
+                Path.Combine("linux-arm64", "libnethost.so"),
+                Path.Combine("linux-x64", "J2CBridgeHostActivator.so"),
+                Path.Combine("linux-x64", "libnethost.so"),
+                Path.Combine("win-arm", "J2CBridgeHostActivator.dll"),
+                Path.Combine("win-arm", "nethost.dll"),
+                Path.Combine("win-arm64", "J2CBridgeHostActivator.dll"),
+                Path.Combine("win-arm64", "nethost.dll"),
+                Path.Combine("win-x64", "J2CBridgeHostActivator.dll"),
+                Path.Combine("win-x64", "nethost.dll"),
+                Path.Combine("win-x86", "J2CBridgeHostActivator.dll"),
+                Path.Combine("win-x86", "nethost.dll"),
+                "C2JBridge.dll",
+                "C2JBridgeDesktop.dll",
+                "IpAddressIdGenerator.dll",
+                "IpAddressIdGenerator.runtimeconfig.json",
+                "J2CBridge_Arm.dll",
+                "J2CBridge_Arm.so",
+                "J2CBridge_Arm64.dll",
+                "J2CBridge_Arm64.so",
+                "J2CBridge_x64.dll",
+                "J2CBridge_x64.so",
+                "J2CBridge_x86.dll",
+                "JCOBridge.docs.jar",
+                "JCOBridge.jar",
+                "LicenseManagerUI.dll",
+                "LicenseManagerUI.runtimeconfig.json",
+                "LicenseViewer.dll",
+                "LicenseViewer.runtimeconfig.json",
+                "MachineIdGenerator.dll",
+                "MachineIdGenerator.runtimeconfig.json",
+                "Microsoft.NET7.App.runtimeconfig.json",
+                "Microsoft.WindowsDesktop7.App.runtimeconfig.json",
             };
 #elif NETFRAMEWORK
             public static string[] JCOBridgeFiles = new string[]
@@ -322,18 +287,14 @@ namespace MASES.JCOReflectorEngine
         {
             public const string All = "All";
 
-#if NETCOREAPP3_1
-            public const string Runtime = ".NET Core";
-            public const string RuntimeName = ".NETCoreApp";
-            public const string RuntimeFolder = "netcoreapp3.1";
-#elif NET5_0
-            public const string Runtime = ".NET 5";
-            public const string RuntimeName = ".NETCoreApp";
-            public const string RuntimeFolder = "net5.0";
-#elif NET6_0
+#if NET6_0
             public const string Runtime = ".NET 6";
             public const string RuntimeName = ".NETCoreApp";
             public const string RuntimeFolder = "net6.0";
+#elif NET7_0
+            public const string Runtime = ".NET 7";
+            public const string RuntimeName = ".NETCoreApp";
+            public const string RuntimeFolder = "net7.0";
 #elif NETFRAMEWORK
             public const string Runtime = ".NET Framework";
             public const string RuntimeName = ".NETFramework";

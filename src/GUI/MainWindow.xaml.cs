@@ -1,7 +1,7 @@
 ﻿/*
  *  MIT License
  *
- *  Copyright (c) 2022 MASES s.r.l.
+ *  Copyright (c) 2023 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -109,16 +109,12 @@ namespace MASES.JCOReflectorGUI
         {
             InitializeComponent();
 
-#if NETCOREAPP3_1
-            Title = "JCOReflector Builder - CLR to JVM reflection class generator (.NET Core)";
-
-            tbAssemblyNames.Text += "PresentationFramework";
-#elif NET5_0
-            Title = "JCOReflector Builder - CLR to JVM reflection class generator (.NET 5)";
-
-            tbAssemblyNames.Text += "PresentationFramework";
-#elif NET6_0
+#if NET6_0
             Title = "JCOReflector Builder - CLR to JVM reflection class generator (.NET 6)";
+
+            tbAssemblyNames.Text += "PresentationFramework";
+#elif NET7_0
+            Title = "JCOReflector Builder - CLR to JVM reflection class generator (.NET 7)";
 
             tbAssemblyNames.Text += "PresentationFramework";
 #elif NETFRAMEWORK

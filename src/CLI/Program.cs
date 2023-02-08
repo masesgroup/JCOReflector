@@ -1,7 +1,7 @@
 ﻿/*
  *  MIT License
  *
- *  Copyright (c) 2022 MASES s.r.l.
+ *  Copyright (c) 2023 MASES s.r.l.
  *
  *  Permission is hereby granted, free of charge, to any person obtaining a copy
  *  of this software and associated documentation files (the "Software"), to deal
@@ -32,12 +32,10 @@ namespace MASES.JCOReflectorCLI
         static void showHelp(string errorString = null)
         {
             var assembly = typeof(Program).Assembly;
-#if NETCOREAPP3_1
-            var title = "JCOReflector CLI - CLI interface for JCOReflector Engine (.NET Core)";
-#elif NET5_0
-            var title = "JCOReflector CLI - CLI interface for JCOReflector Engine (.NET 5)";
-#elif NET6_0
+#if NET6_0
             var title = "JCOReflector CLI - CLI interface for JCOReflector Engine (.NET 6)";
+#elif NET7_0
+            var title = "JCOReflector CLI - CLI interface for JCOReflector Engine (.NET 7)";
 #elif NETFRAMEWORK
             var title = "JCOReflector CLI - CLI interface for JCOReflector Engine (.NET Framework)";
 #else

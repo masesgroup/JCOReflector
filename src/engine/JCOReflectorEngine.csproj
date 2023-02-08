@@ -4,13 +4,13 @@
     <RootNamespace>MASES.JCOReflectorEngine</RootNamespace>
     <Title>JCOReflector Engine - JCOBridge based Java class generator that mimic .NET classes</Title>
     <Description>JCOReflector Engine - JCOBridge based Java class generator that mimic .NET classes</Description>
-    <Copyright>Copyright ©  MASES s.r.l. 2022</Copyright>
+    <Copyright>Copyright ©  MASES s.r.l. 2023</Copyright>
     <Authors>MASES s.r.l.</Authors>
     <Company>MASES s.r.l.</Company>
-    <Version>1.11.0.0</Version>
+    <Version>1.12.0.0</Version>
     <Product>MASES.JCOReflectorEngine</Product>
     <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
-    <TargetFrameworks>net462;netcoreapp3.1;net6.0</TargetFrameworks>
+    <TargetFrameworks>net462;net6.0;net7.0</TargetFrameworks>
     <OutputPath>..\..\bin\</OutputPath>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
@@ -103,9 +103,8 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Condition="$(TargetFramework) == 'net462'" Include="..\..\netreflected\src\net462\assemblies.list" />
-    <EmbeddedResource Condition="$(TargetFramework) == 'netcoreapp3.1'" Include="..\..\netreflected\src\netcoreapp3.1\assemblies.list" />
-    <EmbeddedResource Condition="$(TargetFramework) == 'net5.0'" Include="..\..\netreflected\src\net5.0\assemblies.list" />
     <EmbeddedResource Condition="$(TargetFramework) == 'net6.0'" Include="..\..\netreflected\src\net6.0\assemblies.list" />
+	<EmbeddedResource Condition="$(TargetFramework) == 'net7.0'" Include="..\..\netreflected\src\net7.0\assemblies.list" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\LICENSE" Pack="true" PackagePath="" />
@@ -115,7 +114,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MASES.CLIParser" Version="3.1.2" />
-    <PackageReference Include="MASES.JCOBridge" Version="2.4.14">
+    <PackageReference Include="MASES.JCOBridge" Version="2.5.1">
       <IncludeAssets>All</IncludeAssets>
       <PrivateAssets>None</PrivateAssets>
     </PackageReference>

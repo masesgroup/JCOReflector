@@ -70,7 +70,7 @@ jobs:
             fetch-depth: '1'
 
         - name: Extract file
-          run: .github/workflows/GetLicense.ps1 ${{ secrets.JCOBRIDGE_2_5_1 }} $env:GITHUB_WORKSPACE/JCOBridge.lic
+          run: .github/workflows/GetLicense.ps1 ${{ secrets.JCOBRIDGE_2_5_2 }} $env:GITHUB_WORKSPACE/JCOBridge.lic
           shell: pwsh
 
         # Install .NET SDKs
@@ -92,13 +92,13 @@ jobs:
 
         - name: Build Java files
           run: |
-            dotnet bin/net6.0/MASES.JCOReflectorCLI.dll -JobType Build -JDKFolder /usr/lib/jvm/adoptopenjdk-8-hotspot-amd64/ -JobFile .github/workflows/build_linux.job
-            dotnet bin/net7.0/MASES.JCOReflectorCLI.dll -JobType Build -JDKFolder /usr/lib/jvm/adoptopenjdk-8-hotspot-amd64/ -JobFile .github/workflows/build_linux.job
+            dotnet bin/net6.0/MASES.JCOReflectorCLI.dll -JobType Build -JDKFolder $JAVA_HOME_11_X64 -JobFile .github/workflows/build_linux.job
+            dotnet bin/net7.0/MASES.JCOReflectorCLI.dll -JobType Build -JDKFolder $JAVA_HOME_11_X64 -JobFile .github/workflows/build_linux.job
 
         - name: Build JAR files
           run: |
-            dotnet bin/net6.0/MASES.JCOReflectorCLI.dll -JobType CreateJars -JDKFolder /usr/lib/jvm/adoptopenjdk-8-hotspot-amd64/ -JobFile .github/workflows/createjars_core6.0_linux.job
-            dotnet bin/net7.0/MASES.JCOReflectorCLI.dll -JobType CreateJars -JDKFolder /usr/lib/jvm/adoptopenjdk-8-hotspot-amd64/ -JobFile .github/workflows/createjars_core7.0_linux.job
+            dotnet bin/net6.0/MASES.JCOReflectorCLI.dll -JobType CreateJars -JDKFolder $JAVA_HOME_11_X64 -JobFile .github/workflows/createjars_core6.0_linux.job
+            dotnet bin/net7.0/MASES.JCOReflectorCLI.dll -JobType CreateJars -JDKFolder $JAVA_HOME_11_X64 -JobFile .github/workflows/createjars_core7.0_linux.job
 
         - uses: actions/setup-java@v3
           with:

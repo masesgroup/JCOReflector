@@ -5,16 +5,15 @@ main:
     url: https://masesgroup.github.io/sinapse/
   - title: "JCOBridge"
     url: https://masesgroup.github.io/JCOBridge/
+  - title: "JNet"
+    url: https://masesgroup.github.io/JNet/
   - title: "JCOReflector"
     url: https://masesgroup.github.io/JCOReflector/
   - title: "Data Distribution Manager"
-    url: https://masesgroup.github.io/DataDistributionManager
-  - title: "DDM Chat"
-    url: https://masesgroup.github.io/DDMChat
+    url: https://masesgroup.github.io/DataDistributionManager/
   - title: "JCO SWT Bridge"
     url: https://masesgroup.github.io/JCOSWTBridge/
-  - title: "JCOBridge Examples"
-    url: https://masesgroup.github.io/JCOBridge-Examples
+
     
 sidebar_elements:
   - title: Source code
@@ -27,10 +26,10 @@ sidebar_elements:
     children:
       - title: ".NET Framework documentation"
         url: /netreflected/docs/net462/
-      - title: ".NET Core documentation"
-        url: /netreflected/docs/netcoreapp3.1/
       - title: ".NET 6 documentation"
         url: /netreflected/docs/net6.0/
+      - title: ".NET 7 documentation"
+        url: /netreflected/docs/net7.0/
   - title: External links
     children:
       - title: "Sinapse Platform Official site"

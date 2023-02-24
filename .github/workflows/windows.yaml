@@ -72,7 +72,7 @@ jobs:
           fetch-depth: '1'
 
       - name: Extract secret
-        run: .github\workflows\GetLicense.ps1 ${{ secrets.JCOBRIDGE_2_5_2 }} .\JCOBridge.lic
+        run: .github\workflows\GetLicense.ps1 ${{ secrets.JCOBRIDGE_2_5_3 }} .\JCOBridge.lic
 
       # Runs a set of commands using the runners shell
       - name: Build JCOReflectorCLI

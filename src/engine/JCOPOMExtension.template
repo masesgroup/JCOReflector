@@ -154,7 +154,7 @@
             <additionalDependency>
               <groupId>JCOBridge</groupId>
               <artifactId>JCOBridge</artifactId>
-              <version>2.5.2</version>
+              <version>POM_JCOBRIDGE_VERSION_PLACEHOLDER</version>
             </additionalDependency>
           </additionalDependencies>
         </configuration>

@@ -56,7 +56,7 @@ jobs:
         done < files.txt
 
   # This workflow contains a single job called "build"
-  build_maven:
+  build_maven_net6:
     needs: check
     if: needs.check.outputs.run_job == 'true' 
     # The type of runner that the job will run on
@@ -80,25 +80,14 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Build JCOReflectorCLI
-        run: |
-          dotnet build --no-incremental --framework net6.0 src\JCOReflectorCLI.sln 
-          dotnet build --no-incremental --framework net7.0 src\JCOReflectorCLI.sln 
-          dotnet build --no-incremental --framework net462 src\JCOReflectorCLI.sln  
+        run: dotnet build --no-incremental --framework net6.0 src\JCOReflectorCLI.sln
 
       # Runs a set of commands using the runners shell
       - name: Copy configuration file
-        run: |
-          Copy-Item .github\workflows\JCOReflectorCLI6.0.runtimeconfig.json -Destination bin\net6.0\MASES.JCOReflectorCLI.runtimeconfig.json -Force
-          Copy-Item .github\workflows\JCOReflectorCLI7.0.runtimeconfig.json -Destination bin\net7.0\MASES.JCOReflectorCLI.runtimeconfig.json -Force
+        run: Copy-Item .github\workflows\JCOReflectorCLI6.0.runtimeconfig.json -Destination bin\net6.0\MASES.JCOReflectorCLI.runtimeconfig.json -Force
 
       - name: Build net6.0 Maven POM files
         run: dotnet bin\net6.0\MASES.JCOReflectorCLI.dll -JobType CreatePOM -JobFile .github\workflows\createpom_win19.job
-
-      - name: Build net7.0 Maven POM files
-        run: dotnet bin\net7.0\MASES.JCOReflectorCLI.dll -JobType CreatePOM -JobFile .github\workflows\createpom_win19.job
-         
-      - name: Build net462 Maven POM files
-        run: .\bin\net462\MASES.JCOReflectorCLI -JobType CreatePOM -JobFile .github\workflows\createpom_win19.job
 
       - name: Set up Apache Maven Central
         uses: actions/setup-java@v3
@@ -124,6 +113,55 @@ jobs:
           MAVEN_CENTRAL_TOKEN: ${{ secrets.MAVEN_CENTRAL_TOKEN }}
           MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
 
+  build_maven_net7:
+    needs: check
+    if: needs.check.outputs.run_job == 'true' 
+    # The type of runner that the job will run on
+    runs-on: windows-2022
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Runs a set of commands using the runners shell
+      # Support longpaths
+      - name: Support long paths
+        run: git config --system core.longpaths true
+  
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      - name: Install gpg secret key
+        run: |
+          cat <(echo -e "${{ secrets.MAVEN_GPG_PRIVATE_KEY }}") | gpg --batch --import
+          gpg --list-secret-keys --keyid-format LONG
+        shell: bash
+
+      # Runs a set of commands using the runners shell
+      - name: Build JCOReflectorCLI
+        run: dotnet build --no-incremental --framework net7.0 src\JCOReflectorCLI.sln 
+
+      # Runs a set of commands using the runners shell
+      - name: Copy configuration file
+        run: Copy-Item .github\workflows\JCOReflectorCLI7.0.runtimeconfig.json -Destination bin\net7.0\MASES.JCOReflectorCLI.runtimeconfig.json -Force
+
+      - name: Build net7.0 Maven POM files
+        run: dotnet bin\net7.0\MASES.JCOReflectorCLI.dll -JobType CreatePOM -JobFile .github\workflows\createpom_win19.job
+
+      - name: Set up Apache Maven Central
+        uses: actions/setup-java@v3
+        with: # running setup-java again overwrites the settings.xml
+          distribution: temurin
+          java-version: 11
+          cache: 'maven'
+          server-id: ossrh # Value of the distributionManagement/repository/id field of the pom.xml
+          server-username: MAVEN_USERNAME # env variable for username in deploy
+          server-password: MAVEN_CENTRAL_TOKEN # env variable for token in deploy
+          gpg-private-key: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }} # Value of the GPG private key to import
+          gpg-passphrase: MAVEN_GPG_PASSPHRASE # env variable for GPG private key passphrase
+
+      - name: Install local file to be used within Javadoc section of generated POM 
+        shell: bash
+        run: mvn install:install-file --no-transfer-progress -Dfile=../../bin/net7.0/JCOBridge.jar -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.3 -Dpackaging=jar -f ./netreflected/src/net7.0.xml
+
       - name: Publish net7.0 to Apache Maven Central
         shell: bash
         run: mvn --file ./netreflected/src/net7.0.xml --no-transfer-progress --batch-mode -Dgpg.passphrase=${{ secrets.MAVEN_GPG_PASSPHRASE }} deploy
@@ -131,6 +169,51 @@ jobs:
           MAVEN_USERNAME: ${{ secrets.MAVEN_USERNAME }}
           MAVEN_CENTRAL_TOKEN: ${{ secrets.MAVEN_CENTRAL_TOKEN }}
           MAVEN_GPG_PASSPHRASE: ${{ secrets.MAVEN_GPG_PASSPHRASE }}
+
+  build_maven_net462:
+    needs: check
+    if: needs.check.outputs.run_job == 'true' 
+    # The type of runner that the job will run on
+    runs-on: windows-2022
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Runs a set of commands using the runners shell
+      # Support longpaths
+      - name: Support long paths
+        run: git config --system core.longpaths true
+  
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      - name: Install gpg secret key
+        run: |
+          cat <(echo -e "${{ secrets.MAVEN_GPG_PRIVATE_KEY }}") | gpg --batch --import
+          gpg --list-secret-keys --keyid-format LONG
+        shell: bash
+
+      # Runs a set of commands using the runners shell
+      - name: Build JCOReflectorCLI
+        run: dotnet build --no-incremental --framework net462 src\JCOReflectorCLI.sln  
+
+      - name: Build net462 Maven POM files
+        run: .\bin\net462\MASES.JCOReflectorCLI -JobType CreatePOM -JobFile .github\workflows\createpom_win19.job
+
+      - name: Set up Apache Maven Central
+        uses: actions/setup-java@v3
+        with: # running setup-java again overwrites the settings.xml
+          distribution: temurin
+          java-version: 11
+          cache: 'maven'
+          server-id: ossrh # Value of the distributionManagement/repository/id field of the pom.xml
+          server-username: MAVEN_USERNAME # env variable for username in deploy
+          server-password: MAVEN_CENTRAL_TOKEN # env variable for token in deploy
+          gpg-private-key: ${{ secrets.MAVEN_GPG_PRIVATE_KEY }} # Value of the GPG private key to import
+          gpg-passphrase: MAVEN_GPG_PASSPHRASE # env variable for GPG private key passphrase
+
+      - name: Install local file to be used within Javadoc section of generated POM 
+        shell: bash
+        run: mvn install:install-file --no-transfer-progress -Dfile=../../bin/net462/JCOBridge.jar -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.3 -Dpackaging=jar -f ./netreflected/src/net462.xml
 
       - name: Publish net462 to Apache Maven Central
         shell: bash

@@ -156,7 +156,7 @@ public class DpapiProtectedConfigurationProvider extends ProtectedConfigurationP
     
     // Methods section
     
-    public XmlNode Decrypt(XmlNode encryptedNode) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.security.cryptography.CryptographicException, system.xml.XmlException, system.xml.schema.XmlSchemaException {
+    public XmlNode Decrypt(XmlNode encryptedNode) throws Throwable, system.NotSupportedException, system.ArgumentException, system.PlatformNotSupportedException, system.configuration.ConfigurationErrorsException, system.ArgumentOutOfRangeException, system.OutOfMemoryException, system.InvalidOperationException, system.ArgumentNullException, system.IndexOutOfRangeException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.globalization.CultureNotFoundException, system.security.cryptography.CryptographicException, system.xml.XmlException, system.xml.schema.XmlSchemaException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {
@@ -167,7 +167,7 @@ public class DpapiProtectedConfigurationProvider extends ProtectedConfigurationP
         }
     }
 
-    public XmlNode Encrypt(XmlNode node) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.security.cryptography.CryptographicException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.NotSupportedException, system.xml.XmlException, system.xml.schema.XmlSchemaException {
+    public XmlNode Encrypt(XmlNode node) throws Throwable, system.ArgumentNullException, system.PlatformNotSupportedException, system.InvalidOperationException, system.ArgumentException, system.globalization.CultureNotFoundException, system.security.cryptography.CryptographicException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.OutOfMemoryException, system.ArrayTypeMismatchException, system.NotSupportedException, system.xml.XmlException, system.xml.schema.XmlSchemaException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

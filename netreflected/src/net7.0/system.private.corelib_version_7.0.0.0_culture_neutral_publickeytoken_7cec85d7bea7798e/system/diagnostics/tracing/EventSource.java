@@ -267,7 +267,7 @@ public class EventSource extends NetObject implements AutoCloseable {
         }
     }
 
-    public void Dispose() throws Throwable, system.ArgumentException, system.ArgumentOutOfRangeException, system.IndexOutOfRangeException, system.PlatformNotSupportedException, system.NotSupportedException, system.ObjectDisposedException, system.InvalidOperationException, system.RankException, system.ArrayTypeMismatchException, system.FormatException, system.ArgumentNullException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.diagnostics.tracing.EventSourceException {
+    public void Dispose() throws Throwable, system.PlatformNotSupportedException, system.NotSupportedException, system.ArgumentOutOfRangeException, system.ArgumentNullException, system.InvalidOperationException, system.ArgumentException, system.IndexOutOfRangeException, system.FormatException, system.OutOfMemoryException, system.collections.generic.KeyNotFoundException, system.diagnostics.tracing.EventSourceException {
         if (classInstance == null)
             throw new UnsupportedOperationException("classInstance is null.");
         try {

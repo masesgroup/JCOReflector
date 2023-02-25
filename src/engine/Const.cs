@@ -22,10 +22,12 @@
  *  SOFTWARE.
  */
 
+using MASES.JCOBridge.C2JBridge;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.IO;
+using System.Reflection;
 
 namespace MASES.JCOReflectorEngine
 {
@@ -40,6 +42,10 @@ namespace MASES.JCOReflectorEngine
 
             return name;
         }
+
+        static Assembly jcoBridgeAssemblyVersion = typeof(SetupJVMWrapper).Assembly;
+        static System.Diagnostics.FileVersionInfo fileVersionInfo = System.Diagnostics.FileVersionInfo.GetVersionInfo(jcoBridgeAssemblyVersion.Location);
+        public static string JCOBridgeVersion => $"{fileVersionInfo.FileMajorPart}.{fileVersionInfo.FileMinorPart}.{fileVersionInfo.FileBuildPart}";
 
         public static readonly string ReflectorVersion = typeof(JavaBuilder).Assembly.GetName().Version.ToString();
 
@@ -161,7 +167,6 @@ namespace MASES.JCOReflectorEngine
             public const string CompiledPattern = "{0}.jar";
             public const string JCOBridgeEmbeddedFile = "JCOBridge.zip";
             public const string JCOReflectorOptionsFile = "JCOReflectorOptions.java";
-
 
 #if NET6_0
             public static string[] JCOBridgeFiles = new string[]
@@ -686,6 +691,7 @@ namespace MASES.JCOReflectorEngine
             public const string POM_VERSION_PLACEHOLDER = "POM_VERSION_PLACEHOLDER";
             public const string POM_VERSION_SNAPSHOT = "-SNAPSHOT";
             public const string POM_RUNTIME_PLACEHOLDER = "POM_RUNTIME_PLACEHOLDER";
+            public const string POM_JCOBRIDGE_VERSION_PLACEHOLDER = "POM_JCOBRIDGE_VERSION_PLACEHOLDER";
             public const string POM_JDK_TARGET = "POM_JDK_TARGET";
             public const string POM_JCOREFLECTOR_SOURCE_PLACEHOLDER = "                <source>./{0}</source>";
         }

@@ -258,6 +258,7 @@ namespace MASES.JCOReflectorEngine
 
                 var jcoPom = jcoPomTemplate.Replace(Const.POM.POM_VERSION_PLACEHOLDER, args.POMVersion + ((args.POMStagingType == POMStagingType.Snapshot) ? Const.POM.POM_VERSION_SNAPSHOT : string.Empty))
                                            .Replace(Const.POM.POM_RUNTIME_PLACEHOLDER, Const.Framework.RuntimeFolder)
+                                           .Replace(Const.POM.POM_JCOBRIDGE_VERSION_PLACEHOLDER, Const.JCOBridgeVersion)
                                            .Replace(Const.POM.POM_JDK_TARGET, ((int)args.JDKTarget).ToString())
                                            .Replace(Const.POM.POM_SOURCEDIRECTORIES_PLACEHOLDER, sourceFlders)
                                            .Replace(Const.POM.POM_ARTIFACTID_PLACEHOLDER, args.POMArtifactId)

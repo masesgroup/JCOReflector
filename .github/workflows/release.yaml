@@ -68,7 +68,7 @@ jobs:
 
       - name: Install local file to be used within Javadoc section of generated POM 
         shell: bash
-        run: mvn install:install-file -Dfile=./bin/net6.0/JCOBridge.jar -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.2 -Dpackaging=jar -DgeneratePom=true
+        run: mvn install:install-file -Dfile=./bin/net6.0/JCOBridge.jar -DgroupId=JCOBridge -DartifactId=JCOBridge -Dversion=2.5.3 -Dpackaging=jar -DgeneratePom=true
 
       - name: Publish net6.0 to Apache Maven Central
         shell: bash
